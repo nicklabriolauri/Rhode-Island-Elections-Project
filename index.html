@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>RIEP - Rhode Island Elections Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    :root {
+      --navy: #111c3d;
+      --navy2: #172554;
+      --blue: #2b6cb0;
+      --red: #dc2626;
+      --gray: #64748b;
+      --panel: #f8fafc;
+      --line: #e5e7eb;
+      --text: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #f8fafc;
+      overflow: hidden;
+    }
+    header {
+      padding: 18px 22px;
+      color: white;
+      background: linear-gradient(135deg, #0f172a 0%, #172554 100%);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: -0.03em;
+    }
+    header p {
+      margin: 6px 0 0 0;
+      color: rgba(255,255,255,.88);
+      line-height: 1.35;
+      font-size: 15px;
+    }
+    .controls {
+      height: 62px;
+      padding: 11px 22px;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      background: white;
+      border-bottom: 1px solid var(--line);
+      flex-wrap: wrap;
+    }
+    .control-group { display: flex; align-items: center; gap: 8px; }
+    .control-label {
+      color: var(--gray);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-weight: 800;
+    }
+    .segmented, .year-timeline {
+      display: inline-flex;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      border-radius: 999px;
+      padding: 3px;
+      gap: 3px;
+    }
+    .segmented button, .year-timeline button {
+      border: 0;
+      background: transparent;
+      border-radius: 999px;
+      padding: 6px 11px;
+      color: #475569;
+      font-weight: 800;
+      cursor: pointer;
+      font-size: 13px;
+      transition: all .15s ease;
+    }
+    .year-timeline button { padding: 6px 9px; font-size: 12px; }
+    .segmented button:hover, .year-timeline button:hover { background: #e2e8f0; }
+    .segmented button.active, .year-timeline button.active {
+      background: var(--navy2);
+      color: white;
+      box-shadow: 0 2px 8px rgba(23,37,84,.22);
+    }
+    select {
+      border-radius: 999px;
+      padding: 7px 28px 7px 11px;
+      border: 1px solid #dbe3ef;
+      color: var(--text);
+      font-weight: 750;
+      background: white;
+      font-size: 13px;
+    }
+    .era-badge {
+      margin-left: auto;
+      white-space: nowrap;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: #3730a3;
+      font-weight: 800;
+      padding: 6px 11px;
+      font-size: 12px;
+    }
+    .note {
+      height: 41px;
+      padding: 10px 22px;
+      background: #faf7f0;
+      border-bottom: 1px solid #ead7b7;
+      color: #475569;
+      font-size: 13px;
+    }
+    .dashboard {
+      display: grid;
+      grid-template-columns: 250px minmax(420px, 1fr) 310px;
+      height: calc(100vh - 179px);
+      min-height: 560px;
+    }
+    aside {
+      background: var(--panel);
+      overflow-y: auto;
+    }
+    #districtPanel {
+      border-right: 1px solid var(--line);
+      padding: 10px;
+    }
+    #factsPanel {
+      border-left: 1px solid var(--line);
+      padding: 12px;
+    }
+    .district-panel-title {
+      font-size: 14px;
+      font-weight: 900;
+      margin: 0 0 7px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .district-panel-title::after {
+      content: "Click to zoom";
+      font-size: 10px;
+      color: var(--gray);
+      font-weight: 700;
+    }
+    .district-search {
+      width: 100%;
+      padding: 8px 9px;
+      border-radius: 10px;
+      border: 1px solid #d1d5db;
+      margin-bottom: 8px;
+      font-size: 12px;
+      background: white;
+    }
+    .district-list {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .district-item {
+      cursor: pointer;
+      border: 1px solid var(--line);
+      border-left: 5px solid #999;
+      background: white;
+      border-radius: 9px;
+      padding: 7px 8px;
+      box-shadow: 0 1px 4px rgba(15,23,42,0.06);
+    }
+    .district-item:hover { background: #f1f5f9; }
+    .district-item.active {
+      outline: 3px solid rgba(37, 99, 235, 0.22);
+      background: #eff6ff;
+    }
+    .district-item-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 6px;
+      color: var(--gray);
+      font-size: 9.5px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      margin-bottom: 2px;
+    }
+    .district-item-name {
+      font-size: 13px;
+      font-weight: 900;
+      line-height: 1.15;
+      color: var(--text);
+    }
+    .district-item-detail {
+      color: #64748b;
+      font-size: 10.5px;
+      margin-top: 2px;
+    }
+    #map {
+      height: 100%;
+      width: 100%;
+      background: #f8fafc;
+    }
+    .leaflet-tile-pane {
+      filter: grayscale(85%) saturate(70%) contrast(92%);
+      opacity: 0.45;
+    }
+    .facts-title {
+      font-size: 18px;
+      font-weight: 900;
+      margin: 0 0 10px 0;
+      letter-spacing: -0.02em;
+    }
+    .seat-card, .fact-card {
+      background: linear-gradient(180deg, #fff 0%, #f8fafc 100%);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(15,23,42,.06);
+    }
+    .seat-card {
+      padding: 10px 12px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .seat-title, .fact-label {
+      color: #64748b;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-weight: 900;
+    }
+    #seatChart {
+      width: 210px;
+      height: 104px;
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+    .seat-labels {
+      display: flex;
+      justify-content: space-between;
+      margin-top: -8px;
+      color: #475569;
+      font-size: 11px;
+    }
+    .seat-count {
+      display: block;
+      font-size: 19px;
+      line-height: 1.05;
+      color: var(--text);
+      font-weight: 900;
+    }
+    .facts-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 9px;
+    }
+    .fact-card {
+      padding: 10px 12px;
+    }
+    .fact-value {
+      margin-top: 4px;
+      font-size: 20px;
+      line-height: 1.12;
+      color: var(--text);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+    }
+    .fact-detail {
+      margin-top: 5px;
+      font-size: 12px;
+      color: #475569;
+      line-height: 1.35;
+    }
+    .legend {
+      background: white;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      box-shadow: 0 4px 16px rgba(15,23,42,.14);
+      line-height: 1.4;
+      font-size: 13px;
+    }
+    .legend-title { font-weight: 900; margin-bottom: 5px; }
+    .swatch {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-right: 6px;
+      vertical-align: -2px;
+      border: 1px solid rgba(0,0,0,.15);
+    }
+    .error {
+      margin: 12px;
+      padding: 12px;
+      border: 1px solid #fecaca;
+      background: #fef2f2;
+      color: #991b1b;
+      border-radius: 10px;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    @media (max-width: 1000px) {
+      body { overflow: auto; }
+      .dashboard {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+      #districtPanel { max-height: 280px; }
+      #map { height: 520px; }
+      #factsPanel { border-left: 0; border-top: 1px solid var(--line); }
+      .era-badge { margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>RIEP - Rhode Island Elections Project</h1>
+  <p><strong>Rhode Island Legislative Election Map</strong><br>Interactive map with RI GIS coastline-clipped 2012–2020 boundaries and 2022–2024 boundaries.</p>
+</header>
+
+<div class="controls">
+  <div class="control-group">
+    <div class="control-label">Chamber</div>
+    <div class="segmented" id="chamberButtons">
+      <button type="button" data-value="house">House</button>
+      <button type="button" data-value="senate">Senate</button>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="control-label">Election year</div>
+    <div class="year-timeline" id="yearButtons"></div>
+  </div>
+  <div class="control-group">
+    <div class="control-label">Map view</div>
+    <select id="viewSelect">
+      <option value="party">Winner Party</option>
+      <option value="uncontested">Uncontested Seats</option>
+    </select>
+  </div>
+  <span id="eraBadge" class="era-badge"></span>
+</div>
+
+<div class="note">Hover over a district for a quick label. Click a district for candidates, votes, parties, percentages, total votes, margin, and uncontested status.</div>
+
+<main class="dashboard">
+  <aside id="districtPanel">
+    <div class="district-panel-title">Districts</div>
+    <input id="districtSearch" class="district-search" type="search" placeholder="Search district or candidate..." />
+    <div id="districtList" class="district-list"></div>
+  </aside>
+
+  <section id="map"></section>
+
+  <aside id="factsPanel">
+    <div class="facts-title" id="overviewTitle">Election Overview</div>
+    <div class="seat-card">
+      <div class="seat-title">Seat composition</div>
+      <svg id="seatChart" viewBox="0 0 240 130" aria-label="Seat composition semicircle chart"></svg>
+      <div class="seat-labels" id="seatLabels"></div>
+    </div>
+    <div class="facts-grid" id="factsGrid"></div>
+  </aside>
+</main>
+
+<script>
+const years = ["2012", "2014", "2016", "2018", "2020", "2022", "2024"];
+const state = { chamber: "house", year: "2024", view: "party" };
+let geojsons = {};
+let raceData = {};
+let layer = null;
+let legend = null;
+let selectedLayer = null;
+let selectedKey = null;
+let featureLayerByKey = {};
+
+const partyColors = {
+  DEM: "#2b6cb0",
+  REP: "#dc2626",
+  IND: "#7f7f7f",
+  LIB: "#f59e0b",
+  MOD: "#8b5cf6",
+  NON: "#9ca3af",
+  OTHER: "#8a8a8a"
+};
+
+const partyNames = {
+  DEM: "Democratic",
+  REP: "Republican",
+  IND: "Independent",
+  LIB: "Libertarian",
+  MOD: "Moderate",
+  NON: "Write-in",
+  OTHER: "Independent/Other"
+};
+
+const map = L.map("map", { zoomControl: true }).setView([41.70, -71.55], 9);
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  maxZoom: 18,
+  opacity: 0.28,
+  attribution: "&copy; OpenStreetMap contributors"
+}).addTo(map);
+
+function getEra(year) {
+  return Number(year) <= 2020 ? "old" : "new";
+}
+
+function getGeoKey(chamber, year) {
+  return `${chamber}_${getEra(year)}`;
+}
+
+function normalizeDistrict(value) {
+  return Number(String(value).replace(/^0+/, ""));
+}
+
+function getFeatureDistrict(feature) {
+  const p = feature.properties || {};
+  const raw = p.district_number ?? p.DIST_NUM ?? p.SLDUST ?? p.DISTRICT ?? p.District ?? p.NAME ?? p.NAMELSAD;
+  const match = String(raw).match(/\d+/);
+  return match ? Number(match[0]) : null;
+}
+
+function getRace(chamber, year, district) {
+  return raceData[`${chamber}|${year}|${Number(district)}`];
+}
+
+function parseNumber(value) {
+  if (value === null || value === undefined || value === "") return NaN;
+  if (typeof value === "number") return value;
+  return Number(String(value).replace(/,/g, "").replace(/%/g, ""));
+}
+
+function partyLabel(code) {
+  return partyNames[code] || code || "Other";
+}
+
+function partyColor(code) {
+  return partyColors[code] || partyColors.OTHER;
+}
+
+function racesForSelection() {
+  const prefix = `${state.chamber}|${state.year}|`;
+  return Object.entries(raceData)
+    .filter(([key]) => key.startsWith(prefix))
+    .map(([, race]) => race)
+    .sort((a, b) => Number(a.district_number) - Number(b.district_number));
+}
+
+function formatDistrictLabel(race) {
+  if (!race) return "N/A";
+  return `${race.chamber} District ${race.district_number}`;
+}
+
+function candidateRows(race) {
+  const candidates = race.candidates || [];
+  if (!candidates.length) return "";
+  return candidates.map(c => `
+    <tr>
+      <td>${c.name || ""}</td>
+      <td>${c.party || ""}</td>
+      <td style="text-align:right;">${c.votes || ""}</td>
+      <td style="text-align:right;">${c.pct || ""}</td>
+    </tr>
+  `).join("");
+}
+
+function popupHtml(race) {
+  if (!race) return "<strong>No race data found</strong>";
+  return `
+    <div style="min-width:270px;">
+      <h3 style="margin:0 0 6px 0;">${race.chamber} District ${race.district_number}</h3>
+      <div><strong>Winner:</strong> ${race.winner_candidate || ""} (${partyLabel(race.winner_party)})</div>
+      <div><strong>Total votes:</strong> ${race.district_total_votes || "N/A"}</div>
+      <div><strong>Margin:</strong> ${race.margin_votes || "N/A"} votes (${race.margin_pct || "N/A"})</div>
+      <div><strong>Status:</strong> ${race.is_uncontested ? "Uncontested" : "Contested"}</div>
+      <table style="width:100%; margin-top:8px; border-collapse:collapse; font-size:12px;">
+        <thead>
+          <tr>
+            <th style="text-align:left; border-bottom:1px solid #ddd;">Candidate</th>
+            <th style="text-align:left; border-bottom:1px solid #ddd;">Party</th>
+            <th style="text-align:right; border-bottom:1px solid #ddd;">Votes</th>
+            <th style="text-align:right; border-bottom:1px solid #ddd;">%</th>
+          </tr>
+        </thead>
+        <tbody>${candidateRows(race)}</tbody>
+      </table>
+    </div>
+  `;
+}
+
+function styleFeature(feature) {
+  const district = getFeatureDistrict(feature);
+  const race = getRace(state.chamber, state.year, district);
+  let stroke = "#334155";
+  let fill = "#ffffff";
+  let fillOpacity = 0.30;
+
+  if (race) {
+    if (state.view === "party") {
+      stroke = partyColor(race.winner_party);
+      fill = partyColor(race.winner_party);
+      fillOpacity = 0.34;
+    } else if (state.view === "uncontested") {
+      if (race.is_uncontested) {
+        stroke = partyColor(race.winner_party);
+        fill = partyColor(race.winner_party);
+        fillOpacity = 0.36;
+      } else {
+        stroke = "#64748b";
+        fill = "#ffffff";
+        fillOpacity = 0.22;
+      }
+    }
+  }
+
+  return {
+    color: stroke,
+    weight: 1.25,
+    opacity: 1,
+    fillColor: fill,
+    fillOpacity
+  };
+}
+
+function showRace(race, lyr) {
+  if (!race || !lyr) return;
+  if (selectedLayer && selectedLayer !== lyr && layer) {
+    layer.resetStyle(selectedLayer);
+  }
+  selectedLayer = lyr;
+  selectedKey = `${state.chamber}|${state.year}|${race.district_number}`;
+  lyr.setStyle({ weight: 4, color: "#0f172a", fillOpacity: 0.58 });
+  lyr.bindPopup(popupHtml(race)).openPopup();
+  highlightDistrictList();
+}
+
+function onEachFeature(feature, lyr) {
+  const district = getFeatureDistrict(feature);
+  const race = getRace(state.chamber, state.year, district);
+  const key = `${state.chamber}|${state.year}|${district}`;
+  featureLayerByKey[key] = lyr;
+
+  const label = race
+    ? `${race.chamber} District ${race.district_number}: ${race.winner_candidate} (${race.winner_party})`
+    : `District ${district}`;
+
+  lyr.bindTooltip(label, { sticky: true });
+  lyr.on("click", () => showRace(race, lyr));
+}
+
+function renderSeatChart(partyCounts, totalSeats) {
+  const svg = document.getElementById("seatChart");
+  const labels = document.getElementById("seatLabels");
+  if (!svg || !labels || !totalSeats) return;
+
+  const parties = Object.entries(partyCounts)
+    .filter(([, count]) => count > 0)
+    .sort((a, b) => {
+      const order = { DEM: 1, REP: 2, IND: 3, LIB: 4, MOD: 5 };
+      return (order[a[0]] || 9) - (order[b[0]] || 9);
+    });
+
+  const cx = 120, cy = 112, rOuter = 88, rInner = 52;
+  let startDeg = 180;
+  let paths = "";
+
+  function pt(r, deg) {
+    const rad = deg * Math.PI / 180;
+    return [cx + r * Math.cos(rad), cy + r * Math.sin(rad)];
+  }
+
+  function segment(a0, a1, color) {
+    const [x1, y1] = pt(rOuter, a0);
+    const [x2, y2] = pt(rOuter, a1);
+    const [x3, y3] = pt(rInner, a1);
+    const [x4, y4] = pt(rInner, a0);
+    const large = (a1 - a0) > 180 ? 1 : 0;
+    return `<path d="M ${x1} ${y1} A ${rOuter} ${rOuter} 0 ${large} 1 ${x2} ${y2} L ${x3} ${y3} A ${rInner} ${rInner} 0 ${large} 0 ${x4} ${y4} Z" fill="${color}" stroke="#fff" stroke-width="2"></path>`;
+  }
+
+  parties.forEach(([party, count]) => {
+    const span = (count / totalSeats) * 180;
+    const endDeg = startDeg + span;
+    paths += segment(startDeg, endDeg, partyColor(party));
+    startDeg = endDeg;
+  });
+
+  const dem = partyCounts.DEM || 0;
+  const rep = partyCounts.REP || 0;
+  const other = totalSeats - dem - rep;
+
+  svg.innerHTML = `
+    ${paths}
+    <text x="120" y="90" text-anchor="middle" font-size="24" font-weight="900" fill="#0f172a">${totalSeats}</text>
+    <text x="120" y="107" text-anchor="middle" font-size="11" fill="#64748b">seats</text>
+  `;
+  labels.innerHTML = `
+    <div><span class="seat-count">${dem}</span>Dem</div>
+    <div style="text-align:center;"><span class="seat-count">${other}</span>Other</div>
+    <div style="text-align:right;"><span class="seat-count">${rep}</span>Rep</div>
+  `;
+}
+
+function updateOverview() {
+  const races = racesForSelection();
+  const titleChamber = state.chamber === "house" ? "House" : "Senate";
+  document.getElementById("overviewTitle").textContent = `${state.year} ${titleChamber} Overview`;
+
+  if (!races.length) {
+    document.getElementById("factsGrid").innerHTML = `<div class="error">No race records found for this selection.</div>`;
+    return;
+  }
+
+  const partyCounts = {};
+  races.forEach(r => {
+    const p = r.winner_party || "OTHER";
+    partyCounts[p] = (partyCounts[p] || 0) + 1;
+  });
+
+  renderSeatChart(partyCounts, races.length);
+
+  const partySummary = Object.entries(partyCounts)
+    .sort((a, b) => b[1] - a[1])
+    .map(([party, count]) => `${count} ${partyLabel(party)}`)
+    .join(" · ");
+
+  const uncontested = races.filter(r => r.is_uncontested);
+  const contested = races.filter(r => !r.is_uncontested);
+
+  const closest = contested
+    .map(r => ({ race: r, margin: Math.abs(parseNumber(r.margin_votes)) }))
+    .filter(x => !Number.isNaN(x.margin))
+    .sort((a, b) => a.margin - b.margin)[0];
+
+  const avgMarginPct = contested
+    .map(r => Math.abs(parseNumber(r.margin_pct)))
+    .filter(x => !Number.isNaN(x));
+
+  const avgMargin = avgMarginPct.length
+    ? (avgMarginPct.reduce((a, b) => a + b, 0) / avgMarginPct.length).toFixed(1) + "%"
+    : "N/A";
+
+  document.getElementById("factsGrid").innerHTML = `
+    <div class="fact-card">
+      <div class="fact-label">Total seats</div>
+      <div class="fact-value">${races.length}</div>
+      <div class="fact-detail">${partySummary}</div>
+    </div>
+    <div class="fact-card">
+      <div class="fact-label">Uncontested</div>
+      <div class="fact-value">${uncontested.length}</div>
+      <div class="fact-detail">${((uncontested.length / races.length) * 100).toFixed(1)}% of seats</div>
+    </div>
+    <div class="fact-card">
+      <div class="fact-label">Closest race</div>
+      <div class="fact-value">${closest ? formatDistrictLabel(closest.race) : "N/A"}</div>
+      <div class="fact-detail">${closest ? `${closest.race.winner_candidate} by ${closest.race.margin_votes} votes (${closest.race.margin_pct})` : "No contested races"}</div>
+    </div>
+    <div class="fact-card">
+      <div class="fact-label">Average margin</div>
+      <div class="fact-value">${avgMargin}</div>
+      <div class="fact-detail">Contested races only</div>
+    </div>
+  `;
+}
+
+function renderDistrictList() {
+  const query = document.getElementById("districtSearch").value.toLowerCase().trim();
+  const races = racesForSelection();
+  const filtered = races.filter(r => {
+    const haystack = [
+      r.district_number,
+      r.winner_candidate,
+      r.winner_party,
+      r.margin_votes,
+      r.margin_pct,
+      ...(r.candidates || []).map(c => `${c.name} ${c.party} ${c.votes} ${c.pct}`)
+    ].join(" ").toLowerCase();
+    return !query || haystack.includes(query);
+  });
+
+  const list = document.getElementById("districtList");
+  list.innerHTML = filtered.map(r => {
+    const key = `${state.chamber}|${state.year}|${r.district_number}`;
+    const uncontested = r.is_uncontested ? " · Uncontested" : "";
+    return `
+      <div class="district-item" data-key="${key}" style="border-left-color:${partyColor(r.winner_party)}">
+        <div class="district-item-top">
+          <span>${partyLabel(r.winner_party)}</span>
+          <span>District ${r.district_number}</span>
+        </div>
+        <div class="district-item-name">${r.winner_candidate}</div>
+        <div class="district-item-detail">Margin: ${r.margin_votes || "N/A"} votes (${r.margin_pct || "N/A"})${uncontested}</div>
+      </div>
+    `;
+  }).join("");
+
+  list.querySelectorAll(".district-item").forEach(el => {
+    el.addEventListener("click", () => {
+      const lyr = featureLayerByKey[el.dataset.key];
+      const race = raceData[el.dataset.key];
+      if (lyr && race) {
+        map.fitBounds(lyr.getBounds(), { padding: [30, 30], maxZoom: 12 });
+        showRace(race, lyr);
+      }
+    });
+  });
+
+  highlightDistrictList();
+}
+
+function highlightDistrictList() {
+  document.querySelectorAll(".district-item").forEach(el => {
+    el.classList.toggle("active", el.dataset.key === selectedKey);
+  });
+}
+
+function addLegend() {
+  if (legend) map.removeControl(legend);
+  legend = L.control({ position: "bottomright" });
+  legend.onAdd = function() {
+    const div = L.DomUtil.create("div", "legend");
+    const title = state.view === "party" ? "Winner Party" : "Uncontested Seats";
+    div.innerHTML = `<div class="legend-title">${title}</div>`;
+    if (state.view === "party") {
+      div.innerHTML += `
+        <div><span class="swatch" style="background:${partyColors.DEM}"></span>Democratic</div>
+        <div><span class="swatch" style="background:${partyColors.REP}"></span>Republican</div>
+        <div><span class="swatch" style="background:${partyColors.OTHER}"></span>Independent/Other</div>
+      `;
+    } else {
+      div.innerHTML += `
+        <div><span class="swatch" style="background:${partyColors.DEM}"></span>Uncontested Democratic</div>
+        <div><span class="swatch" style="background:${partyColors.REP}"></span>Uncontested Republican</div>
+        <div><span class="swatch" style="background:white"></span>Contested</div>
+      `;
+    }
+    return div;
+  };
+  legend.addTo(map);
+}
+
+function updateEraBadge() {
+  const text = Number(state.year) <= 2020
+    ? "Using RI GIS clipped 2012–2020 districts"
+    : "Using 2022–2024 districts";
+  document.getElementById("eraBadge").textContent = text;
+}
+
+function syncButtons() {
+  document.querySelectorAll("#chamberButtons button").forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.value === state.chamber);
+  });
+  document.querySelectorAll("#yearButtons button").forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.value === state.year);
+  });
+}
+
+function setupControls() {
+  const yearButtons = document.getElementById("yearButtons");
+  yearButtons.innerHTML = years.map(y => `<button type="button" data-value="${y}">${y}</button>`).join("");
+
+  document.querySelectorAll("#chamberButtons button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      state.chamber = btn.dataset.value;
+      refresh();
+    });
+  });
+  document.querySelectorAll("#yearButtons button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      state.year = btn.dataset.value;
+      refresh();
+    });
+  });
+  document.getElementById("viewSelect").addEventListener("change", e => {
+    state.view = e.target.value;
+    refresh();
+  });
+  document.getElementById("districtSearch").addEventListener("input", renderDistrictList);
+  syncButtons();
+}
+
+function refresh() {
+  syncButtons();
+  selectedLayer = null;
+  selectedKey = null;
+  featureLayerByKey = {};
+
+  const geo = geojsons[getGeoKey(state.chamber, state.year)];
+  if (!geo) {
+    document.getElementById("districtList").innerHTML = `<div class="error">Missing GeoJSON for ${state.chamber} ${state.year}.</div>`;
+    return;
+  }
+
+  if (layer) map.removeLayer(layer);
+  layer = L.geoJSON(geo, {
+    style: styleFeature,
+    onEachFeature
+  }).addTo(map);
+
+  map.fitBounds(layer.getBounds(), { padding: [15, 15] });
+  addLegend();
+  updateEraBadge();
+  updateOverview();
+  renderDistrictList();
+}
+
+async function fetchJson(url) {
+  const response = await fetch(url, { cache: "no-store" });
+  if (!response.ok) throw new Error(`${url} returned ${response.status}`);
+  return response.json();
+}
+
+async function loadData() {
+  const files = {
+    senate_old: "data/senate_old.geojson",
+    house_old: "data/house_old.geojson",
+    senate_new: "data/senate_new.geojson",
+    house_new: "data/house_new.geojson"
+  };
+
+  const geoEntries = await Promise.all(
+    Object.entries(files).map(async ([key, url]) => [key, await fetchJson(url)])
+  );
+
+  geojsons = Object.fromEntries(geoEntries);
+  raceData = await fetchJson("data/race_data.json");
+}
+
+setupControls();
+loadData()
+  .then(refresh)
+  .catch(err => {
+    console.error("RIEP data failed to load:", err);
+    document.getElementById("districtList").innerHTML = `
+      <div class="error">
+        <strong>Data failed to load.</strong><br>
+        Make sure these files exist exactly:<br>
+        data/race_data.json<br>
+        data/house_old.geojson<br>
+        data/house_new.geojson<br>
+        data/senate_old.geojson<br>
+        data/senate_new.geojson
+      </div>`;
+    document.getElementById("factsGrid").innerHTML = `<div class="error">${err.message}</div>`;
+  });
+</script>
+</body>
+</html>
