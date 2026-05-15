@@ -720,11 +720,11 @@
   <span id="eraBadge" class="era-badge"></span>
 
   <select id="chamberSelect" class="hidden-select" aria-hidden="true" tabindex="-1">
-    <option value="house">House</option>
+    <option value="house" selected>House</option>
     <option value="senate">Senate</option>
   </select>
   <select id="yearSelect" class="hidden-select" aria-hidden="true" tabindex="-1">
-    <option value="2024">2024</option>
+    <option value="2024" selected>2024</option>
     <option value="2022">2022</option>
     <option value="2020">2020</option>
     <option value="2018">2018</option>
@@ -792,7 +792,7 @@ function setupModernControls() {
   syncModernControls();
 }
 
-function loadData() {
+async function loadData() {
   const files = {
     senate_old: "data/senate_old.geojson",
     house_old: "data/house_old.geojson",
@@ -1169,7 +1169,13 @@ document.getElementById('yearSelect').addEventListener('change', () => { syncMod
 document.getElementById('viewSelect').addEventListener('change', refreshMap);
 document.getElementById('districtSearch').addEventListener('input', renderDistrictList);
 
-loadData().then(refreshMap);
+loadData()
+  .then(refreshMap)
+  .catch(err => {
+    console.error("RIEP data failed to load:", err);
+    document.getElementById("districtList").innerHTML =
+      '<div class="district-item"><div class="district-item-name">Data failed to load</div><div class="district-item-detail">Check that /data/race_data.json and GeoJSON files exist.</div></div>';
+  });
 </script>
 </body>
 </html>
