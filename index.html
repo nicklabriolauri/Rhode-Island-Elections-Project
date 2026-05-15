@@ -43,8 +43,50 @@
       font-size: 14px;
       background: white;
     }
+    #overview {
+      background: #ffffff;
+      border-bottom: 1px solid #ddd;
+      padding: 14px 18px;
+    }
+    .overview-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 10px;
+    }
+    .overview-card {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 10px 12px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+    .overview-label {
+      color: #6b7280;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+    .overview-value {
+      font-size: 20px;
+      font-weight: 700;
+      color: #111827;
+      line-height: 1.25;
+    }
+    .overview-detail {
+      color: #4b5563;
+      font-size: 12px;
+      margin-top: 4px;
+      line-height: 1.35;
+    }
     #map {
-      height: calc(100vh - 142px);
+      height: calc(100vh - 300px);
+      min-height: 420px;
       width: 100%;
     }
     .legend {
@@ -138,6 +180,11 @@
 <div class="note">
   Hover over a district for a quick label. Click a district for candidates, votes, parties, percentages, total votes, margin, and uncontested status.
 </div>
+
+<section id="overview">
+  <div class="overview-title" id="overviewTitle">Election Overview</div>
+  <div class="overview-grid" id="overviewGrid"></div>
+</section>
 
 <div id="map"></div>
 
@@ -310,6 +357,125 @@ function updateEraBadge() {
   }
 }
 
+
+function parseNumber(value) {
+  if (value === null || value === undefined || value === "") return NaN;
+  if (typeof value === "number") return value;
+  return Number(String(value).replace(/,/g, "").replace(/%/g, ""));
+}
+
+function racesForSelection(chamber, year) {
+  const prefix = `${chamber}|${year}|`;
+  return Object.entries(raceData)
+    .filter(([key, race]) => key.startsWith(prefix))
+    .map(([key, race]) => race)
+    .sort((a, b) => Number(a.district_number) - Number(b.district_number));
+}
+
+function partyLabel(code) {
+  if (code === "DEM") return "Democratic";
+  if (code === "REP") return "Republican";
+  if (code === "IND") return "Independent";
+  if (code === "LIB") return "Libertarian";
+  if (code === "MOD") return "Moderate";
+  return code || "Other";
+}
+
+function formatDistrictLabel(race) {
+  if (!race) return "N/A";
+  return `${race.chamber} District ${race.district_number}`;
+}
+
+function updateOverview() {
+  const chamber = document.getElementById('chamberSelect').value;
+  const year = document.getElementById('yearSelect').value;
+  const races = racesForSelection(chamber, year);
+  const titleChamber = chamber === "house" ? "House" : "Senate";
+
+  document.getElementById("overviewTitle").textContent = `${year} Rhode Island ${titleChamber} Overview`;
+
+  if (!races.length) {
+    document.getElementById("overviewGrid").innerHTML = `
+      <div class="overview-card">
+        <div class="overview-label">Status</div>
+        <div class="overview-value">No data</div>
+        <div class="overview-detail">No race records found for this selection.</div>
+      </div>
+    `;
+    return;
+  }
+
+  const partyCounts = {};
+  races.forEach(r => {
+    const p = r.winner_party || "OTHER";
+    partyCounts[p] = (partyCounts[p] || 0) + 1;
+  });
+
+  const partySummary = Object.entries(partyCounts)
+    .sort((a, b) => b[1] - a[1])
+    .map(([party, count]) => `${count} ${partyLabel(party)}`)
+    .join(" · ");
+
+  const uncontested = races.filter(r => r.is_uncontested);
+  const contested = races.filter(r => !r.is_uncontested);
+
+  const closest = contested
+    .map(r => ({race: r, margin: Math.abs(parseNumber(r.margin_votes))}))
+    .filter(x => !Number.isNaN(x.margin))
+    .sort((a, b) => a.margin - b.margin)[0];
+
+  const largest = races
+    .map(r => ({race: r, margin: Math.abs(parseNumber(r.margin_votes))}))
+    .filter(x => !Number.isNaN(x.margin))
+    .sort((a, b) => b.margin - a.margin)[0];
+
+  const avgMarginPct = contested
+    .map(r => Math.abs(parseNumber(r.margin_pct)))
+    .filter(x => !Number.isNaN(x));
+  const avgMargin = avgMarginPct.length
+    ? (avgMarginPct.reduce((a, b) => a + b, 0) / avgMarginPct.length).toFixed(1) + "%"
+    : "N/A";
+
+  const totalVotes = races
+    .map(r => parseNumber(r.district_total_votes))
+    .filter(x => !Number.isNaN(x))
+    .reduce((a, b) => a + b, 0);
+
+  const grid = document.getElementById("overviewGrid");
+  grid.innerHTML = `
+    <div class="overview-card">
+      <div class="overview-label">Total seats</div>
+      <div class="overview-value">${races.length}</div>
+      <div class="overview-detail">${partySummary}</div>
+    </div>
+    <div class="overview-card">
+      <div class="overview-label">Uncontested seats</div>
+      <div class="overview-value">${uncontested.length}</div>
+      <div class="overview-detail">${((uncontested.length / races.length) * 100).toFixed(1)}% of seats</div>
+    </div>
+    <div class="overview-card">
+      <div class="overview-label">Closest race</div>
+      <div class="overview-value">${closest ? formatDistrictLabel(closest.race) : "N/A"}</div>
+      <div class="overview-detail">${closest ? `${closest.race.winner_candidate} won by ${closest.race.margin_votes} votes (${closest.race.margin_pct})` : "No contested races"}</div>
+    </div>
+    <div class="overview-card">
+      <div class="overview-label">Largest win</div>
+      <div class="overview-value">${largest ? formatDistrictLabel(largest.race) : "N/A"}</div>
+      <div class="overview-detail">${largest ? `${largest.race.winner_candidate} won by ${largest.race.margin_votes} votes (${largest.race.margin_pct})` : "N/A"}</div>
+    </div>
+    <div class="overview-card">
+      <div class="overview-label">Average margin</div>
+      <div class="overview-value">${avgMargin}</div>
+      <div class="overview-detail">Average among contested races</div>
+    </div>
+    <div class="overview-card">
+      <div class="overview-label">Total votes</div>
+      <div class="overview-value">${totalVotes.toLocaleString()}</div>
+      <div class="overview-detail">Sum of district-level votes</div>
+    </div>
+  `;
+}
+
 function refreshMap() {
   const chamber = document.getElementById('chamberSelect').value;
   const year = document.getElementById('yearSelect').value;
@@ -325,6 +491,7 @@ function refreshMap() {
   map.fitBounds(layer.getBounds(), {padding: [15, 15]});
   addLegend();
   updateEraBadge();
+  updateOverview();
 }
 
 document.getElementById('chamberSelect').addEventListener('change', refreshMap);
