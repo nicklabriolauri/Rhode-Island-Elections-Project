@@ -490,6 +490,195 @@
       }
     }
 
+
+    /* One-page dashboard layout */
+    .hidden-select {
+      display: none !important;
+    }
+    .modern-controls {
+      padding: 12px 22px;
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid #e5e7eb;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+      box-shadow: 0 1px 0 rgba(15,23,42,0.06);
+    }
+    .control-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .control-label {
+      color: #64748b;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-weight: 800;
+    }
+    .segmented, .year-timeline {
+      display: inline-flex;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      border-radius: 999px;
+      padding: 3px;
+      gap: 3px;
+    }
+    .segmented button, .year-timeline button {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      border-radius: 999px;
+      padding: 6px 11px;
+      color: #475569;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all .15s ease;
+      font-size: 13px;
+    }
+    .year-timeline button {
+      padding: 6px 9px;
+      font-size: 12px;
+    }
+    .segmented button:hover, .year-timeline button:hover {
+      background: #e2e8f0;
+    }
+    .segmented button.active, .year-timeline button.active {
+      background: #172554;
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(23,37,84,.22);
+    }
+    #viewSelect {
+      border-radius: 999px;
+      padding: 7px 28px 7px 11px;
+      border: 1px solid #dbe3ef;
+      color: #0f172a;
+      font-weight: 750;
+      background: white;
+      font-size: 13px;
+    }
+    .era-badge {
+      margin-left: auto;
+      white-space: nowrap;
+    }
+    .note {
+      padding: 8px 22px;
+      font-size: 13px;
+    }
+    .dashboard-layout {
+      grid-template-columns: 250px minmax(420px, 1fr) 310px;
+      height: calc(100vh - 163px);
+      min-height: 650px;
+      border-top: 0;
+    }
+    #districtPanel {
+      padding: 10px;
+      background: #f8fafc;
+    }
+    #factsPanel {
+      background: #f8fafc;
+      border-left: 1px solid #e5e7eb;
+      padding: 12px;
+      overflow-y: auto;
+    }
+    .facts-title {
+      font-size: 17px;
+      font-weight: 900;
+      color: #0f172a;
+      margin: 0 0 10px 0;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .compact-seat-card {
+      min-height: 120px;
+      margin-bottom: 10px;
+    }
+    .facts-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 9px;
+    }
+    .facts-grid .overview-card {
+      min-height: auto;
+      padding: 10px 12px;
+      border-radius: 12px;
+    }
+    .facts-grid .overview-label {
+      font-size: 11px;
+    }
+    .facts-grid .overview-value {
+      font-size: 20px;
+      line-height: 1.12;
+    }
+    .facts-grid .overview-detail {
+      font-size: 12px;
+    }
+    .main-layout {
+      grid-template-columns: 250px minmax(420px, 1fr) 310px;
+    }
+    .district-panel-title {
+      font-size: 14px;
+      margin-bottom: 7px;
+    }
+    .district-panel-title::after {
+      font-size: 10px;
+    }
+    .district-search {
+      padding: 7px 9px;
+      font-size: 12px;
+      margin-bottom: 7px;
+    }
+    .district-list {
+      gap: 5px;
+    }
+    .district-item {
+      padding: 7px 8px;
+      border-radius: 9px;
+      border-left-width: 5px;
+    }
+    .district-item-top {
+      font-size: 9.5px;
+      margin-bottom: 2px;
+    }
+    .district-item-name {
+      font-size: 13px;
+      line-height: 1.15;
+    }
+    .district-item-detail {
+      font-size: 10.5px;
+      margin-top: 2px;
+    }
+    #map {
+      height: 100%;
+      min-height: 650px;
+    }
+    @media (max-width: 1150px) {
+      .dashboard-layout, .main-layout {
+        grid-template-columns: 230px minmax(360px, 1fr) 280px;
+      }
+    }
+    @media (max-width: 900px) {
+      .dashboard-layout, .main-layout {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+      #districtPanel {
+        max-height: 250px;
+      }
+      #factsPanel {
+        border-left: none;
+        border-top: 1px solid #e5e7eb;
+      }
+      #map {
+        height: 520px;
+        min-height: 520px;
+      }
+      .era-badge {
+        margin-left: 0;
+      }
+    }
+
 </style>
 </head>
 <body>
@@ -498,50 +687,58 @@
   <p><strong>Rhode Island Legislative Election Map</strong><br>Interactive map with RI GIS coastline-clipped 2012–2020 boundaries and 2022–2024 boundaries.</p>
 </header>
 
-<div id="controls">
-  <label>Chamber:
-    <select id="chamberSelect">
-      <option value="senate">Senate</option>
-      <option value="house">House</option>
-    </select>
-  </label>
-  <label>Year:
-    <select id="yearSelect">
-      <option value="2024">2024</option>
-      <option value="2022">2022</option>
-      <option value="2020">2020</option>
-      <option value="2018">2018</option>
-      <option value="2016">2016</option>
-      <option value="2014">2014</option>
-      <option value="2012">2012</option>
-    </select>
-  </label>
-  <label>View:
+<div id="controls" class="modern-controls">
+  <div class="control-group">
+    <div class="control-label">Chamber</div>
+    <div class="segmented" id="chamberButtons">
+      <button type="button" data-value="house">House</button>
+      <button type="button" data-value="senate">Senate</button>
+    </div>
+  </div>
+
+  <div class="control-group timeline-group">
+    <div class="control-label">Election year</div>
+    <div class="year-timeline" id="yearButtons">
+      <button type="button" data-value="2012">2012</button>
+      <button type="button" data-value="2014">2014</button>
+      <button type="button" data-value="2016">2016</button>
+      <button type="button" data-value="2018">2018</button>
+      <button type="button" data-value="2020">2020</button>
+      <button type="button" data-value="2022">2022</button>
+      <button type="button" data-value="2024">2024</button>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <div class="control-label">Map view</div>
     <select id="viewSelect">
       <option value="party">Winner Party</option>
       <option value="uncontested">Uncontested Seats</option>
     </select>
-  </label>
+  </div>
+
   <span id="eraBadge" class="era-badge"></span>
+
+  <select id="chamberSelect" class="hidden-select" aria-hidden="true" tabindex="-1">
+    <option value="house">House</option>
+    <option value="senate">Senate</option>
+  </select>
+  <select id="yearSelect" class="hidden-select" aria-hidden="true" tabindex="-1">
+    <option value="2024">2024</option>
+    <option value="2022">2022</option>
+    <option value="2020">2020</option>
+    <option value="2018">2018</option>
+    <option value="2016">2016</option>
+    <option value="2014">2014</option>
+    <option value="2012">2012</option>
+  </select>
 </div>
 
 <div class="note">
   Hover over a district for a quick label. Click a district for candidates, votes, parties, percentages, total votes, margin, and uncontested status.
 </div>
 
-<section id="overview">
-  <div class="overview-title" id="overviewTitle">Election Overview</div>
-  <div class="overview-flex">
-    <div class="seat-chart-card">
-      <div class="seat-chart-title">Seat composition</div>
-      <svg class="seat-chart-svg" id="seatChart" viewBox="0 0 240 130" aria-label="Seat composition semicircle chart"></svg>
-      <div class="seat-chart-labels" id="seatChartLabels"></div>
-    </div>
-    <div class="overview-grid" id="overviewGrid"></div>
-  </div>
-</section>
-
-<div class="main-layout">
+<div class="main-layout dashboard-layout">
   <aside id="districtPanel">
     <div class="district-panel-title">Districts</div>
     <input id="districtSearch" class="district-search" type="search" placeholder="Search district or candidate..." />
@@ -550,13 +747,52 @@
   <div class="map-shell">
     <div id="map"></div>
   </div>
+  <aside id="factsPanel">
+    <div class="facts-title" id="overviewTitle">Election Overview</div>
+    <div class="seat-chart-card compact-seat-card">
+      <div class="seat-chart-title">Seat composition</div>
+      <svg class="seat-chart-svg" id="seatChart" viewBox="0 0 240 130" aria-label="Seat composition semicircle chart"></svg>
+      <div class="seat-chart-labels" id="seatChartLabels"></div>
+    </div>
+    <div class="overview-grid facts-grid" id="overviewGrid"></div>
+  </aside>
 </div>
 
 <script>
 let geojsons = {};
 let raceData = {};
 
-async function loadData() {
+async 
+function syncModernControls() {
+  const chamber = document.getElementById('chamberSelect').value;
+  const year = document.getElementById('yearSelect').value;
+  document.querySelectorAll('#chamberButtons button').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.value === chamber);
+  });
+  document.querySelectorAll('#yearButtons button').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.value === year);
+  });
+}
+
+function setupModernControls() {
+  document.querySelectorAll('#chamberButtons button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.getElementById('chamberSelect').value = btn.dataset.value;
+      syncModernControls();
+      refreshMap();
+    });
+  });
+  document.querySelectorAll('#yearButtons button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.getElementById('yearSelect').value = btn.dataset.value;
+      syncModernControls();
+      refreshMap();
+    });
+  });
+  syncModernControls();
+}
+
+function loadData() {
   const files = {
     senate_old: "data/senate_old.geojson",
     house_old: "data/house_old.geojson",
@@ -769,7 +1005,7 @@ function updateOverview() {
   const races = racesForSelection(chamber, year);
   const titleChamber = chamber === "house" ? "House" : "Senate";
 
-  document.getElementById("overviewTitle").textContent = `${year} Rhode Island ${titleChamber} Overview`;
+  document.getElementById("overviewTitle").textContent = `${year} ${titleChamber} Overview`;
 
   if (!races.length) {
     document.getElementById("overviewGrid").innerHTML = `
@@ -838,103 +1074,11 @@ function updateOverview() {
       <div class="overview-detail">${closest ? `${closest.race.winner_candidate} by ${closest.race.margin_votes} votes (${closest.race.margin_pct})` : "No contested races"}</div>
     </div>
     <div class="overview-card">
-      <div class="overview-label">Largest win</div>
-      <div class="overview-value">${largest ? formatDistrictLabel(largest.race) : "N/A"}</div>
-      <div class="overview-detail">${largest ? `${largest.race.winner_candidate} by ${largest.race.margin_votes} votes (${largest.race.margin_pct})` : "N/A"}</div>
-    </div>
-    <div class="overview-card">
       <div class="overview-label">Average margin</div>
       <div class="overview-value">${avgMargin}</div>
       <div class="overview-detail">Contested races only</div>
     </div>
   `;}
-
-
-let featureLayerByKey = {};
-let selectedLayer = null;
-let selectedDistrictKey = null;
-
-function winnerColor(party) {
-  if (party === "DEM") return "#2b6cb0";
-  if (party === "REP") return "#dc2626";
-  return "#8a8a8a";
-}
-
-function showRacePopup(race, layer) {
-  if (!race || !layer) return;
-  layer.bindPopup(popupHtml(race)).openPopup();
-  if (selectedLayer && selectedLayer !== layer && window.currentGeoJsonLayer) {
-    window.currentGeoJsonLayer.resetStyle(selectedLayer);
-  }
-  selectedLayer = layer;
-  selectedDistrictKey = `${String(race.chamber).toLowerCase()}|${race.year}|${race.district_number}`;
-  layer.setStyle({ weight: 4, color: "#0f172a", fillOpacity: 0.58 });
-  highlightDistrictListItem();
-}
-
-function highlightDistrictListItem() {
-  document.querySelectorAll(".district-item").forEach(el => {
-    el.classList.toggle("active", el.dataset.key === selectedDistrictKey);
-  });
-}
-
-function renderSeatChart(partyCounts, totalSeats) {
-  const svg = document.getElementById("seatChart");
-  const labels = document.getElementById("seatChartLabels");
-  if (!svg || !labels) return;
-
-  const parties = Object.entries(partyCounts)
-    .filter(([, count]) => count > 0)
-    .sort((a, b) => {
-      const order = {DEM: 1, REP: 2, IND: 3, LIB: 4, MOD: 5};
-      return (order[a[0]] || 9) - (order[b[0]] || 9);
-    });
-
-  const cx = 120, cy = 110, rOuter = 88, rInner = 52;
-  let startDeg = 180;
-  let paths = "";
-
-  function pt(r, deg) {
-    const rad = deg * Math.PI / 180;
-    return [cx + r * Math.cos(rad), cy + r * Math.sin(rad)];
-  }
-
-  function segment(a0, a1, color) {
-    if (a1 <= a0) return "";
-    const [x1, y1] = pt(rOuter, a0);
-    const [x2, y2] = pt(rOuter, a1);
-    const [x3, y3] = pt(rInner, a1);
-    const [x4, y4] = pt(rInner, a0);
-    const largeArc = (a1 - a0) > 180 ? 1 : 0;
-    return `<path d="M ${x1.toFixed(3)} ${y1.toFixed(3)}
-      A ${rOuter} ${rOuter} 0 ${largeArc} 1 ${x2.toFixed(3)} ${y2.toFixed(3)}
-      L ${x3.toFixed(3)} ${y3.toFixed(3)}
-      A ${rInner} ${rInner} 0 ${largeArc} 0 ${x4.toFixed(3)} ${y4.toFixed(3)}
-      Z" fill="${color}" stroke="#ffffff" stroke-width="2"></path>`;
-  }
-
-  parties.forEach(([party, count]) => {
-    const span = (count / totalSeats) * 180;
-    const endDeg = startDeg + span;
-    paths += segment(startDeg, endDeg, winnerColor(party));
-    startDeg = endDeg;
-  });
-
-  svg.innerHTML = `
-    ${paths}
-    <text x="120" y="88" text-anchor="middle" font-size="24" font-weight="900" fill="#0f172a">${totalSeats}</text>
-    <text x="120" y="105" text-anchor="middle" font-size="11" fill="#64748b">seats</text>
-  `;
-
-  const dem = partyCounts.DEM || 0;
-  const rep = partyCounts.REP || 0;
-  const other = totalSeats - dem - rep;
-  labels.innerHTML = `
-    <div><span class="seat-count">${dem}</span>Dem</div>
-    <div style="text-align:center;"><span class="seat-count">${other}</span>Other</div>
-    <div style="text-align:right;"><span class="seat-count">${rep}</span>Rep</div>
-  `;
-}
 
 function renderDistrictList() {
   const chamber = document.getElementById('chamberSelect').value;
@@ -1020,8 +1164,8 @@ function refreshMap() {
   renderDistrictList();
 }
 
-document.getElementById('chamberSelect').addEventListener('change', refreshMap);
-document.getElementById('yearSelect').addEventListener('change', refreshMap);
+document.getElementById('chamberSelect').addEventListener('change', () => { syncModernControls(); refreshMap(); });
+document.getElementById('yearSelect').addEventListener('change', () => { syncModernControls(); refreshMap(); });
 document.getElementById('viewSelect').addEventListener('change', refreshMap);
 document.getElementById('districtSearch').addEventListener('input', renderDistrictList);
 
