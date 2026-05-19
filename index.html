@@ -580,6 +580,7 @@
       <option value="party">Winner Party</option>
       <option value="uncontested">Uncontested Seats</option>
       <option value="gender">Gender Parity</option>
+      <option value="competitiveness">Competitiveness</option>
     </select>
   </div>
   <span id="eraBadge" class="era-badge"></span>
@@ -627,7 +628,13 @@ const partyColors = {
   NON: "#9ca3af",
   OTHER: "#8a8a8a",
   WOMAN: "#7c3aed",
-  WOMAN_STROKE: "#5b21b6"
+  WOMAN_STROKE: "#5b21b6",
+  TOSSUP: "#f97316",
+  COMPETITIVE: "#facc15",
+  LEAN: "#84cc16",
+  LIKELY: "#38bdf8",
+  SAFE: "#64748b",
+  UNCONTESTED: "#cbd5e1"
 };
 
 const partyNames = {
@@ -686,6 +693,44 @@ function parseNumber(value) {
   if (value === null || value === undefined || value === "") return NaN;
   if (typeof value === "number") return value;
   return Number(String(value).replace(/,/g, "").replace(/%/g, ""));
+}
+
+function competitivenessCategory(race) {
+  if (!race) return "unknown";
+  if (race.is_uncontested) return "uncontested";
+  const margin = Math.abs(parseNumber(race.margin_pct));
+  if (Number.isNaN(margin)) return "unknown";
+  if (margin < 5) return "tossup";
+  if (margin < 10) return "competitive";
+  if (margin < 20) return "lean";
+  if (margin < 35) return "likely";
+  return "safe";
+}
+
+function competitivenessLabel(category) {
+  const labels = {
+    tossup: "Toss-up",
+    competitive: "Competitive",
+    lean: "Lean",
+    likely: "Likely",
+    safe: "Safe",
+    uncontested: "Uncontested",
+    unknown: "No data"
+  };
+  return labels[category] || "No data";
+}
+
+function competitivenessColor(category) {
+  const colors = {
+    tossup: partyColors.TOSSUP,
+    competitive: partyColors.COMPETITIVE,
+    lean: partyColors.LEAN,
+    likely: partyColors.LIKELY,
+    safe: partyColors.SAFE,
+    uncontested: partyColors.UNCONTESTED,
+    unknown: "#e5e7eb"
+  };
+  return colors[category] || "#e5e7eb";
 }
 
 function partyLabel(code) {
@@ -749,22 +794,30 @@ function popupHtml(race) {
 function styleFeature(feature) {
   const district = getFeatureDistrict(feature);
   const race = getRace(state.chamber, state.year, district);
-  const genderRecord = getGenderRecord(state.chamber, state.year, district);
+  const genderRecord = typeof getGenderRecord === "function" ? getGenderRecord(state.chamber, state.year, district) : null;
 
   let stroke = "#334155";
   let fill = "#ffffff";
   let fillOpacity = 0.30;
+  let weight = 1.25;
 
   if (state.view === "gender") {
     if (genderRecord && genderRecord.is_woman === true) {
       stroke = partyColors.WOMAN_STROKE;
       fill = partyColors.WOMAN;
       fillOpacity = 0.72;
+      weight = 1.8;
     } else {
       stroke = "#9ca3af";
       fill = "#d1d5db";
       fillOpacity = 0.20;
     }
+  } else if (state.view === "competitiveness") {
+    const category = competitivenessCategory(race);
+    fill = competitivenessColor(category);
+    stroke = category === "uncontested" ? "#94a3b8" : "#334155";
+    fillOpacity = category === "unknown" ? 0.18 : 0.68;
+    weight = category === "tossup" || category === "competitive" ? 1.9 : 1.25;
   } else if (race) {
     if (state.view === "party") {
       stroke = partyColor(race.winner_party);
@@ -785,7 +838,7 @@ function styleFeature(feature) {
 
   return {
     color: stroke,
-    weight: state.view === "gender" && genderRecord && genderRecord.is_woman ? 1.8 : 1.25,
+    weight,
     opacity: 1,
     fillColor: fill,
     fillOpacity
@@ -868,6 +921,66 @@ function renderSeatChart(partyCounts, totalSeats) {
     <div><span class="seat-count">${dem}</span>Dem</div>
     <div style="text-align:center;"><span class="seat-count">${other}</span>Other</div>
     <div style="text-align:right;"><span class="seat-count">${rep}</span>Rep</div>
+  `;
+}
+
+
+
+function renderCompetitivenessOverlay(races) {
+  const overlay = document.getElementById("genderOverlay");
+  if (!overlay) return;
+
+  const contested = races.filter(r => !r.is_uncontested);
+  const categories = {
+    tossup: contested.filter(r => competitivenessCategory(r) === "tossup").length,
+    competitive: contested.filter(r => competitivenessCategory(r) === "competitive").length,
+    lean: contested.filter(r => competitivenessCategory(r) === "lean").length,
+    likely: contested.filter(r => competitivenessCategory(r) === "likely").length,
+    safe: contested.filter(r => competitivenessCategory(r) === "safe").length,
+    uncontested: races.filter(r => r.is_uncontested).length
+  };
+
+  const avgMargins = contested
+    .map(r => Math.abs(parseNumber(r.margin_pct)))
+    .filter(v => !Number.isNaN(v));
+  const avgMargin = avgMargins.length
+    ? (avgMargins.reduce((a, b) => a + b, 0) / avgMargins.length).toFixed(1) + "%"
+    : "N/A";
+
+  const closest = contested
+    .map(r => ({ race: r, margin: Math.abs(parseNumber(r.margin_pct)) }))
+    .filter(x => !Number.isNaN(x.margin))
+    .sort((a, b) => a.margin - b.margin)[0];
+
+  overlay.innerHTML = `
+    <div class="gender-overlay-title">${state.year} ${state.chamber === "house" ? "House" : "Senate"} Competitiveness</div>
+    <div class="gender-stat-main">
+      <div class="gender-mini-card">
+        <div class="gender-label">Toss-up seats</div>
+        <div class="gender-value">${categories.tossup}</div>
+        <div class="gender-detail">Margin under 5%</div>
+      </div>
+      <div class="gender-mini-card">
+        <div class="gender-label">Competitive seats</div>
+        <div class="gender-value">${categories.competitive}</div>
+        <div class="gender-detail">Margin 5–10%</div>
+      </div>
+    </div>
+    <div class="gender-mini-card" style="margin-bottom:8px;">
+      <div class="gender-label">Average contested margin</div>
+      <div class="gender-value">${avgMargin}</div>
+      <div class="gender-detail">Excludes uncontested seats</div>
+    </div>
+    <div class="gender-detail"><strong>Seat categories</strong></div>
+    ${["tossup", "competitive", "lean", "likely", "safe", "uncontested"].map(cat => `
+      <div class="gender-party-row">
+        <span><span class="gender-dot" style="background:${competitivenessColor(cat)}"></span>${competitivenessLabel(cat)}</span>
+        <strong>${categories[cat]}</strong>
+      </div>
+    `).join("")}
+    <div class="gender-detail" style="margin-top:8px;">
+      Closest race: ${closest ? `${formatDistrictLabel(closest.race)} — ${closest.race.margin_pct}` : "N/A"}
+    </div>
   `;
 }
 
@@ -1018,14 +1131,16 @@ function renderDistrictList() {
     const isWoman = genderRecord && genderRecord.is_woman === true;
     const leftColor = state.view === "gender" && isWoman ? partyColors.WOMAN : partyColor(r.winner_party);
     const genderText = isWoman ? " · Woman-held seat" : "";
+    const compCategory = competitivenessCategory(r);
+    const compText = state.view === "competitiveness" ? ` · ${competitivenessLabel(compCategory)}` : "";
     return `
-      <div class="district-item" data-key="${key}" style="border-left-color:${leftColor}">
+      <div class="district-item" data-key="${key}" style="border-left-color:${state.view === "competitiveness" ? competitivenessColor(compCategory) : leftColor}">
         <div class="district-item-top">
           <span>${partyLabel(r.winner_party)}</span>
           <span>District ${r.district_number}</span>
         </div>
         <div class="district-item-name">${r.winner_candidate}</div>
-        <div class="district-item-detail">Margin: ${r.margin_votes || "N/A"} votes (${r.margin_pct || "N/A"})${uncontested}${genderText}</div>
+        <div class="district-item-detail">Margin: ${r.margin_votes || "N/A"} votes (${r.margin_pct || "N/A"})${uncontested}${genderText}${compText}</div>
       </div>
     `;
   }).join("");
@@ -1058,7 +1173,8 @@ function addLegend() {
     const title =
       state.view === "party" ? "Winner Party" :
       state.view === "uncontested" ? "Uncontested Seats" :
-      "Gender Parity";
+      state.view === "gender" ? "Gender Parity" :
+      "Competitiveness";
     div.innerHTML = `<div class="legend-title">${title}</div>`;
 
     if (state.view === "party") {
@@ -1077,6 +1193,15 @@ function addLegend() {
       div.innerHTML += `
         <div><span class="swatch" style="background:${partyColors.WOMAN}"></span>Woman-held seat</div>
         <div><span class="swatch" style="background:#d1d5db"></span>Other seat</div>
+      `;
+    } else if (state.view === "competitiveness") {
+      div.innerHTML += `
+        <div><span class="swatch" style="background:${partyColors.TOSSUP}"></span>Toss-up (&lt;5%)</div>
+        <div><span class="swatch" style="background:${partyColors.COMPETITIVE}"></span>Competitive (5–10%)</div>
+        <div><span class="swatch" style="background:${partyColors.LEAN}"></span>Lean (10–20%)</div>
+        <div><span class="swatch" style="background:${partyColors.LIKELY}"></span>Likely (20–35%)</div>
+        <div><span class="swatch" style="background:${partyColors.SAFE}"></span>Safe (&gt;35%)</div>
+        <div><span class="swatch" style="background:${partyColors.UNCONTESTED}"></span>Uncontested</div>
       `;
     }
     return div;
@@ -1126,7 +1251,7 @@ function setupControls() {
 
 function refresh() {
   syncButtons();
-  document.body.classList.toggle("gender-mode", state.view === "gender");
+  document.body.classList.toggle("gender-mode", state.view === "gender" || state.view === "competitiveness");
   setTimeout(() => map.invalidateSize(), 50);
   selectedLayer = null;
   selectedKey = null;
