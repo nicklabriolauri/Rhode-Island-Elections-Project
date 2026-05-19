@@ -752,6 +752,100 @@
       margin-top: 4px;
     }
 
+
+    /* Final analytical-panel layout fixes */
+    .gender-overlay,
+    .gender-overlay.compact-competitiveness,
+    .uncontested-map-overlay {
+      top: 8px !important;
+      right: 10px !important;
+      width: 315px !important;
+      max-width: calc(100vw - 24px) !important;
+      max-height: calc(100dvh - 125px) !important;
+      overflow-y: auto !important;
+      padding: 10px !important;
+      border-radius: 14px !important;
+    }
+
+    .gender-overlay-title {
+      font-size: 14px !important;
+      margin-bottom: 6px !important;
+      line-height: 1.2 !important;
+    }
+
+    .competitiveness-explainer,
+    .uncontested-explainer {
+      font-size: 10.5px !important;
+      line-height: 1.28 !important;
+      padding: 7px 8px !important;
+      margin: 4px 0 7px 0 !important;
+    }
+
+    .gender-stat-main {
+      gap: 6px !important;
+      margin: 6px 0 !important;
+    }
+
+    .gender-mini-card {
+      padding: 6px 7px !important;
+      border-radius: 10px !important;
+    }
+
+    .gender-label {
+      font-size: 9.5px !important;
+      line-height: 1.12 !important;
+      letter-spacing: .05em !important;
+    }
+
+    .gender-value {
+      font-size: 19px !important;
+      margin-top: 2px !important;
+      line-height: 1.05 !important;
+    }
+
+    .gender-detail {
+      font-size: 10.5px !important;
+      line-height: 1.25 !important;
+      margin-top: 3px !important;
+    }
+
+    .competitiveness-scale-note {
+      font-size: 11px !important;
+      margin: 5px 0 3px 0 !important;
+    }
+
+    .gender-party-row {
+      font-size: 10.8px !important;
+      padding: 2px 5px !important;
+      min-height: 20px !important;
+    }
+
+    .gender-dot {
+      width: 8px !important;
+      height: 8px !important;
+      margin-right: 5px !important;
+    }
+
+    .filter-clear {
+      padding: 3px 7px !important;
+      font-size: 10px !important;
+      margin-top: 5px !important;
+    }
+
+    .method-note.full-scale-note,
+    .method-note {
+      font-size: 9.8px !important;
+      line-height: 1.26 !important;
+      padding: 6px 7px !important;
+      margin-top: 5px !important;
+      max-height: none !important;
+      overflow: visible !important;
+    }
+
+    body.uncontested-focus #uncontestedOverlay {
+      display: block !important;
+    }
+
 </style>
 </head>
 <body>
@@ -1214,26 +1308,26 @@ function renderUncontestedOverview(races) {
     <div class="gender-overlay-title">${state.year} ${state.chamber === "house" ? "House" : "Senate"} Uncontested Seats</div>
 
     <div class="uncontested-explainer">
-      Uncontested races indicate limited electoral competition: the winner faced no substantial named opponent, aside from possible write-in votes.
+      Uncontested seats identify districts where the winner faced no substantial named opponent. Write-in votes may be present but do not constitute a competitive contest.
     </div>
 
     <div class="gender-stat-main">
       <div class="gender-mini-card">
         <div class="gender-label">Uncontested seats</div>
         <div class="gender-value">${uncontested.length}</div>
-        <div class="gender-detail">${uncontestedPct} of seats</div>
+        <div class="gender-detail">${uncontestedPct} of chamber</div>
       </div>
       <div class="gender-mini-card">
         <div class="gender-label">Contested seats</div>
         <div class="gender-value">${contested.length}</div>
-        <div class="gender-detail">${contestedPct} of seats</div>
+        <div class="gender-detail">${contestedPct} of chamber</div>
       </div>
     </div>
 
     <div class="competitiveness-scale-note"><strong>Party makeup of uncontested seats</strong></div>
     ${partyRows || '<div class="gender-detail">No uncontested seats.</div>'}
 
-    <div class="gender-stat-main" style="margin-top:8px;">
+    <div class="gender-stat-main" style="margin-top:6px;">
       <div class="gender-mini-card">
         <div class="gender-label">Women-held uncontested</div>
         <div class="gender-value">${womenUncontested.length}</div>
@@ -1241,8 +1335,8 @@ function renderUncontestedOverview(races) {
       </div>
       <div class="gender-mini-card clickable-stat" id="largestUncontestedCard">
         <div class="gender-label">Largest uncontested margin</div>
-        <div class="gender-value" style="font-size:17px;">${largestUncontested ? formatDistrictLabel(largestUncontested.race) : "N/A"}</div>
-        <div class="gender-detail">${largestUncontested ? `${largestUncontested.race.margin_pct}` : "No uncontested seats"}</div>
+        <div class="gender-value" style="font-size:15px;">${largestUncontested ? formatDistrictLabel(largestUncontested.race) : "N/A"}</div>
+        <div class="gender-detail">${largestUncontested ? largestUncontested.race.margin_pct : "No uncontested seats"}</div>
         ${largestUncontested ? '<div class="click-hint">Click to zoom/select</div>' : ''}
       </div>
     </div>
@@ -1253,6 +1347,7 @@ function renderUncontestedOverview(races) {
     largestCard.addEventListener("click", () => selectRaceByDistrict(largestUncontested.race.district_number));
   }
 }
+
 
 function renderCompetitivenessOverlay(races) {
   const overlay = document.getElementById("genderOverlay");
@@ -1335,9 +1430,7 @@ function renderCompetitivenessOverlay(races) {
     <button type="button" class="filter-clear" id="clearCompFilter">${active === "all" ? "Showing all categories" : "Clear category filter"}</button>
 
     <div class="method-note full-scale-note">
-      <strong>Scale:</strong> Toss-up = margin &lt;5 percentage points; Competitive = 5–10;
-      Lean = 10–20; Likely = 20–35; Safe = &gt;35. Uncontested races are reported separately
-      because they do not represent two-candidate electoral competition.
+      <strong>Scale:</strong> Toss-up &lt;5 points; Competitive 5–10; Lean 10–20; Likely 20–35; Safe &gt;35. Uncontested races are separate because they lack meaningful two-candidate competition.
     </div>
   `;
 
@@ -1638,6 +1731,7 @@ function setupControls() {
 function refresh() {
   syncButtons();
   document.body.classList.toggle("gender-mode", state.view === "gender" || state.view === "competitiveness");
+  document.body.classList.toggle("uncontested-focus", state.view === "uncontested");
   document.body.classList.toggle("uncontested-focus", state.view === "uncontested");
   const genderOverlay = document.getElementById("genderOverlay");
   const uncontestedOverlay = document.getElementById("uncontestedOverlay");
