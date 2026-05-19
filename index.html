@@ -309,7 +309,56 @@
       #factsPanel { border-left: 0; border-top: 1px solid var(--line); }
       .era-badge { margin-left: 0; }
     }
-  </style>
+  
+    /* City-label/navigation improvements */
+    .leaflet-tile-pane {
+      filter: grayscale(45%) saturate(85%) contrast(105%);
+      opacity: 0.72;
+    }
+    .leaflet-control-layers,
+    .leaflet-control-zoom,
+    .leaflet-control-custom {
+      border: 1px solid var(--line) !important;
+      border-radius: 12px !important;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(15,23,42,.14) !important;
+    }
+    .leaflet-control-custom button {
+      display: block;
+      width: 100%;
+      border: 0;
+      background: white;
+      padding: 8px 10px;
+      text-align: left;
+      font-weight: 800;
+      color: var(--text);
+      cursor: pointer;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .leaflet-control-custom button:last-child {
+      border-bottom: 0;
+    }
+    .leaflet-control-custom button:hover {
+      background: #f1f5f9;
+    }
+    .city-marker {
+      background: rgba(15, 23, 42, 0.86);
+      color: white;
+      border-radius: 999px;
+      padding: 3px 7px;
+      font-size: 11px;
+      font-weight: 800;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(0,0,0,.25);
+      border: 1px solid rgba(255,255,255,.7);
+    }
+    .city-marker.major {
+      font-size: 12px;
+      padding: 4px 8px;
+      background: rgba(17, 28, 61, 0.92);
+    }
+
+</style>
 </head>
 <body>
 <header>
@@ -393,11 +442,86 @@ const partyNames = {
 };
 
 const map = L.map("map", { zoomControl: true }).setView([41.70, -71.55], 9);
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+const osmDim = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 18,
-  opacity: 0.28,
+  opacity: 0.72,
   attribution: "&copy; OpenStreetMap contributors"
 }).addTo(map);
+
+const labelsStrong = L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+  maxZoom: 20,
+  opacity: 0.92,
+  attribution: "&copy; OpenStreetMap contributors &copy; CARTO"
+});
+
+const majorCities = [
+  ["Providence", 41.8240, -71.4128, true],
+  ["Cranston", 41.7798, -71.4373, true],
+  ["Warwick", 41.7001, -71.4162, true],
+  ["Pawtucket", 41.8787, -71.3826, true],
+  ["Woonsocket", 42.0029, -71.5148, true],
+  ["Newport", 41.4901, -71.3128, true],
+  ["East Providence", 41.8137, -71.3701, false],
+  ["North Providence", 41.8501, -71.4662, false],
+  ["Cumberland", 41.9668, -71.4328, false],
+  ["Lincoln", 41.9212, -71.4350, false],
+  ["Johnston", 41.8210, -71.5065, false],
+  ["Coventry", 41.6886, -71.5626, false],
+  ["West Warwick", 41.6969, -71.5219, false],
+  ["South Kingstown", 41.4472, -71.5249, false],
+  ["Narragansett", 41.4501, -71.4495, false],
+  ["Bristol", 41.6771, -71.2662, false],
+  ["Barrington", 41.7407, -71.3087, false],
+  ["Tiverton", 41.6259, -71.2134, false],
+  ["Westerly", 41.3776, -71.8273, false],
+  ["North Kingstown", 41.5501, -71.4662, false],
+  ["Smithfield", 41.9220, -71.5495, false],
+  ["Burrillville", 41.9668, -71.6840, false]
+];
+
+const cityLabels = L.layerGroup(
+  majorCities.map(([name, lat, lng, major]) =>
+    L.marker([lat, lng], {
+      interactive: false,
+      icon: L.divIcon({
+        className: "",
+        html: `<div class="city-marker ${major ? "major" : ""}">${name}</div>`,
+        iconSize: null,
+        iconAnchor: [0, 0]
+      })
+    })
+  )
+).addTo(map);
+
+L.control.layers(
+  {
+    "Dim street map": osmDim,
+    "Light map with stronger labels": labelsStrong
+  },
+  {
+    "City labels": cityLabels
+  },
+  { position: "topright", collapsed: false }
+).addTo(map);
+
+const quickNav = L.control({ position: "topleft" });
+quickNav.onAdd = function() {
+  const div = L.DomUtil.create("div", "leaflet-control-custom");
+  div.innerHTML = `
+    <button type="button" data-zoom="state">Rhode Island</button>
+    <button type="button" data-zoom="providence">Providence area</button>
+    <button type="button" data-zoom="south">South County</button>
+    <button type="button" data-zoom="newport">Newport/East Bay</button>
+  `;
+  L.DomEvent.disableClickPropagation(div);
+  div.querySelector('[data-zoom="state"]').addEventListener("click", () => map.setView([41.70, -71.55], 9));
+  div.querySelector('[data-zoom="providence"]').addEventListener("click", () => map.setView([41.82, -71.43], 11));
+  div.querySelector('[data-zoom="south"]').addEventListener("click", () => map.setView([41.43, -71.55], 10));
+  div.querySelector('[data-zoom="newport"]').addEventListener("click", () => map.setView([41.58, -71.28], 10));
+  return div;
+};
+quickNav.addTo(map);
+
 
 function getEra(year) {
   return Number(year) <= 2020 ? "old" : "new";
