@@ -549,6 +549,41 @@
       }
     }
 
+
+    .competitiveness-explainer {
+      margin-top: 8px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      color: #7c2d12;
+      font-size: 12px;
+      line-height: 1.35;
+    }
+    .competitiveness-scale-note {
+      color: #475569;
+      font-size: 11.5px;
+      line-height: 1.35;
+      margin: 7px 0 4px 0;
+    }
+
+
+    body.gender-mode .leaflet-bottom.leaflet-left {
+      margin-left: 12px;
+      margin-bottom: 12px;
+    }
+    body.gender-mode .legend {
+      max-width: 240px;
+      font-size: 12px;
+    }
+    .gender-overlay {
+      max-height: calc(100dvh - 230px);
+      overflow-y: auto;
+    }
+    .gender-label {
+      line-height: 1.2;
+    }
+
 </style>
 </head>
 <body>
@@ -930,6 +965,66 @@ function renderSeatChart(partyCounts, totalSeats) {
 
 
 
+
+function renderUncontestedOverview(races) {
+  const grid = document.getElementById("factsGrid");
+  if (!grid) return;
+
+  const uncontested = races.filter(r => r.is_uncontested);
+  const contested = races.filter(r => !r.is_uncontested);
+
+  const uncontestedPct = races.length ? ((uncontested.length / races.length) * 100).toFixed(1) + "%" : "N/A";
+  const contestedPct = races.length ? ((contested.length / races.length) * 100).toFixed(1) + "%" : "N/A";
+
+  const partyCounts = {};
+  uncontested.forEach(r => {
+    const p = r.winner_party || "OTHER";
+    partyCounts[p] = (partyCounts[p] || 0) + 1;
+  });
+
+  const partySummary = Object.entries(partyCounts)
+    .sort((a, b) => b[1] - a[1])
+    .map(([party, count]) => `${count} ${partyLabel(party)}`)
+    .join(" · ") || "No uncontested seats";
+
+  const womenUncontested = uncontested.filter(r => isWomanHeldSeat(state.chamber, state.year, r.district_number));
+  const womenUncontestedPct = uncontested.length ? ((womenUncontested.length / uncontested.length) * 100).toFixed(1) + "%" : "N/A";
+
+  const largestUncontested = uncontested
+    .map(r => ({ race: r, margin: Math.abs(parseNumber(r.margin_pct)) }))
+    .filter(x => !Number.isNaN(x.margin))
+    .sort((a, b) => b.margin - a.margin)[0];
+
+  grid.innerHTML = `
+    <div class="fact-card">
+      <div class="fact-label">Uncontested seats</div>
+      <div class="fact-value">${uncontested.length}</div>
+      <div class="fact-detail">${uncontestedPct} of all seats</div>
+    </div>
+    <div class="fact-card">
+      <div class="fact-label">Contested seats</div>
+      <div class="fact-value">${contested.length}</div>
+      <div class="fact-detail">${contestedPct} of all seats</div>
+    </div>
+    <div class="fact-card">
+      <div class="fact-label">Party makeup</div>
+      <div class="fact-value">${uncontested.length}</div>
+      <div class="fact-detail">${partySummary}</div>
+    </div>
+    <div class="fact-card">
+      <div class="fact-label">Women-held uncontested seats</div>
+      <div class="fact-value">${womenUncontested.length}</div>
+      <div class="fact-detail">${womenUncontestedPct} of uncontested seats</div>
+    </div>
+    <div class="fact-card">
+      <div class="fact-label">Largest uncontested margin</div>
+      <div class="fact-value">${largestUncontested ? formatDistrictLabel(largestUncontested.race) : "N/A"}</div>
+      <div class="fact-detail">${largestUncontested ? `${largestUncontested.race.winner_candidate} (${largestUncontested.race.margin_pct})` : "No uncontested seats"}</div>
+    </div>
+  `;
+}
+
+
 function renderCompetitivenessOverlay(races) {
   const overlay = document.getElementById("genderOverlay");
   if (!overlay) return;
@@ -947,6 +1042,8 @@ function renderCompetitivenessOverlay(races) {
   const competitiveUnder10 = categories.tossup + categories.competitive;
   const competitivePct = races.length ? ((competitiveUnder10 / races.length) * 100).toFixed(1) + "%" : "N/A";
 
+  const contestedPct = races.length ? ((contested.length / races.length) * 100).toFixed(1) + "%" : "N/A";
+
   const avgMargins = contested
     .map(r => Math.abs(parseNumber(r.margin_pct)))
     .filter(v => !Number.isNaN(v));
@@ -961,32 +1058,49 @@ function renderCompetitivenessOverlay(races) {
 
   overlay.innerHTML = `
     <div class="gender-overlay-title">${state.year} ${state.chamber === "house" ? "House" : "Senate"} Competitiveness</div>
-    <div class="gender-stat-main">
+
+    <div class="competitiveness-explainer">
+      Darker orange districts are more competitive. Lighter districts are safer or uncontested.
+      Competitive seats are defined as races decided by less than 10 percentage points.
+    </div>
+
+    <div class="gender-stat-main" style="margin-top:10px;">
       <div class="gender-mini-card">
         <div class="gender-label">Competitive seats</div>
         <div class="gender-value">${competitiveUnder10}</div>
         <div class="gender-detail">under 10% margin</div>
       </div>
       <div class="gender-mini-card">
-        <div class="gender-label">Share of chamber</div>
+        <div class="gender-label">Competitive seats of all seats in %</div>
         <div class="gender-value">${competitivePct}</div>
-        <div class="gender-detail">of all seats</div>
+        <div class="gender-detail">under 10% margin</div>
       </div>
     </div>
-    <div class="gender-mini-card" style="margin-bottom:8px;">
-      <div class="gender-label">Average contested margin</div>
-      <div class="gender-value">${avgMargin}</div>
-      <div class="gender-detail">Excludes uncontested seats</div>
+
+    <div class="gender-stat-main">
+      <div class="gender-mini-card">
+        <div class="gender-label">Contested seats</div>
+        <div class="gender-value">${contested.length}</div>
+        <div class="gender-detail">${contestedPct} of seats</div>
+      </div>
+      <div class="gender-mini-card">
+        <div class="gender-label">Avg. margin</div>
+        <div class="gender-value">${avgMargin}</div>
+        <div class="gender-detail">contested only</div>
+      </div>
     </div>
-    <div class="gender-detail"><strong>Competitiveness scale</strong></div>
+
+    <div class="competitiveness-scale-note"><strong>Scale</strong></div>
     ${["tossup", "competitive", "lean", "likely", "safe", "uncontested"].map(cat => `
       <div class="gender-party-row">
         <span><span class="gender-dot" style="background:${competitivenessColor(cat)}"></span>${competitivenessLabel(cat)}</span>
         <strong>${categories[cat]}</strong>
       </div>
     `).join("")}
+
     <div class="gender-detail" style="margin-top:8px;">
-      Closest race: ${closest ? `${formatDistrictLabel(closest.race)} — ${closest.race.margin_pct}` : "N/A"}
+      <strong>Closest race:</strong><br>
+      ${closest ? `${formatDistrictLabel(closest.race)} — ${closest.race.margin_pct}` : "N/A"}
     </div>
   `;
 }
@@ -1038,7 +1152,12 @@ function updateOverview() {
   document.getElementById("overviewTitle").textContent = `${state.year} ${titleChamber} Overview`;
 
   if (!races.length) {
-    document.getElementById("factsGrid").innerHTML = `<div class="error">No race records found for this selection.</div>`;
+    if (state.view === "uncontested") {
+    renderUncontestedOverview(races);
+    return;
+  }
+
+  document.getElementById("factsGrid").innerHTML = `<div class="error">No race records found for this selection.</div>`;
     return;
   }
 
@@ -1177,7 +1296,7 @@ function highlightDistrictList() {
 
 function addLegend() {
   if (legend) map.removeControl(legend);
-  legend = L.control({ position: "bottomright" });
+  legend = L.control({ position: (state.view === "gender" || state.view === "competitiveness") ? "bottomleft" : "bottomright" });
   legend.onAdd = function() {
     const div = L.DomUtil.create("div", "legend");
     const title =
