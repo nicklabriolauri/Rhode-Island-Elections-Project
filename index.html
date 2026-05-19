@@ -635,6 +635,94 @@
       backdrop-filter: blur(8px);
     }
 
+
+    /* Compact analytical panels */
+    .gender-overlay.compact-competitiveness {
+      width: 330px;
+      padding: 12px;
+      max-height: calc(100dvh - 180px);
+      overflow-y: auto;
+    }
+    .gender-overlay.compact-competitiveness .gender-overlay-title {
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+    .gender-overlay.compact-competitiveness .competitiveness-explainer {
+      font-size: 11.5px;
+      line-height: 1.32;
+      padding: 8px 10px;
+      margin-top: 4px;
+    }
+    .gender-overlay.compact-competitiveness .gender-stat-main {
+      gap: 7px;
+      margin-top: 8px !important;
+      margin-bottom: 7px;
+    }
+    .gender-overlay.compact-competitiveness .gender-mini-card {
+      padding: 7px 8px;
+    }
+    .gender-overlay.compact-competitiveness .gender-value {
+      font-size: 22px;
+    }
+    .gender-overlay.compact-competitiveness .gender-detail {
+      font-size: 11.5px;
+    }
+    .gender-overlay.compact-competitiveness .gender-party-row {
+      font-size: 11.5px;
+      padding: 3px 6px;
+    }
+    .gender-overlay.compact-competitiveness .method-note {
+      font-size: 10.8px;
+      padding: 7px 8px;
+      margin-top: 6px;
+    }
+    .gender-overlay.compact-competitiveness .filter-clear {
+      padding: 4px 8px;
+      font-size: 10.5px;
+      margin-top: 6px;
+    }
+
+    body.uncontested-focus .dashboard {
+      grid-template-columns: 1fr;
+    }
+    body.uncontested-focus #districtPanel,
+    body.uncontested-focus #factsPanel {
+      display: none;
+    }
+    body.uncontested-focus #map {
+      min-height: calc(100dvh - 150px);
+    }
+    .uncontested-map-overlay {
+      display: none;
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      z-index: 800;
+      width: 330px;
+      max-width: calc(100vw - 32px);
+      max-height: calc(100dvh - 180px);
+      overflow-y: auto;
+      background: rgba(255,255,255,.94);
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(15,23,42,.18);
+      padding: 12px;
+      backdrop-filter: blur(8px);
+    }
+    body.uncontested-focus .uncontested-map-overlay {
+      display: block;
+    }
+    .uncontested-explainer {
+      margin: 6px 0 9px 0;
+      padding: 8px 10px;
+      border-radius: 12px;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      color: #1e3a8a;
+      font-size: 11.5px;
+      line-height: 1.32;
+    }
+
 </style>
 </head>
 <body>
@@ -681,7 +769,7 @@
     <div id="districtList" class="district-list"></div>
   </aside>
 
-  <section id="map"><div id="genderOverlay" class="gender-overlay"></div></section>
+  <section id="map"><div id="genderOverlay" class="gender-overlay"></div><div id="uncontestedOverlay" class="uncontested-map-overlay"></div></section>
 
   <aside id="factsPanel">
     <div class="facts-title" id="overviewTitle">Election Overview</div>
@@ -1042,8 +1130,8 @@ function renderSeatChart(partyCounts, totalSeats) {
 
 
 function renderUncontestedOverview(races) {
-  const grid = document.getElementById("factsGrid");
-  if (!grid) return;
+  const overlay = document.getElementById("uncontestedOverlay");
+  if (!overlay) return;
 
   const uncontested = races.filter(r => r.is_uncontested);
   const contested = races.filter(r => !r.is_uncontested);
@@ -1074,43 +1162,39 @@ function renderUncontestedOverview(races) {
     .filter(x => !Number.isNaN(x.margin))
     .sort((a, b) => b.margin - a.margin)[0];
 
-  grid.innerHTML = `
-    <div class="fact-card uncontested-overlay-card">
-      <div class="facts-title" style="margin-bottom:10px;">${state.year} ${state.chamber === "house" ? "House" : "Senate"} Uncontested Seats</div>
+  overlay.innerHTML = `
+    <div class="gender-overlay-title">${state.year} ${state.chamber === "house" ? "House" : "Senate"} Uncontested Seats</div>
 
-      <div class="gender-stat-main">
-        <div class="gender-mini-card">
-          <div class="gender-label">Uncontested seats</div>
-          <div class="gender-value">${uncontested.length}</div>
-          <div class="gender-detail">${uncontestedPct} of seats</div>
-        </div>
-        <div class="gender-mini-card">
-          <div class="gender-label">Contested seats</div>
-          <div class="gender-value">${contested.length}</div>
-          <div class="gender-detail">${contestedPct} of seats</div>
-        </div>
+    <div class="uncontested-explainer">
+      Uncontested races indicate limited electoral competition: the winner faced no substantial named opponent, aside from possible write-in votes.
+    </div>
+
+    <div class="gender-stat-main">
+      <div class="gender-mini-card">
+        <div class="gender-label">Uncontested seats</div>
+        <div class="gender-value">${uncontested.length}</div>
+        <div class="gender-detail">${uncontestedPct} of seats</div>
       </div>
-
-      <div class="method-note">
-        Uncontested seats are races in which the winning candidate faced no meaningful major-party
-        or independent opposition. Write-in votes may appear, but the district is treated as lacking
-        a competitive electoral contest.
+      <div class="gender-mini-card">
+        <div class="gender-label">Contested seats</div>
+        <div class="gender-value">${contested.length}</div>
+        <div class="gender-detail">${contestedPct} of seats</div>
       </div>
+    </div>
 
-      <div class="competitiveness-scale-note"><strong>Party makeup of uncontested seats</strong></div>
-      ${partyRows || '<div class="gender-detail">No uncontested seats.</div>'}
+    <div class="competitiveness-scale-note"><strong>Party makeup of uncontested seats</strong></div>
+    ${partyRows || '<div class="gender-detail">No uncontested seats.</div>'}
 
-      <div class="gender-stat-main" style="margin-top:8px;">
-        <div class="gender-mini-card">
-          <div class="gender-label">Women-held uncontested</div>
-          <div class="gender-value">${womenUncontested.length}</div>
-          <div class="gender-detail">${womenUncontestedPct} of uncontested</div>
-        </div>
-        <div class="gender-mini-card">
-          <div class="gender-label">Largest uncontested margin</div>
-          <div class="gender-value" style="font-size:18px;">${largestUncontested ? formatDistrictLabel(largestUncontested.race) : "N/A"}</div>
-          <div class="gender-detail">${largestUncontested ? `${largestUncontested.race.winner_candidate} (${largestUncontested.race.margin_pct})` : "No uncontested seats"}</div>
-        </div>
+    <div class="gender-stat-main" style="margin-top:8px;">
+      <div class="gender-mini-card">
+        <div class="gender-label">Women-held uncontested</div>
+        <div class="gender-value">${womenUncontested.length}</div>
+        <div class="gender-detail">${womenUncontestedPct} of uncontested</div>
+      </div>
+      <div class="gender-mini-card">
+        <div class="gender-label">Largest uncontested margin</div>
+        <div class="gender-value" style="font-size:17px;">${largestUncontested ? formatDistrictLabel(largestUncontested.race) : "N/A"}</div>
+        <div class="gender-detail">${largestUncontested ? largestUncontested.race.margin_pct : "No uncontested seats"}</div>
       </div>
     </div>
   `;
@@ -1119,6 +1203,8 @@ function renderUncontestedOverview(races) {
 function renderCompetitivenessOverlay(races) {
   const overlay = document.getElementById("genderOverlay");
   if (!overlay) return;
+
+  overlay.classList.add("compact-competitiveness");
 
   const contested = races.filter(r => !r.is_uncontested);
   const categories = {
@@ -1132,8 +1218,6 @@ function renderCompetitivenessOverlay(races) {
 
   const competitiveUnder10 = categories.tossup + categories.competitive;
   const competitivePct = races.length ? ((competitiveUnder10 / races.length) * 100).toFixed(1) + "%" : "N/A";
-
-  const contestedPct = races.length ? ((contested.length / races.length) * 100).toFixed(1) + "%" : "N/A";
 
   const avgMargins = contested
     .map(r => Math.abs(parseNumber(r.margin_pct)))
@@ -1162,15 +1246,14 @@ function renderCompetitivenessOverlay(races) {
     <div class="gender-overlay-title">${state.year} ${state.chamber === "house" ? "House" : "Senate"} Competitiveness</div>
 
     <div class="competitiveness-explainer">
-      Competitiveness is measured by the winner's margin of victory in percentage points.
-      Darker districts indicate closer contests. Click a category below to isolate it on the map.
+      Competitiveness is classified by winner margin in percentage points. Lower margins indicate more electorally competitive districts.
     </div>
 
-    <div class="gender-stat-main" style="margin-top:10px;">
+    <div class="gender-stat-main">
       <div class="gender-mini-card">
         <div class="gender-label">Competitive seats</div>
         <div class="gender-value">${competitiveUnder10}</div>
-        <div class="gender-detail">margin below 10 points</div>
+        <div class="gender-detail">margin below 10 pts.</div>
       </div>
       <div class="gender-mini-card">
         <div class="gender-label">Competitive seats of all seats in %</div>
@@ -1181,30 +1264,23 @@ function renderCompetitivenessOverlay(races) {
 
     <div class="gender-stat-main">
       <div class="gender-mini-card">
-        <div class="gender-label">Contested seats</div>
-        <div class="gender-value">${contested.length}</div>
-        <div class="gender-detail">${contestedPct} of seats</div>
+        <div class="gender-label">Avg. contested margin</div>
+        <div class="gender-value">${avgMargin}</div>
+        <div class="gender-detail">excludes uncontested</div>
       </div>
       <div class="gender-mini-card">
-        <div class="gender-label">Avg. margin</div>
-        <div class="gender-value">${avgMargin}</div>
-        <div class="gender-detail">contested races only</div>
+        <div class="gender-label">Closest race</div>
+        <div class="gender-value" style="font-size:17px;">${closest ? formatDistrictLabel(closest.race) : "N/A"}</div>
+        <div class="gender-detail">${closest ? closest.race.margin_pct : ""}</div>
       </div>
     </div>
 
-    <div class="competitiveness-scale-note"><strong>Competitiveness scale</strong></div>
+    <div class="competitiveness-scale-note"><strong>Click to filter by category</strong></div>
     ${categoryRows}
     <button type="button" class="filter-clear" id="clearCompFilter">${active === "all" ? "Showing all categories" : "Clear category filter"}</button>
 
     <div class="method-note">
-      <strong>Classification:</strong> Toss-up &lt;5; Competitive 5–10; Lean 10–20;
-      Likely 20–35; Safe &gt;35 percentage points. Uncontested races are shown separately
-      because margin percentages do not represent two-candidate competition.
-    </div>
-
-    <div class="gender-detail" style="margin-top:8px;">
-      <strong>Closest race:</strong><br>
-      ${closest ? `${formatDistrictLabel(closest.race)} — ${closest.race.margin_pct}` : "N/A"}
+      Scale: Toss-up &lt;5; Competitive 5–10; Lean 10–20; Likely 20–35; Safe &gt;35 percentage points. Uncontested races are reported separately.
     </div>
   `;
 
@@ -1225,6 +1301,7 @@ function renderCompetitivenessOverlay(races) {
 
 function renderGenderOverlay(races, womenSeats, womenPct, womenPartyCounts) {
   const overlay = document.getElementById("genderOverlay");
+  if (overlay) overlay.classList.remove("compact-competitiveness");
   if (!overlay) return;
 
   const total = races.length;
@@ -1414,7 +1491,7 @@ function highlightDistrictList() {
 
 function addLegend() {
   if (legend) map.removeControl(legend);
-  legend = L.control({ position: (state.view === "gender" || state.view === "competitiveness") ? "bottomleft" : "bottomright" });
+  legend = L.control({ position: (state.view === "gender" || state.view === "competitiveness" || state.view === "uncontested") ? "bottomleft" : "bottomright" });
   legend.onAdd = function() {
     const div = L.DomUtil.create("div", "legend");
     const title =
@@ -1490,7 +1567,7 @@ function setupControls() {
   });
   document.getElementById("viewSelect").addEventListener("change", e => {
     state.view = e.target.value;
-    state.competitivenessFilter = "all";
+    if (state.view !== "competitiveness") state.competitivenessFilter = "all";
     refresh();
   });
   document.getElementById("districtSearch").addEventListener("input", renderDistrictList);
@@ -1500,6 +1577,11 @@ function setupControls() {
 function refresh() {
   syncButtons();
   document.body.classList.toggle("gender-mode", state.view === "gender" || state.view === "competitiveness");
+  document.body.classList.toggle("uncontested-focus", state.view === "uncontested");
+  const genderOverlay = document.getElementById("genderOverlay");
+  const uncontestedOverlay = document.getElementById("uncontestedOverlay");
+  if (state.view !== "gender" && state.view !== "competitiveness" && genderOverlay) genderOverlay.innerHTML = "";
+  if (state.view !== "uncontested" && uncontestedOverlay) uncontestedOverlay.innerHTML = "";
   setTimeout(() => map.invalidateSize(), 50);
   selectedLayer = null;
   selectedKey = null;
