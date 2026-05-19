@@ -195,6 +195,7 @@
       margin-top: 2px;
     }
     #map {
+      position: relative;
       height: 100%;
       width: 100%;
       background: #f8fafc;
@@ -329,12 +330,147 @@
       background: rgba(255,255,255,.16);
     }
 
+
+    header {
+      padding: 14px 22px;
+    }
+    header h1 {
+      font-size: 25px;
+    }
+    header p {
+      margin-top: 4px;
+      font-size: 14px;
+    }
+    .site-nav {
+      margin-top: 8px;
+    }
+    body.gender-mode .dashboard {
+      grid-template-columns: 1fr;
+    }
+    body.gender-mode #districtPanel,
+    body.gender-mode #factsPanel {
+      display: none;
+    }
+    body.gender-mode #map {
+      min-height: calc(100vh - 155px);
+    }
+    .gender-overlay {
+      display: none;
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      z-index: 800;
+      width: 300px;
+      max-width: calc(100vw - 32px);
+      background: rgba(255,255,255,.94);
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(15,23,42,.18);
+      padding: 14px;
+      backdrop-filter: blur(8px);
+    }
+    body.gender-mode .gender-overlay {
+      display: block;
+    }
+    .gender-overlay-title {
+      font-size: 16px;
+      font-weight: 900;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+    .gender-stat-main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .gender-mini-card {
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 9px 10px;
+    }
+    .gender-label {
+      color: #64748b;
+      font-size: 10.5px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-weight: 900;
+    }
+    .gender-value {
+      color: #0f172a;
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin-top: 2px;
+    }
+    .gender-detail {
+      color: #475569;
+      font-size: 12px;
+      line-height: 1.35;
+      margin-top: 4px;
+    }
+    .gender-bar {
+      height: 10px;
+      background: #e5e7eb;
+      border-radius: 999px;
+      overflow: hidden;
+      margin: 8px 0 10px 0;
+    }
+    .gender-bar-fill {
+      height: 100%;
+      background: #7c3aed;
+      border-radius: 999px;
+    }
+    .gender-party-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      color: #334155;
+      font-size: 12px;
+      padding: 4px 0;
+      border-top: 1px solid #eef2f7;
+    }
+    .gender-party-row:first-of-type {
+      border-top: 0;
+    }
+    .gender-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      margin-right: 6px;
+      vertical-align: -1px;
+    }
+    @media (max-width: 800px) {
+      body.gender-mode #map {
+        min-height: 620px;
+      }
+      .gender-overlay {
+        position: static;
+        width: auto;
+        margin: 10px;
+        max-width: none;
+      }
+      body.gender-mode .dashboard {
+        display: flex;
+        flex-direction: column;
+      }
+      body.gender-mode #map {
+        order: 1;
+      }
+      body.gender-mode .gender-overlay {
+        order: 0;
+      }
+    }
+
 </style>
 </head>
 <body>
 <header>
   <h1>RIEP - Rhode Island Elections Project</h1>
-  <p><strong>Rhode Island Legislative Election Map</strong><br>Interactive map with RI GIS coastline-clipped 2012–2020 boundaries and 2022–2024 boundaries.</p>
+  <p>Interactive Rhode Island legislative election map, 2012–2024.</p>
   <nav class="site-nav">
     <a href="index.html">Map</a>
     <a href="methodology.html">Methodology</a>
@@ -365,7 +501,7 @@
   <span id="eraBadge" class="era-badge"></span>
 </div>
 
-<div class="note">Hover over a district for a quick label. Click a district for candidates, votes, parties, percentages, total votes, margin, and uncontested status.</div>
+<div class="note">Hover over districts for labels. Click a district for full race details.</div>
 
 <main class="dashboard">
   <aside id="districtPanel">
@@ -374,7 +510,7 @@
     <div id="districtList" class="district-list"></div>
   </aside>
 
-  <section id="map"></section>
+  <section id="map"><div id="genderOverlay" class="gender-overlay"></div></section>
 
   <aside id="factsPanel">
     <div class="facts-title" id="overviewTitle">Election Overview</div>
@@ -651,6 +787,48 @@ function renderSeatChart(partyCounts, totalSeats) {
   `;
 }
 
+
+function renderGenderOverlay(races, womenSeats, womenPct, womenPartyCounts) {
+  const overlay = document.getElementById("genderOverlay");
+  if (!overlay) return;
+
+  const total = races.length;
+  const menOrOther = total - womenSeats.length;
+  const partyRows = Object.entries(womenPartyCounts)
+    .sort((a, b) => b[1] - a[1])
+    .map(([party, count]) => `
+      <div class="gender-party-row">
+        <span><span class="gender-dot" style="background:${partyColor(party)}"></span>${partyLabel(party)}</span>
+        <strong>${count}</strong>
+      </div>
+    `).join("");
+
+  const womenContested = womenSeats.filter(r => !r.is_uncontested).length;
+  const womenUncontested = womenSeats.filter(r => r.is_uncontested).length;
+
+  overlay.innerHTML = `
+    <div class="gender-overlay-title">${state.year} ${state.chamber === "house" ? "House" : "Senate"} Gender Parity</div>
+    <div class="gender-stat-main">
+      <div class="gender-mini-card">
+        <div class="gender-label">Women-held seats</div>
+        <div class="gender-value">${womenSeats.length}</div>
+        <div class="gender-detail">of ${total} total seats</div>
+      </div>
+      <div class="gender-mini-card">
+        <div class="gender-label">Share of chamber</div>
+        <div class="gender-value">${womenPct}</div>
+        <div class="gender-detail">women-held seats</div>
+      </div>
+    </div>
+    <div class="gender-bar"><div class="gender-bar-fill" style="width:${womenPct}"></div></div>
+    <div class="gender-detail"><strong>Political makeup of women-held seats</strong></div>
+    ${partyRows || '<div class="gender-detail">No women-held seats coded.</div>'}
+    <div class="gender-detail" style="margin-top:8px;">
+      ${womenUncontested} women-held seats were uncontested; ${womenContested} were contested.
+    </div>
+  `;
+}
+
 function updateOverview() {
   const races = racesForSelection();
   const titleChamber = state.chamber === "house" ? "House" : "Senate";
@@ -701,6 +879,8 @@ function updateOverview() {
     .sort((a, b) => b[1] - a[1])
     .map(([party, count]) => `${count} ${partyLabel(party)}`)
     .join(" · ") || "No women-held seats coded";
+
+  renderGenderOverlay(races, womenSeats, womenPct, womenPartyCounts);
 
   document.getElementById("factsGrid").innerHTML = `
     <div class="fact-card">
@@ -862,6 +1042,7 @@ function setupControls() {
 
 function refresh() {
   syncButtons();
+  document.body.classList.toggle("gender-mode", state.view === "gender");
   selectedLayer = null;
   selectedKey = null;
   featureLayerByKey = {};
@@ -878,6 +1059,7 @@ function refresh() {
     onEachFeature
   }).addTo(map);
 
+  setTimeout(() => map.invalidateSize(), 0);
   map.fitBounds(layer.getBounds(), { padding: [15, 15] });
   addLegend();
   updateEraBadge();
