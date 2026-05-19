@@ -465,6 +465,90 @@
       }
     }
 
+
+    /* Viewport-fit fix: prevent top/bottom cutoff on laptops and mobile browsers */
+    html, body {
+      height: 100%;
+    }
+    body {
+      overflow: auto;
+    }
+    header {
+      padding: 10px 22px;
+    }
+    header h1 {
+      font-size: 23px;
+      line-height: 1.12;
+    }
+    header p {
+      font-size: 13px;
+      margin-top: 3px;
+      line-height: 1.25;
+    }
+    .site-nav {
+      margin-top: 6px;
+    }
+    .site-nav a {
+      padding: 5px 10px;
+      font-size: 12px;
+    }
+    .controls {
+      min-height: 52px;
+      height: auto;
+      padding: 8px 22px;
+    }
+    .note {
+      height: auto;
+      min-height: 34px;
+      padding: 8px 22px;
+    }
+    .dashboard {
+      height: calc(100dvh - 150px);
+      min-height: 480px;
+    }
+    #map {
+      min-height: 480px;
+    }
+    body.gender-mode #map {
+      min-height: calc(100dvh - 150px);
+    }
+    @supports not (height: 100dvh) {
+      .dashboard {
+        height: calc(100vh - 150px);
+      }
+      body.gender-mode #map {
+        min-height: calc(100vh - 150px);
+      }
+    }
+    @media (max-height: 760px) {
+      header {
+        padding: 8px 20px;
+      }
+      header h1 {
+        font-size: 21px;
+      }
+      header p {
+        font-size: 12px;
+      }
+      .site-nav {
+        margin-top: 5px;
+      }
+      .controls {
+        padding: 7px 20px;
+      }
+      .note {
+        padding: 7px 20px;
+        font-size: 12px;
+      }
+      .dashboard {
+        height: calc(100dvh - 134px);
+        min-height: 420px;
+      }
+      body.gender-mode #map {
+        min-height: calc(100dvh - 134px);
+      }
+    }
+
 </style>
 </head>
 <body>
@@ -1043,6 +1127,7 @@ function setupControls() {
 function refresh() {
   syncButtons();
   document.body.classList.toggle("gender-mode", state.view === "gender");
+  setTimeout(() => map.invalidateSize(), 50);
   selectedLayer = null;
   selectedKey = null;
   featureLayerByKey = {};
@@ -1088,6 +1173,10 @@ async function loadData() {
   geojsons = Object.fromEntries(geoEntries);
   raceData = await fetchJson("data/race_data.json");
 }
+
+window.addEventListener("resize", () => {
+  setTimeout(() => map.invalidateSize(), 100);
+});
 
 setupControls();
 loadData()
