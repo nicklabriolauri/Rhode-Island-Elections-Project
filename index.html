@@ -723,6 +723,35 @@
       line-height: 1.32;
     }
 
+
+    .gender-overlay.compact-competitiveness,
+    .uncontested-map-overlay {
+      max-height: calc(100dvh - 165px);
+      overflow-y: auto;
+      scrollbar-width: thin;
+    }
+    .method-note.full-scale-note {
+      max-height: none;
+      overflow: visible;
+      font-size: 11px;
+      line-height: 1.38;
+    }
+    .clickable-stat {
+      cursor: pointer;
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+    }
+    .clickable-stat:hover {
+      transform: translateY(-1px);
+      border-color: #93c5fd;
+      box-shadow: 0 6px 18px rgba(37, 99, 235, .14);
+    }
+    .click-hint {
+      font-size: 10.5px;
+      color: #2563eb;
+      font-weight: 800;
+      margin-top: 4px;
+    }
+
 </style>
 </head>
 <body>
@@ -1129,6 +1158,25 @@ function renderSeatChart(partyCounts, totalSeats) {
 
 
 
+
+function selectRaceByDistrict(districtNumber) {
+  let targetLayer = null;
+  map.eachLayer(layer => {
+    if (layer.feature && Number(getFeatureDistrict(layer.feature)) === Number(districtNumber)) {
+      targetLayer = layer;
+    }
+  });
+  if (targetLayer) {
+    selectedLayer = targetLayer;
+    targetLayer.setStyle({ weight: 3.2, color: "#111827" });
+    map.fitBounds(targetLayer.getBounds(), { padding: [40, 40] });
+    const race = getRace(state.chamber, state.year, districtNumber);
+    if (race) {
+      showRace(race);
+    }
+  }
+}
+
 function renderUncontestedOverview(races) {
   const overlay = document.getElementById("uncontestedOverlay");
   if (!overlay) return;
@@ -1191,13 +1239,19 @@ function renderUncontestedOverview(races) {
         <div class="gender-value">${womenUncontested.length}</div>
         <div class="gender-detail">${womenUncontestedPct} of uncontested</div>
       </div>
-      <div class="gender-mini-card">
+      <div class="gender-mini-card clickable-stat" id="largestUncontestedCard">
         <div class="gender-label">Largest uncontested margin</div>
         <div class="gender-value" style="font-size:17px;">${largestUncontested ? formatDistrictLabel(largestUncontested.race) : "N/A"}</div>
-        <div class="gender-detail">${largestUncontested ? largestUncontested.race.margin_pct : "No uncontested seats"}</div>
+        <div class="gender-detail">${largestUncontested ? `${largestUncontested.race.margin_pct}` : "No uncontested seats"}</div>
+        ${largestUncontested ? '<div class="click-hint">Click to zoom/select</div>' : ''}
       </div>
     </div>
   `;
+
+  const largestCard = overlay.querySelector("#largestUncontestedCard");
+  if (largestCard && largestUncontested) {
+    largestCard.addEventListener("click", () => selectRaceByDistrict(largestUncontested.race.district_number));
+  }
 }
 
 function renderCompetitivenessOverlay(races) {
@@ -1268,10 +1322,11 @@ function renderCompetitivenessOverlay(races) {
         <div class="gender-value">${avgMargin}</div>
         <div class="gender-detail">excludes uncontested</div>
       </div>
-      <div class="gender-mini-card">
+      <div class="gender-mini-card clickable-stat" id="closestRaceCard">
         <div class="gender-label">Closest race</div>
         <div class="gender-value" style="font-size:17px;">${closest ? formatDistrictLabel(closest.race) : "N/A"}</div>
         <div class="gender-detail">${closest ? closest.race.margin_pct : ""}</div>
+        ${closest ? '<div class="click-hint">Click to zoom/select</div>' : ''}
       </div>
     </div>
 
@@ -1279,8 +1334,10 @@ function renderCompetitivenessOverlay(races) {
     ${categoryRows}
     <button type="button" class="filter-clear" id="clearCompFilter">${active === "all" ? "Showing all categories" : "Clear category filter"}</button>
 
-    <div class="method-note">
-      Scale: Toss-up &lt;5; Competitive 5–10; Lean 10–20; Likely 20–35; Safe &gt;35 percentage points. Uncontested races are reported separately.
+    <div class="method-note full-scale-note">
+      <strong>Scale:</strong> Toss-up = margin &lt;5 percentage points; Competitive = 5–10;
+      Lean = 10–20; Likely = 20–35; Safe = &gt;35. Uncontested races are reported separately
+      because they do not represent two-candidate electoral competition.
     </div>
   `;
 
@@ -1296,6 +1353,10 @@ function renderCompetitivenessOverlay(races) {
       state.competitivenessFilter = "all";
       refresh();
     });
+  }
+  const closestCard = overlay.querySelector("#closestRaceCard");
+  if (closestCard && closest) {
+    closestCard.addEventListener("click", () => selectRaceByDistrict(closest.race.district_number));
   }
 }
 
