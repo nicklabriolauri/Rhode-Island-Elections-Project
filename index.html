@@ -629,12 +629,12 @@ const partyColors = {
   OTHER: "#8a8a8a",
   WOMAN: "#7c3aed",
   WOMAN_STROKE: "#5b21b6",
-  TOSSUP: "#f97316",
-  COMPETITIVE: "#facc15",
-  LEAN: "#84cc16",
-  LIKELY: "#38bdf8",
-  SAFE: "#64748b",
-  UNCONTESTED: "#cbd5e1"
+  TOSSUP: "#9a3412",
+  COMPETITIVE: "#ea580c",
+  LEAN: "#f59e0b",
+  LIKELY: "#fde68a",
+  SAFE: "#fef3c7",
+  UNCONTESTED: "#e5e7eb"
 };
 
 const partyNames = {
@@ -816,7 +816,11 @@ function styleFeature(feature) {
     const category = competitivenessCategory(race);
     fill = competitivenessColor(category);
     stroke = category === "uncontested" ? "#94a3b8" : "#334155";
-    fillOpacity = category === "unknown" ? 0.18 : 0.68;
+    fillOpacity =
+      category === "unknown" ? 0.18 :
+      category === "safe" ? 0.42 :
+      category === "uncontested" ? 0.32 :
+      0.72;
     weight = category === "tossup" || category === "competitive" ? 1.9 : 1.25;
   } else if (race) {
     if (state.view === "party") {
@@ -940,6 +944,9 @@ function renderCompetitivenessOverlay(races) {
     uncontested: races.filter(r => r.is_uncontested).length
   };
 
+  const competitiveUnder10 = categories.tossup + categories.competitive;
+  const competitivePct = races.length ? ((competitiveUnder10 / races.length) * 100).toFixed(1) + "%" : "N/A";
+
   const avgMargins = contested
     .map(r => Math.abs(parseNumber(r.margin_pct)))
     .filter(v => !Number.isNaN(v));
@@ -956,14 +963,14 @@ function renderCompetitivenessOverlay(races) {
     <div class="gender-overlay-title">${state.year} ${state.chamber === "house" ? "House" : "Senate"} Competitiveness</div>
     <div class="gender-stat-main">
       <div class="gender-mini-card">
-        <div class="gender-label">Toss-up seats</div>
-        <div class="gender-value">${categories.tossup}</div>
-        <div class="gender-detail">Margin under 5%</div>
+        <div class="gender-label">Competitive seats</div>
+        <div class="gender-value">${competitiveUnder10}</div>
+        <div class="gender-detail">under 10% margin</div>
       </div>
       <div class="gender-mini-card">
-        <div class="gender-label">Competitive seats</div>
-        <div class="gender-value">${categories.competitive}</div>
-        <div class="gender-detail">Margin 5–10%</div>
+        <div class="gender-label">Share of chamber</div>
+        <div class="gender-value">${competitivePct}</div>
+        <div class="gender-detail">of all seats</div>
       </div>
     </div>
     <div class="gender-mini-card" style="margin-bottom:8px;">
@@ -971,7 +978,7 @@ function renderCompetitivenessOverlay(races) {
       <div class="gender-value">${avgMargin}</div>
       <div class="gender-detail">Excludes uncontested seats</div>
     </div>
-    <div class="gender-detail"><strong>Seat categories</strong></div>
+    <div class="gender-detail"><strong>Competitiveness scale</strong></div>
     ${["tossup", "competitive", "lean", "likely", "safe", "uncontested"].map(cat => `
       <div class="gender-party-row">
         <span><span class="gender-dot" style="background:${competitivenessColor(cat)}"></span>${competitivenessLabel(cat)}</span>
@@ -983,7 +990,6 @@ function renderCompetitivenessOverlay(races) {
     </div>
   `;
 }
-
 
 function renderGenderOverlay(races, womenSeats, womenPct, womenPartyCounts) {
   const overlay = document.getElementById("genderOverlay");
@@ -1077,7 +1083,11 @@ function updateOverview() {
     .map(([party, count]) => `${count} ${partyLabel(party)}`)
     .join(" · ") || "No women-held seats coded";
 
-  renderGenderOverlay(races, womenSeats, womenPct, womenPartyCounts);
+  if (state.view === "gender") {
+    renderGenderOverlay(races, womenSeats, womenPct, womenPartyCounts);
+  } else if (state.view === "competitiveness") {
+    renderCompetitivenessOverlay(races);
+  }
 
   document.getElementById("factsGrid").innerHTML = `
     <div class="fact-card">
