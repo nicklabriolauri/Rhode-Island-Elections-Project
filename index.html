@@ -310,52 +310,28 @@
       .era-badge { margin-left: 0; }
     }
   
-    /* City-label/navigation improvements */
+    /* Subtle Rhode Island place labels */
     .leaflet-tile-pane {
-      filter: grayscale(45%) saturate(85%) contrast(105%);
-      opacity: 0.72;
+      filter: grayscale(60%) saturate(80%) contrast(102%);
+      opacity: 0.62;
     }
-    .leaflet-control-layers,
-    .leaflet-control-zoom,
-    .leaflet-control-custom {
-      border: 1px solid var(--line) !important;
-      border-radius: 12px !important;
-      overflow: hidden;
-      box-shadow: 0 4px 16px rgba(15,23,42,.14) !important;
-    }
-    .leaflet-control-custom button {
-      display: block;
-      width: 100%;
-      border: 0;
-      background: white;
-      padding: 8px 10px;
-      text-align: left;
-      font-weight: 800;
-      color: var(--text);
-      cursor: pointer;
-      border-bottom: 1px solid #e5e7eb;
-    }
-    .leaflet-control-custom button:last-child {
-      border-bottom: 0;
-    }
-    .leaflet-control-custom button:hover {
-      background: #f1f5f9;
-    }
-    .city-marker {
-      background: rgba(15, 23, 42, 0.86);
-      color: white;
-      border-radius: 999px;
-      padding: 3px 7px;
+    .ri-place-label {
+      color: #111827;
       font-size: 11px;
       font-weight: 800;
+      letter-spacing: -0.01em;
       white-space: nowrap;
-      box-shadow: 0 2px 8px rgba(0,0,0,.25);
-      border: 1px solid rgba(255,255,255,.7);
+      text-shadow:
+        -1px -1px 0 rgba(255,255,255,.92),
+         1px -1px 0 rgba(255,255,255,.92),
+        -1px  1px 0 rgba(255,255,255,.92),
+         1px  1px 0 rgba(255,255,255,.92),
+         0 1px 4px rgba(255,255,255,.9);
+      pointer-events: none;
     }
-    .city-marker.major {
+    .ri-place-label.major {
       font-size: 12px;
-      padding: 4px 8px;
-      background: rgba(17, 28, 61, 0.92);
+      font-weight: 900;
     }
 
 </style>
@@ -442,85 +418,66 @@ const partyNames = {
 };
 
 const map = L.map("map", { zoomControl: true }).setView([41.70, -71.55], 9);
-const osmDim = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 18,
-  opacity: 0.72,
+  opacity: 0.38,
   attribution: "&copy; OpenStreetMap contributors"
 }).addTo(map);
 
-const labelsStrong = L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-  maxZoom: 20,
-  opacity: 0.92,
-  attribution: "&copy; OpenStreetMap contributors &copy; CARTO"
-});
-
-const majorCities = [
+const riPlaceLabels = [
   ["Providence", 41.8240, -71.4128, true],
   ["Cranston", 41.7798, -71.4373, true],
   ["Warwick", 41.7001, -71.4162, true],
   ["Pawtucket", 41.8787, -71.3826, true],
   ["Woonsocket", 42.0029, -71.5148, true],
   ["Newport", 41.4901, -71.3128, true],
-  ["East Providence", 41.8137, -71.3701, false],
+  ["East Providence", 41.8137, -71.3701, true],
   ["North Providence", 41.8501, -71.4662, false],
   ["Cumberland", 41.9668, -71.4328, false],
   ["Lincoln", 41.9212, -71.4350, false],
   ["Johnston", 41.8210, -71.5065, false],
   ["Coventry", 41.6886, -71.5626, false],
   ["West Warwick", 41.6969, -71.5219, false],
+  ["North Kingstown", 41.5501, -71.4662, false],
   ["South Kingstown", 41.4472, -71.5249, false],
   ["Narragansett", 41.4501, -71.4495, false],
   ["Bristol", 41.6771, -71.2662, false],
   ["Barrington", 41.7407, -71.3087, false],
   ["Tiverton", 41.6259, -71.2134, false],
   ["Westerly", 41.3776, -71.8273, false],
-  ["North Kingstown", 41.5501, -71.4662, false],
   ["Smithfield", 41.9220, -71.5495, false],
-  ["Burrillville", 41.9668, -71.6840, false]
+  ["Burrillville", 41.9668, -71.6840, false],
+  ["Portsmouth", 41.6023, -71.2503, false],
+  ["Middletown", 41.5457, -71.2914, false],
+  ["Jamestown", 41.4970, -71.3673, false],
+  ["Little Compton", 41.5090, -71.1714, false],
+  ["Warren", 41.7304, -71.2826, false],
+  ["Scituate", 41.8318, -71.5873, false],
+  ["Glocester", 41.8934, -71.6715, false],
+  ["Foster", 41.8537, -71.7581, false],
+  ["Exeter", 41.5776, -71.5373, false],
+  ["Richmond", 41.4945, -71.6709, false],
+  ["Hopkinton", 41.4612, -71.7776, false],
+  ["Charlestown", 41.3832, -71.6417, false],
+  ["West Greenwich", 41.6370, -71.6600, false],
+  ["East Greenwich", 41.6604, -71.4559, false],
+  ["Central Falls", 41.8907, -71.3923, false],
+  ["New Shoreham", 41.1723, -71.5578, false]
 ];
 
-const cityLabels = L.layerGroup(
-  majorCities.map(([name, lat, lng, major]) =>
+const riLabelsLayer = L.layerGroup(
+  riPlaceLabels.map(([name, lat, lng, major]) =>
     L.marker([lat, lng], {
       interactive: false,
       icon: L.divIcon({
         className: "",
-        html: `<div class="city-marker ${major ? "major" : ""}">${name}</div>`,
-        iconSize: null,
+        html: `<div class="ri-place-label ${major ? "major" : ""}">${name}</div>`,
+        iconSize: [1, 1],
         iconAnchor: [0, 0]
       })
     })
   )
 ).addTo(map);
-
-L.control.layers(
-  {
-    "Dim street map": osmDim,
-    "Light map with stronger labels": labelsStrong
-  },
-  {
-    "City labels": cityLabels
-  },
-  { position: "topright", collapsed: false }
-).addTo(map);
-
-const quickNav = L.control({ position: "topleft" });
-quickNav.onAdd = function() {
-  const div = L.DomUtil.create("div", "leaflet-control-custom");
-  div.innerHTML = `
-    <button type="button" data-zoom="state">Rhode Island</button>
-    <button type="button" data-zoom="providence">Providence area</button>
-    <button type="button" data-zoom="south">South County</button>
-    <button type="button" data-zoom="newport">Newport/East Bay</button>
-  `;
-  L.DomEvent.disableClickPropagation(div);
-  div.querySelector('[data-zoom="state"]').addEventListener("click", () => map.setView([41.70, -71.55], 9));
-  div.querySelector('[data-zoom="providence"]').addEventListener("click", () => map.setView([41.82, -71.43], 11));
-  div.querySelector('[data-zoom="south"]').addEventListener("click", () => map.setView([41.43, -71.55], 10));
-  div.querySelector('[data-zoom="newport"]').addEventListener("click", () => map.setView([41.58, -71.28], 10));
-  return div;
-};
-quickNav.addTo(map);
 
 
 function getEra(year) {
