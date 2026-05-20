@@ -5,7 +5,81 @@
   <title>RIEP - Rhode Island Elections Project</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+
+/* ===== RIEP Mobile CEO Final behavior ===== */
+(function(){
+  function $id(id){ return document.getElementById(id); }
+  function partyNorm(p){ return (typeof normalizeParty === 'function') ? normalizeParty(p) : String(p||'OTHER').toUpperCase(); }
+  function currentRaces(){ return (typeof racesForSelection === 'function') ? racesForSelection() : []; }
+  function summary(){
+    const races = currentRaces();
+    const counts = {};
+    races.forEach(r => { const p = partyNorm(r.winner_party); counts[p]=(counts[p]||0)+1; });
+    return {total:races.length, dem:counts.DEM||0, rep:counts.REP||0, other:Math.max(0, races.length-(counts.DEM||0)-(counts.REP||0))};
+  }
+  function setScores(race){
+    const chamber = state.chamber === 'house' ? 'House' : 'Senate';
+    const kicker=$id('mobileResults')?.querySelector('.mobile-results-kicker');
+    const meta=$id('mobileResults')?.querySelector('.mobile-results-meta');
+    const dem=$id('mobileDemScore'), rep=$id('mobileRepScore'), total=$id('mobileTotalSeats');
+    const card=$id('mobileResults');
+    if(!kicker||!meta||!dem||!rep||!total||!card) return;
+    const s=summary();
+    if(race){
+      const p=partyNorm(race.winner_party);
+      kicker.textContent=`District ${race.district_number}`;
+      meta.textContent=`${race.winner_candidate || 'Winner unavailable'} · ${p}`;
+      total.textContent=(race.is_uncontested ? 'Uncontested' : 'Contested') + (race.margin_pct ? ` · ${race.margin_pct}` : '');
+    } else {
+      kicker.textContent='Rhode Island';
+      meta.textContent=`${chamber} · ${state.year}`;
+      total.textContent=s.total ? `${s.total} Total Seats` : 'Tap a district';
+    }
+    dem.textContent=s.dem || '0'; rep.textContent=s.rep || '0';
+    const angle=s.total?Math.max(0,Math.min(180,(s.dem/s.total)*180)):90;
+    card.style.setProperty('--dem-angle', angle+'deg');
+  }
+  window.updateMobileResults=setScores;
+
+  const oldSync = syncButtons;
+  syncButtons = function(){
+    oldSync();
+    const y=$id('mobileYearSelect'); if(y && y.value!==state.year) y.value=state.year;
+  };
+
+  const oldSetup = setupControls;
+  setupControls = function(){
+    oldSetup();
+    const y=$id('mobileYearSelect');
+    if(y && !y.dataset.bound){
+      y.value=state.year; y.dataset.bound='1';
+      y.addEventListener('change', e => { state.year=e.target.value; refresh(); });
+    }
+  };
+
+  const oldShow = showRace;
+  showRace = function(race, lyr){
+    if(selectedLayer && selectedLayer!==lyr && layer) layer.resetStyle(selectedLayer);
+    selectedLayer=lyr; selectedKey=`${state.chamber}|${state.year}|${race.district_number}`;
+    if(lyr && lyr.setStyle) lyr.setStyle({weight:4,color:'#ffffff',fillOpacity:.78});
+    if(window.matchMedia('(max-width: 760px)').matches && map && lyr && lyr.getBounds){
+      map.fitBounds(lyr.getBounds(),{padding:[28,28],maxZoom:12});
+    } else {
+      oldShow(race,lyr);
+    }
+    if(typeof highlightDistrictList==='function') highlightDistrictList();
+    setScores(race);
+  };
+
+  const oldRefresh = refresh;
+  refresh = function(){
+    oldRefresh();
+    setTimeout(function(){ setScores(); if(map) map.invalidateSize(); },80);
+  };
+})();
+
+</script>
   <style>
     :root {
       --navy: #111c3d;
@@ -973,318 +1047,61 @@ body.gender-mode .gender-overlay {
 }
 
 
-/* =========================================================
-   RIEP Mobile Product Build — map-first, no desktop sidebars
-   ========================================================= */
-.mobile-year-select { display: inline-block; }
 
-.mobile-results {
-  display: none;
+/* ===== RIEP Mobile CEO Final: true mobile app layout ===== */
+:root{
+  --navy:#07142f; --navy2:#14265a; --ink:#0f172a; --muted:#64748b; --line:#e5e7eb;
+  --blue:#2b6cb0; --red:#dc2626; --card:#ffffff;
 }
-
-/* This mobile file is intentionally map-first at every width. */
-#districtPanel,
-#factsPanel {
-  display: none !important;
-}
-
-.dashboard {
-  display: block !important;
-  height: calc(100dvh - 176px) !important;
-  min-height: 540px !important;
-}
-
-#map {
-  height: 100% !important;
-  min-height: 540px !important;
-  width: 100% !important;
-}
-
-.year-timeline {
-  display: none !important;
-}
-
-.year-control-group .mobile-year-select {
-  min-width: 132px;
-}
-
-@media (max-width: 760px) {
-  :root { --mobile-pad: 14px; }
-
-  html, body {
-    height: 100%;
-    width: 100%;
-    overflow: hidden !important;
-    background: #f8fafc;
-  }
-
-  body {
-    display: flex;
-    flex-direction: column;
-  }
-
-  header {
-    flex: 0 0 auto;
-    padding: 13px var(--mobile-pad) 12px !important;
-    background: linear-gradient(135deg, #0f172a 0%, #172554 100%) !important;
-    box-shadow: 0 8px 22px rgba(15, 23, 42, .18);
-    z-index: 20;
-  }
-
-  header h1 {
-    font-size: clamp(20px, 5.1vw, 27px) !important;
-    line-height: 1.05 !important;
-    letter-spacing: -0.045em !important;
-    white-space: normal;
-  }
-
-  header p {
-    margin-top: 6px !important;
-    font-size: 13px !important;
-    line-height: 1.25 !important;
-    color: rgba(255,255,255,.82) !important;
-  }
-
-  .site-nav {
-    margin-top: 11px !important;
-    gap: 8px !important;
-    overflow-x: auto;
-    padding-bottom: 1px;
-    scrollbar-width: none;
-  }
-  .site-nav::-webkit-scrollbar { display: none; }
-
-  .site-nav a {
-    flex: 0 0 auto;
-    padding: 7px 12px !important;
-    border-radius: 999px !important;
-    font-size: 13px !important;
-    background: rgba(255,255,255,.10) !important;
-  }
-
-  .controls {
-    flex: 0 0 auto;
-    display: grid !important;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px 10px !important;
-    height: auto !important;
-    min-height: 0 !important;
-    padding: 12px var(--mobile-pad) !important;
-    background: rgba(255,255,255,.96) !important;
-    border-bottom: 1px solid #e5e7eb !important;
-    box-shadow: 0 2px 14px rgba(15, 23, 42, .06);
-    z-index: 15;
-  }
-
-  .control-group {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 6px !important;
-    min-width: 0;
-  }
-
-  .control-label {
-    font-size: 10px !important;
-    line-height: 1 !important;
-    letter-spacing: .09em !important;
-    color: #64748b !important;
-    font-weight: 900 !important;
-  }
-
-  .segmented {
-    width: 100% !important;
-    display: grid !important;
-    grid-template-columns: 1fr 1fr;
-    padding: 4px !important;
-    border-radius: 16px !important;
-    background: #eef2f7 !important;
-    border: 1px solid #dde5ef !important;
-    gap: 4px !important;
-  }
-
-  .segmented button {
-    width: 100%;
-    min-height: 40px;
-    padding: 8px 6px !important;
-    font-size: 15px !important;
-    border-radius: 13px !important;
-  }
-
-  .mobile-year-select,
-  #viewSelect {
-    width: 100% !important;
-    min-height: 48px !important;
-    border-radius: 16px !important;
-    border: 1px solid #d8e0ea !important;
-    background: #ffffff !important;
-    color: #0f172a !important;
-    font-size: 16px !important;
-    font-weight: 850 !important;
-    padding: 10px 38px 10px 13px !important;
-    box-shadow: 0 2px 8px rgba(15,23,42,.05) !important;
-  }
-
-  .control-group:nth-child(3) {
-    grid-column: 1 / -1;
-  }
-
-  .era-badge {
-    grid-column: 1 / -1;
-    justify-self: start;
-    margin-left: 0 !important;
-    max-width: 100%;
-    white-space: normal !important;
-    font-size: 12px !important;
-    line-height: 1.25 !important;
-    padding: 7px 11px !important;
-    border-radius: 999px !important;
-    background: #eef2ff !important;
-    color: #3730a3 !important;
-  }
-
-  .mobile-hidden-note,
-  .note {
-    display: none !important;
-  }
-
-  .mobile-results {
-    display: block;
-    flex: 0 0 auto;
-    padding: 11px var(--mobile-pad) 12px;
-    background: #ffffff;
-    border-bottom: 1px solid #e5e7eb;
-    box-shadow: 0 2px 10px rgba(15, 23, 42, .05);
-    z-index: 14;
-  }
-
-  .mobile-results-kicker {
-    color: #64748b;
-    font-size: 10.5px;
-    line-height: 1;
-    letter-spacing: .10em;
-    text-transform: uppercase;
-    font-weight: 900;
-  }
-
-  .mobile-results-title {
-    margin-top: 5px;
-    font-size: 17px;
-    line-height: 1.15;
-    font-weight: 950;
-    letter-spacing: -0.035em;
-    color: #0f172a;
-  }
-
-  .mobile-results-meta {
-    margin-top: 4px;
-    font-size: 12.5px;
-    line-height: 1.25;
-    color: #475569;
-    font-weight: 650;
-  }
-
-  main.dashboard {
-    flex: 1 1 auto;
-    display: block !important;
-    height: auto !important;
-    min-height: 0 !important;
-    position: relative;
-  }
-
-  #map {
-    height: 100% !important;
-    min-height: 0 !important;
-    width: 100% !important;
-    background: #f8fafc !important;
-  }
-
-  #districtPanel,
-  #factsPanel,
-  .mobile-tabbar,
-  .mobile-sheet-close {
-    display: none !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
-  }
-
-  .leaflet-control-zoom {
-    margin-left: 12px !important;
-    margin-top: 12px !important;
-    border: 0 !important;
-    box-shadow: 0 8px 24px rgba(15,23,42,.18) !important;
-  }
-
-  .leaflet-control-zoom a {
-    width: 42px !important;
-    height: 42px !important;
-    line-height: 42px !important;
-    font-size: 22px !important;
-    border-color: #e5e7eb !important;
-  }
-
-  .legend {
-    max-width: 164px !important;
-    padding: 8px 10px !important;
-    font-size: 11px !important;
-    line-height: 1.25 !important;
-    border-radius: 14px !important;
-    box-shadow: 0 8px 24px rgba(15,23,42,.14) !important;
-  }
-
-  .legend-title { font-size: 11.5px !important; }
-  .swatch { width: 11px !important; height: 11px !important; }
-
-  body.focus-mode .gender-overlay,
-  body.focus-view .gender-overlay,
-  body.gender-mode .gender-overlay {
-    left: 12px !important;
-    right: 12px !important;
-    bottom: 12px !important;
-    top: auto !important;
-    width: auto !important;
-    max-width: none !important;
-    max-height: 36dvh !important;
-    overflow-y: auto !important;
-    border-radius: 18px !important;
-    padding: 12px !important;
-    z-index: 900 !important;
-  }
-}
-
-@media (max-width: 380px) {
-  .controls {
-    grid-template-columns: 1fr;
-  }
-  .control-group:nth-child(3) { grid-column: auto; }
-  .era-badge { grid-column: auto; }
-}
-
+html,body{height:100%;margin:0;overflow:hidden;background:#f8fafc;font-family:Arial,Helvetica,sans-serif;color:var(--ink);} 
+body.riep-mobile-app{display:flex;flex-direction:column;min-height:100dvh;overflow:hidden;background:#f8fafc;}
+.app-hero{flex:0 0 auto;padding:22px 16px 18px;background:radial-gradient(circle at 90% 5%,rgba(255,255,255,.14),transparent 28%),linear-gradient(135deg,#07142f 0%,#14265a 100%);color:#fff;box-shadow:0 2px 18px rgba(15,23,42,.18);}
+.hero-topline{display:grid;grid-template-columns:34px 1fr 54px;gap:14px;align-items:start;}
+.hamburger{width:32px;margin-top:12px;display:flex;flex-direction:column;gap:6px}.hamburger span{height:4px;border-radius:999px;background:rgba(255,255,255,.9)}
+.app-hero h1{margin:0;font-size:28px;line-height:1.05;letter-spacing:-.055em;font-weight:950;color:white;}
+.app-hero p{margin:10px 0 0;font-size:16px;line-height:1.25;color:rgba(255,255,255,.88)}
+.ri-mark{width:52px;height:52px;border:2px solid rgba(255,255,255,.7);border-radius:50%;display:grid;place-items:center;font-size:30px;background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
+.site-nav{display:flex;gap:10px;margin-top:16px;overflow:visible}.site-nav a{color:white;text-decoration:none;border:1px solid rgba(255,255,255,.30);border-radius:999px;padding:9px 18px;font-size:14px;font-weight:850;background:rgba(255,255,255,.06)}.site-nav a.active,.site-nav a:first-child{background:#fff;color:#14265a;box-shadow:0 6px 18px rgba(0,0,0,.16)}
+.controls{flex:0 0 auto;display:grid;grid-template-columns:130px minmax(0,1fr);gap:12px 14px;align-items:center;padding:18px 16px 14px;background:#fff;border-bottom:1px solid #eef2f7;box-shadow:0 6px 24px rgba(15,23,42,.04)}
+.control-group{display:contents}.control-label{align-self:center;color:#64748b;font-size:14px;line-height:1.05;text-transform:uppercase;letter-spacing:.08em;font-weight:950}.segmented{justify-self:start;display:flex;background:#f1f5f9;border:1px solid #dbe3ef;border-radius:999px;padding:4px;gap:4px;box-shadow:inset 0 1px 2px rgba(15,23,42,.06)}.segmented button{border:0;border-radius:999px;background:transparent;color:#475569;padding:10px 20px;min-height:44px;font-size:17px;font-weight:900}.segmented button.active{background:#14265a;color:#fff;box-shadow:0 8px 18px rgba(20,38,90,.24)}
+#yearButtons,.year-timeline,.note,.mobile-hidden-note{display:none!important;visibility:hidden!important;width:0!important;height:0!important;overflow:hidden!important;position:absolute!important;left:-9999px!important}.mobile-select,select#viewSelect,select#mobileYearSelect{width:100%;min-width:0;min-height:48px;border:1px solid #dbe3ef;border-radius:999px;background:#fff;color:#0f172a;padding:0 44px 0 20px;font-size:17px!important;font-weight:850;box-shadow:0 3px 12px rgba(15,23,42,.07);appearance:auto}.era-badge{grid-column:1 / -1;justify-self:start;margin:4px 0 0 0;white-space:normal;border-radius:999px;background:#eef2ff;color:#3730a3;font-size:14px;font-weight:900;padding:10px 16px;max-width:100%}
+.mobile-results{flex:0 0 auto;margin:14px 16px 14px;display:grid;grid-template-columns:1fr 1.15fr 20px;gap:10px;align-items:center;background:#fff;border:1px solid #dbe3ef;border-radius:18px;padding:14px 14px 12px;box-shadow:0 6px 24px rgba(15,23,42,.08);position:relative;overflow:hidden}.mobile-results:before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:5px;border-radius:999px;background:linear-gradient(#2563eb,#60a5fa)}.mobile-results-left{padding-left:12px}.mobile-results-kicker{font-size:16px;font-weight:950;letter-spacing:-.03em;color:#0f172a}.mobile-results-meta{margin-top:4px;font-size:14px;color:#64748b;font-weight:750}.mobile-score{margin-top:16px;font-size:30px;line-height:1;font-weight:950;letter-spacing:-.05em;color:#0f172a}.score-dash{margin:0 8px;color:#334155}.score-labels{display:flex;gap:52px;margin-top:8px;font-size:13px;font-weight:950}.score-labels span:first-child{color:#2b6cb0}.score-labels span:last-child{color:#dc2626}.mobile-results-chart{min-width:0;text-align:center}.mini-arc{height:82px;max-width:170px;margin:0 auto;border-radius:170px 170px 0 0;background:conic-gradient(from 270deg,#2b6cb0 0deg,#2b6cb0 var(--dem-angle,180deg),#dc2626 var(--dem-angle,180deg),#dc2626 180deg,transparent 180deg);position:relative;overflow:hidden}.mini-arc:after{content:"";position:absolute;left:28%;right:28%;bottom:0;height:56%;border-radius:120px 120px 0 0;background:#fff}.mobile-total-seats{margin-top:4px;font-size:13px;color:#64748b;font-weight:800}.mobile-card-chevron{border:0;background:transparent;color:#94a3b8;font-size:36px;line-height:1;font-weight:300}
+.dashboard{flex:1 1 auto;display:block!important;grid-template-columns:1fr!important;height:auto!important;min-height:0!important;position:relative;overflow:hidden;background:#eef2f7}.dashboard:before{content:"";display:block;height:1px;background:#e5e7eb}#map{height:100%!important;min-height:0!important;width:100%!important;background:#eef2f7!important;position:relative}.leaflet-container{font-family:Arial,Helvetica,sans-serif}.leaflet-tile-pane{filter:grayscale(95%) saturate(75%) contrast(96%)!important;opacity:.48!important}.leaflet-control-zoom{margin-left:16px!important;margin-top:16px!important;border:0!important;box-shadow:0 12px 28px rgba(15,23,42,.18)!important}.leaflet-control-zoom a{width:44px!important;height:44px!important;line-height:44px!important;font-size:24px!important;border-color:#e5e7eb!important}.legend{display:none!important}
+#districtPanel,#factsPanel{display:none!important;visibility:hidden!important;pointer-events:none!important;position:absolute!important;left:-99999px!important;width:0!important;height:0!important;overflow:hidden!important}body.focus-view .gender-overlay,body.focus-mode .gender-overlay,body.gender-mode .gender-overlay{left:12px!important;right:12px!important;bottom:12px!important;top:auto!important;width:auto!important;max-width:none!important;max-height:34dvh!important;overflow:auto!important;border-radius:18px!important;padding:12px!important;z-index:900!important;background:rgba(255,255,255,.96)!important}
+@media (min-width:761px){body.riep-mobile-app{max-width:430px;margin:0 auto;box-shadow:0 0 0 1px #e5e7eb,0 20px 80px rgba(15,23,42,.16)}}
+@media (max-width:390px){.app-hero h1{font-size:25px}.app-hero p{font-size:14px}.controls{grid-template-columns:115px minmax(0,1fr);gap:10px}.control-label{font-size:12px}.segmented button{padding:9px 16px;font-size:15px}.mobile-select,select#viewSelect,select#mobileYearSelect{font-size:15px!important;min-height:45px}.mobile-score{font-size:26px}.mini-arc{height:70px}.site-nav a{padding:8px 14px}}
 
 </style>
 </head>
-<body>
-<header>
-  <h1>RIEP - Rhode Island Elections Project</h1>
-  <p>Interactive Rhode Island legislative election map, 2012–2024.</p>
-  <nav class="site-nav">
-    <a href="index.html">Map</a>
-    <a href="methodology.html">Methodology</a>
-    <a href="about.html">About</a>
-  </nav>
+<body class="riep-mobile-app">
+<header class="app-hero">
+  <div class="hero-topline">
+    <div class="hamburger" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="hero-copy">
+      <h1>RIEP – Rhode Island<br>Elections Project</h1>
+      <p>Interactive legislative election map, 2012–2024.</p>
+      <nav class="site-nav">
+        <a href="index.html" class="active">Map</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+    <div class="ri-mark" aria-hidden="true">⚓</div>
+  </div>
 </header>
 
-<div class="controls">
-  <div class="control-group">
+<section class="controls" aria-label="Election controls">
+  <div class="control-group chamber-control">
     <div class="control-label">Chamber</div>
     <div class="segmented" id="chamberButtons">
       <button type="button" data-value="house">House</button>
       <button type="button" data-value="senate">Senate</button>
     </div>
   </div>
+
   <div class="control-group year-control-group">
-    <label class="control-label" for="mobileYearSelect">Election year</label>
-    <select id="mobileYearSelect" class="mobile-year-select" aria-label="Election year">
+    <label class="control-label" for="mobileYearSelect">Election Year</label>
+    <select id="mobileYearSelect" class="mobile-select" aria-label="Election year">
       <option value="2012">2012</option>
       <option value="2014">2014</option>
       <option value="2016">2016</option>
@@ -1293,29 +1110,38 @@ body.gender-mode .gender-overlay {
       <option value="2022">2022</option>
       <option value="2024">2024</option>
     </select>
-    <div class="year-timeline" id="yearButtons" aria-hidden="true"></div>
+    <div class="year-timeline" id="yearButtons" hidden aria-hidden="true"></div>
   </div>
-  <div class="control-group">
-    <div class="control-label">Map view</div>
-    <select id="viewSelect">
+
+  <div class="control-group view-control-group">
+    <label class="control-label" for="viewSelect">Map View</label>
+    <select id="viewSelect" class="mobile-select" aria-label="Map view">
       <option value="party">Winner Party</option>
       <option value="uncontested">Uncontested Seats</option>
       <option value="gender">Gender Parity</option>
       <option value="competitiveness">Competitiveness</option>
     </select>
   </div>
-  <span id="eraBadge" class="era-badge"></span>
-</div>
 
-<div class="note mobile-hidden-note">Tap a district for race details.</div>
-<div id="mobileResults" class="mobile-results" aria-live="polite">
-  <div class="mobile-results-kicker">2024 House</div>
-  <div class="mobile-results-title">Tap a district to view results</div>
-  <div class="mobile-results-meta">Winner, margin, and status will appear here.</div>
-</div>
+  <span id="eraBadge" class="era-badge"></span>
+</section>
+
+<section id="mobileResults" class="mobile-results" aria-live="polite">
+  <div class="mobile-results-left">
+    <div class="mobile-results-kicker">Rhode Island</div>
+    <div class="mobile-results-meta">House · 2024</div>
+    <div class="mobile-score"><span id="mobileDemScore">—</span><span class="score-dash">–</span><span id="mobileRepScore">—</span></div>
+    <div class="score-labels"><span>DEM</span><span>REP</span></div>
+  </div>
+  <div class="mobile-results-chart" aria-hidden="true">
+    <div class="mini-arc"><div class="mini-arc-fill"></div></div>
+    <div id="mobileTotalSeats" class="mobile-total-seats">Tap a district</div>
+  </div>
+  <button class="mobile-card-chevron" type="button" aria-label="Result details">›</button>
+</section>
 
 <main class="dashboard">
-  <aside id="districtPanel">
+  <aside id="districtPanel" aria-hidden="true">
     <div class="district-panel-title">Districts</div>
     <input id="districtSearch" class="district-search" type="search" placeholder="Search district or candidate..." />
     <div id="districtList" class="district-list"></div>
@@ -1323,7 +1149,7 @@ body.gender-mode .gender-overlay {
 
   <section id="map"><div id="genderOverlay" class="gender-overlay"></div></section>
 
-  <aside id="factsPanel">
+  <aside id="factsPanel" aria-hidden="true">
     <div class="facts-title" id="overviewTitle">Election Overview</div>
     <div class="seat-card">
       <div class="seat-title">Seat composition</div>
@@ -2229,108 +2055,6 @@ loadData()
       </div>`;
     document.getElementById("factsGrid").innerHTML = `<div class="error">${err.message}</div>`;
   });
-
-/* Mobile product behavior: dropdown year + result strip + no sidebars */
-(function(){
-  function byId(id){ return document.getElementById(id); }
-
-  function safeNumber(v){
-    if (v === null || v === undefined || v === '') return '';
-    return String(v);
-  }
-
-  function summarizeSelection(){
-    const races = typeof racesForSelection === 'function' ? racesForSelection() : [];
-    const total = races.length;
-    const partyCounts = {};
-    races.forEach(r => {
-      const p = normalizeParty ? normalizeParty(r.winner_party) : (r.winner_party || 'OTHER');
-      partyCounts[p] = (partyCounts[p] || 0) + 1;
-    });
-    const dem = partyCounts.DEM || 0;
-    const rep = partyCounts.REP || 0;
-    const other = Math.max(0, total - dem - rep);
-    const parts = [`Dem ${dem}`, `Rep ${rep}`];
-    if (other) parts.push(`Other ${other}`);
-    return { total, parts: parts.join(' · ') };
-  }
-
-  window.updateMobileResults = function(race){
-    const box = byId('mobileResults');
-    if (!box) return;
-    const kicker = box.querySelector('.mobile-results-kicker');
-    const title = box.querySelector('.mobile-results-title');
-    const meta = box.querySelector('.mobile-results-meta');
-    const chamber = state.chamber === 'house' ? 'House' : 'Senate';
-    if (race) {
-      const party = typeof partyLabel === 'function' ? partyLabel(race.winner_party) : (race.winner_party || '');
-      const margin = race.margin_pct || race.margin_votes || 'N/A';
-      const status = race.is_uncontested ? 'Uncontested' : 'Contested';
-      kicker.textContent = `${state.year} ${chamber} · District ${race.district_number}`;
-      title.textContent = `${race.winner_candidate || 'Winner unavailable'} (${party})`;
-      meta.textContent = `Margin: ${safeNumber(margin)} · ${status}`;
-    } else {
-      const sum = summarizeSelection();
-      kicker.textContent = `${state.year} ${chamber}`;
-      title.textContent = sum.total ? `${sum.total} districts · ${sum.parts}` : 'Tap a district to view results';
-      meta.textContent = 'Tap any district on the map for winner, margin, and race status.';
-    }
-  };
-
-  function setupYearSelect(){
-    const select = byId('mobileYearSelect');
-    if (!select || select.dataset.ready === '1') return;
-    select.value = state.year;
-    select.dataset.ready = '1';
-    select.addEventListener('change', function(e){
-      state.year = e.target.value;
-      if (typeof refresh === 'function') refresh();
-    });
-  }
-
-  const originalSyncButtons = window.syncButtons || syncButtons;
-  syncButtons = function(){
-    originalSyncButtons();
-    const select = byId('mobileYearSelect');
-    if (select && select.value !== state.year) select.value = state.year;
-  };
-
-  const originalShowRace = window.showRace || showRace;
-  showRace = function(race, lyr){
-    if (window.matchMedia && window.matchMedia('(max-width: 760px)').matches) {
-      if (!race || !lyr) return;
-      if (selectedLayer && selectedLayer !== lyr && layer) layer.resetStyle(selectedLayer);
-      selectedLayer = lyr;
-      selectedKey = `${state.chamber}|${state.year}|${race.district_number}`;
-      lyr.setStyle({ weight: 4, color: '#0f172a', fillOpacity: 0.62 });
-      if (map && lyr.getBounds) map.fitBounds(lyr.getBounds(), { padding: [28, 28], maxZoom: 12 });
-      if (typeof highlightDistrictList === 'function') highlightDistrictList();
-      updateMobileResults(race);
-      return;
-    }
-    originalShowRace(race, lyr);
-    updateMobileResults(race);
-  };
-
-  const originalRefresh = window.refresh || refresh;
-  refresh = function(){
-    document.body.classList.remove('mobile-show-districts','mobile-show-overview');
-    originalRefresh();
-    setTimeout(function(){
-      setupYearSelect();
-      updateMobileResults();
-      if (map) map.invalidateSize();
-    }, 90);
-  };
-
-  document.addEventListener('DOMContentLoaded', function(){
-    setupYearSelect();
-    updateMobileResults();
-    setTimeout(function(){ if (map) map.invalidateSize(); }, 150);
-  });
-})();
-
-
 </script>
 </body>
 </html>
