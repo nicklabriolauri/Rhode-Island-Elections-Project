@@ -895,6 +895,17 @@ body.uncontested-focus #uncontestedOverlay { display: block !important; }
 }
 .mini-table-row strong { color: #0f172a; }
 
+
+/* PATCH: shared analytical panel for all focus views */
+body.focus-mode .dashboard{grid-template-columns:1fr;}
+body.focus-mode #districtPanel, body.focus-mode #factsPanel{display:none!important;}
+body.focus-mode #map{min-height:calc(100dvh - 150px);position:relative;}
+body.focus-mode .gender-overlay{display:block!important;top:8px!important;right:10px!important;width:315px!important;max-width:calc(100vw - 24px)!important;max-height:calc(100dvh - 125px)!important;overflow-y:auto!important;padding:10px!important;border-radius:14px!important;background:rgba(255,255,255,.96)!important;}
+.uncontested-explainer{margin:4px 0 7px 0;padding:7px 8px;border-radius:11px;background:#eff6ff;border:1px solid #bfdbfe;color:#1e3a8a;font-size:10.5px;line-height:1.28;}
+.mini-table{border-top:1px solid #e5e7eb;margin-top:6px;}
+.mini-table-row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:4px 0;border-bottom:1px solid #eef2f7;font-size:10.8px;color:#334155;}
+.mini-table-row strong{color:#0f172a;}
+
 </style>
 </head>
 <body>
@@ -941,7 +952,7 @@ body.uncontested-focus #uncontestedOverlay { display: block !important; }
     <div id="districtList" class="district-list"></div>
   </aside>
 
-  <section id="map"><div id="genderOverlay" class="gender-overlay"></div><div id="uncontestedOverlay" class="uncontested-map-overlay"></div></section>
+  <section id="map"><div id="genderOverlay" class="gender-overlay"></div></section>
 
   <aside id="factsPanel">
     <div class="facts-title" id="overviewTitle">Election Overview</div>
@@ -1322,8 +1333,9 @@ function selectRaceByDistrict(districtNumber) {
 
 
 function renderUncontestedPanel(races) {
-  const overlay = document.getElementById("uncontestedOverlay");
+  const overlay = document.getElementById("genderOverlay");
   if (!overlay) return;
+  overlay.classList.remove("compact-competitiveness");
 
   const uncontested = races.filter(r => r.is_uncontested);
   const contested = races.filter(r => !r.is_uncontested);
@@ -1335,7 +1347,6 @@ function renderUncontestedPanel(races) {
     const p = r.winner_party || "OTHER";
     partyCounts[p] = (partyCounts[p] || 0) + 1;
   });
-
   const partyRows = Object.entries(partyCounts)
     .sort((a, b) => b[1] - a[1])
     .map(([party, count]) => `
@@ -1347,7 +1358,6 @@ function renderUncontestedPanel(races) {
 
   const womenUncontested = uncontested.filter(r => isWomanHeldSeat(state.chamber, state.year, r.district_number));
   const womenUncontestedPct = uncontested.length ? ((womenUncontested.length / uncontested.length) * 100).toFixed(1) + "%" : "N/A";
-
   const largestUncontested = uncontested
     .map(r => ({ race: r, margin: Math.abs(parseNumber(r.margin_pct)) }))
     .filter(x => !Number.isNaN(x.margin))
@@ -1371,9 +1381,7 @@ function renderUncontestedPanel(races) {
       </div>
     </div>
     <div class="competitiveness-scale-note"><strong>Party makeup of uncontested seats</strong></div>
-    <div class="mini-table">
-      ${partyRows || '<div class="mini-table-row"><span>No uncontested seats</span><strong>0</strong></div>'}
-    </div>
+    <div class="mini-table">${partyRows || '<div class="mini-table-row"><span>No uncontested seats</span><strong>0</strong></div>'}</div>
     <div class="gender-stat-main" style="margin-top:7px;">
       <div class="gender-mini-card">
         <div class="gender-label">Women-held uncontested</div>
@@ -1388,9 +1396,8 @@ function renderUncontestedPanel(races) {
       </div>
     </div>
   `;
-
   const largestCard = overlay.querySelector("#largestUncontestedCard");
-  if (largestCard && largestUncontested) {
+  if (largestCard && largestUncontested && typeof selectRaceByDistrict === "function") {
     largestCard.addEventListener("click", () => selectRaceByDistrict(largestUncontested.race.district_number));
   }
 }
@@ -1776,15 +1783,11 @@ function setupControls() {
 
 function refresh() {
   syncButtons();
-  document.body.classList.toggle("uncontested-focus", state.view === "uncontested");
+  const isFocus = state.view === "gender" || state.view === "competitiveness" || state.view === "uncontested";
+  document.body.classList.toggle("focus-mode", isFocus);
   document.body.classList.toggle("gender-mode", state.view === "gender" || state.view === "competitiveness");
-  document.body.classList.toggle("gender-mode", state.view === "gender" || state.view === "competitiveness");
-  document.body.classList.toggle("uncontested-focus", state.view === "uncontested");
-  document.body.classList.toggle("uncontested-focus", state.view === "uncontested");
-  const genderOverlay = document.getElementById("genderOverlay");
-  const uncontestedOverlay = document.getElementById("uncontestedOverlay");
-  if (state.view !== "gender" && state.view !== "competitiveness" && genderOverlay) genderOverlay.innerHTML = "";
-  if (state.view !== "uncontested" && uncontestedOverlay) uncontestedOverlay.innerHTML = "";
+  const sharedOverlay = document.getElementById("genderOverlay");
+  if (!isFocus && sharedOverlay) sharedOverlay.innerHTML = "";
   setTimeout(() => map.invalidateSize(), 50);
   selectedLayer = null;
   selectedKey = null;
@@ -1807,6 +1810,7 @@ function refresh() {
   addLegend();
   updateEraBadge();
   updateOverview();
+  if (state.view === "uncontested") renderUncontestedPanel(racesForCurrent());
   renderDistrictList();
 }
 
