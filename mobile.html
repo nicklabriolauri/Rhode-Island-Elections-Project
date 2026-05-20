@@ -1,85 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var forcedView = params.get("view");
+    if (forcedView === "mobile") return;
+
+    var prefersDesktopViewport = window.matchMedia("(min-width: 761px)").matches;
+    var coarsePointer = window.matchMedia("(pointer: coarse)").matches;
+    var narrowScreen = Math.min(window.screen.width || 0, window.screen.height || 0) <= 900;
+    var shouldUseDesktop = forcedView === "desktop" || (prefersDesktopViewport && !coarsePointer) || (prefersDesktopViewport && !narrowScreen);
+    var isAlreadyDesktop = /(^|\/)index\.html($|[?#])/i.test(window.location.pathname);
+
+    if (shouldUseDesktop && !isAlreadyDesktop) {
+      var target = new URL("index.html", window.location.href);
+      if (window.location.search) target.search = window.location.search;
+      if (window.location.hash) target.hash = window.location.hash;
+      window.location.replace(target.toString());
+    }
+  })();
+  </script>
   <meta charset="utf-8" />
   <title>RIEP - Rhode Island Elections Project</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
-
-/* ===== RIEP Mobile CEO Final behavior ===== */
-(function(){
-  function $id(id){ return document.getElementById(id); }
-  function partyNorm(p){ return (typeof normalizeParty === 'function') ? normalizeParty(p) : String(p||'OTHER').toUpperCase(); }
-  function currentRaces(){ return (typeof racesForSelection === 'function') ? racesForSelection() : []; }
-  function summary(){
-    const races = currentRaces();
-    const counts = {};
-    races.forEach(r => { const p = partyNorm(r.winner_party); counts[p]=(counts[p]||0)+1; });
-    return {total:races.length, dem:counts.DEM||0, rep:counts.REP||0, other:Math.max(0, races.length-(counts.DEM||0)-(counts.REP||0))};
-  }
-  function setScores(race){
-    const chamber = state.chamber === 'house' ? 'House' : 'Senate';
-    const kicker=$id('mobileResults')?.querySelector('.mobile-results-kicker');
-    const meta=$id('mobileResults')?.querySelector('.mobile-results-meta');
-    const dem=$id('mobileDemScore'), rep=$id('mobileRepScore'), total=$id('mobileTotalSeats');
-    const card=$id('mobileResults');
-    if(!kicker||!meta||!dem||!rep||!total||!card) return;
-    const s=summary();
-    if(race){
-      const p=partyNorm(race.winner_party);
-      kicker.textContent=`District ${race.district_number}`;
-      meta.textContent=`${race.winner_candidate || 'Winner unavailable'} · ${p}`;
-      total.textContent=(race.is_uncontested ? 'Uncontested' : 'Contested') + (race.margin_pct ? ` · ${race.margin_pct}` : '');
-    } else {
-      kicker.textContent='Rhode Island';
-      meta.textContent=`${chamber} · ${state.year}`;
-      total.textContent=s.total ? `${s.total} Total Seats` : 'Tap a district';
-    }
-    dem.textContent=s.dem || '0'; rep.textContent=s.rep || '0';
-    const angle=s.total?Math.max(0,Math.min(180,(s.dem/s.total)*180)):90;
-    card.style.setProperty('--dem-angle', angle+'deg');
-  }
-  window.updateMobileResults=setScores;
-
-  const oldSync = syncButtons;
-  syncButtons = function(){
-    oldSync();
-    const y=$id('mobileYearSelect'); if(y && y.value!==state.year) y.value=state.year;
-  };
-
-  const oldSetup = setupControls;
-  setupControls = function(){
-    oldSetup();
-    const y=$id('mobileYearSelect');
-    if(y && !y.dataset.bound){
-      y.value=state.year; y.dataset.bound='1';
-      y.addEventListener('change', e => { state.year=e.target.value; refresh(); });
-    }
-  };
-
-  const oldShow = showRace;
-  showRace = function(race, lyr){
-    if(selectedLayer && selectedLayer!==lyr && layer) layer.resetStyle(selectedLayer);
-    selectedLayer=lyr; selectedKey=`${state.chamber}|${state.year}|${race.district_number}`;
-    if(lyr && lyr.setStyle) lyr.setStyle({weight:4,color:'#ffffff',fillOpacity:.78});
-    if(window.matchMedia('(max-width: 760px)').matches && map && lyr && lyr.getBounds){
-      map.fitBounds(lyr.getBounds(),{padding:[28,28],maxZoom:12});
-    } else {
-      oldShow(race,lyr);
-    }
-    if(typeof highlightDistrictList==='function') highlightDistrictList();
-    setScores(race);
-  };
-
-  const oldRefresh = refresh;
-  refresh = function(){
-    oldRefresh();
-    setTimeout(function(){ setScores(); if(map) map.invalidateSize(); },80);
-  };
-})();
-
-</script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <style>
     :root {
       --navy: #111c3d;
@@ -1071,16 +1017,65 @@ body.riep-mobile-app{display:flex;flex-direction:column;min-height:100dvh;overfl
 @media (min-width:761px){body.riep-mobile-app{max-width:430px;margin:0 auto;box-shadow:0 0 0 1px #e5e7eb,0 20px 80px rgba(15,23,42,.16)}}
 @media (max-width:390px){.app-hero h1{font-size:25px}.app-hero p{font-size:14px}.controls{grid-template-columns:115px minmax(0,1fr);gap:10px}.control-label{font-size:12px}.segmented button{padding:9px 16px;font-size:15px}.mobile-select,select#viewSelect,select#mobileYearSelect{font-size:15px!important;min-height:45px}.mobile-score{font-size:26px}.mini-arc{height:70px}.site-nav a{padding:8px 14px}}
 
+/* Mobile polish pass */
+.hero-menu-toggle{appearance:none;border:0;padding:0;background:transparent;color:#fff;cursor:pointer}
+.hero-menu-toggle .hamburger{width:34px;margin-top:12px}
+.hero-menu-toggle:focus-visible{outline:2px solid rgba(255,255,255,.65);outline-offset:4px;border-radius:12px}
+.site-nav a{transition:background .18s ease,color .18s ease,border-color .18s ease,transform .18s ease}
+.site-nav a:active{transform:translateY(1px)}
+.mobile-results{transition:transform .18s ease,box-shadow .18s ease}
+.mobile-results:active{transform:scale(.995)}
+#map{border-top-left-radius:28px;border-top-right-radius:28px;overflow:hidden;box-shadow:inset 0 1px 0 rgba(255,255,255,.7)}
+.leaflet-control-attribution{font-size:10px!important;padding:0 6px 2px!important}
+.leaflet-popup-content-wrapper{border-radius:16px}
+.leaflet-popup-content{margin:12px 14px;line-height:1.45}
+@media (max-width:760px){
+  .hero-topline{grid-template-columns:40px 1fr 56px;align-items:start}
+  .site-nav{
+    display:none;
+    flex-direction:column;
+    align-items:stretch;
+    gap:8px;
+    margin-top:14px;
+    padding:10px;
+    border-radius:18px;
+    background:rgba(255,255,255,.09);
+    border:1px solid rgba(255,255,255,.14);
+    backdrop-filter:blur(10px);
+  }
+  body.nav-open .site-nav{display:flex}
+  .site-nav a{padding:10px 14px;text-align:center}
+  .controls{
+    margin:-10px 12px 0;
+    border-radius:24px 24px 0 0;
+    position:relative;
+    z-index:10;
+  }
+  .mobile-results{
+    margin:0 12px 12px;
+    border-radius:0 0 22px 22px;
+    border-top:0;
+  }
+  .dashboard{
+    margin:0 12px 12px;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 18px 40px rgba(15,23,42,.08);
+  }
+}
+
 </style>
 </head>
 <body class="riep-mobile-app">
 <header class="app-hero">
   <div class="hero-topline">
-    <div class="hamburger" aria-hidden="true"><span></span><span></span><span></span></div>
+    <button id="menuToggle" class="hero-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">
+      <div class="hamburger" aria-hidden="true"><span></span><span></span><span></span></div>
+    </button>
     <div class="hero-copy">
       <h1>RIEP – Rhode Island<br>Elections Project</h1>
       <p>Interactive legislative election map, 2012–2024.</p>
-      <nav class="site-nav">
+      <nav id="siteNav" class="site-nav">
         <a href="index.html" class="active">Map</a>
         <a href="methodology.html">Methodology</a>
         <a href="about.html">About</a>
@@ -1523,7 +1518,7 @@ function selectRaceByDistrict(districtNumber) {
     map.fitBounds(targetLayer.getBounds(), { padding: [40, 40] });
     const race = getRace(state.chamber, state.year, districtNumber);
     if (race) {
-      showRace(race);
+      showRace(race, targetLayer);
     }
   }
 }
@@ -2055,6 +2050,144 @@ loadData()
       </div>`;
     document.getElementById("factsGrid").innerHTML = `<div class="error">${err.message}</div>`;
   });
+</script>
+<script>
+(function () {
+  function byId(id) {
+    return document.getElementById(id);
+  }
+
+  function normalizePartyValue(value) {
+    return String(value || "OTHER").trim().toUpperCase();
+  }
+
+  function formatMarginText(race) {
+    const margin = Number.parseFloat(race?.margin_pct);
+    if (Number.isFinite(margin) && margin > 0) {
+      return `${(margin * 100).toFixed(1)}% margin`;
+    }
+    return race?.is_uncontested ? "Uncontested" : "Tap a district";
+  }
+
+  function currentRaceSummary() {
+    const races = typeof racesForSelection === "function" ? racesForSelection() : [];
+    const counts = races.reduce((acc, race) => {
+      const party = normalizePartyValue(race.winner_party);
+      acc.total += 1;
+      if (party === "DEM") acc.dem += 1;
+      else if (party === "REP") acc.rep += 1;
+      else acc.other += 1;
+      return acc;
+    }, { total: 0, dem: 0, rep: 0, other: 0 });
+    return counts;
+  }
+
+  function renderMobileResults(race) {
+    const card = byId("mobileResults");
+    if (!card) return;
+
+    const kicker = card.querySelector(".mobile-results-kicker");
+    const meta = card.querySelector(".mobile-results-meta");
+    const dem = byId("mobileDemScore");
+    const rep = byId("mobileRepScore");
+    const total = byId("mobileTotalSeats");
+    const chamberLabel = state.chamber === "house" ? "House" : "Senate";
+    const summary = currentRaceSummary();
+
+    if (race) {
+      const party = normalizePartyValue(race.winner_party);
+      kicker.textContent = `District ${race.district_number}`;
+      meta.textContent = `${race.winner_candidate || "Winner unavailable"} · ${party}`;
+      total.textContent = formatMarginText(race);
+    } else {
+      kicker.textContent = "Rhode Island";
+      meta.textContent = `${chamberLabel} · ${state.year}`;
+      total.textContent = summary.total ? `${summary.total} total seats` : "Tap a district";
+    }
+
+    dem.textContent = summary.dem;
+    rep.textContent = summary.rep;
+
+    const share = summary.total ? summary.dem / summary.total : 0.5;
+    card.style.setProperty("--dem-angle", `${Math.max(0, Math.min(180, share * 180))}deg`);
+  }
+
+  function bindMenuToggle() {
+    const toggle = byId("menuToggle");
+    const nav = byId("siteNav");
+    if (!toggle || !nav || toggle.dataset.bound === "1") return;
+
+    toggle.dataset.bound = "1";
+    toggle.addEventListener("click", () => {
+      const next = !document.body.classList.contains("nav-open");
+      document.body.classList.toggle("nav-open", next);
+      toggle.setAttribute("aria-expanded", String(next));
+    });
+
+    nav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        document.body.classList.remove("nav-open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  function bindMobileYearSelect() {
+    const yearSelect = byId("mobileYearSelect");
+    if (!yearSelect || yearSelect.dataset.bound === "1") return;
+
+    yearSelect.dataset.bound = "1";
+    yearSelect.value = state.year;
+    yearSelect.addEventListener("change", event => {
+      state.year = event.target.value;
+      refresh();
+    });
+  }
+
+  const originalSyncButtons = syncButtons;
+  syncButtons = function () {
+    originalSyncButtons();
+    const yearSelect = byId("mobileYearSelect");
+    if (yearSelect && yearSelect.value !== state.year) {
+      yearSelect.value = state.year;
+    }
+  };
+
+  const originalSetupControls = setupControls;
+  setupControls = function () {
+    originalSetupControls();
+    bindMobileYearSelect();
+    bindMenuToggle();
+  };
+
+  const originalShowRace = showRace;
+  showRace = function (race, lyr) {
+    originalShowRace(race, lyr);
+    renderMobileResults(race);
+
+    if (
+      race &&
+      lyr &&
+      window.matchMedia("(max-width: 760px)").matches &&
+      typeof lyr.getBounds === "function"
+    ) {
+      map.fitBounds(lyr.getBounds(), { padding: [30, 30], maxZoom: 12 });
+    }
+  };
+
+  const originalRefresh = refresh;
+  refresh = function () {
+    originalRefresh();
+    setTimeout(() => {
+      renderMobileResults();
+      map.invalidateSize();
+    }, 90);
+  };
+
+  bindMenuToggle();
+  bindMobileYearSelect();
+  renderMobileResults();
+})();
 </script>
 </body>
 </html>
