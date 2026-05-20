@@ -3,10 +3,21 @@
 <head>
 <script>
 (function () {
-  var isMobile = /Android|iPhone|iPad|iPod|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  var params = new URLSearchParams(window.location.search);
+  var forcedView = params.get("view");
+  if (forcedView === "desktop") return;
+
+  var prefersMobileViewport = window.matchMedia("(max-width: 760px)").matches;
+  var coarsePointer = window.matchMedia("(pointer: coarse)").matches;
+  var narrowScreen = Math.min(window.screen.width || 0, window.screen.height || 0) <= 900;
+  var shouldUseMobile = forcedView === "mobile" || prefersMobileViewport || (coarsePointer && narrowScreen);
   var isAlreadyMobile = /(^|\/)mobile\.html($|[?#])/i.test(window.location.pathname);
-  if (isMobile && !isAlreadyMobile) {
-    window.location.replace("mobile.html" + window.location.search + window.location.hash);
+
+  if (shouldUseMobile && !isAlreadyMobile) {
+    var target = new URL("mobile.html", window.location.href);
+    if (window.location.search) target.search = window.location.search;
+    if (window.location.hash) target.hash = window.location.hash;
+    window.location.replace(target.toString());
   }
 })();
 </script>
