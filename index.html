@@ -1432,8 +1432,7 @@ function renderUncontestedPanel(races) {
     <div class="gender-overlay-title">${state.year} ${state.chamber === "house" ? "House" : "Senate"} Uncontested Seats</div>
 
     <div class="uncontested-explainer">
-      Uncontested seats identify districts where the winner faced no substantial named opponent.
-      They help distinguish electoral competition from party control alone.
+      Uncontested seats identify districts where the winner faced no meaningful opponent. They help distinguish electoral competition from party dominance alone.
     </div>
 
     <div class="gender-stat-main">
@@ -1452,20 +1451,6 @@ function renderUncontestedPanel(races) {
     <div class="competitiveness-scale-note"><strong>Party makeup of uncontested seats</strong></div>
     <div class="mini-table">
       ${partyRows || '<div class="mini-table-row"><span>No uncontested seats</span><strong>0</strong></div>'}
-    </div>
-
-    <div class="gender-stat-main" style="margin-top:7px;">
-      <div class="gender-mini-card">
-        <div class="gender-label">Women-held uncontested</div>
-        <div class="gender-value">${womenUncontested.length}</div>
-        <div class="gender-detail">${womenUncontestedPct} of uncontested</div>
-      </div>
-      <div class="gender-mini-card clickable-stat" id="largestUncontestedCard">
-        <div class="gender-label">Largest uncontested margin</div>
-        <div class="gender-value" style="font-size:15px;">${largestUncontested ? formatDistrictLabel(largestUncontested.race) : "N/A"}</div>
-        <div class="gender-detail">${largestUncontested ? largestUncontested.race.margin_pct : "No uncontested seats"}</div>
-        ${largestUncontested ? '<div class="click-hint">Click to zoom/select</div>' : ''}
-      </div>
     </div>
   `;
 
