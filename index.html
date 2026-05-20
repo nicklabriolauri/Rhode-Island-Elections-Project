@@ -906,6 +906,64 @@ body.focus-mode .gender-overlay{display:block!important;top:8px!important;right:
 .mini-table-row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:4px 0;border-bottom:1px solid #eef2f7;font-size:10.8px;color:#334155;}
 .mini-table-row strong{color:#0f172a;}
 
+
+    /* Dedicated analytical panel behavior */
+    body.focus-view .dashboard {
+      grid-template-columns: 1fr;
+    }
+
+    body.focus-view #districtPanel,
+    body.focus-view #factsPanel {
+      display: none !important;
+    }
+
+    body.focus-view #map {
+      min-height: calc(100dvh - 150px);
+    }
+
+    body.focus-view .gender-overlay {
+      display: block !important;
+      top: 8px !important;
+      right: 10px !important;
+      width: 315px !important;
+      max-width: calc(100vw - 24px) !important;
+      max-height: calc(100dvh - 125px) !important;
+      overflow-y: auto !important;
+      padding: 10px !important;
+      border-radius: 14px !important;
+    }
+
+    .uncontested-explainer {
+      margin: 4px 0 7px 0;
+      padding: 7px 8px;
+      border-radius: 11px;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      color: #1e3a8a;
+      font-size: 10.5px;
+      line-height: 1.28;
+    }
+
+    .mini-table {
+      border-top: 1px solid #e5e7eb;
+      margin-top: 6px;
+    }
+
+    .mini-table-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 0;
+      border-bottom: 1px solid #eef2f7;
+      font-size: 10.8px;
+      color: #334155;
+    }
+
+    .mini-table-row strong {
+      color: #0f172a;
+    }
+
 </style>
 </head>
 <body>
@@ -973,6 +1031,8 @@ let raceData = {};
 let layer = null;
 let legend = null;
 let selectedLayer = null;
+  const sharedOverlay = document.getElementById("genderOverlay");
+  if (!["gender", "competitiveness", "uncontested"].includes(state.view) && sharedOverlay) sharedOverlay.innerHTML = "";
 let selectedKey = null;
 let featureLayerByKey = {};
 
@@ -1332,13 +1392,16 @@ function selectRaceByDistrict(districtNumber) {
 }
 
 
+
 function renderUncontestedPanel(races) {
   const overlay = document.getElementById("genderOverlay");
   if (!overlay) return;
+
   overlay.classList.remove("compact-competitiveness");
 
   const uncontested = races.filter(r => r.is_uncontested);
   const contested = races.filter(r => !r.is_uncontested);
+
   const uncontestedPct = races.length ? ((uncontested.length / races.length) * 100).toFixed(1) + "%" : "N/A";
   const contestedPct = races.length ? ((contested.length / races.length) * 100).toFixed(1) + "%" : "N/A";
 
@@ -1347,6 +1410,7 @@ function renderUncontestedPanel(races) {
     const p = r.winner_party || "OTHER";
     partyCounts[p] = (partyCounts[p] || 0) + 1;
   });
+
   const partyRows = Object.entries(partyCounts)
     .sort((a, b) => b[1] - a[1])
     .map(([party, count]) => `
@@ -1358,6 +1422,7 @@ function renderUncontestedPanel(races) {
 
   const womenUncontested = uncontested.filter(r => isWomanHeldSeat(state.chamber, state.year, r.district_number));
   const womenUncontestedPct = uncontested.length ? ((womenUncontested.length / uncontested.length) * 100).toFixed(1) + "%" : "N/A";
+
   const largestUncontested = uncontested
     .map(r => ({ race: r, margin: Math.abs(parseNumber(r.margin_pct)) }))
     .filter(x => !Number.isNaN(x.margin))
@@ -1365,9 +1430,12 @@ function renderUncontestedPanel(races) {
 
   overlay.innerHTML = `
     <div class="gender-overlay-title">${state.year} ${state.chamber === "house" ? "House" : "Senate"} Uncontested Seats</div>
+
     <div class="uncontested-explainer">
-      Uncontested seats identify districts where the winner faced no substantial named opponent. They help measure electoral competition beyond party control alone.
+      Uncontested seats identify districts where the winner faced no substantial named opponent.
+      They help distinguish electoral competition from party control alone.
     </div>
+
     <div class="gender-stat-main">
       <div class="gender-mini-card">
         <div class="gender-label">Uncontested seats</div>
@@ -1380,8 +1448,12 @@ function renderUncontestedPanel(races) {
         <div class="gender-detail">${contestedPct} of chamber</div>
       </div>
     </div>
+
     <div class="competitiveness-scale-note"><strong>Party makeup of uncontested seats</strong></div>
-    <div class="mini-table">${partyRows || '<div class="mini-table-row"><span>No uncontested seats</span><strong>0</strong></div>'}</div>
+    <div class="mini-table">
+      ${partyRows || '<div class="mini-table-row"><span>No uncontested seats</span><strong>0</strong></div>'}
+    </div>
+
     <div class="gender-stat-main" style="margin-top:7px;">
       <div class="gender-mini-card">
         <div class="gender-label">Women-held uncontested</div>
@@ -1396,11 +1468,13 @@ function renderUncontestedPanel(races) {
       </div>
     </div>
   `;
+
   const largestCard = overlay.querySelector("#largestUncontestedCard");
   if (largestCard && largestUncontested && typeof selectRaceByDistrict === "function") {
     largestCard.addEventListener("click", () => selectRaceByDistrict(largestUncontested.race.district_number));
   }
 }
+
 
 function renderCompetitivenessOverlay(races) {
   const overlay = document.getElementById("genderOverlay");
@@ -1606,8 +1680,13 @@ function updateOverview() {
 
   if (state.view === "gender") {
     renderGenderOverlay(races, womenSeats, womenPct, womenPartyCounts);
+    return;
   } else if (state.view === "competitiveness") {
     renderCompetitivenessOverlay(races);
+    return;
+  } else if (state.view === "uncontested") {
+    renderUncontestedPanel(races);
+    return;
   }
 
   document.getElementById("factsGrid").innerHTML = `
@@ -1783,6 +1862,8 @@ function setupControls() {
 
 function refresh() {
   syncButtons();
+  document.body.classList.toggle("focus-view", ["gender", "competitiveness", "uncontested"].includes(state.view));
+  document.body.classList.toggle("gender-mode", state.view === "gender" || state.view === "competitiveness" || state.view === "uncontested");
   const isFocus = state.view === "gender" || state.view === "competitiveness" || state.view === "uncontested";
   document.body.classList.toggle("focus-mode", isFocus);
   document.body.classList.toggle("gender-mode", state.view === "gender" || state.view === "competitiveness");
@@ -1810,8 +1891,7 @@ function refresh() {
   addLegend();
   updateEraBadge();
   updateOverview();
-  if (state.view === "uncontested") renderUncontestedPanel(racesForCurrent());
-  renderDistrictList();
+renderDistrictList();
 }
 
 async function fetchJson(url) {
