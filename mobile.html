@@ -1593,6 +1593,12 @@ body.gender-mode .gender-overlay {
 
 <div class="note">Hover over districts for labels. Click a district for full race details.</div>
 
+<div id="mobileResultsBar" class="mobile-results-bar" aria-live="polite">
+  <div class="mobile-results-kicker">Election results</div>
+  <div id="mobileResultsTitle" class="mobile-results-title">Loading map…</div>
+  <div id="mobileResultsMeta" class="mobile-results-meta">Select a chamber, year, and map view.</div>
+</div>
+
 <main class="dashboard">
   <aside id="districtPanel">
     <div class="district-panel-title">Districts</div>
@@ -2660,6 +2666,310 @@ function closeMobileSheetsForFocusViews() {
   <button type="button" id="mobileDistrictsBtn">Districts</button>
   <button type="button" id="mobileOverviewBtn">Stats</button>
 </div>
+
+
+<style>
+/* RIEP mobile-first polish patch */
+.mobile-results-bar {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  body {
+    background: #eef2f7 !important;
+    overflow: hidden !important;
+  }
+
+  header {
+    display: none !important;
+  }
+
+  .note {
+    display: none !important;
+  }
+
+  .controls {
+    position: relative;
+    z-index: 1000;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    padding: 8px 10px !important;
+    background: rgba(255,255,255,.98) !important;
+    border-bottom: 1px solid #dbe3ef !important;
+    box-shadow: 0 2px 14px rgba(15,23,42,.08);
+  }
+
+  .control-group {
+    display: grid !important;
+    gap: 4px !important;
+    align-items: start !important;
+  }
+
+  .control-group:nth-child(2) {
+    display: none !important;
+  }
+
+  .control-group:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+
+  .control-label {
+    font-size: 9px !important;
+    line-height: 1 !important;
+  }
+
+  .segmented {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .segmented button {
+    min-width: 0 !important;
+    min-height: 34px !important;
+    padding: 6px 8px !important;
+    font-size: 12px !important;
+  }
+
+  .mobile-year-select-wrap {
+    display: grid !important;
+    grid-template-columns: auto 1fr !important;
+    gap: 7px !important;
+    align-items: center !important;
+  }
+
+  #mobileYearSelect,
+  #viewSelect {
+    width: 100% !important;
+    min-height: 36px !important;
+    border-radius: 10px !important;
+    font-size: 16px !important;
+  }
+
+  #eraBadge,
+  .era-badge {
+    display: none !important;
+  }
+
+  .mobile-results-bar {
+    display: block;
+    position: relative;
+    z-index: 950;
+    background: rgba(255,255,255,.98);
+    border-bottom: 1px solid #dbe3ef;
+    padding: 9px 12px 10px 12px;
+    box-shadow: 0 3px 14px rgba(15,23,42,.08);
+  }
+
+  .mobile-results-kicker {
+    color: #64748b;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+
+  .mobile-results-title {
+    color: #0f172a;
+    font-size: 15px;
+    line-height: 1.15;
+    font-weight: 900;
+    letter-spacing: -.02em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .mobile-results-meta {
+    color: #475569;
+    font-size: 12px;
+    line-height: 1.25;
+    margin-top: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .dashboard {
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  #districtPanel,
+  #factsPanel,
+  .mobile-tabbar {
+    display: none !important;
+  }
+
+  body.mobile-show-districts #districtPanel,
+  body.mobile-show-overview #factsPanel {
+    display: none !important;
+  }
+
+  #map {
+    height: calc(100dvh - 150px) !important;
+    min-height: 0 !important;
+    width: 100% !important;
+    border: 0 !important;
+  }
+
+  .leaflet-top.leaflet-left {
+    top: 8px !important;
+    left: 8px !important;
+  }
+
+  .legend {
+    max-width: 150px !important;
+    font-size: 10.5px !important;
+    line-height: 1.25 !important;
+    padding: 8px 9px !important;
+    border-radius: 11px !important;
+  }
+
+  .legend-title {
+    font-size: 11px !important;
+  }
+
+  body.focus-mode .legend,
+  body.focus-view .legend,
+  body.gender-mode .legend {
+    display: none !important;
+  }
+
+  body.focus-mode .gender-overlay,
+  body.focus-view .gender-overlay,
+  body.gender-mode .gender-overlay {
+    left: 10px !important;
+    right: 10px !important;
+    bottom: 10px !important;
+    top: auto !important;
+    width: auto !important;
+    max-width: none !important;
+    max-height: 32dvh !important;
+    z-index: 900 !important;
+  }
+
+  .leaflet-popup-content {
+    margin: 10px 12px !important;
+    max-width: 250px !important;
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  #map {
+    height: calc(100dvh - 158px) !important;
+  }
+
+  .mobile-results-title {
+    font-size: 14px;
+  }
+
+  .mobile-results-meta {
+    font-size: 11.5px;
+  }
+}
+</style>
+
+
+<script>
+/* RIEP mobile-first simplification patch
+   Keeps the existing data/model code, but reduces the mobile UI to:
+   controls + top results bar + map + tap/click race details. */
+(function() {
+  function isMobileViewport() {
+    return window.matchMedia && window.matchMedia("(max-width: 760px)").matches;
+  }
+
+  function partyCountsFor(races) {
+    const counts = {};
+    (races || []).forEach(r => {
+      const p = r.winner_party || "OTHER";
+      counts[p] = (counts[p] || 0) + 1;
+    });
+    return counts;
+  }
+
+  function countsSummary(counts) {
+    return Object.entries(counts)
+      .sort((a, b) => b[1] - a[1])
+      .map(([party, count]) => `${count} ${typeof partyLabel === "function" ? partyLabel(party) : party}`)
+      .join(" · ");
+  }
+
+  function mobileViewLabel() {
+    const select = document.getElementById("viewSelect");
+    if (!select) return state.view;
+    const selected = select.options[select.selectedIndex];
+    return selected ? selected.textContent : state.view;
+  }
+
+  window.updateMobileResultsBar = function(selectedRace) {
+    const bar = document.getElementById("mobileResultsBar");
+    const title = document.getElementById("mobileResultsTitle");
+    const meta = document.getElementById("mobileResultsMeta");
+    if (!bar || !title || !meta || typeof racesForSelection !== "function") return;
+
+    const races = racesForSelection();
+    const chamberLabel = state.chamber === "house" ? "House" : "Senate";
+
+    if (selectedRace) {
+      const party = selectedRace.winner_party || "OTHER";
+      title.textContent = `District ${selectedRace.district_number}: ${selectedRace.winner_candidate || "Winner unavailable"}`;
+      meta.textContent = `${typeof partyLabel === "function" ? partyLabel(party) : party} · Margin: ${selectedRace.margin_votes || "N/A"} votes (${selectedRace.margin_pct || "N/A"})${selectedRace.is_uncontested ? " · Uncontested" : ""}`;
+      return;
+    }
+
+    if (!races || !races.length) {
+      title.textContent = `${state.year} ${chamberLabel}`;
+      meta.textContent = "No race records found for this selection.";
+      return;
+    }
+
+    const counts = partyCountsFor(races);
+    const uncontested = races.filter(r => r.is_uncontested).length;
+    title.textContent = `${state.year} ${chamberLabel} · ${mobileViewLabel()}`;
+    meta.textContent = `${countsSummary(counts)} · ${uncontested} uncontested`;
+  };
+
+  if (typeof updateOverview === "function") {
+    const originalUpdateOverview = updateOverview;
+    updateOverview = function() {
+      originalUpdateOverview();
+      if (typeof updateMobileResultsBar === "function") updateMobileResultsBar(null);
+    };
+  }
+
+  if (typeof showRace === "function") {
+    const originalShowRace = showRace;
+    showRace = function(race, lyr) {
+      originalShowRace(race, lyr);
+      if (typeof updateMobileResultsBar === "function") updateMobileResultsBar(race);
+      if (isMobileViewport() && typeof showMobileMap === "function") showMobileMap();
+    };
+  }
+
+  if (typeof refresh === "function") {
+    const originalRefresh = refresh;
+    refresh = function() {
+      originalRefresh();
+      if (typeof updateMobileResultsBar === "function") updateMobileResultsBar(null);
+      if (isMobileViewport() && typeof showMobileMap === "function") showMobileMap();
+    };
+  }
+
+  window.addEventListener("resize", () => {
+    if (typeof updateMobileResultsBar === "function") updateMobileResultsBar(null);
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    if (typeof updateMobileResultsBar === "function") updateMobileResultsBar(null);
+  });
+})();
+</script>
 
 </body>
 </html>
