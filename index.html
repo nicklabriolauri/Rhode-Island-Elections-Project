@@ -1420,14 +1420,6 @@ function renderUncontestedPanel(races) {
       </div>
     `).join("");
 
-  const womenUncontested = uncontested.filter(r => isWomanHeldSeat(state.chamber, state.year, r.district_number));
-  const womenUncontestedPct = uncontested.length ? ((womenUncontested.length / uncontested.length) * 100).toFixed(1) + "%" : "N/A";
-
-  const largestUncontested = uncontested
-    .map(r => ({ race: r, margin: Math.abs(parseNumber(r.margin_pct)) }))
-    .filter(x => !Number.isNaN(x.margin))
-    .sort((a, b) => b.margin - a.margin)[0];
-
   overlay.innerHTML = `
     <div class="gender-overlay-title">${state.year} ${state.chamber === "house" ? "House" : "Senate"} Uncontested Seats</div>
 
@@ -1582,7 +1574,6 @@ function renderGenderOverlay(races, womenSeats, womenPct, womenPartyCounts) {
     `).join("");
 
   const womenContested = womenSeats.filter(r => !r.is_uncontested).length;
-  const womenUncontested = womenSeats.filter(r => r.is_uncontested).length;
 
   overlay.innerHTML = `
     <div class="gender-overlay-title">${state.year} ${state.chamber === "house" ? "House" : "Senate"} Gender Parity</div>
