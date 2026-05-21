@@ -1,26 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script>
-  (function () {
-    var params = new URLSearchParams(window.location.search);
-    var forcedView = params.get("view");
-    if (forcedView === "mobile") return;
-
-    var prefersDesktopViewport = window.matchMedia("(min-width: 761px)").matches;
-    var coarsePointer = window.matchMedia("(pointer: coarse)").matches;
-    var narrowScreen = Math.min(window.screen.width || 0, window.screen.height || 0) <= 900;
-    var shouldUseDesktop = forcedView === "desktop" || (prefersDesktopViewport && !coarsePointer) || (prefersDesktopViewport && !narrowScreen);
-    var isAlreadyDesktop = /(^|\/)index\.html($|[?#])/i.test(window.location.pathname);
-
-    if (shouldUseDesktop && !isAlreadyDesktop) {
-      var target = new URL("index.html", window.location.href);
-      if (window.location.search) target.search = window.location.search;
-      if (window.location.hash) target.hash = window.location.hash;
-      window.location.replace(target.toString());
-    }
-  })();
-  </script>
   <meta charset="utf-8" />
   <title>RIEP - Rhode Island Elections Project</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -1011,75 +991,24 @@ body.riep-mobile-app{display:block;min-height:100dvh;overflow-x:hidden;overflow-
 .controls{flex:0 0 auto;display:grid;grid-template-columns:130px minmax(0,1fr);gap:12px 14px;align-items:center;padding:18px 16px 14px;background:#fff;border-bottom:1px solid #eef2f7;box-shadow:0 6px 24px rgba(15,23,42,.04)}
 .control-group{display:contents}.control-label{align-self:center;color:#64748b;font-size:14px;line-height:1.05;text-transform:uppercase;letter-spacing:.08em;font-weight:950}.segmented{justify-self:start;display:flex;background:#f1f5f9;border:1px solid #dbe3ef;border-radius:999px;padding:4px;gap:4px;box-shadow:inset 0 1px 2px rgba(15,23,42,.06)}.segmented button{border:0;border-radius:999px;background:transparent;color:#475569;padding:10px 20px;min-height:44px;font-size:17px;font-weight:900}.segmented button.active{background:#14265a;color:#fff;box-shadow:0 8px 18px rgba(20,38,90,.24)}
 #yearButtons,.year-timeline,.note,.mobile-hidden-note{display:none!important;visibility:hidden!important;width:0!important;height:0!important;overflow:hidden!important;position:absolute!important;left:-9999px!important}.mobile-select,select#viewSelect,select#mobileYearSelect{width:100%;min-width:0;min-height:48px;border:1px solid #dbe3ef;border-radius:999px;background:#fff;color:#0f172a;padding:0 44px 0 20px;font-size:17px!important;font-weight:850;box-shadow:0 3px 12px rgba(15,23,42,.07);appearance:auto}.era-badge{grid-column:1 / -1;justify-self:start;margin:4px 0 0 0;white-space:normal;border-radius:999px;background:#eef2ff;color:#3730a3;font-size:14px;font-weight:900;padding:10px 16px;max-width:100%}
-.mobile-results{flex:0 0 auto;margin:14px 16px 14px;display:grid;grid-template-columns:1fr 1.15fr 20px;gap:10px;align-items:center;background:#fff;border:1px solid #dbe3ef;border-radius:18px;padding:14px 14px 12px;box-shadow:0 6px 24px rgba(15,23,42,.08);position:relative;overflow:hidden}.mobile-results:before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:5px;border-radius:999px;background:linear-gradient(#2563eb,#60a5fa)}.mobile-results-left{padding-left:12px}.mobile-results-kicker{font-size:16px;font-weight:950;letter-spacing:-.03em;color:#0f172a}.mobile-results-meta{margin-top:4px;font-size:14px;color:#64748b;font-weight:750}.mobile-score{margin-top:16px;font-size:30px;line-height:1;font-weight:950;letter-spacing:-.05em;color:#0f172a}.score-dash{margin:0 8px;color:#334155}.score-labels{display:flex;gap:52px;margin-top:8px;font-size:13px;font-weight:950}.score-labels span:first-child{color:#2b6cb0}.score-labels span:last-child{color:#dc2626}.mobile-results-chart{min-width:0;text-align:center}.seat-dot-grid{display:grid;grid-template-columns:repeat(10,10px);justify-content:center;gap:6px;max-width:154px;margin:2px auto 0}.seat-dot{width:10px;height:10px;border-radius:999px;background:#cbd5e1;box-shadow:inset 0 0 0 1px rgba(255,255,255,.55)}.seat-dot.dem{background:#2b6cb0}.seat-dot.rep{background:#dc2626}.seat-dot.other{background:#94a3b8}.mobile-total-seats{margin-top:10px;font-size:13px;color:#64748b;font-weight:800}.mobile-card-chevron{border:0;background:transparent;color:#94a3b8;font-size:36px;line-height:1;font-weight:300}
+.mobile-results{flex:0 0 auto;margin:14px 16px 14px;display:grid;grid-template-columns:1fr 1.15fr 20px;gap:10px;align-items:center;background:#fff;border:1px solid #dbe3ef;border-radius:18px;padding:14px 14px 12px;box-shadow:0 6px 24px rgba(15,23,42,.08);position:relative;overflow:hidden}.mobile-results:before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:5px;border-radius:999px;background:linear-gradient(#2563eb,#60a5fa)}.mobile-results-left{padding-left:12px}.mobile-results-kicker{font-size:16px;font-weight:950;letter-spacing:-.03em;color:#0f172a}.mobile-results-meta{margin-top:4px;font-size:14px;color:#64748b;font-weight:750}.mobile-score{margin-top:16px;font-size:30px;line-height:1;font-weight:950;letter-spacing:-.05em;color:#0f172a}.score-dash{margin:0 8px;color:#334155}.score-labels{display:flex;gap:52px;margin-top:8px;font-size:13px;font-weight:950}.score-labels span:first-child{color:#2b6cb0}.score-labels span:last-child{color:#dc2626}.mobile-results-chart{min-width:0;text-align:center}.seat-dot-arc{display:block;width:100%;max-width:174px;height:100px;margin:0 auto}.seat-dot{fill:#cbd5e1;stroke:rgba(255,255,255,.75);stroke-width:1}.seat-dot.dem{fill:#2b6cb0}.seat-dot.rep{fill:#dc2626}.seat-dot.other{fill:#94a3b8}.mobile-total-seats{margin-top:2px;font-size:13px;color:#64748b;font-weight:800}.mobile-card-chevron{border:0;background:transparent;color:#94a3b8;font-size:36px;line-height:1;font-weight:300}
+.analysis-panel{display:none;margin:0 12px 14px;padding:14px 14px 12px;border-radius:22px;background:#fff;border:1px solid #e5e7eb;box-shadow:0 14px 32px rgba(15,23,42,.08)}
 .dashboard{display:block!important;grid-template-columns:1fr!important;height:auto!important;min-height:0!important;position:relative;overflow:visible;background:#eef2f7}.dashboard:before{content:"";display:block;height:1px;background:#e5e7eb}#map{height:68svh!important;min-height:520px!important;max-height:760px;width:100%!important;background:#eef2f7!important;position:relative}.leaflet-container{height:100%!important;width:100%!important;font-family:Arial,Helvetica,sans-serif;touch-action:pan-y}.leaflet-tile-pane{filter:grayscale(95%) saturate(75%) contrast(96%)!important;opacity:.48!important}.leaflet-control-zoom{display:none!important}.legend{display:none!important}
-#districtPanel,#factsPanel{display:none!important;visibility:hidden!important;pointer-events:none!important;position:absolute!important;left:-99999px!important;width:0!important;height:0!important;overflow:hidden!important}.analysis-panel{display:none;margin:0 12px 14px;padding:14px 14px 12px;border-radius:22px;background:#fff;border:1px solid #e5e7eb;box-shadow:0 14px 32px rgba(15,23,42,.08)}body.focus-view .analysis-panel,body.focus-mode .analysis-panel,body.gender-mode .analysis-panel{display:block}.gender-overlay{display:none!important}
+#districtPanel,#factsPanel{display:none!important;visibility:hidden!important;pointer-events:none!important;position:absolute!important;left:-99999px!important;width:0!important;height:0!important;overflow:hidden!important}.gender-overlay{display:none!important}body.focus-view .analysis-panel,body.focus-mode .analysis-panel,body.gender-mode .analysis-panel{display:block}
 @media (min-width:761px){body.riep-mobile-app{max-width:430px;margin:0 auto;box-shadow:0 0 0 1px #e5e7eb,0 20px 80px rgba(15,23,42,.16)}}
-@media (max-width:390px){.app-hero h1{font-size:25px}.app-hero p{font-size:14px}.controls{grid-template-columns:115px minmax(0,1fr);gap:10px}.control-label{font-size:12px}.segmented button{padding:9px 16px;font-size:15px}.mobile-select,select#viewSelect,select#mobileYearSelect{font-size:15px!important;min-height:45px}.mobile-score{font-size:26px}.seat-dot-grid{grid-template-columns:repeat(8,10px);gap:5px;max-width:128px}.site-nav a{padding:8px 14px}}
-
-/* Mobile polish pass */
-.hero-menu-toggle{appearance:none;border:0;padding:0;background:transparent;color:#fff;cursor:pointer}
-.hero-menu-toggle .hamburger{width:34px;margin-top:12px}
-.hero-menu-toggle:focus-visible{outline:2px solid rgba(255,255,255,.65);outline-offset:4px;border-radius:12px}
-.site-nav a{transition:background .18s ease,color .18s ease,border-color .18s ease,transform .18s ease}
-.site-nav a:active{transform:translateY(1px)}
-.mobile-results{transition:transform .18s ease,box-shadow .18s ease}
-.mobile-results:active{transform:scale(.995)}
-#map{border-top-left-radius:28px;border-top-right-radius:28px;overflow:hidden;box-shadow:inset 0 1px 0 rgba(255,255,255,.7)}
-.leaflet-control-attribution{font-size:10px!important;padding:0 6px 2px!important}
-.leaflet-popup-content-wrapper{border-radius:16px}
-.leaflet-popup-content{margin:12px 14px;line-height:1.45}
-@media (max-width:760px){
-  .hero-topline{grid-template-columns:40px 1fr 56px;align-items:start}
-  .site-nav{
-    display:none;
-    flex-direction:column;
-    align-items:stretch;
-    gap:8px;
-    margin-top:14px;
-    padding:10px;
-    border-radius:18px;
-    background:rgba(255,255,255,.09);
-    border:1px solid rgba(255,255,255,.14);
-    backdrop-filter:blur(10px);
-  }
-  body.nav-open .site-nav{display:flex}
-  .site-nav a{padding:10px 14px;text-align:center}
-  .controls{
-    margin:-10px 12px 0;
-    border-radius:24px 24px 0 0;
-    position:relative;
-    z-index:10;
-  }
-  .mobile-results{
-    margin:0 12px 12px;
-    border-radius:0 0 22px 22px;
-    border-top:0;
-  }
-  .dashboard{
-    margin:0 12px 18px;
-    border-radius:24px;
-    overflow:hidden;
-    box-shadow:0 18px 40px rgba(15,23,42,.08);
-  }
-}
-
-@media (max-width:420px){
-  #map{height:62svh!important;min-height:460px!important}
-}
+@media (max-width:420px){#map{height:62svh!important;min-height:460px!important}}
+@media (max-width:390px){.app-hero h1{font-size:25px}.app-hero p{font-size:14px}.controls{grid-template-columns:115px minmax(0,1fr);gap:10px}.control-label{font-size:12px}.segmented button{padding:9px 16px;font-size:15px}.mobile-select,select#viewSelect,select#mobileYearSelect{font-size:15px!important;min-height:45px}.mobile-score{font-size:26px}.seat-dot-arc{max-width:152px;height:88px}.site-nav a{padding:8px 14px}}
 
 </style>
 </head>
 <body class="riep-mobile-app">
 <header class="app-hero">
   <div class="hero-topline">
-    <button id="menuToggle" class="hero-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">
-      <div class="hamburger" aria-hidden="true"><span></span><span></span><span></span></div>
-    </button>
+    <div class="hamburger" aria-hidden="true"><span></span><span></span><span></span></div>
     <div class="hero-copy">
       <h1>RIEP – Rhode Island<br>Elections Project</h1>
       <p>Interactive legislative election map, 2012–2024.</p>
-      <nav id="siteNav" class="site-nav">
+      <nav class="site-nav">
         <a href="index.html" class="active">Map</a>
         <a href="methodology.html">Methodology</a>
         <a href="about.html">About</a>
@@ -1133,7 +1062,7 @@ body.riep-mobile-app{display:block;min-height:100dvh;overflow-x:hidden;overflow-
     <div class="score-labels"><span>DEM</span><span>REP</span></div>
   </div>
   <div class="mobile-results-chart" aria-hidden="true">
-    <div id="mobileSeatDots" class="seat-dot-grid"></div>
+    <div id="mobileSeatDots"></div>
     <div id="mobileTotalSeats" class="mobile-total-seats">Tap a district</div>
   </div>
   <button class="mobile-card-chevron" type="button" aria-label="Result details">›</button>
@@ -1449,8 +1378,15 @@ function showRace(race, lyr) {
   selectedLayer = lyr;
   selectedKey = `${state.chamber}|${state.year}|${race.district_number}`;
   lyr.setStyle({ weight: 4, color: "#0f172a", fillOpacity: 0.58 });
-  lyr.bindPopup(popupHtml(race)).openPopup();
+  lyr.bindPopup(popupHtml(race), { autoPan: false, closeButton: false }).openPopup();
   highlightDistrictList();
+  updateMobileResults(race);
+  recenterMapToState();
+}
+
+function recenterMapToState() {
+  if (!layer || typeof layer.getBounds !== "function") return;
+  map.fitBounds(layer.getBounds(), { padding: [14, 14], maxZoom: 9 });
 }
 
 function onEachFeature(feature, lyr) {
@@ -1969,6 +1905,7 @@ function syncButtons() {
 function setupControls() {
   const yearButtons = document.getElementById("yearButtons");
   yearButtons.innerHTML = years.map(y => `<button type="button" data-value="${y}">${y}</button>`).join("");
+  const mobileYearSelect = document.getElementById("mobileYearSelect");
 
   document.querySelectorAll("#chamberButtons button").forEach(btn => {
     btn.addEventListener("click", () => {
@@ -1987,6 +1924,13 @@ function setupControls() {
     if (state.view !== "competitiveness") state.competitivenessFilter = "all";
     refresh();
   });
+  if (mobileYearSelect) {
+    mobileYearSelect.value = state.year;
+    mobileYearSelect.addEventListener("change", e => {
+      state.year = e.target.value;
+      refresh();
+    });
+  }
   document.getElementById("districtSearch").addEventListener("input", renderDistrictList);
   syncButtons();
 }
@@ -1999,8 +1943,10 @@ function refresh() {
   document.body.classList.toggle("gender-mode", isFocus);
   const sharedOverlay = document.getElementById("genderOverlay");
   const analysisPanel = document.getElementById("analysisPanel");
+  const mobileYearSelect = document.getElementById("mobileYearSelect");
   if (!isFocus && sharedOverlay) sharedOverlay.innerHTML = "";
   if (!isFocus && analysisPanel) analysisPanel.innerHTML = "";
+  if (mobileYearSelect && mobileYearSelect.value !== state.year) mobileYearSelect.value = state.year;
   setTimeout(() => map.invalidateSize(), 50);
   selectedLayer = null;
   selectedKey = null;
@@ -2019,11 +1965,12 @@ function refresh() {
   }).addTo(map);
 
   setTimeout(() => map.invalidateSize(), 0);
-  map.fitBounds(layer.getBounds(), { padding: [15, 15] });
+  recenterMapToState();
   addLegend();
   updateEraBadge();
   updateOverview();
-renderDistrictList();
+  renderDistrictList();
+  updateMobileResults();
 }
 
 async function fetchJson(url) {
@@ -2048,6 +1995,88 @@ async function loadData() {
   raceData = await fetchJson("data/race_data.json");
 }
 
+function updateMobileResults(race) {
+  const card = document.getElementById("mobileResults");
+  if (!card) return;
+
+  const kicker = card.querySelector(".mobile-results-kicker");
+  const meta = card.querySelector(".mobile-results-meta");
+  const dem = document.getElementById("mobileDemScore");
+  const rep = document.getElementById("mobileRepScore");
+  const total = document.getElementById("mobileTotalSeats");
+  const seatDots = document.getElementById("mobileSeatDots");
+  const races = racesForSelection();
+  const chamberLabel = state.chamber === "house" ? "House" : "Senate";
+  const counts = { total: races.length, dem: 0, rep: 0, other: 0 };
+
+  races.forEach(entry => {
+    const party = String(entry.winner_party || "OTHER").trim().toUpperCase();
+    if (party === "DEM") counts.dem += 1;
+    else if (party === "REP") counts.rep += 1;
+    else counts.other += 1;
+  });
+
+  if (race) {
+    const margin = Number.parseFloat(race.margin_pct);
+    kicker.textContent = `District ${race.district_number}`;
+    meta.textContent = `${race.winner_candidate || "Winner unavailable"} · ${String(race.winner_party || "OTHER").trim().toUpperCase()}`;
+    total.textContent = Number.isFinite(margin) && margin > 0 ? `${margin.toFixed(1)}% margin` : (race.is_uncontested ? "Uncontested" : "Tap a district");
+  } else {
+    kicker.textContent = "Rhode Island";
+    meta.textContent = `${chamberLabel} · ${state.year}`;
+    total.textContent = counts.total ? `${counts.total} total seats` : "Tap a district";
+  }
+
+  dem.textContent = counts.dem;
+  rep.textContent = counts.rep;
+
+  if (seatDots) {
+    const seats = [];
+    for (let index = 0; index < counts.dem; index += 1) seats.push("dem");
+    for (let index = 0; index < counts.rep; index += 1) seats.push("rep");
+    for (let index = 0; index < counts.other; index += 1) seats.push("other");
+
+    const rows = seats.length > 60 ? 6 : seats.length > 45 ? 5 : seats.length > 28 ? 4 : 3;
+    const weights = [1.3, 1.15, 1, 0.85, 0.7, 0.55].slice(0, rows);
+    const weightTotal = weights.reduce((sum, value) => sum + value, 0);
+    const rowCounts = weights.map(value => Math.max(1, Math.round((value / weightTotal) * seats.length)));
+
+    while (rowCounts.reduce((sum, value) => sum + value, 0) > seats.length) {
+      const lastAdjustable = rowCounts.map((value, index) => ({ value, index })).reverse().find(item => item.value > 1);
+      if (!lastAdjustable) break;
+      rowCounts[lastAdjustable.index] -= 1;
+    }
+    while (rowCounts.reduce((sum, value) => sum + value, 0) < seats.length) {
+      rowCounts[0] += 1;
+    }
+
+    const width = 180;
+    const height = 102;
+    const cx = 90;
+    const cy = 88;
+    const outerRadius = 74;
+    const innerRadius = rows <= 3 ? 44 : 34;
+    let seatIndex = 0;
+
+    const circles = rowCounts.flatMap((count, rowIndex) => {
+      const ratio = rows === 1 ? 0 : rowIndex / (rows - 1);
+      const radius = outerRadius - ((outerRadius - innerRadius) * ratio);
+      const start = 182;
+      const end = 358;
+      const step = count === 1 ? 0 : (end - start) / (count - 1);
+      return Array.from({ length: count }, (_, dotIndex) => {
+        const angle = (start + (step * dotIndex)) * (Math.PI / 180);
+        const x = cx + (radius * Math.cos(angle));
+        const y = cy + (radius * Math.sin(angle));
+        const party = seats[seatIndex++] || "other";
+        return `<circle class="seat-dot ${party}" cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="4.3"></circle>`;
+      });
+    });
+
+    seatDots.innerHTML = `<svg class="seat-dot-arc" viewBox="0 0 ${width} ${height}" role="img" aria-label="${counts.total} seats by party">${circles.join("")}</svg>`;
+  }
+}
+
 window.addEventListener("resize", () => {
   setTimeout(() => map.invalidateSize(), 100);
 });
@@ -2069,142 +2098,6 @@ loadData()
       </div>`;
     document.getElementById("factsGrid").innerHTML = `<div class="error">${err.message}</div>`;
   });
-</script>
-<script>
-(function () {
-  function byId(id) {
-    return document.getElementById(id);
-  }
-
-  function normalizePartyValue(value) {
-    return String(value || "OTHER").trim().toUpperCase();
-  }
-
-  function formatMarginText(race) {
-    const margin = Number.parseFloat(race?.margin_pct);
-    if (Number.isFinite(margin) && margin > 0) {
-      return `${margin.toFixed(1)}% margin`;
-    }
-    return race?.is_uncontested ? "Uncontested" : "Tap a district";
-  }
-
-  function buildSeatDots(summary) {
-    const dots = [];
-    for (let index = 0; index < summary.dem; index += 1) dots.push('<span class="seat-dot dem"></span>');
-    for (let index = 0; index < summary.rep; index += 1) dots.push('<span class="seat-dot rep"></span>');
-    for (let index = 0; index < summary.other; index += 1) dots.push('<span class="seat-dot other"></span>');
-    return dots.join("");
-  }
-
-  function currentRaceSummary() {
-    const races = typeof racesForSelection === "function" ? racesForSelection() : [];
-    const counts = races.reduce((acc, race) => {
-      const party = normalizePartyValue(race.winner_party);
-      acc.total += 1;
-      if (party === "DEM") acc.dem += 1;
-      else if (party === "REP") acc.rep += 1;
-      else acc.other += 1;
-      return acc;
-    }, { total: 0, dem: 0, rep: 0, other: 0 });
-    return counts;
-  }
-
-  function renderMobileResults(race) {
-    const card = byId("mobileResults");
-    if (!card) return;
-
-    const kicker = card.querySelector(".mobile-results-kicker");
-    const meta = card.querySelector(".mobile-results-meta");
-    const dem = byId("mobileDemScore");
-    const rep = byId("mobileRepScore");
-    const total = byId("mobileTotalSeats");
-    const seatDots = byId("mobileSeatDots");
-    const chamberLabel = state.chamber === "house" ? "House" : "Senate";
-    const summary = currentRaceSummary();
-
-    if (race) {
-      const party = normalizePartyValue(race.winner_party);
-      kicker.textContent = `District ${race.district_number}`;
-      meta.textContent = `${race.winner_candidate || "Winner unavailable"} · ${party}`;
-      total.textContent = formatMarginText(race);
-    } else {
-      kicker.textContent = "Rhode Island";
-      meta.textContent = `${chamberLabel} · ${state.year}`;
-      total.textContent = summary.total ? `${summary.total} total seats` : "Tap a district";
-    }
-
-    dem.textContent = summary.dem;
-    rep.textContent = summary.rep;
-    if (seatDots) seatDots.innerHTML = buildSeatDots(summary);
-  }
-
-  function bindMenuToggle() {
-    const toggle = byId("menuToggle");
-    const nav = byId("siteNav");
-    if (!toggle || !nav || toggle.dataset.bound === "1") return;
-
-    toggle.dataset.bound = "1";
-    toggle.addEventListener("click", () => {
-      const next = !document.body.classList.contains("nav-open");
-      document.body.classList.toggle("nav-open", next);
-      toggle.setAttribute("aria-expanded", String(next));
-    });
-
-    nav.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        document.body.classList.remove("nav-open");
-        toggle.setAttribute("aria-expanded", "false");
-      });
-    });
-  }
-
-  function bindMobileYearSelect() {
-    const yearSelect = byId("mobileYearSelect");
-    if (!yearSelect || yearSelect.dataset.bound === "1") return;
-
-    yearSelect.dataset.bound = "1";
-    yearSelect.value = state.year;
-    yearSelect.addEventListener("change", event => {
-      state.year = event.target.value;
-      refresh();
-    });
-  }
-
-  const originalSyncButtons = syncButtons;
-  syncButtons = function () {
-    originalSyncButtons();
-    const yearSelect = byId("mobileYearSelect");
-    if (yearSelect && yearSelect.value !== state.year) {
-      yearSelect.value = state.year;
-    }
-  };
-
-  const originalSetupControls = setupControls;
-  setupControls = function () {
-    originalSetupControls();
-    bindMobileYearSelect();
-    bindMenuToggle();
-  };
-
-  const originalShowRace = showRace;
-  showRace = function (race, lyr) {
-    originalShowRace(race, lyr);
-    renderMobileResults(race);
-  };
-
-  const originalRefresh = refresh;
-  refresh = function () {
-    originalRefresh();
-    setTimeout(() => {
-      renderMobileResults();
-      map.invalidateSize();
-    }, 90);
-  };
-
-  bindMenuToggle();
-  bindMobileYearSelect();
-  renderMobileResults();
-})();
 </script>
 </body>
 </html>
