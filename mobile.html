@@ -1053,8 +1053,8 @@ body.gender-mode .gender-overlay {
   --navy:#07142f; --navy2:#14265a; --ink:#0f172a; --muted:#64748b; --line:#e5e7eb;
   --blue:#2b6cb0; --red:#dc2626; --card:#ffffff;
 }
-html,body{height:100%;margin:0;overflow:hidden;background:#f8fafc;font-family:Arial,Helvetica,sans-serif;color:var(--ink);} 
-body.riep-mobile-app{display:flex;flex-direction:column;min-height:100dvh;overflow:hidden;background:#f8fafc;}
+html,body{height:100%;margin:0;overflow-x:hidden;overflow-y:auto;background:#f8fafc;font-family:Arial,Helvetica,sans-serif;color:var(--ink);} 
+body.riep-mobile-app{display:flex;flex-direction:column;min-height:100dvh;overflow-x:hidden;overflow-y:auto;background:#f8fafc;}
 .app-hero{flex:0 0 auto;padding:22px 16px 18px;background:radial-gradient(circle at 90% 5%,rgba(255,255,255,.14),transparent 28%),linear-gradient(135deg,#07142f 0%,#14265a 100%);color:#fff;box-shadow:0 2px 18px rgba(15,23,42,.18);}
 .hero-topline{display:grid;grid-template-columns:34px 1fr 54px;gap:14px;align-items:start;}
 .hamburger{width:32px;margin-top:12px;display:flex;flex-direction:column;gap:6px}.hamburger span{height:4px;border-radius:999px;background:rgba(255,255,255,.9)}
@@ -1065,12 +1065,11 @@ body.riep-mobile-app{display:flex;flex-direction:column;min-height:100dvh;overfl
 .controls{flex:0 0 auto;display:grid;grid-template-columns:130px minmax(0,1fr);gap:12px 14px;align-items:center;padding:18px 16px 14px;background:#fff;border-bottom:1px solid #eef2f7;box-shadow:0 6px 24px rgba(15,23,42,.04)}
 .control-group{display:contents}.control-label{align-self:center;color:#64748b;font-size:14px;line-height:1.05;text-transform:uppercase;letter-spacing:.08em;font-weight:950}.segmented{justify-self:start;display:flex;background:#f1f5f9;border:1px solid #dbe3ef;border-radius:999px;padding:4px;gap:4px;box-shadow:inset 0 1px 2px rgba(15,23,42,.06)}.segmented button{border:0;border-radius:999px;background:transparent;color:#475569;padding:10px 20px;min-height:44px;font-size:17px;font-weight:900}.segmented button.active{background:#14265a;color:#fff;box-shadow:0 8px 18px rgba(20,38,90,.24)}
 #yearButtons,.year-timeline,.note,.mobile-hidden-note{display:none!important;visibility:hidden!important;width:0!important;height:0!important;overflow:hidden!important;position:absolute!important;left:-9999px!important}.mobile-select,select#viewSelect,select#mobileYearSelect{width:100%;min-width:0;min-height:48px;border:1px solid #dbe3ef;border-radius:999px;background:#fff;color:#0f172a;padding:0 44px 0 20px;font-size:17px!important;font-weight:850;box-shadow:0 3px 12px rgba(15,23,42,.07);appearance:auto}.era-badge{grid-column:1 / -1;justify-self:start;margin:4px 0 0 0;white-space:normal;border-radius:999px;background:#eef2ff;color:#3730a3;font-size:14px;font-weight:900;padding:10px 16px;max-width:100%}
-.mobile-results{flex:0 0 auto;margin:14px 16px 14px;display:grid;grid-template-columns:1fr 1.15fr 20px;gap:10px;align-items:center;background:#fff;border:1px solid #dbe3ef;border-radius:18px;padding:14px 14px 12px;box-shadow:0 6px 24px rgba(15,23,42,.08);position:relative;overflow:hidden}.mobile-results:before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:5px;border-radius:999px;background:linear-gradient(#2563eb,#60a5fa)}.mobile-results-left{padding-left:12px}.mobile-results-kicker{font-size:16px;font-weight:950;letter-spacing:-.03em;color:#0f172a}.mobile-results-meta{margin-top:4px;font-size:14px;color:#64748b;font-weight:750}.mobile-score{margin-top:16px;font-size:30px;line-height:1;font-weight:950;letter-spacing:-.05em;color:#0f172a}.score-dash{margin:0 8px;color:#334155}.score-labels{display:flex;gap:52px;margin-top:8px;font-size:13px;font-weight:950}.score-labels span:first-child{color:#2b6cb0}.score-labels span:last-child{color:#dc2626}.mobile-results-chart{min-width:0;text-align:center}.seat-dot-arc{display:block;width:100%;max-width:176px;height:102px;margin:0 auto}.seat-dot{fill:#cbd5e1;stroke:rgba(255,255,255,.75);stroke-width:1}.seat-dot.dem{fill:#2b6cb0}.seat-dot.rep{fill:#dc2626}.seat-dot.other{fill:#94a3b8}.mobile-total-seats{margin-top:2px;font-size:13px;color:#64748b;font-weight:800}.mobile-card-chevron{border:0;background:transparent;color:#94a3b8;font-size:36px;line-height:1;font-weight:300}
-.dashboard{display:flex!important;flex-direction:column!important;height:auto!important;min-height:0!important;position:relative;overflow:visible;background:#eef2f7}.dashboard:before{content:"";display:block;height:1px;background:#e5e7eb}#map{order:1;height:58svh!important;min-height:420px!important;max-height:620px;width:100%!important;background:#eef2f7!important;position:relative}.leaflet-container{height:100%!important;width:100%!important;font-family:Arial,Helvetica,sans-serif}.leaflet-tile-pane{filter:grayscale(95%) saturate(75%) contrast(96%)!important;opacity:.48!important}.leaflet-control-zoom{display:none!important}.legend{display:none!important}
-#districtPanel{order:2;display:block!important;visibility:visible!important;pointer-events:auto!important;position:static!important;left:auto!important;width:auto!important;height:auto!important;overflow:visible!important;background:#fff;border-top:1px solid #e5e7eb;padding:14px 12px 18px;max-height:none!important}#factsPanel{display:none!important;visibility:hidden!important;pointer-events:none!important;position:absolute!important;left:-99999px!important;width:0!important;height:0!important;overflow:hidden!important}body.focus-view .gender-overlay,body.focus-mode .gender-overlay,body.gender-mode .gender-overlay{left:12px!important;right:12px!important;bottom:12px!important;top:auto!important;width:auto!important;max-width:none!important;max-height:30dvh!important;overflow:auto!important;border-radius:18px!important;padding:12px!important;z-index:900!important;background:rgba(255,255,255,.96)!important}
-.district-browser-title{font-size:13px;font-weight:900;letter-spacing:-.01em;margin:0 0 10px;color:#0f172a}.district-search.mobile-district-search{width:100%;padding:11px 12px;border-radius:14px;border:1px solid #d1d5db;margin-bottom:10px;font-size:14px;background:#f8fafc}.district-list.mobile-district-list{display:flex;flex-direction:column;gap:8px;max-height:none}
+.mobile-results{flex:0 0 auto;margin:14px 16px 14px;display:grid;grid-template-columns:1fr 1.15fr 20px;gap:10px;align-items:center;background:#fff;border:1px solid #dbe3ef;border-radius:18px;padding:14px 14px 12px;box-shadow:0 6px 24px rgba(15,23,42,.08);position:relative;overflow:hidden}.mobile-results:before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:5px;border-radius:999px;background:linear-gradient(#2563eb,#60a5fa)}.mobile-results-left{padding-left:12px}.mobile-results-kicker{font-size:16px;font-weight:950;letter-spacing:-.03em;color:#0f172a}.mobile-results-meta{margin-top:4px;font-size:14px;color:#64748b;font-weight:750}.mobile-score{margin-top:16px;font-size:30px;line-height:1;font-weight:950;letter-spacing:-.05em;color:#0f172a}.score-dash{margin:0 8px;color:#334155}.score-labels{display:flex;gap:52px;margin-top:8px;font-size:13px;font-weight:950}.score-labels span:first-child{color:#2b6cb0}.score-labels span:last-child{color:#dc2626}.mobile-results-chart{min-width:0;text-align:center}.mini-arc{height:82px;max-width:170px;margin:0 auto;border-radius:170px 170px 0 0;background:conic-gradient(from 270deg,#2b6cb0 0deg,#2b6cb0 var(--dem-angle,180deg),#dc2626 var(--dem-angle,180deg),#dc2626 180deg,transparent 180deg);position:relative;overflow:hidden}.mini-arc:after{content:"";position:absolute;left:28%;right:28%;bottom:0;height:56%;border-radius:120px 120px 0 0;background:#fff}.mobile-total-seats{margin-top:4px;font-size:13px;color:#64748b;font-weight:800}.mobile-card-chevron{border:0;background:transparent;color:#94a3b8;font-size:36px;line-height:1;font-weight:300}
+.dashboard{flex:0 0 auto;display:block!important;grid-template-columns:1fr!important;height:auto!important;min-height:0!important;position:relative;overflow:visible;background:#eef2f7}.dashboard:before{content:"";display:block;height:1px;background:#e5e7eb}#map{height:min(72vh,680px)!important;min-height:500px!important;width:100%!important;background:#eef2f7!important;position:relative}.leaflet-container{height:100%!important;font-family:Arial,Helvetica,sans-serif}.leaflet-tile-pane{filter:grayscale(95%) saturate(75%) contrast(96%)!important;opacity:.48!important}.leaflet-control-zoom{margin-left:16px!important;margin-top:16px!important;border:0!important;box-shadow:0 12px 28px rgba(15,23,42,.18)!important}.leaflet-control-zoom a{width:44px!important;height:44px!important;line-height:44px!important;font-size:24px!important;border-color:#e5e7eb!important}.legend{display:none!important}
+#districtPanel,#factsPanel{display:none!important;visibility:hidden!important;pointer-events:none!important;position:absolute!important;left:-99999px!important;width:0!important;height:0!important;overflow:hidden!important}body.focus-view .gender-overlay,body.focus-mode .gender-overlay,body.gender-mode .gender-overlay{left:12px!important;right:12px!important;bottom:12px!important;top:auto!important;width:auto!important;max-width:none!important;max-height:34dvh!important;overflow:auto!important;border-radius:18px!important;padding:12px!important;z-index:900!important;background:rgba(255,255,255,.96)!important}
 @media (min-width:761px){body.riep-mobile-app{max-width:430px;margin:0 auto;box-shadow:0 0 0 1px #e5e7eb,0 20px 80px rgba(15,23,42,.16)}}
-@media (max-width:390px){.app-hero h1{font-size:25px}.app-hero p{font-size:14px}.controls{grid-template-columns:115px minmax(0,1fr);gap:10px}.control-label{font-size:12px}.segmented button{padding:9px 16px;font-size:15px}.mobile-select,select#viewSelect,select#mobileYearSelect{font-size:15px!important;min-height:45px}.mobile-score{font-size:26px}.seat-dot-arc{max-width:154px;height:90px}.site-nav a{padding:8px 14px}}
+@media (max-width:390px){.app-hero h1{font-size:25px}.app-hero p{font-size:14px}.controls{grid-template-columns:115px minmax(0,1fr);gap:10px}.control-label{font-size:12px}.segmented button{padding:9px 16px;font-size:15px}.mobile-select,select#viewSelect,select#mobileYearSelect{font-size:15px!important;min-height:45px}.mobile-score{font-size:26px}.mini-arc{height:70px}.site-nav a{padding:8px 14px}#map{height:min(66vh,620px)!important;min-height:440px!important}}
 
 </style>
 </head>
@@ -1135,20 +1134,20 @@ body.riep-mobile-app{display:flex;flex-direction:column;min-height:100dvh;overfl
     <div class="score-labels"><span>DEM</span><span>REP</span></div>
   </div>
   <div class="mobile-results-chart" aria-hidden="true">
-    <div id="mobileSeatDots"></div>
+    <div class="mini-arc"><div class="mini-arc-fill"></div></div>
     <div id="mobileTotalSeats" class="mobile-total-seats">Tap a district</div>
   </div>
   <button class="mobile-card-chevron" type="button" aria-label="Result details">›</button>
 </section>
 
 <main class="dashboard">
-  <section id="map"><div id="genderOverlay" class="gender-overlay"></div></section>
-
-  <aside id="districtPanel">
-    <div class="district-browser-title">Browse Districts</div>
-    <input id="districtSearch" class="district-search mobile-district-search" type="search" placeholder="Search district or candidate..." />
-    <div id="districtList" class="district-list mobile-district-list"></div>
+  <aside id="districtPanel" aria-hidden="true">
+    <div class="district-panel-title">Districts</div>
+    <input id="districtSearch" class="district-search" type="search" placeholder="Search district or candidate..." />
+    <div id="districtList" class="district-list"></div>
   </aside>
+
+  <section id="map"><div id="genderOverlay" class="gender-overlay"></div></section>
 
   <aside id="factsPanel" aria-hidden="true">
     <div class="facts-title" id="overviewTitle">Election Overview</div>
@@ -1173,6 +1172,7 @@ let selectedLayer = null;
   if (!["gender", "competitiveness", "uncontested"].includes(state.view) && sharedOverlay) sharedOverlay.innerHTML = "";
 let selectedKey = null;
 let featureLayerByKey = {};
+let initialBounds = null;
 
 const partyColors = {
   DEM: "#2b6cb0",
@@ -1436,12 +1436,7 @@ function showRace(race, lyr) {
   selectedLayer = lyr;
   selectedKey = `${state.chamber}|${state.year}|${race.district_number}`;
   lyr.setStyle({ weight: 4, color: "#0f172a", fillOpacity: 0.58 });
-  if (!window.matchMedia("(max-width: 760px)").matches) {
-    lyr.bindPopup(popupHtml(race)).openPopup();
-  } else if (lyr.closePopup) {
-    lyr.closePopup();
-  }
-  updateMobileResults(race);
+  lyr.bindPopup(popupHtml(race)).openPopup();
   highlightDistrictList();
 }
 
@@ -1526,9 +1521,10 @@ function selectRaceByDistrict(districtNumber) {
   if (targetLayer) {
     selectedLayer = targetLayer;
     targetLayer.setStyle({ weight: 3.2, color: "#111827" });
+    map.fitBounds(targetLayer.getBounds(), { padding: [40, 40] });
     const race = getRace(state.chamber, state.year, districtNumber);
     if (race) {
-      showRace(race, targetLayer);
+      showRace(race);
     }
   }
 }
@@ -1884,6 +1880,7 @@ function renderDistrictList() {
       const lyr = featureLayerByKey[el.dataset.key];
       const race = raceData[el.dataset.key];
       if (lyr && race) {
+        map.fitBounds(lyr.getBounds(), { padding: [30, 30], maxZoom: 12 });
         showRace(race, lyr);
       }
     });
@@ -1961,7 +1958,6 @@ function syncButtons() {
 function setupControls() {
   const yearButtons = document.getElementById("yearButtons");
   yearButtons.innerHTML = years.map(y => `<button type="button" data-value="${y}">${y}</button>`).join("");
-  const mobileYearSelect = document.getElementById("mobileYearSelect");
 
   document.querySelectorAll("#chamberButtons button").forEach(btn => {
     btn.addEventListener("click", () => {
@@ -1980,15 +1976,17 @@ function setupControls() {
     if (state.view !== "competitiveness") state.competitivenessFilter = "all";
     refresh();
   });
-  if (mobileYearSelect) {
-    mobileYearSelect.value = state.year;
-    mobileYearSelect.addEventListener("change", e => {
-      state.year = e.target.value;
-      refresh();
-    });
-  }
   document.getElementById("districtSearch").addEventListener("input", renderDistrictList);
   syncButtons();
+}
+
+function ensureMapHeroSize() {
+  setTimeout(() => map.invalidateSize(), 0);
+  setTimeout(() => map.invalidateSize(), 160);
+  setTimeout(() => map.invalidateSize(), 420);
+  if (initialBounds) {
+    setTimeout(() => map.fitBounds(initialBounds, { padding: [18, 18] }), 200);
+  }
 }
 
 function refresh() {
@@ -1998,9 +1996,7 @@ function refresh() {
   document.body.classList.toggle("focus-mode", isFocus);
   document.body.classList.toggle("gender-mode", isFocus);
   const sharedOverlay = document.getElementById("genderOverlay");
-  const mobileYearSelect = document.getElementById("mobileYearSelect");
   if (!isFocus && sharedOverlay) sharedOverlay.innerHTML = "";
-  if (mobileYearSelect && mobileYearSelect.value !== state.year) mobileYearSelect.value = state.year;
   setTimeout(() => map.invalidateSize(), 50);
   selectedLayer = null;
   selectedKey = null;
@@ -2018,13 +2014,14 @@ function refresh() {
     onEachFeature
   }).addTo(map);
 
+  initialBounds = layer.getBounds();
   setTimeout(() => map.invalidateSize(), 0);
-  map.fitBounds(layer.getBounds(), { padding: [15, 15] });
+  map.fitBounds(initialBounds, { padding: [15, 15] });
+  ensureMapHeroSize();
   addLegend();
   updateEraBadge();
   updateOverview();
-  renderDistrictList();
-  updateMobileResults();
+renderDistrictList();
 }
 
 async function fetchJson(url) {
@@ -2049,99 +2046,12 @@ async function loadData() {
   raceData = await fetchJson("data/race_data.json");
 }
 
-function updateMobileResults(race) {
-  const card = document.getElementById("mobileResults");
-  if (!card) return;
-
-  const kicker = card.querySelector(".mobile-results-kicker");
-  const meta = card.querySelector(".mobile-results-meta");
-  const dem = document.getElementById("mobileDemScore");
-  const rep = document.getElementById("mobileRepScore");
-  const total = document.getElementById("mobileTotalSeats");
-  const seatDots = document.getElementById("mobileSeatDots");
-  const races = racesForSelection();
-  const chamberLabel = state.chamber === "house" ? "House" : "Senate";
-  const counts = { total: races.length, dem: 0, rep: 0, other: 0 };
-
-  races.forEach(entry => {
-    const party = String(entry.winner_party || "OTHER").trim().toUpperCase();
-    if (party === "DEM") counts.dem += 1;
-    else if (party === "REP") counts.rep += 1;
-    else counts.other += 1;
-  });
-
-  if (race) {
-    kicker.textContent = `District ${race.district_number}`;
-    meta.textContent = `${race.winner_candidate || "Winner unavailable"} · ${String(race.winner_party || "OTHER").trim().toUpperCase()}`;
-    total.textContent = race.is_uncontested ? "Uncontested" : ((race.margin_pct || "N/A") + " margin");
-  } else {
-    kicker.textContent = "Rhode Island";
-    meta.textContent = `${chamberLabel} · ${state.year}`;
-    total.textContent = counts.total ? `${counts.total} total seats` : "Tap a district";
-  }
-
-  dem.textContent = counts.dem;
-  rep.textContent = counts.rep;
-
-  if (seatDots) {
-    const parties = [];
-    for (let index = 0; index < counts.dem; index += 1) parties.push("dem");
-    for (let index = 0; index < counts.other; index += 1) parties.push("other");
-    for (let index = 0; index < counts.rep; index += 1) parties.push("rep");
-
-    const totalSeats = parties.length;
-    const rows = totalSeats > 60 ? 6 : totalSeats > 45 ? 5 : totalSeats > 28 ? 4 : 3;
-    const weights = [1.28, 1.12, 1, 0.86, 0.72, 0.56].slice(0, rows);
-    const weightTotal = weights.reduce((sum, value) => sum + value, 0);
-    const rowCounts = weights.map(value => Math.max(1, Math.round((value / weightTotal) * totalSeats)));
-
-    while (rowCounts.reduce((sum, value) => sum + value, 0) > totalSeats) {
-      for (let index = rowCounts.length - 1; index >= 0; index -= 1) {
-        if (rowCounts[index] > 1) {
-          rowCounts[index] -= 1;
-          break;
-        }
-      }
-    }
-    while (rowCounts.reduce((sum, value) => sum + value, 0) < totalSeats) {
-      rowCounts[0] += 1;
-    }
-
-    const width = 180;
-    const height = 104;
-    const centerX = 90;
-    const centerY = 90;
-    const outerRadius = 74;
-    const innerRadius = rows <= 3 ? 42 : 34;
-    const positions = [];
-
-    rowCounts.forEach((count, rowIndex) => {
-      const ratio = rows === 1 ? 0 : rowIndex / (rows - 1);
-      const radius = outerRadius - ((outerRadius - innerRadius) * ratio);
-      const startDeg = 184;
-      const endDeg = 356;
-      const step = count === 1 ? 0 : (endDeg - startDeg) / (count - 1);
-      for (let dotIndex = 0; dotIndex < count; dotIndex += 1) {
-        const angle = (startDeg + (step * dotIndex)) * (Math.PI / 180);
-        positions.push({
-          x: centerX + (radius * Math.cos(angle)),
-          y: centerY + (radius * Math.sin(angle))
-        });
-      }
-    });
-
-    positions.sort((a, b) => a.x - b.x);
-    const circles = positions.map((position, index) => {
-      const party = parties[index] || "other";
-      return `<circle class="seat-dot ${party}" cx="${position.x.toFixed(2)}" cy="${position.y.toFixed(2)}" r="4.2"></circle>`;
-    }).join("");
-
-    seatDots.innerHTML = `<svg class="seat-dot-arc" viewBox="0 0 ${width} ${height}" role="img" aria-label="${counts.total} seats by party">${circles}</svg>`;
-  }
-}
-
 window.addEventListener("resize", () => {
   setTimeout(() => map.invalidateSize(), 100);
+});
+
+window.addEventListener("load", () => {
+  ensureMapHeroSize();
 });
 
 setupControls();
