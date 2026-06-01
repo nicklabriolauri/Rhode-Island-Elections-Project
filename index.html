@@ -73,6 +73,7 @@
       flex-wrap: wrap;
     }
     .control-group { display: flex; align-items: center; gap: 8px; }
+    .control-group.is-hidden { display: none; }
     .control-label {
       color: var(--gray);
       font-size: 12px;
@@ -105,6 +106,16 @@
       background: var(--navy2);
       color: white;
       box-shadow: 0 2px 8px rgba(23,37,84,.22);
+    }
+    .segmented button.is-disabled,
+    .year-timeline button.is-disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+    .segmented button.is-disabled:hover,
+    .year-timeline button.is-disabled:hover {
+      background: transparent;
     }
     select {
       border-radius: 999px;
@@ -1008,6 +1019,22 @@ body.gender-mode .gender-overlay {
 
 <div class="controls">
   <div class="control-group">
+    <div class="control-label">Data mode</div>
+    <div class="segmented" id="dataModeButtons">
+      <button type="button" data-value="results">Results</button>
+      <button type="button" data-value="turnout">Turnout</button>
+    </div>
+  </div>
+  <div class="control-group" id="turnoutGeoGroup">
+    <div class="control-label">Geography</div>
+    <div class="segmented" id="turnoutGeoButtons">
+      <button type="button" data-value="municipality">Municipality</button>
+      <button type="button" data-value="precinct">Precinct</button>
+      <button type="button" data-value="house">House</button>
+      <button type="button" data-value="senate">Senate</button>
+    </div>
+  </div>
+  <div class="control-group" id="resultsChamberGroup">
     <div class="control-label">Chamber</div>
     <div class="segmented" id="chamberButtons">
       <button type="button" data-value="house">House</button>
@@ -1030,11 +1057,11 @@ body.gender-mode .gender-overlay {
   <span id="eraBadge" class="era-badge"></span>
 </div>
 
-<div class="note">Hover over districts for labels. Click a district for full race details.</div>
+<div class="note" id="noteBar">Hover over districts for labels. Click a district for full race details.</div>
 
 <main class="dashboard">
   <aside id="districtPanel">
-    <div class="district-panel-title">Districts</div>
+    <div class="district-panel-title" id="districtPanelTitle">Districts</div>
     <input id="districtSearch" class="district-search" type="search" placeholder="Search district or candidate..." />
     <div id="districtList" class="district-list"></div>
   </aside>
@@ -1044,7 +1071,7 @@ body.gender-mode .gender-overlay {
   <aside id="factsPanel">
     <div class="facts-title" id="overviewTitle">Election Overview</div>
     <div class="seat-card">
-      <div class="seat-title">Seat composition</div>
+      <div class="seat-title" id="seatCardTitle">Seat composition</div>
       <svg id="seatChart" viewBox="0 0 240 130" aria-label="Seat composition semicircle chart"></svg>
       <div class="seat-labels" id="seatLabels"></div>
     </div>
@@ -1054,9 +1081,27 @@ body.gender-mode .gender-overlay {
 
 <script>
 const years = ["2012", "2014", "2016", "2018", "2020", "2022", "2024"];
-const state = { chamber: "house", year: "2024", view: "party", competitivenessFilter: "all" };
+const resultViewOptions = `
+  <option value="party">Winner Party</option>
+  <option value="uncontested">Uncontested Seats</option>
+  <option value="gender">Gender Parity</option>
+  <option value="competitiveness">Competitiveness</option>
+`;
+const turnoutViewOptions = `
+  <option value="turnout">Turnout Rate</option>
+`;
+const state = {
+  dataMode: "results",
+  chamber: "house",
+  turnoutGeo: "municipality",
+  year: "2024",
+  resultsYear: "2024",
+  view: "party",
+  competitivenessFilter: "all"
+};
 let geojsons = {};
 let raceData = {};
+let turnoutData = { rows: {}, arrays: {}, statewide: {} };
 let layer = null;
 let legend = null;
 let selectedLayer = null;
@@ -1082,6 +1127,17 @@ const partyColors = {
   SAFE: "#fef3c7",
   UNCONTESTED: "#e5e7eb"
 };
+
+const turnoutPalette = [
+  { max: 15, color: "#b5e8ec" },
+  { max: 25, color: "#a4e1e6" },
+  { max: 35, color: "#93dbe1" },
+  { max: 45, color: "#80d4dc" },
+  { max: 55, color: "#6ccdd6" },
+  { max: 65, color: "#30afbb" },
+  { max: 75, color: "#258992" },
+  { max: 100, color: "#1b6369" }
+];
 
 const partyNames = {
   DEM: "Democratic",
@@ -1111,6 +1167,16 @@ function getGeoKey(chamber, year) {
   return `${chamber}_${getEra(year)}`;
 }
 
+function getActiveGeoKey() {
+  if (!isTurnoutMode()) {
+    return getGeoKey(state.chamber, state.year);
+  }
+  if (state.turnoutGeo === "house" || state.turnoutGeo === "senate") {
+    return getGeoKey(state.turnoutGeo, "2024");
+  }
+  return `turnout_${state.turnoutGeo}_2024`;
+}
+
 function normalizeDistrict(value) {
   return Number(String(value).replace(/^0+/, ""));
 }
@@ -1120,6 +1186,21 @@ function getFeatureDistrict(feature) {
   const raw = p.district_number ?? p.DIST_NUM ?? p.SLDUST ?? p.DISTRICT ?? p.District ?? p.NAME ?? p.NAMELSAD;
   const match = String(raw).match(/\d+/);
   return match ? Number(match[0]) : null;
+}
+
+function getTurnoutFeatureId(feature) {
+  const props = feature.properties || {};
+  if (state.turnoutGeo === "precinct") {
+    return String(props.DISTRICT ?? props.PRECINCTS ?? "").trim();
+  }
+  if (state.turnoutGeo === "municipality") {
+    return String(props.RIMunicipality ?? props.NAME ?? "").trim();
+  }
+  return getFeatureDistrict(feature);
+}
+
+function activeFeatureId(feature) {
+  return isTurnoutMode() ? getTurnoutFeatureId(feature) : getFeatureDistrict(feature);
 }
 
 function getRace(chamber, year, district) {
@@ -1179,6 +1260,74 @@ function competitivenessColor(category) {
   return colors[category] || "#e5e7eb";
 }
 
+function isTurnoutMode() {
+  return state.dataMode === "turnout";
+}
+
+function activeYear() {
+  return isTurnoutMode() ? "2024" : state.year;
+}
+
+function titleCase(value) {
+  return String(value || "")
+    .replace(/_/g, " ")
+    .replace(/\b\w/g, char => char.toUpperCase());
+}
+
+function turnoutGeoLabel() {
+  const labels = {
+    municipality: "Municipality",
+    precinct: "Precinct",
+    house: "House District",
+    senate: "Senate District"
+  };
+  return labels[state.turnoutGeo] || "Geography";
+}
+
+function turnoutLookupKey(geography, year, id) {
+  return `${geography}|${year}|${String(id).trim()}`;
+}
+
+function formatInt(value) {
+  const number = parseNumber(value);
+  if (Number.isNaN(number)) return "N/A";
+  return Math.round(number).toLocaleString("en-US");
+}
+
+function formatPct(value, digits = 1) {
+  const number = parseNumber(value);
+  if (Number.isNaN(number)) return "N/A";
+  return `${number.toFixed(digits)}%`;
+}
+
+function turnoutShare(value, total) {
+  const v = parseNumber(value);
+  const t = parseNumber(total);
+  if (Number.isNaN(v) || Number.isNaN(t) || !t) return "N/A";
+  return `${((v / t) * 100).toFixed(1)}%`;
+}
+
+function turnoutFillColor(turnoutPct) {
+  const pct = parseNumber(turnoutPct);
+  if (Number.isNaN(pct)) return "#e5e7eb";
+  const match = turnoutPalette.find(stop => pct <= stop.max);
+  return match ? match.color : turnoutPalette[turnoutPalette.length - 1].color;
+}
+
+function turnoutRowsForSelection() {
+  const geography = state.turnoutGeo;
+  const year = activeYear();
+  return (turnoutData.arrays[`${geography}|${year}`] || []).slice();
+}
+
+function getTurnoutRow(geography, year, id) {
+  return turnoutData.rows[turnoutLookupKey(geography, year, id)];
+}
+
+function currentTurnoutSummary() {
+  return turnoutData.statewide[activeYear()] || null;
+}
+
 function competitivenessDefinition(category) {
   const definitions = {
     tossup: "winner margin below 5 percentage points",
@@ -1205,6 +1354,10 @@ function racesForSelection() {
     .filter(([key]) => key.startsWith(prefix))
     .map(([, race]) => race)
     .sort((a, b) => Number(a.district_number) - Number(b.district_number));
+}
+
+function activeRows() {
+  return isTurnoutMode() ? turnoutRowsForSelection() : racesForSelection();
 }
 
 function formatDistrictLabel(race) {
@@ -1249,7 +1402,43 @@ function popupHtml(race) {
   `;
 }
 
+function turnoutPopupHtml(row) {
+  if (!row) return "<strong>No turnout data found</strong>";
+
+  const heading =
+    state.turnoutGeo === "precinct"
+      ? `${row.municipality} Precinct ${row.precinct_label || row.precinct_code}`
+      : state.turnoutGeo === "municipality"
+        ? row.municipality
+        : `${turnoutGeoLabel()} ${row.district_number}`;
+
+  return `
+    <div style="min-width:270px;">
+      <h3 style="margin:0 0 6px 0;">${heading}</h3>
+      <div><strong>Turnout:</strong> ${formatPct(row.turnout_pct, 1)}</div>
+      <div><strong>Voted:</strong> ${formatInt(row.voted_total)}</div>
+      <div><strong>Eligible:</strong> ${formatInt(row.eligible_total)}</div>
+      <div><strong>Mail ballot share:</strong> ${turnoutShare(row.voted_mail, row.voted_total)}</div>
+      <div><strong>Early vote share:</strong> ${turnoutShare(row.voted_early, row.voted_total)}</div>
+      <div><strong>Election Day share:</strong> ${turnoutShare(row.voted_election_day, row.voted_total)}</div>
+    </div>
+  `;
+}
+
 function styleFeature(feature) {
+  if (isTurnoutMode()) {
+    const featureId = activeFeatureId(feature);
+    const turnoutRow = getTurnoutRow(state.turnoutGeo, activeYear(), featureId);
+    const fill = turnoutRow ? turnoutFillColor(turnoutRow.turnout_pct) : "#ffffff";
+    return {
+      color: "#334155",
+      weight: state.turnoutGeo === "precinct" ? 0.8 : 1.2,
+      opacity: 1,
+      fillColor: fill,
+      fillOpacity: turnoutRow ? 0.78 : 0.1
+    };
+  }
+
   const district = getFeatureDistrict(feature);
   const race = getRace(state.chamber, state.year, district);
   const genderRecord = typeof getGenderRecord === "function" ? getGenderRecord(state.chamber, state.year, district) : null;
@@ -1331,7 +1520,41 @@ function showRace(race, lyr) {
   highlightDistrictList();
 }
 
+function showTurnout(row, lyr) {
+  if (!row || !lyr) return;
+  if (selectedLayer && selectedLayer !== lyr && layer) {
+    layer.resetStyle(selectedLayer);
+  }
+  selectedLayer = lyr;
+  const rowId = state.turnoutGeo === "precinct"
+    ? row.precinct_code
+    : state.turnoutGeo === "municipality"
+      ? row.municipality
+      : row.district_number;
+  selectedKey = turnoutLookupKey(state.turnoutGeo, activeYear(), rowId);
+  lyr.setStyle({ weight: 3, color: "#0f172a", fillOpacity: 0.92 });
+  lyr.bindPopup(turnoutPopupHtml(row)).openPopup();
+  highlightDistrictList();
+}
+
 function onEachFeature(feature, lyr) {
+  if (isTurnoutMode()) {
+    const featureId = activeFeatureId(feature);
+    const row = getTurnoutRow(state.turnoutGeo, activeYear(), featureId);
+    const key = turnoutLookupKey(state.turnoutGeo, activeYear(), featureId);
+    featureLayerByKey[key] = lyr;
+    const label = row
+      ? state.turnoutGeo === "precinct"
+        ? `${row.municipality} Precinct ${row.precinct_label || row.precinct_code}: ${formatPct(row.turnout_pct, 1)} turnout`
+        : state.turnoutGeo === "municipality"
+          ? `${row.municipality}: ${formatPct(row.turnout_pct, 1)} turnout`
+          : `${turnoutGeoLabel()} ${row.district_number}: ${formatPct(row.turnout_pct, 1)} turnout`
+      : turnoutGeoLabel();
+    lyr.bindTooltip(label, { sticky: true });
+    lyr.on("click", () => showTurnout(row, lyr));
+    return;
+  }
+
   const district = getFeatureDistrict(feature);
   const race = getRace(state.chamber, state.year, district);
   const key = `${state.chamber}|${state.year}|${district}`;
@@ -1398,6 +1621,47 @@ function renderSeatChart(partyCounts, totalSeats) {
   `;
 }
 
+function renderTurnoutGauge(summary) {
+  const svg = document.getElementById("seatChart");
+  const labels = document.getElementById("seatLabels");
+  const title = document.getElementById("seatCardTitle");
+  if (!svg || !labels || !title || !summary) return;
+
+  title.textContent = "Statewide turnout";
+
+  const eligible = parseNumber(summary.eligible_total);
+  const voted = parseNumber(summary.voted_total);
+  const turnoutPct = parseNumber(summary.turnout_pct);
+  const votedSpan = eligible ? (voted / eligible) * 180 : 0;
+  const cx = 120, cy = 112, rOuter = 88, rInner = 52;
+
+  function pt(r, deg) {
+    const rad = deg * Math.PI / 180;
+    return [cx + r * Math.cos(rad), cy + r * Math.sin(rad)];
+  }
+
+  function segment(a0, a1, color) {
+    const [x1, y1] = pt(rOuter, a0);
+    const [x2, y2] = pt(rOuter, a1);
+    const [x3, y3] = pt(rInner, a1);
+    const [x4, y4] = pt(rInner, a0);
+    const large = (a1 - a0) > 180 ? 1 : 0;
+    return `<path d="M ${x1} ${y1} A ${rOuter} ${rOuter} 0 ${large} 1 ${x2} ${y2} L ${x3} ${y3} A ${rInner} ${rInner} 0 ${large} 0 ${x4} ${y4} Z" fill="${color}" stroke="#fff" stroke-width="2"></path>`;
+  }
+
+  svg.innerHTML = `
+    ${segment(180, 180 + votedSpan, "#258992")}
+    ${segment(180 + votedSpan, 360, "#dbe3ef")}
+    <text x="120" y="90" text-anchor="middle" font-size="24" font-weight="900" fill="#0f172a">${turnoutPct.toFixed(1)}%</text>
+    <text x="120" y="107" text-anchor="middle" font-size="11" fill="#64748b">turnout</text>
+  `;
+
+  labels.innerHTML = `
+    <div><span class="seat-count">${formatInt(voted)}</span>Voted</div>
+    <div style="text-align:right;"><span class="seat-count">${formatInt(eligible - voted)}</span>Did not vote</div>
+  `;
+}
+
 
 
 
@@ -1417,6 +1681,16 @@ function selectRaceByDistrict(districtNumber) {
     if (race) {
       showRace(race);
     }
+  }
+}
+
+function selectTurnoutRow(rowId) {
+  const key = turnoutLookupKey(state.turnoutGeo, activeYear(), rowId);
+  const targetLayer = featureLayerByKey[key];
+  const row = getTurnoutRow(state.turnoutGeo, activeYear(), rowId);
+  if (targetLayer && row) {
+    map.fitBounds(targetLayer.getBounds(), { padding: [30, 30], maxZoom: state.turnoutGeo === "precinct" ? 12 : 11 });
+    showTurnout(row, targetLayer);
   }
 }
 
@@ -1633,10 +1907,79 @@ function renderGenderOverlay(races, womenSeats, womenPct, womenPartyCounts) {
   `;
 }
 
+function renderTurnoutOverview() {
+  const rows = turnoutRowsForSelection();
+  const summary = currentTurnoutSummary();
+  const geoLabel = turnoutGeoLabel();
+  const titleText = state.turnoutGeo === "precinct" ? "Precincts" : `${geoLabel}s`;
+
+  document.getElementById("overviewTitle").textContent = `2024 ${geoLabel} Turnout`;
+
+  if (!summary || !rows.length) {
+    document.getElementById("factsGrid").innerHTML = `<div class="error">No turnout records found for this selection.</div>`;
+    return;
+  }
+
+  renderTurnoutGauge(summary);
+
+  const sortedRows = rows
+    .filter(row => !Number.isNaN(parseNumber(row.turnout_pct)))
+    .sort((a, b) => parseNumber(b.turnout_pct) - parseNumber(a.turnout_pct));
+  const highest = sortedRows[0];
+  const lowest = sortedRows[sortedRows.length - 1];
+  const votedMailShare = turnoutShare(summary.voted_mail, summary.voted_total);
+  const votedEarlyShare = turnoutShare(summary.voted_early, summary.voted_total);
+
+  function rowLabel(row) {
+    if (state.turnoutGeo === "municipality") return row.municipality;
+    if (state.turnoutGeo === "precinct") return `${row.municipality} ${row.precinct_label || row.precinct_code}`;
+    return `${geoLabel} ${row.district_number}`;
+  }
+
+  document.getElementById("factsGrid").innerHTML = `
+    <div class="fact-card">
+      <div class="fact-label">${titleText} mapped</div>
+      <div class="fact-value">${rows.length}</div>
+      <div class="fact-detail">Official 2024 Rhode Island turnout source</div>
+    </div>
+    <div class="fact-card">
+      <div class="fact-label">Statewide turnout</div>
+      <div class="fact-value">${formatPct(summary.turnout_pct, 1)}</div>
+      <div class="fact-detail">${formatInt(summary.voted_total)} voted out of ${formatInt(summary.eligible_total)} eligible</div>
+    </div>
+    <div class="fact-card">
+      <div class="fact-label">Highest turnout</div>
+      <div class="fact-value">${rowLabel(highest)}</div>
+      <div class="fact-detail">${formatPct(highest.turnout_pct, 1)}</div>
+    </div>
+    <div class="fact-card">
+      <div class="fact-label">Lowest turnout</div>
+      <div class="fact-value">${rowLabel(lowest)}</div>
+      <div class="fact-detail">${formatPct(lowest.turnout_pct, 1)}</div>
+    </div>
+    <div class="fact-card">
+      <div class="fact-label">Mail ballot share</div>
+      <div class="fact-value">${votedMailShare}</div>
+      <div class="fact-detail">${formatInt(summary.voted_mail)} of all ballots cast</div>
+    </div>
+    <div class="fact-card">
+      <div class="fact-label">Early vote share</div>
+      <div class="fact-value">${votedEarlyShare}</div>
+      <div class="fact-detail">${formatInt(summary.voted_early)} early votes statewide</div>
+    </div>
+  `;
+}
+
 function updateOverview() {
+  if (isTurnoutMode()) {
+    renderTurnoutOverview();
+    return;
+  }
+
   const races = racesForSelection();
   const titleChamber = state.chamber === "house" ? "House" : "Senate";
   document.getElementById("overviewTitle").textContent = `${state.year} ${titleChamber} Overview`;
+  document.getElementById("seatCardTitle").textContent = "Seat composition";
 
   if (!races.length) {
     if (state.view === "uncontested") {
@@ -1730,6 +2073,62 @@ function updateOverview() {
 }
 
 function renderDistrictList() {
+  if (isTurnoutMode()) {
+    const query = document.getElementById("districtSearch").value.toLowerCase().trim();
+    const rows = turnoutRowsForSelection();
+    const filtered = rows.filter(row => {
+      const label =
+        state.turnoutGeo === "municipality"
+          ? row.municipality
+          : state.turnoutGeo === "precinct"
+            ? `${row.municipality} ${row.precinct_label || row.precinct_code}`
+            : `${row.district_number}`;
+      const haystack = [
+        label,
+        row.municipality,
+        row.precinct_label,
+        row.precinct_code,
+        row.district_number,
+        row.turnout_pct,
+        row.voted_total,
+        row.eligible_total
+      ].join(" ").toLowerCase();
+      return !query || haystack.includes(query);
+    });
+
+    const list = document.getElementById("districtList");
+    list.innerHTML = filtered.map(row => {
+      const rowId = state.turnoutGeo === "precinct"
+        ? row.precinct_code
+        : state.turnoutGeo === "municipality"
+          ? row.municipality
+          : row.district_number;
+      const key = turnoutLookupKey(state.turnoutGeo, activeYear(), rowId);
+      const title = state.turnoutGeo === "municipality"
+        ? row.municipality
+        : state.turnoutGeo === "precinct"
+          ? `${row.municipality} ${row.precinct_label || row.precinct_code}`
+          : `${turnoutGeoLabel()} ${row.district_number}`;
+      return `
+        <div class="district-item" data-key="${key}" data-row-id="${rowId}" style="border-left-color:${turnoutFillColor(row.turnout_pct)}">
+          <div class="district-item-top">
+            <span>${formatPct(row.turnout_pct, 1)} turnout</span>
+            <span>${state.turnoutGeo === "precinct" ? row.precinct_code : titleCase(state.turnoutGeo)}</span>
+          </div>
+          <div class="district-item-name">${title}</div>
+          <div class="district-item-detail">Voted: ${formatInt(row.voted_total)} · Eligible: ${formatInt(row.eligible_total)} · Mail share: ${turnoutShare(row.voted_mail, row.voted_total)}</div>
+        </div>
+      `;
+    }).join("");
+
+    list.querySelectorAll(".district-item").forEach(el => {
+      el.addEventListener("click", () => selectTurnoutRow(el.dataset.rowId));
+    });
+
+    highlightDistrictList();
+    return;
+  }
+
   const query = document.getElementById("districtSearch").value.toLowerCase().trim();
   const races = racesForSelection();
   const filtered = races.filter(r => {
@@ -1791,6 +2190,19 @@ function addLegend() {
   legend = L.control({ position: (state.view === "gender" || state.view === "competitiveness" || state.view === "uncontested") ? "bottomleft" : "bottomright" });
   legend.onAdd = function() {
     const div = L.DomUtil.create("div", "legend");
+    if (isTurnoutMode()) {
+      div.innerHTML = `
+        <div class="legend-title">Turnout Rate</div>
+        <div><span class="swatch" style="background:#b5e8ec"></span>0–15%</div>
+        <div><span class="swatch" style="background:#93dbe1"></span>25–35%</div>
+        <div><span class="swatch" style="background:#6ccdd6"></span>45–55%</div>
+        <div><span class="swatch" style="background:#30afbb"></span>55–65%</div>
+        <div><span class="swatch" style="background:#258992"></span>65–75%</div>
+        <div><span class="swatch" style="background:#1b6369"></span>75%+</div>
+      `;
+      return div;
+    }
+
     const title =
       state.view === "party" ? "Winner Party" :
       state.view === "uncontested" ? "Uncontested Seats" :
@@ -1831,6 +2243,10 @@ function addLegend() {
 }
 
 function updateEraBadge() {
+  if (isTurnoutMode()) {
+    document.getElementById("eraBadge").textContent = "Official turnout currently wired for 2024";
+    return;
+  }
   const text = Number(state.year) <= 2020
     ? "Using RI GIS clipped 2012–2020 districts"
     : "Using 2022–2024 districts";
@@ -1838,27 +2254,83 @@ function updateEraBadge() {
 }
 
 function syncButtons() {
+  document.querySelectorAll("#dataModeButtons button").forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.value === state.dataMode);
+  });
   document.querySelectorAll("#chamberButtons button").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.value === state.chamber);
   });
+  document.querySelectorAll("#turnoutGeoButtons button").forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.value === state.turnoutGeo);
+  });
   document.querySelectorAll("#yearButtons button").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.value === state.year);
+    const disabled = isTurnoutMode() && btn.dataset.value !== "2024";
+    btn.classList.toggle("is-disabled", disabled);
+    btn.disabled = disabled;
   });
+
+  document.getElementById("resultsChamberGroup").classList.toggle("is-hidden", isTurnoutMode());
+  document.getElementById("turnoutGeoGroup").classList.toggle("is-hidden", !isTurnoutMode());
+  document.getElementById("districtPanelTitle").textContent = isTurnoutMode() ? titleCase(`${state.turnoutGeo} list`) : "Districts";
+  document.getElementById("districtSearch").placeholder = isTurnoutMode()
+    ? "Search geography or place..."
+    : "Search district or candidate...";
+  document.getElementById("noteBar").textContent = isTurnoutMode()
+    ? "Turnout mode uses official Rhode Island 2024 turnout data. Click a place to inspect turnout, eligible voters, and voting method splits."
+    : "Hover over districts for labels. Click a district for full race details.";
+
+  const viewSelect = document.getElementById("viewSelect");
+  const targetOptions = isTurnoutMode() ? turnoutViewOptions : resultViewOptions;
+  if (viewSelect.innerHTML.trim() !== targetOptions.trim()) {
+    viewSelect.innerHTML = targetOptions;
+  }
+  if (isTurnoutMode()) {
+    viewSelect.value = "turnout";
+    state.view = "turnout";
+  } else {
+    viewSelect.value = state.view;
+  }
 }
 
 function setupControls() {
   const yearButtons = document.getElementById("yearButtons");
   yearButtons.innerHTML = years.map(y => `<button type="button" data-value="${y}">${y}</button>`).join("");
 
+  document.querySelectorAll("#dataModeButtons button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      if (btn.dataset.value === state.dataMode) return;
+      if (btn.dataset.value === "turnout") {
+        state.resultsYear = state.year;
+        state.dataMode = "turnout";
+        state.year = "2024";
+        state.view = "turnout";
+      } else {
+        state.dataMode = "results";
+        state.year = state.resultsYear || "2024";
+        state.view = "party";
+      }
+      state.competitivenessFilter = "all";
+      refresh();
+    });
+  });
   document.querySelectorAll("#chamberButtons button").forEach(btn => {
     btn.addEventListener("click", () => {
       state.chamber = btn.dataset.value;
       refresh();
     });
   });
+  document.querySelectorAll("#turnoutGeoButtons button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      state.turnoutGeo = btn.dataset.value;
+      refresh();
+    });
+  });
   document.querySelectorAll("#yearButtons button").forEach(btn => {
     btn.addEventListener("click", () => {
+      if (isTurnoutMode() && btn.dataset.value !== "2024") return;
       state.year = btn.dataset.value;
+      if (!isTurnoutMode()) state.resultsYear = btn.dataset.value;
       refresh();
     });
   });
@@ -1873,7 +2345,7 @@ function setupControls() {
 
 function refresh() {
   syncButtons();
-  const isFocus = state.view === "gender" || state.view === "competitiveness" || state.view === "uncontested";
+  const isFocus = !isTurnoutMode() && (state.view === "gender" || state.view === "competitiveness" || state.view === "uncontested");
   document.body.classList.toggle("focus-view", isFocus);
   document.body.classList.toggle("focus-mode", isFocus);
   document.body.classList.toggle("gender-mode", isFocus);
@@ -1884,9 +2356,10 @@ function refresh() {
   selectedKey = null;
   featureLayerByKey = {};
 
-  const geo = geojsons[getGeoKey(state.chamber, state.year)];
+  const geo = geojsons[getActiveGeoKey()];
   if (!geo) {
-    document.getElementById("districtList").innerHTML = `<div class="error">Missing GeoJSON for ${state.chamber} ${state.year}.</div>`;
+    const missingLabel = isTurnoutMode() ? `${turnoutGeoLabel()} turnout ${activeYear()}` : `${state.chamber} ${state.year}`;
+    document.getElementById("districtList").innerHTML = `<div class="error">Missing GeoJSON for ${missingLabel}.</div>`;
     return;
   }
 
@@ -1915,7 +2388,9 @@ async function loadData() {
     senate_old: "data/senate_old.geojson",
     house_old: "data/house_old.geojson",
     senate_new: "data/senate_new.geojson",
-    house_new: "data/house_new.geojson"
+    house_new: "data/house_new.geojson",
+    turnout_precinct_2024: "data/ri_turnout_2024_precinct.geojson",
+    turnout_municipality_2024: "data/ri_turnout_2024_municipality.geojson"
   };
 
   const geoEntries = await Promise.all(
@@ -1924,6 +2399,42 @@ async function loadData() {
 
   geojsons = Object.fromEntries(geoEntries);
   raceData = await fetchJson("data/race_data.json");
+  const turnoutPayload = await fetchJson("data/ri_2024_turnout_data.json");
+  turnoutData.statewide["2024"] = turnoutPayload.statewide;
+  [
+    ["municipality", turnoutPayload.municipality],
+    ["house", turnoutPayload.house],
+    ["senate", turnoutPayload.senate]
+  ].forEach(([geography, rows]) => {
+    turnoutData.arrays[`${geography}|2024`] = rows;
+    rows.forEach(row => {
+      const id = geography === "municipality" ? row.municipality : row.district_number;
+      turnoutData.rows[turnoutLookupKey(geography, "2024", id)] = row;
+    });
+  });
+
+  const precinctRows = await fetchJson("data/ri_turnout_2024_precinct.geojson");
+  turnoutData.arrays["precinct|2024"] = precinctRows.features.map(feature => {
+    const props = feature.properties || {};
+    return {
+      year: 2024,
+      geography_type: "precinct",
+      municipality: props.RIMunicipality || props.TOWN,
+      precinct_code: String(props.DISTRICT || props.PRECINCTS || "").trim(),
+      precinct_label: props.PRECINCTS || props.DISTRICT,
+      voted_total: props.VOTED,
+      eligible_total: props.ELIGIBLE,
+      turnout_pct: props.PCTVOTEDGEN,
+      voted_in_person: props.Voted_InPerson,
+      voted_mail: props.Voted_Mail,
+      voted_election_day: props.Voted_ElectionDay,
+      voted_early: props.Voted_Early,
+      district_number: ""
+    };
+  });
+  turnoutData.arrays["precinct|2024"].forEach(row => {
+    turnoutData.rows[turnoutLookupKey("precinct", "2024", row.precinct_code)] = row;
+  });
 }
 
 window.addEventListener("resize", () => {
@@ -1943,7 +2454,10 @@ loadData()
         data/house_old.geojson<br>
         data/house_new.geojson<br>
         data/senate_old.geojson<br>
-        data/senate_new.geojson
+        data/senate_new.geojson<br>
+        data/ri_turnout_2024_precinct.geojson<br>
+        data/ri_turnout_2024_municipality.geojson<br>
+        data/ri_2024_turnout_data.json
       </div>`;
     document.getElementById("factsGrid").innerHTML = `<div class="error">${err.message}</div>`;
   });
