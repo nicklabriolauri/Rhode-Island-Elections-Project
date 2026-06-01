@@ -404,7 +404,7 @@
       </div>
       <div id="candidateList" class="candidate-list"></div>
       <div class="helper">
-        Use a street address plus the correct city or town. This lookup now uses Rhode Island's official public E911 address locator as its search backend. For official polling place confirmation, use the Rhode Island Department of State lookup linked above.
+        Start typing an address and the page will suggest Rhode Island matches. Selecting a city or town helps narrow results, but it is no longer required. For official polling place confirmation, use the Rhode Island Department of State lookup linked above.
       </div>
       <div id="status" class="status"></div>
     </section>
@@ -448,6 +448,7 @@
     let marker = null;
     let lastCandidates = [];
     let suggestionTimer = null;
+    let suggestionRequestId = 0;
 
     function formatInt(value) {
       const number = Number(value || 0);
@@ -491,6 +492,21 @@
       node.querySelectorAll(".candidate-item").forEach(button => {
         button.addEventListener("click", () => applyCandidate(lastCandidates[Number(button.dataset.index)]));
       });
+    }
+
+    function dedupeCandidates(candidates, limit = 8) {
+      const byAddress = new Map();
+      (candidates || []).forEach(candidate => {
+        if (!candidate?.address) return;
+        const key = candidate.address.trim().toUpperCase();
+        const existing = byAddress.get(key);
+        if (!existing || Number(candidate.score || 0) > Number(existing.score || 0)) {
+          byAddress.set(key, candidate);
+        }
+      });
+      return [...byAddress.values()]
+        .sort((left, right) => Number(right.score || 0) - Number(left.score || 0))
+        .slice(0, limit);
     }
 
     function turnoutFillColor(turnoutPct) {
@@ -638,18 +654,41 @@
       `;
     }
 
-    async function fetchAddressCandidates(street, city) {
+    async function queryGeocoder(params, maxLocations = 6) {
       const url = new URL(RI_GEOCODER_URL);
-      url.searchParams.set("Street", street);
-      url.searchParams.set("City", city);
+      Object.entries(params || {}).forEach(([key, value]) => {
+        if (value) url.searchParams.set(key, value);
+      });
       url.searchParams.set("State", "RI");
       url.searchParams.set("outSR", "4326");
-      url.searchParams.set("maxLocations", "6");
+      url.searchParams.set("maxLocations", String(maxLocations));
       url.searchParams.set("f", "pjson");
       const response = await fetch(url.toString());
       if (!response.ok) throw new Error("Address search is unavailable right now.");
       const payload = await response.json();
       return payload?.candidates || [];
+    }
+
+    async function fetchAddressCandidates(street, city) {
+      const cleanStreet = (street || "").trim();
+      const cleanCity = (city || "").trim();
+      if (!cleanStreet) return [];
+
+      if (cleanCity) {
+        const exactCandidates = await queryGeocoder({ Street: cleanStreet, City: cleanCity }, 6);
+        if (exactCandidates.length) return dedupeCandidates(exactCandidates, 8);
+      }
+
+      if (cleanStreet.includes(",")) {
+        const singleLineCandidates = await queryGeocoder({ "Single Line Input": cleanStreet }, 8);
+        if (singleLineCandidates.length) return dedupeCandidates(singleLineCandidates, 8);
+      }
+
+      const statewideRequests = MUNICIPALITIES.map(name =>
+        queryGeocoder({ Street: cleanStreet, City: name }, 2).catch(() => [])
+      );
+      const statewideResults = (await Promise.all(statewideRequests)).flat();
+      return dedupeCandidates(statewideResults, 8);
     }
 
     async function loadData() {
@@ -729,16 +768,33 @@
     async function updateSuggestions() {
       const address = document.getElementById("addressInput").value.trim();
       const city = document.getElementById("citySelect").value;
-      if (address.length < 4 || !city) {
+      if (address.length < 4) {
         clearSuggestions();
+        if (!address.length) {
+          setStatus("Ready. Enter a Rhode Island address to look up a precinct.");
+        }
         return;
       }
 
+      const requestId = ++suggestionRequestId;
       try {
         const candidates = await fetchAddressCandidates(address, city);
+        if (requestId !== suggestionRequestId) return;
         renderCandidateList(candidates);
+        if (!candidates.length) {
+          setStatus("No Rhode Island match yet. Try adding a street number or optionally choose a city or town.", true);
+          return;
+        }
+        if (city) {
+          setStatus(`Showing address suggestions in ${city}.`);
+          return;
+        }
+        setStatus("Showing statewide Rhode Island address suggestions. Select a city or town to narrow them further.");
       } catch (error) {
         console.error(error);
+        if (requestId === suggestionRequestId) {
+          setStatus(error.message || "Address suggestion search failed.", true);
+        }
       }
     }
 
@@ -749,17 +805,14 @@
         setStatus("Please enter a street address.", true);
         return;
       }
-      if (!city) {
-        setStatus("Please select a Rhode Island city or town.", true);
-        return;
-      }
-
-      setStatus("Searching Rhode Island address database and matching precinct...");
+      setStatus(city
+        ? `Searching Rhode Island address database in ${city} and matching precinct...`
+        : "Searching Rhode Island address database statewide and matching precinct...");
       try {
         const candidates = await fetchAddressCandidates(address, city);
         if (!candidates.length) {
           clearSuggestions();
-          setStatus("No Rhode Island address match was found. Try the street number and street name with the correct city or town.", true);
+          setStatus("No Rhode Island address match was found. Try the street number and street name, or add a city or town to narrow the search.", true);
           return;
         }
         renderCandidateList(candidates);
@@ -778,12 +831,14 @@
       }
     });
     document.getElementById("addressInput").addEventListener("input", () => {
+      suggestionRequestId += 1;
       clearTimeout(suggestionTimer);
-      suggestionTimer = setTimeout(updateSuggestions, 250);
+      suggestionTimer = setTimeout(updateSuggestions, 320);
     });
     document.getElementById("citySelect").addEventListener("change", () => {
+      suggestionRequestId += 1;
       clearTimeout(suggestionTimer);
-      suggestionTimer = setTimeout(updateSuggestions, 100);
+      suggestionTimer = setTimeout(updateSuggestions, 120);
     });
 
     loadData().catch(error => {
