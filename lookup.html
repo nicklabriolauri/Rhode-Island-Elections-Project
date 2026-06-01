@@ -116,12 +116,13 @@
     .search-row {
       margin-top: 18px;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) auto auto;
+      grid-template-columns: minmax(0, 1.2fr) minmax(220px, 0.8fr) auto auto;
       gap: 12px;
       align-items: center;
     }
 
-    .search-input {
+    .search-input,
+    .search-select {
       width: 100%;
       border-radius: 16px;
       border: 1px solid #d7deea;
@@ -129,6 +130,19 @@
       font-size: 15px;
       color: var(--text);
       background: white;
+    }
+
+    .search-select {
+      appearance: none;
+      background-image:
+        linear-gradient(45deg, transparent 50%, #64748b 50%),
+        linear-gradient(135deg, #64748b 50%, transparent 50%);
+      background-position:
+        calc(100% - 20px) calc(50% - 2px),
+        calc(100% - 14px) calc(50% - 2px);
+      background-size: 6px 6px, 6px 6px;
+      background-repeat: no-repeat;
+      padding-right: 38px;
     }
 
     .search-button,
@@ -173,6 +187,47 @@
 
     .status.error {
       color: #991b1b;
+    }
+
+    .candidate-list {
+      display: none;
+      margin-top: 14px;
+      border: 1px solid #dbe3ef;
+      border-radius: 18px;
+      background: white;
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+    }
+
+    .candidate-list.is-visible {
+      display: block;
+    }
+
+    .candidate-item {
+      width: 100%;
+      border: 0;
+      background: white;
+      text-align: left;
+      padding: 14px 16px;
+      cursor: pointer;
+      font-size: 14px;
+      color: var(--text);
+      border-top: 1px solid #edf2f7;
+    }
+
+    .candidate-item:first-child {
+      border-top: 0;
+    }
+
+    .candidate-item:hover {
+      background: #f8fbff;
+    }
+
+    .candidate-score {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
     }
 
     .layout {
@@ -341,11 +396,15 @@
       </p>
       <div class="search-row">
         <input id="addressInput" class="search-input" type="text" placeholder="Example: 82 Smith St, Providence, RI 02903" />
+        <select id="citySelect" class="search-select">
+          <option value="">Select city or town</option>
+        </select>
         <button id="searchButton" class="search-button" type="button">Find Precinct</button>
         <a class="ghost-button" href="https://vote.sos.ri.gov/Home/PollingPlaces?ActiveFlag=2&lt=" target="_blank" rel="noopener noreferrer">Official RI Lookup</a>
       </div>
+      <div id="candidateList" class="candidate-list"></div>
       <div class="helper">
-        This lookup is intended as a research and visualization feature. For official polling place confirmation, use the Rhode Island Department of State lookup linked above.
+        Use a street address plus the correct city or town. This lookup now uses Rhode Island's official public E911 address locator as its search backend. For official polling place confirmation, use the Rhode Island Department of State lookup linked above.
       </div>
       <div id="status" class="status"></div>
     </section>
@@ -364,6 +423,17 @@
 
   <script>
     const RI_CENTER = [41.68, -71.57];
+    const RI_GEOCODER_URL = "https://risegis.ri.gov/gpserver/rest/services/E911_Sites_AddressLocator/GeocodeServer/findAddressCandidates";
+    const MUNICIPALITIES = [
+      "Barrington", "Bristol", "Burrillville", "Central Falls", "Charlestown",
+      "Coventry", "Cranston", "Cumberland", "East Greenwich", "East Providence",
+      "Exeter", "Foster", "Glocester", "Hopkinton", "Jamestown", "Johnston",
+      "Lincoln", "Little Compton", "Middletown", "Narragansett", "Newport",
+      "New Shoreham", "North Kingstown", "North Providence", "North Smithfield",
+      "Pawtucket", "Portsmouth", "Providence", "Richmond", "Scituate",
+      "Smithfield", "South Kingstown", "Tiverton", "Warren", "Warwick",
+      "West Greenwich", "West Warwick", "Westerly", "Woonsocket"
+    ];
     const map = L.map("map", { zoomControl: true }).setView(RI_CENTER, 9);
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 18,
@@ -376,6 +446,8 @@
     let precinctLayer = null;
     let highlightLayer = null;
     let marker = null;
+    let lastCandidates = [];
+    let suggestionTimer = null;
 
     function formatInt(value) {
       const number = Number(value || 0);
@@ -391,6 +463,34 @@
       const node = document.getElementById("status");
       node.textContent = message;
       node.classList.toggle("error", isError);
+    }
+
+    function populateMunicipalities() {
+      const select = document.getElementById("citySelect");
+      select.innerHTML = `<option value="">Select city or town</option>` +
+        MUNICIPALITIES.map(name => `<option value="${name}">${name}</option>`).join("");
+    }
+
+    function renderCandidateList(candidates) {
+      lastCandidates = candidates || [];
+      const node = document.getElementById("candidateList");
+      if (!lastCandidates.length) {
+        node.classList.remove("is-visible");
+        node.innerHTML = "";
+        return;
+      }
+
+      node.innerHTML = lastCandidates.map((candidate, index) => `
+        <button class="candidate-item" type="button" data-index="${index}">
+          ${candidate.address}
+          <span class="candidate-score">Match score: ${Math.round(candidate.score || 0)}</span>
+        </button>
+      `).join("");
+      node.classList.add("is-visible");
+
+      node.querySelectorAll(".candidate-item").forEach(button => {
+        button.addEventListener("click", () => applyCandidate(lastCandidates[Number(button.dataset.index)]));
+      });
     }
 
     function turnoutFillColor(turnoutPct) {
@@ -538,6 +638,20 @@
       `;
     }
 
+    async function fetchAddressCandidates(street, city) {
+      const url = new URL(RI_GEOCODER_URL);
+      url.searchParams.set("Street", street);
+      url.searchParams.set("City", city);
+      url.searchParams.set("State", "RI");
+      url.searchParams.set("outSR", "4326");
+      url.searchParams.set("maxLocations", "6");
+      url.searchParams.set("f", "pjson");
+      const response = await fetch(url.toString());
+      if (!response.ok) throw new Error("Address search is unavailable right now.");
+      const payload = await response.json();
+      return payload?.candidates || [];
+    }
+
     async function loadData() {
       const [geojsonResponse, lookupResponse] = await Promise.all([
         fetch("data/ri_turnout_2024_precinct.geojson", { cache: "no-store" }),
@@ -561,72 +675,95 @@
       setStatus("Ready. Enter a Rhode Island address to look up a precinct.");
     }
 
-    async function geocodeAddress(address) {
-      const url = `https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=${encodeURIComponent(address)}&benchmark=Public_AR_Current&format=json`;
-      const response = await fetch(url);
-      if (!response.ok) throw new Error("Address lookup service is unavailable.");
-      const payload = await response.json();
-      const matches = payload?.result?.addressMatches || [];
-      if (!matches.length) return null;
-      return matches[0];
+    function clearSuggestions() {
+      renderCandidateList([]);
+    }
+
+    function applyCandidate(candidate) {
+      if (!candidate) return;
+      clearSuggestions();
+      const lng = candidate.location.x;
+      const lat = candidate.location.y;
+      const feature = findContainingFeature(lng, lat);
+
+      if (!feature) {
+        setStatus("The address was matched by the Rhode Island search service, but no precinct polygon was found for it.", true);
+        return;
+      }
+
+      const precinctCode = String(feature.properties.DISTRICT || feature.properties.PRECINCTS || "").trim();
+      const lookupRecord = precinctLookup?.precincts?.[precinctCode];
+      if (!lookupRecord) {
+        setStatus("The precinct was matched, but no lookup record was found for it.", true);
+        return;
+      }
+
+      if (highlightLayer) map.removeLayer(highlightLayer);
+      highlightLayer = L.geoJSON(feature, {
+        style: {
+          color: "#0f172a",
+          weight: 3,
+          opacity: 1,
+          fillColor: turnoutFillColor(feature.properties.PCTVOTEDGEN),
+          fillOpacity: 0.85
+        }
+      }).addTo(map);
+
+      if (marker) map.removeLayer(marker);
+      marker = L.circleMarker([lat, lng], {
+        radius: 8,
+        color: "#fff",
+        weight: 2,
+        fillColor: "#111c3d",
+        fillOpacity: 1
+      }).addTo(map);
+
+      const group = L.featureGroup([highlightLayer, marker]);
+      map.fitBounds(group.getBounds(), { padding: [32, 32], maxZoom: 13 });
+
+      renderResults(feature, lookupRecord, candidate.address);
+      document.getElementById("addressInput").value = candidate.address;
+      setStatus(`Matched ${candidate.address} to ${lookupRecord.municipality} Precinct ${lookupRecord.precinct_label || lookupRecord.precinct_code}.`);
+    }
+
+    async function updateSuggestions() {
+      const address = document.getElementById("addressInput").value.trim();
+      const city = document.getElementById("citySelect").value;
+      if (address.length < 4 || !city) {
+        clearSuggestions();
+        return;
+      }
+
+      try {
+        const candidates = await fetchAddressCandidates(address, city);
+        renderCandidateList(candidates);
+      } catch (error) {
+        console.error(error);
+      }
     }
 
     async function handleSearch() {
       const address = document.getElementById("addressInput").value.trim();
+      const city = document.getElementById("citySelect").value;
       if (!address) {
-        setStatus("Please enter a Rhode Island street address.", true);
+        setStatus("Please enter a street address.", true);
+        return;
+      }
+      if (!city) {
+        setStatus("Please select a Rhode Island city or town.", true);
         return;
       }
 
-      setStatus("Looking up address and matching precinct...");
+      setStatus("Searching Rhode Island address database and matching precinct...");
       try {
-        const match = await geocodeAddress(address);
-        if (!match) {
-          setStatus("No address match was found. Try a fuller Rhode Island address with street number, city, and ZIP.", true);
+        const candidates = await fetchAddressCandidates(address, city);
+        if (!candidates.length) {
+          clearSuggestions();
+          setStatus("No Rhode Island address match was found. Try the street number and street name with the correct city or town.", true);
           return;
         }
-
-        const lng = match.coordinates.x;
-        const lat = match.coordinates.y;
-        const feature = findContainingFeature(lng, lat);
-
-        if (!feature) {
-          setStatus("The address was geocoded, but no Rhode Island precinct polygon was matched. Please verify the address.", true);
-          return;
-        }
-
-        const precinctCode = String(feature.properties.DISTRICT || feature.properties.PRECINCTS || "").trim();
-        const lookupRecord = precinctLookup?.precincts?.[precinctCode];
-        if (!lookupRecord) {
-          setStatus("The precinct was matched, but no lookup record was found for it.", true);
-          return;
-        }
-
-        if (highlightLayer) map.removeLayer(highlightLayer);
-        highlightLayer = L.geoJSON(feature, {
-          style: {
-            color: "#0f172a",
-            weight: 3,
-            opacity: 1,
-            fillColor: turnoutFillColor(feature.properties.PCTVOTEDGEN),
-            fillOpacity: 0.85
-          }
-        }).addTo(map);
-
-        if (marker) map.removeLayer(marker);
-        marker = L.circleMarker([lat, lng], {
-          radius: 8,
-          color: "#fff",
-          weight: 2,
-          fillColor: "#111c3d",
-          fillOpacity: 1
-        }).addTo(map);
-
-        const group = L.featureGroup([highlightLayer, marker]);
-        map.fitBounds(group.getBounds(), { padding: [32, 32], maxZoom: 13 });
-
-        renderResults(feature, lookupRecord, match.matchedAddress || address);
-        setStatus(`Matched ${match.matchedAddress || address} to ${lookupRecord.municipality} Precinct ${lookupRecord.precinct_label || lookupRecord.precinct_code}.`);
+        renderCandidateList(candidates);
+        applyCandidate(candidates[0]);
       } catch (error) {
         console.error(error);
         setStatus(error.message || "Address lookup failed.", true);
@@ -640,11 +777,20 @@
         handleSearch();
       }
     });
+    document.getElementById("addressInput").addEventListener("input", () => {
+      clearTimeout(suggestionTimer);
+      suggestionTimer = setTimeout(updateSuggestions, 250);
+    });
+    document.getElementById("citySelect").addEventListener("change", () => {
+      clearTimeout(suggestionTimer);
+      suggestionTimer = setTimeout(updateSuggestions, 100);
+    });
 
     loadData().catch(error => {
       console.error(error);
       setStatus("Lookup data failed to load. Make sure the required precinct data files are uploaded to the website data folder.", true);
     });
+    populateMunicipalities();
   </script>
 </body>
 </html>
