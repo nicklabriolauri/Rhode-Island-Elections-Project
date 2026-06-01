@@ -97,7 +97,54 @@ ul {
 <main>
   <section class="card">
     <h2>Methodology</h2>
-    <p class="placeholder">This page is a placeholder. It can later document how election results, district boundaries, and derived indicators were collected and processed.</p>
+    <p class="placeholder">
+      The Rhode Island Elections Project combines official Rhode Island election returns, district boundary files, and public geographic data into a single interactive research interface. The goal is to make legislative election outcomes and turnout patterns easier to explore across chambers, districts, municipalities, and precincts.
+    </p>
+    <p class="placeholder">
+      All displayed indicators are derived from public official sources. Legislative results are based on certified election returns. Turnout estimates currently shown in the map are based on the official Rhode Island <code>2024</code> public turnout layer, which reports ballots cast, eligible voters, and voting method splits at the precinct and municipality level.
+    </p>
+  </section>
+
+  <section class="card">
+    <h3>Election Results</h3>
+    <p class="placeholder">
+      House and Senate results were compiled from official Rhode Island general election files and standardized into a common district-level structure. For each district, the project records the winner, party, vote totals, vote shares, the runner-up where applicable, and the district margin in both votes and percentage points.
+    </p>
+    <ul>
+      <li><strong>Winner party:</strong> the party of the district winner.</li>
+      <li><strong>Margin:</strong> winner votes minus runner-up votes, plus the corresponding percentage-point difference.</li>
+      <li><strong>Uncontested:</strong> a race is treated as uncontested when there is only one named candidate and any remaining votes are write-ins only.</li>
+      <li><strong>Competitiveness:</strong> districts are classified by winner margin in percentage points.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h3>How Turnout Was Calculated</h3>
+    <p class="placeholder">
+      The House and Senate turnout rates now displayed for <code>2024</code> were not taken from a pre-made district turnout file. Instead, they were derived from the official Rhode Island precinct turnout layer. That source includes, for each precinct, the total number of ballots cast, the number of eligible voters, and the corresponding State House and State Senate district assignments.
+    </p>
+    <ul>
+      <li>For each precinct, the official layer reports <code>VOTED</code>, <code>ELIGIBLE</code>, <code>StHouse</code>, and <code>StSenate</code>.</li>
+      <li>To estimate House turnout, all precincts assigned to the same House district were grouped together.</li>
+      <li>To estimate Senate turnout, all precincts assigned to the same Senate district were grouped together.</li>
+      <li>Within each district, <code>VOTED</code> was summed across precincts and <code>ELIGIBLE</code> was summed across precincts.</li>
+      <li>District turnout was then calculated as <code>VOTED / ELIGIBLE * 100</code>.</li>
+    </ul>
+    <p class="placeholder">
+      This means the legislative turnout values shown on the site are derived district aggregates from official precinct-level turnout data, rather than separate district turnout tables published by the state.
+    </p>
+  </section>
+
+  <section class="card">
+    <h3>2024 Turnout Source</h3>
+    <p class="placeholder">
+      The current turnout map is based on Rhode Island's official public ArcGIS turnout layers for the <code>2024</code> general election. Those layers provide turnout at the precinct and municipality level and include additional voting-method fields such as mail, early, and Election Day ballots.
+    </p>
+    <ul>
+      <li><a href="data/ri_turnout_2024_precinct.geojson">2024 precinct turnout GeoJSON</a></li>
+      <li><a href="data/ri_turnout_2024_municipality.geojson">2024 municipality turnout GeoJSON</a></li>
+      <li><a href="data/ri_2024_turnout_data.json">2024 processed turnout data JSON</a></li>
+    </ul>
   </section>
 
   <section class="card">
@@ -108,17 +155,17 @@ ul {
       <li><a href="data/senate_old.geojson">Senate districts, 2012–2020 GeoJSON</a></li>
       <li><a href="data/house_new.geojson">House districts, 2022–2024 GeoJSON</a></li>
       <li><a href="data/senate_new.geojson">Senate districts, 2022–2024 GeoJSON</a></li>
+      <li><a href="data/ri_2024_turnout_data.json">Processed 2024 turnout JSON</a></li>
     </ul>
   </section>
 
   <section class="card">
-    <h3>Planned Documentation</h3>
+    <h3>Current Limitations</h3>
     <ul>
-      <li>Election result sources</li>
-      <li>District boundary sources</li>
-      <li>How uncontested races are classified</li>
-      <li>How margins and vote shares are calculated</li>
-      <li>Known limitations and future improvements</li>
+      <li>The turnout module is currently fully wired for <code>2024</code> only.</li>
+      <li>Older election cycles from <code>2012–2022</code> will require additional municipality and precinct turnout recovery from official Rhode Island publications and data layers.</li>
+      <li>District boundaries changed over time, especially around the <code>2022</code> redistricting cycle, so cross-year comparisons must be interpreted carefully.</li>
+      <li>Some public state sources provide results directly by legislative district, while turnout is more often published by precinct or municipality and must be aggregated.</li>
     </ul>
   </section>
 </main>
