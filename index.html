@@ -23,17 +23,54 @@
 </script>
 
   <meta charset="utf-8" />
-  <title>RIEP | Rhode Island Elections Project</title>
+  <title>Rhode Island Elections Project | RI Legislative Election & Turnout Map</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Interactive Rhode Island legislative election and turnout maps, 2012–2024, with House, Senate, precinct, municipality, and methodology views." />
+  <meta name="description" content="Explore the Rhode Island Elections Project, an interactive Rhode Island election map with State House, State Senate, turnout, precinct, municipality, and methodology views for 2012–2024." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://www.rhodeislandelectionsproject.org/" />
-  <meta property="og:title" content="RIEP | Rhode Island Elections Project" />
-  <meta property="og:description" content="Interactive Rhode Island legislative election and turnout maps, 2012–2024." />
+  <meta property="og:title" content="Rhode Island Elections Project | RI Legislative Election & Turnout Map" />
+  <meta property="og:description" content="Interactive Rhode Island election maps for State House, State Senate, turnout, precinct, and municipality views from 2012–2024." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.rhodeislandelectionsproject.org/" />
   <meta property="og:site_name" content="Rhode Island Elections Project" />
   <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Rhode Island Elections Project" />
+  <meta name="twitter:description" content="Interactive Rhode Island legislative election and turnout map, 2012–2024." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Rhode Island Elections Project",
+    "alternateName": "RIEP",
+    "url": "https://www.rhodeislandelectionsproject.org/",
+    "description": "Interactive Rhode Island election map with legislative results and turnout views for 2012 through 2024.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Rhode Island Elections Project"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "Rhode Island Elections Project Legislative and Turnout Map",
+    "url": "https://www.rhodeislandelectionsproject.org/",
+    "description": "Interactive Rhode Island election data covering State House, State Senate, precinct, municipality, and turnout views for election cycles from 2012 to 2024.",
+    "keywords": [
+      "Rhode Island Elections Project",
+      "Rhode Island election map",
+      "Rhode Island legislative elections",
+      "Rhode Island turnout map",
+      "Rhode Island precinct results"
+    ],
+    "creator": {
+      "@type": "Organization",
+      "name": "Rhode Island Elections Project"
+    },
+    "license": "https://www.rhodeislandelectionsproject.org/methodology.html"
+  }
+  </script>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <style>
@@ -70,6 +107,13 @@
       color: rgba(255,255,255,.88);
       line-height: 1.35;
       font-size: 15px;
+    }
+    .header-search-copy {
+      max-width: 980px;
+      margin-top: 8px;
+      color: rgba(255,255,255,.8);
+      font-size: 13px;
+      line-height: 1.45;
     }
     .controls {
       height: 62px;
@@ -1019,6 +1063,9 @@ body.gender-mode .gender-overlay {
 <header>
   <h1>RIEP - Rhode Island Elections Project</h1>
   <p>Interactive Rhode Island legislative election map, 2012–2024.</p>
+  <div class="header-search-copy">
+    Explore Rhode Island election results, State House and State Senate district maps, turnout by precinct and municipality, and project methodology for elections from 2012 through 2024.
+  </div>
   <nav class="site-nav">
     <a href="index.html">Map</a>
     <a href="lookup.html">Find My Precinct</a>
