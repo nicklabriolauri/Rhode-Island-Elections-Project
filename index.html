@@ -1,41 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>
-(function () {
-  var params = new URLSearchParams(window.location.search);
-  var forcedView = params.get("view");
-  if (forcedView === "desktop") return;
-
-  var prefersMobileViewport = window.matchMedia("(max-width: 760px)").matches;
-  var coarsePointer = window.matchMedia("(pointer: coarse)").matches;
-  var narrowScreen = Math.min(window.screen.width || 0, window.screen.height || 0) <= 900;
-  var shouldUseMobile = forcedView === "mobile" || prefersMobileViewport || (coarsePointer && narrowScreen);
-  var isAlreadyMobile = /(^|\/)mobile\.html($|[?#])/i.test(window.location.pathname);
-
-  if (shouldUseMobile && !isAlreadyMobile) {
-    var target = new URL("mobile.html", window.location.href);
-    if (window.location.search) target.search = window.location.search;
-    if (window.location.hash) target.hash = window.location.hash;
-    window.location.replace(target.toString());
-  }
-})();
-</script>
-
   <meta charset="utf-8" />
-  <title>Rhode Island Elections Project | RI Legislative Election & Turnout Map</title>
+  <title>Rhode Island Elections Project | Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Explore the Rhode Island Elections Project, an interactive Rhode Island election map with State House, State Senate, turnout, precinct, municipality, and methodology views for 2012–2024." />
+  <meta name="description" content="Homepage of the Rhode Island Elections Project, with access to the interactive legislative election map, turnout interface, precinct lookup, methodology, and research team pages." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://www.rhodeislandelectionsproject.org/" />
-  <meta property="og:title" content="Rhode Island Elections Project | RI Legislative Election & Turnout Map" />
-  <meta property="og:description" content="Interactive Rhode Island election maps for State House, State Senate, turnout, precinct, and municipality views from 2012–2024." />
+  <meta property="og:title" content="Rhode Island Elections Project | Home" />
+  <meta property="og:description" content="Explore Rhode Island legislative election results, turnout geography, precinct lookup, project methodology, and researcher information." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.rhodeislandelectionsproject.org/" />
   <meta property="og:site_name" content="Rhode Island Elections Project" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Rhode Island Elections Project" />
-  <meta name="twitter:description" content="Interactive Rhode Island legislative election and turnout map, 2012–2024." />
+  <meta name="twitter:description" content="Homepage for the Rhode Island Elections Project and its interactive election map tools." />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -46,2733 +25,476 @@
     "name": "Rhode Island Elections Project",
     "alternateName": "RIEP",
     "url": "https://www.rhodeislandelectionsproject.org/",
-    "description": "Interactive Rhode Island election map with legislative results and turnout views for 2012 through 2024.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Rhode Island Elections Project"
-    }
+    "description": "Public-facing homepage for the Rhode Island Elections Project, including map, turnout, precinct lookup, methodology, and researcher pages."
   }
   </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Dataset",
-    "name": "Rhode Island Elections Project Legislative and Turnout Map",
-    "url": "https://www.rhodeislandelectionsproject.org/",
-    "description": "Interactive Rhode Island election data covering State House, State Senate, precinct, municipality, and turnout views for election cycles from 2012 to 2024.",
-    "keywords": [
-      "Rhode Island Elections Project",
-      "Rhode Island election map",
-      "Rhode Island legislative elections",
-      "Rhode Island turnout map",
-      "Rhode Island precinct results"
-    ],
-    "creator": {
-      "@type": "Organization",
-      "name": "Rhode Island Elections Project"
-    },
-    "license": "https://www.rhodeislandelectionsproject.org/methodology.html"
-  }
-  </script>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <style>
     :root {
-      --navy: #111c3d;
-      --navy2: #172554;
-      --blue: #2b6cb0;
-      --red: #dc2626;
-      --gray: #64748b;
-      --panel: #f8fafc;
-      --line: #e5e7eb;
-      --text: #0f172a;
+      --navy: #121d40;
+      --navy-2: #1a2855;
+      --navy-3: #31406b;
+      --ink: #101827;
+      --muted: #52627f;
+      --line: rgba(255,255,255,0.14);
+      --panel: rgba(255,255,255,0.08);
+      --panel-strong: rgba(255,255,255,0.94);
+      --blue: #2b50d9;
+      --blue-dark: #203aa7;
+      --chip: rgba(255,255,255,0.1);
+      --shadow: 0 20px 48px rgba(7, 12, 33, 0.28);
     }
+
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: #f8fafc;
-      display: flex;
-      flex-direction: column;
       min-height: 100vh;
-      overflow: hidden;
-    }
-    header {
-      padding: 18px 22px;
+      font-family: Arial, Helvetica, sans-serif;
       color: white;
-      background: linear-gradient(135deg, #0f172a 0%, #172554 100%);
+      background:
+        radial-gradient(circle at top left, rgba(86, 118, 235, 0.24), transparent 28%),
+        radial-gradient(circle at top right, rgba(255, 255, 255, 0.08), transparent 22%),
+        linear-gradient(160deg, #101a3b 0%, #182550 52%, #0c1530 100%);
     }
-    header h1 {
+
+    .shell {
+      width: min(1360px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 28px 0 42px 0;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 26px;
+    }
+
+    .brand h1 {
       margin: 0;
-      font-size: 28px;
-      letter-spacing: -0.03em;
+      font-size: 42px;
+      line-height: 1.02;
+      letter-spacing: -0.05em;
     }
-    header p {
-      margin: 6px 0 0 0;
-      color: rgba(255,255,255,.88);
-      line-height: 1.35;
-      font-size: 15px;
+
+    .brand p {
+      max-width: 720px;
+      margin: 12px 0 0 0;
+      color: rgba(255,255,255,0.8);
+      font-size: 18px;
+      line-height: 1.5;
     }
-    .header-search-copy {
-      max-width: 980px;
-      margin-top: 8px;
-      color: rgba(255,255,255,.8);
+
+    .site-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+
+    .site-nav a {
+      color: white;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.28);
+      border-radius: 999px;
+      padding: 9px 14px;
       font-size: 13px;
-      line-height: 1.45;
+      font-weight: 800;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
     }
-    .home-launchpad-wrap {
-      position: relative;
-      padding: 0 22px 18px 22px;
-      background: linear-gradient(135deg, #0f172a 0%, #172554 100%);
+
+    .site-nav a:hover {
+      background: rgba(255,255,255,0.16);
     }
-    .home-launchpad {
+
+    .hero {
       position: relative;
       overflow: hidden;
-      display: grid;
-      grid-template-columns: minmax(260px, 1.15fr) minmax(420px, 1.55fr);
-      gap: 18px;
-      padding: 18px 20px;
-      border-radius: 24px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.1) 100%);
-      border: 1px solid rgba(255,255,255,0.22);
-      box-shadow: 0 18px 40px rgba(15,23,42,0.24);
-      backdrop-filter: blur(12px);
+      border-radius: 34px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.08) 100%);
+      box-shadow: var(--shadow);
+      padding: 28px;
     }
-    .home-launchpad::before {
+
+    .hero::before {
       content: "";
       position: absolute;
-      inset: -20% auto auto -8%;
-      width: 240px;
-      height: 240px;
-      border-radius: 999px;
-      background: radial-gradient(circle, rgba(96,165,250,0.24), rgba(96,165,250,0));
+      inset: auto auto -110px -120px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(74, 128, 255, 0.36), rgba(74, 128, 255, 0));
       pointer-events: none;
     }
-    .launchpad-copy,
-    .launchpad-grid {
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: -90px -90px auto auto;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0));
+      pointer-events: none;
+    }
+
+    .hero-grid {
       position: relative;
       z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(320px, 1.05fr) minmax(440px, 1.35fr);
+      gap: 22px;
+      align-items: stretch;
     }
-    .launchpad-eyebrow {
+
+    .hero-copy {
+      padding: 8px 4px 8px 4px;
+    }
+
+    .eyebrow {
       color: rgba(255,255,255,0.72);
-      font-size: 11px;
+      font-size: 13px;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.18em;
       font-weight: 800;
     }
-    .launchpad-title {
-      margin: 10px 0 10px 0;
-      color: white;
-      font-size: 32px;
-      line-height: 1.05;
-      letter-spacing: -0.04em;
-      max-width: 560px;
+
+    .hero-copy h2 {
+      margin: 16px 0 14px 0;
+      max-width: 620px;
+      font-size: 74px;
+      line-height: 0.98;
+      letter-spacing: -0.07em;
     }
-    .launchpad-text {
-      max-width: 560px;
-      color: rgba(255,255,255,0.82);
-      font-size: 15px;
-      line-height: 1.55;
-    }
-    .launchpad-tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 16px;
-    }
-    .launchpad-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      border-radius: 999px;
-      padding: 7px 11px;
-      color: #dbeafe;
-      font-size: 12px;
-      font-weight: 700;
-      background: rgba(15,23,42,0.26);
-      border: 1px solid rgba(255,255,255,0.16);
-    }
-    .launchpad-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      align-content: start;
-    }
-    .launch-card {
-      min-height: 138px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 16px;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.9);
-      border: 1px solid rgba(255,255,255,0.72);
-      box-shadow: 0 10px 24px rgba(15,23,42,0.12);
-    }
-    .launch-card-kicker {
-      color: #64748b;
-      font-size: 10.5px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-weight: 900;
-    }
-    .launch-card h3 {
-      margin: 8px 0 7px 0;
-      color: #0f172a;
-      font-size: 21px;
-      line-height: 1.06;
-      letter-spacing: -0.03em;
-    }
-    .launch-card p {
-      margin: 0;
-      color: #475569;
-      font-size: 13px;
+
+    .hero-copy .summary {
+      max-width: 580px;
+      color: rgba(255,255,255,0.86);
+      font-size: 22px;
       line-height: 1.45;
+      margin: 0 0 20px 0;
     }
-    .launch-card-actions {
+
+    .cta-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 14px;
+      gap: 12px;
+      margin-bottom: 20px;
     }
-    .launch-action,
-    .launch-link {
+
+    .btn-primary,
+    .btn-secondary {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 38px;
-      padding: 0 14px;
+      min-height: 52px;
+      padding: 0 22px;
       border-radius: 999px;
       text-decoration: none;
-      font-size: 12px;
+      font-size: 15px;
       font-weight: 800;
-      cursor: pointer;
       transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
     }
-    .launch-action {
-      border: 0;
+
+    .btn-primary {
       color: white;
-      background: linear-gradient(135deg, #1d4ed8 0%, #172554 100%);
-      box-shadow: 0 8px 18px rgba(29,78,216,0.22);
+      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+      box-shadow: 0 14px 28px rgba(43, 80, 217, 0.28);
     }
-    .launch-link {
-      color: #1e3a8a;
-      border: 1px solid #c7d2fe;
-      background: #eef2ff;
+
+    .btn-secondary {
+      color: white;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.22);
     }
-    .launch-action:hover,
-    .launch-link:hover {
+
+    .btn-primary:hover,
+    .btn-secondary:hover {
       transform: translateY(-1px);
     }
-    .controls {
-      min-height: 62px;
-      padding: 11px 22px;
+
+    .chip-row {
       display: flex;
-      gap: 16px;
-      align-items: center;
-      background: white;
-      border-bottom: 1px solid var(--line);
       flex-wrap: wrap;
+      gap: 10px;
     }
-    .control-group { display: flex; align-items: center; gap: 8px; }
-    .control-group.is-hidden { display: none; }
-    .control-label {
-      color: var(--gray);
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: .06em;
-      font-weight: 800;
-    }
-    .segmented, .year-timeline {
+
+    .chip {
       display: inline-flex;
-      background: #f1f5f9;
-      border: 1px solid #e2e8f0;
-      border-radius: 999px;
-      padding: 3px;
-      gap: 3px;
-    }
-    .segmented button, .year-timeline button {
-      border: 0;
-      background: transparent;
-      border-radius: 999px;
-      padding: 6px 11px;
-      color: #475569;
-      font-weight: 800;
-      cursor: pointer;
-      font-size: 13px;
-      transition: all .15s ease;
-    }
-    .year-timeline button { padding: 6px 9px; font-size: 12px; }
-    .segmented button:hover, .year-timeline button:hover { background: #e2e8f0; }
-    .segmented button.active, .year-timeline button.active {
-      background: var(--navy2);
-      color: white;
-      box-shadow: 0 2px 8px rgba(23,37,84,.22);
-    }
-    .segmented button.is-disabled,
-    .year-timeline button.is-disabled {
-      opacity: 0.45;
-      cursor: not-allowed;
-      box-shadow: none;
-    }
-    .segmented button.is-disabled:hover,
-    .year-timeline button.is-disabled:hover {
-      background: transparent;
-    }
-    select {
-      border-radius: 999px;
-      padding: 7px 28px 7px 11px;
-      border: 1px solid #dbe3ef;
-      color: var(--text);
-      font-weight: 750;
-      background: white;
-      font-size: 13px;
-    }
-    .era-badge {
-      margin-left: auto;
-      white-space: nowrap;
-      border-radius: 999px;
-      background: #eef2ff;
-      color: #3730a3;
-      font-weight: 800;
-      padding: 6px 11px;
-      font-size: 12px;
-    }
-    .note {
-      padding: 10px 22px;
-      background: #faf7f0;
-      border-bottom: 1px solid #ead7b7;
-      color: #475569;
-      font-size: 13px;
-    }
-    .dashboard {
-      display: grid;
-      grid-template-columns: 250px minmax(420px, 1fr) 310px;
-      flex: 1;
-      min-height: 0;
-    }
-    aside {
-      background: var(--panel);
-      overflow-y: auto;
-    }
-    #districtPanel {
-      border-right: 1px solid var(--line);
-      padding: 10px;
-    }
-    #factsPanel {
-      border-left: 1px solid var(--line);
-      padding: 12px;
-    }
-    .district-panel-title {
-      font-size: 14px;
-      font-weight: 900;
-      margin: 0 0 7px 0;
-      display: flex;
-      justify-content: space-between;
       align-items: center;
-    }
-    .district-panel-title::after {
-      content: "Click to zoom";
-      font-size: 10px;
-      color: var(--gray);
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--chip);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.88);
+      font-size: 13px;
       font-weight: 700;
     }
-    .district-search {
-      width: 100%;
-      padding: 8px 9px;
-      border-radius: 10px;
-      border: 1px solid #d1d5db;
-      margin-bottom: 8px;
-      font-size: 12px;
-      background: white;
-    }
-    .district-list {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-    }
-    .district-item {
-      cursor: pointer;
-      border: 1px solid var(--line);
-      border-left: 5px solid #999;
-      background: white;
-      border-radius: 9px;
-      padding: 7px 8px;
-      box-shadow: 0 1px 4px rgba(15,23,42,0.06);
-    }
-    .district-item:hover { background: #f1f5f9; }
-    .district-item.active {
-      outline: 3px solid rgba(37, 99, 235, 0.22);
-      background: #eff6ff;
-    }
-    .district-item-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 6px;
-      color: var(--gray);
-      font-size: 9.5px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: .04em;
-      margin-bottom: 2px;
-    }
-    .district-item-name {
-      font-size: 13px;
-      font-weight: 900;
-      line-height: 1.15;
-      color: var(--text);
-    }
-    .district-item-detail {
-      color: #64748b;
-      font-size: 10.5px;
-      margin-top: 2px;
-    }
-    #map {
-      position: relative;
-      height: 100%;
-      width: 100%;
-      background: #f8fafc;
-    }
-    .leaflet-tile-pane {
-      filter: grayscale(85%) saturate(70%) contrast(92%);
-      opacity: 0.45;
-    }
-    .facts-title {
-      font-size: 18px;
-      font-weight: 900;
-      margin: 0 0 10px 0;
-      letter-spacing: -0.02em;
-    }
-    .seat-card, .fact-card {
-      background: linear-gradient(180deg, #fff 0%, #f8fafc 100%);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      box-shadow: 0 2px 8px rgba(15,23,42,.06);
-    }
-    .seat-card {
-      padding: 10px 12px;
-      margin-bottom: 10px;
-      text-align: center;
-    }
-    .seat-title, .fact-label {
-      color: #64748b;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: .06em;
-      font-weight: 900;
-    }
-    #seatChart {
-      width: 210px;
-      height: 104px;
-      max-width: 100%;
-      display: block;
-      margin: 0 auto;
-    }
-    .seat-labels {
-      display: flex;
-      justify-content: space-between;
-      margin-top: -8px;
-      color: #475569;
-      font-size: 11px;
-    }
-    .seat-count {
-      display: block;
-      font-size: 19px;
-      line-height: 1.05;
-      color: var(--text);
-      font-weight: 900;
-    }
-    .facts-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 9px;
-    }
-    .fact-card {
-      padding: 10px 12px;
-    }
-    .fact-value {
-      margin-top: 4px;
-      font-size: 20px;
-      line-height: 1.12;
-      color: var(--text);
-      font-weight: 900;
-      letter-spacing: -0.03em;
-    }
-    .fact-detail {
-      margin-top: 5px;
-      font-size: 12px;
-      color: #475569;
-      line-height: 1.35;
-    }
-    .legend {
-      background: white;
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      box-shadow: 0 4px 16px rgba(15,23,42,.14);
-      line-height: 1.4;
-      font-size: 13px;
-    }
-    .legend-title { font-weight: 900; margin-bottom: 5px; }
-    .swatch {
-      display: inline-block;
-      width: 14px;
-      height: 14px;
-      margin-right: 6px;
-      vertical-align: -2px;
-      border: 1px solid rgba(0,0,0,.15);
-    }
-    .error {
-      margin: 12px;
-      padding: 12px;
-      border: 1px solid #fecaca;
-      background: #fef2f2;
-      color: #991b1b;
-      border-radius: 10px;
-      font-size: 13px;
-      line-height: 1.45;
-    }
-    @media (max-width: 1000px) {
-      body { overflow: auto; }
-      .home-launchpad {
-        grid-template-columns: 1fr;
-      }
-      .launchpad-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-      .dashboard {
-        grid-template-columns: 1fr;
-        height: auto;
-      }
-      #districtPanel { max-height: 280px; }
-      #map { height: 520px; }
-      #factsPanel { border-left: 0; border-top: 1px solid var(--line); }
-      .era-badge { margin-left: 0; }
-    }
-  
-    .site-nav {
-      display: flex;
-      gap: 10px;
-      margin-top: 12px;
-    }
-    .site-nav a {
-      color: white;
-      text-decoration: none;
-      border: 1px solid rgba(255,255,255,.35);
-      border-radius: 999px;
-      padding: 6px 11px;
-      font-size: 13px;
-      font-weight: 800;
-      background: rgba(255,255,255,.08);
-    }
-    .site-nav a:hover {
-      background: rgba(255,255,255,.16);
-    }
 
-
-    header {
-      padding: 14px 22px;
-    }
-    header h1 {
-      font-size: 25px;
-    }
-    header p {
-      margin-top: 4px;
-      font-size: 14px;
-    }
-    .site-nav {
-      margin-top: 8px;
-    }
-    @media (max-width: 760px) {
-      .launchpad-grid {
-        grid-template-columns: 1fr;
-      }
-      .launchpad-title {
-        font-size: 28px;
-      }
-    }
-    body.gender-mode .dashboard {
-      grid-template-columns: 1fr;
-    }
-    body.gender-mode #districtPanel,
-    body.gender-mode #factsPanel {
-      display: none;
-    }
-    body.gender-mode #map {
-      min-height: calc(100vh - 155px);
-    }
-    .gender-overlay {
-      display: none;
-      position: absolute;
-      top: 14px;
-      right: 14px;
-      z-index: 800;
-      width: 300px;
-      max-width: calc(100vw - 32px);
-      background: rgba(255,255,255,.94);
-      border: 1px solid #e5e7eb;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(15,23,42,.18);
-      padding: 14px;
-      backdrop-filter: blur(8px);
-    }
-    body.gender-mode .gender-overlay {
-      display: block;
-    }
-    .gender-overlay-title {
-      font-size: 16px;
-      font-weight: 900;
-      color: #0f172a;
-      margin-bottom: 10px;
-    }
-    .gender-stat-main {
+    .card-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 8px;
-      margin-bottom: 10px;
+      gap: 14px;
+      align-content: start;
     }
-    .gender-mini-card {
-      background: #f8fafc;
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      padding: 9px 10px;
-    }
-    .gender-label {
-      color: #64748b;
-      font-size: 10.5px;
-      text-transform: uppercase;
-      letter-spacing: .06em;
-      font-weight: 900;
-    }
-    .gender-value {
-      color: #0f172a;
-      font-size: 24px;
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      margin-top: 2px;
-    }
-    .gender-detail {
-      color: #475569;
-      font-size: 12px;
-      line-height: 1.35;
-      margin-top: 4px;
-    }
-    .gender-bar {
-      height: 10px;
-      background: #e5e7eb;
-      border-radius: 999px;
-      overflow: hidden;
-      margin: 8px 0 10px 0;
-    }
-    .gender-bar-fill {
-      height: 100%;
-      background: #7c3aed;
-      border-radius: 999px;
-    }
-    .gender-party-row {
+
+    .card {
+      min-height: 190px;
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: space-between;
-      gap: 8px;
-      color: #334155;
+      padding: 20px;
+      border-radius: 24px;
+      background: var(--panel-strong);
+      border: 1px solid rgba(255,255,255,0.78);
+      box-shadow: 0 12px 26px rgba(10, 18, 42, 0.14);
+      color: var(--ink);
+    }
+
+    .card-kicker {
+      color: #71829f;
       font-size: 12px;
-      padding: 4px 0;
-      border-top: 1px solid #eef2f7;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 900;
     }
-    .gender-party-row:first-of-type {
-      border-top: 0;
+
+    .card h3 {
+      margin: 10px 0 8px 0;
+      font-size: 26px;
+      line-height: 1.03;
+      letter-spacing: -0.04em;
     }
-    .gender-dot {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
+    .card-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
       border-radius: 999px;
-      margin-right: 6px;
-      vertical-align: -1px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 800;
     }
-    @media (max-width: 800px) {
-      body.gender-mode #map {
-        min-height: 620px;
-      }
-      .gender-overlay {
-        position: static;
-        width: auto;
-        margin: 10px;
-        max-width: none;
-      }
-      body.gender-mode .dashboard {
-        display: flex;
+
+    .card-link.primary {
+      color: white;
+      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+    }
+
+    .card-link.secondary {
+      color: #28439f;
+      background: #edf2ff;
+      border: 1px solid #cdd8ff;
+    }
+
+    .subsection {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .mini-panel {
+      padding: 18px 20px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.88);
+    }
+
+    .mini-panel h4 {
+      margin: 0 0 10px 0;
+      color: white;
+      font-size: 17px;
+      letter-spacing: -0.03em;
+    }
+
+    .mini-panel p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .mini-panel a {
+      color: #c9d7ff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .mini-panel a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 1100px) {
+      .topbar {
         flex-direction: column;
       }
-      body.gender-mode #map {
-        order: 1;
-      }
-      body.gender-mode .gender-overlay {
-        order: 0;
-      }
-    }
 
-
-    /* Viewport-fit fix: prevent top/bottom cutoff on laptops and mobile browsers */
-    html, body {
-      height: 100%;
-    }
-    body {
-      overflow: auto;
-    }
-    header {
-      padding: 10px 22px;
-    }
-    header h1 {
-      font-size: 23px;
-      line-height: 1.12;
-    }
-    header p {
-      font-size: 13px;
-      margin-top: 3px;
-      line-height: 1.25;
-    }
-    .site-nav {
-      margin-top: 6px;
-    }
-    .site-nav a {
-      padding: 5px 10px;
-      font-size: 12px;
-    }
-    .controls {
-      min-height: 52px;
-      height: auto;
-      padding: 8px 22px;
-    }
-    .note {
-      height: auto;
-      min-height: 34px;
-      padding: 8px 22px;
-    }
-    .dashboard {
-      height: calc(100dvh - 150px);
-      min-height: 480px;
-    }
-    #map {
-      min-height: 480px;
-    }
-    body.gender-mode #map {
-      min-height: calc(100dvh - 150px);
-    }
-    @supports not (height: 100dvh) {
-      .dashboard {
-        height: calc(100vh - 150px);
-      }
-      body.gender-mode #map {
-        min-height: calc(100vh - 150px);
-      }
-    }
-    @media (max-height: 760px) {
-      header {
-        padding: 8px 20px;
-      }
-      header h1 {
-        font-size: 21px;
-      }
-      header p {
-        font-size: 12px;
-      }
       .site-nav {
-        margin-top: 5px;
+        justify-content: flex-start;
       }
-      .controls {
-        padding: 7px 20px;
+
+      .hero-grid {
+        grid-template-columns: 1fr;
       }
-      .note {
-        padding: 7px 20px;
-        font-size: 12px;
-      }
-      .dashboard {
-        height: calc(100dvh - 134px);
-        min-height: 420px;
-      }
-      body.gender-mode #map {
-        min-height: calc(100dvh - 134px);
+
+      .subsection {
+        grid-template-columns: 1fr;
       }
     }
 
+    @media (max-width: 760px) {
+      .shell {
+        width: min(100% - 28px, 1360px);
+        padding-top: 18px;
+      }
 
-    .competitiveness-explainer {
-      margin-top: 8px;
-      padding: 10px 12px;
-      border-radius: 12px;
-      background: #fff7ed;
-      border: 1px solid #fed7aa;
-      color: #7c2d12;
-      font-size: 12px;
-      line-height: 1.35;
-    }
-    .competitiveness-scale-note {
-      color: #475569;
-      font-size: 11.5px;
-      line-height: 1.35;
-      margin: 7px 0 4px 0;
-    }
+      .brand h1 {
+        font-size: 34px;
+      }
 
+      .brand p {
+        font-size: 16px;
+      }
 
-    body.gender-mode .leaflet-bottom.leaflet-left {
-      margin-left: 12px;
-      margin-bottom: 12px;
-    }
-    body.gender-mode .legend {
-      max-width: 240px;
-      font-size: 12px;
-    }
-    .gender-overlay {
-      max-height: calc(100dvh - 230px);
-      overflow-y: auto;
-    }
-    .gender-label {
-      line-height: 1.2;
-    }
+      .hero {
+        padding: 18px;
+        border-radius: 26px;
+      }
 
+      .hero-copy h2 {
+        font-size: 50px;
+      }
 
-    .category-filter-row {
-      cursor: pointer;
-      user-select: none;
-      border-radius: 8px;
-      padding-left: 6px;
-      padding-right: 6px;
-      transition: background .15s ease, transform .15s ease;
-    }
-    .category-filter-row:hover {
-      background: #f8fafc;
-      transform: translateX(1px);
-    }
-    .category-filter-row.active {
-      background: #fff7ed;
-      outline: 2px solid #fed7aa;
-    }
-    .filter-clear {
-      display: inline-block;
-      margin-top: 8px;
-      border: 1px solid #dbe3ef;
-      background: white;
-      color: #334155;
-      border-radius: 999px;
-      padding: 5px 9px;
-      font-size: 11px;
-      font-weight: 800;
-      cursor: pointer;
-    }
-    .filter-clear:hover {
-      background: #f1f5f9;
-    }
-    .method-note {
-      margin-top: 8px;
-      padding: 9px 10px;
-      border-radius: 12px;
-      background: #f8fafc;
-      border: 1px solid #e5e7eb;
-      color: #475569;
-      font-size: 11.5px;
-      line-height: 1.35;
-    }
-    .uncontested-overlay-card {
-      background: rgba(255,255,255,.94);
-      border: 1px solid #e5e7eb;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(15,23,42,.18);
-      padding: 14px;
-      backdrop-filter: blur(8px);
-    }
+      .hero-copy .summary {
+        font-size: 18px;
+      }
 
-
-    /* Compact analytical panels */
-    .gender-overlay.compact-competitiveness {
-      width: 330px;
-      padding: 12px;
-      max-height: calc(100dvh - 180px);
-      overflow-y: auto;
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
     }
-    .gender-overlay.compact-competitiveness .gender-overlay-title {
-      font-size: 15px;
-      margin-bottom: 8px;
-    }
-    .gender-overlay.compact-competitiveness .competitiveness-explainer {
-      font-size: 11.5px;
-      line-height: 1.32;
-      padding: 8px 10px;
-      margin-top: 4px;
-    }
-    .gender-overlay.compact-competitiveness .gender-stat-main {
-      gap: 7px;
-      margin-top: 8px !important;
-      margin-bottom: 7px;
-    }
-    .gender-overlay.compact-competitiveness .gender-mini-card {
-      padding: 7px 8px;
-    }
-    .gender-overlay.compact-competitiveness .gender-value {
-      font-size: 22px;
-    }
-    .gender-overlay.compact-competitiveness .gender-detail {
-      font-size: 11.5px;
-    }
-    .gender-overlay.compact-competitiveness .gender-party-row {
-      font-size: 11.5px;
-      padding: 3px 6px;
-    }
-    .gender-overlay.compact-competitiveness .method-note {
-      font-size: 10.8px;
-      padding: 7px 8px;
-      margin-top: 6px;
-    }
-    .gender-overlay.compact-competitiveness .filter-clear {
-      padding: 4px 8px;
-      font-size: 10.5px;
-      margin-top: 6px;
-    }
-
-    body.uncontested-focus .dashboard {
-      grid-template-columns: 1fr;
-    }
-    body.uncontested-focus #districtPanel,
-    body.uncontested-focus #factsPanel {
-      display: none;
-    }
-    body.uncontested-focus #map {
-      min-height: calc(100dvh - 150px);
-    }
-    .uncontested-map-overlay {
-      display: none;
-      position: absolute;
-      top: 14px;
-      right: 14px;
-      z-index: 800;
-      width: 330px;
-      max-width: calc(100vw - 32px);
-      max-height: calc(100dvh - 180px);
-      overflow-y: auto;
-      background: rgba(255,255,255,.94);
-      border: 1px solid #e5e7eb;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(15,23,42,.18);
-      padding: 12px;
-      backdrop-filter: blur(8px);
-    }
-    body.uncontested-focus .uncontested-map-overlay {
-      display: block;
-    }
-    .uncontested-explainer {
-      margin: 6px 0 9px 0;
-      padding: 8px 10px;
-      border-radius: 12px;
-      background: #eff6ff;
-      border: 1px solid #bfdbfe;
-      color: #1e3a8a;
-      font-size: 11.5px;
-      line-height: 1.32;
-    }
-
-
-    .gender-overlay.compact-competitiveness,
-    .uncontested-map-overlay {
-      max-height: calc(100dvh - 165px);
-      overflow-y: auto;
-      scrollbar-width: thin;
-    }
-    .method-note.full-scale-note {
-      max-height: none;
-      overflow: visible;
-      font-size: 11px;
-      line-height: 1.38;
-    }
-    .clickable-stat {
-      cursor: pointer;
-      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
-    }
-    .clickable-stat:hover {
-      transform: translateY(-1px);
-      border-color: #93c5fd;
-      box-shadow: 0 6px 18px rgba(37, 99, 235, .14);
-    }
-    .click-hint {
-      font-size: 10.5px;
-      color: #2563eb;
-      font-weight: 800;
-      margin-top: 4px;
-    }
-
-
-    /* Final analytical-panel layout fixes */
-    .gender-overlay,
-    .gender-overlay.compact-competitiveness,
-    .uncontested-map-overlay {
-      top: 8px !important;
-      right: 10px !important;
-      width: 315px !important;
-      max-width: calc(100vw - 24px) !important;
-      max-height: calc(100dvh - 125px) !important;
-      overflow-y: auto !important;
-      padding: 10px !important;
-      border-radius: 14px !important;
-    }
-
-    .gender-overlay-title {
-      font-size: 14px !important;
-      margin-bottom: 6px !important;
-      line-height: 1.2 !important;
-    }
-
-    .competitiveness-explainer,
-    .uncontested-explainer {
-      font-size: 10.5px !important;
-      line-height: 1.28 !important;
-      padding: 7px 8px !important;
-      margin: 4px 0 7px 0 !important;
-    }
-
-    .gender-stat-main {
-      gap: 6px !important;
-      margin: 6px 0 !important;
-    }
-
-    .gender-mini-card {
-      padding: 6px 7px !important;
-      border-radius: 10px !important;
-    }
-
-    .gender-label {
-      font-size: 9.5px !important;
-      line-height: 1.12 !important;
-      letter-spacing: .05em !important;
-    }
-
-    .gender-value {
-      font-size: 19px !important;
-      margin-top: 2px !important;
-      line-height: 1.05 !important;
-    }
-
-    .gender-detail {
-      font-size: 10.5px !important;
-      line-height: 1.25 !important;
-      margin-top: 3px !important;
-    }
-
-    .competitiveness-scale-note {
-      font-size: 11px !important;
-      margin: 5px 0 3px 0 !important;
-    }
-
-    .gender-party-row {
-      font-size: 10.8px !important;
-      padding: 2px 5px !important;
-      min-height: 20px !important;
-    }
-
-    .gender-dot {
-      width: 8px !important;
-      height: 8px !important;
-      margin-right: 5px !important;
-    }
-
-    .filter-clear {
-      padding: 3px 7px !important;
-      font-size: 10px !important;
-      margin-top: 5px !important;
-    }
-
-    .method-note.full-scale-note,
-    .method-note {
-      font-size: 9.8px !important;
-      line-height: 1.26 !important;
-      padding: 6px 7px !important;
-      margin-top: 5px !important;
-      max-height: none !important;
-      overflow: visible !important;
-    }
-
-    body.uncontested-focus #uncontestedOverlay {
-      display: block !important;
-    }
-
-
-/* Working Uncontested Seats panel */
-body.uncontested-focus .dashboard { grid-template-columns: 1fr; }
-body.uncontested-focus #districtPanel,
-body.uncontested-focus #factsPanel { display: none !important; }
-body.uncontested-focus #map { min-height: calc(100dvh - 150px); position: relative; }
-
-#uncontestedOverlay {
-  display: none;
-  position: absolute;
-  top: 8px;
-  right: 10px;
-  z-index: 850;
-  width: 315px;
-  max-width: calc(100vw - 24px);
-  max-height: calc(100dvh - 125px);
-  overflow-y: auto;
-  background: rgba(255,255,255,.96);
-  border: 1px solid #e5e7eb;
-  border-radius: 14px;
-  box-shadow: 0 8px 24px rgba(15,23,42,.18);
-  padding: 10px;
-  backdrop-filter: blur(8px);
-}
-body.uncontested-focus #uncontestedOverlay { display: block !important; }
-
-.uncontested-explainer {
-  margin: 4px 0 7px 0;
-  padding: 7px 8px;
-  border-radius: 11px;
-  background: #eff6ff;
-  border: 1px solid #bfdbfe;
-  color: #1e3a8a;
-  font-size: 10.5px;
-  line-height: 1.28;
-}
-.mini-table { border-top: 1px solid #e5e7eb; margin-top: 6px; }
-.mini-table-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-  padding: 4px 0;
-  border-bottom: 1px solid #eef2f7;
-  font-size: 10.8px;
-  color: #334155;
-}
-.mini-table-row strong { color: #0f172a; }
-
-
-/* PATCH: shared analytical panel for all focus views */
-body.focus-mode .dashboard{grid-template-columns:1fr;}
-body.focus-mode #districtPanel, body.focus-mode #factsPanel{display:none!important;}
-body.focus-mode #map{min-height:calc(100dvh - 150px);position:relative;}
-body.focus-mode .gender-overlay{display:block!important;top:8px!important;right:10px!important;width:315px!important;max-width:calc(100vw - 24px)!important;max-height:calc(100dvh - 125px)!important;overflow-y:auto!important;padding:10px!important;border-radius:14px!important;background:rgba(255,255,255,.96)!important;}
-.uncontested-explainer{margin:4px 0 7px 0;padding:7px 8px;border-radius:11px;background:#eff6ff;border:1px solid #bfdbfe;color:#1e3a8a;font-size:10.5px;line-height:1.28;}
-.mini-table{border-top:1px solid #e5e7eb;margin-top:6px;}
-.mini-table-row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:4px 0;border-bottom:1px solid #eef2f7;font-size:10.8px;color:#334155;}
-.mini-table-row strong{color:#0f172a;}
-
-
-    /* Dedicated analytical panel behavior */
-    body.focus-view .dashboard {
-      grid-template-columns: 1fr;
-    }
-
-    body.focus-view #districtPanel,
-    body.focus-view #factsPanel {
-      display: none !important;
-    }
-
-    body.focus-view #map {
-      min-height: calc(100dvh - 150px);
-    }
-
-    body.focus-view .gender-overlay {
-      display: block !important;
-      top: 8px !important;
-      right: 10px !important;
-      width: 315px !important;
-      max-width: calc(100vw - 24px) !important;
-      max-height: calc(100dvh - 125px) !important;
-      overflow-y: auto !important;
-      padding: 10px !important;
-      border-radius: 14px !important;
-    }
-
-    .uncontested-explainer {
-      margin: 4px 0 7px 0;
-      padding: 7px 8px;
-      border-radius: 11px;
-      background: #eff6ff;
-      border: 1px solid #bfdbfe;
-      color: #1e3a8a;
-      font-size: 10.5px;
-      line-height: 1.28;
-    }
-
-    .mini-table {
-      border-top: 1px solid #e5e7eb;
-      margin-top: 6px;
-    }
-
-    .mini-table-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 8px;
-      padding: 4px 0;
-      border-bottom: 1px solid #eef2f7;
-      font-size: 10.8px;
-      color: #334155;
-    }
-
-    .mini-table-row strong {
-      color: #0f172a;
-    }
-
-
-/* Repair: keep focus analytical panels visible and correctly populated */
-body.focus-mode .gender-overlay,
-body.focus-view .gender-overlay,
-body.gender-mode .gender-overlay {
-  display: block !important;
-}
-
-</style>
+  </style>
 </head>
 <body>
-<header>
-  <h1>RIEP - Rhode Island Elections Project</h1>
-  <p>Interactive Rhode Island legislative election map, 2012–2024.</p>
-  <div class="header-search-copy">
-    Explore Rhode Island election results, State House and State Senate district maps, turnout by precinct and municipality, and project methodology for elections from 2012 through 2024.
-  </div>
-  <nav class="site-nav">
-    <a href="index.html">Map</a>
-    <a href="lookup.html">Find My Precinct</a>
-    <a href="methodology.html">Methodology</a>
-    <a href="about.html">About</a>
-  </nav>
-</header>
-
-<section class="home-launchpad-wrap" aria-labelledby="launchpadTitle">
-  <div class="home-launchpad">
-    <div class="launchpad-copy">
-      <div class="launchpad-eyebrow">Explore The Project</div>
-      <h2 class="launchpad-title" id="launchpadTitle">A public-facing Rhode Island elections interface for results, turnout, and precinct lookup.</h2>
-      <div class="launchpad-text">
-        Use the live map below to examine Rhode Island State House and State Senate elections from 2012 through 2024, switch into official 2024 turnout geography, or jump directly to precinct lookup and project documentation.
+  <div class="shell">
+    <div class="topbar">
+      <div class="brand">
+        <h1>RIEP - Rhode Island Elections Project</h1>
+        <p>
+          Public-facing Rhode Island election research interface with legislative results, turnout geography, precinct lookup, and project documentation.
+        </p>
       </div>
-      <div class="launchpad-tag-row" aria-label="Project highlights">
-        <span class="launchpad-tag">2012–2024 election cycles</span>
-        <span class="launchpad-tag">House and Senate district maps</span>
-        <span class="launchpad-tag">2024 turnout by municipality and precinct</span>
-        <span class="launchpad-tag">Methodology and researcher pages</span>
-      </div>
-    </div>
-    <div class="launchpad-grid">
-      <article class="launch-card">
-        <div>
-          <div class="launch-card-kicker">Interactive Map</div>
-          <h3>Election Results</h3>
-          <p>Open the live map in results mode and start with the 2024 House composition view.</p>
-        </div>
-        <div class="launch-card-actions">
-          <button type="button" class="launch-action" id="launchResultsButton">Open Results Map</button>
-        </div>
-      </article>
-      <article class="launch-card">
-        <div>
-          <div class="launch-card-kicker">Turnout Interface</div>
-          <h3>2024 Turnout</h3>
-          <p>Switch the map into turnout mode with official 2024 Rhode Island geography and turnout rates.</p>
-        </div>
-        <div class="launch-card-actions">
-          <button type="button" class="launch-action" id="launchTurnoutButton">Open Turnout Map</button>
-        </div>
-      </article>
-      <article class="launch-card">
-        <div>
-          <div class="launch-card-kicker">Address Lookup</div>
-          <h3>Find My Precinct</h3>
-          <p>Search an address and identify the linked 2024 precinct, turnout profile, and local election results.</p>
-        </div>
-        <div class="launch-card-actions">
-          <a class="launch-link" href="lookup.html">Go To Precinct Lookup</a>
-        </div>
-      </article>
-      <article class="launch-card">
-        <div>
-          <div class="launch-card-kicker">Research Context</div>
-          <h3>Methodology and About</h3>
-          <p>Read how the data was constructed, how turnout is derived, and who is building the project.</p>
-        </div>
-        <div class="launch-card-actions">
-          <a class="launch-link" href="methodology.html">View Methodology</a>
-          <a class="launch-link" href="about.html">Meet The Team</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<div class="controls">
-  <div class="control-group">
-    <div class="control-label">Data mode</div>
-    <div class="segmented" id="dataModeButtons">
-      <button type="button" data-value="results">Results</button>
-      <button type="button" data-value="turnout">Turnout</button>
-    </div>
-  </div>
-  <div class="control-group" id="turnoutGeoGroup">
-    <div class="control-label">Geography</div>
-    <div class="segmented" id="turnoutGeoButtons">
-      <button type="button" data-value="municipality">Municipality</button>
-      <button type="button" data-value="precinct">Precinct</button>
-      <button type="button" data-value="house">House</button>
-      <button type="button" data-value="senate">Senate</button>
-    </div>
-  </div>
-  <div class="control-group" id="resultsChamberGroup">
-    <div class="control-label">Chamber</div>
-    <div class="segmented" id="chamberButtons">
-      <button type="button" data-value="house">House</button>
-      <button type="button" data-value="senate">Senate</button>
-    </div>
-  </div>
-  <div class="control-group">
-    <div class="control-label">Election year</div>
-    <div class="year-timeline" id="yearButtons"></div>
-  </div>
-  <div class="control-group">
-    <div class="control-label">Map view</div>
-    <select id="viewSelect">
-      <option value="party">Winner Party</option>
-      <option value="uncontested">Uncontested Seats</option>
-      <option value="gender">Gender Parity</option>
-      <option value="competitiveness">Competitiveness</option>
-    </select>
-  </div>
-  <span id="eraBadge" class="era-badge"></span>
-</div>
-
-<div class="note" id="noteBar">Hover over districts for labels. Click a district for full race details.</div>
-
-<main class="dashboard">
-  <aside id="districtPanel">
-    <div class="district-panel-title" id="districtPanelTitle">Districts</div>
-    <input id="districtSearch" class="district-search" type="search" placeholder="Search district or candidate..." />
-    <div id="districtList" class="district-list"></div>
-  </aside>
-
-  <section id="map"><div id="genderOverlay" class="gender-overlay"></div></section>
-
-  <aside id="factsPanel">
-    <div class="facts-title" id="overviewTitle">Election Overview</div>
-    <div class="seat-card">
-      <div class="seat-title" id="seatCardTitle">Seat composition</div>
-      <svg id="seatChart" viewBox="0 0 240 130" aria-label="Seat composition semicircle chart"></svg>
-      <div class="seat-labels" id="seatLabels"></div>
-    </div>
-    <div class="facts-grid" id="factsGrid"></div>
-  </aside>
-</main>
-
-<script>
-const years = ["2012", "2014", "2016", "2018", "2020", "2022", "2024"];
-const resultViewOptions = `
-  <option value="party">Winner Party</option>
-  <option value="uncontested">Uncontested Seats</option>
-  <option value="gender">Gender Parity</option>
-  <option value="competitiveness">Competitiveness</option>
-`;
-const turnoutViewOptions = `
-  <option value="turnout">Turnout Rate</option>
-`;
-const state = {
-  dataMode: "results",
-  chamber: "house",
-  turnoutGeo: "municipality",
-  year: "2024",
-  resultsYear: "2024",
-  view: "party",
-  competitivenessFilter: "all"
-};
-let geojsons = {};
-let raceData = {};
-let turnoutData = { rows: {}, arrays: {}, statewide: {} };
-let layer = null;
-let legend = null;
-let selectedLayer = null;
-  const sharedOverlay = document.getElementById("genderOverlay");
-  if (!["gender", "competitiveness", "uncontested"].includes(state.view) && sharedOverlay) sharedOverlay.innerHTML = "";
-let selectedKey = null;
-let featureLayerByKey = {};
-
-const partyColors = {
-  DEM: "#2b6cb0",
-  REP: "#dc2626",
-  IND: "#7f7f7f",
-  LIB: "#f59e0b",
-  MOD: "#8b5cf6",
-  NON: "#9ca3af",
-  OTHER: "#8a8a8a",
-  WOMAN: "#7c3aed",
-  WOMAN_STROKE: "#5b21b6",
-  TOSSUP: "#9a3412",
-  COMPETITIVE: "#ea580c",
-  LEAN: "#f59e0b",
-  LIKELY: "#fde68a",
-  SAFE: "#fef3c7",
-  UNCONTESTED: "#e5e7eb"
-};
-
-const turnoutPalette = [
-  { max: 15, color: "#b5e8ec" },
-  { max: 25, color: "#a4e1e6" },
-  { max: 35, color: "#93dbe1" },
-  { max: 45, color: "#80d4dc" },
-  { max: 55, color: "#6ccdd6" },
-  { max: 65, color: "#30afbb" },
-  { max: 75, color: "#258992" },
-  { max: 100, color: "#1b6369" }
-];
-
-const partyNames = {
-  DEM: "Democratic",
-  REP: "Republican",
-  IND: "Independent",
-  LIB: "Libertarian",
-  MOD: "Moderate",
-  NON: "Write-in",
-  OTHER: "Independent/Other"
-};
-
-const genderParityData = {"senate|2012|1":{"is_woman":true,"gender":"female","winner_candidate":"Maryellen GOODWIN","winner_party":"DEM"},"senate|2012|2":{"is_woman":false,"gender":"male","winner_candidate":"Juan M. PICHARDO","winner_party":"DEM"},"senate|2012|3":{"is_woman":false,"gender":"male","winner_candidate":"Gayle L. GOLDIN","winner_party":"DEM"},"senate|2012|4":{"is_woman":false,"gender":"male","winner_candidate":"Dominick J. RUGGERIO","winner_party":"DEM"},"senate|2012|5":{"is_woman":false,"gender":"male","winner_candidate":"Paul V. JABOUR","winner_party":"DEM"},"senate|2012|6":{"is_woman":false,"gender":"male","winner_candidate":"Harold M. METTS","winner_party":"DEM"},"senate|2012|7":{"is_woman":false,"gender":"male","winner_candidate":"Frank A. CICCONE, III","winner_party":"DEM"},"senate|2012|8":{"is_woman":false,"gender":"male","winner_candidate":"James E. DOYLE, II","winner_party":"DEM"},"senate|2012|9":{"is_woman":false,"gender":"male","winner_candidate":"Adam J. SATCHELL","winner_party":"DEM"},"senate|2012|10":{"is_woman":false,"gender":"male","winner_candidate":"Walter S. FELAG, JR.","winner_party":"DEM"},"senate|2012|11":{"is_woman":false,"gender":"male","winner_candidate":"Christopher Scott OTTIANO","winner_party":"REP"},"senate|2012|12":{"is_woman":false,"gender":"male","winner_candidate":"Louis P. DiPALMA","winner_party":"DEM"},"senate|2012|13":{"is_woman":false,"gender":"male","winner_candidate":"M. Teresa PAIVA-WEED","winner_party":"DEM"},"senate|2012|14":{"is_woman":false,"gender":"male","winner_candidate":"Daniel DaPONTE","winner_party":"DEM"},"senate|2012|15":{"is_woman":true,"gender":"female","winner_candidate":"Donna M. NESSELBUSH","winner_party":"DEM"},"senate|2012|16":{"is_woman":false,"gender":"male","winner_candidate":"Elizabeth A. CROWLEY","winner_party":"DEM"},"senate|2012|17":{"is_woman":false,"gender":"male","winner_candidate":"Edward J. O'NEILL","winner_party":"IND"},"senate|2012|18":{"is_woman":false,"gender":"male","winner_candidate":"William J. CONLEY, JR.","winner_party":"DEM"},"senate|2012|19":{"is_woman":false,"gender":"male","winner_candidate":"Ryan William PEARSON","winner_party":"DEM"},"senate|2012|20":{"is_woman":false,"gender":"male","winner_candidate":"Roger A. PICARD","winner_party":"DEM"},"senate|2012|21":{"is_woman":false,"gender":"male","winner_candidate":"Nicholas D. KETTLE","winner_party":"REP"},"senate|2012|22":{"is_woman":false,"gender":"male","winner_candidate":"Stephen R. ARCHAMBAULT","winner_party":"DEM"},"senate|2012|23":{"is_woman":false,"gender":"male","winner_candidate":"Paul W. FOGARTY","winner_party":"DEM"},"senate|2012|24":{"is_woman":false,"gender":"male","winner_candidate":"Marc A. COTE","winner_party":"DEM"},"senate|2012|25":{"is_woman":false,"gender":"male","winner_candidate":"Frank LOMBARDO, III","winner_party":"DEM"},"senate|2012|26":{"is_woman":false,"gender":"male","winner_candidate":"Frank S. LOMBARDI","winner_party":"DEM"},"senate|2012|27":{"is_woman":false,"gender":"male","winner_candidate":"Hanna M. GALLO","winner_party":"DEM"},"senate|2012|28":{"is_woman":false,"gender":"male","winner_candidate":"Joshua MILLER","winner_party":"DEM"},"senate|2012|29":{"is_woman":false,"gender":"male","winner_candidate":"Michael J. McCAFFREY","winner_party":"DEM"},"senate|2012|30":{"is_woman":false,"gender":"male","winner_candidate":"William A. WALASKA","winner_party":"DEM"},"senate|2012|31":{"is_woman":false,"gender":"male","winner_candidate":"Erin P. LYNCH","winner_party":"DEM"},"senate|2012|32":{"is_woman":false,"gender":"male","winner_candidate":"David E. BATES","winner_party":"REP"},"senate|2012|33":{"is_woman":false,"gender":"male","winner_candidate":"Leonidas P. RAPTAKIS","winner_party":"DEM"},"senate|2012|34":{"is_woman":true,"gender":"female","winner_candidate":"Catherine COOL RUMSEY","winner_party":"DEM"},"senate|2012|35":{"is_woman":false,"gender":"male","winner_candidate":"Dawson Tucker HODGSON","winner_party":"REP"},"senate|2012|36":{"is_woman":false,"gender":"male","winner_candidate":"James C. SHEEHAN","winner_party":"DEM"},"senate|2012|37":{"is_woman":false,"gender":"male","winner_candidate":"V. Susan SOSNOWSKI","winner_party":"DEM"},"senate|2012|38":{"is_woman":false,"gender":"male","winner_candidate":"Dennis L. ALGIERE","winner_party":"REP"},"house|2012|1":{"is_woman":true,"gender":"female","winner_candidate":"Edith H. AJELLO","winner_party":"DEM"},"house|2012|2":{"is_woman":false,"gender":"male","winner_candidate":"Christopher R. BLAZEJEWSKI","winner_party":"DEM"},"house|2012|3":{"is_woman":false,"gender":"male","winner_candidate":"Thomas A. PALANGIO","winner_party":"DEM"},"house|2012|4":{"is_woman":false,"gender":"male","winner_candidate":"Gordon D. FOX","winner_party":"DEM"},"house|2012|5":{"is_woman":false,"gender":"male","winner_candidate":"John J. DeSIMONE","winner_party":"DEM"},"house|2012|6":{"is_woman":false,"gender":"male","winner_candidate":"Raymond A. HULL","winner_party":"DEM"},"house|2012|7":{"is_woman":true,"gender":"female","winner_candidate":"Maria E. CIMINI","winner_party":"DEM"},"house|2012|8":{"is_woman":false,"gender":"male","winner_candidate":"John Joseph LOMBARDI","winner_party":"DEM"},"house|2012|9":{"is_woman":true,"gender":"female","winner_candidate":"Anastasia P. WILLIAMS","winner_party":"DEM"},"house|2012|10":{"is_woman":false,"gender":"male","winner_candidate":"Scott A. SLATER","winner_party":"DEM"},"house|2012|11":{"is_woman":true,"gender":"female","winner_candidate":"Grace DIAZ","winner_party":"DEM"},"house|2012|12":{"is_woman":false,"gender":"male","winner_candidate":"Joseph S. ALMEIDA","winner_party":"DEM"},"house|2012|13":{"is_woman":false,"gender":"male","winner_candidate":"John M. CARNEVALE","winner_party":"DEM"},"house|2012|14":{"is_woman":false,"gender":"male","winner_candidate":"Charlene LIMA","winner_party":"DEM"},"house|2012|15":{"is_woman":false,"gender":"male","winner_candidate":"Nicholas A. MATTIELLO","winner_party":"DEM"},"house|2012|16":{"is_woman":false,"gender":"male","winner_candidate":"Peter G. PALUMBO","winner_party":"DEM"},"house|2012|17":{"is_woman":false,"gender":"male","winner_candidate":"Robert B. JACQUARD","winner_party":"DEM"},"house|2012|18":{"is_woman":false,"gender":"male","winner_candidate":"Arthur HANDY","winner_party":"DEM"},"house|2012|19":{"is_woman":false,"gender":"male","winner_candidate":"Joseph McNAMARA","winner_party":"DEM"},"house|2012|20":{"is_woman":false,"gender":"male","winner_candidate":"David A. BENNETT","winner_party":"DEM"},"house|2012|21":{"is_woman":true,"gender":"female","winner_candidate":"Eileen Slattery NAUGHTON","winner_party":"DEM"},"house|2012|22":{"is_woman":false,"gender":"male","winner_candidate":"Frank G. FERRI","winner_party":"DEM"},"house|2012|23":{"is_woman":false,"gender":"male","winner_candidate":"K. Joseph SHEKARCHI","winner_party":"DEM"},"house|2012|24":{"is_woman":false,"gender":"male","winner_candidate":"Joseph A. TRILLO","winner_party":"REP"},"house|2012|25":{"is_woman":false,"gender":"male","winner_candidate":"Jared R. NUNES","winner_party":"DEM"},"house|2012|26":{"is_woman":true,"gender":"female","winner_candidate":"Patricia L. MORGAN","winner_party":"REP"},"house|2012|27":{"is_woman":true,"gender":"female","winner_candidate":"Patricia A. SERPA","winner_party":"DEM"},"house|2012|28":{"is_woman":false,"gender":"male","winner_candidate":"Scott J. GUTHRIE","winner_party":"DEM"},"house|2012|29":{"is_woman":false,"gender":"male","winner_candidate":"Lisa P. TOMASSO","winner_party":"DEM"},"house|2012|30":{"is_woman":false,"gender":"male","winner_candidate":"Antonio GIARRUSSO","winner_party":"REP"},"house|2012|31":{"is_woman":false,"gender":"male","winner_candidate":"Doreen Marie COSTA","winner_party":"REP"},"house|2012|32":{"is_woman":false,"gender":"male","winner_candidate":"Robert E. CRAVEN, SR.","winner_party":"DEM"},"house|2012|33":{"is_woman":false,"gender":"male","winner_candidate":"Donald J. LALLY, JR.","winner_party":"DEM"},"house|2012|34":{"is_woman":true,"gender":"female","winner_candidate":"Teresa TANZI","winner_party":"DEM"},"house|2012|35":{"is_woman":false,"gender":"male","winner_candidate":"Spencer E. DICKINSON","winner_party":"DEM"},"house|2012|36":{"is_woman":true,"gender":"female","winner_candidate":"Donna M. WALSH","winner_party":"DEM"},"house|2012|37":{"is_woman":false,"gender":"male","winner_candidate":"Samuel A. AZZINARO","winner_party":"DEM"},"house|2012|38":{"is_woman":false,"gender":"male","winner_candidate":"Brian Patrick KENNEDY","winner_party":"DEM"},"house|2012|39":{"is_woman":false,"gender":"male","winner_candidate":"Larry VALENCIA","winner_party":"DEM"},"house|2012|40":{"is_woman":false,"gender":"male","winner_candidate":"Michael W. CHIPPENDALE","winner_party":"REP"},"house|2012|41":{"is_woman":false,"gender":"male","winner_candidate":"Michael J. MARCELLO","winner_party":"DEM"},"house|2012|42":{"is_woman":false,"gender":"male","winner_candidate":"Stephen R. UCCI","winner_party":"DEM"},"house|2012|43":{"is_woman":false,"gender":"male","winner_candidate":"Deborah A. FELLELA","winner_party":"DEM"},"house|2012|44":{"is_woman":false,"gender":"male","winner_candidate":"Gregory J. COSTANTINO","winner_party":"DEM"},"house|2012|45":{"is_woman":true,"gender":"female","winner_candidate":"Mia A. ACKERMAN","winner_party":"DEM"},"house|2012|46":{"is_woman":false,"gender":"male","winner_candidate":"Jeremiah T. O'GRADY","winner_party":"DEM"},"house|2012|47":{"is_woman":false,"gender":"male","winner_candidate":"Cale P. KEABLE","winner_party":"DEM"},"house|2012|48":{"is_woman":false,"gender":"male","winner_candidate":"Brian C. NEWBERRY","winner_party":"REP"},"house|2012|49":{"is_woman":false,"gender":"male","winner_candidate":"Lisa BALDELLI-HUNT","winner_party":"DEM"},"house|2012|50":{"is_woman":false,"gender":"male","winner_candidate":"Stephen M. CASEY","winner_party":"DEM"},"house|2012|51":{"is_woman":false,"gender":"male","winner_candidate":"Robert D. PHILLIPS","winner_party":"DEM"},"house|2012|52":{"is_woman":true,"gender":"female","winner_candidate":"Karen L. MacBETH","winner_party":"DEM"},"house|2012|53":{"is_woman":false,"gender":"male","winner_candidate":"Thomas J. WINFIELD","winner_party":"DEM"},"house|2012|54":{"is_woman":false,"gender":"male","winner_candidate":"William W. O'BRIEN","winner_party":"DEM"},"house|2012|55":{"is_woman":false,"gender":"male","winner_candidate":"Arthur J. CORVESE","winner_party":"DEM"},"house|2012|56":{"is_woman":false,"gender":"male","winner_candidate":"Agostinho F. SILVA","winner_party":"DEM"},"house|2012|57":{"is_woman":false,"gender":"male","winner_candidate":"James N. McLAUGHLIN","winner_party":"DEM"},"house|2012|58":{"is_woman":false,"gender":"male","winner_candidate":"William SAN BENTO, JR.","winner_party":"DEM"},"house|2012|59":{"is_woman":false,"gender":"male","winner_candidate":"J. Patrick O'NEILL","winner_party":"DEM"},"house|2012|60":{"is_woman":false,"gender":"male","winner_candidate":"Elaine A. CODERRE","winner_party":"DEM"},"house|2012|61":{"is_woman":false,"gender":"male","winner_candidate":"Raymond H. JOHNSTON, JR.","winner_party":"DEM"},"house|2012|62":{"is_woman":false,"gender":"male","winner_candidate":"Mary Duffy MESSIER","winner_party":"DEM"},"house|2012|63":{"is_woman":true,"gender":"female","winner_candidate":"Katherine S. KAZARIAN","winner_party":"DEM"},"house|2012|64":{"is_woman":false,"gender":"male","winner_candidate":"Helio MELO","winner_party":"DEM"},"house|2012|65":{"is_woman":false,"gender":"male","winner_candidate":"Gregg AMORE","winner_party":"DEM"},"house|2012|66":{"is_woman":true,"gender":"female","winner_candidate":"Joy HEARN","winner_party":"DEM"},"house|2012|67":{"is_woman":false,"gender":"male","winner_candidate":"Jan P. MALIK","winner_party":"DEM"},"house|2012|68":{"is_woman":false,"gender":"male","winner_candidate":"Kenneth A. MARSHALL","winner_party":"DEM"},"house|2012|69":{"is_woman":false,"gender":"male","winner_candidate":"Raymond E. GALLISON, JR.","winner_party":"DEM"},"house|2012|70":{"is_woman":false,"gender":"male","winner_candidate":"John G. EDWARDS","winner_party":"DEM"},"house|2012|71":{"is_woman":false,"gender":"male","winner_candidate":"Dennis M. CANARIO","winner_party":"DEM"},"house|2012|72":{"is_woman":false,"gender":"male","winner_candidate":"Linda Dill FINN","winner_party":"DEM"},"house|2012|73":{"is_woman":false,"gender":"male","winner_candidate":"Marvin L. ABNEY","winner_party":"DEM"},"house|2012|74":{"is_woman":false,"gender":"male","winner_candidate":"Deborah L. RUGGIERO","winner_party":"DEM"},"house|2012|75":{"is_woman":false,"gender":"male","winner_candidate":"Peter F. MARTIN","winner_party":"DEM"},"senate|2014|1":{"is_woman":true,"gender":"female","winner_candidate":"Maryellen GOODWIN","winner_party":"DEM"},"senate|2014|2":{"is_woman":false,"gender":"male","winner_candidate":"Juan M. PICHARDO","winner_party":"DEM"},"senate|2014|3":{"is_woman":false,"gender":"male","winner_candidate":"Gayle L. GOLDIN","winner_party":"DEM"},"senate|2014|4":{"is_woman":false,"gender":"male","winner_candidate":"Dominick J. RUGGERIO","winner_party":"DEM"},"senate|2014|5":{"is_woman":false,"gender":"male","winner_candidate":"Paul V. JABOUR","winner_party":"DEM"},"senate|2014|6":{"is_woman":false,"gender":"male","winner_candidate":"Harold M. METTS","winner_party":"DEM"},"senate|2014|7":{"is_woman":false,"gender":"male","winner_candidate":"Frank A. CICCONE, III","winner_party":"DEM"},"senate|2014|8":{"is_woman":false,"gender":"male","winner_candidate":"James E. DOYLE, II","winner_party":"DEM"},"senate|2014|9":{"is_woman":false,"gender":"male","winner_candidate":"Adam J. SATCHELL","winner_party":"DEM"},"senate|2014|10":{"is_woman":false,"gender":"male","winner_candidate":"Walter S. FELAG, JR.","winner_party":"DEM"},"senate|2014|11":{"is_woman":false,"gender":"male","winner_candidate":"Christopher Scott OTTIANO","winner_party":"REP"},"senate|2014|12":{"is_woman":false,"gender":"male","winner_candidate":"Louis P. DiPALMA","winner_party":"DEM"},"senate|2014|13":{"is_woman":false,"gender":"male","winner_candidate":"M. Teresa PAIVA-WEED","winner_party":"DEM"},"senate|2014|14":{"is_woman":false,"gender":"male","winner_candidate":"Daniel DaPONTE","winner_party":"DEM"},"senate|2014|15":{"is_woman":true,"gender":"female","winner_candidate":"Donna M. NESSELBUSH","winner_party":"DEM"},"senate|2014|16":{"is_woman":false,"gender":"male","winner_candidate":"Elizabeth A. CROWLEY","winner_party":"DEM"},"senate|2014|17":{"is_woman":false,"gender":"male","winner_candidate":"Edward J. O'NEILL","winner_party":"IND"},"senate|2014|18":{"is_woman":false,"gender":"male","winner_candidate":"William J. CONLEY, JR.","winner_party":"DEM"},"senate|2014|19":{"is_woman":false,"gender":"male","winner_candidate":"Ryan William PEARSON","winner_party":"DEM"},"senate|2014|20":{"is_woman":false,"gender":"male","winner_candidate":"Roger A. PICARD","winner_party":"DEM"},"senate|2014|21":{"is_woman":false,"gender":"male","winner_candidate":"Nicholas D. KETTLE","winner_party":"REP"},"senate|2014|22":{"is_woman":false,"gender":"male","winner_candidate":"Stephen R. ARCHAMBAULT","winner_party":"DEM"},"senate|2014|23":{"is_woman":false,"gender":"male","winner_candidate":"Paul W. FOGARTY","winner_party":"DEM"},"senate|2014|24":{"is_woman":false,"gender":"male","winner_candidate":"Marc A. COTE","winner_party":"DEM"},"senate|2014|25":{"is_woman":false,"gender":"male","winner_candidate":"Frank LOMBARDO, III","winner_party":"DEM"},"senate|2014|26":{"is_woman":false,"gender":"male","winner_candidate":"Frank S. LOMBARDI","winner_party":"DEM"},"senate|2014|27":{"is_woman":false,"gender":"male","winner_candidate":"Hanna M. GALLO","winner_party":"DEM"},"senate|2014|28":{"is_woman":false,"gender":"male","winner_candidate":"Joshua MILLER","winner_party":"DEM"},"senate|2014|29":{"is_woman":false,"gender":"male","winner_candidate":"Michael J. McCAFFREY","winner_party":"DEM"},"senate|2014|30":{"is_woman":false,"gender":"male","winner_candidate":"William A. WALASKA","winner_party":"DEM"},"senate|2014|31":{"is_woman":false,"gender":"male","winner_candidate":"Erin P. LYNCH","winner_party":"DEM"},"senate|2014|32":{"is_woman":false,"gender":"male","winner_candidate":"Cynthia Armour COYNE","winner_party":"DEM"},"senate|2014|33":{"is_woman":false,"gender":"male","winner_candidate":"Leonidas P. RAPTAKIS","winner_party":"DEM"},"senate|2014|34":{"is_woman":false,"gender":"male","winner_candidate":"Elaine J. MORGAN","winner_party":"REP"},"senate|2014|35":{"is_woman":false,"gender":"male","winner_candidate":"Mark W. GEE","winner_party":"REP"},"senate|2014|36":{"is_woman":false,"gender":"male","winner_candidate":"James C. SHEEHAN","winner_party":"DEM"},"senate|2014|37":{"is_woman":false,"gender":"male","winner_candidate":"V. Susan SOSNOWSKI","winner_party":"DEM"},"senate|2014|38":{"is_woman":false,"gender":"male","winner_candidate":"Dennis L. ALGIERE","winner_party":"REP"},"house|2014|1":{"is_woman":true,"gender":"female","winner_candidate":"Edith H. AJELLO","winner_party":"DEM"},"house|2014|2":{"is_woman":false,"gender":"male","winner_candidate":"Christopher R. BLAZEJEWSKI","winner_party":"DEM"},"house|2014|3":{"is_woman":false,"gender":"male","winner_candidate":"Thomas A. PALANGIO","winner_party":"DEM"},"house|2014|4":{"is_woman":false,"gender":"male","winner_candidate":"J. Aaron REGUNBERG","winner_party":"DEM"},"house|2014|5":{"is_woman":false,"gender":"male","winner_candidate":"John J. DeSIMONE","winner_party":"DEM"},"house|2014|6":{"is_woman":false,"gender":"male","winner_candidate":"Raymond A. HULL","winner_party":"DEM"},"house|2014|7":{"is_woman":false,"gender":"male","winner_candidate":"Daniel P. McKIERNAN","winner_party":"DEM"},"house|2014|8":{"is_woman":false,"gender":"male","winner_candidate":"John Joseph LOMBARDI","winner_party":"DEM"},"house|2014|9":{"is_woman":true,"gender":"female","winner_candidate":"Anastasia P. WILLIAMS","winner_party":"DEM"},"house|2014|10":{"is_woman":false,"gender":"male","winner_candidate":"Scott A. SLATER","winner_party":"DEM"},"house|2014|11":{"is_woman":true,"gender":"female","winner_candidate":"Grace DIAZ","winner_party":"DEM"},"house|2014|12":{"is_woman":false,"gender":"male","winner_candidate":"Joseph S. ALMEIDA","winner_party":"DEM"},"house|2014|13":{"is_woman":false,"gender":"male","winner_candidate":"John M. CARNEVALE","winner_party":"DEM"},"house|2014|14":{"is_woman":false,"gender":"male","winner_candidate":"Charlene LIMA","winner_party":"DEM"},"house|2014|15":{"is_woman":false,"gender":"male","winner_candidate":"Nicholas A. MATTIELLO","winner_party":"DEM"},"house|2014|16":{"is_woman":false,"gender":"male","winner_candidate":"Robert B. LANCIA","winner_party":"REP"},"house|2014|17":{"is_woman":false,"gender":"male","winner_candidate":"Robert B. JACQUARD","winner_party":"DEM"},"house|2014|18":{"is_woman":false,"gender":"male","winner_candidate":"Arthur HANDY","winner_party":"DEM"},"house|2014|19":{"is_woman":false,"gender":"male","winner_candidate":"Joseph McNAMARA","winner_party":"DEM"},"house|2014|20":{"is_woman":false,"gender":"male","winner_candidate":"David A. BENNETT","winner_party":"DEM"},"house|2014|21":{"is_woman":true,"gender":"female","winner_candidate":"Eileen Slattery NAUGHTON","winner_party":"DEM"},"house|2014|22":{"is_woman":false,"gender":"male","winner_candidate":"Joseph J. SOLOMON, JR.","winner_party":"DEM"},"house|2014|23":{"is_woman":false,"gender":"male","winner_candidate":"K. Joseph SHEKARCHI","winner_party":"DEM"},"house|2014|24":{"is_woman":false,"gender":"male","winner_candidate":"Joseph A. TRILLO","winner_party":"REP"},"house|2014|25":{"is_woman":false,"gender":"male","winner_candidate":"Jared R. NUNES","winner_party":"DEM"},"house|2014|26":{"is_woman":true,"gender":"female","winner_candidate":"Patricia L. MORGAN","winner_party":"REP"},"house|2014|27":{"is_woman":true,"gender":"female","winner_candidate":"Patricia A. SERPA","winner_party":"DEM"},"house|2014|28":{"is_woman":false,"gender":"male","winner_candidate":"Robert A. NARDOLILLO","winner_party":"REP"},"house|2014|29":{"is_woman":true,"gender":"female","winner_candidate":"Sherry ROBERTS","winner_party":"REP"},"house|2014|30":{"is_woman":false,"gender":"male","winner_candidate":"Antonio GIARRUSSO","winner_party":"REP"},"house|2014|31":{"is_woman":false,"gender":"male","winner_candidate":"Doreen Marie COSTA","winner_party":"REP"},"house|2014|32":{"is_woman":false,"gender":"male","winner_candidate":"Robert E. CRAVEN, SR.","winner_party":"DEM"},"house|2014|33":{"is_woman":false,"gender":"male","winner_candidate":"Donald J. LALLY, JR.","winner_party":"DEM"},"house|2014|34":{"is_woman":true,"gender":"female","winner_candidate":"Teresa TANZI","winner_party":"DEM"},"house|2014|35":{"is_woman":true,"gender":"female","winner_candidate":"Kathleen A. FOGARTY","winner_party":"DEM"},"house|2014|36":{"is_woman":false,"gender":"male","winner_candidate":"Blake Anthony FILIPPI","winner_party":"IND"},"house|2014|37":{"is_woman":false,"gender":"male","winner_candidate":"Samuel A. AZZINARO","winner_party":"DEM"},"house|2014|38":{"is_woman":false,"gender":"male","winner_candidate":"Brian Patrick KENNEDY","winner_party":"DEM"},"house|2014|39":{"is_woman":false,"gender":"male","winner_candidate":"Justin PRICE","winner_party":"REP"},"house|2014|40":{"is_woman":false,"gender":"male","winner_candidate":"Michael W. CHIPPENDALE","winner_party":"REP"},"house|2014|41":{"is_woman":false,"gender":"male","winner_candidate":"Michael J. MARCELLO","winner_party":"DEM"},"house|2014|42":{"is_woman":false,"gender":"male","winner_candidate":"Stephen R. UCCI","winner_party":"DEM"},"house|2014|43":{"is_woman":false,"gender":"male","winner_candidate":"Deborah A. FELLELA","winner_party":"DEM"},"house|2014|44":{"is_woman":false,"gender":"male","winner_candidate":"Gregory J. COSTANTINO","winner_party":"DEM"},"house|2014|45":{"is_woman":true,"gender":"female","winner_candidate":"Mia A. ACKERMAN","winner_party":"DEM"},"house|2014|46":{"is_woman":false,"gender":"male","winner_candidate":"Jeremiah T. O'GRADY","winner_party":"DEM"},"house|2014|47":{"is_woman":false,"gender":"male","winner_candidate":"Cale P. KEABLE","winner_party":"DEM"},"house|2014|48":{"is_woman":false,"gender":"male","winner_candidate":"Brian C. NEWBERRY","winner_party":"REP"},"house|2014|49":{"is_woman":false,"gender":"male","winner_candidate":"Michael A. MORIN","winner_party":"DEM"},"house|2014|50":{"is_woman":false,"gender":"male","winner_candidate":"Stephen M. CASEY","winner_party":"DEM"},"house|2014|51":{"is_woman":false,"gender":"male","winner_candidate":"Robert D. PHILLIPS","winner_party":"DEM"},"house|2014|52":{"is_woman":true,"gender":"female","winner_candidate":"Karen L. MacBETH","winner_party":"DEM"},"house|2014|53":{"is_woman":false,"gender":"male","winner_candidate":"Thomas J. WINFIELD","winner_party":"DEM"},"house|2014|54":{"is_woman":false,"gender":"male","winner_candidate":"William W. O'BRIEN","winner_party":"DEM"},"house|2014|55":{"is_woman":false,"gender":"male","winner_candidate":"Arthur J. CORVESE","winner_party":"DEM"},"house|2014|56":{"is_woman":false,"gender":"male","winner_candidate":"Shelby MALDONADO","winner_party":"DEM"},"house|2014|57":{"is_woman":false,"gender":"male","winner_candidate":"James N. McLAUGHLIN","winner_party":"DEM"},"house|2014|58":{"is_woman":false,"gender":"male","winner_candidate":"Carlos E. TOBON","winner_party":"DEM"},"house|2014|59":{"is_woman":false,"gender":"male","winner_candidate":"Jean Philippe BARROS","winner_party":"DEM"},"house|2014|60":{"is_woman":false,"gender":"male","winner_candidate":"David A. COUGHLIN, JR.","winner_party":"DEM"},"house|2014|61":{"is_woman":false,"gender":"male","winner_candidate":"Raymond H. JOHNSTON, JR.","winner_party":"DEM"},"house|2014|62":{"is_woman":false,"gender":"male","winner_candidate":"Mary Duffy MESSIER","winner_party":"DEM"},"house|2014|63":{"is_woman":true,"gender":"female","winner_candidate":"Katherine S. KAZARIAN","winner_party":"DEM"},"house|2014|64":{"is_woman":false,"gender":"male","winner_candidate":"Helio MELO","winner_party":"DEM"},"house|2014|65":{"is_woman":false,"gender":"male","winner_candidate":"Gregg AMORE","winner_party":"DEM"},"house|2014|66":{"is_woman":true,"gender":"female","winner_candidate":"Joy HEARN","winner_party":"DEM"},"house|2014|67":{"is_woman":false,"gender":"male","winner_candidate":"Jan P. MALIK","winner_party":"DEM"},"house|2014|68":{"is_woman":false,"gender":"male","winner_candidate":"Kenneth A. MARSHALL","winner_party":"DEM"},"house|2014|69":{"is_woman":false,"gender":"male","winner_candidate":"Raymond E. GALLISON, JR.","winner_party":"DEM"},"house|2014|70":{"is_woman":false,"gender":"male","winner_candidate":"John G. EDWARDS","winner_party":"DEM"},"house|2014|71":{"is_woman":false,"gender":"male","winner_candidate":"Dennis M. CANARIO","winner_party":"DEM"},"house|2014|72":{"is_woman":false,"gender":"male","winner_candidate":"Daniel Patrick REILLY","winner_party":"REP"},"house|2014|73":{"is_woman":false,"gender":"male","winner_candidate":"Marvin L. ABNEY","winner_party":"DEM"},"house|2014|74":{"is_woman":false,"gender":"male","winner_candidate":"Deborah L. RUGGIERO","winner_party":"DEM"},"house|2014|75":{"is_woman":true,"gender":"female","winner_candidate":"Lauren H. CARSON","winner_party":"DEM"},"senate|2016|1":{"is_woman":true,"gender":"female","winner_candidate":"Maryellen Goodwin","winner_party":"DEM"},"senate|2016|2":{"is_woman":true,"gender":"female","winner_candidate":"Ana B. Quezada","winner_party":"DEM"},"senate|2016|3":{"is_woman":false,"gender":"male","winner_candidate":"Gayle L. Goldin","winner_party":"DEM"},"senate|2016|4":{"is_woman":false,"gender":"male","winner_candidate":"Dominick J. Ruggerio","winner_party":"DEM"},"senate|2016|5":{"is_woman":false,"gender":"male","winner_candidate":"Paul V. Jabour","winner_party":"DEM"},"senate|2016|6":{"is_woman":false,"gender":"male","winner_candidate":"Harold M. Metts","winner_party":"DEM"},"senate|2016|7":{"is_woman":false,"gender":"male","winner_candidate":"Frank A. Ciccone, III","winner_party":"DEM"},"senate|2016|8":{"is_woman":false,"gender":"male","winner_candidate":"James E. Doyle, II","winner_party":"DEM"},"senate|2016|9":{"is_woman":false,"gender":"male","winner_candidate":"Adam J. Satchell","winner_party":"DEM"},"senate|2016|10":{"is_woman":false,"gender":"male","winner_candidate":"Walter S. Felag, Jr.","winner_party":"DEM"},"senate|2016|11":{"is_woman":false,"gender":"male","winner_candidate":"James Arthur Seveney","winner_party":"DEM"},"senate|2016|12":{"is_woman":false,"gender":"male","winner_candidate":"Louis P. DiPalma","winner_party":"DEM"},"senate|2016|13":{"is_woman":false,"gender":"male","winner_candidate":"M. Teresa Paiva-Weed","winner_party":"DEM"},"senate|2016|14":{"is_woman":false,"gender":"male","winner_candidate":"Daniel Da Ponte","winner_party":"DEM"},"senate|2016|15":{"is_woman":true,"gender":"female","winner_candidate":"Donna M. Nesselbush","winner_party":"DEM"},"senate|2016|16":{"is_woman":false,"gender":"male","winner_candidate":"Elizabeth A. Crowley","winner_party":"DEM"},"senate|2016|17":{"is_woman":false,"gender":"male","winner_candidate":"Thomas J. Paolino","winner_party":"REP"},"senate|2016|18":{"is_woman":false,"gender":"male","winner_candidate":"William J. Conley, Jr.","winner_party":"DEM"},"senate|2016|19":{"is_woman":false,"gender":"male","winner_candidate":"Ryan W. Pearson","winner_party":"DEM"},"senate|2016|20":{"is_woman":false,"gender":"male","winner_candidate":"Roger A. Picard","winner_party":"DEM"},"senate|2016|21":{"is_woman":false,"gender":"male","winner_candidate":"Nicholas D. Kettle","winner_party":"REP"},"senate|2016|22":{"is_woman":false,"gender":"male","winner_candidate":"Stephen R. Archambault","winner_party":"DEM"},"senate|2016|23":{"is_woman":false,"gender":"male","winner_candidate":"Paul W. Fogarty","winner_party":"DEM"},"senate|2016|24":{"is_woman":false,"gender":"male","winner_candidate":"Marc A. Cote","winner_party":"DEM"},"senate|2016|25":{"is_woman":false,"gender":"male","winner_candidate":"Frank Lombardo, III","winner_party":"DEM"},"senate|2016|26":{"is_woman":false,"gender":"male","winner_candidate":"Frank S. Lombardi","winner_party":"DEM"},"senate|2016|27":{"is_woman":false,"gender":"male","winner_candidate":"Hanna M. Gallo","winner_party":"DEM"},"senate|2016|28":{"is_woman":false,"gender":"male","winner_candidate":"Joshua Miller","winner_party":"DEM"},"senate|2016|29":{"is_woman":false,"gender":"male","winner_candidate":"Michael J. McCaffrey","winner_party":"DEM"},"senate|2016|30":{"is_woman":false,"gender":"male","winner_candidate":"Jeanine Calkin","winner_party":"DEM"},"senate|2016|31":{"is_woman":false,"gender":"male","winner_candidate":"Erin Lynch Prata","winner_party":"DEM"},"senate|2016|32":{"is_woman":false,"gender":"male","winner_candidate":"Cynthia Armour Coyne","winner_party":"DEM"},"senate|2016|33":{"is_woman":false,"gender":"male","winner_candidate":"Leonidas P. Raptakis","winner_party":"DEM"},"senate|2016|34":{"is_woman":false,"gender":"male","winner_candidate":"Elaine J. Morgan","winner_party":"REP"},"senate|2016|35":{"is_woman":false,"gender":"male","winner_candidate":"Mark W. Gee","winner_party":"REP"},"senate|2016|36":{"is_woman":false,"gender":"male","winner_candidate":"James C. Sheehan","winner_party":"DEM"},"senate|2016|37":{"is_woman":false,"gender":"male","winner_candidate":"V. Susan Sosnowski","winner_party":"DEM"},"senate|2016|38":{"is_woman":false,"gender":"male","winner_candidate":"Dennis L. Algiere","winner_party":"REP"},"house|2016|1":{"is_woman":true,"gender":"female","winner_candidate":"Edith H. Ajello","winner_party":"DEM"},"house|2016|2":{"is_woman":false,"gender":"male","winner_candidate":"Christopher R. Blazejewski","winner_party":"DEM"},"house|2016|3":{"is_woman":false,"gender":"male","winner_candidate":"Moira Jayne Walsh","winner_party":"DEM"},"house|2016|4":{"is_woman":false,"gender":"male","winner_candidate":"J. Aaron Regunberg","winner_party":"DEM"},"house|2016|5":{"is_woman":true,"gender":"female","winner_candidate":"Marcia Ranglin-Vassell","winner_party":"DEM"},"house|2016|6":{"is_woman":false,"gender":"male","winner_candidate":"Raymond A. Hull","winner_party":"DEM"},"house|2016|7":{"is_woman":false,"gender":"male","winner_candidate":"Daniel P. McKiernan","winner_party":"DEM"},"house|2016|8":{"is_woman":false,"gender":"male","winner_candidate":"John Joseph Lombardi","winner_party":"DEM"},"house|2016|9":{"is_woman":true,"gender":"female","winner_candidate":"Anastasia P. Williams","winner_party":"DEM"},"house|2016|10":{"is_woman":false,"gender":"male","winner_candidate":"Scott A. Slater","winner_party":"DEM"},"house|2016|11":{"is_woman":true,"gender":"female","winner_candidate":"Grace Diaz","winner_party":"DEM"},"house|2016|12":{"is_woman":false,"gender":"male","winner_candidate":"Joseph S. Almeida","winner_party":"DEM"},"house|2016|13":{"is_woman":false,"gender":"male","winner_candidate":"Ramon A. Perez","winner_party":"DEM"},"house|2016|14":{"is_woman":false,"gender":"male","winner_candidate":"Charlene Lima","winner_party":"DEM"},"house|2016|15":{"is_woman":false,"gender":"male","winner_candidate":"Nicholas A. Mattiello","winner_party":"DEM"},"house|2016|16":{"is_woman":false,"gender":"male","winner_candidate":"Robert B. Lancia","winner_party":"REP"},"house|2016|17":{"is_woman":false,"gender":"male","winner_candidate":"Robert B. Jacquard","winner_party":"DEM"},"house|2016|18":{"is_woman":false,"gender":"male","winner_candidate":"Arthur Handy","winner_party":"DEM"},"house|2016|19":{"is_woman":false,"gender":"male","winner_candidate":"Joseph McNamara","winner_party":"DEM"},"house|2016|20":{"is_woman":false,"gender":"male","winner_candidate":"David A. Bennett","winner_party":"DEM"},"house|2016|21":{"is_woman":false,"gender":"male","winner_candidate":"Camille F. Vella-Wilkinson","winner_party":"DEM"},"house|2016|22":{"is_woman":false,"gender":"male","winner_candidate":"Joseph J. Solomon, Jr.","winner_party":"DEM"},"house|2016|23":{"is_woman":false,"gender":"male","winner_candidate":"K. Joseph Shekarchi","winner_party":"DEM"},"house|2016|24":{"is_woman":false,"gender":"male","winner_candidate":"Evan P. Shanley","winner_party":"DEM"},"house|2016|25":{"is_woman":false,"gender":"male","winner_candidate":"Jared R. Nunes","winner_party":"DEM"},"house|2016|26":{"is_woman":true,"gender":"female","winner_candidate":"Patricia L. Morgan","winner_party":"REP"},"house|2016|27":{"is_woman":true,"gender":"female","winner_candidate":"Patricia A. Serpa","winner_party":"DEM"},"house|2016|28":{"is_woman":false,"gender":"male","winner_candidate":"Robert A. Nardolillo","winner_party":"REP"},"house|2016|29":{"is_woman":true,"gender":"female","winner_candidate":"Sherry Roberts","winner_party":"REP"},"house|2016|30":{"is_woman":false,"gender":"male","winner_candidate":"Antonio Giarrusso","winner_party":"REP"},"house|2016|31":{"is_woman":false,"gender":"male","winner_candidate":"Julie A. Casimiro","winner_party":"DEM"},"house|2016|32":{"is_woman":false,"gender":"male","winner_candidate":"Robert E. Craven, Sr.","winner_party":"DEM"},"house|2016|33":{"is_woman":true,"gender":"female","winner_candidate":"Carol Hagan McEntee","winner_party":"DEM"},"house|2016|34":{"is_woman":true,"gender":"female","winner_candidate":"Teresa Tanzi","winner_party":"DEM"},"house|2016|35":{"is_woman":true,"gender":"female","winner_candidate":"Kathleen A. Fogarty","winner_party":"DEM"},"house|2016|36":{"is_woman":false,"gender":"male","winner_candidate":"Blake A. Filippi","winner_party":"Ind"},"house|2016|37":{"is_woman":false,"gender":"male","winner_candidate":"Samuel A. Azzinaro","winner_party":"DEM"},"house|2016|38":{"is_woman":false,"gender":"male","winner_candidate":"Brian Patrick Kennedy","winner_party":"DEM"},"house|2016|39":{"is_woman":false,"gender":"male","winner_candidate":"Justin Price","winner_party":"REP"},"house|2016|40":{"is_woman":false,"gender":"male","winner_candidate":"Michael W. Chippendale","winner_party":"REP"},"house|2016|41":{"is_woman":false,"gender":"male","winner_candidate":"Robert J. Quattrocchi","winner_party":"REP"},"house|2016|42":{"is_woman":false,"gender":"male","winner_candidate":"Stephen R. Ucci","winner_party":"DEM"},"house|2016|43":{"is_woman":false,"gender":"male","winner_candidate":"Deborah A. Fellela","winner_party":"DEM"},"house|2016|44":{"is_woman":false,"gender":"male","winner_candidate":"Gregory J. Costantino","winner_party":"DEM"},"house|2016|45":{"is_woman":true,"gender":"female","winner_candidate":"Mia A. Ackerman","winner_party":"DEM"},"house|2016|46":{"is_woman":false,"gender":"male","winner_candidate":"Jeremiah T. O'Grady","winner_party":"DEM"},"house|2016|47":{"is_woman":false,"gender":"male","winner_candidate":"Cale P. Keable","winner_party":"DEM"},"house|2016|48":{"is_woman":false,"gender":"male","winner_candidate":"Brian C. Newberry","winner_party":"REP"},"house|2016|49":{"is_woman":false,"gender":"male","winner_candidate":"Michael A. Morin","winner_party":"DEM"},"house|2016|50":{"is_woman":false,"gender":"male","winner_candidate":"Stephen M. Casey","winner_party":"DEM"},"house|2016|51":{"is_woman":false,"gender":"male","winner_candidate":"Robert D. Phillips","winner_party":"DEM"},"house|2016|52":{"is_woman":false,"gender":"male","winner_candidate":"Alex D. Marszalkowski","winner_party":"DEM"},"house|2016|53":{"is_woman":false,"gender":"male","winner_candidate":"Thomas J. Winfield","winner_party":"DEM"},"house|2016|54":{"is_woman":false,"gender":"male","winner_candidate":"William W. O'Brien","winner_party":"DEM"},"house|2016|55":{"is_woman":false,"gender":"male","winner_candidate":"Arthur J. Corvese","winner_party":"DEM"},"house|2016|56":{"is_woman":false,"gender":"male","winner_candidate":"Shelby Maldonado","winner_party":"DEM"},"house|2016|57":{"is_woman":false,"gender":"male","winner_candidate":"James N. McLaughlin","winner_party":"DEM"},"house|2016|58":{"is_woman":false,"gender":"male","winner_candidate":"Carlos Eduardo Tobon","winner_party":"DEM"},"house|2016|59":{"is_woman":false,"gender":"male","winner_candidate":"Jean Philippe Barros","winner_party":"DEM"},"house|2016|60":{"is_woman":false,"gender":"male","winner_candidate":"David A. Coughlin, Jr.","winner_party":"DEM"},"house|2016|61":{"is_woman":false,"gender":"male","winner_candidate":"Raymond H. Johnston, Jr.","winner_party":"DEM"},"house|2016|62":{"is_woman":false,"gender":"male","winner_candidate":"Mary Duffy Messier","winner_party":"DEM"},"house|2016|63":{"is_woman":true,"gender":"female","winner_candidate":"Katherine S. Kazarian","winner_party":"DEM"},"house|2016|64":{"is_woman":false,"gender":"male","winner_candidate":"Helder J. Cunha","winner_party":"DEM"},"house|2016|65":{"is_woman":false,"gender":"male","winner_candidate":"Gregg Amore","winner_party":"DEM"},"house|2016|66":{"is_woman":true,"gender":"female","winner_candidate":"Joy S. Hearn","winner_party":"DEM"},"house|2016|67":{"is_woman":false,"gender":"male","winner_candidate":"Jason Knight","winner_party":"DEM"},"house|2016|68":{"is_woman":false,"gender":"male","winner_candidate":"Kenneth A. Marshall","winner_party":"DEM"},"house|2016|69":{"is_woman":true,"gender":"female","winner_candidate":"Susan R. Donovan","winner_party":"DEM"},"house|2016|70":{"is_woman":false,"gender":"male","winner_candidate":"John G. Edwards","winner_party":"DEM"},"house|2016|71":{"is_woman":false,"gender":"male","winner_candidate":"Dennis M. Canario","winner_party":"DEM"},"house|2016|72":{"is_woman":false,"gender":"male","winner_candidate":"Kenneth J. Mendonca","winner_party":"REP"},"house|2016|73":{"is_woman":false,"gender":"male","winner_candidate":"Marvin L. Abney","winner_party":"DEM"},"house|2016|74":{"is_woman":false,"gender":"male","winner_candidate":"Deborah L. Ruggiero","winner_party":"DEM"},"house|2016|75":{"is_woman":true,"gender":"female","winner_candidate":"Lauren H. Carson","winner_party":"DEM"},"senate|2018|1":{"is_woman":true,"gender":"female","winner_candidate":"Maryellen Goodwin","winner_party":"DEM"},"senate|2018|2":{"is_woman":true,"gender":"female","winner_candidate":"Ana B. Quezada","winner_party":"DEM"},"senate|2018|3":{"is_woman":false,"gender":"male","winner_candidate":"Gayle L. Goldin","winner_party":"DEM"},"senate|2018|4":{"is_woman":false,"gender":"male","winner_candidate":"Dominick J. Ruggerio","winner_party":"DEM"},"senate|2018|5":{"is_woman":false,"gender":"male","winner_candidate":"Samuel W. Bell","winner_party":"DEM"},"senate|2018|6":{"is_woman":false,"gender":"male","winner_candidate":"Harold M. Metts","winner_party":"DEM"},"senate|2018|7":{"is_woman":false,"gender":"male","winner_candidate":"Frank A. Ciccone, III","winner_party":"DEM"},"senate|2018|8":{"is_woman":true,"gender":"female","winner_candidate":"Sandra C. Cano","winner_party":"DEM"},"senate|2018|9":{"is_woman":false,"gender":"male","winner_candidate":"Adam J. Satchell","winner_party":"DEM"},"senate|2018|10":{"is_woman":false,"gender":"male","winner_candidate":"Walter S. Felag, Jr.","winner_party":"DEM"},"senate|2018|11":{"is_woman":false,"gender":"male","winner_candidate":"James Arthur Seveney","winner_party":"DEM"},"senate|2018|12":{"is_woman":false,"gender":"male","winner_candidate":"Louis P. DiPalma","winner_party":"DEM"},"senate|2018|13":{"is_woman":true,"gender":"female","winner_candidate":"Dawn M. Euer","winner_party":"DEM"},"senate|2018|14":{"is_woman":true,"gender":"female","winner_candidate":"Valarie J. Lawson","winner_party":"DEM"},"senate|2018|15":{"is_woman":true,"gender":"female","winner_candidate":"Donna M. Nesselbush","winner_party":"DEM"},"senate|2018|16":{"is_woman":false,"gender":"male","winner_candidate":"Elizabeth A. Crowley","winner_party":"DEM"},"senate|2018|17":{"is_woman":false,"gender":"male","winner_candidate":"Thomas J. Paolino","winner_party":"REP"},"senate|2018|18":{"is_woman":false,"gender":"male","winner_candidate":"William J. Conley, Jr.","winner_party":"DEM"},"senate|2018|19":{"is_woman":false,"gender":"male","winner_candidate":"Ryan W. Pearson","winner_party":"DEM"},"senate|2018|20":{"is_woman":false,"gender":"male","winner_candidate":"Roger A. Picard","winner_party":"DEM"},"senate|2018|21":{"is_woman":false,"gender":"male","winner_candidate":"Gordon E. Rogers","winner_party":"REP"},"senate|2018|22":{"is_woman":false,"gender":"male","winner_candidate":"Stephen R. Archambault","winner_party":"DEM"},"senate|2018|23":{"is_woman":true,"gender":"female","winner_candidate":"Jessica de la Cruz","winner_party":"REP"},"senate|2018|24":{"is_woman":true,"gender":"female","winner_candidate":"Melissa A. Murray","winner_party":"DEM"},"senate|2018|25":{"is_woman":false,"gender":"male","winner_candidate":"Frank Lombardo, III","winner_party":"DEM"},"senate|2018|26":{"is_woman":false,"gender":"male","winner_candidate":"Frank S. Lombardi","winner_party":"DEM"},"senate|2018|27":{"is_woman":false,"gender":"male","winner_candidate":"Hanna M. Gallo","winner_party":"DEM"},"senate|2018|28":{"is_woman":false,"gender":"male","winner_candidate":"Joshua Miller","winner_party":"DEM"},"senate|2018|29":{"is_woman":false,"gender":"male","winner_candidate":"Michael J. McCaffrey","winner_party":"DEM"},"senate|2018|30":{"is_woman":false,"gender":"male","winner_candidate":"Mark P. McKenney","winner_party":"DEM"},"senate|2018|31":{"is_woman":false,"gender":"male","winner_candidate":"Erin Lynch Prata","winner_party":"DEM"},"senate|2018|32":{"is_woman":false,"gender":"male","winner_candidate":"Cynthia Armour Coyne","winner_party":"DEM"},"senate|2018|33":{"is_woman":false,"gender":"male","winner_candidate":"Leonidas P. Raptakis","winner_party":"DEM"},"senate|2018|34":{"is_woman":false,"gender":"male","winner_candidate":"Elaine J. Morgan","winner_party":"REP"},"senate|2018|35":{"is_woman":true,"gender":"female","winner_candidate":"Bridget G. Valverde","winner_party":"DEM"},"senate|2018|36":{"is_woman":false,"gender":"male","winner_candidate":"James C. Sheehan","winner_party":"DEM"},"senate|2018|37":{"is_woman":false,"gender":"male","winner_candidate":"V. Susan Sosnowski","winner_party":"DEM"},"senate|2018|38":{"is_woman":false,"gender":"male","winner_candidate":"Dennis L. Algiere","winner_party":"REP"},"house|2018|1":{"is_woman":true,"gender":"female","winner_candidate":"Edith H. Ajello","winner_party":"DEM"},"house|2018|2":{"is_woman":false,"gender":"male","winner_candidate":"Christopher R. Blazejewski","winner_party":"DEM"},"house|2018|3":{"is_woman":false,"gender":"male","winner_candidate":"Moira Jayne Walsh","winner_party":"DEM"},"house|2018|4":{"is_woman":true,"gender":"female","winner_candidate":"Rebecca M. Kislak","winner_party":"DEM"},"house|2018|5":{"is_woman":true,"gender":"female","winner_candidate":"Marcia Ranglin-Vassell","winner_party":"DEM"},"house|2018|6":{"is_woman":false,"gender":"male","winner_candidate":"Raymond A. Hull","winner_party":"DEM"},"house|2018|7":{"is_woman":false,"gender":"male","winner_candidate":"Daniel P. McKiernan","winner_party":"DEM"},"house|2018|8":{"is_woman":false,"gender":"male","winner_candidate":"John Joseph Lombardi","winner_party":"DEM"},"house|2018|9":{"is_woman":true,"gender":"female","winner_candidate":"Anastasia P. Williams","winner_party":"DEM"},"house|2018|10":{"is_woman":false,"gender":"male","winner_candidate":"Scott A. Slater","winner_party":"DEM"},"house|2018|11":{"is_woman":true,"gender":"female","winner_candidate":"Grace Diaz","winner_party":"DEM"},"house|2018|12":{"is_woman":false,"gender":"male","winner_candidate":"Joseph S. Almeida","winner_party":"DEM"},"house|2018|13":{"is_woman":false,"gender":"male","winner_candidate":"Mario F. Mendez","winner_party":"DEM"},"house|2018|14":{"is_woman":false,"gender":"male","winner_candidate":"Charlene Lima","winner_party":"DEM"},"house|2018|15":{"is_woman":false,"gender":"male","winner_candidate":"Nicholas A. Mattiello","winner_party":"DEM"},"house|2018|16":{"is_woman":false,"gender":"male","winner_candidate":"Christopher T. Millea","winner_party":"DEM"},"house|2018|17":{"is_woman":false,"gender":"male","winner_candidate":"Robert B. Jacquard","winner_party":"DEM"},"house|2018|18":{"is_woman":false,"gender":"male","winner_candidate":"Arthur Handy","winner_party":"DEM"},"house|2018|19":{"is_woman":false,"gender":"male","winner_candidate":"Joseph McNamara","winner_party":"DEM"},"house|2018|20":{"is_woman":false,"gender":"male","winner_candidate":"David A. Bennett","winner_party":"DEM"},"house|2018|21":{"is_woman":false,"gender":"male","winner_candidate":"Camille F. Vella-Wilkinson","winner_party":"DEM"},"house|2018|22":{"is_woman":false,"gender":"male","winner_candidate":"Joseph J. Solomon, Jr.","winner_party":"DEM"},"house|2018|23":{"is_woman":false,"gender":"male","winner_candidate":"K. Joseph Shekarchi","winner_party":"DEM"},"house|2018|24":{"is_woman":false,"gender":"male","winner_candidate":"Evan P. Shanley","winner_party":"DEM"},"house|2018|25":{"is_woman":false,"gender":"male","winner_candidate":"Thomas E. Noret","winner_party":"DEM"},"house|2018|26":{"is_woman":false,"gender":"male","winner_candidate":"James B. Jackson","winner_party":"DEM"},"house|2018|27":{"is_woman":true,"gender":"female","winner_candidate":"Patricia A. Serpa","winner_party":"DEM"},"house|2018|28":{"is_woman":false,"gender":"male","winner_candidate":"George A. Nardone","winner_party":"REP"},"house|2018|29":{"is_woman":true,"gender":"female","winner_candidate":"Sherry Roberts","winner_party":"REP"},"house|2018|30":{"is_woman":false,"gender":"male","winner_candidate":"Justine A. Caldwell","winner_party":"DEM"},"house|2018|31":{"is_woman":false,"gender":"male","winner_candidate":"Julie A. Casimiro","winner_party":"DEM"},"house|2018|32":{"is_woman":false,"gender":"male","winner_candidate":"Robert E. Craven, Sr.","winner_party":"DEM"},"house|2018|33":{"is_woman":true,"gender":"female","winner_candidate":"Carol Hagan McEntee","winner_party":"DEM"},"house|2018|34":{"is_woman":true,"gender":"female","winner_candidate":"Teresa Tanzi","winner_party":"DEM"},"house|2018|35":{"is_woman":true,"gender":"female","winner_candidate":"Kathleen A. Fogarty","winner_party":"DEM"},"house|2018|36":{"is_woman":false,"gender":"male","winner_candidate":"Blake A. Filippi","winner_party":"REP"},"house|2018|37":{"is_woman":false,"gender":"male","winner_candidate":"Samuel A. Azzinaro","winner_party":"DEM"},"house|2018|38":{"is_woman":false,"gender":"male","winner_candidate":"Brian Patrick Kennedy","winner_party":"DEM"},"house|2018|39":{"is_woman":false,"gender":"male","winner_candidate":"Justin K. Price","winner_party":"REP"},"house|2018|40":{"is_woman":false,"gender":"male","winner_candidate":"Michael W. Chippendale","winner_party":"REP"},"house|2018|41":{"is_woman":false,"gender":"male","winner_candidate":"Robert J. Quattrocchi","winner_party":"REP"},"house|2018|42":{"is_woman":false,"gender":"male","winner_candidate":"Stephen R. Ucci","winner_party":"DEM"},"house|2018|43":{"is_woman":false,"gender":"male","winner_candidate":"Deborah A. Fellela","winner_party":"DEM"},"house|2018|44":{"is_woman":false,"gender":"male","winner_candidate":"Gregory J. Costantino","winner_party":"DEM"},"house|2018|45":{"is_woman":true,"gender":"female","winner_candidate":"Mia A. Ackerman","winner_party":"DEM"},"house|2018|46":{"is_woman":false,"gender":"male","winner_candidate":"John W. Lyle, Jr.","winner_party":"REP"},"house|2018|47":{"is_woman":false,"gender":"male","winner_candidate":"David J. Place","winner_party":"REP"},"house|2018|48":{"is_woman":false,"gender":"male","winner_candidate":"Brian C. Newberry","winner_party":"REP"},"house|2018|49":{"is_woman":false,"gender":"male","winner_candidate":"Michael A. Morin","winner_party":"DEM"},"house|2018|50":{"is_woman":false,"gender":"male","winner_candidate":"Stephen M. Casey","winner_party":"DEM"},"house|2018|51":{"is_woman":false,"gender":"male","winner_candidate":"Robert D. Phillips","winner_party":"DEM"},"house|2018|52":{"is_woman":false,"gender":"male","winner_candidate":"Alex D. Marszalkowski","winner_party":"DEM"},"house|2018|53":{"is_woman":false,"gender":"male","winner_candidate":"Bernard A. Hawkins","winner_party":"DEM"},"house|2018|54":{"is_woman":false,"gender":"male","winner_candidate":"William W. O'Brien","winner_party":"DEM"},"house|2018|55":{"is_woman":false,"gender":"male","winner_candidate":"Arthur J. Corvese","winner_party":"DEM"},"house|2018|56":{"is_woman":false,"gender":"male","winner_candidate":"Shelby Maldonado","winner_party":"DEM"},"house|2018|57":{"is_woman":false,"gender":"male","winner_candidate":"James N. McLaughlin","winner_party":"DEM"},"house|2018|58":{"is_woman":false,"gender":"male","winner_candidate":"Carlos Eduardo Tobon","winner_party":"DEM"},"house|2018|59":{"is_woman":false,"gender":"male","winner_candidate":"Jean Philippe Barros","winner_party":"DEM"},"house|2018|60":{"is_woman":true,"gender":"female","winner_candidate":"Karen Alzate","winner_party":"DEM"},"house|2018|61":{"is_woman":false,"gender":"male","winner_candidate":"Raymond H. Johnston, Jr.","winner_party":"DEM"},"house|2018|62":{"is_woman":false,"gender":"male","winner_candidate":"Mary Duffy Messier","winner_party":"DEM"},"house|2018|63":{"is_woman":true,"gender":"female","winner_candidate":"Katherine S. Kazarian","winner_party":"DEM"},"house|2018|64":{"is_woman":false,"gender":"male","winner_candidate":"Jose R. Serodio","winner_party":"DEM"},"house|2018|65":{"is_woman":false,"gender":"male","winner_candidate":"Gregg Amore","winner_party":"DEM"},"house|2018|66":{"is_woman":false,"gender":"male","winner_candidate":"Liana M. Cassar","winner_party":"DEM"},"house|2018|67":{"is_woman":false,"gender":"male","winner_candidate":"Jason Knight","winner_party":"DEM"},"house|2018|68":{"is_woman":false,"gender":"male","winner_candidate":"Laufton Ascencao","winner_party":"DEM"},"house|2018|69":{"is_woman":true,"gender":"female","winner_candidate":"Susan R. Donovan","winner_party":"DEM"},"house|2018|70":{"is_woman":false,"gender":"male","winner_candidate":"John G. Edwards","winner_party":"DEM"},"house|2018|71":{"is_woman":false,"gender":"male","winner_candidate":"Dennis M. Canario","winner_party":"DEM"},"house|2018|72":{"is_woman":false,"gender":"male","winner_candidate":"Terri-Denise Cortvriend","winner_party":"DEM"},"house|2018|73":{"is_woman":false,"gender":"male","winner_candidate":"Marvin L. Abney","winner_party":"DEM"},"house|2018|74":{"is_woman":false,"gender":"male","winner_candidate":"Deborah L. Ruggiero","winner_party":"DEM"},"house|2018|75":{"is_woman":true,"gender":"female","winner_candidate":"Lauren H. Carson","winner_party":"DEM"},"house|2020|1":{"is_woman":true,"gender":"female","winner_candidate":"Edith H Ajello","winner_party":"DEM"},"house|2020|2":{"is_woman":false,"gender":"male","winner_candidate":"Christopher R Blazejewski","winner_party":"DEM"},"house|2020|3":{"is_woman":false,"gender":"male","winner_candidate":"Nathan W Biah","winner_party":"DEM"},"house|2020|4":{"is_woman":true,"gender":"female","winner_candidate":"Rebecca M Kislak","winner_party":"DEM"},"house|2020|5":{"is_woman":true,"gender":"female","winner_candidate":"Marcia P Ranglin -Vassell","winner_party":"DEM"},"house|2020|6":{"is_woman":false,"gender":"male","winner_candidate":"Raymond A Hull","winner_party":"DEM"},"house|2020|7":{"is_woman":false,"gender":"male","winner_candidate":"David Morales","winner_party":"DEM"},"house|2020|9":{"is_woman":true,"gender":"female","winner_candidate":"Anastasia P Williams","winner_party":"DEM"},"house|2020|10":{"is_woman":false,"gender":"male","winner_candidate":"Scott A Slater","winner_party":"DEM"},"house|2020|11":{"is_woman":true,"gender":"female","winner_candidate":"Grace Diaz","winner_party":"DEM"},"house|2020|12":{"is_woman":false,"gender":"male","winner_candidate":"Jose F Batista","winner_party":"DEM"},"house|2020|13":{"is_woman":false,"gender":"male","winner_candidate":"Ramon A Perez","winner_party":"DEM"},"house|2020|14":{"is_woman":false,"gender":"male","winner_candidate":"Charlene Lima","winner_party":"DEM"},"house|2020|15":{"is_woman":true,"gender":"female","winner_candidate":"Barbara Ann Fenton -Fung","winner_party":"REP"},"house|2020|16":{"is_woman":true,"gender":"female","winner_candidate":"Jacquelyn M Baginski","winner_party":"DEM"},"house|2020|18":{"is_woman":false,"gender":"male","winner_candidate":"Arthur Handy","winner_party":"DEM"},"house|2020|19":{"is_woman":false,"gender":"male","winner_candidate":"Joseph McNamara","winner_party":"DEM"},"house|2020|20":{"is_woman":false,"gender":"male","winner_candidate":"David A Bennett","winner_party":"DEM"},"house|2020|21":{"is_woman":false,"gender":"male","winner_candidate":"Camille F Vella -Wilkinson","winner_party":"DEM"},"house|2020|22":{"is_woman":false,"gender":"male","winner_candidate":"Joseph J Solomon, Jr","winner_party":"DEM"},"house|2020|23":{"is_woman":false,"gender":"male","winner_candidate":"K Joseph Shekarchi","winner_party":"DEM"},"house|2020|24":{"is_woman":false,"gender":"male","winner_candidate":"Evan P Shanley","winner_party":"DEM"},"house|2020|25":{"is_woman":false,"gender":"male","winner_candidate":"Thomas E Noret","winner_party":"DEM"},"house|2020|26":{"is_woman":true,"gender":"female","winner_candidate":"Patricia L Morgan","winner_party":"REP"},"house|2020|27":{"is_woman":true,"gender":"female","winner_candidate":"Patricia A Serpa","winner_party":"DEM"},"house|2020|28":{"is_woman":false,"gender":"male","winner_candidate":"George A Nardone","winner_party":"REP"},"house|2020|29":{"is_woman":true,"gender":"female","winner_candidate":"Sherry Roberts","winner_party":"REP"},"house|2020|30":{"is_woman":false,"gender":"male","winner_candidate":"Justine A Caldwell","winner_party":"DEM"},"house|2020|31":{"is_woman":false,"gender":"male","winner_candidate":"Julie A Casimiro","winner_party":"DEM"},"house|2020|32":{"is_woman":false,"gender":"male","winner_candidate":"Robert E Craven","winner_party":"DEM"},"house|2020|34":{"is_woman":true,"gender":"female","winner_candidate":"Teresa A Tanzi","winner_party":"DEM"},"house|2020|35":{"is_woman":true,"gender":"female","winner_candidate":"Kathleen A Fogarty","winner_party":"DEM"},"house|2020|36":{"is_woman":false,"gender":"male","winner_candidate":"Blake A Filippi","winner_party":"REP"},"house|2020|37":{"is_woman":false,"gender":"male","winner_candidate":"Samuel A Azzinaro","winner_party":"DEM"},"house|2020|38":{"is_woman":false,"gender":"male","winner_candidate":"Brian Patrick Kennedy","winner_party":"DEM"},"house|2020|39":{"is_woman":false,"gender":"male","winner_candidate":"Justin K Price","winner_party":"REP"},"house|2020|40":{"is_woman":false,"gender":"male","winner_candidate":"Michael W Chippendale","winner_party":"REP"},"house|2020|41":{"is_woman":false,"gender":"male","winner_candidate":"Robert J Quattrocchi","winner_party":"REP"},"house|2020|42":{"is_woman":false,"gender":"male","winner_candidate":"Deborah A Fellela","winner_party":"DEM"},"house|2020|44":{"is_woman":false,"gender":"male","winner_candidate":"Gregory J Costantino","winner_party":"DEM"},"house|2020|45":{"is_woman":true,"gender":"female","winner_candidate":"Mia A Ackerman","winner_party":"DEM"},"house|2020|46":{"is_woman":false,"gender":"male","winner_candidate":"Mary Ann Shallcross Smith","winner_party":"DEM"},"house|2020|47":{"is_woman":false,"gender":"male","winner_candidate":"David J Place","winner_party":"REP"},"house|2020|48":{"is_woman":false,"gender":"male","winner_candidate":"Brian C Newberry","winner_party":"REP"},"house|2020|50":{"is_woman":false,"gender":"male","winner_candidate":"Stephen M Casey","winner_party":"DEM"},"house|2020|51":{"is_woman":false,"gender":"male","winner_candidate":"Robert D Phillips","winner_party":"DEM"},"house|2020|52":{"is_woman":false,"gender":"male","winner_candidate":"Alex D Marszalkowski","winner_party":"DEM"},"house|2020|53":{"is_woman":false,"gender":"male","winner_candidate":"Bernard A Hawkins","winner_party":"DEM"},"house|2020|54":{"is_woman":false,"gender":"male","winner_candidate":"William W O'Brien","winner_party":"DEM"},"house|2020|55":{"is_woman":false,"gender":"male","winner_candidate":"Arthur J Corvese","winner_party":"DEM"},"house|2020|56":{"is_woman":false,"gender":"male","winner_candidate":"Joshua J Giraldo","winner_party":"DEM"},"house|2020|57":{"is_woman":false,"gender":"male","winner_candidate":"James N McLaughlin","winner_party":"DEM"},"house|2020|59":{"is_woman":false,"gender":"male","winner_candidate":"Jean Philippe Barros","winner_party":"DEM"},"house|2020|60":{"is_woman":true,"gender":"female","winner_candidate":"Karen Alzate","winner_party":"DEM"},"house|2020|61":{"is_woman":false,"gender":"male","winner_candidate":"Leonela Felix","winner_party":"DEM"},"house|2020|62":{"is_woman":false,"gender":"male","winner_candidate":"Mary Duffy Messier","winner_party":"DEM"},"house|2020|63":{"is_woman":true,"gender":"female","winner_candidate":"Katherine S Kazarian","winner_party":"DEM"},"house|2020|64":{"is_woman":false,"gender":"male","winner_candidate":"Brianna E Henries","winner_party":"DEM"},"house|2020|65":{"is_woman":false,"gender":"male","winner_candidate":"Gregg Amore","winner_party":"DEM"},"house|2020|66":{"is_woman":false,"gender":"male","winner_candidate":"Liana M Cassar","winner_party":"DEM"},"house|2020|67":{"is_woman":false,"gender":"male","winner_candidate":"Jason Knight","winner_party":"DEM"},"house|2020|68":{"is_woman":true,"gender":"female","winner_candidate":"June S Speakman","winner_party":"DEM"},"house|2020|69":{"is_woman":true,"gender":"female","winner_candidate":"Susan R Donovan","winner_party":"DEM"},"house|2020|70":{"is_woman":false,"gender":"male","winner_candidate":"John G Edwards","winner_party":"DEM"},"house|2020|71":{"is_woman":true,"gender":"female","winner_candidate":"Michelle E McGaw","winner_party":"DEM"},"house|2020|72":{"is_woman":false,"gender":"male","winner_candidate":"Terri-Denise Cortvriend","winner_party":"DEM"},"house|2020|73":{"is_woman":false,"gender":"male","winner_candidate":"Marvin L Abney","winner_party":"DEM"},"house|2020|74":{"is_woman":false,"gender":"male","winner_candidate":"Deborah L Ruggiero","winner_party":"DEM"},"house|2020|75":{"is_woman":false,"gender":"male","winner_candidate":"Frank J Picozzi","winner_party":"Ind"},"senate|2020|1":{"is_woman":true,"gender":"female","winner_candidate":"Maryellen Goodwin","winner_party":"DEM"},"senate|2020|2":{"is_woman":true,"gender":"female","winner_candidate":"Ana B Quezada","winner_party":"DEM"},"senate|2020|3":{"is_woman":false,"gender":"male","winner_candidate":"Gayle L Goldin","winner_party":"DEM"},"senate|2020|4":{"is_woman":false,"gender":"male","winner_candidate":"Dominick J Ruggerio","winner_party":"DEM"},"senate|2020|5":{"is_woman":false,"gender":"male","winner_candidate":"Samuel W Bell","winner_party":"DEM"},"senate|2020|6":{"is_woman":true,"gender":"female","winner_candidate":"Tiara T Mack","winner_party":"DEM"},"senate|2020|7":{"is_woman":false,"gender":"male","winner_candidate":"Frank A Ciccone","winner_party":"DEM"},"senate|2020|8":{"is_woman":true,"gender":"female","winner_candidate":"Sandra C Cano","winner_party":"DEM"},"senate|2020|9":{"is_woman":false,"gender":"male","winner_candidate":"John P Burke","winner_party":"DEM"},"senate|2020|10":{"is_woman":false,"gender":"male","winner_candidate":"Walter S Felag, Jr","winner_party":"DEM"},"senate|2020|11":{"is_woman":false,"gender":"male","winner_candidate":"James Arthur Seveney","winner_party":"DEM"},"senate|2020|12":{"is_woman":false,"gender":"male","winner_candidate":"Louis P DiPalma","winner_party":"DEM"},"senate|2020|13":{"is_woman":true,"gender":"female","winner_candidate":"Dawn M Euer","winner_party":"DEM"},"senate|2020|14":{"is_woman":true,"gender":"female","winner_candidate":"Valarie J Lawson","winner_party":"DEM"},"senate|2020|15":{"is_woman":false,"gender":"male","winner_candidate":"Meghan E Kallman","winner_party":"DEM"},"senate|2020|16":{"is_woman":false,"gender":"male","winner_candidate":"Jonathon Acosta","winner_party":"DEM"},"senate|2020|17":{"is_woman":false,"gender":"male","winner_candidate":"Thomas J Paolino","winner_party":"REP"},"senate|2020|18":{"is_woman":false,"gender":"male","winner_candidate":"Cynthia M Mendes","winner_party":"DEM"},"senate|2020|19":{"is_woman":false,"gender":"male","winner_candidate":"Ryan W Pearso n","winner_party":"DEM"},"senate|2020|20":{"is_woman":false,"gender":"male","winner_candidate":"Roger A Picard","winner_party":"DEM"},"senate|2020|21":{"is_woman":false,"gender":"male","winner_candidate":"Gordon E Rogers","winner_party":"REP"},"senate|2020|22":{"is_woman":false,"gender":"male","winner_candidate":"Stephen R Archambault","winner_party":"DEM"},"senate|2020|23":{"is_woman":true,"gender":"female","winner_candidate":"Jessica de la Cruz","winner_party":"REP"},"senate|2020|24":{"is_woman":true,"gender":"female","winner_candidate":"Melissa A Murray","winner_party":"DEM"},"senate|2020|25":{"is_woman":false,"gender":"male","winner_candidate":"Frank Lombardo, III","winner_party":"DEM"},"senate|2020|26":{"is_woman":false,"gender":"male","winner_candidate":"Frank S Lombardi","winner_party":"DEM"},"senate|2020|27":{"is_woman":false,"gender":"male","winner_candidate":"Hanna M Gallo","winner_party":"DEM"},"senate|2020|28":{"is_woman":false,"gender":"male","winner_candidate":"Joshua Miller","winner_party":"DEM"},"senate|2020|29":{"is_woman":false,"gender":"male","winner_candidate":"Michael J McCaffrey","winner_party":"DEM"},"senate|2020|30":{"is_woman":false,"gender":"male","winner_candidate":"Jeanine Calkin","winner_party":"DEM"},"senate|2020|31":{"is_woman":true,"gender":"female","winner_candidate":"Kendra Anderson","winner_party":"DEM"},"senate|2020|32":{"is_woman":false,"gender":"male","winner_candidate":"Cynthia Armour Coyne","winner_party":"DEM"},"senate|2020|33":{"is_woman":false,"gender":"male","winner_candidate":"Leonidas P Raptakis","winner_party":"DEM"},"senate|2020|34":{"is_woman":false,"gender":"male","winner_candidate":"Elaine J Morgan","winner_party":"REP"},"senate|2020|35":{"is_woman":true,"gender":"female","winner_candidate":"Bridget G Valverde","winner_party":"DEM"},"senate|2020|36":{"is_woman":false,"gender":"male","winner_candidate":"Alana DiMario","winner_party":"DEM"},"senate|2020|37":{"is_woman":false,"gender":"male","winner_candidate":"Virginia S Sosnowski","winner_party":"DEM"},"senate|2020|38":{"is_woman":false,"gender":"male","winner_candidate":"Dennis L Algiere","winner_party":"REP"},"house|2022|1":{"is_woman":true,"gender":"female","winner_candidate":"Edith Hanover Ajello","winner_party":"DEM"},"house|2022|2":{"is_woman":false,"gender":"male","winner_candidate":"Christopher R. Blazejewski","winner_party":"DEM"},"house|2022|3":{"is_woman":false,"gender":"male","winner_candidate":"Nathan W. Biah","winner_party":"DEM"},"house|2022|4":{"is_woman":true,"gender":"female","winner_candidate":"Rebecca M. Kislak","winner_party":"DEM"},"house|2022|5":{"is_woman":false,"gender":"male","winner_candidate":"Anthony J. DeSimone","winner_party":"DEM"},"house|2022|6":{"is_woman":false,"gender":"male","winner_candidate":"Raymond A. Hull","winner_party":"DEM"},"house|2022|7":{"is_woman":false,"gender":"male","winner_candidate":"David Morales","winner_party":"DEM"},"house|2022|8":{"is_woman":false,"gender":"male","winner_candidate":"John J. Lombardi","winner_party":"DEM"},"house|2022|9":{"is_woman":false,"gender":"male","winner_candidate":"Enrique George Sanchez","winner_party":"DEM"},"house|2022|10":{"is_woman":false,"gender":"male","winner_candidate":"Scott A. Slater","winner_party":"DEM"},"house|2022|11":{"is_woman":true,"gender":"female","winner_candidate":"Grace Diaz","winner_party":"DEM"},"house|2022|12":{"is_woman":false,"gender":"male","winner_candidate":"Jose F. Batista","winner_party":"DEM"},"house|2022|13":{"is_woman":false,"gender":"male","winner_candidate":"Ramon A. Perez","winner_party":"DEM"},"house|2022|14":{"is_woman":false,"gender":"male","winner_candidate":"Charlene Lima","winner_party":"DEM"},"house|2022|15":{"is_woman":true,"gender":"female","winner_candidate":"Barbara Ann Fenton Fung","winner_party":"REP"},"house|2022|16":{"is_woman":false,"gender":"male","winner_candidate":"Brandon C. Potter","winner_party":"DEM"},"house|2022|17":{"is_woman":true,"gender":"female","winner_candidate":"Jacquelyn M. Baginski","winner_party":"DEM"},"house|2022|18":{"is_woman":false,"gender":"male","winner_candidate":"Arthur Handy","winner_party":"DEM"},"house|2022|19":{"is_woman":false,"gender":"male","winner_candidate":"Joseph McNamara","winner_party":"DEM"},"house|2022|20":{"is_woman":false,"gender":"male","winner_candidate":"David A. Bennett","winner_party":"DEM"},"house|2022|21":{"is_woman":false,"gender":"male","winner_candidate":"Camille F. Vella-Wilkinson","winner_party":"DEM"},"house|2022|22":{"is_woman":false,"gender":"male","winner_candidate":"Joseph J. Solomon, Jr.","winner_party":"DEM"},"house|2022|23":{"is_woman":false,"gender":"male","winner_candidate":"K. Joseph Shekarchi","winner_party":"DEM"},"house|2022|24":{"is_woman":false,"gender":"male","winner_candidate":"Evan Patrick Shanley","winner_party":"DEM"},"house|2022|25":{"is_woman":false,"gender":"male","winner_candidate":"Thomas E. Noret","winner_party":"DEM"},"house|2022|26":{"is_woman":true,"gender":"female","winner_candidate":"Patricia L. Morgan","winner_party":"REP"},"house|2022|27":{"is_woman":true,"gender":"female","winner_candidate":"Patricia A. Serpa","winner_party":"DEM"},"house|2022|28":{"is_woman":false,"gender":"male","winner_candidate":"George A. Nardone","winner_party":"REP"},"house|2022|29":{"is_woman":true,"gender":"female","winner_candidate":"Sherry L. Roberts","winner_party":"REP"},"house|2022|30":{"is_woman":false,"gender":"male","winner_candidate":"Justine A. Caldwell","winner_party":"DEM"},"house|2022|31":{"is_woman":false,"gender":"male","winner_candidate":"Julie A. Casimiro","winner_party":"DEM"},"house|2022|32":{"is_woman":false,"gender":"male","winner_candidate":"Robert E. Craven","winner_party":"DEM"},"house|2022|33":{"is_woman":true,"gender":"female","winner_candidate":"Carol Hagan McEntee","winner_party":"DEM"},"house|2022|34":{"is_woman":true,"gender":"female","winner_candidate":"Teresa A. Tanzi","winner_party":"DEM"},"house|2022|35":{"is_woman":true,"gender":"female","winner_candidate":"Kathleen A. Fogarty","winner_party":"DEM"},"house|2022|36":{"is_woman":false,"gender":"male","winner_candidate":"Tina L. Spears","winner_party":"DEM"},"house|2022|37":{"is_woman":false,"gender":"male","winner_candidate":"Samuel Angelo Azzinaro","winner_party":"DEM"},"house|2022|38":{"is_woman":false,"gender":"male","winner_candidate":"Brian Patrick Kennedy","winner_party":"DEM"},"house|2022|39":{"is_woman":true,"gender":"female","winner_candidate":"Megan L. Cotter","winner_party":"DEM"},"house|2022|40":{"is_woman":false,"gender":"male","winner_candidate":"Michael W. Chippendale","winner_party":"REP"},"house|2022|41":{"is_woman":false,"gender":"male","winner_candidate":"Robert J. Quattrocchi","winner_party":"REP"},"house|2022|42":{"is_woman":false,"gender":"male","winner_candidate":"Edward T. Cardillo, Jr.","winner_party":"DEM"},"house|2022|43":{"is_woman":false,"gender":"male","winner_candidate":"Deborah Ann Fellela","winner_party":"DEM"},"house|2022|44":{"is_woman":false,"gender":"male","winner_candidate":"Gregory J. Costantino","winner_party":"DEM"},"house|2022|45":{"is_woman":true,"gender":"female","winner_candidate":"Mia A. Ackerman","winner_party":"DEM"},"house|2022|46":{"is_woman":false,"gender":"male","winner_candidate":"Mary Ann Shallcross Smith","winner_party":"DEM"},"house|2022|47":{"is_woman":false,"gender":"male","winner_candidate":"David J. Place","winner_party":"REP"},"house|2022|48":{"is_woman":false,"gender":"male","winner_candidate":"Brian C. Newberry","winner_party":"REP"},"house|2022|49":{"is_woman":false,"gender":"male","winner_candidate":"Jon D. Brien","winner_party":"IND"},"house|2022|50":{"is_woman":false,"gender":"male","winner_candidate":"Stephen M. Casey","winner_party":"DEM"},"house|2022|51":{"is_woman":false,"gender":"male","winner_candidate":"Robert D. Phillips","winner_party":"DEM"},"house|2022|52":{"is_woman":false,"gender":"male","winner_candidate":"Alex Daniel Marszalkowski","winner_party":"DEM"},"house|2022|53":{"is_woman":false,"gender":"male","winner_candidate":"Brian J. Rea","winner_party":"REP"},"house|2022|54":{"is_woman":false,"gender":"male","winner_candidate":"William W. O'Brien","winner_party":"DEM"},"house|2022|55":{"is_woman":false,"gender":"male","winner_candidate":"Arthur J. Corvese","winner_party":"DEM"},"house|2022|56":{"is_woman":false,"gender":"male","winner_candidate":"Joshua J.D. Giraldo","winner_party":"DEM"},"house|2022|57":{"is_woman":false,"gender":"male","winner_candidate":"Brandon T. Voas","winner_party":"DEM"},"house|2022|58":{"is_woman":true,"gender":"female","winner_candidate":"Cherie L. Cruz","winner_party":"DEM"},"house|2022|59":{"is_woman":false,"gender":"male","winner_candidate":"Jennifer A. Stewart","winner_party":"DEM"},"house|2022|60":{"is_woman":true,"gender":"female","winner_candidate":"Karen Alzate","winner_party":"DEM"},"house|2022|61":{"is_woman":false,"gender":"male","winner_candidate":"Leonela Felix","winner_party":"DEM"},"house|2022|62":{"is_woman":false,"gender":"male","winner_candidate":"Mary Duffy Messier","winner_party":"DEM"},"house|2022|63":{"is_woman":true,"gender":"female","winner_candidate":"Katherine S. Kazarian","winner_party":"DEM"},"house|2022|64":{"is_woman":false,"gender":"male","winner_candidate":"Brianna E. Henries","winner_party":"DEM"},"house|2022|65":{"is_woman":false,"gender":"male","winner_candidate":"Matthew S. Dawson","winner_party":"DEM"},"house|2022|66":{"is_woman":false,"gender":"male","winner_candidate":"Jennifer Smith Boylan","winner_party":"DEM"},"house|2022|67":{"is_woman":false,"gender":"male","winner_candidate":"Jason P. Knight","winner_party":"DEM"},"house|2022|68":{"is_woman":true,"gender":"female","winner_candidate":"June S. Speakman","winner_party":"DEM"},"house|2022|69":{"is_woman":true,"gender":"female","winner_candidate":"Susan Ann Donovan","winner_party":"DEM"},"house|2022|70":{"is_woman":false,"gender":"male","winner_candidate":"John G. Edwards, IV","winner_party":"DEM"},"house|2022|71":{"is_woman":true,"gender":"female","winner_candidate":"Michelle Elise McGaw","winner_party":"DEM"},"house|2022|72":{"is_woman":false,"gender":"male","winner_candidate":"Terri-Denise Cortvriend","winner_party":"DEM"},"house|2022|73":{"is_woman":false,"gender":"male","winner_candidate":"Marvin L. Abney","winner_party":"DEM"},"house|2022|74":{"is_woman":false,"gender":"male","winner_candidate":"Alex S. Finkelman","winner_party":"DEM"},"house|2022|75":{"is_woman":true,"gender":"female","winner_candidate":"Lauren H. Carson","winner_party":"DEM"},"senate|2022|1":{"is_woman":true,"gender":"female","winner_candidate":"Maryellen Goodwin","winner_party":"DEM"},"senate|2022|2":{"is_woman":true,"gender":"female","winner_candidate":"Ana B. Quezada","winner_party":"DEM"},"senate|2022|3":{"is_woman":false,"gender":"male","winner_candidate":"Samuel D. Zurier","winner_party":"DEM"},"senate|2022|4":{"is_woman":false,"gender":"male","winner_candidate":"Dominick J. Ruggerio","winner_party":"DEM"},"senate|2022|5":{"is_woman":false,"gender":"male","winner_candidate":"Samuel W. Bell","winner_party":"DEM"},"senate|2022|6":{"is_woman":true,"gender":"female","winner_candidate":"Tiara T. Mack","winner_party":"DEM"},"senate|2022|7":{"is_woman":false,"gender":"male","winner_candidate":"Frank Anthony Ciccone","winner_party":"DEM"},"senate|2022|8":{"is_woman":true,"gender":"female","winner_candidate":"Sandra C. Cano","winner_party":"DEM"},"senate|2022|9":{"is_woman":false,"gender":"male","winner_candidate":"John P. Burke","winner_party":"DEM"},"senate|2022|10":{"is_woman":false,"gender":"male","winner_candidate":"Walter S. Felag, Jr.","winner_party":"DEM"},"senate|2022|11":{"is_woman":false,"gender":"male","winner_candidate":"Linda L. Ujifusa","winner_party":"DEM"},"senate|2022|12":{"is_woman":false,"gender":"male","winner_candidate":"Louis P. DiPalma","winner_party":"DEM"},"senate|2022|13":{"is_woman":true,"gender":"female","winner_candidate":"Dawn M. Euer","winner_party":"DEM"},"senate|2022|14":{"is_woman":true,"gender":"female","winner_candidate":"Valarie J. Lawson","winner_party":"DEM"},"senate|2022|15":{"is_woman":false,"gender":"male","winner_candidate":"Meghan E. Kallman","winner_party":"DEM"},"senate|2022|16":{"is_woman":false,"gender":"male","winner_candidate":"Jonathon Acosta","winner_party":"DEM "},"senate|2022|17":{"is_woman":false,"gender":"male","winner_candidate":"Thomas J. Paolino","winner_party":"REP"},"senate|2022|18":{"is_woman":false,"gender":"male","winner_candidate":"Robert Britto","winner_party":"DEM"},"senate|2022|19":{"is_woman":false,"gender":"male","winner_candidate":"Ryan W. Pearson","winner_party":"DEM"},"senate|2022|20":{"is_woman":false,"gender":"male","winner_candidate":"Roger A. Picard","winner_party":"DEM"},"senate|2022|21":{"is_woman":false,"gender":"male","winner_candidate":"Gordon E. Rogers","winner_party":"REP"},"senate|2022|22":{"is_woman":false,"gender":"male","winner_candidate":"David P. Tikoian","winner_party":"DEM"},"senate|2022|23":{"is_woman":true,"gender":"female","winner_candidate":"Jessica de la Cruz","winner_party":"REP"},"senate|2022|24":{"is_woman":true,"gender":"female","winner_candidate":"Melissa A. Murray","winner_party":"DEM"},"senate|2022|25":{"is_woman":false,"gender":"male","winner_candidate":"Frank Lombardo, III","winner_party":"DEM"},"senate|2022|26":{"is_woman":false,"gender":"male","winner_candidate":"Frank S. Lombardi","winner_party":"DEM"},"senate|2022|27":{"is_woman":false,"gender":"male","winner_candidate":"Hanna M. Gallo","winner_party":"DEM"},"senate|2022|28":{"is_woman":false,"gender":"male","winner_candidate":"Joshua Miller","winner_party":"DEM"},"senate|2022|29":{"is_woman":false,"gender":"male","winner_candidate":"Anthony Phillip DeLuca, II","winner_party":"REP"},"senate|2022|30":{"is_woman":false,"gender":"male","winner_candidate":"Mark P. McKenney","winner_party":"DEM"},"senate|2022|31":{"is_woman":false,"gender":"male","winner_candidate":"Matthew L. LaMountain","winner_party":"DEM"},"senate|2022|32":{"is_woman":true,"gender":"female","winner_candidate":"Pamela J. Lauria","winner_party":"DEM"},"senate|2022|33":{"is_woman":false,"gender":"male","winner_candidate":"Leonidas P. Raptakis","winner_party":"DEM"},"senate|2022|34":{"is_woman":false,"gender":"male","winner_candidate":"Elaine J. Morgan","winner_party":"REP"},"senate|2022|35":{"is_woman":true,"gender":"female","winner_candidate":"Bridget G. Valverde","winner_party":"DEM"},"senate|2022|36":{"is_woman":false,"gender":"male","winner_candidate":"Alana M. DiMario","winner_party":"DEM"},"senate|2022|37":{"is_woman":false,"gender":"male","winner_candidate":"Virginia S. Sosnowski","winner_party":"DEM"},"senate|2022|38":{"is_woman":true,"gender":"female","winner_candidate":"Victoria Gu","winner_party":"DEM"},"house|2024|1":{"is_woman":true,"gender":"female","winner_candidate":"Edith H. Ajello","winner_party":"DEM"},"house|2024|2":{"is_woman":false,"gender":"male","winner_candidate":"Christopher R. Blazejewski","winner_party":"DEM"},"house|2024|3":{"is_woman":false,"gender":"male","winner_candidate":"Nathan W. Biah","winner_party":"DEM"},"house|2024|4":{"is_woman":true,"gender":"female","winner_candidate":"Rebecca M. Kislak","winner_party":"DEM"},"house|2024|5":{"is_woman":false,"gender":"male","winner_candidate":"Anthony J. DeSimone","winner_party":"DEM"},"house|2024|6":{"is_woman":false,"gender":"male","winner_candidate":"Raymond A. Hull","winner_party":"DEM"},"house|2024|7":{"is_woman":false,"gender":"male","winner_candidate":"David Morales","winner_party":"DEM"},"house|2024|8":{"is_woman":false,"gender":"male","winner_candidate":"John J. Lombardi","winner_party":"DEM"},"house|2024|9":{"is_woman":false,"gender":"male","winner_candidate":"Enrique G. Sanchez","winner_party":"DEM"},"house|2024|10":{"is_woman":false,"gender":"male","winner_candidate":"Scott A. Slater","winner_party":"DEM"},"house|2024|11":{"is_woman":true,"gender":"female","winner_candidate":"Grace Diaz","winner_party":"DEM"},"house|2024|12":{"is_woman":false,"gender":"male","winner_candidate":"Jose F. Batista","winner_party":"DEM"},"house|2024|13":{"is_woman":false,"gender":"male","winner_candidate":"Ramon A. Perez","winner_party":"DEM"},"house|2024|14":{"is_woman":false,"gender":"male","winner_candidate":"Charlene Lima","winner_party":"DEM"},"house|2024|15":{"is_woman":false,"gender":"male","winner_candidate":"Christopher G. Paplauskas","winner_party":"REP"},"house|2024|16":{"is_woman":false,"gender":"male","winner_candidate":"Brandon C. Potter","winner_party":"DEM"},"house|2024|17":{"is_woman":true,"gender":"female","winner_candidate":"Jacquelyn M. Baginski","winner_party":"DEM"},"house|2024|18":{"is_woman":false,"gender":"male","winner_candidate":"Arthur Handy","winner_party":"DEM"},"house|2024|19":{"is_woman":false,"gender":"male","winner_candidate":"Joseph McNamara","winner_party":"DEM"},"house|2024|20":{"is_woman":false,"gender":"male","winner_candidate":"David A. Bennett","winner_party":"DEM"},"house|2024|21":{"is_woman":true,"gender":"female","winner_candidate":"Marie A. Hopkins","winner_party":"REP"},"house|2024|22":{"is_woman":false,"gender":"male","winner_candidate":"Joseph J. Solomon, Jr.","winner_party":"DEM"},"house|2024|23":{"is_woman":false,"gender":"male","winner_candidate":"K. Joseph Shekarchi","winner_party":"DEM"},"house|2024|24":{"is_woman":false,"gender":"male","winner_candidate":"Evan Patrick Shanley","winner_party":"DEM"},"house|2024|25":{"is_woman":false,"gender":"male","winner_candidate":"Thomas E. Noret","winner_party":"DEM"},"house|2024|26":{"is_woman":false,"gender":"male","winner_candidate":"Earl A. Read, III","winner_party":"DEM"},"house|2024|27":{"is_woman":true,"gender":"female","winner_candidate":"Patricia A. Serpa","winner_party":"DEM"},"house|2024|28":{"is_woman":false,"gender":"male","winner_candidate":"George A. Nardone","winner_party":"REP"},"house|2024|29":{"is_woman":true,"gender":"female","winner_candidate":"Sherry L. Roberts","winner_party":"REP"},"house|2024|30":{"is_woman":false,"gender":"male","winner_candidate":"Justine Caldwell","winner_party":"DEM"},"house|2024|31":{"is_woman":false,"gender":"male","winner_candidate":"Julie A. Casimiro","winner_party":"DEM"},"house|2024|32":{"is_woman":false,"gender":"male","winner_candidate":"Robert E. Craven","winner_party":"DEM"},"house|2024|33":{"is_woman":true,"gender":"female","winner_candidate":"Carol Hagan McEntee","winner_party":"DEM"},"house|2024|34":{"is_woman":true,"gender":"female","winner_candidate":"Teresa Tanzi","winner_party":"DEM"},"house|2024|35":{"is_woman":true,"gender":"female","winner_candidate":"Kathleen A. Fogarty","winner_party":"DEM"},"house|2024|36":{"is_woman":false,"gender":"male","winner_candidate":"Tina L. Spears","winner_party":"DEM"},"house|2024|37":{"is_woman":false,"gender":"male","winner_candidate":"Samuel Angelo Azzinaro","winner_party":"DEM"},"house|2024|38":{"is_woman":false,"gender":"male","winner_candidate":"Brian Patrick Kennedy","winner_party":"DEM"},"house|2024|39":{"is_woman":true,"gender":"female","winner_candidate":"Megan L. Cotter","winner_party":"DEM"},"house|2024|40":{"is_woman":false,"gender":"male","winner_candidate":"Michael W. Chippendale","winner_party":"REP"},"house|2024|41":{"is_woman":false,"gender":"male","winner_candidate":"Robert Quattrocchi","winner_party":"REP"},"house|2024|42":{"is_woman":false,"gender":"male","winner_candidate":"Richard R. Fascia","winner_party":"REP"},"house|2024|43":{"is_woman":false,"gender":"male","winner_candidate":"Deborah A. Fellela","winner_party":"DEM"},"house|2024|44":{"is_woman":false,"gender":"male","winner_candidate":"Gregory J. Costantino","winner_party":"DEM"},"house|2024|45":{"is_woman":true,"gender":"female","winner_candidate":"Mia A. Ackerman","winner_party":"DEM"},"house|2024|46":{"is_woman":false,"gender":"male","winner_candidate":"Mary Ann Shallcross Smith","winner_party":"DEM"},"house|2024|47":{"is_woman":false,"gender":"male","winner_candidate":"David J. Place","winner_party":"REP"},"house|2024|48":{"is_woman":false,"gender":"male","winner_candidate":"Brian C. Newberry","winner_party":"REP"},"house|2024|49":{"is_woman":false,"gender":"male","winner_candidate":"Jon D. Brien","winner_party":"Ind"},"house|2024|50":{"is_woman":false,"gender":"male","winner_candidate":"Stephen M. Casey","winner_party":"DEM"},"house|2024|51":{"is_woman":false,"gender":"male","winner_candidate":"Robert D. Phillips","winner_party":"DEM"},"house|2024|52":{"is_woman":false,"gender":"male","winner_candidate":"Alex Daniel Marszalkowski","winner_party":"DEM"},"house|2024|53":{"is_woman":false,"gender":"male","winner_candidate":"Paul M. Santucci","winner_party":"REP"},"house|2024|54":{"is_woman":false,"gender":"male","winner_candidate":"William W. O'Brien","winner_party":"DEM"},"house|2024|55":{"is_woman":false,"gender":"male","winner_candidate":"Arthur J. Corvese","winner_party":"DEM"},"house|2024|56":{"is_woman":false,"gender":"male","winner_candidate":"Joshua J. Giraldo","winner_party":"DEM"},"house|2024|57":{"is_woman":false,"gender":"male","winner_candidate":"Brandon T. Voas","winner_party":"DEM"},"house|2024|58":{"is_woman":true,"gender":"female","winner_candidate":"Cherie L. Cruz","winner_party":"DEM"},"house|2024|59":{"is_woman":false,"gender":"male","winner_candidate":"Jennifer A. Stewart","winner_party":"DEM"},"house|2024|60":{"is_woman":true,"gender":"female","winner_candidate":"Karen Alzate","winner_party":"DEM"},"house|2024|61":{"is_woman":false,"gender":"male","winner_candidate":"Leonela Felix","winner_party":"DEM"},"house|2024|62":{"is_woman":false,"gender":"male","winner_candidate":"Mary Duffy Messier","winner_party":"DEM"},"house|2024|63":{"is_woman":true,"gender":"female","winner_candidate":"Katherine Sheena Kazarian","winner_party":"DEM"},"house|2024|64":{"is_woman":false,"gender":"male","winner_candidate":"Jenni Azanero Furtado","winner_party":"DEM"},"house|2024|65":{"is_woman":false,"gender":"male","winner_candidate":"Matthew S. Dawson","winner_party":"DEM"},"house|2024|66":{"is_woman":false,"gender":"male","winner_candidate":"Jennifer Smith Boylan","winner_party":"DEM"},"house|2024|67":{"is_woman":false,"gender":"male","winner_candidate":"Jason P. Knight","winner_party":"DEM"},"house|2024|68":{"is_woman":true,"gender":"female","winner_candidate":"June S. Speakman","winner_party":"DEM"},"house|2024|69":{"is_woman":true,"gender":"female","winner_candidate":"Susan Ann Donovan","winner_party":"DEM"},"house|2024|70":{"is_woman":false,"gender":"male","winner_candidate":"John G. Edwards","winner_party":"DEM"},"house|2024|71":{"is_woman":true,"gender":"female","winner_candidate":"Michelle E. McGaw","winner_party":"DEM"},"house|2024|72":{"is_woman":false,"gender":"male","winner_candidate":"Terri-Denise Cortvriend","winner_party":"DEM"},"house|2024|73":{"is_woman":false,"gender":"male","winner_candidate":"Marvin L. Abney","winner_party":"DEM"},"house|2024|74":{"is_woman":false,"gender":"male","winner_candidate":"Alex S. Finkelman","winner_party":"DEM"},"house|2024|75":{"is_woman":true,"gender":"female","winner_candidate":"Lauren H. Carson","winner_party":"DEM"},"senate|2024|1":{"is_woman":false,"gender":"male","winner_candidate":"Jacob Bissaillon","winner_party":"DEM"},"senate|2024|2":{"is_woman":true,"gender":"female","winner_candidate":"Ana B. Quezada","winner_party":"DEM"},"senate|2024|3":{"is_woman":false,"gender":"male","winner_candidate":"Samuel D. Zurier","winner_party":"DEM"},"senate|2024|4":{"is_woman":false,"gender":"male","winner_candidate":"Dominick J. Ruggerio","winner_party":"DEM"},"senate|2024|5":{"is_woman":false,"gender":"male","winner_candidate":"Samuel W. Bell","winner_party":"DEM"},"senate|2024|6":{"is_woman":true,"gender":"female","winner_candidate":"Tiara TyShae Mack","winner_party":"DEM"},"senate|2024|7":{"is_woman":false,"gender":"male","winner_candidate":"Frank A. Ciccone","winner_party":"DEM"},"senate|2024|8":{"is_woman":true,"gender":"female","winner_candidate":"Lori Urso","winner_party":"DEM"},"senate|2024|9":{"is_woman":false,"gender":"male","winner_candidate":"John P. Burke","winner_party":"DEM"},"senate|2024|10":{"is_woman":false,"gender":"male","winner_candidate":"Walter S. Felag, Jr.","winner_party":"DEM"},"senate|2024|11":{"is_woman":false,"gender":"male","winner_candidate":"Linda L. Ujifusa","winner_party":"DEM"},"senate|2024|12":{"is_woman":false,"gender":"male","winner_candidate":"Louis DiPalma","winner_party":"DEM"},"senate|2024|13":{"is_woman":true,"gender":"female","winner_candidate":"Dawn Euer","winner_party":"DEM"},"senate|2024|14":{"is_woman":true,"gender":"female","winner_candidate":"Valarie J. Lawson","winner_party":"DEM"},"senate|2024|15":{"is_woman":false,"gender":"male","winner_candidate":"Meghan E. Kallman","winner_party":"DEM"},"senate|2024|16":{"is_woman":false,"gender":"male","winner_candidate":"Jonathon Acosta","winner_party":"DEM"},"senate|2024|17":{"is_woman":false,"gender":"male","winner_candidate":"Thomas J. Paolino","winner_party":"REP"},"senate|2024|18":{"is_woman":false,"gender":"male","winner_candidate":"Robert Britto","winner_party":"DEM"},"senate|2024|19":{"is_woman":false,"gender":"male","winner_candidate":"Ryan W. Pearson","winner_party":"DEM"},"senate|2024|20":{"is_woman":false,"gender":"male","winner_candidate":"Brian J. Thompson","winner_party":"DEM"},"senate|2024|21":{"is_woman":false,"gender":"male","winner_candidate":"Gordon Rogers","winner_party":"REP"},"senate|2024|22":{"is_woman":false,"gender":"male","winner_candidate":"David P. Tikoian","winner_party":"DEM"},"senate|2024|23":{"is_woman":true,"gender":"female","winner_candidate":"Jessica de la Cruz","winner_party":"REP"},"senate|2024|24":{"is_woman":true,"gender":"female","winner_candidate":"Melissa Murray","winner_party":"DEM"},"senate|2024|25":{"is_woman":false,"gender":"male","winner_candidate":"Andrew R. Dimitri","winner_party":"DEM"},"senate|2024|26":{"is_woman":false,"gender":"male","winner_candidate":"Todd M. Patalano","winner_party":"DEM"},"senate|2024|27":{"is_woman":false,"gender":"male","winner_candidate":"Hanna Gallo","winner_party":"DEM"},"senate|2024|28":{"is_woman":false,"gender":"male","winner_candidate":"Lammis J. Vargas","winner_party":"DEM"},"senate|2024|29":{"is_woman":false,"gender":"male","winner_candidate":"Peter A. Appollonio, Jr.","winner_party":"DEM"},"senate|2024|30":{"is_woman":false,"gender":"male","winner_candidate":"Mark P. McKenney","winner_party":"DEM"},"senate|2024|31":{"is_woman":false,"gender":"male","winner_candidate":"Matthew L. LaMountain","winner_party":"DEM"},"senate|2024|32":{"is_woman":true,"gender":"female","winner_candidate":"Pamela J. Lauria","winner_party":"DEM"},"senate|2024|33":{"is_woman":false,"gender":"male","winner_candidate":"Leonidas P. Raptakis","winner_party":"DEM"},"senate|2024|34":{"is_woman":false,"gender":"male","winner_candidate":"Elaine J. Morgan","winner_party":"REP"},"senate|2024|35":{"is_woman":true,"gender":"female","winner_candidate":"Bridget G. Valverde","winner_party":"DEM"},"senate|2024|36":{"is_woman":false,"gender":"male","winner_candidate":"Alana M. DiMario","winner_party":"DEM"},"senate|2024|37":{"is_woman":false,"gender":"male","winner_candidate":"Virginia S. Sosnowski","winner_party":"DEM"},"senate|2024|38":{"is_woman":true,"gender":"female","winner_candidate":"Victoria Gu","winner_party":"DEM"}};
-
-
-const map = L.map("map", { zoomControl: true }).setView([41.70, -71.55], 9);
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  maxZoom: 18,
-  opacity: 0.34,
-  attribution: "&copy; OpenStreetMap contributors"
-}).addTo(map);
-
-function getEra(year) {
-  return Number(year) <= 2020 ? "old" : "new";
-}
-
-function getGeoKey(chamber, year) {
-  return `${chamber}_${getEra(year)}`;
-}
-
-function getActiveGeoKey() {
-  if (!isTurnoutMode()) {
-    return getGeoKey(state.chamber, state.year);
-  }
-  if (state.turnoutGeo === "house" || state.turnoutGeo === "senate") {
-    return getGeoKey(state.turnoutGeo, "2024");
-  }
-  return `turnout_${state.turnoutGeo}_2024`;
-}
-
-function normalizeDistrict(value) {
-  return Number(String(value).replace(/^0+/, ""));
-}
-
-function getFeatureDistrict(feature) {
-  const p = feature.properties || {};
-  const raw = p.district_number ?? p.DIST_NUM ?? p.SLDUST ?? p.DISTRICT ?? p.District ?? p.NAME ?? p.NAMELSAD;
-  const match = String(raw).match(/\d+/);
-  return match ? Number(match[0]) : null;
-}
-
-function getTurnoutFeatureId(feature) {
-  const props = feature.properties || {};
-  if (state.turnoutGeo === "precinct") {
-    return String(props.DISTRICT ?? props.PRECINCTS ?? "").trim();
-  }
-  if (state.turnoutGeo === "municipality") {
-    return String(props.RIMunicipality ?? props.NAME ?? "").trim();
-  }
-  return getFeatureDistrict(feature);
-}
-
-function activeFeatureId(feature) {
-  return isTurnoutMode() ? getTurnoutFeatureId(feature) : getFeatureDistrict(feature);
-}
-
-function getRace(chamber, year, district) {
-  return raceData[`${chamber}|${year}|${Number(district)}`];
-}
-
-function getGenderRecord(chamber, year, district) {
-  return genderParityData[`${chamber}|${year}|${Number(district)}`];
-}
-
-function isWomanHeldSeat(chamber, year, district) {
-  const record = getGenderRecord(chamber, year, district);
-  return record && record.is_woman === true;
-}
-
-function parseNumber(value) {
-  if (value === null || value === undefined || value === "") return NaN;
-  if (typeof value === "number") return value;
-  return Number(String(value).replace(/,/g, "").replace(/%/g, ""));
-}
-
-function competitivenessCategory(race) {
-  if (!race) return "unknown";
-  if (race.is_uncontested) return "uncontested";
-  const margin = Math.abs(parseNumber(race.margin_pct));
-  if (Number.isNaN(margin)) return "unknown";
-  if (margin < 5) return "tossup";
-  if (margin < 10) return "competitive";
-  if (margin < 20) return "lean";
-  if (margin < 35) return "likely";
-  return "safe";
-}
-
-function competitivenessLabel(category) {
-  const labels = {
-    tossup: "Toss-up",
-    competitive: "Competitive",
-    lean: "Lean",
-    likely: "Likely",
-    safe: "Safe",
-    uncontested: "Uncontested",
-    unknown: "No data"
-  };
-  return labels[category] || "No data";
-}
-
-function competitivenessColor(category) {
-  const colors = {
-    tossup: partyColors.TOSSUP,
-    competitive: partyColors.COMPETITIVE,
-    lean: partyColors.LEAN,
-    likely: partyColors.LIKELY,
-    safe: partyColors.SAFE,
-    uncontested: partyColors.UNCONTESTED,
-    unknown: "#e5e7eb"
-  };
-  return colors[category] || "#e5e7eb";
-}
-
-function isTurnoutMode() {
-  return state.dataMode === "turnout";
-}
-
-function activeYear() {
-  return isTurnoutMode() ? "2024" : state.year;
-}
-
-function titleCase(value) {
-  return String(value || "")
-    .replace(/_/g, " ")
-    .replace(/\b\w/g, char => char.toUpperCase());
-}
-
-function turnoutGeoLabel() {
-  const labels = {
-    municipality: "Municipality",
-    precinct: "Precinct",
-    house: "House District",
-    senate: "Senate District"
-  };
-  return labels[state.turnoutGeo] || "Geography";
-}
-
-function turnoutLookupKey(geography, year, id) {
-  return `${geography}|${year}|${String(id).trim()}`;
-}
-
-function formatInt(value) {
-  const number = parseNumber(value);
-  if (Number.isNaN(number)) return "N/A";
-  return Math.round(number).toLocaleString("en-US");
-}
-
-function formatPct(value, digits = 1) {
-  const number = parseNumber(value);
-  if (Number.isNaN(number)) return "N/A";
-  return `${number.toFixed(digits)}%`;
-}
-
-function turnoutShare(value, total) {
-  const v = parseNumber(value);
-  const t = parseNumber(total);
-  if (Number.isNaN(v) || Number.isNaN(t) || !t) return "N/A";
-  return `${((v / t) * 100).toFixed(1)}%`;
-}
-
-function turnoutFillColor(turnoutPct) {
-  const pct = parseNumber(turnoutPct);
-  if (Number.isNaN(pct)) return "#e5e7eb";
-  const match = turnoutPalette.find(stop => pct <= stop.max);
-  return match ? match.color : turnoutPalette[turnoutPalette.length - 1].color;
-}
-
-function turnoutRowsForSelection() {
-  const geography = state.turnoutGeo;
-  const year = activeYear();
-  return (turnoutData.arrays[`${geography}|${year}`] || []).slice();
-}
-
-function getTurnoutRow(geography, year, id) {
-  return turnoutData.rows[turnoutLookupKey(geography, year, id)];
-}
-
-function currentTurnoutSummary() {
-  return turnoutData.statewide[activeYear()] || null;
-}
-
-function competitivenessDefinition(category) {
-  const definitions = {
-    tossup: "winner margin below 5 percentage points",
-    competitive: "winner margin from 5 to under 10 percentage points",
-    lean: "winner margin from 10 to under 20 percentage points",
-    likely: "winner margin from 20 to under 35 percentage points",
-    safe: "winner margin of 35 percentage points or more",
-    uncontested: "only one major vote-getting candidate; no meaningful two-candidate contest"
-  };
-  return definitions[category] || "";
-}
-
-function partyLabel(code) {
-  return partyNames[code] || code || "Other";
-}
-
-function partyColor(code) {
-  return partyColors[code] || partyColors.OTHER;
-}
-
-function racesForSelection() {
-  const prefix = `${state.chamber}|${state.year}|`;
-  return Object.entries(raceData)
-    .filter(([key]) => key.startsWith(prefix))
-    .map(([, race]) => race)
-    .sort((a, b) => Number(a.district_number) - Number(b.district_number));
-}
-
-function activeRows() {
-  return isTurnoutMode() ? turnoutRowsForSelection() : racesForSelection();
-}
-
-function formatDistrictLabel(race) {
-  if (!race) return "N/A";
-  return `${race.chamber} District ${race.district_number}`;
-}
-
-function candidateRows(race) {
-  const candidates = race.candidates || [];
-  if (!candidates.length) return "";
-  return candidates.map(c => `
-    <tr>
-      <td>${c.name || ""}</td>
-      <td>${c.party || ""}</td>
-      <td style="text-align:right;">${c.votes || ""}</td>
-      <td style="text-align:right;">${c.pct || ""}</td>
-    </tr>
-  `).join("");
-}
-
-function popupHtml(race) {
-  if (!race) return "<strong>No race data found</strong>";
-  return `
-    <div style="min-width:270px;">
-      <h3 style="margin:0 0 6px 0;">${race.chamber} District ${race.district_number}</h3>
-      <div><strong>Winner:</strong> ${race.winner_candidate || ""} (${partyLabel(race.winner_party)})</div>
-      <div><strong>Total votes:</strong> ${race.district_total_votes || "N/A"}</div>
-      <div><strong>Margin:</strong> ${race.margin_votes || "N/A"} votes (${race.margin_pct || "N/A"})</div>
-      <div><strong>Status:</strong> ${race.is_uncontested ? "Uncontested" : "Contested"}</div>
-      <table style="width:100%; margin-top:8px; border-collapse:collapse; font-size:12px;">
-        <thead>
-          <tr>
-            <th style="text-align:left; border-bottom:1px solid #ddd;">Candidate</th>
-            <th style="text-align:left; border-bottom:1px solid #ddd;">Party</th>
-            <th style="text-align:right; border-bottom:1px solid #ddd;">Votes</th>
-            <th style="text-align:right; border-bottom:1px solid #ddd;">%</th>
-          </tr>
-        </thead>
-        <tbody>${candidateRows(race)}</tbody>
-      </table>
-    </div>
-  `;
-}
-
-function turnoutPopupHtml(row) {
-  if (!row) return "<strong>No turnout data found</strong>";
-
-  const heading =
-    state.turnoutGeo === "precinct"
-      ? `${row.municipality} Precinct ${row.precinct_label || row.precinct_code}`
-      : state.turnoutGeo === "municipality"
-        ? row.municipality
-        : `${turnoutGeoLabel()} ${row.district_number}`;
-
-  return `
-    <div style="min-width:270px;">
-      <h3 style="margin:0 0 6px 0;">${heading}</h3>
-      <div><strong>Turnout:</strong> ${formatPct(row.turnout_pct, 1)}</div>
-      <div><strong>Voted:</strong> ${formatInt(row.voted_total)}</div>
-      <div><strong>Eligible:</strong> ${formatInt(row.eligible_total)}</div>
-      <div><strong>Mail ballot share:</strong> ${turnoutShare(row.voted_mail, row.voted_total)}</div>
-      <div><strong>Early vote share:</strong> ${turnoutShare(row.voted_early, row.voted_total)}</div>
-      <div><strong>Election Day share:</strong> ${turnoutShare(row.voted_election_day, row.voted_total)}</div>
-    </div>
-  `;
-}
-
-function styleFeature(feature) {
-  if (isTurnoutMode()) {
-    const featureId = activeFeatureId(feature);
-    const turnoutRow = getTurnoutRow(state.turnoutGeo, activeYear(), featureId);
-    const fill = turnoutRow ? turnoutFillColor(turnoutRow.turnout_pct) : "#ffffff";
-    return {
-      color: "#334155",
-      weight: state.turnoutGeo === "precinct" ? 0.8 : 1.2,
-      opacity: 1,
-      fillColor: fill,
-      fillOpacity: turnoutRow ? 0.78 : 0.1
-    };
-  }
-
-  const district = getFeatureDistrict(feature);
-  const race = getRace(state.chamber, state.year, district);
-  const genderRecord = typeof getGenderRecord === "function" ? getGenderRecord(state.chamber, state.year, district) : null;
-
-  let stroke = "#334155";
-  let fill = "#ffffff";
-  let fillOpacity = 0.30;
-  let weight = 1.25;
-
-  if (state.view === "gender") {
-    if (genderRecord && genderRecord.is_woman === true) {
-      stroke = partyColors.WOMAN_STROKE;
-      fill = partyColors.WOMAN;
-      fillOpacity = 0.72;
-      weight = 1.8;
-    } else {
-      stroke = "#9ca3af";
-      fill = "#d1d5db";
-      fillOpacity = 0.20;
-    }
-  } else if (state.view === "competitiveness") {
-    const category = competitivenessCategory(race);
-    const isSelected = state.competitivenessFilter === "all" || state.competitivenessFilter === category;
-    fill = competitivenessColor(category);
-    stroke =
-      category === "uncontested" ? "#475569" :
-      category === "unknown" ? "#cbd5e1" :
-      "#334155";
-    fillOpacity =
-      !isSelected ? 0.08 :
-      category === "unknown" ? 0.12 :
-      category === "safe" ? 0.42 :
-      category === "uncontested" ? 0.46 :
-      0.74;
-    weight =
-      !isSelected ? 0.75 :
-      category === "tossup" || category === "competitive" ? 2.0 :
-      category === "uncontested" ? 1.5 :
-      1.25;
-    if (!isSelected) {
-      stroke = "#cbd5e1";
-    }
-  } else if (race) {
-    if (state.view === "party") {
-      stroke = partyColor(race.winner_party);
-      fill = partyColor(race.winner_party);
-      fillOpacity = 0.34;
-    } else if (state.view === "uncontested") {
-      if (race.is_uncontested) {
-        stroke = partyColor(race.winner_party);
-        fill = partyColor(race.winner_party);
-        fillOpacity = 0.36;
-      } else {
-        stroke = "#64748b";
-        fill = "#ffffff";
-        fillOpacity = 0.22;
-      }
-    }
-  }
-
-  return {
-    color: stroke,
-    weight,
-    opacity: 1,
-    fillColor: fill,
-    fillOpacity
-  };
-}
-
-function showRace(race, lyr) {
-  if (!race || !lyr) return;
-  if (selectedLayer && selectedLayer !== lyr && layer) {
-    layer.resetStyle(selectedLayer);
-  }
-  selectedLayer = lyr;
-  selectedKey = `${state.chamber}|${state.year}|${race.district_number}`;
-  lyr.setStyle({ weight: 4, color: "#0f172a", fillOpacity: 0.58 });
-  lyr.bindPopup(popupHtml(race)).openPopup();
-  highlightDistrictList();
-}
-
-function showTurnout(row, lyr) {
-  if (!row || !lyr) return;
-  if (selectedLayer && selectedLayer !== lyr && layer) {
-    layer.resetStyle(selectedLayer);
-  }
-  selectedLayer = lyr;
-  const rowId = state.turnoutGeo === "precinct"
-    ? row.precinct_code
-    : state.turnoutGeo === "municipality"
-      ? row.municipality
-      : row.district_number;
-  selectedKey = turnoutLookupKey(state.turnoutGeo, activeYear(), rowId);
-  lyr.setStyle({ weight: 3, color: "#0f172a", fillOpacity: 0.92 });
-  lyr.bindPopup(turnoutPopupHtml(row)).openPopup();
-  highlightDistrictList();
-}
-
-function onEachFeature(feature, lyr) {
-  if (isTurnoutMode()) {
-    const featureId = activeFeatureId(feature);
-    const row = getTurnoutRow(state.turnoutGeo, activeYear(), featureId);
-    const key = turnoutLookupKey(state.turnoutGeo, activeYear(), featureId);
-    featureLayerByKey[key] = lyr;
-    const label = row
-      ? state.turnoutGeo === "precinct"
-        ? `${row.municipality} Precinct ${row.precinct_label || row.precinct_code}: ${formatPct(row.turnout_pct, 1)} turnout`
-        : state.turnoutGeo === "municipality"
-          ? `${row.municipality}: ${formatPct(row.turnout_pct, 1)} turnout`
-          : `${turnoutGeoLabel()} ${row.district_number}: ${formatPct(row.turnout_pct, 1)} turnout`
-      : turnoutGeoLabel();
-    lyr.bindTooltip(label, { sticky: true });
-    lyr.on("click", () => showTurnout(row, lyr));
-    return;
-  }
-
-  const district = getFeatureDistrict(feature);
-  const race = getRace(state.chamber, state.year, district);
-  const key = `${state.chamber}|${state.year}|${district}`;
-  featureLayerByKey[key] = lyr;
-
-  const label = race
-    ? `${race.chamber} District ${race.district_number}: ${race.winner_candidate} (${race.winner_party})`
-    : `District ${district}`;
-
-  lyr.bindTooltip(label, { sticky: true });
-  lyr.on("click", () => showRace(race, lyr));
-}
-
-function renderSeatChart(partyCounts, totalSeats) {
-  const svg = document.getElementById("seatChart");
-  const labels = document.getElementById("seatLabels");
-  if (!svg || !labels || !totalSeats) return;
-
-  const parties = Object.entries(partyCounts)
-    .filter(([, count]) => count > 0)
-    .sort((a, b) => {
-      const order = { DEM: 1, REP: 2, IND: 3, LIB: 4, MOD: 5 };
-      return (order[a[0]] || 9) - (order[b[0]] || 9);
-    });
-
-  const cx = 120, cy = 112, rOuter = 88, rInner = 52;
-  let startDeg = 180;
-  let paths = "";
-
-  function pt(r, deg) {
-    const rad = deg * Math.PI / 180;
-    return [cx + r * Math.cos(rad), cy + r * Math.sin(rad)];
-  }
-
-  function segment(a0, a1, color) {
-    const [x1, y1] = pt(rOuter, a0);
-    const [x2, y2] = pt(rOuter, a1);
-    const [x3, y3] = pt(rInner, a1);
-    const [x4, y4] = pt(rInner, a0);
-    const large = (a1 - a0) > 180 ? 1 : 0;
-    return `<path d="M ${x1} ${y1} A ${rOuter} ${rOuter} 0 ${large} 1 ${x2} ${y2} L ${x3} ${y3} A ${rInner} ${rInner} 0 ${large} 0 ${x4} ${y4} Z" fill="${color}" stroke="#fff" stroke-width="2"></path>`;
-  }
-
-  parties.forEach(([party, count]) => {
-    const span = (count / totalSeats) * 180;
-    const endDeg = startDeg + span;
-    paths += segment(startDeg, endDeg, partyColor(party));
-    startDeg = endDeg;
-  });
-
-  const dem = partyCounts.DEM || 0;
-  const rep = partyCounts.REP || 0;
-  const other = totalSeats - dem - rep;
-
-  svg.innerHTML = `
-    ${paths}
-    <text x="120" y="90" text-anchor="middle" font-size="24" font-weight="900" fill="#0f172a">${totalSeats}</text>
-    <text x="120" y="107" text-anchor="middle" font-size="11" fill="#64748b">seats</text>
-  `;
-  labels.innerHTML = `
-    <div><span class="seat-count">${dem}</span>Dem</div>
-    <div style="text-align:center;"><span class="seat-count">${other}</span>Other</div>
-    <div style="text-align:right;"><span class="seat-count">${rep}</span>Rep</div>
-  `;
-}
-
-function renderTurnoutGauge(summary) {
-  const svg = document.getElementById("seatChart");
-  const labels = document.getElementById("seatLabels");
-  const title = document.getElementById("seatCardTitle");
-  if (!svg || !labels || !title || !summary) return;
-
-  title.textContent = "Statewide turnout";
-
-  const eligible = parseNumber(summary.eligible_total);
-  const voted = parseNumber(summary.voted_total);
-  const turnoutPct = parseNumber(summary.turnout_pct);
-  const votedSpan = eligible ? (voted / eligible) * 180 : 0;
-  const cx = 120, cy = 112, rOuter = 88, rInner = 52;
-
-  function pt(r, deg) {
-    const rad = deg * Math.PI / 180;
-    return [cx + r * Math.cos(rad), cy + r * Math.sin(rad)];
-  }
-
-  function segment(a0, a1, color) {
-    const [x1, y1] = pt(rOuter, a0);
-    const [x2, y2] = pt(rOuter, a1);
-    const [x3, y3] = pt(rInner, a1);
-    const [x4, y4] = pt(rInner, a0);
-    const large = (a1 - a0) > 180 ? 1 : 0;
-    return `<path d="M ${x1} ${y1} A ${rOuter} ${rOuter} 0 ${large} 1 ${x2} ${y2} L ${x3} ${y3} A ${rInner} ${rInner} 0 ${large} 0 ${x4} ${y4} Z" fill="${color}" stroke="#fff" stroke-width="2"></path>`;
-  }
-
-  svg.innerHTML = `
-    ${segment(180, 180 + votedSpan, "#258992")}
-    ${segment(180 + votedSpan, 360, "#dbe3ef")}
-    <text x="120" y="90" text-anchor="middle" font-size="24" font-weight="900" fill="#0f172a">${turnoutPct.toFixed(1)}%</text>
-    <text x="120" y="107" text-anchor="middle" font-size="11" fill="#64748b">turnout</text>
-  `;
-
-  labels.innerHTML = `
-    <div><span class="seat-count">${formatInt(voted)}</span>Voted</div>
-    <div style="text-align:right;"><span class="seat-count">${formatInt(eligible - voted)}</span>Did not vote</div>
-  `;
-}
-
-
-
-
-
-function selectRaceByDistrict(districtNumber) {
-  let targetLayer = null;
-  map.eachLayer(layer => {
-    if (layer.feature && Number(getFeatureDistrict(layer.feature)) === Number(districtNumber)) {
-      targetLayer = layer;
-    }
-  });
-  if (targetLayer) {
-    selectedLayer = targetLayer;
-    targetLayer.setStyle({ weight: 3.2, color: "#111827" });
-    map.fitBounds(targetLayer.getBounds(), { padding: [40, 40] });
-    const race = getRace(state.chamber, state.year, districtNumber);
-    if (race) {
-      showRace(race);
-    }
-  }
-}
-
-function selectTurnoutRow(rowId) {
-  const key = turnoutLookupKey(state.turnoutGeo, activeYear(), rowId);
-  const targetLayer = featureLayerByKey[key];
-  const row = getTurnoutRow(state.turnoutGeo, activeYear(), rowId);
-  if (targetLayer && row) {
-    map.fitBounds(targetLayer.getBounds(), { padding: [30, 30], maxZoom: state.turnoutGeo === "precinct" ? 12 : 11 });
-    showTurnout(row, targetLayer);
-  }
-}
-
-
-
-function renderUncontestedPanel(races) {
-  const overlay = document.getElementById("genderOverlay");
-  if (!overlay) return;
-
-  overlay.classList.remove("compact-competitiveness");
-
-  const uncontested = races.filter(r => r.is_uncontested);
-  const contested = races.filter(r => !r.is_uncontested);
-
-  const uncontestedPct = races.length ? ((uncontested.length / races.length) * 100).toFixed(1) + "%" : "N/A";
-  const contestedPct = races.length ? ((contested.length / races.length) * 100).toFixed(1) + "%" : "N/A";
-
-  const partyCounts = {};
-  uncontested.forEach(r => {
-    const p = r.winner_party || "OTHER";
-    partyCounts[p] = (partyCounts[p] || 0) + 1;
-  });
-
-  const partyRows = Object.entries(partyCounts)
-    .sort((a, b) => b[1] - a[1])
-    .map(([party, count]) => `
-      <div class="mini-table-row">
-        <span><span class="gender-dot" style="background:${partyColor(party)}"></span>${partyLabel(party)}</span>
-        <strong>${count}</strong>
-      </div>
-    `).join("");
-
-  const womenUncontested = uncontested.filter(r => isWomanHeldSeat(state.chamber, state.year, r.district_number));
-  const womenUncontestedPct = uncontested.length ? ((womenUncontested.length / uncontested.length) * 100).toFixed(1) + "%" : "N/A";
-
-  const largestUncontested = uncontested
-    .map(r => ({ race: r, margin: Math.abs(parseNumber(r.margin_pct)) }))
-    .filter(x => !Number.isNaN(x.margin))
-    .sort((a, b) => b.margin - a.margin)[0];
-
-  overlay.innerHTML = `
-    <div class="gender-overlay-title">${state.year} ${state.chamber === "house" ? "House" : "Senate"} Uncontested Seats</div>
-
-    <div class="uncontested-explainer">
-      Uncontested seats identify districts where the winner faced no meaningful opponent.
-      They help distinguish electoral competition from party dominance alone.
+      <nav class="site-nav" aria-label="Primary">
+        <a href="map.html">Map</a>
+        <a href="lookup.html">Find My Precinct</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="about.html">About</a>
+      </nav>
     </div>
 
-    <div class="gender-stat-main">
-      <div class="gender-mini-card">
-        <div class="gender-label">Uncontested seats</div>
-        <div class="gender-value">${uncontested.length}</div>
-        <div class="gender-detail">${uncontestedPct} of chamber</div>
-      </div>
-      <div class="gender-mini-card">
-        <div class="gender-label">Contested seats</div>
-        <div class="gender-value">${contested.length}</div>
-        <div class="gender-detail">${contestedPct} of chamber</div>
-      </div>
-    </div>
-
-    <div class="competitiveness-scale-note"><strong>Party makeup of uncontested seats</strong></div>
-    <div class="mini-table">
-      ${partyRows || '<div class="mini-table-row"><span>No uncontested seats</span><strong>0</strong></div>'}
-    </div>
-
-  `;
-}
-
-
-function renderCompetitivenessOverlay(races) {
-  const overlay = document.getElementById("genderOverlay");
-  if (!overlay) return;
-
-  overlay.classList.add("compact-competitiveness");
-
-  const contested = races.filter(r => !r.is_uncontested);
-  const categories = {
-    tossup: contested.filter(r => competitivenessCategory(r) === "tossup").length,
-    competitive: contested.filter(r => competitivenessCategory(r) === "competitive").length,
-    lean: contested.filter(r => competitivenessCategory(r) === "lean").length,
-    likely: contested.filter(r => competitivenessCategory(r) === "likely").length,
-    safe: contested.filter(r => competitivenessCategory(r) === "safe").length,
-    uncontested: races.filter(r => r.is_uncontested).length
-  };
-
-  const competitiveUnder10 = categories.tossup + categories.competitive;
-  const competitivePct = races.length ? ((competitiveUnder10 / races.length) * 100).toFixed(1) + "%" : "N/A";
-
-  const avgMargins = contested
-    .map(r => Math.abs(parseNumber(r.margin_pct)))
-    .filter(v => !Number.isNaN(v));
-  const avgMargin = avgMargins.length
-    ? (avgMargins.reduce((a, b) => a + b, 0) / avgMargins.length).toFixed(1) + "%"
-    : "N/A";
-
-  const closest = contested
-    .map(r => ({ race: r, margin: Math.abs(parseNumber(r.margin_pct)) }))
-    .filter(x => !Number.isNaN(x.margin))
-    .sort((a, b) => a.margin - b.margin)[0];
-
-  const active = state.competitivenessFilter || "all";
-  const categoryRows = ["tossup", "competitive", "lean", "likely", "safe", "uncontested"].map(cat => `
-    <div class="gender-party-row category-filter-row ${active === cat ? "active" : ""}" data-comp-filter="${cat}" title="Click to isolate ${competitivenessLabel(cat)} districts">
-      <span>
-        <span class="gender-dot" style="background:${competitivenessColor(cat)}"></span>
-        ${competitivenessLabel(cat)}
-      </span>
-      <strong>${categories[cat]}</strong>
-    </div>
-  `).join("");
-
-  overlay.innerHTML = `
-    <div class="gender-overlay-title">${state.year} ${state.chamber === "house" ? "House" : "Senate"} Competitiveness</div>
-
-    <div class="competitiveness-explainer">
-      Competitiveness is classified by winner margin in percentage points. Lower margins indicate more electorally competitive districts.
-    </div>
-
-    <div class="gender-stat-main">
-      <div class="gender-mini-card">
-        <div class="gender-label">Competitive seats</div>
-        <div class="gender-value">${competitiveUnder10}</div>
-        <div class="gender-detail">margin below 10 pts.</div>
-      </div>
-      <div class="gender-mini-card">
-        <div class="gender-label">Competitive seats of all seats in %</div>
-        <div class="gender-value">${competitivePct}</div>
-        <div class="gender-detail">share of chamber</div>
-      </div>
-    </div>
-
-    <div class="gender-stat-main">
-      <div class="gender-mini-card">
-        <div class="gender-label">Avg. contested margin</div>
-        <div class="gender-value">${avgMargin}</div>
-        <div class="gender-detail">excludes uncontested</div>
-      </div>
-      <div class="gender-mini-card clickable-stat" id="closestRaceCard">
-        <div class="gender-label">Closest race</div>
-        <div class="gender-value" style="font-size:17px;">${closest ? formatDistrictLabel(closest.race) : "N/A"}</div>
-        <div class="gender-detail">${closest ? closest.race.margin_pct : ""}</div>
-        ${closest ? '<div class="click-hint">Click to zoom/select</div>' : ''}
-      </div>
-    </div>
-
-    <div class="competitiveness-scale-note"><strong>Click to filter by category</strong></div>
-    ${categoryRows}
-    <button type="button" class="filter-clear" id="clearCompFilter">${active === "all" ? "Showing all categories" : "Clear category filter"}</button>
-
-    <div class="method-note full-scale-note">
-      <strong>Scale:</strong> Toss-up &lt;5 points; Competitive 5–10; Lean 10–20; Likely 20–35; Safe &gt;35. Uncontested races are separate because they lack meaningful two-candidate competition.
-    </div>
-  `;
-
-  overlay.querySelectorAll("[data-comp-filter]").forEach(row => {
-    row.addEventListener("click", () => {
-      state.competitivenessFilter = state.competitivenessFilter === row.dataset.compFilter ? "all" : row.dataset.compFilter;
-      refresh();
-    });
-  });
-  const clearButton = overlay.querySelector("#clearCompFilter");
-  if (clearButton) {
-    clearButton.addEventListener("click", () => {
-      state.competitivenessFilter = "all";
-      refresh();
-    });
-  }
-  const closestCard = overlay.querySelector("#closestRaceCard");
-  if (closestCard && closest) {
-    closestCard.addEventListener("click", () => selectRaceByDistrict(closest.race.district_number));
-  }
-}
-
-function renderGenderOverlay(races, womenSeats, womenPct, womenPartyCounts) {
-  const overlay = document.getElementById("genderOverlay");
-  if (overlay) overlay.classList.remove("compact-competitiveness");
-  if (!overlay) return;
-
-  const total = races.length;
-  const menOrOther = total - womenSeats.length;
-  const partyRows = Object.entries(womenPartyCounts)
-    .sort((a, b) => b[1] - a[1])
-    .map(([party, count]) => `
-      <div class="gender-party-row">
-        <span><span class="gender-dot" style="background:${partyColor(party)}"></span>${partyLabel(party)}</span>
-        <strong>${count}</strong>
-      </div>
-    `).join("");
-
-  const womenContested = womenSeats.filter(r => !r.is_uncontested).length;
-  const womenUncontested = womenSeats.filter(r => r.is_uncontested).length;
-
-  overlay.innerHTML = `
-    <div class="gender-overlay-title">${state.year} ${state.chamber === "house" ? "House" : "Senate"} Gender Parity</div>
-    <div class="gender-stat-main">
-      <div class="gender-mini-card">
-        <div class="gender-label">Women-held seats</div>
-        <div class="gender-value">${womenSeats.length}</div>
-        <div class="gender-detail">of ${total} total seats</div>
-      </div>
-      <div class="gender-mini-card">
-        <div class="gender-label">Share of chamber</div>
-        <div class="gender-value">${womenPct}</div>
-        <div class="gender-detail">women-held seats</div>
-      </div>
-    </div>
-    <div class="gender-bar"><div class="gender-bar-fill" style="width:${womenPct}"></div></div>
-    <div class="gender-detail"><strong>Political makeup of women-held seats</strong></div>
-    ${partyRows || '<div class="gender-detail">No women-held seats coded.</div>'}
-    <div class="gender-detail" style="margin-top:8px;">
-      ${womenUncontested} women-held seats were uncontested; ${womenContested} were contested.
-    </div>
-  `;
-}
-
-function renderTurnoutOverview() {
-  const rows = turnoutRowsForSelection();
-  const summary = currentTurnoutSummary();
-  const geoLabel = turnoutGeoLabel();
-  const titleText = state.turnoutGeo === "precinct" ? "Precincts" : `${geoLabel}s`;
-
-  document.getElementById("overviewTitle").textContent = `2024 ${geoLabel} Turnout`;
-
-  if (!summary || !rows.length) {
-    document.getElementById("factsGrid").innerHTML = `<div class="error">No turnout records found for this selection.</div>`;
-    return;
-  }
-
-  renderTurnoutGauge(summary);
-
-  const sortedRows = rows
-    .filter(row => !Number.isNaN(parseNumber(row.turnout_pct)))
-    .sort((a, b) => parseNumber(b.turnout_pct) - parseNumber(a.turnout_pct));
-  const highest = sortedRows[0];
-  const lowest = sortedRows[sortedRows.length - 1];
-  const votedMailShare = turnoutShare(summary.voted_mail, summary.voted_total);
-  const votedEarlyShare = turnoutShare(summary.voted_early, summary.voted_total);
-
-  function rowLabel(row) {
-    if (state.turnoutGeo === "municipality") return row.municipality;
-    if (state.turnoutGeo === "precinct") return `${row.municipality} ${row.precinct_label || row.precinct_code}`;
-    return `${geoLabel} ${row.district_number}`;
-  }
-
-  document.getElementById("factsGrid").innerHTML = `
-    <div class="fact-card">
-      <div class="fact-label">${titleText} mapped</div>
-      <div class="fact-value">${rows.length}</div>
-      <div class="fact-detail">Official 2024 Rhode Island turnout source</div>
-    </div>
-    <div class="fact-card">
-      <div class="fact-label">Statewide turnout</div>
-      <div class="fact-value">${formatPct(summary.turnout_pct, 1)}</div>
-      <div class="fact-detail">${formatInt(summary.voted_total)} voted out of ${formatInt(summary.eligible_total)} eligible</div>
-    </div>
-    <div class="fact-card">
-      <div class="fact-label">Highest turnout</div>
-      <div class="fact-value">${rowLabel(highest)}</div>
-      <div class="fact-detail">${formatPct(highest.turnout_pct, 1)}</div>
-    </div>
-    <div class="fact-card">
-      <div class="fact-label">Lowest turnout</div>
-      <div class="fact-value">${rowLabel(lowest)}</div>
-      <div class="fact-detail">${formatPct(lowest.turnout_pct, 1)}</div>
-    </div>
-    <div class="fact-card">
-      <div class="fact-label">Mail ballot share</div>
-      <div class="fact-value">${votedMailShare}</div>
-      <div class="fact-detail">${formatInt(summary.voted_mail)} of all ballots cast</div>
-    </div>
-    <div class="fact-card">
-      <div class="fact-label">Early vote share</div>
-      <div class="fact-value">${votedEarlyShare}</div>
-      <div class="fact-detail">${formatInt(summary.voted_early)} early votes statewide</div>
-    </div>
-  `;
-}
-
-function updateOverview() {
-  if (isTurnoutMode()) {
-    renderTurnoutOverview();
-    return;
-  }
-
-  const races = racesForSelection();
-  const titleChamber = state.chamber === "house" ? "House" : "Senate";
-  document.getElementById("overviewTitle").textContent = `${state.year} ${titleChamber} Overview`;
-  document.getElementById("seatCardTitle").textContent = "Seat composition";
-
-  if (!races.length) {
-    if (state.view === "uncontested") {
-    renderUncontestedPanel(races);
-    return;
-  }
-
-  document.getElementById("factsGrid").innerHTML = `<div class="error">No race records found for this selection.</div>`;
-    return;
-  }
-
-  const partyCounts = {};
-  races.forEach(r => {
-    const p = r.winner_party || "OTHER";
-    partyCounts[p] = (partyCounts[p] || 0) + 1;
-  });
-
-  renderSeatChart(partyCounts, races.length);
-
-  const partySummary = Object.entries(partyCounts)
-    .sort((a, b) => b[1] - a[1])
-    .map(([party, count]) => `${count} ${partyLabel(party)}`)
-    .join(" · ");
-
-  const uncontested = races.filter(r => r.is_uncontested);
-  const contested = races.filter(r => !r.is_uncontested);
-
-  const closest = contested
-    .map(r => ({ race: r, margin: Math.abs(parseNumber(r.margin_votes)) }))
-    .filter(x => !Number.isNaN(x.margin))
-    .sort((a, b) => a.margin - b.margin)[0];
-
-  const avgMarginPct = contested
-    .map(r => Math.abs(parseNumber(r.margin_pct)))
-    .filter(x => !Number.isNaN(x));
-
-  const avgMargin = avgMarginPct.length
-    ? (avgMarginPct.reduce((a, b) => a + b, 0) / avgMarginPct.length).toFixed(1) + "%"
-    : "N/A";
-
-  const womenSeats = races.filter(r => isWomanHeldSeat(state.chamber, state.year, r.district_number));
-  const womenPct = races.length ? ((womenSeats.length / races.length) * 100).toFixed(1) + "%" : "N/A";
-  const womenPartyCounts = {};
-  womenSeats.forEach(r => {
-    const p = r.winner_party || "OTHER";
-    womenPartyCounts[p] = (womenPartyCounts[p] || 0) + 1;
-  });
-  const womenPartySummary = Object.entries(womenPartyCounts)
-    .sort((a, b) => b[1] - a[1])
-    .map(([party, count]) => `${count} ${partyLabel(party)}`)
-    .join(" · ") || "No women-held seats coded";
-
-  if (state.view === "gender") {
-    renderGenderOverlay(races, womenSeats, womenPct, womenPartyCounts);
-    return;
-  } else if (state.view === "competitiveness") {
-    renderCompetitivenessOverlay(races);
-    return;
-  } else if (state.view === "uncontested") {
-    renderUncontestedPanel(races);
-    return;
-  }
-
-  document.getElementById("factsGrid").innerHTML = `
-    <div class="fact-card">
-      <div class="fact-label">Total seats</div>
-      <div class="fact-value">${races.length}</div>
-      <div class="fact-detail">${partySummary}</div>
-    </div>
-    <div class="fact-card">
-      <div class="fact-label">Uncontested</div>
-      <div class="fact-value">${uncontested.length}</div>
-      <div class="fact-detail">${((uncontested.length / races.length) * 100).toFixed(1)}% of seats</div>
-    </div>
-    <div class="fact-card">
-      <div class="fact-label">Women-held seats</div>
-      <div class="fact-value">${womenSeats.length}</div>
-      <div class="fact-detail">${womenPct} of seats · ${womenPartySummary}</div>
-    </div>
-    <div class="fact-card">
-      <div class="fact-label">Closest race</div>
-      <div class="fact-value">${closest ? formatDistrictLabel(closest.race) : "N/A"}</div>
-      <div class="fact-detail">${closest ? `${closest.race.winner_candidate} by ${closest.race.margin_votes} votes (${closest.race.margin_pct})` : "No contested races"}</div>
-    </div>
-    <div class="fact-card">
-      <div class="fact-label">Average margin</div>
-      <div class="fact-value">${avgMargin}</div>
-      <div class="fact-detail">Contested races only</div>
-    </div>
-  `;
-}
-
-function renderDistrictList() {
-  if (isTurnoutMode()) {
-    const query = document.getElementById("districtSearch").value.toLowerCase().trim();
-    const rows = turnoutRowsForSelection();
-    const filtered = rows.filter(row => {
-      const label =
-        state.turnoutGeo === "municipality"
-          ? row.municipality
-          : state.turnoutGeo === "precinct"
-            ? `${row.municipality} ${row.precinct_label || row.precinct_code}`
-            : `${row.district_number}`;
-      const haystack = [
-        label,
-        row.municipality,
-        row.precinct_label,
-        row.precinct_code,
-        row.district_number,
-        row.turnout_pct,
-        row.voted_total,
-        row.eligible_total
-      ].join(" ").toLowerCase();
-      return !query || haystack.includes(query);
-    });
-
-    const list = document.getElementById("districtList");
-    list.innerHTML = filtered.map(row => {
-      const rowId = state.turnoutGeo === "precinct"
-        ? row.precinct_code
-        : state.turnoutGeo === "municipality"
-          ? row.municipality
-          : row.district_number;
-      const key = turnoutLookupKey(state.turnoutGeo, activeYear(), rowId);
-      const title = state.turnoutGeo === "municipality"
-        ? row.municipality
-        : state.turnoutGeo === "precinct"
-          ? `${row.municipality} ${row.precinct_label || row.precinct_code}`
-          : `${turnoutGeoLabel()} ${row.district_number}`;
-      return `
-        <div class="district-item" data-key="${key}" data-row-id="${rowId}" style="border-left-color:${turnoutFillColor(row.turnout_pct)}">
-          <div class="district-item-top">
-            <span>${formatPct(row.turnout_pct, 1)} turnout</span>
-            <span>${state.turnoutGeo === "precinct" ? row.precinct_code : titleCase(state.turnoutGeo)}</span>
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Explore The Project</div>
+          <h2 id="heroTitle">Rhode Island elections, turnout, and precincts in one public research interface.</h2>
+          <p class="summary">
+            Enter the interactive map, open the 2024 turnout view, search for a precinct by address, or read how the project was built.
+          </p>
+          <div class="cta-row">
+            <a class="btn-primary" href="map.html?mode=results&chamber=house&year=2024&view=party">Open Interactive Map</a>
+            <a class="btn-secondary" href="map.html?mode=turnout&geo=municipality&year=2024">Open 2024 Turnout</a>
           </div>
-          <div class="district-item-name">${title}</div>
-          <div class="district-item-detail">Voted: ${formatInt(row.voted_total)} · Eligible: ${formatInt(row.eligible_total)} · Mail share: ${turnoutShare(row.voted_mail, row.voted_total)}</div>
+          <div class="chip-row" aria-label="Project features">
+            <span class="chip">2012–2024 election cycles</span>
+            <span class="chip">House and Senate district maps</span>
+            <span class="chip">2024 precinct and municipality turnout</span>
+            <span class="chip">Methodology and researcher pages</span>
+          </div>
         </div>
-      `;
-    }).join("");
 
-    list.querySelectorAll(".district-item").forEach(el => {
-      el.addEventListener("click", () => selectTurnoutRow(el.dataset.rowId));
-    });
+        <div class="card-grid">
+          <article class="card">
+            <div>
+              <div class="card-kicker">Interactive Map</div>
+              <h3>Election Results</h3>
+              <p>Open the live results interface for Rhode Island State House and State Senate elections from 2012 through 2024.</p>
+            </div>
+            <div class="card-actions">
+              <a class="card-link primary" href="map.html?mode=results&chamber=house&year=2024&view=party">Enter Results Map</a>
+            </div>
+          </article>
 
-    highlightDistrictList();
-    return;
-  }
+          <article class="card">
+            <div>
+              <div class="card-kicker">Turnout Interface</div>
+              <h3>2024 Turnout</h3>
+              <p>View official Rhode Island turnout by municipality, precinct, House district, or Senate district.</p>
+            </div>
+            <div class="card-actions">
+              <a class="card-link primary" href="map.html?mode=turnout&geo=municipality&year=2024">Enter Turnout Map</a>
+            </div>
+          </article>
 
-  const query = document.getElementById("districtSearch").value.toLowerCase().trim();
-  const races = racesForSelection();
-  const filtered = races.filter(r => {
-    const haystack = [
-      r.district_number,
-      r.winner_candidate,
-      r.winner_party,
-      r.margin_votes,
-      r.margin_pct,
-      ...(r.candidates || []).map(c => `${c.name} ${c.party} ${c.votes} ${c.pct}`)
-    ].join(" ").toLowerCase();
-    return !query || haystack.includes(query);
-  });
+          <article class="card">
+            <div>
+              <div class="card-kicker">Address Lookup</div>
+              <h3>Find My Precinct</h3>
+              <p>Search an address to identify the linked 2024 Rhode Island voting precinct and its local election context.</p>
+            </div>
+            <div class="card-actions">
+              <a class="card-link secondary" href="lookup.html">Go To Precinct Lookup</a>
+            </div>
+          </article>
 
-  const list = document.getElementById("districtList");
-  list.innerHTML = filtered.map(r => {
-    const key = `${state.chamber}|${state.year}|${r.district_number}`;
-    const uncontested = r.is_uncontested ? " · Uncontested" : "";
-    const genderRecord = getGenderRecord(state.chamber, state.year, r.district_number);
-    const isWoman = genderRecord && genderRecord.is_woman === true;
-    const leftColor = state.view === "gender" && isWoman ? partyColors.WOMAN : partyColor(r.winner_party);
-    const genderText = isWoman ? " · Woman-held seat" : "";
-    const compCategory = competitivenessCategory(r);
-    const compText = state.view === "competitiveness" ? ` · ${competitivenessLabel(compCategory)}` : "";
-    return `
-      <div class="district-item" data-key="${key}" style="border-left-color:${state.view === "competitiveness" ? competitivenessColor(compCategory) : leftColor}">
-        <div class="district-item-top">
-          <span>${partyLabel(r.winner_party)}</span>
-          <span>District ${r.district_number}</span>
+          <article class="card">
+            <div>
+              <div class="card-kicker">Project Context</div>
+              <h3>Methodology and About</h3>
+              <p>Read how the data was assembled, how turnout was derived, and who is building the project.</p>
+            </div>
+            <div class="card-actions">
+              <a class="card-link secondary" href="methodology.html">View Methodology</a>
+              <a class="card-link secondary" href="about.html">Meet The Team</a>
+            </div>
+          </article>
         </div>
-        <div class="district-item-name">${r.winner_candidate}</div>
-        <div class="district-item-detail">Margin: ${r.margin_votes || "N/A"} votes (${r.margin_pct || "N/A"})${uncontested}${genderText}${compText}</div>
       </div>
-    `;
-  }).join("");
+    </section>
 
-  list.querySelectorAll(".district-item").forEach(el => {
-    el.addEventListener("click", () => {
-      const lyr = featureLayerByKey[el.dataset.key];
-      const race = raceData[el.dataset.key];
-      if (lyr && race) {
-        map.fitBounds(lyr.getBounds(), { padding: [30, 30], maxZoom: 12 });
-        showRace(race, lyr);
-      }
-    });
-  });
-
-  highlightDistrictList();
-}
-
-function highlightDistrictList() {
-  document.querySelectorAll(".district-item").forEach(el => {
-    el.classList.toggle("active", el.dataset.key === selectedKey);
-  });
-}
-
-function addLegend() {
-  if (legend) map.removeControl(legend);
-  legend = L.control({ position: (state.view === "gender" || state.view === "competitiveness" || state.view === "uncontested") ? "bottomleft" : "bottomright" });
-  legend.onAdd = function() {
-    const div = L.DomUtil.create("div", "legend");
-    if (isTurnoutMode()) {
-      div.innerHTML = `
-        <div class="legend-title">Turnout Rate</div>
-        <div><span class="swatch" style="background:#b5e8ec"></span>0–15%</div>
-        <div><span class="swatch" style="background:#93dbe1"></span>25–35%</div>
-        <div><span class="swatch" style="background:#6ccdd6"></span>45–55%</div>
-        <div><span class="swatch" style="background:#30afbb"></span>55–65%</div>
-        <div><span class="swatch" style="background:#258992"></span>65–75%</div>
-        <div><span class="swatch" style="background:#1b6369"></span>75%+</div>
-      `;
-      return div;
-    }
-
-    const title =
-      state.view === "party" ? "Winner Party" :
-      state.view === "uncontested" ? "Uncontested Seats" :
-      state.view === "gender" ? "Gender Parity" :
-      "Competitiveness";
-    div.innerHTML = `<div class="legend-title">${title}</div>`;
-
-    if (state.view === "party") {
-      div.innerHTML += `
-        <div><span class="swatch" style="background:${partyColors.DEM}"></span>Democratic</div>
-        <div><span class="swatch" style="background:${partyColors.REP}"></span>Republican</div>
-        <div><span class="swatch" style="background:${partyColors.OTHER}"></span>Independent/Other</div>
-      `;
-    } else if (state.view === "uncontested") {
-      div.innerHTML += `
-        <div><span class="swatch" style="background:${partyColors.DEM}"></span>Uncontested Democratic</div>
-        <div><span class="swatch" style="background:${partyColors.REP}"></span>Uncontested Republican</div>
-        <div><span class="swatch" style="background:white"></span>Contested</div>
-      `;
-    } else if (state.view === "gender") {
-      div.innerHTML += `
-        <div><span class="swatch" style="background:${partyColors.WOMAN}"></span>Woman-held seat</div>
-        <div><span class="swatch" style="background:#d1d5db"></span>Other seat</div>
-      `;
-    } else if (state.view === "competitiveness") {
-      div.innerHTML += `
-        <div><span class="swatch" style="background:${partyColors.TOSSUP}"></span>Toss-up (&lt;5%)</div>
-        <div><span class="swatch" style="background:${partyColors.COMPETITIVE}"></span>Competitive (5–10%)</div>
-        <div><span class="swatch" style="background:${partyColors.LEAN}"></span>Lean (10–20%)</div>
-        <div><span class="swatch" style="background:${partyColors.LIKELY}"></span>Likely (20–35%)</div>
-        <div><span class="swatch" style="background:${partyColors.SAFE}"></span>Safe (&gt;35%)</div>
-        <div><span class="swatch" style="background:${partyColors.UNCONTESTED}"></span>Uncontested</div>
-      `;
-    }
-    return div;
-  };
-  legend.addTo(map);
-}
-
-function updateEraBadge() {
-  if (isTurnoutMode()) {
-    document.getElementById("eraBadge").textContent = "Official turnout currently wired for 2024";
-    return;
-  }
-  const text = Number(state.year) <= 2020
-    ? "Using RI GIS clipped 2012–2020 districts"
-    : "Using 2022–2024 districts";
-  document.getElementById("eraBadge").textContent = text;
-}
-
-function syncButtons() {
-  document.querySelectorAll("#dataModeButtons button").forEach(btn => {
-    btn.classList.toggle("active", btn.dataset.value === state.dataMode);
-  });
-  document.querySelectorAll("#chamberButtons button").forEach(btn => {
-    btn.classList.toggle("active", btn.dataset.value === state.chamber);
-  });
-  document.querySelectorAll("#turnoutGeoButtons button").forEach(btn => {
-    btn.classList.toggle("active", btn.dataset.value === state.turnoutGeo);
-  });
-  document.querySelectorAll("#yearButtons button").forEach(btn => {
-    btn.classList.toggle("active", btn.dataset.value === state.year);
-    const disabled = isTurnoutMode() && btn.dataset.value !== "2024";
-    btn.classList.toggle("is-disabled", disabled);
-    btn.disabled = disabled;
-  });
-
-  document.getElementById("resultsChamberGroup").classList.toggle("is-hidden", isTurnoutMode());
-  document.getElementById("turnoutGeoGroup").classList.toggle("is-hidden", !isTurnoutMode());
-  document.getElementById("districtPanelTitle").textContent = isTurnoutMode() ? titleCase(`${state.turnoutGeo} list`) : "Districts";
-  document.getElementById("districtSearch").placeholder = isTurnoutMode()
-    ? "Search geography or place..."
-    : "Search district or candidate...";
-  document.getElementById("noteBar").textContent = isTurnoutMode()
-    ? "Turnout mode uses official Rhode Island 2024 turnout data. Click a place to inspect turnout, eligible voters, and voting method splits."
-    : "Hover over districts for labels. Click a district for full race details.";
-
-  const viewSelect = document.getElementById("viewSelect");
-  const targetOptions = isTurnoutMode() ? turnoutViewOptions : resultViewOptions;
-  if (viewSelect.innerHTML.trim() !== targetOptions.trim()) {
-    viewSelect.innerHTML = targetOptions;
-  }
-  if (isTurnoutMode()) {
-    viewSelect.value = "turnout";
-    state.view = "turnout";
-  } else {
-    viewSelect.value = state.view;
-  }
-}
-
-function setupControls() {
-  const yearButtons = document.getElementById("yearButtons");
-  yearButtons.innerHTML = years.map(y => `<button type="button" data-value="${y}">${y}</button>`).join("");
-
-  document.querySelectorAll("#dataModeButtons button").forEach(btn => {
-    btn.addEventListener("click", () => {
-      if (btn.dataset.value === state.dataMode) return;
-      if (btn.dataset.value === "turnout") {
-        state.resultsYear = state.year;
-        state.dataMode = "turnout";
-        state.year = "2024";
-        state.view = "turnout";
-      } else {
-        state.dataMode = "results";
-        state.year = state.resultsYear || "2024";
-        state.view = "party";
-      }
-      state.competitivenessFilter = "all";
-      refresh();
-    });
-  });
-  document.querySelectorAll("#chamberButtons button").forEach(btn => {
-    btn.addEventListener("click", () => {
-      state.chamber = btn.dataset.value;
-      refresh();
-    });
-  });
-  document.querySelectorAll("#turnoutGeoButtons button").forEach(btn => {
-    btn.addEventListener("click", () => {
-      state.turnoutGeo = btn.dataset.value;
-      refresh();
-    });
-  });
-  document.querySelectorAll("#yearButtons button").forEach(btn => {
-    btn.addEventListener("click", () => {
-      if (isTurnoutMode() && btn.dataset.value !== "2024") return;
-      state.year = btn.dataset.value;
-      if (!isTurnoutMode()) state.resultsYear = btn.dataset.value;
-      refresh();
-    });
-  });
-  document.getElementById("viewSelect").addEventListener("change", e => {
-    state.view = e.target.value;
-    if (state.view !== "competitiveness") state.competitivenessFilter = "all";
-    refresh();
-  });
-  document.getElementById("districtSearch").addEventListener("input", renderDistrictList);
-  syncButtons();
-}
-
-function setupLaunchpad() {
-  const resultsButton = document.getElementById("launchResultsButton");
-  const turnoutButton = document.getElementById("launchTurnoutButton");
-
-  if (resultsButton) {
-    resultsButton.addEventListener("click", () => {
-      state.dataMode = "results";
-      state.chamber = "house";
-      state.year = "2024";
-      state.resultsYear = "2024";
-      state.view = "party";
-      state.competitivenessFilter = "all";
-      refresh();
-      document.getElementById("map").scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-  }
-
-  if (turnoutButton) {
-    turnoutButton.addEventListener("click", () => {
-      state.dataMode = "turnout";
-      state.turnoutGeo = "municipality";
-      state.year = "2024";
-      state.view = "turnout";
-      state.competitivenessFilter = "all";
-      refresh();
-      document.getElementById("map").scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-  }
-}
-
-function refresh() {
-  syncButtons();
-  const isFocus = !isTurnoutMode() && (state.view === "gender" || state.view === "competitiveness" || state.view === "uncontested");
-  document.body.classList.toggle("focus-view", isFocus);
-  document.body.classList.toggle("focus-mode", isFocus);
-  document.body.classList.toggle("gender-mode", isFocus);
-  const sharedOverlay = document.getElementById("genderOverlay");
-  if (!isFocus && sharedOverlay) sharedOverlay.innerHTML = "";
-  setTimeout(() => map.invalidateSize(), 50);
-  selectedLayer = null;
-  selectedKey = null;
-  featureLayerByKey = {};
-
-  const geo = geojsons[getActiveGeoKey()];
-  if (!geo) {
-    const missingLabel = isTurnoutMode() ? `${turnoutGeoLabel()} turnout ${activeYear()}` : `${state.chamber} ${state.year}`;
-    document.getElementById("districtList").innerHTML = `<div class="error">Missing GeoJSON for ${missingLabel}.</div>`;
-    return;
-  }
-
-  if (layer) map.removeLayer(layer);
-  layer = L.geoJSON(geo, {
-    style: styleFeature,
-    onEachFeature
-  }).addTo(map);
-
-  setTimeout(() => map.invalidateSize(), 0);
-  map.fitBounds(layer.getBounds(), { padding: [15, 15] });
-  addLegend();
-  updateEraBadge();
-  updateOverview();
-renderDistrictList();
-}
-
-async function fetchJson(url) {
-  const response = await fetch(url, { cache: "no-store" });
-  if (!response.ok) throw new Error(`${url} returned ${response.status}`);
-  return response.json();
-}
-
-async function loadData() {
-  const files = {
-    senate_old: "data/senate_old.geojson",
-    house_old: "data/house_old.geojson",
-    senate_new: "data/senate_new.geojson",
-    house_new: "data/house_new.geojson",
-    turnout_precinct_2024: "data/ri_turnout_2024_precinct.geojson",
-    turnout_municipality_2024: "data/ri_turnout_2024_municipality.geojson"
-  };
-
-  const geoEntries = await Promise.all(
-    Object.entries(files).map(async ([key, url]) => [key, await fetchJson(url)])
-  );
-
-  geojsons = Object.fromEntries(geoEntries);
-  raceData = await fetchJson("data/race_data.json");
-  const turnoutPayload = await fetchJson("data/ri_2024_turnout_data.json");
-  turnoutData.statewide["2024"] = turnoutPayload.statewide;
-  [
-    ["municipality", turnoutPayload.municipality],
-    ["house", turnoutPayload.house],
-    ["senate", turnoutPayload.senate]
-  ].forEach(([geography, rows]) => {
-    turnoutData.arrays[`${geography}|2024`] = rows;
-    rows.forEach(row => {
-      const id = geography === "municipality" ? row.municipality : row.district_number;
-      turnoutData.rows[turnoutLookupKey(geography, "2024", id)] = row;
-    });
-  });
-
-  const precinctRows = await fetchJson("data/ri_turnout_2024_precinct.geojson");
-  turnoutData.arrays["precinct|2024"] = precinctRows.features.map(feature => {
-    const props = feature.properties || {};
-    return {
-      year: 2024,
-      geography_type: "precinct",
-      municipality: props.RIMunicipality || props.TOWN,
-      precinct_code: String(props.DISTRICT || props.PRECINCTS || "").trim(),
-      precinct_label: props.PRECINCTS || props.DISTRICT,
-      voted_total: props.VOTED,
-      eligible_total: props.ELIGIBLE,
-      turnout_pct: props.PCTVOTEDGEN,
-      voted_in_person: props.Voted_InPerson,
-      voted_mail: props.Voted_Mail,
-      voted_election_day: props.Voted_ElectionDay,
-      voted_early: props.Voted_Early,
-      district_number: ""
-    };
-  });
-  turnoutData.arrays["precinct|2024"].forEach(row => {
-    turnoutData.rows[turnoutLookupKey("precinct", "2024", row.precinct_code)] = row;
-  });
-}
-
-window.addEventListener("resize", () => {
-  setTimeout(() => map.invalidateSize(), 100);
-});
-
-setupControls();
-setupLaunchpad();
-loadData()
-  .then(refresh)
-  .catch(err => {
-    console.error("RIEP data failed to load:", err);
-    document.getElementById("districtList").innerHTML = `
-      <div class="error">
-        <strong>Data failed to load.</strong><br>
-        Make sure these files exist exactly:<br>
-        data/race_data.json<br>
-        data/house_old.geojson<br>
-        data/house_new.geojson<br>
-        data/senate_old.geojson<br>
-        data/senate_new.geojson<br>
-        data/ri_turnout_2024_precinct.geojson<br>
-        data/ri_turnout_2024_municipality.geojson<br>
-        data/ri_2024_turnout_data.json
-      </div>`;
-    document.getElementById("factsGrid").innerHTML = `<div class="error">${err.message}</div>`;
-  });
-</script>
+    <section class="subsection" aria-label="Project summary">
+      <article class="mini-panel">
+        <h4>What this site covers</h4>
+        <p>The project focuses on Rhode Island legislative election results, district composition, turnout geography, and precinct-level access points for public-facing research.</p>
+      </article>
+      <article class="mini-panel">
+        <h4>How to use it</h4>
+        <p>Start with the <a href="map.html">interactive map</a>, jump to the <a href="lookup.html">precinct finder</a>, or review the <a href="methodology.html">methodology</a> before citing the data.</p>
+      </article>
+      <article class="mini-panel">
+        <h4>Project home</h4>
+        <p>This homepage is the main front door for the Rhode Island Elections Project. The map application itself now lives on the dedicated <a href="map.html">map page</a>.</p>
+      </article>
+    </section>
+  </div>
 </body>
 </html>
