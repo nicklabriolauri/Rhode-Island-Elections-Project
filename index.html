@@ -156,10 +156,13 @@
     .hero-grid {
       position: relative;
       z-index: 1;
-      display: grid;
-      grid-template-columns: minmax(320px, 1fr) minmax(250px, 0.56fr);
-      gap: 56px;
-      align-items: start;
+      display: block;
+    }
+
+    .hero-copy {
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
     }
 
     .eyebrow {
@@ -171,26 +174,28 @@
     }
 
     .hero-copy h2 {
-      margin: 16px 0 16px 0;
-      max-width: 700px;
+      margin: 18px auto 14px auto;
+      max-width: 880px;
       font-family: "Sora", sans-serif;
-      font-size: 56px;
-      line-height: 0.98;
-      letter-spacing: -0.068em;
+      font-size: 74px;
+      line-height: 0.94;
+      letter-spacing: -0.08em;
     }
 
     .summary {
-      max-width: 520px;
-      margin: 0 0 24px 0;
+      max-width: 620px;
+      margin: 0 auto 24px auto;
       color: var(--muted);
-      font-size: 18px;
+      font-size: 19px;
       line-height: 1.55;
     }
 
     .cta-row {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 14px;
+      margin-bottom: 28px;
     }
 
     .btn-primary,
@@ -226,98 +231,46 @@
     }
 
     .hero-meta {
-      margin-top: 28px;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-      max-width: 560px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      max-width: 860px;
     }
 
     .meta-item {
-      padding-top: 14px;
-      border-top: 1px solid rgba(255,255,255,0.12);
+      padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
     }
 
     .meta-label {
-      color: var(--muted-2);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      font-weight: 800;
-      margin-bottom: 8px;
+      display: none;
     }
 
     .meta-value {
       color: white;
-      font-size: 16px;
-      line-height: 1.38;
-      font-weight: 600;
-    }
-
-    .utility-panel {
-      padding-top: 8px;
-    }
-
-    .utility-eyebrow {
-      color: var(--muted-2);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-weight: 800;
-      margin-bottom: 12px;
-    }
-
-    .utility-list {
-      display: grid;
-      gap: 12px;
-    }
-
-    .utility-card {
-      padding: 0 0 16px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .utility-card:last-child {
-      border-bottom: 0;
-      padding-bottom: 0;
-    }
-
-    .utility-kicker {
-      color: var(--muted-2);
-      font-size: 10.5px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-weight: 900;
-      margin-bottom: 8px;
-    }
-
-    .utility-card h3 {
-      margin: 0 0 8px 0;
-      font-family: "Sora", sans-serif;
-      font-size: 20px;
-      line-height: 1.08;
-      letter-spacing: -0.04em;
-    }
-
-    .utility-card p {
-      margin: 0 0 12px 0;
-      color: var(--muted);
       font-size: 14px;
-      line-height: 1.48;
+      line-height: 1.3;
+      font-weight: 700;
     }
 
-    .utility-actions {
+    .link-row {
+      margin-top: 18px;
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 10px;
     }
 
-    .utility-link {
+    .link-pill {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 38px;
-      padding: 0 14px;
+      min-height: 36px;
+      padding: 0 13px;
       border-radius: 999px;
       text-decoration: none;
       font-size: 12px;
@@ -325,12 +278,7 @@
       transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
     }
 
-    .utility-link.primary {
-      color: white;
-      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
-    }
-
-    .utility-link.secondary {
+    .link-pill {
       color: white;
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(255,255,255,0.14);
@@ -344,11 +292,6 @@
 
       .site-nav {
         justify-content: flex-start;
-      }
-
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
       }
     }
 
@@ -382,7 +325,7 @@
       }
 
       .hero-copy h2 {
-        font-size: 44px;
+        font-size: 48px;
       }
 
       .summary {
@@ -390,7 +333,6 @@
       }
 
       .hero-meta {
-        grid-template-columns: 1fr;
         max-width: none;
       }
     }
@@ -418,65 +360,35 @@
       <div class="hero-grid">
         <div class="hero-copy">
           <div class="eyebrow">Explore The Project</div>
-          <h2 id="heroTitle">Rhode Island elections, turnout, and precincts in one public research interface.</h2>
-          <p class="summary">Open the live map, jump into 2024 turnout, search for a precinct by address, or review the project methodology.</p>
+          <h2 id="heroTitle">See how Rhode Island votes.</h2>
+          <p class="summary">Results, turnout, and precinct lookup in one public-facing interface.</p>
           <div class="cta-row">
             <a class="btn-primary" href="map.html?mode=results&chamber=house&year=2024&view=party">Open Interactive Map</a>
             <a class="btn-secondary" href="map.html?mode=turnout&geo=municipality&year=2024">Open 2024 Turnout</a>
+            <a class="btn-secondary" href="lookup.html">Find My Precinct</a>
           </div>
           <div class="hero-meta" aria-label="Project highlights">
             <div class="meta-item">
-              <div class="meta-label">Coverage</div>
               <div class="meta-value">2012–2024 legislative election cycles</div>
             </div>
             <div class="meta-item">
-              <div class="meta-label">Views</div>
               <div class="meta-value">House, Senate, precinct, and municipality</div>
             </div>
             <div class="meta-item">
-              <div class="meta-label">Lookup</div>
               <div class="meta-value">Address-based precinct search for 2024</div>
             </div>
             <div class="meta-item">
-              <div class="meta-label">Purpose</div>
               <div class="meta-value">Public-facing election research and visualization</div>
             </div>
           </div>
-        </div>
-
-        <aside class="utility-panel" aria-label="Project entry points">
-          <div class="utility-eyebrow">Project Entry Points</div>
-          <div class="utility-list">
-            <article class="utility-card">
-              <div class="utility-kicker">Interactive Map</div>
-              <h3>Election results</h3>
-              <p>Open the main map for House and Senate results, competitiveness, and composition.</p>
-              <div class="utility-actions">
-                <a class="utility-link primary" href="map.html?mode=results&chamber=house&year=2024&view=party">Open Results</a>
-              </div>
-            </article>
-
-            <article class="utility-card">
-              <div class="utility-kicker">Turnout</div>
-              <h3>2024 turnout</h3>
-              <p>View official Rhode Island turnout by municipality, precinct, House district, or Senate district.</p>
-              <div class="utility-actions">
-                <a class="utility-link secondary" href="map.html?mode=turnout&geo=municipality&year=2024">Open Turnout</a>
-              </div>
-            </article>
-
-            <article class="utility-card">
-              <div class="utility-kicker">Lookup and Context</div>
-              <h3>Precincts, methods, and team</h3>
-              <p>Go directly to precinct search, review the methodology, or read about the researchers.</p>
-              <div class="utility-actions">
-                <a class="utility-link secondary" href="lookup.html">Lookup</a>
-                <a class="utility-link secondary" href="methodology.html">Methodology</a>
-                <a class="utility-link secondary" href="about.html">About</a>
-              </div>
-            </article>
+          <div class="link-row" aria-label="Secondary project links">
+            <a class="link-pill" href="map.html?mode=results&chamber=house&year=2024&view=party">Results</a>
+            <a class="link-pill" href="map.html?mode=turnout&geo=municipality&year=2024">Turnout</a>
+            <a class="link-pill" href="lookup.html">Lookup</a>
+            <a class="link-pill" href="methodology.html">Methodology</a>
+            <a class="link-pill" href="about.html">About</a>
           </div>
-        </aside>
+        </div>
       </div>
     </section>
   </div>
