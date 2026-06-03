@@ -93,6 +93,9 @@
       font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
       background: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
       overflow: hidden;
     }
     header {
@@ -118,8 +121,152 @@
       font-size: 13px;
       line-height: 1.45;
     }
+    .home-launchpad-wrap {
+      position: relative;
+      padding: 0 22px 18px 22px;
+      background: linear-gradient(135deg, #0f172a 0%, #172554 100%);
+    }
+    .home-launchpad {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(260px, 1.15fr) minmax(420px, 1.55fr);
+      gap: 18px;
+      padding: 18px 20px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.1) 100%);
+      border: 1px solid rgba(255,255,255,0.22);
+      box-shadow: 0 18px 40px rgba(15,23,42,0.24);
+      backdrop-filter: blur(12px);
+    }
+    .home-launchpad::before {
+      content: "";
+      position: absolute;
+      inset: -20% auto auto -8%;
+      width: 240px;
+      height: 240px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(96,165,250,0.24), rgba(96,165,250,0));
+      pointer-events: none;
+    }
+    .launchpad-copy,
+    .launchpad-grid {
+      position: relative;
+      z-index: 1;
+    }
+    .launchpad-eyebrow {
+      color: rgba(255,255,255,0.72);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-weight: 800;
+    }
+    .launchpad-title {
+      margin: 10px 0 10px 0;
+      color: white;
+      font-size: 32px;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      max-width: 560px;
+    }
+    .launchpad-text {
+      max-width: 560px;
+      color: rgba(255,255,255,0.82);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .launchpad-tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .launchpad-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      padding: 7px 11px;
+      color: #dbeafe;
+      font-size: 12px;
+      font-weight: 700;
+      background: rgba(15,23,42,0.26);
+      border: 1px solid rgba(255,255,255,0.16);
+    }
+    .launchpad-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      align-content: start;
+    }
+    .launch-card {
+      min-height: 138px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.9);
+      border: 1px solid rgba(255,255,255,0.72);
+      box-shadow: 0 10px 24px rgba(15,23,42,0.12);
+    }
+    .launch-card-kicker {
+      color: #64748b;
+      font-size: 10.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 900;
+    }
+    .launch-card h3 {
+      margin: 8px 0 7px 0;
+      color: #0f172a;
+      font-size: 21px;
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+    }
+    .launch-card p {
+      margin: 0;
+      color: #475569;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    .launch-card-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .launch-action,
+    .launch-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding: 0 14px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+    }
+    .launch-action {
+      border: 0;
+      color: white;
+      background: linear-gradient(135deg, #1d4ed8 0%, #172554 100%);
+      box-shadow: 0 8px 18px rgba(29,78,216,0.22);
+    }
+    .launch-link {
+      color: #1e3a8a;
+      border: 1px solid #c7d2fe;
+      background: #eef2ff;
+    }
+    .launch-action:hover,
+    .launch-link:hover {
+      transform: translateY(-1px);
+    }
     .controls {
-      height: 62px;
+      min-height: 62px;
       padding: 11px 22px;
       display: flex;
       gap: 16px;
@@ -193,7 +340,6 @@
       font-size: 12px;
     }
     .note {
-      height: 41px;
       padding: 10px 22px;
       background: #faf7f0;
       border-bottom: 1px solid #ead7b7;
@@ -203,8 +349,8 @@
     .dashboard {
       display: grid;
       grid-template-columns: 250px minmax(420px, 1fr) 310px;
-      height: calc(100vh - 179px);
-      min-height: 560px;
+      flex: 1;
+      min-height: 0;
     }
     aside {
       background: var(--panel);
@@ -389,6 +535,12 @@
     }
     @media (max-width: 1000px) {
       body { overflow: auto; }
+      .home-launchpad {
+        grid-template-columns: 1fr;
+      }
+      .launchpad-grid {
+        grid-template-columns: 1fr 1fr;
+      }
       .dashboard {
         grid-template-columns: 1fr;
         height: auto;
@@ -431,6 +583,14 @@
     }
     .site-nav {
       margin-top: 8px;
+    }
+    @media (max-width: 760px) {
+      .launchpad-grid {
+        grid-template-columns: 1fr;
+      }
+      .launchpad-title {
+        font-size: 28px;
+      }
     }
     body.gender-mode .dashboard {
       grid-template-columns: 1fr;
@@ -1076,6 +1236,67 @@ body.gender-mode .gender-overlay {
     <a href="about.html">About</a>
   </nav>
 </header>
+
+<section class="home-launchpad-wrap" aria-labelledby="launchpadTitle">
+  <div class="home-launchpad">
+    <div class="launchpad-copy">
+      <div class="launchpad-eyebrow">Explore The Project</div>
+      <h2 class="launchpad-title" id="launchpadTitle">A public-facing Rhode Island elections interface for results, turnout, and precinct lookup.</h2>
+      <div class="launchpad-text">
+        Use the live map below to examine Rhode Island State House and State Senate elections from 2012 through 2024, switch into official 2024 turnout geography, or jump directly to precinct lookup and project documentation.
+      </div>
+      <div class="launchpad-tag-row" aria-label="Project highlights">
+        <span class="launchpad-tag">2012–2024 election cycles</span>
+        <span class="launchpad-tag">House and Senate district maps</span>
+        <span class="launchpad-tag">2024 turnout by municipality and precinct</span>
+        <span class="launchpad-tag">Methodology and researcher pages</span>
+      </div>
+    </div>
+    <div class="launchpad-grid">
+      <article class="launch-card">
+        <div>
+          <div class="launch-card-kicker">Interactive Map</div>
+          <h3>Election Results</h3>
+          <p>Open the live map in results mode and start with the 2024 House composition view.</p>
+        </div>
+        <div class="launch-card-actions">
+          <button type="button" class="launch-action" id="launchResultsButton">Open Results Map</button>
+        </div>
+      </article>
+      <article class="launch-card">
+        <div>
+          <div class="launch-card-kicker">Turnout Interface</div>
+          <h3>2024 Turnout</h3>
+          <p>Switch the map into turnout mode with official 2024 Rhode Island geography and turnout rates.</p>
+        </div>
+        <div class="launch-card-actions">
+          <button type="button" class="launch-action" id="launchTurnoutButton">Open Turnout Map</button>
+        </div>
+      </article>
+      <article class="launch-card">
+        <div>
+          <div class="launch-card-kicker">Address Lookup</div>
+          <h3>Find My Precinct</h3>
+          <p>Search an address and identify the linked 2024 precinct, turnout profile, and local election results.</p>
+        </div>
+        <div class="launch-card-actions">
+          <a class="launch-link" href="lookup.html">Go To Precinct Lookup</a>
+        </div>
+      </article>
+      <article class="launch-card">
+        <div>
+          <div class="launch-card-kicker">Research Context</div>
+          <h3>Methodology and About</h3>
+          <p>Read how the data was constructed, how turnout is derived, and who is building the project.</p>
+        </div>
+        <div class="launch-card-actions">
+          <a class="launch-link" href="methodology.html">View Methodology</a>
+          <a class="launch-link" href="about.html">Meet The Team</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
 <div class="controls">
   <div class="control-group">
@@ -2403,6 +2624,36 @@ function setupControls() {
   syncButtons();
 }
 
+function setupLaunchpad() {
+  const resultsButton = document.getElementById("launchResultsButton");
+  const turnoutButton = document.getElementById("launchTurnoutButton");
+
+  if (resultsButton) {
+    resultsButton.addEventListener("click", () => {
+      state.dataMode = "results";
+      state.chamber = "house";
+      state.year = "2024";
+      state.resultsYear = "2024";
+      state.view = "party";
+      state.competitivenessFilter = "all";
+      refresh();
+      document.getElementById("map").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
+  if (turnoutButton) {
+    turnoutButton.addEventListener("click", () => {
+      state.dataMode = "turnout";
+      state.turnoutGeo = "municipality";
+      state.year = "2024";
+      state.view = "turnout";
+      state.competitivenessFilter = "all";
+      refresh();
+      document.getElementById("map").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+}
+
 function refresh() {
   syncButtons();
   const isFocus = !isTurnoutMode() && (state.view === "gender" || state.view === "competitiveness" || state.view === "uncontested");
@@ -2502,6 +2753,7 @@ window.addEventListener("resize", () => {
 });
 
 setupControls();
+setupLaunchpad();
 loadData()
   .then(refresh)
   .catch(err => {
