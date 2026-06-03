@@ -1359,6 +1359,9 @@ applyQueryState();
 let geojsons = {};
 let raceData = {};
 let turnoutData = { rows: {}, arrays: {}, statewide: {} };
+const pendingLoads = {};
+let raceDataLoaded = false;
+let turnoutSummaryLoaded = false;
 let layer = null;
 let legend = null;
 let selectedLayer = null;
@@ -1433,6 +1436,15 @@ function getActiveGeoKey() {
   }
   return `turnout_${state.turnoutGeo}_2024`;
 }
+
+const geoFileMap = {
+  senate_old: "data/senate_old.geojson",
+  house_old: "data/house_old.geojson",
+  senate_new: "data/senate_new.geojson",
+  house_new: "data/house_new.geojson",
+  turnout_precinct_2024: "data/ri_turnout_2024_precinct.geojson",
+  turnout_municipality_2024: "data/ri_turnout_2024_municipality.geojson"
+};
 
 function normalizeDistrict(value) {
   return Number(String(value).replace(/^0+/, ""));
@@ -2600,7 +2612,123 @@ function setupControls() {
   syncButtons();
 }
 
-function refresh() {
+function showLoadingState(message) {
+  document.getElementById("districtList").innerHTML = `<div class="error">${message}</div>`;
+  document.getElementById("factsGrid").innerHTML = `<div class="error">${message}</div>`;
+}
+
+async function fetchJson(url) {
+  const response = await fetch(url, { cache: "default" });
+  if (!response.ok) throw new Error(`${url} returned ${response.status}`);
+  return response.json();
+}
+
+function loadOnce(key, loader) {
+  if (!pendingLoads[key]) {
+    pendingLoads[key] = loader().finally(() => {
+      delete pendingLoads[key];
+    });
+  }
+  return pendingLoads[key];
+}
+
+async function ensureGeoLoaded(key) {
+  if (geojsons[key]) return geojsons[key];
+  const url = geoFileMap[key];
+  if (!url) throw new Error(`No file configured for ${key}`);
+  return loadOnce(`geo:${key}`, async () => {
+    geojsons[key] = await fetchJson(url);
+    return geojsons[key];
+  });
+}
+
+async function ensureRaceDataLoaded() {
+  if (raceDataLoaded) return;
+  await loadOnce("raceData", async () => {
+    raceData = await fetchJson("data/race_data.json");
+    raceDataLoaded = true;
+  });
+}
+
+async function ensureTurnoutSummaryLoaded() {
+  if (turnoutSummaryLoaded) return;
+  await loadOnce("turnoutSummary", async () => {
+    const turnoutPayload = await fetchJson("data/ri_2024_turnout_data.json");
+    turnoutData.statewide["2024"] = turnoutPayload.statewide;
+    [
+      ["municipality", turnoutPayload.municipality],
+      ["house", turnoutPayload.house],
+      ["senate", turnoutPayload.senate]
+    ].forEach(([geography, rows]) => {
+      turnoutData.arrays[`${geography}|2024`] = rows;
+      rows.forEach(row => {
+        const id = geography === "municipality" ? row.municipality : row.district_number;
+        turnoutData.rows[turnoutLookupKey(geography, "2024", id)] = row;
+      });
+    });
+    turnoutSummaryLoaded = true;
+  });
+}
+
+async function ensureTurnoutPrecinctRowsLoaded() {
+  if (turnoutData.arrays["precinct|2024"]) return;
+  await loadOnce("turnoutPrecinctRows", async () => {
+    const precinctGeo = await ensureGeoLoaded("turnout_precinct_2024");
+    turnoutData.arrays["precinct|2024"] = precinctGeo.features.map(feature => {
+      const props = feature.properties || {};
+      return {
+        year: 2024,
+        geography_type: "precinct",
+        municipality: props.RIMunicipality || props.TOWN,
+        precinct_code: String(props.DISTRICT || props.PRECINCTS || "").trim(),
+        precinct_label: props.PRECINCTS || props.DISTRICT,
+        voted_total: props.VOTED,
+        eligible_total: props.ELIGIBLE,
+        turnout_pct: props.PCTVOTEDGEN,
+        voted_in_person: props.Voted_InPerson,
+        voted_mail: props.Voted_Mail,
+        voted_election_day: props.Voted_ElectionDay,
+        voted_early: props.Voted_Early,
+        district_number: ""
+      };
+    });
+    turnoutData.arrays["precinct|2024"].forEach(row => {
+      turnoutData.rows[turnoutLookupKey("precinct", "2024", row.precinct_code)] = row;
+    });
+  });
+}
+
+async function ensureDataForCurrentView() {
+  const activeGeoKey = getActiveGeoKey();
+
+  if (isTurnoutMode()) {
+    if (state.turnoutGeo === "municipality" || state.turnoutGeo === "house" || state.turnoutGeo === "senate") {
+      await Promise.all([
+        ensureTurnoutSummaryLoaded(),
+        ensureGeoLoaded(activeGeoKey)
+      ]);
+      return;
+    }
+
+    if (state.turnoutGeo === "precinct") {
+      await Promise.all([
+        ensureTurnoutPrecinctRowsLoaded(),
+        ensureGeoLoaded(activeGeoKey)
+      ]);
+      return;
+    }
+  }
+
+  await Promise.all([
+    ensureRaceDataLoaded(),
+    ensureGeoLoaded(activeGeoKey)
+  ]);
+}
+
+let refreshSerial = 0;
+
+async function refresh() {
+  const refreshId = ++refreshSerial;
   syncButtons();
   const isFocus = !isTurnoutMode() && (state.view === "gender" || state.view === "competitiveness" || state.view === "uncontested");
   document.body.classList.toggle("focus-view", isFocus);
@@ -2612,6 +2740,18 @@ function refresh() {
   selectedLayer = null;
   selectedKey = null;
   featureLayerByKey = {};
+
+  showLoadingState("Loading map data...");
+
+  try {
+    await ensureDataForCurrentView();
+  } catch (err) {
+    console.error("RIEP data failed to load:", err);
+    showLoadingState(`Data failed to load: ${err.message}`);
+    return;
+  }
+
+  if (refreshId !== refreshSerial) return;
 
   const geo = geojsons[getActiveGeoKey()];
   if (!geo) {
@@ -2631,67 +2771,7 @@ function refresh() {
   addLegend();
   updateEraBadge();
   updateOverview();
-renderDistrictList();
-}
-
-async function fetchJson(url) {
-  const response = await fetch(url, { cache: "default" });
-  if (!response.ok) throw new Error(`${url} returned ${response.status}`);
-  return response.json();
-}
-
-async function loadData() {
-  const files = {
-    senate_old: "data/senate_old.geojson",
-    house_old: "data/house_old.geojson",
-    senate_new: "data/senate_new.geojson",
-    house_new: "data/house_new.geojson",
-    turnout_precinct_2024: "data/ri_turnout_2024_precinct.geojson",
-    turnout_municipality_2024: "data/ri_turnout_2024_municipality.geojson"
-  };
-
-  const geoEntries = await Promise.all(
-    Object.entries(files).map(async ([key, url]) => [key, await fetchJson(url)])
-  );
-
-  geojsons = Object.fromEntries(geoEntries);
-  raceData = await fetchJson("data/race_data.json");
-  const turnoutPayload = await fetchJson("data/ri_2024_turnout_data.json");
-  turnoutData.statewide["2024"] = turnoutPayload.statewide;
-  [
-    ["municipality", turnoutPayload.municipality],
-    ["house", turnoutPayload.house],
-    ["senate", turnoutPayload.senate]
-  ].forEach(([geography, rows]) => {
-    turnoutData.arrays[`${geography}|2024`] = rows;
-    rows.forEach(row => {
-      const id = geography === "municipality" ? row.municipality : row.district_number;
-      turnoutData.rows[turnoutLookupKey(geography, "2024", id)] = row;
-    });
-  });
-
-  const precinctRows = await fetchJson("data/ri_turnout_2024_precinct.geojson");
-  turnoutData.arrays["precinct|2024"] = precinctRows.features.map(feature => {
-    const props = feature.properties || {};
-    return {
-      year: 2024,
-      geography_type: "precinct",
-      municipality: props.RIMunicipality || props.TOWN,
-      precinct_code: String(props.DISTRICT || props.PRECINCTS || "").trim(),
-      precinct_label: props.PRECINCTS || props.DISTRICT,
-      voted_total: props.VOTED,
-      eligible_total: props.ELIGIBLE,
-      turnout_pct: props.PCTVOTEDGEN,
-      voted_in_person: props.Voted_InPerson,
-      voted_mail: props.Voted_Mail,
-      voted_election_day: props.Voted_ElectionDay,
-      voted_early: props.Voted_Early,
-      district_number: ""
-    };
-  });
-  turnoutData.arrays["precinct|2024"].forEach(row => {
-    turnoutData.rows[turnoutLookupKey("precinct", "2024", row.precinct_code)] = row;
-  });
+  renderDistrictList();
 }
 
 window.addEventListener("resize", () => {
@@ -2699,25 +2779,7 @@ window.addEventListener("resize", () => {
 });
 
 setupControls();
-loadData()
-  .then(refresh)
-  .catch(err => {
-    console.error("RIEP data failed to load:", err);
-    document.getElementById("districtList").innerHTML = `
-      <div class="error">
-        <strong>Data failed to load.</strong><br>
-        Make sure these files exist exactly:<br>
-        data/race_data.json<br>
-        data/house_old.geojson<br>
-        data/house_new.geojson<br>
-        data/senate_old.geojson<br>
-        data/senate_new.geojson<br>
-        data/ri_turnout_2024_precinct.geojson<br>
-        data/ri_turnout_2024_municipality.geojson<br>
-        data/ri_2024_turnout_data.json
-      </div>`;
-    document.getElementById("factsGrid").innerHTML = `<div class="error">${err.message}</div>`;
-  });
+refresh();
 </script>
 </body>
 </html>
