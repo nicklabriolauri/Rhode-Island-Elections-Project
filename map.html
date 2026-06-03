@@ -5,6 +5,7 @@
 (function () {
   var params = new URLSearchParams(window.location.search);
   var forcedView = params.get("view");
+  var requestedMode = params.get("mode");
   if (forcedView === "desktop") return;
 
   var prefersMobileViewport = window.matchMedia("(max-width: 760px)").matches;
@@ -13,7 +14,7 @@
   var shouldUseMobile = forcedView === "mobile" || prefersMobileViewport || (coarsePointer && narrowScreen);
   var isAlreadyMobile = /(^|\/)mobile\.html($|[?#])/i.test(window.location.pathname);
 
-  if (shouldUseMobile && !isAlreadyMobile) {
+  if (shouldUseMobile && !isAlreadyMobile && requestedMode !== "turnout") {
     var target = new URL("mobile.html", window.location.href);
     if (window.location.search) target.search = window.location.search;
     if (window.location.hash) target.hash = window.location.hash;
@@ -1235,6 +1236,7 @@ body.gender-mode .gender-overlay {
     <a href="lookup.html">Find My Precinct</a>
     <a href="methodology.html">Methodology</a>
     <a href="about.html">About</a>
+    <a href="support.html">Support</a>
   </nav>
 </header>
 
