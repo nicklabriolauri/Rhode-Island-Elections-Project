@@ -269,6 +269,19 @@
       line-height: 1.55;
     }
 
+    .site-footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .site-footer-logo {
+      width: 122px;
+      height: auto;
+      display: block;
+      flex: 0 0 auto;
+    }
+
     .site-footer strong {
       color: var(--text);
     }
@@ -415,7 +428,10 @@
     </section>
 
     <footer class="site-footer">
-      <div><strong>Rhode Island Elections Project</strong> is a University of Rhode Island research initiative focused on legislative elections, turnout, and public-facing civic data accessibility.</div>
+      <div class="site-footer-brand">
+        <img class="site-footer-logo" src="riep-logo-transparent.png" alt="Rhode Island Elections Project logo" />
+        <div><strong>Rhode Island Elections Project</strong> is a University of Rhode Island research initiative focused on legislative elections, turnout, and public-facing civic data accessibility.</div>
+      </div>
       <div class="site-footer-links">
         <a href="index.html">Home</a>
         <a href="map.html">Map</a>

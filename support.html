@@ -295,6 +295,19 @@
       line-height: 1.55;
     }
 
+    .site-footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .site-footer-logo {
+      width: 122px;
+      height: auto;
+      display: block;
+      flex: 0 0 auto;
+    }
+
     .site-footer strong {
       color: #0f172a;
     }
@@ -448,7 +461,10 @@
     </p>
 
     <footer class="site-footer">
-      <div><strong>Rhode Island Elections Project</strong> is a public-facing research interface focused on Rhode Island legislative elections, turnout, precinct access, and election transparency.</div>
+      <div class="site-footer-brand">
+        <img class="site-footer-logo" src="riep-logo-transparent.png" alt="Rhode Island Elections Project logo" />
+        <div><strong>Rhode Island Elections Project</strong> is a public-facing research interface focused on Rhode Island legislative elections, turnout, precinct access, and election transparency.</div>
+      </div>
       <div class="site-footer-links">
         <a href="map.html">Map</a>
         <a href="lookup.html">Find My Precinct</a>

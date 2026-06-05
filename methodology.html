@@ -103,6 +103,17 @@ ul {
   font-size: 13px;
   line-height: 1.55;
 }
+.site-footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.site-footer-logo {
+  width: 122px;
+  height: auto;
+  display: block;
+  flex: 0 0 auto;
+}
 .site-footer strong {
   color: var(--text);
 }
@@ -213,7 +224,10 @@ ul {
   </section>
 
   <footer class="site-footer">
-    <div><strong>Rhode Island Elections Project</strong> documents the public sources, calculations, and assumptions behind the site’s legislative results and turnout displays.</div>
+    <div class="site-footer-brand">
+      <img class="site-footer-logo" src="riep-logo-transparent.png" alt="Rhode Island Elections Project logo" />
+      <div><strong>Rhode Island Elections Project</strong> documents the public sources, calculations, and assumptions behind the site’s legislative results and turnout displays.</div>
+    </div>
     <div class="site-footer-links">
       <a href="index.html">Home</a>
       <a href="map.html">Map</a>

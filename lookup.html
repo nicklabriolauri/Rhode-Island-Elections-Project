@@ -384,6 +384,19 @@
       line-height: 1.55;
     }
 
+    .site-footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .site-footer-logo {
+      width: 122px;
+      height: auto;
+      display: block;
+      flex: 0 0 auto;
+    }
+
     .site-footer strong {
       color: var(--text);
     }
@@ -469,7 +482,10 @@
     </section>
 
     <footer class="site-footer">
-      <div><strong>Find My Precinct</strong> is a public-facing lookup tool built within the Rhode Island Elections Project and tied to official precinct geometry and 2024 election context.</div>
+      <div class="site-footer-brand">
+        <img class="site-footer-logo" src="riep-logo-transparent.png" alt="Rhode Island Elections Project logo" />
+        <div><strong>Find My Precinct</strong> is a public-facing lookup tool built within the Rhode Island Elections Project and tied to official precinct geometry and 2024 election context.</div>
+      </div>
       <div class="site-footer-links">
         <a href="index.html">Home</a>
         <a href="map.html">Map</a>
