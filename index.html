@@ -82,12 +82,57 @@
       min-width: 0;
     }
 
+    .brand-mark-wrap {
+      position: relative;
+      width: 156px;
+      height: 92px;
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      isolation: isolate;
+    }
+
+    .brand-mark-wrap::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 12px;
+      width: 86px;
+      height: 64px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(191,219,254,0.34) 0%, rgba(96,165,250,0.16) 44%, rgba(96,165,250,0) 74%);
+      opacity: 0;
+      filter: blur(3px);
+      animation: lighthouseGlow 2.5s ease-out .08s 1;
+      pointer-events: none;
+    }
+
+    .brand-mark-wrap::after {
+      content: "";
+      position: absolute;
+      left: 56px;
+      top: 20px;
+      width: 176px;
+      height: 60px;
+      opacity: 0;
+      pointer-events: none;
+      transform-origin: 0 50%;
+      clip-path: polygon(0 46%, 100% 0, 100% 100%, 0 54%);
+      background: linear-gradient(90deg, rgba(251,191,36,0.58) 0%, rgba(254,240,138,0.26) 44%, rgba(255,255,255,0) 100%);
+      filter: blur(5px);
+      animation: lighthouseSweep 2.35s ease-in-out .16s 1;
+    }
+
     .brand-mark {
       width: 144px;
       height: 84px;
       object-fit: contain;
       flex: 0 0 auto;
       filter: drop-shadow(0 12px 30px rgba(5, 10, 28, 0.2));
+      position: relative;
+      z-index: 1;
+      animation: lighthouseSettle .9s ease-out .05s both;
     }
 
     .brand-copy h1 {
@@ -479,6 +524,26 @@
       color: white;
     }
 
+    @keyframes lighthouseGlow {
+      0% { opacity: 0; transform: scale(.9); }
+      20% { opacity: .92; transform: scale(1); }
+      70% { opacity: .24; transform: scale(1.06); }
+      100% { opacity: 0; transform: scale(1.08); }
+    }
+
+    @keyframes lighthouseSweep {
+      0% { opacity: 0; transform: rotate(-18deg) scaleX(.92); }
+      16% { opacity: .92; }
+      54% { opacity: .98; transform: rotate(10deg) scaleX(1.02); }
+      82% { opacity: .34; }
+      100% { opacity: 0; transform: rotate(15deg) scaleX(1.04); }
+    }
+
+    @keyframes lighthouseSettle {
+      0% { transform: translateY(4px) scale(.985); filter: drop-shadow(0 0 0 rgba(5, 10, 28, 0)); }
+      100% { transform: translateY(0) scale(1); filter: drop-shadow(0 12px 30px rgba(5, 10, 28, 0.2)); }
+    }
+
     @keyframes heroRise {
       to {
         opacity: 1;
@@ -517,9 +582,21 @@
         align-items: flex-start;
       }
 
+      .brand-mark-wrap {
+        width: 132px;
+        height: 78px;
+      }
+
       .brand-mark {
         width: 122px;
         height: 72px;
+      }
+
+      .brand-mark-wrap::after {
+        left: 48px;
+        top: 18px;
+        width: 142px;
+        height: 48px;
       }
 
       .brand-copy h1 {
@@ -560,13 +637,23 @@
         font-size: 16px;
       }
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      .brand-mark,
+      .brand-mark-wrap::before,
+      .brand-mark-wrap::after {
+        animation: none !important;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="shell">
     <div class="topbar">
       <div class="brand">
-        <img class="brand-mark" src="riep-logo-lighthouse.png" alt="Rhode Island Elections Project logo" />
+        <div class="brand-mark-wrap">
+          <img class="brand-mark" src="riep-logo-lighthouse.png" alt="Rhode Island Elections Project logo" />
+        </div>
         <div class="brand-copy">
           <h1>Rhode Island Elections Project</h1>
           <p>Public-facing Rhode Island election research interface with legislative results, turnout geography, precinct lookup, and project documentation.</p>
