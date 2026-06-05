@@ -83,13 +83,11 @@
     }
 
     .brand-mark {
-      width: 72px;
+      width: 120px;
       height: 72px;
-      object-fit: cover;
-      border-radius: 22px;
-      border: 1px solid rgba(255,255,255,0.14);
-      box-shadow: 0 12px 30px rgba(5, 10, 28, 0.24);
+      object-fit: contain;
       flex: 0 0 auto;
+      filter: drop-shadow(0 12px 30px rgba(5, 10, 28, 0.24));
     }
 
     .brand-copy h1 {
@@ -113,6 +111,23 @@
       flex-wrap: wrap;
       gap: 10px;
       justify-content: flex-end;
+    }
+
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .topbar-logo {
+      width: 112px;
+      height: 58px;
+      object-fit: contain;
+      opacity: 0.92;
+      flex: 0 0 auto;
+      filter: drop-shadow(0 10px 24px rgba(5, 10, 28, 0.18));
     }
 
     .site-nav a {
@@ -485,6 +500,11 @@
         align-items: flex-start;
       }
 
+      .topbar-right {
+        width: 100%;
+        justify-content: space-between;
+      }
+
       .site-nav {
         justify-content: flex-start;
       }
@@ -505,9 +525,13 @@
       }
 
       .brand-mark {
-        width: 60px;
+        width: 96px;
         height: 60px;
-        border-radius: 18px;
+      }
+
+      .topbar-logo {
+        width: 88px;
+        height: 46px;
       }
 
       .brand-copy h1 {
@@ -554,19 +578,22 @@
   <div class="shell">
     <div class="topbar">
       <div class="brand">
-        <img class="brand-mark" src="favicon-source.png" alt="Rhode Island Elections Project logo" />
+        <img class="brand-mark" src="riep-logo-transparent.png" alt="Rhode Island Elections Project logo" />
         <div class="brand-copy">
           <h1>RIEP - Rhode Island Elections Project</h1>
           <p>Public-facing Rhode Island election research interface with legislative results, turnout geography, precinct lookup, and project documentation.</p>
         </div>
       </div>
-      <nav class="site-nav" aria-label="Primary">
-        <a href="map.html">Map</a>
-        <a href="lookup.html">Find My Precinct</a>
-        <a href="methodology.html">Methodology</a>
-        <a href="about.html">About</a>
-        <a href="support.html">Support</a>
-      </nav>
+      <div class="topbar-right">
+        <nav class="site-nav" aria-label="Primary">
+          <a href="map.html">Map</a>
+          <a href="lookup.html">Find My Precinct</a>
+          <a href="methodology.html">Methodology</a>
+          <a href="about.html">About</a>
+          <a href="support.html">Support</a>
+        </nav>
+        <img class="topbar-logo" src="riep-logo-transparent.png" alt="Rhode Island Elections Project logo mark" />
+      </div>
     </div>
 
     <section class="hero" aria-labelledby="heroTitle">
