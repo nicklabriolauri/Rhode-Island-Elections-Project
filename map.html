@@ -435,6 +435,53 @@
       width: 100%;
       background: #f8fafc;
     }
+    .map-loading-overlay {
+      position: absolute;
+      inset: 18px;
+      z-index: 700;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+    .map-loading-overlay.visible {
+      display: flex;
+    }
+    .map-loading-card {
+      min-width: 280px;
+      max-width: min(420px, 86%);
+      padding: 18px 20px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.72);
+      background: rgba(255,255,255,0.94);
+      box-shadow: 0 18px 40px rgba(15,23,42,.14);
+      backdrop-filter: blur(10px);
+      text-align: center;
+    }
+    .map-loading-spinner {
+      width: 34px;
+      height: 34px;
+      margin: 0 auto 12px auto;
+      border-radius: 50%;
+      border: 3px solid #dbe3ef;
+      border-top-color: #2b6cb0;
+      animation: mapSpin .9s linear infinite;
+    }
+    .map-loading-title {
+      color: #0f172a;
+      font-size: 17px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+    .map-loading-text {
+      margin-top: 6px;
+      color: #64748b;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    @keyframes mapSpin {
+      to { transform: rotate(360deg); }
+    }
     .leaflet-tile-pane {
       filter: grayscale(85%) saturate(70%) contrast(92%);
       opacity: 0.45;
@@ -1289,7 +1336,16 @@ body.gender-mode .gender-overlay {
     <div id="districtList" class="district-list"></div>
   </aside>
 
-  <section id="map"><div id="genderOverlay" class="gender-overlay"></div></section>
+  <section id="map">
+    <div id="mapLoadingOverlay" class="map-loading-overlay" aria-live="polite" aria-hidden="true">
+      <div class="map-loading-card">
+        <div class="map-loading-spinner" aria-hidden="true"></div>
+        <div class="map-loading-title">Preparing the map</div>
+        <div class="map-loading-text" id="mapLoadingText">Loading district geometry and election data...</div>
+      </div>
+    </div>
+    <div id="genderOverlay" class="gender-overlay"></div>
+  </section>
 
   <aside id="factsPanel">
     <div class="facts-title" id="overviewTitle">Election Overview</div>
@@ -2615,8 +2671,23 @@ function setupControls() {
 }
 
 function showLoadingState(message) {
+  const overlay = document.getElementById("mapLoadingOverlay");
+  const overlayText = document.getElementById("mapLoadingText");
+  if (overlay && overlayText) {
+    overlay.classList.add("visible");
+    overlay.setAttribute("aria-hidden", "false");
+    overlayText.textContent = message;
+  }
   document.getElementById("districtList").innerHTML = `<div class="error">${message}</div>`;
   document.getElementById("factsGrid").innerHTML = `<div class="error">${message}</div>`;
+}
+
+function hideLoadingState() {
+  const overlay = document.getElementById("mapLoadingOverlay");
+  if (overlay) {
+    overlay.classList.remove("visible");
+    overlay.setAttribute("aria-hidden", "true");
+  }
 }
 
 async function fetchJson(url) {
@@ -2774,6 +2845,7 @@ async function refresh() {
   updateEraBadge();
   updateOverview();
   renderDistrictList();
+  hideLoadingState();
 }
 
 window.addEventListener("resize", () => {

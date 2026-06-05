@@ -93,6 +93,34 @@ h3 {
 ul {
   line-height: 1.6;
 }
+.site-footer {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid #dbe3ef;
+  display: grid;
+  gap: 10px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.55;
+}
+.site-footer strong {
+  color: var(--text);
+}
+.site-footer a {
+  color: #334155;
+  text-decoration: none;
+}
+.site-footer a:hover {
+  color: #172554;
+}
+.site-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+.site-footer-links a {
+  font-weight: 700;
+}
 </style>
 </head>
 <body>
@@ -183,6 +211,18 @@ ul {
       <li>Some public state sources provide results directly by legislative district, while turnout is more often published by precinct or municipality and must be aggregated.</li>
     </ul>
   </section>
+
+  <footer class="site-footer">
+    <div><strong>Rhode Island Elections Project</strong> documents the public sources, calculations, and assumptions behind the site’s legislative results and turnout displays.</div>
+    <div class="site-footer-links">
+      <a href="index.html">Home</a>
+      <a href="map.html">Map</a>
+      <a href="lookup.html">Find My Precinct</a>
+      <a href="about.html">About</a>
+      <a href="support.html">Support</a>
+    </div>
+    <div>Contact: <a href="mailto:nicholas.labriola@uri.edu">nicholas.labriola@uri.edu</a> · Last updated: June 2026</div>
+  </footer>
 </main>
 </body>
 </html>

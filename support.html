@@ -120,10 +120,7 @@
     .hero-inner {
       position: relative;
       z-index: 1;
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
-      gap: 28px;
-      align-items: start;
+      display: block;
     }
 
     .eyebrow {
@@ -173,7 +170,7 @@
 
     .btn-primary,
     .btn-secondary,
-    .paypal-handle {
+    .btn-filled {
       transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
     }
 
@@ -189,44 +186,17 @@
       border: 1px solid rgba(255,255,255,0.16);
     }
 
+    .btn-filled {
+      color: #172554;
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(255,255,255,0.2);
+      box-shadow: 0 12px 24px rgba(255,255,255,0.08);
+    }
+
     .btn-primary:hover,
     .btn-secondary:hover,
-    .paypal-handle:hover {
+    .btn-filled:hover {
       transform: translateY(-1px);
-    }
-
-    .paypal-handle {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 14px;
-      padding: 10px 14px;
-      border-radius: 999px;
-      text-decoration: none;
-      color: rgba(255,255,255,0.92);
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.16);
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 0.01em;
-    }
-
-    .hero-note {
-      padding: 18px 20px;
-      border-radius: 22px;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.07);
-      color: rgba(255,255,255,0.84);
-      line-height: 1.55;
-      font-size: 15px;
-    }
-
-    .hero-note strong {
-      display: block;
-      color: white;
-      margin-bottom: 6px;
-      font-size: 14px;
-      letter-spacing: 0.01em;
     }
 
     .card-grid {
@@ -314,6 +284,46 @@
       text-align: center;
     }
 
+    .site-footer {
+      margin-top: 26px;
+      border-top: 1px solid #dbe3ef;
+      padding-top: 18px;
+      display: grid;
+      gap: 10px;
+      color: #64748b;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .site-footer strong {
+      color: #0f172a;
+    }
+
+    .site-footer a {
+      color: #334155;
+      text-decoration: none;
+    }
+
+    .site-footer a:hover {
+      color: #172554;
+    }
+
+    .site-footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+    }
+
+    .site-footer-links a {
+      color: #334155;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .site-footer-links a:hover {
+      color: #172554;
+    }
+
     .support-inline-note {
       margin-top: 14px;
       color: #475569;
@@ -322,7 +332,6 @@
     }
 
     @media (max-width: 980px) {
-      .hero-inner,
       .wide-card,
       .card-grid {
         grid-template-columns: 1fr;
@@ -377,15 +386,10 @@
           </p>
           <div class="cta-row">
             <a class="btn-primary" href="https://paypal.me/labriola690" target="_blank" rel="noopener noreferrer">Donate with PayPal</a>
-            <a class="btn-secondary" href="mailto:nicholas.labriola@uri.edu?subject=Support%20the%20Rhode%20Island%20Elections%20Project">Partnership inquiries</a>
+            <a class="btn-filled" href="mailto:nicholas.labriola@uri.edu?subject=Support%20the%20Rhode%20Island%20Elections%20Project">Partnership inquiries</a>
             <a class="btn-secondary" href="about.html">Meet the team</a>
           </div>
-          <a class="paypal-handle" href="https://paypal.me/labriola690" target="_blank" rel="noopener noreferrer">PayPal: @labriola690</a>
         </div>
-        <aside class="hero-note">
-          <strong>Live contribution link</strong>
-          The support page now routes directly to PayPal for public contributions, while collaboration and institutional support can still come through direct contact.
-        </aside>
       </div>
     </section>
 
@@ -442,6 +446,18 @@
     <p class="footer-note">
       PayPal donations are now live through <strong>@labriola690</strong>. It is still worth testing the public link once on the live domain to confirm the payment flow looks exactly the way you want.
     </p>
+
+    <footer class="site-footer">
+      <div><strong>Rhode Island Elections Project</strong> is a public-facing research interface focused on Rhode Island legislative elections, turnout, precinct access, and election transparency.</div>
+      <div class="site-footer-links">
+        <a href="map.html">Map</a>
+        <a href="lookup.html">Find My Precinct</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="about.html">About</a>
+        <a href="support.html">Support</a>
+      </div>
+      <div>Contact: <a href="mailto:nicholas.labriola@uri.edu">nicholas.labriola@uri.edu</a> · Last updated: June 2026 · University of Rhode Island research project</div>
+    </footer>
   </main>
 </body>
 </html>

@@ -373,6 +373,40 @@
       opacity: 0.5;
     }
 
+    .site-footer {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid #dbe3ef;
+      display: grid;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .site-footer strong {
+      color: var(--text);
+    }
+
+    .site-footer a {
+      color: #334155;
+      text-decoration: none;
+    }
+
+    .site-footer a:hover {
+      color: var(--navy2);
+    }
+
+    .site-footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+    }
+
+    .site-footer-links a {
+      font-weight: 700;
+    }
+
     @media (max-width: 980px) {
       .layout {
         grid-template-columns: 1fr;
@@ -433,6 +467,18 @@
         </div>
       </aside>
     </section>
+
+    <footer class="site-footer">
+      <div><strong>Find My Precinct</strong> is a public-facing lookup tool built within the Rhode Island Elections Project and tied to official precinct geometry and 2024 election context.</div>
+      <div class="site-footer-links">
+        <a href="index.html">Home</a>
+        <a href="map.html">Map</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="about.html">About</a>
+        <a href="support.html">Support</a>
+      </div>
+      <div>Contact: <a href="mailto:nicholas.labriola@uri.edu">nicholas.labriola@uri.edu</a> · Last updated: June 2026</div>
+    </footer>
   </main>
 
   <script>
