@@ -458,14 +458,122 @@
       backdrop-filter: blur(10px);
       text-align: center;
     }
-    .map-loading-spinner {
-      width: 34px;
-      height: 34px;
-      margin: 0 auto 12px auto;
-      border-radius: 50%;
-      border: 3px solid #dbe3ef;
-      border-top-color: #2b6cb0;
-      animation: mapSpin .9s linear infinite;
+    .map-loading-visual {
+      position: relative;
+      width: 210px;
+      height: 96px;
+      margin: 0 auto 14px auto;
+      overflow: hidden;
+    }
+    .map-loading-visual::before {
+      content: "";
+      position: absolute;
+      inset: auto 0 2px 0;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(148,163,184,0) 0%, rgba(148,163,184,.36) 16%, rgba(148,163,184,.36) 84%, rgba(148,163,184,0) 100%);
+    }
+    .loading-lighthouse {
+      position: absolute;
+      left: 28px;
+      bottom: 10px;
+      width: 28px;
+      height: 60px;
+      border-radius: 8px 8px 6px 6px;
+      background: linear-gradient(180deg, #ffffff 0%, #e2e8f0 100%);
+      box-shadow: inset 0 0 0 1px rgba(15,23,42,.08);
+    }
+    .loading-lighthouse::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: -10px;
+      transform: translateX(-50%);
+      width: 18px;
+      height: 12px;
+      border-radius: 5px 5px 2px 2px;
+      background: #f8fafc;
+      box-shadow: inset 0 0 0 1px rgba(15,23,42,.08);
+    }
+    .loading-lighthouse::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 14px;
+      transform: translateX(-50%);
+      width: 6px;
+      height: 14px;
+      border-radius: 999px;
+      background: rgba(59,130,246,.22);
+    }
+    .loading-light {
+      position: absolute;
+      left: 42px;
+      top: 24px;
+      width: 136px;
+      height: 54px;
+      transform-origin: 0% 50%;
+      animation: beamSweep 2.8s ease-in-out infinite;
+    }
+    .loading-light::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      clip-path: polygon(0 46%, 100% 0, 100% 100%, 0 54%);
+      background: linear-gradient(90deg, rgba(251,191,36,.62) 0%, rgba(253,224,71,.36) 42%, rgba(255,255,255,0) 100%);
+    }
+    .loading-light::after {
+      content: "";
+      position: absolute;
+      inset: -8px -10px;
+      clip-path: polygon(0 46%, 100% 0, 100% 100%, 0 54%);
+      background: linear-gradient(90deg, rgba(250,204,21,.22) 0%, rgba(255,255,255,.14) 48%, rgba(255,255,255,0) 100%);
+      filter: blur(8px);
+      opacity: .85;
+    }
+    .loading-ballot-box {
+      position: absolute;
+      right: 26px;
+      bottom: 12px;
+      width: 58px;
+      height: 36px;
+      border-radius: 8px;
+      background: linear-gradient(180deg, #1e3a8a 0%, #172554 100%);
+      box-shadow: 0 10px 18px rgba(15,23,42,.18);
+      animation: ballotGlow 2.8s ease-in-out infinite;
+    }
+    .loading-ballot-box::before {
+      content: "";
+      position: absolute;
+      left: 9px;
+      right: 9px;
+      top: 7px;
+      height: 4px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.6);
+    }
+    .loading-ballot-box::after {
+      content: "";
+      position: absolute;
+      left: 18px;
+      top: -15px;
+      width: 22px;
+      height: 24px;
+      border-radius: 3px;
+      background: linear-gradient(180deg, #ffffff 0%, #eff6ff 100%);
+      box-shadow: 0 8px 16px rgba(15,23,42,.12);
+      transform: rotate(-8deg);
+    }
+    .loading-check {
+      position: absolute;
+      right: 38px;
+      bottom: 35px;
+      width: 16px;
+      height: 8px;
+      border-left: 3px solid #ef4444;
+      border-bottom: 3px solid #ef4444;
+      transform: rotate(-45deg);
+      border-radius: 1px;
+      z-index: 1;
     }
     .map-loading-title {
       color: #0f172a;
@@ -479,8 +587,25 @@
       font-size: 13px;
       line-height: 1.5;
     }
-    @keyframes mapSpin {
-      to { transform: rotate(360deg); }
+    @keyframes beamSweep {
+      0%,
+      100% {
+        transform: rotate(-18deg) scaleX(.94);
+      }
+      50% {
+        transform: rotate(10deg) scaleX(1.03);
+      }
+    }
+    @keyframes ballotGlow {
+      0%,
+      100% {
+        box-shadow: 0 10px 18px rgba(15,23,42,.18);
+        transform: translateY(0);
+      }
+      50% {
+        box-shadow: 0 0 0 1px rgba(251,191,36,.24), 0 0 24px rgba(250,204,21,.34), 0 12px 22px rgba(15,23,42,.16);
+        transform: translateY(-1px);
+      }
     }
     .leaflet-tile-pane {
       filter: grayscale(85%) saturate(70%) contrast(92%);
@@ -1339,7 +1464,12 @@ body.gender-mode .gender-overlay {
   <section id="map">
     <div id="mapLoadingOverlay" class="map-loading-overlay" aria-live="polite" aria-hidden="true">
       <div class="map-loading-card">
-        <div class="map-loading-spinner" aria-hidden="true"></div>
+        <div class="map-loading-visual" aria-hidden="true">
+          <div class="loading-lighthouse"></div>
+          <div class="loading-light"></div>
+          <div class="loading-ballot-box"></div>
+          <div class="loading-check"></div>
+        </div>
         <div class="map-loading-title">Preparing the map</div>
         <div class="map-loading-text" id="mapLoadingText">Loading district geometry and election data...</div>
       </div>
