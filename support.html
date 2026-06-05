@@ -171,6 +171,12 @@
       font-weight: 800;
     }
 
+    .btn-primary,
+    .btn-secondary,
+    .paypal-handle {
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+    }
+
     .btn-primary {
       color: white;
       background: linear-gradient(135deg, var(--blue) 0%, #1e40af 100%);
@@ -181,6 +187,28 @@
       color: white;
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(255,255,255,0.16);
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover,
+    .paypal-handle:hover {
+      transform: translateY(-1px);
+    }
+
+    .paypal-handle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 14px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      text-decoration: none;
+      color: rgba(255,255,255,0.92);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.16);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.01em;
     }
 
     .hero-note {
@@ -286,6 +314,13 @@
       text-align: center;
     }
 
+    .support-inline-note {
+      margin-top: 14px;
+      color: #475569;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
     @media (max-width: 980px) {
       .hero-inner,
       .wide-card,
@@ -341,13 +376,15 @@
             The Rhode Island Elections Project is being built as a public-facing research and visualization resource. Support can help sustain hosting, data work, map maintenance, and future election-cycle updates.
           </p>
           <div class="cta-row">
-            <a class="btn-primary" href="mailto:nicholas.labriola@uri.edu?subject=Support%20the%20Rhode%20Island%20Elections%20Project">Contact to support</a>
+            <a class="btn-primary" href="https://paypal.me/labriola690" target="_blank" rel="noopener noreferrer">Donate with PayPal</a>
+            <a class="btn-secondary" href="mailto:nicholas.labriola@uri.edu?subject=Support%20the%20Rhode%20Island%20Elections%20Project">Partnership inquiries</a>
             <a class="btn-secondary" href="about.html">Meet the team</a>
           </div>
+          <a class="paypal-handle" href="https://paypal.me/labriola690" target="_blank" rel="noopener noreferrer">PayPal: @labriola690</a>
         </div>
         <aside class="hero-note">
-          <strong>Donation-ready structure</strong>
-          This page can take a direct Stripe, PayPal, or Givebutter button as soon as the project chooses its preferred payment platform or institutional fiscal home.
+          <strong>Live contribution link</strong>
+          The support page now routes directly to PayPal for public contributions, while collaboration and institutional support can still come through direct contact.
         </aside>
       </div>
     </section>
@@ -356,7 +393,7 @@
       <article class="card">
         <div class="card-label">Direct support</div>
         <h3>Donations</h3>
-        <p>Small public contributions can help cover hosting, domain, and routine maintenance while the project grows.</p>
+        <p>Small public contributions can now go directly through PayPal and help cover hosting, domain, and routine maintenance as the project grows.</p>
       </article>
       <article class="card">
         <div class="card-label">Institutional support</div>
@@ -378,9 +415,13 @@
           The next stage of the project is not just visual polish. It is sustained upkeep: keeping the map current, improving mobile performance, adding additional turnout history, validating precinct-level sources, and maintaining a credible public research interface.
         </p>
         <div class="cta-row">
-          <a class="btn-primary" href="mailto:nicholas.labriola@uri.edu?subject=Support%20the%20Rhode%20Island%20Elections%20Project">Discuss support</a>
+          <a class="btn-primary" href="https://paypal.me/labriola690" target="_blank" rel="noopener noreferrer">Contribute now</a>
+          <a class="btn-secondary" href="mailto:nicholas.labriola@uri.edu?subject=Support%20the%20Rhode%20Island%20Elections%20Project">Discuss support</a>
           <a class="btn-secondary" href="methodology.html">Review methodology</a>
         </div>
+        <p class="support-inline-note">
+          If you are supporting the project as a faculty partner, office, or civic organization rather than as an individual donor, the email route is still the better first point of contact.
+        </p>
       </div>
       <div class="detail-stack">
         <div class="detail-card">
@@ -399,7 +440,7 @@
     </section>
 
     <p class="footer-note">
-      If you want this page to handle real online contributions next, the cleanest next step is choosing one platform and replacing the contact button with the live donation link.
+      PayPal donations are now live through <strong>@labriola690</strong>. It is still worth testing the public link once on the live domain to confirm the payment flow looks exactly the way you want.
     </p>
   </main>
 </body>
