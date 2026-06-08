@@ -2,19 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Rhode Island Elections Project | Home</title>
+  <title>Rhode Island Elections Project | Rhode Island Election Results, Turnout, and Precinct Maps</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="A data-driven guide to Rhode Island elections, featuring results, turnout analysis, precinct lookup, and project research." />
+  <meta name="description" content="The official site of the Rhode Island Elections Project: a data-driven guide to Rhode Island election results, turnout maps, precinct lookup, and public-facing election research." />
+  <meta name="application-name" content="Rhode Island Elections Project" />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://www.rhodeislandelectionsproject.org/" />
-  <meta property="og:title" content="Rhode Island Elections Project | Home" />
-  <meta property="og:description" content="Discover how Rhode Island votes with interactive election results, turnout maps, precinct tools, and election research." />
+  <meta property="og:title" content="Rhode Island Elections Project | Rhode Island Election Results, Turnout, and Precinct Maps" />
+  <meta property="og:description" content="The official site of the Rhode Island Elections Project, featuring interactive election results, turnout maps, precinct tools, and public-facing research." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.rhodeislandelectionsproject.org/" />
   <meta property="og:site_name" content="Rhode Island Elections Project" />
+  <meta property="og:image" content="https://www.rhodeislandelectionsproject.org/riep-logo-sunburst-white.png" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Rhode Island Elections Project" />
-  <meta name="twitter:description" content="Election results, turnout maps, and precinct data all in one place." />
+  <meta name="twitter:description" content="The official site of the Rhode Island Elections Project: election results, turnout maps, and precinct data all in one place." />
+  <meta name="twitter:image" content="https://www.rhodeislandelectionsproject.org/riep-logo-sunburst-white.png" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -22,11 +25,45 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Rhode Island Elections Project",
-    "alternateName": "RIEP",
-    "url": "https://www.rhodeislandelectionsproject.org/",
-    "description": "A data-driven guide to Rhode Island elections, featuring results, turnout analysis, precinct lookup, and project research."
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.rhodeislandelectionsproject.org/#organization",
+        "name": "Rhode Island Elections Project",
+        "alternateName": "RIEP",
+        "url": "https://www.rhodeislandelectionsproject.org/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.rhodeislandelectionsproject.org/riep-logo-sunburst-white.png"
+        },
+        "description": "A nonpartisan public-facing election research project focused on Rhode Island election results, turnout, precinct information, and legislative representation.",
+        "email": "nicholas.labriola@uri.edu"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.rhodeislandelectionsproject.org/#website",
+        "url": "https://www.rhodeislandelectionsproject.org/",
+        "name": "Rhode Island Elections Project",
+        "alternateName": "RIEP",
+        "description": "The official site of the Rhode Island Elections Project: a data-driven guide to Rhode Island election results, turnout maps, precinct lookup, and public-facing election research.",
+        "publisher": {
+          "@id": "https://www.rhodeislandelectionsproject.org/#organization"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.rhodeislandelectionsproject.org/#webpage",
+        "url": "https://www.rhodeislandelectionsproject.org/",
+        "name": "Rhode Island Elections Project",
+        "description": "The official site of the Rhode Island Elections Project, featuring interactive election results, turnout maps, precinct tools, and public-facing research.",
+        "isPartOf": {
+          "@id": "https://www.rhodeislandelectionsproject.org/#website"
+        },
+        "about": {
+          "@id": "https://www.rhodeislandelectionsproject.org/#organization"
+        }
+      }
+    ]
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
