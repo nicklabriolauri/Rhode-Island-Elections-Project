@@ -586,7 +586,7 @@
   <header>
     <div class="header-shell">
       <div class="brand">
-        <img src="riep-logo-light.png" alt="Rhode Island Elections Project logo" />
+        <img src="riep-logo-sunburst-white.png" alt="Rhode Island Elections Project logo" />
         <div>
           <h1>Rhode Island Elections Project</h1>
           <p>Track 2026 candidate filings for Rhode Island State House and State Senate districts, including where primary contests are emerging and where a likely general-election matchup is already in place.</p>
@@ -694,7 +694,7 @@
   <footer>
     <div class="site-footer">
       <div>
-        <img src="riep-logo-light.png" alt="Rhode Island Elections Project logo" />
+        <img src="riep-logo-sunburst-white.png" alt="Rhode Island Elections Project logo" />
         <div style="margin-top:10px; max-width:640px;">Rhode Island Elections Project is a public-facing interface for Rhode Island legislative elections, turnout geography, precinct lookup, candidate filing status, and election accessibility.</div>
       </div>
       <div>
@@ -722,8 +722,8 @@
     let featureLayerByDistrict = {};
 
     const geojsonFiles = {
-      house: "data/house_new.geojson",
-      senate: "data/senate_new.geojson"
+      house: "/data/house_new.geojson",
+      senate: "/data/senate_new.geojson"
     };
 
     const generalFill = {
@@ -1009,7 +1009,7 @@
     async function boot() {
       try {
         const [data, houseGeo, senateGeo] = await Promise.all([
-          fetchJson("data/whos_running_2026.json"),
+          fetchJson("/data/whos_running_2026.json"),
           fetchJson(geojsonFiles.house),
           fetchJson(geojsonFiles.senate)
         ]);
