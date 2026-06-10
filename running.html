@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Who's Running? | Rhode Island Elections Project</title>
-  <meta name="description" content="Track 2026 candidate filings across Rhode Island State House and State Senate districts, including primary activity and likely general-election matchups." />
+  <meta name="description" content="Track 2026 Rhode Island primary filings across State House and State Senate districts, including where same-party contests are already forming before the September primary." />
   <meta property="og:title" content="Who's Running? | Rhode Island Elections Project" />
-  <meta property="og:description" content="Track 2026 Rhode Island candidate filings, primary activity, and district-level matchup status." />
+  <meta property="og:description" content="Track 2026 Rhode Island primary filings, district activity, and same-party contests before the September primary." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.rhodeislandelectionsproject.org/running.html" />
   <meta property="og:site_name" content="Rhode Island Elections Project" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Who's Running? | Rhode Island Elections Project" />
-  <meta name="twitter:description" content="Track 2026 Rhode Island candidate filings, primary activity, and district-level matchup status." />
+  <meta name="twitter:description" content="Track 2026 Rhode Island primary filings, district activity, and same-party contests before the September primary." />
   <link rel="canonical" href="https://www.rhodeislandelectionsproject.org/running.html" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
@@ -589,7 +589,7 @@
         <img src="riep-logo-sunburst-white.png" alt="Rhode Island Elections Project logo" />
         <div>
           <h1>Rhode Island Elections Project</h1>
-          <p>Track 2026 candidate filings for Rhode Island State House and State Senate districts, including where primary contests are emerging and where a likely general-election matchup is already in place.</p>
+          <p>Track 2026 candidate filings for Rhode Island State House and State Senate districts, with a focus on where same-party primaries are emerging before Rhode Island's September primary.</p>
         </div>
       </div>
       <nav class="site-nav">
@@ -608,9 +608,9 @@
     <section class="hero">
       <div class="hero-grid">
         <div>
-          <div class="hero-eyebrow">2026 Candidate Filings</div>
+          <div class="hero-eyebrow">2026 Primary Watch</div>
           <h2>See who’s running across Rhode Island.</h2>
-          <div class="hero-lead">This page tracks where candidates have already filed for the 2026 cycle. Blue signals Democratic-only filings, red signals Republican-only filings, and purple marks districts where both major parties have already filed.</div>
+          <div class="hero-lead">This page tracks who has filed so far for the 2026 cycle and highlights where Democratic or Republican primaries are already taking shape ahead of Rhode Island's Labor Day primary.</div>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#running-map-anchor">Open filing map</a>
             <a class="btn btn-secondary" href="#district-browser">Browse filed districts</a>
@@ -618,14 +618,14 @@
         </div>
         <div class="summary-grid">
           <div class="summary-card">
+            <div class="summary-label">Days until primary</div>
+            <div class="summary-value" id="summaryCountdown">—</div>
+            <div class="summary-copy" id="summaryPrimaryDate">Labor Day primary countdown</div>
+          </div>
+          <div class="summary-card">
             <div class="summary-label">Districts with filings</div>
             <div class="summary-value" id="summaryFiled">—</div>
             <div class="summary-copy">Districts in the current chamber with at least one filed candidate.</div>
-          </div>
-          <div class="summary-card">
-            <div class="summary-label">Two-party matchups</div>
-            <div class="summary-value" id="summaryMatchups">—</div>
-            <div class="summary-copy">Districts where both Democratic and Republican candidates have filed.</div>
           </div>
           <div class="summary-card">
             <div class="summary-label">Primary activity</div>
@@ -633,13 +633,14 @@
             <div class="summary-copy">Districts with multiple candidates already filed within the same party.</div>
           </div>
           <div class="summary-card">
-            <div class="summary-label">Map logic</div>
-            <div class="summary-copy">Fill color shows the general-election picture. Outline color shows whether a primary is forming.</div>
+            <div class="summary-label">Cross-party filings</div>
+            <div class="summary-value" id="summaryMatchups">—</div>
+            <div class="summary-copy">Districts where both Democratic and Republican candidates have filed so far.</div>
           </div>
         </div>
       </div>
       <div class="hero-note">
-        <strong>Color idea:</strong> when both Democrats and Republicans file in the same district, the fill turns purple so the seat reads immediately as a likely general-election matchup. Primary activity is layered into the outline so the map can show both stories at once.
+        <strong>Primary first:</strong> the map now defaults to Primary Watch. Saturated blue or red marks an active primary, while softer fills show districts where candidates have filed but no same-party primary has formed yet.
       </div>
     </section>
 
@@ -654,13 +655,13 @@
 
           <div class="control-label">Map View</div>
           <div class="segmented" id="viewButtons">
-            <button type="button" data-view="general">General Outlook</button>
             <button type="button" data-view="primary">Primary Watch</button>
+            <button type="button" data-view="general">Current Filings</button>
           </div>
         </div>
         <div class="chip-bar">
-          <div class="chip"><strong>General:</strong> fill color shows the likely November picture.</div>
-          <div class="chip"><strong>Primary:</strong> border color flags where same-party competition is forming.</div>
+          <div class="chip"><strong>Primary:</strong> saturated fill shows where same-party competition is already active.</div>
+          <div class="chip"><strong>Filed seats:</strong> softer party tints show districts with filings but no active primary yet.</div>
           <div class="chip"><strong>Boundaries:</strong> current House and Senate districts.</div>
         </div>
         <div id="runningMap" aria-label="Rhode Island candidate filing map"></div>
@@ -669,14 +670,14 @@
       <aside class="detail-card">
         <div class="detail-eyebrow">District detail</div>
         <div class="detail-title" id="detailTitle">Select a district</div>
-        <div class="detail-copy" id="detailCopy">Tap any House or Senate district on the map to see who has filed, whether a primary is forming, and how the current filing picture looks for the general election.</div>
+        <div class="detail-copy" id="detailCopy">Tap any House or Senate district on the map to see who has filed so far, whether a same-party primary is forming, and what the current filing picture looks like heading into the September primary.</div>
         <div class="detail-statuses">
           <div class="status-card">
-            <h3>General outlook</h3>
+            <h3>Current filings</h3>
             <p id="detailGeneral">No district selected</p>
           </div>
           <div class="status-card">
-            <h3>Primary watch</h3>
+            <h3>Primary status</h3>
             <p id="detailPrimary">No district selected</p>
           </div>
         </div>
@@ -685,8 +686,8 @@
     </section>
 
     <section class="district-browser" id="district-browser">
-      <h3>Filed districts</h3>
-      <p>Use the district list if you want to jump directly to filed seats instead of browsing the full map.</p>
+      <h3>Filed districts before the primary</h3>
+      <p>Use the district list if you want to jump directly to seats with filed candidates instead of browsing the full map.</p>
       <div class="district-grid" id="districtGrid"></div>
     </section>
   </main>
@@ -694,7 +695,7 @@
   <footer>
     <div class="site-footer">
       <div>
-        <img src="riep-logo-sunburst-white.png" alt="Rhode Island Elections Project logo" />
+        <img src="riep-logo-light.png" alt="Rhode Island Elections Project logo" />
         <div style="margin-top:10px; max-width:640px;">Rhode Island Elections Project is a public-facing interface for Rhode Island legislative elections, turnout geography, precinct lookup, candidate filing status, and election accessibility.</div>
       </div>
       <div>
@@ -713,7 +714,7 @@
   </footer>
 
   <script>
-    const state = { chamber: "house", view: "general", selectedDistrict: null };
+    const state = { chamber: "house", view: "primary", selectedDistrict: null };
     const geojsons = {};
     let filingData = null;
     let mapLayer = null;
@@ -755,6 +756,14 @@
       dem_primary: "#3b82f6",
       rep_primary: "#ef4444",
       no_primary: "#e2e8f0",
+      no_filing: "#f8fafc"
+    };
+
+    const filingTint = {
+      both_major: "#ddd6fe",
+      dem_only: "#dbeafe",
+      rep_only: "#fee2e2",
+      other_only: "#ccfbf1",
       no_filing: "#f8fafc"
     };
 
@@ -814,6 +823,39 @@
       return filingData?.summary?.[chamber] || null;
     }
 
+    function getPrimaryDate(year) {
+      const date = new Date(year, 8, 1);
+      while (date.getDay() !== 1) date.setDate(date.getDate() + 1);
+      return date;
+    }
+
+    function setPrimaryCountdown() {
+      if (!filingData?.election_cycle) return;
+      const electionYear = Number(filingData.election_cycle);
+      const primaryDate = getPrimaryDate(electionYear);
+      const startOfToday = new Date();
+      startOfToday.setHours(0, 0, 0, 0);
+      const days = Math.ceil((primaryDate - startOfToday) / 86400000);
+      const countdown = document.getElementById("summaryCountdown");
+      const copy = document.getElementById("summaryPrimaryDate");
+      const formatted = primaryDate.toLocaleDateString("en-US", {
+        month: "long",
+        day: "numeric",
+        year: "numeric"
+      });
+
+      if (days > 0) {
+        countdown.textContent = days;
+        copy.textContent = `Primary Day: ${formatted}`;
+      } else if (days === 0) {
+        countdown.textContent = "Today";
+        copy.textContent = `Primary Day: ${formatted}`;
+      } else {
+        countdown.textContent = "Done";
+        copy.textContent = `Primary Day was ${formatted}`;
+      }
+    }
+
     function districtStyle(record) {
       if (!record) {
         return { color: "#94a3b8", weight: 1.2, fillColor: "#e2e8f0", fillOpacity: 0.45 };
@@ -833,8 +875,11 @@
         color: primaryStroke[record.primary_status] || "#64748b",
         weight: record.primary_status !== "no_primary" && record.primary_status !== "no_filing" ? 3.4 : 1.8,
         opacity: 1,
-        fillColor: primaryFill[record.primary_status] || "#e2e8f0",
-        fillOpacity: record.primary_status === "no_filing" ? 0.18 : 0.72
+        fillColor:
+          record.primary_status !== "no_primary" && record.primary_status !== "no_filing"
+            ? (primaryFill[record.primary_status] || "#e2e8f0")
+            : (filingTint[record.general_status] || "#e2e8f0"),
+        fillOpacity: record.primary_status === "no_filing" ? 0.18 : (record.primary_status === "no_primary" ? 0.62 : 0.76)
       };
     }
 
@@ -855,7 +900,7 @@
 
       if (!record) {
         title.textContent = "Select a district";
-        copy.textContent = "Tap any House or Senate district on the map to see who has filed, whether a primary is forming, and how the current filing picture looks for the general election.";
+        copy.textContent = "Tap any House or Senate district on the map to see who has filed so far, whether a same-party primary is forming, and what the filing picture looks like heading into the September primary.";
         general.textContent = "No district selected";
         primary.textContent = "No district selected";
         list.innerHTML = "";
@@ -920,21 +965,23 @@
         const div = L.DomUtil.create("div", "legend-box");
         if (state.view === "general") {
           div.innerHTML = `
-            <div class="legend-title">General outlook</div>
+            <div class="legend-title">Current filings</div>
             <div class="legend-row"><span class="swatch" style="background:${generalFill.both_major};border-color:${generalStroke.both_major}"></span>Both major parties filed</div>
             <div class="legend-row"><span class="swatch" style="background:${generalFill.dem_only};border-color:${generalStroke.dem_only}"></span>Democratic only</div>
             <div class="legend-row"><span class="swatch" style="background:${generalFill.rep_only};border-color:${generalStroke.rep_only}"></span>Republican only</div>
             <div class="legend-row"><span class="swatch" style="background:${generalFill.no_filing};border-color:${generalStroke.no_filing}"></span>No filing in current sheet</div>
-            <div class="legend-title" style="margin-top:12px;">Primary outline</div>
-            <div class="legend-row"><span class="swatch" style="background:#fff;border-color:${primaryStroke.dem_primary}"></span>Democratic primary</div>
-            <div class="legend-row"><span class="swatch" style="background:#fff;border-color:${primaryStroke.rep_primary}"></span>Republican primary</div>
+            <div class="legend-title" style="margin-top:12px;">Primary signal</div>
+            <div class="legend-row"><span class="swatch" style="background:#fff;border-color:${primaryStroke.dem_primary}"></span>Democratic primary underway</div>
+            <div class="legend-row"><span class="swatch" style="background:#fff;border-color:${primaryStroke.rep_primary}"></span>Republican primary underway</div>
           `;
         } else {
           div.innerHTML = `
             <div class="legend-title">Primary watch</div>
             <div class="legend-row"><span class="swatch" style="background:${primaryFill.dem_primary};border-color:${primaryStroke.dem_primary}"></span>Democratic primary underway</div>
             <div class="legend-row"><span class="swatch" style="background:${primaryFill.rep_primary};border-color:${primaryStroke.rep_primary}"></span>Republican primary underway</div>
-            <div class="legend-row"><span class="swatch" style="background:${primaryFill.no_primary};border-color:${primaryStroke.no_primary}"></span>Filed, no active primary</div>
+            <div class="legend-row"><span class="swatch" style="background:${filingTint.dem_only};border-color:${primaryStroke.no_primary}"></span>Democratic filed, no primary yet</div>
+            <div class="legend-row"><span class="swatch" style="background:${filingTint.rep_only};border-color:${primaryStroke.no_primary}"></span>Republican filed, no primary yet</div>
+            <div class="legend-row"><span class="swatch" style="background:${filingTint.both_major};border-color:${primaryStroke.no_primary}"></span>Both parties filed, no primary yet</div>
             <div class="legend-row"><span class="swatch" style="background:${primaryFill.no_filing};border-color:${primaryStroke.no_filing}"></span>No filing in current sheet</div>
           `;
         }
@@ -999,6 +1046,7 @@
       map.fitBounds(mapLayer.getBounds(), { padding: [22, 22] });
       buildLegend();
       setSummaryCards();
+      setPrimaryCountdown();
       renderDistrictBrowser();
       setDetail(state.selectedDistrict ? getDistrictData(state.chamber, state.selectedDistrict) : null);
       if (state.selectedDistrict && featureLayerByDistrict[state.selectedDistrict]) {
