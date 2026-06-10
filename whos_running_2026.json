@@ -1,0 +1,1402 @@
+{
+  "generated_at": "2026-06-10T09:11:54.499933+00:00",
+  "election_cycle": 2026,
+  "source_file": "/Users/nicholaslabriola/Documents/New project/data/raw/2026-election-candidates.xlsx",
+  "chambers": {
+    "house": {
+      "1": {
+        "chamber": "house",
+        "district_number": 1,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "2": {
+        "chamber": "house",
+        "district_number": 2,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "3": {
+        "chamber": "house",
+        "district_number": 3,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "4": {
+        "chamber": "house",
+        "district_number": 4,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "5": {
+        "chamber": "house",
+        "district_number": 5,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "6": {
+        "chamber": "house",
+        "district_number": 6,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "7": {
+        "chamber": "house",
+        "district_number": 7,
+        "candidates": [
+          {
+            "name": "Amy Santiago",
+            "party": "DEM",
+            "party_label": "Democratic",
+            "incumbent": false
+          }
+        ],
+        "party_counts": {
+          "DEM": 1
+        },
+        "candidate_total": 1,
+        "general_status": "dem_only",
+        "general_label": "Democratic candidates filed only",
+        "primary_status": "no_primary",
+        "primary_label": "No active primary in current filings"
+      },
+      "8": {
+        "chamber": "house",
+        "district_number": 8,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "9": {
+        "chamber": "house",
+        "district_number": 9,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "10": {
+        "chamber": "house",
+        "district_number": 10,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "11": {
+        "chamber": "house",
+        "district_number": 11,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "12": {
+        "chamber": "house",
+        "district_number": 12,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "13": {
+        "chamber": "house",
+        "district_number": 13,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "14": {
+        "chamber": "house",
+        "district_number": 14,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "15": {
+        "chamber": "house",
+        "district_number": 15,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "16": {
+        "chamber": "house",
+        "district_number": 16,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "17": {
+        "chamber": "house",
+        "district_number": 17,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "18": {
+        "chamber": "house",
+        "district_number": 18,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "19": {
+        "chamber": "house",
+        "district_number": 19,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "20": {
+        "chamber": "house",
+        "district_number": 20,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "21": {
+        "chamber": "house",
+        "district_number": 21,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "22": {
+        "chamber": "house",
+        "district_number": 22,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "23": {
+        "chamber": "house",
+        "district_number": 23,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "24": {
+        "chamber": "house",
+        "district_number": 24,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "25": {
+        "chamber": "house",
+        "district_number": 25,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "26": {
+        "chamber": "house",
+        "district_number": 26,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "27": {
+        "chamber": "house",
+        "district_number": 27,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "28": {
+        "chamber": "house",
+        "district_number": 28,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "29": {
+        "chamber": "house",
+        "district_number": 29,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "30": {
+        "chamber": "house",
+        "district_number": 30,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "31": {
+        "chamber": "house",
+        "district_number": 31,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "32": {
+        "chamber": "house",
+        "district_number": 32,
+        "candidates": [
+          {
+            "name": "Kevin Hoyle",
+            "party": "DEM",
+            "party_label": "Democratic",
+            "incumbent": false
+          }
+        ],
+        "party_counts": {
+          "DEM": 1
+        },
+        "candidate_total": 1,
+        "general_status": "dem_only",
+        "general_label": "Democratic candidates filed only",
+        "primary_status": "no_primary",
+        "primary_label": "No active primary in current filings"
+      },
+      "33": {
+        "chamber": "house",
+        "district_number": 33,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "34": {
+        "chamber": "house",
+        "district_number": 34,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "35": {
+        "chamber": "house",
+        "district_number": 35,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "36": {
+        "chamber": "house",
+        "district_number": 36,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "37": {
+        "chamber": "house",
+        "district_number": 37,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "38": {
+        "chamber": "house",
+        "district_number": 38,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "39": {
+        "chamber": "house",
+        "district_number": 39,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "40": {
+        "chamber": "house",
+        "district_number": 40,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "41": {
+        "chamber": "house",
+        "district_number": 41,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "42": {
+        "chamber": "house",
+        "district_number": 42,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "43": {
+        "chamber": "house",
+        "district_number": 43,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "44": {
+        "chamber": "house",
+        "district_number": 44,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "45": {
+        "chamber": "house",
+        "district_number": 45,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "46": {
+        "chamber": "house",
+        "district_number": 46,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "47": {
+        "chamber": "house",
+        "district_number": 47,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "48": {
+        "chamber": "house",
+        "district_number": 48,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "49": {
+        "chamber": "house",
+        "district_number": 49,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "50": {
+        "chamber": "house",
+        "district_number": 50,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "51": {
+        "chamber": "house",
+        "district_number": 51,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "52": {
+        "chamber": "house",
+        "district_number": 52,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "53": {
+        "chamber": "house",
+        "district_number": 53,
+        "candidates": [
+          {
+            "name": "Suzy Alba",
+            "party": "DEM",
+            "party_label": "Democratic",
+            "incumbent": false
+          },
+          {
+            "name": "Paul Santucci",
+            "party": "REP",
+            "party_label": "Republican",
+            "incumbent": true
+          }
+        ],
+        "party_counts": {
+          "DEM": 1,
+          "REP": 1
+        },
+        "candidate_total": 2,
+        "general_status": "both_major",
+        "general_label": "Democratic and Republican candidates filed",
+        "primary_status": "no_primary",
+        "primary_label": "No active primary in current filings"
+      },
+      "54": {
+        "chamber": "house",
+        "district_number": 54,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "55": {
+        "chamber": "house",
+        "district_number": 55,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "56": {
+        "chamber": "house",
+        "district_number": 56,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "57": {
+        "chamber": "house",
+        "district_number": 57,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "58": {
+        "chamber": "house",
+        "district_number": 58,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "59": {
+        "chamber": "house",
+        "district_number": 59,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "60": {
+        "chamber": "house",
+        "district_number": 60,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "61": {
+        "chamber": "house",
+        "district_number": 61,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "62": {
+        "chamber": "house",
+        "district_number": 62,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "63": {
+        "chamber": "house",
+        "district_number": 63,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "64": {
+        "chamber": "house",
+        "district_number": 64,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "65": {
+        "chamber": "house",
+        "district_number": 65,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "66": {
+        "chamber": "house",
+        "district_number": 66,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "67": {
+        "chamber": "house",
+        "district_number": 67,
+        "candidates": [
+          {
+            "name": "Nicole Jellinek",
+            "party": "DEM",
+            "party_label": "Democratic",
+            "incumbent": false
+          }
+        ],
+        "party_counts": {
+          "DEM": 1
+        },
+        "candidate_total": 1,
+        "general_status": "dem_only",
+        "general_label": "Democratic candidates filed only",
+        "primary_status": "no_primary",
+        "primary_label": "No active primary in current filings"
+      },
+      "68": {
+        "chamber": "house",
+        "district_number": 68,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "69": {
+        "chamber": "house",
+        "district_number": 69,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "70": {
+        "chamber": "house",
+        "district_number": 70,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "71": {
+        "chamber": "house",
+        "district_number": 71,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "72": {
+        "chamber": "house",
+        "district_number": 72,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "73": {
+        "chamber": "house",
+        "district_number": 73,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "74": {
+        "chamber": "house",
+        "district_number": 74,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "75": {
+        "chamber": "house",
+        "district_number": 75,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      }
+    },
+    "senate": {
+      "1": {
+        "chamber": "senate",
+        "district_number": 1,
+        "candidates": [
+          {
+            "name": "Jacob Bissalion",
+            "party": "DEM",
+            "party_label": "Democratic",
+            "incumbent": false
+          }
+        ],
+        "party_counts": {
+          "DEM": 1
+        },
+        "candidate_total": 1,
+        "general_status": "dem_only",
+        "general_label": "Democratic candidates filed only",
+        "primary_status": "no_primary",
+        "primary_label": "No active primary in current filings"
+      },
+      "2": {
+        "chamber": "senate",
+        "district_number": 2,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "3": {
+        "chamber": "senate",
+        "district_number": 3,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "4": {
+        "chamber": "senate",
+        "district_number": 4,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "5": {
+        "chamber": "senate",
+        "district_number": 5,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "6": {
+        "chamber": "senate",
+        "district_number": 6,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "7": {
+        "chamber": "senate",
+        "district_number": 7,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "8": {
+        "chamber": "senate",
+        "district_number": 8,
+        "candidates": [
+          {
+            "name": "Gena Felix",
+            "party": "DEM",
+            "party_label": "Democratic",
+            "incumbent": false
+          }
+        ],
+        "party_counts": {
+          "DEM": 1
+        },
+        "candidate_total": 1,
+        "general_status": "dem_only",
+        "general_label": "Democratic candidates filed only",
+        "primary_status": "no_primary",
+        "primary_label": "No active primary in current filings"
+      },
+      "9": {
+        "chamber": "senate",
+        "district_number": 9,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "10": {
+        "chamber": "senate",
+        "district_number": 10,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "11": {
+        "chamber": "senate",
+        "district_number": 11,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "12": {
+        "chamber": "senate",
+        "district_number": 12,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "13": {
+        "chamber": "senate",
+        "district_number": 13,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "14": {
+        "chamber": "senate",
+        "district_number": 14,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "15": {
+        "chamber": "senate",
+        "district_number": 15,
+        "candidates": [
+          {
+            "name": "Meghan Kallaman",
+            "party": "DEM",
+            "party_label": "Democratic",
+            "incumbent": false
+          },
+          {
+            "name": "Vanessa Lopez",
+            "party": "DEM",
+            "party_label": "Democratic",
+            "incumbent": false
+          }
+        ],
+        "party_counts": {
+          "DEM": 2
+        },
+        "candidate_total": 2,
+        "general_status": "dem_only",
+        "general_label": "Democratic candidates filed only",
+        "primary_status": "dem_primary",
+        "primary_label": "Democratic primary underway"
+      },
+      "16": {
+        "chamber": "senate",
+        "district_number": 16,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "17": {
+        "chamber": "senate",
+        "district_number": 17,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "18": {
+        "chamber": "senate",
+        "district_number": 18,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "19": {
+        "chamber": "senate",
+        "district_number": 19,
+        "candidates": [
+          {
+            "name": "James Metevier",
+            "party": "DEM",
+            "party_label": "Democratic",
+            "incumbent": false
+          }
+        ],
+        "party_counts": {
+          "DEM": 1
+        },
+        "candidate_total": 1,
+        "general_status": "dem_only",
+        "general_label": "Democratic candidates filed only",
+        "primary_status": "no_primary",
+        "primary_label": "No active primary in current filings"
+      },
+      "20": {
+        "chamber": "senate",
+        "district_number": 20,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "21": {
+        "chamber": "senate",
+        "district_number": 21,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "22": {
+        "chamber": "senate",
+        "district_number": 22,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "23": {
+        "chamber": "senate",
+        "district_number": 23,
+        "candidates": [
+          {
+            "name": "Jessica De La Cruz",
+            "party": "DEM",
+            "party_label": "Democratic",
+            "incumbent": false
+          }
+        ],
+        "party_counts": {
+          "DEM": 1
+        },
+        "candidate_total": 1,
+        "general_status": "dem_only",
+        "general_label": "Democratic candidates filed only",
+        "primary_status": "no_primary",
+        "primary_label": "No active primary in current filings"
+      },
+      "24": {
+        "chamber": "senate",
+        "district_number": 24,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "25": {
+        "chamber": "senate",
+        "district_number": 25,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "26": {
+        "chamber": "senate",
+        "district_number": 26,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "27": {
+        "chamber": "senate",
+        "district_number": 27,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "28": {
+        "chamber": "senate",
+        "district_number": 28,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "29": {
+        "chamber": "senate",
+        "district_number": 29,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "30": {
+        "chamber": "senate",
+        "district_number": 30,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "31": {
+        "chamber": "senate",
+        "district_number": 31,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "32": {
+        "chamber": "senate",
+        "district_number": 32,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "33": {
+        "chamber": "senate",
+        "district_number": 33,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "34": {
+        "chamber": "senate",
+        "district_number": 34,
+        "candidates": [
+          {
+            "name": "Samantha Wilcox",
+            "party": "DEM",
+            "party_label": "Democratic",
+            "incumbent": false
+          },
+          {
+            "name": "Elaine Morgan",
+            "party": "REP",
+            "party_label": "Republican",
+            "incumbent": false
+          }
+        ],
+        "party_counts": {
+          "REP": 1,
+          "DEM": 1
+        },
+        "candidate_total": 2,
+        "general_status": "both_major",
+        "general_label": "Democratic and Republican candidates filed",
+        "primary_status": "no_primary",
+        "primary_label": "No active primary in current filings"
+      },
+      "35": {
+        "chamber": "senate",
+        "district_number": 35,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "36": {
+        "chamber": "senate",
+        "district_number": 36,
+        "candidates": [
+          {
+            "name": "Mark Mesrobian",
+            "party": "DEM",
+            "party_label": "Democratic",
+            "incumbent": false
+          }
+        ],
+        "party_counts": {
+          "DEM": 1
+        },
+        "candidate_total": 1,
+        "general_status": "dem_only",
+        "general_label": "Democratic candidates filed only",
+        "primary_status": "no_primary",
+        "primary_label": "No active primary in current filings"
+      },
+      "37": {
+        "chamber": "senate",
+        "district_number": 37,
+        "candidates": [],
+        "party_counts": {},
+        "candidate_total": 0,
+        "general_status": "no_filing",
+        "general_label": "No filing listed in current sheet",
+        "primary_status": "no_filing",
+        "primary_label": "No filing listed in current sheet"
+      },
+      "38": {
+        "chamber": "senate",
+        "district_number": 38,
+        "candidates": [
+          {
+            "name": "Victoria Gu",
+            "party": "DEM",
+            "party_label": "Democratic",
+            "incumbent": false
+          }
+        ],
+        "party_counts": {
+          "DEM": 1
+        },
+        "candidate_total": 1,
+        "general_status": "dem_only",
+        "general_label": "Democratic candidates filed only",
+        "primary_status": "no_primary",
+        "primary_label": "No active primary in current filings"
+      }
+    }
+  },
+  "summary": {
+    "house": {
+      "district_total": 75,
+      "districts_with_filings": 4,
+      "no_filing_reported": 71,
+      "both_major_parties_filed": 1,
+      "democratic_only": 3,
+      "republican_only": 0,
+      "districts_with_primary_activity": 0
+    },
+    "senate": {
+      "district_total": 38,
+      "districts_with_filings": 8,
+      "no_filing_reported": 30,
+      "both_major_parties_filed": 1,
+      "democratic_only": 7,
+      "republican_only": 0,
+      "districts_with_primary_activity": 1
+    }
+  }
+}

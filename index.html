@@ -699,6 +699,7 @@
       <div class="topbar-right">
         <nav class="site-nav" aria-label="Primary">
           <a href="map.html">Map</a>
+          <a href="running.html">Who's Running?</a>
           <a href="lookup.html">Find My Precinct</a>
           <a href="methodology.html">Methodology</a>
           <a href="about.html">About</a>
@@ -716,6 +717,7 @@
           <p class="summary">Election results, turnout maps, and precinct data, all in one place.</p>
           <div class="cta-row">
             <a class="btn-primary" href="map.html?mode=results&chamber=house&year=2024&view=party">Open Interactive Map</a>
+            <a class="btn-secondary" href="running.html">Who's Running?</a>
             <a class="btn-secondary" href="map.html?mode=turnout&geo=municipality&year=2024">Open 2024 Turnout</a>
             <a class="btn-secondary" href="lookup.html">Find My Precinct</a>
           </div>
@@ -725,6 +727,8 @@
             <a class="link-pill" href="map.html?mode=turnout&geo=municipality&year=2024">Turnout</a>
             <span class="separator-dot" aria-hidden="true"></span>
             <a class="link-pill" href="lookup.html">Lookup</a>
+            <span class="separator-dot" aria-hidden="true"></span>
+            <a class="link-pill" href="running.html">Who's Running?</a>
             <span class="separator-dot" aria-hidden="true"></span>
             <a class="link-pill" href="methodology.html">Methodology</a>
             <span class="separator-dot" aria-hidden="true"></span>
@@ -772,6 +776,7 @@
       </div>
       <div class="site-footer-links">
         <a href="map.html">Map</a>
+        <a href="running.html">Who's Running?</a>
         <a href="lookup.html">Find My Precinct</a>
         <a href="methodology.html">Methodology</a>
         <a href="about.html">About</a>
@@ -784,7 +789,9 @@
   (function () {
     const assets = [
       "/map.html",
+      "/running.html",
       "/data/race_data.json",
+      "/data/whos_running_2026.json",
       "/data/house_old.geojson",
       "/data/house_new.geojson",
       "/data/senate_old.geojson",

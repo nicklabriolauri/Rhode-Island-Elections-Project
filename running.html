@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Who's Running? | Rhode Island Elections Project</title>
+  <meta name="description" content="Track 2026 candidate filings across Rhode Island State House and State Senate districts, including primary activity and likely general-election matchups." />
+  <meta property="og:title" content="Who's Running? | Rhode Island Elections Project" />
+  <meta property="og:description" content="Track 2026 Rhode Island candidate filings, primary activity, and district-level matchup status." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.rhodeislandelectionsproject.org/running.html" />
+  <meta property="og:site_name" content="Rhode Island Elections Project" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Who's Running? | Rhode Island Elections Project" />
+  <meta name="twitter:description" content="Track 2026 Rhode Island candidate filings, primary activity, and district-level matchup status." />
+  <link rel="canonical" href="https://www.rhodeislandelectionsproject.org/running.html" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    :root {
+      --navy: #111c3d;
+      --navy-2: #1d2a57;
+      --ink: #0f172a;
+      --slate: #475569;
+      --line: #dbe3ef;
+      --panel: #ffffff;
+      --surface: #f8fafc;
+      --dem: #3b82f6;
+      --dem-deep: #1d4ed8;
+      --rep: #ef4444;
+      --rep-deep: #b91c1c;
+      --both: #7c3aed;
+      --both-deep: #5b21b6;
+      --other: #14b8a6;
+      --other-deep: #0f766e;
+      --none: #d7deea;
+      --none-deep: #94a3b8;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #f8fafc 0%, #eef3fb 100%);
+    }
+    header {
+      padding: 24px 24px 18px;
+      color: white;
+      background: linear-gradient(135deg, #0f172a 0%, #172554 100%);
+    }
+    .header-shell {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: flex-start;
+    }
+    .brand {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      min-width: 0;
+    }
+    .brand img {
+      width: 78px;
+      height: 78px;
+      object-fit: contain;
+      flex: 0 0 auto;
+    }
+    .brand h1 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+    .brand p {
+      margin: 10px 0 0;
+      max-width: 700px;
+      color: rgba(255,255,255,.84);
+      font-size: 15px;
+      line-height: 1.45;
+    }
+    .site-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 2px;
+    }
+    .site-nav a {
+      color: white;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,.3);
+      background: rgba(255,255,255,.07);
+      border-radius: 999px;
+      padding: 9px 15px;
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .site-nav a.active {
+      background: white;
+      color: var(--navy);
+      box-shadow: 0 8px 22px rgba(15,23,42,.2);
+    }
+
+    main {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 28px 24px 34px;
+    }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      padding: 28px;
+      background: linear-gradient(145deg, rgba(23,37,84,.96), rgba(35,48,98,.9));
+      box-shadow: 0 20px 55px rgba(15,23,42,.18);
+      border: 1px solid rgba(148,163,184,.18);
+      color: white;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(96,165,250,.18), rgba(96,165,250,0));
+      left: -60px;
+      bottom: -100px;
+      pointer-events: none;
+    }
+    .hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.9fr);
+      gap: 26px;
+      align-items: start;
+    }
+    .hero-eyebrow {
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.68);
+    }
+    .hero h2 {
+      margin: 10px 0 0;
+      font-size: 66px;
+      line-height: .96;
+      letter-spacing: -0.06em;
+    }
+    .hero-lead {
+      margin: 18px 0 0;
+      max-width: 720px;
+      color: rgba(255,255,255,.82);
+      font-size: 20px;
+      line-height: 1.45;
+    }
+    .hero-actions {
+      margin-top: 22px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 900;
+      border: 1px solid transparent;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+      cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary {
+      background: linear-gradient(135deg, #4361ee 0%, #3554e8 100%);
+      color: white;
+      box-shadow: 0 12px 24px rgba(53,84,232,.22);
+    }
+    .btn-secondary {
+      background: rgba(255,255,255,.08);
+      border-color: rgba(255,255,255,.22);
+      color: white;
+    }
+    .hero-note {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.14);
+      color: rgba(255,255,255,.82);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .summary-card {
+      border-radius: 22px;
+      padding: 18px 18px 16px;
+      background: rgba(255,255,255,.97);
+      color: var(--ink);
+      border: 1px solid rgba(219,227,239,.84);
+      box-shadow: 0 14px 34px rgba(15,23,42,.1);
+    }
+    .summary-label {
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #64748b;
+    }
+    .summary-value {
+      margin-top: 8px;
+      font-size: 34px;
+      font-weight: 900;
+      letter-spacing: -.05em;
+      color: var(--ink);
+    }
+    .summary-copy {
+      margin-top: 6px;
+      color: #475569;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .workspace {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      gap: 22px;
+      align-items: start;
+    }
+    .map-card, .detail-card {
+      background: rgba(255,255,255,.96);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: 0 16px 40px rgba(15,23,42,.08);
+    }
+    .controls {
+      padding: 18px 20px 0;
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 14px 14px;
+      align-items: center;
+    }
+    .control-label {
+      color: #64748b;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    .segmented {
+      display: inline-flex;
+      gap: 6px;
+      padding: 4px;
+      background: #f1f5f9;
+      border: 1px solid #dbe3ef;
+      border-radius: 999px;
+      justify-self: start;
+    }
+    .segmented button {
+      border: 0;
+      background: transparent;
+      padding: 11px 18px;
+      border-radius: 999px;
+      color: #475569;
+      font-size: 15px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+    .segmented button.active {
+      background: var(--navy);
+      color: white;
+      box-shadow: 0 10px 20px rgba(17,28,61,.18);
+    }
+    .chip-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 16px 20px 0;
+    }
+    .chip {
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 800;
+      color: #334155;
+      background: #f8fafc;
+      border: 1px solid #dbe3ef;
+    }
+    .chip strong { color: var(--ink); }
+    #runningMap {
+      height: 680px;
+      margin: 16px 20px 20px;
+      border-radius: 22px;
+      border: 1px solid #dbe3ef;
+      overflow: hidden;
+      background: #eef2f7;
+    }
+    .leaflet-container { font-family: Arial, Helvetica, sans-serif; }
+    .leaflet-control-zoom {
+      border: 0 !important;
+      box-shadow: 0 14px 32px rgba(15,23,42,.18) !important;
+    }
+    .leaflet-control-zoom a {
+      width: 40px !important;
+      height: 40px !important;
+      line-height: 40px !important;
+      font-size: 22px !important;
+      border-color: #e5e7eb !important;
+    }
+    .legend-box {
+      padding: 12px 14px;
+      background: rgba(255,255,255,.96);
+      border-radius: 16px;
+      border: 1px solid #dbe3ef;
+      box-shadow: 0 12px 28px rgba(15,23,42,.12);
+      color: var(--ink);
+      min-width: 220px;
+    }
+    .legend-title {
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #64748b;
+      margin-bottom: 10px;
+    }
+    .legend-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: #334155;
+      margin-top: 8px;
+    }
+    .swatch {
+      width: 14px;
+      height: 14px;
+      border-radius: 999px;
+      border: 2px solid transparent;
+      flex: 0 0 auto;
+    }
+    .detail-card {
+      padding: 18px;
+      position: sticky;
+      top: 18px;
+    }
+    .detail-eyebrow {
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #64748b;
+    }
+    .detail-title {
+      margin-top: 8px;
+      font-size: 34px;
+      line-height: 1;
+      letter-spacing: -.05em;
+      font-weight: 900;
+      color: var(--ink);
+    }
+    .detail-copy {
+      margin-top: 10px;
+      font-size: 15px;
+      line-height: 1.55;
+      color: #475569;
+    }
+    .detail-statuses {
+      margin-top: 16px;
+      display: grid;
+      gap: 10px;
+    }
+    .status-card {
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+    }
+    .status-card h3 {
+      margin: 0;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      color: #64748b;
+    }
+    .status-card p {
+      margin: 8px 0 0;
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.45;
+      font-weight: 800;
+    }
+    .candidate-list {
+      margin-top: 16px;
+      display: grid;
+      gap: 10px;
+    }
+    .candidate-item {
+      padding: 12px 14px;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      background: #fff;
+    }
+    .candidate-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+    }
+    .candidate-name {
+      font-size: 16px;
+      font-weight: 900;
+      color: var(--ink);
+    }
+    .candidate-party {
+      font-size: 13px;
+      font-weight: 800;
+      color: #475569;
+    }
+    .candidate-note {
+      margin-top: 6px;
+      font-size: 13px;
+      color: #64748b;
+    }
+    .district-browser {
+      margin-top: 22px;
+      background: rgba(255,255,255,.96);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: 0 16px 40px rgba(15,23,42,.08);
+      padding: 18px 20px 20px;
+    }
+    .district-browser h3 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.1;
+      letter-spacing: -.04em;
+    }
+    .district-browser p {
+      margin: 8px 0 0;
+      color: #64748b;
+      font-size: 15px;
+    }
+    .district-grid {
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .district-button {
+      border: 1px solid #dbe3ef;
+      background: #fff;
+      border-radius: 18px;
+      padding: 13px 14px;
+      text-align: left;
+      cursor: pointer;
+      transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+    }
+    .district-button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 26px rgba(15,23,42,.08);
+    }
+    .district-button.active {
+      border-color: #4f7cff;
+      box-shadow: 0 10px 24px rgba(79,124,255,.18);
+    }
+    .district-button-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #64748b;
+    }
+    .district-button-name {
+      margin-top: 8px;
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: -.03em;
+      color: var(--ink);
+    }
+    .district-button-detail {
+      margin-top: 6px;
+      font-size: 13px;
+      line-height: 1.45;
+      color: #475569;
+    }
+    footer {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px 38px;
+    }
+    .site-footer {
+      border-top: 1px solid rgba(148,163,184,.22);
+      padding-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px 26px;
+      color: #475569;
+      font-size: 14px;
+    }
+    .site-footer img {
+      width: 150px;
+      height: auto;
+      display: block;
+      opacity: .95;
+    }
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 10px;
+    }
+    .footer-nav a {
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 800;
+    }
+    .loading-card {
+      padding: 22px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.95);
+      border: 1px solid #dbe3ef;
+      box-shadow: 0 18px 44px rgba(15,23,42,.14);
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .workspace { grid-template-columns: 1fr; }
+      .detail-card { position: static; }
+      .summary-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 880px) {
+      .header-shell { flex-direction: column; }
+      .site-nav { justify-content: flex-start; }
+      .hero h2 { font-size: 48px; }
+      .summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .controls { grid-template-columns: 1fr; }
+      #runningMap { height: 560px; }
+      .district-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 640px) {
+      header { padding: 20px 18px 16px; }
+      main { padding: 20px 18px 28px; }
+      footer { padding: 0 18px 28px; }
+      .brand img { width: 68px; height: 68px; }
+      .brand h1 { font-size: 24px; }
+      .hero { padding: 22px 18px; }
+      .hero h2 { font-size: 38px; }
+      .hero-lead { font-size: 17px; }
+      .summary-grid { grid-template-columns: 1fr; }
+      #runningMap { margin: 14px 16px 16px; height: 480px; }
+      .detail-title { font-size: 28px; }
+      .district-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-shell">
+      <div class="brand">
+        <img src="riep-logo-light.png" alt="Rhode Island Elections Project logo" />
+        <div>
+          <h1>Rhode Island Elections Project</h1>
+          <p>Track 2026 candidate filings for Rhode Island State House and State Senate districts, including where primary contests are emerging and where a likely general-election matchup is already in place.</p>
+        </div>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="map.html">Map</a>
+        <a href="running.html" class="active">Who's Running?</a>
+        <a href="lookup.html">Find My Precinct</a>
+        <a href="methodology.html">Methodology</a>
+        <a href="about.html">About</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-eyebrow">2026 Candidate Filings</div>
+          <h2>See who’s running across Rhode Island.</h2>
+          <div class="hero-lead">This page tracks where candidates have already filed for the 2026 cycle. Blue signals Democratic-only filings, red signals Republican-only filings, and purple marks districts where both major parties have already filed.</div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#running-map-anchor">Open filing map</a>
+            <a class="btn btn-secondary" href="#district-browser">Browse filed districts</a>
+          </div>
+        </div>
+        <div class="summary-grid">
+          <div class="summary-card">
+            <div class="summary-label">Districts with filings</div>
+            <div class="summary-value" id="summaryFiled">—</div>
+            <div class="summary-copy">Districts in the current chamber with at least one filed candidate.</div>
+          </div>
+          <div class="summary-card">
+            <div class="summary-label">Two-party matchups</div>
+            <div class="summary-value" id="summaryMatchups">—</div>
+            <div class="summary-copy">Districts where both Democratic and Republican candidates have filed.</div>
+          </div>
+          <div class="summary-card">
+            <div class="summary-label">Primary activity</div>
+            <div class="summary-value" id="summaryPrimaries">—</div>
+            <div class="summary-copy">Districts with multiple candidates already filed within the same party.</div>
+          </div>
+          <div class="summary-card">
+            <div class="summary-label">Map logic</div>
+            <div class="summary-copy">Fill color shows the general-election picture. Outline color shows whether a primary is forming.</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-note">
+        <strong>Color idea:</strong> when both Democrats and Republicans file in the same district, the fill turns purple so the seat reads immediately as a likely general-election matchup. Primary activity is layered into the outline so the map can show both stories at once.
+      </div>
+    </section>
+
+    <section class="workspace" id="running-map-anchor">
+      <div class="map-card">
+        <div class="controls">
+          <div class="control-label">Chamber</div>
+          <div class="segmented" id="chamberButtons">
+            <button type="button" data-chamber="house">House</button>
+            <button type="button" data-chamber="senate">Senate</button>
+          </div>
+
+          <div class="control-label">Map View</div>
+          <div class="segmented" id="viewButtons">
+            <button type="button" data-view="general">General Outlook</button>
+            <button type="button" data-view="primary">Primary Watch</button>
+          </div>
+        </div>
+        <div class="chip-bar">
+          <div class="chip"><strong>General:</strong> fill color shows the likely November picture.</div>
+          <div class="chip"><strong>Primary:</strong> border color flags where same-party competition is forming.</div>
+          <div class="chip"><strong>Boundaries:</strong> current House and Senate districts.</div>
+        </div>
+        <div id="runningMap" aria-label="Rhode Island candidate filing map"></div>
+      </div>
+
+      <aside class="detail-card">
+        <div class="detail-eyebrow">District detail</div>
+        <div class="detail-title" id="detailTitle">Select a district</div>
+        <div class="detail-copy" id="detailCopy">Tap any House or Senate district on the map to see who has filed, whether a primary is forming, and how the current filing picture looks for the general election.</div>
+        <div class="detail-statuses">
+          <div class="status-card">
+            <h3>General outlook</h3>
+            <p id="detailGeneral">No district selected</p>
+          </div>
+          <div class="status-card">
+            <h3>Primary watch</h3>
+            <p id="detailPrimary">No district selected</p>
+          </div>
+        </div>
+        <div class="candidate-list" id="candidateList"></div>
+      </aside>
+    </section>
+
+    <section class="district-browser" id="district-browser">
+      <h3>Filed districts</h3>
+      <p>Use the district list if you want to jump directly to filed seats instead of browsing the full map.</p>
+      <div class="district-grid" id="districtGrid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="site-footer">
+      <div>
+        <img src="riep-logo-light.png" alt="Rhode Island Elections Project logo" />
+        <div style="margin-top:10px; max-width:640px;">Rhode Island Elections Project is a public-facing interface for Rhode Island legislative elections, turnout geography, precinct lookup, candidate filing status, and election accessibility.</div>
+      </div>
+      <div>
+        <div class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="map.html">Map</a>
+          <a href="running.html">Who's Running?</a>
+          <a href="lookup.html">Find My Precinct</a>
+          <a href="methodology.html">Methodology</a>
+          <a href="about.html">About</a>
+          <a href="support.html">Support</a>
+        </div>
+        <div style="margin-top:12px;">Contact: nicholas.labriola@uri.edu · Last updated: June 2026 · University of Rhode Island research project</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const state = { chamber: "house", view: "general", selectedDistrict: null };
+    const geojsons = {};
+    let filingData = null;
+    let mapLayer = null;
+    let legend = null;
+    let selectedLayer = null;
+    let featureLayerByDistrict = {};
+
+    const geojsonFiles = {
+      house: "data/house_new.geojson",
+      senate: "data/senate_new.geojson"
+    };
+
+    const generalFill = {
+      both_major: "#7c3aed",
+      dem_only: "#4f7cff",
+      rep_only: "#ff6b6b",
+      other_only: "#14b8a6",
+      no_filing: "#d7deea"
+    };
+
+    const generalStroke = {
+      both_major: "#5b21b6",
+      dem_only: "#1d4ed8",
+      rep_only: "#b91c1c",
+      other_only: "#0f766e",
+      no_filing: "#94a3b8"
+    };
+
+    const primaryStroke = {
+      both_primaries: "#6d28d9",
+      dem_primary: "#1d4ed8",
+      rep_primary: "#b91c1c",
+      no_primary: "#64748b",
+      no_filing: "#94a3b8"
+    };
+
+    const primaryFill = {
+      both_primaries: "#7c3aed",
+      dem_primary: "#3b82f6",
+      rep_primary: "#ef4444",
+      no_primary: "#e2e8f0",
+      no_filing: "#f8fafc"
+    };
+
+    const map = L.map("runningMap", {
+      zoomControl: true,
+      scrollWheelZoom: false,
+      minZoom: 7,
+      maxZoom: 11
+    }).setView([41.70, -71.55], 8.4);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 18,
+      opacity: 0.42,
+      attribution: "&copy; OpenStreetMap contributors"
+    }).addTo(map);
+
+    const loading = L.control({ position: "topleft" });
+    loading.onAdd = function () {
+      const div = L.DomUtil.create("div", "loading-card");
+      div.id = "loadingCard";
+      div.textContent = "Loading 2026 filing map...";
+      return div;
+    };
+    loading.addTo(map);
+
+    function fetchJson(url) {
+      return fetch(url).then(r => {
+        if (!r.ok) throw new Error(`Failed to load ${url}`);
+        return r.json();
+      });
+    }
+
+    function normalizeDistrict(value) {
+      if (value === null || value === undefined) return null;
+      const match = String(value).match(/\d+/);
+      return match ? Number(match[0]) : null;
+    }
+
+    function getFeatureDistrict(feature) {
+      const props = feature.properties || {};
+      return normalizeDistrict(
+        props.district_number ??
+        props.DIST_NUM ??
+        props.SLDUST ??
+        props.DISTRICT ??
+        props.District ??
+        props.NAME ??
+        props.NAMELSAD
+      );
+    }
+
+    function getDistrictData(chamber, district) {
+      return filingData?.chambers?.[chamber]?.[String(district)] || null;
+    }
+
+    function getSummary(chamber) {
+      return filingData?.summary?.[chamber] || null;
+    }
+
+    function districtStyle(record) {
+      if (!record) {
+        return { color: "#94a3b8", weight: 1.2, fillColor: "#e2e8f0", fillOpacity: 0.45 };
+      }
+
+      if (state.view === "general") {
+        return {
+          color: primaryStroke[record.primary_status] || generalStroke[record.general_status] || "#64748b",
+          weight: record.primary_status !== "no_primary" && record.primary_status !== "no_filing" ? 3.2 : 1.8,
+          opacity: 1,
+          fillColor: generalFill[record.general_status] || "#d7deea",
+          fillOpacity: record.candidate_total ? 0.64 : 0.26
+        };
+      }
+
+      return {
+        color: primaryStroke[record.primary_status] || "#64748b",
+        weight: record.primary_status !== "no_primary" && record.primary_status !== "no_filing" ? 3.4 : 1.8,
+        opacity: 1,
+        fillColor: primaryFill[record.primary_status] || "#e2e8f0",
+        fillOpacity: record.primary_status === "no_filing" ? 0.18 : 0.72
+      };
+    }
+
+    function setSummaryCards() {
+      const summary = getSummary(state.chamber);
+      if (!summary) return;
+      document.getElementById("summaryFiled").textContent = summary.districts_with_filings;
+      document.getElementById("summaryMatchups").textContent = summary.both_major_parties_filed;
+      document.getElementById("summaryPrimaries").textContent = summary.districts_with_primary_activity;
+    }
+
+    function setDetail(record) {
+      const title = document.getElementById("detailTitle");
+      const copy = document.getElementById("detailCopy");
+      const general = document.getElementById("detailGeneral");
+      const primary = document.getElementById("detailPrimary");
+      const list = document.getElementById("candidateList");
+
+      if (!record) {
+        title.textContent = "Select a district";
+        copy.textContent = "Tap any House or Senate district on the map to see who has filed, whether a primary is forming, and how the current filing picture looks for the general election.";
+        general.textContent = "No district selected";
+        primary.textContent = "No district selected";
+        list.innerHTML = "";
+        return;
+      }
+
+      title.textContent = `${state.chamber === "house" ? "House" : "Senate"} District ${record.district_number}`;
+      copy.textContent = record.candidate_total
+        ? `${record.candidate_total} candidate${record.candidate_total === 1 ? "" : "s"} currently listed in the filing sheet for this district.`
+        : "No candidate filing appears in the current worksheet for this district yet.";
+      general.textContent = record.general_label;
+      primary.textContent = record.primary_label;
+
+      if (!record.candidates.length) {
+        list.innerHTML = `<div class="candidate-item"><div class="candidate-name">No filing listed yet</div><div class="candidate-note">This district does not appear in the current worksheet.</div></div>`;
+        return;
+      }
+
+      list.innerHTML = record.candidates.map(candidate => `
+        <div class="candidate-item">
+          <div class="candidate-top">
+            <div class="candidate-name">${candidate.name}</div>
+            <div class="candidate-party">${candidate.party_label}</div>
+          </div>
+          <div class="candidate-note">${candidate.incumbent ? "Incumbent marker included in source sheet." : "Candidate listed in current filing sheet."}</div>
+        </div>
+      `).join("");
+    }
+
+    function updateSelectedButton() {
+      document.querySelectorAll(".district-button").forEach(btn => {
+        btn.classList.toggle("active", Number(btn.dataset.district) === state.selectedDistrict);
+      });
+    }
+
+    function focusDistrict(district) {
+      state.selectedDistrict = district;
+      const layer = featureLayerByDistrict[district];
+      const record = getDistrictData(state.chamber, district);
+
+      if (selectedLayer && mapLayer) {
+        mapLayer.resetStyle(selectedLayer);
+      }
+
+      if (layer) {
+        selectedLayer = layer;
+        layer.setStyle({
+          ...districtStyle(record),
+          weight: Math.max((districtStyle(record).weight || 2) + 1.2, 3.4),
+          color: "#0f172a"
+        });
+      }
+
+      setDetail(record);
+      updateSelectedButton();
+    }
+
+    function buildLegend() {
+      if (legend) map.removeControl(legend);
+      legend = L.control({ position: "bottomright" });
+      legend.onAdd = function () {
+        const div = L.DomUtil.create("div", "legend-box");
+        if (state.view === "general") {
+          div.innerHTML = `
+            <div class="legend-title">General outlook</div>
+            <div class="legend-row"><span class="swatch" style="background:${generalFill.both_major};border-color:${generalStroke.both_major}"></span>Both major parties filed</div>
+            <div class="legend-row"><span class="swatch" style="background:${generalFill.dem_only};border-color:${generalStroke.dem_only}"></span>Democratic only</div>
+            <div class="legend-row"><span class="swatch" style="background:${generalFill.rep_only};border-color:${generalStroke.rep_only}"></span>Republican only</div>
+            <div class="legend-row"><span class="swatch" style="background:${generalFill.no_filing};border-color:${generalStroke.no_filing}"></span>No filing in current sheet</div>
+            <div class="legend-title" style="margin-top:12px;">Primary outline</div>
+            <div class="legend-row"><span class="swatch" style="background:#fff;border-color:${primaryStroke.dem_primary}"></span>Democratic primary</div>
+            <div class="legend-row"><span class="swatch" style="background:#fff;border-color:${primaryStroke.rep_primary}"></span>Republican primary</div>
+          `;
+        } else {
+          div.innerHTML = `
+            <div class="legend-title">Primary watch</div>
+            <div class="legend-row"><span class="swatch" style="background:${primaryFill.dem_primary};border-color:${primaryStroke.dem_primary}"></span>Democratic primary underway</div>
+            <div class="legend-row"><span class="swatch" style="background:${primaryFill.rep_primary};border-color:${primaryStroke.rep_primary}"></span>Republican primary underway</div>
+            <div class="legend-row"><span class="swatch" style="background:${primaryFill.no_primary};border-color:${primaryStroke.no_primary}"></span>Filed, no active primary</div>
+            <div class="legend-row"><span class="swatch" style="background:${primaryFill.no_filing};border-color:${primaryStroke.no_filing}"></span>No filing in current sheet</div>
+          `;
+        }
+        return div;
+      };
+      legend.addTo(map);
+    }
+
+    function renderDistrictBrowser() {
+      const grid = document.getElementById("districtGrid");
+      const chamberData = filingData?.chambers?.[state.chamber] || {};
+      const filed = Object.values(chamberData)
+        .filter(record => record.candidate_total > 0)
+        .sort((a, b) => a.district_number - b.district_number);
+
+      if (!filed.length) {
+        grid.innerHTML = `<div class="candidate-item" style="grid-column:1 / -1;">No districts with filings yet in the current sheet.</div>`;
+        return;
+      }
+
+      grid.innerHTML = filed.map(record => `
+        <button class="district-button${state.selectedDistrict === record.district_number ? " active" : ""}" type="button" data-district="${record.district_number}">
+          <div class="district-button-top">
+            <span>District ${record.district_number}</span>
+            <span>${record.candidate_total} filed</span>
+          </div>
+          <div class="district-button-name">${record.general_label}</div>
+          <div class="district-button-detail">${record.primary_label}</div>
+        </button>
+      `).join("");
+
+      grid.querySelectorAll(".district-button").forEach(button => {
+        button.addEventListener("click", () => focusDistrict(Number(button.dataset.district)));
+      });
+    }
+
+    function renderMap() {
+      featureLayerByDistrict = {};
+      const geo = geojsons[state.chamber];
+      if (!geo) return;
+
+      if (mapLayer) map.removeLayer(mapLayer);
+      mapLayer = L.geoJSON(geo, {
+        style: feature => districtStyle(getDistrictData(state.chamber, getFeatureDistrict(feature))),
+        onEachFeature: (feature, layer) => {
+          const district = getFeatureDistrict(feature);
+          if (!district) return;
+          featureLayerByDistrict[district] = layer;
+          const record = getDistrictData(state.chamber, district);
+          layer.bindTooltip(`${state.chamber === "house" ? "House" : "Senate"} District ${district}`, { sticky: true });
+          layer.on("click", () => focusDistrict(district));
+          if (record?.candidate_total) {
+            layer.bindPopup(`
+              <strong>${state.chamber === "house" ? "House" : "Senate"} District ${district}</strong><br/>
+              ${record.general_label}<br/>
+              ${record.primary_label}
+            `);
+          }
+        }
+      }).addTo(map);
+
+      map.fitBounds(mapLayer.getBounds(), { padding: [22, 22] });
+      buildLegend();
+      setSummaryCards();
+      renderDistrictBrowser();
+      setDetail(state.selectedDistrict ? getDistrictData(state.chamber, state.selectedDistrict) : null);
+      if (state.selectedDistrict && featureLayerByDistrict[state.selectedDistrict]) {
+        focusDistrict(state.selectedDistrict);
+      }
+    }
+
+    async function boot() {
+      try {
+        const [data, houseGeo, senateGeo] = await Promise.all([
+          fetchJson("data/whos_running_2026.json"),
+          fetchJson(geojsonFiles.house),
+          fetchJson(geojsonFiles.senate)
+        ]);
+
+        filingData = data;
+        geojsons.house = houseGeo;
+        geojsons.senate = senateGeo;
+
+        document.getElementById("loadingCard")?.remove();
+
+        document.querySelectorAll("#chamberButtons button").forEach(button => {
+          button.classList.toggle("active", button.dataset.chamber === state.chamber);
+          button.addEventListener("click", () => {
+            state.chamber = button.dataset.chamber;
+            state.selectedDistrict = null;
+            document.querySelectorAll("#chamberButtons button").forEach(btn => btn.classList.toggle("active", btn === button));
+            renderMap();
+          });
+        });
+
+        document.querySelectorAll("#viewButtons button").forEach(button => {
+          button.classList.toggle("active", button.dataset.view === state.view);
+          button.addEventListener("click", () => {
+            state.view = button.dataset.view;
+            document.querySelectorAll("#viewButtons button").forEach(btn => btn.classList.toggle("active", btn === button));
+            renderMap();
+          });
+        });
+
+        renderMap();
+      } catch (error) {
+        const card = document.getElementById("loadingCard");
+        if (card) {
+          card.innerHTML = `Could not load the filing map.<br/><span style="display:block;margin-top:8px;font-size:13px;color:#64748b;font-weight:700;">${error.message}</span>`;
+        }
+        console.error(error);
+      }
+    }
+
+    boot();
+  </script>
+</body>
+</html>
