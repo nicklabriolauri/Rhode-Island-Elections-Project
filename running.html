@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Who's Running? | Rhode Island Elections Project</title>
-  <meta name="description" content="Track 2026 Rhode Island primary filings across State House and State Senate districts, including where same-party contests are already forming before the September primary." />
+  <meta name="description" content="Track who has filed for the September 9, 2026 Rhode Island primary in State House and State Senate districts, including where same-party nomination contests are underway." />
   <meta property="og:title" content="Who's Running? | Rhode Island Elections Project" />
-  <meta property="og:description" content="Track 2026 Rhode Island primary filings, district activity, and same-party contests before the September primary." />
+  <meta property="og:description" content="Track who has filed for the September 9, 2026 Rhode Island primary and where same-party nomination contests are underway." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.rhodeislandelectionsproject.org/running.html" />
   <meta property="og:site_name" content="Rhode Island Elections Project" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Who's Running? | Rhode Island Elections Project" />
-  <meta name="twitter:description" content="Track 2026 Rhode Island primary filings, district activity, and same-party contests before the September primary." />
+  <meta name="twitter:description" content="Track who has filed for the September 9, 2026 Rhode Island primary and where same-party nomination contests are underway." />
   <link rel="canonical" href="https://www.rhodeislandelectionsproject.org/running.html" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
@@ -589,7 +589,7 @@
         <img src="riep-logo-sunburst-white.png" alt="Rhode Island Elections Project logo" />
         <div>
           <h1>Rhode Island Elections Project</h1>
-          <p>Track 2026 primary filings for Rhode Island State House and State Senate districts, including where Democratic or Republican nomination contests are taking shape before September 9.</p>
+          <p>Track who has filed for the September 9, 2026 Rhode Island primary in State House and State Senate districts, including where Democratic or Republican nomination contests are taking shape.</p>
         </div>
       </div>
       <nav class="site-nav">
@@ -610,7 +610,7 @@
         <div>
           <div class="hero-eyebrow">2026 Rhode Island Primary</div>
           <h2>See who’s running across Rhode Island.</h2>
-          <div class="hero-lead">This page tracks who has filed so far for the September 9, 2026 Rhode Island primary and highlights where Democratic or Republican nomination contests are already taking shape.</div>
+          <div class="hero-lead">This page tracks who has filed so far for the September 9, 2026 Rhode Island primary and highlights where same-party nomination contests are already forming.</div>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#running-map-anchor">Open filing map</a>
             <a class="btn btn-secondary" href="#district-browser">Browse filed districts</a>
@@ -640,7 +640,7 @@
         </div>
       </div>
       <div class="hero-note">
-        <strong>Primary first:</strong> this page is focused on the September 9 primary. The general-election picture remains pending until primary day decides each party's nominee in contested districts.
+        <strong>Primary first:</strong> this page is focused on who has filed for the September 9 primary ballot. The November general-election matchup remains pending until primary day determines each party's nominee in contested districts.
       </div>
     </section>
 
@@ -654,8 +654,8 @@
           </div>
         </div>
         <div class="chip-bar">
-          <div class="chip"><strong>Primary:</strong> deep blue or red marks an active Democratic or Republican contest.</div>
-          <div class="chip"><strong>Filed seats:</strong> blue, red, or purple still show party filing status even where no primary is active yet.</div>
+          <div class="chip"><strong>Fill color:</strong> who has filed for the September 9 primary ballot in each district.</div>
+          <div class="chip"><strong>Border:</strong> whether a same-party primary contest is currently active.</div>
           <div class="chip"><strong>General election:</strong> pending the September 9 primary.</div>
           <div class="chip"><strong>Boundaries:</strong> current House and Senate districts.</div>
         </div>
@@ -665,10 +665,10 @@
       <aside class="detail-card">
         <div class="detail-eyebrow">District detail</div>
         <div class="detail-title" id="detailTitle">Select a district</div>
-        <div class="detail-copy" id="detailCopy">Tap any House or Senate district on the map to see who has filed so far, whether a same-party primary is forming, and which candidates are currently on the primary ballot.</div>
+        <div class="detail-copy" id="detailCopy">Tap any House or Senate district on the map to see who has filed for the September 9 primary ballot, whether a same-party nomination contest is underway, and which general-election pairing is still pending primary day.</div>
         <div class="detail-statuses">
           <div class="status-card">
-            <h3>Primary field</h3>
+            <h3>Filed for September 9</h3>
             <p id="detailGeneral">No district selected</p>
           </div>
           <div class="status-card">
@@ -682,7 +682,7 @@
 
     <section class="district-browser" id="district-browser">
       <h3>Filed districts before September 9</h3>
-      <p>Use the district list if you want to jump directly to seats with filed candidates instead of browsing the full primary map.</p>
+      <p>Use the district list if you want to jump directly to districts where candidates have filed for the September 9 primary ballot.</p>
       <div class="district-grid" id="districtGrid"></div>
     </section>
   </main>
@@ -690,7 +690,7 @@
   <footer>
     <div class="site-footer">
       <div>
-        <img src="riep-logo-light.png" alt="Rhode Island Elections Project logo" />
+        <img src="riep-logo-sunburst-white.png" alt="Rhode Island Elections Project logo" />
         <div style="margin-top:10px; max-width:640px;">Rhode Island Elections Project is a public-facing interface for Rhode Island legislative elections, turnout geography, precinct lookup, candidate filing status, and election accessibility.</div>
       </div>
       <div>
@@ -726,8 +726,8 @@
       both_major: "#7c3aed",
       dem_only: "#4f7cff",
       rep_only: "#ff6b6b",
-      other_only: "#14b8a6",
-      no_filing: "#d7deea"
+      other_only: "#0f766e",
+      no_filing: "#eef2f7"
     };
 
     const generalStroke = {
@@ -739,7 +739,7 @@
     };
 
     const primaryStroke = {
-      both_primaries: "#6d28d9",
+      both_primaries: "#4c1d95",
       dem_primary: "#1d4ed8",
       rep_primary: "#b91c1c",
       no_primary: "#64748b",
@@ -747,7 +747,7 @@
     };
 
     const primaryFill = {
-      both_primaries: "#7c3aed",
+      both_primaries: "#8b5cf6",
       dem_primary: "#2563eb",
       rep_primary: "#dc2626",
       no_primary: "#e2e8f0",
@@ -756,9 +756,9 @@
 
     const filingTint = {
       both_major: "#8b5cf6",
-      dem_only: "#3b82f6",
-      rep_only: "#ef4444",
-      other_only: "#ccfbf1",
+      dem_only: "#2563eb",
+      rep_only: "#dc2626",
+      other_only: "#14b8a6",
       no_filing: "#f8fafc"
     };
 
@@ -863,17 +863,11 @@
       }
 
       return {
-        color:
-          record.primary_status !== "no_primary" && record.primary_status !== "no_filing"
-            ? (primaryStroke[record.primary_status] || "#64748b")
-            : (filingStroke[record.general_status] || "#64748b"),
-        weight: record.primary_status !== "no_primary" && record.primary_status !== "no_filing" ? 3.6 : 2.1,
+        color: primaryStroke[record.primary_status] || "#64748b",
+        weight: record.primary_status !== "no_primary" && record.primary_status !== "no_filing" ? 3.8 : 2.2,
         opacity: 1,
-        fillColor:
-          record.primary_status !== "no_primary" && record.primary_status !== "no_filing"
-            ? (primaryFill[record.primary_status] || "#e2e8f0")
-            : (filingTint[record.general_status] || "#e2e8f0"),
-        fillOpacity: record.primary_status === "no_filing" ? 0.18 : (record.primary_status === "no_primary" ? 0.62 : 0.76)
+        fillColor: filingTint[record.general_status] || "#e2e8f0",
+        fillOpacity: record.primary_status === "no_filing" ? 0.12 : 0.78
       };
     }
 
@@ -893,7 +887,7 @@
 
       if (!record) {
         title.textContent = "Select a district";
-        copy.textContent = "Tap any House or Senate district on the map to see who has filed so far, whether a same-party primary is forming, and which candidates are currently on the primary ballot.";
+        copy.textContent = "Tap any House or Senate district on the map to see who has filed for the September 9 primary ballot, whether a same-party nomination contest is underway, and which general-election matchup remains pending primary day.";
         general.textContent = "No district selected";
         primary.textContent = "No district selected";
         list.innerHTML = "";
@@ -902,7 +896,7 @@
 
       title.textContent = `${state.chamber === "house" ? "House" : "Senate"} District ${record.district_number}`;
       copy.textContent = record.candidate_total
-        ? `${record.candidate_total} candidate${record.candidate_total === 1 ? "" : "s"} currently listed in the filing sheet for this district.`
+        ? `${record.candidate_total} candidate${record.candidate_total === 1 ? "" : "s"} currently listed for the September 9 primary ballot in this district.`
         : "No candidate filing appears in the current worksheet for this district yet.";
       general.textContent = record.general_label;
       primary.textContent = buildPrimaryContestLabel(record);
@@ -964,7 +958,7 @@
       if ((byParty.REP || []).length > 1) contestLabels.push(`Republican primary: ${byParty.REP.join(" vs ")}`);
       if ((byParty.IND || []).length > 1) contestLabels.push(`Independent contest: ${byParty.IND.join(" vs ")}`);
 
-      return contestLabels.length ? contestLabels.join(" · ") : "No active primary in current filings";
+      return contestLabels.length ? contestLabels.join(" · ") : "No same-party primary contest in current filings";
     }
 
     function buildLegend() {
@@ -974,11 +968,11 @@
         const div = L.DomUtil.create("div", "legend-box");
         div.innerHTML = `
           <div class="legend-title">Primary watch</div>
-          <div class="legend-row"><span class="swatch" style="background:${primaryFill.dem_primary};border-color:${primaryStroke.dem_primary}"></span>Democratic primary underway</div>
-          <div class="legend-row"><span class="swatch" style="background:${primaryFill.rep_primary};border-color:${primaryStroke.rep_primary}"></span>Republican primary underway</div>
-          <div class="legend-row"><span class="swatch" style="background:${filingTint.dem_only};border-color:${filingStroke.dem_only}"></span>Democratic filed, no primary yet</div>
-          <div class="legend-row"><span class="swatch" style="background:${filingTint.rep_only};border-color:${filingStroke.rep_only}"></span>Republican filed, no primary yet</div>
-          <div class="legend-row"><span class="swatch" style="background:${filingTint.both_major};border-color:${filingStroke.both_major}"></span>Both parties filed, no primary yet</div>
+          <div class="legend-row"><span class="swatch" style="background:${filingTint.dem_only};border-color:${primaryStroke.dem_primary}"></span>Democratic filing only · active Democratic primary</div>
+          <div class="legend-row"><span class="swatch" style="background:${filingTint.rep_only};border-color:${primaryStroke.rep_primary}"></span>Republican filing only · active Republican primary</div>
+          <div class="legend-row"><span class="swatch" style="background:${filingTint.dem_only};border-color:${primaryStroke.no_primary}"></span>Democratic filing only · no primary yet</div>
+          <div class="legend-row"><span class="swatch" style="background:${filingTint.rep_only};border-color:${primaryStroke.no_primary}"></span>Republican filing only · no primary yet</div>
+          <div class="legend-row"><span class="swatch" style="background:${filingTint.both_major};border-color:${primaryStroke.no_primary}"></span>Both parties filed · November matchup pending Sept. 9</div>
           <div class="legend-row"><span class="swatch" style="background:${primaryFill.no_filing};border-color:${primaryStroke.no_filing}"></span>No filing in current sheet</div>
         `;
         return div;
