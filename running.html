@@ -654,10 +654,8 @@
           </div>
         </div>
         <div class="chip-bar">
-          <div class="chip"><strong>Fill color:</strong> who has filed for the September 9 primary ballot in each district.</div>
-          <div class="chip"><strong>Border:</strong> whether a same-party primary contest is currently active.</div>
-          <div class="chip"><strong>General election:</strong> pending the September 9 primary.</div>
-          <div class="chip"><strong>Boundaries:</strong> current House and Senate districts.</div>
+          <div class="chip"><strong>Filed candidates:</strong> blue = Democratic filing, red = Republican filing, purple = both parties filed.</div>
+          <div class="chip"><strong>Competitive primary:</strong> highlighted border = more than one candidate filed within the same party.</div>
         </div>
         <div id="runningMap" aria-label="Rhode Island candidate filing map"></div>
       </div>
@@ -665,7 +663,7 @@
       <aside class="detail-card">
         <div class="detail-eyebrow">District detail</div>
         <div class="detail-title" id="detailTitle">Select a district</div>
-        <div class="detail-copy" id="detailCopy">Tap any House or Senate district on the map to see who has filed for the September 9 primary ballot, whether a same-party nomination contest is underway, and which general-election pairing is still pending primary day.</div>
+        <div class="detail-copy" id="detailCopy">Tap any House or Senate district on the map to see who has filed for the September 9 primary ballot and whether a competitive same-party primary is underway.</div>
         <div class="detail-statuses">
           <div class="status-card">
             <h3>Filed for September 9</h3>
@@ -739,9 +737,9 @@
     };
 
     const primaryStroke = {
-      both_primaries: "#4c1d95",
-      dem_primary: "#1d4ed8",
-      rep_primary: "#b91c1c",
+      both_primaries: "#b45309",
+      dem_primary: "#b45309",
+      rep_primary: "#b45309",
       no_primary: "#64748b",
       no_filing: "#94a3b8"
     };
@@ -847,13 +845,13 @@
 
       if (days > 0) {
         countdown.textContent = days;
-        copy.textContent = `Primary Day: ${formatted}`;
+        copy.textContent = `Rhode Island primary: ${formatted}`;
       } else if (days === 0) {
         countdown.textContent = "Today";
-        copy.textContent = `Primary Day: ${formatted}`;
+        copy.textContent = `Rhode Island primary: ${formatted}`;
       } else {
         countdown.textContent = "Done";
-        copy.textContent = `Primary Day was ${formatted}`;
+        copy.textContent = `Rhode Island primary was ${formatted}`;
       }
     }
 
@@ -887,7 +885,7 @@
 
       if (!record) {
         title.textContent = "Select a district";
-        copy.textContent = "Tap any House or Senate district on the map to see who has filed for the September 9 primary ballot, whether a same-party nomination contest is underway, and which general-election matchup remains pending primary day.";
+        copy.textContent = "Tap any House or Senate district on the map to see who has filed for the September 9 primary ballot and whether a competitive same-party primary is underway.";
         general.textContent = "No district selected";
         primary.textContent = "No district selected";
         list.innerHTML = "";
@@ -967,13 +965,13 @@
       legend.onAdd = function () {
         const div = L.DomUtil.create("div", "legend-box");
         div.innerHTML = `
-          <div class="legend-title">Primary watch</div>
-          <div class="legend-row"><span class="swatch" style="background:${filingTint.dem_only};border-color:${primaryStroke.dem_primary}"></span>Democratic filing only · active Democratic primary</div>
-          <div class="legend-row"><span class="swatch" style="background:${filingTint.rep_only};border-color:${primaryStroke.rep_primary}"></span>Republican filing only · active Republican primary</div>
-          <div class="legend-row"><span class="swatch" style="background:${filingTint.dem_only};border-color:${primaryStroke.no_primary}"></span>Democratic filing only · no primary yet</div>
-          <div class="legend-row"><span class="swatch" style="background:${filingTint.rep_only};border-color:${primaryStroke.no_primary}"></span>Republican filing only · no primary yet</div>
-          <div class="legend-row"><span class="swatch" style="background:${filingTint.both_major};border-color:${primaryStroke.no_primary}"></span>Both parties filed · November matchup pending Sept. 9</div>
+          <div class="legend-title">Filed for the primary</div>
+          <div class="legend-row"><span class="swatch" style="background:${filingTint.dem_only};border-color:${primaryStroke.no_primary}"></span>Democratic candidates filed</div>
+          <div class="legend-row"><span class="swatch" style="background:${filingTint.rep_only};border-color:${primaryStroke.no_primary}"></span>Republican candidates filed</div>
+          <div class="legend-row"><span class="swatch" style="background:${filingTint.both_major};border-color:${primaryStroke.no_primary}"></span>Both parties filed</div>
           <div class="legend-row"><span class="swatch" style="background:${primaryFill.no_filing};border-color:${primaryStroke.no_filing}"></span>No filing in current sheet</div>
+          <div class="legend-title" style="margin-top:14px;">Competitive primary</div>
+          <div class="legend-row"><span class="swatch" style="background:#ffffff;border-color:${primaryStroke.dem_primary}"></span>Gold border = more than one candidate filed within the same party</div>
         `;
         return div;
       };
