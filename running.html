@@ -388,10 +388,27 @@
       gap: 10px;
     }
     .status-card {
+      position: relative;
       padding: 12px 14px;
       border-radius: 16px;
       background: #f8fafc;
       border: 1px solid #e2e8f0;
+      overflow: hidden;
+    }
+    .status-card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #94a3b8;
+    }
+    .party-status.dem-status::before {
+      background: var(--dem-deep);
+    }
+    .party-status.rep-status::before {
+      background: var(--rep-deep);
     }
     .status-card h3 {
       margin: 0;
@@ -406,6 +423,20 @@
       font-size: 15px;
       line-height: 1.45;
       font-weight: 800;
+    }
+    .status-meta {
+      margin-top: 8px;
+      font-size: 13px;
+      line-height: 1.45;
+      color: #475569;
+      font-weight: 700;
+    }
+    .status-vs {
+      margin-top: 6px;
+      font-size: 14px;
+      line-height: 1.45;
+      color: var(--ink);
+      font-weight: 900;
     }
     .candidate-list {
       margin-top: 16px;
@@ -555,6 +586,43 @@
       font-weight: 800;
       color: var(--ink);
     }
+    .ballot-info {
+      margin-top: 16px;
+      padding: 14px 15px;
+      border-radius: 18px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+    }
+    .ballot-info-title {
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #64748b;
+    }
+    .ballot-info-list {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: #475569;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+    .ballot-info-links {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .ballot-info-links a {
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 900;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid #dbe3ef;
+    }
     footer {
       max-width: 1240px;
       margin: 0 auto;
@@ -636,7 +704,7 @@
   <header>
     <div class="header-shell">
       <div class="brand">
-        <img src="riep-logo-transparent.png" alt="Rhode Island Elections Project logo" />
+        <img src="riep-logo-sunburst-white.png" alt="Rhode Island Elections Project logo" />
         <div>
           <h1>Rhode Island Elections Project</h1>
           <p>Track who has filed for the September 9, 2026 Rhode Island primary in State House and State Senate districts, including where Democratic or Republican nomination contests are taking shape.</p>
@@ -713,18 +781,29 @@
       <aside class="detail-card">
         <div class="detail-eyebrow">District detail</div>
         <div class="detail-title" id="detailTitle">Select a district</div>
-        <div class="detail-copy" id="detailCopy">Tap any House or Senate district on the map to see who has filed for the September 9 primary ballot and whether a competitive same-party primary is underway.</div>
+        <div class="detail-copy" id="detailCopy">Tap any House or Senate district on the map to see who has filed for the September 9 primary ballot, whether either party has a competitive primary, and which candidates are currently listed.</div>
         <div class="detail-statuses">
-          <div class="status-card">
-            <h3>Filed for September 9</h3>
-            <p id="detailGeneral">No district selected</p>
+          <div class="status-card party-status dem-status">
+            <h3>Democratic primary</h3>
+            <p id="detailDemPrimary">No district selected</p>
           </div>
-          <div class="status-card">
-            <h3>Primary contest</h3>
-            <p id="detailPrimary">No district selected</p>
+          <div class="status-card party-status rep-status">
+            <h3>Republican primary</h3>
+            <p id="detailRepPrimary">No district selected</p>
           </div>
         </div>
         <div class="candidate-list" id="candidateList"></div>
+        <div class="ballot-info">
+          <div class="ballot-info-title">How to get on the ballot in Rhode Island</div>
+          <ul class="ballot-info-list">
+            <li>State legislative candidates qualify through Rhode Island filing and nomination-paper rules for the September 9, 2026 primary.</li>
+            <li>Deadlines and signature requirements can vary, so candidates should confirm the current totals with official state guidance before filing.</li>
+          </ul>
+          <div class="ballot-info-links">
+            <a href="https://vote.sos.ri.gov/" target="_blank" rel="noopener noreferrer">RI Department of State</a>
+            <a href="https://elections.ri.gov/" target="_blank" rel="noopener noreferrer">RI Board of Elections</a>
+          </div>
+        </div>
       </aside>
     </section>
 
@@ -738,7 +817,7 @@
   <footer>
     <div class="site-footer">
       <div>
-        <img src="riep-logo-sunburst-white.png" alt="Rhode Island Elections Project logo" />
+        <img src="riep-logo-transparent.png" alt="Rhode Island Elections Project logo" />
         <div style="margin-top:10px; max-width:640px;">Rhode Island Elections Project is a public-facing interface for Rhode Island legislative elections, turnout geography, precinct lookup, candidate filing status, and election accessibility.</div>
       </div>
       <div>
@@ -964,6 +1043,37 @@
       return null;
     }
 
+    function getPartyCandidates(record, party) {
+      return (record?.candidates || []).filter(candidate => candidate.party === party);
+    }
+
+    function buildPartyPrimaryHtml(record, party) {
+      const partyName = party === "DEM" ? "Democratic" : "Republican";
+      const candidates = getPartyCandidates(record, party);
+
+      if (!record) return "No district selected";
+      if (!candidates.length) {
+        return `
+          <div>No ${partyName.toLowerCase()} candidate filed yet</div>
+          <div class="status-meta">No ${partyName.toLowerCase()} filing appears in the current sheet for this district.</div>
+        `;
+      }
+
+      if (candidates.length === 1) {
+        return `
+          <div>1 ${partyName.toLowerCase()} candidate filed</div>
+          <div class="status-vs">${candidates[0].name}</div>
+          <div class="status-meta">No same-party primary contest in current filings.</div>
+        `;
+      }
+
+      return `
+        <span class="contest-badge">Competitive primary</span>
+        <div class="status-meta">${partyName} primary on September 9</div>
+        <div class="status-vs">${candidates.map(candidate => candidate.name).join(" vs ")}</div>
+      `;
+    }
+
     function setSummaryCards() {
       const summary = getSummary(state.chamber);
       if (!summary) return;
@@ -974,15 +1084,15 @@
     function setDetail(record) {
       const title = document.getElementById("detailTitle");
       const copy = document.getElementById("detailCopy");
-      const general = document.getElementById("detailGeneral");
-      const primary = document.getElementById("detailPrimary");
+      const demPrimary = document.getElementById("detailDemPrimary");
+      const repPrimary = document.getElementById("detailRepPrimary");
       const list = document.getElementById("candidateList");
 
       if (!record) {
         title.textContent = "Select a district";
-        copy.textContent = "Tap any House or Senate district on the map to see who has filed for the September 9 primary ballot and whether a competitive same-party primary is underway.";
-        general.textContent = "No district selected";
-        primary.textContent = "No district selected";
+        copy.textContent = "Tap any House or Senate district on the map to see who has filed for the September 9 primary ballot and whether either party has a competitive same-party primary.";
+        demPrimary.textContent = "No district selected";
+        repPrimary.textContent = "No district selected";
         list.innerHTML = "";
         return;
       }
@@ -991,8 +1101,8 @@
       copy.textContent = record.candidate_total
         ? `${record.candidate_total} candidate${record.candidate_total === 1 ? "" : "s"} currently listed for the September 9 primary ballot in this district.`
         : "No candidate filing appears in the current worksheet for this district yet.";
-      general.textContent = record.general_label;
-      primary.innerHTML = buildPrimaryContestHtml(record);
+      demPrimary.innerHTML = buildPartyPrimaryHtml(record, "DEM");
+      repPrimary.innerHTML = buildPartyPrimaryHtml(record, "REP");
 
       if (!record.candidates.length) {
         list.innerHTML = `<div class="candidate-item"><div class="candidate-name">No filing listed yet</div><div class="candidate-note">This district does not appear in the current worksheet.</div></div>`;
