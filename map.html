@@ -1395,24 +1395,142 @@ body.gender-mode .gender-overlay {
   display: block !important;
 }
 
+/* Interior page refresh */
+.interior-header {
+  padding: 18px 22px 16px;
+}
+.interior-header .header-shell {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 22px;
+  align-items: flex-start;
+}
+.interior-header .brand-block {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  min-width: 0;
+}
+.interior-header .brand-mark {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+.interior-header .page-kicker {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.62);
+}
+.interior-header .brand-copy h1 {
+  margin: 6px 0 0;
+  font-size: 30px;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.interior-header .brand-copy p {
+  margin: 8px 0 0;
+  max-width: 720px;
+  color: rgba(255,255,255,.84);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.interior-header .site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 2px;
+}
+.interior-header .site-nav a {
+  color: white;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,.3);
+  background: rgba(255,255,255,.07);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+  transition: background .15s ease, transform .15s ease, color .15s ease;
+}
+.interior-header .site-nav a:hover,
+.interior-header .site-nav a.active {
+  background: white;
+  color: var(--navy2);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(15,23,42,.18);
+}
+.controls {
+  min-height: 62px;
+  margin: 14px 22px 0;
+  padding: 14px 18px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  background: rgba(255,255,255,.96);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: 0 10px 24px rgba(15,23,42,.08);
+  flex-wrap: wrap;
+}
+.note {
+  margin: 10px 22px 14px;
+  padding: 11px 16px;
+  background: #faf7f0;
+  border: 1px solid #ead7b7;
+  border-radius: 16px;
+  color: #475569;
+  font-size: 13px;
+}
+.dashboard {
+  display: grid;
+  grid-template-columns: 250px minmax(420px, 1fr) 310px;
+  flex: 1;
+  min-height: 0;
+  margin: 0 22px 22px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(15,23,42,.08);
+  background: white;
+}
+@media (max-width: 1040px) {
+  .interior-header .header-shell {
+    flex-direction: column;
+  }
+  .interior-header .site-nav {
+    justify-content: flex-start;
+  }
+}
+
 </style>
 </head>
 <body>
-<header>
-  <h1>RIEP - Rhode Island Elections Project</h1>
-  <p>Interactive Rhode Island election results and turnout maps, 2012-2024.</p>
-  <div class="header-search-copy">
-    Explore Rhode Island elections through interactive results, legislative district maps, precinct-level turnout data, and transparent methodology, all covering elections from 2012 through 2024.
+<header class="interior-header">
+  <div class="header-shell">
+    <div class="brand-block">
+      <img class="brand-mark" src="riep-logo-sunburst-white.png" alt="Rhode Island Elections Project logo" />
+      <div class="brand-copy">
+        <div class="page-kicker">Interactive map</div>
+        <h1>Rhode Island Elections Project</h1>
+        <p>Interactive election results, turnout maps, and district views covering Rhode Island elections from 2012 through 2024.</p>
+      </div>
+    </div>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="map.html" class="active">Map</a>
+      <a href="running.html">Who's Running?</a>
+      <a href="lookup.html">Find My Precinct</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="about.html">About</a>
+      <a href="support.html">Support</a>
+    </nav>
   </div>
-  <nav class="site-nav">
-    <a href="index.html">Home</a>
-    <a href="map.html">Map</a>
-    <a href="running.html">Who's Running?</a>
-    <a href="lookup.html">Find My Precinct</a>
-    <a href="methodology.html">Methodology</a>
-    <a href="about.html">About</a>
-    <a href="support.html">Support</a>
-  </nav>
 </header>
 
 <div class="controls">

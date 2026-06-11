@@ -32,39 +32,73 @@ body {
   background: #f8fafc;
 }
 header {
-  padding: 18px 22px;
+  padding: 18px 22px 16px;
   color: white;
   background: linear-gradient(135deg, #0f172a 0%, #172554 100%);
 }
-header h1 {
-  margin: 0;
+.header-shell {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 22px;
+  align-items: flex-start;
+}
+.brand-block {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  min-width: 0;
+}
+.brand-mark {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+.page-kicker {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.62);
+}
+.brand-copy h1 {
+  margin: 6px 0 0;
   font-size: 28px;
   letter-spacing: -0.03em;
 }
-header p {
-  margin: 6px 0 0 0;
-  color: rgba(255,255,255,.88);
-  line-height: 1.35;
-  font-size: 15px;
+.brand-copy p {
+  margin: 8px 0 0;
+  color: rgba(255,255,255,.86);
+  line-height: 1.5;
+  font-size: 14px;
+  max-width: 620px;
 }
 .site-nav {
   display: flex;
   gap: 10px;
-  margin-top: 12px;
+  margin-top: 2px;
   flex-wrap: wrap;
+  justify-content: flex-end;
 }
 .site-nav a {
   color: white;
   text-decoration: none;
-  border: 1px solid rgba(255,255,255,.35);
+  border: 1px solid rgba(255,255,255,.3);
   border-radius: 999px;
-  padding: 6px 11px;
+  padding: 8px 14px;
   font-size: 13px;
   font-weight: 800;
-  background: rgba(255,255,255,.08);
+  background: rgba(255,255,255,.07);
+  transition: background .15s ease, transform .15s ease, color .15s ease;
 }
-.site-nav a:hover {
-  background: rgba(255,255,255,.16);
+.site-nav a:hover,
+.site-nav a.active {
+  background: white;
+  color: var(--navy);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(15,23,42,.18);
 }
 main {
   max-width: 980px;
@@ -133,21 +167,41 @@ ul {
 .site-footer-links a {
   font-weight: 700;
 }
+@media (max-width: 860px) {
+  .header-shell {
+    flex-direction: column;
+  }
+  .site-nav {
+    justify-content: flex-start;
+  }
+  .brand-mark {
+    width: 56px;
+    height: 56px;
+  }
+}
 </style>
 </head>
 <body>
 <header>
-  <h1>RIEP - Rhode Island Elections Project</h1>
-  <p><strong>Methodology</strong><br>Documentation for data sources, processing decisions, and replication files.</p>
-  <nav class="site-nav">
-    <a href="index.html">Home</a>
-    <a href="map.html">Map</a>
-    <a href="running.html">Who's Running?</a>
-    <a href="lookup.html">Find My Precinct</a>
-    <a href="methodology.html">Methodology</a>
-    <a href="about.html">About</a>
-    <a href="support.html">Support</a>
-  </nav>
+  <div class="header-shell">
+    <div class="brand-block">
+      <img class="brand-mark" src="riep-logo-sunburst-white.png" alt="Rhode Island Elections Project logo" />
+      <div class="brand-copy">
+        <div class="page-kicker">Methodology</div>
+        <h1>Rhode Island Elections Project</h1>
+        <p>Source notes, turnout calculations, district-boundary handling, and replication files for the project.</p>
+      </div>
+    </div>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="map.html">Map</a>
+      <a href="running.html">Who's Running?</a>
+      <a href="lookup.html">Find My Precinct</a>
+      <a href="methodology.html" class="active">Methodology</a>
+      <a href="about.html">About</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
 </header>
 
 <main>
