@@ -413,10 +413,22 @@
       gap: 10px;
     }
     .candidate-item {
+      position: relative;
       padding: 12px 14px;
       border-radius: 16px;
       border: 1px solid #e2e8f0;
       background: #fff;
+      overflow: hidden;
+    }
+    .candidate-item::before,
+    .district-button::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: var(--party-accent, var(--none-deep));
     }
     .candidate-top {
       display: flex;
@@ -433,6 +445,10 @@
       font-size: 13px;
       font-weight: 800;
       color: #475569;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
     }
     .candidate-note {
       margin-top: 6px;
@@ -465,6 +481,7 @@
       gap: 12px;
     }
     .district-button {
+      position: relative;
       border: 1px solid #dbe3ef;
       background: #fff;
       border-radius: 18px;
@@ -480,6 +497,11 @@
     .district-button.active {
       border-color: #4f7cff;
       box-shadow: 0 10px 24px rgba(79,124,255,.18);
+    }
+    .district-button.competitive {
+      border-color: rgba(180, 83, 9, .55);
+      box-shadow: 0 12px 28px rgba(180, 83, 9, .14);
+      background: linear-gradient(180deg, #fff 0%, #fffaf2 100%);
     }
     .district-button-top {
       display: flex;
@@ -504,6 +526,34 @@
       font-size: 13px;
       line-height: 1.45;
       color: #475569;
+    }
+    .contest-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 8px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: rgba(245, 158, 11, .12);
+      color: #92400e;
+      border: 1px solid rgba(180, 83, 9, .2);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .contest-meta {
+      margin-top: 8px;
+      font-size: 13px;
+      line-height: 1.45;
+      color: #475569;
+    }
+    .contest-name-list {
+      margin-top: 6px;
+      font-size: 14px;
+      line-height: 1.45;
+      font-weight: 800;
+      color: var(--ink);
     }
     footer {
       max-width: 1240px;
@@ -586,7 +636,7 @@
   <header>
     <div class="header-shell">
       <div class="brand">
-        <img src="riep-logo-sunburst-white.png" alt="Rhode Island Elections Project logo" />
+        <img src="riep-logo-transparent.png" alt="Rhode Island Elections Project logo" />
         <div>
           <h1>Rhode Island Elections Project</h1>
           <p>Track who has filed for the September 9, 2026 Rhode Island primary in State House and State Senate districts, including where Democratic or Republican nomination contests are taking shape.</p>
@@ -869,6 +919,51 @@
       };
     }
 
+    function getPartyAccent(record) {
+      if (!record) return "#94a3b8";
+      if (record.general_status === "dem_only") return "#2563eb";
+      if (record.general_status === "rep_only") return "#dc2626";
+      if (record.general_status === "both_major") return "#8b5cf6";
+      if (record.general_status === "other_only") return "#14b8a6";
+      return "#94a3b8";
+    }
+
+    function hasCompetitivePrimary(record) {
+      return ["dem_primary", "rep_primary", "both_primaries"].includes(record?.primary_status);
+    }
+
+    function buildPrimaryContestMeta(record) {
+      if (!record?.candidates?.length) return null;
+      const byParty = {};
+      record.candidates.forEach(candidate => {
+        byParty[candidate.party] = byParty[candidate.party] || [];
+        byParty[candidate.party].push(candidate.name);
+      });
+
+      if ((byParty.DEM || []).length > 1) {
+        return {
+          label: "Competitive primary",
+          party: "Democratic primary",
+          names: byParty.DEM
+        };
+      }
+      if ((byParty.REP || []).length > 1) {
+        return {
+          label: "Competitive primary",
+          party: "Republican primary",
+          names: byParty.REP
+        };
+      }
+      if ((byParty.IND || []).length > 1) {
+        return {
+          label: "Competitive primary",
+          party: "Independent contest",
+          names: byParty.IND
+        };
+      }
+      return null;
+    }
+
     function setSummaryCards() {
       const summary = getSummary(state.chamber);
       if (!summary) return;
@@ -897,7 +992,7 @@
         ? `${record.candidate_total} candidate${record.candidate_total === 1 ? "" : "s"} currently listed for the September 9 primary ballot in this district.`
         : "No candidate filing appears in the current worksheet for this district yet.";
       general.textContent = record.general_label;
-      primary.textContent = buildPrimaryContestLabel(record);
+      primary.innerHTML = buildPrimaryContestHtml(record);
 
       if (!record.candidates.length) {
         list.innerHTML = `<div class="candidate-item"><div class="candidate-name">No filing listed yet</div><div class="candidate-note">This district does not appear in the current worksheet.</div></div>`;
@@ -905,7 +1000,7 @@
       }
 
       list.innerHTML = record.candidates.map(candidate => `
-        <div class="candidate-item">
+        <div class="candidate-item" style="--party-accent:${candidate.party === "DEM" ? "#2563eb" : candidate.party === "REP" ? "#dc2626" : candidate.party === "IND" ? "#14b8a6" : "#8b5cf6"}">
           <div class="candidate-top">
             <div class="candidate-name">${candidate.name}</div>
             <div class="candidate-party">${candidate.party_label}</div>
@@ -944,19 +1039,20 @@
     }
 
     function buildPrimaryContestLabel(record) {
+      const meta = buildPrimaryContestMeta(record);
       if (!record?.candidates?.length) return "No filing listed in current sheet";
-      const byParty = {};
-      record.candidates.forEach(candidate => {
-        byParty[candidate.party] = byParty[candidate.party] || [];
-        byParty[candidate.party].push(candidate.name);
-      });
+      return meta ? `${meta.party}: ${meta.names.join(" vs ")}` : "No same-party primary contest in current filings";
+    }
 
-      const contestLabels = [];
-      if ((byParty.DEM || []).length > 1) contestLabels.push(`Democratic primary: ${byParty.DEM.join(" vs ")}`);
-      if ((byParty.REP || []).length > 1) contestLabels.push(`Republican primary: ${byParty.REP.join(" vs ")}`);
-      if ((byParty.IND || []).length > 1) contestLabels.push(`Independent contest: ${byParty.IND.join(" vs ")}`);
-
-      return contestLabels.length ? contestLabels.join(" · ") : "No same-party primary contest in current filings";
+    function buildPrimaryContestHtml(record) {
+      const meta = buildPrimaryContestMeta(record);
+      if (!record?.candidates?.length) return "No filing listed in current sheet";
+      if (!meta) return "No same-party primary contest in current filings";
+      return `
+        <span class="contest-badge">${meta.label}</span>
+        <div class="contest-meta">${meta.party}</div>
+        <div class="contest-name-list">${meta.names.join(" vs ")}</div>
+      `;
     }
 
     function buildLegend() {
@@ -991,12 +1087,13 @@
       }
 
       grid.innerHTML = filed.map(record => `
-        <button class="district-button${state.selectedDistrict === record.district_number ? " active" : ""}" type="button" data-district="${record.district_number}">
+        <button class="district-button${state.selectedDistrict === record.district_number ? " active" : ""}${hasCompetitivePrimary(record) ? " competitive" : ""}" type="button" data-district="${record.district_number}" style="--party-accent:${getPartyAccent(record)}">
           <div class="district-button-top">
             <span>District ${record.district_number}</span>
             <span>${record.candidate_total} filed</span>
           </div>
           <div class="district-button-name">${record.general_label}</div>
+          ${hasCompetitivePrimary(record) ? `<div class="contest-badge">Competitive primary</div>` : ``}
           <div class="district-button-detail">${buildPrimaryContestLabel(record)}</div>
         </button>
       `).join("");
