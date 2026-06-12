@@ -5,16 +5,9 @@
 (function () {
   var params = new URLSearchParams(window.location.search);
   var forcedView = params.get("view");
-  var requestedMode = params.get("mode");
-  if (forcedView === "desktop") return;
-
-  var prefersMobileViewport = window.matchMedia("(max-width: 760px)").matches;
-  var coarsePointer = window.matchMedia("(pointer: coarse)").matches;
-  var narrowScreen = Math.min(window.screen.width || 0, window.screen.height || 0) <= 900;
-  var shouldUseMobile = forcedView === "mobile" || prefersMobileViewport || (coarsePointer && narrowScreen);
   var isAlreadyMobile = /(^|\/)mobile\.html($|[?#])/i.test(window.location.pathname);
 
-  if (shouldUseMobile && !isAlreadyMobile && requestedMode !== "turnout") {
+  if (forcedView === "mobile" && !isAlreadyMobile) {
     var target = new URL("mobile.html", window.location.href);
     if (window.location.search) target.search = window.location.search;
     if (window.location.hash) target.hash = window.location.hash;
