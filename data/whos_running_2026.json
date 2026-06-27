@@ -1,8 +1,12 @@
 {
-  "generated_at": "2026-06-27T17:11:47.953028+00:00",
+  "generated_at": "2026-06-27T17:32:21.985515+00:00",
   "election_cycle": 2026,
   "source_file": "/Users/nicholaslabriola/Documents/New project/data/raw/2026-election-candidates.xlsx",
   "source_updated_at": "2026-06-10T08:55:07.285853+00:00",
+  "manual_cross_check_notes": [
+    "June 27, 2026 Ballotpedia cross-check provided in chat added House 18 Jessica Gomes and House 46 Mary Ann Shallcross-Smith (i).",
+    "Candidate spellings were normalized for Jacob Bissaillon, James Metivier, Meghan Kallman, and Jessica de la Cruz."
+  ],
   "chambers": {
     "house": {
       "1": {
@@ -204,13 +208,22 @@
       "18": {
         "chamber": "house",
         "district_number": 18,
-        "candidates": [],
-        "party_counts": {},
-        "candidate_total": 0,
-        "general_status": "no_filing",
-        "general_label": "No filing listed in current sheet",
-        "primary_status": "no_filing",
-        "primary_label": "No filing listed in current sheet"
+        "candidates": [
+          {
+            "name": "Jessica Gomes",
+            "party": "DEM",
+            "party_label": "Democratic",
+            "incumbent": false
+          }
+        ],
+        "party_counts": {
+          "DEM": 1
+        },
+        "candidate_total": 1,
+        "general_status": "dem_only",
+        "general_label": "Democratic candidates filed only",
+        "primary_status": "no_primary",
+        "primary_label": "No active primary in current filings"
       },
       "19": {
         "chamber": "house",
@@ -521,13 +534,22 @@
       "46": {
         "chamber": "house",
         "district_number": 46,
-        "candidates": [],
-        "party_counts": {},
-        "candidate_total": 0,
-        "general_status": "no_filing",
-        "general_label": "No filing listed in current sheet",
-        "primary_status": "no_filing",
-        "primary_label": "No filing listed in current sheet"
+        "candidates": [
+          {
+            "name": "Mary Ann Shallcross-Smith",
+            "party": "DEM",
+            "party_label": "Democratic",
+            "incumbent": true
+          }
+        ],
+        "party_counts": {
+          "DEM": 1
+        },
+        "candidate_total": 1,
+        "general_status": "dem_only",
+        "general_label": "Democratic candidates filed only",
+        "primary_status": "no_primary",
+        "primary_label": "No active primary in current filings"
       },
       "47": {
         "chamber": "house",
@@ -1111,7 +1133,7 @@
         "district_number": 19,
         "candidates": [
           {
-            "name": "James Metevier",
+            "name": "James Metivier",
             "party": "DEM",
             "party_label": "Democratic",
             "incumbent": false
@@ -1383,10 +1405,10 @@
   "summary": {
     "house": {
       "district_total": 75,
-      "districts_with_filings": 4,
-      "no_filing_reported": 71,
+      "districts_with_filings": 6,
+      "no_filing_reported": 69,
       "both_major_parties_filed": 1,
-      "democratic_only": 3,
+      "democratic_only": 5,
       "republican_only": 0,
       "districts_with_primary_activity": 0
     },
