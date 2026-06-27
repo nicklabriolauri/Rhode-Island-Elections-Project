@@ -1005,7 +1005,7 @@ body.riep-mobile-app{display:block;min-height:100dvh;overflow-x:hidden;overflow-
 .control-group{display:contents}.control-label{align-self:center;color:#64748b;font-size:14px;line-height:1.05;text-transform:uppercase;letter-spacing:.08em;font-weight:950}.segmented{justify-self:start;display:flex;background:#f1f5f9;border:1px solid #dbe3ef;border-radius:999px;padding:4px;gap:4px;box-shadow:inset 0 1px 2px rgba(15,23,42,.06)}.segmented button{border:0;border-radius:999px;background:transparent;color:#475569;padding:10px 20px;min-height:44px;font-size:17px;font-weight:900}.segmented button.active{background:#14265a;color:#fff;box-shadow:0 8px 18px rgba(20,38,90,.24)}
 #yearButtons,.year-timeline,.note,.mobile-hidden-note{display:none!important;visibility:hidden!important;width:0!important;height:0!important;overflow:hidden!important;position:absolute!important;left:-9999px!important}.mobile-select,select#viewSelect,select#mobileYearSelect{width:100%;min-width:0;min-height:48px;border:1px solid #dbe3ef;border-radius:999px;background:#fff;color:#0f172a;padding:0 44px 0 20px;font-size:17px!important;font-weight:850;box-shadow:0 3px 12px rgba(15,23,42,.07);appearance:auto}.era-badge{grid-column:1 / -1;justify-self:start;margin:4px 0 0 0;white-space:normal;border-radius:999px;background:#eef2ff;color:#3730a3;font-size:14px;font-weight:900;padding:10px 16px;max-width:100%}
 .mobile-results{flex:0 0 auto;margin:14px 16px 14px;display:grid;grid-template-columns:1fr 1.15fr 20px;gap:10px;align-items:center;background:#fff;border:1px solid #dbe3ef;border-radius:18px;padding:14px 14px 12px;box-shadow:0 6px 24px rgba(15,23,42,.08);position:relative;overflow:hidden}.mobile-results:before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:5px;border-radius:999px;background:linear-gradient(#2563eb,#60a5fa)}.mobile-results-left{padding-left:12px}.mobile-results-kicker{font-size:16px;font-weight:950;letter-spacing:-.03em;color:#0f172a}.mobile-results-meta{margin-top:4px;font-size:14px;color:#64748b;font-weight:750}.mobile-score{margin-top:16px;font-size:30px;line-height:1;font-weight:950;letter-spacing:-.05em;color:#0f172a}.score-dash{margin:0 8px;color:#334155}.score-labels{display:flex;gap:52px;margin-top:8px;font-size:13px;font-weight:950}.score-labels span:first-child{color:#2b6cb0}.score-labels span:last-child{color:#dc2626}.mobile-results-chart{min-width:0;text-align:center}.mini-arc{height:82px;max-width:170px;margin:0 auto;border-radius:170px 170px 0 0;background:conic-gradient(from 270deg,#2b6cb0 0deg,#2b6cb0 var(--dem-angle,180deg),#dc2626 var(--dem-angle,180deg),#dc2626 180deg,transparent 180deg);position:relative;overflow:hidden}.mini-arc:after{content:"";position:absolute;left:28%;right:28%;bottom:0;height:56%;border-radius:120px 120px 0 0;background:#fff}.mobile-total-seats{margin-top:4px;font-size:13px;color:#64748b;font-weight:800}.mobile-card-chevron{border:0;background:transparent;color:#94a3b8;font-size:36px;line-height:1;font-weight:300}
-.dashboard{display:block!important;position:relative;overflow:visible;background:#f8fafc;padding:0 16px 8px}.dashboard:before{content:none}#map{height:70vh!important;min-height:520px!important;max-height:860px!important;width:100%!important;background:#eef2f7!important;position:relative;border:1px solid #dbe3ef;border-radius:22px;box-shadow:0 8px 28px rgba(15,23,42,.08);overflow:hidden}.leaflet-container{font-family:Arial,Helvetica,sans-serif;border-radius:22px}.leaflet-tile-pane{filter:grayscale(95%) saturate(75%) contrast(96%)!important;opacity:.58!important}.leaflet-control-zoom{margin-left:16px!important;margin-top:16px!important;border:0!important;box-shadow:0 12px 28px rgba(15,23,42,.18)!important}.leaflet-control-zoom a{width:44px!important;height:44px!important;line-height:44px!important;font-size:24px!important;border-color:#e5e7eb!important}.legend{display:none!important}
+.dashboard{display:block!important;position:relative;overflow:visible;background:#f8fafc;padding:0 16px 8px}.dashboard:before{content:none}#map{height:70vh!important;min-height:520px!important;max-height:860px!important;width:100%!important;background:#eef2f7!important;position:relative;border:1px solid #dbe3ef;border-radius:22px;box-shadow:0 8px 28px rgba(15,23,42,.08);overflow:hidden;touch-action:pan-y!important}.leaflet-container{font-family:Arial,Helvetica,sans-serif;border-radius:22px;touch-action:pan-y!important}.leaflet-pane,.leaflet-top,.leaflet-bottom{touch-action:pan-y!important}.leaflet-tile-pane{filter:grayscale(95%) saturate(75%) contrast(96%)!important;opacity:.58!important}.leaflet-control-zoom{margin-left:16px!important;margin-top:16px!important;border:0!important;box-shadow:0 12px 28px rgba(15,23,42,.18)!important}.leaflet-control-zoom a{width:44px!important;height:44px!important;line-height:44px!important;font-size:24px!important;border-color:#e5e7eb!important}.legend{display:none!important}
 .map-loading-shell{position:absolute;inset:0;display:none;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(255,255,255,.76),rgba(248,250,252,.96));z-index:650;backdrop-filter:blur(3px)}
 .map-loading-shell.is-visible{display:flex}
 .map-loading-card{padding:18px 20px;border-radius:18px;background:rgba(255,255,255,.92);border:1px solid #dbe3ef;box-shadow:0 14px 34px rgba(15,23,42,.10);text-align:center;max-width:230px}
@@ -1041,6 +1041,13 @@ body.gender-mode #map{height:76vh!important;min-height:600px!important;max-heigh
 .mobile-detail-stack .gender-overlay .click-hint{font-size:12.5px;line-height:1.45}
 .mobile-detail-stack .gender-overlay .gender-bar{margin:12px 0 14px 0;height:12px}
 .mobile-detail-stack .gender-overlay .filter-clear{margin-top:12px;min-height:42px;padding:0 14px;border-radius:999px;font-size:13px;font-weight:800}
+.mobile-detail-stack .gender-overlay .party-filter-chips{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 14px 0}
+.mobile-detail-stack .gender-overlay .party-filter-chip{border:1px solid #dbe3ef;background:#fff;color:#334155;border-radius:999px;min-height:42px;padding:0 14px;font-size:13px;font-weight:850;box-shadow:0 4px 12px rgba(15,23,42,.06)}
+.mobile-detail-stack .gender-overlay .party-filter-chip.active{background:#14265a;color:#fff;border-color:#14265a;box-shadow:0 10px 24px rgba(20,38,90,.18)}
+.mobile-detail-stack .gender-overlay .mini-table-row.is-clickable{cursor:pointer;border-radius:12px;padding:10px 12px;margin:4px 0;transition:background .15s ease,box-shadow .15s ease,border-color .15s ease;border:1px solid transparent}
+.mobile-detail-stack .gender-overlay .mini-table-row.is-clickable:hover{background:#f8fafc;border-color:#dbe3ef}
+.mobile-detail-stack .gender-overlay .mini-table-row.is-clickable.active{background:#eff6ff;border-color:#93c5fd;box-shadow:0 8px 18px rgba(37,99,235,.10)}
+.mobile-detail-stack .gender-overlay .mini-table-row.is-dimmed{opacity:.48}
 @media (max-width:640px){.controls{grid-template-columns:1fr;gap:14px;padding:16px}.control-group{display:grid;gap:8px}.control-label{font-size:12px}.segmented{justify-self:stretch;width:100%}.segmented button{flex:1 1 0}.mobile-select,select#viewSelect,select#mobileYearSelect{width:100%}.era-badge{margin-top:2px}}
 @media (min-width:761px){body.riep-mobile-app{max-width:430px;margin:0 auto;box-shadow:0 0 0 1px #e5e7eb,0 20px 80px rgba(15,23,42,.16)}}
 @media (max-width:390px){.hero-topline{grid-template-columns:64px minmax(0,1fr);gap:14px}.hero-mark{width:64px;height:64px;border-radius:18px}.hero-mark img{padding:8px}.app-hero h1{font-size:26px}.app-hero p{font-size:14px}.controls{grid-template-columns:1fr;gap:12px}.control-group{display:grid;gap:8px}.control-label{font-size:12px}.segmented button{padding:9px 16px;font-size:15px}.mobile-select,select#viewSelect,select#mobileYearSelect{font-size:15px!important;min-height:45px}.mobile-score{font-size:26px}.mini-arc{height:70px}.site-nav a{padding:8px 13px}#map{min-height:460px!important;height:64vh!important}.mobile-selection-grid{grid-template-columns:1fr}.mobile-detail-stack .gender-overlay .gender-stat-main{grid-template-columns:1fr}.mobile-detail-stack .gender-overlay .gender-value{font-size:28px}}
@@ -1153,7 +1160,7 @@ body.gender-mode #map{height:76vh!important;min-height:600px!important;max-heigh
 
 <script>
 const years = ["2012", "2014", "2016", "2018", "2020", "2022", "2024"];
-const state = { chamber: "house", year: "2024", view: "party", competitivenessFilter: "all" };
+const state = { chamber: "house", year: "2024", view: "party", competitivenessFilter: "all", uncontestedPartyFilter: "all" };
 let geojsons = {};
 let geojsonPromises = {};
 let raceData = {};
@@ -1204,6 +1211,8 @@ const map = L.map("map", {
   boxZoom: false,
   keyboard: false,
   touchZoom: false,
+  dragging: false,
+  tap: false,
   minZoom: 8,
   maxZoom: 11
 }).setView([41.70, -71.55], 9);
@@ -1303,6 +1312,10 @@ function competitivenessDefinition(category) {
 
 function partyLabel(code) {
   return partyNames[code] || code || "Other";
+}
+
+function normalizeParty(code) {
+  return String(code || "OTHER").toUpperCase();
 }
 
 function partyColor(code) {
@@ -1408,14 +1421,22 @@ function styleFeature(feature) {
       fill = partyColor(race.winner_party);
       fillOpacity = 0.34;
     } else if (state.view === "uncontested") {
+      const activeParty = state.uncontestedPartyFilter || "all";
       if (race.is_uncontested) {
+        const raceParty = normalizeParty(race.winner_party);
+        const isSelectedParty = activeParty === "all" || activeParty === raceParty;
         stroke = partyColor(race.winner_party);
         fill = partyColor(race.winner_party);
-        fillOpacity = 0.36;
+        fillOpacity = isSelectedParty ? 0.42 : 0.1;
+        weight = isSelectedParty ? 1.7 : 0.85;
+        if (!isSelectedParty) {
+          stroke = "#cbd5e1";
+        }
       } else {
         stroke = "#64748b";
         fill = "#ffffff";
-        fillOpacity = 0.22;
+        fillOpacity = activeParty === "all" ? 0.22 : 0.08;
+        weight = activeParty === "all" ? 1.25 : 0.8;
       }
     }
   }
@@ -1580,14 +1601,21 @@ function renderUncontestedPanel(races) {
 
   const partyCounts = {};
   uncontested.forEach(r => {
-    const p = r.winner_party || "OTHER";
+    const p = normalizeParty(r.winner_party);
     partyCounts[p] = (partyCounts[p] || 0) + 1;
   });
+
+  const activeParty = state.uncontestedPartyFilter || "all";
+  const partyFilters = [
+    { key: "all", label: "All uncontested", count: uncontested.length },
+    { key: "DEM", label: "Democratic", count: partyCounts.DEM || 0 },
+    { key: "REP", label: "Republican", count: partyCounts.REP || 0 }
+  ];
 
   const partyRows = Object.entries(partyCounts)
     .sort((a, b) => b[1] - a[1])
     .map(([party, count]) => `
-      <div class="mini-table-row">
+      <div class="mini-table-row is-clickable ${activeParty === party ? "active" : ""} ${activeParty !== "all" && activeParty !== party ? "is-dimmed" : ""}" data-uncontested-party-filter="${party}">
         <span><span class="gender-dot" style="background:${partyColor(party)}"></span>${partyLabel(party)}</span>
         <strong>${count}</strong>
       </div>
@@ -1622,12 +1650,29 @@ function renderUncontestedPanel(races) {
       </div>
     </div>
 
+    <div class="competitiveness-scale-note"><strong>Highlight uncontested seats by party</strong></div>
+    <div class="party-filter-chips">
+      ${partyFilters.map(filter => `
+        <button type="button" class="party-filter-chip ${activeParty === filter.key ? "active" : ""}" data-uncontested-party-filter="${filter.key}">
+          ${filter.label} (${filter.count})
+        </button>
+      `).join("")}
+    </div>
+
     <div class="competitiveness-scale-note"><strong>Party makeup of uncontested seats</strong></div>
     <div class="mini-table">
       ${partyRows || '<div class="mini-table-row"><span>No uncontested seats</span><strong>0</strong></div>'}
     </div>
 
   `;
+
+  overlay.querySelectorAll("[data-uncontested-party-filter]").forEach(node => {
+    node.addEventListener("click", () => {
+      const nextFilter = node.dataset.uncontestedPartyFilter || "all";
+      state.uncontestedPartyFilter = state.uncontestedPartyFilter === nextFilter ? "all" : nextFilter;
+      refresh();
+    });
+  });
 }
 
 
@@ -2022,6 +2067,7 @@ function setupControls() {
   document.getElementById("viewSelect").addEventListener("change", e => {
     state.view = e.target.value;
     if (state.view !== "competitiveness") state.competitivenessFilter = "all";
+    if (state.view !== "uncontested") state.uncontestedPartyFilter = "all";
     refresh();
   });
   document.getElementById("districtSearch").addEventListener("input", renderDistrictList);
@@ -2031,6 +2077,8 @@ function setupControls() {
 function refresh() {
   syncButtons();
   const isFocus = state.view === "gender" || state.view === "competitiveness" || state.view === "uncontested";
+  if (state.view !== "competitiveness") state.competitivenessFilter = "all";
+  if (state.view !== "uncontested") state.uncontestedPartyFilter = "all";
   document.body.classList.toggle("focus-view", isFocus);
   document.body.classList.toggle("focus-mode", isFocus);
   document.body.classList.toggle("gender-mode", isFocus);
