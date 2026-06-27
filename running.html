@@ -798,10 +798,13 @@
           <ul class="ballot-info-list">
             <li>State legislative candidates qualify through Rhode Island filing and nomination-paper rules for the September 9, 2026 primary.</li>
             <li>Deadlines and signature requirements can vary, so candidates should confirm the current totals with official state guidance before filing.</li>
+            <li id="filingSourceNote">Candidate list source file date is loading.</li>
           </ul>
           <div class="ballot-info-links">
             <a href="https://vote.sos.ri.gov/" target="_blank" rel="noopener noreferrer">RI Department of State</a>
             <a href="https://elections.ri.gov/" target="_blank" rel="noopener noreferrer">RI Board of Elections</a>
+            <a href="https://ballotpedia.org/Rhode_Island_State_Senate_elections,_2026" target="_blank" rel="noopener noreferrer">Ballotpedia Senate</a>
+            <a href="https://ballotpedia.org/Rhode_Island_House_of_Representatives_elections,_2026" target="_blank" rel="noopener noreferrer">Ballotpedia House</a>
           </div>
         </div>
       </aside>
@@ -982,6 +985,24 @@
         countdown.textContent = "Done";
         copy.textContent = `Rhode Island primary was ${formatted}`;
       }
+    }
+
+    function setSourceNote() {
+      const note = document.getElementById("filingSourceNote");
+      if (!note) return;
+
+      const sourceUpdated = filingData?.source_updated_at;
+      if (!sourceUpdated) {
+        note.textContent = "Candidate list source file date is not available in the current payload.";
+        return;
+      }
+
+      const formatted = new Date(sourceUpdated).toLocaleDateString("en-US", {
+        month: "long",
+        day: "numeric",
+        year: "numeric"
+      });
+      note.textContent = `Candidate list source workbook was last updated ${formatted}. Use the Ballotpedia links below as a cross-check while filings continue to change.`;
     }
 
     function districtStyle(record) {
@@ -1274,6 +1295,7 @@
         });
 
         renderMap();
+        setSourceNote();
       } catch (error) {
         const card = document.getElementById("loadingCard");
         if (card) {

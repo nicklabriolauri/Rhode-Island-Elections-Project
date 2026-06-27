@@ -2962,7 +2962,7 @@ async function ensureGeoLoaded(key) {
 async function ensureRaceDataLoaded() {
   if (raceDataLoaded) return;
   await loadOnce("raceData", async () => {
-    raceData = await fetchJson("data/race_data.json");
+    raceData = await fetchJson("/data/race_data.json");
     raceDataLoaded = true;
   });
 }
@@ -2970,7 +2970,7 @@ async function ensureRaceDataLoaded() {
 async function ensureTurnoutSummaryLoaded() {
   if (turnoutSummaryLoaded) return;
   await loadOnce("turnoutSummary", async () => {
-    const turnoutPayload = await fetchJson("data/ri_2024_turnout_data.json");
+    const turnoutPayload = await fetchJson("/data/ri_2024_turnout_data.json");
     turnoutData.statewide["2024"] = turnoutPayload.statewide;
     [
       ["municipality", turnoutPayload.municipality],

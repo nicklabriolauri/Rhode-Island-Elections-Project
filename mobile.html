@@ -1023,8 +1023,9 @@ body.riep-mobile-app{display:block;min-height:100dvh;overflow-x:hidden;overflow-
 .mobile-selection-stat{padding:12px;border-radius:14px;background:#f8fafc;border:1px solid #e2e8f0}
 .mobile-selection-label{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#64748b}
 .mobile-selection-value{margin-top:4px;font-size:17px;line-height:1.2;font-weight:900;color:#0f172a}
+@media (max-width:640px){.controls{grid-template-columns:1fr;gap:14px;padding:16px}.control-group{display:grid;gap:8px}.control-label{font-size:12px}.segmented{justify-self:stretch;width:100%}.segmented button{flex:1 1 0}.mobile-select,select#viewSelect,select#mobileYearSelect{width:100%}.era-badge{margin-top:2px}}
 @media (min-width:761px){body.riep-mobile-app{max-width:430px;margin:0 auto;box-shadow:0 0 0 1px #e5e7eb,0 20px 80px rgba(15,23,42,.16)}}
-@media (max-width:390px){.hero-topline{grid-template-columns:64px minmax(0,1fr);gap:14px}.hero-mark{width:64px;height:64px;border-radius:18px}.hero-mark img{padding:8px}.app-hero h1{font-size:26px}.app-hero p{font-size:14px}.controls{grid-template-columns:115px minmax(0,1fr);gap:10px}.control-label{font-size:12px}.segmented button{padding:9px 16px;font-size:15px}.mobile-select,select#viewSelect,select#mobileYearSelect{font-size:15px!important;min-height:45px}.mobile-score{font-size:26px}.mini-arc{height:70px}.site-nav a{padding:8px 13px}#map{min-height:380px!important;height:56vh!important}.mobile-selection-grid{grid-template-columns:1fr}}
+@media (max-width:390px){.hero-topline{grid-template-columns:64px minmax(0,1fr);gap:14px}.hero-mark{width:64px;height:64px;border-radius:18px}.hero-mark img{padding:8px}.app-hero h1{font-size:26px}.app-hero p{font-size:14px}.controls{grid-template-columns:1fr;gap:12px}.control-group{display:grid;gap:8px}.control-label{font-size:12px}.segmented button{padding:9px 16px;font-size:15px}.mobile-select,select#viewSelect,select#mobileYearSelect{font-size:15px!important;min-height:45px}.mobile-score{font-size:26px}.mini-arc{height:70px}.site-nav a{padding:8px 13px}#map{min-height:380px!important;height:56vh!important}.mobile-selection-grid{grid-template-columns:1fr}}
 
 </style>
 </head>
@@ -1100,6 +1101,11 @@ body.riep-mobile-app{display:block;min-height:100dvh;overflow-x:hidden;overflow-
   <button class="mobile-card-chevron" type="button" aria-label="Result details">›</button>
 </section>
 
+<section id="mobileDetailStack" class="mobile-detail-stack" aria-live="polite">
+  <section id="mobileSelectionCard" class="mobile-selection-card"></section>
+  <section id="genderOverlay" class="gender-overlay"></section>
+</section>
+
 <main class="dashboard">
   <aside id="districtPanel" aria-hidden="true">
     <div class="district-panel-title">Districts</div>
@@ -1126,11 +1132,6 @@ body.riep-mobile-app{display:block;min-height:100dvh;overflow-x:hidden;overflow-
     <div class="facts-grid" id="factsGrid"></div>
   </aside>
 </main>
-
-<section id="mobileDetailStack" class="mobile-detail-stack" aria-live="polite">
-  <section id="mobileSelectionCard" class="mobile-selection-card"></section>
-  <section id="genderOverlay" class="gender-overlay"></section>
-</section>
 
 <script>
 const years = ["2012", "2014", "2016", "2018", "2020", "2022", "2024"];
@@ -1984,7 +1985,9 @@ function syncButtons() {
 
 function setupControls() {
   const yearButtons = document.getElementById("yearButtons");
-  yearButtons.innerHTML = years.map(y => `<button type="button" data-value="${y}">${y}</button>`).join("");
+  if (yearButtons) {
+    yearButtons.innerHTML = "";
+  }
 
   document.querySelectorAll("#chamberButtons button").forEach(btn => {
     btn.addEventListener("click", () => {
@@ -2157,10 +2160,10 @@ async function fetchJson(url) {
 }
 
 const geojsonFiles = {
-  senate_old: "data/senate_old.geojson",
-  house_old: "data/house_old.geojson",
-  senate_new: "data/senate_new.geojson",
-  house_new: "data/house_new.geojson"
+  senate_old: "/data/senate_old.geojson",
+  house_old: "/data/house_old.geojson",
+  senate_new: "/data/senate_new.geojson",
+  house_new: "/data/house_new.geojson"
 };
 
 async function ensureGeojson(key) {
@@ -2176,7 +2179,7 @@ async function ensureGeojson(key) {
 }
 
 async function loadData() {
-  raceData = await fetchJson("data/race_data.json");
+  raceData = await fetchJson("/data/race_data.json");
   await ensureGeojson(getGeoKey(state.chamber, state.year));
 }
 
@@ -2195,11 +2198,11 @@ loadData()
       <div class="error">
         <strong>Data failed to load.</strong><br>
         Make sure these files exist exactly:<br>
-        data/race_data.json<br>
-        data/house_old.geojson<br>
-        data/house_new.geojson<br>
-        data/senate_old.geojson<br>
-        data/senate_new.geojson
+        /data/race_data.json<br>
+        /data/house_old.geojson<br>
+        /data/house_new.geojson<br>
+        /data/senate_old.geojson<br>
+        /data/senate_new.geojson
       </div>`;
     document.getElementById("factsGrid").innerHTML = `<div class="error">${err.message}</div>`;
   });
