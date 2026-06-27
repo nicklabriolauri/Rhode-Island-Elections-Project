@@ -6,8 +6,22 @@
   var params = new URLSearchParams(window.location.search);
   var forcedView = params.get("view");
   var isAlreadyMobile = /(^|\/)mobile\.html($|[?#])/i.test(window.location.pathname);
+  var widthCandidates = [
+    window.innerWidth,
+    window.screen && window.screen.width,
+    document.documentElement && document.documentElement.clientWidth
+  ].filter(function (value) {
+    return typeof value === "number" && value > 0;
+  });
+  var viewportWidth = widthCandidates.length ? Math.min.apply(Math, widthCandidates) : 9999;
+  var isSmallScreen = viewportWidth <= 760;
+  var isMobileUserAgent = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent || "");
+  var prefersMobile = forcedView === "mobile" || (isSmallScreen && forcedView !== "desktop");
+  if (!prefersMobile && isMobileUserAgent && forcedView !== "desktop") {
+    prefersMobile = true;
+  }
 
-  if (forcedView === "mobile" && !isAlreadyMobile) {
+  if (prefersMobile && !isAlreadyMobile) {
     var target = new URL("mobile.html", window.location.href);
     if (window.location.search) target.search = window.location.search;
     if (window.location.hash) target.hash = window.location.hash;

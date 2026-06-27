@@ -1188,6 +1188,10 @@
 
     function buildLegend() {
       if (legend) map.removeControl(legend);
+      if (window.innerWidth <= 640) {
+        legend = null;
+        return;
+      }
       legend = L.control({ position: "bottomright" });
       legend.onAdd = function () {
         const div = L.DomUtil.create("div", "legend-box");
