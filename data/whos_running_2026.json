@@ -1,7 +1,8 @@
 {
-  "generated_at": "2026-06-10T11:08:47.777890+00:00",
+  "generated_at": "2026-06-27T17:11:47.953028+00:00",
   "election_cycle": 2026,
   "source_file": "/Users/nicholaslabriola/Documents/New project/data/raw/2026-election-candidates.xlsx",
+  "source_updated_at": "2026-06-10T08:55:07.285853+00:00",
   "chambers": {
     "house": {
       "1": {
@@ -879,7 +880,7 @@
         "district_number": 1,
         "candidates": [
           {
-            "name": "Jacob Bissalion",
+            "name": "Jacob Bissaillon",
             "party": "DEM",
             "party_label": "Democratic",
             "incumbent": false
@@ -1051,7 +1052,7 @@
         "district_number": 15,
         "candidates": [
           {
-            "name": "Meghan Kallaman",
+            "name": "Meghan Kallman",
             "party": "DEM",
             "party_label": "Democratic",
             "incumbent": false
@@ -1163,7 +1164,7 @@
         "district_number": 23,
         "candidates": [
           {
-            "name": "Jessica De La Cruz",
+            "name": "Jessica de la Cruz",
             "party": "REP",
             "party_label": "Republican",
             "incumbent": false
