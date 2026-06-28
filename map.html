@@ -358,6 +358,7 @@
       display: grid;
       grid-template-columns: 250px minmax(420px, 1fr) 310px;
       flex: 1;
+      align-items: stretch;
       min-height: 0;
     }
     aside {
@@ -1363,23 +1364,24 @@ body.focus-mode .gender-overlay{display:block!important;top:8px!important;right:
   .dashboard {
     flex: 0 0 auto;
     height: auto !important;
-    min-height: calc(100dvh - 170px);
+    min-height: 0;
     align-items: stretch;
   }
 
   #map {
-    min-height: 620px;
+    height: calc(100dvh - 170px);
+    min-height: 0;
   }
 
   #districtPanel {
     max-height: calc(100dvh - 170px);
-    overflow-y: auto;
+    overflow: hidden;
   }
 
   #factsPanel {
-    max-height: none;
-    overflow: visible;
-    padding-bottom: 28px;
+    max-height: calc(100dvh - 170px);
+    overflow-y: auto;
+    padding-bottom: 24px;
   }
 }
 
@@ -2892,6 +2894,45 @@ function updateEraBadge() {
   document.getElementById("eraBadge").textContent = text;
 }
 
+function getMapFitOptions() {
+  if (isTurnoutMode()) {
+    return { padding: [15, 15] };
+  }
+
+  if (state.view === "gender" || state.view === "competitiveness" || state.view === "uncontested") {
+    const overlay = document.getElementById("genderOverlay");
+    const overlayWidth = overlay && overlay.offsetWidth ? overlay.offsetWidth : 0;
+    const rightPadding = map.getSize().x > 1000 && overlayWidth
+      ? Math.min(220, Math.round(overlayWidth * 0.58))
+      : 24;
+    return {
+      paddingTopLeft: [18, 18],
+      paddingBottomRight: [rightPadding, 18]
+    };
+  }
+
+  return { padding: [15, 15] };
+}
+
+async function settleAndFitBounds(targetLayer) {
+  if (!targetLayer) return;
+  await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+  map.invalidateSize();
+  map.fitBounds(targetLayer.getBounds(), getMapFitOptions());
+}
+
+function syncDesktopDashboardLayout() {
+  const dashboard = document.querySelector(".dashboard");
+  const districtPanel = document.getElementById("districtPanel");
+  const factsPanel = document.getElementById("factsPanel");
+  if (!dashboard || !districtPanel || !factsPanel) return;
+
+  dashboard.style.height = "";
+  districtPanel.style.height = "";
+  factsPanel.style.height = "";
+  factsPanel.style.overflowY = "";
+}
+
 function syncButtons() {
   document.querySelectorAll("#dataModeButtons button").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.value === state.dataMode);
@@ -3151,17 +3192,20 @@ async function refresh() {
     onEachFeature
   }).addTo(map);
 
-  setTimeout(() => map.invalidateSize(), 0);
-  map.fitBounds(layer.getBounds(), { padding: [15, 15] });
   addLegend();
   updateEraBadge();
   updateOverview();
   renderDistrictList();
+  syncDesktopDashboardLayout();
+  await settleAndFitBounds(layer);
   hideLoadingState();
 }
 
 window.addEventListener("resize", () => {
-  setTimeout(() => map.invalidateSize(), 100);
+  setTimeout(() => {
+    syncDesktopDashboardLayout();
+    map.invalidateSize();
+  }, 100);
 });
 
 setupControls();
