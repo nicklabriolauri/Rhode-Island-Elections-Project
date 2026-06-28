@@ -1,11 +1,12 @@
 {
-  "generated_at": "2026-06-27T17:32:21.985515+00:00",
+  "generated_at": "2026-06-28T11:02:12.363200+00:00",
   "election_cycle": 2026,
   "source_file": "/Users/nicholaslabriola/Documents/New project/data/raw/2026-election-candidates.xlsx",
   "source_updated_at": "2026-06-10T08:55:07.285853+00:00",
   "manual_cross_check_notes": [
     "June 27, 2026 Ballotpedia cross-check provided in chat added House 18 Jessica Gomes and House 46 Mary Ann Shallcross-Smith (i).",
-    "Candidate spellings were normalized for Jacob Bissaillon, James Metivier, Meghan Kallman, and Jessica de la Cruz."
+    "June 28, 2026 Providence Journal candidate roundup provided in chat added legislative candidates including Allan Fung, Thomas Lynch, James Sheehan, Veronicka Vega, Nelly Burdette, Brian Coogan, Rob Craven, and Westin Place.",
+    "Candidate spellings were normalized for Jacob Bissaillon, Joseph Metivier, Marc Mesrobian, Meghan Kallman, and Jessica de la Cruz."
   ],
   "chambers": {
     "house": {
@@ -175,13 +176,22 @@
       "15": {
         "chamber": "house",
         "district_number": 15,
-        "candidates": [],
-        "party_counts": {},
-        "candidate_total": 0,
-        "general_status": "no_filing",
-        "general_label": "No filing listed in current sheet",
-        "primary_status": "no_filing",
-        "primary_label": "No filing listed in current sheet"
+        "candidates": [
+          {
+            "name": "Allan Fung",
+            "party": "IND",
+            "party_label": "Independent",
+            "incumbent": false
+          }
+        ],
+        "party_counts": {
+          "IND": 1
+        },
+        "candidate_total": 1,
+        "general_status": "other_only",
+        "general_label": "Independent or other candidates filed only",
+        "primary_status": "no_primary",
+        "primary_label": "No active primary in current filings"
       },
       "16": {
         "chamber": "house",
@@ -261,13 +271,22 @@
       "22": {
         "chamber": "house",
         "district_number": 22,
-        "candidates": [],
-        "party_counts": {},
-        "candidate_total": 0,
-        "general_status": "no_filing",
-        "general_label": "No filing listed in current sheet",
-        "primary_status": "no_filing",
-        "primary_label": "No filing listed in current sheet"
+        "candidates": [
+          {
+            "name": "Thomas Lynch",
+            "party": "DEM",
+            "party_label": "Democratic",
+            "incumbent": false
+          }
+        ],
+        "party_counts": {
+          "DEM": 1
+        },
+        "candidate_total": 1,
+        "general_status": "dem_only",
+        "general_label": "Democratic candidates filed only",
+        "primary_status": "no_primary",
+        "primary_label": "No active primary in current filings"
       },
       "23": {
         "chamber": "house",
@@ -360,20 +379,9 @@
       "31": {
         "chamber": "house",
         "district_number": 31,
-        "candidates": [],
-        "party_counts": {},
-        "candidate_total": 0,
-        "general_status": "no_filing",
-        "general_label": "No filing listed in current sheet",
-        "primary_status": "no_filing",
-        "primary_label": "No filing listed in current sheet"
-      },
-      "32": {
-        "chamber": "house",
-        "district_number": 32,
         "candidates": [
           {
-            "name": "Kevin Hoyle",
+            "name": "James Sheehan",
             "party": "DEM",
             "party_label": "Democratic",
             "incumbent": false
@@ -387,6 +395,32 @@
         "general_label": "Democratic candidates filed only",
         "primary_status": "no_primary",
         "primary_label": "No active primary in current filings"
+      },
+      "32": {
+        "chamber": "house",
+        "district_number": 32,
+        "candidates": [
+          {
+            "name": "Kevin Hoyle",
+            "party": "DEM",
+            "party_label": "Democratic",
+            "incumbent": false
+          },
+          {
+            "name": "Rob Craven",
+            "party": "DEM",
+            "party_label": "Democratic",
+            "incumbent": false
+          }
+        ],
+        "party_counts": {
+          "DEM": 2
+        },
+        "candidate_total": 2,
+        "general_status": "dem_only",
+        "general_label": "Democratic candidates filed only",
+        "primary_status": "dem_primary",
+        "primary_label": "Democratic primary underway"
       },
       "33": {
         "chamber": "house",
@@ -490,13 +524,22 @@
       "42": {
         "chamber": "house",
         "district_number": 42,
-        "candidates": [],
-        "party_counts": {},
-        "candidate_total": 0,
-        "general_status": "no_filing",
-        "general_label": "No filing listed in current sheet",
-        "primary_status": "no_filing",
-        "primary_label": "No filing listed in current sheet"
+        "candidates": [
+          {
+            "name": "Ed Cardillo",
+            "party": "DEM",
+            "party_label": "Democratic",
+            "incumbent": false
+          }
+        ],
+        "party_counts": {
+          "DEM": 1
+        },
+        "candidate_total": 1,
+        "general_status": "dem_only",
+        "general_label": "Democratic candidates filed only",
+        "primary_status": "no_primary",
+        "primary_label": "No active primary in current filings"
       },
       "43": {
         "chamber": "house",
@@ -536,6 +579,12 @@
         "district_number": 46,
         "candidates": [
           {
+            "name": "John Barr",
+            "party": "DEM",
+            "party_label": "Democratic",
+            "incumbent": false
+          },
+          {
             "name": "Mary Ann Shallcross-Smith",
             "party": "DEM",
             "party_label": "Democratic",
@@ -543,13 +592,13 @@
           }
         ],
         "party_counts": {
-          "DEM": 1
+          "DEM": 2
         },
-        "candidate_total": 1,
+        "candidate_total": 2,
         "general_status": "dem_only",
         "general_label": "Democratic candidates filed only",
-        "primary_status": "no_primary",
-        "primary_label": "No active primary in current filings"
+        "primary_status": "dem_primary",
+        "primary_label": "Democratic primary underway"
       },
       "47": {
         "chamber": "house",
@@ -576,13 +625,22 @@
       "49": {
         "chamber": "house",
         "district_number": 49,
-        "candidates": [],
-        "party_counts": {},
-        "candidate_total": 0,
-        "general_status": "no_filing",
-        "general_label": "No filing listed in current sheet",
-        "primary_status": "no_filing",
-        "primary_label": "No filing listed in current sheet"
+        "candidates": [
+          {
+            "name": "Veronicka Vega",
+            "party": "DEM",
+            "party_label": "Democratic",
+            "incumbent": false
+          }
+        ],
+        "party_counts": {
+          "DEM": 1
+        },
+        "candidate_total": 1,
+        "general_status": "dem_only",
+        "general_label": "Democratic candidates filed only",
+        "primary_status": "no_primary",
+        "primary_label": "No active primary in current filings"
       },
       "50": {
         "chamber": "house",
@@ -680,13 +738,22 @@
       "57": {
         "chamber": "house",
         "district_number": 57,
-        "candidates": [],
-        "party_counts": {},
-        "candidate_total": 0,
-        "general_status": "no_filing",
-        "general_label": "No filing listed in current sheet",
-        "primary_status": "no_filing",
-        "primary_label": "No filing listed in current sheet"
+        "candidates": [
+          {
+            "name": "James McLaughlin",
+            "party": "DEM",
+            "party_label": "Democratic",
+            "incumbent": false
+          }
+        ],
+        "party_counts": {
+          "DEM": 1
+        },
+        "candidate_total": 1,
+        "general_status": "dem_only",
+        "general_label": "Democratic candidates filed only",
+        "primary_status": "no_primary",
+        "primary_label": "No active primary in current filings"
       },
       "58": {
         "chamber": "house",
@@ -702,13 +769,22 @@
       "59": {
         "chamber": "house",
         "district_number": 59,
-        "candidates": [],
-        "party_counts": {},
-        "candidate_total": 0,
-        "general_status": "no_filing",
-        "general_label": "No filing listed in current sheet",
-        "primary_status": "no_filing",
-        "primary_label": "No filing listed in current sheet"
+        "candidates": [
+          {
+            "name": "Jean Philippe Barros",
+            "party": "DEM",
+            "party_label": "Democratic",
+            "incumbent": false
+          }
+        ],
+        "party_counts": {
+          "DEM": 1
+        },
+        "candidate_total": 1,
+        "general_status": "dem_only",
+        "general_label": "Democratic candidates filed only",
+        "primary_status": "no_primary",
+        "primary_label": "No active primary in current filings"
       },
       "60": {
         "chamber": "house",
@@ -1061,13 +1137,22 @@
       "14": {
         "chamber": "senate",
         "district_number": 14,
-        "candidates": [],
-        "party_counts": {},
-        "candidate_total": 0,
-        "general_status": "no_filing",
-        "general_label": "No filing listed in current sheet",
-        "primary_status": "no_filing",
-        "primary_label": "No filing listed in current sheet"
+        "candidates": [
+          {
+            "name": "Brian Coogan",
+            "party": "IND",
+            "party_label": "Independent",
+            "incumbent": false
+          }
+        ],
+        "party_counts": {
+          "IND": 1
+        },
+        "candidate_total": 1,
+        "general_status": "other_only",
+        "general_label": "Independent or other candidates filed only",
+        "primary_status": "no_primary",
+        "primary_label": "No active primary in current filings"
       },
       "15": {
         "chamber": "senate",
@@ -1109,13 +1194,22 @@
       "17": {
         "chamber": "senate",
         "district_number": 17,
-        "candidates": [],
-        "party_counts": {},
-        "candidate_total": 0,
-        "general_status": "no_filing",
-        "general_label": "No filing listed in current sheet",
-        "primary_status": "no_filing",
-        "primary_label": "No filing listed in current sheet"
+        "candidates": [
+          {
+            "name": "Nelly Burdette",
+            "party": "DEM",
+            "party_label": "Democratic",
+            "incumbent": false
+          }
+        ],
+        "party_counts": {
+          "DEM": 1
+        },
+        "candidate_total": 1,
+        "general_status": "dem_only",
+        "general_label": "Democratic candidates filed only",
+        "primary_status": "no_primary",
+        "primary_label": "No active primary in current filings"
       },
       "18": {
         "chamber": "senate",
@@ -1133,7 +1227,7 @@
         "district_number": 19,
         "candidates": [
           {
-            "name": "James Metivier",
+            "name": "Joseph Metivier",
             "party": "DEM",
             "party_label": "Democratic",
             "incumbent": false
@@ -1354,7 +1448,7 @@
         "district_number": 36,
         "candidates": [
           {
-            "name": "Mark Mesrobian",
+            "name": "Marc Mesrobian",
             "party": "DEM",
             "party_label": "Democratic",
             "incumbent": false
@@ -1389,14 +1483,21 @@
             "party": "DEM",
             "party_label": "Democratic",
             "incumbent": false
+          },
+          {
+            "name": "Westin Place",
+            "party": "REP",
+            "party_label": "Republican",
+            "incumbent": false
           }
         ],
         "party_counts": {
-          "DEM": 1
+          "DEM": 1,
+          "REP": 1
         },
-        "candidate_total": 1,
-        "general_status": "dem_only",
-        "general_label": "Democratic candidates filed only",
+        "candidate_total": 2,
+        "general_status": "both_major",
+        "general_label": "Democratic and Republican candidates filed",
         "primary_status": "no_primary",
         "primary_label": "No active primary in current filings"
       }
@@ -1405,18 +1506,18 @@
   "summary": {
     "house": {
       "district_total": 75,
-      "districts_with_filings": 6,
-      "no_filing_reported": 69,
+      "districts_with_filings": 13,
+      "no_filing_reported": 62,
       "both_major_parties_filed": 1,
-      "democratic_only": 5,
+      "democratic_only": 11,
       "republican_only": 0,
-      "districts_with_primary_activity": 0
+      "districts_with_primary_activity": 2
     },
     "senate": {
       "district_total": 38,
-      "districts_with_filings": 8,
-      "no_filing_reported": 30,
-      "both_major_parties_filed": 1,
+      "districts_with_filings": 10,
+      "no_filing_reported": 28,
+      "both_major_parties_filed": 2,
       "democratic_only": 6,
       "republican_only": 1,
       "districts_with_primary_activity": 1
