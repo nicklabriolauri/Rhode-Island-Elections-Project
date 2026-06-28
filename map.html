@@ -369,6 +369,8 @@
       flex-direction: column;
       border-right: 1px solid var(--line);
       padding: 10px;
+      min-height: 0;
+      overflow-y: auto;
     }
     #factsPanel {
       border-left: 1px solid var(--line);
@@ -401,9 +403,8 @@
       display: flex;
       flex-direction: column;
       gap: 5px;
-      flex: 1 1 auto;
-      min-height: 0;
-      overflow-y: auto;
+      flex: 0 0 auto;
+      min-height: 100%;
       padding-bottom: 10px;
     }
     .district-item {

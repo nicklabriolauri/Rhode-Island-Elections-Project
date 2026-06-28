@@ -92,6 +92,7 @@
       min-height: 100vh;
       font-family: "Instrument Sans", sans-serif;
       color: var(--text);
+      overflow-x: hidden;
       background:
         radial-gradient(circle at 14% 8%, rgba(104, 136, 255, 0.18), transparent 20%),
         radial-gradient(circle at 86% 10%, rgba(255,255,255,0.05), transparent 18%),
@@ -618,16 +619,19 @@
       .topbar-right {
         width: 100%;
         display: block;
+        min-width: 0;
       }
 
       .site-nav {
         width: 100%;
         flex-wrap: wrap;
         justify-content: flex-start;
+        gap: 8px;
       }
 
       .site-nav a {
         max-width: 100%;
+        padding: 9px 12px;
       }
 
       .brand {
@@ -666,6 +670,7 @@
 
       .hero-copy h2 {
         font-size: 48px;
+        word-break: break-word;
       }
 
       .summary {
@@ -691,6 +696,7 @@
 
       .link-row {
         gap: 8px 12px;
+        max-width: 100%;
       }
 
       .separator-dot {
