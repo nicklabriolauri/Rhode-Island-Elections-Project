@@ -1052,6 +1052,19 @@ body.gender-mode #map{height:76vh!important;min-height:600px!important;max-heigh
 @media (min-width:761px){body.riep-mobile-app{max-width:430px;margin:0 auto;box-shadow:0 0 0 1px #e5e7eb,0 20px 80px rgba(15,23,42,.16)}}
 @media (max-width:390px){.hero-topline{grid-template-columns:64px minmax(0,1fr);gap:14px}.hero-mark{width:64px;height:64px;border-radius:18px}.hero-mark img{padding:8px}.app-hero h1{font-size:26px}.app-hero p{font-size:14px}.controls{grid-template-columns:1fr;gap:12px}.control-group{display:grid;gap:8px}.control-label{font-size:12px}.segmented button{padding:9px 16px;font-size:15px}.mobile-select,select#viewSelect,select#mobileYearSelect{font-size:15px!important;min-height:45px}.mobile-score{font-size:26px}.mini-arc{height:70px}.site-nav a{padding:8px 13px}#map{min-height:460px!important;height:64vh!important}.mobile-selection-grid{grid-template-columns:1fr}.mobile-detail-stack .gender-overlay .gender-stat-main{grid-template-columns:1fr}.mobile-detail-stack .gender-overlay .gender-value{font-size:28px}}
 
+/* Final touch-scroll guard for analytical mobile views */
+.mobile-detail-stack,
+.mobile-detail-stack .gender-overlay{touch-action:pan-y;overscroll-behavior-y:contain;-webkit-overflow-scrolling:touch}
+body.focus-mode #map,
+body.focus-view #map,
+body.gender-mode #map{touch-action:pan-y!important}
+body.focus-mode #map .leaflet-container,
+body.focus-view #map .leaflet-container,
+body.gender-mode #map .leaflet-container{pointer-events:none!important}
+body.focus-mode #map .leaflet-control-container,
+body.focus-view #map .leaflet-control-container,
+body.gender-mode #map .leaflet-control-container{display:none!important}
+
 </style>
 </head>
 <body class="riep-mobile-app">

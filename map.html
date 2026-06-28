@@ -1337,6 +1337,45 @@ body.focus-mode .gender-overlay{display:block!important;top:8px!important;right:
 .mini-table-row strong{color:#0f172a;}
 
 
+/* Final desktop layout fix: let the page grow so the overview panel is not clipped */
+@media (min-width: 1001px) {
+  html,
+  body {
+    height: auto;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dashboard {
+    flex: 0 0 auto;
+    height: auto !important;
+    min-height: calc(100dvh - 170px);
+    align-items: stretch;
+  }
+
+  #map {
+    min-height: 620px;
+  }
+
+  #districtPanel {
+    max-height: calc(100dvh - 170px);
+    overflow-y: auto;
+  }
+
+  #factsPanel {
+    max-height: none;
+    overflow: visible;
+    padding-bottom: 28px;
+  }
+}
+
+
     /* Dedicated analytical panel behavior */
     body.focus-view .dashboard {
       grid-template-columns: 1fr;
