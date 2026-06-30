@@ -486,6 +486,89 @@
       font-size: 13px;
       color: #64748b;
     }
+    .candidate-subhead {
+      margin-top: 4px;
+      font-size: 12px;
+      font-weight: 800;
+      color: #64748b;
+    }
+    .candidate-section {
+      display: grid;
+      gap: 10px;
+    }
+    .candidate-section + .candidate-section {
+      margin-top: 4px;
+    }
+    .candidate-section-label {
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #64748b;
+    }
+    .candidate-section-note {
+      margin-top: -2px;
+      font-size: 13px;
+      line-height: 1.45;
+      color: #475569;
+    }
+    .candidate-meta-grid {
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+    .candidate-meta {
+      padding: 9px 10px;
+      border-radius: 12px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+    }
+    .candidate-meta-label {
+      display: block;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #64748b;
+    }
+    .candidate-meta-value {
+      display: block;
+      margin-top: 4px;
+      font-size: 13px;
+      line-height: 1.35;
+      font-weight: 800;
+      color: var(--ink);
+      word-break: break-word;
+    }
+    .candidate-links {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .candidate-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 34px;
+      padding: 0 11px;
+      border-radius: 999px;
+      border: 1px solid #dbe3ef;
+      background: #fff;
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 900;
+    }
+    .candidate-link.is-muted {
+      color: #64748b;
+      background: #f8fafc;
+    }
+    .candidate-link:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(15,23,42,.08);
+    }
     .district-browser {
       margin-top: 22px;
       background: rgba(255,255,255,.96);
@@ -751,14 +834,14 @@
             <div class="summary-copy">Districts with multiple candidates already filed within the same party.</div>
           </div>
           <div class="summary-card">
-            <div class="summary-label">Update cadence</div>
-            <div class="summary-value" id="summaryMatchups">48h</div>
-            <div class="summary-copy">Candidate filing sheet refresh target: every second day.</div>
+            <div class="summary-label">Official source</div>
+            <div class="summary-value" id="summaryMatchups">RI SOS</div>
+            <div class="summary-copy" id="summarySourceCopy">Declared candidates workbook</div>
           </div>
         </div>
       </div>
       <div class="hero-note">
-        <strong>Primary first:</strong> this page is focused on who has filed for the September 9 primary ballot. The November general-election matchup remains pending until primary day determines each party's nominee in contested districts.
+        <strong>Primary first:</strong> this page is focused on who has filed for the September 9 primary ballot. When a district already has a general-election-only independent declaration on file, that candidate appears in the district sidebar without changing the primary map colors.
       </div>
     </section>
 
@@ -772,7 +855,7 @@
           </div>
         </div>
         <div class="chip-bar">
-          <div class="chip"><strong>Filed candidates:</strong> blue = Democratic filing, red = Republican filing, purple = both parties filed.</div>
+          <div class="chip"><strong>Filed primary candidates:</strong> blue = Democratic-only filing, red = Republican-only filing, purple = both major parties filed.</div>
           <div class="chip"><strong>Competitive primary:</strong> highlighted border = more than one candidate filed within the same party.</div>
         </div>
         <div id="runningMap" aria-label="Rhode Island candidate filing map"></div>
@@ -781,7 +864,7 @@
       <aside class="detail-card">
         <div class="detail-eyebrow">District detail</div>
         <div class="detail-title" id="detailTitle">Select a district</div>
-        <div class="detail-copy" id="detailCopy">Tap any House or Senate district on the map to see who has filed for the September 9 primary ballot, whether either party has a competitive primary, and which candidates are currently listed.</div>
+        <div class="detail-copy" id="detailCopy">Tap any House or Senate district on the map to see official September 9 primary filings, whether either party has a competitive primary, and the public contact details listed in Rhode Island's declared candidates workbook.</div>
         <div class="detail-statuses">
           <div class="status-card party-status dem-status">
             <h3>Democratic primary</h3>
@@ -802,6 +885,7 @@
           </ul>
           <div class="ballot-info-links">
             <a href="https://vote.sos.ri.gov/" target="_blank" rel="noopener noreferrer">RI Department of State</a>
+            <a href="https://vote.sos.ri.gov/Forms/elections/Reports/Candidates.xlsx" target="_blank" rel="noopener noreferrer">Declared Candidates Workbook</a>
             <a href="https://elections.ri.gov/" target="_blank" rel="noopener noreferrer">RI Board of Elections</a>
             <a href="https://ballotpedia.org/Rhode_Island_State_Senate_elections,_2026" target="_blank" rel="noopener noreferrer">Ballotpedia Senate</a>
             <a href="https://ballotpedia.org/Rhode_Island_House_of_Representatives_elections,_2026" target="_blank" rel="noopener noreferrer">Ballotpedia House</a>
@@ -811,8 +895,8 @@
     </section>
 
     <section class="district-browser" id="district-browser">
-      <h3>Filed districts before September 9</h3>
-      <p>Use the district list if you want to jump directly to districts where candidates have filed for the September 9 primary ballot.</p>
+      <h3>Declared districts before September 9</h3>
+      <p>Use the district list to jump directly across the current chamber and compare the official declared primary candidates district by district.</p>
       <div class="district-grid" id="districtGrid"></div>
     </section>
   </main>
@@ -989,11 +1073,12 @@
 
     function setSourceNote() {
       const note = document.getElementById("filingSourceNote");
+      const summarySourceCopy = document.getElementById("summarySourceCopy");
       if (!note) return;
 
       const sourceUpdated = filingData?.source_updated_at;
       if (!sourceUpdated) {
-        note.textContent = "Candidate list source file date is not available in the current payload.";
+        note.textContent = "Official declared candidates workbook date is not available in the current payload.";
         return;
       }
 
@@ -1002,7 +1087,86 @@
         day: "numeric",
         year: "numeric"
       });
-      note.textContent = `Candidate list source workbook was last updated ${formatted}. Use the Ballotpedia links below as a cross-check while filings continue to change.`;
+      note.textContent = `Official Rhode Island declared candidates workbook was last updated ${formatted}. This page shows hometown, ZIP code, phone, and email when listed, while full street addresses are intentionally withheld.`;
+      if (summarySourceCopy) {
+        summarySourceCopy.textContent = `Official workbook last updated ${formatted}.`;
+      }
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#39;");
+    }
+
+    function candidateAccent(candidate) {
+      if (candidate.party === "DEM") return "#2563eb";
+      if (candidate.party === "REP") return "#dc2626";
+      if (candidate.party === "IND") return "#14b8a6";
+      return "#8b5cf6";
+    }
+
+    function buildCandidateLinks(candidate) {
+      const links = [];
+      if (candidate.phone) {
+        const digits = candidate.phone.replace(/[^\d+]/g, "");
+        links.push(`<a class="candidate-link" href="tel:${escapeHtml(digits)}">Call ${escapeHtml(candidate.phone)}</a>`);
+      }
+      if (candidate.email) {
+        links.push(`<a class="candidate-link" href="mailto:${escapeHtml(candidate.email)}">Email ${escapeHtml(candidate.email)}</a>`);
+      }
+      if (!links.length) {
+        links.push(`<span class="candidate-link is-muted">No public phone or email listed</span>`);
+      }
+      return links.join("");
+    }
+
+    function buildCandidateCard(candidate) {
+      const stageText = candidate.ballot_stage === "general"
+        ? "November general-election declaration"
+        : "September primary declaration";
+      const homeLabel = candidate.home_label || candidate.hometown || "Not listed";
+      const zipLabel = candidate.zip_code || "Not listed";
+      const declarationLabel = candidate.declaration_status || "Not listed";
+      const signatureLabel = candidate.required_signatures ? `${candidate.required_signatures}` : "Not listed";
+      const note = candidate.ballot_stage === "general"
+        ? "Official Rhode Island general-election declaration on file for this district."
+        : "Official Rhode Island primary declaration on file for this district.";
+
+      return `
+        <div class="candidate-item" style="--party-accent:${candidateAccent(candidate)}">
+          <div class="candidate-top">
+            <div>
+              <div class="candidate-name">${escapeHtml(candidate.name)}</div>
+              <div class="candidate-subhead">${escapeHtml(stageText)}</div>
+            </div>
+            <div class="candidate-party">${escapeHtml(candidate.party_raw || candidate.party_label)}</div>
+          </div>
+          <div class="candidate-meta-grid">
+            <div class="candidate-meta">
+              <span class="candidate-meta-label">Home base</span>
+              <span class="candidate-meta-value">${escapeHtml(homeLabel)}</span>
+            </div>
+            <div class="candidate-meta">
+              <span class="candidate-meta-label">ZIP code</span>
+              <span class="candidate-meta-value">${escapeHtml(zipLabel)}</span>
+            </div>
+            <div class="candidate-meta">
+              <span class="candidate-meta-label">Declaration</span>
+              <span class="candidate-meta-value">${escapeHtml(declarationLabel)}</span>
+            </div>
+            <div class="candidate-meta">
+              <span class="candidate-meta-label">Signature requirement</span>
+              <span class="candidate-meta-value">${escapeHtml(signatureLabel)}</span>
+            </div>
+          </div>
+          <div class="candidate-links">${buildCandidateLinks(candidate)}</div>
+          <div class="candidate-note">${escapeHtml(note)}</div>
+        </div>
+      `;
     }
 
     function districtStyle(record) {
@@ -1111,7 +1275,7 @@
 
       if (!record) {
         title.textContent = "Select a district";
-        copy.textContent = "Tap any House or Senate district on the map to see who has filed for the September 9 primary ballot and whether either party has a competitive same-party primary.";
+        copy.textContent = "Tap any House or Senate district on the map to see who has filed for the September 9 primary ballot, whether either party has a competitive same-party primary, and which public contact details are listed in the official Rhode Island workbook.";
         demPrimary.textContent = "No district selected";
         repPrimary.textContent = "No district selected";
         list.innerHTML = "";
@@ -1119,26 +1283,42 @@
       }
 
       title.textContent = `${state.chamber === "house" ? "House" : "Senate"} District ${record.district_number}`;
-      copy.textContent = record.candidate_total
-        ? `${record.candidate_total} candidate${record.candidate_total === 1 ? "" : "s"} currently listed for the September 9 primary ballot in this district.`
-        : "No candidate filing appears in the current worksheet for this district yet.";
+      if (record.candidate_total && record.general_candidate_total) {
+        copy.textContent = `${record.candidate_total} candidate${record.candidate_total === 1 ? "" : "s"} currently listed for the September 9 primary ballot in this district, plus ${record.general_candidate_total} general-election-only candidate${record.general_candidate_total === 1 ? "" : "s"} already declared for November.`;
+      } else if (record.candidate_total) {
+        copy.textContent = `${record.candidate_total} candidate${record.candidate_total === 1 ? "" : "s"} currently listed for the September 9 primary ballot in this district.`;
+      } else if (record.general_candidate_total) {
+        copy.textContent = `${record.general_candidate_total} general-election-only candidate${record.general_candidate_total === 1 ? "" : "s"} already declared for November in this district, but no September 9 primary filing is listed in the official workbook.`;
+      } else {
+        copy.textContent = "No candidate filing appears in the official Rhode Island workbook for this district yet.";
+      }
       demPrimary.innerHTML = buildPartyPrimaryHtml(record, "DEM");
       repPrimary.innerHTML = buildPartyPrimaryHtml(record, "REP");
 
-      if (!record.candidates.length) {
-        list.innerHTML = `<div class="candidate-item"><div class="candidate-name">No filing listed yet</div><div class="candidate-note">This district does not appear in the current worksheet.</div></div>`;
+      if (!record.candidates.length && !record.general_candidates.length) {
+        list.innerHTML = `<div class="candidate-item"><div class="candidate-name">No filing listed yet</div><div class="candidate-note">This district does not appear in the current official workbook yet.</div></div>`;
         return;
       }
 
-      list.innerHTML = record.candidates.map(candidate => `
-        <div class="candidate-item" style="--party-accent:${candidate.party === "DEM" ? "#2563eb" : candidate.party === "REP" ? "#dc2626" : candidate.party === "IND" ? "#14b8a6" : "#8b5cf6"}">
-          <div class="candidate-top">
-            <div class="candidate-name">${candidate.name}</div>
-            <div class="candidate-party">${candidate.party_label}</div>
+      const sections = [];
+      if (record.candidates.length) {
+        sections.push(`
+          <div class="candidate-section">
+            <div class="candidate-section-label">September primary candidates</div>
+            ${record.candidates.map(buildCandidateCard).join("")}
           </div>
-          <div class="candidate-note">${candidate.incumbent ? "Incumbent marker included in source sheet." : "Candidate listed in current filing sheet."}</div>
-        </div>
-      `).join("");
+        `);
+      }
+      if (record.general_candidates.length) {
+        sections.push(`
+          <div class="candidate-section">
+            <div class="candidate-section-label">Also declared for November</div>
+            <div class="candidate-section-note">These candidates appear in the official general-election declaration list and do not change the September 9 primary map colors.</div>
+            ${record.general_candidates.map(buildCandidateCard).join("")}
+          </div>
+        `);
+      }
+      list.innerHTML = sections.join("");
     }
 
     function updateSelectedButton() {
@@ -1255,10 +1435,14 @@
           layer.bindTooltip(`${state.chamber === "house" ? "House" : "Senate"} District ${district}`, { sticky: true });
           layer.on("click", () => focusDistrict(district));
           if (record?.candidate_total) {
+            const generalLine = record.general_candidate_total
+              ? `<br/>${record.general_candidate_total} November-only candidate${record.general_candidate_total === 1 ? "" : "s"} also declared`
+              : "";
             layer.bindPopup(`
               <strong>${state.chamber === "house" ? "House" : "Senate"} District ${district}</strong><br/>
               ${record.general_label}<br/>
               ${buildPrimaryContestLabel(record)}
+              ${generalLine}
             `);
           }
         }
