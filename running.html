@@ -463,6 +463,29 @@
       font-weight: 900;
       color: var(--ink);
     }
+    .detail-actions {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .detail-action-btn {
+      appearance: none;
+      border: 1px solid #dbe3ef;
+      background: #fff;
+      color: var(--navy);
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 900;
+      cursor: pointer;
+      transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+    }
+    .detail-action-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(15,23,42,.08);
+    }
     .detail-copy {
       margin-top: 10px;
       font-size: 15px;
@@ -885,6 +908,14 @@
       text-decoration: none;
       font-weight: 800;
     }
+    .footer-motto {
+      margin-top: 10px;
+      font-size: 12px;
+      line-height: 1.45;
+      color: #64748b;
+      font-style: italic;
+      letter-spacing: .03em;
+    }
     .loading-card {
       padding: 22px;
       border-radius: 20px;
@@ -1017,6 +1048,9 @@
       <aside class="detail-card">
         <div class="detail-eyebrow">District detail</div>
         <div class="detail-title" id="detailTitle">Select a district</div>
+        <div class="detail-actions">
+          <button type="button" class="detail-action-btn" id="copyDistrictLinkBtn">Copy district link</button>
+        </div>
         <div class="detail-copy" id="detailCopy">Tap any House or Senate district on the map to see official September 9 primary filings, whether either party has a competitive primary, and the public contact details listed in Rhode Island's declared candidates workbook.</div>
         <div class="detail-statuses">
           <div class="status-card party-status dem-status is-clickable" id="detailDemCard" role="button" tabindex="0" aria-pressed="false">
@@ -1061,6 +1095,7 @@
       <div>
         <img src="riep-logo-transparent.png" alt="Rhode Island Elections Project logo" />
         <div style="margin-top:10px; max-width:640px;">Rhode Island Elections Project is a public-facing interface for Rhode Island legislative elections, turnout geography, precinct lookup, candidate filing status, and election accessibility.</div>
+        <div class="footer-motto">Perspictuitas et Reddito Rationum in Democratia</div>
       </div>
       <div>
         <div class="footer-nav">
@@ -1251,6 +1286,53 @@
 
     function getSummary(chamber) {
       return filingData?.summary?.[chamber] || null;
+    }
+
+    function updateDistrictUrl() {
+      const url = new URL(window.location.href);
+      url.searchParams.set("chamber", state.chamber);
+      if (state.selectedDistrict) {
+        url.searchParams.set("district", String(state.selectedDistrict));
+      } else {
+        url.searchParams.delete("district");
+      }
+      window.history.replaceState({}, "", url);
+    }
+
+    function readInitialState() {
+      const params = new URLSearchParams(window.location.search);
+      const chamber = params.get("chamber");
+      const district = Number(params.get("district"));
+      if (chamber === "house" || chamber === "senate") {
+        state.chamber = chamber;
+      }
+      if (Number.isFinite(district) && district > 0) {
+        state.selectedDistrict = district;
+      }
+    }
+
+    async function copyDistrictLink() {
+      const url = new URL(window.location.href);
+      url.searchParams.set("chamber", state.chamber);
+      if (state.selectedDistrict) {
+        url.searchParams.set("district", String(state.selectedDistrict));
+      } else {
+        url.searchParams.delete("district");
+      }
+      const text = url.toString();
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(text);
+        return;
+      }
+      const helper = document.createElement("textarea");
+      helper.value = text;
+      helper.setAttribute("readonly", "");
+      helper.style.position = "absolute";
+      helper.style.left = "-9999px";
+      document.body.appendChild(helper);
+      helper.select();
+      document.execCommand("copy");
+      helper.remove();
     }
 
     function hashString(value) {
@@ -1773,6 +1855,7 @@
       updateSelectedButton();
       updateResetViewButton();
       updateStatewideGuideVisibility();
+      updateDistrictUrl();
     }
 
     function refreshSelectedDistrictView() {
@@ -1849,6 +1932,7 @@
       updateSelectedButton();
       updateResetViewButton();
       updateStatewideGuideVisibility();
+      updateDistrictUrl();
       if (mapLayer) {
         map.fitBounds(mapLayer.getBounds(), { padding: [22, 22] });
       }
@@ -1941,6 +2025,7 @@
 
     async function boot() {
       try {
+        readInitialState();
         const [data, houseGeo, senateGeo] = await Promise.all([
           fetchJson("/data/whos_running_2026.json"),
           fetchJson(geojsonFiles.house),
@@ -1964,6 +2049,23 @@
             renderMap();
           });
         });
+
+        const copyDistrictLinkBtn = document.getElementById("copyDistrictLinkBtn");
+        if (copyDistrictLinkBtn) {
+          copyDistrictLinkBtn.addEventListener("click", async () => {
+            const original = copyDistrictLinkBtn.textContent;
+            try {
+              await copyDistrictLink();
+              copyDistrictLinkBtn.textContent = "Link copied";
+            } catch (error) {
+              console.error(error);
+              copyDistrictLinkBtn.textContent = "Copy failed";
+            }
+            window.setTimeout(() => {
+              copyDistrictLinkBtn.textContent = original;
+            }, 1400);
+          });
+        }
 
         const mapExpandBtn = document.getElementById("mapExpandBtn");
         const mapCard = document.querySelector(".map-card");
