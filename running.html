@@ -371,6 +371,39 @@
     .map-return-btn:hover {
       transform: translateY(-1px);
     }
+    .map-guide-box {
+      padding: 10px 12px;
+      background: rgba(255,255,255,.96);
+      border-radius: 14px;
+      border: 1px solid #dbe3ef;
+      box-shadow: 0 12px 28px rgba(15,23,42,.14);
+      color: var(--ink);
+      min-width: 190px;
+    }
+    .map-guide-title {
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #64748b;
+      margin-bottom: 8px;
+    }
+    .map-guide-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      line-height: 1.35;
+      color: #334155;
+      margin-top: 6px;
+    }
+    .map-guide-copy {
+      margin-top: 10px;
+      font-size: 12px;
+      line-height: 1.45;
+      color: #475569;
+      font-weight: 700;
+    }
     .detail-card {
       padding: 18px;
       position: sticky;
@@ -1007,6 +1040,7 @@
     const geojsons = {};
     let filingData = null;
     let mapLayer = null;
+    let statewideGuideControl = null;
     let selectedLayer = null;
     let featureLayerByDistrict = {};
     let featureGeometryByDistrict = {};
@@ -1071,7 +1105,7 @@
       maxZoom: 11
     }).setView([41.70, -71.55], 8.4);
 
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    const baseTileLayer = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 18,
       opacity: 0.42,
       attribution: "&copy; OpenStreetMap contributors"
@@ -1094,6 +1128,22 @@
       return wrapper;
     };
     resetViewControl.addTo(map);
+
+    statewideGuideControl = L.control({ position: "bottomleft" });
+    statewideGuideControl.onAdd = function () {
+      const div = L.DomUtil.create("div", "map-guide-box");
+      div.id = "statewideGuideBox";
+      div.innerHTML = `
+        <div class="map-guide-title">Statewide key</div>
+        <div class="map-guide-row"><span class="swatch" style="background:${filingTint.dem_only};border-color:${primaryStroke.no_primary}"></span>Democratic-only filing</div>
+        <div class="map-guide-row"><span class="swatch" style="background:${filingTint.rep_only};border-color:${primaryStroke.no_primary}"></span>Republican-only filing</div>
+        <div class="map-guide-row"><span class="swatch" style="background:${filingTint.both_major};border-color:${primaryStroke.no_primary}"></span>Purple district = both parties filed or an independent / other declaration is on file</div>
+        <div class="map-guide-row"><span class="swatch" style="background:#ffffff;border-color:${primaryStroke.dem_primary}"></span>Gold border = competitive primary</div>
+        <div class="map-guide-copy">Click any district to zoom in, isolate it, and see privacy-safe candidate markers.</div>
+      `;
+      return div;
+    };
+    statewideGuideControl.addTo(map);
 
     const loading = L.control({ position: "topleft" });
     loading.onAdd = function () {
@@ -1434,6 +1484,12 @@
       return "#94a3b8";
     }
 
+    function updateStatewideGuideVisibility() {
+      const guide = document.getElementById("statewideGuideBox");
+      if (!guide) return;
+      guide.style.display = state.selectedDistrict ? "none" : "block";
+    }
+
     function hasCompetitivePrimary(record) {
       return ["dem_primary", "rep_primary", "both_primaries"].includes(record?.primary_status);
     }
@@ -1629,23 +1685,39 @@
       if (!options.preservePartyFocus) {
         state.partyFocus = "all";
       }
-      const layer = featureLayerByDistrict[district];
       const record = getDistrictData(state.chamber, district);
+      const layer = featureLayerByDistrict[district];
+      selectedLayer = layer || null;
 
-      if (selectedLayer && mapLayer) {
-        mapLayer.resetStyle(selectedLayer);
+      if (mapLayer) {
+        mapLayer.eachLayer(entry => {
+          const layerDistrict = getFeatureDistrict(entry.feature);
+          const layerRecord = getDistrictData(state.chamber, layerDistrict);
+          if (layerDistrict === district) {
+            entry.setStyle({
+              ...districtStyle(layerRecord),
+              weight: Math.max((districtStyle(layerRecord).weight || 2) + 1.6, 4.2),
+              color: "#0f172a",
+              opacity: 1,
+              fillOpacity: 0.94
+            });
+          } else {
+            entry.setStyle({
+              ...districtStyle(layerRecord),
+              color: "#cbd5e1",
+              weight: 1.1,
+              opacity: 0.35,
+              fillOpacity: 0.08
+            });
+          }
+        });
       }
 
       if (layer) {
-        selectedLayer = layer;
-        layer.setStyle({
-          ...districtStyle(record),
-          weight: Math.max((districtStyle(record).weight || 2) + 1.2, 3.4),
-          color: "#0f172a"
-        });
+        baseTileLayer.setOpacity(0.2);
         map.fitBounds(layer.getBounds(), {
-          padding: [34, 34],
-          maxZoom: 11
+          padding: [18, 18],
+          maxZoom: 12
         });
       }
 
@@ -1653,6 +1725,7 @@
       renderSelectedDistrictMarkers(record);
       updateSelectedButton();
       updateResetViewButton();
+      updateStatewideGuideVisibility();
     }
 
     function refreshSelectedDistrictView() {
@@ -1717,14 +1790,18 @@
     function resetStatewideView() {
       state.selectedDistrict = null;
       state.partyFocus = "all";
-      if (selectedLayer && mapLayer) {
-        mapLayer.resetStyle(selectedLayer);
+      if (mapLayer) {
+        mapLayer.eachLayer(entry => {
+          mapLayer.resetStyle(entry);
+        });
       }
       selectedLayer = null;
+      baseTileLayer.setOpacity(0.42);
       candidateMarkerLayer.clearLayers();
       setDetail(null);
       updateSelectedButton();
       updateResetViewButton();
+      updateStatewideGuideVisibility();
       if (mapLayer) {
         map.fitBounds(mapLayer.getBounds(), { padding: [22, 22] });
       }
@@ -1749,6 +1826,7 @@
 
     function buildLegend() {
       updateResetViewButton();
+      updateStatewideGuideVisibility();
     }
 
     function renderDistrictBrowser() {
@@ -1800,24 +1878,6 @@
           const record = getDistrictData(state.chamber, district);
           layer.bindTooltip(`${state.chamber === "house" ? "House" : "Senate"} District ${district}`, { sticky: true });
           layer.on("click", () => focusDistrict(district));
-          if (record?.candidate_total || record?.general_candidate_total) {
-            const otherNames = getOtherCandidates(record).map(candidate => candidate.name);
-            const generalLine = record.general_candidate_total
-              ? `<br/>${record.general_candidate_total} November-only candidate${record.general_candidate_total === 1 ? "" : "s"} also declared`
-              : "";
-            const otherLine = otherNames.length
-              ? `<br/>Independent / other declaration: ${otherNames.join(", ")}`
-              : "";
-            layer.bindPopup(`
-              <strong>${state.chamber === "house" ? "House" : "Senate"} District ${district}</strong><br/>
-              ${recordHasOtherPresence(record) && getVisualStatus(record) === "both_major" && record.general_status !== "both_major"
-                ? "Purple district with independent / other declaration"
-                : record.general_label}<br/>
-              ${buildPrimaryContestLabel(record)}
-              ${generalLine}
-              ${otherLine}
-            `);
-          }
         }
       }).addTo(map);
 
