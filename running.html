@@ -379,19 +379,26 @@
     }
     .map-card:fullscreen,
     .map-card:-webkit-full-screen {
-      padding: 20px;
-      border-radius: 28px;
+      padding: 18px;
+      border-radius: 30px;
       background: rgba(248,250,252,.99);
+      overflow: hidden;
+      box-sizing: border-box;
     }
     .map-card:fullscreen #runningMap,
     .map-card:-webkit-full-screen #runningMap {
-      height: calc(100vh - 150px);
+      height: calc(100vh - 156px);
       margin-bottom: 0;
-      border-radius: 24px;
+      border-radius: 28px;
     }
     .map-card:fullscreen::backdrop,
     .map-card:-webkit-full-screen::backdrop {
       background: rgba(15,23,42,.88);
+    }
+    .map-card:fullscreen .map-guide-box,
+    .map-card:-webkit-full-screen .map-guide-box {
+      max-width: 310px;
+      border-radius: 16px;
     }
     .leaflet-container { font-family: Arial, Helvetica, sans-serif; }
     .leaflet-control-zoom {
@@ -1331,34 +1338,66 @@
     function updateDistrictUrl() {
       const url = new URL(window.location.href);
       url.searchParams.set("chamber", state.chamber);
+      if (state.mapFilter && state.mapFilter !== "all") {
+        url.searchParams.set("filter", state.mapFilter);
+      } else {
+        url.searchParams.delete("filter");
+      }
       if (state.selectedDistrict) {
         url.searchParams.set("district", String(state.selectedDistrict));
+        if (state.partyFocus && state.partyFocus !== "all") {
+          url.searchParams.set("party", state.partyFocus);
+        } else {
+          url.searchParams.delete("party");
+        }
       } else {
         url.searchParams.delete("district");
+        url.searchParams.delete("party");
       }
+      url.hash = "running-map-anchor";
       window.history.replaceState({}, "", url);
     }
 
     function readInitialState() {
       const params = new URLSearchParams(window.location.search);
       const chamber = params.get("chamber");
+      const filter = params.get("filter");
+      const party = params.get("party");
       const district = Number(params.get("district"));
       if (chamber === "house" || chamber === "senate") {
         state.chamber = chamber;
       }
+      if (["all", "dem_only", "rep_only", "both_major", "competitive"].includes(filter)) {
+        state.mapFilter = filter;
+      }
       if (Number.isFinite(district) && district > 0) {
         state.selectedDistrict = district;
+      }
+      if (["all", "DEM", "REP", "OTHER"].includes(party)) {
+        state.partyFocus = party;
       }
     }
 
     async function copyDistrictLink() {
       const url = new URL(window.location.href);
       url.searchParams.set("chamber", state.chamber);
+      if (state.mapFilter && state.mapFilter !== "all") {
+        url.searchParams.set("filter", state.mapFilter);
+      } else {
+        url.searchParams.delete("filter");
+      }
       if (state.selectedDistrict) {
         url.searchParams.set("district", String(state.selectedDistrict));
+        if (state.partyFocus && state.partyFocus !== "all") {
+          url.searchParams.set("party", state.partyFocus);
+        } else {
+          url.searchParams.delete("party");
+        }
       } else {
         url.searchParams.delete("district");
+        url.searchParams.delete("party");
       }
+      url.hash = "running-map-anchor";
       const text = url.toString();
       if (navigator.clipboard?.writeText) {
         await navigator.clipboard.writeText(text);
@@ -2006,11 +2045,14 @@
     }
 
     function fitStatewideBounds() {
-      if (!mapLayer) return;
-      map.fitBounds(mapLayer.getBounds(), {
-        paddingTopLeft: [30, 24],
-        paddingBottomRight: [34, 160],
-        maxZoom: isMapFullscreen() ? 8 : 9
+      const statewideBounds = L.latLngBounds(
+        [41.06, -71.92],
+        [42.03, -71.10]
+      );
+      map.fitBounds(statewideBounds, {
+        paddingTopLeft: isMapFullscreen() ? [34, 28] : [28, 22],
+        paddingBottomRight: isMapFullscreen() ? [42, 168] : [30, 138],
+        maxZoom: isMapFullscreen() ? 8.25 : 8.55
       });
     }
 
@@ -2073,7 +2115,7 @@
       renderDistrictBrowser();
       setDetail(state.selectedDistrict ? getDistrictData(state.chamber, state.selectedDistrict) : null);
       if (state.selectedDistrict && featureLayerByDistrict[state.selectedDistrict]) {
-        focusDistrict(state.selectedDistrict);
+        focusDistrict(state.selectedDistrict, { preservePartyFocus: true });
       }
     }
 
