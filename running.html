@@ -1006,8 +1006,16 @@
     };
     loading.addTo(map);
 
+    const assetVersion = "20260630b";
+
+    function freshAssetUrl(url) {
+      const separator = url.includes("?") ? "&" : "?";
+      return `${url}${separator}v=${assetVersion}`;
+    }
+
     function fetchJson(url) {
-      return fetch(url).then(r => {
+      const requestUrl = freshAssetUrl(url);
+      return fetch(requestUrl, { cache: "no-store" }).then(r => {
         if (!r.ok) throw new Error(`Failed to load ${url}`);
         return r.json();
       });
