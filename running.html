@@ -293,6 +293,7 @@
       flex-wrap: wrap;
       gap: 8px;
       padding: 16px 20px 0;
+      align-items: center;
     }
     .chip {
       border-radius: 999px;
@@ -304,6 +305,28 @@
       border: 1px solid #dbe3ef;
     }
     .chip strong { color: var(--ink); }
+    .chip-filter {
+      appearance: none;
+      cursor: pointer;
+      transition: transform .16s ease, box-shadow .16s ease, background .16s ease, border-color .16s ease;
+    }
+    .chip-filter:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(15,23,42,.08);
+    }
+    .chip-filter.active {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: white;
+      box-shadow: 0 12px 24px rgba(17,28,61,.18);
+    }
+    .chip-filter.active strong {
+      color: white;
+    }
+    .chip-note {
+      background: #fff;
+      color: #475569;
+    }
     #runningMap {
       height: 680px;
       margin: 16px 20px 20px;
@@ -395,6 +418,19 @@
       border: 1px solid #e2e8f0;
       overflow: hidden;
     }
+    .status-card.is-clickable {
+      cursor: pointer;
+      transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease, background .16s ease;
+    }
+    .status-card.is-clickable:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 24px rgba(15,23,42,.08);
+    }
+    .status-card.is-active {
+      background: #fff;
+      border-color: #94a3b8;
+      box-shadow: 0 12px 26px rgba(15,23,42,.1);
+    }
     .status-card::before {
       content: "";
       position: absolute;
@@ -437,6 +473,41 @@
       line-height: 1.45;
       color: var(--ink);
       font-weight: 900;
+    }
+    .candidate-focus {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .candidate-focus-btn {
+      appearance: none;
+      border: 1px solid #dbe3ef;
+      background: #fff;
+      color: #334155;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 900;
+      cursor: pointer;
+      transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease, background .16s ease;
+    }
+    .candidate-focus-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(15,23,42,.08);
+    }
+    .candidate-focus-btn.active {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: white;
+      box-shadow: 0 12px 24px rgba(17,28,61,.18);
+    }
+    .candidate-map-note {
+      margin-top: 10px;
+      font-size: 13px;
+      line-height: 1.5;
+      color: #475569;
     }
     .candidate-list {
       margin-top: 16px;
@@ -485,6 +556,17 @@
       margin-top: 6px;
       font-size: 13px;
       color: #64748b;
+    }
+    .candidate-approx-note {
+      margin-top: 10px;
+      padding: 10px 11px;
+      border-radius: 12px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      color: #475569;
+      font-size: 12px;
+      line-height: 1.45;
+      font-weight: 700;
     }
     .candidate-subhead {
       margin-top: 4px;
@@ -854,9 +936,14 @@
             <button type="button" data-chamber="senate">Senate</button>
           </div>
         </div>
-        <div class="chip-bar">
-          <div class="chip"><strong>Filed primary candidates:</strong> blue = Democratic-only filing, red = Republican-only filing, purple = both major parties filed.</div>
-          <div class="chip"><strong>Competitive primary:</strong> highlighted border = more than one candidate filed within the same party.</div>
+        <div class="chip-bar" id="mapFilterBar">
+          <button type="button" class="chip chip-filter active" data-filter="all"><strong>All filed districts</strong></button>
+          <button type="button" class="chip chip-filter" data-filter="dem_only">Democratic candidates filed</button>
+          <button type="button" class="chip chip-filter" data-filter="rep_only">Republican candidates filed</button>
+          <button type="button" class="chip chip-filter" data-filter="both_major">Both parties filed</button>
+          <button type="button" class="chip chip-filter" data-filter="other_presence">Independent or other declared</button>
+          <button type="button" class="chip chip-filter" data-filter="competitive">Competitive primaries</button>
+          <div class="chip chip-note"><strong>Privacy-safe map:</strong> select a district to see approximate in-district home-base markers instead of exact addresses.</div>
         </div>
         <div id="runningMap" aria-label="Rhode Island candidate filing map"></div>
       </div>
@@ -866,15 +953,17 @@
         <div class="detail-title" id="detailTitle">Select a district</div>
         <div class="detail-copy" id="detailCopy">Tap any House or Senate district on the map to see official September 9 primary filings, whether either party has a competitive primary, and the public contact details listed in Rhode Island's declared candidates workbook.</div>
         <div class="detail-statuses">
-          <div class="status-card party-status dem-status">
+          <div class="status-card party-status dem-status is-clickable" id="detailDemCard" role="button" tabindex="0" aria-pressed="false">
             <h3>Democratic primary</h3>
             <p id="detailDemPrimary">No district selected</p>
           </div>
-          <div class="status-card party-status rep-status">
+          <div class="status-card party-status rep-status is-clickable" id="detailRepCard" role="button" tabindex="0" aria-pressed="false">
             <h3>Republican primary</h3>
             <p id="detailRepPrimary">No district selected</p>
           </div>
         </div>
+        <div class="candidate-focus" id="candidateFocusControls"></div>
+        <div class="candidate-map-note" id="candidateMapNote">Select a district to place privacy-safe candidate home-base markers on the map.</div>
         <div class="candidate-list" id="candidateList"></div>
         <div class="ballot-info">
           <div class="ballot-info-title">How to get on the ballot in Rhode Island</div>
@@ -923,13 +1012,17 @@
   </footer>
 
   <script>
-    const state = { chamber: "house", selectedDistrict: null };
+    const state = { chamber: "house", selectedDistrict: null, mapFilter: "all", partyFocus: "all" };
     const geojsons = {};
     let filingData = null;
     let mapLayer = null;
     let legend = null;
     let selectedLayer = null;
     let featureLayerByDistrict = {};
+    let featureGeometryByDistrict = {};
+    let featureBoundsByDistrict = {};
+    let candidateMarkerLayer = null;
+    let otherPresenceLayer = null;
 
     const geojsonFiles = {
       house: "/data/house_new.geojson",
@@ -997,6 +1090,9 @@
       attribution: "&copy; OpenStreetMap contributors"
     }).addTo(map);
 
+    candidateMarkerLayer = L.layerGroup().addTo(map);
+    otherPresenceLayer = L.layerGroup().addTo(map);
+
     const loading = L.control({ position: "topleft" });
     loading.onAdd = function () {
       const div = L.DomUtil.create("div", "loading-card");
@@ -1046,6 +1142,120 @@
 
     function getSummary(chamber) {
       return filingData?.summary?.[chamber] || null;
+    }
+
+    function hashString(value) {
+      let hash = 2166136261;
+      const source = String(value || "");
+      for (let i = 0; i < source.length; i += 1) {
+        hash ^= source.charCodeAt(i);
+        hash = Math.imul(hash, 16777619);
+      }
+      return hash >>> 0;
+    }
+
+    function mulberry32(seed) {
+      let current = seed >>> 0;
+      return function next() {
+        current += 0x6d2b79f5;
+        let t = current;
+        t = Math.imul(t ^ (t >>> 15), t | 1);
+        t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+        return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+      };
+    }
+
+    function pointInRing(lat, lng, ring) {
+      let inside = false;
+      for (let i = 0, j = ring.length - 1; i < ring.length; j = i, i += 1) {
+        const xi = ring[i][0];
+        const yi = ring[i][1];
+        const xj = ring[j][0];
+        const yj = ring[j][1];
+        const intersect = ((yi > lat) !== (yj > lat))
+          && (lng < ((xj - xi) * (lat - yi)) / ((yj - yi) || 1e-12) + xi);
+        if (intersect) inside = !inside;
+      }
+      return inside;
+    }
+
+    function pointInPolygonGeometry(lat, lng, polygonCoords) {
+      if (!polygonCoords?.length) return false;
+      if (!pointInRing(lat, lng, polygonCoords[0])) return false;
+      for (let i = 1; i < polygonCoords.length; i += 1) {
+        if (pointInRing(lat, lng, polygonCoords[i])) return false;
+      }
+      return true;
+    }
+
+    function pointInGeometry(lat, lng, geometry) {
+      if (!geometry) return false;
+      if (geometry.type === "Polygon") {
+        return pointInPolygonGeometry(lat, lng, geometry.coordinates);
+      }
+      if (geometry.type === "MultiPolygon") {
+        return geometry.coordinates.some(polygon => pointInPolygonGeometry(lat, lng, polygon));
+      }
+      return false;
+    }
+
+    function recordHasOtherPresence(record) {
+      if (!record) return false;
+      return [...(record.candidates || []), ...(record.general_candidates || [])]
+        .some(candidate => !["DEM", "REP"].includes(candidate.party));
+    }
+
+    function getOtherCandidates(record) {
+      return [...(record?.candidates || []), ...(record?.general_candidates || [])]
+        .filter(candidate => !["DEM", "REP"].includes(candidate.party));
+    }
+
+    function recordMatchesFilter(record) {
+      if (!record) return false;
+      if (state.mapFilter === "all") return record.candidate_total > 0 || record.general_candidate_total > 0;
+      if (state.mapFilter === "competitive") return hasCompetitivePrimary(record);
+      if (state.mapFilter === "other_presence") return recordHasOtherPresence(record);
+      return record.general_status === state.mapFilter;
+    }
+
+    function candidateMatchesFocus(candidate) {
+      if (state.partyFocus === "all") return true;
+      if (state.partyFocus === "OTHER") return !["DEM", "REP"].includes(candidate.party);
+      return candidate.party === state.partyFocus;
+    }
+
+    function getApproximateCandidatePoint(district, candidate, index, total) {
+      const geometry = featureGeometryByDistrict[district];
+      const bounds = featureBoundsByDistrict[district];
+      if (!geometry || !bounds) {
+        return L.latLng(41.70, -71.55);
+      }
+
+      const seed = hashString([
+        state.chamber,
+        district,
+        candidate.name,
+        candidate.home_label,
+        candidate.party,
+        candidate.ballot_stage,
+        index,
+        total
+      ].join("|"));
+      const random = mulberry32(seed);
+      const south = bounds.getSouth();
+      const north = bounds.getNorth();
+      const west = bounds.getWest();
+      const east = bounds.getEast();
+
+      for (let attempt = 0; attempt < 160; attempt += 1) {
+        const lat = south + ((north - south) * random());
+        const lng = west + ((east - west) * random());
+        if (pointInGeometry(lat, lng, geometry)) {
+          return L.latLng(lat, lng);
+        }
+      }
+
+      return bounds.getCenter();
     }
 
     function getPrimaryDate(year) {
@@ -1173,6 +1383,7 @@
           </div>
           <div class="candidate-links">${buildCandidateLinks(candidate)}</div>
           <div class="candidate-note">${escapeHtml(note)}</div>
+          <div class="candidate-approx-note">Map marker shows an approximate in-district home-base location rather than the physical street address.</div>
         </div>
       `;
     }
@@ -1182,13 +1393,26 @@
         return { color: "#94a3b8", weight: 1.2, fillColor: "#e2e8f0", fillOpacity: 0.45 };
       }
 
-      return {
+      const base = {
         color: primaryStroke[record.primary_status] || "#64748b",
         weight: record.primary_status !== "no_primary" && record.primary_status !== "no_filing" ? 3.8 : 2.2,
         opacity: 1,
         fillColor: filingTint[record.general_status] || "#e2e8f0",
         fillOpacity: record.primary_status === "no_filing" ? 0.12 : 0.78
       };
+
+      if (state.mapFilter !== "all" && !recordMatchesFilter(record)) {
+        return {
+          ...base,
+          color: "#cbd5e1",
+          weight: 1.4,
+          opacity: 0.55,
+          fillColor: "#f8fafc",
+          fillOpacity: 0.16
+        };
+      }
+
+      return base;
     }
 
     function getPartyAccent(record) {
@@ -1267,6 +1491,42 @@
       `;
     }
 
+    function buildCandidateFocusControls(record) {
+      const holder = document.getElementById("candidateFocusControls");
+      if (!holder) return;
+
+      if (!record) {
+        holder.innerHTML = "";
+        return;
+      }
+
+      const options = [{ code: "all", label: "All candidates" }];
+      if ([...(record.candidates || []), ...(record.general_candidates || [])].some(candidate => candidate.party === "DEM")) {
+        options.push({ code: "DEM", label: "Democrats" });
+      }
+      if ([...(record.candidates || []), ...(record.general_candidates || [])].some(candidate => candidate.party === "REP")) {
+        options.push({ code: "REP", label: "Republicans" });
+      }
+      if (recordHasOtherPresence(record)) {
+        options.push({ code: "OTHER", label: "Independent / Other" });
+      }
+
+      holder.innerHTML = options.map(option => `
+        <button
+          type="button"
+          class="candidate-focus-btn${state.partyFocus === option.code ? " active" : ""}"
+          data-party-focus="${option.code}"
+        >${option.label}</button>
+      `).join("");
+
+      holder.querySelectorAll("[data-party-focus]").forEach(button => {
+        button.addEventListener("click", () => {
+          state.partyFocus = button.dataset.partyFocus;
+          refreshSelectedDistrictView();
+        });
+      });
+    }
+
     function setSummaryCards() {
       const summary = getSummary(state.chamber);
       if (!summary) return;
@@ -1280,13 +1540,19 @@
       const demPrimary = document.getElementById("detailDemPrimary");
       const repPrimary = document.getElementById("detailRepPrimary");
       const list = document.getElementById("candidateList");
+      const mapNote = document.getElementById("candidateMapNote");
 
       if (!record) {
         title.textContent = "Select a district";
         copy.textContent = "Tap any House or Senate district on the map to see who has filed for the September 9 primary ballot, whether either party has a competitive same-party primary, and which public contact details are listed in the official Rhode Island workbook.";
         demPrimary.textContent = "No district selected";
         repPrimary.textContent = "No district selected";
+        if (mapNote) {
+          mapNote.textContent = "Select a district to place privacy-safe candidate home-base markers on the map.";
+        }
+        buildCandidateFocusControls(null);
         list.innerHTML = "";
+        syncPartyCards(null);
         return;
       }
 
@@ -1302,27 +1568,40 @@
       }
       demPrimary.innerHTML = buildPartyPrimaryHtml(record, "DEM");
       repPrimary.innerHTML = buildPartyPrimaryHtml(record, "REP");
+      if (mapNote) {
+        mapNote.textContent = "Candidate markers show approximate in-district home-base locations only. Use the buttons above to focus the map on one party at a time.";
+      }
+      buildCandidateFocusControls(record);
+      syncPartyCards(record);
+
+      const visiblePrimaryCandidates = record.candidates.filter(candidateMatchesFocus);
+      const visibleGeneralCandidates = record.general_candidates.filter(candidateMatchesFocus);
 
       if (!record.candidates.length && !record.general_candidates.length) {
         list.innerHTML = `<div class="candidate-item"><div class="candidate-name">No filing listed yet</div><div class="candidate-note">This district does not appear in the current official workbook yet.</div></div>`;
         return;
       }
 
+      if (!visiblePrimaryCandidates.length && !visibleGeneralCandidates.length) {
+        list.innerHTML = `<div class="candidate-item"><div class="candidate-name">No matching candidates in this view</div><div class="candidate-note">Change the party focus above to bring all filed candidates back into view.</div></div>`;
+        return;
+      }
+
       const sections = [];
-      if (record.candidates.length) {
+      if (visiblePrimaryCandidates.length) {
         sections.push(`
           <div class="candidate-section">
             <div class="candidate-section-label">September primary candidates</div>
-            ${record.candidates.map(buildCandidateCard).join("")}
+            ${visiblePrimaryCandidates.map(buildCandidateCard).join("")}
           </div>
         `);
       }
-      if (record.general_candidates.length) {
+      if (visibleGeneralCandidates.length) {
         sections.push(`
           <div class="candidate-section">
             <div class="candidate-section-label">Also declared for November</div>
             <div class="candidate-section-note">These candidates appear in the official general-election declaration list and do not change the September 9 primary map colors.</div>
-            ${record.general_candidates.map(buildCandidateCard).join("")}
+            ${visibleGeneralCandidates.map(buildCandidateCard).join("")}
           </div>
         `);
       }
@@ -1335,8 +1614,11 @@
       });
     }
 
-    function focusDistrict(district) {
+    function focusDistrict(district, options = {}) {
       state.selectedDistrict = district;
+      if (!options.preservePartyFocus) {
+        state.partyFocus = "all";
+      }
       const layer = featureLayerByDistrict[district];
       const record = getDistrictData(state.chamber, district);
 
@@ -1354,7 +1636,94 @@
       }
 
       setDetail(record);
+      renderSelectedDistrictMarkers(record);
       updateSelectedButton();
+    }
+
+    function refreshSelectedDistrictView() {
+      if (!state.selectedDistrict) return;
+      const record = getDistrictData(state.chamber, state.selectedDistrict);
+      setDetail(record);
+      renderSelectedDistrictMarkers(record);
+    }
+
+    function syncPartyCards(record) {
+      const demCard = document.getElementById("detailDemCard");
+      const repCard = document.getElementById("detailRepCard");
+      if (!demCard || !repCard) return;
+
+      const hasDem = !!getPartyCandidates(record, "DEM").length;
+      const hasRep = !!getPartyCandidates(record, "REP").length;
+
+      demCard.classList.toggle("is-active", state.partyFocus === "DEM");
+      demCard.classList.toggle("is-clickable", hasDem);
+      demCard.setAttribute("aria-pressed", String(state.partyFocus === "DEM"));
+      demCard.style.opacity = hasDem ? "1" : ".68";
+
+      repCard.classList.toggle("is-active", state.partyFocus === "REP");
+      repCard.classList.toggle("is-clickable", hasRep);
+      repCard.setAttribute("aria-pressed", String(state.partyFocus === "REP"));
+      repCard.style.opacity = hasRep ? "1" : ".68";
+    }
+
+    function renderSelectedDistrictMarkers(record) {
+      candidateMarkerLayer.clearLayers();
+      if (!record || !state.selectedDistrict) return;
+
+      const allCandidates = [...record.candidates, ...record.general_candidates].filter(candidateMatchesFocus);
+      if (!allCandidates.length) return;
+
+      allCandidates.forEach((candidate, index) => {
+        const point = getApproximateCandidatePoint(record.district_number, candidate, index, allCandidates.length);
+        const marker = L.circleMarker(point, {
+          radius: candidate.ballot_stage === "general" ? 8 : 7,
+          color: "#ffffff",
+          weight: 2,
+          fillColor: candidateAccent(candidate),
+          fillOpacity: 0.96
+        });
+        marker.bindPopup(`
+          <strong>${escapeHtml(candidate.name)}</strong><br/>
+          ${escapeHtml(candidate.party_raw || candidate.party_label)}<br/>
+          ${escapeHtml(candidate.ballot_stage === "general" ? "November general-election declaration" : "September primary declaration")}<br/>
+          ${escapeHtml(candidate.home_label || "Home base not listed")}<br/>
+          <em>Approximate in-district location shown to protect private addresses.</em>
+        `);
+        marker.bindTooltip(candidate.name, { direction: "top" });
+        candidateMarkerLayer.addLayer(marker);
+      });
+    }
+
+    function renderOtherPresenceIndicators() {
+      otherPresenceLayer.clearLayers();
+      const chamberData = filingData?.chambers?.[state.chamber] || {};
+      Object.values(chamberData).forEach(record => {
+        if (!recordHasOtherPresence(record)) return;
+        const otherCandidates = getOtherCandidates(record);
+        if (!otherCandidates.length) return;
+        const point = getApproximateCandidatePoint(record.district_number, otherCandidates[0], 0, otherCandidates.length);
+        const marker = L.circleMarker(point, {
+          radius: 6,
+          color: "#0f766e",
+          weight: 2.2,
+          fillColor: "#34d399",
+          fillOpacity: 0.98
+        });
+        marker.bindTooltip(
+          `${state.chamber === "house" ? "House" : "Senate"} District ${record.district_number}: ${otherCandidates.map(candidate => candidate.name).join(", ")}`,
+          { direction: "top" }
+        );
+        marker.bindPopup(`
+          <strong>${state.chamber === "house" ? "House" : "Senate"} District ${record.district_number}</strong><br/>
+          Independent / other declaration on file:<br/>
+          ${otherCandidates.map(candidate => escapeHtml(candidate.name)).join("<br/>")}
+        `);
+        marker.on("click", () => {
+          state.partyFocus = "OTHER";
+          focusDistrict(record.district_number, { preservePartyFocus: true });
+        });
+        otherPresenceLayer.addLayer(marker);
+      });
     }
 
     function buildPrimaryContestLabel(record) {
@@ -1392,6 +1761,8 @@
           <div class="legend-row"><span class="swatch" style="background:${primaryFill.no_filing};border-color:${primaryStroke.no_filing}"></span>No filing in current sheet</div>
           <div class="legend-title" style="margin-top:14px;">Competitive primary</div>
           <div class="legend-row"><span class="swatch" style="background:#ffffff;border-color:${primaryStroke.dem_primary}"></span>Gold border = more than one candidate filed within the same party</div>
+          <div class="legend-title" style="margin-top:14px;">Approximate home markers</div>
+          <div class="legend-row"><span class="swatch" style="background:#34d399;border-color:#0f766e"></span>Teal dots flag districts with independent or other declarations, including November-only candidates like Allan Fung</div>
         `;
         return div;
       };
@@ -1418,7 +1789,7 @@
           </div>
           <div class="district-button-name">${record.general_label}</div>
           ${hasCompetitivePrimary(record) ? `<div class="contest-badge">Competitive primary</div>` : ``}
-          <div class="district-button-detail">${buildPrimaryContestLabel(record)}</div>
+          <div class="district-button-detail">${buildPrimaryContestLabel(record)}${recordHasOtherPresence(record) ? "<br/>Independent / other declaration also on file." : ""}</div>
         </button>
       `).join("");
 
@@ -1429,28 +1800,39 @@
 
     function renderMap() {
       featureLayerByDistrict = {};
+      featureGeometryByDistrict = {};
+      featureBoundsByDistrict = {};
       const geo = geojsons[state.chamber];
       if (!geo) return;
 
       if (mapLayer) map.removeLayer(mapLayer);
+      candidateMarkerLayer.clearLayers();
+      otherPresenceLayer.clearLayers();
       mapLayer = L.geoJSON(geo, {
         style: feature => districtStyle(getDistrictData(state.chamber, getFeatureDistrict(feature))),
         onEachFeature: (feature, layer) => {
           const district = getFeatureDistrict(feature);
           if (!district) return;
           featureLayerByDistrict[district] = layer;
+          featureGeometryByDistrict[district] = feature.geometry;
+          featureBoundsByDistrict[district] = layer.getBounds();
           const record = getDistrictData(state.chamber, district);
           layer.bindTooltip(`${state.chamber === "house" ? "House" : "Senate"} District ${district}`, { sticky: true });
           layer.on("click", () => focusDistrict(district));
           if (record?.candidate_total) {
+            const otherNames = getOtherCandidates(record).map(candidate => candidate.name);
             const generalLine = record.general_candidate_total
               ? `<br/>${record.general_candidate_total} November-only candidate${record.general_candidate_total === 1 ? "" : "s"} also declared`
+              : "";
+            const otherLine = otherNames.length
+              ? `<br/>Independent / other declaration: ${otherNames.join(", ")}`
               : "";
             layer.bindPopup(`
               <strong>${state.chamber === "house" ? "House" : "Senate"} District ${district}</strong><br/>
               ${record.general_label}<br/>
               ${buildPrimaryContestLabel(record)}
               ${generalLine}
+              ${otherLine}
             `);
           }
         }
@@ -1458,6 +1840,7 @@
 
       map.fitBounds(mapLayer.getBounds(), { padding: [22, 22] });
       buildLegend();
+      renderOtherPresenceIndicators();
       setSummaryCards();
       setPrimaryCountdown();
       renderDistrictBrowser();
@@ -1486,10 +1869,43 @@
           button.addEventListener("click", () => {
             state.chamber = button.dataset.chamber;
             state.selectedDistrict = null;
+            state.partyFocus = "all";
             document.querySelectorAll("#chamberButtons button").forEach(btn => btn.classList.toggle("active", btn === button));
             renderMap();
           });
         });
+
+        document.querySelectorAll("[data-filter]").forEach(button => {
+          button.classList.toggle("active", button.dataset.filter === state.mapFilter);
+          button.addEventListener("click", () => {
+            state.mapFilter = button.dataset.filter;
+            document.querySelectorAll("[data-filter]").forEach(btn => btn.classList.toggle("active", btn.dataset.filter === state.mapFilter));
+            renderMap();
+          });
+        });
+
+        const demCard = document.getElementById("detailDemCard");
+        const repCard = document.getElementById("detailRepCard");
+        const attachCardToggle = (card, code) => {
+          if (!card) return;
+          const toggle = () => {
+            if (!state.selectedDistrict) return;
+            const record = getDistrictData(state.chamber, state.selectedDistrict);
+            const hasCandidates = code === "DEM" ? getPartyCandidates(record, "DEM").length : getPartyCandidates(record, "REP").length;
+            if (!hasCandidates) return;
+            state.partyFocus = state.partyFocus === code ? "all" : code;
+            refreshSelectedDistrictView();
+          };
+          card.addEventListener("click", toggle);
+          card.addEventListener("keydown", event => {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              toggle();
+            }
+          });
+        };
+        attachCardToggle(demCard, "DEM");
+        attachCardToggle(repCard, "REP");
 
         renderMap();
         setSourceNote();
