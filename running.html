@@ -257,6 +257,13 @@
       gap: 14px 14px;
       align-items: center;
     }
+    .control-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+    }
     .control-label {
       color: #64748b;
       font-size: 12px;
@@ -287,6 +294,23 @@
       background: var(--navy);
       color: white;
       box-shadow: 0 10px 20px rgba(17,28,61,.18);
+    }
+    .map-expand-btn {
+      appearance: none;
+      border: 1px solid #dbe3ef;
+      background: #fff;
+      color: var(--navy);
+      min-height: 40px;
+      padding: 0 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 10px 24px rgba(15,23,42,.08);
+      white-space: nowrap;
+    }
+    .map-expand-btn:hover {
+      transform: translateY(-1px);
     }
     .chip-bar {
       display: flex;
@@ -335,6 +359,21 @@
       border: 1px solid #dbe3ef;
       overflow: hidden;
       background: #eef2f7;
+    }
+    .map-card:fullscreen,
+    .map-card:-webkit-full-screen {
+      padding: 20px;
+      border-radius: 0;
+      background: rgba(248,250,252,.99);
+    }
+    .map-card:fullscreen #runningMap,
+    .map-card:-webkit-full-screen #runningMap {
+      height: calc(100vh - 160px);
+      margin-bottom: 0;
+    }
+    .map-card:fullscreen::backdrop,
+    .map-card:-webkit-full-screen::backdrop {
+      background: rgba(15,23,42,.88);
     }
     .leaflet-container { font-family: Arial, Helvetica, sans-serif; }
     .leaflet-control-zoom {
@@ -956,9 +995,12 @@
       <div class="map-card">
         <div class="controls">
           <div class="control-label">Chamber</div>
-          <div class="segmented" id="chamberButtons">
-            <button type="button" data-chamber="house">House</button>
-            <button type="button" data-chamber="senate">Senate</button>
+          <div class="control-row">
+            <div class="segmented" id="chamberButtons">
+              <button type="button" data-chamber="house">House</button>
+              <button type="button" data-chamber="senate">Senate</button>
+            </div>
+            <button type="button" class="map-expand-btn" id="mapExpandBtn">Enlarge map</button>
           </div>
         </div>
         <div class="chip-bar" id="mapFilterBar">
@@ -1110,6 +1152,21 @@
       opacity: 0.42,
       attribution: "&copy; OpenStreetMap contributors"
     }).addTo(map);
+
+    function invalidateRunningMap() {
+      window.setTimeout(() => map.invalidateSize(), 120);
+    }
+
+    function isMapFullscreen() {
+      const mapCard = document.querySelector(".map-card");
+      return document.fullscreenElement === mapCard || document.webkitFullscreenElement === mapCard;
+    }
+
+    function updateMapExpandButton() {
+      const button = document.getElementById("mapExpandBtn");
+      if (!button) return;
+      button.textContent = isMapFullscreen() ? "Exit full screen" : "Enlarge map";
+    }
 
     candidateMarkerLayer = L.layerGroup().addTo(map);
 
@@ -1408,8 +1465,6 @@
         : "September primary declaration";
       const homeLabel = candidate.home_label || candidate.hometown || "Not listed";
       const zipLabel = candidate.zip_code || "Not listed";
-      const declarationLabel = candidate.declaration_status || "Not listed";
-      const signatureLabel = candidate.required_signatures ? `${candidate.required_signatures}` : "Not listed";
       const note = candidate.ballot_stage === "general"
         ? "Official Rhode Island general-election declaration on file for this district."
         : "Official Rhode Island primary declaration on file for this district.";
@@ -1431,14 +1486,6 @@
             <div class="candidate-meta">
               <span class="candidate-meta-label">ZIP code</span>
               <span class="candidate-meta-value">${escapeHtml(zipLabel)}</span>
-            </div>
-            <div class="candidate-meta">
-              <span class="candidate-meta-label">Declaration</span>
-              <span class="candidate-meta-value">${escapeHtml(declarationLabel)}</span>
-            </div>
-            <div class="candidate-meta">
-              <span class="candidate-meta-label">Signature requirement</span>
-              <span class="candidate-meta-value">${escapeHtml(signatureLabel)}</span>
             </div>
           </div>
           <div class="candidate-links">${buildCandidateLinks(candidate)}</div>
@@ -1918,6 +1965,40 @@
           });
         });
 
+        const mapExpandBtn = document.getElementById("mapExpandBtn");
+        const mapCard = document.querySelector(".map-card");
+        if (mapExpandBtn && mapCard) {
+          mapExpandBtn.addEventListener("click", async () => {
+            try {
+              if (isMapFullscreen()) {
+                if (document.exitFullscreen) {
+                  await document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) {
+                  document.webkitExitFullscreen();
+                }
+              } else if (mapCard.requestFullscreen) {
+                await mapCard.requestFullscreen();
+              } else if (mapCard.webkitRequestFullscreen) {
+                mapCard.webkitRequestFullscreen();
+              }
+            } catch (error) {
+              console.error(error);
+            } finally {
+              updateMapExpandButton();
+              invalidateRunningMap();
+            }
+          });
+        }
+
+        document.addEventListener("fullscreenchange", () => {
+          updateMapExpandButton();
+          invalidateRunningMap();
+        });
+        document.addEventListener("webkitfullscreenchange", () => {
+          updateMapExpandButton();
+          invalidateRunningMap();
+        });
+
         document.querySelectorAll("[data-filter]").forEach(button => {
           button.classList.toggle("active", button.dataset.filter === state.mapFilter);
           button.addEventListener("click", () => {
@@ -1952,6 +2033,7 @@
 
         renderMap();
         setSourceNote();
+        updateMapExpandButton();
       } catch (error) {
         const card = document.getElementById("loadingCard");
         if (card) {
