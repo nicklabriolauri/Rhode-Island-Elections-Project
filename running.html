@@ -262,7 +262,7 @@
       flex-wrap: wrap;
       gap: 10px;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-start;
     }
     .control-label {
       color: #64748b;
@@ -298,18 +298,35 @@
     .map-expand-btn {
       appearance: none;
       border: 1px solid #dbe3ef;
-      background: #fff;
+      background: rgba(255,255,255,.96);
       color: var(--navy);
-      min-height: 40px;
-      padding: 0 14px;
+      min-height: 38px;
+      padding: 0 12px;
       border-radius: 999px;
       font-size: 12px;
       font-weight: 900;
       cursor: pointer;
-      box-shadow: 0 10px 24px rgba(15,23,42,.08);
+      box-shadow: 0 12px 28px rgba(15,23,42,.16);
       white-space: nowrap;
     }
     .map-expand-btn:hover {
+      transform: translateY(-1px);
+    }
+    .map-float-btn {
+      appearance: none;
+      border: 1px solid #dbe3ef;
+      background: rgba(255,255,255,.97);
+      color: var(--navy);
+      min-height: 38px;
+      padding: 0 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 12px 28px rgba(15,23,42,.16);
+      white-space: nowrap;
+    }
+    .map-float-btn:hover {
       transform: translateY(-1px);
     }
     .chip-bar {
@@ -363,13 +380,14 @@
     .map-card:fullscreen,
     .map-card:-webkit-full-screen {
       padding: 20px;
-      border-radius: 0;
+      border-radius: 28px;
       background: rgba(248,250,252,.99);
     }
     .map-card:fullscreen #runningMap,
     .map-card:-webkit-full-screen #runningMap {
-      height: calc(100vh - 160px);
+      height: calc(100vh - 150px);
       margin-bottom: 0;
+      border-radius: 24px;
     }
     .map-card:fullscreen::backdrop,
     .map-card:-webkit-full-screen::backdrop {
@@ -417,7 +435,8 @@
       border: 1px solid #dbe3ef;
       box-shadow: 0 12px 28px rgba(15,23,42,.14);
       color: var(--ink);
-      min-width: 190px;
+      min-width: 170px;
+      max-width: 290px;
     }
     .map-guide-title {
       font-size: 11px;
@@ -468,6 +487,9 @@
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
+    }
+    .detail-actions.is-inline {
+      margin-top: 12px;
     }
     .detail-action-btn {
       appearance: none;
@@ -1031,7 +1053,6 @@
               <button type="button" data-chamber="house">House</button>
               <button type="button" data-chamber="senate">Senate</button>
             </div>
-            <button type="button" class="map-expand-btn" id="mapExpandBtn">Enlarge map</button>
           </div>
         </div>
         <div class="chip-bar" id="mapFilterBar">
@@ -1049,7 +1070,7 @@
         <div class="detail-eyebrow">District detail</div>
         <div class="detail-title" id="detailTitle">Select a district</div>
         <div class="detail-actions">
-          <button type="button" class="detail-action-btn" id="copyDistrictLinkBtn">Copy district link</button>
+          <button type="button" class="detail-action-btn" id="copyDistrictLinkBtn" data-copy-district-link="true">Copy district link</button>
         </div>
         <div class="detail-copy" id="detailCopy">Tap any House or Senate district on the map to see official September 9 primary filings, whether either party has a competitive primary, and the public contact details listed in Rhode Island's declared candidates workbook.</div>
         <div class="detail-statuses">
@@ -1063,6 +1084,7 @@
           </div>
         </div>
         <div class="candidate-focus" id="candidateFocusControls"></div>
+        <div class="detail-actions is-inline" id="secondaryDetailActions"></div>
         <div class="candidate-map-note" id="candidateMapNote">Select a district to place privacy-safe candidate home-base markers on the map.</div>
         <div class="candidate-list" id="candidateList"></div>
         <div class="ballot-info">
@@ -1125,6 +1147,8 @@
     let candidateMarkerLayer = null;
     let resetViewControl = null;
     let resetViewButton = null;
+    let expandViewControl = null;
+    let expandViewButton = null;
 
     const geojsonFiles = {
       house: "/data/house_new.geojson",
@@ -1198,9 +1222,13 @@
     }
 
     function updateMapExpandButton() {
-      const button = document.getElementById("mapExpandBtn");
-      if (!button) return;
-      button.textContent = isMapFullscreen() ? "Exit full screen" : "Enlarge map";
+      const buttons = [
+        document.getElementById("mapExpandBtn"),
+        expandViewButton
+      ].filter(Boolean);
+      buttons.forEach(button => {
+        button.textContent = isMapFullscreen() ? "Exit full screen" : "Enlarge map";
+      });
     }
 
     candidateMarkerLayer = L.layerGroup().addTo(map);
@@ -1220,6 +1248,18 @@
       return wrapper;
     };
     resetViewControl.addTo(map);
+
+    expandViewControl = L.control({ position: "topright" });
+    expandViewControl.onAdd = function () {
+      const wrapper = L.DomUtil.create("div");
+      expandViewButton = L.DomUtil.create("button", "map-float-btn", wrapper);
+      expandViewButton.type = "button";
+      expandViewButton.id = "mapExpandBtn";
+      expandViewButton.textContent = "Enlarge map";
+      L.DomEvent.disableClickPropagation(wrapper);
+      return wrapper;
+    };
+    expandViewControl.addTo(map);
 
     statewideGuideControl = L.control({ position: "bottomleft" });
     statewideGuideControl.onAdd = function () {
@@ -1688,10 +1728,12 @@
 
     function buildCandidateFocusControls(record) {
       const holder = document.getElementById("candidateFocusControls");
+      const actionHolder = document.getElementById("secondaryDetailActions");
       if (!holder) return;
 
       if (!record) {
         holder.innerHTML = "";
+        if (actionHolder) actionHolder.innerHTML = "";
         return;
       }
 
@@ -1720,6 +1762,10 @@
           refreshSelectedDistrictView();
         });
       });
+
+      if (actionHolder) {
+        actionHolder.innerHTML = `<button type="button" class="detail-action-btn" data-copy-district-link="true">Copy district link</button>`;
+      }
     }
 
     function setSummaryCards() {
@@ -1845,7 +1891,8 @@
       if (layer) {
         baseTileLayer.setOpacity(0.2);
         map.fitBounds(layer.getBounds(), {
-          padding: [18, 18],
+          paddingTopLeft: [28, 22],
+          paddingBottomRight: [28, 46],
           maxZoom: 12
         });
       }
@@ -1933,9 +1980,7 @@
       updateResetViewButton();
       updateStatewideGuideVisibility();
       updateDistrictUrl();
-      if (mapLayer) {
-        map.fitBounds(mapLayer.getBounds(), { padding: [22, 22] });
-      }
+      fitStatewideBounds();
     }
 
     function buildPrimaryContestLabel(record) {
@@ -1958,6 +2003,15 @@
     function buildLegend() {
       updateResetViewButton();
       updateStatewideGuideVisibility();
+    }
+
+    function fitStatewideBounds() {
+      if (!mapLayer) return;
+      map.fitBounds(mapLayer.getBounds(), {
+        paddingTopLeft: [30, 24],
+        paddingBottomRight: [34, 160],
+        maxZoom: isMapFullscreen() ? 8 : 9
+      });
     }
 
     function renderDistrictBrowser() {
@@ -2012,7 +2066,7 @@
         }
       }).addTo(map);
 
-      map.fitBounds(mapLayer.getBounds(), { padding: [22, 22] });
+      fitStatewideBounds();
       buildLegend();
       setSummaryCards();
       setPrimaryCountdown();
@@ -2050,27 +2104,32 @@
           });
         });
 
-        const copyDistrictLinkBtn = document.getElementById("copyDistrictLinkBtn");
-        if (copyDistrictLinkBtn) {
-          copyDistrictLinkBtn.addEventListener("click", async () => {
-            const original = copyDistrictLinkBtn.textContent;
+        const mapCard = document.querySelector(".map-card");
+        document.addEventListener("click", async event => {
+          const copyButton = event.target.closest("[data-copy-district-link]");
+          if (copyButton) {
+            const original = copyButton.textContent;
             try {
               await copyDistrictLink();
-              copyDistrictLinkBtn.textContent = "Link copied";
+              document.querySelectorAll("[data-copy-district-link]").forEach(button => {
+                button.textContent = "Link copied";
+              });
             } catch (error) {
               console.error(error);
-              copyDistrictLinkBtn.textContent = "Copy failed";
+              document.querySelectorAll("[data-copy-district-link]").forEach(button => {
+                button.textContent = "Copy failed";
+              });
             }
             window.setTimeout(() => {
-              copyDistrictLinkBtn.textContent = original;
+              document.querySelectorAll("[data-copy-district-link]").forEach(button => {
+                button.textContent = original;
+              });
             }, 1400);
-          });
-        }
+            return;
+          }
 
-        const mapExpandBtn = document.getElementById("mapExpandBtn");
-        const mapCard = document.querySelector(".map-card");
-        if (mapExpandBtn && mapCard) {
-          mapExpandBtn.addEventListener("click", async () => {
+          const expandButton = event.target.closest("#mapExpandBtn");
+          if (expandButton && mapCard) {
             try {
               if (isMapFullscreen()) {
                 if (document.exitFullscreen) {
@@ -2089,16 +2148,22 @@
               updateMapExpandButton();
               invalidateRunningMap();
             }
-          });
-        }
+          }
+        });
 
         document.addEventListener("fullscreenchange", () => {
           updateMapExpandButton();
           invalidateRunningMap();
+          if (!state.selectedDistrict) {
+            window.setTimeout(fitStatewideBounds, 120);
+          }
         });
         document.addEventListener("webkitfullscreenchange", () => {
           updateMapExpandButton();
           invalidateRunningMap();
+          if (!state.selectedDistrict) {
+            window.setTimeout(fitStatewideBounds, 120);
+          }
         });
 
         document.querySelectorAll("[data-filter]").forEach(button => {
