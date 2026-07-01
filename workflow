@@ -1,5 +1,5 @@
 .github/workflows/update-ri-politics-news.yml
-ame: Update RI Politics News
+Name: Update RI Politics News
 
 on:
   schedule:
