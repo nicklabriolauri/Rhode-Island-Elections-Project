@@ -98,3 +98,77 @@ jobs:
               FEED_URL,
               headers={
                   "User-Agent": "Mozilla/5.0",
+                  "Accept": "application/rss+xml,application/xml,text/xml,*/*",
+              },
+          )
+
+          with urlopen(request, timeout=45) as response:
+              xml_bytes = response.read()
+
+          root = ET.fromstring(xml_bytes)
+          channel = root.find("./channel")
+          items = []
+
+          if channel is not None:
+              for item in channel.findall("item"):
+                  raw_title = item.findtext("title", default="")
+                  raw_link = item.findtext("link", default="")
+                  raw_pub = item.findtext("pubDate", default="")
+                  source, title = extract_source_and_title(raw_title)
+                  if not title or not raw_link:
+                      continue
+                  if source and not source_allowed(source):
+                      continue
+                  items.append(
+                      {
+                          "title": title,
+                          "url": raw_link.strip(),
+                          "source": source or "Google News",
+                          "published_at": parse_pubdate(raw_pub),
+                      }
+                  )
+
+          deduped = []
+          seen = set()
+          for item in sorted(
+              items,
+              key=lambda entry: (normalize_source_rank(entry["source"]), entry["published_at"] or ""),
+          ):
+              key = (item["title"].lower(), item["source"].lower())
+              if key in seen:
+                  continue
+              seen.add(key)
+              deduped.append(item)
+
+          deduped = sorted(
+              deduped,
+              key=lambda entry: entry["published_at"] or "",
+              reverse=True,
+          )[:MAX_ITEMS]
+
+          payload = {
+              "query": QUERY,
+              "source_label": "Google News RSS",
+              "source_url": FEED_URL,
+              "generated_at": datetime.now(timezone.utc).isoformat(),
+              "items": deduped,
+          }
+
+          OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+          OUTPUT.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+          print(f"Wrote {len(deduped)} headlines to {OUTPUT}")
+          PY
+
+      - name: Commit updated news JSON
+        shell: bash
+        run: |
+          if git diff --quiet -- data/ri_politics_news.json; then
+            echo "No feed changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ri_politics_news.json
+          git commit -m "Update RI politics news feed"
+          git push
+
