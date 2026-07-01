@@ -440,11 +440,12 @@
       position: relative;
       overflow: hidden;
       border-radius: 28px;
-      border: 1px solid rgba(255,255,255,0.1);
+      border: 1px solid rgba(191,219,254,0.22);
       background:
-        radial-gradient(circle at 88% 18%, rgba(96,165,250,0.12), transparent 22%),
-        linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.04) 100%);
-      box-shadow: 0 20px 44px rgba(5, 10, 28, 0.22);
+        radial-gradient(circle at 88% 18%, rgba(147,197,253,0.18), transparent 22%),
+        radial-gradient(circle at 16% 84%, rgba(251,191,36,0.10), transparent 20%),
+        linear-gradient(180deg, rgba(255,255,255,0.11) 0%, rgba(255,255,255,0.08) 100%);
+      box-shadow: 0 22px 48px rgba(5, 10, 28, 0.2);
       padding: 24px 28px;
     }
 
@@ -455,7 +456,7 @@
       width: 180px;
       height: 180px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(239,68,68,0.14), rgba(239,68,68,0));
+      background: radial-gradient(circle, rgba(255,255,255,0.14), rgba(255,255,255,0));
       pointer-events: none;
     }
 
@@ -474,7 +475,7 @@
     }
 
     .news-kicker {
-      color: var(--muted-2);
+      color: rgba(226,232,240,0.82);
       font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 0.18em;
@@ -492,7 +493,7 @@
 
     .news-summary {
       margin: 12px 0 0 0;
-      color: var(--muted);
+      color: rgba(241,245,249,0.8);
       font-size: 16px;
       line-height: 1.55;
       max-width: 560px;
@@ -503,7 +504,7 @@
       flex-wrap: wrap;
       gap: 8px 14px;
       margin-top: 14px;
-      color: rgba(255,255,255,0.68);
+      color: rgba(226,232,240,0.78);
       font-size: 12px;
       line-height: 1.5;
     }
@@ -514,9 +515,9 @@
       min-height: 34px;
       padding: 0 12px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.1);
-      color: rgba(255,255,255,0.82);
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(191,219,254,0.24);
+      color: rgba(248,250,252,0.9);
       font-size: 12px;
       font-weight: 700;
       white-space: nowrap;
@@ -536,18 +537,19 @@
       gap: 10px;
       padding: 18px 18px 16px;
       border-radius: 22px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(191,219,254,0.16);
       text-decoration: none;
       color: inherit;
       transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
       min-height: 188px;
+      backdrop-filter: blur(8px);
     }
 
     .news-card:hover {
       transform: translateY(-2px);
-      background: rgba(255,255,255,0.08);
-      box-shadow: 0 18px 36px rgba(5,10,28,0.18);
+      background: rgba(255,255,255,0.14);
+      box-shadow: 0 18px 36px rgba(5,10,28,0.16);
     }
 
     .news-card-source {
@@ -558,7 +560,7 @@
       font-weight: 800;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.6);
+      color: rgba(226,232,240,0.72);
     }
 
     .news-card-source::before {
@@ -579,7 +581,7 @@
     }
 
     .news-card-summary {
-      color: rgba(255,255,255,0.72);
+      color: rgba(241,245,249,0.78);
       font-size: 14px;
       line-height: 1.55;
     }
@@ -590,13 +592,13 @@
       justify-content: space-between;
       align-items: center;
       gap: 12px;
-      color: rgba(255,255,255,0.64);
+      color: rgba(226,232,240,0.7);
       font-size: 12px;
       line-height: 1.4;
     }
 
     .news-card-link {
-      color: rgba(255,255,255,0.88);
+      color: rgba(248,250,252,0.94);
       font-weight: 700;
     }
 
@@ -606,9 +608,9 @@
       margin-top: 18px;
       padding: 18px 20px;
       border-radius: 20px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      color: rgba(255,255,255,0.72);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(191,219,254,0.16);
+      color: rgba(241,245,249,0.78);
       font-size: 15px;
       line-height: 1.55;
     }
@@ -981,8 +983,8 @@
         <div class="news-head">
           <div class="news-copy">
             <div class="news-kicker">Rhode Island Politics Watch</div>
-            <h3 class="news-title" id="newsTitle">Live Rhode Island politics headlines, right on the homepage.</h3>
-            <p class="news-summary">This banner pulls the latest Rhode Island politics headlines from a feed-backed news list so visitors can see what is moving around elections, campaigns, and state government without leaving the project.</p>
+            <h3 class="news-title" id="newsTitle">The latest Rhode Island politics coverage, in one place.</h3>
+            <p class="news-summary">Track fresh reporting on elections, campaigns, and state government through a live headline brief that updates automatically and keeps the project connected to the day’s political news cycle.</p>
             <div class="news-meta">
               <span id="newsSourceLabel">Source: loading headline feed</span>
               <a class="link-pill" id="newsSourceLink" href="https://news.google.com/search?q=Rhode%20Island%20politics&hl=en-US&gl=US&ceid=US%3Aen" target="_blank" rel="noopener noreferrer">Open source feed</a>
