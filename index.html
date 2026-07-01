@@ -436,6 +436,183 @@
       gap: 18px;
     }
 
+    .news-section {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background:
+        radial-gradient(circle at 88% 18%, rgba(96,165,250,0.12), transparent 22%),
+        linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.04) 100%);
+      box-shadow: 0 20px 44px rgba(5, 10, 28, 0.22);
+      padding: 24px 28px;
+    }
+
+    .news-section::before {
+      content: "";
+      position: absolute;
+      inset: auto auto -62px -42px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(239,68,68,0.14), rgba(239,68,68,0));
+      pointer-events: none;
+    }
+
+    .news-head {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .news-copy {
+      max-width: 620px;
+    }
+
+    .news-kicker {
+      color: var(--muted-2);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .news-title {
+      margin: 0;
+      font-family: "Sora", sans-serif;
+      font-size: 30px;
+      line-height: 1.02;
+      letter-spacing: -0.05em;
+    }
+
+    .news-summary {
+      margin: 12px 0 0 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.55;
+      max-width: 560px;
+    }
+
+    .news-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      margin-top: 14px;
+      color: rgba(255,255,255,0.68);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .news-stamp {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.82);
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .news-grid {
+      position: relative;
+      z-index: 1;
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .news-card {
+      display: grid;
+      gap: 10px;
+      padding: 18px 18px 16px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      text-decoration: none;
+      color: inherit;
+      transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+      min-height: 188px;
+    }
+
+    .news-card:hover {
+      transform: translateY(-2px);
+      background: rgba(255,255,255,0.08);
+      box-shadow: 0 18px 36px rgba(5,10,28,0.18);
+    }
+
+    .news-card-source {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .news-card-source::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #ef4444 0%, #3b82f6 100%);
+      flex: 0 0 auto;
+    }
+
+    .news-card-title {
+      font-family: "Sora", sans-serif;
+      font-size: 22px;
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+      color: white;
+    }
+
+    .news-card-summary {
+      color: rgba(255,255,255,0.72);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .news-card-footer {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      color: rgba(255,255,255,0.64);
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    .news-card-link {
+      color: rgba(255,255,255,0.88);
+      font-weight: 700;
+    }
+
+    .news-empty {
+      position: relative;
+      z-index: 1;
+      margin-top: 18px;
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.72);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
     .info-section {
       position: relative;
       overflow: hidden;
@@ -621,6 +798,10 @@
       .info-grid {
         grid-template-columns: 1fr;
       }
+
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 760px) {
@@ -695,6 +876,11 @@
         border-radius: 24px;
       }
 
+      .news-section {
+        padding: 22px 20px;
+        border-radius: 24px;
+      }
+
       .below-fold {
         margin-top: 18px;
       }
@@ -705,6 +891,10 @@
 
       .info-summary {
         font-size: 16px;
+      }
+
+      .news-title {
+        font-size: 26px;
       }
 
       .link-row {
@@ -787,6 +977,23 @@
     </section>
 
     <section class="below-fold" aria-label="Additional project sections">
+      <section class="news-section" aria-labelledby="newsTitle">
+        <div class="news-head">
+          <div class="news-copy">
+            <div class="news-kicker">Rhode Island Politics Watch</div>
+            <h3 class="news-title" id="newsTitle">Live Rhode Island politics headlines, right on the homepage.</h3>
+            <p class="news-summary">This banner pulls the latest Rhode Island politics headlines from a feed-backed news list so visitors can see what is moving around elections, campaigns, and state government without leaving the project.</p>
+            <div class="news-meta">
+              <span id="newsSourceLabel">Source: loading headline feed</span>
+              <a class="link-pill" id="newsSourceLink" href="https://news.google.com/search?q=Rhode%20Island%20politics&hl=en-US&gl=US&ceid=US%3Aen" target="_blank" rel="noopener noreferrer">Open source feed</a>
+            </div>
+          </div>
+          <div class="news-stamp" id="newsUpdatedAt">Updating headlines…</div>
+        </div>
+        <div class="news-grid" id="riPoliticsNewsGrid" hidden></div>
+        <div class="news-empty" id="riPoliticsNewsEmpty">Headline feed is loading. If it does not appear, the feed source may be refreshing.</div>
+      </section>
+
       <section class="info-section" id="mission-preview">
         <div class="info-grid">
           <div>
@@ -834,6 +1041,7 @@
   </div>
   <script>
   (function () {
+    const newsUrl = "/data/ri_politics_news.json?v=20260701a";
     const assets = [
       "/map.html",
       "/data/race_data.json",
@@ -845,6 +1053,99 @@
       "/data/ri_turnout_2024_precinct.geojson",
       "/data/ri_turnout_2024_municipality.geojson"
     ];
+
+    function formatNewsTimestamp(value) {
+      if (!value) return "Headline feed awaiting update";
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return "Headline feed awaiting update";
+      return `Updated ${date.toLocaleString("en-US", {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+        hour: "numeric",
+        minute: "2-digit"
+      })}`;
+    }
+
+    function formatPublishedDate(value) {
+      if (!value) return "Recently published";
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return "Recently published";
+      return date.toLocaleDateString("en-US", {
+        month: "short",
+        day: "numeric"
+      });
+    }
+
+    function truncateCopy(value, maxLength) {
+      if (!value || value.length <= maxLength) return value;
+      return `${value.slice(0, maxLength - 1).trimEnd()}…`;
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#39;");
+    }
+
+    function renderNews(payload) {
+      const grid = document.getElementById("riPoliticsNewsGrid");
+      const empty = document.getElementById("riPoliticsNewsEmpty");
+      const stamp = document.getElementById("newsUpdatedAt");
+      const sourceLabel = document.getElementById("newsSourceLabel");
+      const sourceLink = document.getElementById("newsSourceLink");
+      if (!grid || !empty || !stamp || !sourceLabel || !sourceLink) return;
+
+      sourceLabel.textContent = `Source: ${payload?.source_label || "Google News RSS"}`;
+      sourceLink.href = payload?.source_url || sourceLink.href;
+      stamp.textContent = formatNewsTimestamp(payload?.generated_at);
+
+      const items = Array.isArray(payload?.items) ? payload.items.slice(0, 3) : [];
+      if (!items.length) {
+        empty.textContent = "Headline feed is updating. Run the news builder again to publish the latest Rhode Island politics headlines.";
+        empty.hidden = false;
+        grid.hidden = true;
+        grid.innerHTML = "";
+        return;
+      }
+
+      grid.innerHTML = items.map(item => `
+        <a class="news-card" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">
+          <div class="news-card-source">${escapeHtml(item.source || "Google News")}</div>
+          <div class="news-card-title">${escapeHtml(item.title)}</div>
+          <div class="news-card-summary">${escapeHtml(truncateCopy(item.title, 120))}</div>
+          <div class="news-card-footer">
+            <span>${escapeHtml(formatPublishedDate(item.published_at))}</span>
+            <span class="news-card-link">Read story</span>
+          </div>
+        </a>
+      `).join("");
+      grid.hidden = false;
+      empty.hidden = true;
+    }
+
+    function loadNewsBanner() {
+      fetch(newsUrl, { cache: "no-store" })
+        .then(response => {
+          if (!response.ok) throw new Error(`News feed request failed: ${response.status}`);
+          return response.json();
+        })
+        .then(renderNews)
+        .catch(() => {
+          const empty = document.getElementById("riPoliticsNewsEmpty");
+          const stamp = document.getElementById("newsUpdatedAt");
+          if (empty) {
+            empty.textContent = "Headline feed could not be loaded right now. Please refresh later.";
+            empty.hidden = false;
+          }
+          if (stamp) {
+            stamp.textContent = "Headline feed unavailable";
+          }
+        });
+    }
 
     function warmMapCache() {
       assets.forEach((url, index) => {
@@ -859,6 +1160,8 @@
     } else {
       window.setTimeout(warmMapCache, 1200);
     }
+
+    loadNewsBanner();
   })();
   </script>
 </body>
