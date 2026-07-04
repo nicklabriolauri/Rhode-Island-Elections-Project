@@ -559,6 +559,69 @@
       gap: 14px;
     }
 
+    .news-carousel-controls {
+      position: relative;
+      z-index: 1;
+      margin-top: 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .news-nav-btn {
+      appearance: none;
+      border: 1px solid rgba(191,219,254,0.22);
+      background: rgba(255,255,255,0.08);
+      color: rgba(248,250,252,0.92);
+      min-height: 36px;
+      min-width: 36px;
+      padding: 0 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+    }
+
+    .news-nav-btn:hover {
+      transform: translateY(-1px);
+      background: rgba(255,255,255,0.12);
+      box-shadow: 0 10px 22px rgba(5,10,28,0.14);
+    }
+
+    .news-nav-btn:disabled {
+      opacity: 0.45;
+      cursor: default;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .news-slider-wrap {
+      flex: 1 1 280px;
+      display: grid;
+      gap: 6px;
+      min-width: 220px;
+    }
+
+    .news-slider {
+      width: 100%;
+      accent-color: #93c5fd;
+      cursor: pointer;
+    }
+
+    .news-slider-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      color: rgba(226,232,240,0.72);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
     .news-card {
       display: grid;
       gap: 9px;
@@ -1026,6 +1089,17 @@
           <div class="news-stamp" id="newsUpdatedAt">Updating headlines…</div>
         </div>
         <div class="news-grid" id="riPoliticsNewsGrid" hidden></div>
+        <div class="news-carousel-controls" id="riPoliticsNewsControls" hidden>
+          <button type="button" class="news-nav-btn" id="riPoliticsPrev">← Newer</button>
+          <div class="news-slider-wrap">
+            <input type="range" min="0" max="0" step="1" value="0" class="news-slider" id="riPoliticsSlider" aria-label="Browse Rhode Island politics headlines" />
+            <div class="news-slider-meta">
+              <span id="riPoliticsPageLabel">Showing latest headlines</span>
+              <span id="riPoliticsArchiveCount">0 saved</span>
+            </div>
+          </div>
+          <button type="button" class="news-nav-btn" id="riPoliticsNext">Older →</button>
+        </div>
         <div class="news-empty" id="riPoliticsNewsEmpty">Headline feed is loading. If it does not appear, the feed source may be refreshing.</div>
       </section>
 
@@ -1077,6 +1151,7 @@
   <script>
   (function () {
     const newsUrl = "/data/ri_politics_news.json?v=20260701a";
+    const NEWS_PAGE_SIZE = 3;
     const assets = [
       "/map.html",
       "/data/race_data.json",
@@ -1126,6 +1201,63 @@
         .replaceAll("'", "&#39;");
     }
 
+    function renderNewsPage(items, pageIndex) {
+      const grid = document.getElementById("riPoliticsNewsGrid");
+      const slider = document.getElementById("riPoliticsSlider");
+      const prev = document.getElementById("riPoliticsPrev");
+      const next = document.getElementById("riPoliticsNext");
+      const pageLabel = document.getElementById("riPoliticsPageLabel");
+      if (!grid || !slider || !prev || !next || !pageLabel) return;
+
+      const totalPages = Math.max(1, Math.ceil(items.length / NEWS_PAGE_SIZE));
+      const safePage = Math.min(Math.max(pageIndex, 0), totalPages - 1);
+      const pageItems = items.slice(safePage * NEWS_PAGE_SIZE, (safePage + 1) * NEWS_PAGE_SIZE);
+
+      grid.innerHTML = pageItems.map(item => `
+        <a class="news-card" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">
+          <div class="news-card-source">${escapeHtml(item.source || "Google News")}</div>
+          <div class="news-card-title">${escapeHtml(item.title)}</div>
+          <div class="news-card-summary">${escapeHtml(truncateCopy(item.title, 120))}</div>
+          <div class="news-card-footer">
+            <span>${escapeHtml(formatPublishedDate(item.published_at))}</span>
+            <span class="news-card-link">Read story</span>
+          </div>
+        </a>
+      `).join("");
+      grid.hidden = false;
+      slider.max = String(totalPages - 1);
+      slider.value = String(safePage);
+      prev.disabled = safePage <= 0;
+      next.disabled = safePage >= totalPages - 1;
+      pageLabel.textContent = safePage === 0 ? "Showing latest headlines" : `Showing earlier headlines · Page ${safePage + 1} of ${totalPages}`;
+    }
+
+    function bindNewsCarousel(items) {
+      const controls = document.getElementById("riPoliticsNewsControls");
+      const slider = document.getElementById("riPoliticsSlider");
+      const prev = document.getElementById("riPoliticsPrev");
+      const next = document.getElementById("riPoliticsNext");
+      const archiveCount = document.getElementById("riPoliticsArchiveCount");
+      if (!controls || !slider || !prev || !next || !archiveCount) return;
+
+      const totalPages = Math.max(1, Math.ceil(items.length / NEWS_PAGE_SIZE));
+      archiveCount.textContent = `${items.length} saved`;
+      controls.hidden = items.length <= NEWS_PAGE_SIZE;
+
+      let currentPage = 0;
+      const update = (page) => {
+        currentPage = Math.min(Math.max(page, 0), totalPages - 1);
+        renderNewsPage(items, currentPage);
+      };
+
+      slider.addEventListener("input", () => {
+        update(Number(slider.value || 0));
+      });
+      prev.addEventListener("click", () => update(currentPage - 1));
+      next.addEventListener("click", () => update(currentPage + 1));
+      update(0);
+    }
+
     function renderNews(payload) {
       const grid = document.getElementById("riPoliticsNewsGrid");
       const empty = document.getElementById("riPoliticsNewsEmpty");
@@ -1138,7 +1270,7 @@
       sourceLink.href = payload?.source_url || sourceLink.href;
       stamp.textContent = formatNewsTimestamp(payload?.generated_at);
 
-      const items = Array.isArray(payload?.items) ? payload.items.slice(0, 3) : [];
+      const items = Array.isArray(payload?.items) ? payload.items : [];
       if (!items.length) {
         empty.textContent = "Headline feed is updating. Run the news builder again to publish the latest Rhode Island politics headlines.";
         empty.hidden = false;
@@ -1147,19 +1279,8 @@
         return;
       }
 
-      grid.innerHTML = items.map(item => `
-        <a class="news-card" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">
-          <div class="news-card-source">${escapeHtml(item.source || "Google News")}</div>
-          <div class="news-card-title">${escapeHtml(item.title)}</div>
-          <div class="news-card-summary">${escapeHtml(truncateCopy(item.title, 120))}</div>
-          <div class="news-card-footer">
-            <span>${escapeHtml(formatPublishedDate(item.published_at))}</span>
-            <span class="news-card-link">Read story</span>
-          </div>
-        </a>
-      `).join("");
-      grid.hidden = false;
       empty.hidden = true;
+      bindNewsCarousel(items);
     }
 
     function loadNewsBanner() {
@@ -1172,9 +1293,13 @@
         .catch(() => {
           const empty = document.getElementById("riPoliticsNewsEmpty");
           const stamp = document.getElementById("newsUpdatedAt");
+          const controls = document.getElementById("riPoliticsNewsControls");
           if (empty) {
             empty.textContent = "Headline feed could not be loaded right now. Please refresh later.";
             empty.hidden = false;
+          }
+          if (controls) {
+            controls.hidden = true;
           }
           if (stamp) {
             stamp.textContent = "Headline feed unavailable";
