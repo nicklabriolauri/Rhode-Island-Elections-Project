@@ -44,6 +44,7 @@ jobs:
           )
           OUTPUT = Path("data/ri_politics_news.json")
           MAX_ITEMS = 5
+          MAX_ARCHIVE_ITEMS = 60
           PREFERRED_SOURCES = [
               "Rhode Island Current",
               "The Providence Journal",
@@ -70,6 +71,45 @@ jobs:
               value = re.sub(r"<[^>]+>", "", value)
               value = re.sub(r"\s+", " ", value).strip()
               return value
+
+          def load_existing_items() -> list[dict]:
+              if not OUTPUT.exists():
+                  return []
+              try:
+                  payload = json.loads(OUTPUT.read_text(encoding="utf-8"))
+              except Exception:
+                  return []
+              items = payload.get("items")
+              return items if isinstance(items, list) else []
+
+          def merge_archive(existing_items: list[dict], fresh_items: list[dict]) -> list[dict]:
+              merged = []
+              seen = set()
+              for item in sorted(
+                  fresh_items + existing_items,
+                  key=lambda entry: entry.get("published_at") or "",
+                  reverse=True,
+              ):
+                  title = clean_text(item.get("title", ""))
+                  source = clean_text(item.get("source", ""))
+                  url = clean_text(item.get("url", ""))
+                  if not title or not url:
+                      continue
+                  key = (title.lower(), source.lower())
+                  if key in seen:
+                      continue
+                  seen.add(key)
+                  merged.append(
+                      {
+                          "title": title,
+                          "url": url,
+                          "source": source or "Google News",
+                          "published_at": item.get("published_at", ""),
+                      }
+                  )
+                  if len(merged) >= MAX_ARCHIVE_ITEMS:
+                      break
+              return merged
 
           def extract_source_and_title(raw_title: str) -> tuple[str, str]:
               title = clean_text(raw_title)
@@ -154,6 +194,7 @@ jobs:
               "items": deduped,
           }
 
+          payload["items"] = merge_archive(load_existing_items(), payload["items"])
           OUTPUT.parent.mkdir(parents=True, exist_ok=True)
           OUTPUT.write_text(json.dumps(payload, indent=2), encoding="utf-8")
           print(f"Wrote {len(deduped)} headlines to {OUTPUT}")
@@ -171,4 +212,3 @@ jobs:
           git add data/ri_politics_news.json
           git commit -m "Update RI politics news feed"
           git push
-
