@@ -1047,7 +1047,7 @@
         </div>
       </div>
       <div class="hero-note">
-        <strong>Primary first:</strong> this page is focused on who has filed for the September 9 primary ballot. When a district already has a general-election-only independent declaration on file, that candidate appears in the district sidebar without changing the primary map colors.
+        <strong>Primary first:</strong> this page is focused on who has filed for the September 9 primary ballot. Color categories show the filing mix in each district: Democratic-only, Republican-only, Independent/Other-only, or a mixed field when more than one filing type is present.
       </div>
     </section>
 
@@ -1064,11 +1064,12 @@
         </div>
         <div class="chip-bar" id="mapFilterBar">
           <button type="button" class="chip chip-filter active" data-filter="all"><strong>All filed districts</strong></button>
-          <button type="button" class="chip chip-filter" data-filter="dem_only">Democratic candidates filed</button>
-          <button type="button" class="chip chip-filter" data-filter="rep_only">Republican candidates filed</button>
-          <button type="button" class="chip chip-filter" data-filter="both_major">Purple districts</button>
+          <button type="button" class="chip chip-filter" data-filter="dem_only">Only Democratic filed</button>
+          <button type="button" class="chip chip-filter" data-filter="rep_only">Only Republican filed</button>
+          <button type="button" class="chip chip-filter" data-filter="other_only">Only Independent / Other filed</button>
+          <button type="button" class="chip chip-filter" data-filter="mixed_field">Mixed field</button>
           <button type="button" class="chip chip-filter" data-filter="competitive">Competitive primaries</button>
-          <div class="chip chip-note"><strong>Purple districts:</strong> both major parties filed or an independent / other declaration is also on file. Select a district to zoom in and see approximate in-district candidate markers.</div>
+          <div class="chip chip-note"><strong>Purple districts:</strong> mixed field, meaning more than one meaningful filing type is present. Select a district to zoom in and see approximate in-district candidate markers.</div>
         </div>
         <div id="runningMap" aria-label="Rhode Island candidate filing map"></div>
       </div>
@@ -1163,16 +1164,18 @@
     };
 
     const generalFill = {
-      both_major: "#7c3aed",
+      mixed_field: "#7c3aed",
       dem_only: "#4f7cff",
       rep_only: "#ff6b6b",
+      other_only: "#14b8a6",
       no_filing: "#eef2f7"
     };
 
     const generalStroke = {
-      both_major: "#5b21b6",
+      mixed_field: "#5b21b6",
       dem_only: "#1d4ed8",
       rep_only: "#b91c1c",
+      other_only: "#0f766e",
       no_filing: "#94a3b8"
     };
 
@@ -1193,16 +1196,18 @@
     };
 
     const filingTint = {
-      both_major: "#8b5cf6",
+      mixed_field: "#8b5cf6",
       dem_only: "#2563eb",
       rep_only: "#dc2626",
+      other_only: "#14b8a6",
       no_filing: "#f8fafc"
     };
 
     const filingStroke = {
-      both_major: "#6d28d9",
+      mixed_field: "#6d28d9",
       dem_only: "#1d4ed8",
       rep_only: "#b91c1c",
+      other_only: "#0f766e",
       no_filing: "#94a3b8"
     };
 
@@ -1276,7 +1281,8 @@
         <div class="map-guide-title">Statewide key</div>
         <div class="map-guide-row"><span class="swatch" style="background:${filingTint.dem_only};border-color:${primaryStroke.no_primary}"></span>Democratic-only filing</div>
         <div class="map-guide-row"><span class="swatch" style="background:${filingTint.rep_only};border-color:${primaryStroke.no_primary}"></span>Republican-only filing</div>
-        <div class="map-guide-row"><span class="swatch" style="background:${filingTint.both_major};border-color:${primaryStroke.no_primary}"></span>Purple district = both parties filed or an independent / other declaration is on file</div>
+        <div class="map-guide-row"><span class="swatch" style="background:${filingTint.other_only};border-color:${primaryStroke.no_primary}"></span>Independent / Other-only filing</div>
+        <div class="map-guide-row"><span class="swatch" style="background:${filingTint.mixed_field};border-color:${primaryStroke.no_primary}"></span>Purple district = mixed field / more than one filing type present</div>
         <div class="map-guide-row"><span class="swatch" style="background:#ffffff;border-color:${primaryStroke.dem_primary}"></span>Gold border = competitive primary</div>
         <div class="map-guide-copy">Click any district to zoom in, isolate it, and see privacy-safe candidate markers.</div>
       `;
@@ -1367,7 +1373,9 @@
       if (chamber === "house" || chamber === "senate") {
         state.chamber = chamber;
       }
-      if (["all", "dem_only", "rep_only", "both_major", "competitive"].includes(filter)) {
+      if (filter === "both_major") {
+        state.mapFilter = "mixed_field";
+      } else if (["all", "dem_only", "rep_only", "other_only", "mixed_field", "competitive"].includes(filter)) {
         state.mapFilter = filter;
       }
       if (Number.isFinite(district) && district > 0) {
@@ -1480,10 +1488,21 @@
         .filter(candidate => !["DEM", "REP"].includes(candidate.party));
     }
 
+    function getFilingTypeLabel(status) {
+      return {
+        mixed_field: "Mixed field",
+        dem_only: "Only Democratic filed",
+        rep_only: "Only Republican filed",
+        other_only: "Only Independent / Other filed",
+        no_filing: "No filing listed in official state workbook"
+      }[status] || "No filing listed in official state workbook";
+    }
+
     function getVisualStatus(record) {
       if (!record) return "no_filing";
-      if (record.general_status === "both_major") return "both_major";
-      if (recordHasOtherPresence(record)) return "both_major";
+      if (record.general_status === "both_major") return "mixed_field";
+      if (recordHasOtherPresence(record) && (record.general_status === "dem_only" || record.general_status === "rep_only")) return "mixed_field";
+      if (recordHasOtherPresence(record)) return "other_only";
       if (record.general_status === "dem_only") return "dem_only";
       if (record.general_status === "rep_only") return "rep_only";
       return "no_filing";
@@ -1688,7 +1707,8 @@
       if (!record) return "#94a3b8";
       if (getVisualStatus(record) === "dem_only") return "#2563eb";
       if (getVisualStatus(record) === "rep_only") return "#dc2626";
-      if (getVisualStatus(record) === "both_major") return "#8b5cf6";
+      if (getVisualStatus(record) === "other_only") return "#14b8a6";
+      if (getVisualStatus(record) === "mixed_field") return "#8b5cf6";
       return "#94a3b8";
     }
 
@@ -2074,9 +2094,9 @@
             <span>District ${record.district_number}</span>
             <span>${record.candidate_total} filed</span>
           </div>
-          <div class="district-button-name">${recordHasOtherPresence(record) && getVisualStatus(record) === "both_major" && record.general_status !== "both_major" ? "Purple district with independent / other declaration" : record.general_label}</div>
+          <div class="district-button-name">${getFilingTypeLabel(getVisualStatus(record))}</div>
           ${hasCompetitivePrimary(record) ? `<div class="contest-badge">Competitive primary</div>` : ``}
-          <div class="district-button-detail">${buildPrimaryContestLabel(record)}${recordHasOtherPresence(record) ? "<br/>Independent / other declaration also on file." : ""}</div>
+          <div class="district-button-detail">${buildPrimaryContestLabel(record)}${getVisualStatus(record) === "mixed_field" && recordHasOtherPresence(record) ? "<br/>Independent / other declaration also on file." : ""}</div>
         </button>
       `).join("");
 
