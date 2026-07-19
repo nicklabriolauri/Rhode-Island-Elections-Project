@@ -1651,6 +1651,9 @@
       const note = candidate.ballot_stage === "general"
         ? "Rhode Island general-election declaration on file for this district."
         : "Rhode Island primary declaration on file for this district.";
+      const precinctSentence = candidate.home_precinct_name
+        ? `${candidate.name} lives in ${candidate.home_precinct_name}.`
+        : `${candidate.name}'s filing address could not be matched to a precinct in the public geometry used on this site.`;
       const precinctNote = candidate.home_precinct_name
         ? "Map highlight shows the matched home precinct rather than a street address."
         : "Home precinct could not be matched from the public precinct geometry used on this site.";
@@ -1675,6 +1678,7 @@
             </div>
           </div>
           <div class="candidate-links">${buildCandidateLinks(candidate)}</div>
+          <div class="candidate-note">${escapeHtml(precinctSentence)}</div>
           <div class="candidate-note">${escapeHtml(note)}</div>
           <div class="candidate-approx-note">${escapeHtml(precinctNote)}</div>
         </div>
@@ -2064,7 +2068,10 @@
         const precinctName = candidates[0].home_precinct_name || `Precinct ${precinctCode}`;
         const candidateLines = candidates.map(candidate => {
           const stageText = candidate.ballot_stage === "general" ? "November declaration" : "September primary";
-          return `${escapeHtml(candidate.name)} (${escapeHtml(candidate.party_raw || candidate.party_label)}, ${escapeHtml(stageText)})`;
+          const livesText = candidate.home_precinct_name
+            ? `${escapeHtml(candidate.name)} lives in ${escapeHtml(candidate.home_precinct_name)}`
+            : `${escapeHtml(candidate.name)} could not be matched to a precinct`;
+          return `${livesText} (${escapeHtml(candidate.party_raw || candidate.party_label)}, ${escapeHtml(stageText)})`;
         }).join("<br/>");
         layer.bindPopup(`
           <strong>${escapeHtml(precinctName)}</strong><br/>
