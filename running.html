@@ -1302,7 +1302,7 @@
     };
     loading.addTo(map);
 
-    const assetVersion = "20260630b";
+    const assetVersion = "20260719a";
 
     function freshAssetUrl(url) {
       const separator = url.includes("?") ? "&" : "?";
@@ -2022,6 +2022,24 @@
       };
     }
 
+    function getPrecinctMarkerStyle(candidates) {
+      const parties = new Set(candidates.map(candidate => candidate.party));
+      let fillColor = "#8b5cf6";
+
+      if (parties.size === 1) {
+        fillColor = candidateAccent(candidates[0]);
+      }
+
+      return {
+        radius: candidates.length > 1 ? 9 : 7,
+        color: "#ffffff",
+        weight: 2.5,
+        opacity: 1,
+        fillColor,
+        fillOpacity: 0.96
+      };
+    }
+
     function renderSelectedDistrictMarkers(record) {
       candidateMarkerLayer.clearLayers();
       if (!record || !state.selectedDistrict) return;
@@ -2055,6 +2073,19 @@
         `);
         layer.bindTooltip(precinctName, { direction: "top" });
         candidateMarkerLayer.addLayer(layer);
+
+        const center = layer.getBounds().getCenter();
+        const marker = L.circleMarker(center, getPrecinctMarkerStyle(candidates));
+        marker.bindPopup(`
+          <strong>${escapeHtml(precinctName)}</strong><br/>
+          ${candidateLines}<br/>
+          <em>Marker shows the matched home precinct.</em>
+        `);
+        marker.bindTooltip(
+          candidates.length > 1 ? `${precinctName} (${candidates.length})` : precinctName,
+          { direction: "top", offset: [0, -8] }
+        );
+        candidateMarkerLayer.addLayer(marker);
       });
     }
 
