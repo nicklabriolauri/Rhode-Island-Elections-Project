@@ -509,7 +509,7 @@
     <section class="hero-card">
       <h2>Find My Precinct</h2>
       <p class="hero-copy">
-        Find any Rhode Island voting precinct by address. The tool highlights the matched precinct on the map, reports turnout statistics, identifies legislative districts, and shows the associated House and Senate election results for that location.
+        Find any Rhode Island voting precinct by address. The tool highlights the matched precinct on the map, reports turnout statistics used on this site, identifies legislative districts, and shows the associated House and Senate election results for that location.
       </p>
       <div class="search-row">
         <input id="addressInput" class="search-input" type="text" placeholder="Example: 82 Smith St, Providence, RI 02903" />
@@ -521,7 +521,7 @@
       </div>
       <div id="candidateList" class="candidate-list"></div>
       <div class="helper">
-        Start typing an address and the page will suggest Rhode Island matches. Selecting a city or town helps narrow results, but it is no longer required. Street-only matches are approximate, so adding a house number improves precision. For official polling place confirmation, use the Rhode Island Department of State lookup linked above.
+        Start typing an address and the page will suggest Rhode Island matches. Selecting a city or town helps narrow results, but it is no longer required. Street-only matches are approximate, so adding a house number improves precision. This is an independent project and is not affiliated with or endorsed by the Rhode Island Department of State or the Rhode Island Board of Elections. For official polling place confirmation, use the Rhode Island Department of State lookup linked above.
       </div>
       <div id="status" class="status"></div>
     </section>
@@ -540,7 +540,7 @@
     <footer class="site-footer">
       <div class="site-footer-brand">
         <img class="site-footer-logo" src="riep-logo-transparent.png" alt="Rhode Island Elections Project logo" />
-        <div><strong>Find My Precinct</strong> is a public-facing lookup tool built within the Rhode Island Elections Project and tied to official precinct geometry and 2024 election context.</div>
+        <div><strong>Find My Precinct</strong> is an independent public-facing lookup tool built within the Rhode Island Elections Project and tied to Rhode Island precinct geometry and 2024 voter-history turnout context. It is not affiliated with or endorsed by the Rhode Island Department of State or the Rhode Island Board of Elections.</div>
       </div>
       <div class="site-footer-links">
         <a href="index.html">Home</a>
@@ -786,19 +786,19 @@
           <div class="mini-stat">
             <div class="mini-label">House district</div>
             <div class="mini-value">${lookupRecord.house_district ?? "N/A"}</div>
-            <div class="mini-detail">Matched from official precinct turnout layer</div>
+            <div class="mini-detail">Matched from the precinct layer used on this site</div>
           </div>
           <div class="mini-stat">
             <div class="mini-label">Senate district</div>
             <div class="mini-value">${lookupRecord.senate_district ?? "N/A"}</div>
-            <div class="mini-detail">Matched from official precinct turnout layer</div>
+            <div class="mini-detail">Matched from the precinct layer used on this site</div>
           </div>
         </div>
 
         <div class="result-stack">
           <section class="result-card">
             <h3>Turnout Detail</h3>
-            <div class="result-meta">Official 2024 Rhode Island turnout fields for the matched precinct.</div>
+            <div class="result-meta">2024 turnout fields used on this site for the matched precinct. These figures are based on Rhode Island voter history turnout data.</div>
             <table class="result-table">
               <tbody>
                 <tr><th>Municipality</th><td>${lookupRecord.municipality}</td></tr>
@@ -815,7 +815,7 @@
 
           <div class="note-card">
             ${approximateMatch ? "<strong>Approximate match:</strong> this suggestion appears to be a street-level location rather than a specific house number. Add the street number for a more exact precinct check.<br /><br />" : ""}
-            This tool identifies the containing precinct from the address point and then reports turnout and legislative contest results associated with that precinct. For official voter record and polling-place confirmation, use the Rhode Island Department of State lookup linked above.
+            This tool geocodes the entered address, identifies the containing precinct, and then reports turnout and legislative contest results associated with that precinct. For official voter record and polling-place confirmation, use the Rhode Island Department of State lookup linked above.
           </div>
         </div>
       `;
