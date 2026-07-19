@@ -2000,14 +2000,32 @@
       repCard.style.opacity = hasRep ? "1" : ".68";
     }
 
+    function buildPrecinctHoverHtml(precinctName, candidates) {
+      const descriptionLines = candidates.map(candidate => {
+        const stageText = candidate.ballot_stage === "general" ? "November declaration" : "September primary";
+        const livesText = candidate.home_precinct_name
+          ? `${escapeHtml(candidate.name)} lives in ${escapeHtml(candidate.home_precinct_name)}.`
+          : `${escapeHtml(candidate.name)} could not be matched to a precinct.`;
+        return `${livesText} <span class="tooltip-stage">(${escapeHtml(candidate.party_raw || candidate.party_label)}, ${escapeHtml(stageText)})</span>`;
+      }).join("<br/>");
+
+      return `<strong>${escapeHtml(precinctName)}</strong><br/>${descriptionLines}`;
+    }
+
     function getPrecinctStyle(candidates) {
       const parties = new Set(candidates.map(candidate => candidate.party));
-      let fillColor = "#8b5cf6";
+      let fillColor = "#ddd6fe";
       let strokeColor = "#5b21b6";
 
       if (parties.size === 1) {
         const onlyParty = candidates[0].party;
-        fillColor = candidateAccent(candidates[0]);
+        fillColor = onlyParty === "DEM"
+          ? "#bfdbfe"
+          : onlyParty === "REP"
+            ? "#fecaca"
+            : onlyParty === "IND"
+              ? "#99f6e4"
+              : "#ddd6fe";
         strokeColor = onlyParty === "DEM"
           ? "#1d4ed8"
           : onlyParty === "REP"
@@ -2022,7 +2040,7 @@
         weight: 3,
         opacity: 1,
         fillColor,
-        fillOpacity: 0.34
+        fillOpacity: 0.58
       };
     }
 
@@ -2066,32 +2084,32 @@
           style: getPrecinctStyle(candidates)
         });
         const precinctName = candidates[0].home_precinct_name || `Precinct ${precinctCode}`;
-        const candidateLines = candidates.map(candidate => {
-          const stageText = candidate.ballot_stage === "general" ? "November declaration" : "September primary";
-          const livesText = candidate.home_precinct_name
-            ? `${escapeHtml(candidate.name)} lives in ${escapeHtml(candidate.home_precinct_name)}`
-            : `${escapeHtml(candidate.name)} could not be matched to a precinct`;
-          return `${livesText} (${escapeHtml(candidate.party_raw || candidate.party_label)}, ${escapeHtml(stageText)})`;
-        }).join("<br/>");
+        const hoverHtml = buildPrecinctHoverHtml(precinctName, candidates);
         layer.bindPopup(`
           <strong>${escapeHtml(precinctName)}</strong><br/>
-          ${candidateLines}<br/>
+          ${hoverHtml.replace(`<strong>${escapeHtml(precinctName)}</strong><br/>`, "")}<br/>
           <em>Precinct highlight shown instead of a street address.</em>
         `);
-        layer.bindTooltip(precinctName, { direction: "top" });
+        layer.bindTooltip(hoverHtml, {
+          direction: "top",
+          sticky: true,
+          opacity: 0.97
+        });
         candidateMarkerLayer.addLayer(layer);
 
         const center = layer.getBounds().getCenter();
         const marker = L.circleMarker(center, getPrecinctMarkerStyle(candidates));
         marker.bindPopup(`
           <strong>${escapeHtml(precinctName)}</strong><br/>
-          ${candidateLines}<br/>
+          ${hoverHtml.replace(`<strong>${escapeHtml(precinctName)}</strong><br/>`, "")}<br/>
           <em>Marker shows the matched home precinct.</em>
         `);
-        marker.bindTooltip(
-          candidates.length > 1 ? `${precinctName} (${candidates.length})` : precinctName,
-          { direction: "top", offset: [0, -8] }
-        );
+        marker.bindTooltip(hoverHtml, {
+          direction: "top",
+          offset: [0, -8],
+          sticky: true,
+          opacity: 0.97
+        });
         candidateMarkerLayer.addLayer(marker);
       });
     }
