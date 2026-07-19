@@ -2014,18 +2014,18 @@
 
     function getPrecinctStyle(candidates) {
       const parties = new Set(candidates.map(candidate => candidate.party));
-      let fillColor = "#ddd6fe";
+      let fillColor = "#ede9fe";
       let strokeColor = "#5b21b6";
 
       if (parties.size === 1) {
         const onlyParty = candidates[0].party;
         fillColor = onlyParty === "DEM"
-          ? "#bfdbfe"
+          ? "#dbeafe"
           : onlyParty === "REP"
-            ? "#fecaca"
+            ? "#fee2e2"
             : onlyParty === "IND"
-              ? "#99f6e4"
-              : "#ddd6fe";
+              ? "#ede9fe"
+              : "#ede9fe";
         strokeColor = onlyParty === "DEM"
           ? "#1d4ed8"
           : onlyParty === "REP"
@@ -2037,10 +2037,10 @@
 
       return {
         color: strokeColor,
-        weight: 3,
+        weight: 2.6,
         opacity: 1,
         fillColor,
-        fillOpacity: 0.58
+        fillOpacity: 0.72
       };
     }
 
