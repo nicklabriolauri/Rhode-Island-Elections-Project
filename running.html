@@ -2183,7 +2183,7 @@
       try {
         readInitialState();
         const [data, houseGeo, senateGeo, precinctGeo] = await Promise.all([
-          fetchJson("/data/whos_running_2026.json"),
+          fetchJson("/data/whos_running_2026_precincts.json"),
           fetchJson(geojsonFiles.house),
           fetchJson(geojsonFiles.senate),
           fetchJson(geojsonFiles.precincts)
