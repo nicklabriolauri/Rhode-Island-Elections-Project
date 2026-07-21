@@ -2085,25 +2085,10 @@
         });
         const precinctName = candidates[0].home_precinct_name || `Precinct ${precinctCode}`;
         const hoverHtml = buildPrecinctHoverHtml(precinctName, candidates);
-        layer.bindPopup(`
-          <strong>${escapeHtml(precinctName)}</strong><br/>
-          ${hoverHtml.replace(`<strong>${escapeHtml(precinctName)}</strong><br/>`, "")}<br/>
-          <em>Precinct highlight shown instead of a street address.</em>
-        `);
-        layer.bindTooltip(hoverHtml, {
-          direction: "top",
-          sticky: true,
-          opacity: 0.97
-        });
         candidateMarkerLayer.addLayer(layer);
 
         const center = layer.getBounds().getCenter();
         const marker = L.circleMarker(center, getPrecinctMarkerStyle(candidates));
-        marker.bindPopup(`
-          <strong>${escapeHtml(precinctName)}</strong><br/>
-          ${hoverHtml.replace(`<strong>${escapeHtml(precinctName)}</strong><br/>`, "")}<br/>
-          <em>Marker shows the matched home precinct.</em>
-        `);
         marker.bindTooltip(hoverHtml, {
           direction: "top",
           offset: [0, -8],
