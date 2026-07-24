@@ -218,7 +218,7 @@
     .topbar-right {
       display: flex;
       align-items: center;
-      gap: 0;
+      gap: 12px;
       flex-wrap: nowrap;
       justify-content: flex-end;
     }
@@ -238,6 +238,41 @@
 
     .site-nav a:hover {
       background: rgba(255,255,255,0.1);
+    }
+
+    .social-links {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      flex: 0 0 auto;
+    }
+
+    .social-link {
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.04);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      backdrop-filter: blur(8px);
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    }
+
+    .social-link:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(191,219,254,0.42);
+      transform: translateY(-1px);
+    }
+
+    .social-link svg {
+      width: 18px;
+      height: 18px;
+      display: block;
+      fill: currentColor;
     }
 
     .hero {
@@ -335,6 +370,79 @@
       transform: translateY(16px);
       animation: heroRise .9s ease forwards;
       animation-delay: .32s;
+    }
+
+    .feature-kicker {
+      margin: 6px auto 12px auto;
+      color: rgba(226,232,240,0.76);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-weight: 800;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: heroRise .9s ease forwards;
+      animation-delay: .37s;
+    }
+
+    .feature-row {
+      max-width: 1020px;
+      margin: 0 auto 22px auto;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: heroRise .9s ease forwards;
+      animation-delay: .4s;
+    }
+
+    .feature-card {
+      display: block;
+      text-align: left;
+      text-decoration: none;
+      color: white;
+      padding: 16px 18px;
+      border-radius: 22px;
+      border: 1px solid rgba(191,219,254,0.18);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.05) 100%);
+      box-shadow: 0 18px 34px rgba(5,10,28,0.14);
+      transition: transform .15s ease, border-color .15s ease, background .15s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(147,197,253,0.4);
+      background: linear-gradient(180deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.07) 100%);
+    }
+
+    .feature-card-label {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      color: rgba(226,232,240,0.82);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 800;
+    }
+
+    .feature-card-title {
+      margin: 0 0 6px 0;
+      font-family: "Sora", sans-serif;
+      font-size: 24px;
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+    }
+
+    .feature-card-copy {
+      margin: 0;
+      color: rgba(248,250,252,0.72);
+      font-size: 14px;
+      line-height: 1.45;
     }
 
     .btn-primary,
@@ -880,6 +988,7 @@
       .topbar-right {
         width: 100%;
         justify-content: space-between;
+        flex-wrap: wrap;
       }
 
       .site-nav {
@@ -893,6 +1002,10 @@
       .news-grid {
         grid-template-columns: 1fr;
       }
+
+      .feature-row {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 760px) {
@@ -903,7 +1016,9 @@
 
       .topbar-right {
         width: 100%;
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         min-width: 0;
       }
 
@@ -917,6 +1032,10 @@
       .site-nav a {
         max-width: 100%;
         padding: 9px 12px;
+      }
+
+      .social-links {
+        margin-top: 4px;
       }
 
       .brand {
@@ -993,6 +1112,10 @@
         font-size: 26px;
       }
 
+      .feature-card-title {
+        font-size: 21px;
+      }
+
       .link-row {
         gap: 8px 12px;
         max-width: 100%;
@@ -1034,6 +1157,13 @@
           <a href="about.html">About</a>
           <a href="support.html">Support</a>
         </nav>
+        <div class="social-links" aria-label="Social links">
+          <a class="social-link" href="https://www.linkedin.com/company/the-rhode-island-elections-project/about/" target="_blank" rel="noopener noreferrer" aria-label="Rhode Island Elections Project on LinkedIn" title="Follow RIEP on LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A2 2 0 1 0 5.3 7a2 2 0 0 0-.05-4ZM20.44 12.66c0-3.5-1.87-5.12-4.37-5.12a3.78 3.78 0 0 0-3.39 1.87V8.5H9.31c.05.61 0 11.5 0 11.5h3.37v-6.42c0-.34.03-.68.13-.92.27-.68.88-1.39 1.9-1.39 1.34 0 1.88 1.02 1.88 2.52V20H20v-6.73Z"/>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
 
@@ -1050,8 +1180,26 @@
             <a class="btn-secondary" href="map.html?mode=turnout&geo=municipality&year=2024">Open 2024 Turnout</a>
             <a class="btn-secondary" href="lookup.html">Find My Precinct</a>
           </div>
+          <div class="feature-kicker">Explore More Map Views</div>
+          <div class="feature-row" aria-label="Featured map views">
+            <a class="feature-card" href="map.html?mode=results&chamber=house&year=2024&view=uncontested">
+              <span class="feature-card-label">Map View</span>
+              <h3 class="feature-card-title">Uncontested Seats</h3>
+              <p class="feature-card-copy">See where voters had no meaningful general-election choice and how widespread uncontested districts were in 2024.</p>
+            </a>
+            <a class="feature-card" href="map.html?mode=results&chamber=house&year=2024&view=gender">
+              <span class="feature-card-label">Map View</span>
+              <h3 class="feature-card-title">Gender Parity</h3>
+              <p class="feature-card-copy">Explore where women currently hold legislative seats and how representation varies across Rhode Island.</p>
+            </a>
+            <a class="feature-card" href="map.html?mode=results&chamber=house&year=2024&view=competitiveness">
+              <span class="feature-card-label">Map View</span>
+              <h3 class="feature-card-title">Competitiveness</h3>
+              <p class="feature-card-copy">Compare tossups, close races, and safe seats to understand where Rhode Island elections are truly competitive.</p>
+            </a>
+          </div>
           <div class="link-row" aria-label="Secondary project links">
-            <a class="link-pill" href="map.html?mode=results&chamber=house&year=2024&view=party">Results</a>
+            <a class="link-pill" href="map.html?mode=results&chamber=house&year=2024&view=party">Winner Party</a>
             <span class="separator-dot" aria-hidden="true"></span>
             <a class="link-pill" href="map.html?mode=turnout&geo=municipality&year=2024">Turnout</a>
             <span class="separator-dot" aria-hidden="true"></span>
