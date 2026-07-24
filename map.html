@@ -1813,6 +1813,11 @@ const map = L.map("map", {
   keyboard: false,
   touchZoom: false
 }).setView([41.70, -71.55], 9);
+map.on("popupclose", event => {
+  if (event.popup && selectedLayer && event.popup._source === selectedLayer) {
+    clearPinnedSelection();
+  }
+});
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 18,
   opacity: 0.34,
@@ -2180,18 +2185,20 @@ function styleFeature(feature) {
 function showRace(race, lyr) {
   if (!race || !lyr) return;
   if (selectedLayer && selectedLayer !== lyr && layer) {
+    selectedLayer.closePopup();
     layer.resetStyle(selectedLayer);
   }
   selectedLayer = lyr;
   selectedKey = `${state.chamber}|${state.year}|${race.district_number}`;
   lyr.setStyle({ weight: 4, color: "#0f172a", fillOpacity: 0.58 });
-  lyr.bindPopup(popupHtml(race)).openPopup();
+  lyr.bindPopup(popupHtml(race), { closeButton: true, autoPan: true }).openPopup();
   highlightDistrictList();
 }
 
 function showTurnout(row, lyr) {
   if (!row || !lyr) return;
   if (selectedLayer && selectedLayer !== lyr && layer) {
+    selectedLayer.closePopup();
     layer.resetStyle(selectedLayer);
   }
   selectedLayer = lyr;
@@ -2202,7 +2209,30 @@ function showTurnout(row, lyr) {
       : row.district_number;
   selectedKey = turnoutLookupKey(state.turnoutGeo, activeYear(), rowId);
   lyr.setStyle({ weight: 3, color: "#0f172a", fillOpacity: 0.92 });
-  lyr.bindPopup(turnoutPopupHtml(row)).openPopup();
+  lyr.bindPopup(turnoutPopupHtml(row), { closeButton: true, autoPan: true }).openPopup();
+  highlightDistrictList();
+}
+
+function previewRace(race, lyr) {
+  if (!race || !lyr || selectedLayer === lyr) return;
+  lyr.bindPopup(popupHtml(race), { closeButton: false, autoPan: false }).openPopup();
+}
+
+function previewTurnout(row, lyr) {
+  if (!row || !lyr || selectedLayer === lyr) return;
+  lyr.bindPopup(turnoutPopupHtml(row), { closeButton: false, autoPan: false }).openPopup();
+}
+
+function clearPinnedSelection() {
+  if (!selectedLayer || !layer) {
+    selectedLayer = null;
+    selectedKey = null;
+    highlightDistrictList();
+    return;
+  }
+  layer.resetStyle(selectedLayer);
+  selectedLayer = null;
+  selectedKey = null;
   highlightDistrictList();
 }
 
@@ -2220,6 +2250,10 @@ function onEachFeature(feature, lyr) {
           : `${turnoutGeoLabel()} ${row.district_number}: ${formatPct(row.turnout_pct, 1)} turnout`
       : turnoutGeoLabel();
     lyr.bindTooltip(label, { sticky: true });
+    lyr.on("mouseover", () => previewTurnout(row, lyr));
+    lyr.on("mouseout", () => {
+      if (selectedLayer !== lyr) lyr.closePopup();
+    });
     lyr.on("click", () => showTurnout(row, lyr));
     return;
   }
@@ -2234,6 +2268,10 @@ function onEachFeature(feature, lyr) {
     : `District ${district}`;
 
   lyr.bindTooltip(label, { sticky: true });
+  lyr.on("mouseover", () => previewRace(race, lyr));
+  lyr.on("mouseout", () => {
+    if (selectedLayer !== lyr) lyr.closePopup();
+  });
   lyr.on("click", () => showRace(race, lyr));
 }
 
@@ -2913,7 +2951,7 @@ function addLegend() {
 
 function updateEraBadge() {
   if (isTurnoutMode()) {
-    document.getElementById("eraBadge").textContent = "Official turnout currently wired for 2024";
+    document.getElementById("eraBadge").textContent = "Unofficial turnout currently wired for 2024";
     return;
   }
   const text = Number(state.year) <= 2020
@@ -2986,7 +3024,7 @@ function syncButtons() {
     : "Search district or candidate...";
   document.getElementById("noteBar").textContent = isTurnoutMode()
     ? "Turnout mode uses Rhode Island 2024 turnout data published on this site. Click a place to inspect turnout, eligible voters, and voting method splits."
-    : "Hover over districts for labels. Click a district for full race details.";
+    : "Hover for a preview. Click to pin district details.";
 
   const viewSelect = document.getElementById("viewSelect");
   const targetOptions = isTurnoutMode() ? turnoutViewOptions : resultViewOptions;
