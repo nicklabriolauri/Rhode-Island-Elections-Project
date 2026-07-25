@@ -688,6 +688,66 @@
     .fact-card {
       padding: 10px 12px;
     }
+    .facts-action-row {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 8px;
+    }
+    .facts-reset-btn {
+      border: 1px solid #dbe3ef;
+      background: white;
+      color: var(--navy2);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 11px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(15,23,42,.06);
+    }
+    .facts-reset-btn:hover {
+      background: #f8fafc;
+    }
+    .district-detail-card {
+      padding: 14px 14px 12px;
+    }
+    .district-detail-meta {
+      display: grid;
+      gap: 6px;
+      margin-bottom: 12px;
+      font-size: 13px;
+      line-height: 1.35;
+      color: var(--text);
+    }
+    .district-detail-meta strong {
+      font-weight: 900;
+    }
+    .district-detail-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+    }
+    .district-detail-table th,
+    .district-detail-table td {
+      padding: 6px 0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .district-detail-table th {
+      text-align: left;
+      color: #475569;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      font-weight: 900;
+    }
+    .district-detail-table td:last-child,
+    .district-detail-table th:last-child,
+    .district-detail-table td:nth-last-child(2),
+    .district-detail-table th:nth-last-child(2) {
+      text-align: right;
+    }
+    .district-detail-table tbody tr:last-child td {
+      border-bottom: 0;
+    }
     .fact-value {
       margin-top: 4px;
       font-size: 20px;
@@ -1657,7 +1717,7 @@ body.gender-mode .gender-overlay {
   <span id="eraBadge" class="era-badge"></span>
 </div>
 
-<div class="note" id="noteBar">Hover over districts for labels. Click a district for full race details.</div>
+<div class="note" id="noteBar">Hover over districts for labels. Click a district to view full race details in the sidebar.</div>
 
 <main class="dashboard">
   <aside id="districtPanel">
@@ -2094,6 +2154,88 @@ function turnoutPopupHtml(row) {
   `;
 }
 
+function detailResetButton() {
+  return `
+    <div class="facts-action-row">
+      <button type="button" class="facts-reset-btn" id="factsResetBtn">Back to overview</button>
+    </div>
+  `;
+}
+
+function wireFactsResetButton() {
+  const btn = document.getElementById("factsResetBtn");
+  if (!btn) return;
+  btn.addEventListener("click", clearSelection);
+}
+
+function clearSelection() {
+  if (selectedLayer && layer) {
+    layer.resetStyle(selectedLayer);
+  }
+  selectedLayer = null;
+  selectedKey = null;
+  updateOverview();
+  highlightDistrictList();
+}
+
+function renderRaceSidebar(race) {
+  const seatCard = document.querySelector("#factsPanel .seat-card");
+  if (seatCard) seatCard.style.display = "none";
+
+  document.getElementById("overviewTitle").textContent = `${race.chamber} District ${race.district_number}`;
+  document.getElementById("factsGrid").innerHTML = `
+    ${detailResetButton()}
+    <div class="fact-card district-detail-card">
+      <div class="district-detail-meta">
+        <div><strong>Winner:</strong> ${race.winner_candidate || "N/A"} (${partyLabel(race.winner_party)})</div>
+        <div><strong>Total votes:</strong> ${race.district_total_votes || "N/A"}</div>
+        <div><strong>Margin:</strong> ${race.margin_votes || "N/A"} votes (${race.margin_pct || "N/A"})</div>
+        <div><strong>Status:</strong> ${race.is_uncontested ? "Uncontested" : "Contested"}</div>
+      </div>
+      <table class="district-detail-table">
+        <thead>
+          <tr>
+            <th>Candidate</th>
+            <th>Party</th>
+            <th>Votes</th>
+            <th>%</th>
+          </tr>
+        </thead>
+        <tbody>${candidateRows(race)}</tbody>
+      </table>
+    </div>
+  `;
+  wireFactsResetButton();
+}
+
+function renderTurnoutSidebar(row) {
+  const seatCard = document.querySelector("#factsPanel .seat-card");
+  if (seatCard) seatCard.style.display = "none";
+
+  const heading =
+    state.turnoutGeo === "precinct"
+      ? `${row.municipality} Precinct ${row.precinct_label || row.precinct_code}`
+      : state.turnoutGeo === "municipality"
+        ? row.municipality
+        : `${turnoutGeoLabel()} ${row.district_number}`;
+
+  document.getElementById("overviewTitle").textContent = heading;
+  document.getElementById("factsGrid").innerHTML = `
+    ${detailResetButton()}
+    <div class="fact-card district-detail-card">
+      <div class="district-detail-meta">
+        <div><strong>Turnout:</strong> ${formatPct(row.turnout_pct, 1)}</div>
+        <div><strong>Voted:</strong> ${formatInt(row.voted_total)}</div>
+        <div><strong>Eligible:</strong> ${formatInt(row.eligible_total)}</div>
+        <div><strong>Mail ballot share:</strong> ${turnoutShare(row.voted_mail, row.voted_total)}</div>
+        <div><strong>Early vote share:</strong> ${turnoutShare(row.voted_early, row.voted_total)}</div>
+        <div><strong>Election Day share:</strong> ${turnoutShare(row.voted_election_day, row.voted_total)}</div>
+      </div>
+    </div>
+  `;
+  wireFactsResetButton();
+}
+
 function styleFeature(feature) {
   if (isTurnoutMode()) {
     const featureId = activeFeatureId(feature);
@@ -2185,7 +2327,7 @@ function showRace(race, lyr) {
   selectedLayer = lyr;
   selectedKey = `${state.chamber}|${state.year}|${race.district_number}`;
   lyr.setStyle({ weight: 4, color: "#0f172a", fillOpacity: 0.58 });
-  lyr.bindPopup(popupHtml(race)).openPopup();
+  renderRaceSidebar(race);
   highlightDistrictList();
 }
 
@@ -2202,7 +2344,7 @@ function showTurnout(row, lyr) {
       : row.district_number;
   selectedKey = turnoutLookupKey(state.turnoutGeo, activeYear(), rowId);
   lyr.setStyle({ weight: 3, color: "#0f172a", fillOpacity: 0.92 });
-  lyr.bindPopup(turnoutPopupHtml(row)).openPopup();
+  renderTurnoutSidebar(row);
   highlightDistrictList();
 }
 
@@ -2581,6 +2723,8 @@ function renderTurnoutOverview() {
   const summary = currentTurnoutSummary();
   const geoLabel = turnoutGeoLabel();
   const titleText = state.turnoutGeo === "precinct" ? "Precincts" : `${geoLabel}s`;
+  const seatCard = document.querySelector("#factsPanel .seat-card");
+  if (seatCard) seatCard.style.display = "";
 
   document.getElementById("overviewTitle").textContent = `2024 ${geoLabel} Turnout`;
 
@@ -2647,6 +2791,8 @@ function updateOverview() {
 
   const races = racesForSelection();
   const titleChamber = state.chamber === "house" ? "House" : "Senate";
+  const seatCard = document.querySelector("#factsPanel .seat-card");
+  if (seatCard) seatCard.style.display = "";
   document.getElementById("overviewTitle").textContent = `${state.year} ${titleChamber} Overview`;
   document.getElementById("seatCardTitle").textContent = "Seat composition";
 
@@ -2985,8 +3131,8 @@ function syncButtons() {
     ? "Search geography or place..."
     : "Search district or candidate...";
   document.getElementById("noteBar").textContent = isTurnoutMode()
-    ? "Turnout mode uses Rhode Island 2024 turnout data published on this site. Click a place to inspect turnout, eligible voters, and voting method splits."
-    : "Hover over districts for labels. Click a district for full race details.";
+    ? "Turnout mode uses Rhode Island 2024 turnout data published on this site. Click a place to inspect turnout, eligible voters, and voting method splits in the sidebar."
+    : "Hover over districts for labels. Click a district to view full race details in the sidebar.";
 
   const viewSelect = document.getElementById("viewSelect");
   const targetOptions = isTurnoutMode() ? turnoutViewOptions : resultViewOptions;
