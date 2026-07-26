@@ -1017,7 +1017,7 @@
         <div>
           <div class="hero-eyebrow">2026 Rhode Island Primary</div>
           <h2>See who’s running across Rhode Island.</h2>
-          <div class="hero-lead">This page tracks who has filed so far for the September 9, 2026 Rhode Island primary and highlights where same-party nomination contests are already forming.</div>
+          <div class="hero-lead">This page tracks who has filed so far for the September 9, 2026 Rhode Island primary and highlights where same-party nomination contests are already forming. Early voting begins on August 20, 2026.</div>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#running-map-anchor">Open filing map</a>
             <a class="btn btn-secondary" href="#district-browser">Browse filed districts</a>
@@ -1025,9 +1025,9 @@
         </div>
         <div class="summary-grid">
           <div class="summary-card">
-            <div class="summary-label">Days until September 9</div>
+            <div class="summary-label">Days until early voting</div>
             <div class="summary-value" id="summaryCountdown">—</div>
-            <div class="summary-copy" id="summaryPrimaryDate">Rhode Island primary countdown</div>
+            <div class="summary-copy" id="summaryPrimaryDate">Early voting opens August 20, 2026</div>
           </div>
           <div class="summary-card">
             <div class="summary-label">Districts with filings</div>
@@ -1047,7 +1047,7 @@
         </div>
       </div>
       <div class="hero-note">
-        <strong>Primary first:</strong> this page is focused on who has filed for the September 9 primary ballot. Color categories show whether only Democrats, only Republicans, only Independents / Others, or candidates from more than one party have filed in each district.
+        <strong>Primary first:</strong> this page is focused on who has filed for the September 9 primary ballot. Early voting begins on August 20, 2026. Color categories show whether only Democrats, only Republicans, only Independents / Others, or candidates from more than one party have filed in each district.
       </div>
     </section>
 
@@ -1562,16 +1562,26 @@
       return new Date(year, 8, 9);
     }
 
+    function getEarlyVotingDate(year) {
+      return new Date(year, 7, 20);
+    }
+
     function setPrimaryCountdown() {
       if (!filingData?.election_cycle) return;
       const electionYear = Number(filingData.election_cycle);
       const primaryDate = getPrimaryDate(electionYear);
+      const earlyVotingDate = getEarlyVotingDate(electionYear);
       const startOfToday = new Date();
       startOfToday.setHours(0, 0, 0, 0);
-      const days = Math.ceil((primaryDate - startOfToday) / 86400000);
+      const days = Math.ceil((earlyVotingDate - startOfToday) / 86400000);
       const countdown = document.getElementById("summaryCountdown");
       const copy = document.getElementById("summaryPrimaryDate");
-      const formatted = primaryDate.toLocaleDateString("en-US", {
+      const earlyFormatted = earlyVotingDate.toLocaleDateString("en-US", {
+        month: "long",
+        day: "numeric",
+        year: "numeric"
+      });
+      const primaryFormatted = primaryDate.toLocaleDateString("en-US", {
         month: "long",
         day: "numeric",
         year: "numeric"
@@ -1579,13 +1589,13 @@
 
       if (days > 0) {
         countdown.textContent = days;
-        copy.textContent = `Rhode Island primary: ${formatted}`;
+        copy.textContent = `Early voting opens ${earlyFormatted} · Primary ${primaryFormatted}`;
       } else if (days === 0) {
         countdown.textContent = "Today";
-        copy.textContent = `Rhode Island primary: ${formatted}`;
+        copy.textContent = `Early voting opens ${earlyFormatted} · Primary ${primaryFormatted}`;
       } else {
-        countdown.textContent = "Done";
-        copy.textContent = `Rhode Island primary was ${formatted}`;
+        countdown.textContent = "Open";
+        copy.textContent = `Early voting began ${earlyFormatted} · Primary ${primaryFormatted}`;
       }
     }
 
