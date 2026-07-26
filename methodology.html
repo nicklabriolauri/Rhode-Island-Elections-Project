@@ -216,6 +216,21 @@ ul {
   </section>
 
   <section class="card">
+    <h3>What Are JSON and GeoJSON?</h3>
+    <p class="placeholder">
+      Several downloadable files on this site are provided in <strong>JSON</strong> or <strong>GeoJSON</strong> format. These are plain-text data formats that are widely used in research, public data work, and web mapping.
+    </p>
+    <ul>
+      <li><strong>JSON</strong> stands for <em>JavaScript Object Notation</em>. In practice, it is simply a structured text file that stores rows, fields, and values in a machine-readable way. It can be opened in R, Python, Stata workflows, spreadsheets after conversion, database tools, and many data-cleaning platforms.</li>
+      <li><strong>GeoJSON</strong> is a geographic version of JSON. It stores both the data fields and the map geometry together. For example, a GeoJSON file can contain a precinct name, turnout fields, and the polygon that draws that precinct on the map.</li>
+      <li><strong>Why these formats are used here:</strong> they are lightweight, portable, and well-suited for an interactive public website because the browser can read them directly.</li>
+    </ul>
+    <p class="placeholder">
+      If you are more comfortable working with tables than map files, the JSON and GeoJSON files can also be converted into <code>CSV</code>, Excel, shapefiles, or database tables for downstream analysis.
+    </p>
+  </section>
+
+  <section class="card">
     <h3>Election Results</h3>
     <p class="placeholder">
       House and Senate results were compiled from official Rhode Island general election files and standardized into a common district-level structure. For each district, the project records the winner, party, vote totals, vote shares, the runner-up where applicable, and the district margin in both votes and percentage points.
@@ -258,7 +273,23 @@ ul {
   </section>
 
   <section class="card">
+    <h3>How the Website and Maps Are Built</h3>
+    <p class="placeholder">
+      The public website is a static web project. The map views are rendered in the browser using downloadable data files rather than a live database query. In practical terms, that means the website loads district and precinct geometry, attaches election or turnout fields to those geographies, and then draws the map interactively for the user.
+    </p>
+    <ul>
+      <li><strong>Map rendering:</strong> the interactive maps are displayed with Leaflet, a browser-based mapping library.</li>
+      <li><strong>Results layer:</strong> legislative race summaries are stored in a structured JSON file and joined to House and Senate district boundary files.</li>
+      <li><strong>Turnout layer:</strong> turnout files are stored at the precinct and municipality level and then displayed directly on the map or aggregated into district summaries.</li>
+      <li><strong>Why this matters for research:</strong> the downloadable files on this page are the same core files the website uses to generate its public map views.</li>
+    </ul>
+  </section>
+
+  <section class="card">
     <h3>Replication Data</h3>
+    <p class="placeholder">
+      Researchers who want to reproduce, extend, or audit the site can begin with the following files. These are the main structured data assets used to power the public map and turnout views.
+    </p>
     <ul>
       <li><a href="data/race_data.json">Race data JSON</a></li>
       <li><a href="data/house_old.geojson">House districts, 2012–2020 GeoJSON</a></li>
@@ -267,6 +298,23 @@ ul {
       <li><a href="data/senate_new.geojson">Senate districts, 2022–2024 GeoJSON</a></li>
       <li><a href="data/ri_2024_turnout_data.json">Processed 2024 turnout JSON</a></li>
     </ul>
+  </section>
+
+  <section class="card">
+    <h3>How You Can Use These Data in Research</h3>
+    <p class="placeholder">
+      You do not need to use R to work with the files provided here. The project data can be used in several different research workflows depending on what software you prefer.
+    </p>
+    <ul>
+      <li><strong>Python:</strong> JSON and GeoJSON can be read directly with common packages such as <code>pandas</code> and <code>geopandas</code>.</li>
+      <li><strong>QGIS or ArcGIS:</strong> GeoJSON files can be loaded directly as map layers for spatial analysis or export.</li>
+      <li><strong>Excel or CSV-based workflows:</strong> JSON files can be converted into CSV tables if you prefer spreadsheet analysis or want to import the data into other statistical packages.</li>
+      <li><strong>Stata, SPSS, or other statistics software:</strong> the structured files can be converted into flat tables for district-level or precinct-level modeling.</li>
+      <li><strong>Database workflows:</strong> JSON and GeoJSON can be imported into SQL or document-oriented databases for larger-scale querying.</li>
+    </ul>
+    <p class="placeholder">
+      In research terms, the files on this page can support district-level electoral analysis, turnout comparisons, spatial visualization, classroom demos, replication exercises, and custom merges with outside demographic, municipal, or legislative datasets.
+    </p>
   </section>
 
   <section class="card">
