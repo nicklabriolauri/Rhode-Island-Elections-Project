@@ -397,7 +397,7 @@
     }
 
     .feature-row {
-      max-width: 920px;
+      max-width: 980px;
       margin: 0 auto 22px auto;
       display: flex;
       flex-wrap: wrap;
@@ -414,23 +414,25 @@
       align-items: center;
       justify-content: center;
       min-height: 52px;
-      padding: 0 22px;
+      min-width: 210px;
+      padding: 0 24px;
       border-radius: 999px;
       text-decoration: none;
       color: white;
       font-size: 14px;
       font-weight: 800;
       letter-spacing: 0;
-      border: 1px solid rgba(200,214,255,0.22);
-      background: rgba(232,238,255,0.07);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
-      transition: transform .15s ease, border-color .15s ease, background .15s ease, color .15s ease;
+      border: 1px solid rgba(214,224,255,0.18);
+      background: linear-gradient(180deg, rgba(255,255,255,0.065) 0%, rgba(255,255,255,0.04) 100%);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+      transition: transform .15s ease, border-color .15s ease, background .15s ease, color .15s ease, box-shadow .15s ease;
     }
 
     .feature-card:hover {
       transform: translateY(-2px);
-      border-color: rgba(191,219,254,0.42);
-      background: rgba(232,238,255,0.12);
+      border-color: rgba(191,219,254,0.32);
+      background: linear-gradient(180deg, rgba(255,255,255,0.085) 0%, rgba(255,255,255,0.055) 100%);
+      box-shadow: 0 14px 28px rgba(5,10,28,0.12);
     }
 
     .feature-card::before {
@@ -446,6 +448,10 @@
 
     .feature-card.uncontested::before {
       background: #f59e0b;
+    }
+
+    .feature-card.turnout::before {
+      background: #38bdf8;
     }
 
     .feature-card.gender::before {
@@ -1174,6 +1180,7 @@
       .feature-card {
         width: 100%;
         max-width: 360px;
+        min-width: 0;
       }
 
       .link-row {
@@ -1237,16 +1244,16 @@
           <div class="cta-row">
             <a class="btn-primary" href="map.html?mode=results&chamber=house&year=2024&view=party">Open Interactive Map</a>
             <a class="btn-secondary" href="running.html">Who's Running?</a>
-            <a class="btn-secondary" href="map.html?mode=turnout&geo=municipality&year=2024">Open 2024 Turnout</a>
             <a class="btn-secondary" href="lookup.html">Find My Precinct</a>
           </div>
           <div class="feature-kicker">Explore more map views</div>
           <div class="feature-row" aria-label="Featured map views">
+            <a class="feature-card turnout" href="map.html?mode=turnout&geo=municipality&year=2024">Turnout</a>
             <a class="feature-card uncontested" href="map.html?mode=results&chamber=house&year=2024&view=uncontested">Uncontested Seats</a>
             <a class="feature-card gender" href="map.html?mode=results&chamber=house&year=2024&view=gender">Gender Parity</a>
             <a class="feature-card competitiveness" href="map.html?mode=results&chamber=house&year=2024&view=competitiveness">Competitiveness</a>
           </div>
-          <p class="feature-note">Compare winner party, turnout, uncontested districts, gender representation, and electoral competitiveness directly from the homepage.</p>
+          <p class="feature-note">Compare turnout, uncontested districts, gender representation, and electoral competitiveness directly from the homepage.</p>
           <div class="link-row" aria-label="Secondary project links">
             <a class="link-pill" href="map.html?mode=results&chamber=house&year=2024&view=party">Winner Party</a>
             <span class="separator-dot" aria-hidden="true"></span>
