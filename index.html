@@ -397,11 +397,10 @@
     }
 
     .feature-row {
-      max-width: 980px;
+      max-width: 940px;
       margin: 0 auto 22px auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 14px;
       opacity: 0;
       transform: translateY(16px);
@@ -414,7 +413,8 @@
       align-items: center;
       justify-content: center;
       min-height: 52px;
-      min-width: 210px;
+      min-width: 0;
+      width: 100%;
       padding: 0 24px;
       border-radius: 999px;
       text-decoration: none;
@@ -1056,6 +1056,7 @@
       }
 
       .feature-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         justify-content: center;
       }
 
@@ -1179,7 +1180,7 @@
 
       .feature-card {
         width: 100%;
-        max-width: 360px;
+        max-width: none;
         min-width: 0;
       }
 
