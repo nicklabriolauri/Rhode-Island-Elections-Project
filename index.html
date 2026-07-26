@@ -351,12 +351,17 @@
 
     .hero-copy h2 span {
       display: block;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: heroRise .9s ease forwards;
     }
 
-    .hero-copy h2 span:nth-child(2) {
+    .hero-line-text {
+      display: inline-block;
+      opacity: 0;
+      clip-path: inset(0 100% 0 0);
+      transform: translateY(10px);
+      animation: heroWrite .95s cubic-bezier(.22,1,.36,1) forwards;
+    }
+
+    .hero-copy h2 span:nth-child(2) .hero-line-text {
       animation-delay: .12s;
     }
 
@@ -1032,6 +1037,22 @@
       }
     }
 
+    @keyframes heroWrite {
+      0% {
+        opacity: 0;
+        clip-path: inset(0 100% 0 0);
+        transform: translateY(10px);
+      }
+      30% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+        transform: translateY(0);
+      }
+    }
+
     @media (max-width: 1060px) {
       .topbar {
         display: flex;
@@ -1207,8 +1228,12 @@
     @media (prefers-reduced-motion: reduce) {
       .brand-mark,
       .brand-mark-wrap::before,
-      .brand-mark-wrap::after {
+      .brand-mark-wrap::after,
+      .hero-line-text {
         animation: none !important;
+        opacity: 1 !important;
+        clip-path: none !important;
+        transform: none !important;
       }
     }
   </style>
@@ -1249,7 +1274,7 @@
       <div class="hero-grid">
         <div class="hero-copy">
           <div class="eyebrow is-home">The Home of Rhode Island Politics</div>
-          <h2 id="heroTitle"><span>See how</span><span>Rhode Island votes.</span></h2>
+          <h2 id="heroTitle"><span><span class="hero-line-text">See how</span></span><span><span class="hero-line-text">Rhode Island votes.</span></span></h2>
           <div class="ocean-line" aria-hidden="true"></div>
           <p class="summary">Election results, turnout maps, and precinct data, all in one place.</p>
           <div class="cta-row">
