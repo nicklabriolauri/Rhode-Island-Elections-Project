@@ -713,7 +713,7 @@
     .candidate-meta-grid {
       margin-top: 10px;
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 8px;
     }
     .candidate-meta {
@@ -971,6 +971,7 @@
       .controls { grid-template-columns: 1fr; }
       #runningMap { height: 560px; }
       .district-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .candidate-meta-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     @media (max-width: 640px) {
@@ -1302,7 +1303,7 @@
     };
     loading.addTo(map);
 
-    const assetVersion = "20260719a";
+    const assetVersion = "20260729a";
 
     function freshAssetUrl(url) {
       const separator = url.includes("?") ? "&" : "?";
@@ -1630,6 +1631,12 @@
         .replaceAll("'", "&#39;");
     }
 
+    function formatYesNo(value) {
+      if (value === true) return "Yes";
+      if (value === false) return "No";
+      return "Not listed";
+    }
+
     function candidateAccent(candidate) {
       if (candidate.party === "DEM") return "#2563eb";
       if (candidate.party === "REP") return "#dc2626";
@@ -1685,6 +1692,10 @@
             <div class="candidate-meta">
               <span class="candidate-meta-label">ZIP code</span>
               <span class="candidate-meta-value">${escapeHtml(zipLabel)}</span>
+            </div>
+            <div class="candidate-meta">
+              <span class="candidate-meta-label">On primary ballot</span>
+              <span class="candidate-meta-value">${escapeHtml(formatYesNo(candidate.on_primary_ballot))}</span>
             </div>
           </div>
           <div class="candidate-links">${buildCandidateLinks(candidate)}</div>
