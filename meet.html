@@ -4,57 +4,62 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Meet the Candidates | Rhode Island Elections Project</title>
-  <meta name="description" content="Compare Rhode Island House and Senate candidates by district and review campaign-submitted issue priorities in one place." />
+  <meta name="description" content="Answer a few questions, find your Rhode Island House or Senate race, and compare candidate priorities in a simpler guided view." />
   <meta property="og:title" content="Meet the Candidates | Rhode Island Elections Project" />
-  <meta property="og:description" content="Compare Rhode Island legislative candidates by district and review campaign-submitted priorities in one place." />
+  <meta property="og:description" content="Answer a few questions, find your Rhode Island House or Senate race, and compare candidate priorities in a simpler guided view." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.rhodeislandelectionsproject.org/meet.html" />
   <meta property="og:site_name" content="Rhode Island Elections Project" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Meet the Candidates | Rhode Island Elections Project" />
-  <meta name="twitter:description" content="Compare Rhode Island legislative candidates by district and review campaign-submitted priorities in one place." />
+  <meta name="twitter:description" content="Answer a few questions, find your Rhode Island House or Senate race, and compare candidate priorities in a simpler guided view." />
   <link rel="canonical" href="https://www.rhodeislandelectionsproject.org/meet.html" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <style>
     :root {
-      --navy: #111c3d;
-      --navy-soft: #1c2b58;
-      --ink: #0f172a;
-      --slate: #475569;
-      --line: #dbe3ef;
-      --panel: #ffffff;
-      --surface: #f8fafc;
-      --surface-2: #eef3fb;
-      --dem: #2563eb;
+      --ink: #1f2937;
+      --ink-soft: #52606d;
+      --navy: #182338;
+      --navy-2: #23324d;
+      --cream: #f6f1e8;
+      --paper: #fffdfa;
+      --stone: #ddd4c6;
+      --mist: #f1ede5;
+      --shadow: 0 18px 42px rgba(24, 35, 56, 0.08);
+      --dem: #3b82f6;
+      --dem-soft: rgba(59,130,246,0.12);
       --rep: #dc2626;
-      --other: #0f766e;
-      --mixed: #7c3aed;
-      --gold: #d97706;
-      --shadow: 0 18px 44px rgba(15, 23, 42, 0.08);
+      --rep-soft: rgba(220,38,38,0.12);
+      --accent: #5b6f63;
+      --accent-soft: rgba(91,111,99,0.12);
     }
 
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: var(--ink);
-      background: linear-gradient(180deg, #f8fafc 0%, #eef3fb 100%);
+      background:
+        radial-gradient(circle at top left, rgba(91,111,99,0.08), transparent 24%),
+        linear-gradient(180deg, #fbf8f2 0%, #f3eee5 100%);
     }
     a { color: inherit; }
+
     header {
       padding: 24px 24px 18px;
       color: white;
-      background: linear-gradient(135deg, #0f172a 0%, #172554 100%);
+      background: linear-gradient(135deg, #122038 0%, #1d2e4a 100%);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
     .header-shell {
       max-width: 1240px;
       margin: 0 auto;
       display: flex;
-      justify-content: space-between;
-      gap: 24px;
-      align-items: flex-start;
+      flex-direction: column;
+      gap: 16px;
     }
     .brand {
       display: flex;
@@ -63,38 +68,54 @@
       min-width: 0;
     }
     .brand img {
-      width: 78px;
-      height: 78px;
+      width: 74px;
+      height: 74px;
       object-fit: contain;
       flex: 0 0 auto;
     }
+    .brand-copy {
+      min-width: 0;
+    }
+    .brand-kicker {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 0 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.74);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
     .brand h1 {
-      margin: 0;
-      font-size: 28px;
+      margin: 10px 0 0;
+      font-size: 30px;
       line-height: 1;
-      letter-spacing: -0.04em;
+      letter-spacing: -0.045em;
     }
     .brand p {
       margin: 10px 0 0;
-      max-width: 720px;
-      color: rgba(255,255,255,.84);
+      max-width: 760px;
+      color: rgba(255,255,255,0.82);
       font-size: 15px;
-      line-height: 1.45;
+      line-height: 1.5;
     }
     .site-nav {
       display: flex;
       flex-wrap: wrap;
-      justify-content: flex-end;
       gap: 10px;
-      margin-top: 2px;
+      align-items: center;
     }
     .site-nav a {
       color: white;
       text-decoration: none;
-      border: 1px solid rgba(255,255,255,.3);
-      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.06);
       border-radius: 999px;
-      padding: 9px 15px;
+      padding: 9px 14px;
       font-size: 13px;
       font-weight: 800;
       white-space: nowrap;
@@ -102,327 +123,288 @@
     .site-nav a.active {
       background: white;
       color: var(--navy);
-      box-shadow: 0 8px 22px rgba(15,23,42,.2);
+      box-shadow: 0 8px 20px rgba(15,23,42,.18);
     }
 
     main {
       max-width: 1240px;
       margin: 0 auto;
-      padding: 28px 24px 36px;
+      padding: 28px 24px 40px;
     }
-    .hero {
-      position: relative;
-      overflow: hidden;
-      border-radius: 28px;
-      padding: 28px;
-      background: linear-gradient(145deg, rgba(23,37,84,.96), rgba(35,48,98,.9));
-      border: 1px solid rgba(148,163,184,.18);
-      box-shadow: 0 20px 55px rgba(15,23,42,.18);
-      color: white;
+    .page-intro {
+      margin-bottom: 22px;
+      padding: 0 2px;
     }
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 260px;
-      height: 260px;
-      border-radius: 999px;
-      background: radial-gradient(circle, rgba(96,165,250,.18), rgba(96,165,250,0));
-      left: -72px;
-      bottom: -110px;
-      pointer-events: none;
-    }
-    .hero-grid {
-      position: relative;
-      display: grid;
-      grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.95fr);
-      gap: 26px;
-      align-items: start;
-    }
-    .hero-eyebrow {
+    .page-intro-label {
       font-size: 12px;
       font-weight: 900;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: rgba(255,255,255,.68);
+      color: #6b7280;
     }
-    .hero h2 {
+    .page-intro h2 {
       margin: 10px 0 0;
-      font-size: 64px;
-      line-height: .96;
-      letter-spacing: -.06em;
+      font-size: 52px;
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+      color: var(--navy);
+      max-width: 760px;
     }
-    .hero-lead {
-      margin: 18px 0 0;
-      max-width: 720px;
-      color: rgba(255,255,255,.82);
-      font-size: 19px;
-      line-height: 1.5;
-    }
-    .hero-actions {
-      margin-top: 22px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 46px;
-      padding: 0 18px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 900;
-      border: 1px solid transparent;
-      cursor: pointer;
-      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
-    }
-    .btn:hover { transform: translateY(-1px); }
-    .btn-primary {
-      background: linear-gradient(135deg, #4361ee 0%, #3554e8 100%);
-      color: white;
-      box-shadow: 0 12px 24px rgba(53,84,232,.22);
-    }
-    .btn-secondary {
-      background: rgba(255,255,255,.08);
-      border-color: rgba(255,255,255,.22);
-      color: white;
-    }
-    .hero-note {
-      margin-top: 18px;
-      padding: 16px 18px;
-      border-radius: 18px;
-      background: rgba(255,255,255,.07);
-      border: 1px solid rgba(255,255,255,.14);
-      color: rgba(255,255,255,.82);
-      font-size: 15px;
-      line-height: 1.5;
-    }
-    .summary-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-    .summary-card {
-      border-radius: 22px;
-      padding: 18px 18px 16px;
-      background: rgba(255,255,255,.97);
-      color: var(--ink);
-      border: 1px solid rgba(219,227,239,.84);
-      box-shadow: 0 14px 34px rgba(15,23,42,.1);
-    }
-    .summary-label {
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: #64748b;
-    }
-    .summary-value {
-      margin-top: 8px;
-      font-size: 34px;
-      font-weight: 900;
-      letter-spacing: -.05em;
-    }
-    .summary-copy {
-      margin-top: 6px;
-      color: #475569;
-      font-size: 14px;
-      line-height: 1.45;
+    .page-intro p {
+      margin: 14px 0 0;
+      max-width: 760px;
+      color: var(--ink-soft);
+      font-size: 18px;
+      line-height: 1.55;
     }
 
-    .workspace {
-      margin-top: 24px;
+    .layout {
       display: grid;
-      grid-template-columns: 340px minmax(0, 1fr);
+      grid-template-columns: 360px minmax(0, 1fr);
       gap: 22px;
       align-items: start;
     }
     .panel {
-      background: rgba(255,255,255,.96);
-      border: 1px solid var(--line);
-      border-radius: 24px;
+      background: rgba(255,253,250,0.96);
+      border: 1px solid var(--stone);
+      border-radius: 26px;
       box-shadow: var(--shadow);
     }
-    .planner {
+    .question-card {
       position: sticky;
       top: 18px;
-      padding: 20px;
+      padding: 22px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.92), rgba(252,248,241,0.98));
     }
-    .panel-eyebrow {
+    .panel-label {
       font-size: 11px;
       font-weight: 900;
-      letter-spacing: .14em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: #64748b;
+      color: #7a8491;
     }
-    .planner h3,
+    .question-card h3,
     .results-head h3 {
       margin: 10px 0 0;
-      font-size: 28px;
+      font-size: 32px;
       line-height: 1;
-      letter-spacing: -.05em;
+      letter-spacing: -0.05em;
+      color: var(--navy);
     }
-    .planner-copy,
+    .panel-copy,
     .results-copy {
-      margin-top: 10px;
-      color: var(--slate);
+      margin-top: 12px;
+      color: var(--ink-soft);
       font-size: 15px;
       line-height: 1.55;
     }
-    .step-block {
-      margin-top: 20px;
+    .question-block {
+      margin-top: 22px;
       padding-top: 18px;
-      border-top: 1px solid #e5edf7;
+      border-top: 1px solid #e8e0d4;
     }
-    .step-title {
+    .question-title {
       font-size: 12px;
       font-weight: 900;
-      letter-spacing: .12em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: #64748b;
-      margin-bottom: 10px;
+      color: #7a8491;
+      margin-bottom: 12px;
     }
-    .issue-grid,
-    .quick-districts {
+    .option-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 10px;
     }
-    .issue-chip,
-    .quick-district {
+    .option-btn,
+    .utility-link,
+    .reset-btn {
       appearance: none;
-      border: 1px solid #dbe3ef;
-      background: #f8fafc;
-      color: #334155;
+      border: 1px solid var(--stone);
+      background: white;
+      color: var(--ink);
       border-radius: 999px;
-      min-height: 36px;
-      padding: 0 12px;
-      font-size: 12px;
+      min-height: 42px;
+      padding: 0 14px;
+      font-size: 14px;
       font-weight: 800;
       cursor: pointer;
-      transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease, background .16s ease;
-    }
-    .issue-chip:hover,
-    .quick-district:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 10px 22px rgba(15,23,42,.08);
-    }
-    .issue-chip.active,
-    .quick-district.active {
-      background: var(--navy);
-      color: white;
-      border-color: var(--navy);
-      box-shadow: 0 12px 24px rgba(17,28,61,.18);
-    }
-    .issue-helper,
-    .empty-state,
-    .source-note {
-      margin-top: 10px;
-      color: #64748b;
-      font-size: 13px;
-      line-height: 1.45;
-    }
-    .segmented {
+      text-decoration: none;
       display: inline-flex;
-      gap: 6px;
-      padding: 4px;
-      background: #f1f5f9;
-      border: 1px solid #dbe3ef;
-      border-radius: 999px;
-      width: 100%;
+      align-items: center;
+      justify-content: center;
+      transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease, background .14s ease;
     }
-    .segmented button {
-      flex: 1 1 0;
-      border: 0;
-      background: transparent;
-      padding: 11px 16px;
-      border-radius: 999px;
-      color: #475569;
-      font-size: 15px;
-      font-weight: 900;
-      cursor: pointer;
+    .option-btn:hover,
+    .utility-link:hover,
+    .reset-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 20px rgba(24,35,56,0.08);
     }
-    .segmented button.active {
+    .option-btn.active {
       background: var(--navy);
+      border-color: var(--navy);
       color: white;
-      box-shadow: 0 10px 20px rgba(17,28,61,.18);
+      box-shadow: 0 12px 24px rgba(24,35,56,0.14);
+    }
+    .option-btn.party-dem.active {
+      background: var(--dem);
+      border-color: var(--dem);
+    }
+    .option-btn.party-rep.active {
+      background: var(--rep);
+      border-color: var(--rep);
     }
     .district-select {
       width: 100%;
-      min-height: 46px;
+      min-height: 48px;
       border-radius: 16px;
-      border: 1px solid #dbe3ef;
-      background: #fff;
+      border: 1px solid var(--stone);
+      background: white;
       color: var(--ink);
       padding: 0 14px;
       font-size: 15px;
       font-weight: 700;
     }
-    .planner-links {
+    .inline-note {
+      margin-top: 10px;
+      color: #6b7280;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    .inline-note strong {
+      color: var(--ink);
+    }
+    .selection-summary {
+      margin-top: 18px;
+      padding: 14px 14px 12px;
+      border-radius: 18px;
+      background: var(--mist);
+      border: 1px solid #e6dece;
+    }
+    .summary-title {
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #7a8491;
+    }
+    .summary-value {
+      margin-top: 8px;
+      color: var(--navy);
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.5;
+    }
+    .helper-links {
       margin-top: 16px;
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
     }
-    .planner-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+    .utility-link {
+      color: var(--navy);
+      background: #fff;
       min-height: 38px;
       padding: 0 12px;
-      border-radius: 999px;
-      text-decoration: none;
-      border: 1px solid #dbe3ef;
-      background: #fff;
-      color: var(--navy);
       font-size: 12px;
-      font-weight: 900;
     }
-    .results {
-      padding: 20px;
+    .reset-btn {
+      min-height: 38px;
+      padding: 0 12px;
+      font-size: 12px;
+      color: #6b7280;
+      background: transparent;
+    }
+
+    .results-panel {
+      padding: 22px;
+      min-height: 640px;
+    }
+    .results-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 560px;
+      border: 1px dashed #d7cdbd;
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(246,241,232,0.55));
+      text-align: center;
+      padding: 26px;
+    }
+    .placeholder-copy {
+      max-width: 540px;
+    }
+    .placeholder-copy h4 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      color: var(--navy);
+    }
+    .placeholder-copy p {
+      margin: 14px 0 0;
+      color: var(--ink-soft);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .results-shell[hidden],
+    .results-placeholder[hidden],
+    .question-block[hidden],
+    .message-banner[hidden] {
+      display: none !important;
     }
     .results-head {
       display: flex;
       justify-content: space-between;
       gap: 18px;
-      align-items: start;
+      align-items: flex-start;
       flex-wrap: wrap;
     }
     .results-status {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
       min-height: 36px;
       padding: 0 12px;
       border-radius: 999px;
-      background: #f8fafc;
-      border: 1px solid #dbe3ef;
-      color: #334155;
+      border: 1px solid var(--stone);
+      background: var(--mist);
+      color: var(--ink);
       font-size: 12px;
       font-weight: 800;
       white-space: nowrap;
     }
+    .message-banner {
+      margin-top: 18px;
+      border-radius: 18px;
+      padding: 14px 16px;
+      border: 1px solid #e8dcc5;
+      background: #fff8ed;
+      color: #775d2a;
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 700;
+    }
     .candidate-grid {
-      margin-top: 20px;
+      margin-top: 18px;
       display: grid;
       grid-template-columns: 1fr;
       gap: 16px;
     }
     .candidate-card {
+      border: 1px solid var(--stone);
       border-radius: 22px;
-      border: 1px solid #dbe3ef;
-      background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(248,250,252,.98));
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(251,248,242,0.98));
+      box-shadow: 0 12px 26px rgba(24,35,56,0.05);
       padding: 18px;
-      box-shadow: 0 12px 28px rgba(15,23,42,.06);
     }
     .candidate-card[data-party="DEM"] { border-top: 4px solid var(--dem); }
     .candidate-card[data-party="REP"] { border-top: 4px solid var(--rep); }
     .candidate-card[data-party="IND"],
     .candidate-card[data-party="OTH"],
     .candidate-card[data-party="MOD"],
-    .candidate-card[data-party="LIB"] { border-top: 4px solid var(--other); }
+    .candidate-card[data-party="LIB"] { border-top: 4px solid var(--accent); }
     .candidate-top {
       display: flex;
       justify-content: space-between;
@@ -431,14 +413,15 @@
       flex-wrap: wrap;
     }
     .candidate-name {
-      font-size: 26px;
+      font-size: 28px;
       font-weight: 900;
-      letter-spacing: -.04em;
-      line-height: 1.04;
+      letter-spacing: -0.045em;
+      line-height: 1.02;
+      color: var(--navy);
     }
     .candidate-subhead {
       margin-top: 6px;
-      color: #64748b;
+      color: #6b7280;
       font-size: 13px;
       font-weight: 800;
     }
@@ -454,25 +437,20 @@
       min-height: 30px;
       padding: 0 10px;
       border-radius: 999px;
+      border: 1px solid var(--stone);
+      background: white;
+      color: #4b5563;
       font-size: 11px;
       font-weight: 900;
-      letter-spacing: .08em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      border: 1px solid #dbe3ef;
-      background: #fff;
-      color: #334155;
     }
-    .badge.match {
-      background: rgba(17,28,61,.06);
-      border-color: rgba(17,28,61,.1);
-      color: var(--navy);
-    }
-    .badge.party.democrat { color: var(--dem); border-color: rgba(37,99,235,.2); background: rgba(37,99,235,.06); }
-    .badge.party.republican { color: var(--rep); border-color: rgba(220,38,38,.2); background: rgba(220,38,38,.06); }
+    .badge.party.democrat { background: var(--dem-soft); border-color: rgba(59,130,246,0.18); color: #1d4ed8; }
+    .badge.party.republican { background: var(--rep-soft); border-color: rgba(220,38,38,0.18); color: #b91c1c; }
     .badge.party.independent,
     .badge.party.other,
     .badge.party.libertarian,
-    .badge.party.moderate { color: var(--other); border-color: rgba(15,118,110,.2); background: rgba(15,118,110,.06); }
+    .badge.party.moderate { background: var(--accent-soft); border-color: rgba(91,111,99,0.22); color: #486155; }
     .candidate-meta-grid {
       margin-top: 16px;
       display: grid;
@@ -480,27 +458,27 @@
       gap: 12px;
     }
     .candidate-meta {
-      border-radius: 16px;
-      border: 1px solid #dbe3ef;
-      background: #f8fafc;
+      min-height: 82px;
       padding: 12px;
-      min-height: 86px;
+      border-radius: 16px;
+      border: 1px solid #e6dece;
+      background: #fbf8f1;
     }
     .candidate-meta-label {
       display: block;
       font-size: 11px;
       font-weight: 900;
-      letter-spacing: .12em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: #64748b;
+      color: #7a8491;
     }
     .candidate-meta-value {
       display: block;
       margin-top: 8px;
+      color: var(--ink);
       font-size: 18px;
       line-height: 1.25;
       font-weight: 900;
-      color: var(--ink);
     }
     .candidate-links {
       margin-top: 14px;
@@ -516,19 +494,19 @@
       padding: 0 12px;
       border-radius: 999px;
       text-decoration: none;
-      border: 1px solid #dbe3ef;
-      background: #fff;
+      border: 1px solid var(--stone);
+      background: white;
       color: var(--navy);
       font-size: 13px;
       font-weight: 900;
     }
     .candidate-link.is-muted {
-      color: #64748b;
-      background: #f8fafc;
+      background: var(--mist);
+      color: #6b7280;
     }
     .candidate-copy {
       margin-top: 14px;
-      color: #334155;
+      color: #41505d;
       font-size: 15px;
       line-height: 1.6;
     }
@@ -538,9 +516,9 @@
     .priority-title {
       font-size: 11px;
       font-weight: 900;
-      letter-spacing: .12em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: #64748b;
+      color: #7a8491;
       margin-bottom: 10px;
     }
     .priority-list {
@@ -550,24 +528,25 @@
     }
     .priority-item {
       border-radius: 18px;
-      border: 1px solid #dbe3ef;
-      background: #fff;
+      border: 1px solid #e6dece;
+      background: white;
       padding: 14px;
     }
     .priority-item h4 {
       margin: 0;
-      font-size: 17px;
+      font-size: 18px;
       line-height: 1.25;
-      letter-spacing: -.02em;
+      letter-spacing: -0.02em;
+      color: var(--navy);
     }
     .priority-item p {
       margin: 8px 0 0;
-      color: #475569;
+      color: #536171;
       font-size: 14px;
-      line-height: 1.55;
+      line-height: 1.56;
     }
     .priority-tags {
-      margin-top: 10px;
+      margin-top: 12px;
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
@@ -575,34 +554,35 @@
     .priority-tag {
       border-radius: 999px;
       padding: 6px 10px;
+      border: 1px solid #e6dece;
+      background: var(--mist);
+      color: #55616d;
       font-size: 11px;
       font-weight: 800;
-      color: #334155;
-      background: #f8fafc;
-      border: 1px solid #dbe3ef;
     }
     .no-response {
       margin-top: 16px;
-      border-radius: 18px;
-      border: 1px dashed #cbd5e1;
-      background: #f8fafc;
       padding: 14px;
-      color: #475569;
+      border-radius: 18px;
+      border: 1px dashed #d9cfbe;
+      background: #fbf8f1;
+      color: #5f6d7a;
       font-size: 14px;
       line-height: 1.55;
     }
+
     footer {
       padding: 0 24px 32px;
     }
     .site-footer {
       max-width: 1240px;
       margin: 0 auto;
-      color: #475569;
-      font-size: 14px;
       display: flex;
       justify-content: space-between;
       gap: 18px;
       flex-wrap: wrap;
+      color: #5b6774;
+      font-size: 14px;
     }
     .site-footer img {
       width: 52px;
@@ -613,7 +593,7 @@
       display: flex;
       gap: 12px;
       align-items: flex-start;
-      max-width: 720px;
+      max-width: 760px;
     }
     .site-footer-links {
       display: flex;
@@ -624,11 +604,10 @@
     }
 
     @media (max-width: 1080px) {
-      .hero-grid,
-      .workspace {
+      .layout {
         grid-template-columns: 1fr;
       }
-      .planner {
+      .question-card {
         position: static;
       }
       .candidate-meta-grid {
@@ -642,9 +621,6 @@
         padding-left: 16px;
         padding-right: 16px;
       }
-      .header-shell {
-        flex-direction: column;
-      }
       .brand img {
         width: 64px;
         height: 64px;
@@ -652,16 +628,12 @@
       .brand h1 {
         font-size: 24px;
       }
-      .hero,
-      .planner,
-      .results {
-        padding: 20px;
+      .page-intro h2 {
+        font-size: 40px;
       }
-      .hero h2 {
-        font-size: 46px;
-      }
-      .summary-grid {
-        grid-template-columns: 1fr;
+      .question-card,
+      .results-panel {
+        padding: 18px;
       }
       .candidate-meta-grid,
       .priority-list {
@@ -669,6 +641,9 @@
       }
       .site-footer-links {
         justify-content: flex-start;
+      }
+      .placeholder-copy h4 {
+        font-size: 30px;
       }
     }
   </style>
@@ -678,9 +653,10 @@
     <div class="header-shell">
       <div class="brand">
         <img src="riep-logo-sunburst-white.png" alt="Rhode Island Elections Project logo" />
-        <div>
+        <div class="brand-copy">
+          <div class="brand-kicker">Meet the Candidates</div>
           <h1>Rhode Island Elections Project</h1>
-          <p>Compare Rhode Island House and Senate candidates by district, review campaign-submitted issue priorities, and see who is asking for your vote before Election Day.</p>
+          <p>Answer a few short questions, identify your House or Senate race, and compare candidate priorities in a simpler guided view.</p>
         </div>
       </div>
       <nav class="site-nav">
@@ -697,91 +673,84 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-grid">
-        <div>
-          <div class="hero-eyebrow">2026 Rhode Island Election Guide</div>
-          <h2>Meet the candidates behind the district lines.</h2>
-          <div class="hero-lead">Select the issues you care about most, choose your House or Senate district, and compare campaign-submitted priorities alongside the same public filing details shown in the rest of the project.</div>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#meetWorkspace">Start comparing candidates</a>
-            <a class="btn btn-secondary" href="lookup.html">Need help finding your district?</a>
-          </div>
-          <div class="hero-note"><strong>How this works:</strong> campaign priorities on this page are candidate-submitted. Contact details, party, district, home precinct, ZIP code, and ballot status are matched against the public Rhode Island declared-candidates workbook used throughout the site.</div>
-        </div>
-        <div class="summary-grid">
-          <div class="summary-card">
-            <div class="summary-label">Candidate responses</div>
-            <div class="summary-value" id="summaryResponses">—</div>
-            <div class="summary-copy">Campaign profiles currently published on this page.</div>
-          </div>
-          <div class="summary-card">
-            <div class="summary-label">Districts covered</div>
-            <div class="summary-value" id="summaryDistricts">—</div>
-            <div class="summary-copy">House or Senate districts with at least one submitted response.</div>
-          </div>
-          <div class="summary-card">
-            <div class="summary-label">Issue topics</div>
-            <div class="summary-value" id="summaryTopics">—</div>
-            <div class="summary-copy">Topics users can use to guide candidate comparisons.</div>
-          </div>
-          <div class="summary-card">
-            <div class="summary-label">Data source</div>
-            <div class="summary-value">RI SOS</div>
-            <div class="summary-copy" id="summarySource">Candidate workbook and campaign submissions.</div>
-          </div>
-        </div>
-      </div>
+    <section class="page-intro">
+      <div class="page-intro-label">2026 Rhode Island Election Guide</div>
+      <h2>Find your race first. Then meet the candidates.</h2>
+      <p>This page is designed to feel more like a guided ballot assistant. Start with the election type, choose your chamber, and then select the district you want to inspect.</p>
     </section>
 
-    <section class="workspace" id="meetWorkspace">
-      <aside class="panel planner">
-        <div class="panel-eyebrow">Voter guide</div>
-        <h3>Start with your priorities.</h3>
-        <div class="planner-copy" id="questionnairePrompt">Select up to five issues that matter most to you, then choose a district to compare candidates side by side.</div>
+    <section class="layout">
+      <aside class="panel question-card">
+        <div class="panel-label">Questionnaire</div>
+        <h3>Answer three quick questions.</h3>
+        <div class="panel-copy">We will use your selections to narrow the page to the candidates actually relevant to your ballot.</div>
 
-        <div class="step-block">
-          <div class="step-title">Step 1 · Select issues</div>
-          <div class="issue-grid" id="issueGrid"></div>
-          <div class="issue-helper" id="issueHelper">No issue filters selected yet.</div>
+        <div class="question-block">
+          <div class="question-title">1. Election</div>
+          <div class="option-row" id="electionButtons">
+            <button type="button" class="option-btn" data-election="primary">Primary</button>
+            <button type="button" class="option-btn" data-election="general">General</button>
+          </div>
+          <div class="inline-note">Primary means the September 9, 2026 ballot. General means the November 3, 2026 ballot.</div>
         </div>
 
-        <div class="step-block">
-          <div class="step-title">Step 2 · Pick a chamber</div>
-          <div class="segmented" id="chamberButtons">
-            <button type="button" data-chamber="house">House</button>
-            <button type="button" data-chamber="senate">Senate</button>
+        <div class="question-block" id="partyBlock" hidden>
+          <div class="question-title">2. If primary, which ballot?</div>
+          <div class="option-row" id="partyButtons">
+            <button type="button" class="option-btn party-dem" data-party="DEM">Democratic</button>
+            <button type="button" class="option-btn party-rep" data-party="REP">Republican</button>
+          </div>
+          <div class="inline-note">If a party has not filed a candidate in the district you choose, the page will tell you that directly.</div>
+        </div>
+
+        <div class="question-block">
+          <div class="question-title">3. Chamber</div>
+          <div class="option-row" id="chamberButtons">
+            <button type="button" class="option-btn" data-chamber="house">House</button>
+            <button type="button" class="option-btn" data-chamber="senate">Senate</button>
           </div>
         </div>
 
-        <div class="step-block">
-          <div class="step-title">Step 3 · Choose a district</div>
-          <select class="district-select" id="districtSelect">
-            <option value="">Show statewide responses first</option>
+        <div class="question-block">
+          <div class="question-title">District</div>
+          <select class="district-select" id="districtSelect" disabled>
+            <option value="">Choose a district</option>
           </select>
-          <div class="issue-helper">Know your district already? Select it here. If not, use Find My Precinct first and then return to this page.</div>
-          <div class="quick-districts" id="quickDistricts"></div>
+          <div class="inline-note">Need help first? Use <strong>Find My Precinct</strong> to identify your House and Senate districts, then return here.</div>
         </div>
 
-        <div class="planner-links">
-          <a class="planner-link" id="openRunningLink" href="running.html">Open Who's Running?</a>
-          <a class="planner-link" href="lookup.html">Find My Precinct</a>
+        <div class="selection-summary">
+          <div class="summary-title">Current selection</div>
+          <div class="summary-value" id="selectionSummary">No ballot selected yet.</div>
         </div>
 
-        <div class="source-note" id="sourceNote">Loading campaign profile source notes…</div>
+        <div class="helper-links">
+          <a class="utility-link" href="lookup.html">Find My Precinct</a>
+          <a class="utility-link" id="openRunningLink" href="running.html">Open Who's Running?</a>
+          <button type="button" class="reset-btn" id="resetButton">Reset</button>
+        </div>
       </aside>
 
-      <section class="panel results">
-        <div class="results-head">
-          <div>
-            <div class="panel-eyebrow">Candidate comparison</div>
-            <h3 id="resultsTitle">Campaign responses from across Rhode Island</h3>
-            <div class="results-copy" id="resultsCopy">Choose a district to show every filed candidate in that race. Until then, this page highlights candidates who have already submitted priorities.</div>
+      <section class="panel results-panel">
+        <div class="results-placeholder" id="resultsPlaceholder">
+          <div class="placeholder-copy">
+            <h4>Start with the questionnaire on the left.</h4>
+            <p>Select an election, choose House or Senate, and pick a district. Once that is done, this page will show the candidates relevant to that ballot and any submitted campaign priorities.</p>
           </div>
-          <div class="results-status" id="resultsStatus">Loading candidate profiles…</div>
         </div>
-        <div class="candidate-grid" id="candidateGrid"></div>
-        <div class="empty-state" id="emptyState" hidden>No campaign profiles match the current filters yet.</div>
+
+        <div class="results-shell" id="resultsShell" hidden>
+          <div class="results-head">
+            <div>
+              <div class="panel-label">Candidate results</div>
+              <h3 id="resultsTitle">Candidate results</h3>
+              <div class="results-copy" id="resultsCopy">Loading candidate results…</div>
+            </div>
+            <div class="results-status" id="resultsStatus">Loading…</div>
+          </div>
+          <div class="message-banner" id="messageBanner" hidden></div>
+          <div class="candidate-grid" id="candidateGrid"></div>
+        </div>
       </section>
     </section>
   </main>
@@ -804,18 +773,17 @@
   </footer>
 
   <script>
-    const assetVersion = "20260730a";
+    const assetVersion = "20260730b";
     const state = {
-      chamber: "house",
-      district: "",
-      selectedIssues: new Set()
+      election: "",
+      primaryParty: "",
+      chamber: "",
+      district: ""
     };
-    let chamberWasExplicitlySet = false;
 
     let filingData = null;
     let profileData = null;
     let flattenedCandidates = [];
-    let issueCatalog = [];
 
     function withAssetVersion(url) {
       const separator = url.includes("?") ? "&" : "?";
@@ -839,6 +807,16 @@
 
     function chamberLabel(chamber) {
       return chamber === "senate" ? "Senate" : "House";
+    }
+
+    function electionLabel(election) {
+      return election === "general" ? "General election" : "Primary election";
+    }
+
+    function partyLabel(code) {
+      if (code === "DEM") return "Democratic";
+      if (code === "REP") return "Republican";
+      return "Other";
     }
 
     function partyClass(candidate) {
@@ -876,9 +854,7 @@
             all.push({
               ...candidate,
               chamber,
-              district_number: record.district_number,
-              general_status: record.general_status,
-              primary_status: record.primary_status
+              district_number: record.district_number
             });
           });
         });
@@ -893,56 +869,9 @@
         .sort((a, b) => a.district_number - b.district_number);
     }
 
-    function responseDistrictsForChamber(chamber) {
-      const seen = new Set();
-      return flattenedCandidates
-        .filter(candidate => candidate.chamber === chamber && candidate.profile)
-        .sort((a, b) => a.district_number - b.district_number || a.name.localeCompare(b.name))
-        .filter(candidate => {
-          const key = `${candidate.chamber}-${candidate.district_number}`;
-          if (seen.has(key)) return false;
-          seen.add(key);
-          return true;
-        });
-    }
-
-    function getIssueLabel(id) {
-      const found = issueCatalog.find(issue => issue.id === id);
-      return found ? found.label : id;
-    }
-
-    function issueMatchCount(candidate) {
-      if (!state.selectedIssues.size || !candidate.profile) return 0;
-      const tags = new Set(candidate.profile.issue_tags || []);
-      let count = 0;
-      state.selectedIssues.forEach(issue => {
-        if (tags.has(issue)) count += 1;
-      });
-      return count;
-    }
-
-    function filteredCandidates() {
-      let candidates = flattenedCandidates.filter(candidate => candidate.chamber === state.chamber);
-
-      if (state.district) {
-        candidates = candidates.filter(candidate => String(candidate.district_number) === String(state.district));
-      } else {
-        candidates = candidates.filter(candidate => candidate.profile);
-      }
-
-      if (state.selectedIssues.size) {
-        candidates = candidates.filter(candidate => !candidate.profile || issueMatchCount(candidate) > 0 || state.district);
-      }
-
-      return candidates.sort((a, b) => {
-        const matchDiff = issueMatchCount(b) - issueMatchCount(a);
-        if (matchDiff) return matchDiff;
-        const profileDiff = Number(Boolean(b.profile)) - Number(Boolean(a.profile));
-        if (profileDiff) return profileDiff;
-        const districtDiff = a.district_number - b.district_number;
-        if (districtDiff) return districtDiff;
-        return a.name.localeCompare(b.name);
-      });
+    function getRecord() {
+      if (!state.chamber || !state.district) return null;
+      return filingData?.chambers?.[state.chamber]?.[String(state.district)] || null;
     }
 
     function buildPriorityTags(candidate) {
@@ -950,7 +879,7 @@
       if (!tags.length) return "";
       return `
         <div class="priority-tags">
-          ${tags.map(tag => `<span class="priority-tag">${escapeHtml(getIssueLabel(tag))}</span>`).join("")}
+          ${tags.map(tag => `<span class="priority-tag">${escapeHtml(tag.replaceAll("-", " "))}</span>`).join("")}
         </div>
       `;
     }
@@ -959,7 +888,7 @@
       if (!candidate.profile?.priorities?.length) {
         return `
           <div class="no-response">
-            Campaign priorities have not been submitted for this candidate yet. The card still shows public filing information from the Rhode Island declared-candidates workbook so users can identify who is on the ballot and how to reach the campaign.
+            Campaign priorities have not been submitted for this candidate yet. Public filing information is still shown so users can identify who is on this ballot and how to reach the campaign.
           </div>
         `;
       }
@@ -981,17 +910,11 @@
     }
 
     function buildCandidateCard(candidate) {
-      const matchCount = issueMatchCount(candidate);
-      const partyLabel = candidate.party_raw || candidate.party_label || "Other";
-      const stageText = candidate.ballot_stage === "general"
-        ? "November general-election declaration"
-        : "September primary declaration";
-      const responseBadge = candidate.profile
-        ? `<span class="badge">Response received</span>`
-        : `<span class="badge">Awaiting response</span>`;
-      const matchBadge = matchCount > 0
-        ? `<span class="badge match">Matches ${matchCount} selected issue${matchCount === 1 ? "" : "s"}</span>`
-        : "";
+      const subtitle = state.election === "general"
+        ? `${chamberLabel(candidate.chamber)} District ${candidate.district_number} · November general-election filing`
+        : `${chamberLabel(candidate.chamber)} District ${candidate.district_number} · ${partyLabel(state.primaryParty)} primary ballot`;
+      const ballotLabel = state.election === "general" ? "On general ballot" : "On primary ballot";
+      const ballotValue = state.election === "general" ? formatYesNo(candidate.on_election_ballot) : formatYesNo(candidate.on_primary_ballot);
       const summary = candidate.profile?.summary
         ? `<div class="candidate-copy">${escapeHtml(candidate.profile.summary)}</div>`
         : "";
@@ -1001,12 +924,11 @@
           <div class="candidate-top">
             <div>
               <div class="candidate-name">${escapeHtml(candidate.name)}</div>
-              <div class="candidate-subhead">${escapeHtml(chamberLabel(candidate.chamber))} District ${escapeHtml(candidate.district_number)} · ${escapeHtml(stageText)}</div>
+              <div class="candidate-subhead">${escapeHtml(subtitle)}</div>
             </div>
             <div class="candidate-badges">
-              <span class="badge party ${partyClass(candidate)}">${escapeHtml(partyLabel)}</span>
-              ${responseBadge}
-              ${matchBadge}
+              <span class="badge party ${partyClass(candidate)}">${escapeHtml(candidate.party_raw || candidate.party_label || "Other")}</span>
+              ${candidate.profile ? `<span class="badge">Response received</span>` : `<span class="badge">Awaiting response</span>`}
             </div>
           </div>
           <div class="candidate-meta-grid">
@@ -1019,8 +941,8 @@
               <span class="candidate-meta-value">${escapeHtml(candidate.zip_code || "Not listed")}</span>
             </div>
             <div class="candidate-meta">
-              <span class="candidate-meta-label">On primary ballot</span>
-              <span class="candidate-meta-value">${escapeHtml(formatYesNo(candidate.on_primary_ballot))}</span>
+              <span class="candidate-meta-label">${escapeHtml(ballotLabel)}</span>
+              <span class="candidate-meta-value">${escapeHtml(ballotValue)}</span>
             </div>
             <div class="candidate-meta">
               <span class="candidate-meta-label">Required signatures</span>
@@ -1034,164 +956,226 @@
       `;
     }
 
-    function setSummaryCards() {
-      const profiles = profileData?.profiles || [];
-      const districts = new Set(profiles.map(profile => `${profile.chamber}-${profile.district_number}`));
-      const topics = new Set(profiles.flatMap(profile => profile.issue_tags || []));
-      const updated = profileData?.updated_at
-        ? new Date(profileData.updated_at).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })
-        : "Unknown";
-
-      document.getElementById("summaryResponses").textContent = profiles.length;
-      document.getElementById("summaryDistricts").textContent = districts.size;
-      document.getElementById("summaryTopics").textContent = topics.size || issueCatalog.length;
-      document.getElementById("summarySource").textContent = `Campaign responses updated ${updated}.`;
+    function currentSelectionText() {
+      const parts = [];
+      if (state.election) parts.push(electionLabel(state.election));
+      if (state.election === "primary" && state.primaryParty) parts.push(`${partyLabel(state.primaryParty)} ballot`);
+      if (state.chamber) parts.push(chamberLabel(state.chamber));
+      if (state.district) parts.push(`District ${state.district}`);
+      return parts.length ? parts.join(" · ") : "No ballot selected yet.";
     }
 
-    function renderIssueGrid() {
-      const grid = document.getElementById("issueGrid");
-      const helper = document.getElementById("issueHelper");
-      grid.innerHTML = issueCatalog.map(issue => `
-        <button
-          type="button"
-          class="issue-chip${state.selectedIssues.has(issue.id) ? " active" : ""}"
-          data-issue="${issue.id}"
-        >${escapeHtml(issue.label)}</button>
-      `).join("");
+    function isReady() {
+      if (!state.election || !state.chamber || !state.district) return false;
+      if (state.election === "primary" && !state.primaryParty) return false;
+      return true;
+    }
 
-      grid.querySelectorAll("[data-issue]").forEach(button => {
-        button.addEventListener("click", () => {
-          const issue = button.dataset.issue;
-          if (state.selectedIssues.has(issue)) {
-            state.selectedIssues.delete(issue);
-          } else if (state.selectedIssues.size < 5) {
-            state.selectedIssues.add(issue);
-          }
-          renderIssueGrid();
-          renderCandidates();
-          syncUrl();
-        });
+    function updateQuestionnaire() {
+      document.querySelectorAll("[data-election]").forEach(button => {
+        button.classList.toggle("active", button.dataset.election === state.election);
       });
 
-      if (!state.selectedIssues.size) {
-        helper.textContent = "No issue filters selected yet.";
-      } else {
-        helper.textContent = `${state.selectedIssues.size} issue${state.selectedIssues.size === 1 ? "" : "s"} selected. Candidates with matching priorities rise to the top.`;
-      }
-    }
-
-    function renderDistrictControls() {
-      const select = document.getElementById("districtSelect");
-      const quick = document.getElementById("quickDistricts");
-      const districts = uniqueDistrictsForChamber(state.chamber);
-
-      select.innerHTML = `<option value="">Show statewide responses first</option>${districts.map(record => `
-        <option value="${record.district_number}" ${String(state.district) === String(record.district_number) ? "selected" : ""}>
-          ${chamberLabel(state.chamber)} District ${record.district_number}
-        </option>
-      `).join("")}`;
-
-      select.onchange = () => {
-        state.district = select.value;
-        renderDistrictControls();
-        renderCandidates();
-        syncUrl();
-      };
-
-      const responseDistricts = responseDistrictsForChamber(state.chamber);
-      quick.innerHTML = responseDistricts.length ? responseDistricts.map(candidate => `
-        <button
-          type="button"
-          class="quick-district${String(state.district) === String(candidate.district_number) ? " active" : ""}"
-          data-district="${candidate.district_number}"
-        >${chamberLabel(state.chamber)} ${candidate.district_number}</button>
-      `).join("") : "";
-
-      quick.querySelectorAll("[data-district]").forEach(button => {
-        button.addEventListener("click", () => {
-          state.district = button.dataset.district;
-          renderDistrictControls();
-          renderCandidates();
-          syncUrl();
-        });
+      const partyBlock = document.getElementById("partyBlock");
+      partyBlock.hidden = state.election !== "primary";
+      document.querySelectorAll("[data-party]").forEach(button => {
+        button.classList.toggle("active", button.dataset.party === state.primaryParty);
       });
-    }
 
-    function renderChamberButtons() {
-      document.querySelectorAll("#chamberButtons [data-chamber]").forEach(button => {
+      document.querySelectorAll("[data-chamber]").forEach(button => {
         button.classList.toggle("active", button.dataset.chamber === state.chamber);
-        button.onclick = () => {
-          state.chamber = button.dataset.chamber;
-          state.district = "";
-          renderChamberButtons();
-          renderDistrictControls();
-          renderCandidates();
-          syncUrl();
-        };
       });
+
+      const select = document.getElementById("districtSelect");
+      const runningLink = document.getElementById("openRunningLink");
+
+      if (state.chamber) {
+        const districts = uniqueDistrictsForChamber(state.chamber);
+        select.disabled = false;
+        select.innerHTML = `<option value="">Choose a district</option>${districts.map(record => `
+          <option value="${record.district_number}" ${String(state.district) === String(record.district_number) ? "selected" : ""}>
+            ${chamberLabel(state.chamber)} District ${record.district_number}
+          </option>
+        `).join("")}`;
+      } else {
+        select.disabled = true;
+        select.innerHTML = `<option value="">Choose a district</option>`;
+      }
+
+      runningLink.href = state.chamber
+        ? `running.html?chamber=${encodeURIComponent(state.chamber)}${state.district ? `&district=${encodeURIComponent(state.district)}` : ""}`
+        : "running.html";
+
+      document.getElementById("selectionSummary").textContent = currentSelectionText();
     }
 
-    function renderCandidates() {
+    function selectedCandidates() {
+      const record = getRecord();
+      if (!record) {
+        return { candidates: [], message: "", record: null };
+      }
+
+      if (state.election === "primary") {
+        const candidates = (record.candidates || [])
+          .filter(candidate => candidate.party === state.primaryParty)
+          .map(candidate => ({
+            ...candidate,
+            profile: (profileData?.profiles || []).find(profile => profile.candidate_id === candidate.candidate_id) || null
+          }))
+          .sort((a, b) => a.name.localeCompare(b.name));
+
+        if (!candidates.length) {
+          return {
+            candidates: [],
+            message: `Sorry, the ${partyLabel(state.primaryParty)} Party has not filed a candidate in ${chamberLabel(state.chamber)} District ${state.district} for the September 9, 2026 primary ballot.`,
+            record
+          };
+        }
+
+        return { candidates, message: "", record };
+      }
+
+      const candidates = (record.general_candidates || [])
+        .map(candidate => ({
+          ...candidate,
+          profile: (profileData?.profiles || []).find(profile => profile.candidate_id === candidate.candidate_id) || null
+        }))
+        .sort((a, b) => a.name.localeCompare(b.name));
+
+      if (!candidates.length) {
+        return {
+          candidates: [],
+          message: `No general-election candidate is currently listed in ${chamberLabel(state.chamber)} District ${state.district}. Try the primary view if you want to inspect September 9 filings instead.`,
+          record
+        };
+      }
+
+      return { candidates, message: "", record };
+    }
+
+    function renderResults() {
+      const placeholder = document.getElementById("resultsPlaceholder");
+      const shell = document.getElementById("resultsShell");
       const title = document.getElementById("resultsTitle");
       const copy = document.getElementById("resultsCopy");
       const status = document.getElementById("resultsStatus");
       const grid = document.getElementById("candidateGrid");
-      const empty = document.getElementById("emptyState");
-      const openRunningLink = document.getElementById("openRunningLink");
-      const candidates = filteredCandidates();
+      const banner = document.getElementById("messageBanner");
 
-      if (state.district) {
-        title.textContent = `Meet the candidates in ${chamberLabel(state.chamber)} District ${state.district}`;
-        copy.textContent = "Every filed candidate in the selected district appears below. Campaign priorities are shown when a response has been submitted.";
-        openRunningLink.href = `running.html?chamber=${encodeURIComponent(state.chamber)}&district=${encodeURIComponent(state.district)}`;
-      } else {
-        title.textContent = `Campaign responses from across the Rhode Island ${chamberLabel(state.chamber)}`;
-        copy.textContent = "Choose a district to show every filed candidate in that race. Until then, this page highlights candidates who have already submitted priorities.";
-        openRunningLink.href = `running.html?chamber=${encodeURIComponent(state.chamber)}`;
-      }
-
-      status.textContent = `${candidates.length} candidate${candidates.length === 1 ? "" : "s"} shown`;
-
-      if (!candidates.length) {
-        grid.innerHTML = "";
-        empty.hidden = false;
+      if (!isReady()) {
+        placeholder.hidden = false;
+        shell.hidden = true;
         return;
       }
 
-      empty.hidden = true;
+      placeholder.hidden = true;
+      shell.hidden = false;
+
+      const { candidates, message } = selectedCandidates();
+      const electionText = state.election === "general" ? "general election" : `${partyLabel(state.primaryParty)} primary`;
+
+      title.textContent = `${chamberLabel(state.chamber)} District ${state.district}`;
+      copy.textContent = `Showing candidates relevant to the ${electionText} ballot for this district. Campaign priorities appear when a response has been submitted.`;
+      status.textContent = candidates.length ? `${candidates.length} candidate${candidates.length === 1 ? "" : "s"} shown` : "No candidate filed";
+
+      if (message) {
+        banner.hidden = false;
+        banner.textContent = message;
+      } else {
+        banner.hidden = true;
+        banner.textContent = "";
+      }
+
       grid.innerHTML = candidates.map(buildCandidateCard).join("");
     }
 
     function syncUrl() {
-      const params = new URLSearchParams(window.location.search);
-      params.set("chamber", state.chamber);
-      if (state.district) {
-        params.set("district", state.district);
-      } else {
-        params.delete("district");
-      }
-      if (state.selectedIssues.size) {
-        params.set("issues", Array.from(state.selectedIssues).join(","));
-      } else {
-        params.delete("issues");
-      }
-      const next = `${window.location.pathname}?${params.toString()}`;
+      const params = new URLSearchParams();
+      if (state.election) params.set("election", state.election);
+      if (state.primaryParty) params.set("party", state.primaryParty);
+      if (state.chamber) params.set("chamber", state.chamber);
+      if (state.district) params.set("district", state.district);
+      const query = params.toString();
+      const next = query ? `${window.location.pathname}?${query}` : window.location.pathname;
       window.history.replaceState({}, "", next);
     }
 
     function hydrateStateFromUrl() {
       const params = new URLSearchParams(window.location.search);
+      const election = params.get("election");
+      const party = params.get("party");
       const chamber = params.get("chamber");
+      const district = params.get("district");
+
+      if (election === "primary" || election === "general") {
+        state.election = election;
+      }
+      if (party === "DEM" || party === "REP") {
+        state.primaryParty = party;
+      }
       if (chamber === "house" || chamber === "senate") {
         state.chamber = chamber;
-        chamberWasExplicitlySet = true;
       }
-      const district = params.get("district");
       if (district) {
         state.district = district;
       }
-      const issues = (params.get("issues") || "").split(",").map(item => item.trim()).filter(Boolean).slice(0, 5);
-      issues.forEach(issue => state.selectedIssues.add(issue));
+    }
+
+    function resetState() {
+      state.election = "";
+      state.primaryParty = "";
+      state.chamber = "";
+      state.district = "";
+      updateQuestionnaire();
+      renderResults();
+      syncUrl();
+    }
+
+    function bindQuestionnaire() {
+      document.querySelectorAll("[data-election]").forEach(button => {
+        button.addEventListener("click", () => {
+          state.election = button.dataset.election;
+          if (state.election !== "primary") {
+            state.primaryParty = "";
+          }
+          updateQuestionnaire();
+          renderResults();
+          syncUrl();
+        });
+      });
+
+      document.querySelectorAll("[data-party]").forEach(button => {
+        button.addEventListener("click", () => {
+          state.primaryParty = button.dataset.party;
+          updateQuestionnaire();
+          renderResults();
+          syncUrl();
+        });
+      });
+
+      document.querySelectorAll("[data-chamber]").forEach(button => {
+        button.addEventListener("click", () => {
+          const nextChamber = button.dataset.chamber;
+          if (state.chamber !== nextChamber) {
+            state.chamber = nextChamber;
+            state.district = "";
+          }
+          updateQuestionnaire();
+          renderResults();
+          syncUrl();
+        });
+      });
+
+      document.getElementById("districtSelect").addEventListener("change", (event) => {
+        state.district = event.target.value;
+        updateQuestionnaire();
+        renderResults();
+        syncUrl();
+      });
+
+      document.getElementById("resetButton").addEventListener("click", () => {
+        resetState();
+      });
     }
 
     async function boot() {
@@ -1200,36 +1184,24 @@
           fetch(withAssetVersion("/data/whos_running_2026_precincts.json")),
           fetch(withAssetVersion("/data/candidate_profiles_2026.json"))
         ]);
+
         filingData = await filingsResponse.json();
         profileData = await profilesResponse.json();
-
-        issueCatalog = profileData.issue_catalog || [];
-        flattenedCandidates = collectCandidates(filingData).map(candidate => {
-          const profile = (profileData.profiles || []).find(item => item.candidate_id === candidate.candidate_id) || null;
-          return {
-            ...candidate,
-            profile
-          };
-        });
+        flattenedCandidates = collectCandidates(filingData);
 
         hydrateStateFromUrl();
-        if (!chamberWasExplicitlySet && !state.district) {
-          const firstResponseChamber = (profileData.profiles || [])[0]?.chamber;
-          if (firstResponseChamber) {
-            state.chamber = firstResponseChamber;
-          }
-        }
-        setSummaryCards();
-        document.getElementById("questionnairePrompt").textContent = profileData.questionnaire_prompt || document.getElementById("questionnairePrompt").textContent;
-        document.getElementById("sourceNote").textContent = "Candidate priorities are campaign-submitted. Public filing details are matched against the Rhode Island declared-candidates workbook used throughout the site. Candidates without a published response still appear once you select their district.";
-        renderChamberButtons();
-        renderIssueGrid();
-        renderDistrictControls();
-        renderCandidates();
+        bindQuestionnaire();
+        updateQuestionnaire();
+        renderResults();
       } catch (error) {
-        document.getElementById("resultsStatus").textContent = "Could not load candidate profiles";
-        document.getElementById("emptyState").hidden = false;
-        document.getElementById("emptyState").textContent = "Candidate profile data could not be loaded right now. Please refresh and try again.";
+        document.getElementById("resultsPlaceholder").hidden = true;
+        document.getElementById("resultsShell").hidden = false;
+        document.getElementById("resultsTitle").textContent = "Could not load candidate data";
+        document.getElementById("resultsCopy").textContent = "Please refresh the page. If the problem continues, the candidate data feed may be updating.";
+        document.getElementById("resultsStatus").textContent = "Load error";
+        document.getElementById("messageBanner").hidden = false;
+        document.getElementById("messageBanner").textContent = "Candidate data or campaign profile data could not be loaded right now.";
+        document.getElementById("candidateGrid").innerHTML = "";
       }
     }
 
