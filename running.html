@@ -499,6 +499,9 @@
       margin-top: 12px;
     }
     .detail-action-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       appearance: none;
       border: 1px solid #dbe3ef;
       background: #fff;
@@ -509,6 +512,7 @@
       font-size: 12px;
       font-weight: 900;
       cursor: pointer;
+      text-decoration: none;
       transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
     }
     .detail-action-btn:hover {
@@ -1004,6 +1008,7 @@
         <a href="index.html">Home</a>
         <a href="map.html">Map</a>
         <a href="running.html" class="active">Who's Running?</a>
+        <a href="meet.html">Meet the Candidates</a>
         <a href="lookup.html">Find My Precinct</a>
         <a href="methodology.html">Methodology</a>
         <a href="about.html">About</a>
@@ -1022,6 +1027,7 @@
           <div class="hero-actions">
             <a class="btn btn-primary" href="#running-map-anchor">Open filing map</a>
             <a class="btn btn-secondary" href="#district-browser">Browse filed districts</a>
+            <a class="btn btn-secondary" href="meet.html">Meet the candidates</a>
           </div>
         </div>
         <div class="summary-grid">
@@ -1134,6 +1140,7 @@
           <a href="index.html">Home</a>
           <a href="map.html">Map</a>
           <a href="running.html">Who's Running?</a>
+          <a href="meet.html">Meet the Candidates</a>
           <a href="lookup.html">Find My Precinct</a>
           <a href="methodology.html">Methodology</a>
           <a href="about.html">About</a>
@@ -1854,7 +1861,10 @@
       });
 
       if (actionHolder) {
-        actionHolder.innerHTML = `<button type="button" class="detail-action-btn" data-copy-district-link="true">Copy district link</button>`;
+        actionHolder.innerHTML = `
+          <button type="button" class="detail-action-btn" data-copy-district-link="true">Copy district link</button>
+          <a class="detail-action-btn" href="meet.html?chamber=${encodeURIComponent(state.chamber)}&district=${encodeURIComponent(record.district_number)}">Meet these candidates</a>
+        `;
       }
     }
 
