@@ -109,10 +109,10 @@
     }
 
     .topbar {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      align-items: start;
-      gap: 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 18px;
       margin-bottom: 34px;
     }
 
@@ -219,8 +219,8 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      flex-wrap: nowrap;
-      justify-content: flex-end;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
 
     .site-nav a {
@@ -1054,12 +1054,6 @@
     }
 
     @media (max-width: 1060px) {
-      .topbar {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
       .topbar-right {
         width: 100%;
         justify-content: space-between;
