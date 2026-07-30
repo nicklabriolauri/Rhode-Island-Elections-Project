@@ -1,15 +1,16 @@
 {
-  "generated_at": "2026-06-30T10:23:05.588893+00:00",
+  "generated_at": "2026-07-30T10:08:08.106997+00:00",
   "election_cycle": 2026,
   "source_kind": "official_ri_declared_candidates_workbook",
   "source_download_url": "https://vote.sos.ri.gov/Forms/elections/Reports/Candidates.xlsx",
   "source_file": "/Users/nicholaslabriola/Documents/New project/data/raw/ri_declared_candidates_official_2026.xlsx",
-  "source_downloaded_at": "2026-06-30T10:23:05.190842+00:00",
-  "source_updated_at": "2026-06-29T22:18:01+00:00",
+  "source_downloaded_at": "2026-07-29T08:27:50.610388+00:00",
+  "source_updated_at": "2026-07-29T08:27:50.610388+00:00",
   "manual_cross_check_notes": [
     "Primary map colors and district counts are based on the official Rhode Island Department of State declared candidates workbook.",
     "Only legislative candidates with DECLARATION = Valid are included in the published dataset.",
     "Street addresses from the official workbook are intentionally withheld on the public site; hometown, ZIP code, phone, and email are shown when available.",
+    "Candidate home precincts are derived by matching workbook addresses against 2024 Rhode Island precinct geometry; full street addresses are not published.",
     "General-election-only independents are preserved separately in district detail cards but do not color the September 9 primary map."
   ],
   "chambers": {
@@ -19,6 +20,7 @@
         "district_number": 1,
         "candidates": [
           {
+            "candidate_id": "house-1-dem-primary-edith-h-ajello",
             "name": "Edith H Ajello",
             "first_name": "Edith",
             "middle_name": "H",
@@ -34,11 +36,21 @@
             "email": "edithajello@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-1-dem-primary-michael-j-garman",
             "name": "Michael J Garman",
             "first_name": "Michael",
             "middle_name": "J",
@@ -54,9 +66,18 @@
             "email": "michaeljgarman10@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -79,6 +100,7 @@
         "district_number": 2,
         "candidates": [
           {
+            "candidate_id": "house-2-dem-primary-christopher-r-blazejewski",
             "name": "Christopher R Blazejewski",
             "first_name": "Christopher",
             "middle_name": "R",
@@ -94,9 +116,18 @@
             "email": "blazejewskiforstaterep@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -118,6 +149,7 @@
         "district_number": 3,
         "candidates": [
           {
+            "candidate_id": "house-3-dem-primary-nathan-w-biah",
             "name": "Nathan W Biah",
             "first_name": "Nathan",
             "middle_name": "W",
@@ -133,9 +165,18 @@
             "email": "nathanbiahd3@gmial.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -157,6 +198,7 @@
         "district_number": 4,
         "candidates": [
           {
+            "candidate_id": "house-4-dem-primary-rebecca-m-kislak",
             "name": "Rebecca M Kislak",
             "first_name": "Rebecca",
             "middle_name": "M",
@@ -172,9 +214,18 @@
             "email": "rebecca@rebeccakislak.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -196,6 +247,7 @@
         "district_number": 5,
         "candidates": [
           {
+            "candidate_id": "house-5-dem-primary-anthony-j-desimone",
             "name": "Anthony J DeSimone",
             "first_name": "Anthony",
             "middle_name": "J",
@@ -211,13 +263,23 @@
             "email": "antd457@yahoo.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [
           {
+            "candidate_id": "house-5-oth-general-brittany-m-kubicek",
             "name": "Brittany M Kubicek",
             "first_name": "Brittany",
             "middle_name": "M",
@@ -233,9 +295,18 @@
             "email": "btkubicek@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": false,
+            "on_election_ballot": true,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "general"
+            "ballot_stage": "general",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "party_counts": {
@@ -256,6 +327,7 @@
         "district_number": 6,
         "candidates": [
           {
+            "candidate_id": "house-6-dem-primary-raymond-a-hull",
             "name": "Raymond A Hull",
             "first_name": "Raymond",
             "middle_name": "A",
@@ -271,9 +343,18 @@
             "email": "m94ppd@aol.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -295,6 +376,7 @@
         "district_number": 7,
         "candidates": [
           {
+            "candidate_id": "house-7-dem-primary-amy-j-santiago",
             "name": "Amy J Santiago",
             "first_name": "Amy",
             "middle_name": "J",
@@ -310,11 +392,21 @@
             "email": "amysantiagori@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-7-dem-primary-jo-ann-ryan",
             "name": "Jo-Ann Ryan",
             "first_name": "Jo-Ann",
             "middle_name": "",
@@ -330,11 +422,21 @@
             "email": "joannryanpvd5@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-7-rep-primary-christopher-l-ireland",
             "name": "Christopher L Ireland",
             "first_name": "Christopher",
             "middle_name": "L",
@@ -350,9 +452,18 @@
             "email": "christopherlireland@yahoo.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -375,6 +486,7 @@
         "district_number": 8,
         "candidates": [
           {
+            "candidate_id": "house-8-dem-primary-john-joseph-lombardi",
             "name": "John Joseph Lombardi",
             "first_name": "John",
             "middle_name": "Joseph",
@@ -390,9 +502,18 @@
             "email": "jayomay@aol.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -414,6 +535,7 @@
         "district_number": 9,
         "candidates": [
           {
+            "candidate_id": "house-9-dem-primary-enrique-george-sanchez",
             "name": "Enrique George Sanchez",
             "first_name": "Enrique",
             "middle_name": "George",
@@ -429,11 +551,21 @@
             "email": "sanchezforstaterep9@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-9-dem-primary-santos-javier",
             "name": "Santos Javier",
             "first_name": "Santos",
             "middle_name": "",
@@ -449,9 +581,18 @@
             "email": "santosjward15@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -473,6 +614,7 @@
         "district_number": 10,
         "candidates": [
           {
+            "candidate_id": "house-10-dem-primary-scott-a-slater",
             "name": "Scott A Slater",
             "first_name": "Scott",
             "middle_name": "A",
@@ -488,9 +630,18 @@
             "email": "slateroc@aol.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -512,6 +663,7 @@
         "district_number": 11,
         "candidates": [
           {
+            "candidate_id": "house-11-dem-primary-grace-diaz",
             "name": "Grace Diaz",
             "first_name": "Grace",
             "middle_name": "",
@@ -527,9 +679,18 @@
             "email": "repgracediaz@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -551,6 +712,7 @@
         "district_number": 12,
         "candidates": [
           {
+            "candidate_id": "house-12-dem-primary-arlette-hidalgo",
             "name": "Arlette Hidalgo",
             "first_name": "Arlette",
             "middle_name": "",
@@ -566,11 +728,21 @@
             "email": "arletteforri@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-12-dem-primary-carlos-cedeno",
             "name": "Carlos Cedeno",
             "first_name": "Carlos",
             "middle_name": "",
@@ -586,9 +758,18 @@
             "email": "carlosmcedeno2018@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -610,6 +791,7 @@
         "district_number": 13,
         "candidates": [
           {
+            "candidate_id": "house-13-dem-primary-ramon-perez",
             "name": "Ramon Perez",
             "first_name": "Ramon",
             "middle_name": "",
@@ -625,11 +807,21 @@
             "email": "representativeperez@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-13-rep-primary-derick-a-reels",
             "name": "Derick A Reels",
             "first_name": "Derick",
             "middle_name": "A",
@@ -645,9 +837,18 @@
             "email": "derickreels@yahoo.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -670,6 +871,7 @@
         "district_number": 14,
         "candidates": [
           {
+            "candidate_id": "house-14-dem-primary-charlene-m-lima",
             "name": "Charlene M Lima",
             "first_name": "Charlene",
             "middle_name": "M",
@@ -685,11 +887,21 @@
             "email": "replima@yahoo.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-14-dem-primary-kassielle-m-ramos",
             "name": "Kassielle M Ramos",
             "first_name": "Kassielle",
             "middle_name": "M",
@@ -705,11 +917,21 @@
             "email": "kassielleramos16@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": false,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-14-dem-primary-naiommi-baret",
             "name": "Naiommi Baret",
             "first_name": "Naiommi",
             "middle_name": "",
@@ -725,9 +947,18 @@
             "email": "nbaret10@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -750,6 +981,7 @@
         "district_number": 15,
         "candidates": [
           {
+            "candidate_id": "house-15-dem-primary-colleen-m-crudele",
             "name": "Colleen M Crudele",
             "first_name": "Colleen",
             "middle_name": "M",
@@ -765,11 +997,21 @@
             "email": "colleen@crudelelaw.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-15-rep-primary-christopher-g-paplauskas",
             "name": "Christopher G Paplauskas",
             "first_name": "Christopher",
             "middle_name": "G",
@@ -785,13 +1027,23 @@
             "email": "chrispaplauskas@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [
           {
+            "candidate_id": "house-15-ind-general-allan-w-fung",
             "name": "Allan W Fung",
             "first_name": "Allan",
             "middle_name": "W",
@@ -807,9 +1059,18 @@
             "email": "allan@allanfung.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": false,
+            "on_election_ballot": true,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "general"
+            "ballot_stage": "general",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "party_counts": {
@@ -832,6 +1093,7 @@
         "district_number": 16,
         "candidates": [
           {
+            "candidate_id": "house-16-dem-primary-brandon-potter",
             "name": "Brandon Potter",
             "first_name": "Brandon",
             "middle_name": "",
@@ -847,9 +1109,18 @@
             "email": "brandonpotterri@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -871,6 +1142,7 @@
         "district_number": 17,
         "candidates": [
           {
+            "candidate_id": "house-17-dem-primary-jacquelyn-baginski",
             "name": "Jacquelyn Baginski",
             "first_name": "Jacquelyn",
             "middle_name": "",
@@ -886,9 +1158,18 @@
             "email": "jacquelyn.baginski@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -910,6 +1191,7 @@
         "district_number": 18,
         "candidates": [
           {
+            "candidate_id": "house-18-dem-primary-arthur-handy",
             "name": "Arthur Handy",
             "first_name": "Arthur",
             "middle_name": "",
@@ -925,11 +1207,21 @@
             "email": "artbhandy@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-18-rep-primary-jessica-gomes",
             "name": "Jessica Gomes",
             "first_name": "Jessica",
             "middle_name": "",
@@ -945,9 +1237,18 @@
             "email": "jessica4cranston@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -970,6 +1271,7 @@
         "district_number": 19,
         "candidates": [
           {
+            "candidate_id": "house-19-dem-primary-joseph-mcnamara",
             "name": "Joseph McNamara",
             "first_name": "Joseph",
             "middle_name": "",
@@ -985,13 +1287,23 @@
             "email": "repjmac@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [
           {
+            "candidate_id": "house-19-ind-general-patrick-e-maloney-jr",
             "name": "Patrick E Maloney Jr",
             "first_name": "Patrick",
             "middle_name": "E",
@@ -1007,9 +1319,18 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": false,
+            "on_election_ballot": true,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "general"
+            "ballot_stage": "general",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "party_counts": {
@@ -1030,6 +1351,7 @@
         "district_number": 20,
         "candidates": [
           {
+            "candidate_id": "house-20-dem-primary-david-a-bennett",
             "name": "David A Bennett",
             "first_name": "David",
             "middle_name": "A",
@@ -1045,9 +1367,18 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -1069,6 +1400,7 @@
         "district_number": 21,
         "candidates": [
           {
+            "candidate_id": "house-21-rep-primary-marie-a-hopkins",
             "name": "Marie A Hopkins",
             "first_name": "Marie",
             "middle_name": "A",
@@ -1084,9 +1416,18 @@
             "email": "marie_hopkins@alumni.brown.edu",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -1108,6 +1449,7 @@
         "district_number": 22,
         "candidates": [
           {
+            "candidate_id": "house-22-dem-primary-janie-lee-segui",
             "name": "Janie Lee Segui",
             "first_name": "Janie",
             "middle_name": "Lee",
@@ -1123,31 +1465,21 @@
             "email": "janie.segui@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
-            "name": "Thomas A Lynch",
-            "first_name": "Thomas",
-            "middle_name": "A",
-            "last_name": "Lynch",
-            "suffix": "",
-            "party": "DEM",
-            "party_label": "Democratic",
-            "party_raw": "Democrat",
-            "hometown": "Warwick",
-            "zip_code": "02889",
-            "home_label": "Warwick 02889",
-            "phone": "(401) 524-3070",
-            "email": "sentalynch@icloud.com",
-            "declaration_status": "Valid",
-            "needs_nomination_papers": true,
-            "required_signatures": 50,
-            "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
-          },
-          {
+            "candidate_id": "house-22-dem-primary-zakary-j-pereira",
             "name": "Zakary J Pereira",
             "first_name": "Zakary",
             "middle_name": "J",
@@ -1163,11 +1495,21 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-22-rep-primary-barbara-quigley",
             "name": "Barbara Quigley",
             "first_name": "Barbara",
             "middle_name": "",
@@ -1183,17 +1525,26 @@
             "email": "k31ko@yahoo.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
         "party_counts": {
-          "DEM": 3,
+          "DEM": 2,
           "REP": 1
         },
-        "candidate_total": 4,
+        "candidate_total": 3,
         "general_candidate_total": 0,
         "general_status": "both_major",
         "general_label": "Democratic and Republican candidates filed",
@@ -1208,6 +1559,7 @@
         "district_number": 23,
         "candidates": [
           {
+            "candidate_id": "house-23-dem-primary-timothy-howe",
             "name": "Timothy Howe",
             "first_name": "Timothy",
             "middle_name": "",
@@ -1223,11 +1575,21 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-23-dem-primary-william-muto",
             "name": "William Muto",
             "first_name": "William",
             "middle_name": "",
@@ -1243,11 +1605,21 @@
             "email": "bill@mutoforwarwick.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-23-rep-primary-dana-james-traversie",
             "name": "Dana James Traversie",
             "first_name": "Dana",
             "middle_name": "James",
@@ -1263,9 +1635,18 @@
             "email": "dana@djt4ri.us",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -1289,6 +1670,7 @@
         "district_number": 24,
         "candidates": [
           {
+            "candidate_id": "house-24-dem-primary-evan-patrick-shanley",
             "name": "Evan Patrick Shanley",
             "first_name": "Evan",
             "middle_name": "Patrick",
@@ -1304,9 +1686,18 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -1328,6 +1719,7 @@
         "district_number": 25,
         "candidates": [
           {
+            "candidate_id": "house-25-dem-primary-thomas-e-noret",
             "name": "Thomas E Noret",
             "first_name": "Thomas",
             "middle_name": "E",
@@ -1343,9 +1735,18 @@
             "email": "tnoret822@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -1367,6 +1768,7 @@
         "district_number": 26,
         "candidates": [
           {
+            "candidate_id": "house-26-dem-primary-earl-a-read-iii",
             "name": "Earl A Read III",
             "first_name": "Earl",
             "middle_name": "A",
@@ -1382,9 +1784,18 @@
             "email": "read4rep26@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -1406,6 +1817,7 @@
         "district_number": 27,
         "candidates": [
           {
+            "candidate_id": "house-27-dem-primary-angela-s-coburn",
             "name": "Angela S Coburn",
             "first_name": "Angela",
             "middle_name": "S",
@@ -1421,11 +1833,21 @@
             "email": "gcoburn712@hotmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-27-rep-primary-lawrence-paul-almagno-jr",
             "name": "Lawrence Paul Almagno Jr",
             "first_name": "Lawrence",
             "middle_name": "Paul",
@@ -1441,9 +1863,18 @@
             "email": "lawrencealmagnojr@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -1466,6 +1897,7 @@
         "district_number": 28,
         "candidates": [
           {
+            "candidate_id": "house-28-rep-primary-george-a-nardone",
             "name": "George A Nardone",
             "first_name": "George",
             "middle_name": "A",
@@ -1481,9 +1913,18 @@
             "email": "cgateuph@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -1505,6 +1946,7 @@
         "district_number": 29,
         "candidates": [
           {
+            "candidate_id": "house-29-rep-primary-sherry-l-roberts",
             "name": "Sherry L Roberts",
             "first_name": "Sherry",
             "middle_name": "L",
@@ -1520,9 +1962,18 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -1544,6 +1995,7 @@
         "district_number": 30,
         "candidates": [
           {
+            "candidate_id": "house-30-dem-primary-justine-caldwell",
             "name": "Justine Caldwell",
             "first_name": "Justine",
             "middle_name": "",
@@ -1559,9 +2011,18 @@
             "email": "drjustinecaldwell@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -1583,6 +2044,7 @@
         "district_number": 31,
         "candidates": [
           {
+            "candidate_id": "house-31-dem-primary-james-c-sheehan",
             "name": "James C Sheehan",
             "first_name": "James",
             "middle_name": "C",
@@ -1598,15 +2060,25 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
-            "name": "Matthew B Mccoy",
+            "candidate_id": "house-31-dem-primary-matthew-b-mccoy",
+            "name": "Matthew B McCoy",
             "first_name": "Matthew",
             "middle_name": "B",
-            "last_name": "Mccoy",
+            "last_name": "McCoy",
             "suffix": "",
             "party": "DEM",
             "party_label": "Democratic",
@@ -1618,11 +2090,21 @@
             "email": "mccoymb@cox.net",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-31-dem-primary-thomas-n-menec",
             "name": "Thomas N Menec",
             "first_name": "Thomas",
             "middle_name": "N",
@@ -1638,9 +2120,18 @@
             "email": "thomas.menec@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -1662,6 +2153,7 @@
         "district_number": 32,
         "candidates": [
           {
+            "candidate_id": "house-32-dem-primary-kevin-hoyle",
             "name": "Kevin Hoyle",
             "first_name": "Kevin",
             "middle_name": "",
@@ -1677,11 +2169,21 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-32-dem-primary-robert-e-craven-jr",
             "name": "Robert E Craven Jr",
             "first_name": "Robert",
             "middle_name": "E",
@@ -1697,9 +2199,18 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -1721,6 +2232,7 @@
         "district_number": 33,
         "candidates": [
           {
+            "candidate_id": "house-33-dem-primary-carol-hagan-mcentee",
             "name": "Carol Hagan McEntee",
             "first_name": "Carol",
             "middle_name": "Hagan",
@@ -1736,11 +2248,21 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-33-rep-primary-jessica-drew-day",
             "name": "Jessica Drew Day",
             "first_name": "Jessica",
             "middle_name": "",
@@ -1756,9 +2278,18 @@
             "email": "jessicadrewday@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -1782,6 +2313,7 @@
         "district_number": 34,
         "candidates": [
           {
+            "candidate_id": "house-34-dem-primary-teresa-a-tanzi",
             "name": "Teresa A Tanzi",
             "first_name": "Teresa",
             "middle_name": "A",
@@ -1797,9 +2329,18 @@
             "email": "teresatanzi@mac.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -1821,6 +2362,7 @@
         "district_number": 35,
         "candidates": [
           {
+            "candidate_id": "house-35-dem-primary-kathleen-a-fogarty",
             "name": "Kathleen A Fogarty",
             "first_name": "Kathleen",
             "middle_name": "A",
@@ -1836,11 +2378,21 @@
             "email": "kathleenafogarty@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-35-rep-primary-jennifer-p-nerbonne",
             "name": "Jennifer P Nerbonne",
             "first_name": "Jennifer",
             "middle_name": "P",
@@ -1856,9 +2408,18 @@
             "email": "jen.nerbonne@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -1881,6 +2442,7 @@
         "district_number": 36,
         "candidates": [
           {
+            "candidate_id": "house-36-dem-primary-leah-j-boisclair",
             "name": "Leah J Boisclair",
             "first_name": "Leah",
             "middle_name": "J",
@@ -1896,11 +2458,21 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-36-dem-primary-tina-l-spears",
             "name": "Tina L Spears",
             "first_name": "Tina",
             "middle_name": "L",
@@ -1916,36 +2488,25 @@
             "email": "tina7spears@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
-          },
-          {
-            "name": "Wilfred Thomas Collette",
-            "first_name": "Wilfred",
-            "middle_name": "Thomas",
-            "last_name": "Collette",
-            "suffix": "",
-            "party": "DEM",
-            "party_label": "Democratic",
-            "party_raw": "Democrat",
-            "hometown": "Charlestown",
-            "zip_code": "02813",
-            "home_label": "Charlestown 02813",
-            "phone": "",
-            "email": "",
-            "declaration_status": "Valid",
-            "needs_nomination_papers": true,
-            "required_signatures": 50,
-            "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
         "party_counts": {
-          "DEM": 3
+          "DEM": 2
         },
-        "candidate_total": 3,
+        "candidate_total": 2,
         "general_candidate_total": 0,
         "general_status": "dem_only",
         "general_label": "Democratic candidates filed only",
@@ -1960,6 +2521,7 @@
         "district_number": 37,
         "candidates": [
           {
+            "candidate_id": "house-37-dem-primary-samuel-angelo-azzinaro",
             "name": "Samuel Angelo Azzinaro",
             "first_name": "Samuel",
             "middle_name": "Angelo",
@@ -1975,11 +2537,21 @@
             "email": "sazzinaro@icloud.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-37-rep-primary-christopher-m-stanton",
             "name": "Christopher M Stanton",
             "first_name": "Christopher",
             "middle_name": "M",
@@ -1995,9 +2567,18 @@
             "email": "stanton@stanton4ri.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -2020,6 +2601,7 @@
         "district_number": 38,
         "candidates": [
           {
+            "candidate_id": "house-38-dem-primary-brian-patrick-kennedy",
             "name": "Brian Patrick Kennedy",
             "first_name": "Brian",
             "middle_name": "Patrick",
@@ -2035,11 +2617,21 @@
             "email": "rep.kennedy.rilin.state.ri.us@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-38-dem-primary-stephen-c-moffitt",
             "name": "Stephen C Moffitt",
             "first_name": "Stephen",
             "middle_name": "C",
@@ -2055,9 +2647,18 @@
             "email": "smoffitt11@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -2080,6 +2681,7 @@
         "district_number": 39,
         "candidates": [
           {
+            "candidate_id": "house-39-dem-primary-megan-l-cotter",
             "name": "Megan L Cotter",
             "first_name": "Megan",
             "middle_name": "L",
@@ -2095,11 +2697,21 @@
             "email": "megan@megancotterri.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-39-rep-primary-jasmin-roy",
             "name": "Jasmin Roy",
             "first_name": "Jasmin",
             "middle_name": "",
@@ -2115,9 +2727,18 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -2141,6 +2762,7 @@
         "district_number": 40,
         "candidates": [
           {
+            "candidate_id": "house-40-rep-primary-michael-chippendale",
             "name": "Michael Chippendale",
             "first_name": "Michael",
             "middle_name": "",
@@ -2156,9 +2778,18 @@
             "email": "mike@repchip.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -2180,6 +2811,7 @@
         "district_number": 41,
         "candidates": [
           {
+            "candidate_id": "house-41-dem-primary-shaina-n-smith",
             "name": "Shaina N Smith",
             "first_name": "Shaina",
             "middle_name": "N",
@@ -2195,11 +2827,21 @@
             "email": "shaina.n.smith@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-41-rep-primary-michael-j-riley",
             "name": "Michael J Riley",
             "first_name": "Michael",
             "middle_name": "J",
@@ -2215,9 +2857,18 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -2240,26 +2891,7 @@
         "district_number": 42,
         "candidates": [
           {
-            "name": "Edward T Cardillo Jr",
-            "first_name": "Edward",
-            "middle_name": "T",
-            "last_name": "Cardillo",
-            "suffix": "Jr",
-            "party": "DEM",
-            "party_label": "Democratic",
-            "party_raw": "Democrat",
-            "hometown": "Johnston",
-            "zip_code": "02919",
-            "home_label": "Johnston 02919",
-            "phone": "(401) 215-8836",
-            "email": "ec54@cox.net",
-            "declaration_status": "Valid",
-            "needs_nomination_papers": true,
-            "required_signatures": 50,
-            "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
-          },
-          {
+            "candidate_id": "house-42-dem-primary-edward-w-stravato",
             "name": "Edward W Stravato",
             "first_name": "Edward",
             "middle_name": "W",
@@ -2272,14 +2904,24 @@
             "zip_code": "02919",
             "home_label": "Johnston 02919",
             "phone": "(401) 419-0286",
-            "email": "edfor@gmail.com",
+            "email": "edfor42@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-42-rep-primary-richard-r-fascia",
             "name": "Richard R Fascia",
             "first_name": "Richard",
             "middle_name": "R",
@@ -2295,22 +2937,31 @@
             "email": "richard@fasciarep42.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
         "party_counts": {
-          "DEM": 2,
+          "DEM": 1,
           "REP": 1
         },
-        "candidate_total": 3,
+        "candidate_total": 2,
         "general_candidate_total": 0,
         "general_status": "both_major",
         "general_label": "Democratic and Republican candidates filed",
-        "primary_status": "dem_primary",
-        "primary_label": "Democratic primary underway",
+        "primary_status": "no_primary",
+        "primary_label": "No active primary in current filings",
         "hometowns": [
           "Johnston 02919"
         ]
@@ -2320,6 +2971,7 @@
         "district_number": 43,
         "candidates": [
           {
+            "candidate_id": "house-43-dem-primary-deborah-a-fellela",
             "name": "Deborah A Fellela",
             "first_name": "Deborah",
             "middle_name": "A",
@@ -2335,9 +2987,18 @@
             "email": "repdfellela43@aol.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -2359,6 +3020,7 @@
         "district_number": 44,
         "candidates": [
           {
+            "candidate_id": "house-44-dem-primary-gregory-costantino",
             "name": "Gregory Costantino",
             "first_name": "Gregory",
             "middle_name": "",
@@ -2374,11 +3036,21 @@
             "email": "repcostantino@aol.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-44-rep-primary-joseph-hosey",
             "name": "Joseph Hosey",
             "first_name": "Joseph",
             "middle_name": "",
@@ -2394,9 +3066,18 @@
             "email": "hoseyforri@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -2419,6 +3100,7 @@
         "district_number": 45,
         "candidates": [
           {
+            "candidate_id": "house-45-dem-primary-mia-a-ackerman",
             "name": "Mia A Ackerman",
             "first_name": "Mia",
             "middle_name": "A",
@@ -2434,9 +3116,18 @@
             "email": "miaforrep@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -2458,6 +3149,7 @@
         "district_number": 46,
         "candidates": [
           {
+            "candidate_id": "house-46-dem-primary-mary-ann-shallcross-smith",
             "name": "Mary Ann Shallcross Smith",
             "first_name": "Mary Ann",
             "middle_name": "",
@@ -2473,9 +3165,18 @@
             "email": "maryannshallcrosssmith@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -2497,6 +3198,7 @@
         "district_number": 47,
         "candidates": [
           {
+            "candidate_id": "house-47-rep-primary-david-j-place",
             "name": "David J Place",
             "first_name": "David",
             "middle_name": "J",
@@ -2512,9 +3214,18 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -2536,6 +3247,7 @@
         "district_number": 48,
         "candidates": [
           {
+            "candidate_id": "house-48-rep-primary-brian-c-newberry",
             "name": "Brian C Newberry",
             "first_name": "Brian",
             "middle_name": "C",
@@ -2551,9 +3263,18 @@
             "email": "briancnewberry@cox.net",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -2575,6 +3296,7 @@
         "district_number": 49,
         "candidates": [
           {
+            "candidate_id": "house-49-dem-primary-veronicka-vega",
             "name": "Veronicka Vega",
             "first_name": "Veronicka",
             "middle_name": "",
@@ -2590,13 +3312,23 @@
             "email": "veronickavega7@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [
           {
+            "candidate_id": "house-49-ind-general-jon-d-brien",
             "name": "Jon D Brien",
             "first_name": "Jon",
             "middle_name": "D",
@@ -2609,12 +3341,21 @@
             "zip_code": "02895",
             "home_label": "Woonsocket 02895",
             "phone": "",
-            "email": "",
+            "email": "jondbrien@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": false,
+            "on_election_ballot": true,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "general"
+            "ballot_stage": "general",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "party_counts": {
@@ -2635,6 +3376,7 @@
         "district_number": 50,
         "candidates": [
           {
+            "candidate_id": "house-50-dem-primary-stephen-casey",
             "name": "Stephen Casey",
             "first_name": "Stephen",
             "middle_name": "",
@@ -2647,12 +3389,21 @@
             "zip_code": "02895",
             "home_label": "Woonsocket 02895",
             "phone": "",
-            "email": "",
+            "email": "scasey1968@hotmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -2674,6 +3425,7 @@
         "district_number": 51,
         "candidates": [
           {
+            "candidate_id": "house-51-dem-primary-robert-d-phillips",
             "name": "Robert D Phillips",
             "first_name": "Robert",
             "middle_name": "D",
@@ -2689,9 +3441,18 @@
             "email": "bobphillips56@msn.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -2713,6 +3474,7 @@
         "district_number": 52,
         "candidates": [
           {
+            "candidate_id": "house-52-dem-primary-alex-d-marszalkowski",
             "name": "Alex D Marszalkowski",
             "first_name": "Alex",
             "middle_name": "D",
@@ -2728,9 +3490,18 @@
             "email": "alexdistrict52@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -2752,6 +3523,7 @@
         "district_number": 53,
         "candidates": [
           {
+            "candidate_id": "house-53-dem-primary-suzanna-l-alba",
             "name": "Suzanna L Alba",
             "first_name": "Suzanna",
             "middle_name": "L",
@@ -2767,11 +3539,21 @@
             "email": "suzyalbaforsmithfield@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-53-rep-primary-paul-m-santucci",
             "name": "Paul M Santucci",
             "first_name": "Paul",
             "middle_name": "M",
@@ -2787,9 +3569,18 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -2812,10 +3603,11 @@
         "district_number": 54,
         "candidates": [
           {
-            "name": "William W O'brien",
+            "candidate_id": "house-54-dem-primary-william-w-o-brien",
+            "name": "William W O'Brien",
             "first_name": "William",
             "middle_name": "W",
-            "last_name": "O'brien",
+            "last_name": "O'Brien",
             "suffix": "",
             "party": "DEM",
             "party_label": "Democratic",
@@ -2827,9 +3619,18 @@
             "email": "williamobrien2012@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -2851,6 +3652,7 @@
         "district_number": 55,
         "candidates": [
           {
+            "candidate_id": "house-55-dem-primary-arthur-j-corvese",
             "name": "Arthur J Corvese",
             "first_name": "Arthur",
             "middle_name": "J",
@@ -2866,9 +3668,18 @@
             "email": "arthurcorvese@verizon.net",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -2890,9 +3701,10 @@
         "district_number": 56,
         "candidates": [
           {
-            "name": "Joshua J D Giraldo",
+            "candidate_id": "house-56-dem-primary-joshua-j-giraldo",
+            "name": "Joshua J Giraldo",
             "first_name": "Joshua",
-            "middle_name": "J D",
+            "middle_name": "J",
             "last_name": "Giraldo",
             "suffix": "",
             "party": "DEM",
@@ -2905,9 +3717,18 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -2929,6 +3750,7 @@
         "district_number": 57,
         "candidates": [
           {
+            "candidate_id": "house-57-dem-primary-brandon-t-voas",
             "name": "Brandon T Voas",
             "first_name": "Brandon",
             "middle_name": "T",
@@ -2944,11 +3766,21 @@
             "email": "votebrandonvoas@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-57-dem-primary-james-mclaughlin",
             "name": "James McLaughlin",
             "first_name": "James",
             "middle_name": "",
@@ -2964,9 +3796,18 @@
             "email": "jmclaughlin@cox.net",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -2988,6 +3829,7 @@
         "district_number": 58,
         "candidates": [
           {
+            "candidate_id": "house-58-dem-primary-cherie-l-cruz",
             "name": "Cherie L Cruz",
             "first_name": "Cherie",
             "middle_name": "L",
@@ -3003,9 +3845,18 @@
             "email": "cherie.cruz7@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -3027,6 +3878,7 @@
         "district_number": 59,
         "candidates": [
           {
+            "candidate_id": "house-59-dem-primary-jennifer-a-stewart",
             "name": "Jennifer A Stewart",
             "first_name": "Jennifer",
             "middle_name": "A",
@@ -3039,16 +3891,26 @@
             "zip_code": "02860",
             "home_label": "Pawtucket 02860",
             "phone": "(401) 305-0088",
-            "email": "jenniferstuartforri@gmail.com",
+            "email": "jenniferstewartforri@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [
           {
+            "candidate_id": "house-59-ind-general-jean-p-barros",
             "name": "Jean P Barros",
             "first_name": "Jean",
             "middle_name": "P",
@@ -3064,9 +3926,18 @@
             "email": "jeanphilippebarros@yahoo.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": false,
+            "on_election_ballot": true,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "general"
+            "ballot_stage": "general",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "party_counts": {
@@ -3087,6 +3958,7 @@
         "district_number": 60,
         "candidates": [
           {
+            "candidate_id": "house-60-dem-primary-karen-alzate",
             "name": "Karen Alzate",
             "first_name": "Karen",
             "middle_name": "",
@@ -3102,11 +3974,21 @@
             "email": "alzate60@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-60-rep-primary-luis-ernesto-sandoval-jr",
             "name": "Luis Ernesto Sandoval Jr",
             "first_name": "Luis",
             "middle_name": "Ernesto",
@@ -3122,9 +4004,18 @@
             "email": "elmexicano021999@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": false,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -3148,6 +4039,7 @@
         "district_number": 61,
         "candidates": [
           {
+            "candidate_id": "house-61-dem-primary-leonela-felix",
             "name": "Leonela Felix",
             "first_name": "Leonela",
             "middle_name": "",
@@ -3163,11 +4055,21 @@
             "email": "leonela.felix05@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-61-dem-primary-mark-a-theroux",
             "name": "Mark A Theroux",
             "first_name": "Mark",
             "middle_name": "A",
@@ -3183,9 +4085,18 @@
             "email": "marktheroux@yahoo.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -3207,6 +4118,7 @@
         "district_number": 62,
         "candidates": [
           {
+            "candidate_id": "house-62-dem-primary-mary-duffy-messier",
             "name": "Mary Duffy Messier",
             "first_name": "Mary",
             "middle_name": "Duffy",
@@ -3222,9 +4134,18 @@
             "email": "marykiley2@yahoo.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -3246,6 +4167,7 @@
         "district_number": 63,
         "candidates": [
           {
+            "candidate_id": "house-63-dem-primary-katherine-sheena-kazarian",
             "name": "Katherine Sheena Kazarian",
             "first_name": "Katherine",
             "middle_name": "Sheena",
@@ -3261,9 +4183,18 @@
             "email": "katherine.kazarian@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -3285,6 +4216,7 @@
         "district_number": 64,
         "candidates": [
           {
+            "candidate_id": "house-64-dem-primary-jenni-a-furtado",
             "name": "Jenni A Furtado",
             "first_name": "Jenni",
             "middle_name": "A",
@@ -3300,9 +4232,18 @@
             "email": "jenni.a.furtado@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -3324,9 +4265,10 @@
         "district_number": 65,
         "candidates": [
           {
-            "name": "Cameron David St Germain",
+            "candidate_id": "house-65-dem-primary-cameron-st-germain",
+            "name": "Cameron St Germain",
             "first_name": "Cameron",
-            "middle_name": "David",
+            "middle_name": "",
             "last_name": "St Germain",
             "suffix": "",
             "party": "DEM",
@@ -3339,11 +4281,21 @@
             "email": "cameron.d.stgermain@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-65-dem-primary-grant-webber-wosencroft",
             "name": "Grant Webber Wosencroft",
             "first_name": "Grant",
             "middle_name": "Webber",
@@ -3359,11 +4311,21 @@
             "email": "gwose123@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-65-dem-primary-matthew-dawson",
             "name": "Matthew Dawson",
             "first_name": "Matthew",
             "middle_name": "",
@@ -3379,9 +4341,18 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -3404,6 +4375,7 @@
         "district_number": 66,
         "candidates": [
           {
+            "candidate_id": "house-66-dem-primary-jennifer-smith-boylan",
             "name": "Jennifer Smith Boylan",
             "first_name": "Jennifer",
             "middle_name": "Smith",
@@ -3419,9 +4391,18 @@
             "email": "jboylan4ri@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -3443,6 +4424,7 @@
         "district_number": 67,
         "candidates": [
           {
+            "candidate_id": "house-67-dem-primary-nicole-p-jellinek",
             "name": "Nicole P Jellinek",
             "first_name": "Nicole",
             "middle_name": "P",
@@ -3458,11 +4440,21 @@
             "email": "nicole.jellinek@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "house-67-dem-primary-ronald-paul-jarvais-jr",
             "name": "Ronald Paul Jarvais Jr",
             "first_name": "Ronald",
             "middle_name": "Paul",
@@ -3478,13 +4470,23 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [
           {
+            "candidate_id": "house-67-ind-general-joseph-a-depasquale",
             "name": "Joseph A DePasquale",
             "first_name": "Joseph",
             "middle_name": "A",
@@ -3500,9 +4502,18 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": false,
+            "on_election_ballot": true,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "general"
+            "ballot_stage": "general",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "party_counts": {
@@ -3524,6 +4535,7 @@
         "district_number": 68,
         "candidates": [
           {
+            "candidate_id": "house-68-dem-primary-june-s-speakman",
             "name": "June S Speakman",
             "first_name": "June",
             "middle_name": "S",
@@ -3539,9 +4551,18 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -3563,6 +4584,7 @@
         "district_number": 69,
         "candidates": [
           {
+            "candidate_id": "house-69-dem-primary-susan-ann-donovan",
             "name": "Susan Ann Donovan",
             "first_name": "Susan",
             "middle_name": "Ann",
@@ -3578,9 +4600,18 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -3602,6 +4633,7 @@
         "district_number": 70,
         "candidates": [
           {
+            "candidate_id": "house-70-dem-primary-john-g-edwards",
             "name": "John G Edwards",
             "first_name": "John",
             "middle_name": "G",
@@ -3617,9 +4649,18 @@
             "email": "jay@elect-jay.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -3641,6 +4682,7 @@
         "district_number": 71,
         "candidates": [
           {
+            "candidate_id": "house-71-dem-primary-michelle-e-mcgaw",
             "name": "Michelle E McGaw",
             "first_name": "Michelle",
             "middle_name": "E",
@@ -3656,9 +4698,18 @@
             "email": "mcgaw4ri@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -3680,6 +4731,7 @@
         "district_number": 72,
         "candidates": [
           {
+            "candidate_id": "house-72-dem-primary-terri-denise-cortvriend",
             "name": "Terri-Denise Cortvriend",
             "first_name": "Terri-Denise",
             "middle_name": "",
@@ -3695,9 +4747,18 @@
             "email": "terricortvriend@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -3719,6 +4780,7 @@
         "district_number": 73,
         "candidates": [
           {
+            "candidate_id": "house-73-dem-primary-marvin-abney",
             "name": "Marvin Abney",
             "first_name": "Marvin",
             "middle_name": "",
@@ -3734,9 +4796,18 @@
             "email": "marvinla@aol.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -3758,6 +4829,7 @@
         "district_number": 74,
         "candidates": [
           {
+            "candidate_id": "house-74-dem-primary-alex-finkelman",
             "name": "Alex Finkelman",
             "first_name": "Alex",
             "middle_name": "",
@@ -3773,9 +4845,18 @@
             "email": "afinkelman@egisgroup.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -3797,6 +4878,7 @@
         "district_number": 75,
         "candidates": [
           {
+            "candidate_id": "house-75-dem-primary-lauren-h-carson",
             "name": "Lauren H Carson",
             "first_name": "Lauren",
             "middle_name": "H",
@@ -3812,9 +4894,18 @@
             "email": "laurenhcarson@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 50,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -3838,6 +4929,7 @@
         "district_number": 1,
         "candidates": [
           {
+            "candidate_id": "senate-1-dem-primary-jacob-bissaillon",
             "name": "Jacob Bissaillon",
             "first_name": "Jacob",
             "middle_name": "",
@@ -3853,9 +4945,18 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -3877,6 +4978,7 @@
         "district_number": 2,
         "candidates": [
           {
+            "candidate_id": "senate-2-dem-primary-ana-b-quezada",
             "name": "Ana B Quezada",
             "first_name": "Ana",
             "middle_name": "B",
@@ -3892,9 +4994,18 @@
             "email": "anabquezada@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -3916,6 +5027,7 @@
         "district_number": 3,
         "candidates": [
           {
+            "candidate_id": "senate-3-dem-primary-samuel-d-zurier",
             "name": "Samuel D Zurier",
             "first_name": "Samuel",
             "middle_name": "D",
@@ -3931,13 +5043,23 @@
             "email": "sam@samzurier.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [
           {
+            "candidate_id": "senate-3-ind-general-peder-a-schaefer",
             "name": "Peder A Schaefer",
             "first_name": "Peder",
             "middle_name": "A",
@@ -3953,9 +5075,18 @@
             "email": "peders1@verizon.net",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": false,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "general"
+            "ballot_stage": "general",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "party_counts": {
@@ -3976,6 +5107,7 @@
         "district_number": 4,
         "candidates": [
           {
+            "candidate_id": "senate-4-dem-primary-stefano-v-famiglietti",
             "name": "Stefano V Famiglietti",
             "first_name": "Stefano",
             "middle_name": "V",
@@ -3991,9 +5123,18 @@
             "email": "sfamiglietti@yahoo.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -4015,6 +5156,7 @@
         "district_number": 5,
         "candidates": [
           {
+            "candidate_id": "senate-5-dem-primary-cameron-moquin",
             "name": "Cameron Moquin",
             "first_name": "Cameron",
             "middle_name": "",
@@ -4030,11 +5172,21 @@
             "email": "cameron.moquin@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "senate-5-dem-primary-samuel-w-bell",
             "name": "Samuel W Bell",
             "first_name": "Samuel",
             "middle_name": "W",
@@ -4050,11 +5202,21 @@
             "email": "swbell11@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "senate-5-dem-primary-theodore-newcomer-jr",
             "name": "Theodore Newcomer Jr",
             "first_name": "Theodore",
             "middle_name": "",
@@ -4070,11 +5232,21 @@
             "email": "tednewcomerjr@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "senate-5-rep-primary-william-d-connell-jr",
             "name": "William D Connell Jr",
             "first_name": "William",
             "middle_name": "D",
@@ -4090,9 +5262,18 @@
             "email": "angelconnell@earthlink.net",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -4116,6 +5297,7 @@
         "district_number": 6,
         "candidates": [
           {
+            "candidate_id": "senate-6-dem-primary-tiara-t-mack",
             "name": "Tiara T Mack",
             "first_name": "Tiara",
             "middle_name": "T",
@@ -4131,9 +5313,18 @@
             "email": "tiaramackri@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -4155,6 +5346,7 @@
         "district_number": 7,
         "candidates": [
           {
+            "candidate_id": "senate-7-dem-primary-frank-a-ciccone",
             "name": "Frank A Ciccone",
             "first_name": "Frank",
             "middle_name": "A",
@@ -4170,9 +5362,18 @@
             "email": "franka2002@outlook.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -4194,6 +5395,7 @@
         "district_number": 8,
         "candidates": [
           {
+            "candidate_id": "senate-8-dem-primary-gena-felix",
             "name": "Gena Felix",
             "first_name": "Gena",
             "middle_name": "",
@@ -4206,14 +5408,37 @@
             "zip_code": "02861",
             "home_label": "Pawtucket 02861",
             "phone": "(401) 617-1523",
-            "email": "gena.felix05@gmail.com",
+            "email": "gena@genafelix.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": true,
+            "response_status": "submitted",
+            "campaign_url": "",
+            "issue_tags": [
+              "affordability",
+              "housing",
+              "healthcare",
+              "mental-health",
+              "accountability",
+              "economy",
+              "jobs",
+              "small-business",
+              "education",
+              "infrastructure",
+              "energy",
+              "environment"
+            ]
           },
           {
+            "candidate_id": "senate-8-dem-primary-lori-urso",
             "name": "Lori Urso",
             "first_name": "Lori",
             "middle_name": "",
@@ -4229,40 +5454,28 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
-          },
-          {
-            "name": "Adam Carreiro",
-            "first_name": "Adam",
-            "middle_name": "",
-            "last_name": "Carreiro",
-            "suffix": "",
-            "party": "REP",
-            "party_label": "Republican",
-            "party_raw": "Republican",
-            "hometown": "Pawtucket",
-            "zip_code": "02861",
-            "home_label": "Pawtucket 02861",
-            "phone": "(401) 263-9830",
-            "email": "apcarrier023@gmail.com",
-            "declaration_status": "Valid",
-            "needs_nomination_papers": true,
-            "required_signatures": 100,
-            "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
         "party_counts": {
-          "DEM": 2,
-          "REP": 1
+          "DEM": 2
         },
-        "candidate_total": 3,
+        "candidate_total": 2,
         "general_candidate_total": 0,
-        "general_status": "both_major",
-        "general_label": "Democratic and Republican candidates filed",
+        "general_status": "dem_only",
+        "general_label": "Democratic candidates filed only",
         "primary_status": "dem_primary",
         "primary_label": "Democratic primary underway",
         "hometowns": [
@@ -4274,6 +5487,7 @@
         "district_number": 9,
         "candidates": [
           {
+            "candidate_id": "senate-9-dem-primary-john-burke",
             "name": "John Burke",
             "first_name": "John",
             "middle_name": "",
@@ -4289,9 +5503,18 @@
             "email": "jbwwri@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -4313,6 +5536,7 @@
         "district_number": 10,
         "candidates": [
           {
+            "candidate_id": "senate-10-dem-primary-walter-s-felag-jr",
             "name": "Walter S Felag Jr",
             "first_name": "Walter",
             "middle_name": "S",
@@ -4328,9 +5552,18 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -4352,6 +5585,7 @@
         "district_number": 11,
         "candidates": [
           {
+            "candidate_id": "senate-11-dem-primary-linda-l-ujifusa",
             "name": "Linda L Ujifusa",
             "first_name": "Linda",
             "middle_name": "L",
@@ -4367,9 +5601,18 @@
             "email": "lindaujifusa.ri@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -4391,10 +5634,11 @@
         "district_number": 12,
         "candidates": [
           {
-            "name": "Louis Dipalma",
+            "candidate_id": "senate-12-dem-primary-louis-dipalma",
+            "name": "Louis DiPalma",
             "first_name": "Louis",
             "middle_name": "",
-            "last_name": "Dipalma",
+            "last_name": "DiPalma",
             "suffix": "",
             "party": "DEM",
             "party_label": "Democratic",
@@ -4406,9 +5650,18 @@
             "email": "louis_dipalma@yahoo.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -4430,6 +5683,7 @@
         "district_number": 13,
         "candidates": [
           {
+            "candidate_id": "senate-13-dem-primary-angela-lima",
             "name": "Angela Lima",
             "first_name": "Angela",
             "middle_name": "",
@@ -4445,11 +5699,21 @@
             "email": "angela.lima0427@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "senate-13-dem-primary-dawn-euer",
             "name": "Dawn Euer",
             "first_name": "Dawn",
             "middle_name": "",
@@ -4465,9 +5729,18 @@
             "email": "dawn@electdawneuer.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -4489,6 +5762,7 @@
         "district_number": 14,
         "candidates": [
           {
+            "candidate_id": "senate-14-dem-primary-valarie-jean-lawson",
             "name": "Valarie Jean Lawson",
             "first_name": "Valarie",
             "middle_name": "Jean",
@@ -4504,16 +5778,26 @@
             "email": "vlawson814@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [
           {
-            "name": "Brian Gary Coogan",
+            "candidate_id": "senate-14-ind-general-brian-g-coogan",
+            "name": "Brian G Coogan",
             "first_name": "Brian",
-            "middle_name": "Gary",
+            "middle_name": "G",
             "last_name": "Coogan",
             "suffix": "",
             "party": "IND",
@@ -4526,9 +5810,18 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": false,
+            "on_election_ballot": true,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "general"
+            "ballot_stage": "general",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "party_counts": {
@@ -4550,6 +5843,7 @@
         "district_number": 15,
         "candidates": [
           {
+            "candidate_id": "senate-15-dem-primary-meghan-e-kallman",
             "name": "Meghan E Kallman",
             "first_name": "Meghan",
             "middle_name": "E",
@@ -4565,14 +5859,24 @@
             "email": "electmeghankallman@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
-            "name": "Vanessa Rosa Lopez",
+            "candidate_id": "senate-15-dem-primary-vanessa-lopez",
+            "name": "Vanessa Lopez",
             "first_name": "Vanessa",
-            "middle_name": "Rosa",
+            "middle_name": "",
             "last_name": "Lopez",
             "suffix": "",
             "party": "DEM",
@@ -4585,9 +5889,18 @@
             "email": "vanessalopezforri@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -4609,6 +5922,7 @@
         "district_number": 16,
         "candidates": [
           {
+            "candidate_id": "senate-16-dem-primary-jonathon-acosta",
             "name": "Jonathon Acosta",
             "first_name": "Jonathon",
             "middle_name": "",
@@ -4624,9 +5938,18 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -4648,6 +5971,7 @@
         "district_number": 17,
         "candidates": [
           {
+            "candidate_id": "senate-17-dem-primary-nelly-burdette",
             "name": "Nelly Burdette",
             "first_name": "Nelly",
             "middle_name": "",
@@ -4663,11 +5987,21 @@
             "email": "nelly@electnelly.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "senate-17-rep-primary-thomas-j-paolino",
             "name": "Thomas J Paolino",
             "first_name": "Thomas",
             "middle_name": "J",
@@ -4683,13 +6017,23 @@
             "email": "thomaspaolino@yahoo.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [
           {
+            "candidate_id": "senate-17-ind-general-jina-n-petrarca",
             "name": "Jina N Petrarca",
             "first_name": "Jina",
             "middle_name": "N",
@@ -4705,16 +6049,26 @@
             "email": "jina@petrarcalaw.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": false,
+            "on_election_ballot": true,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "general"
+            "ballot_stage": "general",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
-            "name": "John Douglas Barr Ii",
+            "candidate_id": "senate-17-ind-general-john-douglas-barr-ii",
+            "name": "John Douglas Barr II",
             "first_name": "John",
             "middle_name": "Douglas",
             "last_name": "Barr",
-            "suffix": "Ii",
+            "suffix": "II",
             "party": "IND",
             "party_label": "Independent",
             "party_raw": "Independent",
@@ -4725,9 +6079,18 @@
             "email": "johndbarrii@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": false,
+            "on_election_ballot": true,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "general"
+            "ballot_stage": "general",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "party_counts": {
@@ -4749,6 +6112,7 @@
         "district_number": 18,
         "candidates": [
           {
+            "candidate_id": "senate-18-dem-primary-robert-britto",
             "name": "Robert Britto",
             "first_name": "Robert",
             "middle_name": "",
@@ -4764,9 +6128,18 @@
             "email": "rbritto@cox.net",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -4788,6 +6161,7 @@
         "district_number": 19,
         "candidates": [
           {
+            "candidate_id": "senate-19-dem-primary-james-metivier",
             "name": "James Metivier",
             "first_name": "James",
             "middle_name": "",
@@ -4803,11 +6177,21 @@
             "email": "jimmetsenate@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "senate-19-dem-primary-ryan-w-pearson",
             "name": "Ryan W Pearson",
             "first_name": "Ryan",
             "middle_name": "W",
@@ -4823,13 +6207,23 @@
             "email": "ryan@ryanfori.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [
           {
+            "candidate_id": "senate-19-ind-general-james-d-purcell",
             "name": "James D Purcell",
             "first_name": "James",
             "middle_name": "D",
@@ -4845,9 +6239,18 @@
             "email": "bluecord2017@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": false,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "general"
+            "ballot_stage": "general",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "party_counts": {
@@ -4868,6 +6271,7 @@
         "district_number": 20,
         "candidates": [
           {
+            "candidate_id": "senate-20-dem-primary-brian-j-thompson",
             "name": "Brian J Thompson",
             "first_name": "Brian",
             "middle_name": "J",
@@ -4883,9 +6287,18 @@
             "email": "brianthompsonforri@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -4907,6 +6320,7 @@
         "district_number": 21,
         "candidates": [
           {
+            "candidate_id": "senate-21-rep-primary-gordon-e-rogers",
             "name": "Gordon E Rogers",
             "first_name": "Gordon",
             "middle_name": "E",
@@ -4922,9 +6336,18 @@
             "email": "gthbobcat@aol.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -4946,6 +6369,7 @@
         "district_number": 22,
         "candidates": [
           {
+            "candidate_id": "senate-22-dem-primary-david-p-tikoian",
             "name": "David P Tikoian",
             "first_name": "David",
             "middle_name": "P",
@@ -4961,9 +6385,18 @@
             "email": "dpt68@cox.net",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -4985,6 +6418,7 @@
         "district_number": 23,
         "candidates": [
           {
+            "candidate_id": "senate-23-rep-primary-jessica-de-la-cruz",
             "name": "Jessica de la Cruz",
             "first_name": "Jessica",
             "middle_name": "",
@@ -5000,9 +6434,18 @@
             "email": "jessicaforri@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -5024,6 +6467,7 @@
         "district_number": 24,
         "candidates": [
           {
+            "candidate_id": "senate-24-dem-primary-melissa-murray",
             "name": "Melissa Murray",
             "first_name": "Melissa",
             "middle_name": "",
@@ -5039,9 +6483,18 @@
             "email": "murrayforri@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -5063,6 +6516,7 @@
         "district_number": 25,
         "candidates": [
           {
+            "candidate_id": "senate-25-dem-primary-andrew-r-dimitri",
             "name": "Andrew R Dimitri",
             "first_name": "Andrew",
             "middle_name": "R",
@@ -5078,9 +6532,18 @@
             "email": "dimitriforsenate@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -5102,6 +6565,7 @@
         "district_number": 26,
         "candidates": [
           {
+            "candidate_id": "senate-26-dem-primary-todd-m-patalano",
             "name": "Todd M Patalano",
             "first_name": "Todd",
             "middle_name": "M",
@@ -5117,9 +6581,18 @@
             "email": "toddpatalano@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -5141,6 +6614,7 @@
         "district_number": 27,
         "candidates": [
           {
+            "candidate_id": "senate-27-dem-primary-hanna-m-gallo",
             "name": "Hanna M Gallo",
             "first_name": "Hanna",
             "middle_name": "M",
@@ -5156,9 +6630,18 @@
             "email": "hannagallo21@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -5180,6 +6663,7 @@
         "district_number": 28,
         "candidates": [
           {
+            "candidate_id": "senate-28-dem-primary-lammis-j-vargas",
             "name": "Lammis J Vargas",
             "first_name": "Lammis",
             "middle_name": "J",
@@ -5195,9 +6679,18 @@
             "email": "lammis.vargas@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -5219,6 +6712,7 @@
         "district_number": 29,
         "candidates": [
           {
+            "candidate_id": "senate-29-dem-primary-peter-a-appollonio-jr",
             "name": "Peter A Appollonio Jr",
             "first_name": "Peter",
             "middle_name": "A",
@@ -5234,9 +6728,18 @@
             "email": "p_appollonio@outlook.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -5258,6 +6761,7 @@
         "district_number": 30,
         "candidates": [
           {
+            "candidate_id": "senate-30-dem-primary-mark-mckenney",
             "name": "Mark McKenney",
             "first_name": "Mark",
             "middle_name": "",
@@ -5273,9 +6777,18 @@
             "email": "mmckenney@mce-law.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -5297,6 +6810,7 @@
         "district_number": 31,
         "candidates": [
           {
+            "candidate_id": "senate-31-dem-primary-matthew-l-lamountain",
             "name": "Matthew L LaMountain",
             "first_name": "Matthew",
             "middle_name": "L",
@@ -5312,9 +6826,18 @@
             "email": "lamountainforsenate@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -5336,6 +6859,7 @@
         "district_number": 32,
         "candidates": [
           {
+            "candidate_id": "senate-32-dem-primary-pamela-j-lauria",
             "name": "Pamela J Lauria",
             "first_name": "Pamela",
             "middle_name": "J",
@@ -5351,9 +6875,18 @@
             "email": "pamlauria@me.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -5375,6 +6908,7 @@
         "district_number": 33,
         "candidates": [
           {
+            "candidate_id": "senate-33-dem-primary-leonidas-peter-raptakis",
             "name": "Leonidas Peter Raptakis",
             "first_name": "Leonidas",
             "middle_name": "Peter",
@@ -5390,11 +6924,21 @@
             "email": "senraptakis@hotmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "senate-33-rep-primary-james-p-pierson",
             "name": "James P Pierson",
             "first_name": "James",
             "middle_name": "P",
@@ -5410,9 +6954,18 @@
             "email": "jamespierson.ri@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -5435,6 +6988,7 @@
         "district_number": 34,
         "candidates": [
           {
+            "candidate_id": "senate-34-dem-primary-samantha-r-wilcox",
             "name": "Samantha R Wilcox",
             "first_name": "Samantha",
             "middle_name": "R",
@@ -5450,11 +7004,21 @@
             "email": "samwilcoxri@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "senate-34-rep-primary-elaine-j-morgan",
             "name": "Elaine J Morgan",
             "first_name": "Elaine",
             "middle_name": "J",
@@ -5470,9 +7034,18 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -5496,6 +7069,7 @@
         "district_number": 35,
         "candidates": [
           {
+            "candidate_id": "senate-35-dem-primary-bridget-g-valverde",
             "name": "Bridget G Valverde",
             "first_name": "Bridget",
             "middle_name": "G",
@@ -5511,9 +7085,18 @@
             "email": "",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -5535,6 +7118,7 @@
         "district_number": 36,
         "candidates": [
           {
+            "candidate_id": "senate-36-dem-primary-alana-m-dimario",
             "name": "Alana M DiMario",
             "first_name": "Alana",
             "middle_name": "M",
@@ -5550,11 +7134,21 @@
             "email": "alanadimario@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "senate-36-dem-primary-mark-mesrobian",
             "name": "Mark Mesrobian",
             "first_name": "Mark",
             "middle_name": "",
@@ -5570,9 +7164,18 @@
             "email": "mark.mesrobian@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -5594,6 +7197,7 @@
         "district_number": 37,
         "candidates": [
           {
+            "candidate_id": "senate-37-dem-primary-virginia-susan-sosnowski",
             "name": "Virginia Susan Sosnowski",
             "first_name": "Virginia",
             "middle_name": "Susan",
@@ -5609,9 +7213,18 @@
             "email": "vssosnowski@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -5633,6 +7246,7 @@
         "district_number": 38,
         "candidates": [
           {
+            "candidate_id": "senate-38-dem-primary-victoria-gu",
             "name": "Victoria Gu",
             "first_name": "Victoria",
             "middle_name": "",
@@ -5648,11 +7262,21 @@
             "email": "victoria4ri@gmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           },
           {
+            "candidate_id": "senate-38-rep-primary-westin-j-place",
             "name": "Westin J Place",
             "first_name": "Westin",
             "middle_name": "J",
@@ -5668,9 +7292,18 @@
             "email": "westin4ri@hotmail.com",
             "declaration_status": "Valid",
             "needs_nomination_papers": true,
+            "on_primary_ballot": true,
+            "on_election_ballot": false,
             "required_signatures": 100,
+            "home_precinct_code": "",
+            "home_precinct_label": "",
+            "home_precinct_name": "",
             "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary"
+            "ballot_stage": "primary",
+            "profile_available": false,
+            "response_status": "not_submitted",
+            "campaign_url": "",
+            "issue_tags": []
           }
         ],
         "general_candidates": [],
@@ -5699,15 +7332,15 @@
       "both_major_parties_filed": 16,
       "democratic_only": 53,
       "republican_only": 6,
-      "districts_with_primary_activity": 16,
+      "districts_with_primary_activity": 15,
       "districts_with_general_only_candidates": 6
     },
     "senate": {
       "district_total": 38,
       "districts_with_filings": 38,
       "no_filing_reported": 0,
-      "both_major_parties_filed": 6,
-      "democratic_only": 30,
+      "both_major_parties_filed": 5,
+      "democratic_only": 31,
       "republican_only": 2,
       "districts_with_primary_activity": 6,
       "districts_with_general_only_candidates": 4

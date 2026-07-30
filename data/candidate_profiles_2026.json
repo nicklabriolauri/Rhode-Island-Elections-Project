@@ -1,0 +1,68 @@
+{
+  "updated_at": "2026-07-30T00:00:00Z",
+  "project_name": "Meet the Candidates",
+  "questionnaire_prompt": "Select up to five issues that matter most to you, then choose your House or Senate district to compare candidate priorities.",
+  "issue_catalog": [
+    { "id": "affordability", "label": "Affordability" },
+    { "id": "housing", "label": "Housing" },
+    { "id": "healthcare", "label": "Healthcare" },
+    { "id": "mental-health", "label": "Mental health" },
+    { "id": "accountability", "label": "Government accountability" },
+    { "id": "economy", "label": "Economy" },
+    { "id": "jobs", "label": "Jobs and wages" },
+    { "id": "small-business", "label": "Small business" },
+    { "id": "education", "label": "Education" },
+    { "id": "infrastructure", "label": "Infrastructure" },
+    { "id": "energy", "label": "Energy costs" },
+    { "id": "environment", "label": "Environment" }
+  ],
+  "profiles": [
+    {
+      "candidate_id": "senate-8-dem-primary-gena-felix",
+      "candidate_name": "Gena Felix",
+      "chamber": "senate",
+      "district_number": 8,
+      "party": "DEM",
+      "ballot_stage": "primary",
+      "response_status": "submitted",
+      "email_override": "gena@genafelix.com",
+      "summary": "My campaign is focused on five key priorities.",
+      "issue_tags": [
+        "affordability",
+        "housing",
+        "healthcare",
+        "mental-health",
+        "accountability",
+        "economy",
+        "jobs",
+        "small-business",
+        "education",
+        "infrastructure",
+        "energy",
+        "environment"
+      ],
+      "priorities": [
+        {
+          "title": "Making Rhode Island More Affordable",
+          "summary": "Working to lower the cost of living by addressing rising utility costs, expanding consumer protections, supporting affordable housing, and ensuring working families can keep more of what they earn."
+        },
+        {
+          "title": "Expanding Access to Healthcare",
+          "summary": "Strengthening our healthcare workforce by improving provider retention, supporting primary care, increasing access to preventive and mental healthcare, and ensuring every Rhode Islander can access quality, affordable care."
+        },
+        {
+          "title": "Government Accountability and Transparency",
+          "summary": "Promoting ethical, transparent government that is responsive to residents, protects taxpayer dollars, and restores public trust through greater accountability."
+        },
+        {
+          "title": "Building a Stronger Economy for Working Families",
+          "summary": "Supporting small businesses, investing in workforce development, creating good-paying jobs, and ensuring economic growth benefits working families, not just large corporations."
+        },
+        {
+          "title": "Investing in Safe, Healthy, and Sustainable Communities",
+          "summary": "Improving infrastructure, supporting public education, expanding clean energy that reduces costs for consumers, protecting our environment, and creating neighborhoods where families can thrive."
+        }
+      ]
+    }
+  ]
+}
