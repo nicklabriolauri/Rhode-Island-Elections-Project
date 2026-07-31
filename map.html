@@ -725,11 +725,25 @@
       width: 100%;
       border-collapse: collapse;
       font-size: 12.5px;
+      table-layout: fixed;
+    }
+    .district-detail-table col.col-candidate {
+      width: 52%;
+    }
+    .district-detail-table col.col-party {
+      width: 14%;
+    }
+    .district-detail-table col.col-votes {
+      width: 22%;
+    }
+    .district-detail-table col.col-pct {
+      width: 12%;
     }
     .district-detail-table th,
     .district-detail-table td {
       padding: 6px 0;
       border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
     }
     .district-detail-table th {
       text-align: left;
@@ -745,8 +759,23 @@
     .district-detail-table th:nth-last-child(2) {
       text-align: right;
     }
+    .district-detail-table .candidate-cell {
+      padding-right: 10px;
+      line-height: 1.22;
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
+    .district-detail-table .party-cell,
+    .district-detail-table .votes-cell,
+    .district-detail-table .pct-cell {
+      white-space: nowrap;
+    }
     .district-detail-table tbody tr:last-child td {
       border-bottom: 0;
+    }
+    .race-popup-table {
+      margin-top: 8px;
+      font-size: 12px;
     }
     .fact-value {
       margin-top: 4px;
@@ -2100,10 +2129,10 @@ function candidateRows(race) {
   if (!candidates.length) return "";
   return candidates.map(c => `
     <tr>
-      <td>${c.name || ""}</td>
-      <td>${c.party || ""}</td>
-      <td style="text-align:right;">${c.votes || ""}</td>
-      <td style="text-align:right;">${c.pct || ""}</td>
+      <td class="candidate-cell">${c.name || ""}</td>
+      <td class="party-cell">${c.party || ""}</td>
+      <td class="votes-cell">${c.votes || ""}</td>
+      <td class="pct-cell">${c.pct || ""}</td>
     </tr>
   `).join("");
 }
@@ -2117,13 +2146,19 @@ function popupHtml(race) {
       <div><strong>Total votes:</strong> ${race.district_total_votes || "N/A"}</div>
       <div><strong>Margin:</strong> ${race.margin_votes || "N/A"} votes (${race.margin_pct || "N/A"})</div>
       <div><strong>Status:</strong> ${race.is_uncontested ? "Uncontested" : "Contested"}</div>
-      <table style="width:100%; margin-top:8px; border-collapse:collapse; font-size:12px;">
+      <table class="district-detail-table race-popup-table">
+        <colgroup>
+          <col class="col-candidate">
+          <col class="col-party">
+          <col class="col-votes">
+          <col class="col-pct">
+        </colgroup>
         <thead>
           <tr>
-            <th style="text-align:left; border-bottom:1px solid #ddd;">Candidate</th>
-            <th style="text-align:left; border-bottom:1px solid #ddd;">Party</th>
-            <th style="text-align:right; border-bottom:1px solid #ddd;">Votes</th>
-            <th style="text-align:right; border-bottom:1px solid #ddd;">%</th>
+            <th>Candidate</th>
+            <th>Party</th>
+            <th>Votes</th>
+            <th>%</th>
           </tr>
         </thead>
         <tbody>${candidateRows(race)}</tbody>
@@ -2194,6 +2229,12 @@ function renderRaceSidebar(race) {
         <div><strong>Status:</strong> ${race.is_uncontested ? "Uncontested" : "Contested"}</div>
       </div>
       <table class="district-detail-table">
+        <colgroup>
+          <col class="col-candidate">
+          <col class="col-party">
+          <col class="col-votes">
+          <col class="col-pct">
+        </colgroup>
         <thead>
           <tr>
             <th>Candidate</th>
