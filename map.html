@@ -724,6 +724,7 @@
     .district-detail-table {
       width: 100%;
       border-collapse: collapse;
+      border-spacing: 0;
       font-size: 12.5px;
       table-layout: fixed;
     }
@@ -741,9 +742,13 @@
     }
     .district-detail-table th,
     .district-detail-table td {
-      padding: 6px 0;
+      padding: 7px 10px 7px 0;
       border-bottom: 1px solid #e2e8f0;
       vertical-align: top;
+    }
+    .district-detail-table th:not(:first-child),
+    .district-detail-table td:not(:first-child) {
+      padding-left: 12px;
     }
     .district-detail-table th {
       text-align: left;
@@ -760,7 +765,7 @@
       text-align: right;
     }
     .district-detail-table .candidate-cell {
-      padding-right: 10px;
+      padding-right: 14px;
       line-height: 1.22;
       overflow-wrap: anywhere;
       word-break: normal;
@@ -769,6 +774,13 @@
     .district-detail-table .votes-cell,
     .district-detail-table .pct-cell {
       white-space: nowrap;
+    }
+    .district-detail-table .party-cell {
+      font-weight: 700;
+    }
+    .district-detail-table .votes-cell,
+    .district-detail-table .pct-cell {
+      font-variant-numeric: tabular-nums;
     }
     .district-detail-table tbody tr:last-child td {
       border-bottom: 0;

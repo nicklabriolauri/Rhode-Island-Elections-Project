@@ -19,21 +19,22 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <style>
     :root {
-      --ink: #1f2937;
-      --ink-soft: #52606d;
-      --navy: #182338;
-      --navy-2: #23324d;
-      --cream: #f6f1e8;
-      --paper: #fffdfa;
-      --stone: #ddd4c6;
-      --mist: #f1ede5;
-      --shadow: 0 18px 42px rgba(24, 35, 56, 0.08);
+      --ink: #18212f;
+      --ink-soft: #5f6b7a;
+      --navy: #1b2740;
+      --navy-2: #2b3a57;
+      --cream: #f3efe7;
+      --paper: #fcfbf8;
+      --stone: #d8d2c6;
+      --mist: #f3f5f8;
+      --line-soft: #e8e3d9;
+      --shadow: 0 10px 28px rgba(21, 32, 52, 0.06);
       --dem: #3b82f6;
       --dem-soft: rgba(59,130,246,0.12);
       --rep: #dc2626;
       --rep-soft: rgba(220,38,38,0.12);
-      --accent: #5b6f63;
-      --accent-soft: rgba(91,111,99,0.12);
+      --accent: #5c726c;
+      --accent-soft: rgba(92,114,108,0.12);
     }
 
     * { box-sizing: border-box; }
@@ -42,16 +43,14 @@
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: var(--ink);
-      background:
-        radial-gradient(circle at top left, rgba(91,111,99,0.08), transparent 24%),
-        linear-gradient(180deg, #fbf8f2 0%, #f3eee5 100%);
+      background: #f4f1ea;
     }
     a { color: inherit; }
 
     header {
       padding: 24px 24px 18px;
       color: white;
-      background: linear-gradient(135deg, #122038 0%, #1d2e4a 100%);
+      background: linear-gradient(180deg, #18243c 0%, #1d2942 100%);
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
     .header-shell {
@@ -83,7 +82,7 @@
       padding: 0 12px;
       border-radius: 999px;
       border: 1px solid rgba(255,255,255,0.16);
-      background: rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.04);
       color: rgba(255,255,255,0.74);
       font-size: 11px;
       font-weight: 800;
@@ -92,7 +91,7 @@
     }
     .brand h1 {
       margin: 10px 0 0;
-      font-size: 30px;
+      font-size: 29px;
       line-height: 1;
       letter-spacing: -0.045em;
     }
@@ -113,7 +112,7 @@
       color: white;
       text-decoration: none;
       border: 1px solid rgba(255,255,255,0.18);
-      background: rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.04);
       border-radius: 999px;
       padding: 9px 14px;
       font-size: 13px;
@@ -132,7 +131,7 @@
       padding: 28px 24px 40px;
     }
     .page-intro {
-      margin-bottom: 22px;
+      margin-bottom: 18px;
       padding: 0 2px;
     }
     .page-intro-label {
@@ -144,38 +143,37 @@
     }
     .page-intro h2 {
       margin: 10px 0 0;
-      font-size: 52px;
-      line-height: 0.98;
-      letter-spacing: -0.055em;
+      font-size: 46px;
+      line-height: 1.02;
+      letter-spacing: -0.05em;
       color: var(--navy);
-      max-width: 760px;
+      max-width: 680px;
     }
     .page-intro p {
-      margin: 14px 0 0;
-      max-width: 760px;
+      margin: 12px 0 0;
+      max-width: 700px;
       color: var(--ink-soft);
-      font-size: 18px;
-      line-height: 1.55;
+      font-size: 17px;
+      line-height: 1.6;
     }
 
     .layout {
       display: grid;
-      grid-template-columns: 360px minmax(0, 1fr);
-      gap: 22px;
+      grid-template-columns: 340px minmax(0, 1fr);
+      gap: 18px;
       align-items: start;
     }
     .panel {
-      background: rgba(255,253,250,0.96);
-      border: 1px solid var(--stone);
-      border-radius: 26px;
+      background: rgba(252,251,248,0.98);
+      border: 1px solid var(--line-soft);
+      border-radius: 20px;
       box-shadow: var(--shadow);
     }
     .question-card {
       position: sticky;
       top: 18px;
       padding: 22px;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.92), rgba(252,248,241,0.98));
+      background: rgba(252,251,248,0.98);
     }
     .panel-label {
       font-size: 11px;
@@ -187,7 +185,7 @@
     .question-card h3,
     .results-head h3 {
       margin: 10px 0 0;
-      font-size: 32px;
+      font-size: 28px;
       line-height: 1;
       letter-spacing: -0.05em;
       color: var(--navy);
@@ -202,7 +200,7 @@
     .question-block {
       margin-top: 22px;
       padding-top: 18px;
-      border-top: 1px solid #e8e0d4;
+      border-top: 1px solid var(--line-soft);
     }
     .question-title {
       font-size: 12px;
@@ -221,8 +219,8 @@
     .utility-link,
     .reset-btn {
       appearance: none;
-      border: 1px solid var(--stone);
-      background: white;
+      border: 1px solid #d7dce4;
+      background: #ffffff;
       color: var(--ink);
       border-radius: 999px;
       min-height: 42px;
@@ -234,19 +232,19 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease, background .14s ease;
+      transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease, background .14s ease, color .14s ease;
     }
     .option-btn:hover,
     .utility-link:hover,
     .reset-btn:hover {
       transform: translateY(-1px);
-      box-shadow: 0 10px 20px rgba(24,35,56,0.08);
+      box-shadow: 0 8px 16px rgba(24,35,56,0.06);
     }
     .option-btn.active {
       background: var(--navy);
       border-color: var(--navy);
       color: white;
-      box-shadow: 0 12px 24px rgba(24,35,56,0.14);
+      box-shadow: 0 10px 18px rgba(24,35,56,0.10);
     }
     .option-btn.party-dem.active {
       background: var(--dem);
@@ -259,8 +257,8 @@
     .district-select {
       width: 100%;
       min-height: 48px;
-      border-radius: 16px;
-      border: 1px solid var(--stone);
+      border-radius: 14px;
+      border: 1px solid #d7dce4;
       background: white;
       color: var(--ink);
       padding: 0 14px;
@@ -279,9 +277,9 @@
     .selection-summary {
       margin-top: 18px;
       padding: 14px 14px 12px;
-      border-radius: 18px;
-      background: var(--mist);
-      border: 1px solid #e6dece;
+      border-radius: 16px;
+      background: #f6f8fb;
+      border: 1px solid #dfe5ec;
     }
     .summary-title {
       font-size: 11px;
@@ -327,9 +325,9 @@
       align-items: center;
       justify-content: center;
       min-height: 560px;
-      border: 1px dashed #d7cdbd;
-      border-radius: 22px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(246,241,232,0.55));
+      border: 1px dashed #d9dee5;
+      border-radius: 18px;
+      background: #f7f8fa;
       text-align: center;
       padding: 26px;
     }
@@ -338,9 +336,9 @@
     }
     .placeholder-copy h4 {
       margin: 0;
-      font-size: 34px;
-      line-height: 1.02;
-      letter-spacing: -0.04em;
+      font-size: 30px;
+      line-height: 1.06;
+      letter-spacing: -0.035em;
       color: var(--navy);
     }
     .placeholder-copy p {
@@ -368,8 +366,8 @@
       min-height: 36px;
       padding: 0 12px;
       border-radius: 999px;
-      border: 1px solid var(--stone);
-      background: var(--mist);
+      border: 1px solid #dfe5ec;
+      background: #f6f8fb;
       color: var(--ink);
       font-size: 12px;
       font-weight: 800;
@@ -377,10 +375,10 @@
     }
     .message-banner {
       margin-top: 18px;
-      border-radius: 18px;
+      border-radius: 16px;
       padding: 14px 16px;
-      border: 1px solid #e8dcc5;
-      background: #fff8ed;
+      border: 1px solid #e7dcc8;
+      background: #fcf5e7;
       color: #775d2a;
       font-size: 14px;
       line-height: 1.5;
@@ -393,18 +391,18 @@
       gap: 16px;
     }
     .candidate-card {
-      border: 1px solid var(--stone);
-      border-radius: 22px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(251,248,242,0.98));
-      box-shadow: 0 12px 26px rgba(24,35,56,0.05);
+      border: 1px solid #e3e7ee;
+      border-radius: 18px;
+      background: #ffffff;
+      box-shadow: 0 6px 18px rgba(24,35,56,0.04);
       padding: 18px;
     }
-    .candidate-card[data-party="DEM"] { border-top: 4px solid var(--dem); }
-    .candidate-card[data-party="REP"] { border-top: 4px solid var(--rep); }
+    .candidate-card[data-party="DEM"] { border-left: 4px solid var(--dem); }
+    .candidate-card[data-party="REP"] { border-left: 4px solid var(--rep); }
     .candidate-card[data-party="IND"],
     .candidate-card[data-party="OTH"],
     .candidate-card[data-party="MOD"],
-    .candidate-card[data-party="LIB"] { border-top: 4px solid var(--accent); }
+    .candidate-card[data-party="LIB"] { border-left: 4px solid var(--accent); }
     .candidate-top {
       display: flex;
       justify-content: space-between;
@@ -413,10 +411,10 @@
       flex-wrap: wrap;
     }
     .candidate-name {
-      font-size: 28px;
+      font-size: 25px;
       font-weight: 900;
       letter-spacing: -0.045em;
-      line-height: 1.02;
+      line-height: 1.06;
       color: var(--navy);
     }
     .candidate-subhead {
@@ -437,8 +435,8 @@
       min-height: 30px;
       padding: 0 10px;
       border-radius: 999px;
-      border: 1px solid var(--stone);
-      background: white;
+      border: 1px solid #dde3ea;
+      background: #f8fafc;
       color: #4b5563;
       font-size: 11px;
       font-weight: 900;
@@ -460,9 +458,9 @@
     .candidate-meta {
       min-height: 82px;
       padding: 12px;
-      border-radius: 16px;
-      border: 1px solid #e6dece;
-      background: #fbf8f1;
+      border-radius: 14px;
+      border: 1px solid #e3e8ef;
+      background: #f7f9fc;
     }
     .candidate-meta-label {
       display: block;
@@ -494,14 +492,14 @@
       padding: 0 12px;
       border-radius: 999px;
       text-decoration: none;
-      border: 1px solid var(--stone);
+      border: 1px solid #dce2ea;
       background: white;
       color: var(--navy);
       font-size: 13px;
       font-weight: 900;
     }
     .candidate-link.is-muted {
-      background: var(--mist);
+      background: #f6f8fb;
       color: #6b7280;
     }
     .candidate-copy {
@@ -527,14 +525,14 @@
       gap: 12px;
     }
     .priority-item {
-      border-radius: 18px;
-      border: 1px solid #e6dece;
-      background: white;
+      border-radius: 16px;
+      border: 1px solid #e3e8ef;
+      background: #fbfcfe;
       padding: 14px;
     }
     .priority-item h4 {
       margin: 0;
-      font-size: 18px;
+      font-size: 17px;
       line-height: 1.25;
       letter-spacing: -0.02em;
       color: var(--navy);
@@ -554,8 +552,8 @@
     .priority-tag {
       border-radius: 999px;
       padding: 6px 10px;
-      border: 1px solid #e6dece;
-      background: var(--mist);
+      border: 1px solid #dde3ea;
+      background: #f6f8fb;
       color: #55616d;
       font-size: 11px;
       font-weight: 800;
@@ -563,9 +561,9 @@
     .no-response {
       margin-top: 16px;
       padding: 14px;
-      border-radius: 18px;
-      border: 1px dashed #d9cfbe;
-      background: #fbf8f1;
+      border-radius: 16px;
+      border: 1px dashed #d8dee6;
+      background: #f7f9fc;
       color: #5f6d7a;
       font-size: 14px;
       line-height: 1.55;
@@ -773,7 +771,7 @@
   </footer>
 
   <script>
-    const assetVersion = "20260731a";
+    const assetVersion = "20260731b";
     const state = {
       election: "",
       primaryParty: "",
