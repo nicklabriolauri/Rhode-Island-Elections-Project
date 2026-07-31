@@ -728,8 +728,8 @@
     .district-detail-ledger-head,
     .district-detail-ledger-row {
       display: grid;
-      grid-template-columns: minmax(0, 1.7fr) 68px minmax(84px, 0.72fr) 58px;
-      column-gap: 14px;
+      grid-template-columns: minmax(180px, 1fr) 58px 88px 56px;
+      column-gap: 10px;
       align-items: start;
     }
     .district-detail-ledger-head {
@@ -751,9 +751,11 @@
     }
     .district-ledger-candidate {
       line-height: 1.2;
-      overflow-wrap: anywhere;
+      min-width: 180px;
+      overflow-wrap: normal;
       word-break: normal;
-      padding-right: 2px;
+      white-space: normal;
+      padding-right: 4px;
     }
     .district-ledger-party {
       font-weight: 800;
@@ -773,8 +775,11 @@
     }
     .race-popup-ledger .district-detail-ledger-head,
     .race-popup-ledger .district-detail-ledger-row {
-      grid-template-columns: minmax(0, 1.6fr) 58px minmax(72px, 0.8fr) 48px;
-      column-gap: 12px;
+      grid-template-columns: minmax(150px, 1fr) 52px 78px 46px;
+      column-gap: 10px;
+    }
+    .race-popup-ledger .district-ledger-candidate {
+      min-width: 150px;
     }
     .fact-value {
       margin-top: 4px;
