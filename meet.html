@@ -908,6 +908,7 @@
     }
 
     function buildCandidateCard(candidate) {
+      const displayName = candidate.profile?.candidate_name || candidate.name;
       const subtitle = state.election === "general"
         ? `${chamberLabel(candidate.chamber)} District ${candidate.district_number} · November general-election filing`
         : `${chamberLabel(candidate.chamber)} District ${candidate.district_number} · ${partyLabel(state.primaryParty)} primary ballot`;
@@ -921,7 +922,7 @@
         <article class="candidate-card" data-party="${escapeHtml(candidate.party)}">
           <div class="candidate-top">
             <div>
-              <div class="candidate-name">${escapeHtml(candidate.name)}</div>
+              <div class="candidate-name">${escapeHtml(displayName)}</div>
               <div class="candidate-subhead">${escapeHtml(subtitle)}</div>
             </div>
             <div class="candidate-badges">
