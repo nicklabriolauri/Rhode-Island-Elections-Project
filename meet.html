@@ -1018,6 +1018,8 @@
           .filter(candidate => candidate.party === state.primaryParty)
           .map(candidate => ({
             ...candidate,
+            chamber: state.chamber,
+            district_number: record.district_number,
             profile: (profileData?.profiles || []).find(profile => profile.candidate_id === candidate.candidate_id) || null
           }))
           .sort((a, b) => a.name.localeCompare(b.name));
@@ -1036,6 +1038,8 @@
       const candidates = (record.general_candidates || [])
         .map(candidate => ({
           ...candidate,
+          chamber: state.chamber,
+          district_number: record.district_number,
           profile: (profileData?.profiles || []).find(profile => profile.candidate_id === candidate.candidate_id) || null
         }))
         .sort((a, b) => a.name.localeCompare(b.name));
