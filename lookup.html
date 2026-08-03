@@ -490,7 +490,7 @@
         <div class="brand-copy">
           <div class="page-kicker">Find My Precinct</div>
           <h1>Rhode Island Elections Project</h1>
-          <p>Search any Rhode Island address to identify the matching precinct, linked districts, turnout profile, and election results.</p>
+          <p>Search any Rhode Island address to identify the matching precinct, linked districts, 2024 turnout profile, and election results.</p>
         </div>
       </div>
       <nav class="site-nav">
@@ -533,7 +533,7 @@
       <aside class="panel">
         <h2 class="panel-title">Address Match</h2>
         <div id="resultsPanel" class="empty-state">
-          Enter an address above to identify the precinct, view turnout data, locate the district assignments, and inspect the linked House and Senate election results.
+          Enter an address above to identify the precinct, view 2024 turnout data, locate the district assignments, and inspect the linked House and Senate election results.
         </div>
       </aside>
     </section>
@@ -781,9 +781,9 @@
             <div class="mini-detail">${precinctName}</div>
           </div>
           <div class="mini-stat">
-            <div class="mini-label">Turnout</div>
+            <div class="mini-label">2024 turnout</div>
             <div class="mini-value">${formatPct(lookupRecord.turnout_pct, 1)}</div>
-            <div class="mini-detail">${formatInt(lookupRecord.voted_total)} voted out of ${formatInt(lookupRecord.eligible_total)} eligible</div>
+            <div class="mini-detail">2024 turnout: ${formatInt(lookupRecord.voted_total)} voted out of ${formatInt(lookupRecord.eligible_total)} eligible</div>
           </div>
           <div class="mini-stat">
             <div class="mini-label">House district</div>
@@ -799,8 +799,8 @@
 
         <div class="result-stack">
           <section class="result-card">
-            <h3>Turnout Detail</h3>
-            <div class="result-meta">2024 turnout fields used on this site for the matched precinct. These figures are based on Rhode Island voter history turnout data.</div>
+            <h3>2024 Turnout Detail</h3>
+            <div class="result-meta">These are 2024 turnout fields used on this site for the matched precinct. The figures are based on Rhode Island voter history turnout data.</div>
             <table class="result-table">
               <tbody>
                 <tr><th>Municipality</th><td>${lookupRecord.municipality}</td></tr>
@@ -817,7 +817,7 @@
 
           <div class="note-card">
             ${approximateMatch ? "<strong>Approximate match:</strong> this suggestion appears to be a street-level location rather than a specific house number. Add the street number for a more exact precinct check.<br /><br />" : ""}
-            This tool geocodes the entered address, identifies the containing precinct, and then reports turnout and legislative contest results associated with that precinct. For official voter record and polling-place confirmation, use the Rhode Island Department of State lookup linked above.
+            This tool geocodes the entered address, identifies the containing precinct, and then reports 2024 turnout and legislative contest results associated with that precinct. For official voter record and polling-place confirmation, use the Rhode Island Department of State lookup linked above.
           </div>
         </div>
       `;
