@@ -1047,14 +1047,14 @@
             <div class="summary-copy">Districts with multiple candidates already filed within the same party.</div>
           </div>
           <div class="summary-card">
-            <div class="summary-label">Official source</div>
+            <div class="summary-label">State source</div>
             <div class="summary-value" id="summaryMatchups">RI SOS</div>
-            <div class="summary-copy" id="summarySourceCopy">Declared candidates workbook</div>
+            <div class="summary-copy" id="summarySourceCopy">Advanced candidate workbook (Excel)</div>
           </div>
         </div>
       </div>
       <div class="hero-note">
-        <strong>Primary first:</strong> this page is focused on who has filed for the September 9 primary ballot. Early voting begins on August 20, 2026. Color categories show whether only Democrats, only Republicans, only Independents / Others, or candidates from more than one party have filed in each district.
+        <strong>Primary first:</strong> this page is focused on who has filed for the September 9 primary ballot. Early voting begins on August 20, 2026. Most visitors can start by choosing a chamber and clicking a district; the raw state workbook remains available below as an advanced source file.
       </div>
     </section>
 
@@ -1087,7 +1087,7 @@
         <div class="detail-actions">
           <button type="button" class="detail-action-btn" id="copyDistrictLinkBtn" data-copy-district-link="true">Copy district link</button>
         </div>
-        <div class="detail-copy" id="detailCopy">Tap any House or Senate district on the map to see official September 9 primary filings, whether either party has a competitive primary, and the public contact details listed in Rhode Island's declared candidates workbook.</div>
+        <div class="detail-copy" id="detailCopy">Select any House or Senate district on the map to see who is on the September 9 primary ballot, whether either party has a competitive primary, and which public campaign contact details appear in the state filing workbook.</div>
         <div class="detail-statuses">
           <div class="status-card party-status dem-status is-clickable" id="detailDemCard" role="button" tabindex="0" aria-pressed="false">
             <h3>Democratic primary</h3>
@@ -1112,7 +1112,7 @@
           </ul>
           <div class="ballot-info-links">
             <a href="https://vote.sos.ri.gov/" target="_blank" rel="noopener noreferrer">RI Department of State</a>
-            <a href="https://vote.sos.ri.gov/Forms/elections/Reports/Candidates.xlsx" target="_blank" rel="noopener noreferrer">Declared Candidates Workbook</a>
+            <a href="https://vote.sos.ri.gov/Forms/elections/Reports/Candidates.xlsx" target="_blank" rel="noopener noreferrer">Advanced candidate workbook (Excel)</a>
             <a href="https://elections.ri.gov/" target="_blank" rel="noopener noreferrer">RI Board of Elections</a>
             <a href="https://ballotpedia.org/Rhode_Island_State_Senate_elections,_2026" target="_blank" rel="noopener noreferrer">Ballotpedia Senate</a>
             <a href="https://ballotpedia.org/Rhode_Island_House_of_Representatives_elections,_2026" target="_blank" rel="noopener noreferrer">Ballotpedia House</a>
@@ -1614,7 +1614,7 @@
 
       const sourceUpdated = filingData?.source_updated_at;
       if (!sourceUpdated) {
-        note.textContent = "Rhode Island declared candidates workbook date is not available in the current payload.";
+        note.textContent = "The update date for the state candidate workbook is not available in the current file.";
         return;
       }
 
@@ -1623,9 +1623,9 @@
         day: "numeric",
         year: "numeric"
       });
-      note.textContent = `Rhode Island declared candidates workbook was last updated ${formatted}. This page shows home precinct, ZIP code, phone, and email when listed, while full street addresses are intentionally withheld.`;
+      note.textContent = `The state candidate workbook used here was last updated ${formatted}. This page shows home precinct, ZIP code, phone, and email when listed, while full street addresses are intentionally withheld.`;
       if (summarySourceCopy) {
-        summarySourceCopy.textContent = `Official workbook last updated ${formatted}.`;
+        summarySourceCopy.textContent = `Advanced source file updated ${formatted}.`;
       }
     }
 
@@ -1885,7 +1885,7 @@
 
       if (!record) {
         title.textContent = "Select a district";
-        copy.textContent = "Tap any House or Senate district on the map to see who has filed for the September 9 primary ballot, whether either party has a competitive same-party primary, and which public contact details are listed in the Rhode Island declared candidates workbook.";
+        copy.textContent = "Select any House or Senate district on the map to see who has filed for the September 9 primary ballot, whether either party has a competitive primary, and which public campaign contact details appear in the state filing workbook.";
         demPrimary.textContent = "No district selected";
         repPrimary.textContent = "No district selected";
         if (mapNote) {
@@ -1903,9 +1903,9 @@
       } else if (record.candidate_total) {
         copy.textContent = `${record.candidate_total} candidate${record.candidate_total === 1 ? "" : "s"} currently listed for the September 9 primary ballot in this district.`;
       } else if (record.general_candidate_total) {
-        copy.textContent = `${record.general_candidate_total} general-election-only candidate${record.general_candidate_total === 1 ? "" : "s"} already declared for November in this district, but no September 9 primary filing is listed in the Rhode Island declared candidates workbook.`;
+        copy.textContent = `${record.general_candidate_total} general-election-only candidate${record.general_candidate_total === 1 ? "" : "s"} already declared for November in this district, but no September 9 primary filing is listed in the state filing workbook.`;
       } else {
-        copy.textContent = "No candidate filing appears in the Rhode Island declared candidates workbook for this district yet.";
+        copy.textContent = "No candidate filing appears in the current state filing workbook for this district yet.";
       }
       demPrimary.innerHTML = buildPartyPrimaryHtml(record, "DEM");
       repPrimary.innerHTML = buildPartyPrimaryHtml(record, "REP");
@@ -1919,7 +1919,7 @@
       const visibleGeneralCandidates = record.general_candidates.filter(candidateMatchesFocus);
 
       if (!record.candidates.length && !record.general_candidates.length) {
-        list.innerHTML = `<div class="candidate-item"><div class="candidate-name">No filing listed yet</div><div class="candidate-note">This district does not appear in the current Rhode Island declared candidates workbook yet.</div></div>`;
+        list.innerHTML = `<div class="candidate-item"><div class="candidate-name">No filing listed yet</div><div class="candidate-note">This district does not appear in the current state filing workbook yet.</div></div>`;
         return;
       }
 

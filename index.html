@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <title>Rhode Island Elections Project | Rhode Island Election Results, Turnout, and Precinct Maps</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="The Rhode Island Elections Project: a data-driven guide to Rhode Island election results, turnout maps, precinct lookup, and public-facing election research." />
+  <meta name="description" content="The Rhode Island Elections Project: a data-driven guide to Rhode Island election results, turnout maps, precinct lookup, and district-level election tools." />
   <meta name="application-name" content="Rhode Island Elections Project" />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://www.rhodeislandelectionsproject.org/" />
   <meta property="og:title" content="Rhode Island Elections Project | Rhode Island Election Results, Turnout, and Precinct Maps" />
-  <meta property="og:description" content="The Rhode Island Elections Project, featuring interactive election results, turnout maps, precinct tools, and public-facing research." />
+  <meta property="og:description" content="The Rhode Island Elections Project, featuring interactive election results, turnout maps, precinct tools, and district-level election guidance." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.rhodeislandelectionsproject.org/" />
   <meta property="og:site_name" content="Rhode Island Elections Project" />
@@ -40,7 +40,7 @@
           "@type": "ImageObject",
           "url": "https://www.rhodeislandelectionsproject.org/riep-logo-light.png?v=20260628"
         },
-        "description": "A nonpartisan public-facing election research project focused on Rhode Island election results, turnout, precinct information, and legislative representation."
+        "description": "A nonpartisan public-facing civic data project focused on Rhode Island election results, turnout, precinct information, and legislative representation."
       },
       {
         "@type": "WebSite",
@@ -48,7 +48,7 @@
         "url": "https://www.rhodeislandelectionsproject.org/",
         "name": "Rhode Island Elections Project",
         "alternateName": "RIEP",
-        "description": "The Rhode Island Elections Project: a data-driven guide to Rhode Island election results, turnout maps, precinct lookup, and public-facing election research.",
+        "description": "The Rhode Island Elections Project: a data-driven guide to Rhode Island election results, turnout maps, precinct lookup, and district-level election tools.",
         "publisher": {
           "@id": "https://www.rhodeislandelectionsproject.org/#organization"
         }
@@ -58,7 +58,7 @@
         "@id": "https://www.rhodeislandelectionsproject.org/#webpage",
         "url": "https://www.rhodeislandelectionsproject.org/",
         "name": "Rhode Island Elections Project",
-        "description": "The Rhode Island Elections Project, featuring interactive election results, turnout maps, precinct tools, and public-facing research.",
+        "description": "The Rhode Island Elections Project, featuring interactive election results, turnout maps, precinct tools, and district-level election guidance.",
         "isPartOf": {
           "@id": "https://www.rhodeislandelectionsproject.org/#website"
         },
@@ -470,7 +470,6 @@
     .feature-note {
       margin: -4px auto 20px auto;
       max-width: 980px;
-      white-space: nowrap;
       text-align: center;
       align-items: center;
       color: rgba(248,250,252,0.62);
@@ -480,6 +479,141 @@
       transform: translateY(16px);
       animation: heroRise .9s ease forwards;
       animation-delay: .43s;
+    }
+
+    .entry-section {
+      margin-top: 20px;
+      padding: 24px 28px;
+      border-radius: 28px;
+      border: 1px solid rgba(191,219,254,0.18);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.05) 100%);
+      box-shadow: 0 18px 38px rgba(5, 10, 28, 0.16);
+    }
+
+    .entry-header {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .entry-header h3 {
+      margin: 0;
+      font-family: "Sora", sans-serif;
+      font-size: 30px;
+      line-height: 1.04;
+      letter-spacing: -0.05em;
+    }
+
+    .entry-header p {
+      margin: 0;
+      max-width: 780px;
+      color: rgba(241,245,249,0.76);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .entry-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .entry-card {
+      padding: 22px 22px 20px;
+      border-radius: 22px;
+      border: 1px solid rgba(191,219,254,0.16);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.05) 100%);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+    }
+
+    .entry-card.research {
+      background: linear-gradient(180deg, rgba(191,219,254,0.12) 0%, rgba(255,255,255,0.05) 100%);
+    }
+
+    .entry-label {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 0 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(191,219,254,0.18);
+      background: rgba(255,255,255,0.06);
+      color: rgba(226,232,240,0.8);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .entry-title {
+      margin: 14px 0 8px 0;
+      font-family: "Sora", sans-serif;
+      font-size: 24px;
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+    }
+
+    .entry-copy {
+      margin: 0;
+      color: rgba(241,245,249,0.78);
+      font-size: 15px;
+      line-height: 1.58;
+    }
+
+    .entry-list {
+      margin: 16px 0 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .entry-list li {
+      display: grid;
+      grid-template-columns: 28px minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+    }
+
+    .entry-step {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(191,219,254,0.18);
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .entry-list strong {
+      display: block;
+      margin-bottom: 3px;
+      color: white;
+      font-size: 14px;
+    }
+
+    .entry-list span {
+      color: rgba(241,245,249,0.72);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .entry-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .entry-note {
+      margin-top: 14px;
+      color: rgba(226,232,240,0.66);
+      font-size: 13px;
+      line-height: 1.55;
     }
 
     .btn-primary,
@@ -1077,6 +1211,10 @@
         justify-content: center;
       }
 
+      .entry-grid {
+        grid-template-columns: 1fr;
+      }
+
       .feature-note {
         white-space: normal;
       }
@@ -1199,6 +1337,14 @@
         gap: 10px;
       }
 
+      .entry-section {
+        padding: 20px 18px;
+      }
+
+      .entry-header h3 {
+        font-size: 26px;
+      }
+
       .feature-card {
         width: 100%;
         max-width: none;
@@ -1308,6 +1454,82 @@
             <span class="scroll-cue-arrow">↓</span>
           </a>
         </div>
+      </div>
+    </section>
+
+    <section class="entry-section" aria-labelledby="entryTitle">
+      <div class="entry-header">
+        <div class="eyebrow">Start Here</div>
+        <h3 id="entryTitle">Choose the path that fits what you need.</h3>
+        <p>Most visitors want a quick way to find their district, see who is on the ballot, and compare local election patterns. The deeper source files are still available, but they do not need to come first.</p>
+      </div>
+      <div class="entry-grid">
+        <article class="entry-card voter">
+          <div class="entry-label">Voter View</div>
+          <h4 class="entry-title">Start with the everyday questions.</h4>
+          <p class="entry-copy">Use the public-facing tools first if you want practical election information without digging through raw state spreadsheets.</p>
+          <ul class="entry-list">
+            <li>
+              <span class="entry-step">1</span>
+              <div>
+                <strong>Find your districts</strong>
+                <span>Use the precinct lookup to identify your House district, Senate district, and 2024 turnout context.</span>
+              </div>
+            </li>
+            <li>
+              <span class="entry-step">2</span>
+              <div>
+                <strong>See who is on your ballot</strong>
+                <span>Open Who’s Running? or Meet the Candidates to move straight from district to candidate information.</span>
+              </div>
+            </li>
+            <li>
+              <span class="entry-step">3</span>
+              <div>
+                <strong>Compare your area to the rest of Rhode Island</strong>
+                <span>Use the interactive map views to inspect turnout, uncontested seats, competitiveness, and winner patterns.</span>
+              </div>
+            </li>
+          </ul>
+          <div class="entry-actions">
+            <a class="btn-primary" href="lookup.html">Find My Precinct</a>
+            <a class="btn-secondary" href="running.html">Who's Running?</a>
+            <a class="btn-secondary" href="meet.html">Meet the Candidates</a>
+          </div>
+        </article>
+        <article class="entry-card research">
+          <div class="entry-label">Research View</div>
+          <h4 class="entry-title">Open the documentation and source files.</h4>
+          <p class="entry-copy">If you want the underlying methods, replication files, or the raw state candidate workbook, use the advanced materials here.</p>
+          <ul class="entry-list">
+            <li>
+              <span class="entry-step">A</span>
+              <div>
+                <strong>Read the methods in plain English</strong>
+                <span>The methodology page explains turnout calculations, district files, JSON, and GeoJSON in nontechnical language.</span>
+              </div>
+            </li>
+            <li>
+              <span class="entry-step">B</span>
+              <div>
+                <strong>Download the core project files</strong>
+                <span>Researchers can use the same map and turnout files that power the public site.</span>
+              </div>
+            </li>
+            <li>
+              <span class="entry-step">C</span>
+              <div>
+                <strong>Open the raw state candidate workbook</strong>
+                <span>This is the full Excel source file from the Rhode Island Department of State, best suited for campaigns, audits, and advanced review.</span>
+              </div>
+            </li>
+          </ul>
+          <div class="entry-actions">
+            <a class="btn-secondary" href="methodology.html">Open Methodology</a>
+            <a class="btn-secondary" href="https://vote.sos.ri.gov/Forms/elections/Reports/Candidates.xlsx" target="_blank" rel="noopener noreferrer">Advanced candidate workbook (Excel)</a>
+          </div>
+          <div class="entry-note">Most voters can skip the Excel workbook and use the voter tools above instead.</div>
+        </article>
       </div>
     </section>
 
