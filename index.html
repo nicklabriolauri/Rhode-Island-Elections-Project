@@ -415,6 +415,18 @@
       animation-delay: .22s;
     }
 
+    .summary-helper {
+      max-width: 620px;
+      margin: -10px auto 24px auto;
+      color: rgba(241,245,249,0.68);
+      font-size: 14px;
+      line-height: 1.55;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: heroRise .9s ease forwards;
+      animation-delay: .26s;
+    }
+
     .cta-row {
       display: flex;
       flex-wrap: wrap;
@@ -427,8 +439,44 @@
       animation-delay: .32s;
     }
 
+    .feature-tools {
+      display: grid;
+      gap: 14px;
+      margin-top: 8px;
+    }
+
+    .feature-toggle {
+      appearance: none;
+      margin: 0 auto;
+      border: 1px solid rgba(191,219,254,0.18);
+      background: rgba(255,255,255,0.05);
+      color: rgba(248,250,252,0.9);
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: heroRise .9s ease forwards;
+      animation-delay: .36s;
+      transition: background .15s ease, border-color .15s ease, transform .15s ease;
+    }
+
+    .feature-toggle:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(191,219,254,0.3);
+      transform: translateY(-1px);
+    }
+
+    .feature-panel {
+      display: grid;
+    }
+
     .feature-kicker {
-      margin: 4px auto 12px auto;
+      margin: 0 auto 12px auto;
       color: rgba(226,232,240,0.72);
       font-size: 12px;
       letter-spacing: 0.08em;
@@ -712,6 +760,12 @@
       transform: translateY(16px);
       animation: heroRise .9s ease forwards;
       animation-delay: .42s;
+    }
+
+    .link-row[hidden],
+    .feature-toggle[hidden],
+    .feature-panel[hidden] {
+      display: none !important;
     }
 
     .link-pill {
@@ -1455,15 +1509,7 @@
         </div>
       </div>
       <div class="topbar-right">
-        <nav class="site-nav" aria-label="Primary">
-          <a href="map.html">Map</a>
-          <a href="running.html">Who's Running?</a>
-          <a href="meet.html">Meet the Candidates</a>
-          <a href="lookup.html">Find My Precinct</a>
-          <a href="methodology.html">Methodology</a>
-          <a href="about.html">About</a>
-          <a href="support.html">Support</a>
-        </nav>
+        <nav class="site-nav" id="homePrimaryNav" aria-label="Primary"></nav>
         <div class="view-toggle" aria-label="Homepage view mode">
           <button type="button" class="active" data-home-mode="voter" aria-pressed="true">Voter View</button>
           <button type="button" data-home-mode="research" aria-pressed="false">Research View</button>
@@ -1485,10 +1531,16 @@
           <h2 id="heroTitle"><span><span class="hero-line-text">See how</span></span><span><span class="hero-line-text">Rhode Island votes.</span></span></h2>
           <div class="ocean-line" aria-hidden="true"></div>
           <p class="summary" id="homeSummary">Election results, turnout maps, and precinct data, all in one place.</p>
+          <p class="summary-helper" id="homeSummaryHelper">Start with Find My Precinct if you want the quickest path to the districts and ballot that apply to you.</p>
           <div class="cta-row" id="homeCtaRow"></div>
-          <div class="feature-kicker" id="homeFeatureKicker">Explore more map views</div>
-          <div class="feature-row" id="homeFeatureRow" aria-label="Featured homepage links"></div>
-          <p class="feature-note" id="homeFeatureNote">Compare turnout, uncontested districts, gender representation, and electoral competitiveness directly from the homepage.</p>
+          <div class="feature-tools">
+            <button type="button" class="feature-toggle" id="homeFeatureToggle" aria-expanded="false" aria-controls="homeFeaturePanel">More map views</button>
+            <div class="feature-panel" id="homeFeaturePanel" hidden>
+              <div class="feature-kicker" id="homeFeatureKicker">Explore more map views</div>
+              <div class="feature-row" id="homeFeatureRow" aria-label="Featured homepage links"></div>
+              <p class="feature-note" id="homeFeatureNote">Compare turnout, uncontested districts, gender representation, and electoral competitiveness directly from the homepage.</p>
+            </div>
+          </div>
           <div class="link-row" id="homeLinkRow" aria-label="Secondary project links"></div>
           <a class="scroll-cue" href="#mission-preview">
             <span>Scroll for more</span>
@@ -1601,14 +1653,16 @@
     ];
     const homeModes = {
       voter: {
-        summary: "Election results, turnout maps, and precinct data, all in one place.",
-        featureKicker: "Explore more map views",
-        featureNote: "Compare turnout, uncontested districts, gender representation, and electoral competitiveness directly from the homepage.",
+        summary: "Find your precinct, see who is on your ballot, and explore election results.",
+        summaryHelper: "Start with Find My Precinct if you want the quickest path to the districts and ballot that apply to you.",
+        featureKicker: "Additional map views",
+        featureToggleLabel: "More map views",
+        featureNote: "Use these optional views to compare turnout, uncontested districts, gender representation, and electoral competitiveness across Rhode Island.",
+        featureOpenByDefault: false,
         ctas: [
-          { label: "Open Interactive Map", href: "map.html?mode=results&chamber=house&year=2024&view=party", style: "primary" },
-          { label: "Who's Running?", href: "running.html", style: "secondary" },
-          { label: "Meet the Candidates", href: "meet.html", style: "secondary" },
-          { label: "Find My Precinct", href: "lookup.html", style: "secondary" }
+          { label: "Find My Precinct", href: "lookup.html", style: "primary" },
+          { label: "See Who's On My Ballot", href: "running.html", style: "secondary" },
+          { label: "See Election Map", href: "map.html?mode=results&chamber=house&year=2024&view=party", style: "secondary" }
         ],
         features: [
           { label: "Turnout", href: "map.html?mode=turnout&geo=municipality&year=2024", className: "turnout" },
@@ -1616,21 +1670,22 @@
           { label: "Gender Parity", href: "map.html?mode=results&chamber=house&year=2024&view=gender", className: "gender" },
           { label: "Competitiveness", href: "map.html?mode=results&chamber=house&year=2024&view=competitiveness", className: "competitiveness" }
         ],
-        links: [
-          { label: "Winner Party", href: "map.html?mode=results&chamber=house&year=2024&view=party" },
-          { label: "Turnout", href: "map.html?mode=turnout&geo=municipality&year=2024" },
-          { label: "Lookup", href: "lookup.html" },
-          { label: "Who's Running?", href: "running.html" },
-          { label: "Meet the Candidates", href: "meet.html" },
-          { label: "Methodology", href: "methodology.html" },
-          { label: "About", href: "about.html" },
-          { label: "Support", href: "support.html" }
+        links: [],
+        nav: [
+          { label: "Find My Precinct", href: "lookup.html" },
+          { label: "Who's On My Ballot", href: "running.html" },
+          { label: "Compare Candidates", href: "meet.html" },
+          { label: "Map", href: "map.html" },
+          { label: "About", href: "about.html" }
         ]
       },
       research: {
         summary: "Methods, source files, and public election data for deeper Rhode Island analysis.",
+        summaryHelper: "Use this mode if you want documentation, downloadable files, or the same structured data that powers the public site.",
         featureKicker: "Explore core source files",
+        featureToggleLabel: "Source files and datasets",
         featureNote: "Open the same structured files that power the public map, turnout tools, and filing pages.",
+        featureOpenByDefault: true,
         ctas: [
           { label: "Open Methodology", href: "methodology.html", style: "primary" },
           { label: "Race Data JSON", href: "data/race_data.json", style: "secondary" },
@@ -1652,6 +1707,15 @@
           { label: "Precinct GeoJSON", href: "data/ri_turnout_2024_precinct.geojson" },
           { label: "Municipality GeoJSON", href: "data/ri_turnout_2024_municipality.geojson" },
           { label: "Support", href: "support.html" }
+        ],
+        nav: [
+          { label: "Map", href: "map.html" },
+          { label: "Who's Running?", href: "running.html" },
+          { label: "Meet the Candidates", href: "meet.html" },
+          { label: "Find My Precinct", href: "lookup.html" },
+          { label: "Methodology", href: "methodology.html" },
+          { label: "About", href: "about.html" },
+          { label: "Support", href: "support.html" }
         ]
       }
     };
@@ -1667,10 +1731,27 @@
       return `<a ${attrs.join(" ")}>${item.label}</a>`;
     }
 
+    function renderPrimaryNav(items) {
+      const nav = document.getElementById("homePrimaryNav");
+      if (!nav) return;
+      nav.innerHTML = items.map(item => buildAnchor(item, "")).join("");
+    }
+
+    function setFeaturePanelState(expanded, label) {
+      const button = document.getElementById("homeFeatureToggle");
+      const panel = document.getElementById("homeFeaturePanel");
+      if (!button || !panel) return;
+      button.textContent = label;
+      button.setAttribute("aria-expanded", expanded ? "true" : "false");
+      panel.hidden = !expanded;
+    }
+
     function renderHomeMode(mode) {
       const config = homeModes[mode] || homeModes.voter;
       const summary = document.getElementById("homeSummary");
+      const summaryHelper = document.getElementById("homeSummaryHelper");
       const ctaRow = document.getElementById("homeCtaRow");
+      const featureToggle = document.getElementById("homeFeatureToggle");
       const featureKicker = document.getElementById("homeFeatureKicker");
       const featureRow = document.getElementById("homeFeatureRow");
       const featureNote = document.getElementById("homeFeatureNote");
@@ -1678,13 +1759,19 @@
       const toggleButtons = Array.from(document.querySelectorAll("[data-home-mode]"));
 
       if (summary) summary.textContent = config.summary;
+      if (summaryHelper) summaryHelper.textContent = config.summaryHelper || "";
       if (featureKicker) featureKicker.textContent = config.featureKicker;
       if (featureNote) featureNote.textContent = config.featureNote;
+      renderPrimaryNav(config.nav || []);
       if (ctaRow) {
         ctaRow.innerHTML = config.ctas.map(item => buildAnchor(item, item.style === "primary" ? "btn-primary" : "btn-secondary")).join("");
       }
       if (featureRow) {
         featureRow.innerHTML = config.features.map(item => buildAnchor(item, `feature-card ${item.className || ""}`.trim())).join("");
+      }
+      if (featureToggle) {
+        featureToggle.hidden = !(config.features && config.features.length);
+        setFeaturePanelState(Boolean(config.featureOpenByDefault), config.featureToggleLabel || "More options");
       }
       if (linkRow) {
         const pills = [];
@@ -1695,6 +1782,7 @@
           }
         });
         linkRow.innerHTML = pills.join("");
+        linkRow.hidden = !config.links.length;
       }
 
       toggleButtons.forEach(button => {
@@ -1706,6 +1794,7 @@
 
     function initHomeModeToggle() {
       const toggleButtons = Array.from(document.querySelectorAll("[data-home-mode]"));
+      const featureToggle = document.getElementById("homeFeatureToggle");
       if (!toggleButtons.length) return;
 
       const storedMode = window.localStorage.getItem(HOME_MODE_KEY);
@@ -1720,6 +1809,15 @@
           renderHomeMode(mode);
         });
       });
+
+      if (featureToggle) {
+        featureToggle.addEventListener("click", () => {
+          const currentMode = document.querySelector("[data-home-mode].active")?.dataset.homeMode || "voter";
+          const config = homeModes[currentMode] || homeModes.voter;
+          const expanded = featureToggle.getAttribute("aria-expanded") !== "true";
+          setFeaturePanelState(expanded, config.featureToggleLabel || "More options");
+        });
+      }
     }
 
     function formatNewsTimestamp(value) {
