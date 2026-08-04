@@ -738,6 +738,26 @@
       box-shadow: 0 14px 28px rgba(43,80,217,0.28);
     }
 
+    .btn-primary.ballot {
+      background: linear-gradient(135deg, #5865f2 0%, #3448d5 100%);
+      box-shadow: 0 14px 28px rgba(70, 84, 216, 0.3);
+    }
+
+    .btn-primary.maps {
+      background: linear-gradient(135deg, #0f766e 0%, #0f9e8f 100%);
+      box-shadow: 0 14px 28px rgba(15, 118, 110, 0.28);
+    }
+
+    .btn-primary.candidates {
+      background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+      box-shadow: 0 14px 28px rgba(91, 33, 182, 0.28);
+    }
+
+    .btn-primary.precinct {
+      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+      box-shadow: 0 14px 28px rgba(43,80,217,0.32);
+    }
+
     .btn-secondary {
       color: white;
       background: rgba(255,255,255,0.04);
@@ -1655,14 +1675,15 @@
       voter: {
         summary: "Find your precinct, see who is on your ballot, and explore election results.",
         summaryHelper: "Start with Find My Precinct if you want the quickest path to the districts and ballot that apply to you.",
-        featureKicker: "Additional map views",
+        featureKicker: "Additional map views, 2012-2024",
         featureToggleLabel: "More map views",
-        featureNote: "Use these optional views to compare turnout, uncontested districts, gender representation, and electoral competitiveness across Rhode Island.",
+        featureNote: "Use these optional views to compare turnout, uncontested districts, gender representation, and electoral competitiveness across Rhode Island from 2012 through 2024.",
         featureOpenByDefault: false,
         ctas: [
-          { label: "See Who's On My Ballot", href: "running.html", style: "primary" },
-          { label: "See Election Map", href: "map.html?mode=results&chamber=house&year=2024&view=party", style: "primary" },
-          { label: "Find My Precinct", href: "lookup.html", style: "primary" }
+          { label: "See Who's On My Ballot", href: "running.html", style: "primary", className: "ballot" },
+          { label: "See Rhode Island Election Maps", href: "map.html?mode=results&chamber=house&year=2024&view=party", style: "primary", className: "maps" },
+          { label: "Meet the Candidates", href: "meet.html", style: "primary", className: "candidates" },
+          { label: "Find My Precinct", href: "lookup.html", style: "primary", className: "precinct" }
         ],
         features: [
           { label: "Turnout", href: "map.html?mode=turnout&geo=municipality&year=2024", className: "turnout" },
@@ -1723,7 +1744,7 @@
     function buildAnchor(item, className) {
       const attrs = [
         `href="${item.href}"`,
-        `class="${className}"`
+        `class="${`${className} ${item.className || ""}`.trim()}"`
       ];
       if (item.external) {
         attrs.push('target="_blank"', 'rel="noopener noreferrer"');
