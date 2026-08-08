@@ -1155,6 +1155,8 @@
     const state = { chamber: "house", selectedDistrict: null, mapFilter: "all", partyFocus: "all" };
     const geojsons = {};
     let filingData = null;
+    let financeData = null;
+    let financeProfileIds = new Set();
     let mapLayer = null;
     let statewideGuideControl = null;
     let selectedLayer = null;
@@ -1644,6 +1646,15 @@
       return "Not listed";
     }
 
+    function hasFinanceProfile(candidate) {
+      return Boolean(candidate?.candidate_id && financeProfileIds.has(candidate.candidate_id));
+    }
+
+    function buildFinanceUrl(candidate) {
+      if (!candidate?.candidate_id) return "";
+      return `finance.html?candidate=${encodeURIComponent(candidate.candidate_id)}`;
+    }
+
     function candidateAccent(candidate) {
       if (candidate.party === "DEM") return "#2563eb";
       if (candidate.party === "REP") return "#dc2626";
@@ -1659,6 +1670,9 @@
       }
       if (candidate.email) {
         links.push(`<a class="candidate-link" href="mailto:${escapeHtml(candidate.email)}">Email ${escapeHtml(candidate.email)}</a>`);
+      }
+      if (hasFinanceProfile(candidate)) {
+        links.push(`<a class="candidate-link" href="${buildFinanceUrl(candidate)}">Campaign finance</a>`);
       }
       if (!links.length) {
         links.push(`<span class="candidate-link is-muted">No public phone or email listed</span>`);
@@ -2254,14 +2268,17 @@
     async function boot() {
       try {
         readInitialState();
-        const [data, houseGeo, senateGeo, precinctGeo] = await Promise.all([
+        const [data, houseGeo, senateGeo, precinctGeo, financeResponse] = await Promise.all([
           fetchJson("/data/whos_running_2026_precincts.json"),
           fetchJson(geojsonFiles.house),
           fetchJson(geojsonFiles.senate),
-          fetchJson(geojsonFiles.precincts)
+          fetchJson(geojsonFiles.precincts),
+          fetch(freshAssetUrl("/data/candidate_finance_2026.json"), { cache: "no-store" }).catch(() => null)
         ]);
 
         filingData = data;
+        financeData = financeResponse && financeResponse.ok ? await financeResponse.json() : { profiles: [] };
+        financeProfileIds = new Set((financeData?.profiles || []).map(profile => profile.candidate_id).filter(Boolean));
         geojsons.house = houseGeo;
         geojsons.senate = senateGeo;
         precinctFeatureByCode = {};

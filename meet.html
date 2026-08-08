@@ -771,7 +771,7 @@
   </footer>
 
   <script>
-    const assetVersion = "20260731b";
+    const assetVersion = "20260808a";
     const state = {
       election: "",
       primaryParty: "",
@@ -781,6 +781,8 @@
 
     let filingData = null;
     let profileData = null;
+    let financeData = null;
+    let financeProfileIds = new Set();
     let flattenedCandidates = [];
 
     function withAssetVersion(url) {
@@ -827,6 +829,15 @@
       return "other";
     }
 
+    function hasFinanceProfile(candidate) {
+      return Boolean(candidate?.candidate_id && financeProfileIds.has(candidate.candidate_id));
+    }
+
+    function buildFinanceUrl(candidate) {
+      if (!candidate?.candidate_id) return "";
+      return `finance.html?candidate=${encodeURIComponent(candidate.candidate_id)}`;
+    }
+
     function buildCandidateLinks(candidate) {
       const links = [];
       if (candidate.phone) {
@@ -835,6 +846,9 @@
       }
       if (candidate.email) {
         links.push(`<a class="candidate-link" href="mailto:${escapeHtml(candidate.email)}">Email ${escapeHtml(candidate.email)}</a>`);
+      }
+      if (hasFinanceProfile(candidate)) {
+        links.push(`<a class="candidate-link" href="${buildFinanceUrl(candidate)}">Campaign finance</a>`);
       }
       if (!links.length) {
         links.push(`<span class="candidate-link is-muted">No public phone or email listed</span>`);
@@ -1183,13 +1197,16 @@
 
     async function boot() {
       try {
-        const [filingsResponse, profilesResponse] = await Promise.all([
+        const [filingsResponse, profilesResponse, financeResponse] = await Promise.all([
           fetch(withAssetVersion("/data/whos_running_2026_precincts.json")),
-          fetch(withAssetVersion("/data/candidate_profiles_2026.json"))
+          fetch(withAssetVersion("/data/candidate_profiles_2026.json")),
+          fetch(withAssetVersion("/data/candidate_finance_2026.json")).catch(() => null)
         ]);
 
         filingData = await filingsResponse.json();
         profileData = await profilesResponse.json();
+        financeData = financeResponse && financeResponse.ok ? await financeResponse.json() : { profiles: [] };
+        financeProfileIds = new Set((financeData?.profiles || []).map(profile => profile.candidate_id).filter(Boolean));
         flattenedCandidates = collectCandidates(filingData);
 
         hydrateStateFromUrl();
