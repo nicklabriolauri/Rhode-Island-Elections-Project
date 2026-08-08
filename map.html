@@ -848,32 +848,26 @@
 
     @media (min-width: 1001px) and (max-width: 1460px) {
       .dashboard {
-        grid-template-columns: 240px minmax(0, 1fr);
-        grid-template-areas:
-          "district map"
-          "district facts";
-        height: auto;
-        min-height: calc(100dvh - 170px);
+        grid-template-columns: 228px minmax(0, 1fr) 308px;
+        height: calc(100dvh - 170px);
+        min-height: 560px;
       }
 
       #districtPanel {
-        grid-area: district;
         max-height: calc(100dvh - 170px);
       }
 
       #map {
-        grid-area: map;
-        min-height: 520px;
-        height: min(60dvh, 680px);
+        min-height: 0;
+        height: 100%;
       }
 
       #factsPanel {
-        grid-area: facts;
-        border-left: 0;
-        border-top: 1px solid var(--line);
-        padding-top: 14px;
-        max-height: none;
-        overflow-y: visible;
+        border-left: 1px solid var(--line);
+        border-top: 0;
+        max-height: calc(100dvh - 170px);
+        overflow-y: auto;
+        padding-bottom: 20px;
       }
 
       .seat-card {
@@ -881,7 +875,7 @@
       }
 
       .facts-grid {
-        padding-bottom: 0;
+        padding-bottom: 16px;
       }
     }
   
