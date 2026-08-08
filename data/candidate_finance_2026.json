@@ -1,0 +1,204 @@
+{
+  "generated_at": "2026-08-08T20:00:00Z",
+  "election_cycle": 2026,
+  "profiles": [
+    {
+      "candidate_id": "senate-23-rep-primary-jessica-de-la-cruz",
+      "slug": "jessica-de-la-cruz",
+      "candidate_name": "Jessica de la Cruz",
+      "chamber": "senate",
+      "district_number": 23,
+      "party": "REP",
+      "office_sought": "State Senator",
+      "report_label": "CF-2 report",
+      "reporting_period_label": "April 1, 2026 to June 30, 2026",
+      "source_note": "This page translates one campaign finance filing into plain English. The original filing should still be available alongside any public-facing summary.",
+      "beginning_cash": 61904.64,
+      "money_raised": 7082.27,
+      "money_spent": 9411.79,
+      "ending_cash": 59575.12,
+      "net_change": -2329.52,
+      "campaign_expenses": 9234.46,
+      "aggregate_expenses": 177.33,
+      "summary_intro": "This filing shows a campaign that still has a substantial cash reserve, but that spent more during the period than it raised.",
+      "filing_history": [
+        {
+          "label": "Q1 2026",
+          "reporting_period_label": "January 1, 2026 to March 31, 2026",
+          "beginning_cash": 55693.41,
+          "money_raised": 18374.59,
+          "money_spent": 12163.36,
+          "campaign_expenses": 11179.63,
+          "aggregate_expenses": 983.73,
+          "ending_cash": 61904.64,
+          "net_change": 6211.23,
+          "notes": "The campaign reported strong early fundraising and ended the quarter with a larger reserve than it started with."
+        },
+        {
+          "label": "Q2 2026",
+          "reporting_period_label": "April 1, 2026 to June 30, 2026",
+          "beginning_cash": 61904.64,
+          "money_raised": 7082.27,
+          "money_spent": 9411.79,
+          "campaign_expenses": 9234.46,
+          "aggregate_expenses": 177.33,
+          "ending_cash": 59575.12,
+          "net_change": -2329.52,
+          "notes": "The campaign spent more than it raised in the second quarter, but still retained a substantial cash balance."
+        }
+      ],
+      "source_buckets": [
+        {
+          "label": "Itemized individual donors",
+          "amount": 3984.48,
+          "class_name": "individuals",
+          "description": "Named contributors reported individually in the filing."
+        },
+        {
+          "label": "Small-dollar / aggregate online receipts",
+          "amount": 1731.60,
+          "class_name": "aggregate",
+          "description": "Online or bundled small-dollar receipts reported in aggregate form."
+        },
+        {
+          "label": "PAC contributions",
+          "amount": 1250.0,
+          "class_name": "pacs",
+          "description": "Political committees and PACs listed in the filing."
+        },
+        {
+          "label": "Refunds / rebates",
+          "amount": 116.19,
+          "class_name": "refunds",
+          "description": "Small reimbursements, refunds, or rebates reported by the campaign."
+        }
+      ],
+      "top_donors": [
+        {
+          "donor": "RI Brotherhood of Correctional Officers PAC",
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing.",
+          "amount": 1000.0
+        },
+        {
+          "donor": "Craig Mechler",
+          "type": "Individual",
+          "notes": "North Smithfield donor listed as retired.",
+          "amount": 500.0
+        },
+        {
+          "donor": "Henry Breyer",
+          "type": "Individual",
+          "notes": "Employer listed as Max-Ord Rifles.",
+          "amount": 520.51
+        },
+        {
+          "donor": "David Clauss",
+          "type": "Individual",
+          "notes": "Employer listed as MIKEL Inc.",
+          "amount": 520.51
+        },
+        {
+          "donor": "RI Health Care Association PAC",
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing.",
+          "amount": 250.0
+        },
+        {
+          "donor": "Christopher Bilotti",
+          "type": "Individual",
+          "notes": "Employer listed as The Bilotti Group, Inc.",
+          "amount": 260.25
+        }
+      ],
+      "employer_networks": [
+        {
+          "label": "Fusion Medical",
+          "notes": "Repeated individual donor appears in the filing."
+        },
+        {
+          "label": "The Bilotti Group, Inc.",
+          "notes": "Employer listed by contributor."
+        },
+        {
+          "label": "New England Copperworks",
+          "notes": "Employer listed by contributor."
+        },
+        {
+          "label": "MIKEL Inc.",
+          "notes": "Employer listed by contributor."
+        },
+        {
+          "label": "Max-Ord Rifles",
+          "notes": "Employer listed by contributor."
+        },
+        {
+          "label": "Government Strategies",
+          "notes": "Employer listed by contributor."
+        },
+        {
+          "label": "QML",
+          "notes": "Employer listed by contributor."
+        }
+      ],
+      "spending_categories": [
+        {
+          "title": "Political donations",
+          "summary": "The filing includes several $1,000 political donations to other committees or campaigns, including Friends of Thomas Paolino, Friends of Gordon Rogers, Friends of Elaine J. Morgan, and the Burrillville 250 Commission."
+        },
+        {
+          "title": "Digital advertising and communications",
+          "summary": "Visible spending includes Facebook ads, Google ads, Mailchimp, Wix, and small WinRed-related charges."
+        },
+        {
+          "title": "Campaign materials and parade supplies",
+          "summary": "Several Amazon purchases appear tied to parade candy, parade supplies, and general campaign materials."
+        },
+        {
+          "title": "Meals, meetings, and events",
+          "summary": "The filing includes restaurants, coffee meetings, office appreciation meals, and event-related food purchases."
+        },
+        {
+          "title": "Travel and conference costs",
+          "summary": "There are rideshare and parking expenses tied to conference travel and campaign-related events."
+        }
+      ],
+      "takeaways": [
+        {
+          "title": "Most visible support comes from individuals",
+          "summary": "Named individual donors account for the largest identified share of money coming in during this filing period."
+        },
+        {
+          "title": "PAC money is present, but not dominant",
+          "summary": "The filing shows PAC support, but individual contributions still appear to be the main funding source in this period."
+        },
+        {
+          "title": "The campaign spent more than it raised",
+          "summary": "This filing period ended with negative net movement, even though the campaign retained a large reserve overall."
+        },
+        {
+          "title": "Spending was broad rather than concentrated",
+          "summary": "Expenditures span digital communications, political donations, materials, travel, and event costs instead of clustering in just one vendor category."
+        }
+      ],
+      "explainer_cards": [
+        {
+          "title": "Money raised",
+          "summary": "Money reported as coming into the campaign during the filing period, including individual donations, PAC contributions, online receipts, and occasional refunds."
+        },
+        {
+          "title": "Money spent",
+          "summary": "Campaign spending during the filing period, such as ads, consultants, printing, food, events, travel, or donations to other political committees."
+        },
+        {
+          "title": "Cash on hand",
+          "summary": "What the campaign reported still being available at the close of the filing period."
+        },
+        {
+          "title": "Employer-linked donors",
+          "summary": "These are individual contributors grouped by the employer they listed on the filing. That is not always the same thing as a direct business donation."
+        }
+      ]
+    }
+  ]
+}
