@@ -356,7 +356,7 @@
     }
     .dashboard {
       display: grid;
-      grid-template-columns: 250px minmax(420px, 1fr) 310px;
+      grid-template-columns: 232px minmax(0, 1fr) 392px;
       flex: 1;
       align-items: stretch;
       min-height: 0;
@@ -382,6 +382,7 @@
       padding: 12px;
       position: relative;
       overflow-x: hidden;
+      min-width: 0;
     }
     .district-panel-title {
       font-size: 14px;
@@ -732,9 +733,13 @@
     .district-detail-ledger-head,
     .district-detail-ledger-row {
       display: grid;
-      grid-template-columns: minmax(180px, 1fr) 58px 88px 56px;
-      column-gap: 10px;
+      grid-template-columns: minmax(0, 1.55fr) minmax(0, 0.78fr) minmax(62px, 0.92fr) minmax(42px, 0.5fr);
+      column-gap: 12px;
       align-items: start;
+    }
+    .district-detail-ledger-head > div,
+    .district-detail-ledger-row > div {
+      min-width: 0;
     }
     .district-detail-ledger-head {
       padding: 12px 0 10px;
@@ -755,11 +760,11 @@
     }
     .district-ledger-candidate {
       line-height: 1.2;
-      min-width: 180px;
-      overflow-wrap: normal;
+      min-width: 0;
+      overflow-wrap: anywhere;
       word-break: normal;
       white-space: normal;
-      padding-right: 4px;
+      padding-right: 8px;
     }
     .district-ledger-party {
       font-weight: 800;
@@ -784,6 +789,9 @@
     }
     .race-popup-ledger .district-ledger-candidate {
       min-width: 150px;
+    }
+    .district-detail-card {
+      overflow: hidden;
     }
     .fact-value {
       margin-top: 4px;
@@ -848,7 +856,7 @@
 
     @media (min-width: 1001px) and (max-width: 1460px) {
       .dashboard {
-        grid-template-columns: 228px minmax(0, 1fr) 308px;
+        grid-template-columns: 214px minmax(0, 1fr) 374px;
         height: calc(100dvh - 170px);
         min-height: 560px;
       }
