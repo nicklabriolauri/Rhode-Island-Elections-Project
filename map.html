@@ -361,6 +361,9 @@
       align-items: stretch;
       min-height: 0;
     }
+    .dashboard > * {
+      min-width: 0;
+    }
     aside {
       background: var(--panel);
       overflow-y: auto;
@@ -378,6 +381,7 @@
       border-left: 1px solid var(--line);
       padding: 12px;
       position: relative;
+      overflow-x: hidden;
     }
     .district-panel-title {
       font-size: 14px;
@@ -803,6 +807,7 @@
       box-shadow: 0 4px 16px rgba(15,23,42,.14);
       line-height: 1.4;
       font-size: 13px;
+      max-width: min(220px, calc(100vw - 32px));
     }
     .legend-title { font-weight: 900; margin-bottom: 5px; }
     .swatch {
@@ -839,6 +844,45 @@
       #map { height: 520px; }
       #factsPanel { border-left: 0; border-top: 1px solid var(--line); }
       .era-badge { margin-left: 0; }
+    }
+
+    @media (min-width: 1001px) and (max-width: 1460px) {
+      .dashboard {
+        grid-template-columns: 240px minmax(0, 1fr);
+        grid-template-areas:
+          "district map"
+          "district facts";
+        height: auto;
+        min-height: calc(100dvh - 170px);
+      }
+
+      #districtPanel {
+        grid-area: district;
+        max-height: calc(100dvh - 170px);
+      }
+
+      #map {
+        grid-area: map;
+        min-height: 520px;
+        height: min(60dvh, 680px);
+      }
+
+      #factsPanel {
+        grid-area: facts;
+        border-left: 0;
+        border-top: 1px solid var(--line);
+        padding-top: 14px;
+        max-height: none;
+        overflow-y: visible;
+      }
+
+      .seat-card {
+        margin-bottom: 12px;
+      }
+
+      .facts-grid {
+        padding-bottom: 0;
+      }
     }
   
     .site-nav {
@@ -3030,7 +3074,7 @@ function highlightDistrictList() {
 
 function addLegend() {
   if (legend) map.removeControl(legend);
-  legend = L.control({ position: (state.view === "gender" || state.view === "competitiveness" || state.view === "uncontested") ? "bottomleft" : "bottomright" });
+  legend = L.control({ position: "bottomleft" });
   legend.onAdd = function() {
     const div = L.DomUtil.create("div", "legend");
     if (isTurnoutMode()) {
