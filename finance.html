@@ -363,6 +363,64 @@
       gap: 10px;
     }
 
+    .hero-mix {
+      padding: 16px 16px 14px;
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(248, 251, 255, 0.98) 0%, rgba(242, 247, 252, 0.98) 100%);
+      border: 1px solid #dce7f2;
+    }
+
+    .hero-mix .section-label {
+      color: #60728b;
+    }
+
+    .hero-mix-title {
+      margin-top: 8px;
+      color: var(--navy);
+      font-family: "Sora", sans-serif;
+      font-size: 23px;
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+    }
+
+    .hero-mix-copy {
+      margin-top: 8px;
+      color: var(--ink-soft);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .hero-mix .mix-meter {
+      margin-top: 14px;
+      height: 16px;
+    }
+
+    .hero-mix .mix-list {
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .hero-mix .mix-row {
+      padding: 12px 13px;
+      border-radius: 16px;
+    }
+
+    .hero-mix .mix-copy strong {
+      font-size: 13px;
+    }
+
+    .hero-mix .mix-copy span {
+      font-size: 12px;
+    }
+
+    .hero-mix .mix-amount {
+      font-size: 13px;
+    }
+
+    .hero-mix .mix-amount small {
+      font-size: 11px;
+    }
+
     .subject-cell {
       padding: 13px 14px;
       border-radius: 18px;
@@ -1133,26 +1191,42 @@
               <a href="running.html?chamber=${encodeURIComponent(profile.chamber)}&district=${encodeURIComponent(profile.district_number)}">Back to Who's Running?</a>
               <a href="meet.html?chamber=${encodeURIComponent(profile.chamber)}&district=${encodeURIComponent(profile.district_number)}">Back to Meet the Candidates</a>
             </div>
-            <div class="subject-grid">
-              <div class="subject-cell">
-                <div class="subject-cell-label">Beginning cash</div>
-                <div class="subject-cell-value">${formatCurrency(profile.beginning_cash)}</div>
-              </div>
-              <div class="subject-cell">
-                <div class="subject-cell-label">Ending cash</div>
-                <div class="subject-cell-value">${formatCurrency(profile.ending_cash)}</div>
-              </div>
-              <div class="subject-cell">
-                <div class="subject-cell-label">Money raised</div>
-                <div class="subject-cell-value">${formatCurrency(profile.money_raised)}</div>
-              </div>
-              <div class="subject-cell">
-                <div class="subject-cell-label">Money spent</div>
-                <div class="subject-cell-value">${formatCurrency(profile.money_spent)}</div>
-              </div>
-            </div>
+            ${buildHeroFundingMix(profile)}
           </aside>
         </section>
+      `;
+    }
+
+    function buildHeroFundingMix(profile) {
+      const buckets = profile.source_buckets || [];
+      if (!buckets.length) return "";
+      const total = buckets.reduce((sum, bucket) => sum + Number(bucket.amount || 0), 0) || 1;
+      return `
+        <div class="hero-mix">
+          <div class="section-label">Funding mix</div>
+          <div class="hero-mix-title">Where the money came from</div>
+          <div class="hero-mix-copy">A quick visual breakdown of the campaign’s reported funding sources for this filing period.</div>
+          <div class="mix-meter">
+            ${buckets.map(bucket => `
+              <span class="mix-segment mix-${escapeHtml(bucket.class_name || "default")}" style="width:${((Number(bucket.amount || 0) / total) * 100).toFixed(1)}%"></span>
+            `).join("")}
+          </div>
+          <div class="mix-list">
+            ${buckets.map(bucket => `
+              <div class="mix-row">
+                <div class="mix-dot mix-${escapeHtml(bucket.class_name || "default")}"></div>
+                <div class="mix-copy">
+                  <strong>${escapeHtml(bucket.label)}</strong>
+                  <span>${escapeHtml(bucket.description || "")}</span>
+                </div>
+                <div class="mix-amount">
+                  ${formatCurrency(bucket.amount)}
+                  <small>${formatPercent((Number(bucket.amount || 0) / total) * 100)}</small>
+                </div>
+              </div>
+            `).join("")}
+          </div>
+        </div>
       `;
     }
 
@@ -1422,7 +1496,6 @@
         ${buildSignals(profile)}
         <section class="content-grid">
           <div class="stack">
-            ${buildFundingMix(profile)}
             ${buildDonorHighlights(profile)}
             ${buildMoneyFlow(profile)}
           </div>
