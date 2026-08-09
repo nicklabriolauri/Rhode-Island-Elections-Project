@@ -93,12 +93,6 @@
           "amount": 1000.0
         },
         {
-          "donor": "Craig Mechler",
-          "type": "Individual",
-          "notes": "North Smithfield donor listed as retired.",
-          "amount": 500.0
-        },
-        {
           "donor": "Henry Breyer",
           "type": "Individual",
           "notes": "Employer listed as Max-Ord Rifles.",
@@ -111,16 +105,46 @@
           "amount": 520.51
         },
         {
-          "donor": "RI Health Care Association PAC",
-          "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing.",
-          "amount": 250.0
+          "donor": "Craig Mechler",
+          "type": "Individual",
+          "notes": "North Smithfield donor listed as retired.",
+          "amount": 500.0
         },
         {
           "donor": "Christopher Bilotti",
           "type": "Individual",
           "notes": "Employer listed as The Bilotti Group, Inc.",
           "amount": 260.25
+        },
+        {
+          "donor": "Roger Earle",
+          "type": "Individual",
+          "notes": "North Scituate donor listed as retired.",
+          "amount": 260.25
+        },
+        {
+          "donor": "RI Health Care Association PAC",
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing.",
+          "amount": 250.0
+        },
+        {
+          "donor": "Stephen P. Kelley",
+          "type": "Individual",
+          "notes": "Smithfield donor listed as retired.",
+          "amount": 250.0
+        },
+        {
+          "donor": "Joseph W. Walsh",
+          "type": "Individual",
+          "notes": "Employer listed as self-employed attorney.",
+          "amount": 250.0
+        },
+        {
+          "donor": "William G. Walsh",
+          "type": "Individual",
+          "notes": "Employer listed as Government Strategies.",
+          "amount": 250.0
         }
       ],
       "employer_networks": [
