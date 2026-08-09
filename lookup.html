@@ -999,11 +999,23 @@
       suggestionTimer = setTimeout(updateSuggestions, 120);
     });
 
+    function hydrateLookupFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      const address = params.get("address");
+      if (!address) return;
+      const input = document.getElementById("addressInput");
+      if (!input) return;
+      input.value = address;
+      setStatus("Address loaded from the homepage. Matching it to a Rhode Island precinct now...");
+      handleSearch();
+    }
+
     loadData().catch(error => {
       console.error(error);
       setStatus("Lookup data failed to load. Make sure the required precinct data files are uploaded to the website data folder.", true);
     });
     populateMunicipalities();
+    window.setTimeout(hydrateLookupFromUrl, 80);
   </script>
 </body>
 </html>
