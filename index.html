@@ -707,6 +707,13 @@
       color: #0f172a;
     }
 
+    .hero-search-action.compare {
+      background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
+      border-color: rgba(139, 92, 246, 0.28);
+      color: #312e81;
+      box-shadow: 0 10px 20px rgba(124, 58, 237, 0.12);
+    }
+
     .hero-search-match-list {
       display: grid;
       gap: 10px;
@@ -2531,7 +2538,7 @@
                 </div>
                 <div class="hero-search-match-actions">
                   <a class="hero-search-action primary" href="${buildRunningHref(candidate)}">Who’s on this ballot?</a>
-                  <a class="hero-search-action" href="${buildMeetHref(candidate)}">Compare candidates</a>
+                  <a class="hero-search-action compare" href="${buildMeetHref(candidate)}">Compare candidates</a>
                   ${financeHref ? `<a class="hero-search-action finance" href="${financeHref}">Campaign finance</a>` : ""}
                 </div>
               </article>
@@ -2635,8 +2642,8 @@
             <a class="hero-search-action primary" href="${buildLookupHref(candidate.address || query)}">Open Find My Precinct</a>
             <a class="hero-search-action" href="${houseHref}">House ballot</a>
             <a class="hero-search-action" href="${senateHref}">Senate ballot</a>
-            <a class="hero-search-action" href="${houseMeetHref}">Compare House candidates</a>
-            <a class="hero-search-action" href="${senateMeetHref}">Compare Senate candidates</a>
+            <a class="hero-search-action compare" href="${houseMeetHref}">Compare House candidates</a>
+            <a class="hero-search-action compare" href="${senateMeetHref}">Compare Senate candidates</a>
             <a class="hero-search-action finance" href="finance.html">Campaign finance</a>
           </div>
         </div>

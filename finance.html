@@ -175,6 +175,9 @@
     }
 
     .hero-story {
+      position: relative;
+      z-index: 3;
+      isolation: isolate;
       padding: 30px;
       background:
         radial-gradient(circle at top right, rgba(55, 197, 255, 0.16), transparent 28%),
@@ -244,6 +247,12 @@
       border-color: rgba(111, 125, 146, 0.2);
     }
 
+    .hero-pill.period-pill {
+      color: #0f5f7a;
+      background: linear-gradient(135deg, rgba(215, 244, 255, 0.92) 0%, rgba(232, 247, 255, 0.96) 100%);
+      border-color: rgba(125, 211, 252, 0.44);
+    }
+
     .hero-plain-note {
       margin-top: 18px;
       padding: 16px 18px;
@@ -311,6 +320,8 @@
     }
 
     .hero-side {
+      position: relative;
+      z-index: 1;
       padding: 24px;
       display: grid;
       gap: 16px;
@@ -640,9 +651,10 @@
     .hero-stat-label .inline-help-pop {
       top: auto;
       bottom: calc(100% + 10px);
-      right: auto;
-      left: -6px;
-      width: min(260px, 68vw);
+      right: -6px;
+      left: auto;
+      z-index: 80;
+      width: min(260px, 58vw);
     }
 
     .hero-stat-card .inline-help[open] {
@@ -1317,7 +1329,7 @@
             <div class="hero-pills">
               <div class="hero-pill">${escapeHtml(districtLabel)}</div>
               <div class="hero-pill ${partyTone}">${escapeHtml(partyLabel(profile.party))}</div>
-              <div class="hero-pill">${escapeHtml(profile.reporting_period_label)}</div>
+              <div class="hero-pill period-pill">${escapeHtml(profile.reporting_period_label)}</div>
             </div>
             <div class="hero-plain-note">
               <strong>Quick read:</strong> ${escapeHtml(quarterRead)}
@@ -1647,7 +1659,6 @@
         <section class="content-grid">
           <div class="stack">
             ${buildDonorHighlights(profile)}
-            ${buildMoneyFlow(profile)}
           </div>
           <div class="stack">
             ${buildHistory(profile)}
