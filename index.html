@@ -583,6 +583,123 @@
       animation-delay: .43s;
     }
 
+    .finance-spotlight {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+      gap: 18px;
+      align-items: stretch;
+      max-width: 980px;
+      margin: 0 auto 8px auto;
+      padding: 20px 22px;
+      border-radius: 28px;
+      border: 1px solid rgba(167, 243, 208, 0.18);
+      background:
+        radial-gradient(circle at top right, rgba(45, 212, 191, 0.14), transparent 28%),
+        linear-gradient(140deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.045) 100%);
+      box-shadow: 0 22px 44px rgba(5,10,28,0.16);
+      opacity: 0;
+      transform: translateY(16px);
+      animation: heroRise .9s ease forwards;
+      animation-delay: .35s;
+    }
+
+    .finance-spotlight-copy {
+      text-align: left;
+      min-width: 0;
+    }
+
+    .finance-spotlight-kicker {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 0 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(167, 243, 208, 0.22);
+      background: rgba(15, 118, 110, 0.12);
+      color: rgba(204, 251, 241, 0.92);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .finance-spotlight-title {
+      margin: 14px 0 8px 0;
+      font-family: "Sora", sans-serif;
+      font-size: 30px;
+      line-height: 1.02;
+      letter-spacing: -0.05em;
+      color: white;
+    }
+
+    .finance-spotlight-copy p {
+      margin: 0;
+      color: rgba(241,245,249,0.78);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .finance-spotlight-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .finance-spotlight-point {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 0 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      color: rgba(255,255,255,0.9);
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .finance-spotlight-side {
+      display: grid;
+      gap: 12px;
+      align-content: space-between;
+      min-width: 0;
+    }
+
+    .finance-spotlight-note {
+      padding: 14px 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(6, 182, 212, 0.12);
+      color: rgba(236,254,255,0.94);
+      font-size: 14px;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    .finance-spotlight-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      color: #052033;
+      background: linear-gradient(135deg, #8ef9e5 0%, #a5f3fc 50%, #e0f2fe 100%);
+      box-shadow: 0 18px 34px rgba(45,212,191,0.18);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+
+    .finance-spotlight-action:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 38px rgba(45,212,191,0.22);
+    }
+
     .entry-section {
       margin-top: 20px;
       padding: 24px 28px;
@@ -756,6 +873,12 @@
     .btn-primary.precinct {
       background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
       box-shadow: 0 14px 28px rgba(43,80,217,0.32);
+    }
+
+    .btn-primary.finance {
+      background: linear-gradient(135deg, #0f766e 0%, #14b8a6 55%, #67e8f9 100%);
+      box-shadow: 0 14px 28px rgba(20,184,166,0.28);
+      color: #f8fffe;
     }
 
     .btn-secondary {
@@ -1343,6 +1466,10 @@
         justify-content: center;
       }
 
+      .finance-spotlight {
+        grid-template-columns: 1fr;
+      }
+
       .entry-grid {
         grid-template-columns: 1fr;
       }
@@ -1474,6 +1601,23 @@
         gap: 10px;
       }
 
+      .finance-spotlight {
+        padding: 18px;
+      }
+
+      .finance-spotlight-title {
+        font-size: 24px;
+      }
+
+      .finance-spotlight-points {
+        flex-direction: column;
+      }
+
+      .finance-spotlight-point {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
       .entry-section {
         padding: 20px 18px;
       }
@@ -1553,6 +1697,7 @@
           <p class="summary" id="homeSummary">Election results, turnout maps, and precinct data, all in one place.</p>
           <p class="summary-helper" id="homeSummaryHelper">Start with Find My Precinct if you want the quickest path to the districts and ballot that apply to you.</p>
           <div class="cta-row" id="homeCtaRow"></div>
+          <div class="finance-spotlight" id="homeFinanceSpotlight" hidden></div>
           <div class="feature-tools">
             <button type="button" class="feature-toggle" id="homeFeatureToggle" aria-expanded="false" aria-controls="homeFeaturePanel">More map views</button>
             <div class="feature-panel" id="homeFeaturePanel" hidden>
@@ -1638,6 +1783,7 @@
           <a href="map.html">Map</a>
           <a href="running.html">Who's Running?</a>
           <a href="meet.html">Meet the Candidates</a>
+          <a href="finance.html">Campaign Finance</a>
           <a href="lookup.html">Find My Precinct</a>
           <a href="methodology.html">Methodology</a>
           <a href="about.html">About</a>
@@ -1675,6 +1821,15 @@
       voter: {
         summary: "Find your precinct, see who is on your ballot, and explore election results.",
         summaryHelper: "Start with Find My Precinct if you want the quickest path to the districts and ballot that apply to you.",
+        financeSpotlight: {
+          kicker: "New campaign finance profiles",
+          title: "See who funded the campaign, who gave the biggest checks, and how fast money was spent.",
+          summary: "Open a cleaner campaign finance view with plain-English cards for money raised, money spent, cash on hand, major donors, and company-linked donor names.",
+          points: ["Money in and money out", "Biggest donors first", "Quarter-by-quarter history"],
+          note: "Built for public use: fewer filing codes, more visible patterns.",
+          actionLabel: "Open Campaign Finance",
+          actionHref: "finance.html"
+        },
         featureKicker: "Additional map views, 2012-2024",
         featureToggleLabel: "More map views",
         featureNote: "Use these optional views to compare turnout, uncontested districts, gender representation, and electoral competitiveness across Rhode Island from 2012 through 2024.",
@@ -1696,6 +1851,7 @@
           { label: "Find My Precinct", href: "lookup.html" },
           { label: "Who's On My Ballot", href: "running.html" },
           { label: "Compare Candidates", href: "meet.html" },
+          { label: "Campaign Finance", href: "finance.html" },
           { label: "Map", href: "map.html" },
           { label: "About", href: "about.html" }
         ]
@@ -1703,6 +1859,15 @@
       research: {
         summary: "Methods, source files, and public election data for deeper Rhode Island analysis.",
         summaryHelper: "Use this mode if you want documentation, downloadable files, or the same structured data that powers the public site.",
+        financeSpotlight: {
+          kicker: "Campaign finance data",
+          title: "Open public-facing finance profiles built from the underlying Rhode Island filings.",
+          summary: "Use this section to move from the raw filing toward a more readable candidate-level summary without losing the quarter history or donor details that matter for research.",
+          points: ["Quarter history", "Large donors", "Employer-linked donor names"],
+          note: "The raw filing still matters; this layer simply makes it easier to interpret quickly.",
+          actionLabel: "Open Finance Profiles",
+          actionHref: "finance.html"
+        },
         featureKicker: "Explore core source files",
         featureToggleLabel: "Source files and datasets",
         featureNote: "Open the same structured files that power the public map, turnout tools, and filing pages.",
@@ -1733,6 +1898,7 @@
           { label: "Map", href: "map.html" },
           { label: "Who's Running?", href: "running.html" },
           { label: "Meet the Candidates", href: "meet.html" },
+          { label: "Campaign Finance", href: "finance.html" },
           { label: "Find My Precinct", href: "lookup.html" },
           { label: "Methodology", href: "methodology.html" },
           { label: "About", href: "about.html" },
@@ -1772,6 +1938,7 @@
       const summary = document.getElementById("homeSummary");
       const summaryHelper = document.getElementById("homeSummaryHelper");
       const ctaRow = document.getElementById("homeCtaRow");
+      const financeSpotlight = document.getElementById("homeFinanceSpotlight");
       const featureToggle = document.getElementById("homeFeatureToggle");
       const featureKicker = document.getElementById("homeFeatureKicker");
       const featureRow = document.getElementById("homeFeatureRow");
@@ -1786,6 +1953,29 @@
       renderPrimaryNav(config.nav || []);
       if (ctaRow) {
         ctaRow.innerHTML = config.ctas.map(item => buildAnchor(item, item.style === "primary" ? "btn-primary" : "btn-secondary")).join("");
+      }
+      if (financeSpotlight) {
+        const finance = config.financeSpotlight;
+        if (finance) {
+          financeSpotlight.hidden = false;
+          financeSpotlight.innerHTML = `
+            <div class="finance-spotlight-copy">
+              <div class="finance-spotlight-kicker">${finance.kicker}</div>
+              <div class="finance-spotlight-title">${finance.title}</div>
+              <p>${finance.summary}</p>
+              <div class="finance-spotlight-points">
+                ${(finance.points || []).map(point => `<div class="finance-spotlight-point">${point}</div>`).join("")}
+              </div>
+            </div>
+            <div class="finance-spotlight-side">
+              <div class="finance-spotlight-note">${finance.note}</div>
+              <a class="finance-spotlight-action" href="${finance.actionHref}">${finance.actionLabel}</a>
+            </div>
+          `;
+        } else {
+          financeSpotlight.hidden = true;
+          financeSpotlight.innerHTML = "";
+        }
       }
       if (featureRow) {
         featureRow.innerHTML = config.features.map(item => buildAnchor(item, `feature-card ${item.className || ""}`.trim())).join("");

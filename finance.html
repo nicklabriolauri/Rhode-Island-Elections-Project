@@ -4,57 +4,67 @@
   <meta charset="utf-8" />
   <title>Campaign Finance | Rhode Island Elections Project</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Plain-English campaign finance profiles for Rhode Island candidates, starting with who funded the campaign, how money was spent, and what the filing means." />
+  <meta name="description" content="A simpler campaign finance view for Rhode Island elections, showing who funded a campaign, what it spent, and how much cash it still has on hand." />
   <meta property="og:title" content="Campaign Finance | Rhode Island Elections Project" />
-  <meta property="og:description" content="Plain-English campaign finance profiles for Rhode Island candidates." />
+  <meta property="og:description" content="A simpler campaign finance view for Rhode Island elections." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.rhodeislandelectionsproject.org/finance.html" />
   <meta property="og:site_name" content="Rhode Island Elections Project" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Campaign Finance | Rhode Island Elections Project" />
-  <meta name="twitter:description" content="Plain-English campaign finance profiles for Rhode Island candidates." />
+  <meta name="twitter:description" content="A simpler campaign finance view for Rhode Island elections." />
   <link rel="canonical" href="https://www.rhodeislandelectionsproject.org/finance.html" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --ink: #142033;
-      --ink-soft: #5f6b7a;
-      --navy: #172547;
-      --navy-deep: #101a34;
-      --paper: #f5f1e8;
-      --panel: rgba(255, 255, 255, 0.97);
-      --line: #e6e1d5;
-      --shadow: 0 18px 44px rgba(16, 26, 52, 0.08);
-      --blue: #3457d5;
-      --blue-soft: rgba(52, 87, 213, 0.12);
-      --red: #dc4f43;
-      --red-soft: rgba(220, 79, 67, 0.12);
-      --gold: #d89d26;
-      --gold-soft: rgba(216, 157, 38, 0.16);
-      --teal: #287b74;
-      --teal-soft: rgba(40, 123, 116, 0.12);
-      --slate-soft: #eef2f7;
+      --bg: #eef4fb;
+      --bg-2: #f8fbff;
+      --ink: #112036;
+      --ink-soft: #5f7088;
+      --line: #d8e3f0;
+      --panel: rgba(255, 255, 255, 0.94);
+      --shadow: 0 24px 48px rgba(17, 32, 54, 0.08);
+      --navy: #13264a;
+      --cyan: #37c5ff;
+      --cyan-soft: rgba(55, 197, 255, 0.14);
+      --mint: #15b79e;
+      --mint-soft: rgba(21, 183, 158, 0.14);
+      --violet: #6d5efc;
+      --violet-soft: rgba(109, 94, 252, 0.14);
+      --coral: #ff6f61;
+      --coral-soft: rgba(255, 111, 97, 0.14);
+      --amber: #f4b740;
+      --amber-soft: rgba(244, 183, 64, 0.16);
+      --slate-soft: #f3f7fb;
     }
 
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      min-height: 100vh;
+      font-family: "Instrument Sans", sans-serif;
       color: var(--ink);
       background:
-        radial-gradient(circle at top left, rgba(52, 87, 213, 0.08), transparent 24%),
-        linear-gradient(180deg, #f6f3ec 0%, #f1ede4 100%);
+        radial-gradient(circle at top left, rgba(55, 197, 255, 0.12), transparent 26%),
+        radial-gradient(circle at top right, rgba(109, 94, 252, 0.1), transparent 24%),
+        linear-gradient(180deg, #f5f9ff 0%, #edf3fb 100%);
     }
+
     a { color: inherit; }
 
     header {
       padding: 22px 24px 18px;
       color: white;
-      background: linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 100%);
+      background: linear-gradient(180deg, #0f1c39 0%, #162a52 100%);
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
+
     .header-shell {
       max-width: 1220px;
       margin: 0 auto;
@@ -62,19 +72,23 @@
       flex-direction: column;
       gap: 16px;
     }
+
     .brand-row {
       display: flex;
       gap: 16px;
       align-items: flex-start;
       min-width: 0;
     }
+
     .brand-row img {
       width: 72px;
       height: 72px;
       object-fit: contain;
       flex: 0 0 auto;
     }
+
     .brand-copy { min-width: 0; }
+
     .eyebrow {
       display: inline-flex;
       align-items: center;
@@ -82,31 +96,36 @@
       padding: 0 12px;
       border-radius: 999px;
       border: 1px solid rgba(255,255,255,0.14);
-      color: rgba(255,255,255,0.75);
+      color: rgba(255,255,255,0.78);
       background: rgba(255,255,255,0.05);
       font-size: 11px;
       font-weight: 800;
       letter-spacing: 0.15em;
       text-transform: uppercase;
     }
+
     .brand-copy h1 {
       margin: 10px 0 0;
+      font-family: "Sora", sans-serif;
       font-size: 30px;
       line-height: 1.02;
-      letter-spacing: -0.05em;
+      letter-spacing: -0.055em;
     }
+
     .brand-copy p {
       margin: 10px 0 0;
-      max-width: 780px;
+      max-width: 760px;
       color: rgba(255,255,255,0.82);
       font-size: 15px;
       line-height: 1.5;
     }
+
     .site-nav {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
     }
+
     .site-nav a {
       color: white;
       text-decoration: none;
@@ -118,10 +137,12 @@
       font-weight: 800;
       white-space: nowrap;
     }
+
     .site-nav a.active {
-      background: white;
-      color: var(--navy);
-      box-shadow: 0 10px 22px rgba(8, 15, 31, 0.18);
+      background: linear-gradient(135deg, #8ef9e5 0%, #a5f3fc 50%, #e0f2fe 100%);
+      color: #08253c;
+      border-color: rgba(255,255,255,0.34);
+      box-shadow: 0 14px 30px rgba(15, 118, 110, 0.2);
     }
 
     main {
@@ -129,89 +150,117 @@
       margin: 0 auto;
       padding: 26px 24px 44px;
     }
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.18fr) 360px;
-      gap: 18px;
-      margin-bottom: 18px;
-    }
+
     .panel {
       background: var(--panel);
       border: 1px solid var(--line);
-      border-radius: 24px;
+      border-radius: 28px;
       box-shadow: var(--shadow);
-    }
-    .hero-copy {
-      padding: 28px;
-      background:
-        radial-gradient(circle at bottom left, rgba(52,87,213,0.12), transparent 28%),
-        linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(251,249,245,0.96) 100%);
-    }
-    .hero-copy .local-eyebrow {
-      color: #66758a;
-      border-color: #dce4ef;
-      background: #f8fbff;
-    }
-    .hero-copy h2 {
-      margin: 10px 0 0;
-      max-width: 650px;
-      font-size: 50px;
-      line-height: 0.96;
-      letter-spacing: -0.06em;
-      color: var(--navy);
-    }
-    .hero-copy p {
-      margin: 14px 0 0;
-      max-width: 640px;
-      color: var(--ink-soft);
-      font-size: 17px;
-      line-height: 1.6;
-    }
-    .hero-note,
-    .draft-footer {
-      margin-top: 18px;
-      padding: 14px 16px;
-      border-radius: 16px;
-      background: #faf7ef;
-      border: 1px solid #eadfca;
-      color: #556273;
-      font-size: 14px;
-      line-height: 1.55;
+      backdrop-filter: blur(10px);
     }
 
-    .subject-card {
-      padding: 22px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.14fr) minmax(320px, 0.86fr);
+      gap: 18px;
+      margin-bottom: 18px;
     }
+
+    .hero-story {
+      padding: 30px;
+      background:
+        radial-gradient(circle at top right, rgba(55, 197, 255, 0.16), transparent 28%),
+        radial-gradient(circle at bottom left, rgba(109, 94, 252, 0.12), transparent 22%),
+        linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(245,250,255,0.97) 100%);
+    }
+
+    .hero-story h2 {
+      margin: 14px 0 0;
+      max-width: 720px;
+      font-family: "Sora", sans-serif;
+      font-size: 54px;
+      line-height: 0.95;
+      letter-spacing: -0.065em;
+      color: var(--navy);
+    }
+
+    .hero-story p {
+      margin: 16px 0 0;
+      max-width: 700px;
+      color: var(--ink-soft);
+      font-size: 17px;
+      line-height: 1.62;
+    }
+
+    .hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
+      padding: 0 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.8);
+      border: 1px solid #dbe8f4;
+      color: #2a3d57;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .hero-plain-note {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(21,183,158,0.12) 0%, rgba(55,197,255,0.12) 100%);
+      border: 1px solid rgba(55,197,255,0.18);
+      color: #24435f;
+      font-size: 14px;
+      line-height: 1.58;
+    }
+
+    .hero-side {
+      padding: 24px;
+      display: grid;
+      gap: 16px;
+      align-content: start;
+    }
+
     .subject-kicker,
     .section-label {
-      color: #778395;
+      color: #72839a;
       font-size: 11px;
       font-weight: 900;
       letter-spacing: 0.16em;
       text-transform: uppercase;
     }
+
     .subject-name {
-      font-size: 32px;
-      line-height: 1;
-      letter-spacing: -0.05em;
+      font-size: 34px;
+      line-height: 0.98;
+      letter-spacing: -0.055em;
       color: var(--navy);
       font-weight: 900;
       margin-top: 8px;
     }
+
     .subject-meta {
       color: var(--ink-soft);
       font-size: 15px;
-      line-height: 1.55;
+      line-height: 1.58;
       margin-top: 10px;
     }
+
     .subject-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
     }
+
     .subject-actions a {
       display: inline-flex;
       align-items: center;
@@ -219,286 +268,426 @@
       min-height: 40px;
       padding: 0 14px;
       border-radius: 999px;
-      border: 1px solid #dce4ef;
+      border: 1px solid #dce6f1;
       background: #fff;
       color: var(--navy);
       text-decoration: none;
       font-size: 13px;
       font-weight: 900;
     }
+
     .subject-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 10px;
     }
+
     .subject-cell {
-      padding: 12px 13px;
-      border-radius: 16px;
+      padding: 13px 14px;
+      border-radius: 18px;
       background: var(--slate-soft);
-      border: 1px solid #dde4ee;
+      border: 1px solid #dde7f1;
     }
+
     .subject-cell-label {
-      color: #748093;
+      color: #748499;
       font-size: 10px;
       font-weight: 900;
       letter-spacing: 0.14em;
       text-transform: uppercase;
     }
+
     .subject-cell-value {
       margin-top: 6px;
       font-size: 18px;
-      line-height: 1.15;
+      line-height: 1.16;
       font-weight: 900;
       color: var(--ink);
     }
 
-    .summary-grid {
+    .signal-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 16px;
       margin-bottom: 18px;
     }
-    .summary-card { padding: 18px 18px 16px; }
-    .summary-card .label {
-      color: #748093;
+
+    .signal-card {
+      padding: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .signal-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 5px;
+      border-radius: 5px;
+    }
+
+    .signal-card.raised::before { background: var(--mint); }
+    .signal-card.spent::before { background: var(--coral); }
+    .signal-card.cash::before { background: var(--violet); }
+    .signal-card.change::before { background: var(--amber); }
+
+    .signal-label {
+      color: #738399;
       font-size: 11px;
       font-weight: 900;
       letter-spacing: 0.14em;
       text-transform: uppercase;
     }
-    .summary-card .value {
+
+    .signal-value {
       margin-top: 10px;
+      font-family: "Sora", sans-serif;
       font-size: 34px;
-      line-height: 0.96;
+      line-height: 0.94;
       letter-spacing: -0.045em;
-      font-weight: 900;
       color: var(--navy);
     }
-    .summary-card .detail {
+
+    .signal-detail {
       margin-top: 8px;
       color: var(--ink-soft);
       font-size: 14px;
       line-height: 1.5;
     }
-    .summary-card.in { border-top: 4px solid var(--blue); }
-    .summary-card.out { border-top: 4px solid var(--red); }
-    .summary-card.cash { border-top: 4px solid var(--teal); }
-    .summary-card.delta { border-top: 4px solid var(--gold); }
 
     .content-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
+      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
       gap: 18px;
     }
+
     .stack {
       display: grid;
       gap: 18px;
     }
-    .section-card { padding: 22px; }
+
+    .section-card {
+      padding: 24px;
+    }
+
     .section-card h3 {
       margin: 8px 0 0;
-      font-size: 28px;
+      font-family: "Sora", sans-serif;
+      font-size: 30px;
       line-height: 1.02;
-      letter-spacing: -0.045em;
+      letter-spacing: -0.05em;
       color: var(--navy);
     }
+
     .section-copy {
       margin: 10px 0 0;
       color: var(--ink-soft);
       font-size: 15px;
-      line-height: 1.6;
+      line-height: 1.62;
     }
 
-    .history-grid {
+    .money-flow-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(250px, 0.92fr);
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .meter-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .meter-row {
+      padding: 14px 15px;
+      border-radius: 18px;
+      background: #f9fbfe;
+      border: 1px solid #dde8f3;
+    }
+
+    .meter-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+      margin-bottom: 8px;
+    }
+
+    .meter-label {
+      font-size: 14px;
+      font-weight: 800;
+      color: #1d3048;
+    }
+
+    .meter-amount {
+      font-size: 14px;
+      font-weight: 900;
+      color: var(--navy);
+      white-space: nowrap;
+    }
+
+    .meter-track {
+      height: 12px;
+      border-radius: 999px;
+      background: #e8f0f7;
+      overflow: hidden;
+    }
+
+    .meter-fill {
+      height: 100%;
+      border-radius: 999px;
+    }
+
+    .meter-fill.raised { background: linear-gradient(90deg, #10b981 0%, #5eead4 100%); }
+    .meter-fill.spent { background: linear-gradient(90deg, #ff6f61 0%, #ff9b8f 100%); }
+    .meter-fill.cash { background: linear-gradient(90deg, #6d5efc 0%, #9ea7ff 100%); }
+    .meter-fill.change { background: linear-gradient(90deg, #f59e0b 0%, #fcd34d 100%); }
+
+    .meter-caption {
+      margin-top: 8px;
+      color: #6a7b91;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .mini-callouts {
+      display: grid;
+      gap: 12px;
+    }
+
+    .mini-callout {
+      padding: 16px;
+      border-radius: 20px;
+      border: 1px solid #dce7f2;
+      background: linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(246,250,255,0.98) 100%);
+    }
+
+    .mini-callout strong {
+      display: block;
+      color: var(--navy);
+      font-size: 14px;
+      line-height: 1.45;
+      margin-bottom: 6px;
+    }
+
+    .mini-callout span {
+      display: block;
+      color: var(--ink-soft);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .mix-meter {
+      display: flex;
+      height: 18px;
+      margin-top: 18px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: #e6eef7;
+    }
+
+    .mix-segment { height: 100%; }
+    .mix-individuals { background: linear-gradient(90deg, #15b79e 0%, #5eead4 100%); }
+    .mix-aggregate { background: linear-gradient(90deg, #37c5ff 0%, #7dd3fc 100%); }
+    .mix-pacs { background: linear-gradient(90deg, #6d5efc 0%, #a5b4fc 100%); }
+    .mix-refunds { background: linear-gradient(90deg, #f4b740 0%, #fde68a 100%); }
+    .mix-default { background: linear-gradient(90deg, #94a3b8 0%, #cbd5e1 100%); }
+
+    .mix-list {
       display: grid;
       gap: 12px;
       margin-top: 18px;
     }
-    .history-card {
-      padding: 16px;
+
+    .mix-row {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: start;
+      padding: 14px 15px;
       border-radius: 18px;
-      background: #f8fbff;
-      border: 1px solid #dfe8f6;
+      background: #f9fbfe;
+      border: 1px solid #dde8f3;
     }
-    .history-top {
+
+    .mix-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      margin-top: 4px;
+    }
+
+    .mix-copy strong {
+      display: block;
+      color: #1a3049;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .mix-copy span {
+      display: block;
+      margin-top: 4px;
+      color: #6d7d91;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .mix-amount {
+      text-align: right;
+      white-space: nowrap;
+      font-size: 14px;
+      font-weight: 900;
+      color: var(--navy);
+    }
+
+    .mix-amount small {
+      display: block;
+      margin-top: 3px;
+      color: #6b7c92;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .donor-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .donor-card {
+      padding: 16px;
+      border-radius: 20px;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+      border: 1px solid #dde8f2;
+    }
+
+    .donor-type {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 0 10px;
+      border-radius: 999px;
+      background: var(--cyan-soft);
+      color: #11658a;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .donor-card h4 {
+      margin: 12px 0 0;
+      font-size: 22px;
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      color: var(--navy);
+    }
+
+    .donor-card p {
+      margin: 8px 0 0;
+      color: var(--ink-soft);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .donor-amount {
+      margin-top: 12px;
+      font-size: 24px;
+      line-height: 1;
+      font-weight: 900;
+      color: #112d4e;
+    }
+
+    .network-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .network-pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
+      padding: 0 14px;
+      border-radius: 999px;
+      background: #f8fbff;
+      border: 1px solid #dce7f1;
+      color: #264159;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .timeline-card {
+      padding: 16px;
+      border-radius: 20px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(247,250,255,0.98) 100%);
+      border: 1px solid #dce7f2;
+    }
+
+    .timeline-top {
       display: flex;
       justify-content: space-between;
       gap: 12px;
       align-items: baseline;
       flex-wrap: wrap;
     }
-    .history-label {
-      font-size: 20px;
+
+    .timeline-label {
+      font-size: 15px;
       font-weight: 900;
-      letter-spacing: -0.03em;
       color: var(--navy);
     }
-    .history-dates {
-      color: #6f7d90;
+
+    .timeline-range {
+      color: #6d7d91;
       font-size: 13px;
       font-weight: 700;
     }
-    .history-stats {
-      margin-top: 12px;
+
+    .timeline-stats {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 10px;
+      margin-top: 12px;
     }
-    .history-stat {
+
+    .timeline-stat {
       padding: 10px 12px;
-      border-radius: 14px;
-      background: white;
-      border: 1px solid #e1e8f2;
+      border-radius: 16px;
+      background: #f2f7fc;
+      border: 1px solid #dde7f1;
     }
-    .history-stat span {
+
+    .timeline-stat span {
       display: block;
     }
-    .history-stat .k {
-      color: #788496;
+
+    .timeline-stat .k {
+      color: #738399;
       font-size: 10px;
-      font-weight: 900;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-    .history-stat .v {
-      margin-top: 6px;
-      color: var(--ink);
-      font-size: 18px;
-      font-weight: 900;
-    }
-    .history-note {
-      margin-top: 12px;
-      color: var(--ink-soft);
-      font-size: 14px;
-      line-height: 1.55;
-    }
-
-    .source-bars {
-      display: grid;
-      gap: 12px;
-      margin-top: 18px;
-    }
-    .source-row {
-      display: grid;
-      grid-template-columns: 210px minmax(0, 1fr) 110px;
-      gap: 14px;
-      align-items: center;
-    }
-    .source-label {
-      font-size: 14px;
-      font-weight: 800;
-      color: var(--ink);
-    }
-    .source-bar {
-      height: 14px;
-      border-radius: 999px;
-      background: #edf2f8;
-      overflow: hidden;
-      box-shadow: inset 0 0 0 1px rgba(20,32,51,0.04);
-    }
-    .source-fill {
-      height: 100%;
-      border-radius: inherit;
-    }
-    .source-fill.individuals { background: linear-gradient(90deg, #4266df, #5f84f0); }
-    .source-fill.aggregate { background: linear-gradient(90deg, #5f7bd3, #89a4ef); }
-    .source-fill.pacs { background: linear-gradient(90deg, #248173, #43aa93); }
-    .source-fill.refunds { background: linear-gradient(90deg, #c69a2e, #ebc96c); }
-    .source-amount {
-      text-align: right;
-      font-weight: 900;
-      font-variant-numeric: tabular-nums;
-      color: var(--ink);
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 16px;
-    }
-    th, td {
-      padding: 11px 0;
-      border-top: 1px solid #e7edf4;
-      text-align: left;
-      vertical-align: top;
-    }
-    th {
-      color: #748093;
-      font-size: 11px;
       font-weight: 900;
       letter-spacing: 0.14em;
       text-transform: uppercase;
     }
-    td {
-      font-size: 14px;
-      line-height: 1.45;
-      color: var(--ink);
-      padding-right: 12px;
-    }
-    td.amount {
-      text-align: right;
-      white-space: nowrap;
-      padding-right: 0;
-      font-variant-numeric: tabular-nums;
-      font-weight: 900;
-    }
-    .table-note {
-      margin-top: 10px;
-      color: #6b7789;
-      font-size: 13px;
-      line-height: 1.55;
-    }
 
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-    }
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      min-height: 38px;
-      padding: 0 14px;
-      border-radius: 999px;
-      border: 1px solid #d9e1eb;
-      background: white;
-      color: #314154;
-      font-size: 13px;
-      font-weight: 800;
-    }
-    .pill small {
-      margin-left: 6px;
-      color: #708096;
-      font-weight: 700;
-    }
-
-    .category-list,
-    .takeaway-list {
-      display: grid;
-      gap: 12px;
-      margin-top: 16px;
-    }
-    .category-item,
-    .takeaway {
-      padding: 14px 16px;
-      border-radius: 16px;
-      border: 1px solid #e3e8ef;
-      background: #fbfaf7;
-    }
-    .takeaway {
-      background: #f8fbff;
-      border-color: #dfe8f6;
-    }
-    .category-item strong,
-    .takeaway strong {
-      display: block;
-      color: var(--navy);
+    .timeline-stat .v {
+      margin-top: 5px;
+      color: #14263f;
       font-size: 15px;
-      margin-bottom: 4px;
+      font-weight: 900;
+      line-height: 1.2;
     }
-    .category-item span,
-    .takeaway span {
+
+    .timeline-note {
+      margin-top: 10px;
       color: var(--ink-soft);
       font-size: 14px;
       line-height: 1.55;
@@ -506,76 +695,111 @@
 
     .explain-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 12px;
       margin-top: 18px;
     }
+
     .explain-card {
       padding: 16px;
-      border-radius: 16px;
+      border-radius: 20px;
       background: #f8fbff;
-      border: 1px solid #dfe8f6;
+      border: 1px solid #dde8f2;
     }
+
     .explain-card strong {
       display: block;
-      margin-bottom: 6px;
-      font-size: 14px;
       color: var(--navy);
+      font-size: 15px;
+      line-height: 1.4;
     }
+
     .explain-card span {
+      display: block;
+      margin-top: 8px;
       color: var(--ink-soft);
       font-size: 14px;
+      line-height: 1.58;
+    }
+
+    .source-note {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: #fffdf8;
+      border: 1px solid #f1e2bc;
+      color: #64553d;
+      font-size: 13px;
       line-height: 1.55;
     }
 
+    .loading-state,
     .empty-state {
-      padding: 22px;
-      font-size: 15px;
+      padding: 30px;
+      font-size: 16px;
       line-height: 1.6;
       color: var(--ink-soft);
     }
+
+    .loading-state strong,
     .empty-state strong {
       display: block;
-      color: var(--navy);
-      font-size: 24px;
-      letter-spacing: -0.03em;
-      line-height: 1.05;
       margin-bottom: 8px;
+      color: var(--navy);
+      font-size: 20px;
     }
 
     @media (max-width: 1080px) {
       .hero,
-      .content-grid {
+      .content-grid,
+      .money-flow-grid {
         grid-template-columns: 1fr;
       }
-      .summary-grid {
-        grid-template-columns: 1fr 1fr;
+
+      .signal-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
-    @media (max-width: 720px) {
+    @media (max-width: 760px) {
       header,
       main {
         padding-left: 16px;
         padding-right: 16px;
       }
+
       .brand-row {
-        flex-direction: column;
+        align-items: flex-start;
       }
-      .hero-copy h2 {
-        font-size: 40px;
-      }
-      .summary-grid,
-      .explain-grid,
-      .history-stats,
-      .subject-grid {
-        grid-template-columns: 1fr;
-      }
-      .source-row {
-        grid-template-columns: 1fr;
+
+      .site-nav {
         gap: 8px;
       }
-      .source-amount {
+
+      .hero-story,
+      .hero-side,
+      .section-card {
+        padding: 20px;
+      }
+
+      .hero-story h2 {
+        font-size: 38px;
+      }
+
+      .signal-grid,
+      .subject-grid,
+      .timeline-stats,
+      .donor-grid,
+      .explain-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mix-row {
+        grid-template-columns: auto minmax(0, 1fr);
+      }
+
+      .mix-amount {
+        grid-column: 2;
         text-align: left;
       }
     }
@@ -587,56 +811,59 @@
       <div class="brand-row">
         <img src="riep-logo-sunburst-white.png" alt="Rhode Island Elections Project logo" />
         <div class="brand-copy">
-          <div class="eyebrow">Campaign Finance</div>
+          <div class="eyebrow">Campaign Finance Explorer</div>
           <h1>Rhode Island Elections Project</h1>
-          <p>Plain-English campaign finance profiles that start with the questions voters usually have first: who funded the campaign, how much was spent, and what the filing suggests at a glance.</p>
+          <p>Follow who funded a campaign, how much it spent, and what cash remained without forcing voters through raw filing codes first.</p>
         </div>
       </div>
-      <nav class="site-nav">
+      <nav class="site-nav" aria-label="Main">
         <a href="index.html">Home</a>
         <a href="map.html">Map</a>
         <a href="running.html">Who's Running?</a>
         <a href="meet.html">Meet the Candidates</a>
+        <a href="finance.html" class="active">Campaign Finance</a>
         <a href="lookup.html">Find My Precinct</a>
         <a href="methodology.html">Methodology</a>
-        <a class="active" href="finance.html">Campaign Finance</a>
+        <a href="about.html">About</a>
       </nav>
     </div>
   </header>
 
-  <main id="financeApp">
-    <div class="panel empty-state">
-      <strong>Loading campaign finance profile</strong>
-      Please wait while this page loads the filing summary.
+  <main>
+    <div id="financeApp">
+      <div class="panel loading-state">
+        <strong>Loading campaign finance profile…</strong>
+        Pulling the latest published finance summary for this candidate.
+      </div>
     </div>
   </main>
 
   <script>
-    const currencyFormatter = new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: "USD",
-      maximumFractionDigits: 0
-    });
-
     function escapeHtml(value) {
       return String(value ?? "")
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#39;");
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
     }
 
     function formatCurrency(value) {
-      if (typeof value !== "number" || Number.isNaN(value)) return "Not listed";
-      return currencyFormatter.format(value);
+      return new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+        maximumFractionDigits: 2
+      }).format(Number(value || 0));
     }
 
     function formatSignedCurrency(value) {
-      if (typeof value !== "number" || Number.isNaN(value)) return "Not listed";
-      if (value > 0) return `+${currencyFormatter.format(value)}`;
-      if (value < 0) return `-${currencyFormatter.format(Math.abs(value))}`;
-      return currencyFormatter.format(0);
+      const amount = Number(value || 0);
+      return `${amount >= 0 ? "+" : "-"}${formatCurrency(Math.abs(amount))}`;
+    }
+
+    function formatPercent(value) {
+      const amount = Number(value || 0);
+      return `${amount.toFixed(1)}%`;
     }
 
     function chamberLabel(chamber) {
@@ -652,7 +879,7 @@
 
     function withAssetVersion(url) {
       const separator = url.includes("?") ? "&" : "?";
-      return `${url}${separator}v=20260808`;
+      return `${url}${separator}v=20260808b`;
     }
 
     function getRequestedProfile(profiles) {
@@ -673,15 +900,30 @@
 
     function buildHero(profile) {
       const districtLabel = `${chamberLabel(profile.chamber)} District ${profile.district_number}`;
+      const strongestBucket = (profile.source_buckets || []).slice().sort((a, b) => (b.amount || 0) - (a.amount || 0))[0];
+      const quarterRead = Number(profile.net_change || 0) >= 0
+        ? "This campaign raised more than it spent during the filing period."
+        : "This campaign spent more than it raised during the filing period.";
+
       return `
         <section class="hero">
-          <div class="panel hero-copy">
-            <div class="eyebrow local-eyebrow">Finance, in plain English</div>
-            <h2>Show who funded the campaign, how money was spent, and what it means.</h2>
-            <p>${escapeHtml(profile.summary_intro || "This page translates a campaign finance filing into a more readable public summary.")}</p>
-            <div class="hero-note"><strong>Plain-English rule:</strong> lead with the story, not the filing codes. Start with money raised, money spent, cash on hand, top donors, employer-linked donor networks, and the main spending themes.</div>
+          <div class="panel hero-story">
+            <div class="eyebrow" style="color:#47617b;border-color:#d9e7f5;background:#f7fbff;">Finance, simplified</div>
+            <h2>Follow the money behind ${escapeHtml(profile.candidate_name)}.</h2>
+            <p>${escapeHtml(profile.summary_intro || "This page turns a Rhode Island campaign finance filing into a simpler public summary.")}</p>
+            <div class="hero-pills">
+              <div class="hero-pill">${escapeHtml(districtLabel)}</div>
+              <div class="hero-pill">${escapeHtml(partyLabel(profile.party))}</div>
+              <div class="hero-pill">${escapeHtml(profile.reporting_period_label)}</div>
+            </div>
+            <div class="hero-plain-note">
+              <strong>What this page does:</strong> It starts with the broad picture first: how much money came in, how much went out, how much is still on hand, and which donors or donor networks stand out most clearly.
+              ${strongestBucket ? ` Right now, the largest identified funding stream is <strong>${escapeHtml(strongestBucket.label)}</strong>.` : ""}
+              <br /><br />
+              <strong>Quick read:</strong> ${escapeHtml(quarterRead)}
+            </div>
           </div>
-          <aside class="panel subject-card">
+          <aside class="panel hero-side">
             <div>
               <div class="subject-kicker">Candidate finance profile</div>
               <div class="subject-name">${escapeHtml(profile.candidate_name)}</div>
@@ -689,7 +931,7 @@
                 ${escapeHtml(profile.office_sought)}<br />
                 ${escapeHtml(partyLabel(profile.party))}<br />
                 ${escapeHtml(districtLabel)}<br />
-                Reporting period: ${escapeHtml(profile.reporting_period_label)}
+                Source file: ${escapeHtml(profile.report_label || "Campaign filing")}
               </div>
             </div>
             <div class="subject-actions">
@@ -706,12 +948,12 @@
                 <div class="subject-cell-value">${formatCurrency(profile.ending_cash)}</div>
               </div>
               <div class="subject-cell">
-                <div class="subject-cell-label">Office sought</div>
-                <div class="subject-cell-value">${escapeHtml(profile.office_sought)}</div>
+                <div class="subject-cell-label">Money raised</div>
+                <div class="subject-cell-value">${formatCurrency(profile.money_raised)}</div>
               </div>
               <div class="subject-cell">
-                <div class="subject-cell-label">Source file</div>
-                <div class="subject-cell-value">${escapeHtml(profile.report_label || "Campaign filing")}</div>
+                <div class="subject-cell-label">Money spent</div>
+                <div class="subject-cell-value">${formatCurrency(profile.money_spent)}</div>
               </div>
             </div>
           </aside>
@@ -719,125 +961,162 @@
       `;
     }
 
-    function buildSummary(profile) {
+    function buildSignals(profile) {
       return `
-        <section class="summary-grid">
-          <article class="panel summary-card in">
-            <div class="label">Raised this period</div>
-            <div class="value">${formatCurrency(profile.money_raised)}</div>
-            <div class="detail">Money reported as coming into the campaign during this filing period.</div>
+        <section class="signal-grid">
+          <article class="panel signal-card raised">
+            <div class="signal-label">Raised this period</div>
+            <div class="signal-value">${formatCurrency(profile.money_raised)}</div>
+            <div class="signal-detail">Total money reported as coming into the campaign during this filing period.</div>
           </article>
-          <article class="panel summary-card out">
-            <div class="label">Spent this period</div>
-            <div class="value">${formatCurrency(profile.money_spent)}</div>
-            <div class="detail">Total reported outflow during the filing period, including aggregate expenses.</div>
+          <article class="panel signal-card spent">
+            <div class="signal-label">Spent this period</div>
+            <div class="signal-value">${formatCurrency(profile.money_spent)}</div>
+            <div class="signal-detail">Total money reported as going out during the same period.</div>
           </article>
-          <article class="panel summary-card cash">
-            <div class="label">Cash on hand</div>
-            <div class="value">${formatCurrency(profile.ending_cash)}</div>
-            <div class="detail">What the campaign reported still having available at the end of the period.</div>
+          <article class="panel signal-card cash">
+            <div class="signal-label">Cash on hand</div>
+            <div class="signal-value">${formatCurrency(profile.ending_cash)}</div>
+            <div class="signal-detail">What the campaign reported still having available at the close of the filing period.</div>
           </article>
-          <article class="panel summary-card delta">
-            <div class="label">Net change</div>
-            <div class="value">${formatSignedCurrency(profile.net_change)}</div>
-            <div class="detail">Raised minus spent during this period.</div>
+          <article class="panel signal-card change">
+            <div class="signal-label">Net change</div>
+            <div class="signal-value">${formatSignedCurrency(profile.net_change)}</div>
+            <div class="signal-detail">Raised minus spent during the reporting period.</div>
           </article>
         </section>
       `;
     }
 
-    function buildHistory(profile) {
-      const history = profile.filing_history || [];
-      if (!history.length) return "";
+    function buildMoneyFlow(profile) {
+      const biggestDonor = (profile.top_donors || [])[0];
+      const max = Math.max(
+        Number(profile.money_raised || 0),
+        Number(profile.money_spent || 0),
+        Number(profile.ending_cash || 0),
+        Math.abs(Number(profile.net_change || 0)),
+        1
+      );
+      const rows = [
+        {
+          key: "raised",
+          label: "Money raised",
+          value: Number(profile.money_raised || 0),
+          detail: "New money reported as coming into the campaign during this filing period."
+        },
+        {
+          key: "spent",
+          label: "Money spent",
+          value: Number(profile.money_spent || 0),
+          detail: "Reported outflow during the period."
+        },
+        {
+          key: "cash",
+          label: "Cash on hand",
+          value: Number(profile.ending_cash || 0),
+          detail: "What remained in the account at the end of the filing period."
+        },
+        {
+          key: "change",
+          label: "Net change",
+          value: Math.abs(Number(profile.net_change || 0)),
+          amountText: formatSignedCurrency(profile.net_change),
+          detail: Number(profile.net_change || 0) >= 0
+            ? "The campaign ended the period ahead."
+            : "The campaign ended the period below where it started."
+        }
+      ];
+
       return `
         <article class="panel section-card">
-          <div class="section-label">Filing history</div>
-          <h3>Show the campaign over time, not just in one snapshot.</h3>
-          <p class="section-copy">Quarter-to-quarter changes are often easier to understand than a single filing in isolation. This helps viewers see whether a campaign is accelerating, maintaining, or burning through cash.</p>
-          <div class="history-grid">
-            ${history.map(item => `
-              <div class="history-card">
-                <div class="history-top">
-                  <div class="history-label">${escapeHtml(item.label)}</div>
-                  <div class="history-dates">${escapeHtml(item.reporting_period_label)}</div>
+          <div class="section-label">Money flow</div>
+          <h3>Start with the big picture before the line items.</h3>
+          <p class="section-copy">This section lets a viewer see the quarter at a glance without having to read the full filing first.</p>
+          <div class="money-flow-grid">
+            <div class="meter-list">
+              ${rows.map(row => `
+                <div class="meter-row">
+                  <div class="meter-head">
+                    <div class="meter-label">${row.label}</div>
+                    <div class="meter-amount">${row.amountText || formatCurrency(row.value)}</div>
+                  </div>
+                  <div class="meter-track">
+                    <div class="meter-fill ${row.key}" style="width:${Math.max(8, (row.value / max) * 100).toFixed(1)}%"></div>
+                  </div>
+                  <div class="meter-caption">${row.detail}</div>
                 </div>
-                <div class="history-stats">
-                  <div class="history-stat">
-                    <span class="k">Raised</span>
-                    <span class="v">${formatCurrency(item.money_raised)}</span>
-                  </div>
-                  <div class="history-stat">
-                    <span class="k">Spent</span>
-                    <span class="v">${formatCurrency(item.money_spent)}</span>
-                  </div>
-                  <div class="history-stat">
-                    <span class="k">Ending cash</span>
-                    <span class="v">${formatCurrency(item.ending_cash)}</span>
-                  </div>
-                  <div class="history-stat">
-                    <span class="k">Net change</span>
-                    <span class="v">${formatSignedCurrency(item.net_change)}</span>
-                  </div>
-                </div>
-                <div class="history-note">${escapeHtml(item.notes || "")}</div>
+              `).join("")}
+            </div>
+            <div class="mini-callouts">
+              <div class="mini-callout">
+                <strong>Largest visible donor</strong>
+                <span>${biggestDonor ? `${escapeHtml(biggestDonor.donor)} at ${formatCurrency(biggestDonor.amount)}.` : "No large itemized donor has been highlighted yet in this profile."}</span>
               </div>
-            `).join("")}
+              <div class="mini-callout">
+                <strong>Expense split</strong>
+                <span>${formatCurrency(profile.campaign_expenses || 0)} was reported as campaign expenses and ${formatCurrency(profile.aggregate_expenses || 0)} was reported as aggregate expenses.</span>
+              </div>
+              <div class="mini-callout">
+                <strong>Why cash on hand matters</strong>
+                <span>A campaign can have a slower fundraising quarter and still remain well positioned if it has a large reserve left over.</span>
+              </div>
+            </div>
           </div>
         </article>
       `;
     }
 
-    function buildSourceBuckets(profile) {
+    function buildFundingMix(profile) {
       const buckets = profile.source_buckets || [];
       if (!buckets.length) return "";
-      const max = Math.max(...buckets.map(bucket => bucket.amount || 0), 0);
+      const total = buckets.reduce((sum, bucket) => sum + Number(bucket.amount || 0), 0) || 1;
       return `
         <article class="panel section-card">
-          <div class="section-label">Where the money came from</div>
-          <h3>Start with a simple source breakdown.</h3>
-          <p class="section-copy">The first question most users have is whether a campaign is mostly funded by individuals, PACs, or something else. This section turns filing categories into a few plain-language buckets.</p>
-          <div class="source-bars">
+          <div class="section-label">Funding mix</div>
+          <h3>Show where the money came from.</h3>
+          <p class="section-copy">This view groups the filing into a few readable source buckets so voters can see whether the money came mostly from individuals, PACs, or smaller bundled receipts.</p>
+          <div class="mix-meter">
             ${buckets.map(bucket => `
-              <div class="source-row">
-                <div class="source-label">${escapeHtml(bucket.label)}</div>
-                <div class="source-bar"><div class="source-fill ${escapeHtml(bucket.class_name || "")}" style="width:${max ? ((bucket.amount / max) * 100).toFixed(1) : 0}%"></div></div>
-                <div class="source-amount">${formatCurrency(bucket.amount)}</div>
+              <span class="mix-segment mix-${escapeHtml(bucket.class_name || "default")}" style="width:${((Number(bucket.amount || 0) / total) * 100).toFixed(1)}%"></span>
+            `).join("")}
+          </div>
+          <div class="mix-list">
+            ${buckets.map(bucket => `
+              <div class="mix-row">
+                <div class="mix-dot mix-${escapeHtml(bucket.class_name || "default")}"></div>
+                <div class="mix-copy">
+                  <strong>${escapeHtml(bucket.label)}</strong>
+                  <span>${escapeHtml(bucket.description || "")}</span>
+                </div>
+                <div class="mix-amount">
+                  ${formatCurrency(bucket.amount)}
+                  <small>${formatPercent((Number(bucket.amount || 0) / total) * 100)}</small>
+                </div>
               </div>
             `).join("")}
           </div>
-          <div class="table-note">Grouped source categories like this are usually easier to read than dropping a raw spreadsheet or PDF table on the public first.</div>
         </article>
       `;
     }
 
-    function buildTopDonors(profile) {
-      const donors = profile.top_donors || [];
+    function buildDonorHighlights(profile) {
+      const donors = (profile.top_donors || []).slice(0, 4);
+      if (!donors.length) return "";
       return `
         <article class="panel section-card">
-          <div class="section-label">Top donors</div>
-          <h3>Show the people and committees a voter is most likely to recognize.</h3>
-          <p class="section-copy">Rather than listing every transaction first, start with the largest itemized donors and the PACs or committees that stand out most clearly.</p>
-          <table>
-            <thead>
-              <tr>
-                <th>Donor</th>
-                <th>Type</th>
-                <th>Notes</th>
-                <th class="amount">Amount</th>
-              </tr>
-            </thead>
-            <tbody>
-              ${donors.map(donor => `
-                <tr>
-                  <td>${escapeHtml(donor.donor)}</td>
-                  <td>${escapeHtml(donor.type)}</td>
-                  <td>${escapeHtml(donor.notes || "")}</td>
-                  <td class="amount">${formatCurrency(donor.amount)}</td>
-                </tr>
-              `).join("")}
-            </tbody>
-          </table>
-          <div class="table-note">This should sit above the full transaction table. The raw filing still matters, but it should not be the first thing an average voter sees.</div>
+          <div class="section-label">Largest visible donors</div>
+          <h3>Put the biggest donor names up front.</h3>
+          <p class="section-copy">This is the quickest way to understand which individual donors, PACs, or committees stand out most clearly in the filing.</p>
+          <div class="donor-grid">
+            ${donors.map(donor => `
+              <div class="donor-card">
+                <div class="donor-type">${escapeHtml(donor.type || "Donor")}</div>
+                <h4>${escapeHtml(donor.donor)}</h4>
+                <p>${escapeHtml(donor.notes || "Listed as a major itemized donor in this filing.")}</p>
+                <div class="donor-amount">${formatCurrency(donor.amount)}</div>
+              </div>
+            `).join("")}
+          </div>
         </article>
       `;
     }
@@ -847,50 +1126,52 @@
       if (!networks.length) return "";
       return `
         <article class="panel section-card">
-          <div class="section-label">Employer-linked donor networks</div>
-          <h3>Separate company-linked donor patterns from actual PAC or committee money.</h3>
-          <p class="section-copy">The safest wording here is employer-linked donors, because the donor is usually the individual listed on the filing, not necessarily the company itself.</p>
-          <div class="pill-row">
+          <div class="section-label">Company-linked donor names</div>
+          <h3>Surface repeated employer names without overclaiming what they mean.</h3>
+          <p class="section-copy">These are individual donors grouped by the employer name listed on the filing. This does not automatically mean the company itself donated.</p>
+          <div class="network-wrap">
             ${networks.map(item => `
-              <div class="pill">${escapeHtml(item.label)}${item.notes ? `<small>${escapeHtml(item.notes)}</small>` : ""}</div>
+              <div class="network-pill">${escapeHtml(item.label)}</div>
             `).join("")}
           </div>
-          <div class="draft-footer">Recommended public explainer: “Employer-linked donors are individuals who listed this employer in the filing. This does not necessarily mean the employer itself donated.”</div>
         </article>
       `;
     }
 
-    function buildSpending(profile) {
-      const categories = profile.spending_categories || [];
+    function buildHistory(profile) {
+      const history = profile.filing_history || [];
+      if (!history.length) return "";
       return `
         <article class="panel section-card">
-          <div class="section-label">What the campaign spent money on</div>
-          <h3>Translate spending into a few recognizable themes.</h3>
-          <p class="section-copy">Instead of asking viewers to parse vendor codes, group spending into a small number of recognizable categories and give a few examples.</p>
-          <div class="category-list">
-            ${categories.map(item => `
-              <div class="category-item">
-                <strong>${escapeHtml(item.title)}</strong>
-                <span>${escapeHtml(item.summary)}</span>
-              </div>
-            `).join("")}
-          </div>
-          <div class="table-note">Current quarter filing totals include ${formatCurrency(profile.campaign_expenses || 0)} in campaign expenses and ${formatCurrency(profile.aggregate_expenses || 0)} in aggregate expenses.</div>
-        </article>
-      `;
-    }
-
-    function buildTakeaways(profile) {
-      const takeaways = profile.takeaways || [];
-      return `
-        <article class="panel section-card">
-          <div class="section-label">What this means</div>
-          <h3>End with short takeaways, not technical jargon.</h3>
-          <div class="takeaway-list">
-            ${takeaways.map(item => `
-              <div class="takeaway">
-                <strong>${escapeHtml(item.title)}</strong>
-                <span>${escapeHtml(item.summary)}</span>
+          <div class="section-label">Quarter history</div>
+          <h3>Track the campaign over time.</h3>
+          <p class="section-copy">A single filing can be misleading on its own. Looking across quarters makes it easier to see whether a campaign is accelerating, holding steady, or drawing down its reserve.</p>
+          <div class="timeline">
+            ${history.map(item => `
+              <div class="timeline-card">
+                <div class="timeline-top">
+                  <div class="timeline-label">${escapeHtml(item.label)}</div>
+                  <div class="timeline-range">${escapeHtml(item.reporting_period_label)}</div>
+                </div>
+                <div class="timeline-stats">
+                  <div class="timeline-stat">
+                    <span class="k">Raised</span>
+                    <span class="v">${formatCurrency(item.money_raised)}</span>
+                  </div>
+                  <div class="timeline-stat">
+                    <span class="k">Spent</span>
+                    <span class="v">${formatCurrency(item.money_spent)}</span>
+                  </div>
+                  <div class="timeline-stat">
+                    <span class="k">Ending cash</span>
+                    <span class="v">${formatCurrency(item.ending_cash)}</span>
+                  </div>
+                  <div class="timeline-stat">
+                    <span class="k">Net change</span>
+                    <span class="v">${formatSignedCurrency(item.net_change)}</span>
+                  </div>
+                </div>
+                <div class="timeline-note">${escapeHtml(item.notes || "")}</div>
               </div>
             `).join("")}
           </div>
@@ -900,10 +1181,11 @@
 
     function buildExplainers(profile) {
       const explainers = profile.explainer_cards || [];
+      if (!explainers.length) return "";
       return `
         <article class="panel section-card">
           <div class="section-label">How to read this page</div>
-          <h3>A small explainer for the average viewer.</h3>
+          <h3>Short explainers for non-specialists.</h3>
           <div class="explain-grid">
             ${explainers.map(item => `
               <div class="explain-card">
@@ -912,7 +1194,7 @@
               </div>
             `).join("")}
           </div>
-          <div class="draft-footer">${escapeHtml(profile.source_note || "")}</div>
+          <div class="source-note">${escapeHtml(profile.source_note || "")}</div>
         </article>
       `;
     }
@@ -923,17 +1205,16 @@
       document.title = `${titleBase} | Rhode Island Elections Project`;
       app.innerHTML = `
         ${buildHero(profile)}
-        ${buildSummary(profile)}
+        ${buildSignals(profile)}
         <section class="content-grid">
           <div class="stack">
-            ${buildSourceBuckets(profile)}
-            ${buildTopDonors(profile)}
-            ${buildEmployerNetworks(profile)}
+            ${buildMoneyFlow(profile)}
+            ${buildFundingMix(profile)}
+            ${buildDonorHighlights(profile)}
           </div>
           <div class="stack">
             ${buildHistory(profile)}
-            ${buildSpending(profile)}
-            ${buildTakeaways(profile)}
+            ${buildEmployerNetworks(profile)}
             ${buildExplainers(profile)}
           </div>
         </section>
@@ -944,7 +1225,7 @@
       document.getElementById("financeApp").innerHTML = `
         <div class="panel empty-state">
           <strong>No campaign finance profile is published for this candidate yet.</strong>
-          This page is ready to support candidate-level finance summaries, but the requested candidate does not have a published profile in the current site data.
+          This page is ready for candidate-level finance summaries, but the requested candidate does not have a published profile in the current site data.
         </div>
       `;
     }
