@@ -41,6 +41,14 @@
       --amber: #f4b740;
       --amber-soft: rgba(244, 183, 64, 0.16);
       --slate-soft: #f3f7fb;
+      --dem: #2e6bff;
+      --dem-soft: rgba(46, 107, 255, 0.14);
+      --rep: #df4b48;
+      --rep-soft: rgba(223, 75, 72, 0.14);
+      --ind: #18a999;
+      --ind-soft: rgba(24, 169, 153, 0.14);
+      --other: #6f7d92;
+      --other-soft: rgba(111, 125, 146, 0.14);
     }
 
     * { box-sizing: border-box; }
@@ -212,6 +220,30 @@
       font-weight: 800;
     }
 
+    .hero-pill.party-dem {
+      color: var(--dem);
+      background: var(--dem-soft);
+      border-color: rgba(46, 107, 255, 0.2);
+    }
+
+    .hero-pill.party-rep {
+      color: var(--rep);
+      background: var(--rep-soft);
+      border-color: rgba(223, 75, 72, 0.2);
+    }
+
+    .hero-pill.party-ind {
+      color: var(--ind);
+      background: var(--ind-soft);
+      border-color: rgba(24, 169, 153, 0.2);
+    }
+
+    .hero-pill.party-other {
+      color: var(--other);
+      background: var(--other-soft);
+      border-color: rgba(111, 125, 146, 0.2);
+    }
+
     .hero-plain-note {
       margin-top: 18px;
       padding: 16px 18px;
@@ -230,6 +262,11 @@
       align-content: start;
     }
 
+    .hero-side.party-dem { border-top: 6px solid var(--dem); }
+    .hero-side.party-rep { border-top: 6px solid var(--rep); }
+    .hero-side.party-ind { border-top: 6px solid var(--ind); }
+    .hero-side.party-other { border-top: 6px solid var(--other); }
+
     .subject-kicker,
     .section-label {
       color: #72839a;
@@ -245,14 +282,58 @@
       letter-spacing: -0.055em;
       color: var(--navy);
       font-weight: 900;
-      margin-top: 8px;
+      margin-top: 0;
     }
 
     .subject-meta {
       color: var(--ink-soft);
       font-size: 15px;
       line-height: 1.58;
-      margin-top: 10px;
+      margin-top: 8px;
+    }
+
+    .subject-topline {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .party-badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 0 12px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .party-badge.party-dem {
+      color: var(--dem);
+      background: var(--dem-soft);
+      border-color: rgba(46, 107, 255, 0.22);
+    }
+
+    .party-badge.party-rep {
+      color: var(--rep);
+      background: var(--rep-soft);
+      border-color: rgba(223, 75, 72, 0.22);
+    }
+
+    .party-badge.party-ind {
+      color: var(--ind);
+      background: var(--ind-soft);
+      border-color: rgba(24, 169, 153, 0.22);
+    }
+
+    .party-badge.party-other {
+      color: var(--other);
+      background: var(--other-soft);
+      border-color: rgba(111, 125, 146, 0.22);
     }
 
     .subject-actions {
@@ -550,73 +631,84 @@
 
     .donor-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 12px;
       margin-top: 18px;
     }
 
-    .donor-card {
+    .donor-bar-card {
       padding: 16px;
-      border-radius: 20px;
+      border-radius: 22px;
       background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
       border: 1px solid #dde8f2;
     }
 
-    .donor-type {
-      display: inline-flex;
-      align-items: center;
-      min-height: 28px;
-      padding: 0 10px;
-      border-radius: 999px;
-      background: var(--cyan-soft);
-      color: #11658a;
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+    .donor-top {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: end;
     }
 
-    .donor-card h4 {
-      margin: 12px 0 0;
-      font-size: 22px;
-      line-height: 1.02;
-      letter-spacing: -0.04em;
+    .donor-name {
+      font-size: 18px;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      font-weight: 900;
       color: var(--navy);
     }
 
-    .donor-card p {
-      margin: 8px 0 0;
-      color: var(--ink-soft);
-      font-size: 14px;
-      line-height: 1.55;
-    }
-
     .donor-amount {
-      margin-top: 12px;
-      font-size: 24px;
+      white-space: nowrap;
+      text-align: right;
+      font-size: 22px;
       line-height: 1;
       font-weight: 900;
       color: #112d4e;
     }
 
-    .network-wrap {
+    .donor-meta {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
+      gap: 8px;
+      margin-top: 8px;
+      color: #6f8095;
+      font-size: 13px;
+      font-weight: 700;
     }
 
-    .network-pill {
+    .donor-type {
       display: inline-flex;
       align-items: center;
-      min-height: 40px;
-      padding: 0 14px;
+      min-height: 26px;
+      padding: 0 10px;
       border-radius: 999px;
-      background: #f8fbff;
-      border: 1px solid #dce7f1;
-      color: #264159;
+      background: var(--cyan-soft);
+      color: #11658a;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .donor-track {
+      height: 12px;
+      margin-top: 12px;
+      border-radius: 999px;
+      background: #e8f0f7;
+      overflow: hidden;
+    }
+
+    .donor-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #1db2c3 0%, #67d3ff 100%);
+    }
+
+    .donor-note {
+      margin-top: 10px;
+      color: var(--ink-soft);
       font-size: 13px;
-      font-weight: 800;
+      line-height: 1.5;
     }
 
     .timeline {
@@ -695,14 +787,13 @@
 
     .explain-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 12px;
-      margin-top: 18px;
+      margin-top: 14px;
     }
 
     .explain-card {
-      padding: 16px;
-      border-radius: 20px;
+      padding: 14px 16px;
+      border-radius: 18px;
       background: #f8fbff;
       border: 1px solid #dde8f2;
     }
@@ -731,6 +822,95 @@
       color: #64553d;
       font-size: 13px;
       line-height: 1.55;
+    }
+
+    .explainer-toggle {
+      margin-top: 18px;
+      border-radius: 22px;
+      border: 1px solid #dde8f2;
+      background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(247,250,255,0.98) 100%);
+      overflow: hidden;
+    }
+
+    .explainer-toggle summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      color: var(--navy);
+      font-size: 16px;
+      font-weight: 900;
+    }
+
+    .explainer-toggle summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .explainer-toggle summary::after {
+      content: "+";
+      flex: 0 0 auto;
+      color: #6f8095;
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .explainer-toggle[open] summary::after {
+      content: "–";
+    }
+
+    .explainer-body {
+      padding: 0 20px 20px;
+    }
+
+    .verification-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .verification-item {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 16px;
+      border-radius: 18px;
+      background: #f9fbfe;
+      border: 1px solid #dde8f3;
+    }
+
+    .verification-copy strong {
+      display: block;
+      color: var(--navy);
+      font-size: 15px;
+      line-height: 1.35;
+    }
+
+    .verification-copy span {
+      display: block;
+      margin-top: 4px;
+      color: #6d7d91;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .verification-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 0 14px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid #dbe6f1;
+      color: var(--navy);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 900;
+      white-space: nowrap;
     }
 
     .loading-state,
@@ -800,6 +980,15 @@
 
       .mix-amount {
         grid-column: 2;
+        text-align: left;
+      }
+
+      .verification-item,
+      .donor-top {
+        grid-template-columns: 1fr;
+      }
+
+      .donor-amount {
         text-align: left;
       }
     }
@@ -877,6 +1066,13 @@
       return party || "Other";
     }
 
+    function partyClass(party) {
+      if (party === "DEM") return "party-dem";
+      if (party === "REP") return "party-rep";
+      if (party === "IND") return "party-ind";
+      return "party-other";
+    }
+
     function withAssetVersion(url) {
       const separator = url.includes("?") ? "&" : "?";
       return `${url}${separator}v=20260808b`;
@@ -904,34 +1100,33 @@
       const quarterRead = Number(profile.net_change || 0) >= 0
         ? "This campaign raised more than it spent during the filing period."
         : "This campaign spent more than it raised during the filing period.";
+      const partyTone = partyClass(profile.party);
 
       return `
         <section class="hero">
           <div class="panel hero-story">
-            <div class="eyebrow" style="color:#47617b;border-color:#d9e7f5;background:#f7fbff;">Finance, simplified</div>
             <h2>Follow the money behind ${escapeHtml(profile.candidate_name)}.</h2>
             <p>${escapeHtml(profile.summary_intro || "This page turns a Rhode Island campaign finance filing into a simpler public summary.")}</p>
             <div class="hero-pills">
               <div class="hero-pill">${escapeHtml(districtLabel)}</div>
-              <div class="hero-pill">${escapeHtml(partyLabel(profile.party))}</div>
+              <div class="hero-pill ${partyTone}">${escapeHtml(partyLabel(profile.party))}</div>
               <div class="hero-pill">${escapeHtml(profile.reporting_period_label)}</div>
             </div>
             <div class="hero-plain-note">
-              <strong>What this page does:</strong> It starts with the broad picture first: how much money came in, how much went out, how much is still on hand, and which donors or donor networks stand out most clearly.
-              ${strongestBucket ? ` Right now, the largest identified funding stream is <strong>${escapeHtml(strongestBucket.label)}</strong>.` : ""}
-              <br /><br />
               <strong>Quick read:</strong> ${escapeHtml(quarterRead)}
+              ${strongestBucket ? ` The largest visible funding stream in this filing is <strong>${escapeHtml(strongestBucket.label)}</strong>.` : ""}
             </div>
           </div>
-          <aside class="panel hero-side">
+          <aside class="panel hero-side ${partyTone}">
             <div>
-              <div class="subject-kicker">Candidate finance profile</div>
+              <div class="subject-topline">
+                <div class="party-badge ${partyTone}">${escapeHtml(partyLabel(profile.party))}</div>
+              </div>
               <div class="subject-name">${escapeHtml(profile.candidate_name)}</div>
               <div class="subject-meta">
                 ${escapeHtml(profile.office_sought)}<br />
-                ${escapeHtml(partyLabel(profile.party))}<br />
                 ${escapeHtml(districtLabel)}<br />
-                Source file: ${escapeHtml(profile.report_label || "Campaign filing")}
+                Filing period: ${escapeHtml(profile.reporting_period_label)}
               </div>
             </div>
             <div class="subject-actions">
@@ -1073,8 +1268,8 @@
       return `
         <article class="panel section-card">
           <div class="section-label">Funding mix</div>
-          <h3>Show where the money came from.</h3>
-          <p class="section-copy">This view groups the filing into a few readable source buckets so voters can see whether the money came mostly from individuals, PACs, or smaller bundled receipts.</p>
+          <h3>Where the money came from.</h3>
+          <p class="section-copy">This groups the filing into a few readable categories so you can see the campaign’s funding base at a glance.</p>
           <div class="mix-meter">
             ${buckets.map(bucket => `
               <span class="mix-segment mix-${escapeHtml(bucket.class_name || "default")}" style="width:${((Number(bucket.amount || 0) / total) * 100).toFixed(1)}%"></span>
@@ -1100,38 +1295,29 @@
     }
 
     function buildDonorHighlights(profile) {
-      const donors = (profile.top_donors || []).slice(0, 4);
+      const donors = (profile.top_donors || []).slice(0, 6);
       if (!donors.length) return "";
+      const maxAmount = Math.max(...donors.map(donor => Number(donor.amount || 0)), 1);
       return `
         <article class="panel section-card">
-          <div class="section-label">Largest visible donors</div>
-          <h3>Put the biggest donor names up front.</h3>
-          <p class="section-copy">This is the quickest way to understand which individual donors, PACs, or committees stand out most clearly in the filing.</p>
+          <div class="section-label">Top donors</div>
+          <h3>Who gave the biggest checks.</h3>
+          <p class="section-copy">These are the largest visible itemized donors in the filing, shown from highest to lower amounts.</p>
           <div class="donor-grid">
             ${donors.map(donor => `
-              <div class="donor-card">
-                <div class="donor-type">${escapeHtml(donor.type || "Donor")}</div>
-                <h4>${escapeHtml(donor.donor)}</h4>
-                <p>${escapeHtml(donor.notes || "Listed as a major itemized donor in this filing.")}</p>
-                <div class="donor-amount">${formatCurrency(donor.amount)}</div>
+              <div class="donor-bar-card">
+                <div class="donor-top">
+                  <div class="donor-name">${escapeHtml(donor.donor)}</div>
+                  <div class="donor-amount">${formatCurrency(donor.amount)}</div>
+                </div>
+                <div class="donor-meta">
+                  <span class="donor-type">${escapeHtml(donor.type || "Donor")}</span>
+                </div>
+                <div class="donor-track">
+                  <div class="donor-fill" style="width:${Math.max(8, (Number(donor.amount || 0) / maxAmount) * 100).toFixed(1)}%"></div>
+                </div>
+                <div class="donor-note">${escapeHtml(donor.notes || "Listed as a major itemized donor in this filing.")}</div>
               </div>
-            `).join("")}
-          </div>
-        </article>
-      `;
-    }
-
-    function buildEmployerNetworks(profile) {
-      const networks = profile.employer_networks || [];
-      if (!networks.length) return "";
-      return `
-        <article class="panel section-card">
-          <div class="section-label">Company-linked donor names</div>
-          <h3>Surface repeated employer names without overclaiming what they mean.</h3>
-          <p class="section-copy">These are individual donors grouped by the employer name listed on the filing. This does not automatically mean the company itself donated.</p>
-          <div class="network-wrap">
-            ${networks.map(item => `
-              <div class="network-pill">${escapeHtml(item.label)}</div>
             `).join("")}
           </div>
         </article>
@@ -1179,22 +1365,50 @@
       `;
     }
 
-    function buildExplainers(profile) {
-      const explainers = profile.explainer_cards || [];
-      if (!explainers.length) return "";
+    function buildVerification(profile) {
+      const documents = profile.original_documents || [];
+      if (!documents.length) return "";
       return `
         <article class="panel section-card">
-          <div class="section-label">How to read this page</div>
-          <h3>Short explainers for non-specialists.</h3>
-          <div class="explain-grid">
-            ${explainers.map(item => `
-              <div class="explain-card">
-                <strong>${escapeHtml(item.title)}</strong>
-                <span>${escapeHtml(item.summary)}</span>
+          <div class="section-label">Original filing documents</div>
+          <h3>Open the source filings yourself.</h3>
+          <p class="section-copy">These are the original filing documents used to build this summary so visitors can verify the numbers directly.</p>
+          <div class="verification-list">
+            ${documents.map(item => `
+              <div class="verification-item">
+                <div class="verification-copy">
+                  <strong>${escapeHtml(item.label || "Campaign filing")}</strong>
+                  <span>${escapeHtml(item.period || "")}</span>
+                </div>
+                <a class="verification-link" href="${escapeHtml(item.href)}" target="_blank" rel="noopener">Open PDF</a>
               </div>
             `).join("")}
           </div>
-          <div class="source-note">${escapeHtml(profile.source_note || "")}</div>
+        </article>
+      `;
+    }
+
+    function buildExplainers(profile) {
+      const explainers = (profile.explainer_cards || []).filter(item => item.title !== "Employer-linked donors");
+      if (!explainers.length && !profile.source_note) return "";
+      return `
+        <article class="panel section-card">
+          <div class="section-label">How to read this page</div>
+          <h3>Quick help for non-specialists.</h3>
+          <details class="explainer-toggle">
+            <summary>Open the short explainers</summary>
+            <div class="explainer-body">
+              <div class="explain-grid">
+                ${explainers.map(item => `
+                  <div class="explain-card">
+                    <strong>${escapeHtml(item.title)}</strong>
+                    <span>${escapeHtml(item.summary)}</span>
+                  </div>
+                `).join("")}
+              </div>
+              ${profile.source_note ? `<div class="source-note">${escapeHtml(profile.source_note)}</div>` : ""}
+            </div>
+          </details>
         </article>
       `;
     }
@@ -1208,13 +1422,13 @@
         ${buildSignals(profile)}
         <section class="content-grid">
           <div class="stack">
-            ${buildMoneyFlow(profile)}
             ${buildFundingMix(profile)}
             ${buildDonorHighlights(profile)}
+            ${buildMoneyFlow(profile)}
           </div>
           <div class="stack">
+            ${buildVerification(profile)}
             ${buildHistory(profile)}
-            ${buildEmployerNetworks(profile)}
             ${buildExplainers(profile)}
           </div>
         </section>
