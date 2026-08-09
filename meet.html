@@ -772,6 +772,7 @@
 
   <script>
     const assetVersion = "20260808a";
+    const PRIMARY_RELEASE_TIMESTAMP = new Date("2026-09-10T00:00:00-04:00").getTime();
     const state = {
       election: "",
       primaryParty: "",
@@ -827,6 +828,10 @@
       if (label.includes("lib")) return "libertarian";
       if (label.includes("mod")) return "moderate";
       return "other";
+    }
+
+    function isPostPrimaryRelease() {
+      return Date.now() >= PRIMARY_RELEASE_TIMESTAMP;
     }
 
     function hasFinanceProfile(candidate) {
@@ -886,6 +891,30 @@
       return filingData?.chambers?.[state.chamber]?.[String(state.district)] || null;
     }
 
+    function enrichCandidate(candidate, record, extra = {}) {
+      return {
+        ...candidate,
+        chamber: state.chamber,
+        district_number: record.district_number,
+        profile: (profileData?.profiles || []).find(profile => profile.candidate_id === candidate.candidate_id) || null,
+        ...extra
+      };
+    }
+
+    function provisionalGeneralCandidates(record) {
+      const candidatesByParty = new Map();
+      (record.candidates || []).forEach(candidate => {
+        const key = candidate.party || "OTHER";
+        if (!candidatesByParty.has(key)) candidatesByParty.set(key, []);
+        candidatesByParty.get(key).push(candidate);
+      });
+
+      return Array.from(candidatesByParty.values())
+        .filter(group => group.length === 1)
+        .map(group => enrichCandidate(group[0], record, { general_preview: true }))
+        .sort((a, b) => a.name.localeCompare(b.name));
+    }
+
     function buildPriorityTags(candidate) {
       const tags = (candidate.profile?.issue_tags || []).slice(0, 6);
       if (!tags.length) return "";
@@ -924,7 +953,7 @@
     function buildCandidateCard(candidate) {
       const displayName = candidate.profile?.candidate_name || candidate.name;
       const subtitle = state.election === "general"
-        ? `${chamberLabel(candidate.chamber)} District ${candidate.district_number} · November general-election filing`
+        ? `${chamberLabel(candidate.chamber)} District ${candidate.district_number} · ${candidate.general_preview ? "General-election preview" : "November general-election filing"}`
         : `${chamberLabel(candidate.chamber)} District ${candidate.district_number} · ${partyLabel(state.primaryParty)} primary ballot`;
       const ballotLabel = state.election === "general" ? "On general ballot" : "On primary ballot";
       const ballotValue = state.election === "general" ? formatYesNo(candidate.on_election_ballot) : formatYesNo(candidate.on_primary_ballot);
@@ -1031,12 +1060,7 @@
       if (state.election === "primary") {
         const candidates = (record.candidates || [])
           .filter(candidate => candidate.party === state.primaryParty)
-          .map(candidate => ({
-            ...candidate,
-            chamber: state.chamber,
-            district_number: record.district_number,
-            profile: (profileData?.profiles || []).find(profile => profile.candidate_id === candidate.candidate_id) || null
-          }))
+          .map(candidate => enrichCandidate(candidate, record))
           .sort((a, b) => a.name.localeCompare(b.name));
 
         if (!candidates.length) {
@@ -1051,23 +1075,33 @@
       }
 
       const candidates = (record.general_candidates || [])
-        .map(candidate => ({
-          ...candidate,
-          chamber: state.chamber,
-          district_number: record.district_number,
-          profile: (profileData?.profiles || []).find(profile => profile.candidate_id === candidate.candidate_id) || null
-        }))
+        .map(candidate => enrichCandidate(candidate, record))
         .sort((a, b) => a.name.localeCompare(b.name));
 
       if (!candidates.length) {
+        const previewCandidates = provisionalGeneralCandidates(record);
+        if (previewCandidates.length) {
+          return {
+            candidates: previewCandidates,
+            message: isPostPrimaryRelease()
+              ? "Official November ballot data is still updating. Candidates shown here are the uncontested party filers already positioned for the general election."
+              : "This is a pre-primary general-election preview based on districts where only one candidate has filed within a party so far. Full November matchups will expand after the September 9, 2026 primary.",
+            record,
+            generalPreview: true
+          };
+        }
+
         return {
           candidates: [],
-          message: `No general-election candidate is currently listed in ${chamberLabel(state.chamber)} District ${state.district}. Try the primary view if you want to inspect September 9 filings instead.`,
-          record
+          message: isPostPrimaryRelease()
+            ? `General-election candidates are not yet available in ${chamberLabel(state.chamber)} District ${state.district}. Official November ballot data should appear here once it is added after the September 9, 2026 primary.`
+            : `No general-election candidate is currently listed in ${chamberLabel(state.chamber)} District ${state.district}. Try the primary view if you want to inspect September 9 filings instead.`,
+          record,
+          generalPreview: false
         };
       }
 
-      return { candidates, message: "", record };
+      return { candidates, message: "", record, generalPreview: false };
     }
 
     function renderResults() {
@@ -1088,12 +1122,16 @@
       placeholder.hidden = true;
       shell.hidden = false;
 
-      const { candidates, message } = selectedCandidates();
+      const { candidates, message, generalPreview } = selectedCandidates();
       const electionText = state.election === "general" ? "general election" : `${partyLabel(state.primaryParty)} primary`;
 
       title.textContent = `${chamberLabel(state.chamber)} District ${state.district}`;
-      copy.textContent = `Showing candidates relevant to the ${electionText} ballot for this district. Campaign priorities appear when a response has been submitted.`;
-      status.textContent = candidates.length ? `${candidates.length} candidate${candidates.length === 1 ? "" : "s"} shown` : "No candidate filed";
+      copy.textContent = state.election === "general" && generalPreview
+        ? `Showing candidates already positioned for the November ballot in this district. Additional general-election pairings will appear here once post-primary ballot data is available.`
+        : `Showing candidates relevant to the ${electionText} ballot for this district. Campaign priorities appear when a response has been submitted.`;
+      status.textContent = candidates.length
+        ? `${candidates.length} candidate${candidates.length === 1 ? "" : "s"} ${generalPreview ? "previewed" : "shown"}`
+        : "No candidate filed";
 
       if (message) {
         banner.hidden = false;
