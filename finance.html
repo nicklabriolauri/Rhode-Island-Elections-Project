@@ -255,6 +255,60 @@
       line-height: 1.58;
     }
 
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .hero-stat-card {
+      position: relative;
+      padding: 18px 18px 16px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(246,250,255,0.98) 100%);
+      border: 1px solid #dbe6f1;
+      box-shadow: 0 12px 30px rgba(17, 32, 54, 0.06);
+      overflow: hidden;
+    }
+
+    .hero-stat-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 5px;
+      border-radius: 5px;
+    }
+
+    .hero-stat-card.raised::before { background: var(--mint); }
+    .hero-stat-card.spent::before { background: var(--coral); }
+    .hero-stat-card.cash::before { background: var(--violet); }
+    .hero-stat-card.change::before { background: var(--amber); }
+
+    .hero-stat-label {
+      color: #738399;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .hero-stat-value {
+      margin-top: 10px;
+      font-family: "Sora", sans-serif;
+      font-size: 34px;
+      line-height: 0.94;
+      letter-spacing: -0.05em;
+      color: var(--navy);
+    }
+
+    .hero-stat-detail {
+      margin-top: 8px;
+      color: var(--ink-soft);
+      font-size: 14px;
+      line-height: 1.48;
+    }
+
     .hero-side {
       padding: 24px;
       display: grid;
@@ -1024,6 +1078,7 @@
         font-size: 38px;
       }
 
+      .hero-stats,
       .signal-grid,
       .subject-grid,
       .timeline-stats,
@@ -1174,6 +1229,7 @@
               <strong>Quick read:</strong> ${escapeHtml(quarterRead)}
               ${strongestBucket ? ` The largest visible funding stream in this filing is <strong>${escapeHtml(strongestBucket.label)}</strong>.` : ""}
             </div>
+            ${buildHeroStats(profile)}
           </div>
           <aside class="panel hero-side ${partyTone}">
             <div>
@@ -1194,6 +1250,33 @@
             ${buildHeroFundingMix(profile)}
           </aside>
         </section>
+      `;
+    }
+
+    function buildHeroStats(profile) {
+      return `
+        <div class="hero-stats">
+          <article class="hero-stat-card raised">
+            <div class="hero-stat-label">Raised this period</div>
+            <div class="hero-stat-value">${formatCurrency(profile.money_raised)}</div>
+            <div class="hero-stat-detail">Money reported as coming into the campaign during this filing period.</div>
+          </article>
+          <article class="hero-stat-card spent">
+            <div class="hero-stat-label">Spent this period</div>
+            <div class="hero-stat-value">${formatCurrency(profile.money_spent)}</div>
+            <div class="hero-stat-detail">Money reported as going out during the same reporting window.</div>
+          </article>
+          <article class="hero-stat-card cash">
+            <div class="hero-stat-label">Cash on hand</div>
+            <div class="hero-stat-value">${formatCurrency(profile.ending_cash)}</div>
+            <div class="hero-stat-detail">What the campaign reported still having available at the close of the filing period.</div>
+          </article>
+          <article class="hero-stat-card change">
+            <div class="hero-stat-label">Net change</div>
+            <div class="hero-stat-value">${formatSignedCurrency(profile.net_change)}</div>
+            <div class="hero-stat-detail">Raised minus spent during the reporting period.</div>
+          </article>
+        </div>
       `;
     }
 
@@ -1493,7 +1576,6 @@
       document.title = `${titleBase} | Rhode Island Elections Project`;
       app.innerHTML = `
         ${buildHero(profile)}
-        ${buildSignals(profile)}
         <section class="content-grid">
           <div class="stack">
             ${buildDonorHighlights(profile)}
