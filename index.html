@@ -594,39 +594,24 @@
       color: #fee2e2;
     }
 
-    .hero-search-grid {
-      display: grid;
-      gap: 12px;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .hero-search-card {
-      padding: 16px 16px 14px;
-      border-radius: 22px;
+    .hero-search-overview {
+      padding: 18px 18px 16px;
+      border-radius: 24px;
       border: 1px solid rgba(191,219,254,0.18);
-      background: rgba(255,255,255,0.92);
+      background: rgba(255,255,255,0.94);
       color: #0f172a;
       box-shadow: 0 18px 36px rgba(15,23,42,0.12);
     }
 
-    .hero-search-card-head {
+    .hero-search-overview-head {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
-      gap: 10px;
+      gap: 12px;
       margin-bottom: 10px;
     }
 
-    .hero-search-card h4 {
-      margin: 0;
-      font-family: "Sora", sans-serif;
-      font-size: 22px;
-      line-height: 1.02;
-      letter-spacing: -0.045em;
-      color: #0f172a;
-    }
-
-    .hero-search-badge {
+    .hero-search-kicker {
       display: inline-flex;
       align-items: center;
       min-height: 30px;
@@ -643,14 +628,30 @@
       flex: 0 0 auto;
     }
 
-    .hero-search-meta {
+    .hero-search-title {
+      margin: 0;
+      font-family: "Sora", sans-serif;
+      font-size: 30px;
+      line-height: 1;
+      letter-spacing: -0.05em;
+      color: #0f172a;
+    }
+
+    .hero-search-subtitle {
+      margin: 8px 0 0 0;
+      color: #475569;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .hero-search-chip-row {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-bottom: 10px;
+      margin: 12px 0 0 0;
     }
 
-    .hero-search-meta span {
+    .hero-search-chip {
       display: inline-flex;
       align-items: center;
       min-height: 30px;
@@ -663,14 +664,7 @@
       font-weight: 700;
     }
 
-    .hero-search-copyline {
-      margin: 0;
-      color: #475569;
-      font-size: 14px;
-      line-height: 1.55;
-    }
-
-    .hero-search-actions {
+    .hero-search-action-row {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
@@ -711,6 +705,49 @@
       background: linear-gradient(135deg, #cffafe 0%, #e0f2fe 100%);
       border-color: rgba(125,211,252,0.44);
       color: #0f172a;
+    }
+
+    .hero-search-match-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .hero-search-match {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 14px 14px 12px;
+      border-radius: 18px;
+      background: #f8fafc;
+      border: 1px solid #dbeafe;
+    }
+
+    .hero-search-match-copy {
+      min-width: 0;
+    }
+
+    .hero-search-match-name {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.15;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .hero-search-match-meta {
+      margin: 6px 0 0 0;
+      color: #475569;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .hero-search-match-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
     }
 
     .cta-row {
@@ -1737,10 +1774,6 @@
         justify-content: center;
       }
 
-      .hero-search-grid {
-        grid-template-columns: 1fr;
-      }
-
       .finance-spotlight {
         grid-template-columns: 1fr;
       }
@@ -1852,6 +1885,19 @@
 
       .hero-search-submit {
         width: 100%;
+      }
+
+      .hero-search-overview-head {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-search-match {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-search-match-actions {
+        justify-content: flex-start;
       }
 
       .hero-copy h2 {
@@ -2459,32 +2505,39 @@
 
       results.hidden = false;
       results.innerHTML = `
-        <div class="hero-search-grid">
+        <div class="hero-search-overview">
+          <div class="hero-search-overview-head">
+            <div>
+              <h4 class="hero-search-title">${matches.length === 1 ? escapeHtml(matches[0].name) : "Closest candidate matches"}</h4>
+              <p class="hero-search-subtitle">
+                ${matches.length === 1
+                  ? "Open the ballot, district, candidate, or finance pages connected to this candidate."
+                  : "Choose the candidate you meant and jump straight to the right Rhode Island election pages."}
+              </p>
+            </div>
+            <span class="hero-search-kicker">${matches.length === 1 ? "Candidate match" : `${matches.length} matches`}</span>
+          </div>
+          <div class="hero-search-match-list">
           ${matches.map(candidate => {
             const financeHref = buildFinanceHref(candidate);
             return `
-              <article class="hero-search-card">
-                <div class="hero-search-card-head">
-                  <h4>${escapeHtml(candidate.name)}</h4>
-                  <span class="hero-search-badge">${escapeHtml(partyLongLabel(candidate.party))}</span>
+              <article class="hero-search-match">
+                <div class="hero-search-match-copy">
+                  <h5 class="hero-search-match-name">${escapeHtml(candidate.name)}</h5>
+                  <p class="hero-search-match-meta">
+                    ${escapeHtml(`${partyLongLabel(candidate.party)} · ${chamberLabel(candidate.chamber)} District ${candidate.district_number}`)}
+                    ${candidate.home_precinct_name ? ` · ${escapeHtml(candidate.home_precinct_name)}` : ""}
+                  </p>
                 </div>
-                <div class="hero-search-meta">
-                  <span>${escapeHtml(`${chamberLabel(candidate.chamber)} District ${candidate.district_number}`)}</span>
-                  ${candidate.home_precinct_name ? `<span>${escapeHtml(candidate.home_precinct_name)}</span>` : ""}
-                  ${candidate.zip_code ? `<span>ZIP ${escapeHtml(candidate.zip_code)}</span>` : ""}
-                  <span>${candidate.on_primary_ballot ? "On primary ballot" : "General filing"}</span>
-                </div>
-                <p class="hero-search-copyline">
-                  ${escapeHtml(candidate.home_label || candidate.hometown || "Rhode Island candidate")} · Open the district page, compare candidates, or jump to campaign finance.
-                </p>
-                <div class="hero-search-actions">
+                <div class="hero-search-match-actions">
                   <a class="hero-search-action primary" href="${buildRunningHref(candidate)}">Who’s on this ballot?</a>
-                  <a class="hero-search-action" href="${buildMeetHref(candidate)}">Meet the candidates</a>
+                  <a class="hero-search-action" href="${buildMeetHref(candidate)}">Compare candidates</a>
                   ${financeHref ? `<a class="hero-search-action finance" href="${financeHref}">Campaign finance</a>` : ""}
                 </div>
               </article>
             `;
           }).join("")}
+          </div>
         </div>
       `;
     }
@@ -2564,45 +2617,28 @@
 
       results.hidden = false;
       results.innerHTML = `
-        <div class="hero-search-grid">
-          <article class="hero-search-card">
-            <div class="hero-search-card-head">
-              <h4>${escapeHtml(candidate.address || query)}</h4>
-              <span class="hero-search-badge">Address match</span>
+        <div class="hero-search-overview">
+          <div class="hero-search-overview-head">
+            <div>
+              <h4 class="hero-search-title">${escapeHtml(candidate.address || query)}</h4>
+              <p class="hero-search-subtitle">We matched this Rhode Island address to a precinct and gathered the quickest next pages for this voter.</p>
             </div>
-            <div class="hero-search-meta">
-              <span>${escapeHtml(precinctName)}</span>
-              ${lookupRecord.house_district ? `<span>House District ${escapeHtml(String(lookupRecord.house_district))}</span>` : ""}
-              ${lookupRecord.senate_district ? `<span>Senate District ${escapeHtml(String(lookupRecord.senate_district))}</span>` : ""}
-            </div>
-            <p class="hero-search-copyline">
-              We matched this Rhode Island address to a precinct and can now send you straight to the ballot, district, and candidate pages that matter.
-            </p>
-            <div class="hero-search-actions">
-              <a class="hero-search-action primary" href="${buildLookupHref(candidate.address || query)}">Open Find My Precinct</a>
-              <a class="hero-search-action" href="${houseHref}">House ballot</a>
-              <a class="hero-search-action" href="${senateHref}">Senate ballot</a>
-            </div>
-          </article>
-          <article class="hero-search-card">
-            <div class="hero-search-card-head">
-              <h4>Your next pages</h4>
-              <span class="hero-search-badge">Quick links</span>
-            </div>
-            <div class="hero-search-meta">
-              <span>Matched precinct</span>
-              <span>2024 turnout context</span>
-              <span>Candidate pages</span>
-            </div>
-            <p class="hero-search-copyline">
-              Use the district pages for a faster view of who is on your ballot, then jump into candidate comparison or campaign finance.
-            </p>
-            <div class="hero-search-actions">
-              <a class="hero-search-action" href="${houseMeetHref}">Compare House candidates</a>
-              <a class="hero-search-action" href="${senateMeetHref}">Compare Senate candidates</a>
-              <a class="hero-search-action finance" href="finance.html">Browse campaign finance</a>
-            </div>
-          </article>
+            <span class="hero-search-kicker">Address match</span>
+          </div>
+          <div class="hero-search-chip-row">
+            <span class="hero-search-chip">${escapeHtml(precinctName)}</span>
+            ${lookupRecord.house_district ? `<span class="hero-search-chip">House District ${escapeHtml(String(lookupRecord.house_district))}</span>` : ""}
+            ${lookupRecord.senate_district ? `<span class="hero-search-chip">Senate District ${escapeHtml(String(lookupRecord.senate_district))}</span>` : ""}
+            <span class="hero-search-chip">2024 turnout context</span>
+          </div>
+          <div class="hero-search-action-row">
+            <a class="hero-search-action primary" href="${buildLookupHref(candidate.address || query)}">Open Find My Precinct</a>
+            <a class="hero-search-action" href="${houseHref}">House ballot</a>
+            <a class="hero-search-action" href="${senateHref}">Senate ballot</a>
+            <a class="hero-search-action" href="${houseMeetHref}">Compare House candidates</a>
+            <a class="hero-search-action" href="${senateMeetHref}">Compare Senate candidates</a>
+            <a class="hero-search-action finance" href="finance.html">Campaign finance</a>
+          </div>
         </div>
       `;
     }
