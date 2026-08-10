@@ -540,7 +540,8 @@
     .signal-card {
       padding: 18px;
       position: relative;
-      overflow: hidden;
+      overflow: visible;
+      z-index: 1;
     }
 
     .signal-card::before {
@@ -649,8 +650,10 @@
     .inline-help-pop {
       position: absolute;
       top: calc(100% + 10px);
-      right: 0;
-      z-index: 30;
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
+      z-index: 120;
       width: min(280px, 74vw);
       padding: 12px 14px;
       border-radius: 16px;
@@ -675,14 +678,15 @@
     .hero-stat-label .inline-help-pop {
       top: auto;
       bottom: calc(100% + 10px);
-      right: -6px;
-      left: auto;
-      z-index: 80;
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
+      z-index: 160;
       width: min(260px, 58vw);
     }
 
     .hero-stat-card .inline-help[open] {
-      z-index: 40;
+      z-index: 120;
     }
 
     .money-flow-grid {
@@ -785,7 +789,10 @@
       background: #e6eef7;
     }
 
-    .mix-segment { height: 100%; }
+    .mix-segment {
+      height: 100%;
+      min-width: 4px;
+    }
     .mix-individuals { background: linear-gradient(90deg, #15b79e 0%, #5eead4 100%); }
     .mix-aggregate { background: linear-gradient(90deg, #37c5ff 0%, #7dd3fc 100%); }
     .mix-pacs { background: linear-gradient(90deg, #6d5efc 0%, #a5b4fc 100%); }
@@ -809,6 +816,31 @@
       border: 1px solid #dde8f3;
     }
 
+    .mix-row.mix-individuals {
+      background: linear-gradient(90deg, rgba(21, 183, 158, 0.08) 0%, #f9fbfe 16%);
+      border-color: rgba(21, 183, 158, 0.18);
+    }
+
+    .mix-row.mix-aggregate {
+      background: linear-gradient(90deg, rgba(55, 197, 255, 0.08) 0%, #f9fbfe 16%);
+      border-color: rgba(55, 197, 255, 0.2);
+    }
+
+    .mix-row.mix-pacs {
+      background: linear-gradient(90deg, rgba(109, 94, 252, 0.08) 0%, #f9fbfe 16%);
+      border-color: rgba(109, 94, 252, 0.18);
+    }
+
+    .mix-row.mix-refunds {
+      background: linear-gradient(90deg, rgba(244, 183, 64, 0.1) 0%, #f9fbfe 16%);
+      border-color: rgba(244, 183, 64, 0.24);
+    }
+
+    .mix-row.mix-default {
+      background: linear-gradient(90deg, rgba(148, 163, 184, 0.09) 0%, #f9fbfe 16%);
+      border-color: rgba(148, 163, 184, 0.2);
+    }
+
     .mix-dot {
       width: 12px;
       height: 12px;
@@ -829,6 +861,16 @@
       color: #6d7d91;
       font-size: 13px;
       line-height: 1.5;
+    }
+
+    .mix-copy em {
+      display: inline-block;
+      margin-top: 8px;
+      color: #3b5877;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.45;
     }
 
     .mix-amount {
@@ -1737,7 +1779,55 @@
 
     function withAssetVersion(url) {
       const separator = url.includes("?") ? "&" : "?";
-      return `${url}${separator}v=20260808b`;
+      return `${url}${separator}v=20260810a`;
+    }
+
+    function normalizeBucketClass(bucket) {
+      const raw = String(bucket?.class_name || "").trim().toLowerCase();
+      if (!raw) return "default";
+      if (raw === "individuals" || raw === "itemized-individual-donors") return "individuals";
+      if (raw === "aggregate" || raw === "small-dollar-aggregate-online-receipts") return "aggregate";
+      if (raw === "pacs" || raw === "pac-contributions") return "pacs";
+      if (raw === "refunds" || raw === "refunds-rebates" || raw === "refund/rebate") return "refunds";
+      if (raw === "other" || raw === "other-reported-sources") return "default";
+      return raw;
+    }
+
+    function getBucketMeta(bucket) {
+      const bucketClass = normalizeBucketClass(bucket);
+      if (bucketClass === "aggregate") {
+        return {
+          label: "Receipts without donor names listed",
+          description: "This money was reported in aggregate form, so individual donor names are not listed in the public filing.",
+          note: "Rhode Island filings often use aggregate reporting for smaller-dollar or bundled receipts."
+        };
+      }
+      if (bucketClass === "individuals") {
+        return {
+          label: bucket?.label || "Itemized individual donors",
+          description: bucket?.description || "Named contributors reported individually in the filing.",
+          note: ""
+        };
+      }
+      if (bucketClass === "pacs") {
+        return {
+          label: bucket?.label || "PAC contributions",
+          description: bucket?.description || "Political committees and PACs listed in the filing.",
+          note: ""
+        };
+      }
+      if (bucketClass === "refunds") {
+        return {
+          label: bucket?.label || "Refunds / rebates",
+          description: bucket?.description || "Small reimbursements, refunds, or rebates reported by the campaign.",
+          note: ""
+        };
+      }
+      return {
+        label: bucket?.label || "Other funding",
+        description: bucket?.description || "Other money reported in the filing.",
+        note: ""
+      };
     }
 
     function profileUrl(profile) {
@@ -1762,11 +1852,18 @@
 
     function buildHero(profile) {
       const districtLabel = `${chamberLabel(profile.chamber)} District ${profile.district_number}`;
-      const strongestBucket = (profile.source_buckets || []).slice().sort((a, b) => (b.amount || 0) - (a.amount || 0))[0];
+      const buckets = (profile.source_buckets || []).slice();
+      const total = buckets.reduce((sum, bucket) => sum + Number(bucket.amount || 0), 0) || 1;
+      const strongestBucket = buckets.slice().sort((a, b) => (b.amount || 0) - (a.amount || 0))[0];
+      const unnamedBucket = buckets.find(bucket => normalizeBucketClass(bucket) === "aggregate");
       const quarterRead = Number(profile.net_change || 0) >= 0
         ? "This campaign raised more than it spent during the filing period."
         : "This campaign spent more than it raised during the filing period.";
       const partyTone = partyClass(profile.party);
+      const strongestLabel = strongestBucket ? getBucketMeta(strongestBucket).label : "";
+      const unnamedCopy = unnamedBucket
+        ? ` ${formatCurrency(unnamedBucket.amount)} of this filing (${formatPercent((Number(unnamedBucket.amount || 0) / total) * 100)}) was reported without individual donor names attached.`
+        : "";
 
       return `
         <section class="hero">
@@ -1780,7 +1877,8 @@
             </div>
             <div class="hero-plain-note">
               <strong>Quick read:</strong> ${escapeHtml(quarterRead)}
-              ${strongestBucket ? ` The largest visible funding stream in this filing is <strong>${escapeHtml(strongestBucket.label)}</strong>.` : ""}
+              ${strongestBucket ? ` The largest visible funding stream in this filing is <strong>${escapeHtml(strongestLabel)}</strong>.` : ""}
+              ${escapeHtml(unnamedCopy)}
             </div>
             ${buildHeroStats(profile)}
           </div>
@@ -1839,23 +1937,28 @@
       const buckets = profile.source_buckets || [];
       if (!buckets.length) return "";
       const total = buckets.reduce((sum, bucket) => sum + Number(bucket.amount || 0), 0) || 1;
+      const unnamedBucket = buckets.find(bucket => normalizeBucketClass(bucket) === "aggregate");
       return `
         <div class="hero-mix">
           <div class="section-label">Funding mix ${buildHelp("Funding mix shows the reported sources of money in this filing period, grouped into a few simpler categories so you can see the campaign’s funding base at a glance.")}</div>
           <div class="hero-mix-title">Where the money came from</div>
-          <div class="hero-mix-copy">A quick visual breakdown of the campaign’s reported funding sources for this filing period.</div>
+          <div class="hero-mix-copy">
+            A quick visual breakdown of the campaign’s reported funding sources for this filing period.
+            ${unnamedBucket ? ` ${formatCurrency(unnamedBucket.amount)} was reported without individual donor names listed.` : ""}
+          </div>
           <div class="mix-meter">
             ${buckets.map(bucket => `
-              <span class="mix-segment mix-${escapeHtml(bucket.class_name || "default")}" style="width:${((Number(bucket.amount || 0) / total) * 100).toFixed(1)}%"></span>
+              <span class="mix-segment mix-${escapeHtml(normalizeBucketClass(bucket))}" style="width:${((Number(bucket.amount || 0) / total) * 100).toFixed(1)}%"></span>
             `).join("")}
           </div>
           <div class="mix-list">
             ${buckets.map(bucket => `
-              <div class="mix-row">
-                <div class="mix-dot mix-${escapeHtml(bucket.class_name || "default")}"></div>
+              <div class="mix-row mix-${escapeHtml(normalizeBucketClass(bucket))}">
+                <div class="mix-dot mix-${escapeHtml(normalizeBucketClass(bucket))}"></div>
                 <div class="mix-copy">
-                  <strong>${escapeHtml(bucket.label)}</strong>
-                  <span>${escapeHtml(bucket.description || "")}</span>
+                  <strong>${escapeHtml(getBucketMeta(bucket).label)}</strong>
+                  <span>${escapeHtml(getBucketMeta(bucket).description)}</span>
+                  ${getBucketMeta(bucket).note ? `<em>${escapeHtml(getBucketMeta(bucket).note)}</em>` : ""}
                 </div>
                 <div class="mix-amount">
                   ${formatCurrency(bucket.amount)}
@@ -1976,23 +2079,28 @@
       const buckets = profile.source_buckets || [];
       if (!buckets.length) return "";
       const total = buckets.reduce((sum, bucket) => sum + Number(bucket.amount || 0), 0) || 1;
+      const unnamedBucket = buckets.find(bucket => normalizeBucketClass(bucket) === "aggregate");
       return `
         <article class="panel section-card">
           <div class="section-label">Funding mix</div>
           <h3>Where the money came from.</h3>
-          <p class="section-copy">This groups the filing into a few readable categories so you can see the campaign’s funding base at a glance.</p>
+          <p class="section-copy">
+            This groups the filing into a few readable categories so you can see the campaign’s funding base at a glance.
+            ${unnamedBucket ? ` ${formatCurrency(unnamedBucket.amount)} was reported in aggregate form, which means the filing does not attach individual donor names to that portion.` : ""}
+          </p>
           <div class="mix-meter">
             ${buckets.map(bucket => `
-              <span class="mix-segment mix-${escapeHtml(bucket.class_name || "default")}" style="width:${((Number(bucket.amount || 0) / total) * 100).toFixed(1)}%"></span>
+              <span class="mix-segment mix-${escapeHtml(normalizeBucketClass(bucket))}" style="width:${((Number(bucket.amount || 0) / total) * 100).toFixed(1)}%"></span>
             `).join("")}
           </div>
           <div class="mix-list">
             ${buckets.map(bucket => `
-              <div class="mix-row">
-                <div class="mix-dot mix-${escapeHtml(bucket.class_name || "default")}"></div>
+              <div class="mix-row mix-${escapeHtml(normalizeBucketClass(bucket))}">
+                <div class="mix-dot mix-${escapeHtml(normalizeBucketClass(bucket))}"></div>
                 <div class="mix-copy">
-                  <strong>${escapeHtml(bucket.label)}</strong>
-                  <span>${escapeHtml(bucket.description || "")}</span>
+                  <strong>${escapeHtml(getBucketMeta(bucket).label)}</strong>
+                  <span>${escapeHtml(getBucketMeta(bucket).description)}</span>
+                  ${getBucketMeta(bucket).note ? `<em>${escapeHtml(getBucketMeta(bucket).note)}</em>` : ""}
                 </div>
                 <div class="mix-amount">
                   ${formatCurrency(bucket.amount)}
@@ -2007,7 +2115,19 @@
 
     function buildDonorHighlights(profile) {
       const donors = (profile.top_donors || []).slice(0, 10);
-      if (!donors.length) return "";
+      if (!donors.length) {
+        const unnamedBucket = (profile.source_buckets || []).find(bucket => normalizeBucketClass(bucket) === "aggregate");
+        return `
+          <article class="panel section-card jump-target" id="top-donors">
+            <div class="section-label">Top donors</div>
+            <h3>Who gave the biggest checks${buildHelp("Some filings list donors one by one, while others report part of their money in aggregate form without naming each contributor.")}</h3>
+            <p class="section-copy">
+              No itemized donor list is visible in this filing.
+              ${unnamedBucket ? ` ${formatCurrency(unnamedBucket.amount)} was reported without individual donor names attached, so that portion cannot be shown as a donor-by-donor list here.` : "This candidate may still have raised money, but the filing data currently available to the site does not expose a donor-by-donor list we can show here yet."}
+            </p>
+          </article>
+        `;
+      }
       const maxAmount = Math.max(...donors.map(donor => Number(donor.amount || 0)), 1);
       return `
         <article class="panel section-card jump-target" id="top-donors">
@@ -2203,6 +2323,12 @@
         profile: profileBySlug.get(entry.slug) || null
       })).sort((a, b) => {
         if ((b.profile ? 1 : 0) !== (a.profile ? 1 : 0)) return (b.profile ? 1 : 0) - (a.profile ? 1 : 0);
+        if (a.profile && b.profile && Number(b.profile.money_raised || 0) !== Number(a.profile.money_raised || 0)) {
+          return Number(b.profile.money_raised || 0) - Number(a.profile.money_raised || 0);
+        }
+        if (a.profile && b.profile && Number(b.profile.money_spent || 0) !== Number(a.profile.money_spent || 0)) {
+          return Number(b.profile.money_spent || 0) - Number(a.profile.money_spent || 0);
+        }
         if (a.chamber !== b.chamber) return a.chamber.localeCompare(b.chamber);
         if (Number(a.district_number) !== Number(b.district_number)) return Number(a.district_number) - Number(b.district_number);
         return a.candidate_name.localeCompare(b.candidate_name);
@@ -2232,7 +2358,7 @@
               <article class="directory-stat">
                 <div class="directory-stat-label">By chamber</div>
                 <div class="directory-stat-value">${houseCount} / ${senateCount}</div>
-                <div class="directory-stat-copy">House candidates first, Senate candidates second, so you can scan the field quickly.</div>
+                <div class="directory-stat-copy">House and Senate candidates currently represented in this finance directory.</div>
               </article>
             </div>
           </section>
@@ -2251,7 +2377,7 @@
             </div>
             <div class="directory-results-head">
               <div class="directory-results-count" id="financeDirectoryCount">${entries.length} candidates shown</div>
-              <div class="directory-results-copy">Candidates with a published finance filing open into a full profile. Others still link into the ballot and candidate pages while finance filings continue to populate.</div>
+              <div class="directory-results-copy">Profiles are sorted by money raised in the most recent published filing. Candidates with a published finance filing open into a full profile; others still link into the ballot and candidate pages while finance filings continue to populate.</div>
             </div>
             <div class="finance-card-grid" id="financeDirectoryResults"></div>
             <div class="directory-empty" id="financeDirectoryEmpty" hidden>No candidates match that search yet. Try a broader name or switch filters.</div>
