@@ -180,23 +180,28 @@
       "spending_categories": [
         {
           "title": "Political donations",
-          "summary": "The filing includes several $1,000 political donations to other committees or campaigns, including Friends of Thomas Paolino, Friends of Gordon Rogers, Friends of Elaine J. Morgan, and the Burrillville 250 Commission."
+          "summary": "The filing includes several $1,000 political donations to other committees or campaigns, including Friends of Thomas Paolino, Friends of Gordon Rogers, Friends of Elaine J. Morgan, and the Burrillville 250 Commission.",
+          "amount": 4000.0
         },
         {
           "title": "Digital advertising and communications",
-          "summary": "Visible spending includes Facebook ads, Google ads, Mailchimp, Wix, and small WinRed-related charges."
+          "summary": "Visible spending includes Facebook ads, Google ads, Mailchimp, Wix, and small WinRed-related charges.",
+          "amount": 2399.59
         },
         {
           "title": "Campaign materials and parade supplies",
-          "summary": "Several Amazon purchases appear tied to parade candy, parade supplies, and general campaign materials."
+          "summary": "Several Amazon purchases appear tied to parade candy, parade supplies, and general campaign materials.",
+          "amount": 1784.9
         },
         {
           "title": "Meals, meetings, and events",
-          "summary": "The filing includes restaurants, coffee meetings, office appreciation meals, and event-related food purchases."
+          "summary": "The filing includes restaurants, coffee meetings, office appreciation meals, and event-related food purchases.",
+          "amount": 1002.95
         },
         {
           "title": "Travel and conference costs",
-          "summary": "There are rideshare and parking expenses tied to conference travel and campaign-related events."
+          "summary": "There are rideshare and parking expenses tied to conference travel and campaign-related events.",
+          "amount": 120.25
         }
       ],
       "takeaways": [
