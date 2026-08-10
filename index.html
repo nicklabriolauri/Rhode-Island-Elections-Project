@@ -2406,6 +2406,35 @@
         .trim();
     }
 
+    function searchTokens(value) {
+      return normalizeSearchText(value).split(" ").filter(Boolean);
+    }
+
+    function orderedTokenMatch(targetValue, queryValue) {
+      const targetTokens = searchTokens(targetValue);
+      const queryTokens = searchTokens(queryValue);
+      if (!targetTokens.length || !queryTokens.length) return false;
+      let queryIndex = 0;
+      for (const token of targetTokens) {
+        if (token.startsWith(queryTokens[queryIndex])) {
+          queryIndex += 1;
+          if (queryIndex === queryTokens.length) return true;
+        }
+      }
+      return false;
+    }
+
+    function candidateSearchScore(candidate, query) {
+      const normalizedName = normalizeSearchText(candidate?.name || "");
+      const normalizedQuery = normalizeSearchText(query);
+      if (!normalizedName || !normalizedQuery) return -1;
+      if (normalizedName === normalizedQuery) return 4;
+      if (normalizedName.startsWith(normalizedQuery)) return 3;
+      if (normalizedName.includes(normalizedQuery)) return 2;
+      if (orderedTokenMatch(candidate?.name || "", query)) return 1;
+      return -1;
+    }
+
     function buildFinanceCompositeKey({ chamber, district_number, party, name }) {
       return [
         String(chamber || "").toLowerCase(),
@@ -2734,13 +2763,19 @@
         await loadHomepageSearchData();
         const normalizedQuery = normalizeSearchText(query);
         const matches = homepageCandidates
-          .filter(candidate => normalizeSearchText(candidate.name).includes(normalizedQuery))
+          .map(candidate => ({
+            candidate,
+            score: candidateSearchScore(candidate, query)
+          }))
+          .filter(result => result.score >= 0)
           .sort((left, right) => {
-            const leftStarts = normalizeSearchText(left.name).startsWith(normalizedQuery) ? 0 : 1;
-            const rightStarts = normalizeSearchText(right.name).startsWith(normalizedQuery) ? 0 : 1;
+            if (right.score !== left.score) return right.score - left.score;
+            const leftStarts = normalizeSearchText(left.candidate.name).startsWith(normalizedQuery) ? 0 : 1;
+            const rightStarts = normalizeSearchText(right.candidate.name).startsWith(normalizedQuery) ? 0 : 1;
             if (leftStarts !== rightStarts) return leftStarts - rightStarts;
-            return left.name.localeCompare(right.name);
+            return left.candidate.name.localeCompare(right.candidate.name);
           })
+          .map(result => result.candidate)
           .slice(0, 6);
         renderCandidateSearchResults(matches);
         return;
