@@ -1375,6 +1375,37 @@
       gap: 10px;
     }
 
+    .directory-sort {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 44px;
+      padding: 0 0 0 14px;
+      border-radius: 999px;
+      border: 1px solid #dbe6f1;
+      background: #fff;
+      color: var(--ink-soft);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .directory-sort select {
+      min-height: 42px;
+      padding: 0 40px 0 2px;
+      border: 0;
+      outline: 0;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--navy);
+      font-size: 14px;
+      font-weight: 800;
+      font-family: inherit;
+      cursor: pointer;
+    }
+
     .directory-filter {
       display: inline-flex;
       align-items: center;
@@ -2368,16 +2399,26 @@
               <label class="directory-search" aria-label="Search campaign finance profiles">
                 <input id="financeDirectorySearch" type="search" placeholder="Search candidate, chamber, or district" />
               </label>
-              <div class="directory-filter-bar" id="financeDirectoryFilters">
-                <button class="directory-filter active" type="button" data-filter="all">All candidates</button>
-                <button class="directory-filter" type="button" data-filter="published">Published finance profiles</button>
-                <button class="directory-filter" type="button" data-chamber="house">House</button>
-                <button class="directory-filter" type="button" data-chamber="senate">Senate</button>
+              <div class="directory-filter-bar">
+                <div class="directory-filter-bar" id="financeDirectoryFilters">
+                  <button class="directory-filter active" type="button" data-filter="all">All candidates</button>
+                  <button class="directory-filter" type="button" data-filter="published">Published finance profiles</button>
+                  <button class="directory-filter" type="button" data-chamber="house">House</button>
+                  <button class="directory-filter" type="button" data-chamber="senate">Senate</button>
+                </div>
+                <label class="directory-sort" aria-label="Sort campaign finance profiles">
+                  <span>Sort by</span>
+                  <select id="financeDirectorySort">
+                    <option value="raised">Raised</option>
+                    <option value="spent">Spent</option>
+                    <option value="cash">Cash on hand</option>
+                  </select>
+                </label>
               </div>
             </div>
             <div class="directory-results-head">
               <div class="directory-results-count" id="financeDirectoryCount">${entries.length} candidates shown</div>
-              <div class="directory-results-copy">Profiles are sorted by money raised in the most recent published filing. Candidates with a published finance filing open into a full profile; others still link into the ballot and candidate pages while finance filings continue to populate.</div>
+              <div class="directory-results-copy" id="financeDirectoryCopy">Profiles are sorted by money raised in the most recent published filing. Candidates with a published finance filing open into a full profile; others still link into the ballot and candidate pages while finance filings continue to populate.</div>
             </div>
             <div class="finance-card-grid" id="financeDirectoryResults"></div>
             <div class="directory-empty" id="financeDirectoryEmpty" hidden>No candidates match that search yet. Try a broader name or switch filters.</div>
@@ -2386,11 +2427,18 @@
       `;
 
       const searchInput = document.getElementById("financeDirectorySearch");
+      const sortInput = document.getElementById("financeDirectorySort");
       const countNode = document.getElementById("financeDirectoryCount");
+      const copyNode = document.getElementById("financeDirectoryCopy");
       const resultsNode = document.getElementById("financeDirectoryResults");
       const emptyNode = document.getElementById("financeDirectoryEmpty");
       const filterButtons = Array.from(document.querySelectorAll("#financeDirectoryFilters .directory-filter"));
-      const state = { chamber: "all", filter: "all", query: "" };
+      const sortCopy = {
+        raised: "Profiles are sorted by money raised in the most recent published filing.",
+        spent: "Profiles are sorted by money spent in the most recent published filing.",
+        cash: "Profiles are sorted by cash on hand in the most recent published filing."
+      };
+      const state = { chamber: "all", filter: "all", query: "", sort: "raised" };
 
       function applyDirectoryFilters() {
         const query = state.query.trim().toLowerCase();
@@ -2407,15 +2455,37 @@
             partyLabel(entry.party)
           ].join(" ").toLowerCase();
           return haystack.includes(query);
+        }).sort((a, b) => {
+          if ((b.profile ? 1 : 0) !== (a.profile ? 1 : 0)) return (b.profile ? 1 : 0) - (a.profile ? 1 : 0);
+          const metricKey = state.sort === "spent"
+            ? "money_spent"
+            : state.sort === "cash"
+              ? "ending_cash"
+              : "money_raised";
+          const aMetric = Number(a.profile?.[metricKey] || 0);
+          const bMetric = Number(b.profile?.[metricKey] || 0);
+          if (bMetric !== aMetric) return bMetric - aMetric;
+          if (a.profile && b.profile && Number(b.profile.money_raised || 0) !== Number(a.profile.money_raised || 0)) {
+            return Number(b.profile.money_raised || 0) - Number(a.profile.money_raised || 0);
+          }
+          if (a.chamber !== b.chamber) return a.chamber.localeCompare(b.chamber);
+          if (Number(a.district_number) !== Number(b.district_number)) return Number(a.district_number) - Number(b.district_number);
+          return a.candidate_name.localeCompare(b.candidate_name);
         });
 
         countNode.textContent = `${filtered.length} candidate${filtered.length === 1 ? "" : "s"} shown`;
+        copyNode.textContent = `${sortCopy[state.sort]} Candidates with a published finance filing open into a full profile; others still link into the ballot and candidate pages while finance filings continue to populate.`;
         resultsNode.innerHTML = filtered.map(buildDirectoryCard).join("");
         emptyNode.hidden = filtered.length > 0;
       }
 
       searchInput.addEventListener("input", event => {
         state.query = event.target.value || "";
+        applyDirectoryFilters();
+      });
+
+      sortInput.addEventListener("change", event => {
+        state.sort = event.target.value || "raised";
         applyDirectoryFilters();
       });
 
