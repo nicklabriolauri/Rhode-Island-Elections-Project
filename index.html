@@ -2382,6 +2382,7 @@
     let homepageSearchMode = "candidate";
     let homepageCandidates = [];
     let homepageFinanceByCandidateId = new Map();
+    let homepageFinanceByCompositeKey = new Map();
     let homepagePrecinctGeojson = null;
     let homepagePrecinctLookup = null;
     let precinctAssetsPromise = null;
@@ -2405,6 +2406,15 @@
         .trim();
     }
 
+    function buildFinanceCompositeKey({ chamber, district_number, party, name }) {
+      return [
+        String(chamber || "").toLowerCase(),
+        String(district_number || "").trim(),
+        String(party || "").toUpperCase(),
+        normalizeSearchText(name || "")
+      ].join("::");
+    }
+
     function buildRunningHref(candidate) {
       return `running.html?chamber=${encodeURIComponent(candidate.chamber)}&district=${encodeURIComponent(candidate.district_number)}`;
     }
@@ -2423,12 +2433,15 @@
     }
 
     function buildFinanceHref(candidate) {
-      const profile = homepageFinanceByCandidateId.get(candidate.candidate_id);
+      const profile = getFinanceProfile(candidate);
       return profile ? `finance.html?slug=${encodeURIComponent(profile.slug)}` : "";
     }
 
     function getFinanceProfile(candidate) {
-      return homepageFinanceByCandidateId.get(candidate.candidate_id) || null;
+      if (!candidate) return null;
+      return homepageFinanceByCandidateId.get(candidate.candidate_id)
+        || homepageFinanceByCompositeKey.get(buildFinanceCompositeKey(candidate))
+        || null;
     }
 
     function getDistrictFinanceMatches(lookupRecord) {
@@ -2501,7 +2514,19 @@
 
       if (financeResponse.ok) {
         const financePayload = await financeResponse.json();
-        homepageFinanceByCandidateId = new Map((financePayload?.profiles || []).map(profile => [profile.candidate_id, profile]));
+        const profiles = financePayload?.profiles || [];
+        homepageFinanceByCandidateId = new Map(profiles.map(profile => [profile.candidate_id, profile]));
+        homepageFinanceByCompositeKey = new Map(
+          profiles.map(profile => [
+            buildFinanceCompositeKey({
+              chamber: profile.chamber,
+              district_number: profile.district_number,
+              party: profile.party,
+              name: profile.candidate_name
+            }),
+            profile
+          ])
+        );
       }
     }
 
