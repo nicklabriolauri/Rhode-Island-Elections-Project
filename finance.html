@@ -1217,6 +1217,320 @@
       white-space: nowrap;
     }
 
+    .directory-shell {
+      display: grid;
+      gap: 18px;
+    }
+
+    .directory-hero {
+      padding: 28px;
+      background:
+        radial-gradient(circle at top right, rgba(55, 197, 255, 0.16), transparent 28%),
+        radial-gradient(circle at bottom left, rgba(109, 94, 252, 0.12), transparent 22%),
+        linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(245,250,255,0.97) 100%);
+    }
+
+    .directory-hero h2 {
+      margin: 12px 0 0;
+      max-width: 760px;
+      font-family: "Sora", sans-serif;
+      font-size: 46px;
+      line-height: 0.98;
+      letter-spacing: -0.06em;
+      color: var(--navy);
+    }
+
+    .directory-hero p {
+      margin: 14px 0 0;
+      max-width: 760px;
+      color: var(--ink-soft);
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .directory-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .directory-stat {
+      padding: 18px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.86);
+      border: 1px solid #dbe6f1;
+      box-shadow: 0 12px 28px rgba(17, 32, 54, 0.05);
+    }
+
+    .directory-stat-label {
+      color: #738399;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .directory-stat-value {
+      margin-top: 10px;
+      font-family: "Sora", sans-serif;
+      font-size: 34px;
+      line-height: 0.94;
+      letter-spacing: -0.05em;
+      color: var(--navy);
+    }
+
+    .directory-stat-copy {
+      margin-top: 8px;
+      color: var(--ink-soft);
+      font-size: 14px;
+      line-height: 1.48;
+    }
+
+    .directory-controls {
+      padding: 24px;
+    }
+
+    .directory-controls-top {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .directory-search {
+      flex: 1 1 340px;
+      display: flex;
+      align-items: center;
+      min-height: 56px;
+      padding: 0 18px;
+      border-radius: 20px;
+      border: 1px solid #d6e3ef;
+      background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(248,251,255,0.98) 100%);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.65);
+    }
+
+    .directory-search input {
+      width: 100%;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      color: var(--navy);
+      font-size: 18px;
+      font-weight: 700;
+      font-family: inherit;
+    }
+
+    .directory-search input::placeholder {
+      color: #7e8ea4;
+      font-weight: 600;
+    }
+
+    .directory-filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .directory-filter {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 16px;
+      border-radius: 999px;
+      border: 1px solid #dbe6f1;
+      background: #fff;
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 900;
+      cursor: pointer;
+      transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease, background .16s ease;
+    }
+
+    .directory-filter:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(17, 32, 54, 0.08);
+    }
+
+    .directory-filter.active {
+      border-color: rgba(19, 38, 74, 0.12);
+      background: linear-gradient(135deg, #13264a 0%, #1f3966 100%);
+      color: #fff;
+      box-shadow: 0 12px 28px rgba(19, 38, 74, 0.18);
+    }
+
+    .directory-results-head {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid #e2ebf4;
+    }
+
+    .directory-results-count {
+      color: var(--navy);
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .directory-results-copy {
+      color: var(--ink-soft);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .finance-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .finance-card {
+      display: grid;
+      gap: 14px;
+      padding: 22px;
+      border-radius: 26px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(247,250,255,0.98) 100%);
+      border: 1px solid #dbe6f1;
+      box-shadow: 0 14px 30px rgba(17, 32, 54, 0.06);
+    }
+
+    .finance-card-top {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .finance-card-name {
+      font-family: "Sora", sans-serif;
+      font-size: 28px;
+      line-height: 1;
+      letter-spacing: -0.05em;
+      color: var(--navy);
+    }
+
+    .finance-card-meta {
+      margin-top: 8px;
+      color: var(--ink-soft);
+      font-size: 15px;
+      line-height: 1.56;
+    }
+
+    .finance-card-party {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 36px;
+      padding: 0 12px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .finance-card-party.party-dem {
+      color: var(--dem);
+      background: var(--dem-soft);
+      border-color: rgba(46, 107, 255, 0.2);
+    }
+
+    .finance-card-party.party-rep {
+      color: var(--rep);
+      background: var(--rep-soft);
+      border-color: rgba(223, 75, 72, 0.2);
+    }
+
+    .finance-card-party.party-ind {
+      color: var(--ind);
+      background: var(--ind-soft);
+      border-color: rgba(24, 169, 153, 0.2);
+    }
+
+    .finance-card-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .finance-card-stat {
+      padding: 14px;
+      border-radius: 18px;
+      background: #f8fbff;
+      border: 1px solid #dde8f2;
+    }
+
+    .finance-card-stat-label {
+      color: #738399;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .finance-card-stat-value {
+      margin-top: 8px;
+      color: var(--navy);
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 1.1;
+    }
+
+    .finance-card-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .finance-card-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 900;
+      border: 1px solid #dbe6f1;
+      color: var(--navy);
+      background: #fff;
+    }
+
+    .finance-card-link.primary {
+      color: #fff;
+      border-color: rgba(19, 38, 74, 0.1);
+      background: linear-gradient(135deg, #13264a 0%, #1f3966 100%);
+      box-shadow: 0 12px 26px rgba(19, 38, 74, 0.18);
+    }
+
+    .finance-card-link.disabled {
+      color: #7d8ca2;
+      background: #f3f7fb;
+      border-style: dashed;
+      cursor: default;
+    }
+
+    .directory-empty {
+      margin-top: 18px;
+      padding: 22px;
+      border-radius: 22px;
+      background: #f8fbff;
+      border: 1px dashed #ccdced;
+      color: var(--ink-soft);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
     .loading-state,
     .empty-state {
       padding: 30px;
@@ -1237,6 +1551,11 @@
       .hero,
       .content-grid,
       .money-flow-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .directory-stats,
+      .finance-card-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1301,6 +1620,25 @@
       .verification-item,
       .donor-top {
         grid-template-columns: 1fr;
+      }
+
+      .directory-hero,
+      .directory-controls,
+      .finance-card {
+        padding: 20px;
+      }
+
+      .directory-hero h2 {
+        font-size: 38px;
+      }
+
+      .directory-stats,
+      .finance-card-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .directory-search {
+        min-height: 52px;
       }
 
       .donor-amount {
@@ -1402,6 +1740,10 @@
       return `${url}${separator}v=20260808b`;
     }
 
+    function profileUrl(profile) {
+      return `finance.html?slug=${encodeURIComponent(profile.slug)}`;
+    }
+
     function getRequestedProfile(profiles) {
       const params = new URLSearchParams(window.location.search);
       const requestedId = params.get("candidate");
@@ -1415,7 +1757,7 @@
         const exact = profiles.find(profile => profile.slug === requestedSlug);
         if (exact) return exact;
       }
-      return profiles[0] || null;
+      return null;
     }
 
     function buildHero(profile) {
@@ -1807,6 +2149,162 @@
       `;
     }
 
+    function buildDirectoryCard(entry) {
+      const districtLabel = `${chamberLabel(entry.chamber)} District ${entry.district_number}`;
+      const partyTone = partyClass(entry.party);
+      const profile = entry.profile || null;
+      const statusCopy = profile
+        ? escapeHtml(profile.reporting_period_label || "2026 second-quarter filing")
+        : "No public 2026 second-quarter finance profile found yet";
+      return `
+        <article class="finance-card">
+          <div class="finance-card-top">
+            <div>
+              <div class="finance-card-name">${escapeHtml(entry.candidate_name)}</div>
+              <div class="finance-card-meta">
+                ${escapeHtml(entry.office_sought)}<br />
+                ${escapeHtml(districtLabel)}<br />
+                ${statusCopy}
+              </div>
+            </div>
+            <div class="finance-card-party ${partyTone}">${escapeHtml(partyLabel(entry.party))}</div>
+          </div>
+          <div class="finance-card-stats">
+            <div class="finance-card-stat">
+              <div class="finance-card-stat-label">Raised</div>
+              <div class="finance-card-stat-value">${profile ? formatCurrency(profile.money_raised) : "—"}</div>
+            </div>
+            <div class="finance-card-stat">
+              <div class="finance-card-stat-label">Spent</div>
+              <div class="finance-card-stat-value">${profile ? formatCurrency(profile.money_spent) : "—"}</div>
+            </div>
+            <div class="finance-card-stat">
+              <div class="finance-card-stat-label">Cash on hand</div>
+              <div class="finance-card-stat-value">${profile ? formatCurrency(profile.ending_cash) : "—"}</div>
+            </div>
+          </div>
+          <div class="finance-card-actions">
+            ${profile
+              ? `<a class="finance-card-link primary" href="${profileUrl(profile)}">Open finance profile</a>`
+              : `<span class="finance-card-link disabled">Finance profile not published yet</span>`
+            }
+            <a class="finance-card-link" href="running.html?chamber=${encodeURIComponent(entry.chamber)}&district=${encodeURIComponent(entry.district_number)}">Who's Running?</a>
+            <a class="finance-card-link" href="meet.html?chamber=${encodeURIComponent(entry.chamber)}&district=${encodeURIComponent(entry.district_number)}">Meet the Candidates</a>
+          </div>
+        </article>
+      `;
+    }
+
+    function renderDirectory(data) {
+      const app = document.getElementById("financeApp");
+      const profileBySlug = new Map((data.profiles || []).map(profile => [profile.slug, profile]));
+      const entries = (data.directory || []).map(entry => ({
+        ...entry,
+        profile: profileBySlug.get(entry.slug) || null
+      })).sort((a, b) => {
+        if ((b.profile ? 1 : 0) !== (a.profile ? 1 : 0)) return (b.profile ? 1 : 0) - (a.profile ? 1 : 0);
+        if (a.chamber !== b.chamber) return a.chamber.localeCompare(b.chamber);
+        if (Number(a.district_number) !== Number(b.district_number)) return Number(a.district_number) - Number(b.district_number);
+        return a.candidate_name.localeCompare(b.candidate_name);
+      });
+      const publishedCount = entries.filter(entry => entry.profile).length;
+      const houseCount = entries.filter(entry => entry.chamber === "house").length;
+      const senateCount = entries.filter(entry => entry.chamber === "senate").length;
+
+      document.title = "Campaign Finance | Rhode Island Elections Project";
+      app.innerHTML = `
+        <div class="directory-shell">
+          <section class="panel directory-hero">
+            <div class="eyebrow">Campaign Finance Directory</div>
+            <h2>Browse Rhode Island campaign finance profiles.</h2>
+            <p>Search every legislative candidate, filter by chamber, and open a cleaner public summary of who raised money, who spent it, and what cash remains on hand when a filing is available.</p>
+            <div class="directory-stats">
+              <article class="directory-stat">
+                <div class="directory-stat-label">All candidates</div>
+                <div class="directory-stat-value">${entries.length}</div>
+                <div class="directory-stat-copy">House and Senate candidates currently listed in the 2026 statewide roster.</div>
+              </article>
+              <article class="directory-stat">
+                <div class="directory-stat-label">Published profiles</div>
+                <div class="directory-stat-value">${publishedCount}</div>
+                <div class="directory-stat-copy">Candidates with a public 2026 second-quarter finance profile now available on this page.</div>
+              </article>
+              <article class="directory-stat">
+                <div class="directory-stat-label">By chamber</div>
+                <div class="directory-stat-value">${houseCount} / ${senateCount}</div>
+                <div class="directory-stat-copy">House candidates first, Senate candidates second, so you can scan the field quickly.</div>
+              </article>
+            </div>
+          </section>
+
+          <section class="panel directory-controls">
+            <div class="directory-controls-top">
+              <label class="directory-search" aria-label="Search campaign finance profiles">
+                <input id="financeDirectorySearch" type="search" placeholder="Search candidate, chamber, or district" />
+              </label>
+              <div class="directory-filter-bar" id="financeDirectoryFilters">
+                <button class="directory-filter active" type="button" data-filter="all">All candidates</button>
+                <button class="directory-filter" type="button" data-filter="published">Published finance profiles</button>
+                <button class="directory-filter" type="button" data-chamber="house">House</button>
+                <button class="directory-filter" type="button" data-chamber="senate">Senate</button>
+              </div>
+            </div>
+            <div class="directory-results-head">
+              <div class="directory-results-count" id="financeDirectoryCount">${entries.length} candidates shown</div>
+              <div class="directory-results-copy">Candidates with a published finance filing open into a full profile. Others still link into the ballot and candidate pages while finance filings continue to populate.</div>
+            </div>
+            <div class="finance-card-grid" id="financeDirectoryResults"></div>
+            <div class="directory-empty" id="financeDirectoryEmpty" hidden>No candidates match that search yet. Try a broader name or switch filters.</div>
+          </section>
+        </div>
+      `;
+
+      const searchInput = document.getElementById("financeDirectorySearch");
+      const countNode = document.getElementById("financeDirectoryCount");
+      const resultsNode = document.getElementById("financeDirectoryResults");
+      const emptyNode = document.getElementById("financeDirectoryEmpty");
+      const filterButtons = Array.from(document.querySelectorAll("#financeDirectoryFilters .directory-filter"));
+      const state = { chamber: "all", filter: "all", query: "" };
+
+      function applyDirectoryFilters() {
+        const query = state.query.trim().toLowerCase();
+        const filtered = entries.filter(entry => {
+          if (state.filter === "published" && !entry.profile) return false;
+          if (state.chamber !== "all" && entry.chamber !== state.chamber) return false;
+          if (!query) return true;
+          const districtLabel = `${chamberLabel(entry.chamber)} District ${entry.district_number}`.toLowerCase();
+          const haystack = [
+            entry.candidate_name,
+            entry.office_sought,
+            entry.profile?.reporting_period_label,
+            districtLabel,
+            partyLabel(entry.party)
+          ].join(" ").toLowerCase();
+          return haystack.includes(query);
+        });
+
+        countNode.textContent = `${filtered.length} candidate${filtered.length === 1 ? "" : "s"} shown`;
+        resultsNode.innerHTML = filtered.map(buildDirectoryCard).join("");
+        emptyNode.hidden = filtered.length > 0;
+      }
+
+      searchInput.addEventListener("input", event => {
+        state.query = event.target.value || "";
+        applyDirectoryFilters();
+      });
+
+      filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+          state.filter = button.dataset.filter || "all";
+          state.chamber = button.dataset.chamber || "all";
+          filterButtons.forEach(item => item.classList.toggle("active", item === button));
+          applyDirectoryFilters();
+        });
+      });
+
+      applyDirectoryFilters();
+    }
+
     document.addEventListener("click", event => {
       const activeHelp = event.target.closest(".inline-help");
       document.querySelectorAll(".inline-help[open]").forEach(item => {
@@ -1824,6 +2322,9 @@
         <div class="panel empty-state">
           <strong>No campaign finance profile is published for this candidate yet.</strong>
           This page is ready for candidate-level finance summaries, but the requested candidate does not have a published profile in the current site data.
+          <div style="margin-top:14px;">
+            <a class="finance-card-link primary" href="finance.html">Open all finance profiles</a>
+          </div>
         </div>
       `;
     }
@@ -1833,11 +2334,15 @@
         const response = await fetch(withAssetVersion("/data/candidate_finance_2026.json"), { cache: "no-store" });
         const data = await response.json();
         const profile = getRequestedProfile(data.profiles || []);
-        if (!profile) {
-          renderMissing();
+        if (profile) {
+          renderProfile(profile);
           return;
         }
-        renderProfile(profile);
+        if ((data.profiles || []).length) {
+          renderDirectory(data);
+          return;
+        }
+        renderMissing();
       } catch (error) {
         console.error(error);
         document.getElementById("financeApp").innerHTML = `
