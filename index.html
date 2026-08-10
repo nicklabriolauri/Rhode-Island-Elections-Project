@@ -757,6 +757,44 @@
       justify-content: flex-end;
     }
 
+    .hero-search-result-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .hero-search-result-card {
+      padding: 12px 13px;
+      border-radius: 18px;
+      border: 1px solid #dbeafe;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.82);
+    }
+
+    .hero-search-result-label {
+      color: #64748b;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .hero-search-result-value {
+      margin-top: 5px;
+      color: #0f172a;
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .hero-search-result-copy {
+      margin-top: 5px;
+      color: #475569;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
     .cta-row {
       display: flex;
       flex-wrap: wrap;
@@ -2045,7 +2083,7 @@
           <div class="ocean-line" aria-hidden="true"></div>
           <p class="summary" id="homeSummary">Election results, turnout maps, and precinct data, all in one place.</p>
           <p class="summary-helper" id="homeSummaryHelper"></p>
-          <section class="hero-search" aria-labelledby="heroSearchTitle">
+          <section class="hero-search" id="homeSearchSection" aria-labelledby="heroSearchTitle">
             <div class="hero-search-head">
               <div class="hero-search-copy">
                 <strong id="heroSearchTitle">Search by candidate or by address.</strong>
@@ -2234,14 +2272,7 @@
       research: {
         summary: "Methods, source files, and public election data for deeper Rhode Island analysis.",
         summaryHelper: "Use this mode if you want documentation, downloadable files, or the same structured data that powers the public site.",
-        financeSpotlight: {
-          kicker: "Campaign finance data",
-          title: "Public filing summaries available",
-          summary: "Compare readable candidate finance pages and then move back to the underlying filings if you need the full detail.",
-          note: "A lighter public-facing layer on top of the raw reports.",
-          actionLabel: "Open finance",
-          actionHref: "finance.html"
-        },
+        financeSpotlight: null,
         featureKicker: "Explore core source files",
         featureToggleLabel: "Source files and datasets",
         featureNote: "Open the same structured files that power the public map, turnout tools, and filing pages.",
@@ -2250,7 +2281,7 @@
           { label: "Open Methodology", href: "methodology.html", style: "primary" },
           { label: "Race Data JSON", href: "data/race_data.json", style: "secondary" },
           { label: "2024 Turnout JSON", href: "data/ri_2024_turnout_data.json", style: "secondary" },
-          { label: "Candidate Workbook", href: "https://vote.sos.ri.gov/Forms/elections/Reports/Candidates.xlsx", style: "secondary", external: true }
+          { label: "Finance Profiles JSON", href: "data/candidate_finance_2026.json", style: "secondary" }
         ],
         features: [
           { label: "House GeoJSON", href: "data/house_new.geojson", className: "geometry" },
@@ -2261,22 +2292,23 @@
         links: [
           { label: "Methodology", href: "methodology.html" },
           { label: "Race Data JSON", href: "data/race_data.json" },
+          { label: "Finance Profiles JSON", href: "data/candidate_finance_2026.json" },
+          { label: "Who's Running JSON", href: "data/whos_running_2026.json" },
           { label: "House GeoJSON", href: "data/house_new.geojson" },
           { label: "Senate GeoJSON", href: "data/senate_new.geojson" },
           { label: "Turnout JSON", href: "data/ri_2024_turnout_data.json" },
           { label: "Precinct GeoJSON", href: "data/ri_turnout_2024_precinct.geojson" },
           { label: "Municipality GeoJSON", href: "data/ri_turnout_2024_municipality.geojson" },
-          { label: "Support", href: "support.html" }
+          { label: "Candidate Workbook", href: "https://vote.sos.ri.gov/Forms/elections/Reports/Candidates.xlsx", external: true }
         ],
         nav: [
-          { label: "Map", href: "map.html" },
-          { label: "Who's Running?", href: "running.html" },
-          { label: "Meet the Candidates", href: "meet.html" },
-          { label: "Campaign Finance", href: "finance.html" },
-          { label: "Find My Precinct", href: "lookup.html" },
           { label: "Methodology", href: "methodology.html" },
-          { label: "About", href: "about.html" },
-          { label: "Support", href: "support.html" }
+          { label: "Race Data JSON", href: "data/race_data.json" },
+          { label: "Turnout JSON", href: "data/ri_2024_turnout_data.json" },
+          { label: "Finance Profiles JSON", href: "data/candidate_finance_2026.json" },
+          { label: "House GeoJSON", href: "data/house_new.geojson" },
+          { label: "Senate GeoJSON", href: "data/senate_new.geojson" },
+          { label: "Candidate Workbook", href: "https://vote.sos.ri.gov/Forms/elections/Reports/Candidates.xlsx", external: true }
         ]
       }
     };
@@ -2311,6 +2343,7 @@
       const config = homeModes[mode] || homeModes.voter;
       const summary = document.getElementById("homeSummary");
       const summaryHelper = document.getElementById("homeSummaryHelper");
+      const searchSection = document.getElementById("homeSearchSection");
       const ctaRow = document.getElementById("homeCtaRow");
       const financeSpotlight = document.getElementById("homeFinanceSpotlight");
       const featureToggle = document.getElementById("homeFeatureToggle");
@@ -2322,6 +2355,9 @@
 
       if (summary) summary.textContent = config.summary;
       if (summaryHelper) summaryHelper.textContent = config.summaryHelper || "";
+      if (searchSection) {
+        searchSection.hidden = mode === "research";
+      }
       if (featureKicker) featureKicker.textContent = config.featureKicker;
       if (featureNote) featureNote.textContent = config.featureNote;
       renderPrimaryNav(config.nav || []);
@@ -2383,6 +2419,7 @@
     let homepageCandidates = [];
     let homepageFinanceByCandidateId = new Map();
     let homepageFinanceByCompositeKey = new Map();
+    let homepageRaceData = null;
     let homepagePrecinctGeojson = null;
     let homepagePrecinctLookup = null;
     let precinctAssetsPromise = null;
@@ -2410,6 +2447,23 @@
       return normalizeSearchText(value).split(" ").filter(Boolean);
     }
 
+    function normalizeNameWithoutMiddleInitial(value) {
+      const tokens = searchTokens(value);
+      if (tokens.length <= 2) return tokens.join(" ");
+      return tokens
+        .filter((token, index) => !(index > 0 && index < tokens.length - 1 && token.length === 1))
+        .join(" ");
+    }
+
+    function buildNameVariants(value) {
+      const variants = new Set();
+      const normalized = normalizeSearchText(value);
+      if (normalized) variants.add(normalized);
+      const compact = normalizeNameWithoutMiddleInitial(value);
+      if (compact) variants.add(compact);
+      return Array.from(variants);
+    }
+
     function orderedTokenMatch(targetValue, queryValue) {
       const targetTokens = searchTokens(targetValue);
       const queryTokens = searchTokens(queryValue);
@@ -2424,24 +2478,32 @@
       return false;
     }
 
+    function namesLikelyMatch(leftValue, rightValue) {
+      const leftVariants = buildNameVariants(leftValue);
+      const rightVariants = new Set(buildNameVariants(rightValue));
+      if (leftVariants.some(variant => rightVariants.has(variant))) return true;
+      return orderedTokenMatch(leftValue, rightValue) || orderedTokenMatch(rightValue, leftValue);
+    }
+
     function candidateSearchScore(candidate, query) {
-      const normalizedName = normalizeSearchText(candidate?.name || "");
-      const normalizedQuery = normalizeSearchText(query);
-      if (!normalizedName || !normalizedQuery) return -1;
-      if (normalizedName === normalizedQuery) return 4;
-      if (normalizedName.startsWith(normalizedQuery)) return 3;
-      if (normalizedName.includes(normalizedQuery)) return 2;
-      if (orderedTokenMatch(candidate?.name || "", query)) return 1;
+      const nameVariants = buildNameVariants(candidate?.name || "");
+      const queryVariants = buildNameVariants(query);
+      if (!nameVariants.length || !queryVariants.length) return -1;
+      if (nameVariants.some(variant => queryVariants.includes(variant))) return 5;
+      if (nameVariants.some(variant => queryVariants.some(queryVariant => variant.startsWith(queryVariant) || queryVariant.startsWith(variant)))) return 4;
+      if (nameVariants.some(variant => queryVariants.some(queryVariant => variant.includes(queryVariant) || queryVariant.includes(variant)))) return 3;
+      if (queryVariants.some(queryVariant => orderedTokenMatch(candidate?.name || "", queryVariant))) return 2;
+      if (queryVariants.some(queryVariant => orderedTokenMatch(queryVariant, candidate?.name || ""))) return 1;
       return -1;
     }
 
-    function buildFinanceCompositeKey({ chamber, district_number, party, name }) {
-      return [
+    function buildFinanceCompositeKeys({ chamber, district_number, party, name }) {
+      return buildNameVariants(name || "").map(variant => [
         String(chamber || "").toLowerCase(),
         String(district_number || "").trim(),
         String(party || "").toUpperCase(),
-        normalizeSearchText(name || "")
-      ].join("::");
+        variant
+      ].join("::"));
     }
 
     function buildRunningHref(candidate) {
@@ -2468,9 +2530,89 @@
 
     function getFinanceProfile(candidate) {
       if (!candidate) return null;
-      return homepageFinanceByCandidateId.get(candidate.candidate_id)
-        || homepageFinanceByCompositeKey.get(buildFinanceCompositeKey(candidate))
-        || null;
+      if (homepageFinanceByCandidateId.has(candidate.candidate_id)) {
+        return homepageFinanceByCandidateId.get(candidate.candidate_id);
+      }
+      for (const key of buildFinanceCompositeKeys(candidate)) {
+        if (homepageFinanceByCompositeKey.has(key)) {
+          return homepageFinanceByCompositeKey.get(key);
+        }
+      }
+      return null;
+    }
+
+    function buildRaceLookupKey(chamber, districtNumber, year = 2024) {
+      return `${String(chamber || "").toLowerCase()}|${year}|${String(districtNumber || "").trim()}`;
+    }
+
+    function getDistrictRaceSummary(chamber, districtNumber) {
+      if (!homepageRaceData) return null;
+      return homepageRaceData[buildRaceLookupKey(chamber, districtNumber, 2024)] || null;
+    }
+
+    function getCandidateRacePerformance(candidate) {
+      const race = getDistrictRaceSummary(candidate?.chamber, candidate?.district_number);
+      if (!race) return null;
+      const entry = (race.candidates || []).find(person => namesLikelyMatch(person.name, candidate?.name || ""));
+      if (!entry) return { race, entry: null };
+      return { race, entry };
+    }
+
+    function buildCandidatePerformanceCard(candidate) {
+      const performance = getCandidateRacePerformance(candidate);
+      if (!performance || !performance.race) return "";
+      if (performance.entry) {
+        const entry = performance.entry;
+        const roleLabel = entry.role === "Winner" ? "Won in 2024" : entry.role === "Runner-up" ? "2024 result" : entry.role || "2024 result";
+        const districtMargin = performance.race.margin_pct
+          ? `District margin ${performance.race.margin_pct}`
+          : performance.race.margin_votes
+            ? `District margin ${performance.race.margin_votes} votes`
+            : "";
+        const copyParts = [
+          entry.votes ? `${entry.votes} votes` : "",
+          entry.pct ? `(${entry.pct})` : "",
+          districtMargin
+        ].filter(Boolean);
+        return `
+          <div class="hero-search-result-grid">
+            <div class="hero-search-result-card">
+              <div class="hero-search-result-label">2024 candidate performance</div>
+              <div class="hero-search-result-value">${escapeHtml(roleLabel)}</div>
+              <div class="hero-search-result-copy">${escapeHtml(copyParts.join(" · "))}</div>
+            </div>
+          </div>
+        `;
+      }
+
+      const race = performance.race;
+      return `
+        <div class="hero-search-result-grid">
+          <div class="hero-search-result-card">
+            <div class="hero-search-result-label">2024 district result</div>
+            <div class="hero-search-result-value">${escapeHtml(race.winner_candidate || "Result available")}</div>
+            <div class="hero-search-result-copy">${escapeHtml(`${partyLongLabel(race.winner_party)} winner${race.margin_pct ? ` · margin ${race.margin_pct}` : ""}`)}</div>
+          </div>
+        </div>
+      `;
+    }
+
+    function buildDistrictResultCard(chamber, districtNumber) {
+      const race = getDistrictRaceSummary(chamber, districtNumber);
+      if (!race) return "";
+      const chamberTitle = `${chamberLabel(chamber)} District ${districtNumber}`;
+      const copyParts = [
+        `${partyLongLabel(race.winner_party)} winner`,
+        race.margin_pct ? `Margin ${race.margin_pct}` : "",
+        race.district_total_votes ? `${race.district_total_votes} total votes` : ""
+      ].filter(Boolean);
+      return `
+        <div class="hero-search-result-card">
+          <div class="hero-search-result-label">2024 ${escapeHtml(chamberTitle)}</div>
+          <div class="hero-search-result-value">${escapeHtml(race.winner_candidate || "Result available")}</div>
+          <div class="hero-search-result-copy">${escapeHtml(copyParts.join(" · "))}</div>
+        </div>
+      `;
     }
 
     function getDistrictFinanceMatches(lookupRecord) {
@@ -2533,29 +2675,31 @@
 
     async function loadHomepageSearchData() {
       if (homepageCandidates.length) return;
-      const [candidateResponse, financeResponse] = await Promise.all([
+      const [candidateResponse, financeResponse, raceResponse] = await Promise.all([
         fetch("data/whos_running_2026.json", { cache: "no-store" }),
-        fetch("data/candidate_finance_2026.json", { cache: "no-store" })
+        fetch("data/candidate_finance_2026.json", { cache: "no-store" }),
+        fetch("data/race_data.json", { cache: "no-store" })
       ]);
       if (!candidateResponse.ok) throw new Error("Candidate data could not be loaded.");
       const candidatePayload = await candidateResponse.json();
       homepageCandidates = flattenCandidateData(candidatePayload);
+      homepageRaceData = raceResponse.ok ? await raceResponse.json() : {};
 
       if (financeResponse.ok) {
         const financePayload = await financeResponse.json();
         const profiles = financePayload?.profiles || [];
         homepageFinanceByCandidateId = new Map(profiles.map(profile => [profile.candidate_id, profile]));
-        homepageFinanceByCompositeKey = new Map(
-          profiles.map(profile => [
-            buildFinanceCompositeKey({
-              chamber: profile.chamber,
-              district_number: profile.district_number,
-              party: profile.party,
-              name: profile.candidate_name
-            }),
-            profile
-          ])
-        );
+        homepageFinanceByCompositeKey = new Map();
+        profiles.forEach(profile => {
+          buildFinanceCompositeKeys({
+            chamber: profile.chamber,
+            district_number: profile.district_number,
+            party: profile.party,
+            name: profile.candidate_name
+          }).forEach(key => {
+            homepageFinanceByCompositeKey.set(key, profile);
+          });
+        });
       }
     }
 
@@ -2628,6 +2772,7 @@
                     ${escapeHtml(`${partyLongLabel(candidate.party)} · ${chamberLabel(candidate.chamber)} District ${candidate.district_number}`)}
                     ${candidate.home_precinct_name ? ` · ${escapeHtml(candidate.home_precinct_name)}` : ""}
                   </p>
+                  ${buildCandidatePerformanceCard(candidate)}
                 </div>
                 <div class="hero-search-match-actions">
                   <a class="hero-search-action primary" href="${buildRunningHref(candidate)}">Who’s on this ballot?</a>
@@ -2715,6 +2860,10 @@
       const houseMeetHref = lookupRecord.house_district ? `meet.html?chamber=house&district=${encodeURIComponent(lookupRecord.house_district)}` : "meet.html";
       const senateMeetHref = lookupRecord.senate_district ? `meet.html?chamber=senate&district=${encodeURIComponent(lookupRecord.senate_district)}` : "meet.html";
       const financeMatches = getDistrictFinanceMatches(lookupRecord);
+      const districtCards = [
+        lookupRecord.house_district ? buildDistrictResultCard("house", lookupRecord.house_district) : "",
+        lookupRecord.senate_district ? buildDistrictResultCard("senate", lookupRecord.senate_district) : ""
+      ].filter(Boolean).join("");
 
       results.hidden = false;
       results.innerHTML = `
@@ -2732,6 +2881,7 @@
             ${lookupRecord.senate_district ? `<span class="hero-search-chip">Senate District ${escapeHtml(String(lookupRecord.senate_district))}</span>` : ""}
             <span class="hero-search-chip">2024 turnout context</span>
           </div>
+          ${districtCards ? `<div class="hero-search-result-grid">${districtCards}</div>` : ""}
           <div class="hero-search-action-row">
             <a class="hero-search-action primary" href="${buildLookupHref(candidate.address || query)}">Open Find My Precinct</a>
             <a class="hero-search-action" href="${houseHref}">House ballot</a>
