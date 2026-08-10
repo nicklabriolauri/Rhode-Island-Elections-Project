@@ -5324,7 +5324,68 @@
           "description": "Small reimbursements, refunds, or rebates reported by the campaign."
         }
       ],
-      "top_donors": [],
+      "top_donors": [
+        {
+          "donor": "Nicholas Schorsch",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Self-employed Entrepreneur."
+        },
+        {
+          "donor": "Ralph A.",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Palumbo Revity Energy, LLC."
+        },
+        {
+          "donor": "Shelley Schorsch",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Self-employed Artist."
+        },
+        {
+          "donor": "Derek V.",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Mesolella West X Capital, LLC."
+        },
+        {
+          "donor": "Fabihene Cordova-Clark",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Retired."
+        },
+        {
+          "donor": "IUOE LOCAL 57 (International Union of Operating Engineers)",
+          "amount": 1000.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "James J.",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Karam First Bristol Corporation."
+        },
+        {
+          "donor": "Joelle Rocha",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Duffy & Sweeney, Ltd."
+        },
+        {
+          "donor": "John Ritter",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Fernandez Lifespan."
+        },
+        {
+          "donor": "Kajsa Kempenaar",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Kempenaar Real Estates, Inc.."
+        }
+      ],
       "spending_categories": [
         {
           "title": "Fundraising Expenses",
