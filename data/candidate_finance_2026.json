@@ -110,7 +110,7 @@
       "district_number": "8",
       "party": "DEM",
       "office_sought": "State Representative",
-      "has_profile": false
+      "has_profile": true
     },
     {
       "candidate_name": "Enrique George Sanchez",
@@ -6846,6 +6846,95 @@
           "title": "Other",
           "summary": "Visible spending includes Boston Globe.",
           "amount": 55.44
+        }
+      ],
+      "takeaways": [],
+      "explainer_cards": []
+    },
+    {
+      "candidate_id": "house-8-john-joseph-lombardi",
+      "slug": "john-joseph-lombardi",
+      "candidate_name": "John Joseph Lombardi",
+      "chamber": "house",
+      "district_number": "8",
+      "party": "DEM",
+      "office_sought": "State Representative",
+      "report_label": "2026 On-Going Qrtly (2nd)",
+      "reporting_period_label": "April 1, 2026 to June 30, 2026",
+      "source_note": "Built from Rhode Island campaign finance filings for the 2026 second quarter.",
+      "original_documents": [
+        {
+          "label": "Q2 2026 CF-2 report",
+          "period": "April 1, 2026 to June 30, 2026",
+          "href": "/data/finance-documents/john-joseph-lombardi-q2-2026.pdf"
+        },
+        {
+          "label": "Q1 2026 CF-2 report",
+          "period": "January 1, 2026 to March 31, 2026",
+          "href": "/data/finance-documents/john-joseph-lombardi-q1-2026.pdf"
+        }
+      ],
+      "beginning_cash": 7214.17,
+      "money_raised": 63400.0,
+      "money_spent": 59.97,
+      "ending_cash": 70554.2,
+      "net_change": 63340.03,
+      "campaign_expenses": 59.97,
+      "aggregate_expenses": 0.0,
+      "summary_intro": "This filing shows a campaign with a very large reported cash increase, driven mostly by a candidate loan during the quarter.",
+      "filing_history": [
+        {
+          "label": "Q2 2026",
+          "reporting_period_label": "April 1, 2026 to June 30, 2026",
+          "money_raised": 63400.0,
+          "money_spent": 59.97,
+          "ending_cash": 70554.2,
+          "net_change": 63340.03,
+          "notes": "The campaign reported a large self-loan and spent only a small amount in this reporting period."
+        },
+        {
+          "label": "Q1 2026",
+          "reporting_period_label": "January 1, 2026 to March 31, 2026",
+          "money_raised": 0.0,
+          "money_spent": 159.97,
+          "ending_cash": 7214.17,
+          "net_change": -159.97,
+          "notes": "The campaign spent more than it raised in this reporting period."
+        }
+      ],
+      "source_buckets": [
+        {
+          "label": "Other reported sources",
+          "class_name": "other-reported-sources",
+          "amount": 63000.0,
+          "description": "Loan proceeds and other money reported in the filing."
+        },
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 400.0,
+          "description": "Named contributors reported individually in the filing."
+        }
+      ],
+      "top_donors": [
+        {
+          "donor": "John J. Lombardi",
+          "amount": 63000.0,
+          "type": "Loan",
+          "notes": "Reported as a loan from the candidate's savings account."
+        },
+        {
+          "donor": "Louis DiToro",
+          "amount": 400.0,
+          "type": "Individual",
+          "notes": "Employer listed as Perfect Pages."
+        }
+      ],
+      "spending_categories": [
+        {
+          "title": "Advertising",
+          "summary": "Visible spending includes GoDaddy website charges during the quarter.",
+          "amount": 59.97
         }
       ],
       "takeaways": [],
