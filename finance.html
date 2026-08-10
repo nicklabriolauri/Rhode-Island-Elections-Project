@@ -960,7 +960,7 @@
 
     .spending-top {
       display: grid;
-      grid-template-columns: auto minmax(0, 1fr);
+      grid-template-columns: auto minmax(0, 1fr) auto;
       gap: 12px;
       align-items: start;
     }
@@ -986,6 +986,17 @@
       line-height: 1.32;
       font-weight: 900;
       letter-spacing: -0.02em;
+    }
+
+    .spending-amount {
+      color: var(--navy);
+      font-size: 20px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      white-space: nowrap;
+      text-align: right;
+      padding-top: 2px;
     }
 
     .spending-copy {
@@ -1275,6 +1286,16 @@
       .mix-amount {
         grid-column: 2;
         text-align: left;
+      }
+
+      .spending-top {
+        grid-template-columns: auto minmax(0, 1fr);
+      }
+
+      .spending-amount {
+        grid-column: 2;
+        text-align: left;
+        padding-top: 0;
       }
 
       .verification-item,
@@ -1689,6 +1710,7 @@
                     <div class="spending-title">${escapeHtml(item.title || "Campaign spending")}</div>
                     <div class="spending-copy">${escapeHtml(item.summary || "")}</div>
                   </div>
+                  ${typeof item.amount === "number" ? `<div class="spending-amount">${formatCurrency(item.amount)}</div>` : ""}
                 </div>
               </div>
             `).join("")}
