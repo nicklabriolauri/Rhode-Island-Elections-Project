@@ -2427,6 +2427,42 @@
       return profile ? `finance.html?slug=${encodeURIComponent(profile.slug)}` : "";
     }
 
+    function getFinanceProfile(candidate) {
+      return homepageFinanceByCandidateId.get(candidate.candidate_id) || null;
+    }
+
+    function getDistrictFinanceMatches(lookupRecord) {
+      if (!homepageCandidates.length || !lookupRecord) return [];
+
+      const desired = [];
+      if (lookupRecord.house_district) {
+        desired.push({ chamber: "house", district: String(lookupRecord.house_district) });
+      }
+      if (lookupRecord.senate_district) {
+        desired.push({ chamber: "senate", district: String(lookupRecord.senate_district) });
+      }
+
+      const seen = new Set();
+      return homepageCandidates
+        .filter(candidate => desired.some(target =>
+          candidate.chamber === target.chamber
+          && String(candidate.district_number) === target.district
+        ))
+        .filter(candidate => {
+          const profile = getFinanceProfile(candidate);
+          if (!profile || seen.has(candidate.candidate_id)) return false;
+          seen.add(candidate.candidate_id);
+          return true;
+        })
+        .sort((left, right) => {
+          if (left.chamber !== right.chamber) return left.chamber.localeCompare(right.chamber);
+          if (String(left.district_number) !== String(right.district_number)) {
+            return Number(left.district_number) - Number(right.district_number);
+          }
+          return left.name.localeCompare(right.name);
+        });
+    }
+
     function buildLookupHref(address) {
       return `lookup.html?address=${encodeURIComponent(address)}`;
     }
@@ -2524,6 +2560,9 @@
             </div>
             <span class="hero-search-kicker">${matches.length === 1 ? "Candidate match" : `${matches.length} matches`}</span>
           </div>
+          ${matches.length === 1 && buildFinanceHref(matches[0])
+            ? `<div class="hero-search-chip-row"><span class="hero-search-chip">Campaign finance profile available</span></div>`
+            : ""}
           <div class="hero-search-match-list">
           ${matches.map(candidate => {
             const financeHref = buildFinanceHref(candidate);
@@ -2621,6 +2660,7 @@
       const senateHref = lookupRecord.senate_district ? `running.html?chamber=senate&district=${encodeURIComponent(lookupRecord.senate_district)}` : "running.html";
       const houseMeetHref = lookupRecord.house_district ? `meet.html?chamber=house&district=${encodeURIComponent(lookupRecord.house_district)}` : "meet.html";
       const senateMeetHref = lookupRecord.senate_district ? `meet.html?chamber=senate&district=${encodeURIComponent(lookupRecord.senate_district)}` : "meet.html";
+      const financeMatches = getDistrictFinanceMatches(lookupRecord);
 
       results.hidden = false;
       results.innerHTML = `
@@ -2644,7 +2684,12 @@
             <a class="hero-search-action" href="${senateHref}">Senate ballot</a>
             <a class="hero-search-action compare" href="${houseMeetHref}">Compare House candidates</a>
             <a class="hero-search-action compare" href="${senateMeetHref}">Compare Senate candidates</a>
-            <a class="hero-search-action finance" href="finance.html">Campaign finance</a>
+            ${financeMatches.length
+              ? financeMatches.map(candidateMatch => {
+                  const financeHref = buildFinanceHref(candidateMatch);
+                  return `<a class="hero-search-action finance" href="${financeHref}">Finance: ${escapeHtml(candidateMatch.name)}</a>`;
+                }).join("")
+              : `<a class="hero-search-action finance" href="finance.html">Campaign finance directory</a>`}
           </div>
         </div>
       `;
@@ -2679,6 +2724,7 @@
       try {
         renderHomepageSearchMessage("Searching Rhode Island address records and matching precinct boundaries...");
         await loadHomepagePrecinctAssets();
+        await loadHomepageSearchData();
         const candidates = await queryHomepageGeocoder(query);
         if (!candidates.length) {
           renderHomepageSearchMessage("No Rhode Island address match was found yet. Try adding the street number, city, or ZIP code.", "error");
