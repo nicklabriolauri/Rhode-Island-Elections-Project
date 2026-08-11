@@ -1855,6 +1855,8 @@ const state = {
 };
 let requestedResultDistrict = null;
 let requestedResultDistrictApplied = false;
+let requestedTurnoutRow = null;
+let requestedTurnoutRowApplied = false;
 
 function applyQueryState() {
   const params = new URLSearchParams(window.location.search);
@@ -1892,6 +1894,15 @@ function applyQueryState() {
 
   if (state.dataMode === "results" && district && /^\d+$/.test(district)) {
     requestedResultDistrict = Number(district);
+  }
+
+  if (
+    state.dataMode === "turnout" &&
+    district &&
+    /^\d+$/.test(district) &&
+    (state.turnoutGeo === "house" || state.turnoutGeo === "senate")
+  ) {
+    requestedTurnoutRow = Number(district);
   }
 }
 
@@ -2232,6 +2243,12 @@ function turnoutGeoLabel() {
 
 function turnoutLookupKey(geography, year, id) {
   return `${geography}|${year}|${String(id).trim()}`;
+}
+
+function getSelectedDistrictNumber() {
+  if (!selectedKey) return null;
+  const match = String(selectedKey).match(/^[a-z_]+\|\d{4}\|(\d+)$/i);
+  return match ? Number(match[1]) : null;
 }
 
 function formatInt(value) {
@@ -3360,14 +3377,31 @@ function setupControls() {
     btn.addEventListener("click", () => {
       if (btn.dataset.value === state.dataMode) return;
       if (btn.dataset.value === "turnout") {
+        const selectedDistrict = getSelectedDistrictNumber() ?? requestedResultDistrict;
         state.resultsYear = state.year;
+        state.turnoutGeo = state.chamber;
         state.dataMode = "turnout";
         state.year = "2024";
         state.view = "turnout";
+        if (selectedDistrict != null) {
+          requestedTurnoutRow = Number(selectedDistrict);
+          requestedTurnoutRowApplied = false;
+        }
       } else {
+        const selectedDistrict =
+          state.turnoutGeo === "house" || state.turnoutGeo === "senate"
+            ? getSelectedDistrictNumber() ?? requestedTurnoutRow
+            : null;
+        if (state.turnoutGeo === "house" || state.turnoutGeo === "senate") {
+          state.chamber = state.turnoutGeo;
+        }
         state.dataMode = "results";
         state.year = state.resultsYear || "2024";
         state.view = "party";
+        if (selectedDistrict != null) {
+          requestedResultDistrict = Number(selectedDistrict);
+          requestedResultDistrictApplied = false;
+        }
       }
       state.competitivenessFilter = "all";
       refresh();
@@ -3382,6 +3416,9 @@ function setupControls() {
   document.querySelectorAll("#turnoutGeoButtons button").forEach(btn => {
     btn.addEventListener("click", () => {
       state.turnoutGeo = btn.dataset.value;
+      if (btn.dataset.value === "house" || btn.dataset.value === "senate") {
+        state.chamber = btn.dataset.value;
+      }
       refresh();
     });
   });
@@ -3580,6 +3617,15 @@ async function refresh() {
   if (!isTurnoutMode() && requestedResultDistrict && !requestedResultDistrictApplied) {
     selectRaceByDistrict(requestedResultDistrict);
     requestedResultDistrictApplied = true;
+  }
+  if (
+    isTurnoutMode() &&
+    requestedTurnoutRow &&
+    !requestedTurnoutRowApplied &&
+    (state.turnoutGeo === "house" || state.turnoutGeo === "senate")
+  ) {
+    selectTurnoutRow(requestedTurnoutRow);
+    requestedTurnoutRowApplied = true;
   }
   hideLoadingState();
 }
