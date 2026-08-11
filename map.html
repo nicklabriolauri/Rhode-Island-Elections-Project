@@ -1853,6 +1853,8 @@ const state = {
   view: "party",
   competitivenessFilter: "all"
 };
+let requestedResultDistrict = null;
+let requestedResultDistrictApplied = false;
 
 function applyQueryState() {
   const params = new URLSearchParams(window.location.search);
@@ -1861,6 +1863,7 @@ function applyQueryState() {
   const year = params.get("year");
   const view = params.get("view");
   const geo = params.get("geo");
+  const district = params.get("district");
 
   if (mode === "turnout") {
     state.dataMode = "turnout";
@@ -1885,6 +1888,10 @@ function applyQueryState() {
 
   if (state.dataMode === "results" && view && ["party", "uncontested", "gender", "competitiveness"].includes(view)) {
     state.view = view;
+  }
+
+  if (state.dataMode === "results" && district && /^\d+$/.test(district)) {
+    requestedResultDistrict = Number(district);
   }
 }
 
@@ -2552,19 +2559,13 @@ function renderTurnoutGauge(summary) {
 
 
 function selectRaceByDistrict(districtNumber) {
-  let targetLayer = null;
-  map.eachLayer(layer => {
-    if (layer.feature && Number(getFeatureDistrict(layer.feature)) === Number(districtNumber)) {
-      targetLayer = layer;
-    }
-  });
+  const key = `${state.chamber}|${state.year}|${districtNumber}`;
+  const targetLayer = featureLayerByKey[key] || null;
   if (targetLayer) {
-    selectedLayer = targetLayer;
-    targetLayer.setStyle({ weight: 3.2, color: "#111827" });
-    map.fitBounds(targetLayer.getBounds(), { padding: [40, 40] });
     const race = getRace(state.chamber, state.year, districtNumber);
     if (race) {
-      showRace(race);
+      map.fitBounds(targetLayer.getBounds(), { padding: [40, 40] });
+      showRace(race, targetLayer);
     }
   }
 }
@@ -3446,6 +3447,10 @@ async function refresh() {
   renderDistrictList();
   syncDesktopDashboardLayout();
   await settleAndFitBounds(layer);
+  if (!isTurnoutMode() && requestedResultDistrict && !requestedResultDistrictApplied) {
+    selectRaceByDistrict(requestedResultDistrict);
+    requestedResultDistrictApplied = true;
+  }
   hideLoadingState();
 }
 

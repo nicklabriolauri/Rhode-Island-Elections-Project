@@ -765,11 +765,26 @@
     }
 
     .hero-search-result-card {
+      display: block;
       padding: 12px 13px;
       border-radius: 18px;
       border: 1px solid #dbeafe;
       background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.82);
+      text-decoration: none;
+    }
+
+    .hero-search-result-card.is-link {
+      cursor: pointer;
+      transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+    }
+
+    .hero-search-result-card.is-link:hover,
+    .hero-search-result-card.is-link:focus-visible {
+      transform: translateY(-1px);
+      border-color: #93c5fd;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.82), 0 10px 22px rgba(37, 99, 235, 0.12);
+      outline: none;
     }
 
     .hero-search-result-label {
@@ -2602,17 +2617,18 @@
       const race = getDistrictRaceSummary(chamber, districtNumber);
       if (!race) return "";
       const chamberTitle = `${chamberLabel(chamber)} District ${districtNumber}`;
+      const href = `map.html?mode=results&chamber=${encodeURIComponent(chamber)}&year=2024&view=party&district=${encodeURIComponent(String(districtNumber))}`;
       const copyParts = [
         `${partyLongLabel(race.winner_party)} winner`,
         race.margin_pct ? `Margin ${race.margin_pct}` : "",
         race.district_total_votes ? `${race.district_total_votes} total votes` : ""
       ].filter(Boolean);
       return `
-        <div class="hero-search-result-card">
+        <a class="hero-search-result-card is-link" href="${href}" aria-label="${escapeHtml(`Open ${chamberTitle} results on the map`) }">
           <div class="hero-search-result-label">2024 ${escapeHtml(chamberTitle)}</div>
           <div class="hero-search-result-value">${escapeHtml(race.winner_candidate || "Result available")}</div>
           <div class="hero-search-result-copy">${escapeHtml(copyParts.join(" · "))}</div>
-        </div>
+        </a>
       `;
     }
 
