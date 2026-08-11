@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-10T14:55:04.819117+00:00",
+  "generated_at": "2026-08-11T08:45:46.917937+00:00",
   "cycle": "2026-q2",
   "directory": [
     {
@@ -1656,7 +1656,7 @@
           "label": "Small-dollar / aggregate online receipts",
           "class_name": "small-dollar-aggregate-online-receipts",
           "amount": 2650.0,
-          "description": "Online or bundled small-dollar receipts reported in aggregate form."
+          "description": "Money reported in aggregate form without individual donor names listed in the filing."
         },
         {
           "label": "PAC contributions",
@@ -1747,6 +1747,89 @@
           "title": "Donations (All Others)",
           "summary": "Visible spending includes ELMHURST YOUTH BASEBALL.",
           "amount": 500.0
+        }
+      ],
+      "takeaways": [],
+      "explainer_cards": []
+    },
+    {
+      "candidate_id": "house-8-john-joseph-lombardi",
+      "slug": "john-joseph-lombardi",
+      "candidate_name": "John Joseph Lombardi",
+      "chamber": "house",
+      "district_number": "8",
+      "party": "DEM",
+      "office_sought": "State Representative",
+      "report_label": "2026 On-Going Qrtly (2nd)",
+      "reporting_period_label": "April 1, 2026 to June 30, 2026",
+      "source_note": "Built from Rhode Island campaign finance filings for the 2026 second quarter.",
+      "original_documents": [
+        {
+          "label": "Q2 2026 CF-2 report",
+          "period": "April 1, 2026 to June 30, 2026",
+          "href": "/data/finance-documents/john-joseph-lombardi-q2-2026.pdf"
+        },
+        {
+          "label": "Q1 2026 CF-2 report",
+          "period": "January 1, 2026 to March 31, 2026",
+          "href": "/data/finance-documents/john-joseph-lombardi-q1-2026.pdf"
+        }
+      ],
+      "beginning_cash": 7214.17,
+      "money_raised": 400.0,
+      "money_spent": 59.97,
+      "ending_cash": 70554.2,
+      "net_change": 340.03,
+      "campaign_expenses": 59.97,
+      "aggregate_expenses": 0.0,
+      "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it raised more during the period than it spent.",
+      "filing_history": [
+        {
+          "label": "Q2 2026",
+          "reporting_period_label": "April 1, 2026 to June 30, 2026",
+          "money_raised": 400.0,
+          "money_spent": 59.97,
+          "ending_cash": 70554.2,
+          "net_change": 340.03,
+          "notes": "The campaign raised more than it spent in this reporting period."
+        },
+        {
+          "label": "Q1 2026",
+          "reporting_period_label": "January 1, 2026 to March 31, 2026",
+          "money_raised": 0.0,
+          "money_spent": 159.97,
+          "ending_cash": 7214.17,
+          "net_change": -159.97,
+          "notes": "The campaign spent more than it raised in this reporting period."
+        }
+      ],
+      "source_buckets": [
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 400.0,
+          "description": "Named contributors reported individually in the filing."
+        }
+      ],
+      "top_donors": [
+        {
+          "donor": "JOHN J",
+          "amount": 63000.0,
+          "type": "Other",
+          "notes": "Employer listed as LOMBARDI JOHN J LOMBARDI ESQ."
+        },
+        {
+          "donor": "LOUIS DITORO",
+          "amount": 400.0,
+          "type": "Individual",
+          "notes": "Employer listed as Perfect Pages."
+        }
+      ],
+      "spending_categories": [
+        {
+          "title": "Advertising",
+          "summary": "Visible spending includes GO DADDY WEBSITE.",
+          "amount": 59.97
         }
       ],
       "takeaways": [],
@@ -1961,7 +2044,7 @@
           "label": "Small-dollar / aggregate online receipts",
           "class_name": "small-dollar-aggregate-online-receipts",
           "amount": 456.0,
-          "description": "Online or bundled small-dollar receipts reported in aggregate form."
+          "description": "Money reported in aggregate form without individual donor names listed in the filing."
         },
         {
           "label": "PAC contributions",
@@ -2114,7 +2197,7 @@
           "label": "Small-dollar / aggregate online receipts",
           "class_name": "small-dollar-aggregate-online-receipts",
           "amount": 730.0,
-          "description": "Online or bundled small-dollar receipts reported in aggregate form."
+          "description": "Money reported in aggregate form without individual donor names listed in the filing."
         }
       ],
       "top_donors": [
@@ -2125,9 +2208,15 @@
           "notes": "Employer listed as BATISTA LAW OFFICE OF JOSE F BATISTA LLC."
         },
         {
-          "donor": "VICTOR F",
+          "donor": "AGGREGATE INDIVIDUAL DONATIONS",
           "amount": 730.0,
           "type": "Aggregate",
+          "notes": "AGGREGATE INDIVIDUAL DONATIONS"
+        },
+        {
+          "donor": "VICTOR F",
+          "amount": 509.54,
+          "type": "Individual",
           "notes": "Employer listed as CAPELLAN RI EDUCATION COLLECTIVE."
         },
         {
@@ -2221,7 +2310,7 @@
           "label": "Small-dollar / aggregate online receipts",
           "class_name": "small-dollar-aggregate-online-receipts",
           "amount": 1350.0,
-          "description": "Online or bundled small-dollar receipts reported in aggregate form."
+          "description": "Money reported in aggregate form without individual donor names listed in the filing."
         },
         {
           "label": "PAC contributions",
@@ -2231,6 +2320,12 @@
         }
       ],
       "top_donors": [
+        {
+          "donor": "BRETT SMILEY",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as CITY OF PROVIDENCE."
+        },
         {
           "donor": "9 CHECKS OF $150 OR LESS",
           "amount": 900.0,
@@ -2244,16 +2339,22 @@
           "notes": "Named PAC contribution listed in the filing."
         },
         {
-          "donor": "COLLECTIVE POWER",
-          "amount": 300.0,
-          "type": "Individual",
-          "notes": "Employer listed as FOR EDUCATION PAC."
-        },
-        {
           "donor": "FRANK CICCONE",
           "amount": 300.0,
           "type": "Individual",
           "notes": "Employer listed as RETIRED."
+        },
+        {
+          "donor": "OSCAR VARGAS",
+          "amount": 300.0,
+          "type": "Individual",
+          "notes": "Employer listed as CITY OF PROVIDENCE."
+        },
+        {
+          "donor": "COLLECTIVE POWER FOR EDUCATION PAC",
+          "amount": 250.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
         },
         {
           "donor": "PEDRO ESPINAL",
@@ -2341,7 +2442,44 @@
           "description": "Named contributors reported individually in the filing."
         }
       ],
-      "top_donors": [],
+      "top_donors": [
+        {
+          "donor": "John Meara",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as Mandell, Boisclair & Mandell."
+        },
+        {
+          "donor": "Jeffrey Mega",
+          "amount": 200.0,
+          "type": "Individual",
+          "notes": "Employer listed as Decof Mega Quinn PC."
+        },
+        {
+          "donor": "Christopher Vitale",
+          "amount": 100.0,
+          "type": "Individual",
+          "notes": "Named individual contribution listed in the filing."
+        },
+        {
+          "donor": "Nicholas J",
+          "amount": 100.0,
+          "type": "Individual",
+          "notes": "Employer listed as Hemond DarrowEverett."
+        },
+        {
+          "donor": "Ramsey Davis",
+          "amount": 100.0,
+          "type": "Individual",
+          "notes": "Employer listed as Not Employed."
+        },
+        {
+          "donor": "Susan Razza",
+          "amount": 20.0,
+          "type": "Individual",
+          "notes": "Employer listed as Not Employed."
+        }
+      ],
       "spending_categories": [
         {
           "title": "Donations (Political)",
@@ -2437,7 +2575,68 @@
           "description": "Political committees and PACs listed in the filing."
         }
       ],
-      "top_donors": [],
+      "top_donors": [
+        {
+          "donor": "Citizens Bank",
+          "amount": 757.86,
+          "type": "Other",
+          "notes": "Named individual contribution listed in the filing."
+        },
+        {
+          "donor": "Akshay K",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as Talwar Briarcliffe Manor."
+        },
+        {
+          "donor": "George A",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as Zainyeh Athena Solutions."
+        },
+        {
+          "donor": "Carol A.",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as ODonnell Emerald Reconstruction LLC."
+        },
+        {
+          "donor": "John R",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as Koza National Popular Vote."
+        },
+        {
+          "donor": "M. Teresa",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as Paiva Weed F/S Capitol Consulting."
+        },
+        {
+          "donor": "Margaret Sweeney",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as F/S Capitol Consulting LLC."
+        },
+        {
+          "donor": "RHODE ISLAND COALITION OF HOUSING PROVIDERS",
+          "amount": 250.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "RI HOSPITALITY PAC",
+          "amount": 250.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "RI LABORER'S POLITICAL LEAGUE",
+          "amount": 250.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        }
+      ],
       "spending_categories": [
         {
           "title": "Other",
@@ -2525,7 +2724,7 @@
           "label": "Small-dollar / aggregate online receipts",
           "class_name": "small-dollar-aggregate-online-receipts",
           "amount": 250.0,
-          "description": "Online or bundled small-dollar receipts reported in aggregate form."
+          "description": "Money reported in aggregate form without individual donor names listed in the filing."
         },
         {
           "label": "PAC contributions",
@@ -2536,10 +2735,40 @@
       ],
       "top_donors": [
         {
-          "donor": "AMICA /",
-          "amount": 250.0,
-          "type": "Aggregate",
-          "notes": "Employer listed as RI PAC."
+          "donor": "RI MEDICAL PAC",
+          "amount": 200.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "CAREPAC OF BLUE CROSS & BLUE SHIELD OF RI",
+          "amount": 150.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "AMICA / RI PAC",
+          "amount": 100.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "J. Timmons",
+          "amount": 100.0,
+          "type": "Individual",
+          "notes": "Employer listed as Roberts Brown University."
+        },
+        {
+          "donor": "PROVIDENCE RI CENTRAL FEDERATED COUNCIL AFL-CIO",
+          "amount": 100.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "Michael Rubin",
+          "amount": 50.0,
+          "type": "Individual",
+          "notes": "Employer listed as Retired."
         }
       ],
       "spending_categories": [
@@ -2628,7 +2857,7 @@
           "label": "Small-dollar / aggregate online receipts",
           "class_name": "small-dollar-aggregate-online-receipts",
           "amount": 156.16,
-          "description": "Online or bundled small-dollar receipts reported in aggregate form."
+          "description": "Money reported in aggregate form without individual donor names listed in the filing."
         }
       ],
       "top_donors": [
@@ -2655,6 +2884,12 @@
           "amount": 26.03,
           "type": "Aggregate",
           "notes": "Will Grapentine- Winred"
+        },
+        {
+          "donor": "Jessica Gomes",
+          "amount": 25.0,
+          "type": "Other",
+          "notes": "Employer listed as Ts Restaurant."
         }
       ],
       "spending_categories": [
@@ -3045,7 +3280,68 @@
           "description": "Political committees and PACs listed in the filing."
         }
       ],
-      "top_donors": [],
+      "top_donors": [
+        {
+          "donor": "William A",
+          "amount": 7200.0,
+          "type": "Other",
+          "notes": "Employer listed as Muto Auroura IQ Advisory."
+        },
+        {
+          "donor": "Friends of",
+          "amount": 550.0,
+          "type": "Individual",
+          "notes": "Employer listed as Sal DeLuise."
+        },
+        {
+          "donor": "John F",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as Muto."
+        },
+        {
+          "donor": "Peter C",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as Dorsey Jr."
+        },
+        {
+          "donor": "Robert Smith",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as peter pan bus lines."
+        },
+        {
+          "donor": "Steven V",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as Ceceri."
+        },
+        {
+          "donor": "Earl L",
+          "amount": 200.0,
+          "type": "Individual",
+          "notes": "Employer listed as Simson."
+        },
+        {
+          "donor": "Joseph H",
+          "amount": 200.0,
+          "type": "Individual",
+          "notes": "Employer listed as Crowley."
+        },
+        {
+          "donor": "Matthew LaMountain",
+          "amount": 200.0,
+          "type": "Individual",
+          "notes": "Employer listed as Self Employeed."
+        },
+        {
+          "donor": "Anthony R",
+          "amount": 150.0,
+          "type": "Individual",
+          "notes": "Employer listed as Thompson."
+        }
+      ],
       "spending_categories": [
         {
           "title": "Advertising",
@@ -3156,7 +3452,32 @@
           "description": "Political committees and PACs listed in the filing."
         }
       ],
-      "top_donors": [],
+      "top_donors": [
+        {
+          "donor": "AMICA / RI PAC",
+          "amount": 100.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "PROVIDENCE RI CENTRAL FEDERATED COUNCIL AFL-CIO",
+          "amount": 100.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "William J.",
+          "amount": 100.0,
+          "type": "Individual",
+          "notes": "Employer listed as Murphy Murphy & Fay LLC."
+        },
+        {
+          "donor": "April Cambre",
+          "amount": 20.0,
+          "type": "Individual",
+          "notes": "Employer listed as Bradley Hospital."
+        }
+      ],
       "spending_categories": [
         {
           "title": "Donations (Political)",
@@ -3228,7 +3549,7 @@
           "label": "Small-dollar / aggregate online receipts",
           "class_name": "small-dollar-aggregate-online-receipts",
           "amount": 125.0,
-          "description": "Online or bundled small-dollar receipts reported in aggregate form."
+          "description": "Money reported in aggregate form without individual donor names listed in the filing."
         }
       ],
       "top_donors": [
@@ -3316,7 +3637,7 @@
           "label": "Small-dollar / aggregate online receipts",
           "class_name": "small-dollar-aggregate-online-receipts",
           "amount": 1300.0,
-          "description": "Online or bundled small-dollar receipts reported in aggregate form."
+          "description": "Money reported in aggregate form without individual donor names listed in the filing."
         },
         {
           "label": "PAC contributions",
@@ -3331,12 +3652,6 @@
           "amount": 1000.0,
           "type": "PAC",
           "notes": "Named PAC contribution listed in the filing."
-        },
-        {
-          "donor": "JEN MALO",
-          "amount": 975.0,
-          "type": "Aggregate",
-          "notes": "Employer listed as SELF EMPLOYED."
         },
         {
           "donor": "CHRIS STANTON",
@@ -3385,6 +3700,12 @@
           "amount": 215.0,
           "type": "PAC",
           "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "DIANNE TEFFT",
+          "amount": 185.0,
+          "type": "Individual",
+          "notes": "Employer listed as RETIRED."
         }
       ],
       "spending_categories": [
@@ -3494,7 +3815,7 @@
           "label": "Small-dollar / aggregate online receipts",
           "class_name": "small-dollar-aggregate-online-receipts",
           "amount": 8088.04,
-          "description": "Online or bundled small-dollar receipts reported in aggregate form."
+          "description": "Money reported in aggregate form without individual donor names listed in the filing."
         },
         {
           "label": "PAC contributions",
@@ -3505,16 +3826,10 @@
       ],
       "top_donors": [
         {
-          "donor": "4962, 1030, 1675, 1024, 3168, OOO8, 2467, 6252, 2844, 183, 3534, 1071, 207, 4650, 7326, 1047, 1646, 8050, 1251, 6208, 2693, 4786, 9226, 397, 3822,",
-          "amount": 2975.0,
+          "donor": "Unitemized / aggregate receipts",
+          "amount": 6055.0,
           "type": "Aggregate",
-          "notes": "4962, 1030, 1675, 1024, 3168, OOO8, 2467, 6252, 2844, 183, 3534, 1071, 207, 4650, 7326, 1047, 1646, 8050, 1251, 6208, 2693, 4786, 9226, 397, 3822,"
-        },
-        {
-          "donor": "195, 199, 889, 959, 969, 1088, 1103, 1310, 1378, 1438, 2242, 2261, 2839, 3699, 3810, 4278, 4608, 6828, 6838, 9296, 9725, 160517",
-          "amount": 1915.0,
-          "type": "Aggregate",
-          "notes": "195, 199, 889, 959, 969, 1088, 1103, 1310, 1378, 1438, 2242, 2261, 2839, 3699, 3810, 4278, 4608, 6828, 6838, 9296, 9725, 160517"
+          "notes": "The filing reports these receipts in aggregate form without individual donor names."
         },
         {
           "donor": "REALTORS PAC OF RI",
@@ -3535,16 +3850,10 @@
           "notes": "WinRed BC, ML, SP, SM, BW, DC, CO, LR, DL, EB, MM"
         },
         {
-          "donor": "216, 1399, 1438, 2672, 2906, 2993",
+          "donor": "Committee / PAC receipts",
           "amount": 800.0,
           "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing."
-        },
-        {
-          "donor": "169, 398, 433, 523, 1891, 3253, 3719, 4150, 5134, 9437",
-          "amount": 790.0,
-          "type": "Aggregate",
-          "notes": "169, 398, 433, 523, 1891, 3253, 3719, 4150, 5134, 9437"
+          "notes": "The filing shows committee or PAC receipts, but the public text does not provide readable donor names here."
         },
         {
           "donor": "John Petrarca",
@@ -3563,6 +3872,18 @@
           "amount": 500.0,
           "type": "PAC",
           "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "Anthony Thompson",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as Strong Tree Properties LLC."
+        },
+        {
+          "donor": "David Caldwell",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as Caldwell Builders."
         }
       ],
       "spending_categories": [
@@ -3773,7 +4094,68 @@
           "description": "Named contributors reported individually in the filing."
         }
       ],
-      "top_donors": [],
+      "top_donors": [
+        {
+          "donor": "Michael Mezera",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Not employed."
+        },
+        {
+          "donor": "Yugerny Toribio",
+          "amount": 100.0,
+          "type": "Individual",
+          "notes": "Employer listed as Not employed."
+        },
+        {
+          "donor": "Cheyenne Cazeault",
+          "amount": 50.0,
+          "type": "Individual",
+          "notes": "Employer listed as State of Rhode Island."
+        },
+        {
+          "donor": "Grace Voll",
+          "amount": 50.0,
+          "type": "Individual",
+          "notes": "Employer listed as State of Rhode Island."
+        },
+        {
+          "donor": "Jordan Hevenor",
+          "amount": 50.0,
+          "type": "Individual",
+          "notes": "Employer listed as HCAN."
+        },
+        {
+          "donor": "Libby Merrill",
+          "amount": 50.0,
+          "type": "Individual",
+          "notes": "Employer listed as Almda Del Mar Charter School."
+        },
+        {
+          "donor": "RI WORKING FAMILIES PARTY PAC",
+          "amount": 34.55,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "Erik Hernandez",
+          "amount": 29.0,
+          "type": "Individual",
+          "notes": "Named individual contribution listed in the filing."
+        },
+        {
+          "donor": "Cecelia Wachowski",
+          "amount": 25.0,
+          "type": "Individual",
+          "notes": "Employer listed as Town of Upton."
+        },
+        {
+          "donor": "Riley Dunphy",
+          "amount": 20.0,
+          "type": "Individual",
+          "notes": "Named individual contribution listed in the filing."
+        }
+      ],
       "spending_categories": [
         {
           "title": "Advertising",
@@ -3998,7 +4380,14 @@
         }
       ],
       "source_buckets": [],
-      "top_donors": [],
+      "top_donors": [
+        {
+          "donor": "JAMES N",
+          "amount": 11068.71,
+          "type": "Individual",
+          "notes": "Employer listed as MCLAUGHLIN RETIRED."
+        }
+      ],
       "spending_categories": [
         {
           "title": "Bank Fees",
@@ -4074,7 +4463,68 @@
           "description": "Political committees and PACs listed in the filing."
         }
       ],
-      "top_donors": [],
+      "top_donors": [
+        {
+          "donor": "CAREPAC OF BLUE CROSS & BLUE SHIELD OF RI",
+          "amount": 150.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "Jean P",
+          "amount": 150.0,
+          "type": "Individual",
+          "notes": "Employer listed as Barros Unemlyed."
+        },
+        {
+          "donor": "Keith Hoffmann",
+          "amount": 150.0,
+          "type": "Individual",
+          "notes": "Employer listed as Unemployeed."
+        },
+        {
+          "donor": "RI STATE ASSOCIATION OF FIREFIGHTERS",
+          "amount": 150.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "steven Ceceri",
+          "amount": 150.0,
+          "type": "Individual",
+          "notes": "Employer listed as Owner-contractor."
+        },
+        {
+          "donor": "Carlos Vargas",
+          "amount": 100.0,
+          "type": "Individual",
+          "notes": "Employer listed as Navigant Credit Union."
+        },
+        {
+          "donor": "EGFFA PAC (East Greenwich Fire Fighters Association)",
+          "amount": 100.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "Grant Pilkington",
+          "amount": 100.0,
+          "type": "Individual",
+          "notes": "Employer listed as Advocacy Solutions."
+        },
+        {
+          "donor": "IBEW LOCAL 99 PAC (International Brotherhood of Electrical Workers)",
+          "amount": 100.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "Pedro Espinal",
+          "amount": 100.0,
+          "type": "Individual",
+          "notes": "Employer listed as councilmen."
+        }
+      ],
       "spending_categories": [
         {
           "title": "Fundraising Expenses",
@@ -4187,10 +4637,28 @@
       ],
       "top_donors": [
         {
+          "donor": "James Kingston",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as Retired."
+        },
+        {
           "donor": "RI LABORER'S POLITICAL LEAGUE",
           "amount": 200.0,
           "type": "PAC",
           "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "Alan Cohen",
+          "amount": 100.0,
+          "type": "Individual",
+          "notes": "Employer listed as ASC Engineered Solutions."
+        },
+        {
+          "donor": "Angela Yingling",
+          "amount": 100.0,
+          "type": "Individual",
+          "notes": "Employer listed as Rhode Island Public Defender."
         },
         {
           "donor": "IBEW LOCAL 99 PAC (International Brotherhood of Electrical Workers)",
@@ -4227,24 +4695,6 @@
           "amount": 100.0,
           "type": "PAC",
           "notes": "Named PAC contribution listed in the filing."
-        },
-        {
-          "donor": "RI LABORERS' STATE EMPLOYEES",
-          "amount": 100.0,
-          "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing."
-        },
-        {
-          "donor": "alan flam",
-          "amount": 100.0,
-          "type": "Individual",
-          "notes": "Employer listed as not employed."
-        },
-        {
-          "donor": "Alan Cohen",
-          "amount": 50.0,
-          "type": "Individual",
-          "notes": "Employer listed as ASC Engineered Solutions."
         }
       ],
       "spending_categories": [
@@ -4357,7 +4807,68 @@
           "description": "Political committees and PACs listed in the filing."
         }
       ],
-      "top_donors": [],
+      "top_donors": [
+        {
+          "donor": "RI HOSPITALITY PAC",
+          "amount": 500.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "Alex Finkelman",
+          "amount": 350.0,
+          "type": "Individual",
+          "notes": "Employer listed as The Egis Group."
+        },
+        {
+          "donor": "William G.",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as Walsh Government Strategies."
+        },
+        {
+          "donor": "Zachary G",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as Darrow Darrow Everett LLP."
+        },
+        {
+          "donor": "Barbara Traverse",
+          "amount": 100.0,
+          "type": "Individual",
+          "notes": "Employer listed as Retired."
+        },
+        {
+          "donor": "Henry Monti",
+          "amount": 100.0,
+          "type": "Individual",
+          "notes": "Employer listed as Gemma Law."
+        },
+        {
+          "donor": "IBEW LOCAL 99 PAC (International Brotherhood of Electrical Workers)",
+          "amount": 100.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "Joseph W.",
+          "amount": 100.0,
+          "type": "Individual",
+          "notes": "Employer listed as Walsh Government Strategies."
+        },
+        {
+          "donor": "RI ASSOCIATION OF NURSE ANESTHETISTS PAC",
+          "amount": 100.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "William J",
+          "amount": 75.0,
+          "type": "Individual",
+          "notes": "Employer listed as Delaney Cohn & Dussi, LLC."
+        }
+      ],
       "spending_categories": [],
       "takeaways": [],
       "explainer_cards": []
@@ -4427,7 +4938,68 @@
           "description": "Political committees and PACs listed in the filing."
         }
       ],
-      "top_donors": [],
+      "top_donors": [
+        {
+          "donor": "Jay Edwards",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as J.G. Edwards Construction Co."
+        },
+        {
+          "donor": "Patti Doyle",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as Patti Doyle Communications."
+        },
+        {
+          "donor": "William Walsh",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as Government Strategies."
+        },
+        {
+          "donor": "Joseph Walsh",
+          "amount": 200.0,
+          "type": "Individual",
+          "notes": "Employer listed as Government Strategies."
+        },
+        {
+          "donor": "PANNONE LOPES DEVEREAUX & O'GARA LLC RI STATE PAC",
+          "amount": 200.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "Kenneth J",
+          "amount": 103.0,
+          "type": "Individual",
+          "notes": "Employer listed as Filarski Filarski Architecture and Planning Research."
+        },
+        {
+          "donor": "Gayle Wolf",
+          "amount": 100.0,
+          "type": "Individual",
+          "notes": "Employer listed as Government Strategies."
+        },
+        {
+          "donor": "George Zainyeh",
+          "amount": 100.0,
+          "type": "Individual",
+          "notes": "Employer listed as George's of Gailee."
+        },
+        {
+          "donor": "REALTORS PAC OF RI",
+          "amount": 100.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "RI NAGE/IBPO PAC (National Assoc of Gov Employ/International Brotherhood)",
+          "amount": 100.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        }
+      ],
       "spending_categories": [
         {
           "title": "Consultant & Professional Services",
@@ -4513,7 +5085,68 @@
           "description": "Political committees and PACs listed in the filing."
         }
       ],
-      "top_donors": [],
+      "top_donors": [
+        {
+          "donor": "Matthew A",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Lopes Jr Pannone Lopes Devereaux & O'Gara."
+        },
+        {
+          "donor": "PEOPLE, RI COUNCIL 94, AFSCME AFL-CIO PAC",
+          "amount": 500.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "REALTORS PAC OF RI",
+          "amount": 300.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "CAREPAC OF BLUE CROSS & BLUE SHIELD OF RI",
+          "amount": 250.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "Christopher Boyle",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as Christopher Boyle, Esq.."
+        },
+        {
+          "donor": "Leonard Lopes",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as The Victor Group."
+        },
+        {
+          "donor": "M. Teresa",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as Paiva Weed F/S Capitol Consulting, LLC."
+        },
+        {
+          "donor": "NEARI PACE (National Education Association of RI)",
+          "amount": 250.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "Steven VincentCeceri",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as NE Property Services Group, LLC."
+        },
+        {
+          "donor": "William J.",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as Murphy Murphy & Fay, LLP."
+        }
+      ],
       "spending_categories": [
         {
           "title": "Fundraising Expenses",
@@ -4596,7 +5229,7 @@
           "label": "Small-dollar / aggregate online receipts",
           "class_name": "small-dollar-aggregate-online-receipts",
           "amount": 1570.0,
-          "description": "Online or bundled small-dollar receipts reported in aggregate form."
+          "description": "Money reported in aggregate form without individual donor names listed in the filing."
         },
         {
           "label": "PAC contributions",
@@ -4625,6 +5258,12 @@
           "notes": "Named PAC contribution listed in the filing."
         },
         {
+          "donor": "PANNONE LOPES DEVEREAUX & O'GARA LLC RI STATE PAC",
+          "amount": 200.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
           "donor": "William J",
           "amount": 200.0,
           "type": "Individual",
@@ -4637,7 +5276,7 @@
           "notes": "Employer listed as Capitol Communications Group."
         },
         {
-          "donor": "PANNONE LOPES DEVEREAUX & O'GARA LLC RI STATE PAC",
+          "donor": "CITIZENS BANK PACOM",
           "amount": 125.0,
           "type": "PAC",
           "notes": "Named PAC contribution listed in the filing."
@@ -4919,22 +5558,64 @@
       ],
       "top_donors": [
         {
-          "donor": "Actblue",
+          "donor": "John Candon",
+          "amount": 4000.0,
+          "type": "Individual",
+          "notes": "Employer listed as unemploiyed."
+        },
+        {
+          "donor": "PROVIDENCE FIRE FIGHTERS LEADERSHIP PAC",
           "amount": 1000.0,
           "type": "PAC",
           "notes": "Named PAC contribution listed in the filing."
         },
         {
-          "donor": "aaron hawley",
+          "donor": "Samantha Cotter",
           "amount": 500.0,
           "type": "Individual",
-          "notes": "Employer listed as Stride Learning."
+          "notes": "Employer listed as Homecare Advantage."
         },
         {
           "donor": "Cameron Moquin",
+          "amount": 139.07999999999998,
+          "type": "Other",
+          "notes": "Employer listed as City of Providence."
+        },
+        {
+          "donor": "Kimberly Rich",
+          "amount": 100.0,
+          "type": "Individual",
+          "notes": "Employer listed as Kimis bar."
+        },
+        {
+          "donor": "Ryan Sullivan",
           "amount": 100.0,
           "type": "Individual",
           "notes": "Employer listed as City of Providence."
+        },
+        {
+          "donor": "Abigail Rundlett",
+          "amount": 50.0,
+          "type": "Individual",
+          "notes": "Employer listed as School."
+        },
+        {
+          "donor": "Elizabeth Kosiarek",
+          "amount": 50.0,
+          "type": "Individual",
+          "notes": "Employer listed as Not Employed."
+        },
+        {
+          "donor": "Gabriel Rodriguez",
+          "amount": 50.0,
+          "type": "Individual",
+          "notes": "Employer listed as Delmonico & Son."
+        },
+        {
+          "donor": "Kenneth Mangan",
+          "amount": 50.0,
+          "type": "Individual",
+          "notes": "Employer listed as Providence."
         }
       ],
       "spending_categories": [
@@ -5007,7 +5688,68 @@
           "description": "Named contributors reported individually in the filing."
         }
       ],
-      "top_donors": [],
+      "top_donors": [
+        {
+          "donor": "Leonela Felix",
+          "amount": 2150.0,
+          "type": "Individual",
+          "notes": "Employer listed as City of Providence."
+        },
+        {
+          "donor": "Anne Holland",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Not employed."
+        },
+        {
+          "donor": "James Kingston",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Not Employed."
+        },
+        {
+          "donor": "Jonathan P",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Brower Jonathan P Brower MD LLC."
+        },
+        {
+          "donor": "Jane Casella",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as Not Employed."
+        },
+        {
+          "donor": "Jessie Kingston",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as Not Employed."
+        },
+        {
+          "donor": "Luis Felix",
+          "amount": 300.0,
+          "type": "Individual",
+          "notes": "Employer listed as Nova jewelers."
+        },
+        {
+          "donor": "Aaron Regunberg",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as Public Citizen."
+        },
+        {
+          "donor": "Benjamin Aho",
+          "amount": 200.0,
+          "type": "Individual",
+          "notes": "Employer listed as Brown Health."
+        },
+        {
+          "donor": "Marc Depina",
+          "amount": 200.0,
+          "type": "Individual",
+          "notes": "Employer listed as Massage Envy."
+        }
+      ],
       "spending_categories": [
         {
           "title": "Fundraising Expenses",
@@ -5124,22 +5866,16 @@
           "notes": "Employer listed as Badway Law Office of Thomas E. Badway & Associates."
         },
         {
-          "donor": "David P.",
-          "amount": 500.0,
-          "type": "Individual",
-          "notes": "Employer listed as Tikoian Providence Water."
-        },
-        {
           "donor": "Frank A.",
-          "amount": 500.0,
+          "amount": 650.0,
           "type": "Individual",
           "notes": "Employer listed as Ciccone Retired."
         },
         {
-          "donor": "Grant Pilkington",
+          "donor": "David P.",
           "amount": 500.0,
           "type": "Individual",
-          "notes": "Employer listed as Advocacy Solutions LLC."
+          "notes": "Employer listed as Tikoian Providence Water."
         },
         {
           "donor": "Jack Galvao",
@@ -5148,22 +5884,28 @@
           "notes": "Employer listed as Jack Galvao, CPA."
         },
         {
+          "donor": "John H.",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as Petrarca Providence Auto Body."
+        },
+        {
           "donor": "Louis DiPalma",
           "amount": 500.0,
           "type": "Individual",
           "notes": "Employer listed as Raytheon."
         },
         {
-          "donor": "William J.",
-          "amount": 400.0,
+          "donor": "Pamela Hughes",
+          "amount": 500.0,
           "type": "Individual",
-          "notes": "Employer listed as Murphy Murphy & Fay LLP."
+          "notes": "Employer listed as Retired."
         },
         {
-          "donor": "RI LABORERS' PAC",
-          "amount": 350.0,
-          "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing."
+          "donor": "Leonidas Raptakis",
+          "amount": 425.0,
+          "type": "Individual",
+          "notes": "Employer listed as State of Rhode Island."
         }
       ],
       "spending_categories": [],
@@ -5232,7 +5974,7 @@
           "label": "Small-dollar / aggregate online receipts",
           "class_name": "small-dollar-aggregate-online-receipts",
           "amount": 7440.0,
-          "description": "Online or bundled small-dollar receipts reported in aggregate form."
+          "description": "Money reported in aggregate form without individual donor names listed in the filing."
         },
         {
           "label": "PAC contributions",
@@ -5243,10 +5985,64 @@
       ],
       "top_donors": [
         {
-          "donor": "Randy Bottella",
+          "donor": "checks from fundraiser 200 and under in donations.",
           "amount": 7440.0,
           "type": "Aggregate",
-          "notes": "Employer listed as Reliable Collison."
+          "notes": "checks from fundraiser 200 and under in donations."
+        },
+        {
+          "donor": "Carlos Munoz",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as Bally's."
+        },
+        {
+          "donor": "Daniel Ryan",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as Bally's."
+        },
+        {
+          "donor": "Elizabeth Suever",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as Bally's."
+        },
+        {
+          "donor": "John Petrarca",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as Providence Auto Body."
+        },
+        {
+          "donor": "Marc Crisafulli",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as Bally's."
+        },
+        {
+          "donor": "Michael Lima",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as retired."
+        },
+        {
+          "donor": "RI DENTAL PAC",
+          "amount": 500.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "RI HOSPITALITY PAC",
+          "amount": 500.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "The Committe",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as to Elect Val Lawson NEA president also State of RI."
         }
       ],
       "spending_categories": [],
@@ -5503,6 +6299,12 @@
       ],
       "top_donors": [
         {
+          "donor": "Karen Pinelli",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Provence Sur Mer."
+        },
+        {
           "donor": "Richard Litterio",
           "amount": 2000.0,
           "type": "Individual",
@@ -5539,6 +6341,12 @@
           "notes": "Employer listed as Elise Mccaffrey."
         },
         {
+          "donor": "Carol Ann",
+          "amount": 336.78,
+          "type": "Individual",
+          "notes": "Employer listed as Lyons Looking Upwards Inc.."
+        },
+        {
           "donor": "Sabrina Terrell",
           "amount": 300.0,
           "type": "Individual",
@@ -5549,18 +6357,6 @@
           "amount": 300.0,
           "type": "Individual",
           "notes": "Employer listed as OAKIES."
-        },
-        {
-          "donor": "Conceicao Paulo",
-          "amount": 250.0,
-          "type": "Individual",
-          "notes": "Employer listed as Unemployed."
-        },
-        {
-          "donor": "Douglas Smyth",
-          "amount": 250.0,
-          "type": "Individual",
-          "notes": "Employer listed as Douglas Smyth."
         }
       ],
       "spending_categories": [
@@ -5680,7 +6476,7 @@
           "label": "Small-dollar / aggregate online receipts",
           "class_name": "small-dollar-aggregate-online-receipts",
           "amount": 350.0,
-          "description": "Online or bundled small-dollar receipts reported in aggregate form."
+          "description": "Money reported in aggregate form without individual donor names listed in the filing."
         }
       ],
       "top_donors": [
@@ -5837,15 +6633,39 @@
           "label": "Small-dollar / aggregate online receipts",
           "class_name": "small-dollar-aggregate-online-receipts",
           "amount": 1040.0,
-          "description": "Online or bundled small-dollar receipts reported in aggregate form."
+          "description": "Money reported in aggregate form without individual donor names listed in the filing."
         }
       ],
       "top_donors": [
         {
-          "donor": "Leonidas Raptakis",
+          "donor": "anedot donations",
           "amount": 1040.0,
           "type": "Aggregate",
+          "notes": "anedot donations"
+        },
+        {
+          "donor": "Angelo Kapsimalis",
+          "amount": 200.0,
+          "type": "Individual",
+          "notes": "Employer listed as retired."
+        },
+        {
+          "donor": "Greg Weiss",
+          "amount": 200.0,
+          "type": "Individual",
+          "notes": "Employer listed as J and w property management."
+        },
+        {
+          "donor": "Leonidas Raptakis",
+          "amount": 200.0,
+          "type": "Individual",
           "notes": "Employer listed as RI Senate."
+        },
+        {
+          "donor": "Michael Gavencak",
+          "amount": 200.0,
+          "type": "Individual",
+          "notes": "Employer listed as retired."
         }
       ],
       "spending_categories": [
@@ -5928,7 +6748,68 @@
           "description": "Political committees and PACs listed in the filing."
         }
       ],
-      "top_donors": [],
+      "top_donors": [
+        {
+          "donor": "James Kingston",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as NOT EMPLOYED."
+        },
+        {
+          "donor": "Beata Nelken",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as Jenks Park Pediatrics."
+        },
+        {
+          "donor": "RI STATE LODGE FOP PAC (Fraternal Order of Police)",
+          "amount": 500.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "Chiara Deltito",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as RI League of Charter Public Schools."
+        },
+        {
+          "donor": "Maria Rivera",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as City of Central Falls."
+        },
+        {
+          "donor": "Matthew Lopes",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as Pannone Lopes Deveraux O'Gara LLC."
+        },
+        {
+          "donor": "Nicholas Lacroix",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as South County Cultivators."
+        },
+        {
+          "donor": "Dorothy Chatham",
+          "amount": 200.0,
+          "type": "Individual",
+          "notes": "Employer listed as Jaia Robotics."
+        },
+        {
+          "donor": "Frank Ciccone",
+          "amount": 150.0,
+          "type": "Individual",
+          "notes": "Named individual contribution listed in the filing."
+        },
+        {
+          "donor": "Richard McAuliffe",
+          "amount": 150.0,
+          "type": "Individual",
+          "notes": "Employer listed as Mayforth Group."
+        }
+      ],
       "spending_categories": [
         {
           "title": "Consultant & Professional Services",
@@ -6031,22 +6912,64 @@
       ],
       "top_donors": [
         {
+          "donor": "Paula Carmichael",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Reliant medical group."
+        },
+        {
+          "donor": "IBEW LOCAL 2323 PAC (International Brotherhood of Electrical Workers)",
+          "amount": 500.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "Peter Oppenheimer",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as Barrington Behavioral Health Services."
+        },
+        {
+          "donor": "David Freydin",
+          "amount": 420.0,
+          "type": "Individual",
+          "notes": "Employer listed as Not employed."
+        },
+        {
+          "donor": "Clifford Gordon",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as Well One."
+        },
+        {
+          "donor": "Gregory Steinmetz",
+          "amount": 200.0,
+          "type": "Individual",
+          "notes": "Employer listed as Breakwater Primary Care."
+        },
+        {
           "donor": "Judith Evans",
           "amount": 200.0,
           "type": "Individual",
           "notes": "Employer listed as Barnatt."
         },
         {
-          "donor": "Virginia Parker",
-          "amount": 125.0,
+          "donor": "Scune Carrington",
+          "amount": 200.0,
           "type": "Individual",
-          "notes": "Employer listed as Not Employed."
+          "notes": "Employer listed as NAAM."
         },
         {
-          "donor": "Marie Ganim",
-          "amount": 20.0,
+          "donor": "Debra Hurwitz",
+          "amount": 150.0,
           "type": "Individual",
-          "notes": "Employer listed as Not Employed."
+          "notes": "Employer listed as Retired."
+        },
+        {
+          "donor": "Erin Nahrgang",
+          "amount": 150.0,
+          "type": "Individual",
+          "notes": "Employer listed as Boston Medical Center."
         }
       ],
       "spending_categories": [
@@ -6151,7 +7074,7 @@
           "label": "Small-dollar / aggregate online receipts",
           "class_name": "small-dollar-aggregate-online-receipts",
           "amount": 1275.0,
-          "description": "Online or bundled small-dollar receipts reported in aggregate form."
+          "description": "Money reported in aggregate form without individual donor names listed in the filing."
         },
         {
           "label": "PAC contributions",
@@ -6406,7 +7329,7 @@
           "label": "Small-dollar / aggregate online receipts",
           "class_name": "small-dollar-aggregate-online-receipts",
           "amount": 1731.6,
-          "description": "Online or bundled small-dollar receipts reported in aggregate form."
+          "description": "Money reported in aggregate form without individual donor names listed in the filing."
         },
         {
           "label": "PAC contributions",
@@ -6593,7 +7516,68 @@
           "description": "Political committees and PACs listed in the filing."
         }
       ],
-      "top_donors": [],
+      "top_donors": [
+        {
+          "donor": "William Treese",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Behavioral Health Solutions."
+        },
+        {
+          "donor": "Anthony Simon",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as consultant."
+        },
+        {
+          "donor": "John Petrarca",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as Providence Auto Body."
+        },
+        {
+          "donor": "Melissa Broudo",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as Attorney (self)."
+        },
+        {
+          "donor": "Steven Ceceri",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as New England Property Services."
+        },
+        {
+          "donor": "Valarie Lawson",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as NEARI."
+        },
+        {
+          "donor": "RI MEDICAL PAC",
+          "amount": 300.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "CAREPAC OF BLUE CROSS & BLUE SHIELD OF RI",
+          "amount": 250.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "David Tikoian",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Named individual contribution listed in the filing."
+        },
+        {
+          "donor": "Ellis Waldman",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as Walco."
+        }
+      ],
       "spending_categories": [
         {
           "title": "Fundraising Expenses",
@@ -6704,7 +7688,68 @@
           "description": "Political committees and PACs listed in the filing."
         }
       ],
-      "top_donors": [],
+      "top_donors": [
+        {
+          "donor": "Ann Webb",
+          "amount": 600.0,
+          "type": "Individual",
+          "notes": "Employer listed as Retired."
+        },
+        {
+          "donor": "David L",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as Johnston Law Office of David L Johnston."
+        },
+        {
+          "donor": "Valarie Lawson",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as NEA RI."
+        },
+        {
+          "donor": "WARWICK FIREFIGHTERS UNION PAC",
+          "amount": 500.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "INDEPENDENT INSURANCE AGENTS RI PAC",
+          "amount": 400.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "Robert C.",
+          "amount": 350.0,
+          "type": "Individual",
+          "notes": "Employer listed as Corrente Whelan Corrente Law Offices."
+        },
+        {
+          "donor": "AMALGAMATED TRANSIT UNION COPE-RHODE ISLAND",
+          "amount": 300.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "RI LABORERS' PAC",
+          "amount": 300.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the filing."
+        },
+        {
+          "donor": "Anthony Thompson",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as Sign Services, Inc."
+        },
+        {
+          "donor": "Carol O'Donnell",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as Emerald Construction."
+        }
+      ],
       "spending_categories": [
         {
           "title": "Food, Beverages and Meals",
@@ -6913,95 +7958,6 @@
       "explainer_cards": []
     },
     {
-      "candidate_id": "house-8-john-joseph-lombardi",
-      "slug": "john-joseph-lombardi",
-      "candidate_name": "John Joseph Lombardi",
-      "chamber": "house",
-      "district_number": "8",
-      "party": "DEM",
-      "office_sought": "State Representative",
-      "report_label": "2026 On-Going Qrtly (2nd)",
-      "reporting_period_label": "April 1, 2026 to June 30, 2026",
-      "source_note": "Built from Rhode Island campaign finance filings for the 2026 second quarter.",
-      "original_documents": [
-        {
-          "label": "Q2 2026 CF-2 report",
-          "period": "April 1, 2026 to June 30, 2026",
-          "href": "/data/finance-documents/john-joseph-lombardi-q2-2026.pdf"
-        },
-        {
-          "label": "Q1 2026 CF-2 report",
-          "period": "January 1, 2026 to March 31, 2026",
-          "href": "/data/finance-documents/john-joseph-lombardi-q1-2026.pdf"
-        }
-      ],
-      "beginning_cash": 7214.17,
-      "money_raised": 63400.0,
-      "money_spent": 59.97,
-      "ending_cash": 70554.2,
-      "net_change": 63340.03,
-      "campaign_expenses": 59.97,
-      "aggregate_expenses": 0.0,
-      "summary_intro": "This filing shows a campaign with a very large reported cash increase, driven mostly by a candidate loan during the quarter.",
-      "filing_history": [
-        {
-          "label": "Q2 2026",
-          "reporting_period_label": "April 1, 2026 to June 30, 2026",
-          "money_raised": 63400.0,
-          "money_spent": 59.97,
-          "ending_cash": 70554.2,
-          "net_change": 63340.03,
-          "notes": "The campaign reported a large self-loan and spent only a small amount in this reporting period."
-        },
-        {
-          "label": "Q1 2026",
-          "reporting_period_label": "January 1, 2026 to March 31, 2026",
-          "money_raised": 0.0,
-          "money_spent": 159.97,
-          "ending_cash": 7214.17,
-          "net_change": -159.97,
-          "notes": "The campaign spent more than it raised in this reporting period."
-        }
-      ],
-      "source_buckets": [
-        {
-          "label": "Other reported sources",
-          "class_name": "other-reported-sources",
-          "amount": 63000.0,
-          "description": "Loan proceeds and other money reported in the filing."
-        },
-        {
-          "label": "Itemized individual donors",
-          "class_name": "itemized-individual-donors",
-          "amount": 400.0,
-          "description": "Named contributors reported individually in the filing."
-        }
-      ],
-      "top_donors": [
-        {
-          "donor": "John J. Lombardi",
-          "amount": 63000.0,
-          "type": "Loan",
-          "notes": "Reported as a loan from the candidate's savings account."
-        },
-        {
-          "donor": "Louis DiToro",
-          "amount": 400.0,
-          "type": "Individual",
-          "notes": "Employer listed as Perfect Pages."
-        }
-      ],
-      "spending_categories": [
-        {
-          "title": "Advertising",
-          "summary": "Visible spending includes GoDaddy website charges during the quarter.",
-          "amount": 59.97
-        }
-      ],
-      "takeaways": [],
-      "explainer_cards": []
-    },
-    {
       "candidate_id": "senate-38-victoria-gu",
       "slug": "victoria-gu",
       "candidate_name": "Victoria Gu",
@@ -7060,7 +8016,38 @@
           "description": "Named contributors reported individually in the filing."
         }
       ],
-      "top_donors": [],
+      "top_donors": [
+        {
+          "donor": "Kenneth Gu",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Rhode Island Department of Education."
+        },
+        {
+          "donor": "Lisa Chen",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as University of Rhode Island."
+        },
+        {
+          "donor": "MICHAEL ISRAELITE",
+          "amount": 75.0,
+          "type": "Individual",
+          "notes": "Employer listed as NOT EMPLOYED."
+        },
+        {
+          "donor": "Victoria Gu",
+          "amount": 40.0,
+          "type": "Individual",
+          "notes": "Employer listed as State of Rhode Island."
+        },
+        {
+          "donor": "MICHAEL CAMPBELL",
+          "amount": 30.0,
+          "type": "Individual",
+          "notes": "Employer listed as SELF EMPLOYED, MUSICIAN/WRITER/TEACHER."
+        }
+      ],
       "spending_categories": [
         {
           "title": "Advertising",

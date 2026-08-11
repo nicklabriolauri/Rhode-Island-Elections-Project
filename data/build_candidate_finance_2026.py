@@ -99,6 +99,20 @@ def clean_text(value: str) -> str:
     return text
 
 
+def donor_name_looks_like_code(value: str) -> bool:
+    text = clean_text(value)
+    if not text:
+        return False
+    if len(text) < 4:
+        return False
+    if re.fullmatch(r"[\d,\sO-]+", text):
+        return True
+    parts = [part.strip() for part in text.split(",") if part.strip()]
+    if parts and all(re.fullmatch(r"[A-Z0-9]{1,6}", part) for part in parts):
+        return True
+    return False
+
+
 def extract_hidden(html_text: str, name: str) -> str:
     match = re.search(rf'name="{re.escape(name)}" id="{re.escape(name)}" value="([^"]*)"', html_text)
     return match.group(1) if match else ""
@@ -387,20 +401,34 @@ def build_top_donors(entries: list[dict[str, object]]) -> list[dict[str, object]
     grouped: dict[tuple[str, str], dict[str, object]] = {}
     for entry in entries:
         donor = clean_text(str(entry.get("donor", "")))
+        donor_type = str(entry.get("type", "") or "Donor")
+        if donor_name_looks_like_code(donor):
+            if donor_type == "Aggregate":
+                donor = "Unitemized / aggregate receipts"
+            elif donor_type == "PAC":
+                donor = "Committee / PAC receipts"
+            else:
+                donor = "Donor names not readable in filing text"
         if not donor or donor in {"Aggregate", "Refund/Rebate"}:
             continue
-        key = (donor, str(entry.get("type", "")))
+        key = (donor, donor_type)
         item = grouped.setdefault(
             key,
             {
                 "donor": donor,
                 "amount": 0.0,
-                "type": entry.get("type") or "Donor",
+                "type": donor_type,
                 "notes": "",
             },
         )
         item["amount"] = float(item["amount"]) + float(entry.get("amount", 0.0))
-        if entry.get("type") == "PAC":
+        if donor == "Unitemized / aggregate receipts":
+            item["notes"] = "The filing reports these receipts in aggregate form without individual donor names."
+        elif donor == "Committee / PAC receipts":
+            item["notes"] = "The filing shows committee or PAC receipts, but the public text does not provide readable donor names here."
+        elif donor == "Donor names not readable in filing text":
+            item["notes"] = "The filing includes the contribution amount, but the public text does not surface a readable donor name."
+        elif donor_type == "PAC":
             item["notes"] = "Named PAC contribution listed in the filing."
         elif entry.get("employer"):
             item["notes"] = f"Employer listed as {entry['employer']}."
