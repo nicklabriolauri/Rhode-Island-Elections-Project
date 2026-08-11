@@ -2278,37 +2278,38 @@
         featureNote: "Open the same structured files that power the public map, turnout tools, and filing pages.",
         featureOpenByDefault: true,
         ctas: [
-          { label: "Open Methodology", href: "methodology.html", style: "primary" },
-          { label: "Race Data JSON", href: "data/race_data.json", style: "secondary" },
-          { label: "2024 Turnout JSON", href: "data/ri_2024_turnout_data.json", style: "secondary" },
-          { label: "Finance Profiles JSON", href: "data/candidate_finance_2026.json", style: "secondary" }
+          { label: "Race Data JSON", href: "data/race_data.json", style: "primary" },
+          { label: "Who's Running JSON", href: "data/whos_running_2026.json", style: "secondary" },
+          { label: "Finance Profiles JSON", href: "data/candidate_finance_2026.json", style: "secondary" },
+          { label: "2024 Turnout JSON", href: "data/ri_2024_turnout_data.json", style: "secondary" }
         ],
         features: [
           { label: "House GeoJSON", href: "data/house_new.geojson", className: "geometry" },
           { label: "Senate GeoJSON", href: "data/senate_new.geojson", className: "geometry" },
           { label: "Precinct Turnout GeoJSON", href: "data/ri_turnout_2024_precinct.geojson", className: "datafile" },
-          { label: "State Candidate Workbook", href: "https://vote.sos.ri.gov/Forms/elections/Reports/Candidates.xlsx", className: "workbook", external: true }
+          { label: "Municipality Turnout GeoJSON", href: "data/ri_turnout_2024_municipality.geojson", className: "datafile" }
         ],
         links: [
           { label: "Methodology", href: "methodology.html" },
           { label: "Race Data JSON", href: "data/race_data.json" },
-          { label: "Finance Profiles JSON", href: "data/candidate_finance_2026.json" },
           { label: "Who's Running JSON", href: "data/whos_running_2026.json" },
+          { label: "Finance Profiles JSON", href: "data/candidate_finance_2026.json" },
           { label: "House GeoJSON", href: "data/house_new.geojson" },
           { label: "Senate GeoJSON", href: "data/senate_new.geojson" },
           { label: "Turnout JSON", href: "data/ri_2024_turnout_data.json" },
           { label: "Precinct GeoJSON", href: "data/ri_turnout_2024_precinct.geojson" },
           { label: "Municipality GeoJSON", href: "data/ri_turnout_2024_municipality.geojson" },
-          { label: "Candidate Workbook", href: "https://vote.sos.ri.gov/Forms/elections/Reports/Candidates.xlsx", external: true }
+          { label: "Finance Builder Script", href: "scripts/build_candidate_finance_2026.py" },
+          { label: "Who's Running Builder Script", href: "scripts/build_whos_running_2026.py" }
         ],
         nav: [
           { label: "Methodology", href: "methodology.html" },
           { label: "Race Data JSON", href: "data/race_data.json" },
-          { label: "Turnout JSON", href: "data/ri_2024_turnout_data.json" },
+          { label: "Who's Running JSON", href: "data/whos_running_2026.json" },
           { label: "Finance Profiles JSON", href: "data/candidate_finance_2026.json" },
           { label: "House GeoJSON", href: "data/house_new.geojson" },
           { label: "Senate GeoJSON", href: "data/senate_new.geojson" },
-          { label: "Candidate Workbook", href: "https://vote.sos.ri.gov/Forms/elections/Reports/Candidates.xlsx", external: true }
+          { label: "Turnout JSON", href: "data/ri_2024_turnout_data.json" }
         ]
       }
     };
