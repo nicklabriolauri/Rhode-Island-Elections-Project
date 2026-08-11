@@ -566,6 +566,19 @@ def build_summary_intro(candidate_name: str, summary: dict[str, float]) -> str:
     return f"{reserve_text} The report also shows that {flow_text}"
 
 
+def build_local_filing_row(label: str, period_start: str, period_end: str) -> dict[str, str]:
+    return {
+        "label": label,
+        "period_start": period_start,
+        "period_end": period_end,
+        "due_date": "",
+        "status": "Filed",
+        "filed_at": "",
+        "amended": "",
+        "view_href": "",
+    }
+
+
 def parse_candidate_profile(candidate: dict[str, object]) -> dict[str, object] | None:
     chamber = str(candidate["chamber"])
     office_code = OFFICE_CODE_BY_CHAMBER.get(chamber)
@@ -574,58 +587,63 @@ def parse_candidate_profile(candidate: dict[str, object]) -> dict[str, object] |
         return None
 
     name = clean_text(str(candidate["name"]))
+    slug = slugify(name)
+    q2_pdf_path = DOCS_DIR / f"{slug}-q2-2026.pdf"
+    q1_pdf_path = DOCS_DIR / f"{slug}-q1-2026.pdf"
     name_parts = name.split()
     first_name = name_parts[0]
     last_name = " ".join(name_parts[1:]) if len(name_parts) > 1 else name_parts[0]
+    filing_rows: list[dict[str, str]] = []
+    public_summary: dict[str, float] = {}
+    q2_row: dict[str, str] | None = None
+    q1_row: dict[str, str] | None = None
 
-    session = PublicFilingsSession()
-    search_html = session.open_search()
-    results_html = session.submit_search(
-        search_html,
-        last_name=last_name,
-        first_name=first_name,
-        office_code=office_code,
-        party_code=party_code,
-    )
-    result_rows = extract_search_results(results_html)
-    picked = pick_best_search_result(result_rows, name)
-    if not picked:
+    try:
+        session = PublicFilingsSession()
+        search_html = session.open_search()
+        results_html = session.submit_search(
+            search_html,
+            last_name=last_name,
+            first_name=first_name,
+            office_code=office_code,
+            party_code=party_code,
+        )
+        result_rows = extract_search_results(results_html)
+        picked = pick_best_search_result(result_rows, name)
+        if picked:
+            candidate_html = session.open_candidate(
+                results_html,
+                picked.event_target,
+                last_name=last_name,
+                first_name=first_name,
+                office_code=office_code,
+                party_code=party_code,
+            )
+            filing_rows = parse_filing_rows(candidate_html)
+            public_summary = parse_public_summary(candidate_html)
+            q2_row = next((row for row in filing_rows if row["label"] == "2026 On-Going Qrtly (2nd)"), None)
+            q1_row = next((row for row in filing_rows if row["label"] == "2026 On-Going Qrtly (1st)"), None)
+            if q2_row and q2_row.get("view_href"):
+                secure_q2_html = fetch_html(q2_row["view_href"])
+                q2_pdf_href = extract_pdf_href(secure_q2_html)
+                if q2_pdf_href:
+                    download_file(q2_pdf_href, q2_pdf_path)
+            if q1_row and q1_row.get("view_href"):
+                secure_q1_html = fetch_html(q1_row["view_href"])
+                q1_pdf_href = extract_pdf_href(secure_q1_html)
+                if q1_pdf_href:
+                    download_file(q1_pdf_href, q1_pdf_path)
+    except Exception as exc:  # noqa: BLE001
+        print(f"  ! live lookup skipped for {name}: {exc}", file=sys.stderr)
+
+    if not q2_row and q2_pdf_path.exists():
+        q2_row = build_local_filing_row("2026 On-Going Qrtly (2nd)", "04/01/2026", "06/30/2026")
+    if not q1_row and q1_pdf_path.exists():
+        q1_row = build_local_filing_row("2026 On-Going Qrtly (1st)", "01/01/2026", "03/31/2026")
+    if not q2_pdf_path.exists():
         return None
-
-    candidate_html = session.open_candidate(
-        results_html,
-        picked.event_target,
-        last_name=last_name,
-        first_name=first_name,
-        office_code=office_code,
-        party_code=party_code,
-    )
-    filing_rows = parse_filing_rows(candidate_html)
-    public_summary = parse_public_summary(candidate_html)
-
-    q2_row = next((row for row in filing_rows if row["label"] == "2026 On-Going Qrtly (2nd)"), None)
-    if not q2_row or not q2_row["view_href"]:
-        return None
-
-    q1_row = next((row for row in filing_rows if row["label"] == "2026 On-Going Qrtly (1st)"), None)
-
-    secure_q2_html = fetch_html(q2_row["view_href"])
-    q2_pdf_href = extract_pdf_href(secure_q2_html)
-    if not q2_pdf_href:
-        return None
-
-    slug = slugify(name)
-    q2_pdf_path = DOCS_DIR / f"{slug}-q2-2026.pdf"
-    download_file(q2_pdf_href, q2_pdf_path)
-
-    q1_pdf_href = ""
-    q1_pdf_path: Path | None = None
-    if q1_row and q1_row["view_href"]:
-        secure_q1_html = fetch_html(q1_row["view_href"])
-        q1_pdf_href = extract_pdf_href(secure_q1_html)
-        if q1_pdf_href:
-            q1_pdf_path = DOCS_DIR / f"{slug}-q1-2026.pdf"
-            download_file(q1_pdf_href, q1_pdf_path)
+    if not q1_pdf_path.exists():
+        q1_pdf_path = None
 
     q2_summary = parse_page_one_summary(q2_pdf_path)
     contributions = parse_contributions(q2_pdf_path)
