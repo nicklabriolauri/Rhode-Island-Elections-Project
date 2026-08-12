@@ -1810,7 +1810,7 @@
 
     function withAssetVersion(url) {
       const separator = url.includes("?") ? "&" : "?";
-      return `${url}${separator}v=20260810a`;
+      return `${url}${separator}v=20260812a`;
     }
 
     function normalizeBucketClass(bucket) {
@@ -1829,8 +1829,8 @@
       if (bucketClass === "aggregate") {
         return {
           label: "Receipts without donor names listed",
-          description: "This money was reported in aggregate form, so individual donor names are not listed in the public filing.",
-          note: "Rhode Island filings often use aggregate reporting for smaller-dollar or bundled receipts."
+          description: "This portion of the filing reports money received without attaching individual donor names to each contribution.",
+          note: "This is usually smaller-dollar or bundled money reported in aggregate form rather than donor by donor."
         };
       }
       if (bucketClass === "individuals") {
@@ -1892,8 +1892,9 @@
         : "This campaign spent more than it raised during the filing period.";
       const partyTone = partyClass(profile.party);
       const strongestLabel = strongestBucket ? getBucketMeta(strongestBucket).label : "";
+      const unnamedShare = unnamedBucket ? (Number(unnamedBucket.amount || 0) / total) * 100 : 0;
       const unnamedCopy = unnamedBucket
-        ? ` ${formatCurrency(unnamedBucket.amount)} of this filing (${formatPercent((Number(unnamedBucket.amount || 0) / total) * 100)}) was reported without individual donor names attached.`
+        ? ` ${formatCurrency(unnamedBucket.amount)} of this filing (${formatPercent(unnamedShare)}) was reported without individual donor names attached.`
         : "";
 
       return `
@@ -1969,13 +1970,14 @@
       if (!buckets.length) return "";
       const total = buckets.reduce((sum, bucket) => sum + Number(bucket.amount || 0), 0) || 1;
       const unnamedBucket = buckets.find(bucket => normalizeBucketClass(bucket) === "aggregate");
+      const unnamedShare = unnamedBucket ? (Number(unnamedBucket.amount || 0) / total) * 100 : 0;
       return `
         <div class="hero-mix">
           <div class="section-label">Funding mix ${buildHelp("Funding mix shows the reported sources of money in this filing period, grouped into a few simpler categories so you can see the campaign’s funding base at a glance.")}</div>
           <div class="hero-mix-title">Where the money came from</div>
           <div class="hero-mix-copy">
             A quick visual breakdown of the campaign’s reported funding sources for this filing period.
-            ${unnamedBucket ? ` ${formatCurrency(unnamedBucket.amount)} was reported without individual donor names listed.` : ""}
+            ${unnamedBucket ? ` ${formatCurrency(unnamedBucket.amount)} (${formatPercent(unnamedShare)}) was reported without individual donor names listed.` : ""}
           </div>
           <div class="mix-meter">
             ${buckets.map(bucket => `
@@ -2111,13 +2113,14 @@
       if (!buckets.length) return "";
       const total = buckets.reduce((sum, bucket) => sum + Number(bucket.amount || 0), 0) || 1;
       const unnamedBucket = buckets.find(bucket => normalizeBucketClass(bucket) === "aggregate");
+      const unnamedShare = unnamedBucket ? (Number(unnamedBucket.amount || 0) / total) * 100 : 0;
       return `
         <article class="panel section-card">
           <div class="section-label">Funding mix</div>
           <h3>Where the money came from.</h3>
           <p class="section-copy">
             This groups the filing into a few readable categories so you can see the campaign’s funding base at a glance.
-            ${unnamedBucket ? ` ${formatCurrency(unnamedBucket.amount)} was reported in aggregate form, which means the filing does not attach individual donor names to that portion.` : ""}
+            ${unnamedBucket ? ` ${formatCurrency(unnamedBucket.amount)} (${formatPercent(unnamedShare)}) was reported without individual donor names listed, so that share cannot be shown donor by donor on this page.` : ""}
           </p>
           <div class="mix-meter">
             ${buckets.map(bucket => `
