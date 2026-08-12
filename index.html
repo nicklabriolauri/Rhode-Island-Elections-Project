@@ -731,6 +731,36 @@
       border: 1px solid #dbeafe;
     }
 
+    .hero-search-match.is-clickable {
+      cursor: pointer;
+      transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+    }
+
+    .hero-search-match.is-clickable:hover,
+    .hero-search-match.is-clickable:focus-visible {
+      background: linear-gradient(180deg, #fbfdff 0%, #f1f7ff 100%);
+      border-color: #93c5fd;
+      box-shadow: 0 14px 28px rgba(37, 99, 235, 0.1);
+      outline: none;
+      transform: translateY(-1px);
+    }
+
+    .hero-search-match-main {
+      display: block;
+      min-width: 0;
+      text-decoration: none;
+      border-radius: 14px;
+      transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+    }
+
+    .hero-search-match-main:hover,
+    .hero-search-match-main:focus-visible {
+      background: rgba(219, 234, 254, 0.34);
+      box-shadow: 0 10px 22px rgba(37, 99, 235, 0.08);
+      outline: none;
+      transform: translateY(-1px);
+    }
+
     .hero-search-match-copy {
       min-width: 0;
     }
@@ -748,6 +778,40 @@
       color: #475569;
       font-size: 13px;
       line-height: 1.5;
+    }
+
+    .hero-search-match-statuses {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0 0 0;
+    }
+
+    .hero-search-match-status {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 0 10px;
+      border-radius: 999px;
+      border: 1px solid #dbeafe;
+      background: #eff6ff;
+      color: #1d4ed8;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero-search-match-status.is-incumbent {
+      border-color: rgba(37, 99, 235, 0.24);
+      background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+      color: #1d4ed8;
+    }
+
+    .hero-search-match-status.is-history {
+      border-color: rgba(168, 85, 247, 0.22);
+      background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+      color: #6d28d9;
     }
 
     .hero-search-match-actions {
@@ -808,6 +872,10 @@
       color: #475569;
       font-size: 13px;
       line-height: 1.5;
+    }
+
+    .hero-search-address-card {
+      min-height: 100%;
     }
 
     .cta-row {
@@ -1956,6 +2024,10 @@
         grid-template-columns: 1fr;
       }
 
+      .hero-search-match-main {
+        border-radius: 12px;
+      }
+
       .hero-search-match-actions {
         justify-content: flex-start;
       }
@@ -2435,6 +2507,7 @@
     let homepageCandidates = [];
     let homepageFinanceByCandidateId = new Map();
     let homepageFinanceByCompositeKey = new Map();
+    let homepageCandidateHistoryById = new Map();
     let homepageRaceData = null;
     let homepagePrecinctGeojson = null;
     let homepagePrecinctLookup = null;
@@ -2574,9 +2647,56 @@
       return { race, entry };
     }
 
+    function getCandidateHistoricalRuns(candidate) {
+      if (!candidate) return [];
+      const cacheKey = candidate.candidate_id || `${candidate.chamber}-${candidate.district_number}-${candidate.name}`;
+      if (homepageCandidateHistoryById.has(cacheKey)) {
+        return homepageCandidateHistoryById.get(cacheKey);
+      }
+      const history = Object.entries(homepageRaceData || {}).reduce((runs, [key, race]) => {
+        const [raceChamber, year, districtNumber] = key.split("|");
+        if (raceChamber !== candidate.chamber) return runs;
+        const entry = (race?.candidates || []).find(person => namesLikelyMatch(person.name, candidate.name));
+        if (!entry) return runs;
+        runs.push({
+          year: Number(year),
+          districtNumber,
+          role: entry.role || "",
+          votes: entry.votes || "",
+          pct: entry.pct || ""
+        });
+        return runs;
+      }, []);
+      homepageCandidateHistoryById.set(cacheKey, history);
+      return history;
+    }
+
+    function isHomepageIncumbent(candidate) {
+      const performance = getCandidateRacePerformance(candidate);
+      return Boolean(performance?.entry?.role === "Winner");
+    }
+
+    function buildCandidateStatusMarkup(candidate) {
+      const statuses = [];
+      if (isHomepageIncumbent(candidate)) {
+        statuses.push('<span class="hero-search-match-status is-incumbent">Incumbent</span>');
+      } else {
+        const history = getCandidateHistoricalRuns(candidate).filter(run => run.year < 2026);
+        if (history.length) {
+          const latest = history.reduce((best, current) => (current.year > best.year ? current : best), history[0]);
+          const label = latest.year === 2024 ? "Ran in 2024" : "Ran before";
+          statuses.push(`<span class="hero-search-match-status is-history">${escapeHtml(label)}</span>`);
+        }
+      }
+      return statuses.length
+        ? `<div class="hero-search-match-statuses">${statuses.join("")}</div>`
+        : "";
+    }
+
     function buildCandidatePerformanceCard(candidate) {
       const performance = getCandidateRacePerformance(candidate);
       if (!performance || !performance.race) return "";
+      const href = `map.html?mode=results&chamber=${encodeURIComponent(candidate.chamber)}&year=2024&view=party&district=${encodeURIComponent(String(candidate.district_number))}`;
       if (performance.entry) {
         const entry = performance.entry;
         const roleLabel = entry.role === "Winner" ? "Won in 2024" : entry.role === "Runner-up" ? "2024 result" : entry.role || "2024 result";
@@ -2592,11 +2712,11 @@
         ].filter(Boolean);
         return `
           <div class="hero-search-result-grid">
-            <div class="hero-search-result-card">
+            <a class="hero-search-result-card is-link" href="${href}" aria-label="${escapeHtml(`Open ${candidate.name} district result on the map`) }">
               <div class="hero-search-result-label">2024 candidate performance</div>
               <div class="hero-search-result-value">${escapeHtml(roleLabel)}</div>
               <div class="hero-search-result-copy">${escapeHtml(copyParts.join(" · "))}</div>
-            </div>
+            </a>
           </div>
         `;
       }
@@ -2604,11 +2724,11 @@
       const race = performance.race;
       return `
         <div class="hero-search-result-grid">
-          <div class="hero-search-result-card">
+          <a class="hero-search-result-card is-link" href="${href}" aria-label="${escapeHtml(`Open ${chamberLabel(candidate.chamber)} District ${candidate.district_number} results on the map`) }">
             <div class="hero-search-result-label">2024 district result</div>
             <div class="hero-search-result-value">${escapeHtml(race.winner_candidate || "Result available")}</div>
             <div class="hero-search-result-copy">${escapeHtml(`${partyLongLabel(race.winner_party)} winner${race.margin_pct ? ` · margin ${race.margin_pct}` : ""}`)}</div>
-          </div>
+          </a>
         </div>
       `;
     }
@@ -2782,13 +2902,14 @@
           ${matches.map(candidate => {
             const financeHref = buildFinanceHref(candidate);
             return `
-              <article class="hero-search-match">
+              <article class="hero-search-match is-clickable" data-card-href="${buildRunningHref(candidate)}" tabindex="0" role="link" aria-label="${escapeHtml(`Open ${candidate.name} ballot and district pages`) }">
                 <div class="hero-search-match-copy">
                   <h5 class="hero-search-match-name">${escapeHtml(candidate.name)}</h5>
                   <p class="hero-search-match-meta">
                     ${escapeHtml(`${partyLongLabel(candidate.party)} · ${chamberLabel(candidate.chamber)} District ${candidate.district_number}`)}
                     ${candidate.home_precinct_name ? ` · ${escapeHtml(candidate.home_precinct_name)}` : ""}
                   </p>
+                  ${buildCandidateStatusMarkup(candidate)}
                   ${buildCandidatePerformanceCard(candidate)}
                 </div>
                 <div class="hero-search-match-actions">
@@ -2881,6 +3002,7 @@
         lookupRecord.house_district ? buildDistrictResultCard("house", lookupRecord.house_district) : "",
         lookupRecord.senate_district ? buildDistrictResultCard("senate", lookupRecord.senate_district) : ""
       ].filter(Boolean).join("");
+      const lookupHref = buildLookupHref(candidate.address || query);
 
       results.hidden = false;
       results.innerHTML = `
@@ -2898,9 +3020,16 @@
             ${lookupRecord.senate_district ? `<span class="hero-search-chip">Senate District ${escapeHtml(String(lookupRecord.senate_district))}</span>` : ""}
             <span class="hero-search-chip">2024 turnout context</span>
           </div>
-          ${districtCards ? `<div class="hero-search-result-grid">${districtCards}</div>` : ""}
+          <div class="hero-search-result-grid">
+            <a class="hero-search-result-card hero-search-address-card is-link" href="${lookupHref}" aria-label="${escapeHtml(`Open Find My Precinct for ${candidate.address || query}`) }">
+              <div class="hero-search-result-label">Matched address</div>
+              <div class="hero-search-result-value">${escapeHtml(candidate.address || query)}</div>
+              <div class="hero-search-result-copy">${escapeHtml(`Open the full precinct lookup for ${precinctName}`)}</div>
+            </a>
+            ${districtCards}
+          </div>
           <div class="hero-search-action-row">
-            <a class="hero-search-action primary" href="${buildLookupHref(candidate.address || query)}">Open Find My Precinct</a>
+            <a class="hero-search-action primary" href="${lookupHref}">Open Find My Precinct</a>
             <a class="hero-search-action" href="${houseHref}">House ballot</a>
             <a class="hero-search-action" href="${senateHref}">Senate ballot</a>
             <a class="hero-search-action compare" href="${houseMeetHref}">Compare House candidates</a>
@@ -2978,12 +3107,26 @@
 
     function initHomepageSearch() {
       const form = document.getElementById("homeSearchForm");
+      const results = document.getElementById("homeSearchResults");
       const storedMode = window.localStorage.getItem(HOMEPAGE_SEARCH_MODE_KEY);
       setHomepageSearchMode(storedMode === "address" ? "address" : "candidate");
       document.querySelectorAll("[data-search-mode]").forEach(button => {
         button.addEventListener("click", () => setHomepageSearchMode(button.dataset.searchMode));
       });
       form?.addEventListener("submit", handleHomepageSearch);
+      results?.addEventListener("click", event => {
+        const card = event.target.closest("[data-card-href]");
+        if (!card || event.target.closest("a, button, input, select, textarea, label")) return;
+        window.location.href = card.dataset.cardHref;
+      });
+      results?.addEventListener("keydown", event => {
+        const card = event.target.closest("[data-card-href]");
+        if (!card || event.target.closest("a, button, input, select, textarea, label")) return;
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          window.location.href = card.dataset.cardHref;
+        }
+      });
     }
 
     function initHomeModeToggle() {
