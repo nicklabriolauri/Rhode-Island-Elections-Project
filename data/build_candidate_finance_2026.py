@@ -48,7 +48,7 @@ PARTY_LABEL = {
 
 SOURCE_BUCKET_MAP = {
     "individuals": ("Itemized individual donors", "itemized-individual-donors"),
-    "aggregate individuals": ("Small-dollar / aggregate online receipts", "small-dollar-aggregate-online-receipts"),
+    "aggregate individuals": ("Receipts without donor names listed", "small-dollar-aggregate-online-receipts"),
     "political action committees": ("PAC contributions", "pac-contributions"),
     "refund/rebate": ("Refunds / rebates", "refunds-rebates"),
     "other": ("Other reported sources", "other-reported-sources"),
