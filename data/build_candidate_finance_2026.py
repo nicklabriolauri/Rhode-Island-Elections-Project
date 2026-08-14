@@ -1317,6 +1317,304 @@ def apply_lawson_kallman_paolino_q2_overrides(profile: dict[str, object]) -> dic
     profile.update(override)
     return profile
 
+
+# Standardized Q2 main-display overrides for Ryan W. Pearson, Brian J. Thompson, and Gordon E. Rogers.
+PEARSON_THOMPSON_ROGERS_Q2_OVERRIDES = {'senate-19-ryan-w-pearson': {'report_label': 'Q2 2026 campaign finance filing',
+                              'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                              'source_note': 'RI Board of Elections Q1 and Q2 2026 CF-2 / CF-3 / CF-4 filings',
+                              'coverage_note': 'Q2 2026 is used as the main display period for comparability. Two Q2 '
+                                               'versions were uploaded; both have the same CF-2 summary totals. The '
+                                               'more complete six-page version was used for detailed contribution '
+                                               'and expenditure information. A $275,000 loan repayment is reported '
+                                               'separately from the $2,758.42 in campaign expenses.',
+                              'beginning_cash': 345026.97,
+                              'money_raised': 588.61,
+                              'money_spent': 2758.42,
+                              'ending_cash': 67857.16,
+                              'net_change': -277169.81,
+                              'total_cash_receipts': 588.61,
+                              'campaign_expenses': 2758.42,
+                              'aggregate_expenses': 0.0,
+                              'summary_intro': "Ryan W Pearson's Q2 2026 filing reports $588.61 in cash receipts, "
+                                               'consisting of a $100.00 individual contribution and $488.61 in '
+                                               'interest. The campaign reported $2,758.42 in campaign expenses and '
+                                               'repaid $275,000.00 in loans, closing the period with $67,857.16 in '
+                                               'cash on hand.',
+                              'source_buckets': [{'label': 'Itemized individual donors',
+                                                  'class_name': 'itemized-individual-donors',
+                                                  'amount': 100.0,
+                                                  'description': 'One named individual contribution reported in '
+                                                                 "Pearson's Q2 2026 filing."},
+                                                 {'label': 'Other reported sources',
+                                                  'class_name': 'other-reported-sources',
+                                                  'amount': 488.61,
+                                                  'description': 'Interest received from Citizens Bank during Q2 '
+                                                                 '2026.'}],
+                              'top_donors': [{'donor': 'Michael Delucia',
+                                              'amount': 100.0,
+                                              'type': 'Individual',
+                                              'notes': 'Employer listed as Intellezy.'}],
+                              'spending_categories': [{'title': 'Office Equipment & Supplies',
+                                                       'summary': 'Visible spending includes Apple Store.',
+                                                       'amount': 1454.92},
+                                                      {'title': 'Donations (All Others)',
+                                                       'summary': 'Visible spending includes Blood Cancer United, '
+                                                                  'Brandon Voas, and TANK.',
+                                                       'amount': 700.0},
+                                                      {'title': 'Consultant & Professional Services',
+                                                       'summary': 'Visible spending includes Wix.',
+                                                       'amount': 319.3},
+                                                      {'title': 'Donations (Political)',
+                                                       'summary': 'Visible spending includes Friends of Cindy Coyne '
+                                                                  'and Friends of Xay Khamsyvoravong.',
+                                                       'amount': 200.0},
+                                                      {'title': 'Food, Beverages and Meals',
+                                                       'summary': "Visible spending includes Chelo's Waterfront.",
+                                                       'amount': 84.2}],
+                              'filing_history': [{'label': 'Q1 2026',
+                                                  'reporting_period_label': 'January 1, 2026 to March 31, 2026',
+                                                  'money_raised': 275522.26,
+                                                  'money_spent': 339.55,
+                                                  'ending_cash': 345026.97,
+                                                  'net_change': 125182.71,
+                                                  'notes': 'Q1 receipts consisted of a $275,000 loan from Ryan W '
+                                                           'Pearson and $522.26 in interest; $150,000 in loan '
+                                                           'repayments were also reported.'},
+                                                 {'label': 'Q2 2026',
+                                                  'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                                                  'money_raised': 588.61,
+                                                  'money_spent': 2758.42,
+                                                  'ending_cash': 67857.16,
+                                                  'net_change': -277169.81,
+                                                  'notes': 'Q2 is the standardized main display period. The filing '
+                                                           'also reports a $275,000 loan repayment.'}]},
+ 'senate-20-brian-j-thompson': {'report_label': 'Q2 2026 campaign finance filing',
+                                'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                                'source_note': 'RI Board of Elections Q1 and Q2 2026 CF-2 / CF-3 / CF-4 filings',
+                                'coverage_note': 'Q2 2026 is used as the main display period for comparability '
+                                                 'across candidates. Detailed Q2 contributors and expenditures are '
+                                                 'available.',
+                                'beginning_cash': 22996.33,
+                                'money_raised': 12600.0,
+                                'money_spent': 3312.99,
+                                'ending_cash': 32283.34,
+                                'net_change': 9287.01,
+                                'total_cash_receipts': 12600.0,
+                                'campaign_expenses': 3312.99,
+                                'aggregate_expenses': 0.0,
+                                'summary_intro': "Brian J Thompson's Q2 2026 filing reports $12,600.00 in receipts, "
+                                                 'including $10,525.00 from itemized individuals, $225.00 in '
+                                                 'aggregate individual receipts, and $1,850.00 from PACs. The '
+                                                 'campaign reported $3,312.99 in spending and closed with $32,283.34 '
+                                                 'in cash on hand.',
+                                'source_buckets': [{'label': 'Itemized individual donors',
+                                                    'class_name': 'itemized-individual-donors',
+                                                    'amount': 10525.0,
+                                                    'description': 'Named individual contributions reported in '
+                                                                   "Thompson's Q2 2026 filing."},
+                                                   {'label': 'Receipts without donor names listed',
+                                                    'class_name': 'small-dollar-aggregate-online-receipts',
+                                                    'amount': 225.0,
+                                                    'description': 'Nine $25 contributions reported in aggregate '
+                                                                   'without donor names.'},
+                                                   {'label': 'PAC contributions',
+                                                    'class_name': 'pac-contributions',
+                                                    'amount': 1850.0,
+                                                    'description': 'Political action committee contributions '
+                                                                   "reported in Thompson's Q2 2026 filing."}],
+                                'top_donors': [{'donor': 'Mukamil Shah',
+                                                'amount': 1500.0,
+                                                'type': 'Individual',
+                                                'notes': 'Employer listed as Quick Mart.'},
+                                               {'donor': 'Dung Le',
+                                                'amount': 1250.0,
+                                                'type': 'Individual',
+                                                'notes': 'Employer listed as Lee Convenience.'},
+                                               {'donor': 'Muhammed Saeed',
+                                                'amount': 1250.0,
+                                                'type': 'Individual',
+                                                'notes': 'Employer listed as Retired.'},
+                                               {'donor': 'Sabir Hussain',
+                                                'amount': 1000.0,
+                                                'type': 'Individual',
+                                                'notes': 'Employer listed as Retired.'},
+                                               {'donor': 'John H. Petrarca',
+                                                'amount': 500.0,
+                                                'type': 'Individual',
+                                                'notes': 'Employer listed as Providence Auto Body.'},
+                                               {'donor': 'Steven Ceceri',
+                                                'amount': 500.0,
+                                                'type': 'Individual',
+                                                'notes': 'Employer listed as New England Property Services.'},
+                                               {'donor': 'Jeffrey Lemire',
+                                                'amount': 300.0,
+                                                'type': 'Individual',
+                                                'notes': 'Employer listed as Quality Precision Builders.'},
+                                               {'donor': 'Michael R. St. Germain',
+                                                'amount': 250.0,
+                                                'type': 'Individual',
+                                                'notes': 'Employer listed as Sierra Solutions Group.'},
+                                               {'donor': 'RI Hospitality PAC',
+                                                'amount': 250.0,
+                                                'type': 'PAC',
+                                                'notes': 'Named PAC contribution listed in the Q2 filing.'},
+                                               {'donor': 'Garrett Mancieri',
+                                                'amount': 200.0,
+                                                'type': 'Individual',
+                                                'notes': 'Employer listed as Mancieri Real Estate.'}],
+                                'spending_categories': [{'title': 'Donations (All Others)',
+                                                         'summary': 'Visible spending includes Blood Cancer United, '
+                                                                    'George Nasuti 5K, Monique Landry, Ronald '
+                                                                    'Lefort, United Veterans Council of Woonsocket, '
+                                                                    'Woonsocket Cops Walk, and Woonsocket Elks 850.',
+                                                         'amount': 1135.0},
+                                                        {'title': 'Donations (Political)',
+                                                         'summary': 'Visible spending includes Christopher '
+                                                                    'Beauchamp, Friends of Gregg Amore, Daniel '
+                                                                    'Gendron, Michael Kinch, and the Woonsocket '
+                                                                    'Democratic City Committee.',
+                                                         'amount': 1030.0},
+                                                        {'title': 'Advertising',
+                                                         'summary': "Visible spending includes GoDaddy, Kay's, "
+                                                                    'Squarespace, WOON Radio, and Woonsocket Rotary.',
+                                                         'amount': 741.72},
+                                                        {'title': 'Food, Beverages and Meals',
+                                                         'summary': "Visible spending includes Ciro's Tavern.",
+                                                         'amount': 364.2},
+                                                        {'title': 'Bank Fees',
+                                                         'summary': 'Visible spending includes ActBlue and '
+                                                                    'Blackstone River FCU.',
+                                                         'amount': 42.07}],
+                                'filing_history': [{'label': 'Q1 2026',
+                                                    'reporting_period_label': 'January 1, 2026 to March 31, 2026',
+                                                    'money_raised': 12250.0,
+                                                    'money_spent': 8694.48,
+                                                    'ending_cash': 22996.33,
+                                                    'net_change': 3555.52,
+                                                    'notes': 'Q1 retained in filing history.'},
+                                                   {'label': 'Q2 2026',
+                                                    'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                                                    'money_raised': 12600.0,
+                                                    'money_spent': 3312.99,
+                                                    'ending_cash': 32283.34,
+                                                    'net_change': 9287.01,
+                                                    'notes': 'Q2 is the standardized main display period.'}]},
+ 'senate-21-gordon-e-rogers': {'report_label': 'Q2 2026 campaign finance filing',
+                               'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                               'source_note': 'RI Board of Elections Q1 and Q2 2026 CF-2 / CF-3 / CF-4 filings',
+                               'coverage_note': 'Q2 2026 is used as the main display period for comparability across '
+                                                'candidates. Detailed Q2 contributors and expenditures are '
+                                                'available.',
+                               'beginning_cash': 28771.81,
+                               'money_raised': 10615.0,
+                               'money_spent': 2241.03,
+                               'ending_cash': 37145.78,
+                               'net_change': 8373.97,
+                               'total_cash_receipts': 10615.0,
+                               'campaign_expenses': 2091.43,
+                               'aggregate_expenses': 149.6,
+                               'summary_intro': "Gordon E Rogers's Q2 2026 filing reports $10,615.00 in receipts, "
+                                                'including $5,250.00 from itemized individuals, $4,365.00 in '
+                                                'aggregate receipts, and $1,000.00 from PACs. The campaign reported '
+                                                '$2,241.03 in total spending and closed with $37,145.78 in cash on '
+                                                'hand.',
+                               'source_buckets': [{'label': 'Itemized individual donors',
+                                                   'class_name': 'itemized-individual-donors',
+                                                   'amount': 5250.0,
+                                                   'description': 'Named individual contributions reported in '
+                                                                  "Rogers's Q2 2026 filing."},
+                                                  {'label': 'Receipts without donor names listed',
+                                                   'class_name': 'small-dollar-aggregate-online-receipts',
+                                                   'amount': 4365.0,
+                                                   'description': 'Aggregate receipts reported without individual '
+                                                                  'donor names.'},
+                                                  {'label': 'PAC contributions',
+                                                   'class_name': 'pac-contributions',
+                                                   'amount': 1000.0,
+                                                   'description': 'Political action committee contributions reported '
+                                                                  "in Rogers's Q2 2026 filing."}],
+                               'top_donors': [{'donor': 'Gregory Rice',
+                                               'amount': 1000.0,
+                                               'type': 'Individual',
+                                               'notes': 'Employer listed as Nexus Property Management.'},
+                                              {'donor': 'Jessica de la Cruz',
+                                               'amount': 1000.0,
+                                               'type': 'Individual',
+                                               'notes': 'Employer listed as State of Rhode Island.'},
+                                              {'donor': 'Stephen Skoly',
+                                               'amount': 1000.0,
+                                               'type': 'Individual',
+                                               'notes': 'Employer listed as Dr. Stephen T. Skoly Jr., DMD.'},
+                                              {'donor': 'John Rocchio',
+                                               'amount': 500.0,
+                                               'type': 'Individual',
+                                               'notes': 'Employer listed as John Rocchio Corp.'},
+                                              {'donor': 'Linda Young',
+                                               'amount': 500.0,
+                                               'type': 'Individual',
+                                               'notes': 'Employer listed as Compassionate Care Inc.'},
+                                              {'donor': 'Rhode Island Second Amendment PAC',
+                                               'amount': 500.0,
+                                               'type': 'PAC',
+                                               'notes': 'Named PAC contribution listed in the Q2 filing.'},
+                                              {'donor': 'Anthony Thompson',
+                                               'amount': 250.0,
+                                               'type': 'Individual',
+                                               'notes': 'Employer listed as Strong Tree Properties, LLC.'},
+                                              {'donor': 'Gun Owners PAC',
+                                               'amount': 250.0,
+                                               'type': 'PAC',
+                                               'notes': 'Named PAC contribution listed in the Q2 filing.'},
+                                              {'donor': 'Jay DeSilva',
+                                               'amount': 250.0,
+                                               'type': 'Individual',
+                                               'notes': 'Employer listed as DeSilva Excavation LLC.'},
+                                              {'donor': 'Larry Torti',
+                                               'amount': 250.0,
+                                               'type': 'Individual',
+                                               'notes': 'Employer listed as Larry Torti Services, Inc.'}],
+                               'spending_categories': [{'title': 'Advertising',
+                                                        'summary': 'Visible spending includes Amazon for costumes '
+                                                                   'and float-building materials for the Ancients & '
+                                                                   'Horribles Parade.',
+                                                        'amount': 1005.2},
+                                                       {'title': 'Fundraising Expenses',
+                                                        'summary': "Visible spending includes Dan's Place plus "
+                                                                   'aggregate fundraising expenses.',
+                                                        'amount': 833.93},
+                                                       {'title': 'Donations (Political)',
+                                                        'summary': 'Visible spending includes Friends of John '
+                                                                   'Loughlin plus aggregate political donations.',
+                                                        'amount': 306.0},
+                                                       {'title': 'Bank Fees',
+                                                        'summary': 'Visible spending includes Anedot Inc.',
+                                                        'amount': 70.9},
+                                                       {'title': 'Consultant & Professional Services',
+                                                        'summary': 'Visible spending includes Lakeside Compliance '
+                                                                   'Services.',
+                                                        'amount': 25.0}],
+                               'filing_history': [{'label': 'Q1 2026',
+                                                   'reporting_period_label': 'January 1, 2026 to March 31, 2026',
+                                                   'money_raised': 675.0,
+                                                   'money_spent': 595.0,
+                                                   'ending_cash': 28771.81,
+                                                   'net_change': 80.0,
+                                                   'notes': 'Q1 retained in filing history.'},
+                                                  {'label': 'Q2 2026',
+                                                   'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                                                   'money_raised': 10615.0,
+                                                   'money_spent': 2241.03,
+                                                   'ending_cash': 37145.78,
+                                                   'net_change': 8373.97,
+                                                   'notes': 'Q2 is the standardized main display period.'}]}}
+
+def apply_pearson_thompson_rogers_q2_overrides(profile: dict[str, object]) -> dict[str, object]:
+    override = PEARSON_THOMPSON_ROGERS_Q2_OVERRIDES.get(str(profile.get("candidate_id", "")))
+    if not override:
+        return profile
+    profile.update(override)
+    return profile
+
 def slugify(value: str) -> str:
     text = unicodedata.normalize("NFKD", value or "")
     text = text.encode("ascii", "ignore").decode("ascii")
@@ -2762,6 +3060,7 @@ def main() -> int:
             profile = apply_connell_mack_q2_overrides(profile)
             profile = apply_ciccone_felag_ujifusa_q2_overrides(profile)
             profile = apply_lawson_kallman_paolino_q2_overrides(profile)
+            profile = apply_pearson_thompson_rogers_q2_overrides(profile)
             profiles.append(profile)
             entry["has_profile"] = True
         directory.append(entry)
