@@ -84,6 +84,212 @@ def apply_profile_detail_overrides(profile: dict[str, object]) -> dict[str, obje
             profile[field] = override[field]
     return profile
 
+
+# Manual Q2 detail override for Andrew R. Dimitri (RI BOE key 9740).
+# Source: 2026 Q2 CF-2 / CF-3 / CF-4 filing.
+ANDREW_R_DIMITRI_DETAIL_OVERRIDE = {'source_buckets': [{'label': 'Itemized individual donors',
+                     'class_name': 'itemized-individual-donors',
+                     'amount': 40075.0,
+                     'description': 'Named contributors reported individually in the filing.'},
+                    {'label': 'PAC contributions',
+                     'class_name': 'pac-contributions',
+                     'amount': 8750.0,
+                     'description': 'Political committees and PACs listed in the filing.'}],
+ 'top_donors': [{'donor': 'Thomas Badway',
+                 'amount': 2000.0,
+                 'type': 'Individual',
+                 'notes': 'Employer listed as Law Offices of Thomas E. Badway.'},
+                {'donor': 'William C. Dimitri',
+                 'amount': 2000.0,
+                 'type': 'Individual',
+                 'notes': 'Employer listed as William C. Dimitri Law Office.'},
+                {'donor': 'Gerard Disanto',
+                 'amount': 2000.0,
+                 'type': 'Individual',
+                 'notes': 'Employer listed as Retired.'},
+                {'donor': 'Anthony Minutelli Jr.',
+                 'amount': 2000.0,
+                 'type': 'Individual',
+                 'notes': 'Employer listed as Minutelli Law Firm.'},
+                {'donor': 'Johnston Association Firefighters Local 1950',
+                 'amount': 1500.0,
+                 'type': 'PAC',
+                 'notes': 'Named PAC contribution listed in the filing.'},
+                {'donor': 'Thomas G. Casale',
+                 'amount': 1000.0,
+                 'type': 'Individual',
+                 'notes': 'Employer listed as Casale Auto Body.'},
+                {'donor': 'Antonio P. Cassisi',
+                 'amount': 1000.0,
+                 'type': 'Individual',
+                 'notes': 'Employer listed as Cassisi Construction.'},
+                {'donor': 'Frank Cassisi',
+                 'amount': 1000.0,
+                 'type': 'Individual',
+                 'notes': 'Employer listed as Cassisi Construction.'},
+                {'donor': 'Eddie DiRocco',
+                 'amount': 1000.0,
+                 'type': 'Individual',
+                 'notes': 'Employer listed as DiRocco & Sons Inc.'},
+                {'donor': 'John H. Petrarca',
+                 'amount': 1000.0,
+                 'type': 'Individual',
+                 'notes': 'Employer listed as Providence Auto Body.'}],
+ 'spending_categories': [{'title': 'Consultant & Professional Services',
+                          'summary': 'Visible spending includes Checkmate Consulting Group, LLC.',
+                          'amount': 6942.07},
+                         {'title': 'Fundraising Expenses',
+                          'summary': 'Visible spending includes Coast to Coast Promotional Products, Market '
+                                     "Basket, and Silvio's.",
+                          'amount': 4091.7},
+                         {'title': 'Advertising',
+                          'summary': 'Visible spending includes Warwick Beacon.',
+                          'amount': 1216.32},
+                         {'title': 'Donations (All Others)',
+                          'summary': "Visible spending includes Johnston Little League, Slack's Reservoir "
+                                     "Association, and St. Rocco's Church.",
+                          'amount': 1050.0},
+                         {'title': 'Donations (Political)',
+                          'summary': 'Visible spending includes Friends of Lea J. Bosclair and Friends of '
+                                     'Leonidas P. Raptakis.',
+                          'amount': 1000.0},
+                         {'title': 'Bank Fees',
+                          'summary': 'Visible spending includes ActBlue.',
+                          'amount': 231.46}]}
+
+def apply_andrew_dimitri_detail_override(profile: dict[str, object]) -> dict[str, object]:
+    if str(profile.get("candidate_id", "")) != "senate-25-andrew-r-dimitri":
+        return profile
+    profile["source_buckets"] = ANDREW_R_DIMITRI_DETAIL_OVERRIDE["source_buckets"]
+    profile["top_donors"] = ANDREW_R_DIMITRI_DETAIL_OVERRIDE["top_donors"]
+    profile["spending_categories"] = ANDREW_R_DIMITRI_DETAIL_OVERRIDE["spending_categories"]
+    return profile
+
+
+# Manual filing-detail overrides for Ana B. Quezada and Samuel W. Bell.
+# Ana Quezada: Q1 2026 filing only; Q2 is past due.
+# Samuel Bell: Q1 and Q2 2026 filings.
+QUEZADA_BELL_PROFILE_OVERRIDES = {'senate-2-ana-b-quezada': {'report_label': 'Q1 2026 campaign finance filing',
+                            'reporting_period_label': 'January 1, 2026 to March 31, 2026',
+                            'source_note': 'RI Board of Elections Q1 2026 CF-2 / CF-3 / CF-4 filing',
+                            'coverage_note': 'Q1 2026 filing only. Q2 2026 report is past due and is not represented '
+                                             'as a filed report.',
+                            'beginning_cash': 4854.44,
+                            'money_raised': 1000.0,
+                            'money_spent': 3429.98,
+                            'ending_cash': 2424.46,
+                            'net_change': -2429.98,
+                            'total_cash_receipts': 1000.0,
+                            'campaign_expenses': 3168.98,
+                            'aggregate_expenses': 261.0,
+                            'summary_intro': 'The latest filed report available for Ana B Quezada is the Q1 2026 '
+                                             'report. It shows $1,000.00 in other reported receipts, $3,429.98 in '
+                                             'total spending, and $2,424.46 in cash on hand at the end of the '
+                                             'period. A Q2 2026 report has not been filed and is past due.',
+                            'filing_history': [{'label': 'Q1 2026',
+                                                'reporting_period_label': 'January 1, 2026 to March 31, 2026',
+                                                'money_raised': 1000.0,
+                                                'money_spent': 3429.98,
+                                                'ending_cash': 2424.46,
+                                                'net_change': -2429.98,
+                                                'notes': 'The filing reports a $1,000 corporate check as an Other '
+                                                         'Receipt, described as incorrectly deposited and to be '
+                                                         'refunded. Q2 2026 is past due.'}],
+                            'source_buckets': [{'label': 'Other reported sources',
+                                                'class_name': 'other-reported-sources',
+                                                'amount': 1000.0,
+                                                'description': 'The Q1 filing reports a $1,000 Other Receipt '
+                                                               'described as a corporate check that was incorrectly '
+                                                               'deposited and scheduled to be refunded.'}],
+                            'top_donors': [],
+                            'spending_categories': [{'title': 'Donations (All Others)',
+                                                     'summary': 'Visible spending includes Fundacion Global De '
+                                                                'Desarollo, Assumption Church, DIHACRI, and Woman '
+                                                                'Development Institute.',
+                                                     'amount': 2400.0},
+                                                    {'title': 'Travel & Lodging',
+                                                     'summary': 'Visible spending includes travel to Washington, '
+                                                                'D.C. through American Airlines, Travelocity, and a '
+                                                                'Hilton Garden expense.',
+                                                     'amount': 475.88},
+                                                    {'title': 'Other',
+                                                     'summary': 'Visible spending includes USPS postage.',
+                                                     'amount': 216.0},
+                                                    {'title': 'Fundraising Expenses',
+                                                     'summary': 'Visible spending includes AmazonPrime supplies for '
+                                                                'a fundraiser.',
+                                                     'amount': 138.1},
+                                                    {'title': 'Advertising',
+                                                     'summary': 'Visible spending includes Friends of Pedro Espinal.',
+                                                     'amount': 100.0},
+                                                    {'title': 'Donations (Political)',
+                                                     'summary': 'Visible spending includes Friends of Jonathan '
+                                                                'Acosta.',
+                                                     'amount': 100.0}]},
+ 'senate-5-samuel-w-bell': {'source_note': 'RI Board of Elections Q1 and Q2 2026 CF-2 / CF-3 / CF-4 filings',
+                            'coverage_note': 'Q1 and Q2 2026 filings available. The Q2 CF-2 reports $13,159 from '
+                                             'individuals and $1,000 from PACs, but the attached CF-3 contributor '
+                                             'schedule does not list individual donor names.',
+                            'beginning_cash': 53612.41,
+                            'money_raised': 14159.0,
+                            'money_spent': 4840.35,
+                            'ending_cash': 62931.06,
+                            'net_change': 9318.65,
+                            'total_cash_receipts': 14159.0,
+                            'campaign_expenses': 4840.35,
+                            'aggregate_expenses': 0.0,
+                            'summary_intro': "Samuel W Bell's Q2 2026 filing reports $14,159.00 in receipts, "
+                                             'including $13,159.00 from individuals and $1,000.00 from PACs. The '
+                                             'campaign reported $4,840.35 in campaign expenses and closed the period '
+                                             'with $62,931.06 in cash on hand.',
+                            'filing_history': [{'label': 'Q1 2026',
+                                                'reporting_period_label': 'January 1, 2026 to March 31, 2026',
+                                                'money_raised': 7079.0,
+                                                'money_spent': 675.11,
+                                                'ending_cash': 53612.41,
+                                                'net_change': 6403.89,
+                                                'notes': 'Q1 reported $6,879 from individuals and $200 from PACs.'},
+                                               {'label': 'Q2 2026',
+                                                'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                                                'money_raised': 14159.0,
+                                                'money_spent': 4840.35,
+                                                'ending_cash': 62931.06,
+                                                'net_change': 9318.65,
+                                                'notes': 'Q2 reported $13,159 from individuals and $1,000 from PACs. '
+                                                         'The attached CF-3 contributor schedule contains no named '
+                                                         'donor entries.'}],
+                            'source_buckets': [{'label': 'Itemized individual donors',
+                                                'class_name': 'itemized-individual-donors',
+                                                'amount': 13159.0,
+                                                'description': 'The Q2 CF-2 summary reports $13,159.00 from '
+                                                               'individuals. The attached CF-3 contributor schedule '
+                                                               'does not display named donor entries.'},
+                                               {'label': 'PAC contributions',
+                                                'class_name': 'pac-contributions',
+                                                'amount': 1000.0,
+                                                'description': 'The Q2 CF-2 summary reports $1,000.00 from political '
+                                                               'action committees. The attached CF-3 contributor '
+                                                               'schedule does not display named PAC entries.'}],
+                            'top_donors': [],
+                            'spending_categories': [{'title': 'Bank Fees',
+                                                     'summary': 'The Q2 CF-4 schedule lists an ActBlue bank-fee '
+                                                                'entry of $468.77.',
+                                                     'amount': 468.77},
+                                                    {'title': 'Other campaign expenses not itemized on attached CF-4',
+                                                     'summary': 'The Q2 CF-2 reports $4,840.35 in total campaign '
+                                                                'expenses, while the attached CF-4 page itemizes '
+                                                                'only the $468.77 ActBlue bank-fee entry. The '
+                                                                'remainder is shown separately rather than assigned '
+                                                                'to an unsupported category.',
+                                                     'amount': 4371.58}]}}
+
+def apply_quezada_bell_profile_overrides(profile: dict[str, object]) -> dict[str, object]:
+    override = QUEZADA_BELL_PROFILE_OVERRIDES.get(str(profile.get("candidate_id", "")))
+    if not override:
+        return profile
+    profile.update(override)
+    return profile
+
 def slugify(value: str) -> str:
     text = unicodedata.normalize("NFKD", value or "")
     text = text.encode("ascii", "ignore").decode("ascii")
@@ -1522,6 +1728,8 @@ def main() -> int:
 
         if profile:
             profile = apply_profile_detail_overrides(profile)
+            profile = apply_andrew_dimitri_detail_override(profile)
+            profile = apply_quezada_bell_profile_overrides(profile)
             profiles.append(profile)
             entry["has_profile"] = True
         directory.append(entry)
