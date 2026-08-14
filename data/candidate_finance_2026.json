@@ -10520,27 +10520,27 @@
       "office_sought": "State Senator",
       "report_label": "Q2 2026 campaign finance filing",
       "reporting_period_label": "April 1, 2026 to June 30, 2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website summary captured; quarter not reliably identified",
+      "source_note": "RI Board of Elections Q1 and Q2 2026 CF-2 / CF-3 / CF-4 filings",
+      "coverage_note": "Q2 2026 is used as the main display period for comparability across candidates. Detailed Q2 contributors and expenditures are available.",
       "original_documents": [],
-      "beginning_cash": 0.0,
+      "beginning_cash": 172099.81,
       "money_raised": 133184.26,
       "money_spent": 34943.66,
       "ending_cash": 270340.41,
       "net_change": 98240.6,
-      "total_cash_receipts": 0.0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 34943.66,
-      "summary_intro": "This filing shows the campaign closing the period with $270,340.41 in reported cash on hand. The report also shows that it raised more during the period than it spent.",
+      "total_cash_receipts": 133184.26,
+      "campaign_expenses": 34943.66,
+      "aggregate_expenses": 0.0,
+      "summary_intro": "Frank A Ciccone's Q2 2026 filing reports $133,184.26 in receipts and $34,943.66 in spending. The campaign closed the period with $270,340.41 in cash on hand.",
       "filing_history": [
         {
           "label": "Q1 2026",
           "reporting_period_label": "January 1, 2026 to March 31, 2026",
-          "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "money_raised": 77575.25,
+          "money_spent": 50911.75,
+          "ending_cash": 172099.81,
+          "net_change": 26663.5,
+          "notes": "Q1 reported $34,750 from itemized individuals, $20,775 in aggregate individual receipts, $21,650 from PACs, and $400.25 in other receipts."
         },
         {
           "label": "Q2 2026",
@@ -10549,12 +10549,129 @@
           "money_spent": 34943.66,
           "ending_cash": 270340.41,
           "net_change": 98240.6,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "notes": "Q2 is the standardized main display period."
         }
       ],
-      "source_buckets": [],
-      "top_donors": [],
-      "spending_categories": [],
+      "source_buckets": [
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 107500.0,
+          "description": "Named individual contributions reported in Ciccone's Q2 2026 filing."
+        },
+        {
+          "label": "Receipts without donor names listed",
+          "class_name": "small-dollar-aggregate-online-receipts",
+          "amount": 8400.0,
+          "description": "Aggregate individual receipts reported without individual donor names."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 15002.9,
+          "description": "Political action committee contributions reported in Ciccone's Q2 2026 filing."
+        },
+        {
+          "label": "Refunds / rebates",
+          "class_name": "refunds-rebates",
+          "amount": 2281.36,
+          "description": "Refund or rebate receipts reported in the Q2 filing."
+        }
+      ],
+      "top_donors": [
+        {
+          "donor": "Donna Santoro",
+          "amount": 2250.0,
+          "type": "Individual",
+          "notes": "Employer listed as Housewife."
+        },
+        {
+          "donor": "Adam C. Sepe",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as North Eastern Tree."
+        },
+        {
+          "donor": "Angelica A. Colafrancesco",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Dean Auto Body."
+        },
+        {
+          "donor": "Claritza Casale",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Housewife."
+        },
+        {
+          "donor": "David W. Hayes",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as D & H Collision Service."
+        },
+        {
+          "donor": "Daniel Ryan",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Retired."
+        },
+        {
+          "donor": "Gerard C. Disanto II",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Spec Source LLC."
+        },
+        {
+          "donor": "Joseph R. Vinagro",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as JR Vinagro."
+        },
+        {
+          "donor": "Louis Gellis",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Brentwood Health Center."
+        },
+        {
+          "donor": "Marissa Marandola Rego",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as State Street Bank."
+        }
+      ],
+      "spending_categories": [
+        {
+          "title": "Donations (Political)",
+          "summary": "Visible spending includes COMMITTEE TO ELECT LOU RAPTAKIS, CORVESE FOR REPRESENTATIVE, FRIENDS ALANA DIMARIO.",
+          "amount": 8400.0
+        },
+        {
+          "title": "Fundraising Expenses",
+          "summary": "Visible spending includes AURORA CIVIC ASSOCIATION, REGINE PRINTING, TOMASELLI'S.",
+          "amount": 8375.96
+        },
+        {
+          "title": "Donations (All Others)",
+          "summary": "Visible spending includes ACCESS POINT OF RI, AMOS HOUSE, CCRI FOUNDATION.",
+          "amount": 8037.16
+        },
+        {
+          "title": "Other",
+          "summary": "Visible spending includes DIGITAL OCEAN.COM, DOMAIN NAME SERVICES, GOOGLE SUITE.",
+          "amount": 5959.47
+        },
+        {
+          "title": "Food, Beverages and Meals",
+          "summary": "Visible spending includes AISA GRILL, BELLA VISTA RESTAURANT, CAPITAL GRILL.",
+          "amount": 3176.48
+        },
+        {
+          "title": "Office Equipment & Supplies",
+          "summary": "Visible spending includes AMAZON, POSTMASTER.",
+          "amount": 994.59
+        }
+      ],
       "takeaways": [],
       "explainer_cards": []
     },
@@ -10986,27 +11103,27 @@
       "office_sought": "State Senator",
       "report_label": "Q2 2026 campaign finance filing",
       "reporting_period_label": "April 1, 2026 to June 30, 2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website summary captured; quarter not reliably identified",
+      "source_note": "RI Board of Elections Q1 and Q2 2026 CF-2 / CF-3 / CF-4 filings",
+      "coverage_note": "Q2 2026 is used as the main display period for comparability across candidates. Detailed Q2 contributors and expenditures are available.",
       "original_documents": [],
-      "beginning_cash": 0.0,
+      "beginning_cash": 69329.83,
       "money_raised": 6431.74,
       "money_spent": 1476.88,
       "ending_cash": 74284.69,
       "net_change": 4954.86,
-      "total_cash_receipts": 0.0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 1476.88,
-      "summary_intro": "This filing shows the campaign closing the period without reported cash on hand. The report also shows that it raised more during the period than it spent.",
+      "total_cash_receipts": 6431.74,
+      "campaign_expenses": 379.88,
+      "aggregate_expenses": 1097.0,
+      "summary_intro": "Walter S Felag Jr.'s Q2 2026 filing reports $6,431.74 in total receipts, including individual, aggregate individual, PAC, and interest receipts. The campaign reported $1,476.88 in total spending and closed with $74,284.69 in cash on hand.",
       "filing_history": [
         {
           "label": "Q1 2026",
           "reporting_period_label": "January 1, 2026 to March 31, 2026",
-          "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "money_raised": 12407.02,
+          "money_spent": 3922.95,
+          "ending_cash": 69329.83,
+          "net_change": 8484.07,
+          "notes": "Q1 included itemized individuals, aggregate individual receipts, PAC contributions, and $7.02 in interest."
         },
         {
           "label": "Q2 2026",
@@ -11015,12 +11132,90 @@
           "money_spent": 1476.88,
           "ending_cash": 74284.69,
           "net_change": 4954.86,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "notes": "Q2 is the standardized main display period."
         }
       ],
-      "source_buckets": [],
-      "top_donors": [],
-      "spending_categories": [],
+      "source_buckets": [
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 2000.0,
+          "description": "Named individual contributions reported in Felag's Q2 filing."
+        },
+        {
+          "label": "Receipts without donor names listed",
+          "class_name": "small-dollar-aggregate-online-receipts",
+          "amount": 3675.0,
+          "description": "Aggregate individual contributions reported without donor names."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 750.0,
+          "description": "PAC contributions reported in Felag's Q2 filing."
+        },
+        {
+          "label": "Other reported sources",
+          "class_name": "other-reported-sources",
+          "amount": 6.74,
+          "description": "Interest received during Q2 2026."
+        }
+      ],
+      "top_donors": [
+        {
+          "donor": "Jane Costanza",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as WAKEFIELD LIQUORS."
+        },
+        {
+          "donor": "Ali Amirsadri",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as House of Liquor."
+        },
+        {
+          "donor": "RI HOSPITALITY PAC",
+          "amount": 500.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the Q2 filing."
+        },
+        {
+          "donor": "Gayle Wolf",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as Government Strategies, INC."
+        },
+        {
+          "donor": "Joseph Walsh",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as Government Strategies, INC."
+        },
+        {
+          "donor": "RI HEALTH CARE ASSOCIATION PAC",
+          "amount": 250.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the Q2 filing."
+        }
+      ],
+      "spending_categories": [
+        {
+          "title": "Donations (Political)",
+          "summary": "Visible spending includes Friends of Greg Amore.",
+          "amount": 1275.0
+        },
+        {
+          "title": "Telephone",
+          "summary": "Visible spending includes Verizon.",
+          "amount": 129.88
+        },
+        {
+          "title": "Office Equipment & Supplies",
+          "summary": "Payee Information",
+          "amount": 72.0
+        }
+      ],
       "takeaways": [],
       "explainer_cards": []
     },
@@ -11035,27 +11230,27 @@
       "office_sought": "State Senator",
       "report_label": "Q2 2026 campaign finance filing",
       "reporting_period_label": "April 1, 2026 to June 30, 2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website summary captured; quarter not reliably identified",
+      "source_note": "RI Board of Elections Q1 and Q2 2026 CF-2 / CF-3 / CF-4 filings",
+      "coverage_note": "Q2 2026 is used as the main display period for comparability across candidates. Detailed Q2 contributors and expenditures are available.",
       "original_documents": [],
-      "beginning_cash": 0.0,
+      "beginning_cash": 2573.08,
       "money_raised": 240.0,
       "money_spent": 564.7,
       "ending_cash": 2248.38,
       "net_change": -324.7,
-      "total_cash_receipts": 0.0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 564.7,
-      "summary_intro": "This filing shows the campaign closing the period without reported cash on hand. The report also shows that it spent more during the period than it raised.",
+      "total_cash_receipts": 240.0,
+      "campaign_expenses": 564.7,
+      "aggregate_expenses": 0.0,
+      "summary_intro": "Linda L Ujifusa's Q2 2026 filing reports $240.00 in receipts, $564.70 in spending, and $2,248.38 in cash on hand at the end of the period.",
       "filing_history": [
         {
           "label": "Q1 2026",
           "reporting_period_label": "January 1, 2026 to March 31, 2026",
           "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "money_spent": 112.05,
+          "ending_cash": 2573.08,
+          "net_change": -112.05,
+          "notes": "No contributions were reported in Q1; campaign expenses totaled $112.05."
         },
         {
           "label": "Q2 2026",
@@ -11064,12 +11259,44 @@
           "money_spent": 564.7,
           "ending_cash": 2248.38,
           "net_change": -324.7,
-          "notes": "The campaign spent more than it raised in this reporting period."
+          "notes": "Q2 is the standardized main display period."
         }
       ],
-      "source_buckets": [],
-      "top_donors": [],
-      "spending_categories": [],
+      "source_buckets": [
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 100.0,
+          "description": "Named individual contribution reported in Ujifusa's Q2 filing."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 140.0,
+          "description": "PAC contribution reported in Ujifusa's Q2 filing."
+        }
+      ],
+      "top_donors": [
+        {
+          "donor": "RI PRIMARY CARE PAC",
+          "amount": 140.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the Q2 filing."
+        },
+        {
+          "donor": "Robyn Day",
+          "amount": 100.0,
+          "type": "Individual",
+          "notes": "Employer listed as Invictus Therapeutics."
+        }
+      ],
+      "spending_categories": [
+        {
+          "title": "Other",
+          "summary": "Visible spending includes ActBlue, GODADDY, Google.",
+          "amount": 564.7
+        }
+      ],
       "takeaways": [],
       "explainer_cards": []
     },
