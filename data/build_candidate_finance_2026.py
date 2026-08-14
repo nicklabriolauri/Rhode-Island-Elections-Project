@@ -579,6 +579,168 @@ def apply_samuel_bell_q2_main_override(profile: dict[str, object]) -> dict[str, 
     profile.update(SAMUEL_BELL_Q2_MAIN_OVERRIDE)
     return profile
 
+
+# Standardized Q2 main-display overrides for William D. Connell Jr. and Tiara T. Mack.
+# Source: official Rhode Island Board of Elections Q1/Q2 2026 filings.
+CONNELL_MACK_Q2_OVERRIDES = {'senate-5-william-d-connell-jr': {'report_label': 'Q2 2026 campaign finance filing',
+                                   'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                                   'source_note': 'RI Board of Elections Q1 and Q2 2026 CF-2 / CF-3 / CF-4 filings',
+                                   'coverage_note': 'Q2 2026 is used as the main display period for comparability '
+                                                    'across candidates. Connell reported no individual or PAC '
+                                                    'contributions and no expenditures in Q2; the only Q2 receipt '
+                                                    'was $0.06 in interest.',
+                                   'beginning_cash': 422.64,
+                                   'money_raised': 0.06,
+                                   'money_spent': 0.0,
+                                   'ending_cash': 422.7,
+                                   'net_change': 0.06,
+                                   'total_cash_receipts': 0.06,
+                                   'campaign_expenses': 0.0,
+                                   'aggregate_expenses': 0.0,
+                                   'summary_intro': "William D Connell Jr.'s Q2 2026 filing reports $0.06 in "
+                                                    'interest receipts, no campaign spending, and $422.70 in cash on '
+                                                    'hand at the end of the period.',
+                                   'source_buckets': [{'label': 'Other reported sources',
+                                                       'class_name': 'other-reported-sources',
+                                                       'amount': 0.06,
+                                                       'description': 'Interest received from Navigant Credit Union '
+                                                                      'during Q2 2026.'}],
+                                   'top_donors': [],
+                                   'spending_categories': [],
+                                   'filing_history': [{'label': 'Q1 2026',
+                                                       'reporting_period_label': 'January 1, 2026 to March 31, 2026',
+                                                       'money_raised': 0.07,
+                                                       'money_spent': 217.79,
+                                                       'ending_cash': 422.64,
+                                                       'net_change': -217.72,
+                                                       'notes': 'Q1 receipts consisted of $0.07 in interest. Q1 '
+                                                                'spending of $217.79 consisted of political '
+                                                                'donations.'},
+                                                      {'label': 'Q2 2026',
+                                                       'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                                                       'money_raised': 0.06,
+                                                       'money_spent': 0.0,
+                                                       'ending_cash': 422.7,
+                                                       'net_change': 0.06,
+                                                       'notes': 'Q2 receipts consisted solely of $0.06 in interest; '
+                                                                'no Q2 expenditures were reported.'}]},
+ 'senate-6-tiara-t-mack': {'report_label': 'Q2 2026 campaign finance filing',
+                           'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                           'source_note': 'RI Board of Elections Q1 and Q2 2026 CF-2 / CF-3 / CF-4 filings',
+                           'coverage_note': 'Q2 2026 is used as the main display period for comparability across '
+                                            'candidates. Detailed Q2 contributors and expenditures are available.',
+                           'beginning_cash': 4593.86,
+                           'money_raised': 7154.01,
+                           'money_spent': 4055.89,
+                           'ending_cash': 7691.98,
+                           'net_change': 3098.12,
+                           'total_cash_receipts': 7154.01,
+                           'campaign_expenses': 4055.89,
+                           'aggregate_expenses': 0.0,
+                           'summary_intro': "Tiara T Mack's Q2 2026 filing reports $7,154.01 in receipts, including "
+                                            '$6,854.01 from individuals and $300.00 from PACs. The campaign reported '
+                                            '$4,055.89 in spending and closed the period with $7,691.98 in cash on '
+                                            'hand.',
+                           'source_buckets': [{'label': 'Itemized individual donors',
+                                               'class_name': 'itemized-individual-donors',
+                                               'amount': 6854.01,
+                                               'description': "Named individual contributions reported in Mack's Q2 "
+                                                              '2026 filing.'},
+                                              {'label': 'PAC contributions',
+                                               'class_name': 'pac-contributions',
+                                               'amount': 300.0,
+                                               'description': 'Political action committee contributions reported in '
+                                                              "Mack's Q2 2026 filing."}],
+                           'top_donors': [{'donor': 'James Kingston',
+                                           'amount': 1000.0,
+                                           'type': 'Individual',
+                                           'notes': 'Employer listed as retired.'},
+                                          {'donor': 'Brett Smiley',
+                                           'amount': 250.0,
+                                           'type': 'Individual',
+                                           'notes': 'Named individual contribution listed in the filing.'},
+                                          {'donor': 'Jessie Kingston',
+                                           'amount': 250.0,
+                                           'type': 'Individual',
+                                           'notes': 'Employer listed as Not Employed.'},
+                                          {'donor': 'Richard McAuliffe',
+                                           'amount': 250.0,
+                                           'type': 'Individual',
+                                           'notes': 'Employer listed as Mayforth Group.'},
+                                          {'donor': 'Steven Ceceri',
+                                           'amount': 250.0,
+                                           'type': 'Individual',
+                                           'notes': 'Named individual contribution listed in the filing.'},
+                                          {'donor': 'Anne Belzowski',
+                                           'amount': 200.0,
+                                           'type': 'Individual',
+                                           'notes': 'Employer listed as Physician.'},
+                                          {'donor': 'Joshua Miller',
+                                           'amount': 200.0,
+                                           'type': 'Individual',
+                                           'notes': 'Employer listed as Trinity Brewhouse.'},
+                                          {'donor': 'Keith Hoffmann',
+                                           'amount': 200.0,
+                                           'type': 'Individual',
+                                           'notes': 'Employer listed as Not Employed.'},
+                                          {'donor': 'Margaret DeVos',
+                                           'amount': 200.0,
+                                           'type': 'Individual',
+                                           'notes': 'Employer listed as SouthSide Community Landtrust.'},
+                                          {'donor': 'Christopher Stark',
+                                           'amount': 150.0,
+                                           'type': 'Individual',
+                                           'notes': 'Employer listed as RI Insurance Federation.'}],
+                           'spending_categories': [{'title': 'Travel & Lodging',
+                                                    'summary': 'Visible spending includes American Airlines, Amtrak, '
+                                                               'Lyft.',
+                                                    'amount': 1530.04},
+                                                   {'title': 'Fundraising Expenses',
+                                                    'summary': 'Visible spending includes Regine Printing Co Inc, '
+                                                               'The Villiage PVD.',
+                                                    'amount': 1413.35},
+                                                   {'title': 'Office Equipment & Supplies',
+                                                    'summary': 'Visible spending includes Action Network, Square '
+                                                               'Space, staples.',
+                                                    'amount': 518.0},
+                                                   {'title': 'Donations (Political)',
+                                                    'summary': 'Visible spending includes Brad Lander, Gregg Amore.',
+                                                    'amount': 300.0},
+                                                   {'title': 'Donations (All Others)',
+                                                    'summary': 'Visible spending includes Amos House, GLBTQ '
+                                                               'Defenders.',
+                                                    'amount': 159.3},
+                                                   {'title': 'Food, Beverages and Meals',
+                                                    'summary': 'Visible spending includes Dominoes, Rise N Shine Co, '
+                                                               'Wild Flower.',
+                                                    'amount': 76.64},
+                                                   {'title': 'Bank Fees',
+                                                    'summary': 'Visible spending includes Act Blue, ActBlue.',
+                                                    'amount': 58.56}],
+                           'filing_history': [{'label': 'Q1 2026',
+                                               'reporting_period_label': 'January 1, 2026 to March 31, 2026',
+                                               'money_raised': 3460.01,
+                                               'money_spent': 3645.35,
+                                               'ending_cash': 4593.86,
+                                               'net_change': -185.34,
+                                               'notes': 'Q1 reported $3,360.01 from individuals and $100.00 from '
+                                                        'PACs.'},
+                                              {'label': 'Q2 2026',
+                                               'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                                               'money_raised': 7154.01,
+                                               'money_spent': 4055.89,
+                                               'ending_cash': 7691.98,
+                                               'net_change': 3098.12,
+                                               'notes': 'Q2 reported $6,854.01 from individuals and $300.00 from '
+                                                        'PACs.'}]}}
+
+def apply_connell_mack_q2_overrides(profile: dict[str, object]) -> dict[str, object]:
+    override = CONNELL_MACK_Q2_OVERRIDES.get(str(profile.get("candidate_id", "")))
+    if not override:
+        return profile
+    profile.update(override)
+    return profile
+
 def slugify(value: str) -> str:
     text = unicodedata.normalize("NFKD", value or "")
     text = text.encode("ascii", "ignore").decode("ascii")
@@ -2021,6 +2183,7 @@ def main() -> int:
             profile = apply_quezada_bell_profile_overrides(profile)
             profile = apply_bell_dimitri_followup_overrides(profile)
             profile = apply_samuel_bell_q2_main_override(profile)
+            profile = apply_connell_mack_q2_overrides(profile)
             profiles.append(profile)
             entry["has_profile"] = True
         directory.append(entry)
