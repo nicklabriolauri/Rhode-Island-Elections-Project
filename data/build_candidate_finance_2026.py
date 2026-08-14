@@ -15,6 +15,7 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 
+import pandas as pd
 import pdfplumber
 
 
@@ -24,6 +25,11 @@ DATA_DIR = WEBSITE_DIR / "data"
 DOCS_DIR = DATA_DIR / "finance-documents"
 ROSTER_PATH = DATA_DIR / "whos_running_2026.json"
 OUTPUT_PATH = DATA_DIR / "candidate_finance_2026.json"
+WORKBOOK_SUMMARY_PATH = Path("/Users/nicholaslabriola/Downloads/RI_2026_All_Declared_Candidates_Campaign_Finance_UPDATED_Manual_PDFs.xlsx")
+WORKBOOK_DETAIL_PATH = Path("/Users/nicholaslabriola/Downloads/all_candidates_campaign_finance_Q1_Q2_2026_corrected_cash.xlsx")
+LOCAL_PDF_PROFILE_OVERRIDES = {
+    "house-2-christopher-r-blazejewski",
+}
 
 PUBLIC_FILINGS_URL = "http://ricampaignfinance.com/RIPublic/Filings.aspx"
 SECURE_BASE = "https://secure.ricampaignfinance.com"
@@ -54,6 +60,14 @@ SOURCE_BUCKET_MAP = {
     "other": ("Other reported sources", "other-reported-sources"),
 }
 
+PARTY_DISPLAY = {
+    "DEM": "Democratic",
+    "REP": "Republican",
+    "IND": "Independent",
+}
+
+PROFILE_SORT_KEYS = ("money_raised", "money_spent", "ending_cash")
+
 
 def slugify(value: str) -> str:
     text = unicodedata.normalize("NFKD", value or "")
@@ -68,6 +82,219 @@ def normalize_name(value: str) -> str:
     text = text.lower().replace(".", " ").replace(",", " ").replace("'", "")
     text = re.sub(r"\s+", " ", text).strip()
     return text
+
+
+def normalize_candidate_key(value: str) -> str:
+    text = normalize_name(value)
+    tokens = [token for token in text.split() if token]
+    suffixes = {"jr", "sr", "ii", "iii", "iv", "v"}
+    stopwords = {"mr", "mrs", "ms", "miss", "dr", "hon", "rep", "sen"}
+    filtered: list[str] = []
+    for index, token in enumerate(tokens):
+        if token in suffixes or token in stopwords:
+            continue
+        # Drop middle initials like "g" in "john g edwards" but keep single-token names.
+        if len(token) == 1 and index not in {0, len(tokens) - 1}:
+            continue
+        filtered.append(token)
+    return " ".join(filtered or tokens)
+
+CASH_ON_HAND_OVERRIDES = {
+    'alana dimario': 44545.71,
+    'albert joseph vitali': 73.06,
+    'alex finkelman': 100542.07,
+    'alex marszalkowski': 17680.80,
+    'allan fung': 0.00,
+    'amy santiago': 5517.48,
+    'ana quezada': 2424.46,
+    'andrew dimitri': 43871.41,
+    'angela coburn': 1245.00,
+    'angela lima': 15651.70,
+    'anthony desimone': 64077.32,
+    'arlette hidalgo': 2946.10,
+    'arthur corvese': 13247.30,
+    'arthur handy': 23661.00,
+    'barbara quigley': 5.00,
+    'brandon potter': 35367.22,
+    'brandon voas': 16189.17,
+    'brian coogan': 0.00,
+    'brian newberry': 15008.49,
+    'brian patrick kennedy': 70908.00,
+    'brian thompson': 32283.34,
+    'bridget valverde': 47947.80,
+    'brittany kubicek': 4018.69,
+    'cameron moquin': 2260.05,
+    'cameron st germain': 3402.20,
+    'carlos cedeno': 0.00,
+    'carol hagan mcentee': 83982.92,
+    'charlene lima': 105102.91,
+    'cherie cruz': 19211.54,
+    'christopher blazejewski': 608809.48,
+    'christopher ireland': 165.20,
+    'christopher paplauskas': 28314.70,
+    'colleen crudele': 0.00,
+    'dana james traversie': 28022.22,
+    'david bennett': 39586.69,
+    'david place': 4427.49,
+    'david tikoian': 307059.99,
+    'dawn euer': 65049.41,
+    'deborah fellela': 10139.28,
+    'earl read': 33493.45,
+    'edith ajello': 23536.69,
+    'edward cardillo': 17788.73,
+    'edward stravato': 45724.70,
+    'elaine morgan': 8890.27,
+    'enrique george sanchez': 1091.85,
+    'evan patrick shanley': 32358.05,
+    'frank ciccone': 270340.41,
+    'gena felix': 5986.77,
+    'george nardone': 5454.95,
+    'gordon rogers': 37145.78,
+    'grace diaz': 4957.20,
+    'grant webber wosencroft': 3901.72,
+    'hanna gallo': 195600.05,
+    'jacob bissaillon': 81421.87,
+    'jacquelyn baginski': 217427.77,
+    'james mclaughlin': 251.19,
+    'james metivier': 27812.18,
+    'james pierson': 6.39,
+    'james sheehan': 2706.85,
+    'janie lee segui': 0.00,
+    'jasmin roy': 5147.96,
+    'jean barros': 50047.18,
+    'jenni furtado': 10718.17,
+    'jennifer nerbonne': 2239.16,
+    'jennifer smith boylan': 33287.35,
+    'jennifer stewart': 42203.95,
+    'jessica de la cruz': 59575.12,
+    'jessica drew day': 5311.61,
+    'jina petrarca': 0.00,
+    'jo-ann ryan': 32438.76,
+    'john burke': 54855.09,
+    'john douglas barr': 100.00,
+    'john edwards': 75582.25,
+    'john joseph lombardi': 70554.20,
+    'jon brien': 25097.59,
+    'jonathon acosta': 12736.97,
+    'joseph depasquale': 0.00,
+    'joseph hosey': 19132.25,
+    'joseph mcnamara': 49932.40,
+    'joshua giraldo': 28006.72,
+    'june speakman': 12797.55,
+    'justine caldwell': 28083.90,
+    'karen alzate': 2653.17,
+    'katherine sheena kazarian': 185822.87,
+    'kathleen fogarty': 10721.40,
+    'kevin hoyle': 66040.90,
+    'kevin whalen': 0.00,
+    'lammis vargas': 31350.05,
+    'lauren carson': 27542.21,
+    'lawrence paul almagno': 7252.61,
+    'leah boisclair': 12973.79,
+    'leonela felix': 9460.65,
+    'leonidas peter raptakis': 51672.75,
+    'linda ujifusa': 2248.38,
+    'lori urso': 46854.51,
+    'louis dipalma': 145709.16,
+    'luis ernesto sandoval': 10.00,
+    'marie hopkins': 25051.75,
+    'mark mckenney': 47671.10,
+    'mark mesrobian': 107311.17,
+    'mark theroux': 7379.60,
+    'marvin abney': 256687.46,
+    'mary ann shallcross smith': 41142.61,
+    'mary duffy messier': 19459.43,
+    'matthew dawson': 24376.09,
+    'matthew lamountain': 106740.44,
+    'matthew mccoy': 500.00,
+    'megan cotter': 28600.20,
+    'meghan kallman': 50623.40,
+    'melissa murray': 39591.88,
+    'mia ackerman': 49463.38,
+    'michael chippendale': 19694.29,
+    'michael garman': 22613.87,
+    'michael riley': 0.00,
+    'michelle mcgaw': 21189.27,
+    'nathan biah': 8614.72,
+    'nelly burdette': 6480.27,
+    'nicole jellinek': 19642.75,
+    'pamela lauria': 31502.63,
+    'patrick maloney': 0.00,
+    'paul santucci': 34858.77,
+    'peter appollonio': 41265.18,
+    'ramon perez': 518.93,
+    'raymond hull': 200557.50,
+    'rebecca kislak': 43361.42,
+    'richard fascia': 9733.56,
+    'robert britto': 81025.04,
+    'robert craven': 46292.98,
+    'robert phillips': 15327.32,
+    'ronald paul jarvais': 344.51,
+    'ryan pearson': 67857.16,
+    'samantha wilcox': 13314.95,
+    'samuel angelo azzinaro': 19778.28,
+    'samuel bell': 62931.06,
+    'samuel zurier': 44505.45,
+    'santos javier': 2309.77,
+    'scott slater': 97505.96,
+    'shaina smith': 618.56,
+    'sherry roberts': 4555.21,
+    'stefano famiglietti': 27049.97,
+    'stephen casey': 23644.71,
+    'stephen moffitt': 15.35,
+    'susan ann donovan': 16224.12,
+    'suzanna alba': 6218.10,
+    'teresa tanzi': 6117.95,
+    'terri-denise cortvriend': 25640.70,
+    'thomas menec': 2710.97,
+    'thomas noret': 88303.76,
+    'thomas paolino': 18631.07,
+    'tiara mack': 7691.98,
+    'timothy howe': 14799.56,
+    'tina spears': 18511.21,
+    'todd patalano': 123323.44,
+    'valarie jean lawson': 336650.61,
+    'vanessa lopez': 9869.68,
+    'veronicka vega': 5074.45,
+    'victoria gu': 37897.25,
+    'virginia susan sosnowski': 63996.88,
+    'walter felag': 74284.69,
+    'westin place': 609.06,
+    'william connell': 0.00,
+    'william muto': 11160.76,
+    'william obrien': 50074.97,
+    'zakary pereira': 0.00,
+}
+
+
+def apply_cash_on_hand_override(candidate_name: str, current_value: float) -> float:
+    """Use the Ending Balance values from Cash_Hand_2026.xlsx for cash on hand only."""
+    override = CASH_ON_HAND_OVERRIDES.get(normalize_candidate_key(candidate_name))
+    return round(float(override), 2) if override is not None else round(float(current_value), 2)
+
+
+def to_float(value: object) -> float:
+    if value is None:
+        return 0.0
+    if isinstance(value, float):
+        if value != value:
+            return 0.0
+        return value
+    if isinstance(value, int):
+        return float(value)
+    cleaned = str(value).strip()
+    if not cleaned or cleaned.lower() == "nan":
+        return 0.0
+    return parse_money(cleaned)
+
+
+def clean_string(value: object) -> str:
+    if value is None:
+        return ""
+    text = str(value).strip()
+    if not text or text.lower() == "nan":
+        return ""
+    return clean_text(text)
 
 
 def format_period(start: str, end: str) -> str:
@@ -111,6 +338,238 @@ def donor_name_looks_like_code(value: str) -> bool:
     if parts and all(re.fullmatch(r"[A-Z0-9]{1,6}", part) for part in parts):
         return True
     return False
+
+
+def load_excel_sheet(path: Path, sheet_name: str) -> pd.DataFrame:
+    frame = pd.read_excel(path, sheet_name=sheet_name)
+    frame.columns = [clean_string(column) for column in frame.columns]
+    return frame
+
+
+def build_workbook_name_index(roster: list[dict[str, object]]) -> dict[str, dict[str, object]]:
+    index: dict[str, dict[str, object]] = {}
+    for candidate in roster:
+        name = str(candidate["name"])
+        keys = {
+            normalize_candidate_key(name),
+            normalize_name(name),
+        }
+        for key in keys:
+            if key:
+                index[key] = candidate
+    return index
+
+
+def find_roster_candidate(name: str, roster_index: dict[str, dict[str, object]]) -> dict[str, object] | None:
+    for key in (normalize_candidate_key(name), normalize_name(name)):
+        if key in roster_index:
+            return roster_index[key]
+    return None
+
+
+def workbook_candidate_id(candidate: dict[str, object]) -> str:
+    return f"{candidate['chamber']}-{candidate['district_number']}-{slugify(str(candidate['name']))}"
+
+
+def normalize_bucket_class(bucket: str) -> str:
+    text = clean_string(bucket).lower()
+    mapping = {
+        "itemized individual donors": "individuals",
+        "receipts without donor names listed": "aggregate individuals",
+        "small-dollar / aggregate online receipts": "aggregate individuals",
+        "pac contributions": "political action committees",
+        "political action committees": "political action committees",
+        "refunds / rebates": "refund/rebate",
+        "other": "other",
+        "other reported sources": "other",
+        "total parsed receipts": "total",
+    }
+    return mapping.get(text, text)
+
+
+def load_finance_workbooks(roster: list[dict[str, object]]) -> tuple[dict[str, dict[str, object]], list[dict[str, object]]]:
+    roster_index = build_workbook_name_index(roster)
+    discrepancies: list[dict[str, object]] = []
+    candidates_by_id: dict[str, dict[str, object]] = {}
+
+    def get_candidate_record(candidate: dict[str, object]) -> dict[str, object]:
+        candidate_id = workbook_candidate_id(candidate)
+        return candidates_by_id.setdefault(
+            candidate_id,
+            {
+                "candidate": candidate,
+                "summary_rows": {},
+                "donors": [],
+                "expenses": [],
+                "receipt_totals": defaultdict(float),
+                "submitted_filings": [],
+                "coverage_note": "",
+                "source_note": "",
+            },
+        )
+
+    def ingest_summary(path: Path, source_label: str) -> None:
+        frame = load_excel_sheet(path, "Candidate Summary")
+        for _, row in frame.iterrows():
+            name = clean_string(row.get("Candidate"))
+            if not name:
+                continue
+            candidate = find_roster_candidate(name, roster_index)
+            if not candidate:
+                discrepancies.append(
+                    {
+                        "type": "unmatched-summary-candidate",
+                        "source": source_label,
+                        "candidate_name": name,
+                    }
+                )
+                continue
+            record = get_candidate_record(candidate)
+            normalized_row = {column: row.get(column) for column in frame.columns}
+            record["summary_rows"][source_label] = normalized_row
+            record["coverage_note"] = clean_string(row.get("Data Coverage") or row.get("Source / Coverage") or row.get("Finance Status"))
+            record["source_note"] = clean_string(row.get("Source / Coverage") or row.get("Source PDF") or row.get("Finance Status"))
+
+    def ingest_donors(path: Path, source_label: str) -> None:
+        frame = load_excel_sheet(path, "Donors & Receipts")
+        for _, row in frame.iterrows():
+            name = clean_string(row.get("Candidate"))
+            if not name:
+                continue
+            candidate = find_roster_candidate(name, roster_index)
+            if not candidate:
+                continue
+            record = get_candidate_record(candidate)
+            donor_name = clean_string(
+                row.get("Donor / Source")
+                or row.get("Donor")
+                or row.get("Contributor")
+                or row.get("Name")
+            )
+            donor_type = clean_string(
+                row.get("Contribution Type")
+                or row.get("Type")
+                or row.get("Receipt Type")
+                or row.get("Category")
+            )
+            employer = clean_string(row.get("Employer"))
+            description = clean_string(row.get("Description") or row.get("Notes"))
+            amount = to_float(row.get("Amount"))
+            quarter = clean_string(row.get("Quarter"))
+            if amount <= 0:
+                continue
+            record["donors"].append(
+                {
+                    "donor": donor_name or donor_type or "Donor",
+                    "amount": amount,
+                    "type": donor_type or "Other",
+                    "employer": employer,
+                    "description": description,
+                    "quarter": quarter,
+                    "source": source_label,
+                }
+            )
+
+    def ingest_expenses(path: Path, source_label: str) -> None:
+        frame = load_excel_sheet(path, "Expenses")
+        for _, row in frame.iterrows():
+            name = clean_string(row.get("Candidate"))
+            if not name:
+                continue
+            candidate = find_roster_candidate(name, roster_index)
+            if not candidate:
+                continue
+            record = get_candidate_record(candidate)
+            title = clean_string(row.get("Expense Type") or row.get("Category") or row.get("Purpose"))
+            purpose = clean_string(row.get("Purpose") or row.get("Description"))
+            vendor = clean_string(row.get("Vendor / Payee") or row.get("Vendor"))
+            amount = to_float(row.get("Amount"))
+            quarter = clean_string(row.get("Quarter"))
+            if amount <= 0:
+                continue
+            record["expenses"].append(
+                {
+                    "expense_type": title or "Campaign spending",
+                    "amount": amount,
+                    "purpose": purpose,
+                    "vendor": vendor,
+                    "quarter": quarter,
+                    "source": source_label,
+                }
+            )
+
+    def ingest_receipt_totals(path: Path, source_label: str) -> None:
+        frame = load_excel_sheet(path, "Receipt Category Totals")
+        total_columns = (
+            ("Itemized individual donors", "individuals"),
+            ("Receipts without donor names listed", "aggregate individuals"),
+            ("PAC contributions", "political action committees"),
+            ("Refunds / rebates", "refund/rebate"),
+            ("Other", "other"),
+        )
+        for _, row in frame.iterrows():
+            name = clean_string(row.get("Candidate"))
+            if not name:
+                continue
+            candidate = find_roster_candidate(name, roster_index)
+            if not candidate:
+                continue
+            record = get_candidate_record(candidate)
+            quarter = clean_string(row.get("Quarter"))
+            if quarter != "Q2":
+                continue
+            for column_name, bucket in total_columns:
+                amount = to_float(row.get(column_name))
+                if amount > 0:
+                    record["receipt_totals"][bucket] += amount
+
+    def ingest_submitted_filings(path: Path) -> None:
+        if not path.exists():
+            return
+        frame = load_excel_sheet(path, "Submitted Filings")
+        for _, row in frame.iterrows():
+            name = clean_string(row.get("Candidate"))
+            if not name:
+                continue
+            candidate = find_roster_candidate(name, roster_index)
+            if not candidate:
+                continue
+            record = get_candidate_record(candidate)
+            quarter = clean_string(row.get("Quarter"))
+            label = clean_string(row.get("Filing") or row.get("Report") or row.get("Label") or (f"{quarter} campaign finance filing" if quarter else ""))
+            status = clean_string(row.get("Status") or row.get("Filing Status"))
+            amended = clean_string(row.get("Amended"))
+            href = clean_string(row.get("PDF Href") or row.get("Href") or row.get("Link"))
+            period = clean_string(row.get("Period") or row.get("Reporting Period"))
+            if not period:
+                begin = clean_string(row.get("Begin"))
+                end = clean_string(row.get("End"))
+                if begin and end:
+                    period = format_period(begin, end)
+            if not label and not href and not period:
+                continue
+            record["submitted_filings"].append(
+                {
+                    "label": label or "Campaign finance filing",
+                    "status": status,
+                    "amended": amended,
+                    "period": period,
+                    "href": href,
+                }
+            )
+
+    ingest_summary(WORKBOOK_SUMMARY_PATH, "manual-summary")
+    ingest_donors(WORKBOOK_SUMMARY_PATH, "manual-summary")
+    ingest_expenses(WORKBOOK_SUMMARY_PATH, "manual-summary")
+    ingest_receipt_totals(WORKBOOK_SUMMARY_PATH, "manual-summary")
+    ingest_submitted_filings(WORKBOOK_SUMMARY_PATH)
+
+    ingest_summary(WORKBOOK_DETAIL_PATH, "manual-detail")
+    ingest_donors(WORKBOOK_DETAIL_PATH, "manual-detail")
+    ingest_expenses(WORKBOOK_DETAIL_PATH, "manual-detail")
+    ingest_receipt_totals(WORKBOOK_DETAIL_PATH, "manual-detail")
+
+    return candidates_by_id, discrepancies
 
 
 def extract_hidden(html_text: str, name: str) -> str:
@@ -579,6 +1038,31 @@ def build_history_entry(label: str, row: dict[str, str], summary: dict[str, floa
     }
 
 
+def build_history_entry_from_workbook(
+    label: str,
+    period_start: str,
+    period_end: str,
+    money_raised: float,
+    money_spent: float,
+    ending_cash: float,
+) -> dict[str, object]:
+    net_change = round(float(money_raised) - float(money_spent), 2)
+    note = (
+        "The campaign raised more than it spent in this reporting period."
+        if net_change >= 0
+        else "The campaign spent more than it raised in this reporting period."
+    )
+    return {
+        "label": label,
+        "reporting_period_label": format_period(period_start, period_end),
+        "money_raised": round(float(money_raised), 2),
+        "money_spent": round(float(money_spent), 2),
+        "ending_cash": round(float(ending_cash), 2),
+        "net_change": net_change,
+        "notes": note,
+    }
+
+
 def build_summary_intro(candidate_name: str, summary: dict[str, float]) -> str:
     ending_cash = float(summary.get("ending_cash", 0.0))
     net_change = float(summary.get("net_change", 0.0))
@@ -594,6 +1078,23 @@ def build_summary_intro(candidate_name: str, summary: dict[str, float]) -> str:
     return f"{reserve_text} The report also shows that {flow_text}"
 
 
+def summary_value(row: dict[str, object], *keys: str) -> float:
+    for key in keys:
+        if key in row:
+            value = to_float(row.get(key))
+            if value or str(row.get(key)).strip():
+                return value
+    return 0.0
+
+
+def summary_text(row: dict[str, object], *keys: str) -> str:
+    for key in keys:
+        value = clean_string(row.get(key))
+        if value:
+            return value
+    return ""
+
+
 def build_local_filing_row(label: str, period_start: str, period_end: str) -> dict[str, str]:
     return {
         "label": label,
@@ -605,6 +1106,203 @@ def build_local_filing_row(label: str, period_start: str, period_end: str) -> di
         "amended": "",
         "view_href": "",
     }
+
+
+def build_workbook_profile(record: dict[str, object], existing_profile: dict[str, object] | None = None) -> tuple[dict[str, object] | None, list[dict[str, object]]]:
+    candidate = record["candidate"]
+    summary_rows = record.get("summary_rows", {})
+    primary_row = summary_rows.get("manual-summary") or summary_rows.get("manual-detail")
+    if not primary_row:
+        return None, []
+
+    fallback_row = summary_rows.get("manual-detail") if primary_row is summary_rows.get("manual-summary") else summary_rows.get("manual-summary")
+
+    def get_float(*keys: str) -> float:
+        value = summary_value(primary_row, *keys)
+        if value == 0.0 and fallback_row:
+            fallback_value = summary_value(fallback_row, *keys)
+            if fallback_value:
+                return fallback_value
+        return value
+
+    def get_text(*keys: str) -> str:
+        value = summary_text(primary_row, *keys)
+        if not value and fallback_row:
+            return summary_text(fallback_row, *keys)
+        return value
+
+    website_beginning_cash = round(get_float("Website Beginning Balance"), 2)
+    website_ending_cash = round(get_float("Website Ending Balance"), 2)
+    website_total_cash = round(get_float("Website Total Cash"), 2)
+
+    beginning_cash = round(get_float("Q1 Cash on Hand", "Website Beginning Balance"), 2)
+    ending_cash = round(get_float("Q2 Cash on Hand", "Website Ending Balance"), 2)
+    ending_cash = apply_cash_on_hand_override(str(candidate["name"]), ending_cash)
+    total_cash = round(get_float("Q2 Total Cash Receipts", "Website Total Cash"), 2)
+
+    # Prefer the public-facing website summary when it exists, because it mirrors the
+    # Board of Elections summary sheet more reliably than the gross receipt subtotal
+    # columns in Candidate Summary.
+    if website_total_cash and website_beginning_cash:
+        money_raised = round(max(website_total_cash - website_beginning_cash, 0.0), 2)
+    else:
+        money_raised = round(get_float("Q2 Total Cash Receipts", "Q2 Money Raised"), 2)
+
+    if website_total_cash and website_ending_cash:
+        money_spent = round(max(website_total_cash - website_ending_cash, 0.0), 2)
+    else:
+        money_spent = round(get_float("Q2 Spent"), 2)
+
+    net_change = round(money_raised - money_spent, 2)
+
+    receipt_totals = {key: round(float(value), 2) for key, value in dict(record.get("receipt_totals", {})).items() if round(float(value), 2) > 0}
+    if not receipt_totals:
+        bucket_pairs = [
+            ("individuals", "Q2 Individuals"),
+            ("aggregate individuals",),
+            ("political action committees", "Q2 PAC"),
+            ("refund/rebate", "Q2 Refund/Rebate"),
+            ("other", "Q2 Other"),
+        ]
+        for bucket_keys in bucket_pairs:
+            bucket = bucket_keys[0]
+            source_key = bucket_keys[1] if len(bucket_keys) > 1 else None
+            if source_key:
+                amount = get_float(source_key)
+                if amount > 0:
+                    receipt_totals[bucket] = round(amount, 2)
+        total_known = sum(receipt_totals.values())
+        if total_cash > total_known:
+            receipt_totals["aggregate individuals"] = round(receipt_totals.get("aggregate individuals", 0.0) + (total_cash - total_known), 2)
+
+    source_buckets = build_source_buckets(receipt_totals)
+    top_donors = build_top_donors(record.get("donors", []))
+    spending_categories = summarize_spending(record.get("expenses", []))
+    campaign_expenses = round(sum(float(item.get("amount", 0.0)) for item in record.get("expenses", [])), 2)
+    aggregate_expenses = max(0.0, round(money_spent - campaign_expenses, 2))
+
+    filing_history = [
+        build_history_entry_from_workbook(
+            "Q1 2026",
+            "01/01/2026",
+            "03/31/2026",
+            get_float("Q1 Money Raised"),
+            get_float("Q1 Spent"),
+            get_float("Q1 Cash on Hand"),
+        ),
+        build_history_entry_from_workbook(
+            "Q2 2026",
+            "04/01/2026",
+            "06/30/2026",
+            money_raised,
+            money_spent,
+            ending_cash,
+        ),
+    ]
+
+    original_documents: list[dict[str, str]] = []
+    for filing in record.get("submitted_filings", []):
+        href = clean_string(filing.get("href"))
+        if not href:
+            continue
+        label = clean_string(filing.get("label")) or "Campaign finance filing"
+        period = clean_string(filing.get("period")) or label
+        original_documents.append(
+            {
+                "label": label,
+                "period": period,
+                "href": href,
+            }
+        )
+
+    report_label = get_text("Website Summary Period End") or "Q2 2026 campaign finance filing"
+    reporting_period_label = get_text("Website Summary Period End") or "April 1, 2026 to June 30, 2026"
+    office = "State Representative" if candidate["chamber"] == "house" else "State Senator"
+    party_code = str(candidate.get("party_code") or "")
+    party = PARTY_DISPLAY.get(party_code, party_code)
+
+    profile = {
+        "candidate_id": workbook_candidate_id(candidate),
+        "slug": slugify(str(candidate["name"])),
+        "candidate_name": candidate["name"],
+        "chamber": candidate["chamber"],
+        "district_number": str(candidate["district_number"]),
+        "party": party_code,
+        "party_label": party,
+        "office_sought": office,
+        "report_label": report_label,
+        "reporting_period_label": reporting_period_label,
+        "source_note": record.get("source_note") or record.get("coverage_note") or "Workbook-backed finance profile built from Rhode Island campaign finance filings.",
+        "coverage_note": record.get("coverage_note") or "",
+        "original_documents": original_documents,
+        "beginning_cash": beginning_cash,
+        "money_raised": money_raised,
+        "money_spent": money_spent,
+        "ending_cash": ending_cash,
+        "net_change": net_change,
+        "total_cash_receipts": total_cash,
+        "campaign_expenses": campaign_expenses,
+        "aggregate_expenses": aggregate_expenses,
+        "summary_intro": build_summary_intro(str(candidate["name"]), {"ending_cash": ending_cash, "net_change": net_change}),
+        "filing_history": filing_history,
+        "source_buckets": source_buckets,
+        "top_donors": top_donors,
+        "spending_categories": spending_categories,
+        "takeaways": [],
+        "explainer_cards": [],
+    }
+
+    discrepancies: list[dict[str, object]] = []
+    if fallback_row:
+        website_beginning = summary_value(primary_row, "Website Beginning Balance")
+        website_ending = summary_value(primary_row, "Website Ending Balance")
+        website_total_cash = summary_value(primary_row, "Website Total Cash")
+
+        derived_summary_values = {
+            "money_raised": round(max(website_total_cash - website_beginning, 0.0), 2)
+            if website_total_cash or website_beginning
+            else 0.0,
+            "money_spent": round(max(website_total_cash - website_ending, 0.0), 2)
+            if website_total_cash or website_ending
+            else 0.0,
+            "ending_cash": round(website_ending, 2),
+        }
+        detail_values = {
+            "money_raised": round(summary_value(fallback_row, "Q2 Total Cash Receipts", "Q2 Money Raised"), 2),
+            "money_spent": round(summary_value(fallback_row, "Q2 Spent"), 2),
+            "ending_cash": round(summary_value(fallback_row, "Q2 Cash on Hand", "Website Ending Balance"), 2),
+        }
+        for field_name, primary_value in derived_summary_values.items():
+            fallback_value = detail_values[field_name]
+            if primary_value != fallback_value:
+                discrepancies.append(
+                    {
+                        "type": "workbook-source-mismatch",
+                        "candidate_id": profile["candidate_id"],
+                        "candidate_name": profile["candidate_name"],
+                        "field": field_name,
+                        "manual_summary": primary_value,
+                        "manual_detail": fallback_value,
+                    }
+                )
+
+    if existing_profile:
+        for field_name in ("money_raised", "money_spent", "ending_cash", "net_change"):
+            old_value = round(float(existing_profile.get(field_name, 0.0)), 2)
+            new_value = round(float(profile.get(field_name, 0.0)), 2)
+            if old_value != new_value:
+                discrepancies.append(
+                    {
+                        "type": "site-vs-workbook-mismatch",
+                        "candidate_id": profile["candidate_id"],
+                        "candidate_name": profile["candidate_name"],
+                        "field": field_name,
+                        "site_value": old_value,
+                        "workbook_value": new_value,
+                    }
+                )
+
+    return profile, discrepancies
 
 
 def parse_candidate_profile(candidate: dict[str, object]) -> dict[str, object] | None:
@@ -674,6 +1372,7 @@ def parse_candidate_profile(candidate: dict[str, object]) -> dict[str, object] |
         q1_pdf_path = None
 
     q2_summary = parse_page_one_summary(q2_pdf_path)
+    q2_summary["ending_cash"] = apply_cash_on_hand_override(name, float(q2_summary.get("ending_cash", 0.0)))
     contributions = parse_contributions(q2_pdf_path)
     expenditures = parse_expenditures(q2_pdf_path)
 
@@ -764,41 +1463,62 @@ def load_roster() -> list[dict[str, object]]:
 def main() -> int:
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
     roster = load_roster()
+    existing_payload = json.loads(OUTPUT_PATH.read_text()) if OUTPUT_PATH.exists() else {}
+    existing_profiles = {
+        str(profile.get("candidate_id")): profile
+        for profile in existing_payload.get("profiles", [])
+    }
+    workbook_records, workbook_discrepancies = load_finance_workbooks(roster)
     directory = []
     profiles = []
+    discrepancies = list(workbook_discrepancies)
 
     for index, candidate in enumerate(roster, start=1):
         print(f"[{index}/{len(roster)}] {candidate['name']} ({candidate['chamber']} {candidate['district_number']})", file=sys.stderr)
+        candidate_id = workbook_candidate_id(candidate)
         entry = {
             "candidate_name": candidate["name"],
             "slug": slugify(str(candidate["name"])),
-            "candidate_id": f"{candidate['chamber']}-{candidate['district_number']}-{slugify(str(candidate['name']))}",
+            "candidate_id": candidate_id,
             "chamber": candidate["chamber"],
             "district_number": str(candidate["district_number"]),
             "party": candidate["party_code"],
             "office_sought": "State Representative" if candidate["chamber"] == "house" else "State Senator",
             "has_profile": False,
         }
-        try:
-            profile = parse_candidate_profile(candidate)
-        except Exception as exc:  # noqa: BLE001
-            print(f"  ! failed: {exc}", file=sys.stderr)
-            profile = None
+        record = workbook_records.get(candidate_id)
+        profile = None
+        if candidate_id in LOCAL_PDF_PROFILE_OVERRIDES:
+            try:
+                profile = parse_candidate_profile(candidate)
+            except Exception as exc:  # noqa: BLE001
+                print(f"  ! local PDF override failed: {exc}", file=sys.stderr)
+                profile = None
+
+        if profile is None and record:
+            try:
+                profile, profile_discrepancies = build_workbook_profile(record, existing_profiles.get(candidate_id))
+                discrepancies.extend(profile_discrepancies)
+            except Exception as exc:  # noqa: BLE001
+                print(f"  ! workbook build failed: {exc}", file=sys.stderr)
+                profile = None
+        elif profile is None and candidate_id in existing_profiles:
+            profile = existing_profiles[candidate_id]
 
         if profile:
             profiles.append(profile)
             entry["has_profile"] = True
         directory.append(entry)
-        time.sleep(0.15)
 
     payload = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "cycle": "2026-q2",
         "directory": directory,
         "profiles": sorted(profiles, key=lambda item: (item["chamber"], int(item["district_number"]), item["candidate_name"])),
+        "discrepancies": discrepancies,
     }
     OUTPUT_PATH.write_text(json.dumps(payload, indent=2))
-    print(f"Wrote {len(profiles)} profiles to {OUTPUT_PATH}", file=sys.stderr)
+    print(f"Wrote {len(profiles)} profiles to {OUTPUT_PATH} with {len(discrepancies)} discrepancy notes", file=sys.stderr)
     return 0
 
 
