@@ -2438,6 +2438,321 @@ def apply_latest_senate_q2_overrides(profile: dict[str, object]) -> dict[str, ob
     profile.update(override)
     return profile
 
+
+# Final Q2/amended-Q2 overrides for DiMario, Valverde, Place, and Morgan.
+DIMARIO_VALVERDE_PLACE_MORGAN_OVERRIDES = {'senate-36-alana-m-dimario': {'report_label': 'Amended Q2 2026 campaign finance filing',
+                               'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                               'source_note': 'RI Board of Elections Q1 2026 filing and amended Q2 2026 filing '
+                                              'supplied by the user',
+                               'coverage_note': 'The amended Q2 filing supersedes the earlier Q2 version for the '
+                                                'main display. The amendment changes reported ending cash to '
+                                                '$44,045.71 and provides the detailed contribution and expenditure '
+                                                'schedules.',
+                               'beginning_cash': 45474.78,
+                               'money_raised': 14432.0,
+                               'money_spent': 15861.07,
+                               'ending_cash': 44045.71,
+                               'net_change': -1429.07,
+                               'total_cash_receipts': 14432.0,
+                               'campaign_expenses': 15861.07,
+                               'aggregate_expenses': 0.0,
+                               'summary_intro': "Alana M DiMario's amended Q2 2026 filing reports $14,432.00 in "
+                                                'receipts, $15,861.07 in spending, and $44,045.71 in cash on hand at '
+                                                'the end of the period.',
+                               'source_buckets': [{'label': 'Itemized individual donors',
+                                                   'class_name': 'itemized-individual-donors',
+                                                   'amount': 13260.0,
+                                                   'description': 'Individual contributions reported in the amended '
+                                                                  'Q2 filing.'},
+                                                  {'label': 'PAC contributions',
+                                                   'class_name': 'pac-contributions',
+                                                   'amount': 750.0,
+                                                   'description': 'Political action committee contributions reported '
+                                                                  'in the amended Q2 filing.'},
+                                                  {'label': 'Other reported sources',
+                                                   'class_name': 'other-reported-sources',
+                                                   'amount': 422.0,
+                                                   'description': 'Other receipt reported in the amended Q2 filing, '
+                                                                  'including a conference reimbursement.'}],
+                               'top_donors': [{'donor': 'Anne Hills',
+                                               'amount': 2000.0,
+                                               'type': 'Individual',
+                                               'notes': 'Employer listed as Holland Anne Holland Ventures.'},
+                                              {'donor': 'Ralph Palumbo',
+                                               'amount': 2000.0,
+                                               'type': 'Individual',
+                                               'notes': 'Employer listed as Revity Energy.'},
+                                              {'donor': 'John Cicilline',
+                                               'amount': 500.0,
+                                               'type': 'Individual',
+                                               'notes': 'Employer listed as retired.'},
+                                              {'donor': 'Joshua Miller',
+                                               'amount': 500.0,
+                                               'type': 'Individual',
+                                               'notes': 'Employer listed as Trinity Brewhouse.'},
+                                              {'donor': 'Richard Gersten',
+                                               'amount': 500.0,
+                                               'type': 'Individual',
+                                               'notes': 'Employer listed as self-employed in commercial real '
+                                                        'estate.'},
+                                              {'donor': 'Sam Salganik',
+                                               'amount': 500.0,
+                                               'type': 'Individual',
+                                               'notes': 'Employer listed as RIPIN.'},
+                                              {'donor': 'Council of State Governments reimbursement',
+                                               'amount': 422.0,
+                                               'type': 'Other',
+                                               'notes': 'Delaware Housing Conference reimbursement reported in the '
+                                                        'amended filing.'},
+                                              {'donor': 'Margaret McDuff',
+                                               'amount': 275.0,
+                                               'type': 'Individual',
+                                               'notes': 'Employer listed as FSRI.'}],
+                               'spending_categories': [{'title': 'Fundraising Expenses',
+                                                        'summary': 'Visible spending includes Campaign Verify, '
+                                                                   'CustomInk.com, and Amy Gabarra.',
+                                                        'amount': 12217.08},
+                                                       {'title': 'Advertising',
+                                                        'summary': 'Visible spending includes Facebook.com, '
+                                                                   'Google.com, and Mailchimp.com.',
+                                                        'amount': 1209.87},
+                                                       {'title': 'Food, Beverages and Meals',
+                                                        'summary': "Visible spending includes Dave's Marketplace, "
+                                                                   'Gooseneck Vineyards, and Joe.Coffee.',
+                                                        'amount': 629.09},
+                                                       {'title': 'Office Equipment & Supplies',
+                                                        'summary': 'Visible spending includes Amazon.com, Canva.com, '
+                                                                   'and Consignments LTD.',
+                                                        'amount': 599.63},
+                                                       {'title': 'Donations (All Others)',
+                                                        'summary': 'Visible spending includes Planned Parenthood '
+                                                                   'Votes, RI Kids Count, and RI Land Trust Council.',
+                                                        'amount': 544.4},
+                                                       {'title': 'Donations (Political)',
+                                                        'summary': 'Visible spending includes Gregg Amore, Jack '
+                                                                   'Reed, and Tyler McFeeters.',
+                                                        'amount': 381.25},
+                                                       {'title': 'Travel & Lodging',
+                                                        'summary': 'Visible spending includes parking, Block Island '
+                                                                   'Ferry, and City Parking.',
+                                                        'amount': 149.77},
+                                                       {'title': 'Bank Fees',
+                                                        'summary': 'Visible spending includes ActBlue.com.',
+                                                        'amount': 129.98}],
+                               'filing_history': [{'label': 'Q1 2026',
+                                                   'reporting_period_label': 'January 1, 2026 to March 31, 2026',
+                                                   'money_raised': 5421.0,
+                                                   'money_spent': 3830.28,
+                                                   'ending_cash': 45554.62,
+                                                   'net_change': 1590.72,
+                                                   'notes': 'Q1 reported $5,421.00 in receipts.'},
+                                                  {'label': 'Q2 2026 (amended)',
+                                                   'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                                                   'money_raised': 14432.0,
+                                                   'money_spent': 15861.07,
+                                                   'ending_cash': 44045.71,
+                                                   'net_change': -1429.07,
+                                                   'notes': 'The amended filing is used for the standardized main '
+                                                            'display.'}]},
+ 'senate-35-bridget-g-valverde': {'report_label': 'Q2 2026 campaign finance filing',
+                                  'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                                  'source_note': 'RI Board of Elections Q1 and Q2 2026 filings supplied by the user',
+                                  'coverage_note': 'Q2 2026 is used as the main display period.',
+                                  'beginning_cash': 41189.72,
+                                  'money_raised': 7844.0,
+                                  'money_spent': 1085.92,
+                                  'ending_cash': 47947.8,
+                                  'net_change': 6758.08,
+                                  'total_cash_receipts': 7844.0,
+                                  'campaign_expenses': 904.19,
+                                  'aggregate_expenses': 181.73,
+                                  'summary_intro': "Bridget G Valverde's Q2 2026 filing reports $7,844.00 in "
+                                                   'receipts, $1,085.92 in total spending, and $47,947.80 in cash on '
+                                                   'hand.',
+                                  'source_buckets': [{'label': 'Itemized individual donors',
+                                                      'class_name': 'itemized-individual-donors',
+                                                      'amount': 6894.0,
+                                                      'description': 'Individual contributions reported in the Q2 '
+                                                                     'filing.'},
+                                                     {'label': 'PAC contributions',
+                                                      'class_name': 'pac-contributions',
+                                                      'amount': 950.0,
+                                                      'description': 'Political action committee contributions '
+                                                                     'reported in the Q2 filing.'}],
+                                  'top_donors': [{'donor': 'Jessie Kingston',
+                                                  'amount': 2000.0,
+                                                  'type': 'Individual',
+                                                  'notes': 'Employer status listed as retired/not employed.'},
+                                                 {'donor': 'Anne Holland',
+                                                  'amount': 1999.0,
+                                                  'type': 'Individual',
+                                                  'notes': 'Employer status listed as not employed.'},
+                                                 {'donor': 'EGFFA PAC (East Greenwich Fire Fighters Association)',
+                                                  'amount': 250.0,
+                                                  'type': 'PAC',
+                                                  'notes': 'Named PAC contribution listed in the filing.'},
+                                                 {'donor': 'Christopher Malgieri',
+                                                  'amount': 200.0,
+                                                  'type': 'Individual',
+                                                  'notes': 'Employer listed as Brown Medical Health Group.'},
+                                                 {'donor': 'Joshua Miller',
+                                                  'amount': 200.0,
+                                                  'type': 'Individual',
+                                                  'notes': 'Employer listed as Trinity Brewhouse.'},
+                                                 {'donor': 'Leonidas Raptakis',
+                                                  'amount': 200.0,
+                                                  'type': 'Individual',
+                                                  'notes': 'Employer listed as ANR Consulting LLC.'},
+                                                 {'donor': 'William Farrell',
+                                                  'amount': 200.0,
+                                                  'type': 'Individual',
+                                                  'notes': 'Employer listed as William A Farrell and Associates, '
+                                                           'LLC.'},
+                                                 {'donor': 'CarePAC of Blue Cross & Blue Shield of RI',
+                                                  'amount': 150.0,
+                                                  'type': 'PAC',
+                                                  'notes': 'Named PAC contribution listed in the filing.'}],
+                                  'spending_categories': [{'title': 'Food, Beverages and Meals',
+                                                           'summary': "Visible spending includes Ogie's Trailer "
+                                                                      'Park.',
+                                                           'amount': 576.8},
+                                                          {'title': 'Consultant & Professional Services',
+                                                           'summary': 'Visible spending includes All the Answers, '
+                                                                      'Inc.',
+                                                           'amount': 327.39},
+                                                          {'title': 'Fundraising Expenses',
+                                                           'summary': 'Aggregate ActBlue fees reported for April.',
+                                                           'amount': 181.73}],
+                                  'filing_history': [{'label': 'Q1 2026',
+                                                      'reporting_period_label': 'January 1, 2026 to March 31, 2026',
+                                                      'money_raised': 1440.0,
+                                                      'money_spent': 984.72,
+                                                      'ending_cash': 41189.72,
+                                                      'net_change': 455.28,
+                                                      'notes': 'Q1 reported $1,440.00 in receipts.'},
+                                                     {'label': 'Q2 2026',
+                                                      'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                                                      'money_raised': 7844.0,
+                                                      'money_spent': 1085.92,
+                                                      'ending_cash': 47947.8,
+                                                      'net_change': 6758.08,
+                                                      'notes': 'Q2 is the standardized main display period.'}]},
+ 'senate-38-westin-j-place': {'report_label': 'Q2 2026 campaign finance filing',
+                              'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                              'source_note': 'RI Board of Elections Q1 and Q2 2026 filings supplied by the user',
+                              'coverage_note': 'Q2 2026 is used as the main display period. Place reported no Q2 '
+                                               'receipts or expenditures.',
+                              'beginning_cash': 609.06,
+                              'money_raised': 0.0,
+                              'money_spent': 0.0,
+                              'ending_cash': 609.06,
+                              'net_change': 0.0,
+                              'total_cash_receipts': 0.0,
+                              'campaign_expenses': 0.0,
+                              'aggregate_expenses': 0.0,
+                              'summary_intro': "Westin J Place's Q2 2026 filing reports no receipts, no spending, "
+                                               'and $609.06 in cash on hand.',
+                              'source_buckets': [],
+                              'top_donors': [],
+                              'spending_categories': [],
+                              'filing_history': [{'label': 'Q1 2026',
+                                                  'reporting_period_label': 'January 1, 2026 to March 31, 2026',
+                                                  'money_raised': 47.4,
+                                                  'money_spent': 0.0,
+                                                  'ending_cash': 609.06,
+                                                  'net_change': 47.4,
+                                                  'notes': 'Q1 reported $47.40 in aggregate individual receipts and '
+                                                           'no spending.'},
+                                                 {'label': 'Q2 2026',
+                                                  'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                                                  'money_raised': 0.0,
+                                                  'money_spent': 0.0,
+                                                  'ending_cash': 609.06,
+                                                  'net_change': 0.0,
+                                                  'notes': 'No receipts or expenditures were reported.'}]},
+ 'senate-34-elaine-j-morgan': {'report_label': 'Amended Q2 2026 campaign finance filing',
+                               'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                               'source_note': 'RI Board of Elections Q1 2026 filing and amended Q2 2026 filing '
+                                              'supplied by the user',
+                               'coverage_note': 'The amended Q2 filing supersedes the earlier Q2 version for the '
+                                                'funding mix. It reclassifies the $5,580.00 in receipts as $2,780 '
+                                                'aggregate individual, $2,050 itemized individual, and $750 PAC '
+                                                'contributions.',
+                               'beginning_cash': 3624.35,
+                               'money_raised': 5580.0,
+                               'money_spent': 314.08,
+                               'ending_cash': 8890.27,
+                               'net_change': 5265.92,
+                               'total_cash_receipts': 5580.0,
+                               'campaign_expenses': 314.08,
+                               'aggregate_expenses': 0.0,
+                               'summary_intro': "Elaine J Morgan's amended Q2 2026 filing reports $5,580.00 in "
+                                                'receipts, $314.08 in spending, and $8,890.27 in cash on hand.',
+                               'source_buckets': [{'label': 'Aggregate individual contributions',
+                                                   'class_name': 'aggregate-individual-contributions',
+                                                   'amount': 2780.0,
+                                                   'description': 'Aggregate individual contributions reported in '
+                                                                  'the amended Q2 filing.'},
+                                                  {'label': 'Itemized individual donors',
+                                                   'class_name': 'itemized-individual-donors',
+                                                   'amount': 2050.0,
+                                                   'description': 'Itemized individual contributions reported in the '
+                                                                  'amended Q2 filing.'},
+                                                  {'label': 'PAC contributions',
+                                                   'class_name': 'pac-contributions',
+                                                   'amount': 750.0,
+                                                   'description': 'PAC contributions reported in the amended Q2 '
+                                                                  'filing.'}],
+                               'top_donors': [{'donor': 'Bruce Govin',
+                                               'amount': 250.0,
+                                               'type': 'Individual',
+                                               'notes': 'Employer listed as Arrowhead Dental Associates.'},
+                                              {'donor': 'Gun Owners PAC',
+                                               'amount': 250.0,
+                                               'type': 'PAC',
+                                               'notes': 'Named PAC contribution listed in the amended filing.'},
+                                              {'donor': 'Gun Owners PAC',
+                                               'amount': 200.0,
+                                               'type': 'PAC',
+                                               'notes': 'A separate PAC contribution listed in the amended filing.'},
+                                              {'donor': 'Fundraiser donations',
+                                               'amount': 200.0,
+                                               'type': 'Aggregate',
+                                               'notes': 'Aggregate fundraiser donations listed in the amended '
+                                                        'filing.'},
+                                              {'donor': 'PAC contribution',
+                                               'amount': 150.0,
+                                               'type': 'PAC',
+                                               'notes': 'PAC contribution listed in the amended filing.'}],
+                               'spending_categories': [{'title': 'Campaign Expenses',
+                                                        'summary': 'The amended filing reports $314.08 in campaign '
+                                                                   "expenses. The amendment's parsed expenditure "
+                                                                   'schedule does not support a complete '
+                                                                   'category-level allocation, so the official total '
+                                                                   'is retained without guessing.',
+                                                        'amount': 314.08}],
+                               'filing_history': [{'label': 'Q1 2026',
+                                                   'reporting_period_label': 'January 1, 2026 to March 31, 2026',
+                                                   'money_raised': 660.0,
+                                                   'money_spent': 283.92,
+                                                   'ending_cash': 3624.35,
+                                                   'net_change': 376.08,
+                                                   'notes': 'Q1 reported $660.00 in receipts.'},
+                                                  {'label': 'Q2 2026 (amended)',
+                                                   'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                                                   'money_raised': 5580.0,
+                                                   'money_spent': 314.08,
+                                                   'ending_cash': 8890.27,
+                                                   'net_change': 5265.92,
+                                                   'notes': 'The amended filing is used for the standardized main '
+                                                            'display and corrected funding mix.'}]}}
+
+def apply_dimario_valverde_place_morgan_overrides(profile: dict[str, object]) -> dict[str, object]:
+    override = DIMARIO_VALVERDE_PLACE_MORGAN_OVERRIDES.get(str(profile.get("candidate_id", "")))
+    if override:
+        profile.update(override)
+    return profile
+
 def slugify(value: str) -> str:
     text = unicodedata.normalize("NFKD", value or "")
     text = text.encode("ascii", "ignore").decode("ascii")
@@ -3886,6 +4201,7 @@ def main() -> int:
             profile = apply_pearson_thompson_rogers_q2_overrides(profile)
             profile = apply_tikoian_patalano_gallo_q2_overrides(profile)
             profile = apply_latest_senate_q2_overrides(profile)
+            profile = apply_dimario_valverde_place_morgan_overrides(profile)
             profiles.append(profile)
             entry["has_profile"] = True
         directory.append(entry)
