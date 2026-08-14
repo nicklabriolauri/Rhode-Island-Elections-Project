@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-13T11:34:37.697452+00:00",
+  "generated_at": "2026-08-14T12:28:39.180001+00:00",
   "cycle": "2026-q2",
   "directory": [
     {
@@ -1611,7 +1611,7 @@
       "beginning_cash": 0.0,
       "money_raised": 16404.58,
       "money_spent": 0.0,
-      "ending_cash": 0.0,
+      "ending_cash": 23536.69,
       "net_change": 16404.58,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -1632,7 +1632,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 16404.58,
           "money_spent": 0.0,
-          "ending_cash": 0.0,
+          "ending_cash": 23536.69,
           "net_change": 16404.58,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -1660,7 +1660,7 @@
       "beginning_cash": 0.0,
       "money_raised": 1250.0,
       "money_spent": 2476.54,
-      "ending_cash": 0.0,
+      "ending_cash": 22613.87,
       "net_change": -1226.54,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -1681,7 +1681,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 1250.0,
           "money_spent": 2476.54,
-          "ending_cash": 0.0,
+          "ending_cash": 22613.87,
           "net_change": -1226.54,
           "notes": "The campaign spent more than it raised in this reporting period."
         }
@@ -1699,45 +1699,149 @@
       "chamber": "house",
       "district_number": "2",
       "party": "DEM",
-      "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "Q2 2026 campaign finance filing",
+      "report_label": "2026 On-Going Qrtly (2nd)",
       "reporting_period_label": "April 1, 2026 to June 30, 2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website summary captured; quarter not reliably identified",
-      "original_documents": [],
-      "beginning_cash": 0.0,
+      "source_note": "Built from Rhode Island campaign finance filings for the 2026 second quarter.",
+      "original_documents": [
+        {
+          "label": "Q2 2026 CF-2 report",
+          "period": "April 1, 2026 to June 30, 2026",
+          "href": "/data/finance-documents/christopher-r-blazejewski-q2-2026.pdf"
+        }
+      ],
+      "beginning_cash": 458019.78,
       "money_raised": 184079.0,
       "money_spent": 33289.3,
-      "ending_cash": 0.0,
+      "ending_cash": 608809.48,
       "net_change": 150789.7,
-      "total_cash_receipts": 0.0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 33289.3,
-      "summary_intro": "This filing shows the campaign closing the period without reported cash on hand. The report also shows that it raised more during the period than it spent.",
+      "campaign_expenses": 33289.3,
+      "aggregate_expenses": 0.0,
+      "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it raised more during the period than it spent.",
       "filing_history": [
-        {
-          "label": "Q1 2026",
-          "reporting_period_label": "January 1, 2026 to March 31, 2026",
-          "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
-        },
         {
           "label": "Q2 2026",
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 184079.0,
           "money_spent": 33289.3,
-          "ending_cash": 0.0,
+          "ending_cash": 608809.48,
           "net_change": 150789.7,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
       ],
-      "source_buckets": [],
-      "top_donors": [],
-      "spending_categories": [],
+      "source_buckets": [
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 160629.0,
+          "description": "Named contributors reported individually in the filing."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 23450.0,
+          "description": "Political committees and PACs listed in the filing."
+        }
+      ],
+      "top_donors": [
+        {
+          "donor": "Edward P",
+          "amount": 2200.0,
+          "type": "Individual",
+          "notes": "Employer listed as Nolan Jr. Martinous & Associates Ltd."
+        },
+        {
+          "donor": "Kenneth J.",
+          "amount": 2200.0,
+          "type": "Individual",
+          "notes": "Employer listed as Mancini RI Distributing Co., LLC."
+        },
+        {
+          "donor": "Abbe Becker",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Retired."
+        },
+        {
+          "donor": "Anthony Rosciti",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Rosciti Construction."
+        },
+        {
+          "donor": "Brian T",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as McGovern Revity Energy."
+        },
+        {
+          "donor": "Cheryl A",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Rey Employment 2000 Inc.."
+        },
+        {
+          "donor": "Corey J.",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Palumbo Revity Energy."
+        },
+        {
+          "donor": "Danielle Brot",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Bradley Hospital."
+        },
+        {
+          "donor": "Diane Palumbo",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Retired."
+        },
+        {
+          "donor": "Doug Lord",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Behavioral Health Solutions."
+        }
+      ],
+      "spending_categories": [
+        {
+          "title": "Fundraising Expenses",
+          "summary": "Visible spending includes Barclaycard, Checkmate Consulting Group LLC.",
+          "amount": 19822.68
+        },
+        {
+          "title": "Other",
+          "summary": "Visible spending includes Barclaycard.",
+          "amount": 6588.04
+        },
+        {
+          "title": "Food, Beverages and Meals",
+          "summary": "Visible spending includes Barclaycard.",
+          "amount": 5268.64
+        },
+        {
+          "title": "Bank Fees",
+          "summary": "Visible spending includes Citizens Bank, PayPal.",
+          "amount": 844.64
+        },
+        {
+          "title": "Travel & Lodging",
+          "summary": "Visible spending includes Barclaycard.",
+          "amount": 559.8
+        },
+        {
+          "title": "Gifts",
+          "summary": "Visible spending includes Barclaycard.",
+          "amount": 186.0
+        },
+        {
+          "title": "Office Equipment & Supplies",
+          "summary": "Visible spending includes Barclaycard.",
+          "amount": 19.5
+        }
+      ],
       "takeaways": [],
       "explainer_cards": []
     },
@@ -1758,7 +1862,7 @@
       "beginning_cash": 0.0,
       "money_raised": 7800.0,
       "money_spent": 2782.98,
-      "ending_cash": 0.0,
+      "ending_cash": 8614.72,
       "net_change": 5017.02,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -1779,7 +1883,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 7800.0,
           "money_spent": 2782.98,
-          "ending_cash": 0.0,
+          "ending_cash": 8614.72,
           "net_change": 5017.02,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -1807,7 +1911,7 @@
       "beginning_cash": 0.0,
       "money_raised": 7164.0,
       "money_spent": 2650.52,
-      "ending_cash": 0.0,
+      "ending_cash": 43361.42,
       "net_change": 4513.48,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -1828,7 +1932,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 7164.0,
           "money_spent": 2650.52,
-          "ending_cash": 0.0,
+          "ending_cash": 43361.42,
           "net_change": 4513.48,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -1856,7 +1960,7 @@
       "beginning_cash": 0.0,
       "money_raised": 26050.0,
       "money_spent": 2431.49,
-      "ending_cash": 0.0,
+      "ending_cash": 64077.32,
       "net_change": 23618.51,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -1877,7 +1981,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 26050.0,
           "money_spent": 2431.49,
-          "ending_cash": 0.0,
+          "ending_cash": 64077.32,
           "net_change": 23618.51,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -1905,7 +2009,7 @@
       "beginning_cash": 0.0,
       "money_raised": 23200.0,
       "money_spent": 4661.01,
-      "ending_cash": 0.0,
+      "ending_cash": 200557.5,
       "net_change": 18538.99,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -1926,7 +2030,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 23200.0,
           "money_spent": 4661.01,
-          "ending_cash": 0.0,
+          "ending_cash": 200557.5,
           "net_change": 18538.99,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -1954,7 +2058,7 @@
       "beginning_cash": 0.0,
       "money_raised": 2326.0,
       "money_spent": 3577.17,
-      "ending_cash": 0.0,
+      "ending_cash": 5517.48,
       "net_change": -1251.17,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -1975,7 +2079,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 2326.0,
           "money_spent": 3577.17,
-          "ending_cash": 0.0,
+          "ending_cash": 5517.48,
           "net_change": -1251.17,
           "notes": "The campaign spent more than it raised in this reporting period."
         }
@@ -2003,7 +2107,7 @@
       "beginning_cash": 0.0,
       "money_raised": 0.0,
       "money_spent": 30.0,
-      "ending_cash": 0.0,
+      "ending_cash": 165.2,
       "net_change": -30.0,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -2024,7 +2128,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 0.0,
           "money_spent": 30.0,
-          "ending_cash": 0.0,
+          "ending_cash": 165.2,
           "net_change": -30.0,
           "notes": "The campaign spent more than it raised in this reporting period."
         }
@@ -2242,7 +2346,7 @@
       "beginning_cash": 0.0,
       "money_raised": 1065.0,
       "money_spent": 26.24,
-      "ending_cash": 0.0,
+      "ending_cash": 1091.85,
       "net_change": 1038.76,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -2263,7 +2367,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 1065.0,
           "money_spent": 26.24,
-          "ending_cash": 0.0,
+          "ending_cash": 1091.85,
           "net_change": 1038.76,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -2375,7 +2479,7 @@
       "beginning_cash": 0.0,
       "money_raised": 45350.0,
       "money_spent": 16061.17,
-      "ending_cash": 0.0,
+      "ending_cash": 97505.96,
       "net_change": 29288.83,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -2396,7 +2500,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 45350.0,
           "money_spent": 16061.17,
-          "ending_cash": 0.0,
+          "ending_cash": 97505.96,
           "net_change": 29288.83,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -2424,7 +2528,7 @@
       "beginning_cash": 2525.24,
       "money_raised": 6306.0,
       "money_spent": 3874.04,
-      "ending_cash": 5073.76,
+      "ending_cash": 4957.2,
       "net_change": 2431.96,
       "total_cash_receipts": 6306.0,
       "campaign_expenses": 12701.24,
@@ -2445,7 +2549,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 6306.0,
           "money_spent": 3874.04,
-          "ending_cash": 5073.76,
+          "ending_cash": 4957.2,
           "net_change": 2431.96,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -2829,7 +2933,7 @@
       "beginning_cash": 0.0,
       "money_raised": 11210.0,
       "money_spent": 2624.35,
-      "ending_cash": 0.0,
+      "ending_cash": 105102.91,
       "net_change": 8585.65,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -2850,7 +2954,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 11210.0,
           "money_spent": 2624.35,
-          "ending_cash": 0.0,
+          "ending_cash": 105102.91,
           "net_change": 8585.65,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -2976,7 +3080,7 @@
       "beginning_cash": 0.0,
       "money_raised": 12440.0,
       "money_spent": 6396.15,
-      "ending_cash": 0.0,
+      "ending_cash": 28314.7,
       "net_change": 6043.85,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -2997,7 +3101,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 12440.0,
           "money_spent": 6396.15,
-          "ending_cash": 0.0,
+          "ending_cash": 28314.7,
           "net_change": 6043.85,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -4017,7 +4121,7 @@
       "beginning_cash": 7198.56,
       "money_raised": 8825.0,
       "money_spent": 1224.0,
-      "ending_cash": 5974.56,
+      "ending_cash": 14799.56,
       "net_change": 7601.0,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 2448.0,
@@ -4038,7 +4142,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 8825.0,
           "money_spent": 1224.0,
-          "ending_cash": 5974.56,
+          "ending_cash": 14799.56,
           "net_change": 7601.0,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -5495,7 +5599,7 @@
       "beginning_cash": 0.0,
       "money_raised": 7713.39,
       "money_spent": 5417.8,
-      "ending_cash": 0.0,
+      "ending_cash": 70908.0,
       "net_change": 2295.59,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -5516,7 +5620,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 7713.39,
           "money_spent": 5417.8,
-          "ending_cash": 0.0,
+          "ending_cash": 70908.0,
           "net_change": 2295.59,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -5544,7 +5648,7 @@
       "beginning_cash": 15.35,
       "money_raised": 0.0,
       "money_spent": 0.0,
-      "ending_cash": 0.0,
+      "ending_cash": 15.35,
       "net_change": 0.0,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -5565,7 +5669,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 0.0,
           "money_spent": 0.0,
-          "ending_cash": 0.0,
+          "ending_cash": 15.35,
           "net_change": 0.0,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -7404,7 +7508,7 @@
       "beginning_cash": 10.0,
       "money_raised": 0.0,
       "money_spent": 0.0,
-      "ending_cash": 0.0,
+      "ending_cash": 10.0,
       "net_change": 0.0,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -7425,7 +7529,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 0.0,
           "money_spent": 0.0,
-          "ending_cash": 0.0,
+          "ending_cash": 10.0,
           "net_change": 0.0,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -7453,7 +7557,7 @@
       "beginning_cash": 9549.68,
       "money_raised": 2535.0,
       "money_spent": 2959.03,
-      "ending_cash": 9125.65,
+      "ending_cash": 9460.65,
       "net_change": -424.03,
       "total_cash_receipts": 2535.0,
       "campaign_expenses": 8323.76,
@@ -7474,7 +7578,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 2535.0,
           "money_spent": 2959.03,
-          "ending_cash": 9125.65,
+          "ending_cash": 9460.65,
           "net_change": -424.03,
           "notes": "The campaign spent more than it raised in this reporting period."
         }
@@ -7622,7 +7726,7 @@
       "beginning_cash": 0.0,
       "money_raised": 0.0,
       "money_spent": 2150.4,
-      "ending_cash": 0.0,
+      "ending_cash": 7379.6,
       "net_change": -2150.4,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -7643,7 +7747,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 0.0,
           "money_spent": 2150.4,
-          "ending_cash": 0.0,
+          "ending_cash": 7379.6,
           "net_change": -2150.4,
           "notes": "The campaign spent more than it raised in this reporting period."
         }
@@ -8871,7 +8975,7 @@
       "beginning_cash": 51203.73,
       "money_raised": 42695.0,
       "money_spent": 12226.86,
-      "ending_cash": 81471.87,
+      "ending_cash": 81421.87,
       "net_change": 30468.14,
       "total_cash_receipts": 42495.0,
       "campaign_expenses": 29527.66,
@@ -8892,7 +8996,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 42695.0,
           "money_spent": 12226.86,
-          "ending_cash": 81471.87,
+          "ending_cash": 81421.87,
           "net_change": 30468.14,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -9010,7 +9114,7 @@
       "beginning_cash": 2424.46,
       "money_raised": 1000.0,
       "money_spent": 3429.98,
-      "ending_cash": 0.0,
+      "ending_cash": 2424.46,
       "net_change": -2429.98,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -9031,7 +9135,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 1000.0,
           "money_spent": 3429.98,
-          "ending_cash": 0.0,
+          "ending_cash": 2424.46,
           "net_change": -2429.98,
           "notes": "The campaign spent more than it raised in this reporting period."
         }
@@ -9296,7 +9400,7 @@
       "beginning_cash": 0.0,
       "money_raised": 14159.0,
       "money_spent": 4840.35,
-      "ending_cash": 0.0,
+      "ending_cash": 62931.06,
       "net_change": 9318.65,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -9317,7 +9421,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 14159.0,
           "money_spent": 4840.35,
-          "ending_cash": 0.0,
+          "ending_cash": 62931.06,
           "net_change": 9318.65,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -9443,7 +9547,7 @@
       "beginning_cash": 0.0,
       "money_raised": 7154.01,
       "money_spent": 4055.89,
-      "ending_cash": 0.0,
+      "ending_cash": 7691.98,
       "net_change": 3098.12,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -9464,7 +9568,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 7154.01,
           "money_spent": 4055.89,
-          "ending_cash": 0.0,
+          "ending_cash": 7691.98,
           "net_change": 3098.12,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -9492,12 +9596,12 @@
       "beginning_cash": 0.0,
       "money_raised": 133184.26,
       "money_spent": 34943.66,
-      "ending_cash": 0.0,
+      "ending_cash": 270340.41,
       "net_change": 98240.6,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
       "aggregate_expenses": 34943.66,
-      "summary_intro": "This filing shows the campaign closing the period without reported cash on hand. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "This filing shows the campaign closing the period with $270,340.41 in reported cash on hand. The report also shows that it raised more during the period than it spent.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -9513,7 +9617,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 133184.26,
           "money_spent": 34943.66,
-          "ending_cash": 0.0,
+          "ending_cash": 270340.41,
           "net_change": 98240.6,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -9958,7 +10062,7 @@
       "beginning_cash": 0.0,
       "money_raised": 6431.74,
       "money_spent": 1476.88,
-      "ending_cash": 0.0,
+      "ending_cash": 74284.69,
       "net_change": 4954.86,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -9979,7 +10083,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 6431.74,
           "money_spent": 1476.88,
-          "ending_cash": 0.0,
+          "ending_cash": 74284.69,
           "net_change": 4954.86,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -10007,7 +10111,7 @@
       "beginning_cash": 0.0,
       "money_raised": 240.0,
       "money_spent": 564.7,
-      "ending_cash": 0.0,
+      "ending_cash": 2248.38,
       "net_change": -324.7,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -10028,7 +10132,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 240.0,
           "money_spent": 564.7,
-          "ending_cash": 0.0,
+          "ending_cash": 2248.38,
           "net_change": -324.7,
           "notes": "The campaign spent more than it raised in this reporting period."
         }
@@ -10392,7 +10496,7 @@
       "beginning_cash": 54390.74,
       "money_raised": 13941.96,
       "money_spent": 3283.29,
-      "ending_cash": 65059.41,
+      "ending_cash": 65049.41,
       "net_change": 10658.67,
       "total_cash_receipts": 14191.96,
       "campaign_expenses": 9086.66,
@@ -10413,7 +10517,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 13941.96,
           "money_spent": 3283.29,
-          "ending_cash": 65059.41,
+          "ending_cash": 65049.41,
           "net_change": 10658.67,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -10485,7 +10589,7 @@
       "beginning_cash": 0.0,
       "money_raised": 67263.98,
       "money_spent": 24918.9,
-      "ending_cash": 0.0,
+      "ending_cash": 336650.61,
       "net_change": 42345.08,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -10506,7 +10610,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 67263.98,
           "money_spent": 24918.9,
-          "ending_cash": 0.0,
+          "ending_cash": 336650.61,
           "net_change": 42345.08,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -10534,7 +10638,7 @@
       "beginning_cash": 0.0,
       "money_raised": 5180.0,
       "money_spent": 2907.4,
-      "ending_cash": 0.0,
+      "ending_cash": 50623.4,
       "net_change": 2272.6,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -10555,7 +10659,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 5180.0,
           "money_spent": 2907.4,
-          "ending_cash": 0.0,
+          "ending_cash": 50623.4,
           "net_change": 2272.6,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -10583,7 +10687,7 @@
       "beginning_cash": 13576.64,
       "money_raised": 1840.0,
       "money_spent": 5198.04,
-      "ending_cash": 10218.6,
+      "ending_cash": 9869.68,
       "net_change": -3358.04,
       "total_cash_receipts": 1840.0,
       "campaign_expenses": 12629.24,
@@ -10604,7 +10708,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 1840.0,
           "money_spent": 5198.04,
-          "ending_cash": 10218.6,
+          "ending_cash": 9869.68,
           "net_change": -3358.04,
           "notes": "The campaign spent more than it raised in this reporting period."
         }
@@ -11050,7 +11154,7 @@
       "beginning_cash": 0.0,
       "money_raised": 11383.47,
       "money_spent": 4070.62,
-      "ending_cash": 0.0,
+      "ending_cash": 18631.07,
       "net_change": 7312.85,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -11071,7 +11175,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 11383.47,
           "money_spent": 4070.62,
-          "ending_cash": 0.0,
+          "ending_cash": 18631.07,
           "net_change": 7312.85,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -11369,7 +11473,7 @@
       "beginning_cash": 0.0,
       "money_raised": 588.61,
       "money_spent": 277758.42,
-      "ending_cash": 0.0,
+      "ending_cash": 67857.16,
       "net_change": -277169.81,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -11390,7 +11494,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 588.61,
           "money_spent": 277758.42,
-          "ending_cash": 0.0,
+          "ending_cash": 67857.16,
           "net_change": -277169.81,
           "notes": "The campaign spent more than it raised in this reporting period."
         }
@@ -11418,7 +11522,7 @@
       "beginning_cash": 0.0,
       "money_raised": 12600.0,
       "money_spent": 3312.99,
-      "ending_cash": 0.0,
+      "ending_cash": 32283.34,
       "net_change": 9287.01,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -11439,7 +11543,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 12600.0,
           "money_spent": 3312.99,
-          "ending_cash": 0.0,
+          "ending_cash": 32283.34,
           "net_change": 9287.01,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -11467,7 +11571,7 @@
       "beginning_cash": 0.0,
       "money_raised": 10615.0,
       "money_spent": 2241.03,
-      "ending_cash": 0.0,
+      "ending_cash": 37145.78,
       "net_change": 8373.97,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -11488,7 +11592,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 10615.0,
           "money_spent": 2241.03,
-          "ending_cash": 0.0,
+          "ending_cash": 37145.78,
           "net_change": 8373.97,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -11516,7 +11620,7 @@
       "beginning_cash": 0.0,
       "money_raised": 15725.0,
       "money_spent": 2087.2,
-      "ending_cash": 0.0,
+      "ending_cash": 307059.99,
       "net_change": 13637.8,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -11537,7 +11641,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 15725.0,
           "money_spent": 2087.2,
-          "ending_cash": 0.0,
+          "ending_cash": 307059.99,
           "net_change": 13637.8,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -11798,7 +11902,7 @@
       "beginning_cash": 0.0,
       "money_raised": 48825.0,
       "money_spent": 14531.55,
-      "ending_cash": 0.0,
+      "ending_cash": 43871.41,
       "net_change": 34293.45,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -11819,7 +11923,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 48825.0,
           "money_spent": 14531.55,
-          "ending_cash": 0.0,
+          "ending_cash": 43871.41,
           "net_change": 34293.45,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -11847,7 +11951,7 @@
       "beginning_cash": 0.0,
       "money_raised": 6221.83,
       "money_spent": 5733.6,
-      "ending_cash": 0.0,
+      "ending_cash": 123323.44,
       "net_change": 488.23,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -11868,7 +11972,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 6221.83,
           "money_spent": 5733.6,
-          "ending_cash": 0.0,
+          "ending_cash": 123323.44,
           "net_change": 488.23,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -11896,7 +12000,7 @@
       "beginning_cash": 0.0,
       "money_raised": 38825.0,
       "money_spent": 11442.74,
-      "ending_cash": 0.0,
+      "ending_cash": 195600.05,
       "net_change": 27382.26,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -11917,7 +12021,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 38825.0,
           "money_spent": 11442.74,
-          "ending_cash": 0.0,
+          "ending_cash": 195600.05,
           "net_change": 27382.26,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -11945,7 +12049,7 @@
       "beginning_cash": 0.0,
       "money_raised": 3361.0,
       "money_spent": 2315.5,
-      "ending_cash": 0.0,
+      "ending_cash": 31350.05,
       "net_change": 1045.5,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -11966,7 +12070,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 3361.0,
           "money_spent": 2315.5,
-          "ending_cash": 0.0,
+          "ending_cash": 31350.05,
           "net_change": 1045.5,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -11994,7 +12098,7 @@
       "beginning_cash": 0.0,
       "money_raised": 3922.95,
       "money_spent": 13.67,
-      "ending_cash": 0.0,
+      "ending_cash": 41265.18,
       "net_change": 3909.28,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -12015,7 +12119,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 3922.95,
           "money_spent": 13.67,
-          "ending_cash": 0.0,
+          "ending_cash": 41265.18,
           "net_change": 3909.28,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -12043,7 +12147,7 @@
       "beginning_cash": 34146.39,
       "money_raised": 19455.0,
       "money_spent": 5930.29,
-      "ending_cash": 47921.1,
+      "ending_cash": 47671.1,
       "net_change": 13524.71,
       "total_cash_receipts": 19455.0,
       "campaign_expenses": 14513.58,
@@ -12064,7 +12168,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 19455.0,
           "money_spent": 5930.29,
-          "ending_cash": 47921.1,
+          "ending_cash": 47671.1,
           "net_change": 13524.71,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -12146,7 +12250,7 @@
       "beginning_cash": 0.0,
       "money_raised": 8750.0,
       "money_spent": 11578.47,
-      "ending_cash": 0.0,
+      "ending_cash": 106740.44,
       "net_change": -2828.47,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -12167,7 +12271,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 8750.0,
           "money_spent": 11578.47,
-          "ending_cash": 0.0,
+          "ending_cash": 106740.44,
           "net_change": -2828.47,
           "notes": "The campaign spent more than it raised in this reporting period."
         }
@@ -12195,7 +12299,7 @@
       "beginning_cash": 0.0,
       "money_raised": 6347.0,
       "money_spent": 1675.21,
-      "ending_cash": 0.0,
+      "ending_cash": 31502.63,
       "net_change": 4671.79,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -12216,7 +12320,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 6347.0,
           "money_spent": 1675.21,
-          "ending_cash": 0.0,
+          "ending_cash": 31502.63,
           "net_change": 4671.79,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -12244,7 +12348,7 @@
       "beginning_cash": 0.0,
       "money_raised": 0.0,
       "money_spent": 0.0,
-      "ending_cash": 0.0,
+      "ending_cash": 6.39,
       "net_change": 0.0,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -12265,7 +12369,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 0.0,
           "money_spent": 0.0,
-          "ending_cash": 0.0,
+          "ending_cash": 6.39,
           "net_change": 0.0,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -12293,7 +12397,7 @@
       "beginning_cash": 0.0,
       "money_raised": 22314.17,
       "money_spent": 10883.92,
-      "ending_cash": 0.0,
+      "ending_cash": 51672.75,
       "net_change": 11430.25,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -12314,7 +12418,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 22314.17,
           "money_spent": 10883.92,
-          "ending_cash": 0.0,
+          "ending_cash": 51672.75,
           "net_change": 11430.25,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -12342,7 +12446,7 @@
       "beginning_cash": 0.0,
       "money_raised": 5580.0,
       "money_spent": 314.08,
-      "ending_cash": 0.0,
+      "ending_cash": 8890.27,
       "net_change": 5265.92,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -12363,7 +12467,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 5580.0,
           "money_spent": 314.08,
-          "ending_cash": 0.0,
+          "ending_cash": 8890.27,
           "net_change": 5265.92,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -12447,7 +12551,7 @@
       "beginning_cash": 0.0,
       "money_raised": 7844.0,
       "money_spent": 1085.92,
-      "ending_cash": 0.0,
+      "ending_cash": 47947.8,
       "net_change": 6758.08,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -12468,7 +12572,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 7844.0,
           "money_spent": 1085.92,
-          "ending_cash": 0.0,
+          "ending_cash": 47947.8,
           "net_change": 6758.08,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
@@ -12496,7 +12600,7 @@
       "beginning_cash": 0.0,
       "money_raised": 14932.0,
       "money_spent": 15861.07,
-      "ending_cash": 0.0,
+      "ending_cash": 44545.71,
       "net_change": -929.07,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -12517,7 +12621,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 14932.0,
           "money_spent": 15861.07,
-          "ending_cash": 0.0,
+          "ending_cash": 44545.71,
           "net_change": -929.07,
           "notes": "The campaign spent more than it raised in this reporting period."
         }
@@ -12869,7 +12973,7 @@
       "beginning_cash": 0.0,
       "money_raised": 0.0,
       "money_spent": 0.0,
-      "ending_cash": 0.0,
+      "ending_cash": 609.06,
       "net_change": 0.0,
       "total_cash_receipts": 0.0,
       "campaign_expenses": 0,
@@ -12890,7 +12994,7 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 0.0,
           "money_spent": 0.0,
-          "ending_cash": 0.0,
+          "ending_cash": 609.06,
           "net_change": 0.0,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
