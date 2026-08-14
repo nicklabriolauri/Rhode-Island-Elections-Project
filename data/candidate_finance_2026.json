@@ -10091,20 +10091,20 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Senator",
-      "report_label": "2026 filing through August 11",
-      "reporting_period_label": "July 1, 2026 to August 11, 2026",
-      "source_note": "RI Board of Elections filing covering July 1, 2026 through August 11, 2026",
-      "coverage_note": "The profile now uses Bell's latest uploaded filing, covering July 1 through August 11, 2026. Q1 and Q2 2026 remain in filing history.",
+      "report_label": "Q2 2026 campaign finance filing",
+      "reporting_period_label": "April 1, 2026 to June 30, 2026",
+      "source_note": "RI Board of Elections Q2 2026 CF-2 / CF-3 / CF-4 filing",
+      "coverage_note": "Q2 2026 is used as the main display period for comparability across candidates. Bell's later July 1–August 11 filing is retained in filing history but does not replace the Q2 headline.",
       "original_documents": [],
-      "beginning_cash": 62931.06,
-      "money_raised": 3668.0,
-      "money_spent": 7548.69,
-      "ending_cash": 59050.37,
-      "net_change": -3880.69,
-      "total_cash_receipts": 3668.0,
-      "campaign_expenses": 7548.69,
-      "aggregate_expenses": 0.0,
-      "summary_intro": "Samuel W Bell's latest uploaded filing covers July 1 through August 11, 2026. It reports $3,668.00 in receipts, including $3,618.00 from individuals and $50.00 from a PAC. The campaign reported $7,548.69 in expenses and closed the period with $59,050.37 in cash on hand.",
+      "beginning_cash": 53612.41,
+      "money_raised": 14159.0,
+      "money_spent": 4840.35,
+      "ending_cash": 62931.06,
+      "net_change": 9318.65,
+      "total_cash_receipts": 14159.0,
+      "campaign_expenses": 4371.58,
+      "aggregate_expenses": 468.77,
+      "summary_intro": "Samuel W Bell's Q2 2026 filing reports $14,159.00 in receipts, including $13,159.00 from individuals and $1,000.00 from PACs. The campaign reported $4,840.35 in total spending and closed the period with $62,931.06 in cash on hand.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -10122,7 +10122,7 @@
           "money_spent": 4840.35,
           "ending_cash": 62931.06,
           "net_change": 9318.65,
-          "notes": "Q2 reported $13,159 from individuals and $1,000 from PACs. The attached CF-3 contributor schedule contains no named donor entries."
+          "notes": "Q2 is the standardized main display period. Named Q2 donors and detailed spending are available."
         },
         {
           "label": "July 1–August 11, 2026",
@@ -10138,28 +10138,40 @@
         {
           "label": "Itemized individual donors",
           "class_name": "itemized-individual-donors",
-          "amount": 3618.0,
-          "description": "Named individual contributions reported in the July 1–August 11 filing."
+          "amount": 13159.0,
+          "description": "Named individual contributions reported in Bell's Q2 2026 filing."
         },
         {
           "label": "PAC contributions",
           "class_name": "pac-contributions",
-          "amount": 50.0,
-          "description": "PAC contribution reported in the July 1–August 11 filing."
+          "amount": 1000.0,
+          "description": "Political action committee contributions reported in Bell's Q2 2026 filing."
         }
       ],
       "top_donors": [
         {
-          "donor": "Olin Thompson",
-          "amount": 1000.0,
+          "donor": "Samuel W Bell",
+          "amount": 2000.0,
           "type": "Individual",
-          "notes": "Named individual contribution listed in the 07/01/2026–08/11/2026 filing."
+          "notes": "Candidate contribution listed in the Q2 filing; employer listed as Planetary Science Institute."
         },
         {
-          "donor": "Anne De Groot",
-          "amount": 500.0,
+          "donor": "Samantha Weiser",
+          "amount": 2000.0,
           "type": "Individual",
-          "notes": "Employer listed as EVA Therapeutics."
+          "notes": "Employer listed as CreXo."
+        },
+        {
+          "donor": "Daniel Abram",
+          "amount": 1950.0,
+          "type": "Individual",
+          "notes": "Named individual contribution listed in the Q2 filing."
+        },
+        {
+          "donor": "Carolyn Weiser",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Granby Public Schools."
         },
         {
           "donor": "Val Lawson",
@@ -10168,10 +10180,22 @@
           "notes": "Employer listed as NEA RI."
         },
         {
-          "donor": "Russ Mayerfeld",
+          "donor": "Richard St Germain",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Named individual contribution listed in the Q2 filing."
+        },
+        {
+          "donor": "Brian Heller",
+          "amount": 300.0,
+          "type": "Individual",
+          "notes": "Named individual contribution listed in the Q2 filing."
+        },
+        {
+          "donor": "Louis DiPalma",
           "amount": 250.0,
           "type": "Individual",
-          "notes": "Named individual contribution listed in the filing."
+          "notes": "Employer listed as Raytheon."
         },
         {
           "donor": "Francis Richards",
@@ -10180,51 +10204,42 @@
           "notes": "Employer listed as retired."
         },
         {
-          "donor": "David Stuebe",
-          "amount": 218.0,
-          "type": "Individual",
-          "notes": "Two contributions in the filing ($200 and $18); employer listed as RPS ASA."
-        },
-        {
-          "donor": "Daria Brashear",
-          "amount": 100.0,
-          "type": "Individual",
-          "notes": "Employer listed as AuriStor, Inc."
-        },
-        {
-          "donor": "John Chamblee",
-          "amount": 100.0,
-          "type": "Individual",
-          "notes": "Employer listed as Amica Inc."
-        },
-        {
-          "donor": "Brooke Churas",
-          "amount": 100.0,
-          "type": "Individual",
-          "notes": "Employer listed as Sunrise Properties."
-        },
-        {
-          "donor": "Keith Fernandes",
-          "amount": 100.0,
-          "type": "Individual",
-          "notes": "Employer listed as self employed."
+          "donor": "United Food & Commercial Workers Union Local 328 RI PAC",
+          "amount": 250.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the Q2 filing."
         }
       ],
       "spending_categories": [
         {
           "title": "Consultant & Professional Services",
-          "summary": "Visible spending includes Capri Catanzaro for campaign management and Oscar Pearlman for canvassing.",
-          "amount": 5100.0
+          "summary": "Visible spending includes Capri Catanzaro for campaign management.",
+          "amount": 1800.0
+        },
+        {
+          "title": "Other",
+          "summary": "Visible spending includes Signrocket yard signs and an Elmhurst Youth Baseball sponsorship.",
+          "amount": 1625.0
         },
         {
           "title": "Advertising",
-          "summary": "Visible spending includes Signrocket yard signs.",
-          "amount": 1382.5
+          "summary": "Aggregate ActBlue fees reported as advertising on the Q2 expenditure schedule.",
+          "amount": 468.77
+        },
+        {
+          "title": "Donations (Political)",
+          "summary": "Visible spending includes two contributions to Friends of Amy Santiago.",
+          "amount": 350.0
+        },
+        {
+          "title": "Food, Beverages and Meals",
+          "summary": "Visible spending includes Patrick's Pub for fundraiser food.",
+          "amount": 307.2
         },
         {
           "title": "Refunds/Reimbursements",
-          "summary": "Visible spending includes an over-limit contribution refund to Olin Thompson and smaller reimbursements.",
-          "amount": 1066.19
+          "summary": "Visible spending includes reimbursement to Henry Perretta for a stamp purchase.",
+          "amount": 289.38
         }
       ],
       "takeaways": [],

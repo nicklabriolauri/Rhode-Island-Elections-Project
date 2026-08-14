@@ -465,6 +465,120 @@ def apply_bell_dimitri_followup_overrides(profile: dict[str, object]) -> dict[st
     profile.update(override)
     return profile
 
+
+# Final standardized main-display override for Samuel W. Bell.
+# Q2 2026 remains the headline period for comparability; later primary-period filings stay in filing history.
+SAMUEL_BELL_Q2_MAIN_OVERRIDE = {'report_label': 'Q2 2026 campaign finance filing',
+ 'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+ 'source_note': 'RI Board of Elections Q2 2026 CF-2 / CF-3 / CF-4 filing',
+ 'coverage_note': "Q2 2026 is used as the main display period for comparability across candidates. Bell's later July "
+                  '1–August 11 filing is retained in filing history but does not replace the Q2 headline.',
+ 'beginning_cash': 53612.41,
+ 'money_raised': 14159.0,
+ 'money_spent': 4840.35,
+ 'ending_cash': 62931.06,
+ 'net_change': 9318.65,
+ 'total_cash_receipts': 14159.0,
+ 'campaign_expenses': 4371.58,
+ 'aggregate_expenses': 468.77,
+ 'summary_intro': "Samuel W Bell's Q2 2026 filing reports $14,159.00 in receipts, including $13,159.00 from "
+                  'individuals and $1,000.00 from PACs. The campaign reported $4,840.35 in total spending and closed '
+                  'the period with $62,931.06 in cash on hand.',
+ 'source_buckets': [{'label': 'Itemized individual donors',
+                     'class_name': 'itemized-individual-donors',
+                     'amount': 13159.0,
+                     'description': "Named individual contributions reported in Bell's Q2 2026 filing."},
+                    {'label': 'PAC contributions',
+                     'class_name': 'pac-contributions',
+                     'amount': 1000.0,
+                     'description': "Political action committee contributions reported in Bell's Q2 2026 filing."}],
+ 'top_donors': [{'donor': 'Samuel W Bell',
+                 'amount': 2000.0,
+                 'type': 'Individual',
+                 'notes': 'Candidate contribution listed in the Q2 filing; employer listed as Planetary Science '
+                          'Institute.'},
+                {'donor': 'Samantha Weiser',
+                 'amount': 2000.0,
+                 'type': 'Individual',
+                 'notes': 'Employer listed as CreXo.'},
+                {'donor': 'Daniel Abram',
+                 'amount': 1950.0,
+                 'type': 'Individual',
+                 'notes': 'Named individual contribution listed in the Q2 filing.'},
+                {'donor': 'Carolyn Weiser',
+                 'amount': 1000.0,
+                 'type': 'Individual',
+                 'notes': 'Employer listed as Granby Public Schools.'},
+                {'donor': 'Val Lawson', 'amount': 500.0, 'type': 'Individual', 'notes': 'Employer listed as NEA RI.'},
+                {'donor': 'Richard St Germain',
+                 'amount': 500.0,
+                 'type': 'Individual',
+                 'notes': 'Named individual contribution listed in the Q2 filing.'},
+                {'donor': 'Brian Heller',
+                 'amount': 300.0,
+                 'type': 'Individual',
+                 'notes': 'Named individual contribution listed in the Q2 filing.'},
+                {'donor': 'Louis DiPalma',
+                 'amount': 250.0,
+                 'type': 'Individual',
+                 'notes': 'Employer listed as Raytheon.'},
+                {'donor': 'Francis Richards',
+                 'amount': 250.0,
+                 'type': 'Individual',
+                 'notes': 'Employer listed as retired.'},
+                {'donor': 'United Food & Commercial Workers Union Local 328 RI PAC',
+                 'amount': 250.0,
+                 'type': 'PAC',
+                 'notes': 'Named PAC contribution listed in the Q2 filing.'}],
+ 'spending_categories': [{'title': 'Consultant & Professional Services',
+                          'summary': 'Visible spending includes Capri Catanzaro for campaign management.',
+                          'amount': 1800.0},
+                         {'title': 'Other',
+                          'summary': 'Visible spending includes Signrocket yard signs and an Elmhurst Youth Baseball '
+                                     'sponsorship.',
+                          'amount': 1625.0},
+                         {'title': 'Advertising',
+                          'summary': 'Aggregate ActBlue fees reported as advertising on the Q2 expenditure schedule.',
+                          'amount': 468.77},
+                         {'title': 'Donations (Political)',
+                          'summary': 'Visible spending includes two contributions to Friends of Amy Santiago.',
+                          'amount': 350.0},
+                         {'title': 'Food, Beverages and Meals',
+                          'summary': "Visible spending includes Patrick's Pub for fundraiser food.",
+                          'amount': 307.2},
+                         {'title': 'Refunds/Reimbursements',
+                          'summary': 'Visible spending includes reimbursement to Henry Perretta for a stamp '
+                                     'purchase.',
+                          'amount': 289.38}],
+ 'filing_history': [{'label': 'Q1 2026',
+                     'reporting_period_label': 'January 1, 2026 to March 31, 2026',
+                     'money_raised': 7079.0,
+                     'money_spent': 675.11,
+                     'ending_cash': 53612.41,
+                     'net_change': 6403.89,
+                     'notes': 'Q1 reported $6,879 from individuals and $200 from PACs.'},
+                    {'label': 'Q2 2026',
+                     'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                     'money_raised': 14159.0,
+                     'money_spent': 4840.35,
+                     'ending_cash': 62931.06,
+                     'net_change': 9318.65,
+                     'notes': 'Q2 is the standardized main display period. Named Q2 donors and detailed spending are '
+                              'available.'},
+                    {'label': 'July 1–August 11, 2026',
+                     'reporting_period_label': 'July 1, 2026 to August 11, 2026',
+                     'money_raised': 3668.0,
+                     'money_spent': 7548.69,
+                     'ending_cash': 59050.37,
+                     'net_change': -3880.69,
+                     'notes': 'Latest uploaded filing; includes named donors and a $50 PAC contribution.'}]}
+
+def apply_samuel_bell_q2_main_override(profile: dict[str, object]) -> dict[str, object]:
+    if str(profile.get("candidate_id", "")) != "senate-5-samuel-w-bell":
+        return profile
+    profile.update(SAMUEL_BELL_Q2_MAIN_OVERRIDE)
+    return profile
+
 def slugify(value: str) -> str:
     text = unicodedata.normalize("NFKD", value or "")
     text = text.encode("ascii", "ignore").decode("ascii")
@@ -1906,6 +2020,7 @@ def main() -> int:
             profile = apply_andrew_dimitri_detail_override(profile)
             profile = apply_quezada_bell_profile_overrides(profile)
             profile = apply_bell_dimitri_followup_overrides(profile)
+            profile = apply_samuel_bell_q2_main_override(profile)
             profiles.append(profile)
             entry["has_profile"] = True
         directory.append(entry)
