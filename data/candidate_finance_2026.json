@@ -10091,20 +10091,20 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Senator",
-      "report_label": "Q2 2026 campaign finance filing",
-      "reporting_period_label": "April 1, 2026 to June 30, 2026",
-      "source_note": "RI Board of Elections Q1 and Q2 2026 CF-2 / CF-3 / CF-4 filings",
-      "coverage_note": "Q1 and Q2 2026 filings available. The Q2 CF-2 reports $13,159 from individuals and $1,000 from PACs, but the attached CF-3 contributor schedule does not list individual donor names.",
+      "report_label": "2026 filing through August 11",
+      "reporting_period_label": "July 1, 2026 to August 11, 2026",
+      "source_note": "RI Board of Elections filing covering July 1, 2026 through August 11, 2026",
+      "coverage_note": "The profile now uses Bell's latest uploaded filing, covering July 1 through August 11, 2026. Q1 and Q2 2026 remain in filing history.",
       "original_documents": [],
-      "beginning_cash": 53612.41,
-      "money_raised": 14159.0,
-      "money_spent": 4840.35,
-      "ending_cash": 62931.06,
-      "net_change": 9318.65,
-      "total_cash_receipts": 14159.0,
-      "campaign_expenses": 4840.35,
+      "beginning_cash": 62931.06,
+      "money_raised": 3668.0,
+      "money_spent": 7548.69,
+      "ending_cash": 59050.37,
+      "net_change": -3880.69,
+      "total_cash_receipts": 3668.0,
+      "campaign_expenses": 7548.69,
       "aggregate_expenses": 0.0,
-      "summary_intro": "Samuel W Bell's Q2 2026 filing reports $14,159.00 in receipts, including $13,159.00 from individuals and $1,000.00 from PACs. The campaign reported $4,840.35 in campaign expenses and closed the period with $62,931.06 in cash on hand.",
+      "summary_intro": "Samuel W Bell's latest uploaded filing covers July 1 through August 11, 2026. It reports $3,668.00 in receipts, including $3,618.00 from individuals and $50.00 from a PAC. The campaign reported $7,548.69 in expenses and closed the period with $59,050.37 in cash on hand.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -10123,33 +10123,108 @@
           "ending_cash": 62931.06,
           "net_change": 9318.65,
           "notes": "Q2 reported $13,159 from individuals and $1,000 from PACs. The attached CF-3 contributor schedule contains no named donor entries."
+        },
+        {
+          "label": "July 1–August 11, 2026",
+          "reporting_period_label": "July 1, 2026 to August 11, 2026",
+          "money_raised": 3668.0,
+          "money_spent": 7548.69,
+          "ending_cash": 59050.37,
+          "net_change": -3880.69,
+          "notes": "Latest uploaded filing; includes named donors and a $50 PAC contribution."
         }
       ],
       "source_buckets": [
         {
           "label": "Itemized individual donors",
           "class_name": "itemized-individual-donors",
-          "amount": 13159.0,
-          "description": "The Q2 CF-2 summary reports $13,159.00 from individuals. The attached CF-3 contributor schedule does not display named donor entries."
+          "amount": 3618.0,
+          "description": "Named individual contributions reported in the July 1–August 11 filing."
         },
         {
           "label": "PAC contributions",
           "class_name": "pac-contributions",
-          "amount": 1000.0,
-          "description": "The Q2 CF-2 summary reports $1,000.00 from political action committees. The attached CF-3 contributor schedule does not display named PAC entries."
+          "amount": 50.0,
+          "description": "PAC contribution reported in the July 1–August 11 filing."
         }
       ],
-      "top_donors": [],
-      "spending_categories": [
+      "top_donors": [
         {
-          "title": "Bank Fees",
-          "summary": "The Q2 CF-4 schedule lists an ActBlue bank-fee entry of $468.77.",
-          "amount": 468.77
+          "donor": "Olin Thompson",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Named individual contribution listed in the 07/01/2026–08/11/2026 filing."
         },
         {
-          "title": "Other campaign expenses not itemized on attached CF-4",
-          "summary": "The Q2 CF-2 reports $4,840.35 in total campaign expenses, while the attached CF-4 page itemizes only the $468.77 ActBlue bank-fee entry. The remainder is shown separately rather than assigned to an unsupported category.",
-          "amount": 4371.58
+          "donor": "Anne De Groot",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as EVA Therapeutics."
+        },
+        {
+          "donor": "Val Lawson",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as NEA RI."
+        },
+        {
+          "donor": "Russ Mayerfeld",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Named individual contribution listed in the filing."
+        },
+        {
+          "donor": "Francis Richards",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as retired."
+        },
+        {
+          "donor": "David Stuebe",
+          "amount": 218.0,
+          "type": "Individual",
+          "notes": "Two contributions in the filing ($200 and $18); employer listed as RPS ASA."
+        },
+        {
+          "donor": "Daria Brashear",
+          "amount": 100.0,
+          "type": "Individual",
+          "notes": "Employer listed as AuriStor, Inc."
+        },
+        {
+          "donor": "John Chamblee",
+          "amount": 100.0,
+          "type": "Individual",
+          "notes": "Employer listed as Amica Inc."
+        },
+        {
+          "donor": "Brooke Churas",
+          "amount": 100.0,
+          "type": "Individual",
+          "notes": "Employer listed as Sunrise Properties."
+        },
+        {
+          "donor": "Keith Fernandes",
+          "amount": 100.0,
+          "type": "Individual",
+          "notes": "Employer listed as self employed."
+        }
+      ],
+      "spending_categories": [
+        {
+          "title": "Consultant & Professional Services",
+          "summary": "Visible spending includes Capri Catanzaro for campaign management and Oscar Pearlman for canvassing.",
+          "amount": 5100.0
+        },
+        {
+          "title": "Advertising",
+          "summary": "Visible spending includes Signrocket yard signs.",
+          "amount": 1382.5
+        },
+        {
+          "title": "Refunds/Reimbursements",
+          "summary": "Visible spending includes an over-limit contribution refund to Olin Thompson and smaller reimbursements.",
+          "amount": 1066.19
         }
       ],
       "takeaways": [],
@@ -12681,7 +12756,7 @@
       "report_label": "Q2 2026 campaign finance filing",
       "reporting_period_label": "April 1, 2026 to June 30, 2026",
       "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website summary captured; quarter not reliably identified",
+      "coverage_note": "Q1 and Q2 2026 filings available. The profile headline and Top Donors/Funding Mix/Spending Breakdown continue to use Q2; Q1 details are retained in filing history.",
       "original_documents": [],
       "beginning_cash": 0.0,
       "money_raised": 48825.0,
@@ -12696,11 +12771,42 @@
         {
           "label": "Q1 2026",
           "reporting_period_label": "January 1, 2026 to March 31, 2026",
-          "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "money_raised": 450.0,
+          "money_spent": 1482.84,
+          "ending_cash": 9577.96,
+          "net_change": -1032.84,
+          "notes": "Q1 receipts consisted of $450.00 in interest from Washington Trust. Q1 expenses were $1,482.84.",
+          "source_buckets": [
+            {
+              "label": "Other reported sources",
+              "class_name": "other-reported-sources",
+              "amount": 450.0,
+              "description": "Interest received from Washington Trust during Q1 2026."
+            }
+          ],
+          "top_donors": [],
+          "spending_categories": [
+            {
+              "title": "Consultant & Professional Services",
+              "summary": "Visible spending includes Checkmate Consulting Group, LLC.",
+              "amount": 1259.41
+            },
+            {
+              "title": "Food, Beverages and Meals",
+              "summary": "Visible spending includes Capital Grille for a meeting with representatives.",
+              "amount": 176.88
+            },
+            {
+              "title": "Fundraising Expenses",
+              "summary": "Visible spending includes Market Basket for coffee and pastry for a fundraiser.",
+              "amount": 44.12
+            },
+            {
+              "title": "Bank Fees",
+              "summary": "Visible spending includes ActBlue.",
+              "amount": 2.43
+            }
+          ]
         },
         {
           "label": "Q2 2026",

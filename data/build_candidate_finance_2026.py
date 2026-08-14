@@ -290,6 +290,181 @@ def apply_quezada_bell_profile_overrides(profile: dict[str, object]) -> dict[str
     profile.update(override)
     return profile
 
+
+# Manual follow-up overrides:
+# - Samuel W. Bell latest uploaded filing (07/01/2026–08/11/2026), including named donors.
+# - Andrew R. Dimitri Q1 filing added to filing history.
+BELL_DIMITRI_FOLLOWUP_OVERRIDES = {'senate-25-andrew-r-dimitri': {'filing_history': [{'label': 'Q1 2026',
+                                                    'reporting_period_label': 'January 1, 2026 to March 31, 2026',
+                                                    'money_raised': 450.0,
+                                                    'money_spent': 1482.84,
+                                                    'ending_cash': 9577.96,
+                                                    'net_change': -1032.84,
+                                                    'notes': 'Q1 receipts consisted of $450.00 in interest from '
+                                                             'Washington Trust. Q1 expenses were $1,482.84.',
+                                                    'source_buckets': [{'label': 'Other reported sources',
+                                                                        'class_name': 'other-reported-sources',
+                                                                        'amount': 450.0,
+                                                                        'description': 'Interest received from '
+                                                                                       'Washington Trust during Q1 '
+                                                                                       '2026.'}],
+                                                    'top_donors': [],
+                                                    'spending_categories': [{'title': 'Consultant & Professional '
+                                                                                      'Services',
+                                                                             'summary': 'Visible spending includes '
+                                                                                        'Checkmate Consulting Group, '
+                                                                                        'LLC.',
+                                                                             'amount': 1259.41},
+                                                                            {'title': 'Food, Beverages and Meals',
+                                                                             'summary': 'Visible spending includes '
+                                                                                        'Capital Grille for a '
+                                                                                        'meeting with '
+                                                                                        'representatives.',
+                                                                             'amount': 176.88},
+                                                                            {'title': 'Fundraising Expenses',
+                                                                             'summary': 'Visible spending includes '
+                                                                                        'Market Basket for coffee '
+                                                                                        'and pastry for a '
+                                                                                        'fundraiser.',
+                                                                             'amount': 44.12},
+                                                                            {'title': 'Bank Fees',
+                                                                             'summary': 'Visible spending includes '
+                                                                                        'ActBlue.',
+                                                                             'amount': 2.43}]},
+                                                   {'label': 'Q2 2026',
+                                                    'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                                                    'money_raised': 48825.0,
+                                                    'money_spent': 14531.55,
+                                                    'ending_cash': 43871.41,
+                                                    'net_change': 34293.45,
+                                                    'notes': 'The campaign raised more than it spent in this '
+                                                             'reporting period.'}],
+                                'coverage_note': 'Q1 and Q2 2026 filings available. The profile headline and Top '
+                                                 'Donors/Funding Mix/Spending Breakdown continue to use Q2; Q1 '
+                                                 'details are retained in filing history.'},
+ 'senate-5-samuel-w-bell': {'report_label': '2026 filing through August 11',
+                            'reporting_period_label': 'July 1, 2026 to August 11, 2026',
+                            'source_note': 'RI Board of Elections filing covering July 1, 2026 through August 11, '
+                                           '2026',
+                            'coverage_note': "The profile now uses Bell's latest uploaded filing, covering July 1 "
+                                             'through August 11, 2026. Q1 and Q2 2026 remain in filing history.',
+                            'beginning_cash': 62931.06,
+                            'money_raised': 3668.0,
+                            'money_spent': 7548.69,
+                            'ending_cash': 59050.37,
+                            'net_change': -3880.69,
+                            'total_cash_receipts': 3668.0,
+                            'campaign_expenses': 7548.69,
+                            'aggregate_expenses': 0.0,
+                            'summary_intro': "Samuel W Bell's latest uploaded filing covers July 1 through August "
+                                             '11, 2026. It reports $3,668.00 in receipts, including $3,618.00 from '
+                                             'individuals and $50.00 from a PAC. The campaign reported $7,548.69 in '
+                                             'expenses and closed the period with $59,050.37 in cash on hand.',
+                            'source_buckets': [{'label': 'Itemized individual donors',
+                                                'class_name': 'itemized-individual-donors',
+                                                'amount': 3618.0,
+                                                'description': 'Named individual contributions reported in the July '
+                                                               '1–August 11 filing.'},
+                                               {'label': 'PAC contributions',
+                                                'class_name': 'pac-contributions',
+                                                'amount': 50.0,
+                                                'description': 'PAC contribution reported in the July 1–August 11 '
+                                                               'filing.'}],
+                            'top_donors': [{'donor': 'Olin Thompson',
+                                            'amount': 1000.0,
+                                            'type': 'Individual',
+                                            'notes': 'Named individual contribution listed in the '
+                                                     '07/01/2026–08/11/2026 filing.'},
+                                           {'donor': 'Anne De Groot',
+                                            'amount': 500.0,
+                                            'type': 'Individual',
+                                            'notes': 'Employer listed as EVA Therapeutics.'},
+                                           {'donor': 'Val Lawson',
+                                            'amount': 500.0,
+                                            'type': 'Individual',
+                                            'notes': 'Employer listed as NEA RI.'},
+                                           {'donor': 'Russ Mayerfeld',
+                                            'amount': 250.0,
+                                            'type': 'Individual',
+                                            'notes': 'Named individual contribution listed in the filing.'},
+                                           {'donor': 'Francis Richards',
+                                            'amount': 250.0,
+                                            'type': 'Individual',
+                                            'notes': 'Employer listed as retired.'},
+                                           {'donor': 'David Stuebe',
+                                            'amount': 218.0,
+                                            'type': 'Individual',
+                                            'notes': 'Two contributions in the filing ($200 and $18); employer '
+                                                     'listed as RPS ASA.'},
+                                           {'donor': 'Daria Brashear',
+                                            'amount': 100.0,
+                                            'type': 'Individual',
+                                            'notes': 'Employer listed as AuriStor, Inc.'},
+                                           {'donor': 'John Chamblee',
+                                            'amount': 100.0,
+                                            'type': 'Individual',
+                                            'notes': 'Employer listed as Amica Inc.'},
+                                           {'donor': 'Brooke Churas',
+                                            'amount': 100.0,
+                                            'type': 'Individual',
+                                            'notes': 'Employer listed as Sunrise Properties.'},
+                                           {'donor': 'Keith Fernandes',
+                                            'amount': 100.0,
+                                            'type': 'Individual',
+                                            'notes': 'Employer listed as self employed.'}],
+                            'spending_categories': [{'title': 'Consultant & Professional Services',
+                                                     'summary': 'Visible spending includes Capri Catanzaro for '
+                                                                'campaign management and Oscar Pearlman for '
+                                                                'canvassing.',
+                                                     'amount': 5100.0},
+                                                    {'title': 'Advertising',
+                                                     'summary': 'Visible spending includes Signrocket yard signs.',
+                                                     'amount': 1382.5},
+                                                    {'title': 'Refunds/Reimbursements',
+                                                     'summary': 'Visible spending includes an over-limit '
+                                                                'contribution refund to Olin Thompson and smaller '
+                                                                'reimbursements.',
+                                                     'amount': 1066.19},
+                                                    {'title': 'Other campaign expenses not itemized on attached CF-4',
+                                                     'summary': 'The CF-2 reports $7,548.69 in campaign expenses. '
+                                                                'The attached CF-4 pages itemize $8,148.69 in '
+                                                                'positive entries, including a $1,000 contribution '
+                                                                'refund; this category is not used to force a '
+                                                                'reconciliation because the filing itself should be '
+                                                                'preserved as reported.',
+                                                     'amount': 0.0}],
+                            'filing_history': [{'label': 'Q1 2026',
+                                                'reporting_period_label': 'January 1, 2026 to March 31, 2026',
+                                                'money_raised': 7079.0,
+                                                'money_spent': 675.11,
+                                                'ending_cash': 53612.41,
+                                                'net_change': 6403.89,
+                                                'notes': 'Q1 reported $6,879 from individuals and $200 from PACs.'},
+                                               {'label': 'Q2 2026',
+                                                'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                                                'money_raised': 14159.0,
+                                                'money_spent': 4840.35,
+                                                'ending_cash': 62931.06,
+                                                'net_change': 9318.65,
+                                                'notes': 'Q2 reported $13,159 from individuals and $1,000 from PACs. '
+                                                         'The attached CF-3 contributor schedule contains no named '
+                                                         'donor entries.'},
+                                               {'label': 'July 1–August 11, 2026',
+                                                'reporting_period_label': 'July 1, 2026 to August 11, 2026',
+                                                'money_raised': 3668.0,
+                                                'money_spent': 7548.69,
+                                                'ending_cash': 59050.37,
+                                                'net_change': -3880.69,
+                                                'notes': 'Latest uploaded filing; includes named donors and a $50 '
+                                                         'PAC contribution.'}]}}
+
+def apply_bell_dimitri_followup_overrides(profile: dict[str, object]) -> dict[str, object]:
+    override = BELL_DIMITRI_FOLLOWUP_OVERRIDES.get(str(profile.get("candidate_id", "")))
+    if not override:
+        return profile
+    profile.update(override)
+    return profile
+
 def slugify(value: str) -> str:
     text = unicodedata.normalize("NFKD", value or "")
     text = text.encode("ascii", "ignore").decode("ascii")
@@ -1730,6 +1905,7 @@ def main() -> int:
             profile = apply_profile_detail_overrides(profile)
             profile = apply_andrew_dimitri_detail_override(profile)
             profile = apply_quezada_bell_profile_overrides(profile)
+            profile = apply_bell_dimitri_followup_overrides(profile)
             profiles.append(profile)
             entry["has_profile"] = True
         directory.append(entry)
