@@ -11740,27 +11740,27 @@
       "office_sought": "State Senator",
       "report_label": "Q2 2026 campaign finance filing",
       "reporting_period_label": "April 1, 2026 to June 30, 2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website summary captured; quarter not reliably identified",
+      "source_note": "RI Board of Elections Q1 and Q2 2026 CF-2 / CF-3 / CF-4 filings",
+      "coverage_note": "Q2 2026 is used as the main display period for comparability across candidates. Detailed Q2 contributors are available.",
       "original_documents": [],
-      "beginning_cash": 0.0,
+      "beginning_cash": 294305.53,
       "money_raised": 67263.98,
       "money_spent": 24918.9,
       "ending_cash": 336650.61,
       "net_change": 42345.08,
-      "total_cash_receipts": 0.0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 24918.9,
-      "summary_intro": "This filing shows the campaign closing the period without reported cash on hand. The report also shows that it raised more during the period than it spent.",
+      "total_cash_receipts": 67263.98,
+      "campaign_expenses": 24681.71,
+      "aggregate_expenses": 237.19,
+      "summary_intro": "Valarie Jean Lawson's Q2 2026 filing reports $67,263.98 in receipts, $24,918.90 in total spending, and $336,650.61 in cash on hand at the end of the period.",
       "filing_history": [
         {
           "label": "Q1 2026",
           "reporting_period_label": "January 1, 2026 to March 31, 2026",
-          "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "money_raised": 170960.0,
+          "money_spent": 61801.63,
+          "ending_cash": 294305.53,
+          "net_change": 108758.37,
+          "notes": "Q1 retained in filing history."
         },
         {
           "label": "Q2 2026",
@@ -11769,12 +11769,123 @@
           "money_spent": 24918.9,
           "ending_cash": 336650.61,
           "net_change": 42345.08,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "notes": "Q2 is the standardized main display period."
         }
       ],
-      "source_buckets": [],
-      "top_donors": [],
-      "spending_categories": [],
+      "source_buckets": [
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 59015.0,
+          "description": "Named individual contributions reported in Lawson's Q2 2026 filing."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 7650.0,
+          "description": "Political action committee contributions reported in Lawson's Q2 2026 filing."
+        },
+        {
+          "label": "Other reported sources",
+          "class_name": "other-reported-sources",
+          "amount": 598.98,
+          "description": "Other receipts reported in Lawson's Q2 2026 filing."
+        }
+      ],
+      "top_donors": [
+        {
+          "donor": "Arlene Chaplin",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Retired."
+        },
+        {
+          "donor": "Jaquelin Mancini",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as RI Distributiong."
+        },
+        {
+          "donor": "Kenneth J. Mancini",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Mancini Mancini Beverage."
+        },
+        {
+          "donor": "Wayne Chaplin",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Retired."
+        },
+        {
+          "donor": "Zachary Darrow",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Darrow Everett LLP."
+        },
+        {
+          "donor": "Daniel Ryan",
+          "amount": 1500.0,
+          "type": "Individual",
+          "notes": "Employer listed as Twin River Casino."
+        },
+        {
+          "donor": "Elizabeth Suever",
+          "amount": 1500.0,
+          "type": "Individual",
+          "notes": "Employer listed as Bally's Corporation."
+        },
+        {
+          "donor": "INTERNATIONAL UNION OF PAINTERS & ALLIED TRADES POLITICAL ACTION TOGETHER POLITICAL COMMITTEE - RI",
+          "amount": 1500.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the Q2 filing."
+        },
+        {
+          "donor": "Anthony Simon",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Self Employed - Consultant."
+        },
+        {
+          "donor": "Barry Munk",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Marquis."
+        }
+      ],
+      "spending_categories": [
+        {
+          "title": "Donations (Political)",
+          "summary": "Visible spending includes American Airlines, Angelos, AVVIO.",
+          "amount": 9900.0
+        },
+        {
+          "title": "Donations (All Others)",
+          "summary": "Visible spending includes Central Falls Foundation, Fleur Providence, Friends of Townie's Athletics.",
+          "amount": 4667.95
+        },
+        {
+          "title": "Food, Beverages and Meals",
+          "summary": "Visible spending includes Captains Catch.",
+          "amount": 266.2
+        },
+        {
+          "title": "Advertising",
+          "summary": "Visible spending includes CVS.",
+          "amount": 200.0
+        },
+        {
+          "title": "Other",
+          "summary": "Bank Fees & EIG Constant Contacts",
+          "amount": 97.41
+        },
+        {
+          "title": "Other campaign expenses not itemized in parsed schedule",
+          "summary": "Amount needed to reconcile the visible expenditure categories to the CF-2 total; retained separately rather than assigned to an unsupported category.",
+          "amount": 9787.34
+        }
+      ],
       "takeaways": [],
       "explainer_cards": []
     },
@@ -11789,27 +11900,27 @@
       "office_sought": "State Senator",
       "report_label": "Q2 2026 campaign finance filing",
       "reporting_period_label": "April 1, 2026 to June 30, 2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website summary captured; quarter not reliably identified",
+      "source_note": "RI Board of Elections Q1 and Q2 2026 CF-2 / CF-3 / CF-4 filings",
+      "coverage_note": "Q2 2026 is used as the main display period for comparability across candidates. Detailed Q2 contributors and expenditures are available.",
       "original_documents": [],
-      "beginning_cash": 0.0,
+      "beginning_cash": 48350.8,
       "money_raised": 5180.0,
       "money_spent": 2907.4,
       "ending_cash": 50623.4,
       "net_change": 2272.6,
-      "total_cash_receipts": 0.0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 2907.4,
-      "summary_intro": "This filing shows the campaign closing the period without reported cash on hand. The report also shows that it raised more during the period than it spent.",
+      "total_cash_receipts": 5180.0,
+      "campaign_expenses": 2907.4,
+      "aggregate_expenses": 0.0,
+      "summary_intro": "Meghan E Kallman's Q2 2026 filing reports $5,180.00 in receipts, $2,907.40 in spending, and $50,623.40 in cash on hand at the end of the period.",
       "filing_history": [
         {
           "label": "Q1 2026",
           "reporting_period_label": "January 1, 2026 to March 31, 2026",
-          "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "money_raised": 16449.0,
+          "money_spent": 1886.05,
+          "ending_cash": 48350.8,
+          "net_change": 16562.95,
+          "notes": "Q1 retained in filing history."
         },
         {
           "label": "Q2 2026",
@@ -11818,12 +11929,112 @@
           "money_spent": 2907.4,
           "ending_cash": 50623.4,
           "net_change": 2272.6,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "notes": "Q2 is the standardized main display period."
         }
       ],
-      "source_buckets": [],
-      "top_donors": [],
-      "spending_categories": [],
+      "source_buckets": [
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 4005.0,
+          "description": "Named individual contributions reported in Kallman's Q2 2026 filing."
+        },
+        {
+          "label": "Receipts without donor names listed",
+          "class_name": "small-dollar-aggregate-online-receipts",
+          "amount": 1175.0,
+          "description": "Aggregate ActBlue receipts reported without individual donor names."
+        }
+      ],
+      "top_donors": [
+        {
+          "donor": "Anne Holland",
+          "amount": 1997.0,
+          "type": "Individual",
+          "notes": "Employer listed as Anne Holland Ventures."
+        },
+        {
+          "donor": "Adam Sinel",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as Berger Recycling."
+        },
+        {
+          "donor": "Camilo Viveros",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as George Wiley Center."
+        },
+        {
+          "donor": "Carolyn Betensky",
+          "amount": 200.0,
+          "type": "Individual",
+          "notes": "Employer listed as University of Rhode Island."
+        },
+        {
+          "donor": "Elizabeth Radka",
+          "amount": 200.0,
+          "type": "Individual",
+          "notes": "Employer listed as Zywave."
+        },
+        {
+          "donor": "Karen Jo",
+          "amount": 200.0,
+          "type": "Individual",
+          "notes": "Employer listed as Lee Brown University."
+        },
+        {
+          "donor": "Zoe Gardiner",
+          "amount": 200.0,
+          "type": "Individual",
+          "notes": "Employer listed as Self Employed."
+        },
+        {
+          "donor": "Karyn Monti",
+          "amount": 150.0,
+          "type": "Individual",
+          "notes": "Employer listed as Reired."
+        },
+        {
+          "donor": "Lex Rofeberg",
+          "amount": 108.0,
+          "type": "Individual",
+          "notes": "Employer listed as Institute for the next Jewish future."
+        },
+        {
+          "donor": "David O'Hara",
+          "amount": 100.0,
+          "type": "Individual",
+          "notes": "Employer listed as N/A."
+        }
+      ],
+      "spending_categories": [
+        {
+          "title": "Consultant & Professional Services",
+          "summary": "Visible spending includes Jessica Ahlquist, All The Answers Inc..",
+          "amount": 2458.79
+        },
+        {
+          "title": "Refunds/Reimbursements",
+          "summary": "Visible spending includes 5475494 Meghan E Kallman.",
+          "amount": 311.88
+        },
+        {
+          "title": "Bank Fees",
+          "summary": "Visible spending includes ActBlue.",
+          "amount": 118.75
+        },
+        {
+          "title": "Advertising",
+          "summary": "Visible spending includes SQUARESPACE INC.",
+          "amount": 8.99
+        },
+        {
+          "title": "Other campaign expenses not itemized in parsed schedule",
+          "summary": "Amount needed to reconcile the visible expenditure categories to the CF-2 total; retained separately rather than assigned to an unsupported category.",
+          "amount": 8.99
+        }
+      ],
       "takeaways": [],
       "explainer_cards": []
     },
@@ -12305,27 +12516,27 @@
       "office_sought": "State Senator",
       "report_label": "Q2 2026 campaign finance filing",
       "reporting_period_label": "April 1, 2026 to June 30, 2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website summary captured; quarter not reliably identified",
+      "source_note": "RI Board of Elections Q1 and Q2 2026 CF-2 / CF-3 / CF-4 filings",
+      "coverage_note": "Q2 2026 is used as the main display period for comparability. Two Q2 versions were uploaded; both have identical CF-2 summary totals. The more complete six-page Q2 filing was used for donor and spending detail.",
       "original_documents": [],
-      "beginning_cash": 0.0,
+      "beginning_cash": 11318.22,
       "money_raised": 11383.47,
       "money_spent": 4070.62,
       "ending_cash": 18631.07,
       "net_change": 7312.85,
-      "total_cash_receipts": 0.0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 4070.62,
-      "summary_intro": "This filing shows the campaign closing the period without reported cash on hand. The report also shows that it raised more during the period than it spent.",
+      "total_cash_receipts": 11383.47,
+      "campaign_expenses": 4070.62,
+      "aggregate_expenses": 0.0,
+      "summary_intro": "Thomas J Paolino's Q2 2026 filing reports $11,383.47 in receipts, $4,070.62 in spending, and $18,631.07 in cash on hand at the end of the period.",
       "filing_history": [
         {
           "label": "Q1 2026",
           "reporting_period_label": "January 1, 2026 to March 31, 2026",
-          "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
+          "money_raised": 200.0,
+          "money_spent": 200.0,
+          "ending_cash": 11318.22,
           "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "notes": "Q1 retained in filing history."
         },
         {
           "label": "Q2 2026",
@@ -12334,12 +12545,90 @@
           "money_spent": 4070.62,
           "ending_cash": 18631.07,
           "net_change": 7312.85,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "notes": "Q2 is the standardized main display period; detailed entries use the more complete six-page Q2 filing."
         }
       ],
-      "source_buckets": [],
-      "top_donors": [],
-      "spending_categories": [],
+      "source_buckets": [
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 3010.25,
+          "description": "Named individual contributions reported in Paolino's Q2 2026 filing."
+        },
+        {
+          "label": "Receipts without donor names listed",
+          "class_name": "small-dollar-aggregate-online-receipts",
+          "amount": 8373.22,
+          "description": "Aggregate individual receipts reported without donor names."
+        }
+      ],
+      "top_donors": [
+        {
+          "donor": "Jessica De La Cruz",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as La Cruz."
+        },
+        {
+          "donor": "David Ferland",
+          "amount": 500.0,
+          "type": "Individual",
+          "notes": "Employer listed as Overland Supply."
+        },
+        {
+          "donor": "Shawn Wilson",
+          "amount": 260.25,
+          "type": "Individual",
+          "notes": "Employer listed as Retired."
+        },
+        {
+          "donor": "Anthony Thompson",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as Sigil Services."
+        },
+        {
+          "donor": "Brandon Bell",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Named individual contribution listed in the Q2 filing."
+        },
+        {
+          "donor": "Michael Kumar",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as IGT."
+        },
+        {
+          "donor": "Steven Ceceri",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as New England Property Services INC."
+        },
+        {
+          "donor": "Steven Issa",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as Customers Bank."
+        }
+      ],
+      "spending_categories": [
+        {
+          "title": "Fundraising Expenses",
+          "summary": "Visible spending includes Formatt Printing, Michele Fried, Andrew Kagan.",
+          "amount": 3445.53
+        },
+        {
+          "title": "Advertising",
+          "summary": "Visible spending includes Facebook, MailChimp.",
+          "amount": 550.09
+        },
+        {
+          "title": "Donations (Political)",
+          "summary": "Visible spending includes Right to Life.",
+          "amount": 75.0
+        }
+      ],
       "takeaways": [],
       "explainer_cards": []
     },
