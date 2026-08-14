@@ -10094,7 +10094,7 @@
       "report_label": "Q2 2026 campaign finance filing",
       "reporting_period_label": "April 1, 2026 to June 30, 2026",
       "source_note": "RI Board of Elections Q2 2026 CF-2 / CF-3 / CF-4 filing",
-      "coverage_note": "Q2 2026 is used as the main display period for comparability across candidates. Bell's later July 1\u2013August 11 filing is retained in filing history but does not replace the Q2 headline.",
+      "coverage_note": "Q2 2026 is used as the main display period for comparability across candidates. Bell's later July 1–August 11 filing is retained in filing history but does not replace the Q2 headline.",
       "original_documents": [],
       "beginning_cash": 53612.41,
       "money_raised": 14159.0,
@@ -10125,7 +10125,7 @@
           "notes": "Q2 is the standardized main display period. Named Q2 donors and detailed spending are available."
         },
         {
-          "label": "July 1\u2013August 11, 2026",
+          "label": "July 1–August 11, 2026",
           "reporting_period_label": "July 1, 2026 to August 11, 2026",
           "money_raised": 3668.0,
           "money_spent": 7548.69,
@@ -14690,27 +14690,27 @@
       "office_sought": "State Senator",
       "report_label": "Q2 2026 campaign finance filing",
       "reporting_period_label": "April 1, 2026 to June 30, 2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website summary captured; quarter not reliably identified",
+      "source_note": "RI Board of Elections Q1 and Q2 2026 CF-2 / CF-3 / CF-4 filings",
+      "coverage_note": "Q2 2026 is used as the main display period for comparability across candidates. The Q2 filing reports individual, political-party, and PAC receipts.",
       "original_documents": [],
-      "beginning_cash": 0.0,
+      "beginning_cash": 26830.84,
       "money_raised": 6347.0,
       "money_spent": 1675.21,
       "ending_cash": 31502.63,
       "net_change": 4671.79,
-      "total_cash_receipts": 0.0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 1675.21,
-      "summary_intro": "This filing shows the campaign closing the period without reported cash on hand. The report also shows that it raised more during the period than it spent.",
+      "total_cash_receipts": 6347.0,
+      "campaign_expenses": 1675.21,
+      "aggregate_expenses": 0.0,
+      "summary_intro": "Pamela J Lauria's Q2 2026 filing reports $6,347.00 in receipts, $1,675.21 in spending, and $31,502.63 in cash on hand at the end of the period.",
       "filing_history": [
         {
           "label": "Q1 2026",
           "reporting_period_label": "January 1, 2026 to March 31, 2026",
           "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "money_spent": 498.33,
+          "ending_cash": 26830.84,
+          "net_change": -498.33,
+          "notes": "Q1 reported no receipts and $498.33 in campaign expenses."
         },
         {
           "label": "Q2 2026",
@@ -14719,12 +14719,118 @@
           "money_spent": 1675.21,
           "ending_cash": 31502.63,
           "net_change": 4671.79,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "notes": "Q2 is the standardized main display period."
         }
       ],
-      "source_buckets": [],
-      "top_donors": [],
-      "spending_categories": [],
+      "source_buckets": [
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 4222.0,
+          "description": "Named individual contributions reported in Lauria's Q2 2026 filing."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 1875.0,
+          "description": "Political action committee contributions reported in Lauria's Q2 2026 filing."
+        },
+        {
+          "label": "Other reported sources",
+          "class_name": "other-reported-sources",
+          "amount": 250.0,
+          "description": "Political-party contribution reported in Lauria's Q2 2026 filing."
+        }
+      ],
+      "top_donors": [
+        {
+          "donor": "Ralph Palumbo",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Revity Energy."
+        },
+        {
+          "donor": "Val Lawson",
+          "amount": 300.0,
+          "type": "Individual",
+          "notes": "Employer listed as State of RI - Senate."
+        },
+        {
+          "donor": "Anthony Simon",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as self."
+        },
+        {
+          "donor": "Cynthia Coyne",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as retired."
+        },
+        {
+          "donor": "East Providence Ward 4 Democratic City Committee",
+          "amount": 250.0,
+          "type": "Political Party",
+          "notes": "Political-party contribution listed in the Q2 filing."
+        },
+        {
+          "donor": "Nurse Practitioner of Rhode Island PAC",
+          "amount": 250.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the Q2 filing."
+        },
+        {
+          "donor": "RI Laborers' PAC",
+          "amount": 250.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the Q2 filing."
+        },
+        {
+          "donor": "Stephen Alves",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Employer listed as Capital Strategies LLC."
+        },
+        {
+          "donor": "United Food & Commercial Workers Union Local 328 RI PAC",
+          "amount": 250.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the Q2 filing."
+        },
+        {
+          "donor": "Michael Sroczynski",
+          "amount": 200.0,
+          "type": "Individual",
+          "notes": "Employer listed as Hospital Association of Rhode Island."
+        }
+      ],
+      "spending_categories": [
+        {
+          "title": "Fundraising Expenses",
+          "summary": "Visible spending includes Regine Printing and USPS.",
+          "amount": 558.21
+        },
+        {
+          "title": "Donations (Political)",
+          "summary": "Visible spending includes Gregg Amore, Friends of Cindy Coyne, and Friends of Jason Knight.",
+          "amount": 550.0
+        },
+        {
+          "title": "Food, Beverages and Meals",
+          "summary": "Visible spending includes Dave's Market.",
+          "amount": 378.09
+        },
+        {
+          "title": "Donations (All Others)",
+          "summary": "Visible spending includes Town of Barrington.",
+          "amount": 150.0
+        },
+        {
+          "title": "Bank Fees",
+          "summary": "Visible spending includes ActBlue and Stripe.",
+          "amount": 38.91
+        }
+      ],
       "takeaways": [],
       "explainer_cards": []
     },
@@ -14739,27 +14845,27 @@
       "office_sought": "State Senator",
       "report_label": "Q2 2026 campaign finance filing",
       "reporting_period_label": "April 1, 2026 to June 30, 2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website summary captured; quarter not reliably identified",
+      "source_note": "RI Board of Elections Q1 and Q2 2026 CF-2 / CF-3 / CF-4 filings",
+      "coverage_note": "Q2 2026 is used as the main display period. Pierson reported no receipts and no expenditures in either Q1 or Q2; the account remained at $6.39 cash on hand. The Q2 filing reports $465.64 in liabilities.",
       "original_documents": [],
-      "beginning_cash": 0.0,
+      "beginning_cash": 6.39,
       "money_raised": 0.0,
       "money_spent": 0.0,
       "ending_cash": 6.39,
       "net_change": 0.0,
       "total_cash_receipts": 0.0,
-      "campaign_expenses": 0,
+      "campaign_expenses": 0.0,
       "aggregate_expenses": 0.0,
-      "summary_intro": "This filing shows the campaign closing the period without reported cash on hand. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "James P Pierson's Q2 2026 filing reports no receipts, no spending, and $6.39 in cash on hand at the end of the period.",
       "filing_history": [
         {
           "label": "Q1 2026",
           "reporting_period_label": "January 1, 2026 to March 31, 2026",
           "money_raised": 0.0,
           "money_spent": 0.0,
-          "ending_cash": 0.0,
+          "ending_cash": 6.39,
           "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "notes": "No receipts or expenditures were reported."
         },
         {
           "label": "Q2 2026",
@@ -14768,7 +14874,7 @@
           "money_spent": 0.0,
           "ending_cash": 6.39,
           "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "notes": "No receipts or expenditures were reported; Q2 is the standardized main display period."
         }
       ],
       "source_buckets": [],
@@ -14788,41 +14894,156 @@
       "office_sought": "State Senator",
       "report_label": "Q2 2026 campaign finance filing",
       "reporting_period_label": "April 1, 2026 to June 30, 2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website summary captured; quarter not reliably identified",
+      "source_note": "RI Board of Elections Q1 and Q2 2026 CF-2 / CF-3 / CF-4 filings",
+      "coverage_note": "Q2 2026 is used as the main display period for comparability across candidates. The filing reports $10,462.43 in campaign expenses plus $421.49 in aggregate expenses. Visible parsed expenditure categories are shown separately, with the unreconciled remainder kept in a neutral category.",
       "original_documents": [],
-      "beginning_cash": 0.0,
-      "money_raised": 22314.17,
+      "beginning_cash": 40242.5,
+      "money_raised": 22275.0,
       "money_spent": 10883.92,
-      "ending_cash": 51672.75,
-      "net_change": 11430.25,
-      "total_cash_receipts": 0.0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 10883.92,
-      "summary_intro": "This filing shows the campaign closing the period without reported cash on hand. The report also shows that it raised more during the period than it spent.",
+      "ending_cash": 51633.58,
+      "net_change": 11391.08,
+      "total_cash_receipts": 22275.0,
+      "campaign_expenses": 10462.43,
+      "aggregate_expenses": 421.49,
+      "summary_intro": "Leonidas Peter Raptakis's Q2 2026 filing reports $22,275.00 in receipts, including $20,275.00 from individuals and $2,000.00 from PACs. The campaign reported $10,883.92 in total spending and closed the period with $51,633.58 in cash on hand.",
       "filing_history": [
         {
           "label": "Q1 2026",
           "reporting_period_label": "January 1, 2026 to March 31, 2026",
-          "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "money_raised": 42475.0,
+          "money_spent": 8424.19,
+          "ending_cash": 40242.5,
+          "net_change": 34050.81,
+          "notes": "Q1 reported $37,525 from individuals and $4,950 from PACs."
         },
         {
           "label": "Q2 2026",
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
-          "money_raised": 22314.17,
+          "money_raised": 22275.0,
           "money_spent": 10883.92,
-          "ending_cash": 51672.75,
-          "net_change": 11430.25,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "ending_cash": 51633.58,
+          "net_change": 11391.08,
+          "notes": "Q2 is the standardized main display period."
         }
       ],
-      "source_buckets": [],
-      "top_donors": [],
-      "spending_categories": [],
+      "source_buckets": [
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 20275.0,
+          "description": "Named individual contributions reported in Raptakis's Q2 2026 filing."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 2000.0,
+          "description": "Political action committee contributions reported in Raptakis's Q2 2026 filing."
+        }
+      ],
+      "top_donors": [
+        {
+          "donor": "Constantine Panopoulos",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Three Plus Two Inc."
+        },
+        {
+          "donor": "Photis Gkionis",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Strata Critical."
+        },
+        {
+          "donor": "Sundus Sultan",
+          "amount": 2000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Homemaker."
+        },
+        {
+          "donor": "Emanuel Rouvelas",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as KL Gates."
+        },
+        {
+          "donor": "James Grundy",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Atlantic Control Systems."
+        },
+        {
+          "donor": "Louis Katsos",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Jekmar Associates Inc."
+        },
+        {
+          "donor": "Nicholas Bornozis",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Capitol Link."
+        },
+        {
+          "donor": "RI Senate Leadership PAC",
+          "amount": 1000.0,
+          "type": "PAC",
+          "notes": "Named PAC contribution listed in the Q2 filing."
+        },
+        {
+          "donor": "Ravinder Bhalla",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as City of Hoboken."
+        },
+        {
+          "donor": "Tara Allen",
+          "amount": 1000.0,
+          "type": "Individual",
+          "notes": "Employer listed as Ogilvy Health."
+        }
+      ],
+      "spending_categories": [
+        {
+          "title": "Consultant & Professional Services",
+          "summary": "Visible spending includes Greek News USA, SDR MEDIA MGT LLC, and TF Green Airport.",
+          "amount": 1905.0
+        },
+        {
+          "title": "Donations (Political)",
+          "summary": "Visible spending includes Ana Quezada, Sam Bell, and Constant Contact.",
+          "amount": 1325.0
+        },
+        {
+          "title": "Food, Beverages and Meals",
+          "summary": "Visible spending includes Safety Harbor Inn.",
+          "amount": 914.0
+        },
+        {
+          "title": "Advertising",
+          "summary": "Visible spending includes Providence Journal and RI Senate Open.",
+          "amount": 550.0
+        },
+        {
+          "title": "Fundraising Expenses",
+          "summary": "Visible spending includes ActBlue.",
+          "amount": 215.15
+        },
+        {
+          "title": "Travel & Lodging",
+          "summary": "Aggregate fundraising travel expenses reported in the filing.",
+          "amount": 206.34
+        },
+        {
+          "title": "Donations (All Others)",
+          "summary": "Visible spending includes Our Lady of Czenstochowa.",
+          "amount": 100.0
+        },
+        {
+          "title": "Other campaign expenses not itemized in parsed schedule",
+          "summary": "Amount needed to reconcile the visible parsed expenditure categories to the official Q2 total of $10,883.92. It is retained separately rather than assigned to an unsupported category.",
+          "amount": 5668.43
+        }
+      ],
       "takeaways": [],
       "explainer_cards": []
     },
