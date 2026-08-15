@@ -1007,6 +1007,100 @@
       line-height: 1.45;
     }
 
+
+    .topic-overview-card {
+      --topic-color: #5b6ee1;
+      --topic-bg: #f4f6ff;
+      border: 2px solid var(--topic-color);
+      border-radius: 18px;
+      background: var(--topic-bg);
+      overflow: hidden;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+
+    .topic-overview-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(19, 38, 74, .10);
+    }
+
+    .topic-overview-button {
+      width: 100%;
+      border: 0;
+      background: transparent;
+      padding: 16px 16px 15px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      text-align: left;
+      font: inherit;
+      color: inherit;
+      cursor: pointer;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .topic-overview-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: var(--topic-color);
+      color: white;
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 1;
+      transition: transform .18s ease;
+    }
+
+    .topic-overview-card[aria-expanded="true"] .topic-overview-icon {
+      transform: rotate(45deg);
+    }
+
+    .topic-overview-details {
+      display: none;
+      padding: 4px 16px 14px;
+      border-top: 1px solid rgba(15, 35, 65, .10);
+      background: rgba(255,255,255,.58);
+    }
+
+    .topic-overview-card[aria-expanded="true"] .topic-overview-details {
+      display: block;
+    }
+
+    .topic-detail-row {
+      display: grid;
+      grid-template-columns: minmax(0,1fr) auto;
+      gap: 12px;
+      padding: 11px 0;
+      border-bottom: 1px solid rgba(15,35,65,.08);
+    }
+
+    .topic-detail-row:last-child {
+      border-bottom: 0;
+    }
+
+    .topic-detail-name {
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .topic-detail-candidate {
+      margin-top: 3px;
+      color: var(--ink-soft);
+      font-size: 11px;
+      line-height: 1.4;
+    }
+
+    .topic-detail-amount {
+      color: var(--topic-color);
+      font-size: 14px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
     .pac-topic-panel {
       padding: 24px;
     }
@@ -2482,44 +2576,40 @@
 
     function buildDirectoryTopicOverview(data) {
       const rows = getNamedDonorIndex(data);
-      if (!rows.length) return "";
 
       const topicPalette = {
-        "Individual donors": ["#2f80ed", "#eaf4ff"],
-        "Labor / Unions": ["#d64545", "#fff0f0"],
-        "Public Safety": ["#e67e22", "#fff4e8"],
-        "Health Care": ["#16a085", "#e9fbf7"],
-        "Business / Industry": ["#8e44ad", "#f7edfb"],
-        "Housing / Real Estate": ["#b7791f", "#fff8e7"],
-        "Gun Rights": ["#4a5568", "#eef1f5"],
-        "Finance / Insurance": ["#0f766e", "#e8f8f6"],
-        "Political Party / Leadership": ["#6d28d9", "#f2ecff"],
-        "Education": ["#2563eb", "#edf4ff"],
-        "Energy / Utilities": ["#2e7d32", "#edf8ee"],
-        "Construction / Trades": ["#9a3412", "#fff0e8"],
-        "Environment / Conservation": ["#15803d", "#ebf8ef"],
-        "Transportation": ["#0369a1", "#eaf7ff"],
-        "Hospitality / Tourism": ["#c2410c", "#fff1eb"],
-        "Legal / Professional": ["#7c3aed", "#f4efff"],
-        "Reproductive Rights / Women": ["#be185d", "#fff0f6"],
-        "Advocacy / Civic": ["#0e7490", "#eaf9fc"],
-        "Other / Unclassified": ["#64748b", "#f1f5f9"]
+        "Labor / Unions": ["#d64b4b", "#fff1f1"],
+        "Public Safety": ["#e1812c", "#fff4e8"],
+        "Health Care": ["#149b83", "#eafaf6"],
+        "Business / Industry": ["#8c4fb3", "#f7effc"],
+        "Housing / Real Estate": ["#b17a20", "#fff8e8"],
+        "Gun Rights": ["#566274", "#eef2f6"],
+        "Finance / Insurance": ["#0f766e", "#e9f8f6"],
+        "Political Party / Leadership": ["#6e48d6", "#f3efff"],
+        "Education": ["#3574d4", "#eef5ff"],
+        "Energy / Utilities": ["#388e3c", "#eef8ef"],
+        "Construction / Trades": ["#a04a22", "#fff1ea"],
+        "Environment / Conservation": ["#238b45", "#eef9f1"],
+        "Transportation": ["#2477a8", "#eef8fd"],
+        "Hospitality / Tourism": ["#c55a1f", "#fff3ec"],
+        "Legal / Professional": ["#7350bf", "#f4f0ff"],
+        "Reproductive Rights / Women": ["#bd3f78", "#fff0f6"],
+        "Advocacy / Civic": ["#24849b", "#eefbfe"],
+        "Other / Unclassified": ["#65758a", "#f2f5f8"]
       };
 
-      const grouped = new Map();
+      const pacRows = rows.filter(row =>
+        /(pac|committee|party|organization)/i.test(String(row.type || "")) ||
+        String(row.interest_group || "") !== "Individual"
+      );
 
-      for (const row of rows) {
-        const type = String(row.type || "").toLowerCase();
-        const isIndividual = type.includes("individual") && !type.includes("pac");
-        const topic = isIndividual ? "Individual donors" : (row.interest_group || "Other / Unclassified");
+      const grouped = new Map();
+      for (const row of pacRows) {
+        const topic = row.interest_group || "Other / Unclassified";
+        if (topic === "Individual") continue;
 
         if (!grouped.has(topic)) {
-          grouped.set(topic, {
-            topic,
-            records: 0,
-            amount: 0,
-            rows: []
-          });
+          grouped.set(topic, { topic, records: 0, amount: 0, rows: [] });
         }
 
         const item = grouped.get(topic);
@@ -2528,68 +2618,54 @@
         item.rows.push(row);
       }
 
-      const items = [...grouped.values()].sort((a, b) => b.amount - a.amount);
+      const items = [...grouped.values()].sort((a,b) => b.amount - a.amount);
 
       return `
         <section class="panel topic-overview-panel" id="donor-topics">
-          <div class="section-label">Donor types & topics</div>
-          <h3>What kinds of donors appear in the finance profiles?</h3>
+          <div class="section-label">PAC donor topics</div>
+          <h3>What kinds of PACs and organizations are appearing in candidate profiles?</h3>
           <p class="topic-overview-copy">
-            Click a category to see the named donors, PACs or organizations currently represented in that topic.
-            PAC and organization topics are inferred conservatively from the committee or organization name.
-            Individual donors remain in their own category.
+            Click a topic to see the named PACs and organizations, the candidates they supported, and the amounts shown in the currently published donor lists.
+            Individual donors are intentionally excluded from this topic view.
           </p>
-
           <div class="topic-overview-grid">
             ${items.map((item, index) => {
-              const [color, soft] = topicPalette[item.topic] || ["#64748b", "#f1f5f9"];
-              const sortedRows = [...item.rows]
-                .sort((a, b) => Number(b.amount || 0) - Number(a.amount || 0));
+              const palette = topicPalette[item.topic] || ["#65758a", "#f2f5f8"];
+              const color = palette[0];
+              const bg = palette[1];
+              const sortedRows = [...item.rows].sort((a,b) => Number(b.amount || 0) - Number(a.amount || 0));
 
               return `
                 <article
                   class="topic-overview-card"
-                  aria-expanded="false"
                   data-topic-card
-                  style="--topic-color:${color};--topic-soft:${soft};"
+                  aria-expanded="false"
+                  style="--topic-color:${color};--topic-bg:${bg};"
                 >
-                  <button
-                    class="topic-overview-button"
-                    type="button"
-                    data-topic-toggle
-                    aria-controls="topic-details-${index}"
-                  >
+                  <button class="topic-overview-button" type="button" data-topic-toggle>
                     <div>
                       <div class="topic-overview-name">${escapeHtml(item.topic)}</div>
                       <div class="topic-overview-meta">
-                        ${item.records.toLocaleString()} listed donor record${item.records === 1 ? "" : "s"}
-                        · ${formatCurrency(item.amount)} represented
+                        ${item.records.toLocaleString()} listed PAC/organization record${item.records === 1 ? "" : "s"}
+                        · ${formatCurrency(item.amount)}
                       </div>
                     </div>
                     <span class="topic-overview-icon" aria-hidden="true">+</span>
                   </button>
 
-                  <div
-                    class="topic-overview-details"
-                    id="topic-details-${index}"
-                    data-topic-details
-                  >
-                    ${sortedRows.length ? sortedRows.map(row => `
+                  <div class="topic-overview-details">
+                    ${sortedRows.map(row => `
                       <div class="topic-detail-row">
                         <div>
-                          <div class="topic-detail-name">${escapeHtml(row.donor || "Unnamed donor")}</div>
+                          <div class="topic-detail-name">${escapeHtml(row.donor || "Unnamed organization")}</div>
                           <div class="topic-detail-candidate">
-                            ${row.candidate_name
-                              ? `Donated to ${escapeHtml(row.candidate_name)}`
-                              : "Candidate not listed"}
+                            ${row.candidate_name ? `Supported ${escapeHtml(row.candidate_name)}` : ""}
                             ${row.type ? ` · ${escapeHtml(row.type)}` : ""}
                           </div>
                         </div>
                         <div class="topic-detail-amount">${formatCurrency(row.amount)}</div>
                       </div>
-                    `).join("") : `
-                      <div class="topic-detail-empty">No named donor records are available in this category.</div>
-                    `}
+                    `).join("")}
                   </div>
                 </article>
               `;
@@ -2604,9 +2680,8 @@
         button.addEventListener("click", () => {
           const card = button.closest("[data-topic-card]");
           if (!card) return;
-
-          const isOpen = card.getAttribute("aria-expanded") === "true";
-          card.setAttribute("aria-expanded", isOpen ? "false" : "true");
+          const open = card.getAttribute("aria-expanded") === "true";
+          card.setAttribute("aria-expanded", open ? "false" : "true");
         });
       });
     }
