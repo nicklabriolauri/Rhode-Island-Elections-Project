@@ -1842,6 +1842,14 @@
         grid-template-columns: 1fr;
       }
 
+      .topic-detail-row {
+        grid-template-columns: 1fr;
+      }
+
+      .topic-detail-amount {
+        text-align: left;
+      }
+
       .donor-top {
         grid-template-columns: 1fr;
       }
@@ -2476,45 +2484,131 @@
       const rows = getNamedDonorIndex(data);
       if (!rows.length) return "";
 
+      const topicPalette = {
+        "Individual donors": ["#2f80ed", "#eaf4ff"],
+        "Labor / Unions": ["#d64545", "#fff0f0"],
+        "Public Safety": ["#e67e22", "#fff4e8"],
+        "Health Care": ["#16a085", "#e9fbf7"],
+        "Business / Industry": ["#8e44ad", "#f7edfb"],
+        "Housing / Real Estate": ["#b7791f", "#fff8e7"],
+        "Gun Rights": ["#4a5568", "#eef1f5"],
+        "Finance / Insurance": ["#0f766e", "#e8f8f6"],
+        "Political Party / Leadership": ["#6d28d9", "#f2ecff"],
+        "Education": ["#2563eb", "#edf4ff"],
+        "Energy / Utilities": ["#2e7d32", "#edf8ee"],
+        "Construction / Trades": ["#9a3412", "#fff0e8"],
+        "Environment / Conservation": ["#15803d", "#ebf8ef"],
+        "Transportation": ["#0369a1", "#eaf7ff"],
+        "Hospitality / Tourism": ["#c2410c", "#fff1eb"],
+        "Legal / Professional": ["#7c3aed", "#f4efff"],
+        "Reproductive Rights / Women": ["#be185d", "#fff0f6"],
+        "Advocacy / Civic": ["#0e7490", "#eaf9fc"],
+        "Other / Unclassified": ["#64748b", "#f1f5f9"]
+      };
+
       const grouped = new Map();
+
       for (const row of rows) {
         const type = String(row.type || "").toLowerCase();
         const isIndividual = type.includes("individual") && !type.includes("pac");
         const topic = isIndividual ? "Individual donors" : (row.interest_group || "Other / Unclassified");
 
         if (!grouped.has(topic)) {
-          grouped.set(topic, { topic, records: 0, amount: 0 });
+          grouped.set(topic, {
+            topic,
+            records: 0,
+            amount: 0,
+            rows: []
+          });
         }
+
         const item = grouped.get(topic);
         item.records += 1;
         item.amount += Number(row.amount || 0);
+        item.rows.push(row);
       }
 
-      const items = [...grouped.values()]
-        .sort((a, b) => b.amount - a.amount);
+      const items = [...grouped.values()].sort((a, b) => b.amount - a.amount);
 
       return `
         <section class="panel topic-overview-panel" id="donor-topics">
           <div class="section-label">Donor types & topics</div>
           <h3>What kinds of donors appear in the finance profiles?</h3>
           <p class="topic-overview-copy">
-            This overview summarizes the named donors currently shown in published candidate profiles.
-            PACs and organizations are grouped by issue or sector where the committee name makes that clear.
-            Individual donors are kept as individuals rather than being assigned a political topic.
+            Click a category to see the named donors, PACs or organizations currently represented in that topic.
+            PAC and organization topics are inferred conservatively from the committee or organization name.
+            Individual donors remain in their own category.
           </p>
+
           <div class="topic-overview-grid">
-            ${items.map(item => `
-              <article class="topic-overview-card">
-                <div class="topic-overview-name">${escapeHtml(item.topic)}</div>
-                <div class="topic-overview-meta">
-                  ${item.records.toLocaleString()} listed donor record${item.records === 1 ? "" : "s"}
-                  · ${formatCurrency(item.amount)} represented in the currently displayed donor lists
-                </div>
-              </article>
-            `).join("")}
+            ${items.map((item, index) => {
+              const [color, soft] = topicPalette[item.topic] || ["#64748b", "#f1f5f9"];
+              const sortedRows = [...item.rows]
+                .sort((a, b) => Number(b.amount || 0) - Number(a.amount || 0));
+
+              return `
+                <article
+                  class="topic-overview-card"
+                  aria-expanded="false"
+                  data-topic-card
+                  style="--topic-color:${color};--topic-soft:${soft};"
+                >
+                  <button
+                    class="topic-overview-button"
+                    type="button"
+                    data-topic-toggle
+                    aria-controls="topic-details-${index}"
+                  >
+                    <div>
+                      <div class="topic-overview-name">${escapeHtml(item.topic)}</div>
+                      <div class="topic-overview-meta">
+                        ${item.records.toLocaleString()} listed donor record${item.records === 1 ? "" : "s"}
+                        · ${formatCurrency(item.amount)} represented
+                      </div>
+                    </div>
+                    <span class="topic-overview-icon" aria-hidden="true">+</span>
+                  </button>
+
+                  <div
+                    class="topic-overview-details"
+                    id="topic-details-${index}"
+                    data-topic-details
+                  >
+                    ${sortedRows.length ? sortedRows.map(row => `
+                      <div class="topic-detail-row">
+                        <div>
+                          <div class="topic-detail-name">${escapeHtml(row.donor || "Unnamed donor")}</div>
+                          <div class="topic-detail-candidate">
+                            ${row.candidate_name
+                              ? `Donated to ${escapeHtml(row.candidate_name)}`
+                              : "Candidate not listed"}
+                            ${row.type ? ` · ${escapeHtml(row.type)}` : ""}
+                          </div>
+                        </div>
+                        <div class="topic-detail-amount">${formatCurrency(row.amount)}</div>
+                      </div>
+                    `).join("") : `
+                      <div class="topic-detail-empty">No named donor records are available in this category.</div>
+                    `}
+                  </div>
+                </article>
+              `;
+            }).join("")}
           </div>
         </section>
       `;
+    }
+
+    function setupTopicOverview() {
+      document.querySelectorAll("[data-topic-toggle]").forEach(button => {
+        button.addEventListener("click", () => {
+          const card = button.closest("[data-topic-card]");
+          if (!card) return;
+
+          const isOpen = card.getAttribute("aria-expanded") === "true";
+          card.setAttribute("aria-expanded", isOpen ? "false" : "true");
+        });
+      });
     }
 
     function buildPacTopicPanel(profile) {
@@ -2725,6 +2819,8 @@
         </div>
       `;
 
+
+      setupTopicOverview();
 
       const searchInput = document.getElementById("financeDirectorySearch");
       const sortInput = document.getElementById("financeDirectorySort");
