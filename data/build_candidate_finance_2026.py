@@ -2753,6 +2753,449 @@ def apply_dimario_valverde_place_morgan_overrides(profile: dict[str, object]) ->
         profile.update(override)
     return profile
 
+
+# Interest-group topic classification for named donors/committees.
+# Classification is conservative and based on the committee/organization name only.
+INTEREST_GROUP_RULES = [('Gun Rights', ('second amendment', 'gun owners', 'rifle', 'firearms')),
+ ('Public Safety',
+  ('firefighter',
+   'fire fighters',
+   'fire fighters association',
+   'police',
+   'correctional',
+   'law enforcement',
+   'sheriff',
+   'fop')),
+ ('Health Care',
+  ('health',
+   'hospital',
+   'nurse',
+   'nursing',
+   'medical',
+   'physician',
+   'dental',
+   'dentist',
+   'optometric',
+   'carepac',
+   'blue cross',
+   'pharmacy')),
+ ('Education', ('education', 'teacher', 'teachers', 'nea', 'school', 'university', 'college', 'faculty')),
+ ('Labor / Unions',
+  ('union',
+   'afl-cio',
+   'afscme',
+   'ibew',
+   'laborer',
+   'laborers',
+   'teamster',
+   'plumber',
+   'pipefitter',
+   'operating engineer',
+   'cope',
+   'workers',
+   'building trades')),
+ ('Hospitality / Tourism', ('hospitality', 'hotel', 'restaurant', 'tourism', 'lodging')),
+ ('Construction / Trades', ('construction', 'contractor', 'contractors', 'builders', 'building industry')),
+ ('Housing / Real Estate', ('realtor', 'real estate', 'housing', 'property owners')),
+ ('Energy / Utilities', ('energy', 'utility', 'utilities', 'electric', 'gas association', 'renewable')),
+ ('Finance / Insurance', ('bank', 'bankers', 'insurance', 'credit union', 'financial services')),
+ ('Transportation', ('transit', 'transportation', 'truck', 'railroad', 'airline')),
+ ('Environment / Conservation',
+  ('environment', 'environmental', 'conservation', 'clean water', 'land trust', 'climate')),
+ ('Reproductive Rights / Women', ('planned parenthood', 'reproductive', 'women', 'womxn')),
+ ('Business / Industry', ('business', 'chamber', 'manufactur', 'industry', 'industries', 'commerce')),
+ ('Legal / Professional', ('bar association', 'attorney', 'lawyers', 'legal')),
+ ('Political Party / Leadership',
+  ('senate leadership',
+   'democratic committee',
+   'republican committee',
+   'dem committee',
+   'gop',
+   'party committee',
+   'ward committee',
+   'city committee')),
+ ('Advocacy / Civic', ('civic', 'advocacy', 'good government', 'community action'))]
+
+
+AJELLO_GARMAN_BIAH_Q2_OVERRIDES = {'edith-h-ajello': {'report_label': '2026 On-Going Qrtly (2nd)',
+                    'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                    'source_note': "Built from Edith H Ajello's Rhode Island Q1 and Q2 2026 campaign finance filings.",
+                    'coverage_note': 'Detailed Q1/Q2 filing data; Q2 is the main display.',
+                    'original_documents': [{'label': 'Q1 2026 CF-2 report',
+                                            'period': 'January 1, 2026 to March 31, 2026',
+                                            'href': '/data/finance-documents/edith-h-ajello-q1-2026.pdf'},
+                                           {'label': 'Q2 2026 CF-2 report',
+                                            'period': 'April 1, 2026 to June 30, 2026',
+                                            'href': '/data/finance-documents/edith-h-ajello-q2-2026.pdf'}],
+                    'beginning_cash': 7132.11,
+                    'money_raised': 16404.58,
+                    'money_spent': 0.0,
+                    'ending_cash': 23536.69,
+                    'net_change': 16404.58,
+                    'total_cash_receipts': 16404.58,
+                    'campaign_expenses': 0.0,
+                    'aggregate_expenses': 0.0,
+                    'summary_intro': 'This filing shows a campaign that increased its cash reserve substantially '
+                                     'during the quarter. The Q2 report also lists an $8,540 account payable, which is '
+                                     'a liability rather than a cash disbursement.',
+                    'filing_history': [{'label': 'Q1 2026',
+                                        'reporting_period_label': 'January 1, 2026 to March 31, 2026',
+                                        'money_raised': 0.0,
+                                        'money_spent': 150.0,
+                                        'ending_cash': 7132.11,
+                                        'net_change': -150.0,
+                                        'notes': 'The campaign spent more than it raised in this reporting period.'},
+                                       {'label': 'Q2 2026',
+                                        'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                                        'money_raised': 16404.58,
+                                        'money_spent': 0.0,
+                                        'ending_cash': 23536.69,
+                                        'net_change': 16404.58,
+                                        'notes': 'The campaign raised more than it spent in this reporting period.'}],
+                    'source_buckets': [{'label': 'Itemized individual donors',
+                                        'class_name': 'itemized-individual-donors',
+                                        'amount': 5000.0,
+                                        'description': 'Named individual contributors reported in the Q2 filing.'},
+                                       {'label': 'Receipts without donor names listed',
+                                        'class_name': 'small-dollar-aggregate-online-receipts',
+                                        'amount': 5204.58,
+                                        'description': 'Aggregate individual receipts reported without donor names '
+                                                       'attached.'},
+                                       {'label': 'PAC contributions reported in aggregate',
+                                        'class_name': 'pac-contributions',
+                                        'amount': 200.0,
+                                        'description': 'PAC money reported in aggregate without the committee name '
+                                                       'listed.'},
+                                       {'label': 'Candidate loan',
+                                        'class_name': 'candidate-loan',
+                                        'amount': 6000.0,
+                                        'description': 'Loan proceeds from Edith H Ajello to the campaign.'}],
+                    'top_donors': [{'donor': 'Anne Holland',
+                                    'amount': 2000.0,
+                                    'type': 'Individual',
+                                    'interest_group': 'Individual',
+                                    'notes': 'Named contribution listed in the Q2 filing.'},
+                                   {'donor': 'Helen Anthony',
+                                    'amount': 500.0,
+                                    'type': 'Individual',
+                                    'interest_group': 'Individual',
+                                    'notes': 'Named contribution listed in the Q2 filing.'},
+                                   {'donor': 'Jennifer Kiddie',
+                                    'amount': 500.0,
+                                    'type': 'Individual',
+                                    'interest_group': 'Individual',
+                                    'notes': 'Named contribution listed in the Q2 filing.'},
+                                   {'donor': 'Linda Kushner',
+                                    'amount': 500.0,
+                                    'type': 'Individual',
+                                    'interest_group': 'Individual',
+                                    'notes': 'Named contribution listed in the Q2 filing.'},
+                                   {'donor': 'Carolyn Mark',
+                                    'amount': 500.0,
+                                    'type': 'Individual',
+                                    'interest_group': 'Individual',
+                                    'notes': 'Named contribution listed in the Q2 filing.'},
+                                   {'donor': 'Ralph Palumbo',
+                                    'amount': 500.0,
+                                    'type': 'Individual',
+                                    'interest_group': 'Individual',
+                                    'notes': 'Named contribution listed in the Q2 filing.'},
+                                   {'donor': 'Myrth York',
+                                    'amount': 500.0,
+                                    'type': 'Individual',
+                                    'interest_group': 'Individual',
+                                    'notes': 'Named contribution listed in the Q2 filing.'}],
+                    'spending_categories': [],
+                    'takeaways': [],
+                    'explainer_cards': []},
+ 'michael-j-garman': {'report_label': '2026 On-Going Qrtly (2nd)',
+                      'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                      'source_note': "Built from Michael J Garman's Rhode Island Q1 and Q2 2026 campaign finance "
+                                     'filings.',
+                      'coverage_note': 'Detailed Q1/Q2 filing data; Q2 is the main display.',
+                      'original_documents': [{'label': 'Q1 2026 CF-2 report',
+                                              'period': 'January 1, 2026 to March 31, 2026',
+                                              'href': '/data/finance-documents/michael-j-garman-q1-2026.pdf'},
+                                             {'label': 'Q2 2026 CF-2 report',
+                                              'period': 'April 1, 2026 to June 30, 2026',
+                                              'href': '/data/finance-documents/michael-j-garman-q2-2026.pdf'}],
+                      'beginning_cash': 23840.41,
+                      'money_raised': 1250.0,
+                      'money_spent': 2476.54,
+                      'ending_cash': 22613.87,
+                      'net_change': -1226.54,
+                      'total_cash_receipts': 1250.0,
+                      'campaign_expenses': 2476.54,
+                      'aggregate_expenses': 0.0,
+                      'summary_intro': 'This filing shows a campaign that spent more than it raised during Q2 while '
+                                       'retaining more than $22,000 in cash on hand.',
+                      'filing_history': [{'label': 'Q1 2026',
+                                          'reporting_period_label': 'January 1, 2026 to March 31, 2026',
+                                          'money_raised': 5283.0,
+                                          'money_spent': 2450.84,
+                                          'ending_cash': 23840.41,
+                                          'net_change': 2832.16,
+                                          'notes': 'The campaign raised more than it spent in this reporting period.'},
+                                         {'label': 'Q2 2026',
+                                          'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                                          'money_raised': 1250.0,
+                                          'money_spent': 2476.54,
+                                          'ending_cash': 22613.87,
+                                          'net_change': -1226.54,
+                                          'notes': 'The campaign spent more than it raised in this reporting period.'}],
+                      'source_buckets': [{'label': 'Itemized individual donors',
+                                          'class_name': 'itemized-individual-donors',
+                                          'amount': 820.0,
+                                          'description': 'Named individual contributors reported in the Q2 filing.'},
+                                         {'label': 'Receipts without donor names listed',
+                                          'class_name': 'small-dollar-aggregate-online-receipts',
+                                          'amount': 430.0,
+                                          'description': 'ActBlue receipts reported in aggregate without donor names '
+                                                         'attached to those payout lines.'}],
+                      'top_donors': [{'donor': 'Sally Shwartz',
+                                      'amount': 500.0,
+                                      'type': 'Individual',
+                                      'interest_group': 'Individual',
+                                      'notes': 'Named contribution listed in the Q2 filing.'},
+                                     {'donor': 'James Silverthorn',
+                                      'amount': 100.0,
+                                      'type': 'Individual',
+                                      'interest_group': 'Individual',
+                                      'notes': 'Named contribution listed in the Q2 filing.'},
+                                     {'donor': 'Angel Dean',
+                                      'amount': 50.0,
+                                      'type': 'Individual',
+                                      'interest_group': 'Individual',
+                                      'notes': 'Named contribution listed in the Q2 filing.'},
+                                     {'donor': 'Spencer Dickinson',
+                                      'amount': 50.0,
+                                      'type': 'Individual',
+                                      'interest_group': 'Individual',
+                                      'notes': 'Named contribution listed in the Q2 filing.'},
+                                     {'donor': 'Joshua Kennedy',
+                                      'amount': 50.0,
+                                      'type': 'Individual',
+                                      'interest_group': 'Individual',
+                                      'notes': 'Named contribution listed in the Q2 filing.'},
+                                     {'donor': 'Keerthi Sampath Madapusi',
+                                      'amount': 50.0,
+                                      'type': 'Individual',
+                                      'interest_group': 'Individual',
+                                      'notes': 'Named contribution listed in the Q2 filing.'},
+                                     {'donor': 'Kenny Uong',
+                                      'amount': 10.0,
+                                      'type': 'Individual',
+                                      'interest_group': 'Individual',
+                                      'notes': 'Named contribution listed in the Q2 filing.'},
+                                     {'donor': 'Megan Ranney',
+                                      'amount': 10.0,
+                                      'type': 'Individual',
+                                      'interest_group': 'Individual',
+                                      'notes': 'Named contribution listed in the Q2 filing.'}],
+                      'spending_categories': [{'title': 'Consultant & Professional Services',
+                                               'summary': 'Campaign management payments to Joshua Stearns.',
+                                               'amount': 2425.0},
+                                              {'title': 'Fundraising Expenses',
+                                               'summary': 'Donation-processing fees reported for ActBlue and Stripe.',
+                                               'amount': 51.54}],
+                      'takeaways': [],
+                      'explainer_cards': []},
+ 'nathan-w-biah': {'report_label': '2026 On-Going Qrtly (2nd)',
+                   'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                   'source_note': "Built from Nathan W Biah's Rhode Island Q1 and Q2 2026 campaign finance filings.",
+                   'coverage_note': 'Detailed Q1/Q2 filing data; Q2 is the main display.',
+                   'original_documents': [{'label': 'Q1 2026 CF-2 report',
+                                           'period': 'January 1, 2026 to March 31, 2026',
+                                           'href': '/data/finance-documents/nathan-w-biah-q1-2026.pdf'},
+                                          {'label': 'Q2 2026 CF-2 report',
+                                           'period': 'April 1, 2026 to June 30, 2026',
+                                           'href': '/data/finance-documents/nathan-w-biah-q2-2026.pdf'}],
+                   'beginning_cash': 3597.7,
+                   'money_raised': 7800.0,
+                   'money_spent': 2782.98,
+                   'ending_cash': 8614.72,
+                   'net_change': 5017.02,
+                   'total_cash_receipts': 7800.0,
+                   'campaign_expenses': 2782.98,
+                   'aggregate_expenses': 0.0,
+                   'summary_intro': 'This filing shows a campaign that raised substantially more than it spent in Q2, '
+                                    'increasing cash on hand to more than $8,600.',
+                   'filing_history': [{'label': 'Q1 2026',
+                                       'reporting_period_label': 'January 1, 2026 to March 31, 2026',
+                                       'money_raised': 0.0,
+                                       'money_spent': 460.83,
+                                       'ending_cash': 3597.7,
+                                       'net_change': -460.83,
+                                       'notes': 'The campaign spent more than it raised in this reporting period.'},
+                                      {'label': 'Q2 2026',
+                                       'reporting_period_label': 'April 1, 2026 to June 30, 2026',
+                                       'money_raised': 7800.0,
+                                       'money_spent': 2782.98,
+                                       'ending_cash': 8614.72,
+                                       'net_change': 5017.02,
+                                       'notes': 'The campaign raised more than it spent in this reporting period.'}],
+                   'source_buckets': [{'label': 'Itemized individual donors',
+                                       'class_name': 'itemized-individual-donors',
+                                       'amount': 5675.0,
+                                       'description': 'Named individual contributors reported in the Q2 filing.'},
+                                      {'label': 'PAC contributions',
+                                       'class_name': 'pac-contributions',
+                                       'amount': 2125.0,
+                                       'description': 'Political committees and PACs listed in the Q2 filing.'}],
+                   'top_donors': [{'donor': 'John H. Petrarca',
+                                   'amount': 1000.0,
+                                   'type': 'Individual',
+                                   'interest_group': 'Individual',
+                                   'notes': 'Named contribution listed in the Q2 filing.'},
+                                  {'donor': 'Brett P. Smiley',
+                                   'amount': 500.0,
+                                   'type': 'Individual',
+                                   'interest_group': 'Individual',
+                                   'notes': 'Named contribution listed in the Q2 filing.'},
+                                  {'donor': 'CREDIT UNION PAC OF RI',
+                                   'amount': 500.0,
+                                   'type': 'PAC',
+                                   'interest_group': 'Labor / Unions',
+                                   'notes': 'Named contribution listed in the Q2 filing.'},
+                                  {'donor': 'Matthew A Lopes Jr',
+                                   'amount': 250.0,
+                                   'type': 'Individual',
+                                   'interest_group': 'Individual',
+                                   'notes': 'Named contribution listed in the Q2 filing.'},
+                                  {'donor': 'RI TROOPERS ASSOCIATION PAC',
+                                   'amount': 250.0,
+                                   'type': 'PAC',
+                                   'interest_group': 'Public Safety',
+                                   'notes': 'Named contribution listed in the Q2 filing.'},
+                                  {'donor': 'Muraina Akinfolarin',
+                                   'amount': 200.0,
+                                   'type': 'Individual',
+                                   'interest_group': 'Individual',
+                                   'notes': 'Named contribution listed in the Q2 filing.'},
+                                  {'donor': 'Keith Hoffmann',
+                                   'amount': 200.0,
+                                   'type': 'Individual',
+                                   'interest_group': 'Individual',
+                                   'notes': 'Named contribution listed in the Q2 filing.'},
+                                  {'donor': 'William J. Murphy',
+                                   'amount': 200.0,
+                                   'type': 'Individual',
+                                   'interest_group': 'Individual',
+                                   'notes': 'Named contribution listed in the Q2 filing.'},
+                                  {'donor': 'Anthony Simon',
+                                   'amount': 200.0,
+                                   'type': 'Individual',
+                                   'interest_group': 'Individual',
+                                   'notes': 'Named contribution listed in the Q2 filing.'},
+                                  {'donor': 'Joseph W Walsh',
+                                   'amount': 200.0,
+                                   'type': 'Individual',
+                                   'interest_group': 'Individual',
+                                   'notes': 'Named contribution listed in the Q2 filing.'},
+                                  {'donor': 'RI BROTHERHOOD OF CORRECTIONAL OFFICERS PAC',
+                                   'amount': 200.0,
+                                   'type': 'PAC',
+                                   'interest_group': 'Public Safety',
+                                   'notes': 'Named contribution listed in the Q2 filing.'},
+                                  {'donor': 'Zachary G Darrow',
+                                   'amount': 150.0,
+                                   'type': 'Individual',
+                                   'interest_group': 'Individual',
+                                   'notes': 'Named contribution listed in the Q2 filing.'}],
+                   'spending_categories': [{'title': 'Travel & Lodging',
+                                            'summary': 'Visible spending includes American Airlines, Boston Logan '
+                                                       'International Airport, Lyft and Marriott.',
+                                            'amount': 792.76},
+                                           {'title': 'Office Equipment & Supplies',
+                                            'summary': 'Visible spending includes three payments to Hanna Pro, LLC.',
+                                            'amount': 750.0},
+                                           {'title': 'Fundraising Expenses',
+                                            'summary': "Visible spending includes Patrick's Pub.",
+                                            'amount': 683.5},
+                                           {'title': 'Donations (All Others)',
+                                            'summary': "Visible spending includes the Providence St. Patrick's Day "
+                                                       'Parade and The Wings Mentorship Through Sports.',
+                                            'amount': 350.0},
+                                           {'title': 'Food, Beverages and Meals',
+                                            'summary': 'Visible spending includes Condesa Restaurante Mexicano and '
+                                                       "Sala'o Cuban Restaurant & Bar.",
+                                            'amount': 177.6},
+                                           {'title': 'Bank Fees',
+                                            'summary': 'Visible spending includes ActBlue and Citizens Bank.',
+                                            'amount': 29.12}],
+                   'takeaways': [],
+                   'explainer_cards': []}}
+
+
+def apply_ajello_garman_biah_q2_overrides(profile: dict[str, object]) -> dict[str, object]:
+    override = AJELLO_GARMAN_BIAH_Q2_OVERRIDES.get(str(profile.get("slug", "")))
+    if not override:
+        return profile
+    profile.update(override)
+    return profile
+
+def classify_interest_group(donor: dict[str, object]) -> str:
+    name = str(donor.get("donor", "") or "").strip().lower()
+    donor_type = str(donor.get("type", "") or "").strip().lower()
+
+    # Do not infer an individual's policy interests from employer/occupation.
+    if "individual" in donor_type and "pac" not in donor_type and "committee" not in donor_type:
+        return "Individual"
+
+    for category, keywords in INTEREST_GROUP_RULES:
+        if any(keyword in name for keyword in keywords):
+            return category
+
+    if "political party" in donor_type:
+        return "Political Party / Leadership"
+    if any(token in donor_type for token in ("pac", "committee", "organization", "party")):
+        return "Other / Unclassified"
+    if "individual" in donor_type:
+        return "Individual"
+    return "Other / Unclassified"
+
+def enrich_interest_groups(profile: dict[str, object]) -> dict[str, object]:
+    donors = profile.get("top_donors") or []
+    for donor in donors:
+        if isinstance(donor, dict):
+            donor["interest_group"] = classify_interest_group(donor)
+    return profile
+
+def is_searchable_named_donor(donor: dict[str, object]) -> bool:
+    name = str(donor.get("donor", "") or "").strip().lower()
+    donor_type = str(donor.get("type", "") or "").strip().lower()
+    if not name or name in {"(not listed)", "not listed", "unknown"}:
+        return False
+    if "aggregate" in donor_type or "unitemized" in name or "without donor names" in name:
+        return False
+    return True
+
+def build_sitewide_donor_index(profiles: list[dict[str, object]]) -> list[dict[str, object]]:
+    rows: list[dict[str, object]] = []
+    for profile in profiles:
+        for donor in profile.get("top_donors") or []:
+            if not isinstance(donor, dict) or not is_searchable_named_donor(donor):
+                continue
+            rows.append({
+                "donor": str(donor.get("donor", "")),
+                "amount": round(float(donor.get("amount", 0.0) or 0.0), 2),
+                "type": str(donor.get("type", "Donor")),
+                "interest_group": str(donor.get("interest_group") or classify_interest_group(donor)),
+                "notes": str(donor.get("notes", "")),
+                "candidate_id": str(profile.get("candidate_id", "")),
+                "candidate_name": str(profile.get("candidate_name", "")),
+                "chamber": str(profile.get("chamber", "")),
+                "district_number": str(profile.get("district_number", "")),
+                "party": str(profile.get("party", "")),
+                "slug": str(profile.get("slug", "")),
+            })
+    rows.sort(key=lambda row: (
+        str(row["donor"]).lower(),
+        -float(row["amount"]),
+        str(row["candidate_name"]).lower(),
+    ))
+    return rows
+
 def slugify(value: str) -> str:
     text = unicodedata.normalize("NFKD", value or "")
     text = text.encode("ascii", "ignore").decode("ascii")
@@ -4202,6 +4645,8 @@ def main() -> int:
             profile = apply_tikoian_patalano_gallo_q2_overrides(profile)
             profile = apply_latest_senate_q2_overrides(profile)
             profile = apply_dimario_valverde_place_morgan_overrides(profile)
+            profile = apply_ajello_garman_biah_q2_overrides(profile)
+            profile = enrich_interest_groups(profile)
             profiles.append(profile)
             entry["has_profile"] = True
         directory.append(entry)
@@ -4210,6 +4655,8 @@ def main() -> int:
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "cycle": "2026-q2",
         "directory": directory,
+        "donor_index": build_sitewide_donor_index(profiles),
+        "donor_search_scope_note": "Donor search covers named donors currently listed in published campaign-finance profiles. Aggregate receipts reported without donor names cannot be searched.",
         "profiles": sorted(profiles, key=lambda item: (item["chamber"], int(item["district_number"]), item["candidate_name"])),
         "discrepancies": discrepancies,
     }
