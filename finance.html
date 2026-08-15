@@ -1290,6 +1290,47 @@
       line-height: 1.6;
     }
 
+    .finance-progress-note {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-top: 18px;
+      max-width: 900px;
+      padding: 14px 16px;
+      border: 1px solid rgba(55, 197, 255, 0.24);
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(225, 246, 255, 0.92) 0%, rgba(243, 250, 255, 0.96) 100%);
+      color: #27425f;
+      box-shadow: 0 12px 28px rgba(55, 197, 255, 0.08);
+    }
+
+    .finance-progress-note::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      margin-top: 7px;
+      border-radius: 999px;
+      background: var(--cyan);
+      box-shadow: 0 0 0 5px rgba(55, 197, 255, 0.14);
+      flex: 0 0 auto;
+    }
+
+    .finance-progress-note strong {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .finance-progress-note span {
+      display: block;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
     .directory-stats {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1902,6 +1943,12 @@
           <div class="panel hero-story">
             <h2>Follow the money behind ${escapeHtml(profile.candidate_name)}.</h2>
             <p>${escapeHtml(profile.summary_intro || "This page turns a Rhode Island campaign finance filing into a simpler public summary.")}</p>
+            <div class="finance-progress-note">
+              <div>
+                <strong>Work in progress</strong>
+                <span>This campaign finance section is still being built. Some candidate profiles may be incomplete, and some candidates may not appear yet while filings are being added and checked.</span>
+              </div>
+            </div>
             <div class="hero-pills">
               <div class="hero-pill">${escapeHtml(districtLabel)}</div>
               <div class="hero-pill ${partyTone}">${escapeHtml(partyLabel(profile.party))}</div>
@@ -2378,6 +2425,12 @@
             <div class="eyebrow">Campaign Finance Directory</div>
             <h2>Browse Rhode Island campaign finance profiles.</h2>
             <p>Search every legislative candidate, filter by chamber, and open a cleaner public summary of who raised money, who spent it, and what cash remains on hand when a filing is available.</p>
+            <div class="finance-progress-note">
+              <div>
+                <strong>Work in progress</strong>
+                <span>This campaign finance section is still being built. Some candidate profiles may be incomplete, and some candidates may not appear yet while filings are being added and checked.</span>
+              </div>
+            </div>
             <div class="directory-stats">
               <article class="directory-stat">
                 <div class="directory-stat-label">All candidates</div>
