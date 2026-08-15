@@ -941,6 +941,159 @@
       color: #112d4e;
     }
 
+
+    .donor-interest-group {
+      display: inline-flex;
+      align-items: center;
+      min-height: 27px;
+      padding: 0 10px;
+      border-radius: 999px;
+      background: #eeeaff;
+      color: #5945d8;
+      border: 1px solid #dcd4ff;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .donor-search-panel {
+      padding: 24px;
+    }
+
+    .donor-search-panel h3 {
+      margin: 8px 0 0;
+      font-family: "Sora", sans-serif;
+      color: var(--navy);
+      font-size: clamp(26px, 3vw, 34px);
+      line-height: 1.08;
+      letter-spacing: -.045em;
+    }
+
+    .donor-search-copy {
+      margin: 10px 0 0;
+      color: var(--ink-soft);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .donor-search-controls {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(210px, 285px);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .donor-search-input,
+    .donor-search-select {
+      width: 100%;
+      min-height: 52px;
+      padding: 0 16px;
+      border: 1px solid #d6e3ef;
+      border-radius: 18px;
+      background: #fff;
+      color: var(--navy);
+      font: inherit;
+      font-weight: 750;
+      outline: none;
+    }
+
+    .donor-search-input:focus,
+    .donor-search-select:focus {
+      border-color: #8ea8ff;
+      box-shadow: 0 0 0 4px rgba(70, 112, 255, .09);
+    }
+
+    .donor-search-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #e2ebf4;
+      color: var(--ink-soft);
+      font-size: 13px;
+    }
+
+    .donor-search-results {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .donor-search-result {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 14px;
+      align-items: center;
+      padding: 15px 16px;
+      border: 1px solid #dde8f2;
+      border-radius: 18px;
+      background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
+    }
+
+    .donor-search-result-name {
+      color: var(--navy);
+      font-weight: 900;
+      font-size: 16px;
+    }
+
+    .donor-search-result-meta {
+      margin-top: 5px;
+      color: #6f8095;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .donor-search-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .donor-search-tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 9px;
+      border-radius: 999px;
+      background: #edf6ff;
+      color: #345a7e;
+      font-size: 10px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .donor-search-amount {
+      color: var(--navy);
+      font-size: 18px;
+      font-weight: 900;
+      text-align: right;
+    }
+
+    .donor-search-link {
+      display: inline-flex;
+      margin-top: 8px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: #13264a;
+      color: #fff;
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .donor-search-empty {
+      padding: 16px;
+      border-radius: 16px;
+      background: #f8fbff;
+      border: 1px solid #dde8f2;
+      color: var(--ink-soft);
+      font-size: 14px;
+    }
+
     .donor-meta {
       display: flex;
       flex-wrap: wrap;
@@ -1732,6 +1885,15 @@
       }
 
       .verification-item,
+      .donor-search-controls,
+      .donor-search-result {
+        grid-template-columns: 1fr;
+      }
+
+      .donor-search-amount {
+        text-align: left;
+      }
+
       .donor-top {
         grid-template-columns: 1fr;
       }
@@ -2224,6 +2386,7 @@
                 </div>
                 <div class="donor-meta">
                   <span class="donor-type">${escapeHtml(donor.type || "Donor")}</span>
+                  ${donor.interest_group ? `<span class="donor-interest-group">${escapeHtml(donor.interest_group)}</span>` : ""}
                 </div>
                 <div class="donor-track">
                   <div class="donor-fill" style="width:${Math.max(8, (Number(donor.amount || 0) / maxAmount) * 100).toFixed(1)}%"></div>
@@ -2331,7 +2494,155 @@
       `;
     }
 
-    function renderProfile(profile) {
+
+    function buildDonorSearchPanel() {
+      return `
+        <section class="panel donor-search-panel" id="donor-search">
+          <div class="section-label">Donor search</div>
+          <h3>Search donors across campaign-finance profiles</h3>
+          <p class="donor-search-copy">
+            Search by donor name, candidate, district, donor type, or interest-group topic.
+            Aggregate receipts without donor names cannot be searched.
+          </p>
+          <div class="donor-search-controls">
+            <input
+              class="donor-search-input"
+              id="financeDonorSearchInput"
+              type="search"
+              placeholder="Try a donor name, PAC, labor, health care, public safety..."
+              autocomplete="off"
+            />
+            <select class="donor-search-select" id="financeDonorTopicSelect" aria-label="Filter donors by topic">
+              <option value="">All donor types / topics</option>
+            </select>
+          </div>
+          <div class="donor-search-head">
+            <strong id="financeDonorSearchCount">Type a donor name or choose a topic.</strong>
+            <span id="financeDonorSearchIndexed"></span>
+          </div>
+          <div class="donor-search-results" id="financeDonorSearchResults"></div>
+        </section>
+      `;
+    }
+
+    function getDonorIndex(data) {
+      if (Array.isArray(data.donor_index) && data.donor_index.length) {
+        return data.donor_index;
+      }
+
+      const rows = [];
+      for (const profile of data.profiles || []) {
+        for (const donor of profile.top_donors || []) {
+          const name = String(donor.donor || "").trim();
+          const donorType = String(donor.type || "");
+          if (!name || donorType.toLowerCase().includes("aggregate")) continue;
+          rows.push({
+            donor: name,
+            amount: Number(donor.amount || 0),
+            type: donorType || "Donor",
+            interest_group: donor.interest_group || (donorType.toLowerCase().includes("individual") ? "Individual" : "Other / Unclassified"),
+            notes: donor.notes || "",
+            candidate_name: profile.candidate_name,
+            candidate_id: profile.candidate_id,
+            chamber: profile.chamber,
+            district_number: profile.district_number,
+            party: profile.party,
+            slug: profile.slug
+          });
+        }
+      }
+      return rows;
+    }
+
+    function setupDonorSearch(data) {
+      const input = document.getElementById("financeDonorSearchInput");
+      const topicSelect = document.getElementById("financeDonorTopicSelect");
+      const results = document.getElementById("financeDonorSearchResults");
+      const count = document.getElementById("financeDonorSearchCount");
+      const indexed = document.getElementById("financeDonorSearchIndexed");
+      if (!input || !topicSelect || !results || !count) return;
+
+      const index = getDonorIndex(data);
+      const topics = [...new Set(index.map(row => row.interest_group).filter(Boolean))]
+        .sort((a, b) => String(a).localeCompare(String(b)));
+
+      topicSelect.innerHTML = `
+        <option value="">All donor types / topics</option>
+        ${topics.map(topic => `<option value="${escapeHtml(topic)}">${escapeHtml(topic)}</option>`).join("")}
+      `;
+
+      if (indexed) {
+        indexed.textContent = `${index.length.toLocaleString()} named donor records indexed`;
+      }
+
+      function renderMatches() {
+        const q = input.value.trim().toLowerCase();
+        const topic = topicSelect.value;
+
+        if (!q && !topic) {
+          count.textContent = "Type a donor name or choose a topic.";
+          results.innerHTML = "";
+          return;
+        }
+
+        const matches = index
+          .filter(row => {
+            if (topic && String(row.interest_group || "") !== topic) return false;
+            if (!q) return true;
+
+            const chamberName = row.chamber === "house" ? "House" : row.chamber === "senate" ? "Senate" : row.chamber;
+            const haystack = [
+              row.donor,
+              row.candidate_name,
+              row.type,
+              row.interest_group,
+              row.notes,
+              chamberName,
+              row.district_number,
+              row.party
+            ].join(" ").toLowerCase();
+
+            return haystack.includes(q);
+          })
+          .sort((a, b) => Number(b.amount || 0) - Number(a.amount || 0))
+          .slice(0, 100);
+
+        count.textContent = `${matches.length} matching donor record${matches.length === 1 ? "" : "s"} shown`;
+
+        if (!matches.length) {
+          results.innerHTML = `<div class="donor-search-empty">No named donors match that search.</div>`;
+          return;
+        }
+
+        results.innerHTML = matches.map(row => {
+          const chamberName = row.chamber === "house" ? "House" : row.chamber === "senate" ? "Senate" : (row.chamber || "");
+          return `
+            <article class="donor-search-result">
+              <div>
+                <div class="donor-search-result-name">${escapeHtml(row.donor)}</div>
+                <div class="donor-search-result-meta">
+                  Donated to ${escapeHtml(row.candidate_name || "")}
+                  ${row.district_number ? ` · ${escapeHtml(chamberName)} District ${escapeHtml(row.district_number)}` : ""}
+                </div>
+                <div class="donor-search-tags">
+                  <span class="donor-search-tag">${escapeHtml(row.type || "Donor")}</span>
+                  <span class="donor-search-tag">${escapeHtml(row.interest_group || "Other / Unclassified")}</span>
+                </div>
+              </div>
+              <div>
+                <div class="donor-search-amount">${formatCurrency(row.amount)}</div>
+                ${row.slug ? `<a class="donor-search-link" href="finance.html?slug=${encodeURIComponent(row.slug)}">Open candidate</a>` : ""}
+              </div>
+            </article>
+          `;
+        }).join("");
+      }
+
+      input.addEventListener("input", renderMatches);
+      topicSelect.addEventListener("change", renderMatches);
+    }
+
+    function renderProfile(profile, data) {
       const app = document.getElementById("financeApp");
       const titleBase = `${profile.candidate_name} | Campaign Finance`;
       document.title = `${titleBase} | Rhode Island Elections Project`;
@@ -2339,6 +2650,7 @@
         ${buildHero(profile)}
         <section class="content-grid">
           <div class="stack">
+            ${buildDonorSearchPanel()}
             ${buildDonorHighlights(profile)}
           </div>
           <div class="stack">
@@ -2394,6 +2706,7 @@
           </div>
         </article>
       `;
+      setupDonorSearch(data);
     }
 
     function renderDirectory(data) {
@@ -2450,6 +2763,8 @@
             </div>
           </section>
 
+          ${buildDonorSearchPanel()}
+
           <section class="panel directory-controls">
             <div class="directory-controls-top">
               <label class="directory-search" aria-label="Search campaign finance profiles">
@@ -2481,6 +2796,8 @@
           </section>
         </div>
       `;
+
+      setupDonorSearch(data);
 
       const searchInput = document.getElementById("financeDirectorySearch");
       const sortInput = document.getElementById("financeDirectorySort");
@@ -2587,7 +2904,7 @@
         const data = await response.json();
         const profile = getRequestedProfile(data.profiles || []);
         if (profile) {
-          renderProfile(profile);
+          renderProfile(profile, data);
           return;
         }
         if ((data.profiles || []).length) {
@@ -2608,6 +2925,5 @@
 
     boot();
   </script>
-  <script src="finance-enhancements.js?v=20260815d"></script>
 </body>
 </html>
