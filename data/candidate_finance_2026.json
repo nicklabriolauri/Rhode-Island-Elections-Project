@@ -4443,27 +4443,38 @@
       "office_sought": "State Representative",
       "report_label": "Q2 2026 campaign finance filing",
       "reporting_period_label": "April 1, 2026 to June 30, 2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website summary captured; quarter not reliably identified",
-      "original_documents": [],
-      "beginning_cash": 0.0,
+      "source_note": "Built from Christopher G Paplauskas's Rhode Island Q1 and Q2 2026 campaign finance filings supplied by the user.",
+      "coverage_note": "Detailed Q1/Q2 filing data; Q2 is the standardized main display.",
+      "original_documents": [
+        {
+          "label": "Q1 2026 CF-2 report",
+          "period": "January 1, 2026 to March 31, 2026",
+          "href": "/data/finance-documents/christopher-g-paplauskas-q1-2026.pdf"
+        },
+        {
+          "label": "Q2 2026 CF-2 report",
+          "period": "April 1, 2026 to June 30, 2026",
+          "href": "/data/finance-documents/christopher-g-paplauskas-q2-2026.pdf"
+        }
+      ],
+      "beginning_cash": 22270.85,
       "money_raised": 12440.0,
       "money_spent": 6396.15,
       "ending_cash": 28314.7,
       "net_change": 6043.85,
-      "total_cash_receipts": 0.0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 6396.15,
-      "summary_intro": "This filing shows the campaign closing the period without reported cash on hand. The report also shows that it raised more during the period than it spent.",
+      "total_cash_receipts": 12440.0,
+      "campaign_expenses": 6396.15,
+      "aggregate_expenses": 0.0,
+      "summary_intro": "Christopher G Paplauskas's Q2 2026 filing reports $12,440.00 in receipts, $6,396.15 in campaign expenses, and $28,314.70 in cash on hand.",
       "filing_history": [
         {
           "label": "Q1 2026",
           "reporting_period_label": "January 1, 2026 to March 31, 2026",
-          "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "money_raised": 5050.0,
+          "money_spent": 2184.35,
+          "ending_cash": 22270.85,
+          "net_change": 2865.65,
+          "notes": "Q1 retained in filing history."
         },
         {
           "label": "Q2 2026",
@@ -4472,14 +4483,149 @@
           "money_spent": 6396.15,
           "ending_cash": 28314.7,
           "net_change": 6043.85,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "notes": "Q2 is the standardized main display period."
         }
       ],
-      "source_buckets": [],
-      "top_donors": [],
-      "spending_categories": [],
+      "source_buckets": [
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 9540.0,
+          "description": "Individual contributions reported in Q2."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 2900.0,
+          "description": "Political action committee contributions reported in Q2."
+        }
+      ],
+      "top_donors": [
+        {
+          "donor": "INTERNATIONAL BROTHERHOOD OF POLICE OFFICERS LOCAL 301",
+          "amount": 2000.0,
+          "type": "PAC",
+          "interest_group": "Public Safety",
+          "notes": "Named contribution listed in the filing."
+        },
+        {
+          "donor": "Friends of Ken Hopkins",
+          "amount": 2000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Reported as an individual contribution in the filing, despite the committee-style name."
+        },
+        {
+          "donor": "James Donahue",
+          "amount": 1000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Old Sturbridge Village."
+        },
+        {
+          "donor": "John H Petrarca",
+          "amount": 1000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Providence Auto Body."
+        },
+        {
+          "donor": "Alan Muoio",
+          "amount": 500.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Lawn Beauticians Inc."
+        },
+        {
+          "donor": "CRANSTON FIREFIGHTERS LOCAL 1363 COPE",
+          "amount": 500.0,
+          "type": "PAC",
+          "interest_group": "Public Safety",
+          "notes": "Named contribution listed in the filing."
+        },
+        {
+          "donor": "James Pagliarini",
+          "amount": 500.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Central Nursery."
+        },
+        {
+          "donor": "Rusell Henry III",
+          "amount": 500.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as City of Cranston."
+        },
+        {
+          "donor": "Denise Paplauskas",
+          "amount": 300.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as retired."
+        },
+        {
+          "donor": "RI LABORERS' PAC",
+          "amount": 200.0,
+          "type": "PAC",
+          "interest_group": "Labor / Unions",
+          "notes": "Named contribution listed in the filing."
+        },
+        {
+          "donor": "RHODE ISLAND ENERGY PAC (RIE PAC)",
+          "amount": 100.0,
+          "type": "PAC",
+          "interest_group": "Energy / Utilities",
+          "notes": "Named contribution listed in the filing."
+        },
+        {
+          "donor": "RI STATE LODGE FOP PAC (Fraternal Order of Police)",
+          "amount": 100.0,
+          "type": "PAC",
+          "interest_group": "Public Safety",
+          "notes": "Named contribution listed in the filing."
+        }
+      ],
+      "spending_categories": [
+        {
+          "title": "Food, Beverages and Meals",
+          "summary": "Visible spending includes Bajas, Bar Lazio, Circe Prime, Harukis, Legal Sea Foods, The Capital Grille, The Thirsty Beaver, and Twin Oaks.",
+          "amount": 1479.05
+        },
+        {
+          "title": "Fundraising Expenses",
+          "summary": "Visible spending includes Revolution American Bistro and Rhode Island Yacht Club.",
+          "amount": 1331.4
+        },
+        {
+          "title": "Donations (Political)",
+          "summary": "Visible spending includes Cranston Republican City Committee and Friends of Anthony Melillo.",
+          "amount": 1200.0
+        },
+        {
+          "title": "Travel & Lodging",
+          "summary": "Visible spending includes AC Hotel, Lyft, and Uber for a Community Leaders of America conference.",
+          "amount": 708.13
+        },
+        {
+          "title": "Donations (All Others)",
+          "summary": "Visible spending includes Cranston Historical Society, Edgewood Garden Club, Lowe's, and Western Cranston Garden Club.",
+          "amount": 677.57
+        },
+        {
+          "title": "Advertising",
+          "summary": "Visible spending includes Cranston East Little League, Cranston Hall of Fame, and Cranston West Little League.",
+          "amount": 650.0
+        },
+        {
+          "title": "Consultant & Professional Services",
+          "summary": "Visible spending includes Joseph F Agresti.",
+          "amount": 350.0
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_status": "available"
     },
     {
       "candidate_id": "house-15-colleen-m-crudele",
@@ -4490,45 +4636,27 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "Q2 2026 campaign finance filing",
-      "reporting_period_label": "April 1, 2026 to June 30, 2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website summary captured; quarter not reliably identified",
+      "report_label": "No financial summary details found",
+      "reporting_period_label": "",
+      "source_note": "No financial summary details were available in the source material supplied for this update.",
+      "coverage_note": "No financial summary details found. Zeroes should not be interpreted as reported campaign-finance activity.",
       "original_documents": [],
-      "beginning_cash": 0.0,
-      "money_raised": 0.0,
-      "money_spent": 0.0,
-      "ending_cash": 0.0,
-      "net_change": 0.0,
-      "total_cash_receipts": 0.0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 0.0,
-      "summary_intro": "This filing shows the campaign closing the period without reported cash on hand. The report also shows that it raised more during the period than it spent.",
-      "filing_history": [
-        {
-          "label": "Q1 2026",
-          "reporting_period_label": "January 1, 2026 to March 31, 2026",
-          "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
-        },
-        {
-          "label": "Q2 2026",
-          "reporting_period_label": "April 1, 2026 to June 30, 2026",
-          "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
-        }
-      ],
+      "beginning_cash": null,
+      "money_raised": null,
+      "money_spent": null,
+      "ending_cash": null,
+      "net_change": null,
+      "total_cash_receipts": null,
+      "campaign_expenses": null,
+      "aggregate_expenses": null,
+      "summary_intro": "No financial summary details found.",
+      "filing_history": [],
       "source_buckets": [],
       "top_donors": [],
       "spending_categories": [],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_status": "not_found"
     },
     {
       "candidate_id": "house-16-brandon-potter",
@@ -5424,45 +5552,154 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "9/30/2022",
-      "reporting_period_label": "9/30/2022",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website summary captured; quarter not reliably identified",
-      "original_documents": [],
-      "beginning_cash": 0.0,
-      "money_raised": 0.0,
-      "money_spent": 0.0,
-      "ending_cash": 0.0,
-      "net_change": 0.0,
-      "total_cash_receipts": 0.0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 0.0,
-      "summary_intro": "This filing shows the campaign closing the period without reported cash on hand. The report also shows that it raised more during the period than it spent.",
-      "filing_history": [
+      "report_label": "28 Days Before Primary filing",
+      "reporting_period_label": "June 22, 2026 to August 11, 2026",
+      "source_note": "Built from Janie Lee Segui's Rhode Island 28 Days Before Primary campaign finance filing supplied by the user.",
+      "coverage_note": "This is a 28 Days Before Primary filing rather than a Q2 quarterly filing, so it is not directly comparable with candidates whose main display covers April 1 through June 30.",
+      "original_documents": [
         {
-          "label": "Q1 2026",
-          "reporting_period_label": "January 1, 2026 to March 31, 2026",
-          "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
-        },
-        {
-          "label": "Q2 2026",
-          "reporting_period_label": "April 1, 2026 to June 30, 2026",
-          "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "label": "28 Days Before Primary 2026 CF-2 report",
+          "period": "June 22, 2026 to August 11, 2026",
+          "href": "/data/finance-documents/janie-lee-segui-28-days-before-primary-2026.pdf"
         }
       ],
-      "source_buckets": [],
-      "top_donors": [],
-      "spending_categories": [],
+      "beginning_cash": 0.0,
+      "money_raised": 7985.0,
+      "money_spent": 2391.61,
+      "ending_cash": 5593.39,
+      "net_change": 5593.39,
+      "total_cash_receipts": 7985.0,
+      "campaign_expenses": 2391.61,
+      "aggregate_expenses": 0.0,
+      "summary_intro": "Janie Lee Segui's 28 Days Before Primary filing reports $7,985.00 in total cash received, including a $10.00 loan used to open the bank account, $2,391.61 in campaign expenses, and $5,593.39 in cash on hand. The filing also reports $1,000.00 in in-kind support.",
+      "filing_history": [
+        {
+          "label": "28 Days Before Primary 2026",
+          "reporting_period_label": "June 22, 2026 to August 11, 2026",
+          "money_raised": 7985.0,
+          "money_spent": 2391.61,
+          "ending_cash": 5593.39,
+          "net_change": 5593.39,
+          "notes": "Pre-primary filing; not directly comparable with Q2 quarterly reports."
+        }
+      ],
+      "source_buckets": [
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 6850.0,
+          "description": "Named individual cash contributions reported in the pre-primary filing."
+        },
+        {
+          "label": "Receipts without donor names listed",
+          "class_name": "small-dollar-aggregate-online-receipts",
+          "amount": 1125.0,
+          "description": "Aggregate individual receipts reported without donor names."
+        },
+        {
+          "label": "Candidate loan",
+          "class_name": "candidate-loan",
+          "amount": 10.0,
+          "description": "Loan proceeds from Janie Lee Segui used to open the bank account."
+        }
+      ],
+      "top_donors": [
+        {
+          "donor": "James Kingston",
+          "amount": 2000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as not employed."
+        },
+        {
+          "donor": "Kevin Gallagher",
+          "amount": 2000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as consultant."
+        },
+        {
+          "donor": "Jessie Kingston",
+          "amount": 1000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as not employed."
+        },
+        {
+          "donor": "Jonathon Acosta",
+          "amount": 1000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "In-kind contribution; employer listed as Postdoctoral Research Associate / State Senator at State of Rhode Island."
+        },
+        {
+          "donor": "Keri Langan",
+          "amount": 500.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as National Parents Union."
+        },
+        {
+          "donor": "Victoria Criado",
+          "amount": 350.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as PLT Strategies Group."
+        },
+        {
+          "donor": "Brennan McMahon",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Data Quality Campaign."
+        },
+        {
+          "donor": "Chiara Deltito-Sharrott",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as RICPSL."
+        },
+        {
+          "donor": "Jessica Coyle",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as URI."
+        },
+        {
+          "donor": "Margery Yeager",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Education Forward DC."
+        }
+      ],
+      "spending_categories": [
+        {
+          "title": "Other",
+          "summary": "Visible spending includes RI Democratic Party for VAN.",
+          "amount": 1750.0
+        },
+        {
+          "title": "Consultant & Professional Services",
+          "summary": "Visible spending includes She Moves Foward for graphic design and website work.",
+          "amount": 300.0
+        },
+        {
+          "title": "Food, Beverages and Meals",
+          "summary": "Visible spending includes Samms Inn.",
+          "amount": 221.98
+        },
+        {
+          "title": "Bank Fees",
+          "summary": "Visible spending includes ActBlue.",
+          "amount": 119.63
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_status": "available_preprimary"
     },
     {
       "candidate_id": "house-22-zakary-j-pereira",
@@ -17953,6 +18190,19 @@
       "slug": "leonela-felix"
     },
     {
+      "donor": "Alan Muoio",
+      "amount": 500.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as Lawn Beauticians Inc.",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP",
+      "slug": "christopher-g-paplauskas"
+    },
+    {
       "donor": "Albert Gianfrancesco",
       "amount": 400.0,
       "type": "Individual",
@@ -18759,6 +19009,19 @@
       "slug": "todd-m-patalano"
     },
     {
+      "donor": "Brennan McMahon",
+      "amount": 250.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as Data Quality Campaign.",
+      "candidate_id": "house-22-janie-lee-segui",
+      "candidate_name": "Janie Lee Segui",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "DEM",
+      "slug": "janie-lee-segui"
+    },
+    {
       "donor": "Brett P. Smiley",
       "amount": 500.0,
       "type": "Individual",
@@ -19136,6 +19399,19 @@
       "slug": "james-metivier"
     },
     {
+      "donor": "Chiara Deltito-Sharrott",
+      "amount": 250.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as RICPSL.",
+      "candidate_id": "house-22-janie-lee-segui",
+      "candidate_name": "Janie Lee Segui",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "DEM",
+      "slug": "janie-lee-segui"
+    },
+    {
       "donor": "CHRIS STANTON",
       "amount": 500.0,
       "type": "Individual",
@@ -19420,6 +19696,19 @@
       "district_number": "23",
       "party": "REP",
       "slug": "jessica-de-la-cruz"
+    },
+    {
+      "donor": "CRANSTON FIREFIGHTERS LOCAL 1363 COPE",
+      "amount": 500.0,
+      "type": "PAC",
+      "interest_group": "Public Safety",
+      "notes": "Named contribution listed in the filing.",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP",
+      "slug": "christopher-g-paplauskas"
     },
     {
       "donor": "CREDIT UNION PAC OF RI",
@@ -19719,6 +20008,19 @@
       "district_number": "6",
       "party": "DEM",
       "slug": "raymond-a-hull"
+    },
+    {
+      "donor": "Denise Paplauskas",
+      "amount": 300.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as retired.",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP",
+      "slug": "christopher-g-paplauskas"
     },
     {
       "donor": "Diane Palumbo",
@@ -20150,6 +20452,19 @@
       "slug": "william-muto"
     },
     {
+      "donor": "Friends of Ken Hopkins",
+      "amount": 2000.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Reported as an individual contribution in the filing, despite the committee-style name.",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP",
+      "slug": "christopher-g-paplauskas"
+    },
+    {
       "donor": "Garrett Mancieri",
       "amount": 200.0,
       "type": "Individual",
@@ -20541,6 +20856,19 @@
     },
     {
       "donor": "INTERNATIONAL BROTHERHOOD OF POLICE OFFICERS LOCAL 301",
+      "amount": 2000.0,
+      "type": "PAC",
+      "interest_group": "Public Safety",
+      "notes": "Named contribution listed in the filing.",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP",
+      "slug": "christopher-g-paplauskas"
+    },
+    {
+      "donor": "INTERNATIONAL BROTHERHOOD OF POLICE OFFICERS LOCAL 301",
       "amount": 500.0,
       "type": "PAC",
       "interest_group": "Public Safety",
@@ -20631,6 +20959,19 @@
       "slug": "amy-j-santiago"
     },
     {
+      "donor": "James Donahue",
+      "amount": 1000.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as Old Sturbridge Village.",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP",
+      "slug": "christopher-g-paplauskas"
+    },
+    {
       "donor": "James Grundy",
       "amount": 1000.0,
       "type": "Individual",
@@ -20697,6 +21038,19 @@
     },
     {
       "donor": "James Kingston",
+      "amount": 2000.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as not employed.",
+      "candidate_id": "house-22-janie-lee-segui",
+      "candidate_name": "Janie Lee Segui",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "DEM",
+      "slug": "janie-lee-segui"
+    },
+    {
+      "donor": "James Kingston",
       "amount": 1000.0,
       "type": "Individual",
       "interest_group": "Individual",
@@ -20720,6 +21074,19 @@
       "district_number": "72",
       "party": "DEM",
       "slug": "terri-denise-cortvriend"
+    },
+    {
+      "donor": "James Pagliarini",
+      "amount": 500.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as Central Nursery.",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP",
+      "slug": "christopher-g-paplauskas"
     },
     {
       "donor": "James Silverthorn",
@@ -20878,6 +21245,19 @@
       "slug": "edith-h-ajello"
     },
     {
+      "donor": "Jessica Coyle",
+      "amount": 250.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as URI.",
+      "candidate_id": "house-22-janie-lee-segui",
+      "candidate_name": "Janie Lee Segui",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "DEM",
+      "slug": "janie-lee-segui"
+    },
+    {
       "donor": "Jessica de la Cruz",
       "amount": 1000.0,
       "type": "Individual",
@@ -20957,6 +21337,19 @@
     },
     {
       "donor": "Jessie Kingston",
+      "amount": 1000.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as not employed.",
+      "candidate_id": "house-22-janie-lee-segui",
+      "candidate_name": "Janie Lee Segui",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "DEM",
+      "slug": "janie-lee-segui"
+    },
+    {
+      "donor": "Jessie Kingston",
       "amount": 250.0,
       "type": "Individual",
       "interest_group": "Individual",
@@ -21019,6 +21412,19 @@
       "district_number": "23",
       "party": "DEM",
       "slug": "william-muto"
+    },
+    {
+      "donor": "John H Petrarca",
+      "amount": 1000.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as Providence Auto Body.",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP",
+      "slug": "christopher-g-paplauskas"
     },
     {
       "donor": "John H Petrarca",
@@ -21344,6 +21750,19 @@
       "district_number": "8",
       "party": "DEM",
       "slug": "gena-felix"
+    },
+    {
+      "donor": "Jonathon Acosta",
+      "amount": 1000.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "In-kind contribution; employer listed as Postdoctoral Research Associate / State Senator at State of Rhode Island.",
+      "candidate_id": "house-22-janie-lee-segui",
+      "candidate_name": "Janie Lee Segui",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "DEM",
+      "slug": "janie-lee-segui"
     },
     {
       "donor": "Jose Batista",
@@ -21827,6 +22246,32 @@
       "slug": "michael-j-garman"
     },
     {
+      "donor": "Keri Langan",
+      "amount": 500.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as National Parents Union.",
+      "candidate_id": "house-22-janie-lee-segui",
+      "candidate_name": "Janie Lee Segui",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "DEM",
+      "slug": "janie-lee-segui"
+    },
+    {
+      "donor": "Kevin Gallagher",
+      "amount": 2000.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as consultant.",
+      "candidate_id": "house-22-janie-lee-segui",
+      "candidate_name": "Janie Lee Segui",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "DEM",
+      "slug": "janie-lee-segui"
+    },
+    {
       "donor": "Kevin J. Hawkins",
       "amount": 250.0,
       "type": "Individual",
@@ -22293,6 +22738,19 @@
       "district_number": "17",
       "party": "DEM",
       "slug": "jacquelyn-baginski"
+    },
+    {
+      "donor": "Margery Yeager",
+      "amount": 250.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as Education Forward DC.",
+      "candidate_id": "house-22-janie-lee-segui",
+      "candidate_name": "Janie Lee Segui",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "DEM",
+      "slug": "janie-lee-segui"
     },
     {
       "donor": "Marisa Bouley",
@@ -23582,6 +24040,19 @@
       "slug": "michael-chippendale"
     },
     {
+      "donor": "RHODE ISLAND ENERGY PAC (RIE PAC)",
+      "amount": 100.0,
+      "type": "PAC",
+      "interest_group": "Energy / Utilities",
+      "notes": "Named contribution listed in the filing.",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP",
+      "slug": "christopher-g-paplauskas"
+    },
+    {
       "donor": "RHODE ISLAND SECOND AMENDMENT PAC",
       "amount": 1000.0,
       "type": "PAC",
@@ -23972,6 +24443,19 @@
       "slug": "pamela-j-lauria"
     },
     {
+      "donor": "RI LABORERS' PAC",
+      "amount": 200.0,
+      "type": "PAC",
+      "interest_group": "Labor / Unions",
+      "notes": "Named contribution listed in the filing.",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP",
+      "slug": "christopher-g-paplauskas"
+    },
+    {
       "donor": "RI LABORERS' PUBLIC EMPLOYEES PAC",
       "amount": 500.0,
       "type": "PAC",
@@ -24087,6 +24571,19 @@
       "district_number": "60",
       "party": "DEM",
       "slug": "karen-alzate"
+    },
+    {
+      "donor": "RI STATE LODGE FOP PAC (Fraternal Order of Police)",
+      "amount": 100.0,
+      "type": "PAC",
+      "interest_group": "Public Safety",
+      "notes": "Named contribution listed in the filing.",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP",
+      "slug": "christopher-g-paplauskas"
     },
     {
       "donor": "RI TROOPERS ASSOCIATION PAC",
@@ -24282,6 +24779,19 @@
       "district_number": "6",
       "party": "DEM",
       "slug": "raymond-a-hull"
+    },
+    {
+      "donor": "Rusell Henry III",
+      "amount": 500.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as City of Cranston.",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP",
+      "slug": "christopher-g-paplauskas"
     },
     {
       "donor": "Sabir Hussain",
@@ -25036,6 +25546,19 @@
       "district_number": "40",
       "party": "REP",
       "slug": "michael-chippendale"
+    },
+    {
+      "donor": "Victoria Criado",
+      "amount": 350.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as PLT Strategies Group.",
+      "candidate_id": "house-22-janie-lee-segui",
+      "candidate_name": "Janie Lee Segui",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "DEM",
+      "slug": "janie-lee-segui"
     },
     {
       "donor": "Victoria Gu",
