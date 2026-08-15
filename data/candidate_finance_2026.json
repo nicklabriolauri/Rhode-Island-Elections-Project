@@ -3532,27 +3532,38 @@
       "office_sought": "State Representative",
       "report_label": "Q2 2026 campaign finance filing",
       "reporting_period_label": "April 1, 2026 to June 30, 2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website summary captured; quarter not reliably identified",
-      "original_documents": [],
-      "beginning_cash": 0.0,
+      "source_note": "Built from Scott A Slater's Rhode Island Q1 and Q2 2026 campaign finance filings supplied by the user.",
+      "coverage_note": "Detailed Q1/Q2 filing data; Q2 is the standardized main display.",
+      "original_documents": [
+        {
+          "label": "Q1 2026 CF-2 report",
+          "period": "January 1, 2026 to March 31, 2026",
+          "href": "/data/finance-documents/scott-a-slater-q1-2026.pdf"
+        },
+        {
+          "label": "Q2 2026 CF-2 report",
+          "period": "April 1, 2026 to June 30, 2026",
+          "href": "/data/finance-documents/scott-a-slater-q2-2026.pdf"
+        }
+      ],
+      "beginning_cash": 68217.13,
       "money_raised": 45350.0,
       "money_spent": 16061.17,
       "ending_cash": 97505.96,
       "net_change": 29288.83,
-      "total_cash_receipts": 0.0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 16061.17,
-      "summary_intro": "This filing shows the campaign closing the period without reported cash on hand. The report also shows that it raised more during the period than it spent.",
+      "total_cash_receipts": 45350.0,
+      "campaign_expenses": 16061.17,
+      "aggregate_expenses": 0.0,
+      "summary_intro": "Scott A Slater's Q2 2026 filing reports $45,350.00 in receipts, $16,061.17 in campaign expenses, and $97,505.96 in cash on hand.",
       "filing_history": [
         {
           "label": "Q1 2026",
           "reporting_period_label": "January 1, 2026 to March 31, 2026",
-          "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "money_raised": 1000.0,
+          "money_spent": 3325.62,
+          "ending_cash": 68217.13,
+          "net_change": -2325.62,
+          "notes": "Q1 retained in filing history."
         },
         {
           "label": "Q2 2026",
@@ -3561,14 +3572,140 @@
           "money_spent": 16061.17,
           "ending_cash": 97505.96,
           "net_change": 29288.83,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "notes": "Q2 is the standardized main display period."
         }
       ],
-      "source_buckets": [],
-      "top_donors": [],
-      "spending_categories": [],
+      "source_buckets": [
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 38725.0,
+          "description": "Named individual contributions reported in Q2."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 6625.0,
+          "description": "Political action committee contributions reported in Q2."
+        }
+      ],
+      "top_donors": [
+        {
+          "donor": "Gerard C. DiSanto II",
+          "amount": 2000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Club Desire."
+        },
+        {
+          "donor": "Peter M. Kasabian Jr.",
+          "amount": 2000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Donovan Obair, LLC."
+        },
+        {
+          "donor": "Ralph A. Palumbo",
+          "amount": 2000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Ralph A. Palumbo, CPA."
+        },
+        {
+          "donor": "Thomas E. Badway",
+          "amount": 2000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Thomas E. Badway & Associates."
+        },
+        {
+          "donor": "Diane Palumbo",
+          "amount": 1000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Southern Sky Renewable Energy."
+        },
+        {
+          "donor": "John H. Petrarca",
+          "amount": 1000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Providence Auto Body."
+        },
+        {
+          "donor": "Simon Chan",
+          "amount": 1000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Islander Restaurant."
+        },
+        {
+          "donor": "Jacob Bissaillon",
+          "amount": 925.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as State of Rhode Island."
+        },
+        {
+          "donor": "Armand T. Lusi",
+          "amount": 625.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as A.F. Lusi Construction, Inc."
+        },
+        {
+          "donor": "Laurence K. Flynn",
+          "amount": 625.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as retired."
+        }
+      ],
+      "spending_categories": [
+        {
+          "title": "Fundraising Expenses",
+          "summary": "Visible spending includes Capriccio, City of Providence, and Millonzi Fine Catering.",
+          "amount": 7450.59
+        },
+        {
+          "title": "Donations (All Others)",
+          "summary": "Visible spending includes Blood Cancer United, CVS, and Dominican Independence Heritage Award Committee.",
+          "amount": 3317.5
+        },
+        {
+          "title": "Office Equipment & Supplies",
+          "summary": "Visible spending includes Best Buy and Sani Creative.",
+          "amount": 1689.67
+        },
+        {
+          "title": "Food, Beverages and Meals",
+          "summary": "Visible spending includes Camille's Restaurant, Capital Grille, and Capriccio.",
+          "amount": 1366.04
+        },
+        {
+          "title": "Travel & Lodging",
+          "summary": "Visible spending includes American Airlines, Hyatt Arlington, and Rosslyn Metro Station.",
+          "amount": 930.43
+        },
+        {
+          "title": "Donations (Political)",
+          "summary": "Visible spending includes Committee to Elect Edith Ajello, Friends of Michael Solomon, and Friends of Oscar Vargas.",
+          "amount": 900.0
+        },
+        {
+          "title": "Bank Fees",
+          "summary": "Visible spending includes ActBlue and Citizens Bank.",
+          "amount": 206.94
+        },
+        {
+          "title": "Consultant & Professional Services",
+          "summary": "Visible spending includes Erasmo Ramirez.",
+          "amount": 200.0
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_status": "available"
     },
     {
       "candidate_id": "house-11-grace-diaz",
@@ -3876,45 +4013,27 @@
       "party": "REP",
       "party_label": "Republican",
       "office_sought": "State Representative",
-      "report_label": "Q2 2026 campaign finance filing",
-      "reporting_period_label": "April 1, 2026 to June 30, 2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website summary captured; quarter not reliably identified",
+      "report_label": "No financial summary details found",
+      "reporting_period_label": "",
+      "source_note": "No financial summary details were available in the source material supplied for this update.",
+      "coverage_note": "No financial summary details found. Zeroes should not be interpreted as reported campaign-finance activity.",
       "original_documents": [],
-      "beginning_cash": 0.0,
-      "money_raised": 0.0,
-      "money_spent": 0.0,
-      "ending_cash": 0.0,
-      "net_change": 0.0,
-      "total_cash_receipts": 0.0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 0.0,
-      "summary_intro": "This filing shows the campaign closing the period without reported cash on hand. The report also shows that it raised more during the period than it spent.",
-      "filing_history": [
-        {
-          "label": "Q1 2026",
-          "reporting_period_label": "January 1, 2026 to March 31, 2026",
-          "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
-        },
-        {
-          "label": "Q2 2026",
-          "reporting_period_label": "April 1, 2026 to June 30, 2026",
-          "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
-        }
-      ],
+      "beginning_cash": null,
+      "money_raised": null,
+      "money_spent": null,
+      "ending_cash": null,
+      "net_change": null,
+      "total_cash_receipts": null,
+      "campaign_expenses": null,
+      "aggregate_expenses": null,
+      "summary_intro": "No financial summary details found.",
+      "filing_history": [],
       "source_buckets": [],
       "top_donors": [],
       "spending_categories": [],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_status": "not_found"
     },
     {
       "candidate_id": "house-13-ramon-perez",
@@ -4031,27 +4150,38 @@
       "office_sought": "State Representative",
       "report_label": "Q2 2026 campaign finance filing",
       "reporting_period_label": "April 1, 2026 to June 30, 2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website summary captured; quarter not reliably identified",
-      "original_documents": [],
-      "beginning_cash": 0.0,
+      "source_note": "Built from Charlene Lima's Rhode Island Q1 and Q2 2026 campaign finance filings supplied by the user.",
+      "coverage_note": "Detailed Q1/Q2 filing data; Q2 is the standardized main display. Q2 contains both itemized and aggregate receipts.",
+      "original_documents": [
+        {
+          "label": "Q1 2026 CF-2 report",
+          "period": "January 1, 2026 to March 31, 2026",
+          "href": "/data/finance-documents/charlene-lima-q1-2026.pdf"
+        },
+        {
+          "label": "Q2 2026 CF-2 report",
+          "period": "April 1, 2026 to June 30, 2026",
+          "href": "/data/finance-documents/charlene-lima-q2-2026.pdf"
+        }
+      ],
+      "beginning_cash": 96517.26,
       "money_raised": 11210.0,
       "money_spent": 2624.35,
       "ending_cash": 105102.91,
       "net_change": 8585.65,
-      "total_cash_receipts": 0.0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 2624.35,
-      "summary_intro": "This filing shows the campaign closing the period without reported cash on hand. The report also shows that it raised more during the period than it spent.",
+      "total_cash_receipts": 11210.0,
+      "campaign_expenses": 851.17,
+      "aggregate_expenses": 1773.18,
+      "summary_intro": "Charlene M Lima's Q2 2026 filing reports $11,210.00 in cash receipts, $2,624.35 in total spending, and $105,102.91 in cash on hand. The filing also reports $500.00 in in-kind support.",
       "filing_history": [
         {
           "label": "Q1 2026",
           "reporting_period_label": "January 1, 2026 to March 31, 2026",
           "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "money_spent": 1819.62,
+          "ending_cash": 96517.26,
+          "net_change": -1819.62,
+          "notes": "Q1 reported no cash receipts."
         },
         {
           "label": "Q2 2026",
@@ -4060,14 +4190,118 @@
           "money_spent": 2624.35,
           "ending_cash": 105102.91,
           "net_change": 8585.65,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "notes": "Q2 is the standardized main display period."
         }
       ],
-      "source_buckets": [],
-      "top_donors": [],
-      "spending_categories": [],
+      "source_buckets": [
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 4550.0,
+          "description": "Named individual cash contributions reported in Q2."
+        },
+        {
+          "label": "Receipts without donor names listed",
+          "class_name": "small-dollar-aggregate-online-receipts",
+          "amount": 3385.0,
+          "description": "Aggregate individual cash receipts reported without donor names."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 2250.0,
+          "description": "Total PAC cash contributions reported in Q2."
+        },
+        {
+          "label": "PAC receipts without committee names listed",
+          "class_name": "pac-contributions",
+          "amount": 1025.0,
+          "description": "Aggregate PAC receipts included within the Q2 PAC total."
+        }
+      ],
+      "top_donors": [
+        {
+          "donor": "Adam Sepe",
+          "amount": 1000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Northeast Tree."
+        },
+        {
+          "donor": "Louis Gellis",
+          "amount": 1000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Fusing Home Independent."
+        },
+        {
+          "donor": "RI HEALTH CARE ASSOCIATION PAC",
+          "amount": 1000.0,
+          "type": "PAC",
+          "interest_group": "Health Care",
+          "notes": "Named contribution listed in the filing."
+        },
+        {
+          "donor": "Sandra Petraca",
+          "amount": 1000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Providence Auto Body."
+        },
+        {
+          "donor": "Andy Andujar",
+          "amount": 500.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "A $500 in-kind individual contribution is also reported for one-half of a fundraiser food expense."
+        },
+        {
+          "donor": "INTERNATIONAL BROTHERHOOD OF POLICE OFFICERS LOCAL 301",
+          "amount": 500.0,
+          "type": "PAC",
+          "interest_group": "Public Safety",
+          "notes": "Named contribution listed in the filing."
+        },
+        {
+          "donor": "Joseph Walsh",
+          "amount": 500.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Government Strategies Inc."
+        },
+        {
+          "donor": "Anthony Victoria",
+          "amount": 300.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Auto Service Autobody."
+        }
+      ],
+      "spending_categories": [
+        {
+          "title": "Fundraising Expenses",
+          "summary": "Visible itemized spending includes Regine Printing.",
+          "amount": 851.17
+        },
+        {
+          "title": "Food, Beverages and Meals",
+          "summary": "Aggregate food-and-beverage expenses reported in the filing.",
+          "amount": 845.77
+        },
+        {
+          "title": "Donations (All Others)",
+          "summary": "Aggregate donations and gifts reported in the filing.",
+          "amount": 543.94
+        },
+        {
+          "title": "Office Equipment & Supplies",
+          "summary": "Aggregate newspaper and online-technology expenses reported in the filing.",
+          "amount": 383.47
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_status": "available"
     },
     {
       "candidate_id": "house-14-kassielle-m-ramos",
@@ -4078,45 +4312,27 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "Q2 2026 campaign finance filing",
-      "reporting_period_label": "April 1, 2026 to June 30, 2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website summary captured; quarter not reliably identified",
+      "report_label": "No financial summary details found",
+      "reporting_period_label": "",
+      "source_note": "No financial summary details were available in the source material supplied for this update.",
+      "coverage_note": "No financial summary details found. Zeroes should not be interpreted as reported campaign-finance activity.",
       "original_documents": [],
-      "beginning_cash": 0.0,
-      "money_raised": 0.0,
-      "money_spent": 0.0,
-      "ending_cash": 0.0,
-      "net_change": 0.0,
-      "total_cash_receipts": 0.0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 0.0,
-      "summary_intro": "This filing shows the campaign closing the period without reported cash on hand. The report also shows that it raised more during the period than it spent.",
-      "filing_history": [
-        {
-          "label": "Q1 2026",
-          "reporting_period_label": "January 1, 2026 to March 31, 2026",
-          "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
-        },
-        {
-          "label": "Q2 2026",
-          "reporting_period_label": "April 1, 2026 to June 30, 2026",
-          "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
-        }
-      ],
+      "beginning_cash": null,
+      "money_raised": null,
+      "money_spent": null,
+      "ending_cash": null,
+      "net_change": null,
+      "total_cash_receipts": null,
+      "campaign_expenses": null,
+      "aggregate_expenses": null,
+      "summary_intro": "No financial summary details found.",
+      "filing_history": [],
       "source_buckets": [],
       "top_donors": [],
       "spending_categories": [],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_status": "not_found"
     },
     {
       "candidate_id": "house-14-naiommi-baret",
@@ -4127,45 +4343,94 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "Q2 2026 campaign finance filing",
-      "reporting_period_label": "April 1, 2026 to June 30, 2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website summary captured; quarter not reliably identified",
-      "original_documents": [],
-      "beginning_cash": 0.0,
-      "money_raised": 0.0,
-      "money_spent": 0.0,
-      "ending_cash": 0.0,
-      "net_change": 0.0,
-      "total_cash_receipts": 0.0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 0.0,
-      "summary_intro": "This filing shows the campaign closing the period without reported cash on hand. The report also shows that it raised more during the period than it spent.",
-      "filing_history": [
+      "report_label": "28 Days Before Primary filing",
+      "reporting_period_label": "June 22, 2026 to August 11, 2026",
+      "source_note": "Built from Naiommi Baret's Rhode Island 28 Days Before Primary campaign finance filing supplied by the user.",
+      "coverage_note": "This is a 28 Days Before Primary filing, not a Q2 quarterly report, so its reporting period is not directly comparable with candidates whose main display is Q2 2026.",
+      "original_documents": [
         {
-          "label": "Q1 2026",
-          "reporting_period_label": "January 1, 2026 to March 31, 2026",
-          "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
-        },
-        {
-          "label": "Q2 2026",
-          "reporting_period_label": "April 1, 2026 to June 30, 2026",
-          "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "label": "28 Days Before Primary 2026 CF-2 report",
+          "period": "June 22, 2026 to August 11, 2026",
+          "href": "/data/finance-documents/naiommi-baret-28-days-before-primary-2026.pdf"
         }
       ],
-      "source_buckets": [],
-      "top_donors": [],
-      "spending_categories": [],
+      "beginning_cash": 0.0,
+      "money_raised": 1675.0,
+      "money_spent": 1461.45,
+      "ending_cash": 213.55,
+      "net_change": 213.55,
+      "total_cash_receipts": 1675.0,
+      "campaign_expenses": 1461.45,
+      "aggregate_expenses": 0.0,
+      "summary_intro": "Naiommi Baret's 28 Days Before Primary filing reports $1,675.00 in cash receipts, $1,461.45 in campaign expenses, and $213.55 in cash on hand. The filing also reports $418.00 in in-kind support.",
+      "filing_history": [
+        {
+          "label": "28 Days Before Primary 2026",
+          "reporting_period_label": "June 22, 2026 to August 11, 2026",
+          "money_raised": 1675.0,
+          "money_spent": 1461.45,
+          "ending_cash": 213.55,
+          "net_change": 213.55,
+          "notes": "Pre-primary filing; not directly comparable with Q2 quarterly reports."
+        }
+      ],
+      "source_buckets": [
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 1100.0,
+          "description": "Named individual cash contributions reported in the pre-primary filing."
+        },
+        {
+          "label": "Receipts without donor names listed",
+          "class_name": "small-dollar-aggregate-online-receipts",
+          "amount": 575.0,
+          "description": "Aggregate individual cash receipts reported without donor names."
+        }
+      ],
+      "top_donors": [
+        {
+          "donor": "Carol Aguasvivas",
+          "amount": 650.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as RI Collective for Education."
+        },
+        {
+          "donor": "Jole Ramirez",
+          "amount": 618.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "$200 cash contribution plus $418 in-kind contribution for fundraiser food; employer listed as La Roca Restaurant."
+        },
+        {
+          "donor": "Thomas Weyman",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Columbus Cooperative."
+        }
+      ],
+      "spending_categories": [
+        {
+          "title": "Consultant & Professional Services",
+          "summary": "Visible spending includes All The Answers.",
+          "amount": 1070.77
+        },
+        {
+          "title": "Fundraising Expenses",
+          "summary": "Visible spending includes La Eskina.",
+          "amount": 350.48
+        },
+        {
+          "title": "Bank Fees",
+          "summary": "Visible spending includes Stripe Inc.",
+          "amount": 40.2
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_status": "available_preprimary"
     },
     {
       "candidate_id": "house-15-christopher-g-paplauskas",
@@ -17601,6 +17866,19 @@
       "amount": 1000.0,
       "type": "Individual",
       "interest_group": "Individual",
+      "notes": "Employer listed as Northeast Tree.",
+      "candidate_id": "house-14-charlene-m-lima",
+      "candidate_name": "Charlene M Lima",
+      "chamber": "house",
+      "district_number": "14",
+      "party": "DEM",
+      "slug": "charlene-m-lima"
+    },
+    {
+      "donor": "Adam Sepe",
+      "amount": 1000.0,
+      "type": "Individual",
+      "interest_group": "Individual",
       "notes": "Employer listed as North Eastern Tree.",
       "candidate_id": "senate-27-hanna-m-gallo",
       "candidate_name": "Hanna M Gallo",
@@ -17842,6 +18120,19 @@
       "district_number": "15",
       "party": "DEM",
       "slug": "vanessa-lopez"
+    },
+    {
+      "donor": "Andy Andujar",
+      "amount": 500.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "A $500 in-kind individual contribution is also reported for one-half of a fundraiser food expense.",
+      "candidate_id": "house-14-charlene-m-lima",
+      "candidate_name": "Charlene M Lima",
+      "chamber": "house",
+      "district_number": "14",
+      "party": "DEM",
+      "slug": "charlene-m-lima"
     },
     {
       "donor": "Angel Dean",
@@ -18195,6 +18486,19 @@
       "slug": "santos-javier"
     },
     {
+      "donor": "Anthony Victoria",
+      "amount": 300.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as Auto Service Autobody.",
+      "candidate_id": "house-14-charlene-m-lima",
+      "candidate_name": "Charlene M Lima",
+      "chamber": "house",
+      "district_number": "14",
+      "party": "DEM",
+      "slug": "charlene-m-lima"
+    },
+    {
       "donor": "Antonio P. Cassisi",
       "amount": 1000.0,
       "type": "Individual",
@@ -18232,6 +18536,19 @@
       "district_number": "12",
       "party": "DEM",
       "slug": "arlette-hidalgo"
+    },
+    {
+      "donor": "Armand T. Lusi",
+      "amount": 625.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as A.F. Lusi Construction, Inc.",
+      "candidate_id": "house-10-scott-a-slater",
+      "candidate_name": "Scott A Slater",
+      "chamber": "house",
+      "district_number": "10",
+      "party": "DEM",
+      "slug": "scott-a-slater"
     },
     {
       "donor": "Arnold B",
@@ -18713,6 +19030,19 @@
       "district_number": "17",
       "party": "DEM",
       "slug": "jacquelyn-baginski"
+    },
+    {
+      "donor": "Carol Aguasvivas",
+      "amount": 650.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as RI Collective for Education.",
+      "candidate_id": "house-14-naiommi-baret",
+      "candidate_name": "Naiommi Baret",
+      "chamber": "house",
+      "district_number": "14",
+      "party": "DEM",
+      "slug": "naiommi-baret"
     },
     {
       "donor": "Carol O'Donnell",
@@ -19430,6 +19760,19 @@
       "slug": "terri-denise-cortvriend"
     },
     {
+      "donor": "Diane Palumbo",
+      "amount": 1000.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as Southern Sky Renewable Energy.",
+      "candidate_id": "house-10-scott-a-slater",
+      "candidate_name": "Scott A Slater",
+      "chamber": "house",
+      "district_number": "10",
+      "party": "DEM",
+      "slug": "scott-a-slater"
+    },
+    {
       "donor": "DIANNE TEFFT",
       "amount": 185.0,
       "type": "Individual",
@@ -19912,6 +20255,19 @@
     },
     {
       "donor": "Gerard C. DiSanto II",
+      "amount": 2000.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as Club Desire.",
+      "candidate_id": "house-10-scott-a-slater",
+      "candidate_name": "Scott A Slater",
+      "chamber": "house",
+      "district_number": "10",
+      "party": "DEM",
+      "slug": "scott-a-slater"
+    },
+    {
+      "donor": "Gerard C. DiSanto II",
       "amount": 1000.0,
       "type": "Individual",
       "interest_group": "Individual",
@@ -20184,6 +20540,19 @@
       "slug": "karen-alzate"
     },
     {
+      "donor": "INTERNATIONAL BROTHERHOOD OF POLICE OFFICERS LOCAL 301",
+      "amount": 500.0,
+      "type": "PAC",
+      "interest_group": "Public Safety",
+      "notes": "Named contribution listed in the filing.",
+      "candidate_id": "house-14-charlene-m-lima",
+      "candidate_name": "Charlene M Lima",
+      "chamber": "house",
+      "district_number": "14",
+      "party": "DEM",
+      "slug": "charlene-m-lima"
+    },
+    {
       "donor": "INTERNATIONAL UNION OF PAINTERS & ALLIED TRADES POLITICAL ACTION TOGETHER POLITICAL COMMITTEE - RI",
       "amount": 1500.0,
       "type": "PAC",
@@ -20234,6 +20603,19 @@
       "district_number": "18",
       "party": "DEM",
       "slug": "arthur-handy"
+    },
+    {
+      "donor": "Jacob Bissaillon",
+      "amount": 925.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as State of Rhode Island.",
+      "candidate_id": "house-10-scott-a-slater",
+      "candidate_name": "Scott A Slater",
+      "chamber": "house",
+      "district_number": "10",
+      "party": "DEM",
+      "slug": "scott-a-slater"
     },
     {
       "donor": "Jacqueline E. Goldman",
@@ -20718,6 +21100,19 @@
     },
     {
       "donor": "John H. Petrarca",
+      "amount": 1000.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as Providence Auto Body.",
+      "candidate_id": "house-10-scott-a-slater",
+      "candidate_name": "Scott A Slater",
+      "chamber": "house",
+      "district_number": "10",
+      "party": "DEM",
+      "slug": "scott-a-slater"
+    },
+    {
+      "donor": "John H. Petrarca",
       "amount": 500.0,
       "type": "Individual",
       "interest_group": "Individual",
@@ -20899,6 +21294,19 @@
       "slug": "stephen-casey"
     },
     {
+      "donor": "Jole Ramirez",
+      "amount": 618.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "$200 cash contribution plus $418 in-kind contribution for fundraiser food; employer listed as La Roca Restaurant.",
+      "candidate_id": "house-14-naiommi-baret",
+      "candidate_name": "Naiommi Baret",
+      "chamber": "house",
+      "district_number": "14",
+      "party": "DEM",
+      "slug": "naiommi-baret"
+    },
+    {
       "donor": "Jonathan Daly-LaBelle",
       "amount": 30.0,
       "type": "Individual",
@@ -21066,6 +21474,19 @@
       "district_number": "65",
       "party": "DEM",
       "slug": "matthew-dawson"
+    },
+    {
+      "donor": "Joseph Walsh",
+      "amount": 500.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as Government Strategies Inc.",
+      "candidate_id": "house-14-charlene-m-lima",
+      "candidate_name": "Charlene M Lima",
+      "chamber": "house",
+      "district_number": "14",
+      "party": "DEM",
+      "slug": "charlene-m-lima"
     },
     {
       "donor": "Joseph Walsh",
@@ -21484,6 +21905,19 @@
       "slug": "gordon-e-rogers"
     },
     {
+      "donor": "Laurence K. Flynn",
+      "amount": 625.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as retired.",
+      "candidate_id": "house-10-scott-a-slater",
+      "candidate_name": "Scott A Slater",
+      "chamber": "house",
+      "district_number": "10",
+      "party": "DEM",
+      "slug": "scott-a-slater"
+    },
+    {
       "donor": "Leonard Lopes",
       "amount": 250.0,
       "type": "Individual",
@@ -21703,6 +22137,19 @@
       "district_number": "7",
       "party": "DEM",
       "slug": "frank-a-ciccone"
+    },
+    {
+      "donor": "Louis Gellis",
+      "amount": 1000.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as Fusing Home Independent.",
+      "candidate_id": "house-14-charlene-m-lima",
+      "candidate_name": "Charlene M Lima",
+      "chamber": "house",
+      "district_number": "14",
+      "party": "DEM",
+      "slug": "charlene-m-lima"
     },
     {
       "donor": "Louis Gitlin",
@@ -22706,6 +23153,19 @@
       "slug": "anthony-j-desimone"
     },
     {
+      "donor": "Peter M. Kasabian Jr.",
+      "amount": 2000.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as Donovan Obair, LLC.",
+      "candidate_id": "house-10-scott-a-slater",
+      "candidate_name": "Scott A Slater",
+      "chamber": "house",
+      "district_number": "10",
+      "party": "DEM",
+      "slug": "scott-a-slater"
+    },
+    {
       "donor": "Peter Mancini",
       "amount": 200.0,
       "type": "Individual",
@@ -22860,6 +23320,19 @@
       "district_number": "18",
       "party": "DEM",
       "slug": "robert-britto"
+    },
+    {
+      "donor": "Ralph A. Palumbo",
+      "amount": 2000.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as Ralph A. Palumbo, CPA.",
+      "candidate_id": "house-10-scott-a-slater",
+      "candidate_name": "Scott A Slater",
+      "chamber": "house",
+      "district_number": "10",
+      "party": "DEM",
+      "slug": "scott-a-slater"
     },
     {
       "donor": "Ralph Palumbo",
@@ -23263,6 +23736,19 @@
       "district_number": "61",
       "party": "DEM",
       "slug": "leonela-felix"
+    },
+    {
+      "donor": "RI HEALTH CARE ASSOCIATION PAC",
+      "amount": 1000.0,
+      "type": "PAC",
+      "interest_group": "Health Care",
+      "notes": "Named contribution listed in the filing.",
+      "candidate_id": "house-14-charlene-m-lima",
+      "candidate_name": "Charlene M Lima",
+      "chamber": "house",
+      "district_number": "14",
+      "party": "DEM",
+      "slug": "charlene-m-lima"
     },
     {
       "donor": "RI Health Care Association PAC",
@@ -23889,6 +24375,19 @@
       "slug": "samuel-w-bell"
     },
     {
+      "donor": "Sandra Petraca",
+      "amount": 1000.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as Providence Auto Body.",
+      "candidate_id": "house-14-charlene-m-lima",
+      "candidate_name": "Charlene M Lima",
+      "chamber": "house",
+      "district_number": "14",
+      "party": "DEM",
+      "slug": "charlene-m-lima"
+    },
+    {
       "donor": "Sandra Walsh",
       "amount": 1000.0,
       "type": "Individual",
@@ -23939,6 +24438,19 @@
       "district_number": "17",
       "party": "REP",
       "slug": "thomas-j-paolino"
+    },
+    {
+      "donor": "Simon Chan",
+      "amount": 1000.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as Islander Restaurant.",
+      "candidate_id": "house-10-scott-a-slater",
+      "candidate_name": "Scott A Slater",
+      "chamber": "house",
+      "district_number": "10",
+      "party": "DEM",
+      "slug": "scott-a-slater"
     },
     {
       "donor": "Spencer Dickinson",
@@ -24332,6 +24844,19 @@
     },
     {
       "donor": "Thomas E. Badway",
+      "amount": 2000.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as Thomas E. Badway & Associates.",
+      "candidate_id": "house-10-scott-a-slater",
+      "candidate_name": "Scott A Slater",
+      "chamber": "house",
+      "district_number": "10",
+      "party": "DEM",
+      "slug": "scott-a-slater"
+    },
+    {
+      "donor": "Thomas E. Badway",
       "amount": 500.0,
       "type": "Individual",
       "interest_group": "Individual",
@@ -24394,6 +24919,19 @@
       "district_number": "19",
       "party": "DEM",
       "slug": "james-metivier"
+    },
+    {
+      "donor": "Thomas Weyman",
+      "amount": 250.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as Columbus Cooperative.",
+      "candidate_id": "house-14-naiommi-baret",
+      "candidate_name": "Naiommi Baret",
+      "chamber": "house",
+      "district_number": "14",
+      "party": "DEM",
+      "slug": "naiommi-baret"
     },
     {
       "donor": "UNITED FOOD & COMMERCIAL WORKERS UNION LOCAL 328 RI PAC",
