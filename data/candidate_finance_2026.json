@@ -5710,45 +5710,162 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "12/31/2023",
-      "reporting_period_label": "12/31/2023",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website summary captured; quarter not reliably identified",
-      "original_documents": [],
-      "beginning_cash": 0.0,
-      "money_raised": 1951.64,
-      "money_spent": 0.0,
-      "ending_cash": 0.0,
-      "net_change": 1951.64,
-      "total_cash_receipts": 0.0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 0.0,
-      "summary_intro": "This filing shows the campaign closing the period without reported cash on hand. The report also shows that it raised more during the period than it spent.",
-      "filing_history": [
+      "report_label": "28 Days Before Primary filing",
+      "reporting_period_label": "June 22, 2026 to August 11, 2026",
+      "source_note": "Built from Zakary Pereira's Rhode Island 28 Days Before Primary campaign finance filing supplied by the user.",
+      "coverage_note": "This is a 28 Days Before Primary filing rather than a Q2 quarterly filing, so it is not directly comparable with candidates whose main display covers April 1 through June 30.",
+      "original_documents": [
         {
-          "label": "Q1 2026",
-          "reporting_period_label": "January 1, 2026 to March 31, 2026",
-          "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
-        },
-        {
-          "label": "Q2 2026",
-          "reporting_period_label": "April 1, 2026 to June 30, 2026",
-          "money_raised": 1951.64,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 1951.64,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "label": "28 Days Before Primary 2026 CF-2 report",
+          "period": "June 22, 2026 to August 11, 2026",
+          "href": "/data/finance-documents/zakary-j-pereira-28-days-before-primary-2026.pdf"
         }
       ],
-      "source_buckets": [],
-      "top_donors": [],
-      "spending_categories": [],
+      "beginning_cash": 0.0,
+      "money_raised": 12970.0,
+      "money_spent": 7677.1,
+      "ending_cash": 5292.9,
+      "net_change": 5292.9,
+      "total_cash_receipts": 12970.0,
+      "campaign_expenses": 7677.1,
+      "aggregate_expenses": 0.0,
+      "summary_intro": "Zakary J Pereira's 28 Days Before Primary filing reports $12,970.00 in total cash received, including $3,000.00 in loan proceeds, $7,677.10 in campaign expenses, and $5,292.90 in cash on hand.",
+      "filing_history": [
+        {
+          "label": "28 Days Before Primary 2026",
+          "reporting_period_label": "June 22, 2026 to August 11, 2026",
+          "money_raised": 12970.0,
+          "money_spent": 7677.1,
+          "ending_cash": 5292.9,
+          "net_change": 5292.9,
+          "notes": "Pre-primary filing; not directly comparable with Q2 quarterly reports."
+        }
+      ],
+      "source_buckets": [
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 4670.0,
+          "description": "Named individual cash contributions reported in the pre-primary filing."
+        },
+        {
+          "label": "Receipts without donor names listed",
+          "class_name": "small-dollar-aggregate-online-receipts",
+          "amount": 500.0,
+          "description": "Aggregate individual receipts reported without donor names."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 4800.0,
+          "description": "Political action committee contributions reported in the pre-primary filing."
+        },
+        {
+          "label": "Candidate loan",
+          "class_name": "candidate-loan",
+          "amount": 3000.0,
+          "description": "Loan proceeds from Zakary Pereira to the campaign."
+        }
+      ],
+      "top_donors": [
+        {
+          "donor": "Zakary Pereira",
+          "amount": 3000.0,
+          "type": "Loan Proceeds",
+          "interest_group": "Other / Unclassified",
+          "notes": "Candidate loan proceeds reported in the filing."
+        },
+        {
+          "donor": "DISTRICT 1199 SEIU POLITICAL ACTION COMMITTEE-RI",
+          "amount": 2000.0,
+          "type": "PAC",
+          "interest_group": "Other / Unclassified",
+          "notes": "Named contribution listed in the filing."
+        },
+        {
+          "donor": "Matthew Gunnip",
+          "amount": 2000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as State of RI."
+        },
+        {
+          "donor": "RI ALLIANCE SSE SEIU COPE (Social Service Employees)",
+          "amount": 2000.0,
+          "type": "PAC",
+          "interest_group": "Labor / Unions",
+          "notes": "Named contribution listed in the filing."
+        },
+        {
+          "donor": "Aaron Buongiovanni",
+          "amount": 500.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Innovative Renal Care."
+        },
+        {
+          "donor": "Lisa Pereira",
+          "amount": 500.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as retired."
+        },
+        {
+          "donor": "NEARI PACE (National Education Association of RI)",
+          "amount": 500.0,
+          "type": "PAC",
+          "interest_group": "Education",
+          "notes": "Named contribution listed in the filing."
+        },
+        {
+          "donor": "Meredith Armstrong",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as State of RI."
+        },
+        {
+          "donor": "Rebecca Kislak",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Legal Key."
+        },
+        {
+          "donor": "RI WORKING FAMILIES PARTY PAC",
+          "amount": 200.0,
+          "type": "PAC",
+          "interest_group": "Other / Unclassified",
+          "notes": "Named contribution listed in the filing."
+        },
+        {
+          "donor": "RI BROTHERHOOD OF CORRECTIONAL OFFICERS PAC",
+          "amount": 100.0,
+          "type": "PAC",
+          "interest_group": "Public Safety",
+          "notes": "Named contribution listed in the filing."
+        }
+      ],
+      "spending_categories": [
+        {
+          "title": "Advertising",
+          "summary": "Visible spending includes BrandX360, Canva, and Wix.",
+          "amount": 5755.06
+        },
+        {
+          "title": "Other",
+          "summary": "Visible spending includes Campaign Verify and Rhode Island Democratic State Committee.",
+          "amount": 1845.0
+        },
+        {
+          "title": "Bank Fees",
+          "summary": "Visible spending includes ActBlue.",
+          "amount": 77.04
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_status": "available_preprimary"
     },
     {
       "candidate_id": "house-23-dana-james-traversie",
@@ -6238,20 +6355,31 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
-      "original_documents": [],
+      "report_label": "Q2 2026 campaign finance filing",
+      "reporting_period_label": "April 1, 2026 to June 30, 2026",
+      "source_note": "Built from Angela S Coburn's Rhode Island Q1 and Q2 2026 campaign finance filings supplied by the user.",
+      "coverage_note": "Q2 is the standardized main display. No contributions were reported in Q1 or Q2.",
+      "original_documents": [
+        {
+          "label": "Q1 2026 CF-2 report",
+          "period": "January 1, 2026 to March 31, 2026",
+          "href": "/data/finance-documents/angela-s-coburn-q1-2026.pdf"
+        },
+        {
+          "label": "Q2 2026 CF-2 report",
+          "period": "April 1, 2026 to June 30, 2026",
+          "href": "/data/finance-documents/angela-s-coburn-q2-2026.pdf"
+        }
+      ],
       "beginning_cash": 2145.0,
       "money_raised": 0.0,
       "money_spent": 900.0,
       "ending_cash": 1245.0,
       "net_change": -900.0,
       "total_cash_receipts": 0.0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 900.0,
-      "summary_intro": "This filing shows only a limited cash reserve heading into the next stretch of the campaign. The report also shows that it spent more during the period than it raised.",
+      "campaign_expenses": 900.0,
+      "aggregate_expenses": 0.0,
+      "summary_intro": "Angela S Coburn's Q2 2026 filing reports no new receipts, $900.00 in campaign expenses, and $1,245.00 in cash on hand.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -6260,7 +6388,7 @@
           "money_spent": 0.0,
           "ending_cash": 2145.0,
           "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "notes": "Q1 reported no receipts or spending."
         },
         {
           "label": "Q2 2026",
@@ -6269,14 +6397,26 @@
           "money_spent": 900.0,
           "ending_cash": 1245.0,
           "net_change": -900.0,
-          "notes": "The campaign spent more than it raised in this reporting period."
+          "notes": "Q2 is the standardized main display period."
         }
       ],
       "source_buckets": [],
       "top_donors": [],
-      "spending_categories": [],
+      "spending_categories": [
+        {
+          "title": "Advertising",
+          "summary": "Visible spending includes WWWAAA.",
+          "amount": 800.0
+        },
+        {
+          "title": "Donations (All Others)",
+          "summary": "Visible spending includes Friends of Kevin Millonzi.",
+          "amount": 100.0
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_status": "available"
     },
     {
       "candidate_id": "house-27-lawrence-paul-almagno-jr",
@@ -6399,29 +6539,40 @@
       "party": "REP",
       "party_label": "Republican",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
-      "original_documents": [],
+      "report_label": "Q2 2026 campaign finance filing",
+      "reporting_period_label": "April 1, 2026 to June 30, 2026",
+      "source_note": "Built from Sherry L Roberts's Rhode Island Q1 and Q2 2026 campaign finance filings supplied by the user.",
+      "coverage_note": "Q2 is the standardized main display. Q1 contained a $500 contribution from REALTORS PAC OF RI; Q2 reported no new receipts or spending.",
+      "original_documents": [
+        {
+          "label": "Q1 2026 CF-2 report",
+          "period": "January 1, 2026 to March 31, 2026",
+          "href": "/data/finance-documents/sherry-l-roberts-q1-2026.pdf"
+        },
+        {
+          "label": "Q2 2026 CF-2 report",
+          "period": "April 1, 2026 to June 30, 2026",
+          "href": "/data/finance-documents/sherry-l-roberts-q2-2026.pdf"
+        }
+      ],
       "beginning_cash": 4555.21,
       "money_raised": 0.0,
       "money_spent": 0.0,
       "ending_cash": 4555.21,
       "net_change": 0.0,
       "total_cash_receipts": 0.0,
-      "campaign_expenses": 0,
+      "campaign_expenses": 0.0,
       "aggregate_expenses": 0.0,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "Sherry L Roberts's Q2 2026 filing reports no new receipts or spending and an ending cash balance of $4,555.21. Her Q1 filing reported a $500 contribution from REALTORS PAC OF RI.",
       "filing_history": [
         {
           "label": "Q1 2026",
           "reporting_period_label": "January 1, 2026 to March 31, 2026",
-          "money_raised": 0.0,
+          "money_raised": 500.0,
           "money_spent": 0.0,
           "ending_cash": 4555.21,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "net_change": 500.0,
+          "notes": "Q1 reported a $500 PAC contribution from REALTORS PAC OF RI."
         },
         {
           "label": "Q2 2026",
@@ -6430,14 +6581,15 @@
           "money_spent": 0.0,
           "ending_cash": 4555.21,
           "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "notes": "Q2 is the standardized main display period and reported no new activity."
         }
       ],
       "source_buckets": [],
       "top_donors": [],
       "spending_categories": [],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_status": "available"
     },
     {
       "candidate_id": "house-30-justine-caldwell",
@@ -6597,20 +6749,31 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
-      "original_documents": [],
+      "report_label": "Q2 2026 campaign finance filing",
+      "reporting_period_label": "April 1, 2026 to June 30, 2026",
+      "source_note": "Built from James C Sheehan's Rhode Island Q1 and Q2 2026 campaign finance filings supplied by the user.",
+      "coverage_note": "Q2 is the standardized main display. The Q2 filing reports a $1,000 candidate loan in addition to a $2,000 individual contribution.",
+      "original_documents": [
+        {
+          "label": "Q1 2026 CF-2 report",
+          "period": "January 1, 2026 to March 31, 2026",
+          "href": "/data/finance-documents/james-c-sheehan-q1-2026.pdf"
+        },
+        {
+          "label": "Q2 2026 CF-2 report",
+          "period": "April 1, 2026 to June 30, 2026",
+          "href": "/data/finance-documents/james-c-sheehan-q2-2026.pdf"
+        }
+      ],
       "beginning_cash": 0.0,
-      "money_raised": 0.0,
+      "money_raised": 3000.0,
       "money_spent": 293.15,
       "ending_cash": 2706.85,
-      "net_change": -293.15,
-      "total_cash_receipts": 0.0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 293.15,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it spent more during the period than it raised.",
+      "net_change": 2706.85,
+      "total_cash_receipts": 3000.0,
+      "campaign_expenses": 293.15,
+      "aggregate_expenses": 0.0,
+      "summary_intro": "James C Sheehan's Q2 2026 filing reports $3,000.00 in total cash received, including a $1,000.00 candidate loan, $293.15 in campaign expenses, and $2,706.85 in cash on hand.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -6619,23 +6782,63 @@
           "money_spent": 0.0,
           "ending_cash": 0.0,
           "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "notes": "Q1 reported no cash activity."
         },
         {
           "label": "Q2 2026",
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
-          "money_raised": 0.0,
+          "money_raised": 3000.0,
           "money_spent": 293.15,
           "ending_cash": 2706.85,
-          "net_change": -293.15,
-          "notes": "The campaign spent more than it raised in this reporting period."
+          "net_change": 2706.85,
+          "notes": "Q2 is the standardized main display period."
         }
       ],
-      "source_buckets": [],
-      "top_donors": [],
-      "spending_categories": [],
+      "source_buckets": [
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 2000.0,
+          "description": "Named individual contribution reported in Q2."
+        },
+        {
+          "label": "Candidate loan",
+          "class_name": "candidate-loan",
+          "amount": 1000.0,
+          "description": "Loan proceeds from James C Sheehan to the campaign."
+        }
+      ],
+      "top_donors": [
+        {
+          "donor": "Julie Casimiro",
+          "amount": 2000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as retired."
+        },
+        {
+          "donor": "James C Sheehan",
+          "amount": 1000.0,
+          "type": "Loan Proceeds",
+          "interest_group": "Other / Unclassified",
+          "notes": "Candidate loan proceeds reported in the filing."
+        }
+      ],
+      "spending_categories": [
+        {
+          "title": "Other",
+          "summary": "Visible spending includes OpenAI ChatGPT and Sign Rocket.",
+          "amount": 262.65
+        },
+        {
+          "title": "Bank Fees",
+          "summary": "Visible spending includes Citizens Bank.",
+          "amount": 30.5
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_status": "available"
     },
     {
       "candidate_id": "house-31-matthew-b-mccoy",
@@ -18047,6 +18250,19 @@
   ],
   "donor_index": [
     {
+      "donor": "Aaron Buongiovanni",
+      "amount": 500.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as Innovative Renal Care.",
+      "candidate_id": "house-22-zakary-j-pereira",
+      "candidate_name": "Zakary J Pereira",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "DEM",
+      "slug": "zakary-j-pereira"
+    },
+    {
       "donor": "Aaron Regunberg",
       "amount": 500.0,
       "type": "Individual",
@@ -20088,6 +20304,19 @@
       "slug": "jasmin-roy"
     },
     {
+      "donor": "DISTRICT 1199 SEIU POLITICAL ACTION COMMITTEE-RI",
+      "amount": 2000.0,
+      "type": "PAC",
+      "interest_group": "Other / Unclassified",
+      "notes": "Named contribution listed in the filing.",
+      "candidate_id": "house-22-zakary-j-pereira",
+      "candidate_name": "Zakary J Pereira",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "DEM",
+      "slug": "zakary-j-pereira"
+    },
+    {
       "donor": "Donna Santoro",
       "amount": 2250.0,
       "type": "Individual",
@@ -20957,6 +21186,19 @@
       "district_number": "7",
       "party": "DEM",
       "slug": "amy-j-santiago"
+    },
+    {
+      "donor": "James C Sheehan",
+      "amount": 1000.0,
+      "type": "Loan Proceeds",
+      "interest_group": "Other / Unclassified",
+      "notes": "Candidate loan proceeds reported in the filing.",
+      "candidate_id": "house-31-james-c-sheehan",
+      "candidate_name": "James C Sheehan",
+      "chamber": "house",
+      "district_number": "31",
+      "party": "DEM",
+      "slug": "james-c-sheehan"
     },
     {
       "donor": "James Donahue",
@@ -21999,6 +22241,19 @@
       "slug": "rebecca-m-kislak"
     },
     {
+      "donor": "Julie Casimiro",
+      "amount": 2000.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as retired.",
+      "candidate_id": "house-31-james-c-sheehan",
+      "candidate_name": "James C Sheehan",
+      "chamber": "house",
+      "district_number": "31",
+      "party": "DEM",
+      "slug": "james-c-sheehan"
+    },
+    {
       "donor": "Justin Bartinosk",
       "amount": 1000.0,
       "type": "Individual",
@@ -22506,6 +22761,19 @@
       "slug": "raymond-a-hull"
     },
     {
+      "donor": "Lisa Pereira",
+      "amount": 500.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as retired.",
+      "candidate_id": "house-22-zakary-j-pereira",
+      "candidate_name": "Zakary J Pereira",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "DEM",
+      "slug": "zakary-j-pereira"
+    },
+    {
       "donor": "Lori Urso O",
       "amount": 9000.0,
       "type": "Loan Proceeds",
@@ -22922,6 +23190,19 @@
       "slug": "nathan-w-biah"
     },
     {
+      "donor": "Matthew Gunnip",
+      "amount": 2000.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as State of RI.",
+      "candidate_id": "house-22-zakary-j-pereira",
+      "candidate_name": "Zakary J Pereira",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "DEM",
+      "slug": "zakary-j-pereira"
+    },
+    {
       "donor": "Matthew LaMountain",
       "amount": 1550.0,
       "type": "Individual",
@@ -22998,6 +23279,19 @@
       "district_number": "1",
       "party": "DEM",
       "slug": "michael-j-garman"
+    },
+    {
+      "donor": "Meredith Armstrong",
+      "amount": 250.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as State of RI.",
+      "candidate_id": "house-22-zakary-j-pereira",
+      "candidate_name": "Zakary J Pereira",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "DEM",
+      "slug": "zakary-j-pereira"
     },
     {
       "donor": "MICHAEL CAMPBELL",
@@ -23284,6 +23578,19 @@
       "district_number": "5",
       "party": "DEM",
       "slug": "cameron-moquin"
+    },
+    {
+      "donor": "NEARI PACE (National Education Association of RI)",
+      "amount": 500.0,
+      "type": "PAC",
+      "interest_group": "Education",
+      "notes": "Named contribution listed in the filing.",
+      "candidate_id": "house-22-zakary-j-pereira",
+      "candidate_name": "Zakary J Pereira",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "DEM",
+      "slug": "zakary-j-pereira"
     },
     {
       "donor": "NEARI PACE (National Education Association of RI)",
@@ -23988,6 +24295,19 @@
       "slug": "nelly-burdette"
     },
     {
+      "donor": "Rebecca Kislak",
+      "amount": 250.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as Legal Key.",
+      "candidate_id": "house-22-zakary-j-pereira",
+      "candidate_name": "Zakary J Pereira",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "DEM",
+      "slug": "zakary-j-pereira"
+    },
+    {
       "donor": "Renee Rulin",
       "amount": 200.0,
       "type": "Individual",
@@ -24092,6 +24412,19 @@
       "slug": "leonela-felix"
     },
     {
+      "donor": "RI ALLIANCE SSE SEIU COPE (Social Service Employees)",
+      "amount": 2000.0,
+      "type": "PAC",
+      "interest_group": "Labor / Unions",
+      "notes": "Named contribution listed in the filing.",
+      "candidate_id": "house-22-zakary-j-pereira",
+      "candidate_name": "Zakary J Pereira",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "DEM",
+      "slug": "zakary-j-pereira"
+    },
+    {
       "donor": "RI ASSOCIATION OF NURSE ANESTHETISTS PAC",
       "amount": 200.0,
       "type": "PAC",
@@ -24181,6 +24514,19 @@
       "district_number": "3",
       "party": "DEM",
       "slug": "nathan-w-biah"
+    },
+    {
+      "donor": "RI BROTHERHOOD OF CORRECTIONAL OFFICERS PAC",
+      "amount": 100.0,
+      "type": "PAC",
+      "interest_group": "Public Safety",
+      "notes": "Named contribution listed in the filing.",
+      "candidate_id": "house-22-zakary-j-pereira",
+      "candidate_name": "Zakary J Pereira",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "DEM",
+      "slug": "zakary-j-pereira"
     },
     {
       "donor": "RI DENTAL PAC",
@@ -24597,6 +24943,19 @@
       "district_number": "3",
       "party": "DEM",
       "slug": "nathan-w-biah"
+    },
+    {
+      "donor": "RI WORKING FAMILIES PARTY PAC",
+      "amount": 200.0,
+      "type": "PAC",
+      "interest_group": "Other / Unclassified",
+      "notes": "Named contribution listed in the filing.",
+      "candidate_id": "house-22-zakary-j-pereira",
+      "candidate_name": "Zakary J Pereira",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "DEM",
+      "slug": "zakary-j-pereira"
     },
     {
       "donor": "RI WORKING FAMILIES PARTY PAC",
@@ -25871,6 +26230,19 @@
       "district_number": "3",
       "party": "DEM",
       "slug": "nathan-w-biah"
+    },
+    {
+      "donor": "Zakary Pereira",
+      "amount": 3000.0,
+      "type": "Loan Proceeds",
+      "interest_group": "Other / Unclassified",
+      "notes": "Candidate loan proceeds reported in the filing.",
+      "candidate_id": "house-22-zakary-j-pereira",
+      "candidate_name": "Zakary J Pereira",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "DEM",
+      "slug": "zakary-j-pereira"
     },
     {
       "donor": "Zoe Gardiner",
