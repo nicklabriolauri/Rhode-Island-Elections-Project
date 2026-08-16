@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-30T16:09:30.059460+00:00",
+  "generated_at": "2026-08-16T18:11:23.380621+00:00",
   "election_cycle": 2026,
   "source_kind": "official_ri_declared_candidates_workbook",
   "source_download_url": "https://vote.sos.ri.gov/Forms/elections/Reports/Candidates.xlsx",
@@ -74,10 +74,22 @@
             "home_precinct_name": "Providence Precinct 2814",
             "official_source": "Rhode Island Department of State",
             "ballot_stage": "primary",
-            "profile_available": false,
-            "response_status": "not_submitted",
+            "profile_available": true,
+            "response_status": "submitted",
             "campaign_url": "",
-            "issue_tags": []
+            "issue_tags": [
+              "healthcare",
+              "medicaid",
+              "mental-health",
+              "housing",
+              "homelessness",
+              "affordable-housing",
+              "energy",
+              "environment",
+              "climate",
+              "immigration",
+              "tax-equity"
+            ]
           }
         ],
         "general_candidates": [],
@@ -5057,10 +5069,16 @@
             "home_precinct_name": "Providence Precinct 2819",
             "official_source": "Rhode Island Department of State",
             "ballot_stage": "primary",
-            "profile_available": false,
-            "response_status": "not_submitted",
+            "profile_available": true,
+            "response_status": "submitted",
             "campaign_url": "",
-            "issue_tags": []
+            "issue_tags": [
+              "safety-net",
+              "federal-overreach",
+              "school-aid",
+              "climate",
+              "artificial-intelligence"
+            ]
           }
         ],
         "general_candidates": [
@@ -6968,10 +6986,17 @@
             "home_precinct_name": "Coventry Precinct 0617",
             "official_source": "Rhode Island Department of State",
             "ballot_stage": "primary",
-            "profile_available": false,
-            "response_status": "not_submitted",
+            "profile_available": true,
+            "response_status": "submitted",
             "campaign_url": "",
-            "issue_tags": []
+            "issue_tags": [
+              "energy",
+              "housing",
+              "education",
+              "economy",
+              "local-control",
+              "second-amendment"
+            ]
           }
         ],
         "general_candidates": [],
@@ -7018,10 +7043,16 @@
             "home_precinct_name": "Richmond Precinct 2902",
             "official_source": "Rhode Island Department of State",
             "ballot_stage": "primary",
-            "profile_available": false,
-            "response_status": "not_submitted",
+            "profile_available": true,
+            "response_status": "submitted",
             "campaign_url": "",
-            "issue_tags": []
+            "issue_tags": [
+              "environment",
+              "affordability",
+              "education",
+              "small-business",
+              "healthcare"
+            ]
           },
           {
             "candidate_id": "senate-34-rep-primary-elaine-j-morgan",
