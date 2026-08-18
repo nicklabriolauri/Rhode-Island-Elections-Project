@@ -2598,10 +2598,30 @@
         "Other / Unclassified": ["#65758a", "#f2f5f8"]
       };
 
-      const pacRows = rows.filter(row =>
-        /(pac|committee|party|organization)/i.test(String(row.type || "")) ||
-        String(row.interest_group || "") !== "Individual"
-      );
+      const pacRows = rows.filter(row => {
+        const donorType = String(row.type || "").toLowerCase();
+        const donorName = String(row.donor || "").toLowerCase();
+
+        // This section is specifically for PACs and political/interest organizations.
+        // Exclude individuals, candidate loans, refunds/rebates, reimbursements,
+        // and other non-PAC receipts even if they were previously "Unclassified".
+        if (donorType.includes("individual")) return false;
+        if (donorType.includes("loan")) return false;
+        if (donorType.includes("refund")) return false;
+        if (donorType.includes("rebate")) return false;
+        if (donorType.includes("reimbursement")) return false;
+
+        return (
+          donorType.includes("pac") ||
+          donorType.includes("committee") ||
+          donorType.includes("party") ||
+          donorType.includes("organization") ||
+          donorName.includes(" pac") ||
+          donorName.includes("committee") ||
+          donorName.includes("political action committee") ||
+          donorName.includes("working families party")
+        );
+      });
 
       const grouped = new Map();
       for (const row of pacRows) {
