@@ -1570,6 +1570,173 @@
       line-height: 1.48;
     }
 
+
+    .spending-compare-panel {
+      padding: 26px;
+      margin-bottom: 18px;
+    }
+
+    .spending-compare-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .spending-compare-head h3 {
+      margin: 8px 0 0;
+      font-family: "Sora", sans-serif;
+      color: var(--navy);
+      font-size: clamp(28px, 3vw, 38px);
+      line-height: 1.08;
+      letter-spacing: -.045em;
+    }
+
+    .spending-compare-copy {
+      margin: 10px 0 0;
+      max-width: 820px;
+      color: var(--ink-soft);
+      font-size: 14px;
+      line-height: 1.58;
+    }
+
+    .spending-summary-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .spending-summary-card {
+      padding: 17px;
+      border-radius: 18px;
+      border: 1px solid #dbe6f1;
+      background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
+    }
+
+    .spending-summary-label {
+      color: #738399;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .spending-summary-value {
+      margin-top: 8px;
+      color: var(--navy);
+      font-family: "Sora", sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -.04em;
+    }
+
+    .spending-summary-detail {
+      margin-top: 7px;
+      color: var(--ink-soft);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .spending-change-up {
+      color: #c75b20;
+    }
+
+    .spending-change-down {
+      color: #14866d;
+    }
+
+    .spending-ranking {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .spending-rank-row {
+      display: grid;
+      grid-template-columns: 44px minmax(0, 1fr) 140px 140px 130px;
+      gap: 12px;
+      align-items: center;
+      padding: 13px 14px;
+      border: 1px solid #dfe8f2;
+      border-radius: 16px;
+      background: #fff;
+    }
+
+    .spending-rank-number {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: #eef4fb;
+      color: var(--navy);
+      font-weight: 900;
+      font-size: 12px;
+    }
+
+    .spending-rank-name {
+      color: var(--navy);
+      font-weight: 900;
+      font-size: 14px;
+    }
+
+    .spending-rank-meta {
+      margin-top: 3px;
+      color: var(--ink-soft);
+      font-size: 11px;
+    }
+
+    .spending-rank-cell {
+      text-align: right;
+    }
+
+    .spending-rank-cell strong {
+      display: block;
+      color: var(--navy);
+      font-size: 13px;
+    }
+
+    .spending-rank-cell span {
+      display: block;
+      margin-top: 2px;
+      color: #7b8ba0;
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    .spending-direction-badge {
+      display: inline-flex;
+      justify-content: center;
+      min-width: 98px;
+      padding: 7px 9px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .spending-direction-badge.up {
+      color: #a74617;
+      background: #fff0e8;
+      border: 1px solid #ffd2bb;
+    }
+
+    .spending-direction-badge.down {
+      color: #0f755f;
+      background: #e9f8f4;
+      border: 1px solid #bce8dc;
+    }
+
+    .spending-direction-badge.flat {
+      color: #5f7088;
+      background: #f1f5f9;
+      border: 1px solid #dce5ee;
+    }
+
     .directory-controls {
       padding: 24px;
     }
@@ -1934,6 +2101,19 @@
       .verification-item,
       .topic-overview-grid {
         grid-template-columns: 1fr;
+      }
+
+      .spending-summary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .spending-rank-row {
+        grid-template-columns: 40px minmax(0, 1fr);
+      }
+
+      .spending-rank-cell {
+        text-align: left;
+        grid-column: 2;
       }
 
       .topic-detail-row {
@@ -2602,25 +2782,31 @@
         const donorType = String(row.type || "").toLowerCase();
         const donorName = String(row.donor || "").toLowerCase();
 
-        // This section is specifically for PACs and political/interest organizations.
-        // Exclude individuals, candidate loans, refunds/rebates, reimbursements,
-        // and other non-PAC receipts even if they were previously "Unclassified".
-        if (donorType.includes("individual")) return false;
-        if (donorType.includes("loan")) return false;
-        if (donorType.includes("refund")) return false;
-        if (donorType.includes("rebate")) return false;
-        if (donorType.includes("reimbursement")) return false;
+        const excluded =
+          donorType.includes("individual") ||
+          donorType.includes("loan") ||
+          donorType.includes("refund") ||
+          donorType.includes("rebate") ||
+          donorType.includes("reimbursement") ||
+          donorType.includes("other");
 
-        return (
+        if (excluded) return false;
+
+        const explicitPacType =
           donorType.includes("pac") ||
           donorType.includes("committee") ||
           donorType.includes("party") ||
-          donorType.includes("organization") ||
-          donorName.includes(" pac") ||
+          donorType.includes("organization");
+
+        const explicitPacName =
+          /\bpac\b/i.test(donorName) ||
           donorName.includes("committee") ||
           donorName.includes("political action committee") ||
-          donorName.includes("working families party")
-        );
+          donorName.includes("working families party") ||
+          donorName.includes("democratic state committee") ||
+          donorName.includes("republican state committee");
+
+        return explicitPacType || explicitPacName;
       });
 
       const grouped = new Map();
@@ -2826,6 +3012,142 @@
       `;
     }
 
+
+    function findQuarterSpend(profile, label) {
+      const history = Array.isArray(profile.filing_history) ? profile.filing_history : [];
+      const row = history.find(item => String(item.label || "").toLowerCase().startsWith(label.toLowerCase()));
+      return row ? Number(row.money_spent || 0) : null;
+    }
+
+    function buildQuarterSpendingComparison(data) {
+      const profiles = (data.profiles || []).filter(profile =>
+        profile.finance_status !== "not_found"
+      );
+
+      const comparable = [];
+      for (const profile of profiles) {
+        const q1 = findQuarterSpend(profile, "Q1 2026");
+        const q2 = findQuarterSpend(profile, "Q2 2026");
+
+        // Only compare candidates with both standard quarterly filings.
+        if (q1 === null || q2 === null) continue;
+
+        const change = q2 - q1;
+        const pct = q1 > 0 ? (change / q1) * 100 : (q2 > 0 ? null : 0);
+
+        comparable.push({
+          candidate_name: profile.candidate_name,
+          chamber: profile.chamber,
+          district_number: profile.district_number,
+          slug: profile.slug,
+          q1,
+          q2,
+          change,
+          pct
+        });
+      }
+
+      if (!comparable.length) return "";
+
+      const totalQ1 = comparable.reduce((sum, row) => sum + row.q1, 0);
+      const totalQ2 = comparable.reduce((sum, row) => sum + row.q2, 0);
+      const totalChange = totalQ2 - totalQ1;
+      const totalPct = totalQ1 > 0 ? (totalChange / totalQ1) * 100 : null;
+
+      const higher = comparable.filter(row => row.change > 0).length;
+      const lower = comparable.filter(row => row.change < 0).length;
+      const flat = comparable.filter(row => row.change === 0).length;
+
+      const top = [...comparable]
+        .sort((a, b) => b.q2 - a.q2)
+        .slice(0, 10);
+
+      const formatPct = value => {
+        if (value === null || !Number.isFinite(value)) return "New spending";
+        const sign = value > 0 ? "+" : "";
+        return `${sign}${value.toFixed(1)}%`;
+      };
+
+      return `
+        <section class="panel spending-compare-panel" id="quarter-spending">
+          <div class="spending-compare-head">
+            <div>
+              <div class="section-label">Quarter-to-quarter spending</div>
+              <h3>How did Q2 campaign spending compare with Q1?</h3>
+              <p class="spending-compare-copy">
+                This comparison includes only candidates for whom both a standard Q1 2026 and Q2 2026 filing are available.
+                Pre-primary reports, Q1-only records, historical filings, and candidates without a financial summary are excluded.
+              </p>
+            </div>
+          </div>
+
+          <div class="spending-summary-grid">
+            <div class="spending-summary-card">
+              <div class="spending-summary-label">Total Q1 spend</div>
+              <div class="spending-summary-value">${formatCurrency(totalQ1)}</div>
+              <div class="spending-summary-detail">${comparable.length} comparable candidate profiles.</div>
+            </div>
+
+            <div class="spending-summary-card">
+              <div class="spending-summary-label">Total Q2 spend</div>
+              <div class="spending-summary-value">${formatCurrency(totalQ2)}</div>
+              <div class="spending-summary-detail">Same set of candidates as the Q1 total.</div>
+            </div>
+
+            <div class="spending-summary-card">
+              <div class="spending-summary-label">Change</div>
+              <div class="spending-summary-value ${totalChange > 0 ? "spending-change-up" : totalChange < 0 ? "spending-change-down" : ""}">
+                ${totalChange > 0 ? "+" : ""}${formatCurrency(totalChange)}
+              </div>
+              <div class="spending-summary-detail">
+                ${totalPct === null ? "Percentage change unavailable." : `${formatPct(totalPct)} from Q1 to Q2.`}
+              </div>
+            </div>
+
+            <div class="spending-summary-card">
+              <div class="spending-summary-label">Candidate direction</div>
+              <div class="spending-summary-value">${higher} ↑ · ${lower} ↓</div>
+              <div class="spending-summary-detail">${flat} candidate${flat === 1 ? "" : "s"} reported no change.</div>
+            </div>
+          </div>
+
+          <div class="spending-ranking">
+            ${top.map((row, index) => {
+              const directionClass = row.change > 0 ? "up" : row.change < 0 ? "down" : "flat";
+              const directionText = row.change > 0
+                ? `${formatPct(row.pct)}`
+                : row.change < 0
+                  ? `${formatPct(row.pct)}`
+                  : "No change";
+
+              return `
+                <div class="spending-rank-row">
+                  <div class="spending-rank-number">${index + 1}</div>
+                  <div>
+                    <div class="spending-rank-name">${escapeHtml(row.candidate_name)}</div>
+                    <div class="spending-rank-meta">
+                      ${escapeHtml(row.chamber === "house" ? "House" : "Senate")} District ${escapeHtml(row.district_number)}
+                    </div>
+                  </div>
+                  <div class="spending-rank-cell">
+                    <strong>${formatCurrency(row.q1)}</strong>
+                    <span>Q1 spend</span>
+                  </div>
+                  <div class="spending-rank-cell">
+                    <strong>${formatCurrency(row.q2)}</strong>
+                    <span>Q2 spend</span>
+                  </div>
+                  <div class="spending-rank-cell">
+                    <span class="spending-direction-badge ${directionClass}">${directionText}</span>
+                  </div>
+                </div>
+              `;
+            }).join("")}
+          </div>
+        </section>
+      `;
+    }
+
     function renderDirectory(data) {
       const app = document.getElementById("financeApp");
       const profileBySlug = new Map((data.profiles || []).map(profile => [profile.slug, profile]));
@@ -2881,6 +3203,8 @@
           </section>
 
           ${buildDirectoryTopicOverview(data)}
+
+          ${buildQuarterSpendingComparison(data)}
 
           <section class="panel directory-controls">
             <div class="directory-controls-top">
