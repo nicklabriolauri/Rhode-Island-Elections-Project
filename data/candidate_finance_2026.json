@@ -6849,45 +6849,85 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
-      "original_documents": [],
+      "report_label": "Q2 2026 campaign finance filing",
+      "reporting_period_label": "April 1, 2026 to June 30, 2026",
+      "source_note": "Built from Matthew B McCoy's Rhode Island Q1 and Q2 2026 campaign finance filings supplied by the user.",
+      "coverage_note": "Q2 is the standardized main display. The Q2 filing reports a $400 candidate loan and a $100 individual contribution. Q1 is retained in filing history.",
+      "original_documents": [
+        {
+          "label": "Q1 2026 CF-2 report",
+          "period": "January 1, 2026 to March 31, 2026",
+          "href": "/data/finance-documents/matthew-b-mccoy-q1-2026.pdf"
+        },
+        {
+          "label": "Q2 2026 CF-2 report",
+          "period": "April 1, 2026 to June 30, 2026",
+          "href": "/data/finance-documents/matthew-b-mccoy-q2-2026.pdf"
+        }
+      ],
       "beginning_cash": 0.0,
-      "money_raised": 0.0,
+      "money_raised": 500.0,
       "money_spent": 0.0,
       "ending_cash": 500.0,
-      "net_change": 0.0,
-      "total_cash_receipts": 0.0,
-      "campaign_expenses": 0,
+      "net_change": 500.0,
+      "total_cash_receipts": 500.0,
+      "campaign_expenses": 0.0,
       "aggregate_expenses": 0.0,
-      "summary_intro": "This filing shows only a limited cash reserve heading into the next stretch of the campaign. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "Matthew B McCoy's Q2 2026 filing reports $500.00 in total cash received, including a $400.00 candidate loan and a $100.00 individual contribution, no campaign expenses, and $500.00 in cash on hand.",
       "filing_history": [
         {
           "label": "Q1 2026",
           "reporting_period_label": "January 1, 2026 to March 31, 2026",
           "money_raised": 0.0,
-          "money_spent": 0.0,
+          "money_spent": 475.53,
           "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "net_change": -475.53,
+          "notes": "Q1 reported $475.53 in campaign expenses and no new receipts."
         },
         {
           "label": "Q2 2026",
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
-          "money_raised": 0.0,
+          "money_raised": 500.0,
           "money_spent": 0.0,
           "ending_cash": 500.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "net_change": 500.0,
+          "notes": "Q2 is the standardized main display period."
         }
       ],
-      "source_buckets": [],
-      "top_donors": [],
+      "source_buckets": [
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 100.0,
+          "description": "Named individual cash contribution reported in Q2."
+        },
+        {
+          "label": "Candidate loan",
+          "class_name": "candidate-loan",
+          "amount": 400.0,
+          "description": "Loan proceeds from Matthew B McCoy to the campaign."
+        }
+      ],
+      "top_donors": [
+        {
+          "donor": "Matthew B McCoy",
+          "amount": 400.0,
+          "type": "Loan Proceeds",
+          "interest_group": "Other / Unclassified",
+          "notes": "Candidate loan proceeds reported in the filing."
+        },
+        {
+          "donor": "Michael J Donohue",
+          "amount": 100.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as retired."
+        }
+      ],
       "spending_categories": [],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_status": "available"
     },
     {
       "candidate_id": "house-31-thomas-n-menec",
@@ -6898,45 +6938,117 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
-      "original_documents": [],
+      "report_label": "Q2 2026 campaign finance filing",
+      "reporting_period_label": "April 1, 2026 to June 30, 2026",
+      "source_note": "Built from Thomas N Menec's Rhode Island Q2 2026 campaign finance filing supplied by the user.",
+      "coverage_note": "Q2 is the standardized main display. The filing reports $4,450 in individual contributions and a $100 candidate loan.",
+      "original_documents": [
+        {
+          "label": "Q2 2026 CF-2 report",
+          "period": "April 1, 2026 to June 30, 2026",
+          "href": "/data/finance-documents/thomas-n-menec-q2-2026.pdf"
+        }
+      ],
       "beginning_cash": 0.0,
-      "money_raised": 0.0,
+      "money_raised": 4550.0,
       "money_spent": 1839.03,
       "ending_cash": 2710.97,
-      "net_change": -1839.03,
-      "total_cash_receipts": 0.0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 1839.03,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it spent more during the period than it raised.",
+      "net_change": 2710.97,
+      "total_cash_receipts": 4550.0,
+      "campaign_expenses": 1839.03,
+      "aggregate_expenses": 0.0,
+      "summary_intro": "Thomas N Menec's Q2 2026 filing reports $4,550.00 in total cash received, including a $100.00 candidate loan, $1,839.03 in campaign expenses, and $2,710.97 in cash on hand.",
       "filing_history": [
-        {
-          "label": "Q1 2026",
-          "reporting_period_label": "January 1, 2026 to March 31, 2026",
-          "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
-        },
         {
           "label": "Q2 2026",
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
-          "money_raised": 0.0,
+          "money_raised": 4550.0,
           "money_spent": 1839.03,
           "ending_cash": 2710.97,
-          "net_change": -1839.03,
-          "notes": "The campaign spent more than it raised in this reporting period."
+          "net_change": 2710.97,
+          "notes": "Q2 is the standardized main display period."
         }
       ],
-      "source_buckets": [],
-      "top_donors": [],
-      "spending_categories": [],
+      "source_buckets": [
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 4450.0,
+          "description": "Named individual cash contributions reported in Q2."
+        },
+        {
+          "label": "Candidate loan",
+          "class_name": "candidate-loan",
+          "amount": 100.0,
+          "description": "Loan proceeds from Thomas N Menec to the campaign."
+        }
+      ],
+      "top_donors": [
+        {
+          "donor": "Joseph R Vinagro",
+          "amount": 2000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Named contribution listed in the filing."
+        },
+        {
+          "donor": "James Grundy",
+          "amount": 1000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Atlantic Controls."
+        },
+        {
+          "donor": "Joy B Santilli",
+          "amount": 500.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Named contribution listed in the filing."
+        },
+        {
+          "donor": "Michael R Martone",
+          "amount": 500.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Named contribution listed in the filing."
+        },
+        {
+          "donor": "John J Kupa",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Named contribution listed in the filing."
+        },
+        {
+          "donor": "Geoffrey R Morrow",
+          "amount": 200.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Named contribution listed in the filing."
+        },
+        {
+          "donor": "Thomas N Menec",
+          "amount": 100.0,
+          "type": "Loan Proceeds",
+          "interest_group": "Other / Unclassified",
+          "notes": "Candidate loan proceeds reported in the filing."
+        }
+      ],
+      "spending_categories": [
+        {
+          "title": "Advertising",
+          "summary": "Visible spending includes Brand X360 and Good Guys Signs.",
+          "amount": 1803.23
+        },
+        {
+          "title": "Bank Fees",
+          "summary": "Visible spending includes Harland Clark.",
+          "amount": 35.8
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_status": "available"
     },
     {
       "candidate_id": "house-32-kevin-hoyle",
@@ -7472,45 +7584,27 @@
       "party": "REP",
       "party_label": "Republican",
       "office_sought": "State Representative",
-      "report_label": "Q2 2026 campaign finance filing",
-      "reporting_period_label": "April 1, 2026 to June 30, 2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website summary captured; quarter not reliably identified",
+      "report_label": "No financial summary details found",
+      "reporting_period_label": "",
+      "source_note": "No financial summary details were supplied for this candidate in the current batch.",
+      "coverage_note": "No financial summary details found. Zeroes should not be interpreted as reported campaign activity.",
       "original_documents": [],
-      "beginning_cash": 0.0,
-      "money_raised": 0.0,
-      "money_spent": 0.0,
-      "ending_cash": 0.0,
-      "net_change": 0.0,
-      "total_cash_receipts": 0.0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 0.0,
-      "summary_intro": "This filing shows the campaign closing the period without reported cash on hand. The report also shows that it raised more during the period than it spent.",
-      "filing_history": [
-        {
-          "label": "Q1 2026",
-          "reporting_period_label": "January 1, 2026 to March 31, 2026",
-          "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
-        },
-        {
-          "label": "Q2 2026",
-          "reporting_period_label": "April 1, 2026 to June 30, 2026",
-          "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
-        }
-      ],
+      "beginning_cash": null,
+      "money_raised": null,
+      "money_spent": null,
+      "ending_cash": null,
+      "net_change": null,
+      "total_cash_receipts": null,
+      "campaign_expenses": null,
+      "aggregate_expenses": null,
+      "summary_intro": "No financial summary details found",
+      "filing_history": [],
       "source_buckets": [],
       "top_donors": [],
       "spending_categories": [],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_status": "not_found"
     },
     {
       "candidate_id": "house-37-samuel-angelo-azzinaro",
@@ -7577,45 +7671,152 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "8/11/2026",
-      "reporting_period_label": "8/11/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website summary captured; quarter not reliably identified",
-      "original_documents": [],
-      "beginning_cash": 0.0,
-      "money_raised": 7713.39,
-      "money_spent": 5417.8,
-      "ending_cash": 70908.0,
-      "net_change": 2295.59,
-      "total_cash_receipts": 0.0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 5417.8,
-      "summary_intro": "This filing shows the campaign closing the period without reported cash on hand. The report also shows that it raised more during the period than it spent.",
+      "report_label": "Q2 2026 campaign finance filing",
+      "reporting_period_label": "April 1, 2026 to June 30, 2026",
+      "source_note": "Built from Brian Patrick Kennedy's Rhode Island Q1 and Q2 2026 campaign finance filings supplied by the user.",
+      "coverage_note": "Q2 is the standardized main display. Total cash receipts include $6,175 in individual contributions, $3,075 in PAC contributions, and $6,401.46 in refunds/rebates.",
+      "original_documents": [
+        {
+          "label": "Q1 2026 CF-2 report",
+          "period": "January 1, 2026 to March 31, 2026",
+          "href": "/data/finance-documents/brian-patrick-kennedy-q1-2026.pdf"
+        },
+        {
+          "label": "Q2 2026 CF-2 report",
+          "period": "April 1, 2026 to June 30, 2026",
+          "href": "/data/finance-documents/brian-patrick-kennedy-q2-2026.pdf"
+        }
+      ],
+      "beginning_cash": 59514.88,
+      "money_raised": 15651.46,
+      "money_spent": 7553.37,
+      "ending_cash": 67612.97,
+      "net_change": 8098.09,
+      "total_cash_receipts": 15651.46,
+      "campaign_expenses": 7553.37,
+      "aggregate_expenses": 0.0,
+      "summary_intro": "Brian Patrick Kennedy's Q2 2026 filing reports $15,651.46 in total cash receipts, $7,553.37 in campaign expenses, and $67,612.97 in cash on hand. Receipts include $6,401.46 in refunds and rebates.",
       "filing_history": [
         {
           "label": "Q1 2026",
           "reporting_period_label": "January 1, 2026 to March 31, 2026",
-          "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 0.0,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "money_raised": 8457.63,
+          "money_spent": 8550.31,
+          "ending_cash": 59514.88,
+          "net_change": -92.68,
+          "notes": "Q1 receipts included $7,457.63 in refunds/rebates."
         },
         {
           "label": "Q2 2026",
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
-          "money_raised": 7713.39,
-          "money_spent": 5417.8,
-          "ending_cash": 70908.0,
-          "net_change": 2295.59,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "money_raised": 15651.46,
+          "money_spent": 7553.37,
+          "ending_cash": 67612.97,
+          "net_change": 8098.09,
+          "notes": "Q2 is the standardized main display period."
         }
       ],
-      "source_buckets": [],
-      "top_donors": [],
-      "spending_categories": [],
+      "source_buckets": [
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 6175.0,
+          "description": "Individual contributions reported in Q2."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 3075.0,
+          "description": "Political action committee contributions reported in Q2."
+        },
+        {
+          "label": "Refunds / rebates",
+          "class_name": "other-receipts",
+          "amount": 6401.46,
+          "description": "Expense reimbursements and other refunds/rebates reported in Q2."
+        }
+      ],
+      "top_donors": [
+        {
+          "donor": "John H Petrarca",
+          "amount": 1000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Providence Auto Body Inc."
+        },
+        {
+          "donor": "REALTORS PAC OF RI",
+          "amount": 500.0,
+          "type": "PAC",
+          "interest_group": "Housing / Real Estate",
+          "notes": "Named contribution listed in the filing."
+        },
+        {
+          "donor": "M Christine Benoit",
+          "amount": 400.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Dr. M Christine Benoit, DMD."
+        },
+        {
+          "donor": "William J Murphy",
+          "amount": 350.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Dome Consultants LLC."
+        },
+        {
+          "donor": "Andrew C Rogers",
+          "amount": 300.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Westerly Community Credit Union."
+        },
+        {
+          "donor": "RHODE ISLAND ENERGY PAC (RIE PAC)",
+          "amount": 300.0,
+          "type": "PAC",
+          "interest_group": "Energy / Utilities",
+          "notes": "Named contribution listed in the filing."
+        },
+        {
+          "donor": "INDEPENDENT INSURANCE AGENTS RI PAC",
+          "amount": 250.0,
+          "type": "PAC",
+          "interest_group": "Finance / Insurance",
+          "notes": "Named contribution listed in the filing."
+        }
+      ],
+      "spending_categories": [
+        {
+          "title": "Travel & Lodging",
+          "summary": "Visible spending includes American Airlines, Delta Airlines, hotels, parking, rideshare, and transit.",
+          "amount": 5624.6
+        },
+        {
+          "title": "Other",
+          "summary": "Visible spending includes State Legislative Leaders Foundation and U.S. Postal Service.",
+          "amount": 788.0
+        },
+        {
+          "title": "Fundraising Expenses",
+          "summary": "Visible spending includes BJ's Wholesale Club, Camille's, Dollar Tree, and Minuteman Press.",
+          "amount": 694.35
+        },
+        {
+          "title": "Telephone",
+          "summary": "Visible spending includes T-Mobile.",
+          "amount": 246.42
+        },
+        {
+          "title": "Donations (Political)",
+          "summary": "Visible spending includes Friends of Gregg Amore and Hopkinton Democratic Town Committee.",
+          "amount": 200.0
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_status": "available"
     },
     {
       "candidate_id": "house-38-stephen-c-moffitt",
@@ -7626,45 +7827,27 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "3/31/2026",
-      "reporting_period_label": "3/31/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q1 summary only; Q2/donor detail unavailable",
+      "report_label": "No financial summary details found",
+      "reporting_period_label": "",
+      "source_note": "No financial summary details were supplied for this candidate in the current batch.",
+      "coverage_note": "No financial summary details found. Zeroes should not be interpreted as reported campaign activity.",
       "original_documents": [],
-      "beginning_cash": 15.35,
-      "money_raised": 0.0,
-      "money_spent": 0.0,
-      "ending_cash": 15.35,
-      "net_change": 0.0,
-      "total_cash_receipts": 0.0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 0.0,
-      "summary_intro": "This filing shows the campaign closing the period without reported cash on hand. The report also shows that it raised more during the period than it spent.",
-      "filing_history": [
-        {
-          "label": "Q1 2026",
-          "reporting_period_label": "January 1, 2026 to March 31, 2026",
-          "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 15.35,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
-        },
-        {
-          "label": "Q2 2026",
-          "reporting_period_label": "April 1, 2026 to June 30, 2026",
-          "money_raised": 0.0,
-          "money_spent": 0.0,
-          "ending_cash": 15.35,
-          "net_change": 0.0,
-          "notes": "The campaign raised more than it spent in this reporting period."
-        }
-      ],
+      "beginning_cash": null,
+      "money_raised": null,
+      "money_spent": null,
+      "ending_cash": null,
+      "net_change": null,
+      "total_cash_receipts": null,
+      "campaign_expenses": null,
+      "aggregate_expenses": null,
+      "summary_intro": "No financial summary details found",
+      "filing_history": [],
       "source_buckets": [],
       "top_donors": [],
       "spending_categories": [],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_status": "not_found"
     },
     {
       "candidate_id": "house-39-jasmin-roy",
@@ -18549,6 +18732,19 @@
       "slug": "jonathon-acosta"
     },
     {
+      "donor": "Andrew C Rogers",
+      "amount": 300.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as Westerly Community Credit Union.",
+      "candidate_id": "house-38-brian-patrick-kennedy",
+      "candidate_name": "Brian Patrick Kennedy",
+      "chamber": "house",
+      "district_number": "38",
+      "party": "DEM",
+      "slug": "brian-patrick-kennedy"
+    },
+    {
       "donor": "Andrew Saal",
       "amount": 200.0,
       "type": "Individual",
@@ -20733,6 +20929,19 @@
       "slug": "walter-s-felag-jr"
     },
     {
+      "donor": "Geoffrey R Morrow",
+      "amount": 200.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Named contribution listed in the filing.",
+      "candidate_id": "house-31-thomas-n-menec",
+      "candidate_name": "Thomas N Menec",
+      "chamber": "house",
+      "district_number": "31",
+      "party": "DEM",
+      "slug": "thomas-n-menec"
+    },
+    {
       "donor": "George A Zainyeh",
       "amount": 1000.0,
       "type": "Individual",
@@ -21084,6 +21293,19 @@
       "slug": "karen-alzate"
     },
     {
+      "donor": "INDEPENDENT INSURANCE AGENTS RI PAC",
+      "amount": 250.0,
+      "type": "PAC",
+      "interest_group": "Finance / Insurance",
+      "notes": "Named contribution listed in the filing.",
+      "candidate_id": "house-38-brian-patrick-kennedy",
+      "candidate_name": "Brian Patrick Kennedy",
+      "chamber": "house",
+      "district_number": "38",
+      "party": "DEM",
+      "slug": "brian-patrick-kennedy"
+    },
+    {
       "donor": "INTERNATIONAL BROTHERHOOD OF POLICE OFFICERS LOCAL 301",
       "amount": 2000.0,
       "type": "PAC",
@@ -21225,6 +21447,19 @@
       "district_number": "33",
       "party": "DEM",
       "slug": "leonidas-peter-raptakis"
+    },
+    {
+      "donor": "James Grundy",
+      "amount": 1000.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as Atlantic Controls.",
+      "candidate_id": "house-31-thomas-n-menec",
+      "candidate_name": "Thomas N Menec",
+      "chamber": "house",
+      "district_number": "31",
+      "party": "DEM",
+      "slug": "thomas-n-menec"
     },
     {
       "donor": "James Kiernan",
@@ -21660,6 +21895,19 @@
       "amount": 1000.0,
       "type": "Individual",
       "interest_group": "Individual",
+      "notes": "Employer listed as Providence Auto Body Inc.",
+      "candidate_id": "house-38-brian-patrick-kennedy",
+      "candidate_name": "Brian Patrick Kennedy",
+      "chamber": "house",
+      "district_number": "38",
+      "party": "DEM",
+      "slug": "brian-patrick-kennedy"
+    },
+    {
+      "donor": "John H Petrarca",
+      "amount": 1000.0,
+      "type": "Individual",
+      "interest_group": "Individual",
       "notes": "Employer listed as Providence Auto Body.",
       "candidate_id": "house-15-christopher-g-paplauskas",
       "candidate_name": "Christopher G Paplauskas",
@@ -21771,6 +22019,19 @@
       "district_number": "20",
       "party": "DEM",
       "slug": "brian-j-thompson"
+    },
+    {
+      "donor": "John J Kupa",
+      "amount": 250.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Named contribution listed in the filing.",
+      "candidate_id": "house-31-thomas-n-menec",
+      "candidate_name": "Thomas N Menec",
+      "chamber": "house",
+      "district_number": "31",
+      "party": "DEM",
+      "slug": "thomas-n-menec"
     },
     {
       "donor": "JOHN J LOMBARDI JO",
@@ -22085,6 +22346,19 @@
       "slug": "jo-ann-ryan"
     },
     {
+      "donor": "Joseph R Vinagro",
+      "amount": 2000.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Named contribution listed in the filing.",
+      "candidate_id": "house-31-thomas-n-menec",
+      "candidate_name": "Thomas N Menec",
+      "chamber": "house",
+      "district_number": "31",
+      "party": "DEM",
+      "slug": "thomas-n-menec"
+    },
+    {
       "donor": "Joseph R. Vinagro",
       "amount": 2000.0,
       "type": "Individual",
@@ -22226,6 +22500,19 @@
       "district_number": "6",
       "party": "DEM",
       "slug": "tiara-t-mack"
+    },
+    {
+      "donor": "Joy B Santilli",
+      "amount": 500.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Named contribution listed in the filing.",
+      "candidate_id": "house-31-thomas-n-menec",
+      "candidate_name": "Thomas N Menec",
+      "chamber": "house",
+      "district_number": "31",
+      "party": "DEM",
+      "slug": "thomas-n-menec"
     },
     {
       "donor": "Judith Seminoff",
@@ -22917,6 +23204,19 @@
       "slug": "gena-felix"
     },
     {
+      "donor": "M Christine Benoit",
+      "amount": 400.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as Dr. M Christine Benoit, DMD.",
+      "candidate_id": "house-38-brian-patrick-kennedy",
+      "candidate_name": "Brian Patrick Kennedy",
+      "chamber": "house",
+      "district_number": "38",
+      "party": "DEM",
+      "slug": "brian-patrick-kennedy"
+    },
+    {
       "donor": "M. Teresa",
       "amount": 250.0,
       "type": "Individual",
@@ -23190,6 +23490,19 @@
       "slug": "nathan-w-biah"
     },
     {
+      "donor": "Matthew B McCoy",
+      "amount": 400.0,
+      "type": "Loan Proceeds",
+      "interest_group": "Other / Unclassified",
+      "notes": "Candidate loan proceeds reported in the filing.",
+      "candidate_id": "house-31-matthew-b-mccoy",
+      "candidate_name": "Matthew B McCoy",
+      "chamber": "house",
+      "district_number": "31",
+      "party": "DEM",
+      "slug": "matthew-b-mccoy"
+    },
+    {
       "donor": "Matthew Gunnip",
       "amount": 2000.0,
       "type": "Individual",
@@ -23333,6 +23646,19 @@
       "slug": "victoria-gu"
     },
     {
+      "donor": "Michael J Donohue",
+      "amount": 100.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as retired.",
+      "candidate_id": "house-31-matthew-b-mccoy",
+      "candidate_name": "Matthew B McCoy",
+      "chamber": "house",
+      "district_number": "31",
+      "party": "DEM",
+      "slug": "matthew-b-mccoy"
+    },
+    {
       "donor": "Michael Kumar",
       "amount": 250.0,
       "type": "Individual",
@@ -23396,6 +23722,19 @@
       "district_number": "26",
       "party": "DEM",
       "slug": "todd-m-patalano"
+    },
+    {
+      "donor": "Michael R Martone",
+      "amount": 500.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Named contribution listed in the filing.",
+      "candidate_id": "house-31-thomas-n-menec",
+      "candidate_name": "Thomas N Menec",
+      "chamber": "house",
+      "district_number": "31",
+      "party": "DEM",
+      "slug": "thomas-n-menec"
     },
     {
       "donor": "Michael R. St. Germain",
@@ -24244,6 +24583,19 @@
     },
     {
       "donor": "REALTORS PAC OF RI",
+      "amount": 500.0,
+      "type": "PAC",
+      "interest_group": "Housing / Real Estate",
+      "notes": "Named contribution listed in the filing.",
+      "candidate_id": "house-38-brian-patrick-kennedy",
+      "candidate_name": "Brian Patrick Kennedy",
+      "chamber": "house",
+      "district_number": "38",
+      "party": "DEM",
+      "slug": "brian-patrick-kennedy"
+    },
+    {
+      "donor": "REALTORS PAC OF RI",
       "amount": 400.0,
       "type": "PAC",
       "interest_group": "Housing / Real Estate",
@@ -24358,6 +24710,19 @@
       "district_number": "40",
       "party": "REP",
       "slug": "michael-chippendale"
+    },
+    {
+      "donor": "RHODE ISLAND ENERGY PAC (RIE PAC)",
+      "amount": 300.0,
+      "type": "PAC",
+      "interest_group": "Energy / Utilities",
+      "notes": "Named contribution listed in the filing.",
+      "candidate_id": "house-38-brian-patrick-kennedy",
+      "candidate_name": "Brian Patrick Kennedy",
+      "chamber": "house",
+      "district_number": "38",
+      "party": "DEM",
+      "slug": "brian-patrick-kennedy"
     },
     {
       "donor": "RHODE ISLAND ENERGY PAC (RIE PAC)",
@@ -25790,6 +26155,19 @@
       "slug": "james-metivier"
     },
     {
+      "donor": "Thomas N Menec",
+      "amount": 100.0,
+      "type": "Loan Proceeds",
+      "interest_group": "Other / Unclassified",
+      "notes": "Candidate loan proceeds reported in the filing.",
+      "candidate_id": "house-31-thomas-n-menec",
+      "candidate_name": "Thomas N Menec",
+      "chamber": "house",
+      "district_number": "31",
+      "party": "DEM",
+      "slug": "thomas-n-menec"
+    },
+    {
       "donor": "Thomas Weyman",
       "amount": 250.0,
       "type": "Individual",
@@ -26100,6 +26478,19 @@
       "district_number": "65",
       "party": "DEM",
       "slug": "matthew-dawson"
+    },
+    {
+      "donor": "William J Murphy",
+      "amount": 350.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "Employer listed as Dome Consultants LLC.",
+      "candidate_id": "house-38-brian-patrick-kennedy",
+      "candidate_name": "Brian Patrick Kennedy",
+      "chamber": "house",
+      "district_number": "38",
+      "party": "DEM",
+      "slug": "brian-patrick-kennedy"
     },
     {
       "donor": "William J Murphy",
