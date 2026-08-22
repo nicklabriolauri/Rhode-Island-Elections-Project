@@ -44,7 +44,7 @@ jobs:
           )
 
           OUTPUT = Path("data/ri_politics_news.json")
-          MAX_ITEMS = 5
+          MAX_ITEMS = 20
           MAX_ARCHIVE_ITEMS = 60
           CURATED_HOMEPAGE_LIMIT = 1
           PER_SOURCE_HOMEPAGE_LIMIT = 2
