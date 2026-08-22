@@ -42,9 +42,12 @@ jobs:
               "https://news.google.com/rss/search?"
               f"q={quote_plus(QUERY)}&hl=en-US&gl=US&ceid=US:en"
           )
+
           OUTPUT = Path("data/ri_politics_news.json")
           MAX_ITEMS = 5
           MAX_ARCHIVE_ITEMS = 60
+          CURATED_HOMEPAGE_LIMIT = 1
+          PER_SOURCE_HOMEPAGE_LIMIT = 2
 
           SOURCE_FEEDS = [
               {
@@ -65,11 +68,13 @@ jobs:
               "GoLocalProv",
               "Ocean State Media",
           ]
+
           ALLOWED_SOURCE_TOKENS = (
               "Rhode Island Current",
               "Providence Journal",
               "WPRI",
               "NBC 10",
+              "WJAR",
               "Boston Globe",
               "GoLocalProv",
               "Ocean State Media",
@@ -99,140 +104,154 @@ jobs:
               except Exception:
                   return ""
 
-          def display_date(iso_value: str) -> str:
-              if not iso_value:
-                  return ""
-              try:
-                  dt = datetime.fromisoformat(iso_value)
-                  return dt.strftime("%b ") + str(dt.day)
-              except Exception:
-                  return ""
-
-          def normalize_source_rank(source: str) -> int:
-              if source in PREFERRED_SOURCES:
-                  return PREFERRED_SOURCES.index(source)
-              return len(PREFERRED_SOURCES) + 1
-
-          def fetch_xml(url: str) -> ET.Element:
+          def fetch_rss(url: str) -> ET.Element:
               request = Request(url, headers={"User-Agent": "Mozilla/5.0"})
               with urlopen(request, timeout=20) as response:
                   return ET.fromstring(response.read())
 
-          def make_item(
-              *,
-              title: str,
-              source: str,
-              url: str,
-              published: str,
-              summary: str,
-              topic: str = "",
-          ) -> dict:
-              item = {
-                  "title": clean_text(title),
-                  "source": clean_text(source),
-                  "url": url or "",
-                  "published": published,
-                  "displayDate": display_date(published),
-                  "summary": clean_text(summary) or clean_text(title),
+          def parse_item(item: ET.Element, fallback_source: str = "", topic: str = "", curated: bool = False) -> dict:
+              raw_title = item.findtext("title", "")
+              source, title = extract_source_and_title(raw_title)
+
+              if fallback_source:
+                  source = fallback_source
+
+              return {
+                  "title": title,
+                  "source": source,
+                  "summary": clean_text(item.findtext("description", "")),
+                  "link": clean_text(item.findtext("link", "")),
+                  "published": parse_pubdate(item.findtext("pubDate", "")),
+                  "topic": topic,
+                  "curated": curated,
               }
-              if topic:
-                  item["topic"] = topic
-              return item
 
-          def collect_google_items() -> list[dict]:
-              root = fetch_xml(FEED_URL)
-              items = []
-              for node in root.findall("./channel/item"):
-                  source, title = extract_source_and_title(node.findtext("title", ""))
-                  if not source_allowed(source):
-                      continue
-                  published = parse_pubdate(node.findtext("pubDate", ""))
-                  items.append(
-                      make_item(
-                          title=title,
-                          source=source,
-                          url=node.findtext("link", ""),
-                          published=published,
-                          summary=node.findtext("description", ""),
-                      )
-                  )
-              items.sort(key=lambda item: item.get("published", ""), reverse=True)
-              items.sort(key=lambda item: normalize_source_rank(item.get("source", "")))
-              return items
-
-          def collect_source_items() -> list[dict]:
-              items = []
-              for feed in SOURCE_FEEDS:
-                  try:
-                      root = fetch_xml(feed["url"])
-                  except Exception as exc:
-                      print(f"Could not load source feed {feed['url']}: {exc}")
-                      continue
-
-                  for node in root.findall("./channel/item"):
-                      title = clean_text(node.findtext("title", ""))
-                      if not title:
-                          continue
-                      published = parse_pubdate(node.findtext("pubDate", ""))
-                      items.append(
-                          make_item(
-                              title=title,
-                              source=feed["source"],
-                              url=node.findtext("link", ""),
-                              published=published,
-                              summary=node.findtext("description", ""),
-                              topic=feed.get("topic", ""),
-                          )
-                      )
-              items.sort(key=lambda item: item.get("published", ""), reverse=True)
-              return items
-
-          def dedupe_items(items: list[dict]) -> list[dict]:
+          def dedupe_articles(items: list[dict]) -> list[dict]:
               seen = set()
-              unique = []
-              for item in items:
-                  key = (item.get("url") or item.get("title", "")).strip().lower()
+              deduped = []
+
+              for article in items:
+                  key = (article.get("link") or article.get("title") or "").strip().lower()
                   if not key or key in seen:
                       continue
                   seen.add(key)
-                  unique.append(item)
-              return unique
+                  deduped.append(article)
 
-          source_items = collect_source_items()
-          google_items = collect_google_items()
-          combined = dedupe_items(source_items + google_items)
+              return deduped
+
+          def sort_articles(items: list[dict]) -> list[dict]:
+              def source_rank(source: str) -> int:
+                  if source in PREFERRED_SOURCES:
+                      return PREFERRED_SOURCES.index(source)
+                  return len(PREFERRED_SOURCES)
+
+              return sorted(
+                  items,
+                  key=lambda article: (
+                      article.get("published") or "",
+                      -source_rank(article.get("source", "")),
+                  ),
+                  reverse=True,
+              )
+
+          def select_homepage_items(items: list[dict]) -> list[dict]:
+              selected = []
+              deferred = []
+              source_counts = {}
+              curated_count = 0
+              seen = set()
+
+              for article in items:
+                  key = (article.get("link") or article.get("title") or "").strip().lower()
+                  if not key or key in seen:
+                      continue
+
+                  source = article.get("source", "")
+
+                  if article.get("curated") and curated_count >= CURATED_HOMEPAGE_LIMIT:
+                      deferred.append(article)
+                      continue
+
+                  if source_counts.get(source, 0) >= PER_SOURCE_HOMEPAGE_LIMIT:
+                      deferred.append(article)
+                      continue
+
+                  selected.append(article)
+                  seen.add(key)
+                  source_counts[source] = source_counts.get(source, 0) + 1
+
+                  if article.get("curated"):
+                      curated_count += 1
+
+                  if len(selected) >= MAX_ITEMS:
+                      return selected
+
+              for article in deferred:
+                  key = (article.get("link") or article.get("title") or "").strip().lower()
+                  if not key or key in seen:
+                      continue
+
+                  selected.append(article)
+                  seen.add(key)
+
+                  if len(selected) >= MAX_ITEMS:
+                      break
+
+              return selected
+
+          articles = []
+
+          try:
+              google_root = fetch_rss(FEED_URL)
+              for item in google_root.findall("./channel/item"):
+                  article = parse_item(item)
+                  if article["title"] and article["link"] and source_allowed(article["source"]):
+                      articles.append(article)
+          except Exception as exc:
+              print(f"Google News RSS fetch failed: {exc}")
+
+          for feed in SOURCE_FEEDS:
+              try:
+                  source_root = fetch_rss(feed["url"])
+                  for item in source_root.findall("./channel/item"):
+                      article = parse_item(
+                          item,
+                          fallback_source=feed["source"],
+                          topic=feed["topic"],
+                          curated=True,
+                      )
+                      if article["title"] and article["link"]:
+                          articles.append(article)
+              except Exception as exc:
+                  print(f"Curated feed fetch failed for {feed['url']}: {exc}")
+
+          articles = sort_articles(dedupe_articles(articles))
+
+          payload = {
+              "query": QUERY,
+              "source": "Google News RSS plus curated Rhode Island Current feed",
+              "source_url": FEED_URL,
+              "updated_at": datetime.now(timezone.utc).isoformat(),
+              "items": select_homepage_items(articles),
+              "archive": articles[:MAX_ARCHIVE_ITEMS],
+          }
 
           OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-          OUTPUT.write_text(
-              json.dumps(
-                  {
-                      "updated": datetime.now(timezone.utc).isoformat(),
-                      "query": QUERY,
-                      "source": "Google News RSS plus selected Rhode Island politics source feeds",
-                      "items": combined[:MAX_ITEMS],
-                      "archive": combined[:MAX_ARCHIVE_ITEMS],
-                  },
-                  indent=2,
-                  ensure_ascii=False,
-              )
-              + "\n",
-              encoding="utf-8",
-          )
-          print(
-              f"Wrote {len(combined[:MAX_ITEMS])} current items and "
-              f"{len(combined[:MAX_ARCHIVE_ITEMS])} archived items to {OUTPUT}"
-          )
+          OUTPUT.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
+
+          print(f"Wrote {len(payload['items'])} homepage items and {len(payload['archive'])} archive items to {OUTPUT}")
           PY
 
       - name: Commit updated feed
         shell: bash
         run: |
           if git diff --quiet -- data/ri_politics_news.json; then
-            echo "No news changes to commit."
-          else
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/ri_politics_news.json
-            git commit -m "Update RI politics news feed"
-            git push
+            echo "No news feed changes to commit."
+            exit 0
           fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ri_politics_news.json
+          git commit -m "Update RI politics news feed"
+          git push
