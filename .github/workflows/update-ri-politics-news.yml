@@ -45,6 +45,15 @@ jobs:
           OUTPUT = Path("data/ri_politics_news.json")
           MAX_ITEMS = 5
           MAX_ARCHIVE_ITEMS = 60
+
+          SOURCE_FEEDS = [
+              {
+                  "url": "https://rhodeislandcurrent.com/tag/primary-2026-races-to-watch/feed/",
+                  "source": "Rhode Island Current",
+                  "topic": "Primary 2026: Races to watch",
+              },
+          ]
+
           PREFERRED_SOURCES = [
               "Rhode Island Current",
               "The Providence Journal",
@@ -72,45 +81,6 @@ jobs:
               value = re.sub(r"\s+", " ", value).strip()
               return value
 
-          def load_existing_items() -> list[dict]:
-              if not OUTPUT.exists():
-                  return []
-              try:
-                  payload = json.loads(OUTPUT.read_text(encoding="utf-8"))
-              except Exception:
-                  return []
-              items = payload.get("items")
-              return items if isinstance(items, list) else []
-
-          def merge_archive(existing_items: list[dict], fresh_items: list[dict]) -> list[dict]:
-              merged = []
-              seen = set()
-              for item in sorted(
-                  fresh_items + existing_items,
-                  key=lambda entry: entry.get("published_at") or "",
-                  reverse=True,
-              ):
-                  title = clean_text(item.get("title", ""))
-                  source = clean_text(item.get("source", ""))
-                  url = clean_text(item.get("url", ""))
-                  if not title or not url:
-                      continue
-                  key = (title.lower(), source.lower())
-                  if key in seen:
-                      continue
-                  seen.add(key)
-                  merged.append(
-                      {
-                          "title": title,
-                          "url": url,
-                          "source": source or "Google News",
-                          "published_at": item.get("published_at", ""),
-                      }
-                  )
-                  if len(merged) >= MAX_ARCHIVE_ITEMS:
-                      break
-              return merged
-
           def extract_source_and_title(raw_title: str) -> tuple[str, str]:
               title = clean_text(raw_title)
               for separator in (" - ", " | ", " — "):
@@ -129,86 +99,140 @@ jobs:
               except Exception:
                   return ""
 
-          def normalize_source_rank(source: str) -> tuple[int, str]:
+          def display_date(iso_value: str) -> str:
+              if not iso_value:
+                  return ""
+              try:
+                  dt = datetime.fromisoformat(iso_value)
+                  return dt.strftime("%b ") + str(dt.day)
+              except Exception:
+                  return ""
+
+          def normalize_source_rank(source: str) -> int:
               if source in PREFERRED_SOURCES:
-                  return (PREFERRED_SOURCES.index(source), source)
-              return (len(PREFERRED_SOURCES) + 1, source)
+                  return PREFERRED_SOURCES.index(source)
+              return len(PREFERRED_SOURCES) + 1
 
-          request = Request(
-              FEED_URL,
-              headers={
-                  "User-Agent": "Mozilla/5.0",
-                  "Accept": "application/rss+xml,application/xml,text/xml,*/*",
-              },
-          )
+          def fetch_xml(url: str) -> ET.Element:
+              request = Request(url, headers={"User-Agent": "Mozilla/5.0"})
+              with urlopen(request, timeout=20) as response:
+                  return ET.fromstring(response.read())
 
-          with urlopen(request, timeout=45) as response:
-              xml_bytes = response.read()
+          def make_item(
+              *,
+              title: str,
+              source: str,
+              url: str,
+              published: str,
+              summary: str,
+              topic: str = "",
+          ) -> dict:
+              item = {
+                  "title": clean_text(title),
+                  "source": clean_text(source),
+                  "url": url or "",
+                  "published": published,
+                  "displayDate": display_date(published),
+                  "summary": clean_text(summary) or clean_text(title),
+              }
+              if topic:
+                  item["topic"] = topic
+              return item
 
-          root = ET.fromstring(xml_bytes)
-          channel = root.find("./channel")
-          items = []
-
-          if channel is not None:
-              for item in channel.findall("item"):
-                  raw_title = item.findtext("title", default="")
-                  raw_link = item.findtext("link", default="")
-                  raw_pub = item.findtext("pubDate", default="")
-                  source, title = extract_source_and_title(raw_title)
-                  if not title or not raw_link:
+          def collect_google_items() -> list[dict]:
+              root = fetch_xml(FEED_URL)
+              items = []
+              for node in root.findall("./channel/item"):
+                  source, title = extract_source_and_title(node.findtext("title", ""))
+                  if not source_allowed(source):
                       continue
-                  if source and not source_allowed(source):
-                      continue
+                  published = parse_pubdate(node.findtext("pubDate", ""))
                   items.append(
-                      {
-                          "title": title,
-                          "url": raw_link.strip(),
-                          "source": source or "Google News",
-                          "published_at": parse_pubdate(raw_pub),
-                      }
+                      make_item(
+                          title=title,
+                          source=source,
+                          url=node.findtext("link", ""),
+                          published=published,
+                          summary=node.findtext("description", ""),
+                      )
                   )
+              items.sort(key=lambda item: item.get("published", ""), reverse=True)
+              items.sort(key=lambda item: normalize_source_rank(item.get("source", "")))
+              return items
 
-          deduped = []
-          seen = set()
-          for item in sorted(
-              items,
-              key=lambda entry: (normalize_source_rank(entry["source"]), entry["published_at"] or ""),
-          ):
-              key = (item["title"].lower(), item["source"].lower())
-              if key in seen:
-                  continue
-              seen.add(key)
-              deduped.append(item)
+          def collect_source_items() -> list[dict]:
+              items = []
+              for feed in SOURCE_FEEDS:
+                  try:
+                      root = fetch_xml(feed["url"])
+                  except Exception as exc:
+                      print(f"Could not load source feed {feed['url']}: {exc}")
+                      continue
 
-          deduped = sorted(
-              deduped,
-              key=lambda entry: entry["published_at"] or "",
-              reverse=True,
-          )[:MAX_ITEMS]
+                  for node in root.findall("./channel/item"):
+                      title = clean_text(node.findtext("title", ""))
+                      if not title:
+                          continue
+                      published = parse_pubdate(node.findtext("pubDate", ""))
+                      items.append(
+                          make_item(
+                              title=title,
+                              source=feed["source"],
+                              url=node.findtext("link", ""),
+                              published=published,
+                              summary=node.findtext("description", ""),
+                              topic=feed.get("topic", ""),
+                          )
+                      )
+              items.sort(key=lambda item: item.get("published", ""), reverse=True)
+              return items
 
-          payload = {
-              "query": QUERY,
-              "source_label": "Google News RSS",
-              "source_url": FEED_URL,
-              "generated_at": datetime.now(timezone.utc).isoformat(),
-              "items": deduped,
-          }
+          def dedupe_items(items: list[dict]) -> list[dict]:
+              seen = set()
+              unique = []
+              for item in items:
+                  key = (item.get("url") or item.get("title", "")).strip().lower()
+                  if not key or key in seen:
+                      continue
+                  seen.add(key)
+                  unique.append(item)
+              return unique
 
-          payload["items"] = merge_archive(load_existing_items(), payload["items"])
+          source_items = collect_source_items()
+          google_items = collect_google_items()
+          combined = dedupe_items(source_items + google_items)
+
           OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-          OUTPUT.write_text(json.dumps(payload, indent=2), encoding="utf-8")
-          print(f"Wrote {len(deduped)} headlines to {OUTPUT}")
+          OUTPUT.write_text(
+              json.dumps(
+                  {
+                      "updated": datetime.now(timezone.utc).isoformat(),
+                      "query": QUERY,
+                      "source": "Google News RSS plus selected Rhode Island politics source feeds",
+                      "items": combined[:MAX_ITEMS],
+                      "archive": combined[:MAX_ARCHIVE_ITEMS],
+                  },
+                  indent=2,
+                  ensure_ascii=False,
+              )
+              + "\n",
+              encoding="utf-8",
+          )
+          print(
+              f"Wrote {len(combined[:MAX_ITEMS])} current items and "
+              f"{len(combined[:MAX_ARCHIVE_ITEMS])} archived items to {OUTPUT}"
+          )
           PY
 
-      - name: Commit updated news JSON
+      - name: Commit updated feed
         shell: bash
         run: |
           if git diff --quiet -- data/ri_politics_news.json; then
-            echo "No feed changes to commit."
-            exit 0
+            echo "No news changes to commit."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/ri_politics_news.json
+            git commit -m "Update RI politics news feed"
+            git push
           fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/ri_politics_news.json
-          git commit -m "Update RI politics news feed"
-          git push
