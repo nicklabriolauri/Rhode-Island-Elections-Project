@@ -138,6 +138,35 @@
     .priority p{margin:4px 0 0;color:var(--muted);font-size:11px;line-height:1.45}
     .awaiting{margin-top:11px;padding:11px;border-radius:13px;background:#fff8e8;color:#76551b;font-size:11px;line-height:1.45}
     .empty{padding:24px;text-align:center;color:var(--muted)}
+
+    .map-return-btn{
+      appearance:none;
+      border:1px solid #dbe4ef;
+      background:#fff;
+      color:var(--navy);
+      border-radius:999px;
+      padding:9px 12px;
+      font:inherit;
+      font-size:11px;
+      font-weight:900;
+      cursor:pointer;
+      box-shadow:0 8px 20px rgba(15,23,42,.12);
+    }
+    .map-return-btn:hover{transform:translateY(-1px)}
+    .precinct-popup{
+      font-family:"Instrument Sans",sans-serif;
+      line-height:1.35;
+    }
+    .precinct-popup strong{
+      display:block;
+      margin-bottom:3px;
+      color:var(--navy);
+    }
+    .precinct-popup span{
+      color:#5f7088;
+      font-size:11px;
+    }
+
     @media(max-width:920px){
       .workspace{grid-template-columns:1fr}
       .detail-panel{position:static}
@@ -232,12 +261,15 @@
     const DATA_URL = "data/whos_running_2026.json?v=20260828-unified";
     const PROFILE_URL = "data/candidate_profiles_2026.json?v=20260828-unified";
     const GEO = {
-  house: "data/house_new.geojson",
-  senate: "data/senate_new.geojson"
-};
+      house: "/data/house_new.geojson",
+      senate: "/data/senate_new.geojson",
+      precincts: "/data/ri_turnout_2024_precinct.geojson"
+    };
 
     let data = null;
     let profiles = new Map();
+    let financeByCandidateId = new Map();
+    let financeByCompositeKey = new Map();
     let chamber = "house";
     let selectedDistrict = "1";
     let filter = "all";
@@ -245,6 +277,11 @@
     let layer = null;
     let geoCache = {};
     let visibleDistricts = [];
+    let baseTileLayer = null;
+    let candidateMarkerLayer = null;
+    let precinctFeatureByCode = {};
+    let districtLayerByNumber = {};
+    let resetViewButton = null;
 
     const esc = value => String(value ?? "")
       .replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;")
@@ -278,9 +315,6 @@
       if (!record) return "#d7deea";
 
       const c = counts(record);
-
-      // Purple = both major parties; blue = Democratic only;
-      // red = Republican only; teal = other only; gray = no filing.
       if (c.dem > 0 && c.rep > 0) return "#7c3aed";
       if (c.dem > 0) return "#2764e8";
       if (c.rep > 0) return "#e4575e";
@@ -306,9 +340,7 @@
         props.NAME ??
         props.NAMELSAD;
 
-      if (rawDistrict === null || rawDistrict === undefined) {
-        return null;
-      }
+      if (rawDistrict === null || rawDistrict === undefined) return null;
 
       const match = String(rawDistrict).match(/\d+/);
       return match ? String(Number(match[0])) : null;
@@ -322,33 +354,189 @@
       return geoCache[chamber];
     }
 
+    function mapStyleForFeature(feature){
+      const d = districtNumberFromFeature(feature);
+      const rec = d ? getRecord(d) : null;
+      const visible = rec && matchesFilter(rec);
+      const selected = String(d) === String(selectedDistrict);
+
+      return {
+        color: selected ? "#0b1738" : "#ffffff",
+        weight: selected ? 4 : 1.4,
+        opacity: selected ? 1 : 0.95,
+        fill: true,
+        fillColor: rec ? districtColor(rec) : "#d7deea",
+        fillOpacity: visible ? (selected ? 0.88 : 0.62) : 0.10
+      };
+    }
+
+    function getPrecinctStyle(candidates){
+      const parties = new Set(candidates.map(candidate => candidate.party));
+      let fillColor = "#ede9fe";
+      let color = "#6d28d9";
+
+      if(parties.size === 1){
+        const party = candidates[0].party;
+        if(party === "DEM"){
+          fillColor = "#dbeafe";
+          color = "#1d4ed8";
+        }else if(party === "REP"){
+          fillColor = "#fee2e2";
+          color = "#b91c1c";
+        }else{
+          fillColor = "#ccfbf1";
+          color = "#0f766e";
+        }
+      }
+
+      return {
+        color,
+        weight: 2.8,
+        opacity: 1,
+        fillColor,
+        fillOpacity: 0.74
+      };
+    }
+
+    function getPrecinctMarkerStyle(candidates){
+      const parties = new Set(candidates.map(candidate => candidate.party));
+      let fillColor = "#7c3aed";
+
+      if(parties.size === 1){
+        const party = candidates[0].party;
+        fillColor = party === "DEM" ? "#2764e8" : party === "REP" ? "#e4575e" : "#0f9b8e";
+      }
+
+      return {
+        radius: candidates.length > 1 ? 9 : 7,
+        color: "#ffffff",
+        weight: 2.5,
+        opacity: 1,
+        fillColor,
+        fillOpacity: 0.98
+      };
+    }
+
+    function precinctTooltipHtml(precinctName, candidates){
+      const rows = candidates.map(candidate => {
+        const party = candidate.party_label || candidate.party_raw || candidate.party || "Other";
+        return `<strong>${esc(candidate.name)}</strong><span>${esc(party)} · home precinct</span>`;
+      }).join("<br>");
+      return `<div class="precinct-popup"><strong>${esc(precinctName)}</strong>${rows}</div>`;
+    }
+
+    function renderSelectedDistrictMarkers(record){
+      if(!candidateMarkerLayer) return;
+      candidateMarkerLayer.clearLayers();
+      if(!record) return;
+
+      const allCandidates = [...(record.candidates || []), ...(record.general_candidates || [])];
+      const candidatesByPrecinct = {};
+
+      allCandidates.forEach(candidate => {
+        const code = String(candidate.home_precinct_code || "").trim();
+        if(!code || !precinctFeatureByCode[code]) return;
+        candidatesByPrecinct[code] = candidatesByPrecinct[code] || [];
+        candidatesByPrecinct[code].push(candidate);
+      });
+
+      Object.entries(candidatesByPrecinct).forEach(([code, candidates]) => {
+        const feature = precinctFeatureByCode[code];
+        const precinctLayer = L.geoJSON(feature, {
+          style: getPrecinctStyle(candidates)
+        });
+
+        const precinctName =
+          candidates[0].home_precinct_name ||
+          candidates[0].home_precinct_label ||
+          `Precinct ${code}`;
+
+        const tooltip = precinctTooltipHtml(precinctName, candidates);
+
+        precinctLayer.bindTooltip(tooltip, {
+          sticky:true,
+          opacity:0.97
+        });
+
+        candidateMarkerLayer.addLayer(precinctLayer);
+
+        const center = precinctLayer.getBounds().getCenter();
+        const marker = L.circleMarker(center, getPrecinctMarkerStyle(candidates));
+        marker.bindTooltip(tooltip, {
+          direction:"top",
+          offset:[0,-8],
+          sticky:true,
+          opacity:0.97
+        });
+        candidateMarkerLayer.addLayer(marker);
+      });
+    }
+
+    function resetStatewideView(){
+      selectedDistrict = "1";
+      if(candidateMarkerLayer) candidateMarkerLayer.clearLayers();
+      if(baseTileLayer) baseTileLayer.setOpacity(0.42);
+      if(layer){
+        layer.eachLayer(entry => {
+          entry.setStyle(mapStyleForFeature(entry.feature));
+        });
+        try{ map.fitBounds(layer.getBounds(), {padding:[10,10]}); }catch(e){}
+      }
+      if(resetViewButton) resetViewButton.style.display = "none";
+      renderDistrictList();
+      renderDetails();
+    }
+
     async function drawMap(){
       const geo = await loadGeo();
       if(layer) layer.remove();
 
+      districtLayerByNumber = {};
+
       layer = L.geoJSON(geo, {
-        style: feature => {
-          const d = districtNumberFromFeature(feature);
-          const rec = d ? getRecord(d) : null;
-          const visible = rec && matchesFilter(rec);
-          return {
-            color: String(d) === String(selectedDistrict) ? "#0b1738" : "#ffffff",
-            weight: String(d) === String(selectedDistrict) ? 4 : 1.4,
-            opacity: 1,
-            fill: true,
-            fillColor: rec ? districtColor(rec) : "#d7deea",
-            fillOpacity: visible ? 0.62 : 0.10
-          };
-        },
+        style: mapStyleForFeature,
         onEachFeature: (feature, lyr) => {
           const d = districtNumberFromFeature(feature);
           if(!d) return;
+          districtLayerByNumber[String(d)] = lyr;
           lyr.on("click", () => selectDistrict(d, true));
           lyr.bindTooltip(`${chamber === "house" ? "House" : "Senate"} District ${d}`, {sticky:true});
         }
       }).addTo(map);
 
       try{ map.fitBounds(layer.getBounds(), {padding:[10,10]}); }catch(e){}
+    }
+
+    function normalizeFinanceName(value){
+      return String(value || "")
+        .toLowerCase()
+        .replace(/[^a-z0-9\s]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+
+    function getFinanceProfile(candidate){
+      if(!candidate) return null;
+
+      if(candidate.candidate_id && financeByCandidateId.has(candidate.candidate_id)){
+        return financeByCandidateId.get(candidate.candidate_id);
+      }
+
+      const key = [
+        String(chamber || "").toLowerCase(),
+        String(selectedDistrict || "").trim(),
+        String(candidate.party || "").toUpperCase(),
+        normalizeFinanceName(candidate.name || "")
+      ].join("::");
+
+      return financeByCompositeKey.get(key) || null;
+    }
+
+    function buildFinanceHref(candidate){
+      const profile = getFinanceProfile(candidate);
+      return profile?.slug
+        ? `finance.html?slug=${encodeURIComponent(profile.slug)}`
+        : "";
     }
 
     function partyBadge(candidate){
@@ -387,7 +575,10 @@
       if(campaign) links.push(`<a href="${esc(campaign)}" target="_blank" rel="noopener">Campaign website</a>`);
       if(email) links.push(`<a href="mailto:${esc(email)}">Email</a>`);
       if(phone) links.push(`<a href="tel:${esc(String(phone).replace(/[^\d+]/g,''))}">Call</a>`);
-      links.push(`<a class="finance" href="finance.html?candidate=${encodeURIComponent(candidate.candidate_id)}">Campaign finance</a>`);
+      const financeHref = buildFinanceHref(candidate);
+      if(financeHref){
+        links.push(`<a class="finance" href="${financeHref}">Campaign finance</a>`);
+      }
 
       return `
         <article class="candidate-card">
@@ -474,25 +665,57 @@
       selectedDistrict = String(district);
       renderDistrictList();
       renderDetails();
-      if(layer) layer.setStyle(feature => {
-        const d = districtNumberFromFeature(feature);
-        const rec = d ? getRecord(d) : null;
-        const visible = rec && matchesFilter(rec);
-        return {
-          color: String(d) === String(selectedDistrict) ? "#0b1738" : "#ffffff",
-          weight: String(d) === String(selectedDistrict) ? 4 : 1.4,
-          opacity: 1,
-          fill: true,
-          fillColor: rec ? districtColor(rec) : "#d7deea",
-          fillOpacity: visible ? 0.62 : 0.10
-        };
-      });
+
+      const selectedLayer = districtLayerByNumber[String(selectedDistrict)];
+
+      if(layer){
+        layer.eachLayer(entry => {
+          const d = districtNumberFromFeature(entry.feature);
+          const rec = d ? getRecord(d) : null;
+
+          if(String(d) === String(selectedDistrict)){
+            entry.setStyle({
+              color:"#0b1738",
+              weight:4.2,
+              opacity:1,
+              fill:true,
+              fillColor:rec ? districtColor(rec) : "#d7deea",
+              fillOpacity:0.90
+            });
+            if(entry.bringToFront) entry.bringToFront();
+          }else{
+            entry.setStyle({
+              color:"#cbd5e1",
+              weight:1,
+              opacity:0.34,
+              fill:true,
+              fillColor:rec ? districtColor(rec) : "#d7deea",
+              fillOpacity:0.07
+            });
+          }
+        });
+      }
+
+      if(selectedLayer){
+        if(baseTileLayer) baseTileLayer.setOpacity(0.22);
+        map.fitBounds(selectedLayer.getBounds(), {
+          paddingTopLeft:[30,25],
+          paddingBottomRight:[30,45],
+          maxZoom:12
+        });
+      }
+
+      renderSelectedDistrictMarkers(getRecord(selectedDistrict));
+
+      if(resetViewButton) resetViewButton.style.display = "inline-flex";
+
       if(updateUrl){
         const params = new URLSearchParams(location.search);
         params.set("chamber", chamber);
         params.set("district", selectedDistrict);
         history.replaceState({}, "", `${location.pathname}?${params.toString()}`);
       }
+
       document.getElementById("comparePanel").scrollIntoView({behavior:"smooth",block:"start"});
     }
 
@@ -503,6 +726,9 @@
 
       const max = chamber === "house" ? 75 : 38;
       if(Number(selectedDistrict) > max) selectedDistrict = "1";
+      if(candidateMarkerLayer) candidateMarkerLayer.clearLayers();
+      if(baseTileLayer) baseTileLayer.setOpacity(0.42);
+      if(resetViewButton) resetViewButton.style.display = "none";
       renderDistrictList();
       renderDetails();
       await drawMap();
@@ -525,17 +751,64 @@
     }
 
     async function init(){
-      map = L.map("map",{zoomControl:true}).setView([41.68,-71.57],9);
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{
+      map = L.map("map",{zoomControl:true,scrollWheelZoom:false}).setView([41.68,-71.57],9);
+
+      baseTileLayer = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{
         maxZoom:18,opacity:.42,attribution:"&copy; OpenStreetMap contributors"
       }).addTo(map);
 
-      const [running, profilePayload] = await Promise.all([
+      candidateMarkerLayer = L.layerGroup().addTo(map);
+
+      const resetControl = L.control({position:"topright"});
+      resetControl.onAdd = function(){
+        const wrapper = L.DomUtil.create("div");
+        resetViewButton = L.DomUtil.create("button","map-return-btn",wrapper);
+        resetViewButton.type = "button";
+        resetViewButton.textContent = "Return to statewide view";
+        resetViewButton.style.display = "none";
+        L.DomEvent.disableClickPropagation(wrapper);
+        L.DomEvent.on(resetViewButton,"click",event => {
+          L.DomEvent.preventDefault(event);
+          resetStatewideView();
+        });
+        return wrapper;
+      };
+      resetControl.addTo(map);
+
+      const [running, profilePayload, precinctGeo, financePayload] = await Promise.all([
         fetch(DATA_URL,{cache:"no-store"}).then(r=>r.json()),
-        fetch(PROFILE_URL,{cache:"no-store"}).then(r=>r.json())
+        fetch(PROFILE_URL,{cache:"no-store"}).then(r=>r.json()),
+        fetch(GEO.precincts,{cache:"no-store"}).then(r=>r.json()),
+        fetch("data/candidate_finance_2026.json",{cache:"no-store"})
+          .then(r=>r.ok ? r.json() : {profiles:[]})
       ]);
+
       data = running;
       profiles = new Map((profilePayload?.profiles || []).map(p=>[p.candidate_id,p]));
+
+      const financeProfiles = financePayload?.profiles || [];
+      financeByCandidateId = new Map(
+        financeProfiles
+          .filter(profile => profile.candidate_id)
+          .map(profile => [profile.candidate_id, profile])
+      );
+      financeByCompositeKey = new Map();
+      financeProfiles.forEach(profile => {
+        const key = [
+          String(profile.chamber || "").toLowerCase(),
+          String(profile.district_number || "").trim(),
+          String(profile.party || "").toUpperCase(),
+          normalizeFinanceName(profile.candidate_name || "")
+        ].join("::");
+        financeByCompositeKey.set(key, profile);
+      });
+
+      precinctFeatureByCode = {};
+      (precinctGeo?.features || []).forEach(feature => {
+        const props = feature.properties || {};
+        const code = String(props.DISTRICT || props.PRECINCTS || "").trim();
+        if(code) precinctFeatureByCode[code] = feature;
+      });
 
       const params = new URLSearchParams(location.search);
       const requestedChamber = params.get("chamber");
@@ -549,6 +822,10 @@
       renderDistrictList();
       renderDetails();
       await drawMap();
+
+      if(requestedDistrict && districtLayerByNumber[String(selectedDistrict)]){
+        await selectDistrict(selectedDistrict, false);
+      }
     }
 
     init().catch(err => {
