@@ -266,7 +266,7 @@
   (() => {
     const DATA_URL = "data/whos_running_2026.json?v=20260828-unified";
     const PROFILE_URL = "data/candidate_profiles_2026.json?v=20260828-unified";
-    const RESEARCH_URL = "data/candidate_research_2026_with_endorsements.json?v=20260828-phase2";
+    const RESEARCH_URL = "data/candidate_research_2026_with_endorsements_FIXED.json?v=20260828-phase2";
     const GEO = {
       house: "/data/house_new.geojson",
       senate: "/data/senate_new.geojson",
@@ -571,7 +571,7 @@
         <div class="endorsement-block">
           <div class="priority-label">Endorsements</div>
           <div class="endorsement-list">
-            ${items.map(item => `<a class="endorsement-chip" href="${esc(item.source_url || "#")}" target="_blank" rel="noopener">${esc(item.name)}</a>`).join("")}
+            ${items.map(item => { const label = item.name || item.organization || item.endorser || "Endorsement"; return `<a class="endorsement-chip" href="${esc(item.source_url || item.url || "#")}" target="_blank" rel="noopener">${esc(label)}</a>`; }).join("")}
           </div>
           <div class="source-note">Only explicit endorsement announcements are listed. Select an endorsement to open its source.</div>
         </div>`;
