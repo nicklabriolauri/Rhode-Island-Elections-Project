@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Rhode Island Ballot | Rhode Island Elections Project</title>
+  <meta name="description" content="Enter a Rhode Island address once to see your State House and State Senate districts, the candidates who filed, and available campaign priorities in one place." />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <style>
+    :root{
+      --navy:#111c3d;
+      --navy2:#1d2a57;
+      --ink:#10203f;
+      --muted:#5f7088;
+      --line:#dbe4ef;
+      --bg:#eef4fb;
+      --panel:#ffffff;
+      --dem:#3478f6;
+      --rep:#e85b61;
+      --violet:#7c3aed;
+      --teal:#0f9b8e;
+      --gold:#d58b18;
+      --soft-blue:#eef5ff;
+      --soft-red:#fff2f2;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 12% 8%,rgba(70,111,246,.12),transparent 22%),
+        linear-gradient(180deg,#f8fbff 0%,var(--bg) 100%);
+    }
+    a{color:inherit}
+    header{
+      background:linear-gradient(135deg,#0f172a 0%,#172554 100%);
+      color:white;
+      padding:22px 24px;
+    }
+    .header-shell{
+      max-width:1180px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+    .brand{display:flex;gap:14px;align-items:center}
+    .brand img{width:68px;height:68px;object-fit:contain}
+    .brand h1{margin:0;font-size:25px;letter-spacing:-.04em}
+    .brand p{margin:6px 0 0;color:rgba(255,255,255,.75);font-size:13px}
+    nav{display:flex;gap:8px;flex-wrap:wrap}
+    nav a{
+      text-decoration:none;
+      border:1px solid rgba(255,255,255,.2);
+      border-radius:999px;
+      padding:9px 13px;
+      font-size:12px;
+      font-weight:800;
+      background:rgba(255,255,255,.05);
+    }
+    nav a.active{background:white;color:var(--navy)}
+    main{max-width:1180px;margin:auto;padding:28px 24px 46px}
+    .hero{
+      border-radius:30px;
+      padding:34px;
+      color:white;
+      background:
+        radial-gradient(circle at 88% 18%,rgba(126,160,255,.22),transparent 28%),
+        linear-gradient(145deg,#172554,#26376c);
+      box-shadow:0 22px 55px rgba(15,23,42,.18);
+    }
+    .eyebrow{
+      text-transform:uppercase;
+      font-size:11px;
+      letter-spacing:.16em;
+      font-weight:900;
+      color:rgba(255,255,255,.66);
+    }
+    .hero h2{
+      margin:10px 0 0;
+      max-width:780px;
+      font-size:clamp(42px,7vw,72px);
+      line-height:.98;
+      letter-spacing:-.06em;
+    }
+    .hero p{
+      max-width:760px;
+      color:rgba(255,255,255,.82);
+      font-size:18px;
+      line-height:1.5;
+      margin:18px 0 0;
+    }
+    .search-card{
+      margin-top:24px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.16);
+      border-radius:22px;
+      padding:18px;
+    }
+    .search-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) 220px auto;
+      gap:10px;
+    }
+    input,select,button{font:inherit}
+    input,select{
+      min-height:52px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.16);
+      padding:0 15px;
+      background:white;
+      color:var(--ink);
+      font-weight:700;
+    }
+    .search-btn{
+      min-height:52px;
+      padding:0 20px;
+      border:0;
+      border-radius:16px;
+      background:#8bd0ff;
+      color:#10203f;
+      font-weight:900;
+      cursor:pointer;
+    }
+    .status{
+      margin-top:11px;
+      min-height:20px;
+      color:rgba(255,255,255,.72);
+      font-size:13px;
+    }
+    .status.error{color:#ffd1d1}
+    .suggestions{
+      display:none;
+      margin-top:9px;
+      border-radius:16px;
+      overflow:hidden;
+      background:white;
+    }
+    .suggestions.show{display:block}
+    .suggestions button{
+      width:100%;
+      border:0;
+      border-bottom:1px solid #e7edf5;
+      background:white;
+      padding:12px 14px;
+      text-align:left;
+      color:var(--ink);
+      cursor:pointer;
+    }
+    .suggestions button:last-child{border-bottom:0}
+    .suggestions small{display:block;color:var(--muted);margin-top:3px}
+    .results{margin-top:24px}
+    .location-summary{
+      display:none;
+      grid-template-columns:minmax(0,1fr) repeat(3,minmax(140px,.45fr));
+      gap:12px;
+      margin-bottom:18px;
+    }
+    .location-summary.show{display:grid}
+    .mini{
+      padding:16px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.96);
+      border-radius:18px;
+      box-shadow:0 12px 28px rgba(15,23,42,.06);
+    }
+    .mini .label{
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:.11em;
+      font-weight:900;
+      color:#718198;
+    }
+    .mini .value{margin-top:6px;font-size:20px;font-weight:900;color:var(--navy)}
+    .mini .detail{margin-top:4px;color:var(--muted);font-size:12px;line-height:1.4}
+    .ballot-header{
+      display:none;
+      align-items:end;
+      justify-content:space-between;
+      gap:18px;
+      margin:26px 0 14px;
+    }
+    .ballot-header.show{display:flex}
+    .ballot-header h3{
+      margin:6px 0 0;
+      font-size:34px;
+      letter-spacing:-.045em;
+    }
+    .ballot-note{max-width:670px;color:var(--muted);font-size:14px;line-height:1.5}
+    .race-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .race-card{
+      display:none;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.98);
+      border-radius:24px;
+      padding:21px;
+      box-shadow:0 15px 38px rgba(15,23,42,.07);
+    }
+    .race-card.show{display:block}
+    .race-kicker{
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.13em;
+      color:#708098;
+      font-weight:900;
+    }
+    .race-title{
+      margin:7px 0 0;
+      font-size:29px;
+      letter-spacing:-.045em;
+      color:var(--navy);
+    }
+    .race-copy{margin:7px 0 0;color:var(--muted);font-size:13px}
+    .party-filter{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:16px 0;
+      padding:10px;
+      border-radius:16px;
+      background:#f6f9fd;
+    }
+    .party-filter button{
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:8px 11px;
+      background:white;
+      color:var(--navy);
+      font-size:12px;
+      font-weight:900;
+      cursor:pointer;
+    }
+    .party-filter button.active{background:var(--navy);color:white;border-color:var(--navy)}
+    .candidate-list{display:grid;gap:11px}
+    .candidate{
+      border:1px solid #dfe7f1;
+      border-radius:19px;
+      padding:15px;
+      background:linear-gradient(180deg,#fff 0%,#fbfdff 100%);
+    }
+    .candidate-top{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      align-items:flex-start;
+    }
+    .candidate-name{
+      font-size:19px;
+      font-weight:900;
+      letter-spacing:-.025em;
+    }
+    .badges{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+    .badge{
+      display:inline-flex;
+      padding:5px 8px;
+      border-radius:999px;
+      font-size:9px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-weight:900;
+      background:#eef3f9;
+      color:#5c6b7f;
+    }
+    .badge.dem{background:var(--soft-blue);color:#1f5ed9}
+    .badge.rep{background:var(--soft-red);color:#b6363f}
+    .badge.response{background:#ecfdf7;color:#087965}
+    .candidate-meta{margin-top:8px;color:var(--muted);font-size:12px}
+    .priorities{margin-top:13px;border-top:1px solid #e5ebf3;padding-top:12px}
+    .priority-head{font-size:10px;text-transform:uppercase;letter-spacing:.12em;font-weight:900;color:#718198}
+    .priority-list{display:grid;gap:8px;margin-top:9px}
+    .priority{
+      padding:10px 11px;
+      border-radius:13px;
+      background:#f6f9fd;
+    }
+    .priority strong{display:block;font-size:13px;color:var(--navy)}
+    .priority span{display:block;margin-top:3px;color:var(--muted);font-size:11px;line-height:1.45}
+    .no-priorities{
+      margin-top:12px;
+      padding:11px;
+      border-radius:13px;
+      background:#fff8e9;
+      color:#75541c;
+      font-size:12px;
+      line-height:1.45;
+    }
+    .candidate-actions,.page-actions{
+      display:flex;gap:8px;flex-wrap:wrap;margin-top:12px
+    }
+    .candidate-actions a,.page-actions a{
+      text-decoration:none;
+      padding:8px 10px;
+      border:1px solid #dbe4ef;
+      border-radius:999px;
+      background:white;
+      color:var(--navy);
+      font-size:11px;
+      font-weight:900;
+    }
+    .candidate-actions a.primary{background:var(--navy);color:white;border-color:var(--navy)}
+    .why{
+      margin-top:22px;
+      padding:20px;
+      border:1px solid var(--line);
+      border-radius:22px;
+      background:white;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.55;
+    }
+    .why strong{color:var(--navy)}
+    @media(max-width:860px){
+      .search-grid{grid-template-columns:1fr}
+      .location-summary{grid-template-columns:1fr 1fr}
+      .race-grid{grid-template-columns:1fr}
+      .ballot-header{align-items:flex-start;flex-direction:column}
+    }
+    @media(max-width:540px){
+      header{padding:18px}
+      main{padding:20px 16px 34px}
+      .hero{padding:24px 18px}
+      .location-summary{grid-template-columns:1fr}
+      .candidate-top{flex-direction:column}
+      .badges{justify-content:flex-start}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-shell">
+    <div class="brand">
+      <img src="riep-logo-sunburst-white.png" alt="Rhode Island Elections Project logo" />
+      <div>
+        <h1>Rhode Island Elections Project</h1>
+        <p>One address. Your districts. Your candidates.</p>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a class="active" href="ballot.html">Find My Ballot</a>
+      <a href="running.html">All Races</a>
+      <a href="finance.html">Campaign Finance</a>
+      <a href="map.html">Maps & Data</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="eyebrow">Your Rhode Island ballot</div>
+    <h2>Enter your address once.</h2>
+    <p>See your State House and State Senate districts together, then compare the candidates who have filed and the campaign priorities currently available on RIEP.</p>
+
+    <div class="search-card">
+      <div class="search-grid">
+        <input id="addressInput" type="text" autocomplete="street-address" placeholder="Street address — e.g. 100 Main Street" />
+        <select id="citySelect" aria-label="City or town">
+          <option value="">City or town (optional)</option>
+        </select>
+        <button class="search-btn" id="searchButton" type="button">Find my ballot</button>
+      </div>
+      <div class="status" id="status">Loading Rhode Island district data…</div>
+      <div class="suggestions" id="suggestions"></div>
+    </div>
+  </section>
+
+  <section class="results">
+    <div class="location-summary" id="locationSummary">
+      <div class="mini">
+        <div class="label">Matched address</div>
+        <div class="value" id="matchedAddress">—</div>
+        <div class="detail" id="matchedPrecinct">—</div>
+      </div>
+      <div class="mini">
+        <div class="label">House district</div>
+        <div class="value" id="houseDistrict">—</div>
+        <div class="detail">Rhode Island House</div>
+      </div>
+      <div class="mini">
+        <div class="label">Senate district</div>
+        <div class="value" id="senateDistrict">—</div>
+        <div class="detail">Rhode Island Senate</div>
+      </div>
+      <div class="mini">
+        <div class="label">2024 turnout</div>
+        <div class="value" id="turnoutValue">—</div>
+        <div class="detail" id="turnoutDetail">Precinct context</div>
+      </div>
+    </div>
+
+    <div class="ballot-header" id="ballotHeader">
+      <div>
+        <div class="eyebrow" style="color:#75849a">September 9 primary</div>
+        <h3>Your state legislative races</h3>
+      </div>
+      <div class="ballot-note">RIEP currently maps State House and State Senate races. Use the official Rhode Island voter portal for the complete sample ballot including federal, statewide and local contests.</div>
+    </div>
+
+    <div class="race-grid">
+      <article class="race-card" id="houseCard"></article>
+      <article class="race-card" id="senateCard"></article>
+    </div>
+
+    <div class="page-actions" id="pageActions" style="display:none">
+      <a id="precinctDetailsLink" href="lookup.html">Explore precinct & turnout</a>
+      <a href="running.html">Explore all legislative races</a>
+      <a href="finance.html">Open campaign finance</a>
+      <a href="https://vote.sos.ri.gov/" target="_blank" rel="noopener noreferrer">Official RI voter portal</a>
+    </div>
+
+    <div class="why">
+      <strong>Why this page exists:</strong> the previous RIEP experience asked voters to find House and Senate districts separately and then navigate to another page for candidate information. This page combines those steps. Candidate priorities shown here come from the existing RIEP candidate-profile dataset and are clearly labeled when a candidate response is available.
+    </div>
+  </section>
+</main>
+
+<script>
+(() => {
+  const ADDRESS_SEARCH_URL = "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates";
+  const MUNICIPALITIES = [
+    "Barrington","Bristol","Burrillville","Central Falls","Charlestown","Coventry","Cranston",
+    "Cumberland","East Greenwich","East Providence","Exeter","Foster","Glocester","Hopkinton",
+    "Jamestown","Johnston","Lincoln","Little Compton","Middletown","Narragansett","Newport",
+    "New Shoreham","North Kingstown","North Providence","North Smithfield","Pawtucket","Portsmouth",
+    "Providence","Richmond","Scituate","Smithfield","South Kingstown","Tiverton","Warren","Warwick",
+    "West Greenwich","West Warwick","Westerly","Woonsocket"
+  ];
+
+  let precinctGeojson = null;
+  let precinctLookup = null;
+  let runningData = null;
+  let profileData = null;
+  let profileById = new Map();
+  let currentAddress = "";
+
+  const esc = value => String(value ?? "")
+    .replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;").replaceAll("'","&#39;");
+
+  const setStatus = (text, error=false) => {
+    const el = document.getElementById("status");
+    el.textContent = text;
+    el.classList.toggle("error", error);
+  };
+
+  function populateMunicipalities(){
+    document.getElementById("citySelect").innerHTML =
+      `<option value="">City or town (optional)</option>` +
+      MUNICIPALITIES.map(x => `<option value="${esc(x)}">${esc(x)}</option>`).join("");
+  }
+
+  function normalizeText(value){
+    return String(value || "").toLowerCase().replace(/[^a-z0-9\s]/g," ").replace(/\s+/g," ").trim();
+  }
+
+  function streetTokens(street){
+    const stop = new Set(["ri","rhode","island","road","rd","street","st","avenue","ave","lane","ln","drive","dr","boulevard","blvd","court","ct","place","pl","way"]);
+    return normalizeText(street).split(" ").filter(x => x && !stop.has(x) && (/[a-z]/.test(x) || x.length >= 3));
+  }
+
+  function filterStreetCandidates(candidates, street){
+    const tokens = streetTokens(street);
+    if (!tokens.length) return candidates;
+    return candidates.filter(c => {
+      const address = normalizeText(c.address);
+      return tokens.some(token => address.includes(token));
+    });
+  }
+
+  function dedupeCandidates(candidates, limit=7){
+    const map = new Map();
+    (candidates || []).forEach(c => {
+      if (!c?.address) return;
+      const key = c.address.trim().toUpperCase();
+      if (!map.has(key) || Number(c.score||0) > Number(map.get(key).score||0)) map.set(key,c);
+    });
+    return [...map.values()].sort((a,b)=>Number(b.score||0)-Number(a.score||0)).slice(0,limit);
+  }
+
+  function pointInRing(point, ring){
+    const [x,y] = point;
+    let inside = false;
+    for(let i=0,j=ring.length-1;i<ring.length;j=i++){
+      const xi=ring[i][0], yi=ring[i][1], xj=ring[j][0], yj=ring[j][1];
+      const intersects=((yi>y)!==(yj>y)) && (x < ((xj-xi)*(y-yi))/((yj-yi)||Number.EPSILON)+xi);
+      if(intersects) inside=!inside;
+    }
+    return inside;
+  }
+
+  function pointInPolygon(point, coords){
+    if(!coords?.length || !pointInRing(point,coords[0])) return false;
+    for(let i=1;i<coords.length;i++) if(pointInRing(point,coords[i])) return false;
+    return true;
+  }
+
+  function findPrecinct(lng,lat){
+    const point=[lng,lat];
+    for(const feature of precinctGeojson?.features || []){
+      const g=feature.geometry || {};
+      if(g.type==="Polygon" && pointInPolygon(point,g.coordinates)) return feature;
+      if(g.type==="MultiPolygon" && g.coordinates.some(p=>pointInPolygon(point,p))) return feature;
+    }
+    return null;
+  }
+
+  async function queryAddress(street, city){
+    const query = city ? `${street}, ${city}, Rhode Island` : `${street}, Rhode Island`;
+    const url = new URL(ADDRESS_SEARCH_URL);
+    url.searchParams.set("SingleLine",query);
+    url.searchParams.set("sourceCountry","USA");
+    url.searchParams.set("outSR","4326");
+    url.searchParams.set("maxLocations","8");
+    url.searchParams.set("f","pjson");
+    const res=await fetch(url);
+    if(!res.ok) throw new Error("Address search is unavailable right now.");
+    const payload=await res.json();
+    const candidates=payload?.candidates || [];
+    const filtered=filterStreetCandidates(candidates,street);
+    return dedupeCandidates(filtered.length ? filtered : candidates);
+  }
+
+  function renderSuggestions(items){
+    const node=document.getElementById("suggestions");
+    if(!items.length){ node.classList.remove("show"); node.innerHTML=""; return; }
+    node.innerHTML=items.map((c,i)=>`
+      <button type="button" data-i="${i}">
+        ${esc(c.address)}
+        <small>Match score ${Math.round(c.score||0)}</small>
+      </button>`).join("");
+    node.classList.add("show");
+    node.querySelectorAll("button").forEach(btn=>{
+      btn.addEventListener("click",()=>applyAddress(items[Number(btn.dataset.i)]));
+    });
+  }
+
+  function partyClass(party){ return party==="DEM" ? "dem" : party==="REP" ? "rep" : ""; }
+  function partyLabel(candidate){ return candidate.party_label || candidate.party_raw || candidate.party || "Other"; }
+
+  function candidateActions(candidate, chamber, district){
+    const pieces=[];
+    if(candidate.email) pieces.push(`<a href="mailto:${esc(candidate.email)}">Email</a>`);
+    if(candidate.phone) pieces.push(`<a href="tel:${esc(candidate.phone.replace(/[^\d+]/g,""))}">Call</a>`);
+    if(candidate.campaign_url) pieces.push(`<a class="primary" href="${esc(candidate.campaign_url)}" target="_blank" rel="noopener noreferrer">Campaign website</a>`);
+    pieces.push(`<a href="meet.html?election=primary&party=${encodeURIComponent(candidate.party)}&chamber=${encodeURIComponent(chamber)}&district=${encodeURIComponent(district)}">Full candidate comparison</a>`);
+    return pieces.join("");
+  }
+
+  function priorityHtml(candidate){
+    const profile=profileById.get(candidate.candidate_id);
+    if(profile?.priorities?.length){
+      return `
+        <div class="priorities">
+          <div class="priority-head">Top campaign priorities · candidate response</div>
+          <div class="priority-list">
+            ${profile.priorities.slice(0,5).map(p=>`
+              <div class="priority">
+                <strong>${esc(p.title)}</strong>
+                <span>${esc(p.summary)}</span>
+              </div>`).join("")}
+          </div>
+        </div>`;
+    }
+    return `<div class="no-priorities">RIEP has not received or published campaign priorities for this candidate yet. Phase 2 will supplement unanswered profiles with clearly sourced material from official campaign websites.</div>`;
+  }
+
+  function candidateHtml(candidate,chamber,district){
+    const profile=profileById.get(candidate.candidate_id);
+    return `
+      <div class="candidate" data-party="${esc(candidate.party)}">
+        <div class="candidate-top">
+          <div>
+            <div class="candidate-name">${esc(profile?.candidate_name || candidate.name)}</div>
+            <div class="candidate-meta">${esc(candidate.home_label || candidate.hometown || "")}${candidate.zip_code ? ` · ZIP ${esc(candidate.zip_code)}` : ""}</div>
+          </div>
+          <div class="badges">
+            <span class="badge ${partyClass(candidate.party)}">${esc(partyLabel(candidate))}</span>
+            ${profile?.priorities?.length ? `<span class="badge response">Priorities available</span>` : `<span class="badge">Profile incomplete</span>`}
+          </div>
+        </div>
+        ${priorityHtml(candidate)}
+        <div class="candidate-actions">${candidateActions(candidate,chamber,district)}</div>
+      </div>`;
+  }
+
+  function renderRace(chamber,district,record){
+    const title=chamber==="house" ? "State House" : "State Senate";
+    const candidates=[...(record?.candidates || [])];
+    const demCount=candidates.filter(c=>c.party==="DEM").length;
+    const repCount=candidates.filter(c=>c.party==="REP").length;
+    const competitive = demCount>1 || repCount>1;
+    const card=document.getElementById(chamber==="house" ? "houseCard" : "senateCard");
+
+    card.innerHTML=`
+      <div class="race-kicker">${title}</div>
+      <div class="race-title">${title} District ${esc(district)}</div>
+      <div class="race-copy">${competitive ? "A competitive party primary is currently listed in this district." : "Current September 9 filing information for this district."}</div>
+      <div class="party-filter" data-filter-shell="${chamber}">
+        <button class="active" data-filter="ALL">All filed</button>
+        <button data-filter="DEM">Democratic (${demCount})</button>
+        <button data-filter="REP">Republican (${repCount})</button>
+      </div>
+      <div class="candidate-list">
+        ${candidates.length ? candidates.map(c=>candidateHtml(c,chamber,district)).join("") : `<div class="no-priorities">No primary candidate is currently listed in the RIEP filing dataset for this district.</div>`}
+      </div>`;
+    card.classList.add("show");
+
+    card.querySelectorAll("[data-filter]").forEach(button=>{
+      button.addEventListener("click",()=>{
+        card.querySelectorAll("[data-filter]").forEach(b=>b.classList.remove("active"));
+        button.classList.add("active");
+        const filter=button.dataset.filter;
+        card.querySelectorAll(".candidate").forEach(c=>{
+          c.style.display=(filter==="ALL" || c.dataset.party===filter) ? "" : "none";
+        });
+      });
+    });
+  }
+
+  function applyAddress(candidate){
+    renderSuggestions([]);
+    const lng=candidate.location?.x, lat=candidate.location?.y;
+    if(!Number.isFinite(lng) || !Number.isFinite(lat)){
+      setStatus("The address match did not include usable map coordinates.",true); return;
+    }
+    const feature=findPrecinct(lng,lat);
+    if(!feature){ setStatus("The address was found, but RIEP could not match it to a precinct.",true); return; }
+
+    const code=String(feature.properties?.DISTRICT || feature.properties?.PRECINCTS || "").trim();
+    const rec=precinctLookup?.precincts?.[code];
+    if(!rec){ setStatus("The precinct was found, but its district record is missing.",true); return; }
+
+    currentAddress=candidate.address;
+    const house=rec.house_district;
+    const senate=rec.senate_district;
+
+    document.getElementById("matchedAddress").textContent=candidate.address;
+    document.getElementById("matchedPrecinct").textContent=`${rec.municipality} Precinct ${rec.precinct_label || rec.precinct_code}`;
+    document.getElementById("houseDistrict").textContent=house ?? "—";
+    document.getElementById("senateDistrict").textContent=senate ?? "—";
+    document.getElementById("turnoutValue").textContent=Number.isFinite(Number(rec.turnout_pct)) ? `${Number(rec.turnout_pct).toFixed(1)}%` : "—";
+    document.getElementById("turnoutDetail").textContent=rec.voted_total ? `${Number(rec.voted_total).toLocaleString()} voters in 2024` : "Precinct turnout context";
+    document.getElementById("locationSummary").classList.add("show");
+    document.getElementById("ballotHeader").classList.add("show");
+    document.getElementById("pageActions").style.display="flex";
+    document.getElementById("precinctDetailsLink").href=`lookup.html?address=${encodeURIComponent(candidate.address)}`;
+
+    renderRace("house",house,runningData?.chambers?.house?.[String(house)]);
+    renderRace("senate",senate,runningData?.chambers?.senate?.[String(senate)]);
+    setStatus(`Matched ${candidate.address}. House District ${house}; Senate District ${senate}.`);
+    document.getElementById("addressInput").value=candidate.address;
+    document.getElementById("locationSummary").scrollIntoView({behavior:"smooth",block:"start"});
+  }
+
+  async function search(){
+    const street=document.getElementById("addressInput").value.trim();
+    const city=document.getElementById("citySelect").value;
+    if(!street){ setStatus("Enter a Rhode Island street address first.",true); return; }
+    setStatus("Searching Rhode Island addresses…");
+    try{
+      const items=await queryAddress(street,city);
+      if(!items.length){ setStatus("No Rhode Island address match was found. Try adding a street number or city/town.",true); return; }
+      renderSuggestions(items);
+      applyAddress(items[0]);
+    }catch(err){
+      console.error(err);
+      setStatus(err.message || "Address search failed.",true);
+    }
+  }
+
+  async function load(){
+    populateMunicipalities();
+    const [geo,lookup,running,profiles]=await Promise.all([
+      fetch("data/ri_turnout_2024_precinct.geojson",{cache:"no-store"}).then(r=>r.json()),
+      fetch("data/ri_2024_precinct_lookup.json",{cache:"no-store"}).then(r=>r.json()),
+      fetch("data/whos_running_2026.json",{cache:"no-store"}).then(r=>r.json()),
+      fetch("data/candidate_profiles_2026.json",{cache:"no-store"}).then(r=>r.json())
+    ]);
+    precinctGeojson=geo;
+    precinctLookup=lookup;
+    runningData=running;
+    profileData=profiles;
+    profileById=new Map((profiles?.profiles || []).map(p=>[p.candidate_id,p]));
+    setStatus("Ready. Enter a Rhode Island address.");
+
+    const address=new URLSearchParams(location.search).get("address");
+    if(address){
+      document.getElementById("addressInput").value=address;
+      search();
+    }
+  }
+
+  document.getElementById("searchButton").addEventListener("click",search);
+  document.getElementById("addressInput").addEventListener("keydown",e=>{
+    if(e.key==="Enter"){ e.preventDefault(); search(); }
+  });
+
+  load().catch(err=>{
+    console.error(err);
+    setStatus("The ballot data failed to load. Confirm the existing RIEP data files are published in /data.",true);
+  });
+})();
+</script>
+</body>
+</html>
