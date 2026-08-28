@@ -1,2415 +1,538 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Who's Running? | Rhode Island Elections Project</title>
-  <meta name="description" content="Track who has filed for the September 9, 2026 Rhode Island primary in State House and State Senate districts, including where same-party nomination contests are underway." />
-  <meta property="og:title" content="Who's Running? | Rhode Island Elections Project" />
-  <meta property="og:description" content="Track who has filed for the September 9, 2026 Rhode Island primary and where same-party nomination contests are underway." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.rhodeislandelectionsproject.org/running.html" />
-  <meta property="og:site_name" content="Rhode Island Elections Project" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Who's Running? | Rhode Island Elections Project" />
-  <meta name="twitter:description" content="Track who has filed for the September 9, 2026 Rhode Island primary and where same-party nomination contests are underway." />
-  <link rel="canonical" href="https://www.rhodeislandelectionsproject.org/running.html" />
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Races & Candidates | Rhode Island Elections Project</title>
+  <meta name="description" content="Explore Rhode Island State House and State Senate races, compare candidates, and read campaign priorities in one place.">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <style>
-    :root {
-      --navy: #111c3d;
-      --navy-2: #1d2a57;
-      --ink: #0f172a;
-      --slate: #475569;
-      --line: #dbe3ef;
-      --panel: #ffffff;
-      --surface: #f8fafc;
-      --dem: #3b82f6;
-      --dem-deep: #1d4ed8;
-      --rep: #ef4444;
-      --rep-deep: #b91c1c;
-      --both: #7c3aed;
-      --both-deep: #5b21b6;
-      --other: #14b8a6;
-      --other-deep: #0f766e;
-      --none: #d7deea;
-      --none-deep: #94a3b8;
-    }
-
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--ink);
-      background: linear-gradient(180deg, #f8fafc 0%, #eef3fb 100%);
-    }
-    header {
-      padding: 24px 24px 18px;
-      color: white;
-      background: linear-gradient(135deg, #0f172a 0%, #172554 100%);
-    }
-    .header-shell {
-      max-width: 1240px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      gap: 24px;
-      align-items: flex-start;
-    }
-    .brand {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-      min-width: 0;
-    }
-    .brand img {
-      width: 78px;
-      height: 78px;
-      object-fit: contain;
-      flex: 0 0 auto;
-    }
-    .brand h1 {
-      margin: 0;
-      font-size: 28px;
-      line-height: 1;
-      letter-spacing: -0.04em;
-    }
-    .brand p {
-      margin: 10px 0 0;
-      max-width: 700px;
-      color: rgba(255,255,255,.84);
-      font-size: 15px;
-      line-height: 1.45;
-    }
-    .site-nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 10px;
-      margin-top: 2px;
-    }
-    .site-nav a {
-      color: white;
-      text-decoration: none;
-      border: 1px solid rgba(255,255,255,.3);
-      background: rgba(255,255,255,.07);
-      border-radius: 999px;
-      padding: 9px 15px;
-      font-size: 13px;
-      font-weight: 800;
-      white-space: nowrap;
-    }
-    .site-nav a.active {
-      background: white;
-      color: var(--navy);
-      box-shadow: 0 8px 22px rgba(15,23,42,.2);
-    }
-
-    main {
-      max-width: 1240px;
-      margin: 0 auto;
-      padding: 28px 24px 34px;
-    }
-    .hero {
-      position: relative;
-      overflow: hidden;
-      border-radius: 28px;
-      padding: 28px;
-      background: linear-gradient(145deg, rgba(23,37,84,.96), rgba(35,48,98,.9));
-      box-shadow: 0 20px 55px rgba(15,23,42,.18);
-      border: 1px solid rgba(148,163,184,.18);
-      color: white;
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 240px;
-      height: 240px;
-      border-radius: 999px;
-      background: radial-gradient(circle, rgba(96,165,250,.18), rgba(96,165,250,0));
-      left: -60px;
-      bottom: -100px;
-      pointer-events: none;
-    }
-    .hero-grid {
-      position: relative;
-      display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.9fr);
-      gap: 26px;
-      align-items: start;
-    }
-    .hero-eyebrow {
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.68);
-    }
-    .hero h2 {
-      margin: 10px 0 0;
-      font-size: 66px;
-      line-height: .96;
-      letter-spacing: -0.06em;
-    }
-    .hero-lead {
-      margin: 18px 0 0;
-      max-width: 720px;
-      color: rgba(255,255,255,.82);
-      font-size: 20px;
-      line-height: 1.45;
-    }
-    .hero-actions {
-      margin-top: 22px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 46px;
-      padding: 0 18px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 900;
-      border: 1px solid transparent;
-      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
-      cursor: pointer;
-    }
-    .btn:hover { transform: translateY(-1px); }
-    .btn-primary {
-      background: linear-gradient(135deg, #4361ee 0%, #3554e8 100%);
-      color: white;
-      box-shadow: 0 12px 24px rgba(53,84,232,.22);
-    }
-    .btn-secondary {
-      background: rgba(255,255,255,.08);
-      border-color: rgba(255,255,255,.22);
-      color: white;
-    }
-    .hero-note {
-      margin-top: 18px;
-      padding: 16px 18px;
-      border-radius: 18px;
-      background: rgba(255,255,255,.07);
-      border: 1px solid rgba(255,255,255,.14);
-      color: rgba(255,255,255,.82);
-      font-size: 15px;
-      line-height: 1.5;
-    }
-    .summary-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-    .summary-card {
-      border-radius: 22px;
-      padding: 18px 18px 16px;
-      background: rgba(255,255,255,.97);
-      color: var(--ink);
-      border: 1px solid rgba(219,227,239,.84);
-      box-shadow: 0 14px 34px rgba(15,23,42,.1);
-    }
-    .summary-label {
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: #64748b;
-    }
-    .summary-value {
-      margin-top: 8px;
-      font-size: 34px;
-      font-weight: 900;
-      letter-spacing: -.05em;
-      color: var(--ink);
-    }
-    .summary-copy {
-      margin-top: 6px;
-      color: #475569;
-      font-size: 14px;
-      line-height: 1.45;
-    }
-
-    .workspace {
-      margin-top: 24px;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 360px;
-      gap: 22px;
-      align-items: start;
-    }
-    .map-card, .detail-card {
-      background: rgba(255,255,255,.96);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      box-shadow: 0 16px 40px rgba(15,23,42,.08);
-    }
-    .controls {
-      padding: 18px 20px 0;
-      display: grid;
-      grid-template-columns: 120px minmax(0, 1fr);
-      gap: 14px 14px;
-      align-items: center;
-    }
-    .control-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      justify-content: flex-start;
-    }
-    .control-label {
-      color: #64748b;
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-    }
-    .segmented {
-      display: inline-flex;
-      gap: 6px;
-      padding: 4px;
-      background: #f1f5f9;
-      border: 1px solid #dbe3ef;
-      border-radius: 999px;
-      justify-self: start;
-    }
-    .segmented button {
-      border: 0;
-      background: transparent;
-      padding: 11px 18px;
-      border-radius: 999px;
-      color: #475569;
-      font-size: 15px;
-      font-weight: 900;
-      cursor: pointer;
-    }
-    .segmented button.active {
-      background: var(--navy);
-      color: white;
-      box-shadow: 0 10px 20px rgba(17,28,61,.18);
-    }
-    .map-expand-btn {
-      appearance: none;
-      border: 1px solid #dbe3ef;
-      background: rgba(255,255,255,.96);
-      color: var(--navy);
-      min-height: 38px;
-      padding: 0 12px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 900;
-      cursor: pointer;
-      box-shadow: 0 12px 28px rgba(15,23,42,.16);
-      white-space: nowrap;
-    }
-    .map-expand-btn:hover {
-      transform: translateY(-1px);
-    }
-    .map-float-btn {
-      appearance: none;
-      border: 1px solid #dbe3ef;
-      background: rgba(255,255,255,.97);
-      color: var(--navy);
-      min-height: 38px;
-      padding: 0 12px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 900;
-      cursor: pointer;
-      box-shadow: 0 12px 28px rgba(15,23,42,.16);
-      white-space: nowrap;
-    }
-    .map-float-btn:hover {
-      transform: translateY(-1px);
-    }
-    .chip-bar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      padding: 16px 20px 0;
-      align-items: center;
-    }
-    .chip {
-      border-radius: 999px;
-      padding: 8px 12px;
-      font-size: 12px;
-      font-weight: 800;
-      color: #334155;
-      background: #f8fafc;
-      border: 1px solid #dbe3ef;
-    }
-    .chip strong { color: var(--ink); }
-    .chip-filter {
-      appearance: none;
-      cursor: pointer;
-      transition: transform .16s ease, box-shadow .16s ease, background .16s ease, border-color .16s ease;
-    }
-    .chip-filter:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 10px 24px rgba(15,23,42,.08);
-    }
-    .chip-filter.active {
-      background: var(--navy);
-      border-color: var(--navy);
-      color: white;
-      box-shadow: 0 12px 24px rgba(17,28,61,.18);
-    }
-    .chip-filter.active strong {
-      color: white;
-    }
-    .chip-note {
-      background: #fff;
-      color: #475569;
-    }
-    .chip-note strong { color: var(--ink); }
-    #runningMap {
-      height: 680px;
-      margin: 16px 20px 20px;
-      border-radius: 22px;
-      border: 1px solid #dbe3ef;
-      overflow: hidden;
-      background: #eef2f7;
-    }
-    .map-card:fullscreen,
-    .map-card:-webkit-full-screen {
-      padding: 18px;
-      border-radius: 30px;
-      background: rgba(248,250,252,.99);
-      overflow: hidden;
-      box-sizing: border-box;
-    }
-    .map-card:fullscreen #runningMap,
-    .map-card:-webkit-full-screen #runningMap {
-      height: calc(100vh - 156px);
-      margin-bottom: 0;
-      border-radius: 28px;
-    }
-    .map-card:fullscreen::backdrop,
-    .map-card:-webkit-full-screen::backdrop {
-      background: rgba(15,23,42,.88);
-    }
-    .map-card:fullscreen .map-guide-box,
-    .map-card:-webkit-full-screen .map-guide-box {
-      max-width: 310px;
-      border-radius: 16px;
-    }
-    .leaflet-container { font-family: Arial, Helvetica, sans-serif; }
-    .leaflet-control-zoom {
-      border: 0 !important;
-      box-shadow: 0 14px 32px rgba(15,23,42,.18) !important;
-    }
-    .leaflet-control-zoom a {
-      width: 40px !important;
-      height: 40px !important;
-      line-height: 40px !important;
-      font-size: 22px !important;
-      border-color: #e5e7eb !important;
-    }
-    .swatch {
-      width: 14px;
-      height: 14px;
-      border-radius: 999px;
-      border: 2px solid transparent;
-      flex: 0 0 auto;
-    }
-    .map-return-btn {
-      appearance: none;
-      border: 1px solid #dbe3ef;
-      background: rgba(255,255,255,.96);
-      color: var(--navy);
-      min-height: 38px;
-      padding: 0 12px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 900;
-      cursor: pointer;
-      box-shadow: 0 12px 28px rgba(15,23,42,.16);
-    }
-    .map-return-btn:hover {
-      transform: translateY(-1px);
-    }
-    .map-guide-box {
-      padding: 10px 12px;
-      background: rgba(255,255,255,.96);
-      border-radius: 14px;
-      border: 1px solid #dbe3ef;
-      box-shadow: 0 12px 28px rgba(15,23,42,.14);
-      color: var(--ink);
-      min-width: 170px;
-      max-width: 290px;
-    }
-    .map-guide-title {
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: #64748b;
-      margin-bottom: 8px;
-    }
-    .map-guide-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 12px;
-      line-height: 1.35;
-      color: #334155;
-      margin-top: 6px;
-    }
-    .map-guide-copy {
-      margin-top: 10px;
-      font-size: 12px;
-      line-height: 1.45;
-      color: #475569;
-      font-weight: 700;
-    }
-    .detail-card {
-      padding: 18px;
-      position: sticky;
-      top: 18px;
-    }
-    .detail-eyebrow {
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: #64748b;
-    }
-    .detail-title {
-      margin-top: 8px;
-      font-size: 34px;
-      line-height: 1;
-      letter-spacing: -.05em;
-      font-weight: 900;
-      color: var(--ink);
-    }
-    .detail-actions {
-      margin-top: 12px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .detail-actions.is-inline {
-      margin-top: 12px;
-    }
-    .detail-action-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      appearance: none;
-      border: 1px solid #dbe3ef;
-      background: #fff;
-      color: var(--navy);
-      min-height: 34px;
-      padding: 0 12px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 900;
-      cursor: pointer;
-      text-decoration: none;
-      transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
-    }
-    .detail-action-btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 10px 24px rgba(15,23,42,.08);
-    }
-    .detail-copy {
-      margin-top: 10px;
-      font-size: 15px;
-      line-height: 1.55;
-      color: #475569;
-    }
-    .detail-statuses {
-      margin-top: 16px;
-      display: grid;
-      gap: 10px;
-    }
-    .status-card {
-      position: relative;
-      padding: 12px 14px;
-      border-radius: 16px;
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      overflow: hidden;
-    }
-    .status-card.is-clickable {
-      cursor: pointer;
-      transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease, background .16s ease;
-    }
-    .status-card.is-clickable:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 12px 24px rgba(15,23,42,.08);
-    }
-    .status-card.is-active {
-      background: #fff;
-      border-color: #94a3b8;
-      box-shadow: 0 12px 26px rgba(15,23,42,.1);
-    }
-    .status-card::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 4px;
-      background: #94a3b8;
-    }
-    .party-status.dem-status::before {
-      background: var(--dem-deep);
-    }
-    .party-status.rep-status::before {
-      background: var(--rep-deep);
-    }
-    .status-card h3 {
-      margin: 0;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: .14em;
-      color: #64748b;
-    }
-    .status-card p {
-      margin: 8px 0 0;
-      color: var(--ink);
-      font-size: 15px;
-      line-height: 1.45;
-      font-weight: 800;
-    }
-    .status-meta {
-      margin-top: 8px;
-      font-size: 13px;
-      line-height: 1.45;
-      color: #475569;
-      font-weight: 700;
-    }
-    .status-vs {
-      margin-top: 6px;
-      font-size: 14px;
-      line-height: 1.45;
-      color: var(--ink);
-      font-weight: 900;
-    }
-    .candidate-focus {
-      margin-top: 14px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .candidate-focus-btn {
-      appearance: none;
-      border: 1px solid #dbe3ef;
-      background: #fff;
-      color: #334155;
-      min-height: 34px;
-      padding: 0 12px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: 900;
-      cursor: pointer;
-      transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease, background .16s ease;
-    }
-    .candidate-focus-btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 10px 22px rgba(15,23,42,.08);
-    }
-    .candidate-focus-btn.active {
-      background: var(--navy);
-      border-color: var(--navy);
-      color: white;
-      box-shadow: 0 12px 24px rgba(17,28,61,.18);
-    }
-    .candidate-map-note {
-      margin-top: 10px;
-      font-size: 13px;
-      line-height: 1.5;
-      color: #475569;
-    }
-    .candidate-list {
-      margin-top: 16px;
-      display: grid;
-      gap: 10px;
-    }
-    .candidate-item {
-      position: relative;
-      padding: 12px 14px;
-      border-radius: 16px;
-      border: 1px solid #e2e8f0;
-      background: #fff;
-      overflow: hidden;
-    }
-    .candidate-item::before,
-    .district-button::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 4px;
-      background: var(--party-accent, var(--none-deep));
-    }
-    .candidate-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      align-items: baseline;
-    }
-    .candidate-name {
-      font-size: 16px;
-      font-weight: 900;
-      color: var(--ink);
-    }
-    .candidate-party {
-      font-size: 13px;
-      font-weight: 800;
-      color: #475569;
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-    }
-    .candidate-note {
-      margin-top: 6px;
-      font-size: 13px;
-      color: #64748b;
-    }
-    .candidate-approx-note {
-      margin-top: 10px;
-      padding: 10px 11px;
-      border-radius: 12px;
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      color: #475569;
-      font-size: 12px;
-      line-height: 1.45;
-      font-weight: 700;
-    }
-    .candidate-subhead {
-      margin-top: 4px;
-      font-size: 12px;
-      font-weight: 800;
-      color: #64748b;
-    }
-    .candidate-section {
-      display: grid;
-      gap: 10px;
-    }
-    .candidate-section + .candidate-section {
-      margin-top: 4px;
-    }
-    .candidate-section-label {
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: #64748b;
-    }
-    .candidate-section-note {
-      margin-top: -2px;
-      font-size: 13px;
-      line-height: 1.45;
-      color: #475569;
-    }
-    .candidate-meta-grid {
-      margin-top: 10px;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 8px;
-    }
-    .candidate-meta {
-      padding: 9px 10px;
-      border-radius: 12px;
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-    }
-    .candidate-meta-label {
-      display: block;
-      font-size: 10px;
-      font-weight: 900;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: #64748b;
-    }
-    .candidate-meta-value {
-      display: block;
-      margin-top: 4px;
-      font-size: 13px;
-      line-height: 1.35;
-      font-weight: 800;
-      color: var(--ink);
-      word-break: break-word;
-    }
-    .candidate-links {
-      margin-top: 10px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .candidate-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      min-height: 34px;
-      padding: 0 11px;
-      border-radius: 999px;
-      border: 1px solid #dbe3ef;
-      background: #fff;
-      color: var(--navy);
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: 900;
-    }
-    .candidate-link.is-muted {
-      color: #64748b;
-      background: #f8fafc;
-    }
-    .candidate-link:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 8px 18px rgba(15,23,42,.08);
-    }
-    .district-browser {
-      margin-top: 22px;
-      background: rgba(255,255,255,.96);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      box-shadow: 0 16px 40px rgba(15,23,42,.08);
-      padding: 18px 20px 20px;
-    }
-    .district-browser h3 {
-      margin: 0;
-      font-size: 22px;
-      line-height: 1.1;
-      letter-spacing: -.04em;
-    }
-    .district-browser p {
-      margin: 8px 0 0;
-      color: #64748b;
-      font-size: 15px;
-    }
-    .district-grid {
-      margin-top: 16px;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-    }
-    .district-button {
-      position: relative;
-      border: 1px solid #dbe3ef;
-      background: #fff;
-      border-radius: 18px;
-      padding: 13px 14px;
-      text-align: left;
-      cursor: pointer;
-      transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
-    }
-    .district-button:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 10px 26px rgba(15,23,42,.08);
-    }
-    .district-button.active {
-      border-color: #4f7cff;
-      box-shadow: 0 10px 24px rgba(79,124,255,.18);
-    }
-    .district-button.competitive {
-      border-color: rgba(180, 83, 9, .55);
-      box-shadow: 0 12px 28px rgba(180, 83, 9, .14);
-      background: linear-gradient(180deg, #fff 0%, #fffaf2 100%);
-    }
-    .district-button-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      align-items: center;
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: #64748b;
-    }
-    .district-button-name {
-      margin-top: 8px;
-      font-size: 16px;
-      font-weight: 900;
-      letter-spacing: -.03em;
-      color: var(--ink);
-    }
-    .district-button-detail {
-      margin-top: 6px;
-      font-size: 13px;
-      line-height: 1.45;
-      color: #475569;
-    }
-    .contest-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      margin-top: 8px;
-      padding: 5px 9px;
-      border-radius: 999px;
-      background: rgba(245, 158, 11, .12);
-      color: #92400e;
-      border: 1px solid rgba(180, 83, 9, .2);
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-    .contest-meta {
-      margin-top: 8px;
-      font-size: 13px;
-      line-height: 1.45;
-      color: #475569;
-    }
-    .contest-name-list {
-      margin-top: 6px;
-      font-size: 14px;
-      line-height: 1.45;
-      font-weight: 800;
-      color: var(--ink);
-    }
-    .ballot-info {
-      margin-top: 16px;
-      padding: 14px 15px;
-      border-radius: 18px;
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-    }
-    .ballot-info-title {
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: #64748b;
-    }
-    .ballot-info-list {
-      margin: 10px 0 0;
-      padding-left: 18px;
-      color: #475569;
-      font-size: 13px;
-      line-height: 1.55;
-    }
-    .ballot-info-links {
-      margin-top: 12px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .ballot-info-links a {
-      color: var(--navy);
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 900;
-      padding: 8px 10px;
-      border-radius: 999px;
-      background: #fff;
-      border: 1px solid #dbe3ef;
-    }
-    footer {
-      max-width: 1240px;
-      margin: 0 auto;
-      padding: 0 24px 38px;
-    }
-    .site-footer {
-      border-top: 1px solid rgba(148,163,184,.22);
-      padding-top: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 16px 26px;
-      color: #475569;
-      font-size: 14px;
-    }
-    .site-footer img {
-      width: 150px;
-      height: auto;
-      display: block;
-      opacity: .95;
-    }
-    .footer-nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 10px;
-    }
-    .footer-nav a {
-      color: var(--navy);
-      text-decoration: none;
-      font-weight: 800;
-    }
-    .footer-motto {
-      margin-top: 10px;
-      font-size: 12px;
-      line-height: 1.45;
-      color: #64748b;
-      font-style: italic;
-      letter-spacing: .03em;
-    }
-    .loading-card {
-      padding: 22px;
-      border-radius: 20px;
-      background: rgba(255,255,255,.95);
-      border: 1px solid #dbe3ef;
-      box-shadow: 0 18px 44px rgba(15,23,42,.14);
-      font-size: 15px;
-      font-weight: 800;
-      color: var(--ink);
-    }
-
-    @media (max-width: 1080px) {
-      .hero-grid,
-      .workspace { grid-template-columns: 1fr; }
-      .detail-card { position: static; }
-      .summary-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-    }
-
-    @media (max-width: 880px) {
-      .header-shell { flex-direction: column; }
-      .site-nav { justify-content: flex-start; }
-      .hero h2 { font-size: 48px; }
-      .summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .controls { grid-template-columns: 1fr; }
-      #runningMap { height: 560px; }
-      .district-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .candidate-meta-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-
-    @media (max-width: 640px) {
-      header { padding: 20px 18px 16px; }
-      main { padding: 20px 18px 28px; }
-      footer { padding: 0 18px 28px; }
-      .brand img { width: 68px; height: 68px; }
-      .brand h1 { font-size: 24px; }
-      .hero { padding: 22px 18px; }
-      .hero h2 { font-size: 38px; }
-      .hero-lead { font-size: 17px; }
-      .summary-grid { grid-template-columns: 1fr; }
-      #runningMap { margin: 14px 16px 16px; height: 480px; }
-      .detail-title { font-size: 28px; }
-      .district-grid { grid-template-columns: 1fr; }
+    :root{
+      --navy:#101b3b;
+      --navy2:#172654;
+      --ink:#14213d;
+      --muted:#62728a;
+      --line:#dae4ef;
+      --bg:#f3f7fb;
+      --panel:#fff;
+      --dem:#2764e8;
+      --rep:#e4575e;
+      --violet:#7c3aed;
+      --teal:#0f9b8e;
+      --shadow:0 18px 45px rgba(18,37,70,.10);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Instrument Sans",sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 10% 3%,rgba(56,111,238,.12),transparent 22%),
+        linear-gradient(180deg,#f9fbfe 0%,var(--bg) 100%);
+    }
+    a{color:inherit}
+    .top{
+      background:linear-gradient(135deg,#0e1732,#1d2b5d);
+      color:#fff;
+      padding:22px 24px;
+    }
+    .top-inner{
+      max-width:1260px;margin:auto;display:flex;justify-content:space-between;gap:18px;align-items:center;flex-wrap:wrap
+    }
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand img{width:70px;height:60px;object-fit:contain}
+    .brand strong{font-family:Sora,sans-serif;font-size:21px;letter-spacing:-.04em}
+    .brand span{display:block;color:rgba(255,255,255,.66);font-size:12px;margin-top:4px}
+    .nav{display:flex;gap:8px;flex-wrap:wrap}
+    .nav a{
+      text-decoration:none;padding:9px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.18);
+      font-size:12px;font-weight:800;background:rgba(255,255,255,.04)
+    }
+    .nav a.active{background:#fff;color:var(--navy)}
+    main{max-width:1260px;margin:auto;padding:28px 24px 48px}
+    .hero{
+      padding:30px;border:1px solid #cdd9e8;border-radius:28px;background:linear-gradient(135deg,#fff,#f4f8fd);
+      box-shadow:var(--shadow)
+    }
+    .eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:10px;font-weight:900;color:#71839c}
+    .hero h1{
+      margin:8px 0 0;font-family:Sora,sans-serif;font-size:clamp(36px,5vw,58px);line-height:1;letter-spacing:-.055em;color:var(--navy)
+    }
+    .hero p{max-width:850px;color:var(--muted);font-size:16px;line-height:1.55;margin:14px 0 0}
+    .hero-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 14px;border-radius:999px;
+      border:1px solid var(--line);background:#fff;color:var(--navy);font-size:12px;font-weight:900;text-decoration:none;cursor:pointer
+    }
+    .btn.primary{background:var(--navy);color:#fff;border-color:var(--navy)}
+    .controls{
+      display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:18px 0
+    }
+    .segmented,.filters{display:flex;gap:8px;flex-wrap:wrap}
+    .segmented button,.filters button{
+      border:1px solid var(--line);background:#fff;padding:10px 13px;border-radius:999px;color:var(--navy);font-weight:900;cursor:pointer
+    }
+    .segmented button.active,.filters button.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+    .search{
+      min-width:260px;flex:1;max-width:390px;border:1px solid var(--line);border-radius:999px;padding:11px 15px;background:#fff;color:var(--ink);font-weight:700
+    }
+    .workspace{
+      display:grid;grid-template-columns:minmax(0,1.45fr) minmax(350px,.75fr);gap:18px;align-items:start
+    }
+    .map-panel,.detail-panel,.compare-panel{
+      border:1px solid var(--line);background:rgba(255,255,255,.97);border-radius:24px;box-shadow:var(--shadow)
+    }
+    .map-panel{padding:16px}
+    #map{height:600px;border-radius:18px;overflow:hidden;background:#eef2f7}
+    .map-help{padding:10px 3px 0;color:var(--muted);font-size:12px}
+    .detail-panel{padding:20px;position:sticky;top:16px}
+    .detail-panel h2{font-family:Sora,sans-serif;font-size:31px;letter-spacing:-.05em;margin:7px 0 0;color:var(--navy)}
+    .district-summary{margin-top:9px;color:var(--muted);font-size:13px;line-height:1.5}
+    .primary-box{
+      margin-top:16px;padding:14px;border-radius:16px;border-left:4px solid #b7c6d8;background:#f6f9fc
+    }
+    .primary-box.dem{border-left-color:var(--dem)}
+    .primary-box.rep{border-left-color:var(--rep)}
+    .primary-box strong{display:block;color:var(--navy);font-size:13px}
+    .primary-box span{display:block;color:var(--muted);font-size:12px;margin-top:5px;line-height:1.45}
+    .district-list{
+      margin-top:16px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;max-height:190px;overflow:auto
+    }
+    .district-list button{
+      border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 4px;font-size:11px;font-weight:900;color:var(--navy);cursor:pointer
+    }
+    .district-list button.active{background:var(--navy);color:white}
+    .compare-panel{margin-top:18px;padding:22px}
+    .compare-head{display:flex;align-items:flex-end;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .compare-head h2{margin:6px 0 0;font-family:Sora,sans-serif;font-size:34px;letter-spacing:-.05em;color:var(--navy)}
+    .compare-note{max-width:650px;color:var(--muted);font-size:13px;line-height:1.5}
+    .candidate-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:17px}
+    .candidate-card{
+      border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,#fff,#fbfdff);padding:17px
+    }
+    .candidate-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+    .candidate-name{font-family:Sora,sans-serif;font-size:22px;font-weight:800;letter-spacing:-.04em;color:var(--navy)}
+    .candidate-sub{margin-top:5px;color:var(--muted);font-size:12px}
+    .badges{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+    .badge{padding:5px 8px;border-radius:999px;background:#eef3f8;color:#637188;font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.07em}
+    .badge.dem{background:#edf4ff;color:#215ed8}
+    .badge.rep{background:#fff0f1;color:#b83d45}
+    .badge.response{background:#eafaf6;color:#077763}
+    .links{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}
+    .links a{
+      text-decoration:none;border:1px solid var(--line);padding:7px 9px;border-radius:999px;background:#fff;font-size:11px;font-weight:900;color:var(--navy)
+    }
+    .links a.finance{background:#e8fbff;border-color:#b7e9f5}
+    .priority-block{margin-top:14px;padding-top:13px;border-top:1px solid #e5ebf2}
+    .priority-label{text-transform:uppercase;letter-spacing:.1em;color:#708098;font-size:9px;font-weight:900}
+    .priority-list{display:grid;gap:8px;margin-top:9px}
+    .priority{padding:10px;border-radius:13px;background:#f5f8fc}
+    .priority strong{display:block;font-size:13px;color:var(--navy)}
+    .priority p{margin:4px 0 0;color:var(--muted);font-size:11px;line-height:1.45}
+    .awaiting{margin-top:11px;padding:11px;border-radius:13px;background:#fff8e8;color:#76551b;font-size:11px;line-height:1.45}
+    .empty{padding:24px;text-align:center;color:var(--muted)}
+    @media(max-width:920px){
+      .workspace{grid-template-columns:1fr}
+      .detail-panel{position:static}
+      #map{height:480px}
+      .candidate-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:560px){
+      main{padding:20px 14px 40px}
+      .hero{padding:22px 18px}
+      .district-list{grid-template-columns:repeat(4,minmax(0,1fr))}
+      #map{height:380px}
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="header-shell">
+  <header class="top">
+    <div class="top-inner">
       <div class="brand">
-        <img src="riep-logo-sunburst-white.png" alt="Rhode Island Elections Project logo" />
+        <img src="riep-logo-sunburst-white.png" alt="Rhode Island Elections Project">
         <div>
-          <h1>Rhode Island Elections Project</h1>
-          <p>Track who has filed for the September 9, 2026 Rhode Island primary in State House and State Senate districts, including where Democratic or Republican nomination contests are taking shape.</p>
+          <strong>Rhode Island Elections Project</strong>
+          <span>Races and candidate information in one place</span>
         </div>
       </div>
-      <nav class="site-nav">
+      <nav class="nav">
         <a href="index.html">Home</a>
-        <a href="map.html">Map</a>
-        <a href="running.html" class="active">Who's Running?</a>
-        <a href="meet.html">Meet the Candidates</a>
+        <a href="ballot.html">Find My Ballot</a>
+        <a class="active" href="running.html">Races & Candidates</a>
+        <a href="finance.html">Campaign Finance</a>
         <a href="lookup.html">Find My Precinct</a>
-        <a href="methodology.html">Methodology</a>
-        <a href="about.html">About</a>
-        <a href="support.html">Support</a>
+        <a href="map.html">Maps & Data</a>
       </nav>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="hero-grid">
-        <div>
-          <div class="hero-eyebrow">2026 Rhode Island Primary</div>
-          <h2>See who’s running across Rhode Island.</h2>
-          <div class="hero-lead">This page tracks who has filed so far for the September 9, 2026 Rhode Island primary and highlights where same-party nomination contests are already forming. Early voting begins on August 20, 2026.</div>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#running-map-anchor">Open filing map</a>
-            <a class="btn btn-secondary" href="#district-browser">Browse filed districts</a>
-            <a class="btn btn-secondary" href="meet.html">Meet the candidates</a>
-          </div>
-        </div>
-        <div class="summary-grid">
-          <div class="summary-card">
-            <div class="summary-label">Days until early voting</div>
-            <div class="summary-value" id="summaryCountdown">—</div>
-            <div class="summary-copy" id="summaryPrimaryDate">Early voting opens August 20, 2026</div>
-          </div>
-          <div class="summary-card">
-            <div class="summary-label">Districts with filings</div>
-            <div class="summary-value" id="summaryFiled">—</div>
-            <div class="summary-copy">Districts in the current chamber with at least one filed candidate.</div>
-          </div>
-          <div class="summary-card">
-            <div class="summary-label">Primary activity</div>
-            <div class="summary-value" id="summaryPrimaries">—</div>
-            <div class="summary-copy">Districts with multiple candidates already filed within the same party.</div>
-          </div>
-          <div class="summary-card">
-            <div class="summary-label">State source</div>
-            <div class="summary-value" id="summaryMatchups">RI SOS</div>
-            <div class="summary-copy" id="summarySourceCopy">Advanced candidate workbook (Excel)</div>
-          </div>
-        </div>
-      </div>
-      <div class="hero-note">
-        <strong>Primary first:</strong> this page is focused on who has filed for the September 9 primary ballot. Early voting begins on August 20, 2026. Most visitors can start by choosing a chamber and clicking a district; the raw state workbook remains available below as an advanced source file.
+      <div class="eyebrow">Who's running + compare candidates</div>
+      <h1>One race page. Everything together.</h1>
+      <p>Select a House or Senate district to see who filed, whether there is a competitive primary, candidate contact information, campaign finance links, and available campaign priorities. This replaces the old split between “Who's Running?” and “Meet the Candidates.”</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="ballot.html">Find My Ballot</a>
+        <a class="btn" href="lookup.html">Find My Precinct</a>
+        <a class="btn" href="finance.html">Campaign Finance</a>
       </div>
     </section>
 
-    <section class="workspace" id="running-map-anchor">
-      <div class="map-card">
-        <div class="controls">
-          <div class="control-label">Chamber</div>
-          <div class="control-row">
-            <div class="segmented" id="chamberButtons">
-              <button type="button" data-chamber="house">House</button>
-              <button type="button" data-chamber="senate">Senate</button>
-            </div>
-          </div>
-        </div>
-        <div class="chip-bar" id="mapFilterBar">
-          <button type="button" class="chip chip-filter active" data-filter="all"><strong>All filed districts</strong></button>
-          <button type="button" class="chip chip-filter" data-filter="dem_only">Only Democratic filed</button>
-          <button type="button" class="chip chip-filter" data-filter="rep_only">Only Republican filed</button>
-          <button type="button" class="chip chip-filter" data-filter="other_only">Only Independent / Other filed</button>
-          <button type="button" class="chip chip-filter" data-filter="mixed_field">Mixed field</button>
-          <button type="button" class="chip chip-filter" data-filter="competitive">Competitive primaries</button>
-          <div class="chip chip-note"><strong>Purple districts:</strong> candidates from more than one party have filed. Select a district to zoom in and see approximate in-district candidate markers.</div>
-        </div>
-        <div id="runningMap" aria-label="Rhode Island candidate filing map"></div>
+    <div class="controls">
+      <div class="segmented">
+        <button id="houseBtn" class="active" type="button">State House</button>
+        <button id="senateBtn" type="button">State Senate</button>
+      </div>
+      <div class="filters">
+        <button class="active" data-filter="all" type="button">All districts</button>
+        <button data-filter="competitive" type="button">Competitive primaries</button>
+        <button data-filter="dem" type="button">Democratic filed</button>
+        <button data-filter="rep" type="button">Republican filed</button>
+      </div>
+      <input id="districtSearch" class="search" type="search" placeholder="Search district number or candidate">
+    </div>
+
+    <section class="workspace">
+      <div class="map-panel">
+        <div id="map"></div>
+        <div class="map-help">Select a district on the map or use the district buttons. Purple indicates candidates from more than one party filed; blue and red indicate only one major party currently filed.</div>
       </div>
 
-      <aside class="detail-card">
-        <div class="detail-eyebrow">District detail</div>
-        <div class="detail-title" id="detailTitle">Select a district</div>
-        <div class="detail-actions">
-          <button type="button" class="detail-action-btn" id="copyDistrictLinkBtn" data-copy-district-link="true">Copy district link</button>
-        </div>
-        <div class="detail-copy" id="detailCopy">Select any House or Senate district on the map to see who is on the September 9 primary ballot, whether either party has a competitive primary, and which public campaign contact details appear in the state filing workbook.</div>
-        <div class="detail-statuses">
-          <div class="status-card party-status dem-status is-clickable" id="detailDemCard" role="button" tabindex="0" aria-pressed="false">
-            <h3>Democratic primary</h3>
-            <p id="detailDemPrimary">No district selected</p>
-          </div>
-          <div class="status-card party-status rep-status is-clickable" id="detailRepCard" role="button" tabindex="0" aria-pressed="false">
-            <h3>Republican primary</h3>
-            <p id="detailRepPrimary">No district selected</p>
-          </div>
-        </div>
-        <div class="candidate-focus" id="candidateFocusControls"></div>
-        <div class="detail-actions is-inline" id="secondaryDetailActions"></div>
-        <div class="candidate-map-note" id="candidateMapNote">Select a district to highlight candidate home precincts on the map. Full street addresses are not published.</div>
-        <div class="candidate-list" id="candidateList"></div>
-        <div class="ballot-info">
-          <div class="ballot-info-title">How to get on the ballot in Rhode Island</div>
-          <ul class="ballot-info-list">
-            <li>State legislative candidates qualify through Rhode Island filing and nomination-paper rules for the September 9, 2026 primary.</li>
-            <li>Deadlines and signature requirements can vary, so candidates should confirm the current totals with official state guidance before filing.</li>
-            <li id="filingSourceNote">Candidate list source file date is loading.</li>
-            <li>This is an independent personal project and is not affiliated with or endorsed by the Rhode Island Department of State or the Rhode Island Board of Elections.</li>
-          </ul>
-          <div class="ballot-info-links">
-            <a href="https://vote.sos.ri.gov/" target="_blank" rel="noopener noreferrer">RI Department of State</a>
-            <a href="https://vote.sos.ri.gov/Forms/elections/Reports/Candidates.xlsx" target="_blank" rel="noopener noreferrer">Advanced candidate workbook (Excel)</a>
-            <a href="https://elections.ri.gov/" target="_blank" rel="noopener noreferrer">RI Board of Elections</a>
-            <a href="https://ballotpedia.org/Rhode_Island_State_Senate_elections,_2026" target="_blank" rel="noopener noreferrer">Ballotpedia Senate</a>
-            <a href="https://ballotpedia.org/Rhode_Island_House_of_Representatives_elections,_2026" target="_blank" rel="noopener noreferrer">Ballotpedia House</a>
-          </div>
-        </div>
+      <aside class="detail-panel">
+        <div class="eyebrow">District detail</div>
+        <h2 id="districtTitle">House District 1</h2>
+        <div class="district-summary" id="districtSummary">Loading current candidate filings…</div>
+        <div id="primarySummary"></div>
+        <div class="district-list" id="districtList"></div>
       </aside>
     </section>
 
-    <section class="district-browser" id="district-browser">
-      <h3>Declared districts before September 9</h3>
-      <p>Use the district list to jump directly across the current chamber and compare the official declared primary candidates district by district.</p>
-      <div class="district-grid" id="districtGrid"></div>
+    <section class="compare-panel" id="comparePanel">
+      <div class="compare-head">
+        <div>
+          <div class="eyebrow">Candidate comparison</div>
+          <h2 id="compareTitle">House District 1</h2>
+        </div>
+        <div class="compare-note">Candidate-submitted priorities are shown when available. Profiles without a response remain clearly labeled instead of being filled with unsourced assumptions.</div>
+      </div>
+      <div class="candidate-grid" id="candidateGrid"></div>
     </section>
   </main>
 
-  <footer>
-    <div class="site-footer">
-      <div>
-        <img src="riep-logo-transparent.png" alt="Rhode Island Elections Project logo" />
-        <div style="margin-top:10px; max-width:640px;">Rhode Island Elections Project is an independent public-facing interface for Rhode Island legislative elections, turnout geography, precinct lookup, candidate filing status, and election accessibility. It is not affiliated with or endorsed by the Rhode Island Department of State or the Rhode Island Board of Elections.</div>
-        <div class="footer-motto">Perspictuitas et Reddito Rationum in Democratia</div>
-      </div>
-      <div>
-        <div class="footer-nav">
-          <a href="index.html">Home</a>
-          <a href="map.html">Map</a>
-          <a href="running.html">Who's Running?</a>
-          <a href="meet.html">Meet the Candidates</a>
-          <a href="lookup.html">Find My Precinct</a>
-          <a href="methodology.html">Methodology</a>
-          <a href="about.html">About</a>
-          <a href="support.html">Support</a>
-        </div>
-        <div style="margin-top:12px;">Contact, collaborations, interviews, or support: <a href="support.html" style="color:inherit;text-decoration:underline;">Use the Support page</a> · Last updated: July 2026</div>
-      </div>
-    </div>
-  </footer>
-
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
-    const state = { chamber: "house", selectedDistrict: null, mapFilter: "all", partyFocus: "all" };
-    const geojsons = {};
-    let filingData = null;
-    let financeData = null;
-    let financeProfileIds = new Set();
-    let mapLayer = null;
-    let statewideGuideControl = null;
-    let selectedLayer = null;
-    let featureLayerByDistrict = {};
-    let featureGeometryByDistrict = {};
-    let featureBoundsByDistrict = {};
-    let precinctFeatureByCode = {};
-    let candidateMarkerLayer = null;
-    let resetViewControl = null;
-    let resetViewButton = null;
-    let expandViewControl = null;
-    let expandViewButton = null;
-
-    const geojsonFiles = {
-      house: "/data/house_new.geojson",
-      senate: "/data/senate_new.geojson",
-      precincts: "/data/ri_turnout_2024_precinct.geojson"
+  (() => {
+    const DATA_URL = "data/whos_running_2026.json?v=20260828-unified";
+    const PROFILE_URL = "data/candidate_profiles_2026.json?v=20260828-unified";
+    const GEO = {
+      house: "house_new.geojson",
+      senate: "senate_new.geojson"
     };
 
-    const generalFill = {
-      mixed_field: "#7c3aed",
-      dem_only: "#4f7cff",
-      rep_only: "#ff6b6b",
-      other_only: "#14b8a6",
-      no_filing: "#eef2f7"
-    };
+    let data = null;
+    let profiles = new Map();
+    let chamber = "house";
+    let selectedDistrict = "1";
+    let filter = "all";
+    let map = null;
+    let layer = null;
+    let geoCache = {};
+    let visibleDistricts = [];
 
-    const generalStroke = {
-      mixed_field: "#5b21b6",
-      dem_only: "#1d4ed8",
-      rep_only: "#b91c1c",
-      other_only: "#0f766e",
-      no_filing: "#94a3b8"
-    };
+    const esc = value => String(value ?? "")
+      .replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;")
+      .replaceAll('"',"&quot;").replaceAll("'","&#39;");
 
-    const primaryStroke = {
-      both_primaries: "#b45309",
-      dem_primary: "#b45309",
-      rep_primary: "#b45309",
-      no_primary: "#64748b",
-      no_filing: "#94a3b8"
-    };
+    const getRecord = district => data?.chambers?.[chamber]?.[String(district)] || null;
 
-    const primaryFill = {
-      both_primaries: "#8b5cf6",
-      dem_primary: "#2563eb",
-      rep_primary: "#dc2626",
-      no_primary: "#e2e8f0",
-      no_filing: "#f8fafc"
-    };
-
-    const filingTint = {
-      mixed_field: "#8b5cf6",
-      dem_only: "#2563eb",
-      rep_only: "#dc2626",
-      other_only: "#14b8a6",
-      no_filing: "#f8fafc"
-    };
-
-    const filingStroke = {
-      mixed_field: "#6d28d9",
-      dem_only: "#1d4ed8",
-      rep_only: "#b91c1c",
-      other_only: "#0f766e",
-      no_filing: "#94a3b8"
-    };
-
-    const map = L.map("runningMap", {
-      zoomControl: true,
-      scrollWheelZoom: false,
-      minZoom: 7,
-      maxZoom: 11
-    }).setView([41.70, -71.55], 8.4);
-
-    const baseTileLayer = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 18,
-      opacity: 0.42,
-      attribution: "&copy; OpenStreetMap contributors"
-    }).addTo(map);
-
-    function invalidateRunningMap() {
-      window.setTimeout(() => map.invalidateSize(), 120);
-    }
-
-    function isMapFullscreen() {
-      const mapCard = document.querySelector(".map-card");
-      return document.fullscreenElement === mapCard || document.webkitFullscreenElement === mapCard;
-    }
-
-    function updateMapExpandButton() {
-      const buttons = [
-        document.getElementById("mapExpandBtn"),
-        expandViewButton
-      ].filter(Boolean);
-      buttons.forEach(button => {
-        button.textContent = isMapFullscreen() ? "Exit full screen" : "Enlarge map";
-      });
-    }
-
-    candidateMarkerLayer = L.layerGroup().addTo(map);
-
-    resetViewControl = L.control({ position: "topright" });
-    resetViewControl.onAdd = function () {
-      const wrapper = L.DomUtil.create("div");
-      resetViewButton = L.DomUtil.create("button", "map-return-btn", wrapper);
-      resetViewButton.type = "button";
-      resetViewButton.textContent = "Return to statewide view";
-      resetViewButton.style.display = "none";
-      L.DomEvent.disableClickPropagation(wrapper);
-      L.DomEvent.on(resetViewButton, "click", (event) => {
-        L.DomEvent.preventDefault(event);
-        resetStatewideView();
-      });
-      return wrapper;
-    };
-    resetViewControl.addTo(map);
-
-    expandViewControl = L.control({ position: "topright" });
-    expandViewControl.onAdd = function () {
-      const wrapper = L.DomUtil.create("div");
-      expandViewButton = L.DomUtil.create("button", "map-float-btn", wrapper);
-      expandViewButton.type = "button";
-      expandViewButton.id = "mapExpandBtn";
-      expandViewButton.textContent = "Enlarge map";
-      L.DomEvent.disableClickPropagation(wrapper);
-      return wrapper;
-    };
-    expandViewControl.addTo(map);
-
-    statewideGuideControl = L.control({ position: "bottomleft" });
-    statewideGuideControl.onAdd = function () {
-      const div = L.DomUtil.create("div", "map-guide-box");
-      div.id = "statewideGuideBox";
-      div.innerHTML = `
-        <div class="map-guide-title">Statewide key</div>
-        <div class="map-guide-row"><span class="swatch" style="background:${filingTint.dem_only};border-color:${primaryStroke.no_primary}"></span>Democratic-only filing</div>
-        <div class="map-guide-row"><span class="swatch" style="background:${filingTint.rep_only};border-color:${primaryStroke.no_primary}"></span>Republican-only filing</div>
-        <div class="map-guide-row"><span class="swatch" style="background:${filingTint.other_only};border-color:${primaryStroke.no_primary}"></span>Independent / Other-only filing</div>
-        <div class="map-guide-row"><span class="swatch" style="background:${filingTint.mixed_field};border-color:${primaryStroke.no_primary}"></span>Purple district = candidates from more than one party have filed</div>
-        <div class="map-guide-row"><span class="swatch" style="background:#ffffff;border-color:${primaryStroke.dem_primary}"></span>Gold border = competitive primary</div>
-        <div class="map-guide-copy">Click any district to zoom in, isolate it, and see matched home precinct highlights.</div>
-      `;
-      return div;
-    };
-    statewideGuideControl.addTo(map);
-
-    const loading = L.control({ position: "topleft" });
-    loading.onAdd = function () {
-      const div = L.DomUtil.create("div", "loading-card");
-      div.id = "loadingCard";
-      div.textContent = "Loading 2026 filing map...";
-      return div;
-    };
-    loading.addTo(map);
-
-    const assetVersion = "20260730b";
-
-    function freshAssetUrl(url) {
-      const separator = url.includes("?") ? "&" : "?";
-      return `${url}${separator}v=${assetVersion}`;
-    }
-
-    function fetchJson(url) {
-      const requestUrl = freshAssetUrl(url);
-      return fetch(requestUrl, { cache: "no-store" }).then(r => {
-        if (!r.ok) throw new Error(`Failed to load ${url}`);
-        return r.json();
-      });
-    }
-
-    function normalizeDistrict(value) {
-      if (value === null || value === undefined) return null;
-      const match = String(value).match(/\d+/);
-      return match ? Number(match[0]) : null;
-    }
-
-    function getFeatureDistrict(feature) {
-      const props = feature.properties || {};
-      return normalizeDistrict(
-        props.district_number ??
-        props.DIST_NUM ??
-        props.SLDUST ??
-        props.DISTRICT ??
-        props.District ??
-        props.NAME ??
-        props.NAMELSAD
-      );
-    }
-
-    function getDistrictData(chamber, district) {
-      return filingData?.chambers?.[chamber]?.[String(district)] || null;
-    }
-
-    function getSummary(chamber) {
-      return filingData?.summary?.[chamber] || null;
-    }
-
-    function updateDistrictUrl() {
-      const url = new URL(window.location.href);
-      url.searchParams.set("chamber", state.chamber);
-      if (state.mapFilter && state.mapFilter !== "all") {
-        url.searchParams.set("filter", state.mapFilter);
-      } else {
-        url.searchParams.delete("filter");
-      }
-      if (state.selectedDistrict) {
-        url.searchParams.set("district", String(state.selectedDistrict));
-        if (state.partyFocus && state.partyFocus !== "all") {
-          url.searchParams.set("party", state.partyFocus);
-        } else {
-          url.searchParams.delete("party");
-        }
-      } else {
-        url.searchParams.delete("district");
-        url.searchParams.delete("party");
-      }
-      url.hash = "running-map-anchor";
-      window.history.replaceState({}, "", url);
-    }
-
-    function readInitialState() {
-      const params = new URLSearchParams(window.location.search);
-      const chamber = params.get("chamber");
-      const filter = params.get("filter");
-      const party = params.get("party");
-      const district = Number(params.get("district"));
-      if (chamber === "house" || chamber === "senate") {
-        state.chamber = chamber;
-      }
-      if (filter === "both_major") {
-        state.mapFilter = "mixed_field";
-      } else if (["all", "dem_only", "rep_only", "other_only", "mixed_field", "competitive"].includes(filter)) {
-        state.mapFilter = filter;
-      }
-      if (Number.isFinite(district) && district > 0) {
-        state.selectedDistrict = district;
-      }
-      if (["all", "DEM", "REP", "OTHER"].includes(party)) {
-        state.partyFocus = party;
-      }
-    }
-
-    async function copyDistrictLink() {
-      const url = new URL(window.location.href);
-      url.searchParams.set("chamber", state.chamber);
-      if (state.mapFilter && state.mapFilter !== "all") {
-        url.searchParams.set("filter", state.mapFilter);
-      } else {
-        url.searchParams.delete("filter");
-      }
-      if (state.selectedDistrict) {
-        url.searchParams.set("district", String(state.selectedDistrict));
-        if (state.partyFocus && state.partyFocus !== "all") {
-          url.searchParams.set("party", state.partyFocus);
-        } else {
-          url.searchParams.delete("party");
-        }
-      } else {
-        url.searchParams.delete("district");
-        url.searchParams.delete("party");
-      }
-      url.hash = "running-map-anchor";
-      const text = url.toString();
-      if (navigator.clipboard?.writeText) {
-        await navigator.clipboard.writeText(text);
-        return;
-      }
-      const helper = document.createElement("textarea");
-      helper.value = text;
-      helper.setAttribute("readonly", "");
-      helper.style.position = "absolute";
-      helper.style.left = "-9999px";
-      document.body.appendChild(helper);
-      helper.select();
-      document.execCommand("copy");
-      helper.remove();
-    }
-
-    function hashString(value) {
-      let hash = 2166136261;
-      const source = String(value || "");
-      for (let i = 0; i < source.length; i += 1) {
-        hash ^= source.charCodeAt(i);
-        hash = Math.imul(hash, 16777619);
-      }
-      return hash >>> 0;
-    }
-
-    function mulberry32(seed) {
-      let current = seed >>> 0;
-      return function next() {
-        current += 0x6d2b79f5;
-        let t = current;
-        t = Math.imul(t ^ (t >>> 15), t | 1);
-        t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
-        return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    function counts(record){
+      const rows = record?.candidates || [];
+      return {
+        dem: rows.filter(c => c.party === "DEM").length,
+        rep: rows.filter(c => c.party === "REP").length,
+        total: rows.length
       };
     }
 
-    function pointInRing(lat, lng, ring) {
-      let inside = false;
-      for (let i = 0, j = ring.length - 1; i < ring.length; j = i, i += 1) {
-        const xi = ring[i][0];
-        const yi = ring[i][1];
-        const xj = ring[j][0];
-        const yj = ring[j][1];
-        const intersect = ((yi > lat) !== (yj > lat))
-          && (lng < ((xj - xi) * (lat - yi)) / ((yj - yi) || 1e-12) + xi);
-        if (intersect) inside = !inside;
-      }
-      return inside;
+    function isCompetitive(record){
+      const c = counts(record);
+      return c.dem > 1 || c.rep > 1;
     }
 
-    function pointInPolygonGeometry(lat, lng, polygonCoords) {
-      if (!polygonCoords?.length) return false;
-      if (!pointInRing(lat, lng, polygonCoords[0])) return false;
-      for (let i = 1; i < polygonCoords.length; i += 1) {
-        if (pointInRing(lat, lng, polygonCoords[i])) return false;
-      }
+    function matchesFilter(record){
+      const c = counts(record);
+      if(filter === "competitive") return isCompetitive(record);
+      if(filter === "dem") return c.dem > 0;
+      if(filter === "rep") return c.rep > 0;
       return true;
     }
 
-    function pointInGeometry(lat, lng, geometry) {
-      if (!geometry) return false;
-      if (geometry.type === "Polygon") {
-        return pointInPolygonGeometry(lat, lng, geometry.coordinates);
-      }
-      if (geometry.type === "MultiPolygon") {
-        return geometry.coordinates.some(polygon => pointInPolygonGeometry(lat, lng, polygon));
-      }
-      return false;
+    function districtColor(record){
+      const c = counts(record);
+      if(c.dem && c.rep) return "#7c3aed";
+      if(c.dem) return "#2764e8";
+      if(c.rep) return "#e4575e";
+      return "#9aa7b8";
     }
 
-    function recordHasOtherPresence(record) {
-      if (!record) return false;
-      return [...(record.candidates || []), ...(record.general_candidates || [])]
-        .some(candidate => !["DEM", "REP"].includes(candidate.party));
-    }
-
-    function getOtherCandidates(record) {
-      return [...(record?.candidates || []), ...(record?.general_candidates || [])]
-        .filter(candidate => !["DEM", "REP"].includes(candidate.party));
-    }
-
-    function getFilingTypeLabel(status) {
-      return {
-        mixed_field: "Mixed field",
-        dem_only: "Only Democratic filed",
-        rep_only: "Only Republican filed",
-        other_only: "Only Independent / Other filed",
-        no_filing: "No filing listed in official state workbook"
-      }[status] || "No filing listed in official state workbook";
-    }
-
-    function getVisualStatus(record) {
-      if (!record) return "no_filing";
-      if (record.general_status === "both_major") return "mixed_field";
-      if (recordHasOtherPresence(record) && (record.general_status === "dem_only" || record.general_status === "rep_only")) return "mixed_field";
-      if (recordHasOtherPresence(record)) return "other_only";
-      if (record.general_status === "dem_only") return "dem_only";
-      if (record.general_status === "rep_only") return "rep_only";
-      return "no_filing";
-    }
-
-    function recordMatchesFilter(record) {
-      if (!record) return false;
-      if (state.mapFilter === "all") return record.candidate_total > 0 || record.general_candidate_total > 0;
-      if (state.mapFilter === "competitive") return hasCompetitivePrimary(record);
-      return getVisualStatus(record) === state.mapFilter;
-    }
-
-    function candidateMatchesFocus(candidate) {
-      if (state.partyFocus === "all") return true;
-      if (state.partyFocus === "OTHER") return !["DEM", "REP"].includes(candidate.party);
-      return candidate.party === state.partyFocus;
-    }
-
-    function getApproximateCandidatePoint(district, candidate, index, total) {
-      const geometry = featureGeometryByDistrict[district];
-      const bounds = featureBoundsByDistrict[district];
-      if (!geometry || !bounds) {
-        return L.latLng(41.70, -71.55);
-      }
-
-      const seed = hashString([
-        state.chamber,
-        district,
-        candidate.name,
-        candidate.home_label,
-        candidate.party,
-        candidate.ballot_stage,
-        index,
-        total
-      ].join("|"));
-      const random = mulberry32(seed);
-      const south = bounds.getSouth();
-      const north = bounds.getNorth();
-      const west = bounds.getWest();
-      const east = bounds.getEast();
-
-      for (let attempt = 0; attempt < 160; attempt += 1) {
-        const lat = south + ((north - south) * random());
-        const lng = west + ((east - west) * random());
-        if (pointInGeometry(lat, lng, geometry)) {
-          return L.latLng(lat, lng);
-        }
-      }
-
-      return bounds.getCenter();
-    }
-
-    function getPrimaryDate(year) {
-      return new Date(year, 8, 9);
-    }
-
-    function getEarlyVotingDate(year) {
-      return new Date(year, 7, 20);
-    }
-
-    function setPrimaryCountdown() {
-      if (!filingData?.election_cycle) return;
-      const electionYear = Number(filingData.election_cycle);
-      const primaryDate = getPrimaryDate(electionYear);
-      const earlyVotingDate = getEarlyVotingDate(electionYear);
-      const startOfToday = new Date();
-      startOfToday.setHours(0, 0, 0, 0);
-      const days = Math.ceil((earlyVotingDate - startOfToday) / 86400000);
-      const countdown = document.getElementById("summaryCountdown");
-      const copy = document.getElementById("summaryPrimaryDate");
-      const earlyFormatted = earlyVotingDate.toLocaleDateString("en-US", {
-        month: "long",
-        day: "numeric",
-        year: "numeric"
-      });
-      const primaryFormatted = primaryDate.toLocaleDateString("en-US", {
-        month: "long",
-        day: "numeric",
-        year: "numeric"
-      });
-
-      if (days > 0) {
-        countdown.textContent = days;
-        copy.textContent = `Early voting opens ${earlyFormatted} · Primary ${primaryFormatted}`;
-      } else if (days === 0) {
-        countdown.textContent = "Today";
-        copy.textContent = `Early voting opens ${earlyFormatted} · Primary ${primaryFormatted}`;
-      } else {
-        countdown.textContent = "Open";
-        copy.textContent = `Early voting began ${earlyFormatted} · Primary ${primaryFormatted}`;
-      }
-    }
-
-    function setSourceNote() {
-      const note = document.getElementById("filingSourceNote");
-      const summarySourceCopy = document.getElementById("summarySourceCopy");
-      if (!note) return;
-
-      const sourceUpdated = filingData?.source_updated_at;
-      if (!sourceUpdated) {
-        note.textContent = "The update date for the state candidate workbook is not available in the current file.";
-        return;
-      }
-
-      const formatted = new Date(sourceUpdated).toLocaleDateString("en-US", {
-        month: "long",
-        day: "numeric",
-        year: "numeric"
-      });
-      note.textContent = `The state candidate workbook used here was last updated ${formatted}. This page shows home precinct, ZIP code, phone, and email when listed, while full street addresses are intentionally withheld.`;
-      if (summarySourceCopy) {
-        summarySourceCopy.textContent = `Advanced source file updated ${formatted}.`;
-      }
-    }
-
-    function escapeHtml(value) {
-      return String(value ?? "")
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#39;");
-    }
-
-    function formatYesNo(value) {
-      if (value === true) return "Yes";
-      if (value === false) return "No";
-      return "Not listed";
-    }
-
-    function hasFinanceProfile(candidate) {
-      return Boolean(candidate?.candidate_id && financeProfileIds.has(candidate.candidate_id));
-    }
-
-    function buildFinanceUrl(candidate) {
-      if (!candidate?.candidate_id) return "";
-      return `finance.html?candidate=${encodeURIComponent(candidate.candidate_id)}`;
-    }
-
-    function candidateAccent(candidate) {
-      if (candidate.party === "DEM") return "#2563eb";
-      if (candidate.party === "REP") return "#dc2626";
-      if (candidate.party === "IND") return "#14b8a6";
-      return "#8b5cf6";
-    }
-
-    function buildCandidateLinks(candidate) {
-      const links = [];
-      if (candidate.phone) {
-        const digits = candidate.phone.replace(/[^\d+]/g, "");
-        links.push(`<a class="candidate-link" href="tel:${escapeHtml(digits)}">Call ${escapeHtml(candidate.phone)}</a>`);
-      }
-      if (candidate.email) {
-        links.push(`<a class="candidate-link" href="mailto:${escapeHtml(candidate.email)}">Email ${escapeHtml(candidate.email)}</a>`);
-      }
-      if (hasFinanceProfile(candidate)) {
-        links.push(`<a class="candidate-link" href="${buildFinanceUrl(candidate)}">Campaign finance</a>`);
-      }
-      if (!links.length) {
-        links.push(`<span class="candidate-link is-muted">No public phone or email listed</span>`);
-      }
-      return links.join("");
-    }
-
-    function buildCandidateCard(candidate) {
-      const stageText = candidate.ballot_stage === "general"
-        ? "November general-election declaration"
-        : "September primary declaration";
-      const homePrecinct = candidate.home_precinct_name || "Not matched";
-      const zipLabel = candidate.zip_code || "Not listed";
-      const note = candidate.ballot_stage === "general"
-        ? "Rhode Island general-election declaration on file for this district."
-        : "Rhode Island primary declaration on file for this district.";
-      const precinctSentence = candidate.home_precinct_name
-        ? `${candidate.name} lives in ${candidate.home_precinct_name}.`
-        : `${candidate.name}'s filing address could not be matched to a precinct in the public geometry used on this site.`;
-      const precinctNote = candidate.home_precinct_name
-        ? "Map highlight shows the matched home precinct rather than a street address."
-        : "Home precinct could not be matched from the public precinct geometry used on this site.";
-
-      return `
-        <div class="candidate-item" style="--party-accent:${candidateAccent(candidate)}">
-          <div class="candidate-top">
-            <div>
-              <div class="candidate-name">${escapeHtml(candidate.name)}</div>
-              <div class="candidate-subhead">${escapeHtml(stageText)}</div>
-            </div>
-            <div class="candidate-party">${escapeHtml(candidate.party_raw || candidate.party_label)}</div>
-          </div>
-          <div class="candidate-meta-grid">
-            <div class="candidate-meta">
-              <span class="candidate-meta-label">Home precinct</span>
-              <span class="candidate-meta-value">${escapeHtml(homePrecinct)}</span>
-            </div>
-            <div class="candidate-meta">
-              <span class="candidate-meta-label">ZIP code</span>
-              <span class="candidate-meta-value">${escapeHtml(zipLabel)}</span>
-            </div>
-            <div class="candidate-meta">
-              <span class="candidate-meta-label">On primary ballot</span>
-              <span class="candidate-meta-value">${escapeHtml(formatYesNo(candidate.on_primary_ballot))}</span>
-            </div>
-          </div>
-          <div class="candidate-links">${buildCandidateLinks(candidate)}</div>
-          <div class="candidate-note">${escapeHtml(precinctSentence)}</div>
-          <div class="candidate-note">${escapeHtml(note)}</div>
-          <div class="candidate-approx-note">${escapeHtml(precinctNote)}</div>
-        </div>
-      `;
-    }
-
-    function districtStyle(record) {
-      if (!record) {
-        return { color: "#94a3b8", weight: 1.2, fillColor: "#e2e8f0", fillOpacity: 0.45 };
-      }
-
-      const visualStatus = getVisualStatus(record);
-      const base = {
-        color: primaryStroke[record.primary_status] || "#64748b",
-        weight: record.primary_status !== "no_primary" && record.primary_status !== "no_filing" ? 3.8 : 2.2,
-        opacity: 1,
-        fillColor: filingTint[visualStatus] || "#e2e8f0",
-        fillOpacity: record.primary_status === "no_filing" ? 0.12 : 0.78
-      };
-
-      if (state.mapFilter !== "all" && !recordMatchesFilter(record)) {
-        return {
-          ...base,
-          color: "#cbd5e1",
-          weight: 1.4,
-          opacity: 0.55,
-          fillColor: "#f8fafc",
-          fillOpacity: 0.16
-        };
-      }
-
-      return base;
-    }
-
-    function getPartyAccent(record) {
-      if (!record) return "#94a3b8";
-      if (getVisualStatus(record) === "dem_only") return "#2563eb";
-      if (getVisualStatus(record) === "rep_only") return "#dc2626";
-      if (getVisualStatus(record) === "other_only") return "#14b8a6";
-      if (getVisualStatus(record) === "mixed_field") return "#8b5cf6";
-      return "#94a3b8";
-    }
-
-    function updateStatewideGuideVisibility() {
-      const guide = document.getElementById("statewideGuideBox");
-      if (!guide) return;
-      guide.style.display = state.selectedDistrict ? "none" : "block";
-    }
-
-    function hasCompetitivePrimary(record) {
-      return ["dem_primary", "rep_primary", "both_primaries"].includes(record?.primary_status);
-    }
-
-    function buildPrimaryContestMeta(record) {
-      if (!record?.candidates?.length) return null;
-      const byParty = {};
-      record.candidates.forEach(candidate => {
-        byParty[candidate.party] = byParty[candidate.party] || [];
-        byParty[candidate.party].push(candidate.name);
-      });
-
-      if ((byParty.DEM || []).length > 1) {
-        return {
-          label: "Competitive primary",
-          party: "Democratic primary",
-          names: byParty.DEM
-        };
-      }
-      if ((byParty.REP || []).length > 1) {
-        return {
-          label: "Competitive primary",
-          party: "Republican primary",
-          names: byParty.REP
-        };
-      }
-      if ((byParty.IND || []).length > 1) {
-        return {
-          label: "Competitive primary",
-          party: "Independent contest",
-          names: byParty.IND
-        };
+    function districtNumberFromFeature(feature){
+      const p = feature?.properties || {};
+      const candidates = [
+        p.DISTRICT, p.District, p.district, p.DISTRICT_N, p.DIST_NUM, p.DISTRICTNO,
+        p.HOUSE_DIST, p.SEN_DIST, p.DIST
+      ];
+      for(const value of candidates){
+        const m = String(value ?? "").match(/\d+/);
+        if(m) return String(Number(m[0]));
       }
       return null;
     }
 
-    function getPartyCandidates(record, party) {
-      return (record?.candidates || []).filter(candidate => candidate.party === party);
+    async function loadGeo(){
+      if(geoCache[chamber]) return geoCache[chamber];
+      const res = await fetch(GEO[chamber], {cache:"no-store"});
+      if(!res.ok) throw new Error("Could not load district map.");
+      geoCache[chamber] = await res.json();
+      return geoCache[chamber];
     }
 
-    function buildPartyPrimaryHtml(record, party) {
-      const partyName = party === "DEM" ? "Democratic" : "Republican";
-      const candidates = getPartyCandidates(record, party);
+    async function drawMap(){
+      const geo = await loadGeo();
+      if(layer) layer.remove();
 
-      if (!record) return "No district selected";
-      if (!candidates.length) {
-        return `
-          <div>No ${partyName.toLowerCase()} candidate filed yet</div>
-          <div class="status-meta">No ${partyName.toLowerCase()} filing appears in the current sheet for this district.</div>
-        `;
-      }
-
-      if (candidates.length === 1) {
-        return `
-          <div>1 ${partyName.toLowerCase()} candidate filed</div>
-          <div class="status-vs">${candidates[0].name}</div>
-          <div class="status-meta">No same-party primary contest in current filings.</div>
-        `;
-      }
-
-      return `
-        <span class="contest-badge">Competitive primary</span>
-        <div class="status-meta">${partyName} primary on September 9</div>
-        <div class="status-vs">${candidates.map(candidate => candidate.name).join(" vs ")}</div>
-      `;
-    }
-
-    function buildCandidateFocusControls(record) {
-      const holder = document.getElementById("candidateFocusControls");
-      const actionHolder = document.getElementById("secondaryDetailActions");
-      if (!holder) return;
-
-      if (!record) {
-        holder.innerHTML = "";
-        if (actionHolder) actionHolder.innerHTML = "";
-        return;
-      }
-
-      const options = [{ code: "all", label: "All candidates" }];
-      if ([...(record.candidates || []), ...(record.general_candidates || [])].some(candidate => candidate.party === "DEM")) {
-        options.push({ code: "DEM", label: "Democrats" });
-      }
-      if ([...(record.candidates || []), ...(record.general_candidates || [])].some(candidate => candidate.party === "REP")) {
-        options.push({ code: "REP", label: "Republicans" });
-      }
-      if (recordHasOtherPresence(record)) {
-        options.push({ code: "OTHER", label: "Independent / Other" });
-      }
-
-      holder.innerHTML = options.map(option => `
-        <button
-          type="button"
-          class="candidate-focus-btn${state.partyFocus === option.code ? " active" : ""}"
-          data-party-focus="${option.code}"
-        >${option.label}</button>
-      `).join("");
-
-      holder.querySelectorAll("[data-party-focus]").forEach(button => {
-        button.addEventListener("click", () => {
-          state.partyFocus = button.dataset.partyFocus;
-          refreshSelectedDistrictView();
-        });
-      });
-
-      if (actionHolder) {
-        actionHolder.innerHTML = `
-          <button type="button" class="detail-action-btn" data-copy-district-link="true">Copy district link</button>
-          <a class="detail-action-btn" href="meet.html?chamber=${encodeURIComponent(state.chamber)}&district=${encodeURIComponent(record.district_number)}">Meet these candidates</a>
-        `;
-      }
-    }
-
-    function setSummaryCards() {
-      const summary = getSummary(state.chamber);
-      if (!summary) return;
-      document.getElementById("summaryFiled").textContent = summary.districts_with_filings;
-      document.getElementById("summaryPrimaries").textContent = summary.districts_with_primary_activity;
-    }
-
-    function setDetail(record) {
-      const title = document.getElementById("detailTitle");
-      const copy = document.getElementById("detailCopy");
-      const demPrimary = document.getElementById("detailDemPrimary");
-      const repPrimary = document.getElementById("detailRepPrimary");
-      const list = document.getElementById("candidateList");
-      const mapNote = document.getElementById("candidateMapNote");
-
-      if (!record) {
-        title.textContent = "Select a district";
-        copy.textContent = "Select any House or Senate district on the map to see who has filed for the September 9 primary ballot, whether either party has a competitive primary, and which public campaign contact details appear in the state filing workbook.";
-        demPrimary.textContent = "No district selected";
-        repPrimary.textContent = "No district selected";
-        if (mapNote) {
-          mapNote.textContent = "Select a district to highlight candidate home precincts on the map. Full street addresses are not published.";
-        }
-        buildCandidateFocusControls(null);
-        list.innerHTML = "";
-        syncPartyCards(null);
-        return;
-      }
-
-      title.textContent = `${state.chamber === "house" ? "House" : "Senate"} District ${record.district_number}`;
-      if (record.candidate_total && record.general_candidate_total) {
-        copy.textContent = `${record.candidate_total} candidate${record.candidate_total === 1 ? "" : "s"} currently listed for the September 9 primary ballot in this district, plus ${record.general_candidate_total} general-election-only candidate${record.general_candidate_total === 1 ? "" : "s"} already declared for November.`;
-      } else if (record.candidate_total) {
-        copy.textContent = `${record.candidate_total} candidate${record.candidate_total === 1 ? "" : "s"} currently listed for the September 9 primary ballot in this district.`;
-      } else if (record.general_candidate_total) {
-        copy.textContent = `${record.general_candidate_total} general-election-only candidate${record.general_candidate_total === 1 ? "" : "s"} already declared for November in this district, but no September 9 primary filing is listed in the state filing workbook.`;
-      } else {
-        copy.textContent = "No candidate filing appears in the current state filing workbook for this district yet.";
-      }
-      demPrimary.innerHTML = buildPartyPrimaryHtml(record, "DEM");
-      repPrimary.innerHTML = buildPartyPrimaryHtml(record, "REP");
-      if (mapNote) {
-        mapNote.textContent = "Candidate home precincts are highlighted using workbook addresses matched against 2024 precinct geometry. Use the buttons above to focus the map on one party at a time.";
-      }
-      buildCandidateFocusControls(record);
-      syncPartyCards(record);
-
-      const visiblePrimaryCandidates = record.candidates.filter(candidateMatchesFocus);
-      const visibleGeneralCandidates = record.general_candidates.filter(candidateMatchesFocus);
-
-      if (!record.candidates.length && !record.general_candidates.length) {
-        list.innerHTML = `<div class="candidate-item"><div class="candidate-name">No filing listed yet</div><div class="candidate-note">This district does not appear in the current state filing workbook yet.</div></div>`;
-        return;
-      }
-
-      if (!visiblePrimaryCandidates.length && !visibleGeneralCandidates.length) {
-        list.innerHTML = `<div class="candidate-item"><div class="candidate-name">No matching candidates in this view</div><div class="candidate-note">Change the party focus above to bring all filed candidates back into view.</div></div>`;
-        return;
-      }
-
-      const sections = [];
-      if (visiblePrimaryCandidates.length) {
-        sections.push(`
-          <div class="candidate-section">
-            <div class="candidate-section-label">September primary candidates</div>
-            ${visiblePrimaryCandidates.map(buildCandidateCard).join("")}
-          </div>
-        `);
-      }
-      if (visibleGeneralCandidates.length) {
-        sections.push(`
-          <div class="candidate-section">
-            <div class="candidate-section-label">Also declared for November</div>
-            <div class="candidate-section-note">These candidates appear in the official general-election declaration list and do not change the September 9 primary map colors.</div>
-            ${visibleGeneralCandidates.map(buildCandidateCard).join("")}
-          </div>
-        `);
-      }
-      list.innerHTML = sections.join("");
-    }
-
-    function updateSelectedButton() {
-      document.querySelectorAll(".district-button").forEach(btn => {
-        btn.classList.toggle("active", Number(btn.dataset.district) === state.selectedDistrict);
-      });
-    }
-
-    function focusDistrict(district, options = {}) {
-      state.selectedDistrict = district;
-      if (!options.preservePartyFocus) {
-        state.partyFocus = "all";
-      }
-      const record = getDistrictData(state.chamber, district);
-      const layer = featureLayerByDistrict[district];
-      selectedLayer = layer || null;
-
-      if (mapLayer) {
-        mapLayer.eachLayer(entry => {
-          const layerDistrict = getFeatureDistrict(entry.feature);
-          const layerRecord = getDistrictData(state.chamber, layerDistrict);
-          if (layerDistrict === district) {
-            entry.setStyle({
-              ...districtStyle(layerRecord),
-              weight: Math.max((districtStyle(layerRecord).weight || 2) + 1.6, 4.2),
-              color: "#0f172a",
-              opacity: 1,
-              fillOpacity: 0.94
-            });
-          } else {
-            entry.setStyle({
-              ...districtStyle(layerRecord),
-              color: "#cbd5e1",
-              weight: 1.1,
-              opacity: 0.35,
-              fillOpacity: 0.08
-            });
-          }
-        });
-      }
-
-      if (layer) {
-        baseTileLayer.setOpacity(0.2);
-        map.fitBounds(layer.getBounds(), {
-          paddingTopLeft: [28, 22],
-          paddingBottomRight: [28, 46],
-          maxZoom: 12
-        });
-      }
-
-      setDetail(record);
-      renderSelectedDistrictMarkers(record);
-      updateSelectedButton();
-      updateResetViewButton();
-      updateStatewideGuideVisibility();
-      updateDistrictUrl();
-    }
-
-    function refreshSelectedDistrictView() {
-      if (!state.selectedDistrict) return;
-      const record = getDistrictData(state.chamber, state.selectedDistrict);
-      setDetail(record);
-      renderSelectedDistrictMarkers(record);
-    }
-
-    function syncPartyCards(record) {
-      const demCard = document.getElementById("detailDemCard");
-      const repCard = document.getElementById("detailRepCard");
-      if (!demCard || !repCard) return;
-
-      const hasDem = !!getPartyCandidates(record, "DEM").length;
-      const hasRep = !!getPartyCandidates(record, "REP").length;
-
-      demCard.classList.toggle("is-active", state.partyFocus === "DEM");
-      demCard.classList.toggle("is-clickable", hasDem);
-      demCard.setAttribute("aria-pressed", String(state.partyFocus === "DEM"));
-      demCard.style.opacity = hasDem ? "1" : ".68";
-
-      repCard.classList.toggle("is-active", state.partyFocus === "REP");
-      repCard.classList.toggle("is-clickable", hasRep);
-      repCard.setAttribute("aria-pressed", String(state.partyFocus === "REP"));
-      repCard.style.opacity = hasRep ? "1" : ".68";
-    }
-
-    function buildPrecinctHoverHtml(precinctName, candidates) {
-      const descriptionLines = candidates.map(candidate => {
-        const stageText = candidate.ballot_stage === "general" ? "November declaration" : "September primary";
-        const livesText = candidate.home_precinct_name
-          ? `${escapeHtml(candidate.name)} lives in ${escapeHtml(candidate.home_precinct_name)}.`
-          : `${escapeHtml(candidate.name)} could not be matched to a precinct.`;
-        return `${livesText} <span class="tooltip-stage">(${escapeHtml(candidate.party_raw || candidate.party_label)}, ${escapeHtml(stageText)})</span>`;
-      }).join("<br/>");
-
-      return `<strong>${escapeHtml(precinctName)}</strong><br/>${descriptionLines}`;
-    }
-
-    function getPrecinctStyle(candidates) {
-      const parties = new Set(candidates.map(candidate => candidate.party));
-      let fillColor = "#ede9fe";
-      let strokeColor = "#5b21b6";
-
-      if (parties.size === 1) {
-        const onlyParty = candidates[0].party;
-        fillColor = onlyParty === "DEM"
-          ? "#dbeafe"
-          : onlyParty === "REP"
-            ? "#fee2e2"
-            : onlyParty === "IND"
-              ? "#ede9fe"
-              : "#ede9fe";
-        strokeColor = onlyParty === "DEM"
-          ? "#1d4ed8"
-          : onlyParty === "REP"
-            ? "#b91c1c"
-            : onlyParty === "IND"
-              ? "#0f766e"
-              : "#5b21b6";
-      }
-
-      return {
-        color: strokeColor,
-        weight: 2.6,
-        opacity: 1,
-        fillColor,
-        fillOpacity: 0.72
-      };
-    }
-
-    function getPrecinctMarkerStyle(candidates) {
-      const parties = new Set(candidates.map(candidate => candidate.party));
-      let fillColor = "#8b5cf6";
-
-      if (parties.size === 1) {
-        fillColor = candidateAccent(candidates[0]);
-      }
-
-      return {
-        radius: candidates.length > 1 ? 9 : 7,
-        color: "#ffffff",
-        weight: 2.5,
-        opacity: 1,
-        fillColor,
-        fillOpacity: 0.96
-      };
-    }
-
-    function renderSelectedDistrictMarkers(record) {
-      candidateMarkerLayer.clearLayers();
-      if (!record || !state.selectedDistrict) return;
-
-      const allCandidates = [...record.candidates, ...record.general_candidates].filter(candidateMatchesFocus);
-      if (!allCandidates.length) return;
-
-      const candidatesByPrecinct = {};
-      allCandidates.forEach(candidate => {
-        const precinctCode = candidate.home_precinct_code;
-        if (!precinctCode || !precinctFeatureByCode[precinctCode]) return;
-        candidatesByPrecinct[precinctCode] = candidatesByPrecinct[precinctCode] || [];
-        candidatesByPrecinct[precinctCode].push(candidate);
-      });
-
-      Object.entries(candidatesByPrecinct).forEach(([precinctCode, candidates]) => {
-        const feature = precinctFeatureByCode[precinctCode];
-        if (!feature) return;
-        const layer = L.geoJSON(feature, {
-          style: getPrecinctStyle(candidates)
-        });
-        const precinctName = candidates[0].home_precinct_name || `Precinct ${precinctCode}`;
-        const hoverHtml = buildPrecinctHoverHtml(precinctName, candidates);
-        candidateMarkerLayer.addLayer(layer);
-
-        const center = layer.getBounds().getCenter();
-        const marker = L.circleMarker(center, getPrecinctMarkerStyle(candidates));
-        marker.bindTooltip(hoverHtml, {
-          direction: "top",
-          offset: [0, -8],
-          sticky: true,
-          opacity: 0.97
-        });
-        candidateMarkerLayer.addLayer(marker);
-      });
-    }
-
-    function updateResetViewButton() {
-      if (!resetViewButton) return;
-      resetViewButton.style.display = state.selectedDistrict ? "inline-flex" : "none";
-    }
-
-    function resetStatewideView() {
-      state.selectedDistrict = null;
-      state.partyFocus = "all";
-      if (mapLayer) {
-        mapLayer.eachLayer(entry => {
-          mapLayer.resetStyle(entry);
-        });
-      }
-      selectedLayer = null;
-      baseTileLayer.setOpacity(0.42);
-      candidateMarkerLayer.clearLayers();
-      setDetail(null);
-      updateSelectedButton();
-      updateResetViewButton();
-      updateStatewideGuideVisibility();
-      updateDistrictUrl();
-      fitStatewideBounds();
-    }
-
-    function buildPrimaryContestLabel(record) {
-      const meta = buildPrimaryContestMeta(record);
-      if (!record?.candidates?.length) return "No filing listed in current sheet";
-      return meta ? `${meta.party}: ${meta.names.join(" vs ")}` : "No same-party primary contest in current filings";
-    }
-
-    function buildPrimaryContestHtml(record) {
-      const meta = buildPrimaryContestMeta(record);
-      if (!record?.candidates?.length) return "No filing listed in current sheet";
-      if (!meta) return "No same-party primary contest in current filings";
-      return `
-        <span class="contest-badge">${meta.label}</span>
-        <div class="contest-meta">${meta.party}</div>
-        <div class="contest-name-list">${meta.names.join(" vs ")}</div>
-      `;
-    }
-
-    function buildLegend() {
-      updateResetViewButton();
-      updateStatewideGuideVisibility();
-    }
-
-    function fitStatewideBounds() {
-      const statewideBounds = L.latLngBounds(
-        [41.06, -71.92],
-        [42.03, -71.10]
-      );
-      map.fitBounds(statewideBounds, {
-        paddingTopLeft: isMapFullscreen() ? [34, 28] : [28, 22],
-        paddingBottomRight: isMapFullscreen() ? [42, 168] : [30, 138],
-        maxZoom: isMapFullscreen() ? 8.25 : 8.55
-      });
-    }
-
-    function renderDistrictBrowser() {
-      const grid = document.getElementById("districtGrid");
-      const chamberData = filingData?.chambers?.[state.chamber] || {};
-      const filed = Object.values(chamberData)
-        .filter(record => record.candidate_total > 0)
-        .sort((a, b) => a.district_number - b.district_number);
-
-      if (!filed.length) {
-        grid.innerHTML = `<div class="candidate-item" style="grid-column:1 / -1;">No districts with filings yet in the current sheet.</div>`;
-        return;
-      }
-
-      grid.innerHTML = filed.map(record => `
-        <button class="district-button${state.selectedDistrict === record.district_number ? " active" : ""}${hasCompetitivePrimary(record) ? " competitive" : ""}" type="button" data-district="${record.district_number}" style="--party-accent:${getPartyAccent(record)}">
-          <div class="district-button-top">
-            <span>District ${record.district_number}</span>
-            <span>${record.candidate_total} filed</span>
-          </div>
-          <div class="district-button-name">${getFilingTypeLabel(getVisualStatus(record))}</div>
-          ${hasCompetitivePrimary(record) ? `<div class="contest-badge">Competitive primary</div>` : ``}
-          <div class="district-button-detail">${buildPrimaryContestLabel(record)}${getVisualStatus(record) === "mixed_field" && recordHasOtherPresence(record) ? "<br/>Independent / other declaration also on file." : ""}</div>
-        </button>
-      `).join("");
-
-      grid.querySelectorAll(".district-button").forEach(button => {
-        button.addEventListener("click", () => focusDistrict(Number(button.dataset.district)));
-      });
-    }
-
-    function renderMap() {
-      featureLayerByDistrict = {};
-      featureGeometryByDistrict = {};
-      featureBoundsByDistrict = {};
-      const geo = geojsons[state.chamber];
-      if (!geo) return;
-
-      if (mapLayer) map.removeLayer(mapLayer);
-      candidateMarkerLayer.clearLayers();
-      mapLayer = L.geoJSON(geo, {
-        style: feature => districtStyle(getDistrictData(state.chamber, getFeatureDistrict(feature))),
-        onEachFeature: (feature, layer) => {
-          const district = getFeatureDistrict(feature);
-          if (!district) return;
-          featureLayerByDistrict[district] = layer;
-          featureGeometryByDistrict[district] = feature.geometry;
-          featureBoundsByDistrict[district] = layer.getBounds();
-          const record = getDistrictData(state.chamber, district);
-          layer.bindTooltip(`${state.chamber === "house" ? "House" : "Senate"} District ${district}`, { sticky: true });
-          layer.on("click", () => focusDistrict(district));
+      layer = L.geoJSON(geo, {
+        style: feature => {
+          const d = districtNumberFromFeature(feature);
+          const rec = d ? getRecord(d) : null;
+          const visible = rec && matchesFilter(rec);
+          return {
+            color: String(d) === String(selectedDistrict) ? "#0b1738" : "#ffffff",
+            weight: String(d) === String(selectedDistrict) ? 4 : 1.2,
+            fillColor: rec ? districtColor(rec) : "#cbd5e1",
+            fillOpacity: visible ? .58 : .10
+          };
+        },
+        onEachFeature: (feature, lyr) => {
+          const d = districtNumberFromFeature(feature);
+          if(!d) return;
+          lyr.on("click", () => selectDistrict(d, true));
+          lyr.bindTooltip(`${chamber === "house" ? "House" : "Senate"} District ${d}`, {sticky:true});
         }
       }).addTo(map);
 
-      fitStatewideBounds();
-      buildLegend();
-      setSummaryCards();
-      setPrimaryCountdown();
-      renderDistrictBrowser();
-      setDetail(state.selectedDistrict ? getDistrictData(state.chamber, state.selectedDistrict) : null);
-      if (state.selectedDistrict && featureLayerByDistrict[state.selectedDistrict]) {
-        focusDistrict(state.selectedDistrict, { preservePartyFocus: true });
-      }
+      try{ map.fitBounds(layer.getBounds(), {padding:[10,10]}); }catch(e){}
     }
 
-    async function boot() {
-      try {
-        readInitialState();
-        const [data, houseGeo, senateGeo, precinctGeo, financeResponse] = await Promise.all([
-          fetchJson("/data/whos_running_2026_precincts.json"),
-          fetchJson(geojsonFiles.house),
-          fetchJson(geojsonFiles.senate),
-          fetchJson(geojsonFiles.precincts),
-          fetch(freshAssetUrl("/data/candidate_finance_2026.json"), { cache: "no-store" }).catch(() => null)
-        ]);
+    function partyBadge(candidate){
+      const label = candidate.party_label || candidate.party_raw || candidate.party || "Other";
+      const cls = candidate.party === "DEM" ? "dem" : candidate.party === "REP" ? "rep" : "";
+      return `<span class="badge ${cls}">${esc(label)}</span>`;
+    }
 
-        filingData = data;
-        financeData = financeResponse && financeResponse.ok ? await financeResponse.json() : { profiles: [] };
-        financeProfileIds = new Set((financeData?.profiles || []).map(profile => profile.candidate_id).filter(Boolean));
-        geojsons.house = houseGeo;
-        geojsons.senate = senateGeo;
-        precinctFeatureByCode = {};
-        (precinctGeo?.features || []).forEach(feature => {
-          const props = feature.properties || {};
-          const code = String(props.DISTRICT || props.PRECINCTS || "").trim();
-          if (code) precinctFeatureByCode[code] = feature;
-        });
+    function priorityBlock(candidate){
+      const profile = profiles.get(candidate.candidate_id);
+      if(profile?.priorities?.length){
+        return `
+          <div class="priority-block">
+            <div class="priority-label">Top campaign priorities · candidate response</div>
+            <div class="priority-list">
+              ${profile.priorities.slice(0,5).map(p => `
+                <div class="priority">
+                  <strong>${esc(p.title)}</strong>
+                  <p>${esc(p.summary)}</p>
+                </div>
+              `).join("")}
+            </div>
+          </div>`;
+      }
+      return `<div class="awaiting">Campaign priorities have not yet been published for this candidate. Contact information and official filing status are still shown.</div>`;
+    }
 
-        document.getElementById("loadingCard")?.remove();
+    function candidateCard(candidate, district){
+      const profile = profiles.get(candidate.candidate_id);
+      const email = profile?.email_override || candidate.email || "";
+      const phone = profile?.phone_override || candidate.phone || "";
+      const campaign = profile?.campaign_url || candidate.campaign_url || "";
+      const hasPriorities = !!profile?.priorities?.length;
 
-        document.querySelectorAll("#chamberButtons button").forEach(button => {
-          button.classList.toggle("active", button.dataset.chamber === state.chamber);
-          button.addEventListener("click", () => {
-            state.chamber = button.dataset.chamber;
-            state.selectedDistrict = null;
-            state.partyFocus = "all";
-            selectedLayer = null;
-            document.querySelectorAll("#chamberButtons button").forEach(btn => btn.classList.toggle("active", btn === button));
-            renderMap();
-          });
-        });
+      const links = [];
+      if(campaign) links.push(`<a href="${esc(campaign)}" target="_blank" rel="noopener">Campaign website</a>`);
+      if(email) links.push(`<a href="mailto:${esc(email)}">Email</a>`);
+      if(phone) links.push(`<a href="tel:${esc(String(phone).replace(/[^\d+]/g,''))}">Call</a>`);
+      links.push(`<a class="finance" href="finance.html?candidate=${encodeURIComponent(candidate.candidate_id)}">Campaign finance</a>`);
 
-        const mapCard = document.querySelector(".map-card");
-        document.addEventListener("click", async event => {
-          const copyButton = event.target.closest("[data-copy-district-link]");
-          if (copyButton) {
-            const original = copyButton.textContent;
-            try {
-              await copyDistrictLink();
-              document.querySelectorAll("[data-copy-district-link]").forEach(button => {
-                button.textContent = "Link copied";
-              });
-            } catch (error) {
-              console.error(error);
-              document.querySelectorAll("[data-copy-district-link]").forEach(button => {
-                button.textContent = "Copy failed";
-              });
-            }
-            window.setTimeout(() => {
-              document.querySelectorAll("[data-copy-district-link]").forEach(button => {
-                button.textContent = original;
-              });
-            }, 1400);
-            return;
-          }
+      return `
+        <article class="candidate-card">
+          <div class="candidate-top">
+            <div>
+              <div class="candidate-name">${esc(profile?.candidate_name || candidate.name)}</div>
+              <div class="candidate-sub">${esc(chamber === "house" ? "House" : "Senate")} District ${esc(district)} · ${esc(candidate.home_label || candidate.hometown || "")}</div>
+            </div>
+            <div class="badges">
+              ${partyBadge(candidate)}
+              ${hasPriorities ? `<span class="badge response">Priorities available</span>` : `<span class="badge">Profile incomplete</span>`}
+            </div>
+          </div>
+          <div class="links">${links.join("")}</div>
+          ${profile?.summary ? `<div class="candidate-sub" style="margin-top:12px;font-size:13px">${esc(profile.summary)}</div>` : ""}
+          ${priorityBlock(candidate)}
+        </article>`;
+    }
 
-          const expandButton = event.target.closest("#mapExpandBtn");
-          if (expandButton && mapCard) {
-            try {
-              if (isMapFullscreen()) {
-                if (document.exitFullscreen) {
-                  await document.exitFullscreen();
-                } else if (document.webkitExitFullscreen) {
-                  document.webkitExitFullscreen();
-                }
-              } else if (mapCard.requestFullscreen) {
-                await mapCard.requestFullscreen();
-              } else if (mapCard.webkitRequestFullscreen) {
-                mapCard.webkitRequestFullscreen();
-              }
-            } catch (error) {
-              console.error(error);
-            } finally {
-              updateMapExpandButton();
-              invalidateRunningMap();
-            }
-          }
-        });
+    function renderDistrictList(){
+      const chamberData = data?.chambers?.[chamber] || {};
+      const query = document.getElementById("districtSearch").value.trim().toLowerCase();
 
-        document.addEventListener("fullscreenchange", () => {
-          updateMapExpandButton();
-          invalidateRunningMap();
-          if (!state.selectedDistrict) {
-            window.setTimeout(fitStatewideBounds, 120);
-          }
-        });
-        document.addEventListener("webkitfullscreenchange", () => {
-          updateMapExpandButton();
-          invalidateRunningMap();
-          if (!state.selectedDistrict) {
-            window.setTimeout(fitStatewideBounds, 120);
-          }
-        });
+      visibleDistricts = Object.keys(chamberData).filter(d => {
+        const rec = chamberData[d];
+        if(!matchesFilter(rec)) return false;
+        if(!query) return true;
+        if(String(d).includes(query)) return true;
+        return [...(rec.candidates || []), ...(rec.general_candidates || [])]
+          .some(c => String(c.name || "").toLowerCase().includes(query));
+      });
 
-        document.querySelectorAll("[data-filter]").forEach(button => {
-          button.classList.toggle("active", button.dataset.filter === state.mapFilter);
-          button.addEventListener("click", () => {
-            state.mapFilter = button.dataset.filter;
-            document.querySelectorAll("[data-filter]").forEach(btn => btn.classList.toggle("active", btn.dataset.filter === state.mapFilter));
-            renderMap();
-          });
-        });
+      document.getElementById("districtList").innerHTML = visibleDistricts.map(d => `
+        <button type="button" data-district="${esc(d)}" class="${String(d)===String(selectedDistrict) ? "active" : ""}">${esc(d)}</button>
+      `).join("");
 
-        const demCard = document.getElementById("detailDemCard");
-        const repCard = document.getElementById("detailRepCard");
-        const attachCardToggle = (card, code) => {
-          if (!card) return;
-          const toggle = () => {
-            if (!state.selectedDistrict) return;
-            const record = getDistrictData(state.chamber, state.selectedDistrict);
-            const hasCandidates = code === "DEM" ? getPartyCandidates(record, "DEM").length : getPartyCandidates(record, "REP").length;
-            if (!hasCandidates) return;
-            state.partyFocus = state.partyFocus === code ? "all" : code;
-            refreshSelectedDistrictView();
-          };
-          card.addEventListener("click", toggle);
-          card.addEventListener("keydown", event => {
-            if (event.key === "Enter" || event.key === " ") {
-              event.preventDefault();
-              toggle();
-            }
-          });
+      document.querySelectorAll("[data-district]").forEach(btn => {
+        btn.addEventListener("click", () => selectDistrict(btn.dataset.district, true));
+      });
+    }
+
+    function renderDetails(){
+      const rec = getRecord(selectedDistrict);
+      const title = `${chamber === "house" ? "House" : "Senate"} District ${selectedDistrict}`;
+      document.getElementById("districtTitle").textContent = title;
+      document.getElementById("compareTitle").textContent = title;
+
+      if(!rec){
+        document.getElementById("districtSummary").textContent = "No current filing record is available for this district.";
+        document.getElementById("primarySummary").innerHTML = "";
+        document.getElementById("candidateGrid").innerHTML = `<div class="empty">No candidates currently listed.</div>`;
+        return;
+      }
+
+      const c = counts(rec);
+      document.getElementById("districtSummary").textContent =
+        `${c.total} primary candidate${c.total === 1 ? "" : "s"} currently listed. ${rec.general_candidate_total || 0} general-election candidate${Number(rec.general_candidate_total||0)===1 ? "" : "s"} currently preserved in the dataset.`;
+
+      const boxes = [];
+      if(c.dem > 1){
+        boxes.push(`<div class="primary-box dem"><strong>Competitive Democratic primary</strong><span>${rec.candidates.filter(x=>x.party==="DEM").map(x=>esc(x.name)).join(" vs ")}</span></div>`);
+      } else if(c.dem === 1){
+        boxes.push(`<div class="primary-box dem"><strong>Democratic filing</strong><span>${esc(rec.candidates.find(x=>x.party==="DEM").name)}</span></div>`);
+      }
+
+      if(c.rep > 1){
+        boxes.push(`<div class="primary-box rep"><strong>Competitive Republican primary</strong><span>${rec.candidates.filter(x=>x.party==="REP").map(x=>esc(x.name)).join(" vs ")}</span></div>`);
+      } else if(c.rep === 1){
+        boxes.push(`<div class="primary-box rep"><strong>Republican filing</strong><span>${esc(rec.candidates.find(x=>x.party==="REP").name)}</span></div>`);
+      }
+
+      if(!boxes.length){
+        boxes.push(`<div class="primary-box"><strong>No active major-party primary</strong><span>No Democratic or Republican primary candidate is currently listed in this district.</span></div>`);
+      }
+      document.getElementById("primarySummary").innerHTML = boxes.join("");
+
+      const candidates = rec.candidates || [];
+      document.getElementById("candidateGrid").innerHTML = candidates.length
+        ? candidates.map(cand => candidateCard(cand, selectedDistrict)).join("")
+        : `<div class="empty">No primary candidates are currently listed for this district.</div>`;
+    }
+
+    async function selectDistrict(district, updateUrl=false){
+      selectedDistrict = String(district);
+      renderDistrictList();
+      renderDetails();
+      if(layer) layer.setStyle(feature => {
+        const d = districtNumberFromFeature(feature);
+        const rec = d ? getRecord(d) : null;
+        const visible = rec && matchesFilter(rec);
+        return {
+          color: String(d) === String(selectedDistrict) ? "#0b1738" : "#ffffff",
+          weight: String(d) === String(selectedDistrict) ? 4 : 1.2,
+          fillColor: rec ? districtColor(rec) : "#cbd5e1",
+          fillOpacity: visible ? .58 : .10
         };
-        attachCardToggle(demCard, "DEM");
-        attachCardToggle(repCard, "REP");
-
-        renderMap();
-        setSourceNote();
-        updateMapExpandButton();
-      } catch (error) {
-        const card = document.getElementById("loadingCard");
-        if (card) {
-          card.innerHTML = `Could not load the filing map.<br/><span style="display:block;margin-top:8px;font-size:13px;color:#64748b;font-weight:700;">${error.message}</span>`;
-        }
-        console.error(error);
+      });
+      if(updateUrl){
+        const params = new URLSearchParams(location.search);
+        params.set("chamber", chamber);
+        params.set("district", selectedDistrict);
+        history.replaceState({}, "", `${location.pathname}?${params.toString()}`);
       }
+      document.getElementById("comparePanel").scrollIntoView({behavior:"smooth",block:"start"});
     }
 
-    boot();
+    async function setChamber(next){
+      chamber = next;
+      document.getElementById("houseBtn").classList.toggle("active", chamber==="house");
+      document.getElementById("senateBtn").classList.toggle("active", chamber==="senate");
+
+      const max = chamber === "house" ? 75 : 38;
+      if(Number(selectedDistrict) > max) selectedDistrict = "1";
+      renderDistrictList();
+      renderDetails();
+      await drawMap();
+    }
+
+    function initEvents(){
+      document.getElementById("houseBtn").addEventListener("click",()=>setChamber("house"));
+      document.getElementById("senateBtn").addEventListener("click",()=>setChamber("senate"));
+      document.getElementById("districtSearch").addEventListener("input",renderDistrictList);
+
+      document.querySelectorAll("[data-filter]").forEach(btn=>{
+        btn.addEventListener("click",async()=>{
+          document.querySelectorAll("[data-filter]").forEach(x=>x.classList.remove("active"));
+          btn.classList.add("active");
+          filter = btn.dataset.filter;
+          renderDistrictList();
+          await drawMap();
+        });
+      });
+    }
+
+    async function init(){
+      map = L.map("map",{zoomControl:true}).setView([41.68,-71.57],9);
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{
+        maxZoom:18,opacity:.42,attribution:"&copy; OpenStreetMap contributors"
+      }).addTo(map);
+
+      const [running, profilePayload] = await Promise.all([
+        fetch(DATA_URL,{cache:"no-store"}).then(r=>r.json()),
+        fetch(PROFILE_URL,{cache:"no-store"}).then(r=>r.json())
+      ]);
+      data = running;
+      profiles = new Map((profilePayload?.profiles || []).map(p=>[p.candidate_id,p]));
+
+      const params = new URLSearchParams(location.search);
+      const requestedChamber = params.get("chamber");
+      const requestedDistrict = params.get("district");
+      if(["house","senate"].includes(requestedChamber)) chamber = requestedChamber;
+      if(requestedDistrict) selectedDistrict = requestedDistrict;
+
+      initEvents();
+      document.getElementById("houseBtn").classList.toggle("active", chamber==="house");
+      document.getElementById("senateBtn").classList.toggle("active", chamber==="senate");
+      renderDistrictList();
+      renderDetails();
+      await drawMap();
+    }
+
+    init().catch(err=>{
+      console.error(err);
+      document.getElementById("districtSummary").textContent = "The race data could not be loaded. Please refresh the page.";
+    });
+  })();
   </script>
-  <script src="phase1-voter-flow.js" defer></script>
 </body>
 </html>
