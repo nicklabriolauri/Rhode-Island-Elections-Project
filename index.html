@@ -2,479 +2,3321 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Rhode Island Elections Project | Rhode Island Elections</title>
+  <title>Rhode Island Elections Project | Rhode Island Election Results, Turnout, and Precinct Maps</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="A data-driven guide to Rhode Island elections, candidates, campaign finance, precincts, and election results." />
+  <meta name="description" content="The Rhode Island Elections Project: a data-driven guide to Rhode Island election results, turnout maps, precinct lookup, and district-level election tools." />
+  <meta name="application-name" content="Rhode Island Elections Project" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://www.rhodeislandelectionsproject.org/" />
+  <meta property="og:title" content="Rhode Island Elections Project | Rhode Island Election Results, Turnout, and Precinct Maps" />
+  <meta property="og:description" content="The Rhode Island Elections Project, featuring interactive election results, turnout maps, precinct tools, and district-level election guidance." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.rhodeislandelectionsproject.org/" />
+  <meta property="og:site_name" content="Rhode Island Elections Project" />
+  <meta property="og:image" content="https://www.rhodeislandelectionsproject.org/riep-logo-light.png?v=20260628" />
+  <meta property="og:image:secure_url" content="https://www.rhodeislandelectionsproject.org/riep-logo-light.png?v=20260628" />
+  <meta property="og:image:width" content="1536" />
+  <meta property="og:image:height" content="1024" />
+  <meta property="og:image:alt" content="Rhode Island Elections Project logo" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rhode Island Elections Project" />
+  <meta name="twitter:description" content="The Rhode Island Elections Project: election results, turnout maps, and precinct data all in one place." />
+  <meta name="twitter:image" content="https://www.rhodeislandelectionsproject.org/riep-logo-light.png?v=20260628" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="prefetch" href="/map.html" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.rhodeislandelectionsproject.org/#organization",
+        "name": "Rhode Island Elections Project",
+        "alternateName": "RIEP",
+        "url": "https://www.rhodeislandelectionsproject.org/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.rhodeislandelectionsproject.org/riep-logo-light.png?v=20260628"
+        },
+        "description": "A nonpartisan public-facing civic data project focused on Rhode Island election results, turnout, precinct information, and legislative representation."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.rhodeislandelectionsproject.org/#website",
+        "url": "https://www.rhodeislandelectionsproject.org/",
+        "name": "Rhode Island Elections Project",
+        "alternateName": "RIEP",
+        "description": "The Rhode Island Elections Project: a data-driven guide to Rhode Island election results, turnout maps, precinct lookup, and district-level election tools.",
+        "publisher": {
+          "@id": "https://www.rhodeislandelectionsproject.org/#organization"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.rhodeislandelectionsproject.org/#webpage",
+        "url": "https://www.rhodeislandelectionsproject.org/",
+        "name": "Rhode Island Elections Project",
+        "description": "The Rhode Island Elections Project, featuring interactive election results, turnout maps, precinct tools, and district-level election guidance.",
+        "isPartOf": {
+          "@id": "https://www.rhodeislandelectionsproject.org/#website"
+        },
+        "about": {
+          "@id": "https://www.rhodeislandelectionsproject.org/#organization"
+        }
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <style>
-    :root{
-      --bg1:#0e1632;
-      --bg2:#152149;
-      --bg3:#0b132b;
-      --text:#f8fafc;
-      --muted:rgba(248,250,252,.72);
-      --line:rgba(255,255,255,.13);
-      --panel:rgba(255,255,255,.055);
-      --blue:#2b50d9;
-      --cyan:#a5f3fc;
-      --shadow:0 28px 64px rgba(5,10,28,.34);
+    :root {
+      --bg-1: #0e1632;
+      --bg-2: #152149;
+      --bg-3: #0b132b;
+      --text: #f8fafc;
+      --muted: rgba(248,250,252,0.72);
+      --muted-2: rgba(248,250,252,0.52);
+      --line: rgba(255,255,255,0.12);
+      --panel: rgba(255,255,255,0.05);
+      --panel-2: rgba(255,255,255,0.07);
+      --blue: #2b50d9;
+      --blue-dark: #203aa7;
+      --shadow: 0 28px 64px rgba(5, 10, 28, 0.34);
     }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      min-height:100vh;
-      font-family:"Instrument Sans",sans-serif;
-      color:var(--text);
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Instrument Sans", sans-serif;
+      color: var(--text);
+      overflow-x: hidden;
       background:
-        radial-gradient(circle at 14% 8%,rgba(104,136,255,.18),transparent 20%),
-        radial-gradient(circle at 86% 10%,rgba(255,255,255,.05),transparent 18%),
-        linear-gradient(160deg,var(--bg1),var(--bg2) 54%,var(--bg3));
+        radial-gradient(circle at 14% 8%, rgba(104, 136, 255, 0.18), transparent 20%),
+        radial-gradient(circle at 86% 10%, rgba(255,255,255,0.05), transparent 18%),
+        linear-gradient(160deg, var(--bg-1) 0%, var(--bg-2) 54%, var(--bg-3) 100%);
     }
-    a{color:inherit}
-    .shell{width:min(1200px,calc(100% - 56px));margin:auto;padding:30px 0 44px}
-    .topbar{display:grid;gap:18px;margin-bottom:28px}
-    .brand{display:flex;align-items:center;gap:18px}
-    .brand img{width:145px;height:84px;object-fit:contain}
-    .brand-tag{display:inline-flex;padding:6px 12px;border-radius:999px;border:1px solid rgba(191,219,254,.18);background:rgba(255,255,255,.06);color:rgba(226,232,240,.82);font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
-    .brand h1{font-family:Sora,sans-serif;font-size:30px;line-height:1.04;letter-spacing:-.055em;margin:8px 0 0}
-    .brand p{margin:8px 0 0;color:var(--muted);font-size:15px}
-    .navrow{display:flex;gap:10px;justify-content:space-between;align-items:center;flex-wrap:wrap}
-    nav{display:flex;gap:9px;flex-wrap:wrap}
-    nav a{
-      text-decoration:none;border:1px solid rgba(255,255,255,.16);border-radius:999px;
-      padding:10px 15px;font-size:12px;font-weight:800;background:rgba(255,255,255,.04)
+
+    .shell {
+      width: min(1200px, calc(100% - 56px));
+      margin: 0 auto;
+      padding: 34px 0 44px 0;
     }
-    nav a:hover{background:rgba(255,255,255,.1)}
-    .view-toggle{display:inline-flex;gap:4px;padding:4px;border:1px solid rgba(255,255,255,.16);border-radius:999px;background:rgba(255,255,255,.04)}
-    .view-toggle button{border:0;background:transparent;color:rgba(248,250,252,.78);padding:9px 12px;border-radius:999px;font:inherit;font-size:12px;font-weight:800;cursor:pointer}
-    .view-toggle button.active{background:white;color:var(--bg1)}
-    .hero{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:34px;background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.05));box-shadow:var(--shadow);padding:38px}
-    .hero-copy{text-align:center;max-width:940px;margin:auto}
-    .eyebrow{display:inline-flex;padding:7px 14px;border:1px solid rgba(191,219,254,.18);border-radius:999px;background:rgba(255,255,255,.06);color:rgba(226,232,240,.88);font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
-    .hero h2{margin:20px auto 14px;font-family:Sora,sans-serif;font-size:clamp(46px,7vw,74px);line-height:.94;letter-spacing:-.08em}
-    .ocean-line{width:110px;height:4px;border-radius:999px;margin:22px auto;background:linear-gradient(90deg,#ef4444,#f8fafc,#3b82f6)}
-    .summary{max-width:650px;margin:0 auto 24px;color:var(--muted);font-size:17px;line-height:1.55}
-    .hero-search{max-width:940px;margin:0 auto 24px;padding:18px;border:1px solid rgba(191,219,254,.18);border-radius:28px;background:linear-gradient(180deg,rgba(191,219,254,.12),rgba(255,255,255,.04));box-shadow:0 18px 40px rgba(5,10,28,.16);text-align:left}
-    .hero-search-head{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:14px}
-    .hero-search-head strong{display:block;font-size:17px}
-    .hero-search-head span{display:block;margin-top:4px;color:rgba(241,245,249,.72);font-size:13px}
-    .search-toggle{display:inline-flex;gap:6px;padding:4px;border-radius:999px;background:rgba(15,23,42,.22);border:1px solid rgba(191,219,254,.16)}
-    .search-toggle button{border:0;background:transparent;color:rgba(241,245,249,.78);min-height:38px;padding:0 14px;border-radius:999px;font:inherit;font-size:12px;font-weight:800;cursor:pointer}
-    .search-toggle button.active{background:rgba(224,242,254,.96);color:#0f172a}
-    .search-form{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px}
-    .search-input{width:100%;min-height:56px;padding:0 18px;border-radius:18px;border:1px solid rgba(191,219,254,.18);background:rgba(255,255,255,.95);color:#0f172a;font:inherit;font-size:16px;font-weight:600;outline:none}
-    .search-input:focus{border-color:rgba(96,165,250,.62);box-shadow:0 0 0 4px rgba(96,165,250,.16)}
-    .search-submit{border:0;min-height:56px;padding:0 20px;border-radius:18px;background:linear-gradient(135deg,#93c5fd,#bae6fd);color:#082f49;font:inherit;font-size:15px;font-weight:900;cursor:pointer}
-    .search-hint{margin:10px 2px 0;color:rgba(226,232,240,.66);font-size:12px}
-    .results{display:grid;gap:12px;margin-top:14px}.results[hidden]{display:none!important}
-    .status{padding:12px 14px;border:1px solid rgba(191,219,254,.18);border-radius:16px;background:rgba(15,23,42,.18);font-size:13px}.status.error{background:rgba(127,29,29,.18);color:#fee2e2}
-    .result-panel{padding:18px;border:1px solid rgba(191,219,254,.18);border-radius:24px;background:rgba(255,255,255,.96);color:#0f172a;box-shadow:0 18px 36px rgba(15,23,42,.12)}
-    .result-title{font-family:Sora,sans-serif;font-size:30px;letter-spacing:-.05em;margin:0}
-    .result-sub{color:#475569;margin:8px 0 0;font-size:14px;line-height:1.55}
-    .candidate-list{display:grid;gap:10px;margin-top:14px}
-    .candidate-card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;padding:14px;border:1px solid #dbeafe;border-radius:18px;background:#f8fafc}
-    .candidate-name{font-size:18px;font-weight:800;margin:0}.candidate-meta{margin:6px 0 0;color:#475569;font-size:13px}
-    .candidate-status{display:inline-flex;margin-top:9px;padding:5px 9px;border:1px solid #bfdbfe;border-radius:999px;background:#eff6ff;color:#1d4ed8;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.07em}
-    .actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
-    .action{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:0 14px;border:1px solid #cbd5e1;border-radius:999px;text-decoration:none;font-size:12px;font-weight:900;color:#0f172a;background:#f8fafc}
-    .action.primary{background:linear-gradient(135deg,#2563eb,#1d4ed8);color:white;border-color:transparent}
-    .action.finance{background:linear-gradient(135deg,#cffafe,#e0f2fe);border-color:#a5e3f2}
-    .chiprow{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.chip{padding:7px 10px;border-radius:999px;background:#f8fafc;border:1px solid #dbeafe;color:#334155;font-size:12px;font-weight:700}
-    .address-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
-    .cta-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin:0 auto 18px}
-    .cta{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 22px;border-radius:999px;text-decoration:none;color:white;font-size:14px;font-weight:800;box-shadow:0 14px 28px rgba(43,80,217,.25)}
-    .cta.races{background:linear-gradient(135deg,#7c3aed,#5b21b6)}.cta.maps{background:linear-gradient(135deg,#0f766e,#0f9e8f)}.cta.finance{background:linear-gradient(135deg,#0f766e,#14b8a6,#67e8f9)}.cta.precinct{background:linear-gradient(135deg,#2b50d9,#203aa7)}
-    .below{margin-top:18vh;display:grid;gap:18px}
-    .section{border:1px solid rgba(191,219,254,.22);border-radius:28px;background:linear-gradient(180deg,rgba(255,255,255,.11),rgba(255,255,255,.07));box-shadow:0 22px 48px rgba(5,10,28,.18);padding:26px 28px}
-    .section h3{font-family:Sora,sans-serif;font-size:30px;letter-spacing:-.05em;margin:0}.section p{color:rgba(241,245,249,.78);font-size:15px;line-height:1.58}
-    .news-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:20px}
-    .news-card{display:grid;gap:9px;padding:17px;border:1px solid rgba(191,219,254,.22);border-radius:22px;background:linear-gradient(180deg,rgba(147,197,253,.12),rgba(191,219,254,.08));text-decoration:none;min-height:165px}
-    .news-source{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(226,232,240,.72)}.news-title{font-family:Sora,sans-serif;font-size:19px;line-height:1.13}.news-date{margin-top:auto;color:rgba(226,232,240,.7);font-size:11px}
-    .footer{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.66);font-size:13px;line-height:1.55}
-    @media(max-width:800px){.shell{width:min(100% - 28px,1200px)}.hero{padding:24px}.hero-search-head{align-items:stretch;flex-direction:column}.search-form{grid-template-columns:1fr}.candidate-card{grid-template-columns:1fr}.actions{justify-content:flex-start}.news-grid{grid-template-columns:1fr}.below{margin-top:24px}.navrow{align-items:flex-start}.brand{align-items:flex-start}.brand img{width:120px;height:72px}}
-  
-    /* Phase 1 homepage Campaign Finance CTA: cyan/teal */
-    #voterCtas .cta.finance {
-      background: linear-gradient(135deg, #16b8ad 0%, #58d9e7 100%) !important;
-      color: #ffffff !important;
-      border-color: rgba(122, 239, 244, 0.78) !important;
-      box-shadow: 0 16px 34px rgba(20, 184, 181, 0.24) !important;
+
+    .topbar {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 18px;
+      margin-bottom: 34px;
     }
-    #voterCtas .cta.finance:hover,
-    #voterCtas .cta.finance:focus-visible {
-      filter: brightness(1.07);
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      min-width: 0;
+    }
+
+    .brand-mark-wrap {
+      position: relative;
+      width: 156px;
+      height: 92px;
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      isolation: isolate;
+    }
+
+    .brand-mark-wrap::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 12px;
+      width: 86px;
+      height: 64px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(191,219,254,0.34) 0%, rgba(96,165,250,0.16) 44%, rgba(96,165,250,0) 74%);
+      opacity: 0;
+      filter: blur(3px);
+      animation: lighthouseGlow 2.5s ease-out .08s 1;
+      pointer-events: none;
+    }
+
+    .brand-mark-wrap::after {
+      content: "";
+      position: absolute;
+      left: 56px;
+      top: 20px;
+      width: 176px;
+      height: 60px;
+      opacity: 0;
+      pointer-events: none;
+      transform-origin: 0 50%;
+      clip-path: polygon(0 46%, 100% 0, 100% 100%, 0 54%);
+      background: linear-gradient(90deg, rgba(251,191,36,0.58) 0%, rgba(254,240,138,0.26) 44%, rgba(255,255,255,0) 100%);
+      filter: blur(5px);
+      animation: lighthouseSweep 2.35s ease-in-out .16s 1;
+    }
+
+    .brand-mark {
+      width: 144px;
+      height: 84px;
+      object-fit: contain;
+      flex: 0 0 auto;
+      filter: drop-shadow(0 12px 30px rgba(5, 10, 28, 0.2));
+      position: relative;
+      z-index: 1;
+      animation: lighthouseSettle .9s ease-out .05s both;
+    }
+
+    .brand-copy h1 {
+      margin: 0;
+      font-family: "Sora", sans-serif;
+      font-size: 30px;
+      line-height: 1.04;
+      letter-spacing: -0.055em;
+    }
+
+    .brand-tagline {
+      display: inline-flex;
+      align-items: center;
+      margin: 0 0 8px 0;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(191,219,254,0.18);
+      color: rgba(226,232,240,0.82);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .brand-copy p {
+      margin: 8px 0 0 0;
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .site-nav {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .view-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 10px 24px rgba(5,10,28,0.14);
+      flex: 0 0 auto;
+    }
+
+    .view-toggle button {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: rgba(248,250,252,0.78);
+      padding: 9px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background .15s ease, color .15s ease, transform .15s ease, box-shadow .15s ease;
+    }
+
+    .view-toggle button:hover {
+      color: white;
+    }
+
+    .view-toggle button.active {
+      background: white;
+      color: var(--bg-1);
+      box-shadow: 0 8px 20px rgba(5,10,28,0.14);
+    }
+
+    .site-nav a {
+      white-space: nowrap;
+      color: white;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 999px;
+      padding: 10px 15px;
+      font-size: 12px;
+      font-weight: 700;
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(8px);
+    }
+
+    .site-nav a:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .social-links {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      flex: 0 0 auto;
+    }
+
+    .social-link {
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.04);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      backdrop-filter: blur(8px);
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    }
+
+    .social-link:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(191,219,254,0.42);
       transform: translateY(-1px);
     }
 
-</style>
+    .social-link svg {
+      width: 18px;
+      height: 18px;
+      display: block;
+      fill: currentColor;
+    }
+
+    .social-link.linkedin {
+      background: linear-gradient(180deg, rgba(14,118,168,0.28) 0%, rgba(14,118,168,0.18) 100%);
+      border-color: rgba(125,211,252,0.34);
+      color: #f8fbff;
+      box-shadow: 0 10px 24px rgba(14,118,168,0.18);
+    }
+
+    .social-link.linkedin:hover {
+      background: linear-gradient(180deg, rgba(14,118,168,0.38) 0%, rgba(14,118,168,0.24) 100%);
+      border-color: rgba(125,211,252,0.48);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: 34px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.05) 100%);
+      box-shadow: var(--shadow);
+      padding: 38px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      left: -80px;
+      bottom: -100px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(84, 123, 255, 0.16), rgba(84, 123, 255, 0));
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: block;
+    }
+
+    .hero-copy {
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: var(--muted-2);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-weight: 800;
+    }
+
+    .eyebrow.is-home {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(191,219,254,0.18);
+      color: rgba(226,232,240,0.88);
+      box-shadow: 0 12px 24px rgba(5,10,28,0.12);
+    }
+
+    .hero-copy h2 {
+      margin: 18px auto 14px auto;
+      max-width: 880px;
+      font-family: "Sora", sans-serif;
+      font-size: 74px;
+      line-height: 0.94;
+      letter-spacing: -0.08em;
+    }
+
+    .hero-copy h2 span {
+      display: block;
+    }
+
+    .hero-line-text {
+      display: inline-block;
+      opacity: 0;
+      clip-path: inset(0 100% 0 0);
+      transform: translateY(10px);
+      animation: heroWrite 1.25s cubic-bezier(.22,1,.36,1) forwards;
+    }
+
+    .hero-copy h2 span:nth-child(2) .hero-line-text {
+      animation-delay: .2s;
+    }
+
+    .summary {
+      max-width: 560px;
+      margin: 0 auto 24px auto;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: heroRise .9s ease forwards;
+      animation-delay: .22s;
+    }
+
+    .summary-helper {
+      max-width: 620px;
+      margin: -10px auto 24px auto;
+      color: rgba(241,245,249,0.68);
+      font-size: 14px;
+      line-height: 1.55;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: heroRise .9s ease forwards;
+      animation-delay: .26s;
+    }
+
+    .hero-search {
+      max-width: 940px;
+      margin: 0 auto 24px auto;
+      padding: 18px;
+      border-radius: 28px;
+      border: 1px solid rgba(191,219,254,0.18);
+      background: linear-gradient(180deg, rgba(191,219,254,0.12) 0%, rgba(255,255,255,0.04) 100%);
+      box-shadow: 0 18px 40px rgba(5,10,28,0.16);
+      opacity: 0;
+      transform: translateY(16px);
+      animation: heroRise .9s ease forwards;
+      animation-delay: .3s;
+    }
+
+    .hero-search-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 14px;
+      text-align: left;
+    }
+
+    .hero-search-copy {
+      min-width: 0;
+    }
+
+    .hero-search-copy strong {
+      display: block;
+      color: white;
+      font-size: 17px;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+
+    .hero-search-copy span {
+      color: rgba(241,245,249,0.72);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .hero-search-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.22);
+      border: 1px solid rgba(191,219,254,0.16);
+      flex: 0 0 auto;
+    }
+
+    .hero-search-toggle button {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: rgba(241,245,249,0.78);
+      min-height: 38px;
+      padding: 0 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      transition: background .15s ease, color .15s ease;
+    }
+
+    .hero-search-toggle button.active {
+      background: rgba(224,242,254,0.96);
+      color: #0f172a;
+      box-shadow: 0 10px 22px rgba(125,211,252,0.18);
+    }
+
+    .hero-search-form {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .hero-search-input-wrap {
+      position: relative;
+      min-width: 0;
+    }
+
+    .hero-search-input {
+      width: 100%;
+      min-height: 56px;
+      padding: 0 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(191,219,254,0.18);
+      background: rgba(255,255,255,0.94);
+      color: #0f172a;
+      font: inherit;
+      font-size: 16px;
+      font-weight: 600;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+    }
+
+    .hero-search-input::placeholder {
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .hero-search-input:focus {
+      outline: none;
+      border-color: rgba(96,165,250,0.62);
+      box-shadow: 0 0 0 4px rgba(96,165,250,0.16);
+    }
+
+    .hero-search-submit {
+      appearance: none;
+      border: 0;
+      min-height: 56px;
+      padding: 0 20px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #93c5fd 0%, #bae6fd 100%);
+      color: #082f49;
+      font: inherit;
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      cursor: pointer;
+      box-shadow: 0 16px 30px rgba(125,211,252,0.22);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+
+    .hero-search-submit:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 20px 36px rgba(125,211,252,0.26);
+    }
+
+    .hero-search-hint {
+      margin: 10px 2px 0 2px;
+      color: rgba(226,232,240,0.66);
+      font-size: 12px;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    .hero-search-results {
+      display: grid;
+      gap: 12px;
+      margin-top: 14px;
+      text-align: left;
+    }
+
+    .hero-search-results[hidden] {
+      display: none !important;
+    }
+
+    .hero-search-status {
+      padding: 12px 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(191,219,254,0.18);
+      background: rgba(15,23,42,0.18);
+      color: rgba(241,245,249,0.84);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .hero-search-status.error {
+      border-color: rgba(252,165,165,0.2);
+      background: rgba(127,29,29,0.18);
+      color: #fee2e2;
+    }
+
+    .hero-search-overview {
+      padding: 18px 18px 16px;
+      border-radius: 24px;
+      border: 1px solid rgba(191,219,254,0.18);
+      background: rgba(255,255,255,0.94);
+      color: #0f172a;
+      box-shadow: 0 18px 36px rgba(15,23,42,0.12);
+    }
+
+    .hero-search-overview-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .hero-search-kicker {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 0 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(96,165,250,0.24);
+      background: #eff6ff;
+      color: #1d4ed8;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex: 0 0 auto;
+    }
+
+    .hero-search-title {
+      margin: 0;
+      font-family: "Sora", sans-serif;
+      font-size: 30px;
+      line-height: 1;
+      letter-spacing: -0.05em;
+      color: #0f172a;
+    }
+
+    .hero-search-subtitle {
+      margin: 8px 0 0 0;
+      color: #475569;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .hero-search-chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0 0 0;
+    }
+
+    .hero-search-chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 0 11px;
+      border-radius: 999px;
+      background: #f8fafc;
+      border: 1px solid #dbeafe;
+      color: #334155;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .hero-search-action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .hero-search-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 0 14px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.01em;
+      border: 1px solid #cbd5e1;
+      background: #f8fafc;
+      color: #0f172a;
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+    }
+
+    .hero-search-action:hover {
+      transform: translateY(-1px);
+      border-color: #93c5fd;
+      box-shadow: 0 10px 20px rgba(96,165,250,0.16);
+    }
+
+    .hero-search-action.primary {
+      border-color: transparent;
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+      color: white;
+      box-shadow: 0 14px 28px rgba(37,99,235,0.2);
+    }
+
+    .hero-search-action.finance {
+      background: linear-gradient(135deg, #cffafe 0%, #e0f2fe 100%);
+      border-color: rgba(125,211,252,0.44);
+      color: #0f172a;
+    }
+
+    .hero-search-action.compare {
+      background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
+      border-color: rgba(139, 92, 246, 0.28);
+      color: #312e81;
+      box-shadow: 0 10px 20px rgba(124, 58, 237, 0.12);
+    }
+
+    .hero-search-match-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .hero-search-match {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 14px 14px 12px;
+      border-radius: 18px;
+      background: #f8fafc;
+      border: 1px solid #dbeafe;
+    }
+
+    .hero-search-match.is-clickable {
+      cursor: pointer;
+      transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+    }
+
+    .hero-search-match.is-clickable:hover,
+    .hero-search-match.is-clickable:focus-visible {
+      background: linear-gradient(180deg, #fbfdff 0%, #f1f7ff 100%);
+      border-color: #93c5fd;
+      box-shadow: 0 14px 28px rgba(37, 99, 235, 0.1);
+      outline: none;
+      transform: translateY(-1px);
+    }
+
+    .hero-search-match-main {
+      display: block;
+      min-width: 0;
+      text-decoration: none;
+      border-radius: 14px;
+      transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+    }
+
+    .hero-search-match-main:hover,
+    .hero-search-match-main:focus-visible {
+      background: rgba(219, 234, 254, 0.34);
+      box-shadow: 0 10px 22px rgba(37, 99, 235, 0.08);
+      outline: none;
+      transform: translateY(-1px);
+    }
+
+    .hero-search-match-copy {
+      min-width: 0;
+    }
+
+    .hero-search-match-name {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.15;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .hero-search-match-meta {
+      margin: 6px 0 0 0;
+      color: #475569;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .hero-search-match-statuses {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 10px 0 0 0;
+    }
+
+    .hero-search-match-status {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 0 10px;
+      border-radius: 999px;
+      border: 1px solid #dbeafe;
+      background: #eff6ff;
+      color: #1d4ed8;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero-search-match-status.is-incumbent {
+      border-color: rgba(37, 99, 235, 0.24);
+      background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+      color: #1d4ed8;
+    }
+
+    .hero-search-match-status.is-history {
+      border-color: rgba(168, 85, 247, 0.22);
+      background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+      color: #6d28d9;
+    }
+
+    .hero-search-match-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .hero-search-result-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .hero-search-result-card {
+      display: block;
+      padding: 12px 13px;
+      border-radius: 18px;
+      border: 1px solid #dbeafe;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.82);
+      text-decoration: none;
+    }
+
+    .hero-search-result-card.is-link {
+      cursor: pointer;
+      transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+    }
+
+    .hero-search-result-card.is-link:hover,
+    .hero-search-result-card.is-link:focus-visible {
+      transform: translateY(-1px);
+      border-color: #93c5fd;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.82), 0 10px 22px rgba(37, 99, 235, 0.12);
+      outline: none;
+    }
+
+    .hero-search-result-label {
+      color: #64748b;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .hero-search-result-value {
+      margin-top: 5px;
+      color: #0f172a;
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .hero-search-result-copy {
+      margin-top: 5px;
+      color: #475569;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .hero-search-address-card {
+      min-height: 100%;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 28px;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: heroRise .9s ease forwards;
+      animation-delay: .32s;
+    }
+
+    .feature-tools {
+      display: grid;
+      gap: 14px;
+      margin-top: 8px;
+    }
+
+    .feature-toggle {
+      appearance: none;
+      margin: 0 auto;
+      border: 1px solid rgba(191,219,254,0.18);
+      background: rgba(255,255,255,0.05);
+      color: rgba(248,250,252,0.9);
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: heroRise .9s ease forwards;
+      animation-delay: .36s;
+      transition: background .15s ease, border-color .15s ease, transform .15s ease;
+    }
+
+    .feature-toggle:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(191,219,254,0.3);
+      transform: translateY(-1px);
+    }
+
+    .feature-panel {
+      display: grid;
+    }
+
+    .feature-kicker {
+      margin: 0 auto 12px auto;
+      color: rgba(226,232,240,0.72);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: heroRise .9s ease forwards;
+      animation-delay: .37s;
+    }
+
+    .feature-row {
+      max-width: 940px;
+      margin: 0 auto 22px auto;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: heroRise .9s ease forwards;
+      animation-delay: .4s;
+    }
+
+    .feature-card {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      min-width: 0;
+      width: 100%;
+      padding: 0 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0;
+      border: 1px solid rgba(214,224,255,0.18);
+      background: linear-gradient(180deg, rgba(255,255,255,0.065) 0%, rgba(255,255,255,0.04) 100%);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+      transition: transform .15s ease, border-color .15s ease, background .15s ease, color .15s ease, box-shadow .15s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(191,219,254,0.32);
+      background: linear-gradient(180deg, rgba(255,255,255,0.085) 0%, rgba(255,255,255,0.055) 100%);
+      box-shadow: 0 14px 28px rgba(5,10,28,0.12);
+    }
+
+    .feature-card::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      margin-right: 10px;
+      background: rgba(255,255,255,0.58);
+      box-shadow: 0 0 0 4px rgba(255,255,255,0.04);
+      flex: 0 0 auto;
+    }
+
+    .feature-card.uncontested::before {
+      background: #f59e0b;
+    }
+
+    .feature-card.turnout::before {
+      background: #38bdf8;
+    }
+
+    .feature-card.gender::before {
+      background: #60a5fa;
+    }
+
+    .feature-card.competitiveness::before {
+      background: #f87171;
+    }
+
+    .feature-card.source::before {
+      background: #93c5fd;
+    }
+
+    .feature-card.geometry::before {
+      background: #c4b5fd;
+    }
+
+    .feature-card.datafile::before {
+      background: #fca5a5;
+    }
+
+    .feature-card.workbook::before {
+      background: #fde68a;
+    }
+
+    .feature-note {
+      margin: -4px auto 20px auto;
+      max-width: 980px;
+      text-align: center;
+      align-items: center;
+      color: rgba(248,250,252,0.62);
+      font-size: 14px;
+      line-height: 1.45;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: heroRise .9s ease forwards;
+      animation-delay: .43s;
+    }
+
+    .finance-spotlight {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 14px;
+      align-items: center;
+      max-width: 820px;
+      margin: 0 auto 12px auto;
+      padding: 14px 16px;
+      border-radius: 22px;
+      border: 1px solid rgba(125, 211, 252, 0.24);
+      background: linear-gradient(135deg, rgba(224,242,254,0.16) 0%, rgba(186,230,253,0.1) 100%);
+      box-shadow: 0 18px 34px rgba(5,10,28,0.12);
+      opacity: 0;
+      transform: translateY(16px);
+      animation: heroRise .9s ease forwards;
+      animation-delay: .35s;
+    }
+
+    .finance-spotlight-copy {
+      text-align: left;
+      min-width: 0;
+    }
+
+    .finance-spotlight-kicker {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(125,211,252,0.26);
+      background: rgba(224,242,254,0.86);
+      color: #0c4a6e;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .finance-spotlight-title {
+      margin: 8px 0 4px 0;
+      font-family: "Sora", sans-serif;
+      font-size: 18px;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: white;
+    }
+
+    .finance-spotlight-copy p {
+      margin: 0;
+      color: rgba(241,245,249,0.74);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .finance-spotlight-points {
+      display: none;
+    }
+
+    .finance-spotlight-point {
+      display: none;
+    }
+
+    .finance-spotlight-side {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .finance-spotlight-note {
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(125,211,252,0.22);
+      background: rgba(224,242,254,0.14);
+      color: rgba(224,242,254,0.9);
+      font-size: 12px;
+      line-height: 1.45;
+      text-align: left;
+    }
+
+    .finance-spotlight-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      color: #052033;
+      background: linear-gradient(135deg, #8ef9e5 0%, #a5f3fc 50%, #e0f2fe 100%);
+      box-shadow: 0 18px 34px rgba(45,212,191,0.18);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+
+    .finance-spotlight-action:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 38px rgba(45,212,191,0.22);
+    }
+
+    .entry-section {
+      margin-top: 20px;
+      padding: 24px 28px;
+      border-radius: 28px;
+      border: 1px solid rgba(191,219,254,0.18);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.05) 100%);
+      box-shadow: 0 18px 38px rgba(5, 10, 28, 0.16);
+    }
+
+    .entry-header {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .entry-header h3 {
+      margin: 0;
+      font-family: "Sora", sans-serif;
+      font-size: 30px;
+      line-height: 1.04;
+      letter-spacing: -0.05em;
+    }
+
+    .entry-header p {
+      margin: 0;
+      max-width: 780px;
+      color: rgba(241,245,249,0.76);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .entry-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .entry-card {
+      padding: 22px 22px 20px;
+      border-radius: 22px;
+      border: 1px solid rgba(191,219,254,0.16);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.05) 100%);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+    }
+
+    .entry-card.research {
+      background: linear-gradient(180deg, rgba(191,219,254,0.12) 0%, rgba(255,255,255,0.05) 100%);
+    }
+
+    .entry-label {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 0 11px;
+      border-radius: 999px;
+      border: 1px solid rgba(191,219,254,0.18);
+      background: rgba(255,255,255,0.06);
+      color: rgba(226,232,240,0.8);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .entry-title {
+      margin: 14px 0 8px 0;
+      font-family: "Sora", sans-serif;
+      font-size: 24px;
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+    }
+
+    .entry-copy {
+      margin: 0;
+      color: rgba(241,245,249,0.78);
+      font-size: 15px;
+      line-height: 1.58;
+    }
+
+    .entry-list {
+      margin: 16px 0 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .entry-list li {
+      display: grid;
+      grid-template-columns: 28px minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+    }
+
+    .entry-step {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(191,219,254,0.18);
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .entry-list strong {
+      display: block;
+      margin-bottom: 3px;
+      color: white;
+      font-size: 14px;
+    }
+
+    .entry-list span {
+      color: rgba(241,245,249,0.72);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .entry-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .entry-note {
+      margin-top: 14px;
+      color: rgba(226,232,240,0.66);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 800;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+    }
+
+    .btn-primary {
+      color: white;
+      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+      box-shadow: 0 14px 28px rgba(43,80,217,0.28);
+    }
+
+    .btn-primary.ballot {
+      background: linear-gradient(135deg, #5865f2 0%, #3448d5 100%);
+      box-shadow: 0 14px 28px rgba(70, 84, 216, 0.3);
+    }
+
+    .btn-primary.maps {
+      background: linear-gradient(135deg, #0f766e 0%, #0f9e8f 100%);
+      box-shadow: 0 14px 28px rgba(15, 118, 110, 0.28);
+    }
+
+    .btn-primary.candidates {
+      background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+      box-shadow: 0 14px 28px rgba(91, 33, 182, 0.28);
+    }
+
+    .btn-primary.precinct {
+      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+      box-shadow: 0 14px 28px rgba(43,80,217,0.32);
+    }
+
+    .btn-primary.finance {
+      background: linear-gradient(135deg, #0f766e 0%, #14b8a6 55%, #67e8f9 100%);
+      box-shadow: 0 14px 28px rgba(20,184,166,0.28);
+      color: #f8fffe;
+    }
+
+    .btn-secondary {
+      color: white;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.16);
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover,
+    .utility-link:hover {
+      transform: translateY(-1px);
+    }
+
+    .link-row {
+      margin-top: 6px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 18px;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: heroRise .9s ease forwards;
+      animation-delay: .42s;
+    }
+
+    .link-row[hidden],
+    .feature-toggle[hidden],
+    .feature-panel[hidden] {
+      display: none !important;
+    }
+
+    .link-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: auto;
+      padding: 0;
+      border-radius: 0;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      transition: color .15s ease, opacity .15s ease;
+    }
+
+    .link-pill {
+      color: rgba(255,255,255,0.76);
+      background: transparent;
+      border: 0;
+    }
+
+    .link-pill:hover {
+      color: white;
+      transform: none;
+    }
+
+    .separator-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.24);
+      align-self: center;
+      margin-top: 1px;
+    }
+
+    .ocean-line {
+      width: 110px;
+      height: 4px;
+      margin: 0 auto 22px auto;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #ef4444 0%, #f8fafc 50%, #3b82f6 100%);
+      opacity: 0;
+      transform: translateY(14px);
+      animation: heroRise .9s ease forwards;
+      animation-delay: .18s;
+    }
+
+    .scroll-cue {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 28px;
+      color: rgba(255,255,255,0.58);
+      font-size: 12px;
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 700;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: heroRise .9s ease forwards;
+      animation-delay: .52s;
+    }
+
+    .scroll-cue-arrow {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    .below-fold {
+      margin-top: 24vh;
+      display: grid;
+      gap: 18px;
+    }
+
+    .news-section {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      border: 1px solid rgba(191,219,254,0.26);
+      background:
+        radial-gradient(circle at 86% 16%, rgba(147,197,253,0.22), transparent 24%),
+        radial-gradient(circle at 14% 84%, rgba(191,219,254,0.12), transparent 22%),
+        linear-gradient(180deg, rgba(255,255,255,0.14) 0%, rgba(255,255,255,0.10) 100%);
+      box-shadow: 0 22px 48px rgba(5, 10, 28, 0.18);
+      padding: 26px 28px;
+    }
+
+    .news-section::before {
+      content: "";
+      position: absolute;
+      inset: auto auto -62px -42px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.14), rgba(255,255,255,0));
+      pointer-events: none;
+    }
+
+    .news-head {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .news-copy {
+      max-width: 660px;
+    }
+
+    .news-kicker {
+      color: rgba(226,232,240,0.82);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .news-title {
+      margin: 0;
+      font-family: "Sora", sans-serif;
+      font-size: 30px;
+      line-height: 1.02;
+      letter-spacing: -0.05em;
+    }
+
+    .news-summary {
+      margin: 10px 0 0 0;
+      color: rgba(241,245,249,0.8);
+      font-size: 15px;
+      line-height: 1.58;
+      max-width: 540px;
+    }
+
+    .news-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      margin-top: 16px;
+      color: rgba(226,232,240,0.78);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .news-stamp {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 0 11px;
+      border-radius: 999px;
+      background: rgba(191,219,254,0.12);
+      border: 1px solid rgba(191,219,254,0.18);
+      color: rgba(226,232,240,0.84);
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .news-grid {
+      position: relative;
+      z-index: 1;
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .news-carousel-controls {
+      position: relative;
+      z-index: 1;
+      margin-top: 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .news-nav-btn {
+      appearance: none;
+      border: 1px solid rgba(191,219,254,0.22);
+      background: rgba(255,255,255,0.08);
+      color: rgba(248,250,252,0.92);
+      min-height: 36px;
+      min-width: 36px;
+      padding: 0 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+    }
+
+    .news-nav-btn:hover {
+      transform: translateY(-1px);
+      background: rgba(255,255,255,0.12);
+      box-shadow: 0 10px 22px rgba(5,10,28,0.14);
+    }
+
+    .news-nav-btn:disabled {
+      opacity: 0.45;
+      cursor: default;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .news-slider-wrap {
+      flex: 1 1 280px;
+      display: grid;
+      gap: 6px;
+      min-width: 220px;
+    }
+
+    .news-slider {
+      width: 100%;
+      accent-color: #93c5fd;
+      cursor: pointer;
+    }
+
+    .news-slider-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      color: rgba(226,232,240,0.72);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    .news-card {
+      display: grid;
+      gap: 9px;
+      padding: 17px 17px 15px;
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(147,197,253,0.12) 0%, rgba(191,219,254,0.08) 100%);
+      border: 1px solid rgba(191,219,254,0.22);
+      text-decoration: none;
+      color: inherit;
+      transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+      min-height: 176px;
+      backdrop-filter: blur(8px);
+    }
+
+    .news-card:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(180deg, rgba(147,197,253,0.16) 0%, rgba(191,219,254,0.10) 100%);
+      box-shadow: 0 18px 36px rgba(5,10,28,0.14);
+    }
+
+    .news-card-source {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(226,232,240,0.72);
+    }
+
+    .news-card-source::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #ef4444 0%, #3b82f6 100%);
+      flex: 0 0 auto;
+    }
+
+    .news-card-title {
+      font-family: "Sora", sans-serif;
+      font-size: 20px;
+      line-height: 1.13;
+      letter-spacing: -0.04em;
+      color: white;
+    }
+
+    .news-card-summary {
+      color: rgba(241,245,249,0.78);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .news-card-footer {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      color: rgba(226,232,240,0.7);
+      font-size: 11px;
+      line-height: 1.4;
+    }
+
+    .news-card-link {
+      color: rgba(248,250,252,0.94);
+      font-weight: 700;
+    }
+
+    .news-empty {
+      position: relative;
+      z-index: 1;
+      margin-top: 18px;
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(191,219,254,0.16);
+      color: rgba(241,245,249,0.78);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .info-section {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.04) 100%);
+      box-shadow: 0 20px 44px rgba(5, 10, 28, 0.22);
+      padding: 26px 28px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: minmax(260px, 0.72fr) minmax(320px, 1fr);
+      gap: 26px;
+      align-items: start;
+    }
+
+    .info-eyebrow {
+      color: var(--muted-2);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .info-title {
+      margin: 0;
+      font-family: "Sora", sans-serif;
+      font-size: 34px;
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+
+    .info-summary {
+      margin: 14px 0 0 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+      max-width: 440px;
+    }
+
+    .info-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .info-panel {
+      display: grid;
+      gap: 12px;
+    }
+
+    .info-card {
+      padding: 16px 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .info-card-title {
+      margin: 0 0 6px 0;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted-2);
+      font-weight: 800;
+    }
+
+    .info-card p {
+      margin: 0;
+      color: rgba(255,255,255,0.78);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .site-footer {
+      margin-top: 28px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      display: grid;
+      gap: 10px;
+      color: rgba(255,255,255,0.66);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .site-footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .site-footer-logo {
+      width: 156px;
+      height: auto;
+      display: block;
+      flex: 0 0 auto;
+    }
+
+    .site-footer strong {
+      color: white;
+    }
+
+    .project-motto {
+      margin-top: 12px;
+      color: rgba(255,255,255,0.72);
+      font-size: 12px;
+      line-height: 1.5;
+      font-style: italic;
+      letter-spacing: 0.03em;
+    }
+
+    .site-footer a {
+      color: rgba(255,255,255,0.82);
+      text-decoration: none;
+    }
+
+    .site-footer a:hover {
+      color: white;
+    }
+
+    .site-footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+    }
+
+    .site-footer-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .footer-social {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-social-label {
+      color: rgba(255,255,255,0.62);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    .site-footer-links a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .site-footer-links a:hover {
+      color: white;
+    }
+
+    @keyframes lighthouseGlow {
+      0% { opacity: 0; transform: scale(.9); }
+      20% { opacity: .92; transform: scale(1); }
+      70% { opacity: .24; transform: scale(1.06); }
+      100% { opacity: 0; transform: scale(1.08); }
+    }
+
+    @keyframes lighthouseSweep {
+      0% { opacity: 0; transform: rotate(-18deg) scaleX(.92); }
+      16% { opacity: .92; }
+      54% { opacity: .98; transform: rotate(10deg) scaleX(1.02); }
+      82% { opacity: .34; }
+      100% { opacity: 0; transform: rotate(15deg) scaleX(1.04); }
+    }
+
+    @keyframes lighthouseSettle {
+      0% { transform: translateY(4px) scale(.985); filter: drop-shadow(0 0 0 rgba(5, 10, 28, 0)); }
+      100% { transform: translateY(0) scale(1); filter: drop-shadow(0 12px 30px rgba(5, 10, 28, 0.2)); }
+    }
+
+    @keyframes heroRise {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes heroWrite {
+      0% {
+        opacity: 0;
+        clip-path: inset(0 100% 0 0);
+        transform: translateY(10px);
+      }
+      30% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 1060px) {
+      .topbar-right {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .view-toggle {
+        order: 3;
+      }
+
+      .site-nav {
+        justify-content: flex-start;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        justify-content: center;
+      }
+
+      .finance-spotlight {
+        grid-template-columns: 1fr;
+      }
+
+      .entry-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-note {
+        white-space: normal;
+      }
+
+      .site-footer-meta {
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .shell {
+        width: min(100% - 28px, 1200px);
+        padding-top: 20px;
+      }
+
+      .topbar-right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        min-width: 0;
+      }
+
+      .view-toggle {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .site-nav {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 8px;
+      }
+
+      .site-nav a {
+        max-width: 100%;
+        padding: 9px 12px;
+      }
+
+      .social-links {
+        margin-top: 4px;
+      }
+
+      .footer-social {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .brand {
+        align-items: flex-start;
+      }
+
+      .brand-mark-wrap {
+        width: 132px;
+        height: 78px;
+      }
+
+      .brand-mark {
+        width: 122px;
+        height: 72px;
+      }
+
+      .brand-mark-wrap::after {
+        left: 48px;
+        top: 18px;
+        width: 142px;
+        height: 48px;
+      }
+
+      .brand-copy h1 {
+        font-size: 30px;
+      }
+
+      .brand-copy p {
+        font-size: 14px;
+      }
+
+      .brand-tagline {
+        white-space: normal;
+        line-height: 1.35;
+      }
+
+      .hero {
+        padding: 24px;
+        border-radius: 28px;
+      }
+
+      .hero-search {
+        padding: 16px;
+      }
+
+      .hero-search-head {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-search-form {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-search-submit {
+        width: 100%;
+      }
+
+      .hero-search-overview-head {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-search-match {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-search-match-main {
+        border-radius: 12px;
+      }
+
+      .hero-search-match-actions {
+        justify-content: flex-start;
+      }
+
+      .hero-copy h2 {
+        font-size: 48px;
+        word-break: break-word;
+      }
+
+      .summary {
+        font-size: 17px;
+      }
+
+      .info-section {
+        padding: 22px 20px;
+        border-radius: 24px;
+      }
+
+      .news-section {
+        padding: 22px 20px;
+        border-radius: 24px;
+      }
+
+      .below-fold {
+        margin-top: 18px;
+      }
+
+      .info-title {
+        font-size: 28px;
+      }
+
+      .info-summary {
+        font-size: 16px;
+      }
+
+      .news-title {
+        font-size: 26px;
+      }
+
+      .feature-row {
+        gap: 10px;
+      }
+
+      .finance-spotlight {
+        padding: 18px;
+      }
+
+      .finance-spotlight-side {
+        display: grid;
+      }
+
+      .finance-spotlight-title {
+        font-size: 24px;
+      }
+
+      .finance-spotlight-points {
+        flex-direction: column;
+      }
+
+      .finance-spotlight-point {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .entry-section {
+        padding: 20px 18px;
+      }
+
+      .entry-header h3 {
+        font-size: 26px;
+      }
+
+      .feature-card {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+      }
+
+      .feature-note {
+        white-space: normal;
+      }
+
+      .link-row {
+        gap: 8px 12px;
+        max-width: 100%;
+      }
+
+      .separator-dot {
+        display: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .brand-mark,
+      .brand-mark-wrap::before,
+      .brand-mark-wrap::after,
+      .hero-line-text {
+        animation: none !important;
+        opacity: 1 !important;
+        clip-path: none !important;
+        transform: none !important;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="shell">
-    <header class="topbar">
+    <div class="topbar">
       <div class="brand">
-        <img src="riep-logo-sunburst-white.png" alt="Rhode Island Elections Project logo" />
-        <div>
-          <div class="brand-tag">The Home of Rhode Island Politics</div>
+        <div class="brand-mark-wrap">
+          <img class="brand-mark" src="riep-logo-sunburst-white.png" alt="Rhode Island Elections Project logo" />
+        </div>
+        <div class="brand-copy">
+          <div class="brand-tagline">The Home of Rhode Island Politics</div>
           <h1>Rhode Island Elections Project</h1>
           <p>A data-driven guide to Rhode Island elections</p>
         </div>
       </div>
-      <div class="navrow">
-        <nav aria-label="Primary">
-          <a href="lookup.html">Find My Precinct</a>
-          <a href="ballot.html">Find My Ballot</a>
-          <a href="running.html">Races &amp; Candidates</a>
-          <a href="finance.html">Campaign Finance</a>
-          <a href="map.html">Map</a>
-          <a href="about.html">About</a>
-        </nav>
-        <div class="view-toggle">
-          <button type="button" class="active" id="voterModeBtn">Voter View</button>
-          <button type="button" id="researchModeBtn">Research View</button>
+      <div class="topbar-right">
+        <nav class="site-nav" id="homePrimaryNav" aria-label="Primary"></nav>
+        <div class="view-toggle" aria-label="Homepage view mode">
+          <button type="button" class="active" data-home-mode="voter" aria-pressed="true">Voter View</button>
+          <button type="button" data-home-mode="research" aria-pressed="false">Research View</button>
+        </div>
+        <div class="social-links" aria-label="Social links">
+          <a class="social-link linkedin" href="https://www.linkedin.com/company/the-rhode-island-elections-project/about/" target="_blank" rel="noopener noreferrer" aria-label="Rhode Island Elections Project on LinkedIn" title="Follow RIEP on LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A2 2 0 1 0 5.3 7a2 2 0 0 0-.05-4ZM20.44 12.66c0-3.5-1.87-5.12-4.37-5.12a3.78 3.78 0 0 0-3.39 1.87V8.5H9.31c.05.61 0 11.5 0 11.5h3.37v-6.42c0-.34.03-.68.13-.92.27-.68.88-1.39 1.9-1.39 1.34 0 1.88 1.02 1.88 2.52V20H20v-6.73Z"/>
+            </svg>
+          </a>
         </div>
       </div>
-    </header>
+    </div>
 
-    <main>
-      <section class="hero">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow">The Home of Rhode Island Politics</div>
-          <h2>See how<br>Rhode Island votes.</h2>
-          <div class="ocean-line"></div>
-          <p class="summary" id="summary">Find your precinct, compare the candidates in your race, and explore Rhode Island elections in one place.</p>
-
-          <section class="hero-search" id="searchSection">
+          <div class="eyebrow is-home">The Home of Rhode Island Politics</div>
+          <h2 id="heroTitle"><span><span class="hero-line-text">See how</span></span><span><span class="hero-line-text">Rhode Island votes.</span></span></h2>
+          <div class="ocean-line" aria-hidden="true"></div>
+          <p class="summary" id="homeSummary">Election results, turnout maps, and precinct data, all in one place.</p>
+          <p class="summary-helper" id="homeSummaryHelper"></p>
+          <section class="hero-search" id="homeSearchSection" aria-labelledby="heroSearchTitle">
             <div class="hero-search-head">
-              <div>
-                <strong>Search by candidate or by address.</strong>
-                <span>Jump directly to a race, candidate information, campaign finance, or your precinct.</span>
+              <div class="hero-search-copy">
+                <strong id="heroSearchTitle">Search by candidate or by address.</strong>
+                <span>Find the fastest path to your ballot, district pages, candidate comparison, and campaign finance.</span>
               </div>
-              <div class="search-toggle">
-                <button type="button" class="active" data-mode="candidate">Candidate</button>
-                <button type="button" data-mode="address">Address</button>
+              <div class="hero-search-toggle" aria-label="Homepage search mode">
+                <button type="button" class="active" data-search-mode="candidate" aria-pressed="true">Candidate</button>
+                <button type="button" data-search-mode="address" aria-pressed="false">Address</button>
               </div>
             </div>
-            <form class="search-form" id="searchForm">
-              <input id="searchInput" class="search-input" type="search" placeholder="Search a candidate name" autocomplete="off" />
-              <button class="search-submit" id="searchSubmit" type="submit">Search</button>
+            <form class="hero-search-form" id="homeSearchForm">
+              <div class="hero-search-input-wrap">
+                <input
+                  id="homeSearchInput"
+                  class="hero-search-input"
+                  type="search"
+                  placeholder="Search a candidate name"
+                  autocomplete="off"
+                  aria-label="Search a candidate name or Rhode Island address"
+                />
+              </div>
+              <button type="submit" class="hero-search-submit" id="homeSearchSubmit">Search</button>
             </form>
-            <div class="search-hint" id="searchHint">Search a first name, last name, or full candidate name.</div>
-            <div class="results" id="results" hidden></div>
+            <p class="hero-search-hint" id="homeSearchHint">Start typing a candidate name to jump straight to the right district and candidate tools.</p>
+            <div class="hero-search-results" id="homeSearchResults" hidden></div>
           </section>
-
-          <div class="cta-row" id="voterCtas">
-            <a class="cta races" href="running.html">Races &amp; Candidates</a>
-            <a class="cta maps" href="map.html?mode=results&amp;chamber=house&amp;year=2024&amp;view=party">Election Maps</a>
-            <a class="cta finance" href="finance.html">Campaign Finance</a>
-            <a class="cta precinct" href="lookup.html">Find My Precinct</a>
+          <div class="cta-row" id="homeCtaRow"></div>
+          <div class="finance-spotlight" id="homeFinanceSpotlight" hidden></div>
+          <div class="feature-tools">
+            <button type="button" class="feature-toggle" id="homeFeatureToggle" aria-expanded="false" aria-controls="homeFeaturePanel">More map views</button>
+            <div class="feature-panel" id="homeFeaturePanel" hidden>
+              <div class="feature-kicker" id="homeFeatureKicker">Explore more map views</div>
+              <div class="feature-row" id="homeFeatureRow" aria-label="Featured homepage links"></div>
+              <p class="feature-note" id="homeFeatureNote">Compare turnout, uncontested districts, gender representation, and electoral competitiveness directly from the homepage.</p>
+            </div>
           </div>
+          <div class="link-row" id="homeLinkRow" aria-label="Secondary project links"></div>
+          <a class="scroll-cue" href="#mission-preview">
+            <span>Scroll for more</span>
+            <span class="scroll-cue-arrow">↓</span>
+          </a>
+        </div>
+      </div>
+    </section>
 
-          <div class="cta-row" id="researchCtas" hidden>
-            <a class="cta races" href="methodology.html">Methodology</a>
-            <a class="cta maps" href="data/race_data.json">Race Data JSON</a>
-            <a class="cta finance" href="data/candidate_finance_2026.json">Finance JSON</a>
-            <a class="cta precinct" href="data/whos_running_2026.json">Candidate JSON</a>
+    <section class="below-fold" aria-label="Additional project sections">
+      <section class="news-section" aria-labelledby="newsTitle">
+        <div class="news-head">
+          <div class="news-copy">
+            <div class="news-kicker">Rhode Island Politics Watch</div>
+            <h3 class="news-title" id="newsTitle">The latest Rhode Island politics coverage, in one place.</h3>
+            <p class="news-summary">Follow Rhode Island politics as it develops, from campaign filings to State House movement, in one live headline brief.</p>
+            <div class="news-meta">
+              <span id="newsSourceLabel">Source: loading headline feed</span>
+              <a class="link-pill" id="newsSourceLink" href="https://news.google.com/search?q=Rhode%20Island%20politics&hl=en-US&gl=US&ceid=US%3Aen" target="_blank" rel="noopener noreferrer">Open source feed</a>
+            </div>
+          </div>
+          <div class="news-stamp" id="newsUpdatedAt">Updating headlines…</div>
+        </div>
+        <div class="news-grid" id="riPoliticsNewsGrid" hidden></div>
+        <div class="news-carousel-controls" id="riPoliticsNewsControls" hidden>
+          <button type="button" class="news-nav-btn" id="riPoliticsPrev">← Newer</button>
+          <div class="news-slider-wrap">
+            <input type="range" min="0" max="0" step="1" value="0" class="news-slider" id="riPoliticsSlider" aria-label="Browse Rhode Island politics headlines" />
+            <div class="news-slider-meta">
+              <span id="riPoliticsPageLabel">Showing latest headlines</span>
+              <span id="riPoliticsArchiveCount">0 saved</span>
+            </div>
+          </div>
+          <button type="button" class="news-nav-btn" id="riPoliticsNext">Older →</button>
+        </div>
+        <div class="news-empty" id="riPoliticsNewsEmpty">Headline feed is loading. If it does not appear, the feed source may be refreshing.</div>
+      </section>
+
+      <section class="info-section" id="mission-preview">
+        <div class="info-grid">
+          <div>
+            <div class="info-eyebrow">Mission Statement</div>
+            <h3 class="info-title">Making Rhode Island elections easier to understand.</h3>
+            <p class="info-summary">The Rhode Island Elections Project promotes a more transparent and accessible democratic process by providing open, nonpartisan access to election data, research, and interactive tools. Through maps, results, turnout analysis, and precinct-level information, the project helps Rhode Islanders better understand how elections shape representation across the state.</p>
+            <div class="project-motto">Perspictuitas et Reddito Rationum in Democratia</div>
+            <div class="info-actions">
+              <a class="btn-secondary" href="about.html">Read Mission Statement</a>
+            </div>
+          </div>
+          <div class="info-panel">
+            <article class="info-card">
+              <div class="info-card-title">Public Goal</div>
+              <p>Build a clear, nonpartisan public resource that helps Rhode Islanders explore election results, turnout patterns, and legislative representation with confidence.</p>
+            </article>
+            <article class="info-card">
+              <div class="info-card-title">Project Scope</div>
+              <p>Cover Rhode Island election results, turnout maps, precinct tools, and district-level context from 2012 through 2024 in one accessible interface.</p>
+            </article>
+            <article class="info-card">
+              <div class="info-card-title">Map Color Guide</div>
+              <p>Across the 2026 filing map, blue marks Democratic-only filings, red marks Republican-only filings, teal marks Independent or Other-only filings, and purple marks districts where candidates from more than one party have filed.</p>
+            </article>
           </div>
         </div>
       </section>
+    </section>
 
-      <section class="below">
-        <section class="section">
-          <div class="eyebrow">Rhode Island Politics Watch</div>
-          <h3>The latest Rhode Island politics coverage, in one place.</h3>
-          <p>Follow Rhode Island politics as it develops, from campaign filings to State House movement.</p>
-          <div id="newsGrid" class="news-grid"></div>
-        </section>
-
-        <section class="section">
-          <div class="eyebrow">Mission Statement</div>
-          <h3>Making Rhode Island elections easier to understand.</h3>
-          <p>The Rhode Island Elections Project promotes a more transparent and accessible democratic process by providing open, nonpartisan access to election data, research, and interactive tools.</p>
-          <a class="action" href="about.html">Read Mission Statement</a>
-        </section>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <strong>Rhode Island Elections Project</strong> · Election results, candidates, campaign finance, turnout maps, and precinct information.
+    <footer class="site-footer">
+      <div class="site-footer-brand">
+        <img class="site-footer-logo" src="riep-logo-light.png" alt="Rhode Island Elections Project logo" />
+        <div><strong>Rhode Island Elections Project</strong> makes Rhode Island elections easier to understand with election results, turnout maps, precinct information, and transparent research.<div class="project-motto">Perspictuitas et Reddito Rationum in Democratia</div></div>
+      </div>
+      <div class="site-footer-meta">
+        <div class="site-footer-links">
+          <a href="map.html">Map</a>
+          <a href="running.html">Who's Running?</a>
+          <a href="meet.html">Meet the Candidates</a>
+          <a href="finance.html">Campaign Finance</a>
+          <a href="lookup.html">Find My Precinct</a>
+          <a href="methodology.html">Methodology</a>
+          <a href="about.html">About</a>
+          <a href="support.html">Support</a>
+        </div>
+        <div class="footer-social">
+          <span class="footer-social-label">Follow RIEP</span>
+          <a class="social-link linkedin" href="https://www.linkedin.com/company/the-rhode-island-elections-project/about/" target="_blank" rel="noopener noreferrer" aria-label="Rhode Island Elections Project on LinkedIn" title="Follow RIEP on LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A2 2 0 1 0 5.3 7a2 2 0 0 0-.05-4ZM20.44 12.66c0-3.5-1.87-5.12-4.37-5.12a3.78 3.78 0 0 0-3.39 1.87V8.5H9.31c.05.61 0 11.5 0 11.5h3.37v-6.42c0-.34.03-.68.13-.92.27-.68.88-1.39 1.9-1.39 1.34 0 1.88 1.02 1.88 2.52V20H20v-6.73Z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div>Contact, collaborations, interviews, or support: <a href="support.html">Use the Support page</a> · Last updated: July 2026</div>
     </footer>
   </div>
+  <script>
+  (function () {
+    const newsUrl = "/data/ri_politics_news.json?v=20260701a";
+    const NEWS_PAGE_SIZE = 3;
+    const HOME_MODE_KEY = "riep-home-mode";
+    const assets = [
+      "/map.html",
+      "/data/race_data.json",
+      "/data/house_old.geojson",
+      "/data/house_new.geojson",
+      "/data/senate_old.geojson",
+      "/data/senate_new.geojson",
+      "/data/ri_2024_turnout_data.json",
+      "/data/ri_turnout_2024_precinct.geojson",
+      "/data/ri_turnout_2024_municipality.geojson"
+    ];
+    const homeModes = {
+      voter: {
+        summary: "Find your precinct, see who is on your ballot, and explore election results.",
+        summaryHelper: "",
+        financeSpotlight: {
+          kicker: "Campaign finance",
+          title: "Now live on the site",
+          summary: "Open readable campaign finance profiles with major donors, money raised, spending, and quarter history.",
+          note: "Plain-English summaries from the public filings.",
+          actionLabel: "Open finance",
+          actionHref: "finance.html"
+        },
+        featureKicker: "Additional map views, 2012-2024",
+        featureToggleLabel: "More map views",
+        featureNote: "Use these optional views to compare turnout, uncontested districts, gender representation, and electoral competitiveness across Rhode Island from 2012 through 2024.",
+        featureOpenByDefault: false,
+        ctas: [
+          { label: "See Who's On My Ballot", href: "running.html", style: "primary", className: "ballot" },
+          { label: "See Rhode Island Election Maps", href: "map.html?mode=results&chamber=house&year=2024&view=party", style: "primary", className: "maps" },
+          { label: "Campaign Finance", href: "finance.html", style: "primary", className: "finance" },
+          { label: "Find My Precinct", href: "lookup.html", style: "primary", className: "precinct" }
+        ],
+        features: [
+          { label: "Turnout", href: "map.html?mode=turnout&geo=municipality&year=2024", className: "turnout" },
+          { label: "Uncontested Seats", href: "map.html?mode=results&chamber=house&year=2024&view=uncontested", className: "uncontested" },
+          { label: "Gender Parity", href: "map.html?mode=results&chamber=house&year=2024&view=gender", className: "gender" },
+          { label: "Competitiveness", href: "map.html?mode=results&chamber=house&year=2024&view=competitiveness", className: "competitiveness" }
+        ],
+        links: [],
+        nav: [
+          { label: "Find My Precinct", href: "lookup.html" },
+          { label: "Who's On My Ballot", href: "running.html" },
+          { label: "Compare Candidates", href: "meet.html" },
+          { label: "Campaign Finance", href: "finance.html" },
+          { label: "Map", href: "map.html" },
+          { label: "About", href: "about.html" }
+        ]
+      },
+      research: {
+        summary: "Methods, source files, and public election data for deeper Rhode Island analysis.",
+        summaryHelper: "Use this mode if you want documentation, downloadable files, or the same structured data that powers the public site.",
+        financeSpotlight: null,
+        featureKicker: "Explore core source files",
+        featureToggleLabel: "Source files and datasets",
+        featureNote: "Open the same structured files that power the public map, turnout tools, and filing pages.",
+        featureOpenByDefault: true,
+        ctas: [
+          { label: "Race Data JSON", href: "data/race_data.json", style: "primary" },
+          { label: "Who's Running JSON", href: "data/whos_running_2026.json", style: "secondary" },
+          { label: "Finance Profiles JSON", href: "data/candidate_finance_2026.json", style: "secondary" },
+          { label: "2024 Turnout JSON", href: "data/ri_2024_turnout_data.json", style: "secondary" }
+        ],
+        features: [
+          { label: "House GeoJSON", href: "data/house_new.geojson", className: "geometry" },
+          { label: "Senate GeoJSON", href: "data/senate_new.geojson", className: "geometry" },
+          { label: "Precinct Turnout GeoJSON", href: "data/ri_turnout_2024_precinct.geojson", className: "datafile" },
+          { label: "Municipality Turnout GeoJSON", href: "data/ri_turnout_2024_municipality.geojson", className: "datafile" }
+        ],
+        links: [
+          { label: "Methodology", href: "methodology.html" },
+          { label: "Race Data JSON", href: "data/race_data.json" },
+          { label: "Who's Running JSON", href: "data/whos_running_2026.json" },
+          { label: "Finance Profiles JSON", href: "data/candidate_finance_2026.json" },
+          { label: "House GeoJSON", href: "data/house_new.geojson" },
+          { label: "Senate GeoJSON", href: "data/senate_new.geojson" },
+          { label: "Turnout JSON", href: "data/ri_2024_turnout_data.json" },
+          { label: "Precinct GeoJSON", href: "data/ri_turnout_2024_precinct.geojson" },
+          { label: "Municipality GeoJSON", href: "data/ri_turnout_2024_municipality.geojson" },
+          { label: "Finance Builder Script", href: "scripts/build_candidate_finance_2026.py" },
+          { label: "Who's Running Builder Script", href: "scripts/build_whos_running_2026.py" }
+        ],
+        nav: [
+          { label: "Methodology", href: "methodology.html" },
+          { label: "Race Data JSON", href: "data/race_data.json" },
+          { label: "Who's Running JSON", href: "data/whos_running_2026.json" },
+          { label: "Finance Profiles JSON", href: "data/candidate_finance_2026.json" },
+          { label: "House GeoJSON", href: "data/house_new.geojson" },
+          { label: "Senate GeoJSON", href: "data/senate_new.geojson" },
+          { label: "Turnout JSON", href: "data/ri_2024_turnout_data.json" }
+        ]
+      }
+    };
 
-<script>
-(() => {
-  const SEARCH_KEY = "riep-home-search-mode";
-  const ADDRESS_SEARCH_URL = "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates";
-  let searchMode = localStorage.getItem(SEARCH_KEY) === "address" ? "address" : "candidate";
-  let candidates = [];
-  let financeByCandidateId = new Map();
-  let financeByCompositeKey = new Map();
-  let precinctGeo = null;
-  let precinctLookup = null;
-
-  const esc = value => String(value ?? "")
-    .replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;")
-    .replaceAll('"',"&quot;").replaceAll("'","&#39;");
-
-  const norm = value => String(value || "")
-    .toLowerCase()
-    .replace(/[^a-z0-9\s]/g," ")
-    .replace(/\s+/g," ")
-    .trim();
-
-  function nameVariants(value){
-    const tokens = norm(value).split(" ").filter(Boolean);
-    const variants = new Set();
-    if(tokens.length) variants.add(tokens.join(" "));
-    if(tokens.length > 2){
-      variants.add(tokens.filter((t,i)=>!(i>0 && i<tokens.length-1 && t.length===1)).join(" "));
+    function buildAnchor(item, className) {
+      const attrs = [
+        `href="${item.href}"`,
+        `class="${`${className} ${item.className || ""}`.trim()}"`
+      ];
+      if (item.external) {
+        attrs.push('target="_blank"', 'rel="noopener noreferrer"');
+      }
+      return `<a ${attrs.join(" ")}>${item.label}</a>`;
     }
-    return [...variants];
-  }
 
-  function candidateScore(candidate, query){
-    const q = nameVariants(query);
-    const n = nameVariants(candidate.name);
-    if(!q.length || !n.length) return -1;
-    if(n.some(x=>q.includes(x))) return 5;
-    if(n.some(x=>q.some(y=>x.startsWith(y)||y.startsWith(x)))) return 4;
-    if(n.some(x=>q.some(y=>x.includes(y)||y.includes(x)))) return 3;
-    const qt = norm(query).split(" ").filter(Boolean);
-    const nt = norm(candidate.name).split(" ").filter(Boolean);
-    return qt.every(t=>nt.some(n=>n.startsWith(t))) ? 2 : -1;
-  }
+    function renderPrimaryNav(items) {
+      const nav = document.getElementById("homePrimaryNav");
+      if (!nav) return;
+      nav.innerHTML = items.map(item => buildAnchor(item, "")).join("");
+    }
 
-  function flattenCandidates(payload){
-    const out=[], seen=new Set();
-    Object.entries(payload?.chambers || {}).forEach(([chamber,districts])=>{
-      Object.values(districts || {}).forEach(record=>{
-        ["candidates","general_candidates"].forEach(group=>{
-          (record?.[group] || []).forEach(c=>{
-            const id=c.candidate_id || `${chamber}-${record.district_number}-${c.name}`;
-            if(seen.has(id)) return;
-            seen.add(id);
-            out.push({...c,chamber,district_number:record.district_number});
+    function setFeaturePanelState(expanded, label) {
+      const button = document.getElementById("homeFeatureToggle");
+      const panel = document.getElementById("homeFeaturePanel");
+      if (!button || !panel) return;
+      button.textContent = label;
+      button.setAttribute("aria-expanded", expanded ? "true" : "false");
+      panel.hidden = !expanded;
+    }
+
+    function renderHomeMode(mode) {
+      const config = homeModes[mode] || homeModes.voter;
+      const summary = document.getElementById("homeSummary");
+      const summaryHelper = document.getElementById("homeSummaryHelper");
+      const searchSection = document.getElementById("homeSearchSection");
+      const ctaRow = document.getElementById("homeCtaRow");
+      const financeSpotlight = document.getElementById("homeFinanceSpotlight");
+      const featureToggle = document.getElementById("homeFeatureToggle");
+      const featureKicker = document.getElementById("homeFeatureKicker");
+      const featureRow = document.getElementById("homeFeatureRow");
+      const featureNote = document.getElementById("homeFeatureNote");
+      const linkRow = document.getElementById("homeLinkRow");
+      const toggleButtons = Array.from(document.querySelectorAll("[data-home-mode]"));
+
+      if (summary) summary.textContent = config.summary;
+      if (summaryHelper) summaryHelper.textContent = config.summaryHelper || "";
+      if (searchSection) {
+        searchSection.hidden = mode === "research";
+      }
+      if (featureKicker) featureKicker.textContent = config.featureKicker;
+      if (featureNote) featureNote.textContent = config.featureNote;
+      renderPrimaryNav(config.nav || []);
+      if (ctaRow) {
+        ctaRow.innerHTML = config.ctas.map(item => buildAnchor(item, item.style === "primary" ? "btn-primary" : "btn-secondary")).join("");
+      }
+      if (financeSpotlight) {
+        const finance = config.financeSpotlight;
+        if (finance) {
+          financeSpotlight.hidden = false;
+          financeSpotlight.innerHTML = `
+            <div class="finance-spotlight-copy">
+              <div class="finance-spotlight-kicker">${finance.kicker}</div>
+              <div class="finance-spotlight-title">${finance.title}</div>
+              <p>${finance.summary}</p>
+              <div class="finance-spotlight-points">
+                ${(finance.points || []).map(point => `<div class="finance-spotlight-point">${point}</div>`).join("")}
+              </div>
+            </div>
+            <div class="finance-spotlight-side">
+              <div class="finance-spotlight-note">${finance.note}</div>
+              <a class="finance-spotlight-action" href="${finance.actionHref}">${finance.actionLabel}</a>
+            </div>
+          `;
+        } else {
+          financeSpotlight.hidden = true;
+          financeSpotlight.innerHTML = "";
+        }
+      }
+      if (featureRow) {
+        featureRow.innerHTML = config.features.map(item => buildAnchor(item, `feature-card ${item.className || ""}`.trim())).join("");
+      }
+      if (featureToggle) {
+        featureToggle.hidden = !(config.features && config.features.length);
+        setFeaturePanelState(Boolean(config.featureOpenByDefault), config.featureToggleLabel || "More options");
+      }
+      if (linkRow) {
+        const pills = [];
+        config.links.forEach((item, index) => {
+          pills.push(buildAnchor(item, "link-pill"));
+          if (index < config.links.length - 1) {
+            pills.push('<span class="separator-dot" aria-hidden="true">•</span>');
+          }
+        });
+        linkRow.innerHTML = pills.join("");
+        linkRow.hidden = !config.links.length;
+      }
+
+      toggleButtons.forEach(button => {
+        const isActive = button.dataset.homeMode === mode;
+        button.classList.toggle("active", isActive);
+        button.setAttribute("aria-pressed", isActive ? "true" : "false");
+      });
+    }
+
+    const HOMEPAGE_SEARCH_MODE_KEY = "riep-home-search-mode";
+    const ADDRESS_SEARCH_URL = "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates";
+    let homepageSearchMode = "candidate";
+    let homepageCandidates = [];
+    let homepageFinanceByCandidateId = new Map();
+    let homepageFinanceByCompositeKey = new Map();
+    let homepageCandidateHistoryById = new Map();
+    let homepageRaceData = null;
+    let homepagePrecinctGeojson = null;
+    let homepagePrecinctLookup = null;
+    let precinctAssetsPromise = null;
+
+    function chamberLabel(chamber) {
+      return chamber === "senate" ? "Senate" : "House";
+    }
+
+    function partyLongLabel(code) {
+      if (code === "DEM") return "Democrat";
+      if (code === "REP") return "Republican";
+      if (code === "IND") return "Independent";
+      return code === "OTH" ? "Other" : code;
+    }
+
+    function normalizeSearchText(value) {
+      return String(value || "")
+        .toLowerCase()
+        .replace(/[^a-z0-9\s]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+
+    function searchTokens(value) {
+      return normalizeSearchText(value).split(" ").filter(Boolean);
+    }
+
+    function normalizeNameWithoutMiddleInitial(value) {
+      const tokens = searchTokens(value);
+      if (tokens.length <= 2) return tokens.join(" ");
+      return tokens
+        .filter((token, index) => !(index > 0 && index < tokens.length - 1 && token.length === 1))
+        .join(" ");
+    }
+
+    function buildNameVariants(value) {
+      const variants = new Set();
+      const normalized = normalizeSearchText(value);
+      if (normalized) variants.add(normalized);
+      const compact = normalizeNameWithoutMiddleInitial(value);
+      if (compact) variants.add(compact);
+      return Array.from(variants);
+    }
+
+    function orderedTokenMatch(targetValue, queryValue) {
+      const targetTokens = searchTokens(targetValue);
+      const queryTokens = searchTokens(queryValue);
+      if (!targetTokens.length || !queryTokens.length) return false;
+      let queryIndex = 0;
+      for (const token of targetTokens) {
+        if (token.startsWith(queryTokens[queryIndex])) {
+          queryIndex += 1;
+          if (queryIndex === queryTokens.length) return true;
+        }
+      }
+      return false;
+    }
+
+    function namesLikelyMatch(leftValue, rightValue) {
+      const leftVariants = buildNameVariants(leftValue);
+      const rightVariants = new Set(buildNameVariants(rightValue));
+      if (leftVariants.some(variant => rightVariants.has(variant))) return true;
+      return orderedTokenMatch(leftValue, rightValue) || orderedTokenMatch(rightValue, leftValue);
+    }
+
+    function candidateSearchScore(candidate, query) {
+      const nameVariants = buildNameVariants(candidate?.name || "");
+      const queryVariants = buildNameVariants(query);
+      if (!nameVariants.length || !queryVariants.length) return -1;
+      if (nameVariants.some(variant => queryVariants.includes(variant))) return 5;
+      if (nameVariants.some(variant => queryVariants.some(queryVariant => variant.startsWith(queryVariant) || queryVariant.startsWith(variant)))) return 4;
+      if (nameVariants.some(variant => queryVariants.some(queryVariant => variant.includes(queryVariant) || queryVariant.includes(variant)))) return 3;
+      if (queryVariants.some(queryVariant => orderedTokenMatch(candidate?.name || "", queryVariant))) return 2;
+      if (queryVariants.some(queryVariant => orderedTokenMatch(queryVariant, candidate?.name || ""))) return 1;
+      return -1;
+    }
+
+    function buildFinanceCompositeKeys({ chamber, district_number, party, name }) {
+      return buildNameVariants(name || "").map(variant => [
+        String(chamber || "").toLowerCase(),
+        String(district_number || "").trim(),
+        String(party || "").toUpperCase(),
+        variant
+      ].join("::"));
+    }
+
+    function buildRunningHref(candidate) {
+      return `running.html?chamber=${encodeURIComponent(candidate.chamber)}&district=${encodeURIComponent(candidate.district_number)}`;
+    }
+
+    function buildMeetHref(candidate) {
+      const params = new URLSearchParams();
+      params.set("chamber", candidate.chamber);
+      params.set("district", String(candidate.district_number));
+      if (candidate.on_primary_ballot && (candidate.party === "DEM" || candidate.party === "REP")) {
+        params.set("election", "primary");
+        params.set("party", candidate.party);
+      } else {
+        params.set("election", "general");
+      }
+      return `meet.html?${params.toString()}`;
+    }
+
+    function buildFinanceHref(candidate) {
+      const profile = getFinanceProfile(candidate);
+      return profile ? `finance.html?slug=${encodeURIComponent(profile.slug)}` : "";
+    }
+
+    function getFinanceProfile(candidate) {
+      if (!candidate) return null;
+      if (homepageFinanceByCandidateId.has(candidate.candidate_id)) {
+        return homepageFinanceByCandidateId.get(candidate.candidate_id);
+      }
+      for (const key of buildFinanceCompositeKeys(candidate)) {
+        if (homepageFinanceByCompositeKey.has(key)) {
+          return homepageFinanceByCompositeKey.get(key);
+        }
+      }
+      return null;
+    }
+
+    function buildRaceLookupKey(chamber, districtNumber, year = 2024) {
+      return `${String(chamber || "").toLowerCase()}|${year}|${String(districtNumber || "").trim()}`;
+    }
+
+    function getDistrictRaceSummary(chamber, districtNumber) {
+      if (!homepageRaceData) return null;
+      return homepageRaceData[buildRaceLookupKey(chamber, districtNumber, 2024)] || null;
+    }
+
+    function getCandidateRacePerformance(candidate) {
+      const race = getDistrictRaceSummary(candidate?.chamber, candidate?.district_number);
+      if (!race) return null;
+      const entry = (race.candidates || []).find(person => namesLikelyMatch(person.name, candidate?.name || ""));
+      if (!entry) return { race, entry: null };
+      return { race, entry };
+    }
+
+    function getCandidateHistoricalRuns(candidate) {
+      if (!candidate) return [];
+      const cacheKey = candidate.candidate_id || `${candidate.chamber}-${candidate.district_number}-${candidate.name}`;
+      if (homepageCandidateHistoryById.has(cacheKey)) {
+        return homepageCandidateHistoryById.get(cacheKey);
+      }
+      const history = Object.entries(homepageRaceData || {}).reduce((runs, [key, race]) => {
+        const [raceChamber, year, districtNumber] = key.split("|");
+        if (raceChamber !== candidate.chamber) return runs;
+        const entry = (race?.candidates || []).find(person => namesLikelyMatch(person.name, candidate.name));
+        if (!entry) return runs;
+        runs.push({
+          year: Number(year),
+          districtNumber,
+          role: entry.role || "",
+          votes: entry.votes || "",
+          pct: entry.pct || ""
+        });
+        return runs;
+      }, []);
+      homepageCandidateHistoryById.set(cacheKey, history);
+      return history;
+    }
+
+    function isHomepageIncumbent(candidate) {
+      const performance = getCandidateRacePerformance(candidate);
+      return Boolean(performance?.entry?.role === "Winner");
+    }
+
+    function buildCandidateStatusMarkup(candidate) {
+      const statuses = [];
+      if (isHomepageIncumbent(candidate)) {
+        statuses.push('<span class="hero-search-match-status is-incumbent">Incumbent</span>');
+      } else {
+        const history = getCandidateHistoricalRuns(candidate).filter(run => run.year < 2026);
+        if (history.length) {
+          const latest = history.reduce((best, current) => (current.year > best.year ? current : best), history[0]);
+          const label = latest.year === 2024 ? "Ran in 2024" : "Ran before";
+          statuses.push(`<span class="hero-search-match-status is-history">${escapeHtml(label)}</span>`);
+        }
+      }
+      return statuses.length
+        ? `<div class="hero-search-match-statuses">${statuses.join("")}</div>`
+        : "";
+    }
+
+    function buildCandidatePerformanceCard(candidate) {
+      const performance = getCandidateRacePerformance(candidate);
+      if (!performance || !performance.race) return "";
+      const href = `map.html?mode=results&chamber=${encodeURIComponent(candidate.chamber)}&year=2024&view=party&district=${encodeURIComponent(String(candidate.district_number))}`;
+      if (performance.entry) {
+        const entry = performance.entry;
+        const roleLabel = entry.role === "Winner" ? "Won in 2024" : entry.role === "Runner-up" ? "2024 result" : entry.role || "2024 result";
+        const districtMargin = performance.race.margin_pct
+          ? `District margin ${performance.race.margin_pct}`
+          : performance.race.margin_votes
+            ? `District margin ${performance.race.margin_votes} votes`
+            : "";
+        const copyParts = [
+          entry.votes ? `${entry.votes} votes` : "",
+          entry.pct ? `(${entry.pct})` : "",
+          districtMargin
+        ].filter(Boolean);
+        return `
+          <div class="hero-search-result-grid">
+            <a class="hero-search-result-card is-link" href="${href}" aria-label="${escapeHtml(`Open ${candidate.name} district result on the map`) }">
+              <div class="hero-search-result-label">2024 candidate performance</div>
+              <div class="hero-search-result-value">${escapeHtml(roleLabel)}</div>
+              <div class="hero-search-result-copy">${escapeHtml(copyParts.join(" · "))}</div>
+            </a>
+          </div>
+        `;
+      }
+
+      const race = performance.race;
+      return `
+        <div class="hero-search-result-grid">
+          <a class="hero-search-result-card is-link" href="${href}" aria-label="${escapeHtml(`Open ${chamberLabel(candidate.chamber)} District ${candidate.district_number} results on the map`) }">
+            <div class="hero-search-result-label">2024 district result</div>
+            <div class="hero-search-result-value">${escapeHtml(race.winner_candidate || "Result available")}</div>
+            <div class="hero-search-result-copy">${escapeHtml(`${partyLongLabel(race.winner_party)} winner${race.margin_pct ? ` · margin ${race.margin_pct}` : ""}`)}</div>
+          </a>
+        </div>
+      `;
+    }
+
+    function buildDistrictResultCard(chamber, districtNumber) {
+      const race = getDistrictRaceSummary(chamber, districtNumber);
+      if (!race) return "";
+      const chamberTitle = `${chamberLabel(chamber)} District ${districtNumber}`;
+      const href = `map.html?mode=results&chamber=${encodeURIComponent(chamber)}&year=2024&view=party&district=${encodeURIComponent(String(districtNumber))}`;
+      const copyParts = [
+        `${partyLongLabel(race.winner_party)} winner`,
+        race.margin_pct ? `Margin ${race.margin_pct}` : "",
+        race.district_total_votes ? `${race.district_total_votes} total votes` : ""
+      ].filter(Boolean);
+      return `
+        <a class="hero-search-result-card is-link" href="${href}" aria-label="${escapeHtml(`Open ${chamberTitle} results on the map`) }">
+          <div class="hero-search-result-label">2024 ${escapeHtml(chamberTitle)}</div>
+          <div class="hero-search-result-value">${escapeHtml(race.winner_candidate || "Result available")}</div>
+          <div class="hero-search-result-copy">${escapeHtml(copyParts.join(" · "))}</div>
+        </a>
+      `;
+    }
+
+    function getDistrictFinanceMatches(lookupRecord) {
+      if (!homepageCandidates.length || !lookupRecord) return [];
+
+      const desired = [];
+      if (lookupRecord.house_district) {
+        desired.push({ chamber: "house", district: String(lookupRecord.house_district) });
+      }
+      if (lookupRecord.senate_district) {
+        desired.push({ chamber: "senate", district: String(lookupRecord.senate_district) });
+      }
+
+      const seen = new Set();
+      return homepageCandidates
+        .filter(candidate => desired.some(target =>
+          candidate.chamber === target.chamber
+          && String(candidate.district_number) === target.district
+        ))
+        .filter(candidate => {
+          const profile = getFinanceProfile(candidate);
+          if (!profile || seen.has(candidate.candidate_id)) return false;
+          seen.add(candidate.candidate_id);
+          return true;
+        })
+        .sort((left, right) => {
+          if (left.chamber !== right.chamber) return left.chamber.localeCompare(right.chamber);
+          if (String(left.district_number) !== String(right.district_number)) {
+            return Number(left.district_number) - Number(right.district_number);
+          }
+          return left.name.localeCompare(right.name);
+        });
+    }
+
+    function buildLookupHref(address) {
+      return `lookup.html?address=${encodeURIComponent(address)}`;
+    }
+
+    function flattenCandidateData(payload) {
+      const flattened = [];
+      const seen = new Set();
+      Object.entries(payload?.chambers || {}).forEach(([chamber, districts]) => {
+        Object.values(districts || {}).forEach(record => {
+          ["candidates", "general_candidates"].forEach(groupName => {
+            (record?.[groupName] || []).forEach(candidate => {
+              const key = candidate.candidate_id || `${chamber}-${record.district_number}-${candidate.name}`;
+              if (seen.has(key)) return;
+              seen.add(key);
+              flattened.push({
+                ...candidate,
+                chamber,
+                district_number: record.district_number
+              });
+            });
           });
         });
       });
-    });
-    return out;
-  }
-
-  function financeKey(candidate){
-    return [
-      String(candidate.chamber||"").toLowerCase(),
-      String(candidate.district_number||""),
-      String(candidate.party||"").toUpperCase(),
-      norm(candidate.name)
-    ].join("::");
-  }
-
-  function getFinance(candidate){
-    if(candidate?.candidate_id && financeByCandidateId.has(candidate.candidate_id)){
-      return financeByCandidateId.get(candidate.candidate_id);
+      return flattened;
     }
-    return financeByCompositeKey.get(financeKey(candidate)) || null;
-  }
 
-  function financeHref(candidate){
-    const profile=getFinance(candidate);
-    return profile?.slug ? `finance.html?slug=${encodeURIComponent(profile.slug)}` : "";
-  }
+    async function loadHomepageSearchData() {
+      if (homepageCandidates.length) return;
+      const [candidateResponse, financeResponse, raceResponse] = await Promise.all([
+        fetch("data/whos_running_2026.json", { cache: "no-store" }),
+        fetch("data/candidate_finance_2026.json", { cache: "no-store" }),
+        fetch("data/race_data.json", { cache: "no-store" })
+      ]);
+      if (!candidateResponse.ok) throw new Error("Candidate data could not be loaded.");
+      const candidatePayload = await candidateResponse.json();
+      homepageCandidates = flattenCandidateData(candidatePayload);
+      homepageRaceData = raceResponse.ok ? await raceResponse.json() : {};
 
-  function raceHref(candidate){
-    return `running.html?chamber=${encodeURIComponent(candidate.chamber)}&district=${encodeURIComponent(candidate.district_number)}`;
-  }
+      if (financeResponse.ok) {
+        const financePayload = await financeResponse.json();
+        const profiles = financePayload?.profiles || [];
+        homepageFinanceByCandidateId = new Map(profiles.map(profile => [profile.candidate_id, profile]));
+        homepageFinanceByCompositeKey = new Map();
+        profiles.forEach(profile => {
+          buildFinanceCompositeKeys({
+            chamber: profile.chamber,
+            district_number: profile.district_number,
+            party: profile.party,
+            name: profile.candidate_name
+          }).forEach(key => {
+            homepageFinanceByCompositeKey.set(key, profile);
+          });
+        });
+      }
+    }
 
-  async function loadCandidateData(){
-    if(candidates.length) return;
-    const [candidateRes,financeRes]=await Promise.all([
-      fetch("data/whos_running_2026.json",{cache:"no-store"}),
-      fetch("data/candidate_finance_2026.json",{cache:"no-store"})
-    ]);
-    if(!candidateRes.ok) throw new Error("Candidate data could not be loaded.");
-    candidates=flattenCandidates(await candidateRes.json());
-    if(financeRes.ok){
-      const profiles=(await financeRes.json())?.profiles || [];
-      financeByCandidateId=new Map(profiles.filter(p=>p.candidate_id).map(p=>[p.candidate_id,p]));
-      financeByCompositeKey=new Map();
-      profiles.forEach(p=>{
-        financeByCompositeKey.set([
-          String(p.chamber||"").toLowerCase(),
-          String(p.district_number||""),
-          String(p.party||"").toUpperCase(),
-          norm(p.candidate_name)
-        ].join("::"),p);
+    function setHomepageSearchMode(mode) {
+      homepageSearchMode = mode === "address" ? "address" : "candidate";
+      window.localStorage.setItem(HOMEPAGE_SEARCH_MODE_KEY, homepageSearchMode);
+      document.querySelectorAll("[data-search-mode]").forEach(button => {
+        const isActive = button.dataset.searchMode === homepageSearchMode;
+        button.classList.toggle("active", isActive);
+        button.setAttribute("aria-pressed", isActive ? "true" : "false");
+      });
+      const input = document.getElementById("homeSearchInput");
+      const hint = document.getElementById("homeSearchHint");
+      const submit = document.getElementById("homeSearchSubmit");
+      if (input) {
+        input.placeholder = homepageSearchMode === "address"
+          ? "Search a Rhode Island address"
+          : "Search a candidate name";
+      }
+      if (hint) {
+        hint.textContent = homepageSearchMode === "address"
+          ? "Enter a full Rhode Island address and we will point you to the matching precinct, ballot, and district pages."
+          : "Start typing a candidate name to jump straight to the right district and candidate tools.";
+      }
+      if (submit) {
+        submit.textContent = homepageSearchMode === "address" ? "Find address" : "Search";
+      }
+    }
+
+    function renderHomepageSearchMessage(message, type = "info") {
+      const results = document.getElementById("homeSearchResults");
+      if (!results) return;
+      results.hidden = false;
+      results.innerHTML = `<div class="hero-search-status${type === "error" ? " error" : ""}">${escapeHtml(message)}</div>`;
+    }
+
+    function renderCandidateSearchResults(matches) {
+      const results = document.getElementById("homeSearchResults");
+      if (!results) return;
+      if (!matches.length) {
+        renderHomepageSearchMessage("No candidate match yet. Try a first or last name.", "error");
+        return;
+      }
+
+      results.hidden = false;
+      results.innerHTML = `
+        <div class="hero-search-overview">
+          <div class="hero-search-overview-head">
+            <div>
+              <h4 class="hero-search-title">${matches.length === 1 ? escapeHtml(matches[0].name) : "Closest candidate matches"}</h4>
+              <p class="hero-search-subtitle">
+                ${matches.length === 1
+                  ? "Open the ballot, district, candidate, or finance pages connected to this candidate."
+                  : "Choose the candidate you meant and jump straight to the right Rhode Island election pages."}
+              </p>
+            </div>
+            <span class="hero-search-kicker">${matches.length === 1 ? "Candidate match" : `${matches.length} matches`}</span>
+          </div>
+          ${matches.length === 1 && buildFinanceHref(matches[0])
+            ? `<div class="hero-search-chip-row"><span class="hero-search-chip">Campaign finance profile available</span></div>`
+            : ""}
+          <div class="hero-search-match-list">
+          ${matches.map(candidate => {
+            const financeHref = buildFinanceHref(candidate);
+            return `
+              <article class="hero-search-match is-clickable" data-card-href="${buildRunningHref(candidate)}" tabindex="0" role="link" aria-label="${escapeHtml(`Open ${candidate.name} ballot and district pages`) }">
+                <div class="hero-search-match-copy">
+                  <h5 class="hero-search-match-name">${escapeHtml(candidate.name)}</h5>
+                  <p class="hero-search-match-meta">
+                    ${escapeHtml(`${partyLongLabel(candidate.party)} · ${chamberLabel(candidate.chamber)} District ${candidate.district_number}`)}
+                    ${candidate.home_precinct_name ? ` · ${escapeHtml(candidate.home_precinct_name)}` : ""}
+                  </p>
+                  ${buildCandidateStatusMarkup(candidate)}
+                  ${buildCandidatePerformanceCard(candidate)}
+                </div>
+                <div class="hero-search-match-actions">
+  <a class="hero-search-action primary" href="${buildRunningHref(candidate)}">View race & candidates</a>
+  ${financeHref ? `<a class="hero-search-action finance" href="${financeHref}">Campaign finance</a>` : ""}
+</div>
+              </article>
+            `;
+          }).join("")}
+          </div>
+        </div>
+      `;
+    }
+
+    function pointInRing(point, ring) {
+      let inside = false;
+      for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+        const xi = ring[i][0];
+        const yi = ring[i][1];
+        const xj = ring[j][0];
+        const yj = ring[j][1];
+        const intersects = ((yi > point[1]) !== (yj > point[1]))
+          && (point[0] < ((xj - xi) * (point[1] - yi)) / ((yj - yi) || Number.EPSILON) + xi);
+        if (intersects) inside = !inside;
+      }
+      return inside;
+    }
+
+    function pointInPolygon(point, polygonCoordinates) {
+      if (!pointInRing(point, polygonCoordinates[0])) return false;
+      for (let i = 1; i < polygonCoordinates.length; i++) {
+        if (pointInRing(point, polygonCoordinates[i])) return false;
+      }
+      return true;
+    }
+
+    function findContainingFeature(lng, lat) {
+      if (!homepagePrecinctGeojson) return null;
+      const point = [lng, lat];
+      for (const feature of homepagePrecinctGeojson.features) {
+        const geometry = feature.geometry || {};
+        const coordinates = geometry.coordinates || [];
+        if (geometry.type === "Polygon" && pointInPolygon(point, coordinates)) return feature;
+        if (geometry.type === "MultiPolygon" && coordinates.some(polygon => pointInPolygon(point, polygon))) return feature;
+      }
+      return null;
+    }
+
+    async function loadHomepagePrecinctAssets() {
+      if (homepagePrecinctGeojson && homepagePrecinctLookup) return;
+      if (!precinctAssetsPromise) {
+        precinctAssetsPromise = Promise.all([
+          fetch("data/ri_turnout_2024_precinct.geojson", { cache: "no-store" }),
+          fetch("data/ri_2024_precinct_lookup.json", { cache: "no-store" })
+        ]).then(async ([geojsonResponse, lookupResponse]) => {
+          if (!geojsonResponse.ok || !lookupResponse.ok) {
+            throw new Error("Precinct lookup assets could not be loaded.");
+          }
+          homepagePrecinctGeojson = await geojsonResponse.json();
+          homepagePrecinctLookup = await lookupResponse.json();
+        });
+      }
+      return precinctAssetsPromise;
+    }
+
+    async function queryHomepageGeocoder(query) {
+      const url = new URL(ADDRESS_SEARCH_URL);
+      url.searchParams.set("SingleLine", `${query}, Rhode Island`);
+      url.searchParams.set("sourceCountry", "USA");
+      url.searchParams.set("outSR", "4326");
+      url.searchParams.set("maxLocations", "6");
+      url.searchParams.set("f", "pjson");
+      const response = await fetch(url.toString());
+      if (!response.ok) throw new Error("Address search is unavailable right now.");
+      const payload = await response.json();
+      return payload?.candidates || [];
+    }
+
+    function renderAddressSearchResult(query, candidate, lookupRecord) {
+      const results = document.getElementById("homeSearchResults");
+      if (!results) return;
+      const precinctName = `${lookupRecord.municipality} Precinct ${lookupRecord.precinct_label || lookupRecord.precinct_code}`;
+      const houseHref = lookupRecord.house_district ? `running.html?chamber=house&district=${encodeURIComponent(lookupRecord.house_district)}` : "running.html";
+      const senateHref = lookupRecord.senate_district ? `running.html?chamber=senate&district=${encodeURIComponent(lookupRecord.senate_district)}` : "running.html";
+      const houseMeetHref = lookupRecord.house_district ? `meet.html?chamber=house&district=${encodeURIComponent(lookupRecord.house_district)}` : "meet.html";
+      const senateMeetHref = lookupRecord.senate_district ? `meet.html?chamber=senate&district=${encodeURIComponent(lookupRecord.senate_district)}` : "meet.html";
+      const financeMatches = getDistrictFinanceMatches(lookupRecord);
+      const districtCards = [
+        lookupRecord.house_district ? buildDistrictResultCard("house", lookupRecord.house_district) : "",
+        lookupRecord.senate_district ? buildDistrictResultCard("senate", lookupRecord.senate_district) : ""
+      ].filter(Boolean).join("");
+      const lookupHref = buildLookupHref(candidate.address || query);
+
+      results.hidden = false;
+      results.innerHTML = `
+        <div class="hero-search-overview">
+          <div class="hero-search-overview-head">
+            <div>
+              <h4 class="hero-search-title">${escapeHtml(candidate.address || query)}</h4>
+              <p class="hero-search-subtitle">We matched this Rhode Island address to a precinct and gathered the quickest next pages for this voter.</p>
+            </div>
+            <span class="hero-search-kicker">Address match</span>
+          </div>
+          <div class="hero-search-chip-row">
+            <span class="hero-search-chip">${escapeHtml(precinctName)}</span>
+            ${lookupRecord.house_district ? `<span class="hero-search-chip">House District ${escapeHtml(String(lookupRecord.house_district))}</span>` : ""}
+            ${lookupRecord.senate_district ? `<span class="hero-search-chip">Senate District ${escapeHtml(String(lookupRecord.senate_district))}</span>` : ""}
+            <span class="hero-search-chip">2024 turnout context</span>
+          </div>
+          <div class="hero-search-result-grid">
+            <a class="hero-search-result-card hero-search-address-card is-link" href="${lookupHref}" aria-label="${escapeHtml(`Open Find My Precinct for ${candidate.address || query}`) }">
+              <div class="hero-search-result-label">Matched address</div>
+              <div class="hero-search-result-value">${escapeHtml(candidate.address || query)}</div>
+              <div class="hero-search-result-copy">${escapeHtml(`Open the full precinct lookup for ${precinctName}`)}</div>
+            </a>
+            ${districtCards}
+          </div>
+          <div class="hero-search-action-row">
+            <a class="hero-search-action primary" href="${lookupHref}">Open Find My Precinct</a>
+            <a class="hero-search-action" href="${houseHref}">House ballot</a>
+            <a class="hero-search-action" href="${senateHref}">Senate ballot</a>
+            <a class="hero-search-action compare" href="${houseMeetHref}">Compare House candidates</a>
+            <a class="hero-search-action compare" href="${senateMeetHref}">Compare Senate candidates</a>
+            ${financeMatches.length
+              ? financeMatches.map(candidateMatch => {
+                  const financeHref = buildFinanceHref(candidateMatch);
+                  return `<a class="hero-search-action finance" href="${financeHref}">Finance: ${escapeHtml(candidateMatch.name)}</a>`;
+                }).join("")
+              : `<a class="hero-search-action finance" href="finance.html">Campaign finance directory</a>`}
+          </div>
+        </div>
+      `;
+    }
+
+    async function handleHomepageSearch(event) {
+      if (event) event.preventDefault();
+      const input = document.getElementById("homeSearchInput");
+      if (!input) return;
+      const query = input.value.trim();
+      if (!query) {
+        renderHomepageSearchMessage(`Enter a ${homepageSearchMode === "address" ? "Rhode Island address" : "candidate name"} to search.`, "error");
+        return;
+      }
+
+      if (homepageSearchMode === "candidate") {
+        await loadHomepageSearchData();
+        const normalizedQuery = normalizeSearchText(query);
+        const matches = homepageCandidates
+          .map(candidate => ({
+            candidate,
+            score: candidateSearchScore(candidate, query)
+          }))
+          .filter(result => result.score >= 0)
+          .sort((left, right) => {
+            if (right.score !== left.score) return right.score - left.score;
+            const leftStarts = normalizeSearchText(left.candidate.name).startsWith(normalizedQuery) ? 0 : 1;
+            const rightStarts = normalizeSearchText(right.candidate.name).startsWith(normalizedQuery) ? 0 : 1;
+            if (leftStarts !== rightStarts) return leftStarts - rightStarts;
+            return left.candidate.name.localeCompare(right.candidate.name);
+          })
+          .map(result => result.candidate)
+          .slice(0, 6);
+        renderCandidateSearchResults(matches);
+        return;
+      }
+
+      try {
+        renderHomepageSearchMessage("Searching Rhode Island address records and matching precinct boundaries...");
+        await loadHomepagePrecinctAssets();
+        await loadHomepageSearchData();
+        const candidates = await queryHomepageGeocoder(query);
+        if (!candidates.length) {
+          renderHomepageSearchMessage("No Rhode Island address match was found yet. Try adding the street number, city, or ZIP code.", "error");
+          return;
+        }
+        const bestMatch = candidates[0];
+        const feature = findContainingFeature(bestMatch.location?.x, bestMatch.location?.y);
+        if (!feature) {
+          renderHomepageSearchMessage("The address matched the Rhode Island geocoder, but no precinct polygon was found for it.", "error");
+          return;
+        }
+        const precinctCode = String(feature.properties.DISTRICT || feature.properties.PRECINCTS || "").trim();
+        const lookupRecord = homepagePrecinctLookup?.precincts?.[precinctCode];
+        if (!lookupRecord) {
+          renderHomepageSearchMessage("The address matched a precinct, but the homepage lookup record is missing for it.", "error");
+          return;
+        }
+        renderAddressSearchResult(query, bestMatch, lookupRecord);
+      } catch (error) {
+        console.error(error);
+        renderHomepageSearchMessage(error.message || "Address search failed.", "error");
+      }
+    }
+
+    function initHomepageSearch() {
+      const form = document.getElementById("homeSearchForm");
+      const results = document.getElementById("homeSearchResults");
+      const storedMode = window.localStorage.getItem(HOMEPAGE_SEARCH_MODE_KEY);
+      setHomepageSearchMode(storedMode === "address" ? "address" : "candidate");
+      document.querySelectorAll("[data-search-mode]").forEach(button => {
+        button.addEventListener("click", () => setHomepageSearchMode(button.dataset.searchMode));
+      });
+      form?.addEventListener("submit", handleHomepageSearch);
+      results?.addEventListener("click", event => {
+        const card = event.target.closest("[data-card-href]");
+        if (!card || event.target.closest("a, button, input, select, textarea, label")) return;
+        window.location.href = card.dataset.cardHref;
+      });
+      results?.addEventListener("keydown", event => {
+        const card = event.target.closest("[data-card-href]");
+        if (!card || event.target.closest("a, button, input, select, textarea, label")) return;
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          window.location.href = card.dataset.cardHref;
+        }
       });
     }
-  }
 
-  function setMode(mode){
-    searchMode=mode==="address"?"address":"candidate";
-    localStorage.setItem(SEARCH_KEY,searchMode);
-    document.querySelectorAll("[data-mode]").forEach(b=>b.classList.toggle("active",b.dataset.mode===searchMode));
-    searchInput.placeholder=searchMode==="address"?"Search a Rhode Island address":"Search a candidate name";
-    searchHint.textContent=searchMode==="address"
-      ?"Enter a full Rhode Island street address."
-      :"Search a first name, last name, or full candidate name.";
-    searchSubmit.textContent=searchMode==="address"?"Find address":"Search";
-  }
+    function initHomeModeToggle() {
+      const toggleButtons = Array.from(document.querySelectorAll("[data-home-mode]"));
+      const featureToggle = document.getElementById("homeFeatureToggle");
+      if (!toggleButtons.length) return;
 
-  function renderMessage(text,error=false){
-    results.hidden=false;
-    results.innerHTML=`<div class="status${error?" error":""}">${esc(text)}</div>`;
-  }
+      const storedMode = window.localStorage.getItem(HOME_MODE_KEY);
+      const initialMode = storedMode && homeModes[storedMode] ? storedMode : "voter";
+      renderHomeMode(initialMode);
 
-  function renderCandidates(matches){
-    if(!matches.length){renderMessage("No candidate match yet. Try a first or last name.",true);return;}
-    results.hidden=false;
-    results.innerHTML=`
-      <div class="result-panel">
-        <h3 class="result-title">${matches.length===1?esc(matches[0].name):"Closest candidate matches"}</h3>
-        <p class="result-sub">${matches.length===1
-          ?"Open the unified race page or go directly to this candidate’s campaign finance profile."
-          :"Choose the candidate you meant."}</p>
-        <div class="candidate-list">
-          ${matches.map(c=>{
-            const f=financeHref(c);
-            return `<article class="candidate-card">
-              <div>
-                <h4 class="candidate-name">${esc(c.name)}</h4>
-                <p class="candidate-meta">${esc(`${c.party_label||c.party_raw||c.party||""} · ${c.chamber==="senate"?"Senate":"House"} District ${c.district_number}${c.home_precinct_name?` · ${c.home_precinct_name}`:""}`)}</p>
-                ${c.incumbency?`<span class="candidate-status">${esc(c.incumbency)}</span>`:""}
-              </div>
-              <div class="actions">
-                <a class="action primary" href="${raceHref(c)}">View race &amp; candidates</a>
-                ${f?`<a class="action finance" href="${f}">Campaign finance</a>`:""}
-              </div>
-            </article>`;
-          }).join("")}
-        </div>
-      </div>`;
-  }
+      toggleButtons.forEach(button => {
+        button.addEventListener("click", () => {
+          const mode = button.dataset.homeMode;
+          if (!homeModes[mode]) return;
+          window.localStorage.setItem(HOME_MODE_KEY, mode);
+          renderHomeMode(mode);
+        });
+      });
 
-  function pointInRing(point,ring){
-    let inside=false;
-    for(let i=0,j=ring.length-1;i<ring.length;j=i++){
-      const [xi,yi]=ring[i],[xj,yj]=ring[j];
-      const hit=((yi>point[1])!==(yj>point[1]))&&(point[0]<((xj-xi)*(point[1]-yi))/((yj-yi)||Number.EPSILON)+xi);
-      if(hit) inside=!inside;
-    }
-    return inside;
-  }
-  function pointInPolygon(point,coords){
-    if(!coords?.length||!pointInRing(point,coords[0]))return false;
-    for(let i=1;i<coords.length;i++)if(pointInRing(point,coords[i]))return false;
-    return true;
-  }
-  function containingFeature(lng,lat){
-    const point=[lng,lat];
-    for(const f of precinctGeo?.features||[]){
-      const g=f.geometry||{};
-      if(g.type==="Polygon"&&pointInPolygon(point,g.coordinates))return f;
-      if(g.type==="MultiPolygon"&&g.coordinates.some(p=>pointInPolygon(point,p)))return f;
-    }
-    return null;
-  }
-  async function loadPrecinctData(){
-    if(precinctGeo&&precinctLookup)return;
-    const [g,l]=await Promise.all([
-      fetch("data/ri_turnout_2024_precinct.geojson",{cache:"no-store"}),
-      fetch("data/ri_2024_precinct_lookup.json",{cache:"no-store"})
-    ]);
-    if(!g.ok||!l.ok)throw new Error("Precinct data could not be loaded.");
-    precinctGeo=await g.json();precinctLookup=await l.json();
-  }
-  async function geocode(query){
-    const u=new URL(ADDRESS_SEARCH_URL);
-    u.searchParams.set("SingleLine",`${query}, Rhode Island`);
-    u.searchParams.set("sourceCountry","USA");
-    u.searchParams.set("outSR","4326");
-    u.searchParams.set("maxLocations","6");
-    u.searchParams.set("f","pjson");
-    const r=await fetch(u);
-    if(!r.ok)throw new Error("Address search is unavailable.");
-    return (await r.json())?.candidates||[];
-  }
-  function renderAddress(candidate,record,query){
-    const precinct=`${record.municipality} Precinct ${record.precinct_label||record.precinct_code}`;
-    results.hidden=false;
-    results.innerHTML=`
-      <div class="result-panel">
-        <h3 class="result-title">${esc(candidate.address||query)}</h3>
-        <p class="result-sub">Matched to ${esc(precinct)}.</p>
-        <div class="chiprow">
-          ${record.house_district?`<span class="chip">House District ${esc(record.house_district)}</span>`:""}
-          ${record.senate_district?`<span class="chip">Senate District ${esc(record.senate_district)}</span>`:""}
-        </div>
-        <div class="address-actions">
-          <a class="action primary" href="lookup.html?address=${encodeURIComponent(candidate.address||query)}">Open Find My Precinct</a>
-          ${record.house_district?`<a class="action" href="running.html?chamber=house&district=${encodeURIComponent(record.house_district)}">House race &amp; candidates</a>`:""}
-          ${record.senate_district?`<a class="action" href="running.html?chamber=senate&district=${encodeURIComponent(record.senate_district)}">Senate race &amp; candidates</a>`:""}
-        </div>
-      </div>`;
-  }
-
-  searchForm.addEventListener("submit",async e=>{
-    e.preventDefault();
-    const q=searchInput.value.trim();
-    if(!q){renderMessage(searchMode==="address"?"Enter a Rhode Island address.":"Enter a candidate name.",true);return;}
-    try{
-      if(searchMode==="candidate"){
-        await loadCandidateData();
-        const matches=candidates
-          .map(c=>({c,score:candidateScore(c,q)}))
-          .filter(x=>x.score>=0)
-          .sort((a,b)=>b.score-a.score||a.c.name.localeCompare(b.c.name))
-          .slice(0,6).map(x=>x.c);
-        renderCandidates(matches);
-      }else{
-        renderMessage("Searching Rhode Island address records…");
-        await loadPrecinctData();
-        const gs=await geocode(q);
-        if(!gs.length){renderMessage("No Rhode Island address match was found.",true);return;}
-        const best=gs[0],f=containingFeature(best.location?.x,best.location?.y);
-        if(!f){renderMessage("The address matched, but no precinct polygon was found.",true);return;}
-        const code=String(f.properties.DISTRICT||f.properties.PRECINCTS||"").trim();
-        const record=precinctLookup?.precincts?.[code];
-        if(!record){renderMessage("The address matched a precinct, but the lookup record is missing.",true);return;}
-        renderAddress(best,record,q);
+      if (featureToggle) {
+        featureToggle.addEventListener("click", () => {
+          const currentMode = document.querySelector("[data-home-mode].active")?.dataset.homeMode || "voter";
+          const config = homeModes[currentMode] || homeModes.voter;
+          const expanded = featureToggle.getAttribute("aria-expanded") !== "true";
+          setFeaturePanelState(expanded, config.featureToggleLabel || "More options");
+        });
       }
-    }catch(err){console.error(err);renderMessage(err.message||"Search failed.",true);}
-  });
+    }
 
-  document.querySelectorAll("[data-mode]").forEach(b=>b.addEventListener("click",()=>setMode(b.dataset.mode)));
-  setMode(searchMode);
+    function formatNewsTimestamp(value) {
+      if (!value) return "Headline feed awaiting update";
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return "Headline feed awaiting update";
+      return `Updated ${date.toLocaleString("en-US", {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+        hour: "numeric",
+        minute: "2-digit"
+      })}`;
+    }
 
-  voterModeBtn.addEventListener("click",()=>{
-    voterModeBtn.classList.add("active");researchModeBtn.classList.remove("active");
-    voterCtas.hidden=false;researchCtas.hidden=true;searchSection.hidden=false;
-    summary.textContent="Find your precinct, compare the candidates in your race, and explore Rhode Island elections in one place.";
-  });
-  researchModeBtn.addEventListener("click",()=>{
-    researchModeBtn.classList.add("active");voterModeBtn.classList.remove("active");
-    voterCtas.hidden=true;researchCtas.hidden=false;searchSection.hidden=true;
-    summary.textContent="Methods, source files, and public election data for deeper Rhode Island analysis.";
-  });
+    function formatPublishedDate(value) {
+      if (!value) return "Recently published";
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return "Recently published";
+      return date.toLocaleDateString("en-US", {
+        month: "short",
+        day: "numeric"
+      });
+    }
 
-  fetch("/data/ri_politics_news.json",{cache:"no-store"})
-    .then(r=>r.ok?r.json():Promise.reject())
-    .then(payload=>{
-      const items=(payload?.items||[]).slice(0,6);
-      newsGrid.innerHTML=items.length?items.map(item=>`
-        <a class="news-card" href="${esc(item.url)}" target="_blank" rel="noopener noreferrer">
-          <div class="news-source">${esc(item.source||"Rhode Island politics")}</div>
-          <div class="news-title">${esc(item.title)}</div>
-          <div class="news-date">${item.published_at?new Date(item.published_at).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}):"Recently published"}</div>
-        </a>`).join(""):`<div class="status">Headline feed is updating.</div>`;
-    })
-    .catch(()=>{newsGrid.innerHTML=`<div class="status">Headline feed could not be loaded right now.</div>`;});
-})();
-</script>
+    function truncateCopy(value, maxLength) {
+      if (!value || value.length <= maxLength) return value;
+      return `${value.slice(0, maxLength - 1).trimEnd()}…`;
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#39;");
+    }
+
+    function renderNewsPage(items, pageIndex) {
+      const grid = document.getElementById("riPoliticsNewsGrid");
+      const slider = document.getElementById("riPoliticsSlider");
+      const prev = document.getElementById("riPoliticsPrev");
+      const next = document.getElementById("riPoliticsNext");
+      const pageLabel = document.getElementById("riPoliticsPageLabel");
+      if (!grid || !slider || !prev || !next || !pageLabel) return;
+
+      const totalPages = Math.max(1, Math.ceil(items.length / NEWS_PAGE_SIZE));
+      const safePage = Math.min(Math.max(pageIndex, 0), totalPages - 1);
+      const pageItems = items.slice(safePage * NEWS_PAGE_SIZE, (safePage + 1) * NEWS_PAGE_SIZE);
+
+      grid.innerHTML = pageItems.map(item => `
+        <a class="news-card" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">
+          <div class="news-card-source">${escapeHtml(item.source || "Google News")}</div>
+          <div class="news-card-title">${escapeHtml(item.title)}</div>
+          <div class="news-card-summary">${escapeHtml(truncateCopy(item.title, 120))}</div>
+          <div class="news-card-footer">
+            <span>${escapeHtml(formatPublishedDate(item.published_at))}</span>
+            <span class="news-card-link">Read story</span>
+          </div>
+        </a>
+      `).join("");
+      grid.hidden = false;
+      slider.max = String(totalPages - 1);
+      slider.value = String(safePage);
+      prev.disabled = safePage <= 0;
+      next.disabled = safePage >= totalPages - 1;
+      pageLabel.textContent = safePage === 0 ? "Showing latest headlines" : `Showing earlier headlines · Page ${safePage + 1} of ${totalPages}`;
+    }
+
+    function bindNewsCarousel(items) {
+      const controls = document.getElementById("riPoliticsNewsControls");
+      const slider = document.getElementById("riPoliticsSlider");
+      const prev = document.getElementById("riPoliticsPrev");
+      const next = document.getElementById("riPoliticsNext");
+      const archiveCount = document.getElementById("riPoliticsArchiveCount");
+      if (!controls || !slider || !prev || !next || !archiveCount) return;
+
+      const totalPages = Math.max(1, Math.ceil(items.length / NEWS_PAGE_SIZE));
+      archiveCount.textContent = `${items.length} saved`;
+      controls.hidden = items.length <= NEWS_PAGE_SIZE;
+
+      let currentPage = 0;
+      const update = (page) => {
+        currentPage = Math.min(Math.max(page, 0), totalPages - 1);
+        renderNewsPage(items, currentPage);
+      };
+
+      slider.addEventListener("input", () => {
+        update(Number(slider.value || 0));
+      });
+      prev.addEventListener("click", () => update(currentPage - 1));
+      next.addEventListener("click", () => update(currentPage + 1));
+      update(0);
+    }
+
+    function renderNews(payload) {
+      const grid = document.getElementById("riPoliticsNewsGrid");
+      const empty = document.getElementById("riPoliticsNewsEmpty");
+      const stamp = document.getElementById("newsUpdatedAt");
+      const sourceLabel = document.getElementById("newsSourceLabel");
+      const sourceLink = document.getElementById("newsSourceLink");
+      if (!grid || !empty || !stamp || !sourceLabel || !sourceLink) return;
+
+      sourceLabel.textContent = `Source: ${payload?.source_label || "Google News RSS"}`;
+      sourceLink.href = payload?.source_url || sourceLink.href;
+      stamp.textContent = formatNewsTimestamp(payload?.generated_at);
+
+      const items = Array.isArray(payload?.items) ? payload.items : [];
+      if (!items.length) {
+        empty.textContent = "Headline feed is updating. Run the news builder again to publish the latest Rhode Island politics headlines.";
+        empty.hidden = false;
+        grid.hidden = true;
+        grid.innerHTML = "";
+        return;
+      }
+
+      empty.hidden = true;
+      bindNewsCarousel(items);
+    }
+
+    function loadNewsBanner() {
+      fetch(newsUrl, { cache: "no-store" })
+        .then(response => {
+          if (!response.ok) throw new Error(`News feed request failed: ${response.status}`);
+          return response.json();
+        })
+        .then(renderNews)
+        .catch(() => {
+          const empty = document.getElementById("riPoliticsNewsEmpty");
+          const stamp = document.getElementById("newsUpdatedAt");
+          const controls = document.getElementById("riPoliticsNewsControls");
+          if (empty) {
+            empty.textContent = "Headline feed could not be loaded right now. Please refresh later.";
+            empty.hidden = false;
+          }
+          if (controls) {
+            controls.hidden = true;
+          }
+          if (stamp) {
+            stamp.textContent = "Headline feed unavailable";
+          }
+        });
+    }
+
+    function warmMapCache() {
+      assets.forEach((url, index) => {
+        window.setTimeout(() => {
+          fetch(url, { cache: "force-cache" }).catch(() => {});
+        }, index * 180);
+      });
+    }
+
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(warmMapCache, { timeout: 2500 });
+    } else {
+      window.setTimeout(warmMapCache, 1200);
+    }
+
+    initHomeModeToggle();
+    initHomepageSearch();
+    loadNewsBanner();
+  })();
+  </script>
 </body>
 </html>
