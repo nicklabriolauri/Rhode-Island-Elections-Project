@@ -1,164 +1,206 @@
 /*
-Rhode Island Elections Project — Phase 1 voter-flow simplification
+RIEP homepage cleanup after Phase 1 merge.
+Keeps the existing homepage design but simplifies navigation and search results.
 */
 
 (() => {
-  const page = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-
-  function normalize(text) {
-    return String(text || "")
+  function norm(value) {
+    return String(value || "")
       .replace(/\s+/g, " ")
       .trim()
       .toLowerCase();
   }
 
-  function addStyles() {
-    if (document.getElementById("riepPhase1Styles")) return;
+  function cleanupHomeButtons() {
+    const links = [...document.querySelectorAll("a")];
 
-    const style = document.createElement("style");
-    style.id = "riepPhase1Styles";
+    const ballotLinks = links.filter(a => {
+      const text = norm(a.textContent);
+      return (
+        text.includes("find my ballot") ||
+        text.includes("who's on my ballot") ||
+        text.includes("who’s on my ballot")
+      );
+    });
 
-    style.textContent = `
-      .riep-phase1-banner {
-        margin: 18px auto 0;
-        max-width: 1240px;
-        padding: 14px 16px;
-        border-radius: 18px;
-        border: 1px solid rgba(79,124,255,.22);
-        background: linear-gradient(135deg,#eef5ff,#f7fbff);
-        color: #172554;
-        display: flex;
-        gap: 14px;
-        align-items: center;
-        justify-content: space-between;
-        box-shadow: 0 10px 28px rgba(15,23,42,.06);
-      }
+    if (ballotLinks[0]) {
+      ballotLinks[0].textContent = "Find My Ballot";
+      ballotLinks[0].href = "ballot.html";
+    }
 
-      .riep-phase1-banner strong {
-        font-size: 14px;
-      }
+    if (ballotLinks[1]) {
+      ballotLinks[1].textContent = "Find My Precinct";
+      ballotLinks[1].href = "lookup.html";
+    }
 
-      .riep-phase1-banner span {
-        font-size: 12px;
-        color: #64748b;
-      }
+    links.forEach(a => {
+      const text = norm(a.textContent);
 
-      .riep-phase1-banner a {
-        flex: 0 0 auto;
-        text-decoration: none;
-        padding: 9px 13px;
-        border-radius: 999px;
-        background: #172554;
-        color: white;
-        font-size: 12px;
-        font-weight: 900;
-      }
-
-      @media (max-width: 640px) {
-        .riep-phase1-banner {
-          align-items: flex-start;
-          flex-direction: column;
-        }
-      }
-    `;
-
-    document.head.appendChild(style);
-  }
-
-  function relabelLinks() {
-    document.querySelectorAll("a").forEach(a => {
-      const label = normalize(a.textContent);
-
-      if (label === "who's running?" || label === "who’s running?") {
-        a.textContent = "All Races";
+      if (
+        text === "meet the candidates" ||
+        text === "compare candidates"
+      ) {
+        a.textContent = "Races & Candidates";
         a.href = "running.html";
       }
 
-      if (label === "meet the candidates") {
-        a.textContent = "Compare Candidates";
-        a.href = "meet.html";
+      if (
+        text === "who's running?" ||
+        text === "who’s running?" ||
+        text === "all races"
+      ) {
+        a.textContent = "Races & Candidates";
+        a.href = "running.html";
       }
+    });
+  }
 
-      if (label === "find my precinct") {
-        if (page === "index.html") {
-          a.textContent = "Find My Ballot";
-          a.href = "ballot.html";
-        } else {
-          a.textContent = "Precinct & Turnout";
-          a.href = "lookup.html";
-        }
-      }
+  function simplifyCandidateResults() {
+    const anchors = [...document.querySelectorAll("a")];
+
+    anchors.forEach(anchor => {
+      const text = norm(anchor.textContent);
 
       if (
-        label === "see who's on my ballot" ||
-        label === "see who’s on my ballot" ||
-        label.includes("who's on my ballot") ||
-        label.includes("who’s on my ballot")
+        text === "who's on this ballot?" ||
+        text === "who’s on this ballot?"
       ) {
-        a.textContent = "Find My Ballot";
-        a.href = "ballot.html";
+        anchor.style.display = "none";
+
+        const container = anchor.parentElement;
+
+        if (!container) return;
+
+        const compareLink = [...container.querySelectorAll("a")].find(a => {
+          const label = norm(a.textContent);
+          return (
+            label === "compare candidates" ||
+            label === "races & candidates"
+          );
+        });
+
+        if (compareLink) {
+          compareLink.textContent = "Compare race candidates";
+
+          try {
+            const oldUrl = new URL(compareLink.href, location.href);
+
+            const chamber = oldUrl.searchParams.get("chamber");
+            const district = oldUrl.searchParams.get("district");
+
+            const targetUrl = new URL("running.html", location.href);
+
+            if (chamber) {
+              targetUrl.searchParams.set("chamber", chamber);
+            }
+
+            if (district) {
+              targetUrl.searchParams.set("district", district);
+            }
+
+            compareLink.href = targetUrl.href;
+          } catch (error) {
+            console.warn("Could not rebuild candidate comparison link", error);
+          }
+        }
       }
     });
   }
 
-  function insertBanner() {
-    if (!["running.html", "meet.html", "lookup.html"].includes(page)) return;
+  function cleanupSearchResultButtons() {
+    const resultCards = [...document.querySelectorAll("body *")].filter(el => {
+      const links = [...el.children].filter(child => child.tagName === "A");
 
-    if (document.querySelector(".riep-phase1-banner")) return;
+      if (links.length < 2) return false;
 
-    const banner = document.createElement("div");
-    banner.className = "riep-phase1-banner";
+      const labels = links.map(a => norm(a.textContent));
 
-    banner.innerHTML = `
-      <div>
-        <strong>Looking for the fastest path?</strong><br>
-        <span>
-          Enter your address once to see both your House and Senate races together.
-        </span>
-      </div>
+      return (
+        labels.some(label =>
+          label.includes("compare candidates")
+        ) &&
+        labels.some(label =>
+          label.includes("campaign finance")
+        )
+      );
+    });
 
-      <a href="ballot.html">
-        Find My Ballot →
-      </a>
-    `;
+    resultCards.forEach(container => {
+      const links = [...container.querySelectorAll(":scope > a")];
 
-    const main = document.querySelector("main");
-
-    if (main) {
-      main.insertBefore(banner, main.firstChild);
-    } else {
-      document.body.insertBefore(banner, document.body.firstChild);
-    }
-  }
-
-  function simplifyHome() {
-    if (page !== "index.html") return;
-
-    document.querySelectorAll("a").forEach(a => {
-      const label = normalize(a.textContent);
-
-      if (label === "find my ballot") {
-        a.href = "ballot.html";
-        a.setAttribute(
-          "aria-label",
-          "Find my Rhode Island ballot by address"
+      const compare = links.find(a => {
+        const text = norm(a.textContent);
+        return (
+          text === "compare candidates" ||
+          text === "races & candidates" ||
+          text === "compare race candidates"
         );
+      });
+
+      const ballot = links.find(a => {
+        const text = norm(a.textContent);
+        return (
+          text.includes("who's on this ballot") ||
+          text.includes("who’s on this ballot")
+        );
+      });
+
+      if (ballot) {
+        ballot.style.display = "none";
       }
 
-      if (label === "compare candidates") {
-        a.title =
-          "Compare candidate priorities after selecting a race";
-      }
+      if (compare) {
+        compare.textContent = "Compare race candidates";
 
-      if (label === "all races") {
-        a.title =
-          "Browse every State House and State Senate race";
+        try {
+          const currentUrl = new URL(compare.href, location.href);
+
+          const chamber = currentUrl.searchParams.get("chamber");
+          const district = currentUrl.searchParams.get("district");
+
+          const target = new URL("running.html", location.href);
+
+          if (chamber) {
+            target.searchParams.set("chamber", chamber);
+          }
+
+          if (district) {
+            target.searchParams.set("district", district);
+          }
+
+          compare.href = target.href;
+        } catch (error) {
+          console.warn("Unable to update compare link", error);
+        }
       }
     });
   }
 
-  addStyles();
-  relabelLinks();
-  insertBanner();
-  simplifyHome();
+  function runPhaseOneCleanup() {
+    cleanupHomeButtons();
+    simplifyCandidateResults();
+    cleanupSearchResultButtons();
+  }
+
+  function startObserver() {
+    const observer = new MutationObserver(() => {
+      runPhaseOneCleanup();
+    });
+
+    observer.observe(document.body, {
+      subtree: true,
+      childList: true
+    });
+  }
+
+  function init() {
+    runPhaseOneCleanup();
+    startObserver();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
 })();
