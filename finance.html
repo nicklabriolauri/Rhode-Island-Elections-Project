@@ -3013,6 +3013,142 @@
     }
 
 
+
+    function findQuarterRaised(profile, label) {
+      const history = Array.isArray(profile.filing_history) ? profile.filing_history : [];
+      const row = history.find(item => String(item.label || "").toLowerCase().startsWith(label.toLowerCase()));
+      return row ? Number(row.money_raised || 0) : null;
+    }
+
+    function buildQuarterRaisedComparison(data) {
+      const profiles = (data.profiles || []).filter(profile =>
+        profile.finance_status !== "not_found"
+      );
+
+      const comparable = [];
+      for (const profile of profiles) {
+        const q1 = findQuarterRaised(profile, "Q1 2026");
+        const q2 = findQuarterRaised(profile, "Q2 2026");
+
+        // Match the spending overview: compare only candidates with both standard quarterly filings.
+        if (q1 === null || q2 === null) continue;
+
+        const change = q2 - q1;
+        const pct = q1 > 0 ? (change / q1) * 100 : (q2 > 0 ? null : 0);
+
+        comparable.push({
+          candidate_name: profile.candidate_name,
+          chamber: profile.chamber,
+          district_number: profile.district_number,
+          slug: profile.slug,
+          q1,
+          q2,
+          change,
+          pct
+        });
+      }
+
+      if (!comparable.length) return "";
+
+      const totalQ1 = comparable.reduce((sum, row) => sum + row.q1, 0);
+      const totalQ2 = comparable.reduce((sum, row) => sum + row.q2, 0);
+      const totalChange = totalQ2 - totalQ1;
+      const totalPct = totalQ1 > 0 ? (totalChange / totalQ1) * 100 : null;
+
+      const higher = comparable.filter(row => row.change > 0).length;
+      const lower = comparable.filter(row => row.change < 0).length;
+      const flat = comparable.filter(row => row.change === 0).length;
+
+      const top = [...comparable]
+        .sort((a, b) => b.q2 - a.q2)
+        .slice(0, 10);
+
+      const formatPct = value => {
+        if (value === null || !Number.isFinite(value)) return "New fundraising";
+        const sign = value > 0 ? "+" : "";
+        return `${sign}${value.toFixed(1)}%`;
+      };
+
+      return `
+        <section class="panel spending-compare-panel" id="quarter-raised">
+          <div class="spending-compare-head">
+            <div>
+              <div class="section-label">Quarter-to-quarter fundraising</div>
+              <h3>How did Q2 fundraising compare with Q1?</h3>
+              <p class="spending-compare-copy">
+                This comparison includes only candidates for whom both a standard Q1 2026 and Q2 2026 filing are available.
+                Pre-primary reports, Q1-only records, historical filings, and candidates without a financial summary are excluded.
+              </p>
+            </div>
+          </div>
+
+          <div class="spending-summary-grid">
+            <div class="spending-summary-card">
+              <div class="spending-summary-label">Total Q1 raised</div>
+              <div class="spending-summary-value">${formatCurrency(totalQ1)}</div>
+              <div class="spending-summary-detail">${comparable.length} comparable candidate profiles.</div>
+            </div>
+
+            <div class="spending-summary-card">
+              <div class="spending-summary-label">Total Q2 raised</div>
+              <div class="spending-summary-value">${formatCurrency(totalQ2)}</div>
+              <div class="spending-summary-detail">Same set of candidates as the Q1 total.</div>
+            </div>
+
+            <div class="spending-summary-card">
+              <div class="spending-summary-label">Change</div>
+              <div class="spending-summary-value ${totalChange > 0 ? "spending-change-up" : totalChange < 0 ? "spending-change-down" : ""}">
+                ${totalChange > 0 ? "+" : ""}${formatCurrency(totalChange)}
+              </div>
+              <div class="spending-summary-detail">
+                ${totalPct === null ? "Percentage change unavailable." : `${formatPct(totalPct)} from Q1 to Q2.`}
+              </div>
+            </div>
+
+            <div class="spending-summary-card">
+              <div class="spending-summary-label">Candidate direction</div>
+              <div class="spending-summary-value">${higher} ↑ · ${lower} ↓</div>
+              <div class="spending-summary-detail">${flat} candidate${flat === 1 ? "" : "s"} reported no change.</div>
+            </div>
+          </div>
+
+          <div class="spending-ranking">
+            ${top.map((row, index) => {
+              const directionClass = row.change > 0 ? "up" : row.change < 0 ? "down" : "flat";
+              const directionText = row.change > 0
+                ? `${formatPct(row.pct)}`
+                : row.change < 0
+                  ? `${formatPct(row.pct)}`
+                  : "No change";
+
+              return `
+                <div class="spending-rank-row">
+                  <div class="spending-rank-number">${index + 1}</div>
+                  <div>
+                    <div class="spending-rank-name">${escapeHtml(row.candidate_name)}</div>
+                    <div class="spending-rank-meta">
+                      ${escapeHtml(row.chamber === "house" ? "House" : "Senate")} District ${escapeHtml(row.district_number)}
+                    </div>
+                  </div>
+                  <div class="spending-rank-cell">
+                    <strong>${formatCurrency(row.q1)}</strong>
+                    <span>Q1 raised</span>
+                  </div>
+                  <div class="spending-rank-cell">
+                    <strong>${formatCurrency(row.q2)}</strong>
+                    <span>Q2 raised</span>
+                  </div>
+                  <div class="spending-rank-cell">
+                    <span class="spending-direction-badge ${directionClass}">${directionText}</span>
+                  </div>
+                </div>
+              `;
+            }).join("")}
+          </div>
+        </section>
+      `;
+    }
+
     function findQuarterSpend(profile, label) {
       const history = Array.isArray(profile.filing_history) ? profile.filing_history : [];
       const row = history.find(item => String(item.label || "").toLowerCase().startsWith(label.toLowerCase()));
@@ -3203,6 +3339,8 @@
           </section>
 
           ${buildDirectoryTopicOverview(data)}
+
+          ${buildQuarterRaisedComparison(data)}
 
           ${buildQuarterSpendingComparison(data)}
 
