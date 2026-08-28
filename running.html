@@ -274,13 +274,21 @@
       return true;
     }
 
-    function districtColor(record){
-      const c = counts(record);
-      if(c.dem && c.rep) return "#7c3aed";
-      if(c.dem) return "#2764e8";
-      if(c.rep) return "#e4575e";
-      return "#9aa7b8";
-    }
+    function districtColor(record) {
+  if (!record) return "#d7deea";
+
+  switch (record.general_status) {
+    case "mixed_field":
+      return "#7c3aed";   // purple
+    case "dem_only":
+      return "#4f7cff";   // blue
+    case "rep_only":
+      return "#ff6b6b";   // red
+    case "other_only":
+      return "#14b8a6";   // teal
+    default:
+      return "#d7deea";   // no filing / unknown
+  }
 
    function districtNumberFromFeature(feature) {
   const props = feature?.properties || {};
