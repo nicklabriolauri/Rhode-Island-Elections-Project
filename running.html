@@ -275,47 +275,44 @@
     }
 
     function districtColor(record) {
-  if (!record) return "#d7deea";
+      if (!record) return "#d7deea";
 
-  switch (record.general_status) {
-    case "mixed_field":
-      return "#7c3aed";   // purple
-    case "dem_only":
-      return "#4f7cff";   // blue
-    case "rep_only":
-      return "#ff6b6b";   // red
-    case "other_only":
-      return "#14b8a6";   // teal
-    default:
-      return "#d7deea";   // no filing / unknown
-  }
+      const c = counts(record);
 
-   function districtNumberFromFeature(feature) {
-  const props = feature?.properties || {};
+      // Purple = both major parties; blue = Democratic only;
+      // red = Republican only; teal = other only; gray = no filing.
+      if (c.dem > 0 && c.rep > 0) return "#7c3aed";
+      if (c.dem > 0) return "#2764e8";
+      if (c.rep > 0) return "#e4575e";
+      if (c.total > 0) return "#0f9b8e";
+      return "#d7deea";
+    }
 
-  const rawDistrict =
-    props.district_number ??
-    props.DIST_NUM ??
-    props.SLDUST ??
-    props.DISTRICT ??
-    props.District ??
-    props.district ??
-    props.DISTRICT_N ??
-    props.DISTRICTNO ??
-    props.HOUSE_DIST ??
-    props.SEN_DIST ??
-    props.DIST ??
-    props.NAME ??
-    props.NAMELSAD;
+    function districtNumberFromFeature(feature) {
+      const props = feature?.properties || {};
 
-  if (rawDistrict === null || rawDistrict === undefined) {
-    return null;
-  }
+      const rawDistrict =
+        props.district_number ??
+        props.DIST_NUM ??
+        props.SLDUST ??
+        props.DISTRICT ??
+        props.District ??
+        props.district ??
+        props.DISTRICT_N ??
+        props.DISTRICTNO ??
+        props.HOUSE_DIST ??
+        props.SEN_DIST ??
+        props.DIST ??
+        props.NAME ??
+        props.NAMELSAD;
 
-  const match = String(rawDistrict).match(/\d+/);
+      if (rawDistrict === null || rawDistrict === undefined) {
+        return null;
+      }
 
-  return match ? String(Number(match[0])) : null;
-}
+      const match = String(rawDistrict).match(/\d+/);
+      return match ? String(Number(match[0])) : null;
+    }
 
     async function loadGeo(){
       if(geoCache[chamber]) return geoCache[chamber];
@@ -336,9 +333,11 @@
           const visible = rec && matchesFilter(rec);
           return {
             color: String(d) === String(selectedDistrict) ? "#0b1738" : "#ffffff",
-            weight: String(d) === String(selectedDistrict) ? 4 : 1.2,
-            fillColor: rec ? districtColor(rec) : "#cbd5e1",
-            fillOpacity: visible ? .58 : .10
+            weight: String(d) === String(selectedDistrict) ? 4 : 1.4,
+            opacity: 1,
+            fill: true,
+            fillColor: rec ? districtColor(rec) : "#d7deea",
+            fillOpacity: visible ? 0.62 : 0.10
           };
         },
         onEachFeature: (feature, lyr) => {
@@ -481,9 +480,11 @@
         const visible = rec && matchesFilter(rec);
         return {
           color: String(d) === String(selectedDistrict) ? "#0b1738" : "#ffffff",
-          weight: String(d) === String(selectedDistrict) ? 4 : 1.2,
-          fillColor: rec ? districtColor(rec) : "#cbd5e1",
-          fillOpacity: visible ? .58 : .10
+          weight: String(d) === String(selectedDistrict) ? 4 : 1.4,
+          opacity: 1,
+          fill: true,
+          fillColor: rec ? districtColor(rec) : "#d7deea",
+          fillOpacity: visible ? 0.62 : 0.10
         };
       });
       if(updateUrl){
