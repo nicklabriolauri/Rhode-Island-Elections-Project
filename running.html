@@ -137,6 +137,12 @@
     .priority strong{display:block;font-size:13px;color:var(--navy)}
     .priority p{margin:4px 0 0;color:var(--muted);font-size:11px;line-height:1.45}
     .awaiting{margin-top:11px;padding:11px;border-radius:13px;background:#fff8e8;color:#76551b;font-size:11px;line-height:1.45}
+    .source-note{margin-top:7px;color:#78879a;font-size:10px;line-height:1.4}
+    .source-note a{color:#315f91;font-weight:800;text-decoration:none}
+    .endorsement-block{margin-top:14px;padding-top:13px;border-top:1px solid #e5ebf2}
+    .endorsement-list{display:flex;flex-wrap:wrap;gap:7px;margin-top:9px}
+    .endorsement-chip{display:inline-flex;align-items:center;padding:7px 9px;border-radius:999px;background:#eef8f5;border:1px solid #cce9df;color:#176b5d;font-size:10px;font-weight:800;text-decoration:none}
+    .website-status{margin-top:10px;padding:9px 10px;border-radius:12px;background:#f6f8fb;color:#66768c;font-size:10px;line-height:1.45}
     .empty{padding:24px;text-align:center;color:var(--muted)}
 
     .map-return-btn{
@@ -260,6 +266,7 @@
   (() => {
     const DATA_URL = "data/whos_running_2026.json?v=20260828-unified";
     const PROFILE_URL = "data/candidate_profiles_2026.json?v=20260828-unified";
+    const RESEARCH_URL = "data/candidate_research_2026.json?v=20260828-phase2";
     const GEO = {
       house: "/data/house_new.geojson",
       senate: "/data/senate_new.geojson",
@@ -268,8 +275,8 @@
 
     let data = null;
     let profiles = new Map();
-    let financeByCandidateId = new Map();
-    let financeByCompositeKey = new Map();
+    let research = new Map();
+    let researchByName = new Map();
     let chamber = "house";
     let selectedDistrict = "1";
     let filter = "all";
@@ -507,46 +514,20 @@
       try{ map.fitBounds(layer.getBounds(), {padding:[10,10]}); }catch(e){}
     }
 
-    function normalizeFinanceName(value){
-      return String(value || "")
-        .toLowerCase()
-        .replace(/[^a-z0-9\s]/g, " ")
-        .replace(/\s+/g, " ")
-        .trim();
-    }
-
-    function getFinanceProfile(candidate){
-      if(!candidate) return null;
-
-      if(candidate.candidate_id && financeByCandidateId.has(candidate.candidate_id)){
-        return financeByCandidateId.get(candidate.candidate_id);
-      }
-
-      const key = [
-        String(chamber || "").toLowerCase(),
-        String(selectedDistrict || "").trim(),
-        String(candidate.party || "").toUpperCase(),
-        normalizeFinanceName(candidate.name || "")
-      ].join("::");
-
-      return financeByCompositeKey.get(key) || null;
-    }
-
-    function buildFinanceHref(candidate){
-      const profile = getFinanceProfile(candidate);
-      return profile?.slug
-        ? `finance.html?slug=${encodeURIComponent(profile.slug)}`
-        : "";
-    }
-
     function partyBadge(candidate){
       const label = candidate.party_label || candidate.party_raw || candidate.party || "Other";
       const cls = candidate.party === "DEM" ? "dem" : candidate.party === "REP" ? "rep" : "";
       return `<span class="badge ${cls}">${esc(label)}</span>`;
     }
 
+    function researchFor(candidate){
+      return research.get(candidate.candidate_id) || researchByName.get(String(candidate.name || "").toLowerCase()) || null;
+    }
+
     function priorityBlock(candidate){
       const profile = profiles.get(candidate.candidate_id);
+      const web = researchFor(candidate);
+
       if(profile?.priorities?.length){
         return `
           <div class="priority-block">
@@ -559,26 +540,56 @@
                 </div>
               `).join("")}
             </div>
+            <div class="source-note">Source: candidate response submitted directly to the Rhode Island Elections Project.</div>
           </div>`;
       }
-      return `<div class="awaiting">Campaign priorities have not yet been published for this candidate. Contact information and official filing status are still shown.</div>`;
+
+      if(web?.priorities?.length){
+        return `
+          <div class="priority-block">
+            <div class="priority-label">Top campaign priorities · official campaign website</div>
+            <div class="priority-list">
+              ${web.priorities.slice(0,5).map(p => `
+                <div class="priority">
+                  <strong>${esc(p.title)}</strong>
+                  <p>${esc(p.summary)}</p>
+                </div>
+              `).join("")}
+            </div>
+            <div class="source-note">Source: <a href="${esc(web.campaign_website)}" target="_blank" rel="noopener">official campaign website</a>. RIEP summarizes the candidate's published positions without adding inferred positions.</div>
+          </div>`;
+      }
+
+      return `<div class="awaiting">Campaign priorities have not yet been published in this profile. RIEP does not infer positions from party affiliation.</div>`;
+    }
+
+    function endorsementBlock(candidate){
+      const web = researchFor(candidate);
+      const items = web?.endorsements || [];
+      if(!items.length) return "";
+      return `
+        <div class="endorsement-block">
+          <div class="priority-label">Endorsements</div>
+          <div class="endorsement-list">
+            ${items.map(item => `<a class="endorsement-chip" href="${esc(item.source_url || "#")}" target="_blank" rel="noopener">${esc(item.name)}</a>`).join("")}
+          </div>
+          <div class="source-note">Only explicit endorsement announcements are listed. Select an endorsement to open its source.</div>
+        </div>`;
     }
 
     function candidateCard(candidate, district){
       const profile = profiles.get(candidate.candidate_id);
       const email = profile?.email_override || candidate.email || "";
       const phone = profile?.phone_override || candidate.phone || "";
-      const campaign = profile?.campaign_url || candidate.campaign_url || "";
-      const hasPriorities = !!profile?.priorities?.length;
+      const web = researchFor(candidate);
+      const campaign = profile?.campaign_url || web?.campaign_website || candidate.campaign_url || "";
+      const hasPriorities = !!profile?.priorities?.length || !!web?.priorities?.length;
 
       const links = [];
       if(campaign) links.push(`<a href="${esc(campaign)}" target="_blank" rel="noopener">Campaign website</a>`);
       if(email) links.push(`<a href="mailto:${esc(email)}">Email</a>`);
       if(phone) links.push(`<a href="tel:${esc(String(phone).replace(/[^\d+]/g,''))}">Call</a>`);
-      const financeHref = buildFinanceHref(candidate);
-      if(financeHref){
-        links.push(`<a class="finance" href="${financeHref}">Campaign finance</a>`);
-      }
+      links.push(`<a class="finance" href="finance.html?candidate=${encodeURIComponent(candidate.candidate_id)}">Campaign finance</a>`);
 
       return `
         <article class="candidate-card">
@@ -590,11 +601,14 @@
             <div class="badges">
               ${partyBadge(candidate)}
               ${hasPriorities ? `<span class="badge response">Priorities available</span>` : `<span class="badge">Profile incomplete</span>`}
+              ${web?.endorsements?.length ? `<span class="badge response">${web.endorsements.length} endorsement${web.endorsements.length===1?"":"s"}</span>` : ""}
             </div>
           </div>
           <div class="links">${links.join("")}</div>
           ${profile?.summary ? `<div class="candidate-sub" style="margin-top:12px;font-size:13px">${esc(profile.summary)}</div>` : ""}
           ${priorityBlock(candidate)}
+          ${endorsementBlock(candidate)}
+          ${web && !campaign ? `<div class="website-status">No official campaign website was located in RIEP's August 28, 2026 audit. This means no site was found in the audit; it is not a claim that no site exists.</div>` : ""}
         </article>`;
     }
 
@@ -775,33 +789,17 @@
       };
       resetControl.addTo(map);
 
-      const [running, profilePayload, precinctGeo, financePayload] = await Promise.all([
+      const [running, profilePayload, researchPayload, precinctGeo] = await Promise.all([
         fetch(DATA_URL,{cache:"no-store"}).then(r=>r.json()),
         fetch(PROFILE_URL,{cache:"no-store"}).then(r=>r.json()),
-        fetch(GEO.precincts,{cache:"no-store"}).then(r=>r.json()),
-        fetch("data/candidate_finance_2026.json",{cache:"no-store"})
-          .then(r=>r.ok ? r.json() : {profiles:[]})
+        fetch(RESEARCH_URL,{cache:"no-store"}).then(r=>r.json()),
+        fetch(GEO.precincts,{cache:"no-store"}).then(r=>r.json())
       ]);
 
       data = running;
       profiles = new Map((profilePayload?.profiles || []).map(p=>[p.candidate_id,p]));
-
-      const financeProfiles = financePayload?.profiles || [];
-      financeByCandidateId = new Map(
-        financeProfiles
-          .filter(profile => profile.candidate_id)
-          .map(profile => [profile.candidate_id, profile])
-      );
-      financeByCompositeKey = new Map();
-      financeProfiles.forEach(profile => {
-        const key = [
-          String(profile.chamber || "").toLowerCase(),
-          String(profile.district_number || "").trim(),
-          String(profile.party || "").toUpperCase(),
-          normalizeFinanceName(profile.candidate_name || "")
-        ].join("::");
-        financeByCompositeKey.set(key, profile);
-      });
+      research = new Map((researchPayload?.candidates || []).map(p=>[p.candidate_id,p]));
+      researchByName = new Map((researchPayload?.candidates || []).map(p=>[String(p.candidate_name || "").toLowerCase(),p]));
 
       precinctFeatureByCode = {};
       (precinctGeo?.features || []).forEach(feature => {
