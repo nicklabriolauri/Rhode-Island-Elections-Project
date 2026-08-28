@@ -1,0 +1,2958 @@
+{
+  "generated_at": "2026-08-28",
+  "methodology": {
+    "roster": "Valid 2026 Rhode Island legislative candidates from the declared-candidate workbook used by the project.",
+    "website_audit": "Each candidate name was searched for an official 2026 campaign website. Government pages, social profiles, news articles, and generic voter-guide pages were not counted as campaign websites.",
+    "priorities": "Conservative paraphrases of positions stated on verified official campaign websites; no priorities were inferred from party affiliation.",
+    "endorsements": "Only explicit endorsement statements from an endorsing organization or verified campaign site were included.",
+    "caution": "A no-site result means no official campaign website was located during this audit, not that a website definitively does not exist."
+  },
+  "candidates": [
+    {
+      "candidate_id": "senate-1-dem-primary-jacob-bissaillon",
+      "candidate_name": "Jacob Bissaillon",
+      "chamber": "senate",
+      "district_number": 1,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-2-dem-primary-ana-b-quezada",
+      "candidate_name": "Ana B Quezada",
+      "chamber": "senate",
+      "district_number": 2,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-3-dem-primary-samuel-d-zurier",
+      "candidate_name": "Samuel D Zurier",
+      "chamber": "senate",
+      "district_number": 3,
+      "party": "Democrat",
+      "campaign_website": "https://samzurier.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [
+        {
+          "title": "Public education",
+          "summary": "Improve accountability in Providence schools and reform Rhode Island's education funding formula.",
+          "source_label": "Official campaign website",
+          "source_url": "https://samzurier.com/"
+        },
+        {
+          "title": "Climate and transportation",
+          "summary": "Advance climate policy and cleaner transportation while scrutinizing implementation.",
+          "source_label": "Official campaign website",
+          "source_url": "https://samzurier.com/"
+        },
+        {
+          "title": "Public safety",
+          "summary": "Combine community policing, gun safety, enforcement, and prevention programs.",
+          "source_label": "Official campaign website",
+          "source_url": "https://samzurier.com/"
+        },
+        {
+          "title": "Government accountability",
+          "summary": "Increase oversight, transparency, and efficiency in state government.",
+          "source_label": "Official campaign website",
+          "source_url": "https://samzurier.com/"
+        },
+        {
+          "title": "Infrastructure",
+          "summary": "Improve oversight and efficiency of roads, bridges, and transit spending.",
+          "source_label": "Official campaign website",
+          "source_url": "https://samzurier.com/"
+        }
+      ],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "senate-3-oth-general-peder-a-schaefer",
+      "candidate_name": "Peder A Schaefer",
+      "chamber": "senate",
+      "district_number": 3,
+      "party": "Independent",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-4-dem-primary-stefano-v-famiglietti",
+      "candidate_name": "Stefano V Famiglietti",
+      "chamber": "senate",
+      "district_number": 4,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-5-dem-primary-samuel-w-bell",
+      "candidate_name": "Samuel W Bell",
+      "chamber": "senate",
+      "district_number": 5,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "senate-5-dem-primary-theodore-newcomer-jr",
+      "candidate_name": "Theodore Newcomer Jr",
+      "chamber": "senate",
+      "district_number": 5,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-5-dem-primary-cameron-moquin",
+      "candidate_name": "Cameron Moquin",
+      "chamber": "senate",
+      "district_number": 5,
+      "party": "Democrat",
+      "campaign_website": "https://www.cameronmoquin.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [
+        {
+          "title": "Housing and homelessness",
+          "summary": "Use a housing-first approach to homelessness and pair housing with support services.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.cameronmoquin.com/"
+        },
+        {
+          "title": "Universal healthcare",
+          "summary": "Build Rhode Island's provider capacity and payment system so universal coverage becomes workable.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.cameronmoquin.com/"
+        },
+        {
+          "title": "Reproductive rights",
+          "summary": "Protect bodily autonomy and reproductive rights.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.cameronmoquin.com/"
+        },
+        {
+          "title": "Environmental protection",
+          "summary": "Reduce single-use plastics and protect Rhode Island's water and coast.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.cameronmoquin.com/"
+        },
+        {
+          "title": "Pragmatic coalition-building",
+          "summary": "Judge proposals by whether they work and build coalitions to deliver results.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.cameronmoquin.com/"
+        }
+      ],
+      "endorsements": [
+        {
+          "name": "IAFF Local 799",
+          "source_url": "https://www.cameronmoquin.com/",
+          "source_type": "candidate_site"
+        }
+      ]
+    },
+    {
+      "candidate_id": "senate-5-rep-primary-william-d-connell-jr",
+      "candidate_name": "William D Connell Jr",
+      "chamber": "senate",
+      "district_number": 5,
+      "party": "Republican",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-6-dem-primary-tiara-t-mack",
+      "candidate_name": "Tiara T Mack",
+      "chamber": "senate",
+      "district_number": 6,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-7-dem-primary-frank-a-ciccone",
+      "candidate_name": "Frank A Ciccone",
+      "chamber": "senate",
+      "district_number": 7,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-8-dem-primary-lori-urso",
+      "candidate_name": "Lori Urso",
+      "chamber": "senate",
+      "district_number": 8,
+      "party": "Democrat",
+      "campaign_website": "https://loriurso.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-8-dem-primary-gena-felix",
+      "candidate_name": "Gena Felix",
+      "chamber": "senate",
+      "district_number": 8,
+      "party": "Democrat",
+      "campaign_website": "https://www.genafelix.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [
+        {
+          "title": "Affordable healthcare",
+          "summary": "Make healthcare more affordable and accessible.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.genafelix.com/"
+        },
+        {
+          "title": "Cost of living",
+          "summary": "Lower the cost of everyday goods for working families.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.genafelix.com/"
+        },
+        {
+          "title": "Housing affordability",
+          "summary": "Help Pawtucket families remain in their communities as housing costs rise.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.genafelix.com/"
+        },
+        {
+          "title": "Economic relief",
+          "summary": "Deliver economic relief for working families.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.genafelix.com/"
+        }
+      ],
+      "endorsements": [
+        {
+          "name": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "senate-9-dem-primary-john-burke",
+      "candidate_name": "John Burke",
+      "chamber": "senate",
+      "district_number": 9,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-10-dem-primary-walter-s-felag-jr",
+      "candidate_name": "Walter S Felag Jr",
+      "chamber": "senate",
+      "district_number": 10,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-11-dem-primary-linda-l-ujifusa",
+      "candidate_name": "Linda L Ujifusa",
+      "chamber": "senate",
+      "district_number": 11,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "senate-12-dem-primary-louis-dipalma",
+      "candidate_name": "Louis DiPalma",
+      "chamber": "senate",
+      "district_number": 12,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-13-dem-primary-dawn-euer",
+      "candidate_name": "Dawn Euer",
+      "chamber": "senate",
+      "district_number": 13,
+      "party": "Democrat",
+      "campaign_website": "https://www.electdawneuer.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [
+        {
+          "title": "Economy and housing",
+          "summary": "Build an economy that works for residents while expanding housing supply and affordability.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.electdawneuer.com/"
+        },
+        {
+          "title": "Climate",
+          "summary": "Continue Rhode Island climate action and clean-energy policy.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.electdawneuer.com/"
+        },
+        {
+          "title": "Civil rights",
+          "summary": "Protect civil rights and reproductive freedom.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.electdawneuer.com/"
+        },
+        {
+          "title": "Good government",
+          "summary": "Promote transparent, responsive government.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.electdawneuer.com/"
+        }
+      ],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "senate-13-dem-primary-angela-lima",
+      "candidate_name": "Angela Lima",
+      "chamber": "senate",
+      "district_number": 13,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-14-dem-primary-valarie-jean-lawson",
+      "candidate_name": "Valarie Jean Lawson",
+      "chamber": "senate",
+      "district_number": 14,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-14-oth-general-brian-g-coogan",
+      "candidate_name": "Brian G Coogan",
+      "chamber": "senate",
+      "district_number": 14,
+      "party": "Independent",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-15-dem-primary-meghan-e-kallman",
+      "candidate_name": "Meghan E Kallman",
+      "chamber": "senate",
+      "district_number": 15,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-15-dem-primary-vanessa-lopez",
+      "candidate_name": "Vanessa Lopez",
+      "chamber": "senate",
+      "district_number": 15,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-16-dem-primary-jonathon-acosta",
+      "candidate_name": "Jonathon Acosta",
+      "chamber": "senate",
+      "district_number": 16,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "senate-17-dem-primary-nelly-burdette",
+      "candidate_name": "Nelly Burdette",
+      "chamber": "senate",
+      "district_number": 17,
+      "party": "Democrat",
+      "campaign_website": "https://electnelly.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [
+        {
+          "title": "Healthy aging",
+          "summary": "Strengthen healthcare, housing, and community supports so older adults can age with dignity.",
+          "source_label": "Official campaign website",
+          "source_url": "https://electnelly.com/"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Make physical and mental healthcare easier to access and afford.",
+          "source_label": "Official campaign website",
+          "source_url": "https://electnelly.com/"
+        },
+        {
+          "title": "Housing",
+          "summary": "Expand stable, affordable housing as a foundation for health and wellbeing.",
+          "source_label": "Official campaign website",
+          "source_url": "https://electnelly.com/"
+        }
+      ],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        },
+        {
+          "name": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "senate-17-rep-primary-thomas-j-paolino",
+      "candidate_name": "Thomas J Paolino",
+      "chamber": "senate",
+      "district_number": 17,
+      "party": "Republican",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-17-oth-general-john-douglas-barr-ii",
+      "candidate_name": "John Douglas Barr II",
+      "chamber": "senate",
+      "district_number": 17,
+      "party": "Independent",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-17-oth-general-jina-n-petrarca",
+      "candidate_name": "Jina N Petrarca",
+      "chamber": "senate",
+      "district_number": 17,
+      "party": "Independent",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-18-dem-primary-robert-britto",
+      "candidate_name": "Robert Britto",
+      "chamber": "senate",
+      "district_number": 18,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "senate-19-dem-primary-ryan-w-pearson",
+      "candidate_name": "Ryan W Pearson",
+      "chamber": "senate",
+      "district_number": 19,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "senate-19-dem-primary-james-metivier",
+      "candidate_name": "James Metivier",
+      "chamber": "senate",
+      "district_number": 19,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-19-oth-general-james-d-purcell",
+      "candidate_name": "James D Purcell",
+      "chamber": "senate",
+      "district_number": 19,
+      "party": "Independent",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-20-dem-primary-brian-j-thompson",
+      "candidate_name": "Brian J Thompson",
+      "chamber": "senate",
+      "district_number": 20,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-21-rep-primary-gordon-e-rogers",
+      "candidate_name": "Gordon E Rogers",
+      "chamber": "senate",
+      "district_number": 21,
+      "party": "Republican",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-22-dem-primary-david-p-tikoian",
+      "candidate_name": "David P Tikoian",
+      "chamber": "senate",
+      "district_number": 22,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-23-rep-primary-jessica-de-la-cruz",
+      "candidate_name": "Jessica de la Cruz",
+      "chamber": "senate",
+      "district_number": 23,
+      "party": "Republican",
+      "campaign_website": "https://www.jessicaforri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-24-dem-primary-melissa-murray",
+      "candidate_name": "Melissa Murray",
+      "chamber": "senate",
+      "district_number": 24,
+      "party": "Democrat",
+      "campaign_website": "https://www.murrayforri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "senate-25-dem-primary-andrew-r-dimitri",
+      "candidate_name": "Andrew R Dimitri",
+      "chamber": "senate",
+      "district_number": 25,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-26-dem-primary-todd-m-patalano",
+      "candidate_name": "Todd M Patalano",
+      "chamber": "senate",
+      "district_number": 26,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-27-dem-primary-hanna-m-gallo",
+      "candidate_name": "Hanna M Gallo",
+      "chamber": "senate",
+      "district_number": 27,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-28-dem-primary-lammis-j-vargas",
+      "candidate_name": "Lammis J Vargas",
+      "chamber": "senate",
+      "district_number": 28,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "senate-29-dem-primary-peter-a-appollonio-jr",
+      "candidate_name": "Peter A Appollonio Jr",
+      "chamber": "senate",
+      "district_number": 29,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-30-dem-primary-mark-mckenney",
+      "candidate_name": "Mark McKenney",
+      "chamber": "senate",
+      "district_number": 30,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-31-dem-primary-matthew-l-lamountain",
+      "candidate_name": "Matthew L LaMountain",
+      "chamber": "senate",
+      "district_number": 31,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "senate-32-dem-primary-pamela-j-lauria",
+      "candidate_name": "Pamela J Lauria",
+      "chamber": "senate",
+      "district_number": 32,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "senate-33-dem-primary-leonidas-peter-raptakis",
+      "candidate_name": "Leonidas Peter Raptakis",
+      "chamber": "senate",
+      "district_number": 33,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-33-rep-primary-james-p-pierson",
+      "candidate_name": "James P Pierson",
+      "chamber": "senate",
+      "district_number": 33,
+      "party": "Republican",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-34-dem-primary-samantha-r-wilcox",
+      "candidate_name": "Samantha R Wilcox",
+      "chamber": "senate",
+      "district_number": 34,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "senate-34-rep-primary-elaine-j-morgan",
+      "candidate_name": "Elaine J Morgan",
+      "chamber": "senate",
+      "district_number": 34,
+      "party": "Republican",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-35-dem-primary-bridget-g-valverde",
+      "candidate_name": "Bridget G Valverde",
+      "chamber": "senate",
+      "district_number": 35,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "senate-36-dem-primary-alana-m-dimario",
+      "candidate_name": "Alana M DiMario",
+      "chamber": "senate",
+      "district_number": 36,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-36-dem-primary-mark-mesrobian",
+      "candidate_name": "Mark Mesrobian",
+      "chamber": "senate",
+      "district_number": 36,
+      "party": "Democrat",
+      "campaign_website": "https://www.mark4ri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-37-dem-primary-virginia-susan-sosnowski",
+      "candidate_name": "Virginia Susan Sosnowski",
+      "chamber": "senate",
+      "district_number": 37,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "senate-38-dem-primary-victoria-gu",
+      "candidate_name": "Victoria Gu",
+      "chamber": "senate",
+      "district_number": 38,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "senate-38-rep-primary-westin-j-place",
+      "candidate_name": "Westin J Place",
+      "chamber": "senate",
+      "district_number": 38,
+      "party": "Republican",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-1-dem-primary-edith-h-ajello",
+      "candidate_name": "Edith H Ajello",
+      "chamber": "house",
+      "district_number": 1,
+      "party": "Democrat",
+      "campaign_website": "http://edithajello.org/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-1-dem-primary-michael-j-garman",
+      "candidate_name": "Michael J Garman",
+      "chamber": "house",
+      "district_number": 1,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-2-dem-primary-christopher-r-blazejewski",
+      "candidate_name": "Christopher R Blazejewski",
+      "chamber": "house",
+      "district_number": 2,
+      "party": "Democrat",
+      "campaign_website": "https://chrisblazejewski.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-3-dem-primary-nathan-w-biah",
+      "candidate_name": "Nathan W Biah",
+      "chamber": "house",
+      "district_number": 3,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-4-dem-primary-rebecca-m-kislak",
+      "candidate_name": "Rebecca M Kislak",
+      "chamber": "house",
+      "district_number": 4,
+      "party": "Democrat",
+      "campaign_website": "https://www.rebeccakislak.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [
+        {
+          "title": "Public education",
+          "summary": "Invest in strong and equitable public schools.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.rebeccakislak.com/"
+        },
+        {
+          "title": "Healthcare and reproductive justice",
+          "summary": "Support healthcare access, reproductive justice, and abortion care.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.rebeccakislak.com/"
+        },
+        {
+          "title": "Climate and environment",
+          "summary": "Expand renewable energy, conservation, public transit, and climate action.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.rebeccakislak.com/"
+        },
+        {
+          "title": "Gun safety",
+          "summary": "Support effective gun-safety laws, including restrictions on assault weapons.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.rebeccakislak.com/"
+        },
+        {
+          "title": "Aging in place",
+          "summary": "Help older residents remain safely and independently in their homes.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.rebeccakislak.com/"
+        }
+      ],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-5-dem-primary-anthony-j-desimone",
+      "candidate_name": "Anthony J DeSimone",
+      "chamber": "house",
+      "district_number": 5,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-5-oth-general-brittany-m-kubicek",
+      "candidate_name": "Brittany M Kubicek",
+      "chamber": "house",
+      "district_number": 5,
+      "party": "Independent-Socialist",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-6-dem-primary-raymond-a-hull",
+      "candidate_name": "Raymond A Hull",
+      "chamber": "house",
+      "district_number": 6,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-7-dem-primary-amy-j-santiago",
+      "candidate_name": "Amy J Santiago",
+      "chamber": "house",
+      "district_number": 7,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-7-dem-primary-jo-ann-ryan",
+      "candidate_name": "Jo-Ann Ryan",
+      "chamber": "house",
+      "district_number": 7,
+      "party": "Democrat",
+      "campaign_website": "https://www.joannryan.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [
+        {
+          "title": "Road and pedestrian safety",
+          "summary": "Continue work on safer streets and transportation improvements.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.joannryan.com/"
+        },
+        {
+          "title": "Fiscal accountability",
+          "summary": "Bring finance and oversight experience to state budgeting and government operations.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.joannryan.com/"
+        },
+        {
+          "title": "Housing and neighborhoods",
+          "summary": "Protect established neighborhoods while addressing housing needs.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.joannryan.com/"
+        },
+        {
+          "title": "Environment",
+          "summary": "Build on her work reducing single-use plastics with stronger environmental protections.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.joannryan.com/"
+        },
+        {
+          "title": "Community investment",
+          "summary": "Direct public resources toward neighborhood services and programs.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.joannryan.com/"
+        }
+      ],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-7-rep-primary-christopher-l-ireland",
+      "candidate_name": "Christopher L Ireland",
+      "chamber": "house",
+      "district_number": 7,
+      "party": "Republican",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-8-dem-primary-john-joseph-lombardi",
+      "candidate_name": "John Joseph Lombardi",
+      "chamber": "house",
+      "district_number": 8,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-9-dem-primary-santos-javier",
+      "candidate_name": "Santos Javier",
+      "chamber": "house",
+      "district_number": 9,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-9-dem-primary-enrique-george-sanchez",
+      "candidate_name": "Enrique George Sanchez",
+      "chamber": "house",
+      "district_number": 9,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-10-dem-primary-scott-a-slater",
+      "candidate_name": "Scott A Slater",
+      "chamber": "house",
+      "district_number": 10,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-11-dem-primary-grace-diaz",
+      "candidate_name": "Grace Diaz",
+      "chamber": "house",
+      "district_number": 11,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-12-dem-primary-carlos-cedeno",
+      "candidate_name": "Carlos Cedeno",
+      "chamber": "house",
+      "district_number": 12,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-12-dem-primary-arlette-hidalgo",
+      "candidate_name": "Arlette Hidalgo",
+      "chamber": "house",
+      "district_number": 12,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-13-dem-primary-ramon-perez",
+      "candidate_name": "Ramon Perez",
+      "chamber": "house",
+      "district_number": 13,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-13-rep-primary-derick-a-reels",
+      "candidate_name": "Derick A Reels",
+      "chamber": "house",
+      "district_number": 13,
+      "party": "Republican",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-14-dem-primary-charlene-m-lima",
+      "candidate_name": "Charlene M Lima",
+      "chamber": "house",
+      "district_number": 14,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-14-dem-primary-naiommi-baret",
+      "candidate_name": "Naiommi Baret",
+      "chamber": "house",
+      "district_number": 14,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-14-dem-primary-kassielle-m-ramos",
+      "candidate_name": "Kassielle M Ramos",
+      "chamber": "house",
+      "district_number": 14,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-15-dem-primary-colleen-m-crudele",
+      "candidate_name": "Colleen M Crudele",
+      "chamber": "house",
+      "district_number": 15,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-15-rep-primary-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": 15,
+      "party": "Republican",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-15-oth-general-allan-w-fung",
+      "candidate_name": "Allan W Fung",
+      "chamber": "house",
+      "district_number": 15,
+      "party": "Independent",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-16-dem-primary-brandon-potter",
+      "candidate_name": "Brandon Potter",
+      "chamber": "house",
+      "district_number": 16,
+      "party": "Democrat",
+      "campaign_website": "https://www.brandonpotterri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-17-dem-primary-jacquelyn-baginski",
+      "candidate_name": "Jacquelyn Baginski",
+      "chamber": "house",
+      "district_number": 17,
+      "party": "Democrat",
+      "campaign_website": "https://jacquelynbaginski.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-18-dem-primary-arthur-handy",
+      "candidate_name": "Arthur Handy",
+      "chamber": "house",
+      "district_number": 18,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-18-rep-primary-jessica-gomes",
+      "candidate_name": "Jessica Gomes",
+      "chamber": "house",
+      "district_number": 18,
+      "party": "Republican",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-19-dem-primary-joseph-mcnamara",
+      "candidate_name": "Joseph McNamara",
+      "chamber": "house",
+      "district_number": 19,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-19-oth-general-patrick-e-maloney-jr",
+      "candidate_name": "Patrick E Maloney Jr",
+      "chamber": "house",
+      "district_number": 19,
+      "party": "Independent",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-20-dem-primary-david-a-bennett",
+      "candidate_name": "David A Bennett",
+      "chamber": "house",
+      "district_number": 20,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-21-rep-primary-marie-a-hopkins",
+      "candidate_name": "Marie A Hopkins",
+      "chamber": "house",
+      "district_number": 21,
+      "party": "Republican",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-22-dem-primary-janie-lee-segui",
+      "candidate_name": "Janie Lee Segui",
+      "chamber": "house",
+      "district_number": 22,
+      "party": "Democrat",
+      "campaign_website": "https://www.seguiforri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [
+        {
+          "title": "Preservation",
+          "summary": "Preserve Warwick's natural beauty and coastal character.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.seguiforri.com/"
+        },
+        {
+          "title": "Education",
+          "summary": "Improve the school funding formula and support students and schools.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.seguiforri.com/"
+        },
+        {
+          "title": "Affordability",
+          "summary": "Focus state policy on affordability for working families.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.seguiforri.com/"
+        },
+        {
+          "title": "Fiscal accountability",
+          "summary": "Treat taxpayer dollars carefully and emphasize transparent, accountable spending.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.seguiforri.com/"
+        }
+      ],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-22-dem-primary-zakary-j-pereira",
+      "candidate_name": "Zakary J Pereira",
+      "chamber": "house",
+      "district_number": 22,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-22-rep-primary-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": 22,
+      "party": "Republican",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-23-dem-primary-william-muto",
+      "candidate_name": "William Muto",
+      "chamber": "house",
+      "district_number": 23,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-23-dem-primary-timothy-howe",
+      "candidate_name": "Timothy Howe",
+      "chamber": "house",
+      "district_number": 23,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-23-rep-primary-dana-james-traversie",
+      "candidate_name": "Dana James Traversie",
+      "chamber": "house",
+      "district_number": 23,
+      "party": "Republican",
+      "campaign_website": "https://www.djt4ri.us/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [
+        {
+          "title": "Small business",
+          "summary": "Reduce barriers facing small businesses and improve the state's business climate.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.djt4ri.us/"
+        },
+        {
+          "title": "Manufacturing jobs",
+          "summary": "Use reshoring opportunities to grow well-paying manufacturing jobs.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.djt4ri.us/"
+        },
+        {
+          "title": "Technology jobs",
+          "summary": "Attract semiconductor and cybersecurity employers to Rhode Island.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.djt4ri.us/"
+        },
+        {
+          "title": "Affordability",
+          "summary": "Address the high costs of fuel, groceries, and everyday goods.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.djt4ri.us/"
+        }
+      ],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-24-dem-primary-evan-patrick-shanley",
+      "candidate_name": "Evan Patrick Shanley",
+      "chamber": "house",
+      "district_number": 24,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-25-dem-primary-thomas-e-noret",
+      "candidate_name": "Thomas E Noret",
+      "chamber": "house",
+      "district_number": 25,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-26-dem-primary-earl-a-read-iii",
+      "candidate_name": "Earl A Read III",
+      "chamber": "house",
+      "district_number": 26,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-27-dem-primary-angela-s-coburn",
+      "candidate_name": "Angela S Coburn",
+      "chamber": "house",
+      "district_number": 27,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-27-rep-primary-lawrence-paul-almagno-jr",
+      "candidate_name": "Lawrence Paul Almagno Jr",
+      "chamber": "house",
+      "district_number": 27,
+      "party": "Republican",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-28-rep-primary-george-a-nardone",
+      "candidate_name": "George A Nardone",
+      "chamber": "house",
+      "district_number": 28,
+      "party": "Republican",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-29-rep-primary-sherry-l-roberts",
+      "candidate_name": "Sherry L Roberts",
+      "chamber": "house",
+      "district_number": 29,
+      "party": "Republican",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-30-dem-primary-justine-caldwell",
+      "candidate_name": "Justine Caldwell",
+      "chamber": "house",
+      "district_number": 30,
+      "party": "Democrat",
+      "campaign_website": "http://www.justine4ri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-31-dem-primary-james-c-sheehan",
+      "candidate_name": "James C Sheehan",
+      "chamber": "house",
+      "district_number": 31,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-31-dem-primary-thomas-n-menec",
+      "candidate_name": "Thomas N Menec",
+      "chamber": "house",
+      "district_number": 31,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-31-dem-primary-matthew-b-mccoy",
+      "candidate_name": "Matthew B McCoy",
+      "chamber": "house",
+      "district_number": 31,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-32-dem-primary-robert-e-craven-jr",
+      "candidate_name": "Robert E Craven Jr",
+      "chamber": "house",
+      "district_number": 32,
+      "party": "Democrat",
+      "campaign_website": "https://www.cravenforri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [
+        {
+          "title": "Affordability and housing",
+          "summary": "Expand housing working families can afford and help incomes keep pace with living costs.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.cravenforri.com/"
+        },
+        {
+          "title": "Coastal resilience",
+          "summary": "Prepare North Kingstown for erosion, climate risks, insurance pressures, and threats to the blue economy.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.cravenforri.com/"
+        },
+        {
+          "title": "Education",
+          "summary": "Improve the state funding formula, career and technical education, and public-school investment.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.cravenforri.com/"
+        }
+      ],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        },
+        {
+          "name": "AFL-CIO",
+          "source_url": "https://www.cravenforri.com/",
+          "source_type": "candidate_site"
+        },
+        {
+          "name": "National Education Association Rhode Island",
+          "source_url": "https://www.cravenforri.com/",
+          "source_type": "candidate_site"
+        },
+        {
+          "name": "SEIU",
+          "source_url": "https://www.cravenforri.com/",
+          "source_type": "candidate_site"
+        },
+        {
+          "name": "Planned Parenthood Votes! Rhode Island",
+          "source_url": "https://www.cravenforri.com/",
+          "source_type": "candidate_site"
+        },
+        {
+          "name": "Rhode Island Coalition Against Gun Violence",
+          "source_url": "https://www.cravenforri.com/",
+          "source_type": "candidate_site"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-32-dem-primary-kevin-hoyle",
+      "candidate_name": "Kevin Hoyle",
+      "chamber": "house",
+      "district_number": 32,
+      "party": "Democrat",
+      "campaign_website": "https://www.voteforkevin.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [
+        {
+          "title": "Fiscal responsibility",
+          "summary": "Approach state spending with the same affordability discipline households use.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.voteforkevin.com/"
+        },
+        {
+          "title": "Affordability",
+          "summary": "Make Rhode Island more affordable for residents and families.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.voteforkevin.com/"
+        },
+        {
+          "title": "Government accountability",
+          "summary": "Emphasize responsible decision-making and public accountability.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.voteforkevin.com/"
+        },
+        {
+          "title": "Business and jobs",
+          "summary": "Use business experience to strengthen Rhode Island's economy.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.voteforkevin.com/"
+        }
+      ],
+      "endorsements": [
+        {
+          "name": "League of Rhode Island Businesses",
+          "source_url": "https://www.voteforkevin.com/",
+          "source_type": "candidate_site"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-33-dem-primary-carol-hagan-mcentee",
+      "candidate_name": "Carol Hagan McEntee",
+      "chamber": "house",
+      "district_number": 33,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-33-rep-primary-jessica-drew-day",
+      "candidate_name": "Jessica Drew Day",
+      "chamber": "house",
+      "district_number": 33,
+      "party": "Republican",
+      "campaign_website": "https://jessicadrewday.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-34-dem-primary-teresa-a-tanzi",
+      "candidate_name": "Teresa A Tanzi",
+      "chamber": "house",
+      "district_number": 34,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-35-dem-primary-kathleen-a-fogarty",
+      "candidate_name": "Kathleen A Fogarty",
+      "chamber": "house",
+      "district_number": 35,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-35-rep-primary-jennifer-p-nerbonne",
+      "candidate_name": "Jennifer P Nerbonne",
+      "chamber": "house",
+      "district_number": 35,
+      "party": "Republican",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-36-dem-primary-tina-l-spears",
+      "candidate_name": "Tina L Spears",
+      "chamber": "house",
+      "district_number": 36,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-36-dem-primary-leah-j-boisclair",
+      "candidate_name": "Leah J Boisclair",
+      "chamber": "house",
+      "district_number": 36,
+      "party": "Democrat",
+      "campaign_website": "https://www.leahforri-district36.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [
+        {
+          "title": "People before politics",
+          "summary": "Emphasize practical problem-solving over party politics.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.leahforri-district36.com/"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Expand primary care, lower costs, and strengthen mental-health and addiction services.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.leahforri-district36.com/"
+        },
+        {
+          "title": "Housing",
+          "summary": "Create more attainable housing and protect renters.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.leahforri-district36.com/"
+        },
+        {
+          "title": "Infrastructure and transportation",
+          "summary": "Improve roads, bridges, resilient infrastructure, and transit for seniors.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.leahforri-district36.com/"
+        },
+        {
+          "title": "Small business",
+          "summary": "Support local businesses and economic opportunity.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.leahforri-district36.com/"
+        }
+      ],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-37-dem-primary-samuel-angelo-azzinaro",
+      "candidate_name": "Samuel Angelo Azzinaro",
+      "chamber": "house",
+      "district_number": 37,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-37-rep-primary-christopher-m-stanton",
+      "candidate_name": "Christopher M Stanton",
+      "chamber": "house",
+      "district_number": 37,
+      "party": "Republican",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-38-dem-primary-brian-patrick-kennedy",
+      "candidate_name": "Brian Patrick Kennedy",
+      "chamber": "house",
+      "district_number": 38,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-38-dem-primary-stephen-c-moffitt",
+      "candidate_name": "Stephen C Moffitt",
+      "chamber": "house",
+      "district_number": 38,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-39-dem-primary-megan-l-cotter",
+      "candidate_name": "Megan L Cotter",
+      "chamber": "house",
+      "district_number": 39,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-39-rep-primary-jasmin-roy",
+      "candidate_name": "Jasmin Roy",
+      "chamber": "house",
+      "district_number": 39,
+      "party": "Republican",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-40-rep-primary-michael-chippendale",
+      "candidate_name": "Michael Chippendale",
+      "chamber": "house",
+      "district_number": 40,
+      "party": "Republican",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-41-dem-primary-shaina-n-smith",
+      "candidate_name": "Shaina N Smith",
+      "chamber": "house",
+      "district_number": 41,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-41-rep-primary-michael-j-riley",
+      "candidate_name": "Michael J Riley",
+      "chamber": "house",
+      "district_number": 41,
+      "party": "Republican",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-42-dem-primary-edward-w-stravato",
+      "candidate_name": "Edward W Stravato",
+      "chamber": "house",
+      "district_number": 42,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-42-rep-primary-richard-r-fascia",
+      "candidate_name": "Richard R Fascia",
+      "chamber": "house",
+      "district_number": 42,
+      "party": "Republican",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-43-dem-primary-deborah-a-fellela",
+      "candidate_name": "Deborah A Fellela",
+      "chamber": "house",
+      "district_number": 43,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-44-dem-primary-gregory-costantino",
+      "candidate_name": "Gregory Costantino",
+      "chamber": "house",
+      "district_number": 44,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-44-rep-primary-joseph-hosey",
+      "candidate_name": "Joseph Hosey",
+      "chamber": "house",
+      "district_number": 44,
+      "party": "Republican",
+      "campaign_website": "https://hoseyforri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [
+        {
+          "title": "Affordability and taxes",
+          "summary": "Lower cost burdens and keep more money in residents' pockets.",
+          "source_label": "Official campaign website",
+          "source_url": "https://hoseyforri.com/"
+        },
+        {
+          "title": "Housing affordability",
+          "summary": "Make housing more attainable for working people and families.",
+          "source_label": "Official campaign website",
+          "source_url": "https://hoseyforri.com/"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Improve healthcare affordability, access, and accountability.",
+          "source_label": "Official campaign website",
+          "source_url": "https://hoseyforri.com/"
+        },
+        {
+          "title": "Energy costs",
+          "summary": "Seek relief from high electricity and natural-gas costs.",
+          "source_label": "Official campaign website",
+          "source_url": "https://hoseyforri.com/"
+        },
+        {
+          "title": "Government accountability",
+          "summary": "Target waste, fraud, corruption, and unnecessary spending.",
+          "source_label": "Official campaign website",
+          "source_url": "https://hoseyforri.com/"
+        }
+      ],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-45-dem-primary-mia-a-ackerman",
+      "candidate_name": "Mia A Ackerman",
+      "chamber": "house",
+      "district_number": 45,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-46-dem-primary-mary-ann-shallcross-smith",
+      "candidate_name": "Mary Ann Shallcross Smith",
+      "chamber": "house",
+      "district_number": 46,
+      "party": "Democrat",
+      "campaign_website": "https://friendsofmaryannshallcrosssmith.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [
+        {
+          "title": "Small business",
+          "summary": "Advocate for small businesses and working families.",
+          "source_label": "Official campaign website",
+          "source_url": "https://friendsofmaryannshallcrosssmith.com/"
+        },
+        {
+          "title": "Education",
+          "summary": "Support quality, affordable education and early childhood education.",
+          "source_label": "Official campaign website",
+          "source_url": "https://friendsofmaryannshallcrosssmith.com/"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Keep healthcare among the district's core priorities.",
+          "source_label": "Official campaign website",
+          "source_url": "https://friendsofmaryannshallcrosssmith.com/"
+        }
+      ],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-47-rep-primary-david-j-place",
+      "candidate_name": "David J Place",
+      "chamber": "house",
+      "district_number": 47,
+      "party": "Republican",
+      "campaign_website": "https://www.davidjplace.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [
+        {
+          "title": "Local control",
+          "summary": "Restore local decision-making and reduce unfunded state mandates.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.davidjplace.com/"
+        },
+        {
+          "title": "Education choice",
+          "summary": "Expand education options for families.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.davidjplace.com/"
+        },
+        {
+          "title": "Maker and gig economy",
+          "summary": "Support entrepreneurship and new forms of work.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.davidjplace.com/"
+        },
+        {
+          "title": "Small business",
+          "summary": "Reduce cronyism and support local businesses.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.davidjplace.com/"
+        }
+      ],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-48-rep-primary-brian-c-newberry",
+      "candidate_name": "Brian C Newberry",
+      "chamber": "house",
+      "district_number": 48,
+      "party": "Republican",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-49-dem-primary-veronicka-vega",
+      "candidate_name": "Veronicka Vega",
+      "chamber": "house",
+      "district_number": 49,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-49-oth-general-jon-d-brien",
+      "candidate_name": "Jon D Brien",
+      "chamber": "house",
+      "district_number": 49,
+      "party": "Independent",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-50-dem-primary-stephen-casey",
+      "candidate_name": "Stephen Casey",
+      "chamber": "house",
+      "district_number": 50,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-51-dem-primary-robert-d-phillips",
+      "candidate_name": "Robert D Phillips",
+      "chamber": "house",
+      "district_number": 51,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-52-dem-primary-alex-d-marszalkowski",
+      "candidate_name": "Alex D Marszalkowski",
+      "chamber": "house",
+      "district_number": 52,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-53-dem-primary-suzanna-l-alba",
+      "candidate_name": "Suzanna L Alba",
+      "chamber": "house",
+      "district_number": 53,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-53-rep-primary-paul-m-santucci",
+      "candidate_name": "Paul M Santucci",
+      "chamber": "house",
+      "district_number": 53,
+      "party": "Republican",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-54-dem-primary-william-w-o-brien",
+      "candidate_name": "William W O'Brien",
+      "chamber": "house",
+      "district_number": 54,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-55-dem-primary-arthur-j-corvese",
+      "candidate_name": "Arthur J Corvese",
+      "chamber": "house",
+      "district_number": 55,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-56-dem-primary-joshua-j-giraldo",
+      "candidate_name": "Joshua J Giraldo",
+      "chamber": "house",
+      "district_number": 56,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-57-dem-primary-brandon-t-voas",
+      "candidate_name": "Brandon T Voas",
+      "chamber": "house",
+      "district_number": 57,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-57-dem-primary-james-mclaughlin",
+      "candidate_name": "James McLaughlin",
+      "chamber": "house",
+      "district_number": 57,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-58-dem-primary-cherie-l-cruz",
+      "candidate_name": "Cherie L Cruz",
+      "chamber": "house",
+      "district_number": 58,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-59-dem-primary-jennifer-a-stewart",
+      "candidate_name": "Jennifer A Stewart",
+      "chamber": "house",
+      "district_number": 59,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-59-oth-general-jean-p-barros",
+      "candidate_name": "Jean P Barros",
+      "chamber": "house",
+      "district_number": 59,
+      "party": "Independent",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-60-dem-primary-karen-alzate",
+      "candidate_name": "Karen Alzate",
+      "chamber": "house",
+      "district_number": 60,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-60-rep-primary-luis-ernesto-sandoval-jr",
+      "candidate_name": "Luis Ernesto Sandoval Jr",
+      "chamber": "house",
+      "district_number": 60,
+      "party": "Republican",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-61-dem-primary-mark-a-theroux",
+      "candidate_name": "Mark A Theroux",
+      "chamber": "house",
+      "district_number": 61,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-61-dem-primary-leonela-felix",
+      "candidate_name": "Leonela Felix",
+      "chamber": "house",
+      "district_number": 61,
+      "party": "Democrat",
+      "campaign_website": "https://www.leonelafelix.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [
+        {
+          "title": "Criminal justice reform",
+          "summary": "Reform the criminal legal system while supporting public safety.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.leonelafelix.com/"
+        },
+        {
+          "title": "Housing",
+          "summary": "Protect tenants, expand affordable housing, and prevent displacement and homelessness.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.leonelafelix.com/"
+        },
+        {
+          "title": "Reproductive justice",
+          "summary": "Protect bodily autonomy and access to reproductive healthcare.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.leonelafelix.com/"
+        },
+        {
+          "title": "Workers and wages",
+          "summary": "Raise wages, protect workers' rights, and support small businesses.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.leonelafelix.com/"
+        },
+        {
+          "title": "Education and opportunity",
+          "summary": "Strengthen schools and opportunities for Pawtucket families.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.leonelafelix.com/"
+        }
+      ],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-62-dem-primary-mary-duffy-messier",
+      "candidate_name": "Mary Duffy Messier",
+      "chamber": "house",
+      "district_number": 62,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-63-dem-primary-katherine-sheena-kazarian",
+      "candidate_name": "Katherine Sheena Kazarian",
+      "chamber": "house",
+      "district_number": 63,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-64-dem-primary-jenni-a-furtado",
+      "candidate_name": "Jenni A Furtado",
+      "chamber": "house",
+      "district_number": 64,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-65-dem-primary-matthew-dawson",
+      "candidate_name": "Matthew Dawson",
+      "chamber": "house",
+      "district_number": 65,
+      "party": "Democrat",
+      "campaign_website": "https://www.dawsonforep.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-65-dem-primary-grant-webber-wosencroft",
+      "candidate_name": "Grant Webber Wosencroft",
+      "chamber": "house",
+      "district_number": 65,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-65-dem-primary-cameron-st-germain",
+      "candidate_name": "Cameron St Germain",
+      "chamber": "house",
+      "district_number": 65,
+      "party": "Democrat",
+      "campaign_website": "http://stgermainfor65.com",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-66-dem-primary-jennifer-smith-boylan",
+      "candidate_name": "Jennifer Smith Boylan",
+      "chamber": "house",
+      "district_number": 66,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-67-dem-primary-nicole-p-jellinek",
+      "candidate_name": "Nicole P Jellinek",
+      "chamber": "house",
+      "district_number": 67,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-67-dem-primary-ronald-paul-jarvais-jr",
+      "candidate_name": "Ronald Paul Jarvais Jr",
+      "chamber": "house",
+      "district_number": 67,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-67-oth-general-joseph-a-depasquale",
+      "candidate_name": "Joseph A DePasquale",
+      "chamber": "house",
+      "district_number": 67,
+      "party": "Independent",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-68-dem-primary-june-s-speakman",
+      "candidate_name": "June S Speakman",
+      "chamber": "house",
+      "district_number": 68,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-69-dem-primary-susan-ann-donovan",
+      "candidate_name": "Susan Ann Donovan",
+      "chamber": "house",
+      "district_number": 69,
+      "party": "Democrat",
+      "campaign_website": "http://susan-donovan.com",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-70-dem-primary-john-g-edwards",
+      "candidate_name": "John G Edwards",
+      "chamber": "house",
+      "district_number": 70,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-71-dem-primary-michelle-e-mcgaw",
+      "candidate_name": "Michelle E McGaw",
+      "chamber": "house",
+      "district_number": 71,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-72-dem-primary-terri-denise-cortvriend",
+      "candidate_name": "Terri-Denise Cortvriend",
+      "chamber": "house",
+      "district_number": 72,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-73-dem-primary-marvin-abney",
+      "candidate_name": "Marvin Abney",
+      "chamber": "house",
+      "district_number": 73,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-74-dem-primary-alex-finkelman",
+      "candidate_name": "Alex Finkelman",
+      "chamber": "house",
+      "district_number": 74,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": []
+    },
+    {
+      "candidate_id": "house-75-dem-primary-lauren-h-carson",
+      "candidate_name": "Lauren H Carson",
+      "chamber": "house",
+      "district_number": 75,
+      "party": "Democrat",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-08-28",
+      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "priorities": [],
+      "endorsements": [
+        {
+          "name": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser"
+        }
+      ]
+    }
+  ]
+}
