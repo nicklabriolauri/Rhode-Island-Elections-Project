@@ -2913,10 +2913,9 @@
                   ${buildCandidatePerformanceCard(candidate)}
                 </div>
                 <div class="hero-search-match-actions">
-                  <a class="hero-search-action primary" href="${buildRunningHref(candidate)}">Who’s on this ballot?</a>
-                  <a class="hero-search-action compare" href="${buildMeetHref(candidate)}">Compare candidates</a>
-                  ${financeHref ? `<a class="hero-search-action finance" href="${financeHref}">Campaign finance</a>` : ""}
-                </div>
+  <a class="hero-search-action primary" href="${buildRunningHref(candidate)}">View race & candidates</a>
+  ${financeHref ? `<a class="hero-search-action finance" href="${financeHref}">Campaign finance</a>` : ""}
+</div>
               </article>
             `;
           }).join("")}
