@@ -282,18 +282,32 @@
       return "#9aa7b8";
     }
 
-    function districtNumberFromFeature(feature){
-      const p = feature?.properties || {};
-      const candidates = [
-        p.DISTRICT, p.District, p.district, p.DISTRICT_N, p.DIST_NUM, p.DISTRICTNO,
-        p.HOUSE_DIST, p.SEN_DIST, p.DIST
-      ];
-      for(const value of candidates){
-        const m = String(value ?? "").match(/\d+/);
-        if(m) return String(Number(m[0]));
-      }
-      return null;
-    }
+   function districtNumberFromFeature(feature) {
+  const props = feature?.properties || {};
+
+  const rawDistrict =
+    props.district_number ??
+    props.DIST_NUM ??
+    props.SLDUST ??
+    props.DISTRICT ??
+    props.District ??
+    props.district ??
+    props.DISTRICT_N ??
+    props.DISTRICTNO ??
+    props.HOUSE_DIST ??
+    props.SEN_DIST ??
+    props.DIST ??
+    props.NAME ??
+    props.NAMELSAD;
+
+  if (rawDistrict === null || rawDistrict === undefined) {
+    return null;
+  }
+
+  const match = String(rawDistrict).match(/\d+/);
+
+  return match ? String(Number(match[0])) : null;
+}
 
     async function loadGeo(){
       if(geoCache[chamber]) return geoCache[chamber];
@@ -528,10 +542,12 @@
       await drawMap();
     }
 
-    init().catch(err=>{
-      console.error(err);
-      document.getElementById("districtSummary").textContent = "The race data could not be loaded. Please refresh the page.";
-    });
+    init().catch(err => {
+  console.error("RIEP map initialization error:", err);
+
+  document.getElementById("districtSummary").textContent =
+    "Candidate information loaded, but the district map could not be displayed.";
+});;
   })();
   </script>
 </body>
