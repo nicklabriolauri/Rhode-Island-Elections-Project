@@ -267,11 +267,11 @@
   (() => {
     const DATA_URL = "data/whos_running_2026.json?v=20260828-unified";
     const PROFILE_URL = "data/candidate_profiles_2026.json?v=20260828-unified";
-    const RESEARCH_URL = "data/candidate_research_2026_with_endorsements_FIXED.json?v=20260828-phase2";
+    const RESEARCH_URL = "data/candidate_research_2026_with_endorsements.json?v=20260828-phase2";
     const GEO = {
       house: "/data/house_new.geojson",
       senate: "/data/senate_new.geojson",
-      precincts: "/data/ri_2024_precinct_lookup.geojson"
+      precincts: "/data/ri_turnout_2024_precinct.geojson"
     };
 
     let data = null;
@@ -790,22 +790,47 @@
       };
       resetControl.addTo(map);
 
-      const [running, profilePayload, researchPayload, precinctGeo] = await Promise.all([
-        fetch(DATA_URL,{cache:"no-store"}).then(r=>r.json()),
-        fetch(PROFILE_URL,{cache:"no-store"}).then(r=>r.json()),
-        fetch(RESEARCH_URL,{cache:"no-store"}).then(r=>r.json()),
-        fetch(GEO.precincts,{cache:"no-store"}).then(r=>r.json())
+      const [running, profilePayload] = await Promise.all([
+        fetch(DATA_URL,{cache:"no-store"}).then(r => {
+          if(!r.ok) throw new Error("Could not load candidate data.");
+          return r.json();
+        }),
+        fetch(PROFILE_URL,{cache:"no-store"}).then(r => {
+          if(!r.ok) throw new Error("Could not load candidate profiles.");
+          return r.json();
+        })
+      ]);
+
+      // Phase 2 research and precinct geometry are enhancements, not dependencies.
+      // If either fails, the district map, candidate cards, and campaign-finance links
+      // still load normally.
+      const [researchPayload, precinctGeo] = await Promise.all([
+        fetch(RESEARCH_URL,{cache:"no-store"})
+          .then(r => r.ok ? r.json() : {candidates:[]})
+          .catch(() => ({candidates:[]})),
+        fetch(GEO.precincts,{cache:"no-store"})
+          .then(r => r.ok ? r.json() : {features:[]})
+          .catch(() => ({features:[]}))
       ]);
 
       data = running;
       profiles = new Map((profilePayload?.profiles || []).map(p=>[p.candidate_id,p]));
-      research = new Map((researchPayload?.candidates || []).map(p=>[p.candidate_id,p]));
-      researchByName = new Map((researchPayload?.candidates || []).map(p=>[String(p.candidate_name || "").toLowerCase(),p]));
+
+      const researchRows = researchPayload?.candidates || researchPayload?.profiles || [];
+      research = new Map(researchRows.map(p=>[p.candidate_id,p]));
+      researchByName = new Map(researchRows.map(p=>[String(p.candidate_name || p.name || "").toLowerCase(),p]));
 
       precinctFeatureByCode = {};
       (precinctGeo?.features || []).forEach(feature => {
         const props = feature.properties || {};
-        const code = String(props.DISTRICT || props.PRECINCTS || "").trim();
+        const code = String(
+          props.DISTRICT ||
+          props.PRECINCTS ||
+          props.PRECINCT ||
+          props.precinct_code ||
+          props.PRECINCT_CODE ||
+          ""
+        ).trim();
         if(code) precinctFeatureByCode[code] = feature;
       });
 
