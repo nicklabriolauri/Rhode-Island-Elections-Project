@@ -255,7 +255,7 @@
           <div class="eyebrow">Candidate comparison</div>
           <h2 id="compareTitle">House District 1</h2>
         </div>
-        <div class="compare-note">Candidate-submitted priorities are shown when available. Profiles without a response remain clearly labeled instead of being filled with unsourced assumptions.</div>
+        <div class="compare-note">Existing candidate priority lists are preserved. Website-derived priorities are used only when no existing priority list is available. Verified endorsements appear on the same candidate card with source links.</div>
       </div>
       <div class="candidate-grid" id="candidateGrid"></div>
     </section>
@@ -266,7 +266,7 @@
   (() => {
     const DATA_URL = "data/whos_running_2026.json?v=20260828-unified";
     const PROFILE_URL = "data/candidate_profiles_2026.json?v=20260828-unified";
-    const RESEARCH_URL = "data/candidate_research_2026.json?v=20260828-phase2";
+    const RESEARCH_URL = "data/candidate_research_2026_with_endorsements.json?v=20260828-phase2";
     const GEO = {
       house: "/data/house_new.geojson",
       senate: "/data/senate_new.geojson",
