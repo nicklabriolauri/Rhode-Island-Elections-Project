@@ -258,7 +258,20 @@
       .outside-rating-row{grid-template-columns:1fr;gap:5px}
     }
 
-  </style>
+  
+    .office-record{margin-top:14px;padding-top:13px;border-top:1px solid #e5ebf2}
+    .office-record-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:10px}
+    .office-stat{border:1px solid #e2e8f0;padding:10px;background:#fff;border-radius:4px}
+    .office-stat strong{display:block;font-size:20px;line-height:1;color:var(--navy,var(--ink))}
+    .office-stat span{display:block;margin-top:5px;font-size:10px;line-height:1.35;color:var(--muted)}
+    .office-list{margin-top:10px;font-size:11px;line-height:1.5;color:var(--muted)}
+    .office-list strong{color:var(--navy,var(--ink))}
+    .office-source{margin-top:8px;font-size:10px}
+    .office-source a{font-weight:800;color:#315f91;text-decoration:none}
+    .office-method{margin-top:9px;font-size:10px;line-height:1.45;color:#78879a}
+    @media(max-width:700px){.office-record-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+</style>
 </head>
 <body>
   <header class="top">
@@ -342,6 +355,7 @@
     const PROFILE_URL = "data/candidate_profiles_2026.json?v=20260828-unified";
     const RESEARCH_URL = "data/candidate_research_2026_with_endorsements.json?v=20260828-phase2";
     const RATINGS_URL = "data/outside_ratings_2026.json?v=20260829-ratings";
+    const OFFICE_URL = "data/incumbent_records_2026.json?v=20260829-office";
     const GEO = {
       house: "/data/house_new.geojson",
       senate: "/data/senate_new.geojson",
@@ -353,6 +367,7 @@
     let research = new Map();
     let researchByName = new Map();
     let outsideRatings = [];
+    let incumbentRecords = [];
     let chamber = "house";
     let selectedDistrict = "1";
     let filter = "all";
@@ -654,14 +669,59 @@
     }
 
 
+    
+    function normPersonName(value){
+      return String(value || "").toLowerCase()
+        .normalize("NFD").replace(/[\u0300-\u036f]/g,"")
+        .replace(/\b(jr|sr|ii|iii|iv)\.?\b/g,"")
+        .replace(/[^a-z0-9]+/g," ").trim();
+    }
+    function officeRecordFor(candidate){
+      const n=normPersonName(candidate.name);
+      return incumbentRecords.find(r =>
+        String(r.chamber||"").toLowerCase()===String(candidate.chamber||"").toLowerCase() &&
+        String(r.district_number)===String(candidate.district_number) &&
+        normPersonName(r.candidate_name)===n
+      ) || null;
+    }
+    function officeRecordBlock(candidate){
+      const r=officeRecordFor(candidate);
+      if(!r || !r.is_incumbent) return "";
+      const L=r.legislation||{};
+      const stat=(value,label)=> value===null||value===undefined ? "" :
+        `<div class="office-stat"><strong>${esc(value)}</strong><span>${esc(label)}</span></div>`;
+      const stats=[
+        stat(L.prime_sponsored,"Bills introduced · lead sponsor"),
+        stat(L.cosponsored,"Bills cosponsored"),
+        stat(L.passed_chamber,"Lead bills passed chamber"),
+        stat(L.became_law,"Lead bills became law")
+      ].join("");
+      const committees=(r.committees||[]).map(x=>typeof x==="string"?x:(x.role?`${x.role} · ${x.name}`:x.name)).filter(Boolean);
+      const leadership=(r.leadership||[]).map(x=>typeof x==="string"?x:(x.title||x.name)).filter(Boolean);
+      const votes=r.votes||{}, voteBits=[];
+      if(votes.recorded!==null&&votes.recorded!==undefined) voteBits.push(`${votes.recorded} recorded floor votes`);
+      if(votes.not_voting!==null&&votes.not_voting!==undefined) voteBits.push(`${votes.not_voting} not voting`);
+      const sources=(r.sources||[]).filter(Boolean);
+      const hasContent=stats||committees.length||leadership.length||voteBits.length;
+      if(!hasContent) return "";
+      return `<div class="office-record">
+        <div class="priority-label">Record in office · ${esc(r.period||"2025–2026")}</div>
+        ${stats?`<div class="office-record-grid">${stats}</div>`:""}
+        ${committees.length?`<div class="office-list"><strong>Committees:</strong> ${committees.map(esc).join(" · ")}</div>`:""}
+        ${leadership.length?`<div class="office-list"><strong>Leadership:</strong> ${leadership.map(esc).join(" · ")}</div>`:""}
+        ${voteBits.length?`<div class="office-list"><strong>Floor voting:</strong> ${voteBits.map(esc).join(" · ")}</div>`:""}
+        ${sources.length?`<div class="office-source"><a href="${esc(sources[0])}" target="_blank" rel="noopener">Official General Assembly source ↗</a></div>`:""}
+        <div class="office-method">Raw measures only. RIEP does not calculate an effectiveness score.</div>
+      </div>`;
+    }
+
     function ratingsFor(candidate){
-      const candidateName = String(candidate.name || "").toLowerCase().trim();
-      return outsideRatings.filter(item => {
-        const itemName = String(item.candidate_name || "").toLowerCase().trim();
-        return String(item.chamber || "").toLowerCase() === chamber &&
-          String(item.district_number) === String(selectedDistrict) &&
-          (itemName === candidateName || itemName.includes(candidateName) || candidateName.includes(itemName));
-      });
+      const n=normPersonName(candidate.name);
+      return outsideRatings.filter(r =>
+        String(r.chamber||"").toLowerCase()===String(candidate.chamber||"").toLowerCase() &&
+        String(r.district_number)===String(candidate.district_number) &&
+        normPersonName(r.candidate_name)===n
+      );
     }
 
     function outsideRatingsBlock(candidate){
@@ -722,6 +782,7 @@
           ${priorityBlock(candidate)}
           ${endorsementBlock(candidate)}
           ${outsideRatingsBlock(candidate)}
+          ${officeRecordBlock(candidate)}
           ${web && !campaign ? `<div class="website-status">No official campaign website was located in RIEP's August 28, 2026 audit. This means no site was found in the audit; it is not a claim that no site exists.</div>` : ""}
         </article>`;
     }
@@ -917,7 +978,7 @@
       // Phase 2 research and precinct geometry are enhancements, not dependencies.
       // If either fails, the district map, candidate cards, and campaign-finance links
       // still load normally.
-      const [researchPayload, precinctGeo, ratingsPayload] = await Promise.all([
+      const [researchPayload, precinctGeo, ratingsPayload, officePayload] = await Promise.all([
         fetch(RESEARCH_URL,{cache:"no-store"})
           .then(r => r.ok ? r.json() : {candidates:[]})
           .catch(() => ({candidates:[]})),
@@ -926,7 +987,10 @@
           .catch(() => ({features:[]})),
         fetch(RATINGS_URL,{cache:"no-store"})
           .then(r => r.ok ? r.json() : {ratings:[]})
-          .catch(() => ({ratings:[]}))
+          .catch(() => ({ratings:[]})),
+        fetch(OFFICE_URL,{cache:"no-store"})
+          .then(r => r.ok ? r.json() : {records:[]})
+          .catch(() => ({records:[]}))
       ]);
 
       data = running;
@@ -936,6 +1000,7 @@
       research = new Map(researchRows.map(p=>[p.candidate_id,p]));
       researchByName = new Map(researchRows.map(p=>[String(p.candidate_name || p.name || "").toLowerCase(),p]));
       outsideRatings = ratingsPayload?.ratings || [];
+      incumbentRecords = officePayload?.records || [];
 
       precinctFeatureByCode = {};
       (precinctGeo?.features || []).forEach(feature => {
