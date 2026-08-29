@@ -3004,6 +3004,10 @@
       const ballotHref = `ballot.html?${ballotParams.toString()}`;
 
       const resultsHref = "map.html?mode=results&chamber=house&year=2024&view=party";
+      const districtCards = [
+        lookupRecord.house_district ? buildDistrictResultCard("house", lookupRecord.house_district) : "",
+        lookupRecord.senate_district ? buildDistrictResultCard("senate", lookupRecord.senate_district) : ""
+      ].filter(Boolean).join("");
 
       results.hidden = false;
       results.innerHTML = `
@@ -3021,6 +3025,8 @@
             ${lookupRecord.house_district ? `<span class="hero-search-chip">House District ${escapeHtml(String(lookupRecord.house_district))}</span>` : ""}
             ${lookupRecord.senate_district ? `<span class="hero-search-chip">Senate District ${escapeHtml(String(lookupRecord.senate_district))}</span>` : ""}
           </div>
+
+          ${districtCards ? `<div class="hero-search-result-grid">${districtCards}</div>` : ""}
 
           <div class="hero-search-action-row">
             <a class="hero-search-action primary" href="${ballotHref}">My Ballot</a>
