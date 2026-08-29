@@ -678,11 +678,14 @@
     }
     function officeRecordFor(candidate){
       const n=normPersonName(candidate.name);
-      return incumbentRecords.find(r =>
-        String(r.chamber||"").toLowerCase()===String(candidate.chamber||"").toLowerCase() &&
-        String(r.district_number)===String(candidate.district_number) &&
-        normPersonName(r.candidate_name)===n
-      ) || null;
+      const last=n.split(" ").filter(Boolean).at(-1) || "";
+      return incumbentRecords.find(r => {
+        const rn=normPersonName(r.candidate_name);
+        const rlast=rn.split(" ").filter(Boolean).at(-1) || "";
+        return String(r.chamber||"").toLowerCase()===String(candidate.chamber||"").toLowerCase() &&
+          String(r.district_number)===String(candidate.district_number) &&
+          (rn===n || (last && rlast===last));
+      }) || null;
     }
     function officeRecordBlock(candidate){
       const r=officeRecordFor(candidate);
@@ -717,11 +720,14 @@
 
     function ratingsFor(candidate){
       const n=normPersonName(candidate.name);
-      return outsideRatings.filter(r =>
-        String(r.chamber||"").toLowerCase()===String(candidate.chamber||"").toLowerCase() &&
-        String(r.district_number)===String(candidate.district_number) &&
-        normPersonName(r.candidate_name)===n
-      );
+      const last=n.split(" ").filter(Boolean).at(-1) || "";
+      return outsideRatings.filter(r => {
+        const rn=normPersonName(r.candidate_name);
+        const rlast=rn.split(" ").filter(Boolean).at(-1) || "";
+        return String(r.chamber||"").toLowerCase()===String(candidate.chamber||"").toLowerCase() &&
+          String(r.district_number)===String(candidate.district_number) &&
+          (rn===n || (last && rlast===last));
+      });
     }
 
     function outsideRatingsBlock(candidate){
@@ -751,6 +757,7 @@
     }
 
     function candidateCard(candidate, district){
+      candidate = {...candidate, chamber, district_number:Number(district)};
       const profile = profiles.get(candidate.candidate_id);
       const email = profile?.email_override || candidate.email || "";
       const phone = profile?.phone_override || candidate.phone || "";

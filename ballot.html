@@ -253,11 +253,14 @@
     }
     function officeRecordFor(candidate){
       const n=normPersonName(candidate.name);
-      return incumbentRecords.find(r =>
-        String(r.chamber||"").toLowerCase()===String(candidate.chamber||"").toLowerCase() &&
-        String(r.district_number)===String(candidate.district_number) &&
-        normPersonName(r.candidate_name)===n
-      ) || null;
+      const last=n.split(" ").filter(Boolean).at(-1) || "";
+      return incumbentRecords.find(r => {
+        const rn=normPersonName(r.candidate_name);
+        const rlast=rn.split(" ").filter(Boolean).at(-1) || "";
+        return String(r.chamber||"").toLowerCase()===String(candidate.chamber||"").toLowerCase() &&
+          String(r.district_number)===String(candidate.district_number) &&
+          (rn===n || (last && rlast===last));
+      }) || null;
     }
     function officeRecordBlock(candidate){
       const r=officeRecordFor(candidate);
@@ -291,13 +294,16 @@
     }
 
   function ratingsFor(candidate){
-    const n=normPersonName(candidate.name);
-    return outsideRatings.filter(r =>
-      String(r.chamber||"").toLowerCase()===String(candidate.chamber||"").toLowerCase() &&
-      String(r.district_number)===String(candidate.district_number) &&
-      normPersonName(r.candidate_name)===n
-    );
-  }
+      const n=normPersonName(candidate.name);
+      const last=n.split(" ").filter(Boolean).at(-1) || "";
+      return outsideRatings.filter(r => {
+        const rn=normPersonName(r.candidate_name);
+        const rlast=rn.split(" ").filter(Boolean).at(-1) || "";
+        return String(r.chamber||"").toLowerCase()===String(candidate.chamber||"").toLowerCase() &&
+          String(r.district_number)===String(candidate.district_number) &&
+          (rn===n || (last && rlast===last));
+      });
+    }
 
   function ratingsBlock(candidate){
     const items = ratingsFor(candidate);
@@ -361,7 +367,7 @@
       <div class="race-summary">${candidates.length} primary candidate${candidates.length===1?"":"s"} currently listed. ${record?.general_candidate_total || 0} general-election candidate${Number(record?.general_candidate_total||0)===1?"":"s"} currently preserved in the dataset.</div></div>
       <div class="actions"><a href="running.html?chamber=${chamber}&district=${encodeURIComponent(district)}">Open full district page</a></div></div>
       <div class="primary-summary">${primary.join("")}</div>
-      <div class="candidate-grid">${candidates.length?candidates.map(candidateCard).join(""):`<div class="empty">No primary candidates are currently listed for this district.</div>`}</div>
+      <div class="candidate-grid">${candidates.length?candidates.map(candidate=>candidateCard({...candidate,chamber,district_number:Number(district)})).join(""):`<div class="empty">No primary candidates are currently listed for this district.</div>`}</div>
     </section>`;
   }
 
