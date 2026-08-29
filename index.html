@@ -2990,54 +2990,42 @@
     function renderAddressSearchResult(query, candidate, lookupRecord) {
       const results = document.getElementById("homeSearchResults");
       if (!results) return;
+
+      const matchedAddress = candidate.address || query;
       const precinctName = `${lookupRecord.municipality} Precinct ${lookupRecord.precinct_label || lookupRecord.precinct_code}`;
-      const houseHref = lookupRecord.house_district ? `running.html?chamber=house&district=${encodeURIComponent(lookupRecord.house_district)}` : "running.html";
-      const senateHref = lookupRecord.senate_district ? `running.html?chamber=senate&district=${encodeURIComponent(lookupRecord.senate_district)}` : "running.html";
-      const houseMeetHref = lookupRecord.house_district ? `meet.html?chamber=house&district=${encodeURIComponent(lookupRecord.house_district)}` : "meet.html";
-      const senateMeetHref = lookupRecord.senate_district ? `meet.html?chamber=senate&district=${encodeURIComponent(lookupRecord.senate_district)}` : "meet.html";
-      const financeMatches = getDistrictFinanceMatches(lookupRecord);
-      const districtCards = [
-        lookupRecord.house_district ? buildDistrictResultCard("house", lookupRecord.house_district) : "",
-        lookupRecord.senate_district ? buildDistrictResultCard("senate", lookupRecord.senate_district) : ""
-      ].filter(Boolean).join("");
-      const lookupHref = buildLookupHref(candidate.address || query);
+      const lookupHref = buildLookupHref(matchedAddress);
+
+      const ballotParams = new URLSearchParams();
+      ballotParams.set("address", matchedAddress);
+      ballotParams.set("municipality", lookupRecord.municipality || "");
+      ballotParams.set("precinct", lookupRecord.precinct_label || lookupRecord.precinct_code || "");
+      if (lookupRecord.house_district) ballotParams.set("house", String(lookupRecord.house_district));
+      if (lookupRecord.senate_district) ballotParams.set("senate", String(lookupRecord.senate_district));
+      const ballotHref = `ballot.html?${ballotParams.toString()}`;
+
+      const resultsHref = "map.html?mode=results&chamber=house&year=2024&view=party";
 
       results.hidden = false;
       results.innerHTML = `
         <div class="hero-search-overview">
           <div class="hero-search-overview-head">
             <div>
-              <h4 class="hero-search-title">${escapeHtml(candidate.address || query)}</h4>
-              <p class="hero-search-subtitle">We matched this Rhode Island address to a precinct and gathered the quickest next pages for this voter.</p>
+              <h4 class="hero-search-title">Your voting information</h4>
+              <p class="hero-search-subtitle">We matched ${escapeHtml(matchedAddress)} to ${escapeHtml(precinctName)}. Open one ballot page to see the races RIEP can identify for this address.</p>
             </div>
             <span class="hero-search-kicker">Address match</span>
           </div>
+
           <div class="hero-search-chip-row">
             <span class="hero-search-chip">${escapeHtml(precinctName)}</span>
             ${lookupRecord.house_district ? `<span class="hero-search-chip">House District ${escapeHtml(String(lookupRecord.house_district))}</span>` : ""}
             ${lookupRecord.senate_district ? `<span class="hero-search-chip">Senate District ${escapeHtml(String(lookupRecord.senate_district))}</span>` : ""}
-            <span class="hero-search-chip">2024 turnout context</span>
           </div>
-          <div class="hero-search-result-grid">
-            <a class="hero-search-result-card hero-search-address-card is-link" href="${lookupHref}" aria-label="${escapeHtml(`Open Find My Precinct for ${candidate.address || query}`) }">
-              <div class="hero-search-result-label">Matched address</div>
-              <div class="hero-search-result-value">${escapeHtml(candidate.address || query)}</div>
-              <div class="hero-search-result-copy">${escapeHtml(`Open the full precinct lookup for ${precinctName}`)}</div>
-            </a>
-            ${districtCards}
-          </div>
+
           <div class="hero-search-action-row">
-            <a class="hero-search-action primary" href="${lookupHref}">Open Find My Precinct</a>
-            <a class="hero-search-action" href="${houseHref}">House ballot</a>
-            <a class="hero-search-action" href="${senateHref}">Senate ballot</a>
-            <a class="hero-search-action compare" href="${houseMeetHref}">Compare House candidates</a>
-            <a class="hero-search-action compare" href="${senateMeetHref}">Compare Senate candidates</a>
-            ${financeMatches.length
-              ? financeMatches.map(candidateMatch => {
-                  const financeHref = buildFinanceHref(candidateMatch);
-                  return `<a class="hero-search-action finance" href="${financeHref}">Finance: ${escapeHtml(candidateMatch.name)}</a>`;
-                }).join("")
-              : `<a class="hero-search-action finance" href="finance.html">Campaign finance directory</a>`}
+            <a class="hero-search-action primary" href="${ballotHref}">My Ballot</a>
+            <a class="hero-search-action" href="${lookupHref}">Find My Precinct</a>
+            <a class="hero-search-action compare" href="${resultsHref}">Election Results</a>
           </div>
         </div>
       `;
