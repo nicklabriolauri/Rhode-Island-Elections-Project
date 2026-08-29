@@ -73,7 +73,35 @@
     .empty{padding:20px;color:var(--muted)}
     footer{text-align:center;color:#78879a;font-size:12px;margin-top:28px}
     @media(max-width:850px){.candidate-grid{grid-template-columns:1fr}.shell{padding:18px 14px 44px}.hero{padding:24px}}
-  </style>
+  
+  /* Editorial civic-data treatment: fewer pills, flatter surfaces, quieter hierarchy */
+  body{background:#f5f7f9}
+  .hero{background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:8px;box-shadow:none}
+  .hero .eyebrow{color:#5d6f89}
+  .hero p{color:var(--muted)}
+  .chip{background:transparent;color:#52627a;border:0;border-right:1px solid var(--line);border-radius:0;padding:4px 14px 4px 0}
+  .notice{border-radius:4px;background:#fffaf0;box-shadow:none}
+  .race-section{border-radius:6px;box-shadow:none}
+  .candidate-card{border-radius:4px;background:#fff}
+  .badge{border-radius:3px}
+  .links a,.actions a{border-radius:3px;background:transparent}
+  .priority{border-radius:2px;background:#f7f8fa}
+  .awaiting,.website-status{border-radius:2px}
+  .endorsement-chip{border-radius:2px;background:transparent}
+  .official{border-radius:6px}
+  .candidate-grid{gap:10px}
+  .candidate-name{font-family:"Instrument Sans",sans-serif;letter-spacing:-.02em}
+  .race-head h2,.official h2{font-family:"Instrument Sans",sans-serif}
+  .outside-rating{display:grid;grid-template-columns:190px 75px 1fr auto;gap:14px;align-items:start;padding:13px 0;border-bottom:1px solid #e5ebf2}
+  .outside-rating:last-child{border-bottom:0}
+  .outside-rating-org{font-size:12px;font-weight:800}
+  .outside-rating-value{font-size:19px;font-weight:800;color:var(--ink)}
+  .outside-rating-copy{font-size:11px;line-height:1.5;color:var(--muted)}
+  .outside-rating-source{font-size:11px;font-weight:800;text-decoration:none}
+  .ratings-note{font-size:10px;line-height:1.5;color:#78879a;margin-top:9px}
+  @media(max-width:800px){.outside-rating{grid-template-columns:1fr;gap:5px}}
+
+</style>
 </head>
 <body>
 <div class="shell">
@@ -143,7 +171,7 @@
     document.getElementById("ballotChips").appendChild(el);
   });
 
-  let profiles = new Map(), research = new Map(), researchByName = new Map();
+  let profiles = new Map(), research = new Map(), researchByName = new Map(), outsideRatings = [];
   let financeById = new Map(), financeByComposite = new Map();
 
   function flatten(payload){
@@ -202,6 +230,32 @@
       }).join("")}</div>
       <div class="source-note">Only explicit endorsement announcements are listed. Select an endorsement to open its source.</div></div>`;
   }
+
+  function ratingsFor(candidate){
+    const name = String(candidate.name || "").toLowerCase();
+    return outsideRatings.filter(r =>
+      String(r.chamber || "").toLowerCase() === candidate.chamber &&
+      String(r.district_number) === String(candidate.district_number) &&
+      (String(r.candidate_name || "").toLowerCase() === name ||
+       name.includes(String(r.candidate_name || "").toLowerCase()) ||
+       String(r.candidate_name || "").toLowerCase().includes(name))
+    );
+  }
+  function ratingsBlock(candidate){
+    const items = ratingsFor(candidate);
+    if(!items.length) return "";
+    return `<div class="endorsement-block">
+      <div class="priority-label">Outside ratings & scorecards</div>
+      ${items.map(item => `<div class="outside-rating">
+        <div class="outside-rating-org">${esc(item.organization)}<div class="source-note">${esc(item.year)}</div></div>
+        <div class="outside-rating-value">${esc(item.rating)}</div>
+        <div class="outside-rating-copy">${esc(item.measure)}<div class="ratings-note">${esc(item.note || "This is the organization's rating, not an RIEP assessment.")}</div></div>
+        <a class="outside-rating-source" href="${esc(item.source_url)}" target="_blank" rel="noopener">Source ↗</a>
+      </div>`).join("")}
+      <div class="ratings-note">RIEP does not combine outside ratings into an overall candidate score. Each organization selects its own issues and methodology.</div>
+    </div>`;
+  }
+
   function candidateCard(candidate){
     const profile=profiles.get(candidate.candidate_id), web=researchFor(candidate), finance=financeFor(candidate);
     const email=profile?.email_override || candidate.email || "";
@@ -227,6 +281,7 @@
       ${profile?.summary?`<div class="candidate-sub" style="margin-top:12px;font-size:13px">${esc(profile.summary)}</div>`:""}
       ${priorityBlock(candidate)}
       ${endorsementBlock(candidate)}
+      ${ratingsBlock(candidate)}
       ${web && !campaign ? `<div class="website-status">No official campaign website was located in RIEP's August 28, 2026 audit. This does not prove that no site exists.</div>` : ""}
     </article>`;
   }
@@ -255,9 +310,11 @@
     fetch("data/whos_running_2026.json",{cache:"no-store"}).then(r=>r.ok?r.json():Promise.reject(new Error("Candidate data unavailable"))),
     fetch("data/candidate_profiles_2026.json",{cache:"no-store"}).then(r=>r.ok?r.json():({profiles:[]})),
     fetch("data/candidate_research_2026_with_endorsements.json",{cache:"no-store"}).then(r=>r.ok?r.json():({candidates:[]})),
-    fetch("data/candidate_finance_2026.json",{cache:"no-store"}).then(r=>r.ok?r.json():({profiles:[]}))
-  ]).then(([runningPayload,profilePayload,researchPayload,financePayload])=>{
+    fetch("data/candidate_finance_2026.json",{cache:"no-store"}).then(r=>r.ok?r.json():({profiles:[]})),
+    fetch("data/outside_ratings_2026.json",{cache:"no-store"}).then(r=>r.ok?r.json():({ratings:[]}))
+  ]).then(([runningPayload,profilePayload,researchPayload,financePayload,ratingsPayload])=>{
     profiles=new Map((profilePayload?.profiles||[]).map(p=>[p.candidate_id,p]));
+    outsideRatings = ratingsPayload?.ratings || [];
     const rr=researchPayload?.candidates || researchPayload?.profiles || [];
     research=new Map(rr.map(p=>[p.candidate_id,p]));
     researchByName=new Map(rr.map(p=>[String(p.candidate_name||p.name||"").toLowerCase(),p]));
