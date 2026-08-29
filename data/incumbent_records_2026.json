@@ -155,13 +155,21 @@
         "passed_chamber": null,
         "became_law": null
       },
-      "committees": [],
-      "leadership": [],
+      "committees": [
+        "Ex-officio member of all Senate standing committees",
+        "Senate Committee on Labor & Gaming",
+        "Senate Committee on Rules, Government Ethics & Oversight"
+      ],
+      "leadership": [
+        "Senate Minority Leader"
+      ],
       "votes": {
         "recorded": null,
         "not_voting": null
       },
-      "sources": []
+      "sources": [
+        "https://www.rilegislature.gov/senators/de%20la%20Cruz/Pages/Biography.aspx"
+      ]
     },
     {
       "candidate_name": "Alana M. DiMario",
@@ -602,13 +610,22 @@
         "passed_chamber": null,
         "became_law": null
       },
-      "committees": [],
+      "committees": [
+        {
+          "name": "Senate Commerce Committee",
+          "role": "Vice Chair"
+        },
+        "Senate Finance Committee"
+      ],
       "leadership": [],
       "votes": {
         "recorded": null,
         "not_voting": null
       },
-      "sources": []
+      "sources": [
+        "https://www.rilegislature.gov/Pages/SenateCommitteeMembers.aspx?ComChoiceS=SCOC&CommitteeName=Commerce",
+        "https://www.rilegislature.gov/Pages/SenateCommitteeMembers.aspx?ComChoiceS=SFIN&CommitteeName=Finance"
+      ]
     },
     {
       "candidate_name": "Brian J. Thompson",
@@ -1436,13 +1453,28 @@
         "passed_chamber": null,
         "became_law": null
       },
-      "committees": [],
-      "leadership": [],
+      "committees": [
+        {
+          "name": "House Rules Committee",
+          "role": "Chair"
+        },
+        {
+          "name": "House Municipal Government and Housing Committee",
+          "role": "First Vice Chair"
+        },
+        "House Environment and Natural Resources Committee",
+        "House Health and Human Services Committee"
+      ],
+      "leadership": [
+        "First Assistant Speaker"
+      ],
       "votes": {
         "recorded": null,
         "not_voting": null
       },
-      "sources": []
+      "sources": [
+        "https://www.rilegislature.gov/representatives/fogarty/Pages/Biography.aspx"
+      ]
     },
     {
       "candidate_name": "Jenni A. Furtado",
