@@ -3003,7 +3003,11 @@
       if (lookupRecord.senate_district) ballotParams.set("senate", String(lookupRecord.senate_district));
       const ballotHref = `ballot.html?${ballotParams.toString()}`;
 
-      const resultsHref = "map.html?mode=results&chamber=house&year=2024&view=party";
+      const resultsHref = lookupRecord.house_district
+        ? `map.html?mode=results&chamber=house&year=2024&view=party&district=${encodeURIComponent(String(lookupRecord.house_district))}`
+        : lookupRecord.senate_district
+          ? `map.html?mode=results&chamber=senate&year=2024&view=party&district=${encodeURIComponent(String(lookupRecord.senate_district))}`
+          : "map.html?mode=results&chamber=house&year=2024&view=party";
       const districtCards = [
         lookupRecord.house_district ? buildDistrictResultCard("house", lookupRecord.house_district) : "",
         lookupRecord.senate_district ? buildDistrictResultCard("senate", lookupRecord.senate_district) : ""
