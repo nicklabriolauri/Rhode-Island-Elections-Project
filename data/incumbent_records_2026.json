@@ -220,12 +220,16 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 90,
+        "sessions_absent": 1,
+        "attendance_rate_pct": 98.9,
+        "absent_dates": [
+          "2025-01-21"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-21-2025.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -329,15 +333,17 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 1,
-        "sessions_absent": 1,
-        "attendance_rate_pct": 50.0,
+        "sessions_eligible": 91,
+        "sessions_present": 89,
+        "sessions_absent": 2,
+        "attendance_rate_pct": 97.8,
         "absent_dates": [
-          "2025-06-12"
+          "2025-06-12",
+          "2026-04-14"
         ],
         "source_urls_for_absences": [
-          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/06-12-2025.pdf"
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/06-12-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-14-2026.pdf"
         ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
@@ -465,12 +471,24 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 86,
+        "sessions_absent": 5,
+        "attendance_rate_pct": 94.5,
+        "absent_dates": [
+          "2025-04-03",
+          "2025-04-08",
+          "2026-01-27",
+          "2026-05-26",
+          "2026-05-28"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-03-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-08-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-27-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-26-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-28-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -872,12 +890,22 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 87,
+        "sessions_absent": 4,
+        "attendance_rate_pct": 95.6,
+        "absent_dates": [
+          "2025-04-10",
+          "2026-01-06",
+          "2026-03-05",
+          "2026-04-02"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-10-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-06-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-05-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-02-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -1106,8 +1134,8 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
+        "sessions_eligible": 91,
+        "sessions_present": 91,
         "sessions_absent": 0,
         "attendance_rate_pct": 100.0,
         "absent_dates": [],
@@ -1395,15 +1423,23 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 1,
-        "sessions_absent": 1,
-        "attendance_rate_pct": 50.0,
+        "sessions_eligible": 91,
+        "sessions_present": 86,
+        "sessions_absent": 5,
+        "attendance_rate_pct": 94.5,
         "absent_dates": [
-          "2025-06-12"
+          "2025-06-10",
+          "2025-06-12",
+          "2026-02-10",
+          "2026-02-11",
+          "2026-04-16"
         ],
         "source_urls_for_absences": [
-          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/06-12-2025.pdf"
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/06-10-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/06-12-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-10-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-11-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-16-2026.pdf"
         ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
@@ -1792,12 +1828,30 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 83,
+        "sessions_absent": 8,
+        "attendance_rate_pct": 91.2,
+        "absent_dates": [
+          "2025-01-14",
+          "2025-01-15",
+          "2025-01-30",
+          "2025-02-27",
+          "2025-05-22",
+          "2026-01-13",
+          "2026-02-26",
+          "2026-03-12"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-14-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-15-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-30-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-27-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-22-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-13-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-26-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-12-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -1936,12 +1990,22 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 87,
+        "sessions_absent": 4,
+        "attendance_rate_pct": 95.6,
+        "absent_dates": [
+          "2025-02-04",
+          "2025-02-06",
+          "2025-03-11",
+          "2026-03-17"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-04-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-06-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-11-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-17-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -2241,12 +2305,18 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 89,
+        "sessions_absent": 2,
+        "attendance_rate_pct": 97.8,
+        "absent_dates": [
+          "2025-03-20",
+          "2025-04-24"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-20-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-24-2025.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -2471,12 +2541,26 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 85,
+        "sessions_absent": 6,
+        "attendance_rate_pct": 93.4,
+        "absent_dates": [
+          "2025-04-24",
+          "2025-04-29",
+          "2026-02-10",
+          "2026-02-11",
+          "2026-04-28",
+          "2026-04-30"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-24-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-29-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-10-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-11-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-28-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-30-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -2648,12 +2732,74 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 61,
+        "sessions_absent": 30,
+        "attendance_rate_pct": 67.0,
+        "absent_dates": [
+          "2025-01-09",
+          "2025-01-15",
+          "2025-01-23",
+          "2025-02-06",
+          "2025-02-12",
+          "2025-02-27",
+          "2025-04-03",
+          "2025-04-29",
+          "2025-05-20",
+          "2025-05-22",
+          "2025-06-10",
+          "2025-06-16",
+          "2025-06-18",
+          "2026-01-15",
+          "2026-01-22",
+          "2026-01-27",
+          "2026-02-05",
+          "2026-02-11",
+          "2026-02-26",
+          "2026-03-05",
+          "2026-03-12",
+          "2026-03-19",
+          "2026-05-05",
+          "2026-05-12",
+          "2026-05-19",
+          "2026-05-26",
+          "2026-06-03",
+          "2026-06-04",
+          "2026-06-09",
+          "2026-06-11"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-09-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-15-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-23-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-06-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-12-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-27-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-03-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-29-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-20-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-22-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/06-10-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/06-16-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/06-18-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-15-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-22-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-27-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-05-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-11-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-26-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-05-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-12-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-19-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-05-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-12-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-19-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-26-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/06-03-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/06-04-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/06-09-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/06-11-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -2894,12 +3040,44 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 76,
+        "sessions_absent": 15,
+        "attendance_rate_pct": 83.5,
+        "absent_dates": [
+          "2025-01-09",
+          "2025-01-15",
+          "2025-01-23",
+          "2025-02-06",
+          "2025-05-01",
+          "2025-05-22",
+          "2025-05-29",
+          "2025-06-03",
+          "2026-01-06",
+          "2026-01-27",
+          "2026-02-05",
+          "2026-02-26",
+          "2026-03-10",
+          "2026-04-14",
+          "2026-06-04"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-09-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-15-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-23-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-06-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-01-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-22-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-29-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/06-03-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-06-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-27-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-05-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-26-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-10-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-14-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/06-04-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -3122,12 +3300,26 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 85,
+        "sessions_absent": 6,
+        "attendance_rate_pct": 93.4,
+        "absent_dates": [
+          "2026-02-10",
+          "2026-02-26",
+          "2026-03-19",
+          "2026-03-26",
+          "2026-04-28",
+          "2026-05-21"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-10-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-26-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-19-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-26-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-28-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-21-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -3445,12 +3637,38 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 79,
+        "sessions_absent": 12,
+        "attendance_rate_pct": 86.8,
+        "absent_dates": [
+          "2025-01-14",
+          "2025-01-15",
+          "2025-02-06",
+          "2025-03-25",
+          "2025-03-27",
+          "2025-04-01",
+          "2025-04-03",
+          "2026-01-29",
+          "2026-02-10",
+          "2026-03-31",
+          "2026-04-02",
+          "2026-04-16"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-14-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-15-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-06-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-25-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-27-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-01-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-03-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-29-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-10-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-31-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-02-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-16-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -3843,12 +4061,46 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 75,
+        "sessions_absent": 16,
+        "attendance_rate_pct": 82.4,
+        "absent_dates": [
+          "2025-01-07",
+          "2025-01-09",
+          "2025-01-14",
+          "2025-01-15",
+          "2025-05-22",
+          "2026-01-13",
+          "2026-01-20",
+          "2026-02-03",
+          "2026-02-05",
+          "2026-02-10",
+          "2026-02-11",
+          "2026-03-17",
+          "2026-03-31",
+          "2026-04-07",
+          "2026-04-09",
+          "2026-05-26"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-07-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-09-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-14-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-15-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-22-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-13-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-20-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-03-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-05-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-10-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-11-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-17-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-31-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-07-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-09-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-26-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -4071,15 +4323,37 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 1,
-        "attendance_rate_pct": 100.0,
+        "sessions_eligible": 91,
+        "sessions_present": 79,
+        "sessions_absent": 12,
+        "attendance_rate_pct": 86.8,
         "absent_dates": [
-          "2025-03-13"
+          "2025-01-07",
+          "2025-01-09",
+          "2025-02-04",
+          "2025-02-12",
+          "2025-03-13",
+          "2025-03-25",
+          "2025-04-29",
+          "2025-06-20",
+          "2026-01-27",
+          "2026-01-29",
+          "2026-03-12",
+          "2026-04-02"
         ],
         "source_urls_for_absences": [
-          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-13-2025.pdf"
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-07-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-09-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-04-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-12-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-13-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-25-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-29-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/06-20-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-27-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-29-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-12-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-02-2026.pdf"
         ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
@@ -4546,8 +4820,8 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
+        "sessions_eligible": 91,
+        "sessions_present": 91,
         "sessions_absent": 0,
         "attendance_rate_pct": 100.0,
         "absent_dates": [],
@@ -4889,12 +5163,20 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 88,
+        "sessions_absent": 3,
+        "attendance_rate_pct": 96.7,
+        "absent_dates": [
+          "2025-04-03",
+          "2026-01-20",
+          "2026-01-22"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-03-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-20-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-22-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -5093,12 +5375,32 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 82,
+        "sessions_absent": 9,
+        "attendance_rate_pct": 90.1,
+        "absent_dates": [
+          "2025-01-21",
+          "2025-01-23",
+          "2025-03-18",
+          "2025-03-25",
+          "2025-03-27",
+          "2025-05-13",
+          "2026-03-05",
+          "2026-03-26",
+          "2026-06-03"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-21-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-23-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-18-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-25-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-27-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-13-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-05-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-26-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/06-03-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -5461,12 +5763,24 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 86,
+        "sessions_absent": 5,
+        "attendance_rate_pct": 94.5,
+        "absent_dates": [
+          "2025-03-25",
+          "2025-03-27",
+          "2025-04-01",
+          "2025-04-03",
+          "2026-01-22"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-25-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-27-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-01-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-03-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-22-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -5922,15 +6236,23 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 1,
-        "sessions_absent": 1,
-        "attendance_rate_pct": 50.0,
+        "sessions_eligible": 91,
+        "sessions_present": 86,
+        "sessions_absent": 5,
+        "attendance_rate_pct": 94.5,
         "absent_dates": [
-          "2025-06-12"
+          "2025-05-01",
+          "2025-05-08",
+          "2025-06-12",
+          "2026-03-19",
+          "2026-04-30"
         ],
         "source_urls_for_absences": [
-          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/06-12-2025.pdf"
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-01-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-08-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/06-12-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-19-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-30-2026.pdf"
         ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
@@ -6248,12 +6570,16 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 90,
+        "sessions_absent": 1,
+        "attendance_rate_pct": 98.9,
+        "absent_dates": [
+          "2026-05-19"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-19-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -6418,8 +6744,8 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
+        "sessions_eligible": 91,
+        "sessions_present": 91,
         "sessions_absent": 0,
         "attendance_rate_pct": 100.0,
         "absent_dates": [],
@@ -6584,12 +6910,36 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 80,
+        "sessions_absent": 11,
+        "attendance_rate_pct": 87.9,
+        "absent_dates": [
+          "2025-01-30",
+          "2025-04-01",
+          "2025-04-03",
+          "2025-06-03",
+          "2026-01-20",
+          "2026-01-22",
+          "2026-01-27",
+          "2026-03-26",
+          "2026-03-31",
+          "2026-04-02",
+          "2026-06-04"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-30-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-01-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-03-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/06-03-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-20-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-22-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-27-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-26-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-31-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-02-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/06-04-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -6908,12 +7258,22 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 87,
+        "sessions_absent": 4,
+        "attendance_rate_pct": 95.6,
+        "absent_dates": [
+          "2025-01-14",
+          "2026-01-22",
+          "2026-01-27",
+          "2026-01-29"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-14-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-22-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-27-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-29-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -7255,12 +7615,48 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 74,
+        "sessions_absent": 17,
+        "attendance_rate_pct": 81.3,
+        "absent_dates": [
+          "2025-02-25",
+          "2025-02-27",
+          "2025-03-04",
+          "2025-04-10",
+          "2026-01-08",
+          "2026-01-27",
+          "2026-02-03",
+          "2026-02-10",
+          "2026-02-26",
+          "2026-03-05",
+          "2026-03-17",
+          "2026-03-19",
+          "2026-03-31",
+          "2026-04-09",
+          "2026-05-19",
+          "2026-05-26",
+          "2026-06-03"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-25-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-27-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-04-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-10-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-08-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-27-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-03-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-10-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-26-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-05-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-17-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-19-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-31-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-09-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-19-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-26-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/06-03-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -7816,8 +8212,8 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
+        "sessions_eligible": 91,
+        "sessions_present": 91,
         "sessions_absent": 0,
         "attendance_rate_pct": 100.0,
         "absent_dates": [],
@@ -8185,12 +8581,24 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 86,
+        "sessions_absent": 5,
+        "attendance_rate_pct": 94.5,
+        "absent_dates": [
+          "2025-02-04",
+          "2025-04-10",
+          "2025-05-22",
+          "2026-03-17",
+          "2026-05-21"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-04-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-10-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-22-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-17-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-21-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -8580,12 +8988,40 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 78,
+        "sessions_absent": 13,
+        "attendance_rate_pct": 85.7,
+        "absent_dates": [
+          "2025-04-03",
+          "2025-04-08",
+          "2025-04-10",
+          "2025-04-22",
+          "2025-04-24",
+          "2025-04-29",
+          "2025-05-01",
+          "2025-05-06",
+          "2025-05-08",
+          "2025-05-13",
+          "2025-06-03",
+          "2025-06-05",
+          "2026-02-26"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-03-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-08-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-10-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-22-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-24-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-29-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-01-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-06-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-08-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-13-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/06-03-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/06-05-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-26-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -8952,12 +9388,28 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 84,
+        "sessions_absent": 7,
+        "attendance_rate_pct": 92.3,
+        "absent_dates": [
+          "2025-03-04",
+          "2025-03-06",
+          "2025-04-08",
+          "2026-04-16",
+          "2026-04-28",
+          "2026-04-30",
+          "2026-05-05"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-04-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-06-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-08-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-16-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-28-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-30-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-05-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -9323,8 +9775,8 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
+        "sessions_eligible": 91,
+        "sessions_present": 91,
         "sessions_absent": 0,
         "attendance_rate_pct": 100.0,
         "absent_dates": [],
@@ -9598,12 +10050,42 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 77,
+        "sessions_absent": 14,
+        "attendance_rate_pct": 84.6,
+        "absent_dates": [
+          "2025-04-22",
+          "2025-04-24",
+          "2025-04-29",
+          "2025-05-01",
+          "2025-05-06",
+          "2025-05-08",
+          "2025-05-13",
+          "2025-05-15",
+          "2025-05-20",
+          "2025-05-22",
+          "2025-05-27",
+          "2026-03-10",
+          "2026-03-24",
+          "2026-05-28"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-22-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-24-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-29-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-01-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-06-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-08-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-13-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-15-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-20-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-22-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-27-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-10-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-24-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-28-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -10025,12 +10507,16 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 90,
+        "sessions_absent": 1,
+        "attendance_rate_pct": 98.9,
+        "absent_dates": [
+          "2025-03-25"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-25-2025.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -10294,12 +10780,20 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 88,
+        "sessions_absent": 3,
+        "attendance_rate_pct": 96.7,
+        "absent_dates": [
+          "2025-03-06",
+          "2026-03-10",
+          "2026-05-28"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-06-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-10-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-28-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -10441,12 +10935,22 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 87,
+        "sessions_absent": 4,
+        "attendance_rate_pct": 95.6,
+        "absent_dates": [
+          "2025-03-04",
+          "2026-03-12",
+          "2026-04-09",
+          "2026-05-14"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-04-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-12-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-09-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-14-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -10715,12 +11219,30 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 83,
+        "sessions_absent": 8,
+        "attendance_rate_pct": 91.2,
+        "absent_dates": [
+          "2025-01-21",
+          "2025-02-27",
+          "2025-04-03",
+          "2025-05-01",
+          "2026-01-22",
+          "2026-03-17",
+          "2026-03-26",
+          "2026-05-19"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-21-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-27-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-03-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-01-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-22-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-17-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-26-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-19-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -10835,15 +11357,41 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 1,
-        "sessions_absent": 1,
-        "attendance_rate_pct": 50.0,
+        "sessions_eligible": 91,
+        "sessions_present": 77,
+        "sessions_absent": 14,
+        "attendance_rate_pct": 84.6,
         "absent_dates": [
-          "2025-03-13"
+          "2025-01-09",
+          "2025-02-06",
+          "2025-02-12",
+          "2025-03-13",
+          "2025-03-18",
+          "2025-05-22",
+          "2025-05-29",
+          "2026-01-06",
+          "2026-01-13",
+          "2026-01-29",
+          "2026-03-03",
+          "2026-04-28",
+          "2026-05-14",
+          "2026-06-04"
         ],
         "source_urls_for_absences": [
-          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-13-2025.pdf"
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-09-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-06-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-12-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-13-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-18-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-22-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-29-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-06-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-13-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-29-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-03-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-28-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-14-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/06-04-2026.pdf"
         ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
@@ -11043,12 +11591,48 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 74,
+        "sessions_absent": 17,
+        "attendance_rate_pct": 81.3,
+        "absent_dates": [
+          "2025-01-28",
+          "2025-01-30",
+          "2025-03-25",
+          "2025-04-22",
+          "2025-04-24",
+          "2025-05-13",
+          "2025-05-15",
+          "2025-06-05",
+          "2026-01-29",
+          "2026-02-26",
+          "2026-03-26",
+          "2026-03-31",
+          "2026-04-02",
+          "2026-04-07",
+          "2026-04-09",
+          "2026-04-14",
+          "2026-05-28"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-28-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-30-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-25-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-22-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-24-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-13-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-15-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/06-05-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-29-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-26-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-26-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-31-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-02-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-07-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-09-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-14-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-28-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -11440,12 +12024,30 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 83,
+        "sessions_absent": 8,
+        "attendance_rate_pct": 91.2,
+        "absent_dates": [
+          "2025-01-14",
+          "2025-01-15",
+          "2025-01-21",
+          "2025-04-10",
+          "2025-05-29",
+          "2025-06-03",
+          "2026-04-09",
+          "2026-04-16"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-14-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-15-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-21-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-10-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-29-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/06-03-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-09-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-16-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -11882,8 +12484,8 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
+        "sessions_eligible": 91,
+        "sessions_present": 91,
         "sessions_absent": 0,
         "attendance_rate_pct": 100.0,
         "absent_dates": [],
@@ -12050,12 +12652,28 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 84,
+        "sessions_absent": 7,
+        "attendance_rate_pct": 92.3,
+        "absent_dates": [
+          "2025-03-06",
+          "2025-05-01",
+          "2026-03-12",
+          "2026-03-17",
+          "2026-03-19",
+          "2026-04-16",
+          "2026-06-04"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-06-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-01-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-12-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-17-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-19-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-16-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/06-04-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -12267,15 +12885,29 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 1,
-        "sessions_absent": 1,
-        "attendance_rate_pct": 50.0,
+        "sessions_eligible": 91,
+        "sessions_present": 83,
+        "sessions_absent": 8,
+        "attendance_rate_pct": 91.2,
         "absent_dates": [
-          "2025-03-13"
+          "2025-02-11",
+          "2025-02-12",
+          "2025-03-13",
+          "2025-05-22",
+          "2025-06-20",
+          "2026-03-31",
+          "2026-05-14",
+          "2026-05-21"
         ],
         "source_urls_for_absences": [
-          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-13-2025.pdf"
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-11-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-12-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-13-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-22-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/06-20-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-31-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-14-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-21-2026.pdf"
         ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
@@ -12732,12 +13364,26 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 85,
+        "sessions_absent": 6,
+        "attendance_rate_pct": 93.4,
+        "absent_dates": [
+          "2025-01-14",
+          "2025-04-01",
+          "2025-05-29",
+          "2026-01-08",
+          "2026-01-13",
+          "2026-01-20"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-14-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-01-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-29-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-08-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-13-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-20-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -12938,12 +13584,16 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 90,
+        "sessions_absent": 1,
+        "attendance_rate_pct": 98.9,
+        "absent_dates": [
+          "2026-01-15"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-15-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -13106,12 +13756,30 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 83,
+        "sessions_absent": 8,
+        "attendance_rate_pct": 91.2,
+        "absent_dates": [
+          "2025-02-25",
+          "2025-02-27",
+          "2025-03-04",
+          "2025-06-05",
+          "2026-01-13",
+          "2026-02-26",
+          "2026-03-10",
+          "2026-04-16"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-25-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-27-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-04-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/06-05-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-13-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-26-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-10-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-16-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -13324,12 +13992,26 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 85,
+        "sessions_absent": 6,
+        "attendance_rate_pct": 93.4,
+        "absent_dates": [
+          "2025-02-04",
+          "2025-04-29",
+          "2025-05-01",
+          "2025-05-08",
+          "2026-04-02",
+          "2026-05-21"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-04-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-29-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-01-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-08-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-02-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-21-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -13716,12 +14398,16 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 90,
+        "sessions_absent": 1,
+        "attendance_rate_pct": 98.9,
+        "absent_dates": [
+          "2025-05-15"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-15-2025.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -14195,8 +14881,8 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
+        "sessions_eligible": 91,
+        "sessions_present": 91,
         "sessions_absent": 0,
         "attendance_rate_pct": 100.0,
         "absent_dates": [],
@@ -14586,12 +15272,30 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 83,
+        "sessions_absent": 8,
+        "attendance_rate_pct": 91.2,
+        "absent_dates": [
+          "2025-02-11",
+          "2025-02-27",
+          "2025-03-25",
+          "2025-04-29",
+          "2025-05-01",
+          "2025-05-15",
+          "2026-03-17",
+          "2026-05-21"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-11-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-27-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-25-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-29-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-01-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-15-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-17-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-21-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -14914,12 +15618,32 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 82,
+        "sessions_absent": 9,
+        "attendance_rate_pct": 90.1,
+        "absent_dates": [
+          "2025-01-14",
+          "2025-02-12",
+          "2025-05-06",
+          "2025-05-27",
+          "2026-01-13",
+          "2026-01-27",
+          "2026-01-29",
+          "2026-03-24",
+          "2026-05-26"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-14-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-12-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-06-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-27-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-13-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-27-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-29-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-24-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-26-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -15576,12 +16300,32 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 82,
+        "sessions_absent": 9,
+        "attendance_rate_pct": 90.1,
+        "absent_dates": [
+          "2025-01-28",
+          "2025-05-15",
+          "2025-06-10",
+          "2026-02-03",
+          "2026-02-05",
+          "2026-03-12",
+          "2026-04-09",
+          "2026-04-16",
+          "2026-06-10"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-28-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-15-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/06-10-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-03-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-05-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-12-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-09-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-16-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/06-10-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -15888,12 +16632,24 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 86,
+        "sessions_absent": 5,
+        "attendance_rate_pct": 94.5,
+        "absent_dates": [
+          "2025-03-18",
+          "2025-03-20",
+          "2025-04-22",
+          "2026-04-09",
+          "2026-05-21"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-18-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-20-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-22-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-09-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-21-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -16104,12 +16860,32 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 82,
+        "sessions_absent": 9,
+        "attendance_rate_pct": 90.1,
+        "absent_dates": [
+          "2025-02-04",
+          "2025-02-06",
+          "2025-03-27",
+          "2025-05-08",
+          "2025-05-13",
+          "2026-03-24",
+          "2026-04-09",
+          "2026-05-28",
+          "2026-06-02"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-04-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-06-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-27-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-08-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-13-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-24-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-09-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-28-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/06-02-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -16442,12 +17218,48 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 74,
+        "sessions_absent": 17,
+        "attendance_rate_pct": 81.3,
+        "absent_dates": [
+          "2025-01-09",
+          "2025-01-14",
+          "2025-01-15",
+          "2025-01-28",
+          "2025-04-03",
+          "2025-05-01",
+          "2025-05-06",
+          "2025-05-22",
+          "2026-01-15",
+          "2026-01-29",
+          "2026-02-11",
+          "2026-03-05",
+          "2026-03-12",
+          "2026-03-17",
+          "2026-03-31",
+          "2026-05-26",
+          "2026-05-28"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-09-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-14-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-15-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-28-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-03-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-01-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-06-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-22-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-15-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-29-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-11-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-05-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-12-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-17-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-31-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-26-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-28-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -16701,15 +17513,23 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 1,
-        "sessions_absent": 1,
-        "attendance_rate_pct": 50.0,
+        "sessions_eligible": 91,
+        "sessions_present": 86,
+        "sessions_absent": 5,
+        "attendance_rate_pct": 94.5,
         "absent_dates": [
-          "2025-03-13"
+          "2025-02-04",
+          "2025-02-06",
+          "2025-03-13",
+          "2026-03-10",
+          "2026-03-12"
         ],
         "source_urls_for_absences": [
-          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-13-2025.pdf"
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-04-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-06-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-13-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-10-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-12-2026.pdf"
         ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
@@ -16834,12 +17654,26 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 85,
+        "sessions_absent": 6,
+        "attendance_rate_pct": 93.4,
+        "absent_dates": [
+          "2025-04-10",
+          "2025-05-15",
+          "2026-01-20",
+          "2026-02-26",
+          "2026-03-03",
+          "2026-03-12"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-10-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-15-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-20-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-26-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-03-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-12-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -17071,12 +17905,22 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 87,
+        "sessions_absent": 4,
+        "attendance_rate_pct": 95.6,
+        "absent_dates": [
+          "2025-03-04",
+          "2025-03-06",
+          "2026-03-31",
+          "2026-04-02"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-04-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-06-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-31-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-02-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -17517,12 +18361,32 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 82,
+        "sessions_absent": 9,
+        "attendance_rate_pct": 90.1,
+        "absent_dates": [
+          "2025-02-06",
+          "2025-04-22",
+          "2025-05-08",
+          "2026-01-13",
+          "2026-01-15",
+          "2026-01-29",
+          "2026-02-11",
+          "2026-05-12",
+          "2026-06-08"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/02-06-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-22-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-08-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-13-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-15-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-29-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-11-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-12-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/06-08-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -17919,12 +18783,16 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 90,
+        "sessions_absent": 1,
+        "attendance_rate_pct": 98.9,
+        "absent_dates": [
+          "2026-04-28"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/04-28-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -18430,12 +19298,16 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 90,
+        "sessions_absent": 1,
+        "attendance_rate_pct": 98.9,
+        "absent_dates": [
+          "2025-04-24"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-24-2025.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -18899,14 +19771,16 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 1,
-        "sessions_absent": 1,
-        "attendance_rate_pct": 50.0,
+        "sessions_eligible": 91,
+        "sessions_present": 89,
+        "sessions_absent": 2,
+        "attendance_rate_pct": 97.8,
         "absent_dates": [
+          "2025-03-11",
           "2025-03-13"
         ],
         "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-11-2025.pdf",
           "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-13-2025.pdf"
         ],
         "unmatched_validated_session_dates": [],
@@ -19437,15 +20311,29 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 1,
-        "sessions_absent": 1,
-        "attendance_rate_pct": 50.0,
+        "sessions_eligible": 91,
+        "sessions_present": 83,
+        "sessions_absent": 8,
+        "attendance_rate_pct": 91.2,
         "absent_dates": [
-          "2025-03-13"
+          "2025-01-30",
+          "2025-03-13",
+          "2025-06-03",
+          "2025-06-05",
+          "2025-06-18",
+          "2026-01-06",
+          "2026-01-08",
+          "2026-03-12"
         ],
         "source_urls_for_absences": [
-          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-13-2025.pdf"
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-30-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-13-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/06-03-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/06-05-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/06-18-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-06-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-08-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-12-2026.pdf"
         ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
@@ -19843,12 +20731,18 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 89,
+        "sessions_absent": 2,
+        "attendance_rate_pct": 97.8,
+        "absent_dates": [
+          "2026-01-29",
+          "2026-05-19"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-29-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-19-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -20406,12 +21300,26 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 85,
+        "sessions_absent": 6,
+        "attendance_rate_pct": 93.4,
+        "absent_dates": [
+          "2025-04-24",
+          "2025-06-10",
+          "2026-01-06",
+          "2026-01-08",
+          "2026-06-03",
+          "2026-06-04"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-24-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/06-10-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-06-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-08-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/06-03-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/06-04-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -20549,12 +21457,42 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 77,
+        "sessions_absent": 14,
+        "attendance_rate_pct": 84.6,
+        "absent_dates": [
+          "2025-01-28",
+          "2025-03-27",
+          "2026-01-15",
+          "2026-01-20",
+          "2026-01-22",
+          "2026-01-27",
+          "2026-02-03",
+          "2026-02-05",
+          "2026-02-10",
+          "2026-02-11",
+          "2026-02-26",
+          "2026-03-03",
+          "2026-03-05",
+          "2026-03-31"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-28-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/03-27-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-15-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-20-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-22-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-27-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-03-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-05-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-10-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-11-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/02-26-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-03-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-05-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-31-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -20783,12 +21721,30 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 83,
+        "sessions_absent": 8,
+        "attendance_rate_pct": 91.2,
+        "absent_dates": [
+          "2025-01-15",
+          "2025-04-01",
+          "2025-04-03",
+          "2025-04-24",
+          "2025-06-03",
+          "2026-03-05",
+          "2026-05-28",
+          "2026-06-10"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/01-15-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-01-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-03-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/04-24-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/06-03-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/03-05-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-28-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/06-10-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -21120,12 +22076,22 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 2,
-        "sessions_present": 2,
-        "sessions_absent": 0,
-        "attendance_rate_pct": 100.0,
-        "absent_dates": [],
-        "source_urls_for_absences": [],
+        "sessions_eligible": 91,
+        "sessions_present": 87,
+        "sessions_absent": 4,
+        "attendance_rate_pct": 95.6,
+        "absent_dates": [
+          "2025-05-08",
+          "2026-01-06",
+          "2026-01-08",
+          "2026-05-19"
+        ],
+        "source_urls_for_absences": [
+          "https://www.rilegislature.gov/journals/housejournals/2025%20House%20Journals/05-08-2025.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-06-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/01-08-2026.pdf",
+          "https://www.rilegislature.gov/journals/housejournals/2026%20House%20Journals/05-19-2026.pdf"
+        ],
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
@@ -22137,8 +23103,8 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 64,
+        "sessions_eligible": 81,
+        "sessions_present": 81,
         "sessions_absent": 0,
         "attendance_rate_pct": 100.0,
         "absent_dates": [],
@@ -22444,10 +23410,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 56,
+        "sessions_eligible": 81,
+        "sessions_present": 73,
         "sessions_absent": 8,
-        "attendance_rate_pct": 87.5,
+        "attendance_rate_pct": 90.1,
         "absent_dates": [
           "2025-04-01",
           "2025-04-08",
@@ -22864,8 +23830,8 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 64,
+        "sessions_eligible": 81,
+        "sessions_present": 81,
         "sessions_absent": 0,
         "attendance_rate_pct": 100.0,
         "absent_dates": [],
@@ -23136,10 +24102,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 37,
-        "sessions_present": 36,
+        "sessions_eligible": 43,
+        "sessions_present": 42,
         "sessions_absent": 1,
-        "attendance_rate_pct": 97.3,
+        "attendance_rate_pct": 97.7,
         "absent_dates": [
           "2026-03-26"
         ],
@@ -23447,10 +24413,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 63,
+        "sessions_eligible": 81,
+        "sessions_present": 80,
         "sessions_absent": 1,
-        "attendance_rate_pct": 98.4,
+        "attendance_rate_pct": 98.8,
         "absent_dates": [
           "2026-04-02"
         ],
@@ -24043,10 +25009,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 57,
+        "sessions_eligible": 81,
+        "sessions_present": 74,
         "sessions_absent": 7,
-        "attendance_rate_pct": 89.1,
+        "attendance_rate_pct": 91.4,
         "absent_dates": [
           "2025-04-30",
           "2025-05-01",
@@ -24951,10 +25917,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 61,
+        "sessions_eligible": 81,
+        "sessions_present": 78,
         "sessions_absent": 3,
-        "attendance_rate_pct": 95.3,
+        "attendance_rate_pct": 96.3,
         "absent_dates": [
           "2025-04-10",
           "2026-04-14",
@@ -25297,8 +26263,8 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 64,
+        "sessions_eligible": 81,
+        "sessions_present": 81,
         "sessions_absent": 0,
         "attendance_rate_pct": 100.0,
         "absent_dates": [],
@@ -25796,8 +26762,8 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 64,
+        "sessions_eligible": 81,
+        "sessions_present": 81,
         "sessions_absent": 0,
         "attendance_rate_pct": 100.0,
         "absent_dates": [],
@@ -26457,10 +27423,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 62,
+        "sessions_eligible": 81,
+        "sessions_present": 79,
         "sessions_absent": 2,
-        "attendance_rate_pct": 96.9,
+        "attendance_rate_pct": 97.5,
         "absent_dates": [
           "2026-03-19",
           "2026-04-14"
@@ -26967,10 +27933,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 61,
+        "sessions_eligible": 81,
+        "sessions_present": 78,
         "sessions_absent": 3,
-        "attendance_rate_pct": 95.3,
+        "attendance_rate_pct": 96.3,
         "absent_dates": [
           "2025-04-30",
           "2025-05-01",
@@ -27904,10 +28870,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 62,
+        "sessions_eligible": 81,
+        "sessions_present": 79,
         "sessions_absent": 2,
-        "attendance_rate_pct": 96.9,
+        "attendance_rate_pct": 97.5,
         "absent_dates": [
           "2025-01-21",
           "2026-01-15"
@@ -28232,10 +29198,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 51,
+        "sessions_eligible": 81,
+        "sessions_present": 68,
         "sessions_absent": 13,
-        "attendance_rate_pct": 79.7,
+        "attendance_rate_pct": 84.0,
         "absent_dates": [
           "2025-04-30",
           "2025-05-01",
@@ -28569,8 +29535,8 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 64,
+        "sessions_eligible": 81,
+        "sessions_present": 81,
         "sessions_absent": 0,
         "attendance_rate_pct": 100.0,
         "absent_dates": [],
@@ -29161,10 +30127,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 58,
+        "sessions_eligible": 81,
+        "sessions_present": 75,
         "sessions_absent": 6,
-        "attendance_rate_pct": 90.6,
+        "attendance_rate_pct": 92.6,
         "absent_dates": [
           "2025-05-22",
           "2026-01-27",
@@ -29579,10 +30545,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 61,
+        "sessions_eligible": 81,
+        "sessions_present": 78,
         "sessions_absent": 3,
-        "attendance_rate_pct": 95.3,
+        "attendance_rate_pct": 96.3,
         "absent_dates": [
           "2026-03-05",
           "2026-03-17",
@@ -29793,10 +30759,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 56,
+        "sessions_eligible": 81,
+        "sessions_present": 73,
         "sessions_absent": 8,
-        "attendance_rate_pct": 87.5,
+        "attendance_rate_pct": 90.1,
         "absent_dates": [
           "2025-01-14",
           "2025-05-27",
@@ -30432,10 +31398,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 62,
+        "sessions_eligible": 81,
+        "sessions_present": 79,
         "sessions_absent": 2,
-        "attendance_rate_pct": 96.9,
+        "attendance_rate_pct": 97.5,
         "absent_dates": [
           "2026-03-03",
           "2026-03-05"
@@ -30587,10 +31553,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 38,
+        "sessions_eligible": 81,
+        "sessions_present": 55,
         "sessions_absent": 26,
-        "attendance_rate_pct": 59.4,
+        "attendance_rate_pct": 67.9,
         "absent_dates": [
           "2025-03-11",
           "2025-04-30",
@@ -31184,10 +32150,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 58,
+        "sessions_eligible": 81,
+        "sessions_present": 75,
         "sessions_absent": 6,
-        "attendance_rate_pct": 90.6,
+        "attendance_rate_pct": 92.6,
         "absent_dates": [
           "2025-05-01",
           "2025-05-06",
@@ -31628,10 +32594,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 63,
+        "sessions_eligible": 81,
+        "sessions_present": 80,
         "sessions_absent": 1,
-        "attendance_rate_pct": 98.4,
+        "attendance_rate_pct": 98.8,
         "absent_dates": [
           "2026-04-09"
         ],
@@ -32215,8 +33181,8 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 64,
+        "sessions_eligible": 81,
+        "sessions_present": 81,
         "sessions_absent": 0,
         "attendance_rate_pct": 100.0,
         "absent_dates": [],
@@ -32877,10 +33843,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 62,
+        "sessions_eligible": 81,
+        "sessions_present": 79,
         "sessions_absent": 2,
-        "attendance_rate_pct": 96.9,
+        "attendance_rate_pct": 97.5,
         "absent_dates": [
           "2025-06-04",
           "2026-01-27"
@@ -33667,8 +34633,8 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 64,
+        "sessions_eligible": 81,
+        "sessions_present": 81,
         "sessions_absent": 0,
         "attendance_rate_pct": 100.0,
         "absent_dates": [],
@@ -34221,10 +35187,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 63,
+        "sessions_eligible": 81,
+        "sessions_present": 80,
         "sessions_absent": 1,
-        "attendance_rate_pct": 98.4,
+        "attendance_rate_pct": 98.8,
         "absent_dates": [
           "2026-05-14"
         ],
@@ -34720,10 +35686,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 61,
+        "sessions_eligible": 81,
+        "sessions_present": 78,
         "sessions_absent": 3,
-        "attendance_rate_pct": 95.3,
+        "attendance_rate_pct": 96.3,
         "absent_dates": [
           "2026-03-12",
           "2026-03-17",
@@ -35248,10 +36214,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 63,
+        "sessions_eligible": 81,
+        "sessions_present": 80,
         "sessions_absent": 1,
-        "attendance_rate_pct": 98.4,
+        "attendance_rate_pct": 98.8,
         "absent_dates": [
           "2026-05-07"
         ],
@@ -35658,10 +36624,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 60,
+        "sessions_eligible": 81,
+        "sessions_present": 77,
         "sessions_absent": 4,
-        "attendance_rate_pct": 93.8,
+        "attendance_rate_pct": 95.1,
         "absent_dates": [
           "2025-03-04",
           "2025-05-29",
@@ -35953,8 +36919,8 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 64,
+        "sessions_eligible": 81,
+        "sessions_present": 81,
         "sessions_absent": 0,
         "attendance_rate_pct": 100.0,
         "absent_dates": [],
@@ -36732,8 +37698,8 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 64,
+        "sessions_eligible": 81,
+        "sessions_present": 81,
         "sessions_absent": 0,
         "attendance_rate_pct": 100.0,
         "absent_dates": [],
@@ -37602,8 +38568,8 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 64,
+        "sessions_eligible": 81,
+        "sessions_present": 81,
         "sessions_absent": 0,
         "attendance_rate_pct": 100.0,
         "absent_dates": [],
@@ -38152,10 +39118,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 63,
+        "sessions_eligible": 81,
+        "sessions_present": 80,
         "sessions_absent": 1,
-        "attendance_rate_pct": 98.4,
+        "attendance_rate_pct": 98.8,
         "absent_dates": [
           "2026-04-16"
         ],
@@ -38616,10 +39582,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 58,
+        "sessions_eligible": 81,
+        "sessions_present": 75,
         "sessions_absent": 6,
-        "attendance_rate_pct": 90.6,
+        "attendance_rate_pct": 92.6,
         "absent_dates": [
           "2025-04-08",
           "2025-04-10",
@@ -38962,10 +39928,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 49,
+        "sessions_eligible": 81,
+        "sessions_present": 66,
         "sessions_absent": 15,
-        "attendance_rate_pct": 76.6,
+        "attendance_rate_pct": 81.5,
         "absent_dates": [
           "2025-03-27",
           "2025-05-13",
@@ -39433,10 +40399,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 57,
+        "sessions_eligible": 81,
+        "sessions_present": 74,
         "sessions_absent": 7,
-        "attendance_rate_pct": 89.1,
+        "attendance_rate_pct": 91.4,
         "absent_dates": [
           "2025-03-11",
           "2025-06-10",
@@ -40027,10 +40993,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 60,
+        "sessions_eligible": 81,
+        "sessions_present": 77,
         "sessions_absent": 4,
-        "attendance_rate_pct": 93.8,
+        "attendance_rate_pct": 95.1,
         "absent_dates": [
           "2025-05-07",
           "2025-05-08",
@@ -40578,10 +41544,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 49,
+        "sessions_eligible": 81,
+        "sessions_present": 66,
         "sessions_absent": 15,
-        "attendance_rate_pct": 76.6,
+        "attendance_rate_pct": 81.5,
         "absent_dates": [
           "2025-05-20",
           "2026-01-15",
@@ -41226,10 +42192,10 @@
       "attendance": {
         "period": "2025–2026 General Assembly",
         "definition": "Presence at a legislative session as recorded in the official House/Senate Journal.",
-        "sessions_eligible": 64,
-        "sessions_present": 61,
+        "sessions_eligible": 81,
+        "sessions_present": 78,
         "sessions_absent": 3,
-        "attendance_rate_pct": 95.3,
+        "attendance_rate_pct": 96.3,
         "absent_dates": [
           "2025-05-22",
           "2026-02-05",
