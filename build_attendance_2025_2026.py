@@ -120,22 +120,51 @@ def normalize_roll_text(t: str) -> str:
     )
 
 
-def declared_totals(t: str) -> tuple[int | None, int | None]:
+def opening_roll_anchor(t: str):
+    """Locate the official opening attendance roll, not a later floor-vote roll."""
     t = normalize_roll_text(t)
     patterns = [
+        r"quorum\s+is\s+declared\s+present\s+with\s+(\d+)\s+(?:members?|Senators?)?\s*present\s+and\s+(\d+)\s+(?:members?|Senators?)?\s*absent",
+        r"(?:roll\s+is\s+called.*?)(\d+)\s+(?:members?|Senators?)\s+present\s+and\s+(\d+)\s+(?:members?|Senators?)\s+absent",
         r"(\d+)\s+(?:members?|Senators?)\s+present\s+and\s+(\d+)\s+(?:members?|Senators?)\s+absent",
-        r"quorum\s+is\s+declared\s+present\s+with\s+(\d+).*?present\s+and\s+(\d+).*?absent",
     ]
-    matches = []
-    for p in patterns:
-        matches.extend(re.finditer(p, t, re.I | re.S))
-    if not matches:
-        return None, None
-    # Transition/opening journals can contain two rolls. Use the last declared
-    # opening roll in the extracted text.
-    m = sorted(matches, key=lambda x: x.start())[-1]
-    return int(m.group(1)), int(m.group(2))
+    for pat in patterns:
+        matches = list(re.finditer(pat, t, re.I | re.S))
+        if matches:
+            m = matches[0]
+            return int(m.group(1)), int(m.group(2)), m.end()
+    return None, None, None
 
+
+def declared_totals(t: str) -> tuple[int | None, int | None]:
+    p, a, _ = opening_roll_anchor(t)
+    return p, a
+
+
+def opening_roll_sections(t: str):
+    """Extract PRESENT/ABSENT lists immediately following the quorum sentence."""
+    t = normalize_roll_text(t)
+    dp, da, pos = opening_roll_anchor(t)
+    if pos is None:
+        return dp, da, "", ""
+    tail = t[pos:]
+    pm = re.search(rf"\bPRESENT\s*-\s*{dp}\s*:\s*", tail, re.I)
+    if not pm:
+        return dp, da, "", ""
+    after_p = tail[pm.end():]
+    am = re.search(rf"\bABSENT\s*-\s*{da}\s*:\s*", after_p, re.I)
+    if not am:
+        return dp, da, "", ""
+    present = after_p[:am.start()].strip()
+    after_a = after_p[am.end():]
+    heading = re.search(
+        r"\n\s*(?:OATH OF OFFICE|INVOCATION|PLEDGE OF ALLEGIANCE|APPROVAL OF RECORD|"
+        r"COMMUNICATIONS?|ADDRESS(?:ES)?|ELECTION OF|NOW PRESIDING|ANNOUNCEMENTS?|"
+        r"CALENDAR|NEW BUSINESS|TRANSMITTAL|ADJOURNMENT)\b",
+        after_a, re.I,
+    )
+    absent = after_a[:heading.start()].strip() if heading else after_a.split("\n", 1)[0].strip()
+    return dp, da, present, absent
 
 def last_roll_section(t: str, label: str, next_labels: tuple[str, ...]) -> str:
     t = normalize_roll_text(t)
@@ -199,22 +228,9 @@ def late_arrivals(t: str) -> list[str]:
 
 
 def parse_session(chamber: str, d: dt.date, url: str, t: str) -> dict:
-    dp, da = declared_totals(t)
-
-    present_raw = split_roll_names(
-        last_roll_section(t, "PRESENT", ("ABSENT",)),
-        chamber,
-        "PRESENT",
-    )
-    absent_raw = split_roll_names(
-        last_roll_section(
-            t,
-            "ABSENT",
-            ("INVOCATION", "COMMUNICATIONS", "PLEDGE", "APPROVAL", "ADDRESS"),
-        ),
-        chamber,
-        "ABSENT",
-    )
+    dp, da, present_section, absent_section = opening_roll_sections(t)
+    present_raw = split_roll_names(present_section, chamber, "PRESENT")
+    absent_raw = split_roll_names(absent_section, chamber, "ABSENT")
 
     present = {surname(x) for x in present_raw}
     absent = {surname(x) for x in absent_raw}
