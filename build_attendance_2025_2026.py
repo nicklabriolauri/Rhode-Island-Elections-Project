@@ -183,7 +183,7 @@ def opening_roll_sections(t: str):
         return dp, da, present_label, absent_label, present, ""
     after_a = after_p[am.end():]
     heading = re.search(
-        r"\n\s*(?:OATH OF OFFICE|INVOCATION|PLEDGE OF ALLEGIANCE|APPROVAL OF RECORD|"
+        r"\n\s*(?:OATH OF OFFICE|INVOCATION|MOMENT OF SILENCE|PLEDGE OF ALLEGIANCE|APPROVAL OF RECORD|"
         r"COMMUNICATIONS?|ADDRESS(?:ES)?|ELECTION OF|NOW PRESIDING|ANNOUNCEMENTS?|"
         r"CALENDAR|CONSENT CALENDAR|GUESTS?|REPORTS? OF COMMITTEES|TRANSFER OF BILLS|"
         r"NEW BUSINESS|IMMEDIATE CONSIDERATION|TRANSMITTAL|ADJOURNMENT|RULE\s+\d+[A-Z]?)\b",
@@ -235,6 +235,10 @@ def split_roll_names(section: str, chamber: str, label: str) -> list[str]:
             )
 
     s = re.sub(r"^(?:Representatives|Senators)\s+", "", s, flags=re.I)
+    # Official House PDFs sometimes split Mary Ann Shallcross Smith's surname
+    # across comma-delimited extraction as "Shallcross, Smith". Rejoin only this
+    # known current-member compound surname before generic comma splitting.
+    s = re.sub(r"\bShallcross\s*,\s*Smith\b", "Shallcross Smith", s, flags=re.I)
     s = re.sub(r",?\s+and\s+", ", ", s)
 
     out = []
@@ -477,6 +481,26 @@ def self_check():
     r=parse_session("senate",dt.date(2026,6,9),"fixture",text)
     if not r["validated"] or r["absent"]:
         raise RuntimeError(f"Senate zero-absence fixture failed: {r}")
+
+
+    # 2025-01-30 / 2025-06-16 pattern: ABSENT list is followed by MOMENT OF SILENCE.
+    p70=["Shekarchi"]+[f"M{i}" for i in range(1,70)]
+    a5=["Ackerman","Edwards","Lombardi","Roberts","Serpa"]
+    text=fixture(70,5,70,5,p70,a5).replace("\nINVOCATION", "\nMOMENT OF SILENCE\nThe Honorable Speaker requests a moment of silence.\nINVOCATION")
+    r=parse_session("house",dt.date(2025,1,30),"fixture",text)
+    if not r["validated"] or len(r["absent"]) != 5:
+        raise RuntimeError(f"Moment-of-silence boundary fixture failed: {r}")
+
+    # 2026-04-09 pattern: PDF/Journals split Shallcross Smith as
+    # "Quattrocchi, Shallcross, Smith, and Stewart" in the absent list.
+    p65=["Shekarchi"]+[f"R{i}" for i in range(1,65)]
+    a10=["Ackerman","Alzate","Baginski","Batista","Craven","Cruz","Fascia","Quattrocchi","Shallcross Smith","Stewart"]
+    text=fixture(65,10,65,10,p65,a10)
+    # Mimic the official extracted text's comma split.
+    text=text.replace("Shallcross Smith", "Shallcross, Smith")
+    r=parse_session("house",dt.date(2026,4,9),"fixture",text)
+    if not r["validated"] or len(r["absent"]) != 10 or "smith" not in r["absent"]:
+        raise RuntimeError(f"Shallcross-Smith extraction fixture failed: {r}")
 
     print("Attendance parser systematic self-checks: PASS")
 
