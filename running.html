@@ -271,6 +271,30 @@
     .office-method{margin-top:9px;font-size:10px;line-height:1.45;color:#78879a}
     @media(max-width:700px){.office-record-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
+
+    /* Record in Office — complete visible module */
+    .office-record{margin-top:16px;padding-top:15px;border-top:1px solid #dfe6ee}
+    .office-record-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    .office-incumbent{font-size:9px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#315f91}
+    .office-record-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:11px}
+    .office-stat{border:1px solid #e2e8f0;padding:10px;background:#fff;border-radius:4px;min-height:64px}
+    .office-stat strong{display:block;font-size:20px;line-height:1;color:var(--navy,var(--ink))}
+    .office-stat strong.pending{font-size:17px;color:#8a96a8}
+    .office-stat span{display:block;margin-top:6px;font-size:10px;line-height:1.35;color:var(--muted)}
+    .office-stat em{display:block;margin-top:3px;font-size:9px;font-style:normal;color:#8a96a8}
+    .office-attendance{margin-top:11px;border-top:1px solid #edf1f5;padding-top:11px}
+    .office-attendance-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:8px}
+    .office-attendance .office-stat{background:#f9fbfd}
+    .office-list{margin-top:10px;font-size:11px;line-height:1.55;color:var(--muted)}
+    .office-list strong{color:var(--navy,var(--ink))}
+    .office-note{margin-top:8px;padding:8px 10px;background:#f7f9fb;border-left:3px solid #cdd9e8;font-size:10px;line-height:1.5;color:#66768c}
+    .office-source{margin-top:9px;font-size:10px;display:flex;gap:10px;flex-wrap:wrap}
+    .office-source a{font-weight:800;color:#315f91;text-decoration:none}
+    .office-method{margin-top:9px;font-size:10px;line-height:1.5;color:#78879a}
+    @media(max-width:700px){
+      .office-record-grid,.office-attendance-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+
 </style>
 </head>
 <body>
@@ -342,7 +366,7 @@
           <div class="eyebrow">Candidate comparison</div>
           <h2 id="compareTitle">House District 1</h2>
         </div>
-        <div class="compare-note">Candidate priorities, verified endorsements, and sourced outside ratings appear together. RIEP does not combine third-party ratings into an overall candidate score.</div>
+        <div class="compare-note">Candidate priorities, verified endorsements, sourced outside ratings, and incumbent records appear together. Record in Office includes legislative activity, leadership, committees, and journal-verified attendance when available. RIEP does not combine these measures into an overall candidate score.</div>
       </div>
       <div class="candidate-grid" id="candidateGrid"></div>
     </section>
@@ -690,31 +714,74 @@
     function officeRecordBlock(candidate){
       const r=officeRecordFor(candidate);
       if(!r || !r.is_incumbent) return "";
+
       const L=r.legislation||{};
-      const stat=(value,label)=> value===null||value===undefined ? "" :
-        `<div class="office-stat"><strong>${esc(value)}</strong><span>${esc(label)}</span></div>`;
-      const stats=[
-        stat(L.prime_sponsored,"Bills introduced · lead sponsor"),
-        stat(L.cosponsored,"Bills cosponsored"),
-        stat(L.passed_chamber,"Lead bills passed chamber"),
-        stat(L.became_law,"Lead bills became law")
-      ].join("");
-      const committees=(r.committees||[]).map(x=>typeof x==="string"?x:(x.role?`${x.role} · ${x.name}`:x.name)).filter(Boolean);
+      const metric=(value,label)=>{
+        const verified=value!==null&&value!==undefined;
+        return `<div class="office-stat">
+          <strong class="${verified?"":"pending"}">${verified?esc(value):"—"}</strong>
+          <span>${esc(label)}</span>
+          ${verified?"":`<em>Pending verification</em>`}
+        </div>`;
+      };
+
+      const committees=(r.committees||[]).map(x=>{
+        if(typeof x==="string") return x;
+        return x.role?`${x.role} · ${x.name}`:x.name;
+      }).filter(Boolean);
+
       const leadership=(r.leadership||[]).map(x=>typeof x==="string"?x:(x.title||x.name)).filter(Boolean);
-      const votes=r.votes||{}, voteBits=[];
-      if(votes.recorded!==null&&votes.recorded!==undefined) voteBits.push(`${votes.recorded} recorded floor votes`);
-      if(votes.not_voting!==null&&votes.not_voting!==undefined) voteBits.push(`${votes.not_voting} not voting`);
+      const termNotes=(r.term_notes||[]).filter(Boolean);
       const sources=(r.sources||[]).filter(Boolean);
-      const hasContent=stats||committees.length||leadership.length||voteBits.length;
-      if(!hasContent) return "";
+
+      const a=r.attendance||{};
+      const attendanceVerified =
+        a.sessions_eligible!==null && a.sessions_eligible!==undefined &&
+        a.sessions_present!==null && a.sessions_present!==undefined;
+
+      const attendanceHtml = attendanceVerified ? `
+        <div class="office-attendance">
+          <div class="priority-label">Session attendance</div>
+          <div class="office-attendance-grid">
+            ${metric(a.sessions_eligible,"Sessions eligible")}
+            ${metric(a.sessions_present,"Sessions present")}
+            ${metric(a.sessions_absent,"Sessions absent")}
+            ${metric(a.attendance_rate_pct!==null&&a.attendance_rate_pct!==undefined?`${a.attendance_rate_pct}%`:null,"Attendance rate")}
+          </div>
+          <div class="office-method">Presence at legislative sessions as recorded in the official House or Senate Journal. “Not Voting” on an individual floor vote is not treated as an absence.</div>
+        </div>` : `
+        <div class="office-attendance">
+          <div class="priority-label">Session attendance</div>
+          <div class="office-note">Attendance is being verified from the official House and Senate Journals. RIEP does not infer attendance from “Not Voting” entries on individual roll calls.</div>
+        </div>`;
+
+      const hasAny = committees.length || leadership.length || termNotes.length ||
+        Object.values(L).some(v=>v!==null&&v!==undefined) || attendanceVerified;
+
+      if(!hasAny && !r.is_incumbent) return "";
+
       return `<div class="office-record">
-        <div class="priority-label">Record in office · ${esc(r.period||"2025–2026")}</div>
-        ${stats?`<div class="office-record-grid">${stats}</div>`:""}
-        ${committees.length?`<div class="office-list"><strong>Committees:</strong> ${committees.map(esc).join(" · ")}</div>`:""}
+        <div class="office-record-head">
+          <div class="priority-label">Record in office · ${esc(r.period||"2025–2026 General Assembly")}</div>
+          <div class="office-incumbent">Incumbent</div>
+        </div>
+
+        <div class="office-record-grid">
+          ${metric(L.prime_sponsored,"Lead-sponsored bills")}
+          ${metric(L.cosponsored,"Bills cosponsored")}
+          ${metric(L.passed_chamber,"Lead bills passed chamber")}
+          ${metric(L.became_law,"Lead bills became law")}
+        </div>
+
+        ${attendanceHtml}
+
         ${leadership.length?`<div class="office-list"><strong>Leadership:</strong> ${leadership.map(esc).join(" · ")}</div>`:""}
-        ${voteBits.length?`<div class="office-list"><strong>Floor voting:</strong> ${voteBits.map(esc).join(" · ")}</div>`:""}
-        ${sources.length?`<div class="office-source"><a href="${esc(sources[0])}" target="_blank" rel="noopener">Official General Assembly source ↗</a></div>`:""}
-        <div class="office-method">Raw measures only. RIEP does not calculate an effectiveness score.</div>
+        ${committees.length?`<div class="office-list"><strong>Committees:</strong> ${committees.map(esc).join(" · ")}</div>`:""}
+        ${termNotes.map(n=>`<div class="office-note">${esc(n)}</div>`).join("")}
+
+        ${sources.length?`<div class="office-source">${sources.slice(0,3).map((u,i)=>`<a href="${esc(u)}" target="_blank" rel="noopener">${i===0?"Official General Assembly source":"Additional source"} ↗</a>`).join("")}</div>`:""}
+
+        <div class="office-method">Raw descriptive measures only. RIEP does not calculate an effectiveness score or rank legislators by these measures.</div>
       </div>`;
     }
 
