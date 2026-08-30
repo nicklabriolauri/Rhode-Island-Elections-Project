@@ -1,0 +1,66 @@
+name: Update Record in Office
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "build_incumbent_records_2026.py"
+      - "build_attendance_2025_2026.py"
+      - "data/whos_running_2026.json"
+      - "data/incumbent_records_2026.json"
+
+permissions:
+  contents: write
+
+jobs:
+  build-records:
+    # Prevent the bot's own generated-data commit from recursively rebuilding.
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install parsers
+        run: pip install requests lxml pypdf
+
+      - name: Build official bill statistics
+        run: python build_incumbent_records_2026.py
+
+      - name: Build official Journal attendance
+        run: python build_attendance_2025_2026.py
+
+      - name: Validate publishable data
+        run: |
+          python - <<'PY'
+          import json, sys
+          p=json.load(open("data/incumbent_records_2026.json"))
+          records=p.get("records",[])
+          bad=[]
+          for r in records:
+              L=r.get("legislation",{})
+              A=r.get("attendance",{})
+              if any(L.get(k) is None for k in ("prime_sponsored","cosponsored","passed_chamber","became_law")):
+                  bad.append((r.get("candidate_name"),"legislation"))
+              if A.get("status") != "verified_from_official_journals":
+                  bad.append((r.get("candidate_name"),"attendance"))
+          print("records:",len(records))
+          print("records requiring review:",len(bad))
+          if bad:
+              print(*bad[:30],sep="\n")
+              sys.exit(2)
+          PY
+
+      - name: Commit verified dataset
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/incumbent_records_2026.json data/attendance_sessions_2025_2026.json data/attendance_audit_2025_2026.json data/incumbent_records_2026_audit.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Update verified 2025-2026 incumbent records"
+          git push
