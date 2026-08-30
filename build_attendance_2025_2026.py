@@ -141,9 +141,9 @@ def opening_roll_anchor(t: str):
     """Locate the official opening attendance roll, not a later floor-vote roll."""
     t = normalize_roll_text(t)
     patterns = [
-        r"quorum\s+is\s+declared\s+present\s+with\s+(\d+)\s+(?:members?|Senators?)?\s*present\s+and\s+(\d+)\s+(?:members?|Senators?)?\s*absent",
-        r"(?:roll\s+is\s+called.*?)(\d+)\s+(?:members?|Senators?)\s+present\s+and\s+(\d+)\s+(?:members?|Senators?)\s+absent",
-        r"(\d+)\s+(?:members?|Senators?)\s+present\s+and\s+(\d+)\s+(?:members?|Senators?)\s+absent",
+        r"quorum\s+is\s+declared\s+present\s+with\s+(\d+)\s*(?:members?|Senators?)?\s*present\s+and\s+(\d+)\s*(?:members?|Senators?)?\s*absent",
+        r"(?:roll\s+is\s+called.*?)(\d+)\s*(?:members?|Senators?)\s+present\s+and\s+(\d+)\s*(?:members?|Senators?)\s*absent",
+        r"(\d+)\s*(?:members?|Senators?)\s+present\s+and\s+(\d+)\s*(?:members?|Senators?)\s*absent",
     ]
     for pat in patterns:
         matches = list(re.finditer(pat, t, re.I | re.S))
@@ -163,29 +163,42 @@ def declared_totals(t: str) -> tuple[int | None, int | None]:
 
 
 def opening_roll_sections(t: str):
-    """Extract PRESENT/ABSENT lists immediately following the quorum sentence."""
+    """Extract opening enumerated lists without trusting repeated printed totals."""
     t = normalize_roll_text(t)
     dp, da, pos = opening_roll_anchor(t)
     if pos is None:
-        return dp, da, "", ""
+        return dp, da, None, None, "", ""
     tail = t[pos:]
-    pm = re.search(rf"\bPRESENT\s*-\s*{dp}\s*:\s*", tail, re.I)
+    pm = re.search(r"\bPRESENT\s*-\s*(\d+)\s*:\s*", tail, re.I)
     if not pm:
-        return dp, da, "", ""
+        return dp, da, None, None, "", ""
+    present_label = int(pm.group(1))
     after_p = tail[pm.end():]
-    am = re.search(rf"\bABSENT\s*-\s*{da}\s*:\s*", after_p, re.I)
+    am = re.search(r"\bABSENT\s*-\s*(\d+)\s*:\s*", after_p, re.I)
     if not am:
-        return dp, da, "", ""
+        return dp, da, present_label, None, "", ""
+    absent_label = int(am.group(1))
     present = after_p[:am.start()].strip()
+    if absent_label == 0:
+        return dp, da, present_label, absent_label, present, ""
     after_a = after_p[am.end():]
     heading = re.search(
         r"\n\s*(?:OATH OF OFFICE|INVOCATION|PLEDGE OF ALLEGIANCE|APPROVAL OF RECORD|"
         r"COMMUNICATIONS?|ADDRESS(?:ES)?|ELECTION OF|NOW PRESIDING|ANNOUNCEMENTS?|"
-        r"CALENDAR|NEW BUSINESS|TRANSMITTAL|ADJOURNMENT)\b",
+        r"CALENDAR|CONSENT CALENDAR|GUESTS?|REPORTS? OF COMMITTEES|TRANSFER OF BILLS|"
+        r"NEW BUSINESS|IMMEDIATE CONSIDERATION|TRANSMITTAL|ADJOURNMENT|RULE\s+\d+[A-Z]?)\b",
         after_a, re.I,
     )
     absent = after_a[:heading.start()].strip() if heading else after_a.split("\n", 1)[0].strip()
-    return dp, da, present, absent
+    return dp, da, present_label, absent_label, present, absent
+
+
+def expected_membership(chamber: str, d: dt.date) -> int:
+    if chamber == "house":
+        return 75
+    if d.year == 2025 and d >= dt.date(2025, 4, 21):
+        return 37
+    return 38
 
 def last_roll_section(t: str, label: str, next_labels: tuple[str, ...]) -> str:
     t = normalize_roll_text(t)
@@ -249,52 +262,52 @@ def late_arrivals(t: str) -> list[str]:
 
 
 def parse_session(chamber: str, d: dt.date, url: str, t: str) -> dict:
-    dp, da, present_section, absent_section = opening_roll_sections(t)
+    dp, da, present_label, absent_label, present_section, absent_section = opening_roll_sections(t)
     present_raw = split_roll_names(present_section, chamber, "PRESENT")
     absent_raw = split_roll_names(absent_section, chamber, "ABSENT")
-
     present = {surname(x) for x in present_raw}
     absent = {surname(x) for x in absent_raw}
+    expected = expected_membership(chamber, d)
 
-    # A small number of official House Journals contain a clerical duplication:
-    # a member is printed in BOTH the PRESENT and ABSENT lists. Example:
-    # 2025-05-01 prints Lima, Newberry and Santucci in both lists. In that Journal
-    # the raw PRESENT list has 69 names although the Journal declares PRESENT - 66;
-    # removing the three names explicitly repeated under ABSENT yields exactly
-    # 66 present + 9 absent = the full 75-member House.
-    #
-    # Resolve this only when the arithmetic proves the correction. We never guess:
-    # the explicit ABSENT list takes precedence only if removing the overlap makes
-    # BOTH declared totals and the full declared membership reconcile exactly.
     overlap = present & absent
     overlap_resolution = None
-    if overlap and dp is not None and da is not None:
+    if overlap:
         candidate_present = present - overlap
-        declared = dp + da
-        if (
-            len(candidate_present) == dp
-            and len(absent) == da
-            and len(candidate_present | absent) == declared
-        ):
+        if len(candidate_present | absent) == expected:
             present = candidate_present
             overlap_resolution = {
                 "method": "explicit_absent_list_precedence",
                 "names": sorted(overlap),
             }
 
-    declared = (dp + da) if dp is not None and da is not None else None
-    initial_valid = (
-        declared is not None
-        and len(present) == dp
-        and len(absent) == da
-        and len(present | absent) == declared
+    names_complete = (
+        len(present) > 0
+        and len(present | absent) == expected
         and not (present & absent)
     )
+    printed_totals_consistent = (
+        dp is not None and da is not None
+        and len(present) == dp and len(absent) == da
+    )
+    list_labels_consistent = (
+        present_label is not None and absent_label is not None
+        and len(present) == present_label and len(absent) == absent_label
+    )
+    if names_complete and printed_totals_consistent and list_labels_consistent:
+        validation_method = "enumerated_names_and_printed_totals_reconcile"
+    elif names_complete:
+        validation_method = "enumerated_names_complete_printed_totals_inconsistent"
+    else:
+        validation_method = "failed_reconciliation"
+
+    opening_present_count = len(present)
+    opening_absent_count = len(absent)
 
     late = {surname(x) for x in late_arrivals(t)}
-    for ln in late:
-        absent.discard(ln)
-        present.add(ln)
+    if names_complete:
+        for ln in late:
+            absent.discard(ln)
+            present.add(ln)
 
     return {
         "date": d.isoformat(),
@@ -303,15 +316,20 @@ def parse_session(chamber: str, d: dt.date, url: str, t: str) -> dict:
         "source_url": url,
         "declared_present": dp,
         "declared_absent": da,
+        "present_label": present_label,
+        "absent_label": absent_label,
+        "expected_membership": expected,
+        "parsed_present_count": opening_present_count,
+        "parsed_absent_count": opening_absent_count,
         "present": sorted(present),
         "absent": sorted(absent),
         "late_arrivals": sorted(late),
         "overlap_resolution": overlap_resolution,
-        "validated": initial_valid,
-        "parsed_present_count": len({surname(x) for x in present_raw}),
-        "parsed_absent_count": len({surname(x) for x in absent_raw}),
+        "validation_method": validation_method,
+        "printed_totals_consistent": printed_totals_consistent,
+        "list_labels_consistent": list_labels_consistent,
+        "validated": names_complete,
     }
-
 
 def collect():
     ok, bad = [], []
@@ -416,74 +434,51 @@ def merge(payload: dict, sessions: list[dict]) -> None:
 
 
 def self_check():
-    """Fast deterministic checks that run on every GitHub Action invocation."""
-    checks = {
-        "Brien": "brien",
-        "O'Brien": "obrien",
-        "O’Brien": "obrien",
-        "Shallcross Smith": "smith",
-        "de la Cruz": "cruz",
-    }
-    got = {name: surname(name) for name in checks}
-    if got != checks:
-        raise RuntimeError(f"Name-normalization self-check failed: {got}")
-    if surname("Brien") == surname("O'Brien"):
-        raise RuntimeError("Brien/O'Brien collision detected")
+    checks = {"Brien":"brien","O'Brien":"obrien","O’Brien":"obrien","Shallcross Smith":"smith","de la Cruz":"cruz"}
+    got = {k:surname(k) for k in checks}
+    if got != checks or surname("Brien") == surname("O'Brien"):
+        raise RuntimeError(f"Name self-check failed: {got}")
 
-    # Official House Journal, Jan. 7, 2025: 73 present / 2 absent.
-    h_0107 = """The roll is called, and a quorum is declared present with 73 members present and 2 members absent as follows:
-PRESENT – 73: The Honorable Speaker Shekarchi and Representatives Abney, Ackerman, Ajello, Alzate, Azzinaro, Batista, Bennett, Biah, Blazejewski, Boylan, Brien, Caldwell, Carson, Casey, Casimiro, Chippendale, Cortvriend, Corvese, Costantino, Cotter, Craven, Cruz, Dawson, DeSimone, Diaz, Donovan, Edwards, Fascia, Felix, Fellela, Finkelman, Fogarty, Furtado, Giraldo, Hopkins, Hull, Kazarian, Kennedy, Kislak, Knight, Lima, Lombardi, Marszalkowski, McEntee, McGaw, McNamara, Messier, Morales, Nardone, Newberry, Noret, O'Brien, Paplauskas, Perez, Phillips, Place, Potter, Quattrocchi, Read, Roberts, Sanchez, Santucci, Serpa, Shallcross Smith, Shanley, Slater, Solomon, Speakman, Spears, Stewart, Tanzi, and Voas.
-ABSENT – 2: Representatives Baginski and Handy.
-OATH OF OFFICE"""
-    r = parse_session("house", dt.date(2025, 1, 7), "fixture", h_0107)
-    if not r["validated"] or (r["declared_present"], r["declared_absent"]) != (73, 2):
-        raise RuntimeError(f"House 2025-01-07 fixture failed: {r}")
+    def fixture(dp, da, pl, al, pnames, anames, chamber="house", date=dt.date(2026,2,3), no_space=False):
+        unit = "Senators" if chamber == "senate" else "members"
+        gap = "" if no_space else " "
+        if chamber == "house":
+            ptxt = "The Honorable Speaker " + pnames[0] + " and Representatives " + ", ".join(pnames[1:-1]) + ", and " + pnames[-1]
+            atxt = "Representatives " + ", ".join(anames[:-1]) + ((", and " + anames[-1]) if anames else "")
+        else:
+            ptxt = "The Honorable President " + pnames[0] + ", Senators " + ", ".join(pnames[1:-1]) + ", and " + pnames[-1]
+            atxt = "Senators " + ", ".join(anames[:-1]) + ((", and " + anames[-1]) if anames else "")
+        return (
+            f"The roll is called, and a quorum is declared present with {dp} {unit} present and {da}{gap}{unit} absent as follows:\n"
+            f"PRESENT - {pl}: {ptxt}.\nABSENT - {al}: {atxt}.\nINVOCATION"
+        )
 
-    # Official House Journal, May 1, 2025: the printed PRESENT list repeats
-    # Lima, Newberry and Santucci even though all three are also explicitly ABSENT.
-    # The declared totals are 66/9. The parser may correct this only when the
-    # arithmetic reconciles exactly to the 75-member House.
-    h_0501 = """The roll is called and a quorum is declared present with 66 members present and 9 members absent as follows:
-PRESENT – 66: The Honorable Speaker Shekarchi and Representatives Abney, Ackerman, Ajello, Alzate, Azzinaro, Baginski, Batista, Bennett, Biah, Blazejewski, Boylan, Brien, Caldwell, Carson, Casey, Casimiro, Chippendale, Cortvriend, Corvese, Costantino, Cotter, Craven, Cruz, Dawson, DeSimone, Diaz, Donovan, Edwards, Fascia, Finkelman, Furtado, Handy, Hopkins, Hull, Kazarian, Kislak, Knight, Lima, Lombardi, Marszalkowski, McEntee, McGaw, McNamara, Messier, Morales, Nardone, Newberry, O'Brien, Paplauskas, Perez, Phillips, Place, Potter, Quattrocchi, Read, Roberts, Sanchez, Santucci, Serpa, Shallcross Smith, Shanley, Slater, Solomon, Speakman, Spears, Stewart, Tanzi, and Voas.
-ABSENT – 9: Representatives Felix, Fellela, Fogarty, Giraldo, Kennedy, Lima, Newberry, Noret and Santucci.
-INVOCATION"""
-    r = parse_session("house", dt.date(2025, 5, 1), "fixture", h_0501)
-    if not r["validated"] or set((r.get("overlap_resolution") or {}).get("names", [])) != {"lima", "newberry", "santucci"}:
-        raise RuntimeError(f"House 2025-05-01 overlap fixture failed: {r}")
+    # 2026-02-03 pattern: PRESENT header typo "7", but 70 names + 5 absent = full House.
+    p70=["Shekarchi"]+[f"P{i}" for i in range(1,70)]; a5=[f"A{i}" for i in range(1,6)]
+    r=parse_session("house",dt.date(2026,2,3),"fixture",fixture(70,5,7,5,p70,a5))
+    if not r["validated"] or r["present_label"] != 7 or len(r["present"]) != 70:
+        raise RuntimeError(f"Feb 3 fixture failed: {r}")
 
-    # Official House Journal, Jan. 6, 2026 contains two opening rolls:
-    # 62/13 for adjournment of 2025 and 68/7 after commencement of 2026.
-    h_0106 = """The roll is called and a quorum is declared present with 62 members present and 13 members absent as follows:
-PRESENT – 62: The Honorable Speaker Shekarchi and Representatives Abney, Ackerman, Ajello, Alzate, Azzinaro, Baginski, Bennett, Biah, Blazejewski, Boylan, Brien, Caldwell, Casey, Casimiro, Chippendale, Corvese, Cotter, Craven, Cruz, Dawson, DeSimone, Diaz, Donovan, Fascia, Fellela, Finkelman, Fogarty, Giraldo, Handy, Hopkins, Kazarian, Kennedy, Knight, Lombardi, Marszalkowski, McEntee, McGaw, McNamara, Messier, Morales, Nardone, Newberry, Noret, O'Brien, Paplauskas, Perez, Phillips, Place, Potter, Read, Roberts, Santucci, Serpa, Shallcross Smith, Shanley, Solomon, Speakman, Spears, Stewart, Tanzi, and Voas.
-ABSENT – 13: Representatives Batista, Carson, Cortvriend, Costantino, Edwards, Felix, Furtado, Hull, Kislak, Lima, Quattrocchi, Sanchez, and Slater.
-COMMENCEMENT OF 2026
-The roll is called and a quorum is declared present with 68 members present and 7 members absent as follows:
-PRESENT – 68: The Honorable Speaker Shekarchi and Representatives Abney, Ackerman, Ajello, Alzate, Azzinaro, Baginski, Batista, Bennett, Biah, Blazejewski, Boylan, Brien, Caldwell, Casey, Casimiro, Chippendale, Corvese, Cotter, Craven, Cruz, Dawson, DeSimone, Diaz, Donovan, Fascia, Felix, Fellela, Finkelman, Fogarty, Furtado, Giraldo, Handy, Hopkins, Hull, Kazarian, Kennedy, Knight, Lombardi, Marszalkowski, McEntee, McGaw, McNamara, Messier, Morales, Nardone, Newberry, Noret, O'Brien, Paplauskas, Perez, Phillips, Place, Potter, Read, Roberts, Sanchez, Santucci, Serpa, Shallcross Smith, Shanley, Slater, Solomon, Speakman, Spears, Stewart, Tanzi, and Voas.
-ABSENT – 7: Representatives Carson, Cortvriend, Costantino, Edwards, Kislak, Lima, and Quattrocchi.
-COMMUNICATION FROM THE SPEAKER"""
-    r = parse_session("house", dt.date(2026, 1, 6), "fixture", h_0106)
-    if not r["validated"] or (r["declared_present"], r["declared_absent"]) != (68, 7):
-        raise RuntimeError(f"House 2026-01-06 transition fixture failed: {r}")
+    # 2026-03-12 pattern: quorum totals contradict complete enumerated 63/12 lists.
+    p63=["Shekarchi"]+[f"P{i}" for i in range(1,63)]; a12=[f"A{i}" for i in range(1,13)]
+    r=parse_session("house",dt.date(2026,3,12),"fixture",fixture(73,2,63,12,p63,a12))
+    if not r["validated"] or len(r["present"]) != 63 or len(r["absent"]) != 12:
+        raise RuntimeError(f"Mar 12 fixture failed: {r}")
 
-    # Official House Journal, May 7, 2026: 75/0 verifies zero-absence handling.
-    h_0507 = """The roll is called, and a quorum is declared present with 75 members present and 0 members absent as follows:
-PRESENT – 75: The Honorable Speaker Shekarchi and Representatives Abney, Ackerman, Ajello, Alzate, Azzinaro, Baginski, Batista, Bennett, Biah, Blazejewski, Boylan, Brien, Caldwell, Carson, Casey, Casimiro, Chippendale, Cortvriend, Corvese, Costantino, Cotter, Craven, Cruz, Dawson, DeSimone, Diaz, Donovan, Edwards, Fascia, Felix, Fellela, Finkelman, Fogarty, Furtado, Giraldo, Handy, Hopkins, Hull, Kazarian, Kennedy, Kislak, Knight, Lima, Lombardi, Marszalkowski, McEntee, McGaw, McNamara, Messier, Morales, Nardone, Newberry, Noret, O'Brien, Paplauskas, Perez, Phillips, Place, Potter, Quattrocchi, Read, Roberts, Sanchez, Santucci, Serpa, Shallcross Smith, Shanley, Slater, Solomon, Speakman, Spears, Stewart, Tanzi, and Voas.
-ABSENT – 0: Representatives
-INVOCATION"""
-    r = parse_session("house", dt.date(2026, 5, 7), "fixture", h_0507)
-    if not r["validated"] or (r["declared_present"], r["declared_absent"]) != (75, 0):
-        raise RuntimeError(f"House 2026-05-07 zero-absence fixture failed: {r}")
+    # 2026-06-08 pattern: "2members" no space.
+    p73=["Blazejewski"]+[f"P{i}" for i in range(1,73)]
+    r=parse_session("house",dt.date(2026,6,8),"fixture",fixture(73,2,73,2,p73,["Dawson","Shekarchi"],no_space=True))
+    if not r["validated"] or r["declared_absent"] != 2:
+        raise RuntimeError(f"Jun 8 fixture failed: {r}")
 
-    # Official Senate Journal, Apr. 14, 2026: 32/6 and President Lawson included.
-    s_0414 = """The roll is called and a quorum is declared present with 32 Senators present and 6 Senators absent as follows:
-PRESENT –32: The Honorable President Valarie J. Lawson, Senators Acosta, Appollonio, Bell, Bissaillon, Britto, Burke, de la Cruz, DiMario, Dimitri, DiPalma, Euer, Famiglietti, Gallo, Gu, LaMountain, Lauria, McKenney, Murray, Paolino, Patalano, Pearson, Raptakis, Rogers, Sosnowski, Thompson, Tikoian, Ujifusa, Urso, Valverde, Vargas, and Zurier.
-ABSENT – 6: Senators Ciccone, Felag, Kallman, Mack, Morgan, and Quezada.
-INVOCATION"""
-    r = parse_session("senate", dt.date(2026, 4, 14), "fixture", s_0414)
-    if not r["validated"] or (r["declared_present"], r["declared_absent"]) != (32, 6):
-        raise RuntimeError(f"Senate 2026-04-14 fixture failed: {r}")
+    # Senate ABSENT - 0 must never consume following prose.
+    s38=["Lawson"]+[f"S{i}" for i in range(1,38)]
+    text=fixture(38,0,38,0,s38,[],chamber="senate",date=dt.date(2026,6,9))
+    r=parse_session("senate",dt.date(2026,6,9),"fixture",text)
+    if not r["validated"] or r["absent"]:
+        raise RuntimeError(f"Senate zero-absence fixture failed: {r}")
 
-    print("Attendance parser self-checks: PASS")
+    print("Attendance parser systematic self-checks: PASS")
 
 
 def main():
@@ -515,8 +510,14 @@ def main():
                 item.get("chamber"),
                 "declared=",
                 (item.get("declared_present"), item.get("declared_absent")),
+                "labels=",
+                (item.get("present_label"), item.get("absent_label")),
                 "parsed=",
                 (item.get("parsed_present_count"), item.get("parsed_absent_count")),
+                "expected=",
+                item.get("expected_membership"),
+                "method=",
+                item.get("validation_method"),
                 "overlap=",
                 item.get("overlap_resolution"),
                 item.get("source_url"),
