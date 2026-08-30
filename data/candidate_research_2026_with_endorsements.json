@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-28",
+  "generated_at": "2026-08-30",
   "methodology": {
     "roster": "Valid 2026 Rhode Island legislative candidates from the declared-candidate workbook used by the project.",
-    "website_audit": "Each candidate name was searched for an official 2026 campaign website. Government pages, social profiles, news articles, and generic voter-guide pages were not counted as campaign websites.",
-    "priorities": "Conservative paraphrases of positions stated on verified official campaign websites; no priorities were inferred from party affiliation.",
+    "website_audit": "Campaign websites were reconciled against the updated candidate website audit workbook supplied on 2026-08-30. Government pages, social profiles, news articles, and generic voter-guide pages were not treated as campaign websites.",
+    "priorities": "Existing nonempty candidate priority lists were preserved. For candidates with empty priority lists, conservative paraphrases were added only when substantive positions were stated on a verified official campaign website; no priorities were inferred from party affiliation or biography alone.",
     "endorsements": "Only explicit endorsement statements from an endorsing organization or verified campaign site were included.",
     "caution": "A no-site result means no official campaign website was located during this audit, not that a website definitively does not exist."
   },
@@ -16,8 +16,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -29,8 +29,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -42,8 +42,8 @@
       "party": "Democrat",
       "campaign_website": "https://samzurier.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
           "title": "Public education",
@@ -98,8 +98,8 @@
       "party": "Independent",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -109,10 +109,10 @@
       "chamber": "senate",
       "district_number": 4,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "campaign_website": "https://svf-law.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -122,10 +122,10 @@
       "chamber": "senate",
       "district_number": 5,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "campaign_website": "https://www.sambellpvd.com/copy-of-issues",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -143,8 +143,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -156,8 +156,8 @@
       "party": "Democrat",
       "campaign_website": "https://www.cameronmoquin.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
           "title": "Housing and homelessness",
@@ -206,8 +206,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -217,11 +217,42 @@
       "chamber": "senate",
       "district_number": 6,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://www.tiaramackdistrict6.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Housing",
+          "summary": "Expand affordable housing, invest in public housing, limit rent increases, and strengthen tenant protections.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.tiaramackdistrict6.com/en/housing"
+        },
+        {
+          "title": "Education",
+          "summary": "Expand universal pre-K and public-college access while investing in teachers, smaller classes, and student supports.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.tiaramackdistrict6.com/en/education"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Expand access to healthcare, including reproductive healthcare, and pursue universal coverage.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.tiaramackdistrict6.com/en/what-we-believe"
+        },
+        {
+          "title": "Criminal justice and gun policy",
+          "summary": "Pursue criminal-justice reform and stronger gun-safety policies.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.tiaramackdistrict6.com/en/what-we-believe"
+        },
+        {
+          "title": "Climate and wages",
+          "summary": "Advance clean-energy policy and support higher wages for working people.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.tiaramackdistrict6.com/en/what-we-believe"
+        }
+      ],
       "endorsements": []
     },
     {
@@ -232,8 +263,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -245,9 +276,40 @@
       "party": "Democrat",
       "campaign_website": "https://loriurso.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
-      "priorities": [],
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Housing affordability",
+          "summary": "Increase housing supply and improve affordability.",
+          "source_label": "Official campaign website",
+          "source_url": "https://loriurso.com/"
+        },
+        {
+          "title": "Healthcare and mental health",
+          "summary": "Address women's health, mental-health needs, the opioid crisis, and healthcare workforce issues.",
+          "source_label": "Official campaign website",
+          "source_url": "https://loriurso.com/"
+        },
+        {
+          "title": "Main Street revitalization",
+          "summary": "Support downtown development, tourism, and community-based economic revitalization.",
+          "source_label": "Official campaign website",
+          "source_url": "https://loriurso.com/"
+        },
+        {
+          "title": "Education and accessibility",
+          "summary": "Support early educators, multilingual learning, and improved accessibility for people with mobility impairments.",
+          "source_label": "Official campaign website",
+          "source_url": "https://loriurso.com/"
+        },
+        {
+          "title": "Technology and consumer protection",
+          "summary": "Address artificial-intelligence safety and privacy.",
+          "source_label": "Official campaign website",
+          "source_url": "https://loriurso.com/"
+        }
+      ],
       "endorsements": [
         {
           "organization": "Clean Water Action",
@@ -271,8 +333,8 @@
       "party": "Democrat",
       "campaign_website": "https://www.genafelix.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
           "title": "Affordable healthcare",
@@ -321,8 +383,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -334,8 +396,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -345,11 +407,30 @@
       "chamber": "senate",
       "district_number": 11,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://www.ujifusa4ri.com/meetlinda",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Affordable healthcare",
+          "summary": "Expand access to universal, comprehensive, affordable healthcare.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.ujifusa4ri.com/priorities"
+        },
+        {
+          "title": "Insurance and prescription costs",
+          "summary": "Rein in pharmacy benefit managers and insurance practices that restrict care or raise costs.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.ujifusa4ri.com/priorities"
+        },
+        {
+          "title": "Mental health",
+          "summary": "Reduce barriers to mental-health and substance-use treatment.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.ujifusa4ri.com/priorities"
+        }
+      ],
       "endorsements": [
         {
           "name": "Clean Water Action",
@@ -372,8 +453,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -385,8 +466,8 @@
       "party": "Democrat",
       "campaign_website": "https://www.electdawneuer.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
           "title": "Economy and housing",
@@ -435,8 +516,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -448,8 +529,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -468,8 +549,8 @@
       "party": "Independent",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -479,11 +560,42 @@
       "chamber": "senate",
       "district_number": 15,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://electmeghan.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Housing",
+          "summary": "Expand access to affordable housing.",
+          "source_label": "Official campaign website",
+          "source_url": "https://electmeghan.com/"
+        },
+        {
+          "title": "Economic justice",
+          "summary": "Support living wages and policies that strengthen working families.",
+          "source_label": "Official campaign website",
+          "source_url": "https://electmeghan.com/"
+        },
+        {
+          "title": "Climate and clean energy",
+          "summary": "Accelerate the transition away from fossil fuels and address the climate crisis.",
+          "source_label": "Official campaign website",
+          "source_url": "https://electmeghan.com/"
+        },
+        {
+          "title": "Education",
+          "summary": "Invest in strong public education.",
+          "source_label": "Official campaign website",
+          "source_url": "https://electmeghan.com/"
+        },
+        {
+          "title": "Public transit",
+          "summary": "Support accessible, well-funded public transportation.",
+          "source_label": "Official campaign website",
+          "source_url": "https://electmeghan.com/"
+        }
+      ],
       "endorsements": [
         {
           "organization": "Clean Water Action",
@@ -501,8 +613,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -514,8 +626,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -539,8 +651,8 @@
       "party": "Democrat",
       "campaign_website": "https://electnelly.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
           "title": "Healthy aging",
@@ -594,8 +706,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -607,8 +719,8 @@
       "party": "Independent",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -618,10 +730,10 @@
       "chamber": "senate",
       "district_number": 17,
       "party": "Independent",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "campaign_website": "https://petrarcalaw.com/team-member/jina-petrarca-esq/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -633,8 +745,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -656,11 +768,30 @@
       "chamber": "senate",
       "district_number": 19,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://www.ryanforri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Affordability",
+          "summary": "Provide relief to residents facing inflation and rising living costs.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.ryanforri.com/issues"
+        },
+        {
+          "title": "Economic development and housing",
+          "summary": "Support job growth, infrastructure investment, and affordable housing development.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.ryanforri.com/issues"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Improve healthcare availability while lowering insurance and care costs.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.ryanforri.com/issues"
+        }
+      ],
       "endorsements": [
         {
           "name": "Clean Water Action",
@@ -683,8 +814,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -696,8 +827,8 @@
       "party": "Independent",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -707,10 +838,10 @@
       "chamber": "senate",
       "district_number": 20,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "campaign_website": "https://www.thompsonforri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -722,8 +853,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -735,8 +866,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -748,8 +879,8 @@
       "party": "Republican",
       "campaign_website": "https://www.jessicaforri.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -761,8 +892,8 @@
       "party": "Democrat",
       "campaign_website": "https://www.murrayforri.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -786,8 +917,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -799,8 +930,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -812,8 +943,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -823,11 +954,42 @@
       "chamber": "senate",
       "district_number": 28,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://lammisvargas.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Housing",
+          "summary": "Expand affordable housing and homeownership opportunities.",
+          "source_label": "Official campaign website",
+          "source_url": "https://lammisvargas.com/platform/"
+        },
+        {
+          "title": "Environment",
+          "summary": "Protect local natural resources, strengthen environmental justice, and address hazardous pollution.",
+          "source_label": "Official campaign website",
+          "source_url": "https://lammisvargas.com/platform/"
+        },
+        {
+          "title": "Education",
+          "summary": "Improve equitable school funding, special-education support, school meals, and school infrastructure.",
+          "source_label": "Official campaign website",
+          "source_url": "https://lammisvargas.com/platform/"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Expand healthcare access and protect reproductive freedom.",
+          "source_label": "Official campaign website",
+          "source_url": "https://lammisvargas.com/platform/"
+        },
+        {
+          "title": "Public transit and small business",
+          "summary": "Strengthen public transportation and support small businesses.",
+          "source_label": "Official campaign website",
+          "source_url": "https://lammisvargas.com/platform/"
+        }
+      ],
       "endorsements": [
         {
           "name": "Clean Water Action",
@@ -850,8 +1012,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -861,11 +1023,42 @@
       "chamber": "senate",
       "district_number": 30,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://www.markmckenney.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Healthcare",
+          "summary": "Expand access, lower prescription and insurance costs, address medical debt, and protect reproductive healthcare.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.markmckenney.com/"
+        },
+        {
+          "title": "Education",
+          "summary": "Invest in public schools, early childhood education, safe facilities, and academic freedom.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.markmckenney.com/"
+        },
+        {
+          "title": "Affordability and economic opportunity",
+          "summary": "Support fair wages, tax relief, small businesses, and policies that lower living costs.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.markmckenney.com/"
+        },
+        {
+          "title": "Housing and infrastructure",
+          "summary": "Expand affordable housing, strengthen renter protections, and invest in roads and public infrastructure.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.markmckenney.com/"
+        },
+        {
+          "title": "Government accountability",
+          "summary": "Strengthen ethics, transparency, oversight, and stewardship of taxpayer dollars.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.markmckenney.com/"
+        }
+      ],
       "endorsements": []
     },
     {
@@ -876,8 +1069,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -899,11 +1092,42 @@
       "chamber": "senate",
       "district_number": 32,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://pamlauria.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Healthcare",
+          "summary": "Expand affordable and accessible healthcare, mental-health services, and the healthcare workforce.",
+          "source_label": "Official campaign website",
+          "source_url": "https://pamlauria.com/issues1/"
+        },
+        {
+          "title": "Education",
+          "summary": "Support equitable public education, fair school funding, and student mental-health resources.",
+          "source_label": "Official campaign website",
+          "source_url": "https://pamlauria.com/issues1/"
+        },
+        {
+          "title": "Gun violence prevention",
+          "summary": "Strengthen safe-storage laws and other measures intended to reduce gun violence.",
+          "source_label": "Official campaign website",
+          "source_url": "https://pamlauria.com/issues1/"
+        },
+        {
+          "title": "Environment",
+          "summary": "Reduce carbon emissions, strengthen climate resilience, and protect open space and drinking water.",
+          "source_label": "Official campaign website",
+          "source_url": "https://pamlauria.com/issues1/"
+        },
+        {
+          "title": "Housing and seniors",
+          "summary": "Expand affordable housing and help older residents age safely in their communities.",
+          "source_label": "Official campaign website",
+          "source_url": "https://pamlauria.com/issues1/"
+        }
+      ],
       "endorsements": [
         {
           "name": "Clean Water Action",
@@ -918,10 +1142,10 @@
       "chamber": "senate",
       "district_number": 33,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "campaign_website": "https://www.leoraptakis.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -931,11 +1155,42 @@
       "chamber": "senate",
       "district_number": 33,
       "party": "Republican",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://www.jamespiersonri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Energy costs",
+          "summary": "Reform state energy policy to lower utility costs.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.jamespiersonri.com/"
+        },
+        {
+          "title": "Local control and housing growth",
+          "summary": "Protect local zoning authority while streamlining responsible development.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.jamespiersonri.com/"
+        },
+        {
+          "title": "Education",
+          "summary": "Reduce unfunded mandates and focus school resources on student achievement.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.jamespiersonri.com/"
+        },
+        {
+          "title": "Public safety and gun rights",
+          "summary": "Protect lawful gun ownership while targeting violent crime and illegal firearms.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.jamespiersonri.com/"
+        },
+        {
+          "title": "Economy and government accountability",
+          "summary": "Reduce regulatory burdens, strengthen workforce development, and make government more accountable.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.jamespiersonri.com/"
+        }
+      ],
       "endorsements": []
     },
     {
@@ -944,10 +1199,10 @@
       "chamber": "senate",
       "district_number": 34,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "campaign_website": "https://samforrichmond.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -977,8 +1232,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -988,11 +1243,42 @@
       "chamber": "senate",
       "district_number": 35,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://bridget4ri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Environment and climate",
+          "summary": "Protect communities from pollution, advance renewable energy, and strengthen climate resilience.",
+          "source_label": "Official campaign website",
+          "source_url": "https://bridget4ri.com/issues"
+        },
+        {
+          "title": "Education",
+          "summary": "Support equitable public education, pre-K expansion, modern school facilities, and student mental-health supports.",
+          "source_label": "Official campaign website",
+          "source_url": "https://bridget4ri.com/issues"
+        },
+        {
+          "title": "Reproductive rights",
+          "summary": "Protect abortion access and reproductive healthcare.",
+          "source_label": "Official campaign website",
+          "source_url": "https://bridget4ri.com/issues"
+        },
+        {
+          "title": "Gun violence prevention",
+          "summary": "Support gun-safety measures and further restrictions on assault weapons.",
+          "source_label": "Official campaign website",
+          "source_url": "https://bridget4ri.com/issues"
+        },
+        {
+          "title": "Healthcare and working families",
+          "summary": "Expand affordable healthcare and reduce financial pressure on working families.",
+          "source_label": "Official campaign website",
+          "source_url": "https://bridget4ri.com/issues"
+        }
+      ],
       "endorsements": [
         {
           "name": "Clean Water Action",
@@ -1013,10 +1299,10 @@
       "chamber": "senate",
       "district_number": 36,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "campaign_website": "https://www.alana4ri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -1035,8 +1321,8 @@
       "party": "Democrat",
       "campaign_website": "https://www.mark4ri.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1048,8 +1334,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1059,11 +1345,42 @@
       "chamber": "senate",
       "district_number": 38,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://victoria4ri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Affordability",
+          "summary": "Lower costs for families and seniors, including housing, healthcare, childcare, and utilities.",
+          "source_label": "Official campaign website",
+          "source_url": "https://victoria4ri.com/the-issues/"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Improve healthcare access, including community paramedicine and provider recruitment.",
+          "source_label": "Official campaign website",
+          "source_url": "https://victoria4ri.com/the-issues/"
+        },
+        {
+          "title": "Environment and shoreline access",
+          "summary": "Strengthen climate resilience and protect public access to Rhode Island's shoreline.",
+          "source_label": "Official campaign website",
+          "source_url": "https://victoria4ri.com/the-issues/"
+        },
+        {
+          "title": "Transportation",
+          "summary": "Improve Westerly Station and expand affordable transportation options.",
+          "source_label": "Official campaign website",
+          "source_url": "https://victoria4ri.com/the-issues/"
+        },
+        {
+          "title": "Small business and public safety",
+          "summary": "Support small businesses while pursuing gun-safety and community-safety measures.",
+          "source_label": "Official campaign website",
+          "source_url": "https://victoria4ri.com/the-issues/"
+        }
+      ],
       "endorsements": [
         {
           "name": "Clean Water Action",
@@ -1084,10 +1401,10 @@
       "chamber": "senate",
       "district_number": 38,
       "party": "Republican",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "campaign_website": "https://westin4ri-com.translate.goog/?_x_tr_sl=en&_x_tr_tl=it&_x_tr_hl=it&_x_tr_pto=sc",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1099,8 +1416,8 @@
       "party": "Democrat",
       "campaign_website": "http://edithajello.org/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -1128,11 +1445,36 @@
       "chamber": "house",
       "district_number": 1,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://www.michaeljgarman.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Climate and environment",
+          "summary": "Accelerate clean energy, create a climate superfund, and strengthen environmental-justice protections.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.michaeljgarman.com/environment"
+        },
+        {
+          "title": "Public transit",
+          "summary": "Protect and improve RIPTA and public transportation.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.michaeljgarman.com/environment"
+        },
+        {
+          "title": "Housing",
+          "summary": "Expand housing and address homelessness.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.michaeljgarman.com/environment"
+        },
+        {
+          "title": "Tax equity",
+          "summary": "Shift more of the tax burden toward those with greater resources.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.michaeljgarman.com/environment"
+        }
+      ],
       "endorsements": []
     },
     {
@@ -1143,9 +1485,40 @@
       "party": "Democrat",
       "campaign_website": "https://chrisblazejewski.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
-      "priorities": [],
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Affordable housing",
+          "summary": "Expand affordable housing and reduce homelessness.",
+          "source_label": "Official campaign website",
+          "source_url": "https://chrisblazejewski.com/"
+        },
+        {
+          "title": "Education",
+          "summary": "Invest in public schools and education.",
+          "source_label": "Official campaign website",
+          "source_url": "https://chrisblazejewski.com/"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Lower prescription costs and strengthen healthcare access.",
+          "source_label": "Official campaign website",
+          "source_url": "https://chrisblazejewski.com/"
+        },
+        {
+          "title": "Climate and environment",
+          "summary": "Advance climate action and environmental justice.",
+          "source_label": "Official campaign website",
+          "source_url": "https://chrisblazejewski.com/"
+        },
+        {
+          "title": "Workers and families",
+          "summary": "Support workers, paid leave, and policies benefiting working families.",
+          "source_label": "Official campaign website",
+          "source_url": "https://chrisblazejewski.com/"
+        }
+      ],
       "endorsements": []
     },
     {
@@ -1154,11 +1527,30 @@
       "chamber": "house",
       "district_number": 3,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://nathanbiahpvd.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Education funding and aid",
+          "summary": "Expand state education aid, FAFSA guidance, and access to higher-education scholarships.",
+          "source_label": "Official campaign website",
+          "source_url": "https://nathanbiahpvd.com/"
+        },
+        {
+          "title": "Healthcare workforce",
+          "summary": "Support graduate medical education and healthcare workforce development.",
+          "source_label": "Official campaign website",
+          "source_url": "https://nathanbiahpvd.com/"
+        },
+        {
+          "title": "Property-tax reform",
+          "summary": "Tax nonprofit-owned property when it is leased to for-profit entities.",
+          "source_label": "Official campaign website",
+          "source_url": "https://nathanbiahpvd.com/"
+        }
+      ],
       "endorsements": []
     },
     {
@@ -1169,8 +1561,8 @@
       "party": "Democrat",
       "campaign_website": "https://www.rebeccakislak.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
           "title": "Public education",
@@ -1225,8 +1617,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1236,11 +1628,36 @@
       "chamber": "house",
       "district_number": 5,
       "party": "Independent-Socialist",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://brittanyforri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Housing",
+          "summary": "Support a statewide rent freeze and publicly owned affordable housing.",
+          "source_label": "Official campaign website",
+          "source_url": "https://brittanyforri.com/"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Provide healthcare to Rhode Islanders free at the point of service.",
+          "source_label": "Official campaign website",
+          "source_url": "https://brittanyforri.com/"
+        },
+        {
+          "title": "Workers' rights and wages",
+          "summary": "Support a $30 minimum wage, union organizing, and the right to strike.",
+          "source_label": "Official campaign website",
+          "source_url": "https://brittanyforri.com/"
+        },
+        {
+          "title": "Public energy and transit",
+          "summary": "Support public ownership of Rhode Island Energy and full funding for RIPTA.",
+          "source_label": "Official campaign website",
+          "source_url": "https://brittanyforri.com/"
+        }
+      ],
       "endorsements": []
     },
     {
@@ -1251,8 +1668,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1262,11 +1679,30 @@
       "chamber": "house",
       "district_number": 7,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://www.amysantiagori.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Housing",
+          "summary": "Expand affordable housing and strengthen rent-stabilization protections.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.amysantiagori.com/about"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Increase healthcare access and Medicaid reimbursement rates.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.amysantiagori.com/about"
+        },
+        {
+          "title": "Working families",
+          "summary": "Pursue policies that help working families remain financially stable and housed.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.amysantiagori.com/about"
+        }
+      ],
       "endorsements": [
         {
           "name": "Rhode Island Working Families Party",
@@ -1289,8 +1725,8 @@
       "party": "Democrat",
       "campaign_website": "https://www.joannryan.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
           "title": "Road and pedestrian safety",
@@ -1333,8 +1769,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1346,8 +1782,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -1369,11 +1805,30 @@
       "chamber": "house",
       "district_number": 9,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://santojavier.com/learn-about-me",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Housing and jobs",
+          "summary": "Address housing affordability and unemployment in District 9.",
+          "source_label": "Official campaign website",
+          "source_url": "https://santojavier.com/learn-about-me"
+        },
+        {
+          "title": "Healthcare and education",
+          "summary": "Improve healthcare and education for district residents.",
+          "source_label": "Official campaign website",
+          "source_url": "https://santojavier.com/learn-about-me"
+        },
+        {
+          "title": "Civil rights",
+          "summary": "Protect reproductive choice, minority rights, and LGBTQIA+ rights.",
+          "source_label": "Official campaign website",
+          "source_url": "https://santojavier.com/learn-about-me"
+        }
+      ],
       "endorsements": [
         {
           "organization": "Collective Action for Education",
@@ -1391,8 +1846,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -1416,8 +1871,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -1434,10 +1889,10 @@
       "chamber": "house",
       "district_number": 11,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "campaign_website": "https://www.repgracediaz.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -1467,8 +1922,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1478,11 +1933,42 @@
       "chamber": "house",
       "district_number": 12,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://www.arlettefordistrict12.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Education and childcare",
+          "summary": "Strengthen public schools and expand access to quality, affordable childcare.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.arlettefordistrict12.com/"
+        },
+        {
+          "title": "Healthy communities",
+          "summary": "Improve air quality and give residents a stronger voice on Port of Providence impacts.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.arlettefordistrict12.com/"
+        },
+        {
+          "title": "Jobs and small business",
+          "summary": "Support good-paying jobs, small businesses, and economic opportunity.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.arlettefordistrict12.com/"
+        },
+        {
+          "title": "Affordable housing",
+          "summary": "Expand safe, stable, affordable housing for working families.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.arlettefordistrict12.com/"
+        },
+        {
+          "title": "Accessible government",
+          "summary": "Promote transparent government, language access, and inclusive representation.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.arlettefordistrict12.com/"
+        }
+      ],
       "endorsements": [
         {
           "name": "Clean Water Action",
@@ -1511,8 +1997,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -1529,11 +2015,42 @@
       "chamber": "house",
       "district_number": 13,
       "party": "Republican",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://reelsforrhodeisland.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Family and fathers' rights",
+          "summary": "Reform family court, custody, child-support, and co-parenting systems.",
+          "source_label": "Official campaign website",
+          "source_url": "https://reelsforrhodeisland.com/priorities"
+        },
+        {
+          "title": "Public safety",
+          "summary": "Strengthen public safety through accountability and investment.",
+          "source_label": "Official campaign website",
+          "source_url": "https://reelsforrhodeisland.com/priorities"
+        },
+        {
+          "title": "Economic policy",
+          "summary": "Lower taxes and support small businesses and economic opportunity.",
+          "source_label": "Official campaign website",
+          "source_url": "https://reelsforrhodeisland.com/priorities"
+        },
+        {
+          "title": "Education",
+          "summary": "Expand school choice and focus on educational opportunity.",
+          "source_label": "Official campaign website",
+          "source_url": "https://reelsforrhodeisland.com/priorities"
+        },
+        {
+          "title": "Housing and property rights",
+          "summary": "Protect homeowners while addressing housing affordability.",
+          "source_label": "Official campaign website",
+          "source_url": "https://reelsforrhodeisland.com/priorities"
+        }
+      ],
       "endorsements": []
     },
     {
@@ -1544,8 +2061,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1557,8 +2074,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -1577,8 +2094,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1590,8 +2107,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1603,8 +2120,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1616,8 +2133,8 @@
       "party": "Independent",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1629,9 +2146,40 @@
       "party": "Democrat",
       "campaign_website": "https://www.brandonpotterri.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
-      "priorities": [],
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Healthcare",
+          "summary": "Expand affordable healthcare and defend nursing-home staffing and quality standards.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.brandonpotterri.com/issues"
+        },
+        {
+          "title": "Cost of living and workers",
+          "summary": "Provide targeted tax relief, protect wages, and support working families.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.brandonpotterri.com/issues"
+        },
+        {
+          "title": "Education",
+          "summary": "Invest in school facilities and public education.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.brandonpotterri.com/issues"
+        },
+        {
+          "title": "Climate and environment",
+          "summary": "Reduce emissions, expand renewable energy, and protect clean air and water.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.brandonpotterri.com/issues"
+        },
+        {
+          "title": "Gun safety and reproductive rights",
+          "summary": "Support gun-safety measures and protect abortion access.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.brandonpotterri.com/issues"
+        }
+      ],
       "endorsements": []
     },
     {
@@ -1642,9 +2190,28 @@
       "party": "Democrat",
       "campaign_website": "https://jacquelynbaginski.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
-      "priorities": [],
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Public health and safety",
+          "summary": "Keep communities healthy and safe.",
+          "source_label": "Official campaign website",
+          "source_url": "https://jacquelynbaginski.com/"
+        },
+        {
+          "title": "Education",
+          "summary": "Strengthen Rhode Island's education system.",
+          "source_label": "Official campaign website",
+          "source_url": "https://jacquelynbaginski.com/"
+        },
+        {
+          "title": "Economy",
+          "summary": "Support economic recovery and growth.",
+          "source_label": "Official campaign website",
+          "source_url": "https://jacquelynbaginski.com/"
+        }
+      ],
       "endorsements": []
     },
     {
@@ -1655,8 +2222,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -1680,8 +2247,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1693,8 +2260,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -1716,10 +2283,10 @@
       "chamber": "house",
       "district_number": 19,
       "party": "Independent",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "campaign_website": "https://maloneyformayor.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1731,8 +2298,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1742,11 +2309,30 @@
       "chamber": "house",
       "district_number": 21,
       "party": "Republican",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://www.marie4ri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Term limits",
+          "summary": "Support term limits and greater turnover in state government.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.marie4ri.com/vision"
+        },
+        {
+          "title": "Taxes and fiscal policy",
+          "summary": "Limit tax burdens and emphasize fiscal accountability.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.marie4ri.com/vision"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Use healthcare experience to address workforce shortages, mental health, and addiction services.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.marie4ri.com/vision"
+        }
+      ],
       "endorsements": []
     },
     {
@@ -1757,8 +2343,8 @@
       "party": "Democrat",
       "campaign_website": "https://www.seguiforri.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
           "title": "Preservation",
@@ -1793,11 +2379,30 @@
       "chamber": "house",
       "district_number": 22,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://www.zakaryforri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Affordability",
+          "summary": "Address rising housing, healthcare, and everyday living costs.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.zakaryforri.com/"
+        },
+        {
+          "title": "Public safety",
+          "summary": "Support police, firefighters, first responders, and public-safety infrastructure.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.zakaryforri.com/"
+        },
+        {
+          "title": "Education and opportunity",
+          "summary": "Strengthen public education and pathways through college, career training, and veterans' opportunities.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.zakaryforri.com/"
+        }
+      ],
       "endorsements": [
         {
           "name": "Clean Water Action",
@@ -1826,8 +2431,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1837,11 +2442,36 @@
       "chamber": "house",
       "district_number": 23,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://www.mutoforwarwick.com/meet-bill-muto",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Public education",
+          "summary": "Fully fund Warwick schools, expand pre-K, and support teacher recruitment and retention.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.mutoforwarwick.com/"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Protect Medicaid, lower prescription costs, and expand mental-health services.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.mutoforwarwick.com/"
+        },
+        {
+          "title": "Housing",
+          "summary": "Expand affordable housing, speed permitting, protect renters, and assist first-time homebuyers.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.mutoforwarwick.com/"
+        },
+        {
+          "title": "Government accountability",
+          "summary": "Emphasize transparent, data-driven government and accountability for public spending.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.mutoforwarwick.com/"
+        }
+      ],
       "endorsements": [
         {
           "name": "Clean Water Action",
@@ -1862,10 +2492,10 @@
       "chamber": "house",
       "district_number": 23,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "campaign_website": "https://howeri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1877,8 +2507,8 @@
       "party": "Republican",
       "campaign_website": "https://www.djt4ri.us/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
           "title": "Small business",
@@ -1913,10 +2543,10 @@
       "chamber": "house",
       "district_number": 24,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "campaign_website": "https://rilaborlaw.com/attorneys/evan-shanley/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1928,8 +2558,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1941,8 +2571,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1954,8 +2584,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1965,10 +2595,10 @@
       "chamber": "house",
       "district_number": 27,
       "party": "Republican",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "campaign_website": "https://almagno-law.com/about/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1980,8 +2610,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1993,8 +2623,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2006,8 +2636,8 @@
       "party": "Democrat",
       "campaign_website": "http://www.justine4ri.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2019,8 +2649,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2032,8 +2662,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2045,8 +2675,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -2070,8 +2700,8 @@
       "party": "Democrat",
       "campaign_website": "https://www.cravenforri.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
           "title": "Affordability and housing",
@@ -2193,8 +2823,8 @@
       "party": "Democrat",
       "campaign_website": "https://www.voteforkevin.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
           "title": "Fiscal responsibility",
@@ -2237,8 +2867,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -2262,8 +2892,8 @@
       "party": "Republican",
       "campaign_website": "https://jessicadrewday.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2275,8 +2905,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -2300,8 +2930,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -2323,10 +2953,10 @@
       "chamber": "house",
       "district_number": 35,
       "party": "Republican",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "campaign_website": "https://jennerbonne.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2336,11 +2966,42 @@
       "chamber": "house",
       "district_number": 36,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://www.tinaspearsri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Healthcare",
+          "summary": "Expand access to affordable healthcare and strengthen local healthcare services.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.tinaspearsri.com/priorities"
+        },
+        {
+          "title": "Housing",
+          "summary": "Address housing affordability and homelessness.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.tinaspearsri.com/priorities"
+        },
+        {
+          "title": "Education",
+          "summary": "Support schools, special education, and education funding.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.tinaspearsri.com/priorities"
+        },
+        {
+          "title": "Climate resilience",
+          "summary": "Strengthen coastal preparedness and environmental resilience.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.tinaspearsri.com/priorities"
+        },
+        {
+          "title": "Seniors and transportation",
+          "summary": "Help seniors age in place and improve transportation for rural communities.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.tinaspearsri.com/priorities"
+        }
+      ],
       "endorsements": [
         {
           "name": "Clean Water Action",
@@ -2369,8 +3030,8 @@
       "party": "Democrat",
       "campaign_website": "https://www.leahforri-district36.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
           "title": "People before politics",
@@ -2413,8 +3074,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2426,8 +3087,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2439,8 +3100,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -2457,10 +3118,10 @@
       "chamber": "house",
       "district_number": 38,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "campaign_website": "https://moffittforri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2470,10 +3131,10 @@
       "chamber": "house",
       "district_number": 39,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "campaign_website": "https://www.megancotterri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2483,11 +3144,42 @@
       "chamber": "house",
       "district_number": 39,
       "party": "Republican",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://jasminroy4ri.org/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Local control and housing",
+          "summary": "Protect local zoning authority and favor starter-home development over state housing mandates.",
+          "source_label": "Official campaign website",
+          "source_url": "https://jasminroy4ri.org/"
+        },
+        {
+          "title": "Taxes and budgeting",
+          "summary": "Oppose state cost shifts to towns and use zero-based budgeting.",
+          "source_label": "Official campaign website",
+          "source_url": "https://jasminroy4ri.org/"
+        },
+        {
+          "title": "Energy",
+          "summary": "Pursue lower electricity costs through alternative power-generation policy.",
+          "source_label": "Official campaign website",
+          "source_url": "https://jasminroy4ri.org/"
+        },
+        {
+          "title": "Gun rights and public safety",
+          "summary": "Protect Second Amendment rights while strengthening penalties for violent crime.",
+          "source_label": "Official campaign website",
+          "source_url": "https://jasminroy4ri.org/"
+        },
+        {
+          "title": "Veterans",
+          "summary": "Increase respect and support for veterans.",
+          "source_label": "Official campaign website",
+          "source_url": "https://jasminroy4ri.org/"
+        }
+      ],
       "endorsements": []
     },
     {
@@ -2498,8 +3190,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2509,10 +3201,10 @@
       "chamber": "house",
       "district_number": 41,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "campaign_website": "https://scituatedemocrats.org/meet-shaina",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2524,8 +3216,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2535,10 +3227,10 @@
       "chamber": "house",
       "district_number": 42,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "campaign_website": "https://www.edfor42.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2550,8 +3242,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2563,8 +3255,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2576,8 +3268,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2589,8 +3281,8 @@
       "party": "Republican",
       "campaign_website": "https://hoseyforri.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
           "title": "Affordability and taxes",
@@ -2631,10 +3323,10 @@
       "chamber": "house",
       "district_number": 45,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "campaign_website": "https://www.miaforri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2646,8 +3338,8 @@
       "party": "Democrat",
       "campaign_website": "https://friendsofmaryannshallcrosssmith.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
           "title": "Small business",
@@ -2678,8 +3370,8 @@
       "party": "Republican",
       "campaign_website": "https://www.davidjplace.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
           "title": "Local control",
@@ -2714,10 +3406,10 @@
       "chamber": "house",
       "district_number": 48,
       "party": "Republican",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "campaign_website": "https://lewisbrisbois.com/attorneys/newberry-brian-c",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2729,8 +3421,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -2754,8 +3446,8 @@
       "party": "Independent",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2767,8 +3459,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2780,8 +3472,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2793,8 +3485,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2804,11 +3496,24 @@
       "chamber": "house",
       "district_number": 53,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://www.suzyalba.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Education",
+          "summary": "Make public education a central focus and engage residents directly on school issues.",
+          "source_label": "Official campaign website",
+          "source_url": "https://suzyalba.com/"
+        },
+        {
+          "title": "Responsive government",
+          "summary": "Emphasize constituent listening, bipartisan representation, and practical problem-solving.",
+          "source_label": "Official campaign website",
+          "source_url": "https://suzyalba.com/"
+        }
+      ],
       "endorsements": [
         {
           "name": "Clean Water Action",
@@ -2825,8 +3530,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2838,8 +3543,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2849,11 +3554,36 @@
       "chamber": "house",
       "district_number": 55,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://www.corveseforrepresentative.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Education and local aid",
+          "summary": "Increase state support for schools and municipalities.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.corveseforrepresentative.com/about"
+        },
+        {
+          "title": "Taxes",
+          "summary": "Reduce tax burdens, including support for eliminating the car tax.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.corveseforrepresentative.com/about"
+        },
+        {
+          "title": "Seniors and healthcare",
+          "summary": "Strengthen protections for seniors and expand affordable healthcare and prescription access.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.corveseforrepresentative.com/about"
+        },
+        {
+          "title": "Child welfare",
+          "summary": "Increase resources for child protection.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.corveseforrepresentative.com/about"
+        }
+      ],
       "endorsements": []
     },
     {
@@ -2864,8 +3594,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -2884,8 +3614,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -2915,8 +3645,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2926,11 +3656,42 @@
       "chamber": "house",
       "district_number": 58,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://cheriecruzri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Housing",
+          "summary": "Expand affordable and accessible housing.",
+          "source_label": "Official campaign website",
+          "source_url": "https://cheriecruzri.com/issues"
+        },
+        {
+          "title": "Working families and wages",
+          "summary": "Strengthen family supports and secure living wages and worker protections.",
+          "source_label": "Official campaign website",
+          "source_url": "https://cheriecruzri.com/issues"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Expand comprehensive healthcare and reduce prescription costs.",
+          "source_label": "Official campaign website",
+          "source_url": "https://cheriecruzri.com/issues"
+        },
+        {
+          "title": "Education and childcare",
+          "summary": "Invest in public education, teachers, school programs, and childcare.",
+          "source_label": "Official campaign website",
+          "source_url": "https://cheriecruzri.com/issues"
+        },
+        {
+          "title": "Justice and climate",
+          "summary": "Reform the criminal legal system and pursue climate action and green jobs.",
+          "source_label": "Official campaign website",
+          "source_url": "https://cheriecruzri.com/issues"
+        }
+      ],
       "endorsements": []
     },
     {
@@ -2941,8 +3702,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2954,8 +3715,8 @@
       "party": "Independent",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2967,8 +3728,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2980,8 +3741,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2993,8 +3754,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3006,8 +3767,8 @@
       "party": "Democrat",
       "campaign_website": "https://www.leonelafelix.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
           "title": "Criminal justice reform",
@@ -3050,8 +3811,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3063,8 +3824,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3074,11 +3835,30 @@
       "chamber": "house",
       "district_number": 64,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://www.jennifurtado.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Education funding",
+          "summary": "Increase state aid to East Providence and Pawtucket schools.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.jennifurtado.com/"
+        },
+        {
+          "title": "Housing",
+          "summary": "Expand first-time homebuyer assistance and affordable housing.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.jennifurtado.com/"
+        },
+        {
+          "title": "Seniors and taxes",
+          "summary": "Reduce state taxes on retirement income and protect Medicaid.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.jennifurtado.com/"
+        }
+      ],
       "endorsements": [
         {
           "name": "Clean Water Action",
@@ -3101,8 +3881,8 @@
       "party": "Democrat",
       "campaign_website": "https://www.dawsonforep.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -3132,8 +3912,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3145,9 +3925,22 @@
       "party": "Democrat",
       "campaign_website": "http://stgermainfor65.com",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
-      "priorities": [],
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Healthcare",
+          "summary": "Lower healthcare costs, strengthen Medicaid reimbursement, protect reproductive care, and expand mental-health services.",
+          "source_label": "Official campaign website",
+          "source_url": "http://stgermainfor65.com"
+        },
+        {
+          "title": "Affordability",
+          "summary": "Use state policy to reduce everyday costs facing Rhode Islanders.",
+          "source_label": "Official campaign website",
+          "source_url": "http://stgermainfor65.com"
+        }
+      ],
       "endorsements": [
         {
           "organization": "Collective Action for Education",
@@ -3163,11 +3956,42 @@
       "chamber": "house",
       "district_number": 66,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://www.jenniferboylanri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Climate and environment",
+          "summary": "Reduce pollution and carbon emissions and strengthen climate policy.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.jenniferboylanri.com/"
+        },
+        {
+          "title": "Gun safety",
+          "summary": "Support common-sense gun-safety laws.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.jenniferboylanri.com/"
+        },
+        {
+          "title": "Reproductive freedom",
+          "summary": "Protect reproductive rights and healthcare access.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.jenniferboylanri.com/"
+        },
+        {
+          "title": "Small business",
+          "summary": "Support families and small businesses.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.jenniferboylanri.com/"
+        },
+        {
+          "title": "Micromobility",
+          "summary": "Address safe and effective regulation of e-bikes and micromobility.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.jenniferboylanri.com/"
+        }
+      ],
       "endorsements": [
         {
           "name": "Clean Water Action",
@@ -3188,11 +4012,42 @@
       "chamber": "house",
       "district_number": 67,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://www.nicolejellinek.com/about",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Healthcare",
+          "summary": "Expand affordable physical and mental healthcare and address provider and prescription-cost barriers.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.nicolejellinek.com/about"
+        },
+        {
+          "title": "Education",
+          "summary": "Support equitable school funding, teachers, counselors, and affordable education from pre-K through career training.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.nicolejellinek.com/about"
+        },
+        {
+          "title": "Affordability and housing",
+          "summary": "Lower everyday costs and expand safe, stable, affordable housing.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.nicolejellinek.com/about"
+        },
+        {
+          "title": "Rights and families",
+          "summary": "Protect reproductive freedom, childcare access, pay equity, and anti-discrimination protections.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.nicolejellinek.com/about"
+        },
+        {
+          "title": "Climate and environment",
+          "summary": "Reduce emissions, build a green economy, strengthen coastal resilience, and protect drinking water.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.nicolejellinek.com/about"
+        }
+      ],
       "endorsements": [
         {
           "name": "Clean Water Action",
@@ -3219,10 +4074,10 @@
       "chamber": "house",
       "district_number": 67,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "campaign_website": "https://ron4ri.online/meet-ron-jarvais-jr-1",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3234,8 +4089,8 @@
       "party": "Independent",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3247,8 +4102,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -3272,9 +4127,40 @@
       "party": "Democrat",
       "campaign_website": "http://susan-donovan.com",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "Official campaign website located and verified in the 2026 web audit.",
-      "priorities": [],
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Healthcare and seniors",
+          "summary": "Protect affordable healthcare and support services that allow seniors to age at home.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.susan-donovan.com/why-im-running"
+        },
+        {
+          "title": "Education",
+          "summary": "Ensure fair state school funding without overburdening local property taxpayers.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.susan-donovan.com/why-im-running"
+        },
+        {
+          "title": "Housing",
+          "summary": "Expand affordable housing and reduce barriers to housing production.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.susan-donovan.com/why-im-running"
+        },
+        {
+          "title": "Small business",
+          "summary": "Reduce unnecessary regulatory burdens on small businesses.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.susan-donovan.com/why-im-running"
+        },
+        {
+          "title": "Public safety and climate",
+          "summary": "Support gun-safety measures and strengthen climate resilience.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.susan-donovan.com/why-im-running"
+        }
+      ],
       "endorsements": [
         {
           "name": "Clean Water Action",
@@ -3297,8 +4183,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
@@ -3320,11 +4206,36 @@
       "chamber": "house",
       "district_number": 71,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://www.mcgaw4ri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Environment",
+          "summary": "Advance climate policy and environmental stewardship.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.mcgaw4ri.com/"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Improve healthcare access and prescription affordability.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.mcgaw4ri.com/"
+        },
+        {
+          "title": "Democracy",
+          "summary": "Strengthen participation and accountability in state government.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.mcgaw4ri.com/"
+        },
+        {
+          "title": "Reproductive rights",
+          "summary": "Protect reproductive healthcare and rights.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.mcgaw4ri.com/"
+        }
+      ],
       "endorsements": [
         {
           "name": "Clean Water Action",
@@ -3347,8 +4258,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3360,8 +4271,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3371,10 +4282,10 @@
       "chamber": "house",
       "district_number": 74,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "campaign_website": "https://alexfinkelman.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3384,11 +4295,42 @@
       "chamber": "house",
       "district_number": 75,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
-      "priorities": [],
+      "campaign_website": "https://www.laurencarson.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "priorities": [
+        {
+          "title": "Maternal healthcare",
+          "summary": "Protect maternal health services and Newport's birthing center.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.laurencarson.com/press"
+        },
+        {
+          "title": "Environment and climate",
+          "summary": "Advance climate resilience, clean energy, and environmental protection.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.laurencarson.com/the-issues"
+        },
+        {
+          "title": "Housing and short-term rentals",
+          "summary": "Address housing pressures and policies affecting short-term rentals.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.laurencarson.com/the-issues"
+        },
+        {
+          "title": "Small business and tourism",
+          "summary": "Support small businesses and Rhode Island's tourism economy.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.laurencarson.com/the-issues"
+        },
+        {
+          "title": "Government transparency and aging",
+          "summary": "Promote transparent government and improve services for older Rhode Islanders.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.laurencarson.com/the-issues"
+        }
+      ],
       "endorsements": [
         {
           "name": "Clean Water Action",

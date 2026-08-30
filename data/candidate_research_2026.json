@@ -2,8 +2,8 @@
   "generated_at": "2026-08-30",
   "methodology": {
     "roster": "Valid 2026 Rhode Island legislative candidates from the declared-candidate workbook used by the project.",
-    "website_audit": "Each candidate name was searched for an official 2026 campaign website. Government pages, social profiles, news articles, and generic voter-guide pages were not counted as campaign websites.",
-    "priorities": "Conservative paraphrases of positions stated on verified official campaign websites; no priorities were inferred from party affiliation. Existing populated priority lists were preserved and only empty lists were supplemented.",
+    "website_audit": "Campaign websites were reconciled against the updated candidate website audit workbook supplied on 2026-08-30. Government pages, social profiles, news articles, and generic voter-guide pages were not treated as campaign websites.",
+    "priorities": "Existing nonempty candidate priority lists were preserved. For candidates with empty priority lists, conservative paraphrases were added only when substantive positions were stated on a verified official campaign website; no priorities were inferred from party affiliation or biography alone.",
     "endorsements": "Only explicit endorsement statements from an endorsing organization or verified campaign site were included.",
     "caution": "A no-site result means no official campaign website was located during this audit, not that a website definitively does not exist."
   },
@@ -16,8 +16,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -29,8 +29,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -81,6 +81,12 @@
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -92,8 +98,8 @@
       "party": "Independent",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -137,8 +143,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -200,8 +206,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -217,46 +223,34 @@
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
-          "title": "Affordable housing",
-          "summary": "Expand access to affordable housing.",
+          "title": "Housing",
+          "summary": "Expand affordable housing, invest in public housing, limit rent increases, and strengthen tenant protections.",
           "source_label": "Official campaign website",
-          "source_url": "https://www.tiaramackdistrict6.com/"
+          "source_url": "https://www.tiaramackdistrict6.com/en/housing"
         },
         {
-          "title": "Public education",
-          "summary": "Support quality public schools.",
+          "title": "Education",
+          "summary": "Expand universal pre-K and public-college access while investing in teachers, smaller classes, and student supports.",
           "source_label": "Official campaign website",
-          "source_url": "https://www.tiaramackdistrict6.com/"
+          "source_url": "https://www.tiaramackdistrict6.com/en/education"
         },
         {
-          "title": "Criminal justice reform",
-          "summary": "Advance criminal justice reform.",
+          "title": "Healthcare",
+          "summary": "Expand access to healthcare, including reproductive healthcare, and pursue universal coverage.",
           "source_label": "Official campaign website",
-          "source_url": "https://www.tiaramackdistrict6.com/"
+          "source_url": "https://www.tiaramackdistrict6.com/en/what-we-believe"
         },
         {
-          "title": "Gun safety",
-          "summary": "Support gun-safety measures.",
+          "title": "Criminal justice and gun policy",
+          "summary": "Pursue criminal-justice reform and stronger gun-safety policies.",
           "source_label": "Official campaign website",
-          "source_url": "https://www.tiaramackdistrict6.com/"
+          "source_url": "https://www.tiaramackdistrict6.com/en/what-we-believe"
         },
         {
-          "title": "Reproductive healthcare",
-          "summary": "Protect access to reproductive healthcare.",
+          "title": "Climate and wages",
+          "summary": "Advance clean-energy policy and support higher wages for working people.",
           "source_label": "Official campaign website",
-          "source_url": "https://www.tiaramackdistrict6.com/"
-        },
-        {
-          "title": "Wages",
-          "summary": "Support a higher minimum wage and livable wages.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.tiaramackdistrict6.com/"
-        },
-        {
-          "title": "Climate justice",
-          "summary": "Advance climate and clean-energy policies.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.tiaramackdistrict6.com/"
+          "source_url": "https://www.tiaramackdistrict6.com/en/what-we-believe"
         }
       ],
       "endorsements": []
@@ -269,8 +263,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -286,43 +280,50 @@
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
-          "title": "Healthcare access",
-          "summary": "Expand primary and home care and improve healthcare access.",
-          "source_label": "Official campaign website",
-          "source_url": "https://loriurso.com/"
-        },
-        {
-          "title": "AI safety and privacy",
-          "summary": "Strengthen safeguards and privacy protections for artificial intelligence, including in mental health.",
-          "source_label": "Official campaign website",
-          "source_url": "https://loriurso.com/"
-        },
-        {
-          "title": "Animal welfare",
-          "summary": "Strengthen protections for animals and penalties for abuse.",
-          "source_label": "Official campaign website",
-          "source_url": "https://loriurso.com/"
-        },
-        {
-          "title": "Accessibility",
-          "summary": "Improve accessibility for people with mobility impairments.",
-          "source_label": "Official campaign website",
-          "source_url": "https://loriurso.com/"
-        },
-        {
           "title": "Housing affordability",
-          "summary": "Increase housing supply and affordability.",
+          "summary": "Increase housing supply and improve affordability.",
           "source_label": "Official campaign website",
           "source_url": "https://loriurso.com/"
         },
         {
-          "title": "Mental health and opioids",
-          "summary": "Address mental-health needs and the opioid crisis.",
+          "title": "Healthcare and mental health",
+          "summary": "Address women's health, mental-health needs, the opioid crisis, and healthcare workforce issues.",
+          "source_label": "Official campaign website",
+          "source_url": "https://loriurso.com/"
+        },
+        {
+          "title": "Main Street revitalization",
+          "summary": "Support downtown development, tourism, and community-based economic revitalization.",
+          "source_label": "Official campaign website",
+          "source_url": "https://loriurso.com/"
+        },
+        {
+          "title": "Education and accessibility",
+          "summary": "Support early educators, multilingual learning, and improved accessibility for people with mobility impairments.",
+          "source_label": "Official campaign website",
+          "source_url": "https://loriurso.com/"
+        },
+        {
+          "title": "Technology and consumer protection",
+          "summary": "Address artificial-intelligence safety and privacy.",
           "source_label": "Official campaign website",
           "source_url": "https://loriurso.com/"
         }
       ],
-      "endorsements": []
+      "endorsements": [
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "NEARI PACE",
+          "source_url": "https://www.neari.org/votes",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        }
+      ]
     },
     {
       "candidate_id": "senate-8-dem-primary-gena-felix",
@@ -365,6 +366,12 @@
           "name": "Rhode Island Working Families Party",
           "source_url": "https://www.riwfp.org/endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Rhode Island Working Families Party",
+          "source_url": "https://workingfamilies.org/2026/06/rhode-island-working-families-party-endorses-4-first-time-candidates-challenging-new-state-leadership-to-govern-boldly/",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -376,8 +383,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -389,8 +396,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -404,12 +411,37 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Affordable healthcare",
+          "summary": "Expand access to universal, comprehensive, affordable healthcare.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.ujifusa4ri.com/priorities"
+        },
+        {
+          "title": "Insurance and prescription costs",
+          "summary": "Rein in pharmacy benefit managers and insurance practices that restrict care or raise costs.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.ujifusa4ri.com/priorities"
+        },
+        {
+          "title": "Mental health",
+          "summary": "Reduce barriers to mental-health and substance-use treatment.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.ujifusa4ri.com/priorities"
+        }
+      ],
       "endorsements": [
         {
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -421,8 +453,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -467,6 +499,12 @@
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -478,8 +516,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -491,10 +529,17 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        }
+      ]
     },
     {
       "candidate_id": "senate-14-oth-general-brian-g-coogan",
@@ -504,8 +549,8 @@
       "party": "Independent",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -521,32 +566,26 @@
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
-          "title": "Housing affordability",
+          "title": "Housing",
           "summary": "Expand access to affordable housing.",
           "source_label": "Official campaign website",
           "source_url": "https://electmeghan.com/"
         },
         {
           "title": "Economic justice",
-          "summary": "Support living wages and greater economic security.",
+          "summary": "Support living wages and policies that strengthen working families.",
           "source_label": "Official campaign website",
           "source_url": "https://electmeghan.com/"
         },
         {
-          "title": "Clean-energy economy",
-          "summary": "Develop a blue-green economy and transition away from fossil fuels.",
+          "title": "Climate and clean energy",
+          "summary": "Accelerate the transition away from fossil fuels and address the climate crisis.",
           "source_label": "Official campaign website",
           "source_url": "https://electmeghan.com/"
         },
         {
-          "title": "Public education",
+          "title": "Education",
           "summary": "Invest in strong public education.",
-          "source_label": "Official campaign website",
-          "source_url": "https://electmeghan.com/"
-        },
-        {
-          "title": "Climate action",
-          "summary": "Respond to climate change with stronger state action.",
           "source_label": "Official campaign website",
           "source_url": "https://electmeghan.com/"
         },
@@ -557,7 +596,14 @@
           "source_url": "https://electmeghan.com/"
         }
       ],
-      "endorsements": []
+      "endorsements": [
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        }
+      ]
     },
     {
       "candidate_id": "senate-15-dem-primary-vanessa-lopez",
@@ -567,8 +613,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -580,14 +626,20 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -631,6 +683,18 @@
           "name": "Rhode Island Working Families Party",
           "source_url": "https://www.riwfp.org/endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "Rhode Island Working Families Party",
+          "source_url": "https://workingfamilies.org/2026/06/rhode-island-working-families-party-endorses-4-first-time-candidates-challenging-new-state-leadership-to-govern-boldly/",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -642,8 +706,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -655,8 +719,8 @@
       "party": "Independent",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -681,14 +745,20 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -702,12 +772,37 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Affordability",
+          "summary": "Provide relief to residents facing inflation and rising living costs.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.ryanforri.com/issues"
+        },
+        {
+          "title": "Economic development and housing",
+          "summary": "Support job growth, infrastructure investment, and affordable housing development.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.ryanforri.com/issues"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Improve healthcare availability while lowering insurance and care costs.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.ryanforri.com/issues"
+        }
+      ],
       "endorsements": [
         {
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -719,8 +814,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -732,8 +827,8 @@
       "party": "Independent",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -747,44 +842,7 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [
-        {
-          "title": "Public education",
-          "summary": "Increase state support for Woonsocket and Cumberland public schools.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.thompsonforri.com/"
-        },
-        {
-          "title": "Family affordability",
-          "summary": "Expand child tax credits, pension and Social Security tax relief, paid family leave, and affordable child care.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.thompsonforri.com/"
-        },
-        {
-          "title": "Public safety",
-          "summary": "Support policies intended to keep communities safe.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.thompsonforri.com/"
-        },
-        {
-          "title": "Jobs and workforce",
-          "summary": "Expand job training and connect workers with employers seeking skilled labor.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.thompsonforri.com/"
-        },
-        {
-          "title": "Small business",
-          "summary": "Reduce unnecessary regulatory burdens on small businesses.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.thompsonforri.com/"
-        },
-        {
-          "title": "Protection from abuse",
-          "summary": "Strengthen protections for seniors, people with disabilities, domestic-abuse victims, and animals.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.thompsonforri.com/"
-        }
-      ],
+      "priorities": [],
       "endorsements": []
     },
     {
@@ -795,8 +853,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -808,8 +866,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -836,43 +894,18 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [
-        {
-          "title": "Healthcare access",
-          "summary": "Expand access to affordable healthcare and challenge practices that put costs ahead of patients.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.murrayforri.com/"
-        },
-        {
-          "title": "Public education",
-          "summary": "Support proper funding for public schools.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.murrayforri.com/"
-        },
-        {
-          "title": "Working families",
-          "summary": "Advance policies that support working families.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.murrayforri.com/"
-        },
-        {
-          "title": "Seniors and veterans",
-          "summary": "Protect and support seniors and veterans.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.murrayforri.com/"
-        },
-        {
-          "title": "Children and animal welfare",
-          "summary": "Support policies protecting children and animals.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.murrayforri.com/"
-        }
-      ],
+      "priorities": [],
       "endorsements": [
         {
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -884,8 +917,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -897,8 +930,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -910,8 +943,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -927,34 +960,34 @@
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
-          "title": "Affordable housing",
-          "summary": "Expand access to affordable housing.",
+          "title": "Housing",
+          "summary": "Expand affordable housing and homeownership opportunities.",
           "source_label": "Official campaign website",
-          "source_url": "https://lammisvargas.com/"
+          "source_url": "https://lammisvargas.com/platform/"
         },
         {
-          "title": "Environmental protection",
-          "summary": "Protect the environment and community health.",
+          "title": "Environment",
+          "summary": "Protect local natural resources, strengthen environmental justice, and address hazardous pollution.",
           "source_label": "Official campaign website",
-          "source_url": "https://lammisvargas.com/"
+          "source_url": "https://lammisvargas.com/platform/"
         },
         {
-          "title": "Education funding",
-          "summary": "Promote equitable funding for education.",
+          "title": "Education",
+          "summary": "Improve equitable school funding, special-education support, school meals, and school infrastructure.",
           "source_label": "Official campaign website",
-          "source_url": "https://lammisvargas.com/"
+          "source_url": "https://lammisvargas.com/platform/"
         },
         {
-          "title": "Healthcare access",
-          "summary": "Expand access to healthcare.",
+          "title": "Healthcare",
+          "summary": "Expand healthcare access and protect reproductive freedom.",
           "source_label": "Official campaign website",
-          "source_url": "https://lammisvargas.com/"
+          "source_url": "https://lammisvargas.com/platform/"
         },
         {
-          "title": "Small business",
-          "summary": "Support small businesses and local economic opportunity.",
+          "title": "Public transit and small business",
+          "summary": "Strengthen public transportation and support small businesses.",
           "source_label": "Official campaign website",
-          "source_url": "https://lammisvargas.com/"
+          "source_url": "https://lammisvargas.com/platform/"
         }
       ],
       "endorsements": [
@@ -962,6 +995,12 @@
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -973,8 +1012,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -991,43 +1030,31 @@
       "priorities": [
         {
           "title": "Healthcare",
-          "summary": "Expand access to care, lower prescription and insurance costs, address medical debt, and support providers.",
+          "summary": "Expand access, lower prescription and insurance costs, address medical debt, and protect reproductive healthcare.",
           "source_label": "Official campaign website",
           "source_url": "https://www.markmckenney.com/"
         },
         {
           "title": "Education",
-          "summary": "Invest in public schools, early childhood education, safe learning environments, and modern facilities.",
+          "summary": "Invest in public schools, early childhood education, safe facilities, and academic freedom.",
           "source_label": "Official campaign website",
           "source_url": "https://www.markmckenney.com/"
         },
         {
           "title": "Affordability and economic opportunity",
-          "summary": "Support working families through wages, targeted tax relief, and economic development.",
+          "summary": "Support fair wages, tax relief, small businesses, and policies that lower living costs.",
           "source_label": "Official campaign website",
           "source_url": "https://www.markmckenney.com/"
         },
         {
           "title": "Housing and infrastructure",
-          "summary": "Expand affordable housing and invest in roads, schools, shoreline access, and responsible land use.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.markmckenney.com/"
-        },
-        {
-          "title": "Public safety",
-          "summary": "Support gun-safety measures, protections for domestic-violence survivors, and law-enforcement accountability.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.markmckenney.com/"
-        },
-        {
-          "title": "Environment",
-          "summary": "Protect Narragansett Bay, reduce harmful pollution, support clean energy, and strengthen climate policy.",
+          "summary": "Expand affordable housing, strengthen renter protections, and invest in roads and public infrastructure.",
           "source_label": "Official campaign website",
           "source_url": "https://www.markmckenney.com/"
         },
         {
           "title": "Government accountability",
-          "summary": "Strengthen ethics, transparency, oversight, and responsible stewardship of public funds.",
+          "summary": "Strengthen ethics, transparency, oversight, and stewardship of taxpayer dollars.",
           "source_label": "Official campaign website",
           "source_url": "https://www.markmckenney.com/"
         }
@@ -1042,14 +1069,20 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -1066,39 +1099,33 @@
       "priorities": [
         {
           "title": "Healthcare",
-          "summary": "Expand affordable, equitable healthcare and strengthen Rhode Island’s healthcare workforce.",
+          "summary": "Expand affordable and accessible healthcare, mental-health services, and the healthcare workforce.",
           "source_label": "Official campaign website",
-          "source_url": "https://pamlauria.com/"
+          "source_url": "https://pamlauria.com/issues1/"
         },
         {
           "title": "Education",
-          "summary": "Support equitable public education and resources for students, teachers, and school staff.",
+          "summary": "Support equitable public education, fair school funding, and student mental-health resources.",
           "source_label": "Official campaign website",
-          "source_url": "https://pamlauria.com/"
+          "source_url": "https://pamlauria.com/issues1/"
         },
         {
           "title": "Gun violence prevention",
-          "summary": "Support safe-storage requirements and measures aimed at reducing gun violence.",
+          "summary": "Strengthen safe-storage laws and other measures intended to reduce gun violence.",
           "source_label": "Official campaign website",
-          "source_url": "https://pamlauria.com/"
+          "source_url": "https://pamlauria.com/issues1/"
         },
         {
-          "title": "Environment and climate",
-          "summary": "Reduce emissions, strengthen climate resilience, and protect open space and drinking water.",
+          "title": "Environment",
+          "summary": "Reduce carbon emissions, strengthen climate resilience, and protect open space and drinking water.",
           "source_label": "Official campaign website",
-          "source_url": "https://pamlauria.com/"
+          "source_url": "https://pamlauria.com/issues1/"
         },
         {
-          "title": "Rights and equality",
-          "summary": "Protect reproductive healthcare, LGBTQ+ rights, disability rights, and equal treatment.",
+          "title": "Housing and seniors",
+          "summary": "Expand affordable housing and help older residents age safely in their communities.",
           "source_label": "Official campaign website",
-          "source_url": "https://pamlauria.com/"
-        },
-        {
-          "title": "Seniors and housing",
-          "summary": "Expand affordable housing and help seniors age safely in their homes.",
-          "source_label": "Official campaign website",
-          "source_url": "https://pamlauria.com/"
+          "source_url": "https://pamlauria.com/issues1/"
         }
       ],
       "endorsements": [
@@ -1134,38 +1161,32 @@
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
-          "title": "Affordable energy",
+          "title": "Energy costs",
           "summary": "Reform state energy policy to lower utility costs.",
           "source_label": "Official campaign website",
           "source_url": "https://www.jamespiersonri.com/"
         },
         {
-          "title": "Local zoning and smart growth",
-          "summary": "Protect local zoning authority while supporting responsible development.",
+          "title": "Local control and housing growth",
+          "summary": "Protect local zoning authority while streamlining responsible development.",
           "source_label": "Official campaign website",
           "source_url": "https://www.jamespiersonri.com/"
         },
         {
           "title": "Education",
-          "summary": "Reduce unfunded mandates and focus school resources on student outcomes.",
+          "summary": "Reduce unfunded mandates and focus school resources on student achievement.",
           "source_label": "Official campaign website",
           "source_url": "https://www.jamespiersonri.com/"
         },
         {
-          "title": "Public safety and constitutional rights",
-          "summary": "Target violent crime and illegal firearms while protecting lawful gun ownership.",
+          "title": "Public safety and gun rights",
+          "summary": "Protect lawful gun ownership while targeting violent crime and illegal firearms.",
           "source_label": "Official campaign website",
           "source_url": "https://www.jamespiersonri.com/"
         },
         {
-          "title": "Economic growth",
-          "summary": "Reduce regulatory burdens and strengthen workforce development.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.jamespiersonri.com/"
-        },
-        {
-          "title": "Government accountability",
-          "summary": "Reduce bureaucracy and make state government more transparent and responsive.",
+          "title": "Economy and government accountability",
+          "summary": "Reduce regulatory burdens, strengthen workforce development, and make government more accountable.",
           "source_label": "Official campaign website",
           "source_url": "https://www.jamespiersonri.com/"
         }
@@ -1182,37 +1203,24 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [
-        {
-          "title": "Environmental protection",
-          "summary": "Protect natural resources and consider long-term environmental impacts in public decisions.",
-          "source_label": "Official campaign website",
-          "source_url": "https://samforrichmond.com/"
-        },
-        {
-          "title": "Fiscal stewardship",
-          "summary": "Ensure tax dollars are invested carefully and responsibly.",
-          "source_label": "Official campaign website",
-          "source_url": "https://samforrichmond.com/"
-        },
-        {
-          "title": "Economic development",
-          "summary": "Encourage beneficial local business development.",
-          "source_label": "Official campaign website",
-          "source_url": "https://samforrichmond.com/"
-        },
-        {
-          "title": "Transparency and civic engagement",
-          "summary": "Increase government transparency and public participation.",
-          "source_label": "Official campaign website",
-          "source_url": "https://samforrichmond.com/"
-        }
-      ],
+      "priorities": [],
       "endorsements": [
         {
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "Richmond Democratic Town Committee",
+          "source_url": "https://www.richmonddtc.com/",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -1224,8 +1232,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1239,12 +1247,49 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Environment and climate",
+          "summary": "Protect communities from pollution, advance renewable energy, and strengthen climate resilience.",
+          "source_label": "Official campaign website",
+          "source_url": "https://bridget4ri.com/issues"
+        },
+        {
+          "title": "Education",
+          "summary": "Support equitable public education, pre-K expansion, modern school facilities, and student mental-health supports.",
+          "source_label": "Official campaign website",
+          "source_url": "https://bridget4ri.com/issues"
+        },
+        {
+          "title": "Reproductive rights",
+          "summary": "Protect abortion access and reproductive healthcare.",
+          "source_label": "Official campaign website",
+          "source_url": "https://bridget4ri.com/issues"
+        },
+        {
+          "title": "Gun violence prevention",
+          "summary": "Support gun-safety measures and further restrictions on assault weapons.",
+          "source_label": "Official campaign website",
+          "source_url": "https://bridget4ri.com/issues"
+        },
+        {
+          "title": "Healthcare and working families",
+          "summary": "Expand affordable healthcare and reduce financial pressure on working families.",
+          "source_label": "Official campaign website",
+          "source_url": "https://bridget4ri.com/issues"
+        }
+      ],
       "endorsements": [
         {
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -1258,33 +1303,15 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [
+      "priorities": [],
+      "endorsements": [
         {
-          "title": "Affordability",
-          "summary": "Lower utility costs, provide targeted tax relief, and expand affordable housing and healthcare.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.alana4ri.com/"
-        },
-        {
-          "title": "Families and services",
-          "summary": "Strengthen child care, education, mental-health care, primary care, and support for retirees.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.alana4ri.com/"
-        },
-        {
-          "title": "Local economy",
-          "summary": "Reduce unnecessary barriers for small businesses and support job growth.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.alana4ri.com/"
-        },
-        {
-          "title": "Natural resources",
-          "summary": "Protect Rhode Island’s natural resources while supporting the local economy.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.alana4ri.com/"
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
-      ],
-      "endorsements": []
+      ]
     },
     {
       "candidate_id": "senate-36-dem-primary-mark-mesrobian",
@@ -1307,8 +1334,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1325,33 +1352,33 @@
       "priorities": [
         {
           "title": "Affordability",
-          "summary": "Address housing and utility costs so South County families can afford to remain in their communities.",
+          "summary": "Lower costs for families and seniors, including housing, healthcare, childcare, and utilities.",
           "source_label": "Official campaign website",
-          "source_url": "https://victoria4ri.com/"
+          "source_url": "https://victoria4ri.com/the-issues/"
         },
         {
-          "title": "Climate resilience",
-          "summary": "Protect the environment and strengthen preparation for flooding, sea-level rise, and other climate risks.",
+          "title": "Healthcare",
+          "summary": "Improve healthcare access, including community paramedicine and provider recruitment.",
           "source_label": "Official campaign website",
-          "source_url": "https://victoria4ri.com/"
+          "source_url": "https://victoria4ri.com/the-issues/"
         },
         {
-          "title": "Healthcare access",
-          "summary": "Expand community paramedicine and evidence-based nutrition programs to improve access and outcomes.",
+          "title": "Environment and shoreline access",
+          "summary": "Strengthen climate resilience and protect public access to Rhode Island's shoreline.",
           "source_label": "Official campaign website",
-          "source_url": "https://victoria4ri.com/"
-        },
-        {
-          "title": "Utilities",
-          "summary": "Reform oversight of for-profit utilities such as Rhode Island Energy.",
-          "source_label": "Official campaign website",
-          "source_url": "https://victoria4ri.com/"
+          "source_url": "https://victoria4ri.com/the-issues/"
         },
         {
           "title": "Transportation",
-          "summary": "Secure improvements to Westerly Station and expand affordable transportation options.",
+          "summary": "Improve Westerly Station and expand affordable transportation options.",
           "source_label": "Official campaign website",
-          "source_url": "https://victoria4ri.com/"
+          "source_url": "https://victoria4ri.com/the-issues/"
+        },
+        {
+          "title": "Small business and public safety",
+          "summary": "Support small businesses while pursuing gun-safety and community-safety measures.",
+          "source_label": "Official campaign website",
+          "source_url": "https://victoria4ri.com/the-issues/"
         }
       ],
       "endorsements": [
@@ -1359,6 +1386,12 @@
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -1391,6 +1424,18 @@
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "NEARI PACE",
+          "source_url": "https://www.neari.org/votes",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -1406,34 +1451,28 @@
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
-          "title": "Climate and clean energy",
-          "summary": "Accelerate the transition to clean energy while limiting burdens on ratepayers.",
+          "title": "Climate and environment",
+          "summary": "Accelerate clean energy, create a climate superfund, and strengthen environmental-justice protections.",
           "source_label": "Official campaign website",
-          "source_url": "https://www.michaeljgarman.com/"
-        },
-        {
-          "title": "Climate accountability",
-          "summary": "Create a Climate Superfund requiring major fossil-fuel companies to help pay for climate resilience and mitigation.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.michaeljgarman.com/"
+          "source_url": "https://www.michaeljgarman.com/environment"
         },
         {
           "title": "Public transit",
           "summary": "Protect and improve RIPTA and public transportation.",
           "source_label": "Official campaign website",
-          "source_url": "https://www.michaeljgarman.com/"
+          "source_url": "https://www.michaeljgarman.com/environment"
         },
         {
-          "title": "Housing and homelessness",
-          "summary": "Expand housing access and address homelessness as a policy priority.",
+          "title": "Housing",
+          "summary": "Expand housing and address homelessness.",
           "source_label": "Official campaign website",
-          "source_url": "https://www.michaeljgarman.com/"
+          "source_url": "https://www.michaeljgarman.com/environment"
         },
         {
           "title": "Tax equity",
-          "summary": "Make the tax system more equitable and ask higher-income residents to contribute a fairer share.",
+          "summary": "Shift more of the tax burden toward those with greater resources.",
           "source_label": "Official campaign website",
-          "source_url": "https://www.michaeljgarman.com/"
+          "source_url": "https://www.michaeljgarman.com/environment"
         }
       ],
       "endorsements": []
@@ -1450,32 +1489,32 @@
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
-          "title": "Environmental justice",
-          "summary": "Advance environmental justice and climate protections.",
-          "source_label": "Official campaign website",
-          "source_url": "https://chrisblazejewski.com/"
-        },
-        {
           "title": "Affordable housing",
-          "summary": "Expand affordable housing and support efforts to reduce homelessness.",
+          "summary": "Expand affordable housing and reduce homelessness.",
           "source_label": "Official campaign website",
           "source_url": "https://chrisblazejewski.com/"
         },
         {
-          "title": "Public education",
-          "summary": "Invest in Rhode Island public schools.",
+          "title": "Education",
+          "summary": "Invest in public schools and education.",
           "source_label": "Official campaign website",
           "source_url": "https://chrisblazejewski.com/"
         },
         {
-          "title": "Prescription drug costs",
-          "summary": "Lower prescription-drug costs.",
+          "title": "Healthcare",
+          "summary": "Lower prescription costs and strengthen healthcare access.",
+          "source_label": "Official campaign website",
+          "source_url": "https://chrisblazejewski.com/"
+        },
+        {
+          "title": "Climate and environment",
+          "summary": "Advance climate action and environmental justice.",
           "source_label": "Official campaign website",
           "source_url": "https://chrisblazejewski.com/"
         },
         {
           "title": "Workers and families",
-          "summary": "Strengthen protections and economic support for workers and their families.",
+          "summary": "Support workers, paid leave, and policies benefiting working families.",
           "source_label": "Official campaign website",
           "source_url": "https://chrisblazejewski.com/"
         }
@@ -1495,7 +1534,7 @@
       "priorities": [
         {
           "title": "Education funding and aid",
-          "summary": "Expand state education aid, FAFSA guidance, and higher-education opportunity.",
+          "summary": "Expand state education aid, FAFSA guidance, and access to higher-education scholarships.",
           "source_label": "Official campaign website",
           "source_url": "https://nathanbiahpvd.com/"
         },
@@ -1506,8 +1545,8 @@
           "source_url": "https://nathanbiahpvd.com/"
         },
         {
-          "title": "Property-tax fairness",
-          "summary": "Tax nonprofit-owned property leased to for-profit entities and reinvest revenue in public services.",
+          "title": "Property-tax reform",
+          "summary": "Tax nonprofit-owned property when it is leased to for-profit entities.",
           "source_label": "Official campaign website",
           "source_url": "https://nathanbiahpvd.com/"
         }
@@ -1561,6 +1600,12 @@
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -1572,8 +1617,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1590,31 +1635,25 @@
       "priorities": [
         {
           "title": "Housing",
-          "summary": "Support a statewide rent freeze and expansion of publicly owned affordable housing.",
+          "summary": "Support a statewide rent freeze and publicly owned affordable housing.",
           "source_label": "Official campaign website",
           "source_url": "https://brittanyforri.com/"
         },
         {
           "title": "Healthcare",
-          "summary": "Support healthcare for all Rhode Islanders that is free at the point of service.",
+          "summary": "Provide healthcare to Rhode Islanders free at the point of service.",
           "source_label": "Official campaign website",
           "source_url": "https://brittanyforri.com/"
         },
         {
-          "title": "Workers and wages",
-          "summary": "Support a $30 minimum wage, stronger union rights, and the right to strike.",
+          "title": "Workers' rights and wages",
+          "summary": "Support a $30 minimum wage, union organizing, and the right to strike.",
           "source_label": "Official campaign website",
           "source_url": "https://brittanyforri.com/"
         },
         {
-          "title": "Public energy",
-          "summary": "Support public ownership of Rhode Island Energy.",
-          "source_label": "Official campaign website",
-          "source_url": "https://brittanyforri.com/"
-        },
-        {
-          "title": "Public transit",
-          "summary": "Fully fund RIPTA and public transportation.",
+          "title": "Public energy and transit",
+          "summary": "Support public ownership of Rhode Island Energy and full funding for RIPTA.",
           "source_label": "Official campaign website",
           "source_url": "https://brittanyforri.com/"
         }
@@ -1629,8 +1668,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1646,28 +1685,22 @@
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
-          "title": "Affordable housing",
-          "summary": "Expand affordable housing and help working families remain in their homes.",
+          "title": "Housing",
+          "summary": "Expand affordable housing and strengthen rent-stabilization protections.",
           "source_label": "Official campaign website",
-          "source_url": "https://www.amysantiagori.com/"
+          "source_url": "https://www.amysantiagori.com/about"
         },
         {
-          "title": "Rent protections",
-          "summary": "Strengthen rent-stabilization protections.",
+          "title": "Healthcare",
+          "summary": "Increase healthcare access and Medicaid reimbursement rates.",
           "source_label": "Official campaign website",
-          "source_url": "https://www.amysantiagori.com/"
+          "source_url": "https://www.amysantiagori.com/about"
         },
         {
-          "title": "Healthcare access",
-          "summary": "Expand healthcare access and raise Medicaid reimbursement rates.",
+          "title": "Working families",
+          "summary": "Pursue policies that help working families remain financially stable and housed.",
           "source_label": "Official campaign website",
-          "source_url": "https://www.amysantiagori.com/"
-        },
-        {
-          "title": "Public transit and climate resilience",
-          "summary": "Restore RIPTA funding and invest in stormwater, flood mitigation, green space, and pollution accountability.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.amysantiagori.com/"
+          "source_url": "https://www.amysantiagori.com/about"
         }
       ],
       "endorsements": [
@@ -1675,6 +1708,12 @@
           "name": "Rhode Island Working Families Party",
           "source_url": "https://www.riwfp.org/endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Rhode Island Working Families Party",
+          "source_url": "https://workingfamilies.org/2026/06/rhode-island-working-families-party-endorses-4-first-time-candidates-challenging-new-state-leadership-to-govern-boldly/",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -1730,8 +1769,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1743,14 +1782,20 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -1766,37 +1811,32 @@
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
-          "title": "Housing",
-          "summary": "Address housing affordability and stability in District 9.",
+          "title": "Housing and jobs",
+          "summary": "Address housing affordability and unemployment in District 9.",
           "source_label": "Official campaign website",
           "source_url": "https://santojavier.com/learn-about-me"
         },
         {
-          "title": "Jobs and economic opportunity",
-          "summary": "Address unemployment and support economic opportunity and small-business growth.",
+          "title": "Healthcare and education",
+          "summary": "Improve healthcare and education for district residents.",
           "source_label": "Official campaign website",
           "source_url": "https://santojavier.com/learn-about-me"
         },
         {
-          "title": "Healthcare",
-          "summary": "Improve healthcare access for residents.",
-          "source_label": "Official campaign website",
-          "source_url": "https://santojavier.com/learn-about-me"
-        },
-        {
-          "title": "Education",
-          "summary": "Strengthen educational opportunity.",
-          "source_label": "Official campaign website",
-          "source_url": "https://santojavier.com/learn-about-me"
-        },
-        {
-          "title": "Civil and reproductive rights",
-          "summary": "Protect reproductive choice and the rights of minority and LGBTQIA+ residents.",
+          "title": "Civil rights",
+          "summary": "Protect reproductive choice, minority rights, and LGBTQIA+ rights.",
           "source_label": "Official campaign website",
           "source_url": "https://santojavier.com/learn-about-me"
         }
       ],
-      "endorsements": []
+      "endorsements": [
+        {
+          "organization": "Collective Action for Education",
+          "source_url": "https://collectiveactionri.org/collective-action-for-education-announces-first-round-of-2026-rhode-island-primary-candidate-endorsements/",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        }
+      ]
     },
     {
       "candidate_id": "house-9-dem-primary-enrique-george-sanchez",
@@ -1806,14 +1846,20 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -1825,10 +1871,17 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "organization": "Collective Action for Education",
+          "source_url": "https://collectiveactionri.org/collective-action-for-education-endorses-slate-of-state-legislators-and-providence-city-councilors-for-re-election/",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        }
+      ]
     },
     {
       "candidate_id": "house-11-dem-primary-grace-diaz",
@@ -1840,43 +1893,24 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [
-        {
-          "title": "Children and child care",
-          "summary": "Improve support for families and child-care providers.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.repgracediaz.com/"
-        },
-        {
-          "title": "Housing",
-          "summary": "Address Rhode Island’s housing crisis.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.repgracediaz.com/"
-        },
-        {
-          "title": "Reentry",
-          "summary": "Improve support for people transitioning from correctional facilities.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.repgracediaz.com/"
-        },
-        {
-          "title": "Economic opportunity",
-          "summary": "Support business development and better income opportunities.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.repgracediaz.com/"
-        },
-        {
-          "title": "Seniors and immigrant communities",
-          "summary": "Support seniors and immigrant families and improve access to services.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.repgracediaz.com/"
-        }
-      ],
+      "priorities": [],
       "endorsements": [
         {
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "Collective Action for Education",
+          "source_url": "https://collectiveactionri.org/collective-action-for-education-endorses-slate-of-state-legislators-and-providence-city-councilors-for-re-election/",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -1888,8 +1922,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -1905,32 +1939,32 @@
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
-          "title": "Education and child care",
-          "summary": "Strengthen schools, quality child care, and opportunities for students.",
+          "title": "Education and childcare",
+          "summary": "Strengthen public schools and expand access to quality, affordable childcare.",
           "source_label": "Official campaign website",
           "source_url": "https://www.arlettefordistrict12.com/"
         },
         {
           "title": "Healthy communities",
-          "summary": "Improve air quality and give neighborhoods affected by the Port of Providence a stronger voice.",
+          "summary": "Improve air quality and give residents a stronger voice on Port of Providence impacts.",
           "source_label": "Official campaign website",
           "source_url": "https://www.arlettefordistrict12.com/"
         },
         {
           "title": "Jobs and small business",
-          "summary": "Support good-paying jobs, small businesses, and pathways to economic opportunity.",
+          "summary": "Support good-paying jobs, small businesses, and economic opportunity.",
           "source_label": "Official campaign website",
           "source_url": "https://www.arlettefordistrict12.com/"
         },
         {
           "title": "Affordable housing",
-          "summary": "Expand access to safe, stable, affordable homes.",
+          "summary": "Expand safe, stable, affordable housing for working families.",
           "source_label": "Official campaign website",
           "source_url": "https://www.arlettefordistrict12.com/"
         },
         {
           "title": "Accessible government",
-          "summary": "Promote transparent government, language access, and responsive representation.",
+          "summary": "Promote transparent government, language access, and inclusive representation.",
           "source_label": "Official campaign website",
           "source_url": "https://www.arlettefordistrict12.com/"
         }
@@ -1940,6 +1974,18 @@
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "Collective Action for Education",
+          "source_url": "https://collectiveactionri.org/collective-action-for-education-announces-first-round-of-2026-rhode-island-primary-candidate-endorsements/",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -1951,10 +1997,17 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "organization": "Collective Action for Education",
+          "source_url": "https://collectiveactionri.org/collective-action-for-education-endorses-slate-of-state-legislators-and-providence-city-councilors-for-re-election/",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        }
+      ]
     },
     {
       "candidate_id": "house-13-rep-primary-derick-a-reels",
@@ -1968,34 +2021,34 @@
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
-          "title": "Family and fathers’ rights",
-          "summary": "Reform family-court practices, child-support calculations, and access to co-parenting mediation.",
+          "title": "Family and fathers' rights",
+          "summary": "Reform family court, custody, child-support, and co-parenting systems.",
           "source_label": "Official campaign website",
-          "source_url": "https://reelsforrhodeisland.com/"
+          "source_url": "https://reelsforrhodeisland.com/priorities"
         },
         {
           "title": "Public safety",
-          "summary": "Support accountability and investment aimed at safer communities.",
+          "summary": "Strengthen public safety through accountability and investment.",
           "source_label": "Official campaign website",
-          "source_url": "https://reelsforrhodeisland.com/"
+          "source_url": "https://reelsforrhodeisland.com/priorities"
         },
         {
-          "title": "Taxes and small business",
-          "summary": "Lower taxes and expand economic opportunity for small businesses.",
+          "title": "Economic policy",
+          "summary": "Lower taxes and support small businesses and economic opportunity.",
           "source_label": "Official campaign website",
-          "source_url": "https://reelsforrhodeisland.com/"
+          "source_url": "https://reelsforrhodeisland.com/priorities"
         },
         {
-          "title": "Education and school choice",
-          "summary": "Expand educational options and school choice.",
+          "title": "Education",
+          "summary": "Expand school choice and focus on educational opportunity.",
           "source_label": "Official campaign website",
-          "source_url": "https://reelsforrhodeisland.com/"
+          "source_url": "https://reelsforrhodeisland.com/priorities"
         },
         {
           "title": "Housing and property rights",
-          "summary": "Protect property rights while addressing housing affordability.",
+          "summary": "Protect homeowners while addressing housing affordability.",
           "source_label": "Official campaign website",
-          "source_url": "https://reelsforrhodeisland.com/"
+          "source_url": "https://reelsforrhodeisland.com/priorities"
         }
       ],
       "endorsements": []
@@ -2008,8 +2061,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2021,10 +2074,17 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "organization": "Collective Action for Education",
+          "source_url": "https://collectiveactionri.org/collective-action-for-education-announces-first-round-of-2026-rhode-island-primary-candidate-endorsements/",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        }
+      ]
     },
     {
       "candidate_id": "house-14-dem-primary-kassielle-m-ramos",
@@ -2034,8 +2094,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2047,8 +2107,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2060,8 +2120,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2073,8 +2133,8 @@
       "party": "Independent",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2088,7 +2148,38 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Healthcare",
+          "summary": "Expand affordable healthcare and defend nursing-home staffing and quality standards.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.brandonpotterri.com/issues"
+        },
+        {
+          "title": "Cost of living and workers",
+          "summary": "Provide targeted tax relief, protect wages, and support working families.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.brandonpotterri.com/issues"
+        },
+        {
+          "title": "Education",
+          "summary": "Invest in school facilities and public education.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.brandonpotterri.com/issues"
+        },
+        {
+          "title": "Climate and environment",
+          "summary": "Reduce emissions, expand renewable energy, and protect clean air and water.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.brandonpotterri.com/issues"
+        },
+        {
+          "title": "Gun safety and reproductive rights",
+          "summary": "Support gun-safety measures and protect abortion access.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.brandonpotterri.com/issues"
+        }
+      ],
       "endorsements": []
     },
     {
@@ -2103,20 +2194,20 @@
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
-          "title": "Community health and safety",
-          "summary": "Support policies intended to keep Cranston healthy and safe.",
+          "title": "Public health and safety",
+          "summary": "Keep communities healthy and safe.",
           "source_label": "Official campaign website",
           "source_url": "https://jacquelynbaginski.com/"
         },
         {
           "title": "Education",
-          "summary": "Strengthen Rhode Island’s education system.",
+          "summary": "Strengthen Rhode Island's education system.",
           "source_label": "Official campaign website",
           "source_url": "https://jacquelynbaginski.com/"
         },
         {
-          "title": "Economic recovery",
-          "summary": "Support policies aimed at strengthening the state economy.",
+          "title": "Economy",
+          "summary": "Support economic recovery and growth.",
           "source_label": "Official campaign website",
           "source_url": "https://jacquelynbaginski.com/"
         }
@@ -2131,14 +2222,20 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -2150,8 +2247,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2163,14 +2260,20 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -2195,8 +2298,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2213,21 +2316,21 @@
       "priorities": [
         {
           "title": "Term limits",
-          "summary": "Support legislative term limits and greater turnover in State House leadership.",
+          "summary": "Support term limits and greater turnover in state government.",
           "source_label": "Official campaign website",
-          "source_url": "https://www.marie4ri.com/"
+          "source_url": "https://www.marie4ri.com/vision"
         },
         {
           "title": "Taxes and fiscal policy",
-          "summary": "Reduce pressure on taxpayers and strengthen fiscal accountability.",
+          "summary": "Limit tax burdens and emphasize fiscal accountability.",
           "source_label": "Official campaign website",
-          "source_url": "https://www.marie4ri.com/"
+          "source_url": "https://www.marie4ri.com/vision"
         },
         {
           "title": "Healthcare",
-          "summary": "Use healthcare experience to address staffing shortages, behavioral health, addiction, and access to care.",
+          "summary": "Use healthcare experience to address workforce shortages, mental health, and addiction services.",
           "source_label": "Official campaign website",
-          "source_url": "https://www.marie4ri.com/"
+          "source_url": "https://www.marie4ri.com/vision"
         }
       ],
       "endorsements": []
@@ -2283,7 +2386,7 @@
       "priorities": [
         {
           "title": "Affordability",
-          "summary": "Lower housing, healthcare, and everyday costs for working families and retirees.",
+          "summary": "Address rising housing, healthcare, and everyday living costs.",
           "source_label": "Official campaign website",
           "source_url": "https://www.zakaryforri.com/"
         },
@@ -2295,13 +2398,7 @@
         },
         {
           "title": "Education and opportunity",
-          "summary": "Strengthen public education and pathways through college and career and technical education.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.zakaryforri.com/"
-        },
-        {
-          "title": "Veterans",
-          "summary": "Expand economic opportunities for veterans after their service.",
+          "summary": "Strengthen public education and pathways through college, career training, and veterans' opportunities.",
           "source_label": "Official campaign website",
           "source_url": "https://www.zakaryforri.com/"
         }
@@ -2311,6 +2408,18 @@
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "NEARI PACE",
+          "source_url": "https://www.neari.org/votes",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -2322,8 +2431,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2340,9 +2449,27 @@
       "priorities": [
         {
           "title": "Public education",
-          "summary": "Fully fund Warwick public schools and close local school-funding gaps.",
+          "summary": "Fully fund Warwick schools, expand pre-K, and support teacher recruitment and retention.",
           "source_label": "Official campaign website",
-          "source_url": "https://www.mutoforwarwick.com/meet-bill-muto"
+          "source_url": "https://www.mutoforwarwick.com/"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Protect Medicaid, lower prescription costs, and expand mental-health services.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.mutoforwarwick.com/"
+        },
+        {
+          "title": "Housing",
+          "summary": "Expand affordable housing, speed permitting, protect renters, and assist first-time homebuyers.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.mutoforwarwick.com/"
+        },
+        {
+          "title": "Government accountability",
+          "summary": "Emphasize transparent, data-driven government and accountability for public spending.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.mutoforwarwick.com/"
         }
       ],
       "endorsements": [
@@ -2350,6 +2477,12 @@
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -2425,8 +2558,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2438,8 +2571,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2451,8 +2584,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2477,8 +2610,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2490,8 +2623,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2516,8 +2649,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2529,8 +2662,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2542,14 +2675,20 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -2613,6 +2752,66 @@
           "name": "Rhode Island Coalition Against Gun Violence",
           "source_url": "https://www.cravenforri.com/",
           "source_type": "candidate_site"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "NEARI PACE",
+          "source_url": "https://www.neari.org/votes",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://www.cravenforri.com/",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "AFL-CIO",
+          "source_url": "https://www.cravenforri.com/",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "National Education Association Rhode Island",
+          "source_url": "https://www.cravenforri.com/",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "American Federation of Teachers and Healthcare Professionals",
+          "source_url": "https://www.cravenforri.com/",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "SEIU",
+          "source_url": "https://www.cravenforri.com/",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "Rhode Island Troopers Association",
+          "source_url": "https://www.cravenforri.com/",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "Climate Action Rhode Island",
+          "source_url": "https://www.cravenforri.com/",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "Laborers' International Union of North America",
+          "source_url": "https://www.cravenforri.com/",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -2668,14 +2867,20 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -2689,38 +2894,7 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [
-        {
-          "title": "Energy affordability",
-          "summary": "Reduce energy costs by changing state energy mandates and expanding alternative supply options.",
-          "source_label": "Official campaign website",
-          "source_url": "https://jessicadrewday.com/"
-        },
-        {
-          "title": "Small business",
-          "summary": "Reduce taxes, fees, insurance costs, and permitting burdens for small businesses.",
-          "source_label": "Official campaign website",
-          "source_url": "https://jessicadrewday.com/"
-        },
-        {
-          "title": "Healthcare",
-          "summary": "Increase provider reimbursement, expand telehealth, reduce administrative burdens, and encourage competition.",
-          "source_label": "Official campaign website",
-          "source_url": "https://jessicadrewday.com/"
-        },
-        {
-          "title": "Toll fairness",
-          "summary": "Create clearer grace periods and limits on late toll fees.",
-          "source_label": "Official campaign website",
-          "source_url": "https://jessicadrewday.com/"
-        },
-        {
-          "title": "Foster care",
-          "summary": "Improve information sharing and reduce administrative burdens for foster families.",
-          "source_label": "Official campaign website",
-          "source_url": "https://jessicadrewday.com/"
-        }
-      ],
+      "priorities": [],
       "endorsements": []
     },
     {
@@ -2731,14 +2905,20 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -2750,14 +2930,20 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -2771,38 +2957,7 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [
-        {
-          "title": "Affordability",
-          "summary": "Address high costs for housing, utilities, food, and taxes.",
-          "source_label": "Official campaign website",
-          "source_url": "https://jennerbonne.com/"
-        },
-        {
-          "title": "Education and parental involvement",
-          "summary": "Focus schools on core academics and expand transparency and parental engagement.",
-          "source_label": "Official campaign website",
-          "source_url": "https://jennerbonne.com/"
-        },
-        {
-          "title": "Environment and land use",
-          "summary": "Prevent pollution, protect shoreline access, and involve local stakeholders in land-use decisions.",
-          "source_label": "Official campaign website",
-          "source_url": "https://jennerbonne.com/"
-        },
-        {
-          "title": "Business climate",
-          "summary": "Streamline permits, reduce unnecessary regulations, and support small businesses.",
-          "source_label": "Official campaign website",
-          "source_url": "https://jennerbonne.com/"
-        },
-        {
-          "title": "Government accountability",
-          "summary": "Support term limits, transparency, data-driven decisions, and greater accountability.",
-          "source_label": "Official campaign website",
-          "source_url": "https://jennerbonne.com/"
-        }
-      ],
+      "priorities": [],
       "endorsements": []
     },
     {
@@ -2817,34 +2972,34 @@
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
-          "title": "Public education",
-          "summary": "Increase school funding and educational opportunities, including support for students with disabilities and career education.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.tinaspearsri.com/"
-        },
-        {
           "title": "Healthcare",
-          "summary": "Improve affordable healthcare, primary care, behavioral-health services, and support for seniors and people with disabilities.",
+          "summary": "Expand access to affordable healthcare and strengthen local healthcare services.",
           "source_label": "Official campaign website",
-          "source_url": "https://www.tinaspearsri.com/"
+          "source_url": "https://www.tinaspearsri.com/priorities"
         },
         {
-          "title": "Affordability",
-          "summary": "Help families manage rising costs and strengthen economic opportunity.",
+          "title": "Housing",
+          "summary": "Address housing affordability and homelessness.",
           "source_label": "Official campaign website",
-          "source_url": "https://www.tinaspearsri.com/"
+          "source_url": "https://www.tinaspearsri.com/priorities"
         },
         {
-          "title": "Community resilience",
-          "summary": "Protect the environment and strengthen community resilience.",
+          "title": "Education",
+          "summary": "Support schools, special education, and education funding.",
           "source_label": "Official campaign website",
-          "source_url": "https://www.tinaspearsri.com/"
+          "source_url": "https://www.tinaspearsri.com/priorities"
         },
         {
-          "title": "Older Rhode Islanders",
-          "summary": "Improve access to care, medication affordability, aging-in-place support, and protections against scams.",
+          "title": "Climate resilience",
+          "summary": "Strengthen coastal preparedness and environmental resilience.",
           "source_label": "Official campaign website",
-          "source_url": "https://www.tinaspearsri.com/"
+          "source_url": "https://www.tinaspearsri.com/priorities"
+        },
+        {
+          "title": "Seniors and transportation",
+          "summary": "Help seniors age in place and improve transportation for rural communities.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.tinaspearsri.com/priorities"
         }
       ],
       "endorsements": [
@@ -2852,6 +3007,18 @@
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "NEARI PACE",
+          "source_url": "https://www.neari.org/votes",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -2907,8 +3074,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2920,8 +3087,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -2933,10 +3100,17 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "organization": "NEARI PACE",
+          "source_url": "https://www.neari.org/votes",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        }
+      ]
     },
     {
       "candidate_id": "house-38-dem-primary-stephen-c-moffitt",
@@ -2948,26 +3122,7 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [
-        {
-          "title": "Affordability",
-          "summary": "Reduce pressures from taxes, housing, utilities, and other everyday costs.",
-          "source_label": "Official campaign website",
-          "source_url": "https://moffittforri.com/"
-        },
-        {
-          "title": "Local control",
-          "summary": "Protect local decision-making and the character of Hopkinton and Westerly.",
-          "source_label": "Official campaign website",
-          "source_url": "https://moffittforri.com/"
-        },
-        {
-          "title": "Government accountability",
-          "summary": "Hold state government accountable for spending and improve communication with constituents.",
-          "source_label": "Official campaign website",
-          "source_url": "https://moffittforri.com/"
-        }
-      ],
+      "priorities": [],
       "endorsements": []
     },
     {
@@ -2980,38 +3135,7 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [
-        {
-          "title": "Family affordability",
-          "summary": "Use tax relief and child-care policy to lower costs for families and seniors.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.megancotterri.com/"
-        },
-        {
-          "title": "Public education",
-          "summary": "Increase state support for local schools.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.megancotterri.com/"
-        },
-        {
-          "title": "Healthcare access",
-          "summary": "Strengthen Medicaid and protect access to community healthcare.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.megancotterri.com/"
-        },
-        {
-          "title": "Forests and open space",
-          "summary": "Preserve farmland and open space and improve wildfire prevention and forest management.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.megancotterri.com/"
-        },
-        {
-          "title": "Government accountability",
-          "summary": "Support independent oversight and audits to protect taxpayer dollars.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.megancotterri.com/"
-        }
-      ],
+      "priorities": [],
       "endorsements": []
     },
     {
@@ -3026,38 +3150,32 @@
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
-          "title": "Open space and rural character",
-          "summary": "Protect open space and support farming and forestry.",
-          "source_label": "Official campaign website",
-          "source_url": "https://jasminroy4ri.org/"
-        },
-        {
-          "title": "Business and regulation",
-          "summary": "Reduce state regulatory burdens and support economic development.",
-          "source_label": "Official campaign website",
-          "source_url": "https://jasminroy4ri.org/"
-        },
-        {
           "title": "Local control and housing",
-          "summary": "Protect local zoning authority and promote attainable starter homes.",
+          "summary": "Protect local zoning authority and favor starter-home development over state housing mandates.",
+          "source_label": "Official campaign website",
+          "source_url": "https://jasminroy4ri.org/"
+        },
+        {
+          "title": "Taxes and budgeting",
+          "summary": "Oppose state cost shifts to towns and use zero-based budgeting.",
+          "source_label": "Official campaign website",
+          "source_url": "https://jasminroy4ri.org/"
+        },
+        {
+          "title": "Energy",
+          "summary": "Pursue lower electricity costs through alternative power-generation policy.",
+          "source_label": "Official campaign website",
+          "source_url": "https://jasminroy4ri.org/"
+        },
+        {
+          "title": "Gun rights and public safety",
+          "summary": "Protect Second Amendment rights while strengthening penalties for violent crime.",
           "source_label": "Official campaign website",
           "source_url": "https://jasminroy4ri.org/"
         },
         {
           "title": "Veterans",
-          "summary": "Improve respect and support for veterans.",
-          "source_label": "Official campaign website",
-          "source_url": "https://jasminroy4ri.org/"
-        },
-        {
-          "title": "Constitutional rights",
-          "summary": "Protect First and Second Amendment rights.",
-          "source_label": "Official campaign website",
-          "source_url": "https://jasminroy4ri.org/"
-        },
-        {
-          "title": "Budget accountability",
-          "summary": "Use zero-based budgeting, independent auditing, and stronger spending oversight.",
+          "summary": "Increase respect and support for veterans.",
           "source_label": "Official campaign website",
           "source_url": "https://jasminroy4ri.org/"
         }
@@ -3072,8 +3190,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3098,8 +3216,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3124,8 +3242,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3137,8 +3255,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3150,8 +3268,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3303,14 +3421,20 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
           "name": "Rhode Island Working Families Party",
           "source_url": "https://www.riwfp.org/endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Rhode Island Working Families Party",
+          "source_url": "https://workingfamilies.org/2026/06/rhode-island-working-families-party-endorses-4-first-time-candidates-challenging-new-state-leadership-to-govern-boldly/",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -3322,8 +3446,8 @@
       "party": "Independent",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3335,8 +3459,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3348,8 +3472,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3361,8 +3485,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3378,28 +3502,16 @@
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
-          "title": "Public education",
-          "summary": "Strengthen public schools and ensure students have the resources they need.",
+          "title": "Education",
+          "summary": "Make public education a central focus and engage residents directly on school issues.",
           "source_label": "Official campaign website",
-          "source_url": "https://www.suzyalba.com/"
+          "source_url": "https://suzyalba.com/"
         },
         {
-          "title": "Cost of living",
-          "summary": "Address rising healthcare, housing, and grocery costs.",
+          "title": "Responsive government",
+          "summary": "Emphasize constituent listening, bipartisan representation, and practical problem-solving.",
           "source_label": "Official campaign website",
-          "source_url": "https://www.suzyalba.com/"
-        },
-        {
-          "title": "Seniors",
-          "summary": "Protect seniors on fixed incomes and help them remain in their homes.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.suzyalba.com/"
-        },
-        {
-          "title": "Small business",
-          "summary": "Support local small businesses and economic opportunity.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.suzyalba.com/"
+          "source_url": "https://suzyalba.com/"
         }
       ],
       "endorsements": [
@@ -3418,8 +3530,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3431,8 +3543,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3446,7 +3558,32 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Education and local aid",
+          "summary": "Increase state support for schools and municipalities.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.corveseforrepresentative.com/about"
+        },
+        {
+          "title": "Taxes",
+          "summary": "Reduce tax burdens, including support for eliminating the car tax.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.corveseforrepresentative.com/about"
+        },
+        {
+          "title": "Seniors and healthcare",
+          "summary": "Strengthen protections for seniors and expand affordable healthcare and prescription access.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.corveseforrepresentative.com/about"
+        },
+        {
+          "title": "Child welfare",
+          "summary": "Increase resources for child protection.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.corveseforrepresentative.com/about"
+        }
+      ],
       "endorsements": []
     },
     {
@@ -3457,10 +3594,17 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "organization": "Collective Action for Education",
+          "source_url": "https://collectiveactionri.org/collective-action-for-education-endorses-slate-of-state-legislators-and-providence-city-councilors-for-re-election/",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        }
+      ]
     },
     {
       "candidate_id": "house-57-dem-primary-brandon-t-voas",
@@ -3470,14 +3614,26 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "NEARI PACE",
+          "source_url": "https://www.neari.org/votes",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -3489,8 +3645,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3504,7 +3660,38 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Housing",
+          "summary": "Expand affordable and accessible housing.",
+          "source_label": "Official campaign website",
+          "source_url": "https://cheriecruzri.com/issues"
+        },
+        {
+          "title": "Working families and wages",
+          "summary": "Strengthen family supports and secure living wages and worker protections.",
+          "source_label": "Official campaign website",
+          "source_url": "https://cheriecruzri.com/issues"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Expand comprehensive healthcare and reduce prescription costs.",
+          "source_label": "Official campaign website",
+          "source_url": "https://cheriecruzri.com/issues"
+        },
+        {
+          "title": "Education and childcare",
+          "summary": "Invest in public education, teachers, school programs, and childcare.",
+          "source_label": "Official campaign website",
+          "source_url": "https://cheriecruzri.com/issues"
+        },
+        {
+          "title": "Justice and climate",
+          "summary": "Reform the criminal legal system and pursue climate action and green jobs.",
+          "source_label": "Official campaign website",
+          "source_url": "https://cheriecruzri.com/issues"
+        }
+      ],
       "endorsements": []
     },
     {
@@ -3515,8 +3702,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3528,8 +3715,8 @@
       "party": "Independent",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3541,8 +3728,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3554,8 +3741,8 @@
       "party": "Republican",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3567,8 +3754,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3624,8 +3811,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3637,8 +3824,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3654,20 +3841,20 @@
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
-          "title": "Education",
-          "summary": "Invest more in East Providence and Pawtucket schools and support students, parents, and teachers.",
+          "title": "Education funding",
+          "summary": "Increase state aid to East Providence and Pawtucket schools.",
           "source_label": "Official campaign website",
           "source_url": "https://www.jennifurtado.com/"
         },
         {
           "title": "Housing",
-          "summary": "Work across levels of government to build sustainable communities and expand housing opportunity.",
+          "summary": "Expand first-time homebuyer assistance and affordable housing.",
           "source_label": "Official campaign website",
           "source_url": "https://www.jennifurtado.com/"
         },
         {
-          "title": "Economic development",
-          "summary": "Support small businesses, attract new employers, and foster live-work-play development.",
+          "title": "Seniors and taxes",
+          "summary": "Reduce state taxes on retirement income and protect Medicaid.",
           "source_label": "Official campaign website",
           "source_url": "https://www.jennifurtado.com/"
         }
@@ -3677,6 +3864,12 @@
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -3696,6 +3889,18 @@
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "NEARI PACE",
+          "source_url": "https://www.neari.org/votes",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -3707,8 +3912,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3722,8 +3927,28 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
-      "endorsements": []
+      "priorities": [
+        {
+          "title": "Healthcare",
+          "summary": "Lower healthcare costs, strengthen Medicaid reimbursement, protect reproductive care, and expand mental-health services.",
+          "source_label": "Official campaign website",
+          "source_url": "http://stgermainfor65.com"
+        },
+        {
+          "title": "Affordability",
+          "summary": "Use state policy to reduce everyday costs facing Rhode Islanders.",
+          "source_label": "Official campaign website",
+          "source_url": "http://stgermainfor65.com"
+        }
+      ],
+      "endorsements": [
+        {
+          "organization": "Collective Action for Education",
+          "source_url": "https://collectiveactionri.org/collective-action-for-education-announces-first-round-of-2026-rhode-island-primary-candidate-endorsements/",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        }
+      ]
     },
     {
       "candidate_id": "house-66-dem-primary-jennifer-smith-boylan",
@@ -3738,7 +3963,7 @@
       "priorities": [
         {
           "title": "Climate and environment",
-          "summary": "Protect the environment and reduce greenhouse-gas emissions.",
+          "summary": "Reduce pollution and carbon emissions and strengthen climate policy.",
           "source_label": "Official campaign website",
           "source_url": "https://www.jenniferboylanri.com/"
         },
@@ -3750,19 +3975,19 @@
         },
         {
           "title": "Reproductive freedom",
-          "summary": "Protect reproductive rights and access.",
+          "summary": "Protect reproductive rights and healthcare access.",
           "source_label": "Official campaign website",
           "source_url": "https://www.jenniferboylanri.com/"
         },
         {
-          "title": "Small business and families",
+          "title": "Small business",
           "summary": "Support families and small businesses.",
           "source_label": "Official campaign website",
           "source_url": "https://www.jenniferboylanri.com/"
         },
         {
           "title": "Micromobility",
-          "summary": "Improve policy for e-bikes and other forms of micromobility.",
+          "summary": "Address safe and effective regulation of e-bikes and micromobility.",
           "source_label": "Official campaign website",
           "source_url": "https://www.jenniferboylanri.com/"
         }
@@ -3772,6 +3997,12 @@
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -3785,12 +4016,55 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Healthcare",
+          "summary": "Expand affordable physical and mental healthcare and address provider and prescription-cost barriers.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.nicolejellinek.com/about"
+        },
+        {
+          "title": "Education",
+          "summary": "Support equitable school funding, teachers, counselors, and affordable education from pre-K through career training.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.nicolejellinek.com/about"
+        },
+        {
+          "title": "Affordability and housing",
+          "summary": "Lower everyday costs and expand safe, stable, affordable housing.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.nicolejellinek.com/about"
+        },
+        {
+          "title": "Rights and families",
+          "summary": "Protect reproductive freedom, childcare access, pay equity, and anti-discrimination protections.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.nicolejellinek.com/about"
+        },
+        {
+          "title": "Climate and environment",
+          "summary": "Reduce emissions, build a green economy, strengthen coastal resilience, and protect drinking water.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.nicolejellinek.com/about"
+        }
+      ],
       "endorsements": [
         {
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "NEARI PACE",
+          "source_url": "https://www.neari.org/votes",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -3815,8 +4089,8 @@
       "party": "Independent",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3828,14 +4102,20 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -3851,34 +4131,34 @@
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
-          "title": "Working families",
-          "summary": "Support working families through targeted tax relief and public services.",
+          "title": "Healthcare and seniors",
+          "summary": "Protect affordable healthcare and support services that allow seniors to age at home.",
           "source_label": "Official campaign website",
-          "source_url": "http://susan-donovan.com"
+          "source_url": "https://www.susan-donovan.com/why-im-running"
         },
         {
           "title": "Education",
-          "summary": "Strengthen supports and learning opportunities for children.",
+          "summary": "Ensure fair state school funding without overburdening local property taxpayers.",
           "source_label": "Official campaign website",
-          "source_url": "http://susan-donovan.com"
+          "source_url": "https://www.susan-donovan.com/why-im-running"
         },
         {
-          "title": "Healthcare and disability services",
-          "summary": "Increase investment in Medicaid and services for seniors and people with disabilities.",
+          "title": "Housing",
+          "summary": "Expand affordable housing and reduce barriers to housing production.",
           "source_label": "Official campaign website",
-          "source_url": "http://susan-donovan.com"
+          "source_url": "https://www.susan-donovan.com/why-im-running"
         },
         {
-          "title": "Environment",
-          "summary": "Protect local environmental resources and natural assets.",
+          "title": "Small business",
+          "summary": "Reduce unnecessary regulatory burdens on small businesses.",
           "source_label": "Official campaign website",
-          "source_url": "http://susan-donovan.com"
+          "source_url": "https://www.susan-donovan.com/why-im-running"
         },
         {
-          "title": "Infrastructure oversight",
-          "summary": "Strengthen oversight of major transportation projects such as the Washington Bridge.",
+          "title": "Public safety and climate",
+          "summary": "Support gun-safety measures and strengthen climate resilience.",
           "source_label": "Official campaign website",
-          "source_url": "http://susan-donovan.com"
+          "source_url": "https://www.susan-donovan.com/why-im-running"
         }
       ],
       "endorsements": [
@@ -3886,6 +4166,12 @@
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -3897,14 +4183,20 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
         {
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -3920,26 +4212,26 @@
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
-          "title": "Environmental stewardship",
-          "summary": "Strengthen climate policy and environmental protection.",
+          "title": "Environment",
+          "summary": "Advance climate policy and environmental stewardship.",
           "source_label": "Official campaign website",
           "source_url": "https://www.mcgaw4ri.com/"
         },
         {
-          "title": "Healthcare access",
-          "summary": "Improve access to healthcare, drawing on experience in pharmacy and elder care.",
+          "title": "Healthcare",
+          "summary": "Improve healthcare access and prescription affordability.",
           "source_label": "Official campaign website",
           "source_url": "https://www.mcgaw4ri.com/"
         },
         {
-          "title": "Strong democracy",
-          "summary": "Promote participation, transparent government, and strong democratic institutions.",
+          "title": "Democracy",
+          "summary": "Strengthen participation and accountability in state government.",
           "source_label": "Official campaign website",
           "source_url": "https://www.mcgaw4ri.com/"
         },
         {
           "title": "Reproductive rights",
-          "summary": "Protect access to reproductive healthcare.",
+          "summary": "Protect reproductive healthcare and rights.",
           "source_label": "Official campaign website",
           "source_url": "https://www.mcgaw4ri.com/"
         }
@@ -3949,6 +4241,12 @@
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     },
@@ -3960,8 +4258,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -3973,8 +4271,8 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-28",
-      "website_audit_note": "No official campaign website was located in the 2026 web audit. This does not prove that no site exists.",
+      "website_checked": "2026-08-30",
+      "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": []
     },
@@ -4003,16 +4301,34 @@
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
-          "title": "Older adults",
-          "summary": "Improve state programs and services for older Rhode Islanders.",
+          "title": "Maternal healthcare",
+          "summary": "Protect maternal health services and Newport's birthing center.",
           "source_label": "Official campaign website",
-          "source_url": "https://www.laurencarson.com/"
+          "source_url": "https://www.laurencarson.com/press"
         },
         {
-          "title": "Short-term rentals",
-          "summary": "Study and address the economic and social effects of short-term rentals on local communities.",
+          "title": "Environment and climate",
+          "summary": "Advance climate resilience, clean energy, and environmental protection.",
           "source_label": "Official campaign website",
-          "source_url": "https://www.laurencarson.com/"
+          "source_url": "https://www.laurencarson.com/the-issues"
+        },
+        {
+          "title": "Housing and short-term rentals",
+          "summary": "Address housing pressures and policies affecting short-term rentals.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.laurencarson.com/the-issues"
+        },
+        {
+          "title": "Small business and tourism",
+          "summary": "Support small businesses and Rhode Island's tourism economy.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.laurencarson.com/the-issues"
+        },
+        {
+          "title": "Government transparency and aging",
+          "summary": "Promote transparent government and improve services for older Rhode Islanders.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.laurencarson.com/the-issues"
         }
       ],
       "endorsements": [
@@ -4020,8 +4336,16 @@
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
+        },
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
+          "source_type": "endorser_or_candidate_official_source",
+          "date_checked": "2026-08-28"
         }
       ]
     }
-  ]
+  ],
+  "endorsement_research_updated_at": "2026-08-28",
+  "endorsement_methodology": "Endorsements are included only when an endorsing organization or candidate's official campaign site explicitly states the endorsement. Donations, event appearances, photos, and inferred support are excluded. Existing candidate priority lists are not modified by this endorsement update."
 }
