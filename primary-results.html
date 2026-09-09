@@ -883,16 +883,16 @@
         return {
           color: "#ffffff",
           weight: 1.1,
-          fillColor: "#cbd5e1",
+          fillColor: "#d7deea",
           fillOpacity: .10
         };
       }
 
       const parties = [...new Set(races.map(r => normalizeParty(r.party)))];
-      let fillColor = "#6d28d9";
+      let fillColor = "#7c3aed";
 
-      if (parties.length === 1 && parties[0] === "Democratic") fillColor = "#1d4ed8";
-      if (parties.length === 1 && parties[0] === "Republican") fillColor = "#b91c1c";
+      if (parties.length === 1 && parties[0] === "Democratic") fillColor = "#2764e8";
+      if (parties.length === 1 && parties[0] === "Republican") fillColor = "#e4575e";
 
       const margins = races.map(closeness).filter(v => v !== null);
       const closest = margins.length ? Math.min(...margins) : null;
