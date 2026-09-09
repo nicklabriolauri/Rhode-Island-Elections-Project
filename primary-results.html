@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2026 Rhode Island Primary Results | Rhode Island Elections Project</title>
+  <meta name="description" content="Live unofficial 2026 Rhode Island State House and State Senate primary election results from the Rhode Island Elections Project." />
+
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <style>
+    :root {
+      --navy: #111c3d;
+      --navy2: #172554;
+      --blue: #2563eb;
+      --blue-soft: #dbeafe;
+      --red: #dc2626;
+      --red-soft: #fee2e2;
+      --purple: #7c3aed;
+      --gold: #d97706;
+      --green: #15803d;
+      --text: #0f172a;
+      --muted: #64748b;
+      --line: #e2e8f0;
+      --panel: #ffffff;
+      --bg: #f8fafc;
+      --shadow: 0 16px 40px rgba(15, 23, 42, .10);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .site-header {
+      background: linear-gradient(135deg, #0f172a 0%, #172554 100%);
+      color: white;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .nav {
+      width: min(1240px, calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -.02em;
+    }
+
+    .brand img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand-copy small {
+      font-size: 11px;
+      color: rgba(255,255,255,.66);
+      text-transform: uppercase;
+      letter-spacing: .14em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: rgba(255,255,255,.82);
+    }
+
+    .nav-links a:hover { color: #fff; }
+
+    .hero {
+      background:
+        radial-gradient(circle at 50% 0%, rgba(59,130,246,.22), transparent 36%),
+        linear-gradient(135deg, #0f172a 0%, #172554 100%);
+      color: white;
+      padding: 62px 20px 58px;
+      text-align: center;
+    }
+
+    .hero-inner {
+      width: min(980px, 100%);
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.08);
+      border-radius: 999px;
+      color: #dbeafe;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .14em;
+    }
+
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #ef4444;
+      box-shadow: 0 0 0 5px rgba(239,68,68,.14);
+    }
+
+    h1 {
+      margin: 18px auto 12px;
+      font-size: clamp(38px, 6vw, 72px);
+      line-height: .98;
+      letter-spacing: -.055em;
+      max-width: 900px;
+    }
+
+    .hero-subtitle {
+      max-width: 720px;
+      margin: 0 auto;
+      color: rgba(255,255,255,.78);
+      font-size: clamp(16px, 2vw, 20px);
+      line-height: 1.55;
+    }
+
+    .hero-meta {
+      margin-top: 22px;
+      display: flex;
+      justify-content: center;
+      gap: 10px 24px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: rgba(255,255,255,.72);
+    }
+
+    .hero-meta strong { color: white; }
+
+    .main {
+      width: min(1240px, calc(100% - 28px));
+      margin: -28px auto 60px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .control-card {
+      background: rgba(255,255,255,.98);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .tabs, .view-tabs {
+      display: inline-flex;
+      gap: 6px;
+      padding: 5px;
+      border-radius: 14px;
+      background: #f1f5f9;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .tab, .view-tab {
+      border: 0;
+      border-radius: 10px;
+      padding: 11px 18px;
+      background: transparent;
+      color: #475569;
+      font-weight: 800;
+      cursor: pointer;
+      transition: .18s ease;
+    }
+
+    .tab.active, .view-tab.active {
+      background: var(--navy);
+      color: white;
+      box-shadow: 0 6px 16px rgba(15,23,42,.12);
+    }
+
+    .status-note {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    .section {
+      margin-top: 34px;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 14px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-size: clamp(25px, 3vw, 38px);
+      letter-spacing: -.035em;
+    }
+
+    .section-heading p {
+      margin: 7px 0 0;
+      color: var(--muted);
+      line-height: 1.55;
+      max-width: 740px;
+    }
+
+    .map-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1.55fr) minmax(320px, .7fr);
+      min-height: 610px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    #map {
+      min-height: 610px;
+      width: 100%;
+      background: #eef2f7;
+    }
+
+    .race-panel {
+      border-left: 1px solid var(--line);
+      padding: 24px;
+      background: #fff;
+      overflow-y: auto;
+      max-height: 610px;
+    }
+
+    .panel-kicker {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+    }
+
+    .race-panel h3 {
+      margin: 8px 0 6px;
+      font-size: 27px;
+      letter-spacing: -.035em;
+    }
+
+    .party-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 9px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      margin: 5px 0 16px;
+    }
+
+    .party-pill.democratic {
+      background: var(--blue-soft);
+      color: #1d4ed8;
+    }
+
+    .party-pill.republican {
+      background: var(--red-soft);
+      color: #b91c1c;
+    }
+
+    .candidate-row {
+      padding: 14px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .candidate-row:first-of-type { border-top: 0; }
+
+    .candidate-topline {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+    }
+
+    .candidate-name {
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    .candidate-pct {
+      font-weight: 900;
+      font-size: 20px;
+      letter-spacing: -.02em;
+    }
+
+    .candidate-bottom {
+      margin-top: 4px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .winner-mark {
+      color: var(--green);
+      font-weight: 900;
+      margin-right: 5px;
+    }
+
+    .progress {
+      margin-top: 8px;
+      width: 100%;
+      height: 7px;
+      background: #eef2f7;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress span {
+      display: block;
+      height: 100%;
+      border-radius: inherit;
+      background: var(--navy);
+    }
+
+    .reporting-box {
+      margin-top: 18px;
+      padding: 13px 14px;
+      border-radius: 14px;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      color: #475569;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .map-legend {
+      background: rgba(255,255,255,.96);
+      border: 1px solid rgba(148,163,184,.35);
+      padding: 10px 12px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(15,23,42,.12);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .legend-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 3px 0;
+    }
+
+    .swatch {
+      width: 13px;
+      height: 13px;
+      border-radius: 3px;
+      border: 1px solid rgba(15,23,42,.12);
+    }
+
+    .results-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .results-toolbar {
+      padding: 18px;
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .search-wrap {
+      flex: 1 1 360px;
+      max-width: 580px;
+    }
+
+    .search-input {
+      width: 100%;
+      border: 1px solid #cbd5e1;
+      border-radius: 13px;
+      padding: 12px 14px;
+      font: inherit;
+      outline: none;
+      background: #fff;
+    }
+
+    .search-input:focus {
+      border-color: #94a3b8;
+      box-shadow: 0 0 0 3px rgba(148,163,184,.16);
+    }
+
+    .results-count {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .race-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .race-card {
+      padding: 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .race-card:nth-child(odd) {
+      border-right: 1px solid var(--line);
+    }
+
+    .race-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .race-card h3 {
+      margin: 0;
+      font-size: 19px;
+      letter-spacing: -.025em;
+    }
+
+    .race-status {
+      flex: none;
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      padding: 6px 8px;
+      border-radius: 999px;
+      background: #f1f5f9;
+      color: #475569;
+    }
+
+    .race-status.called {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .race-status.reporting {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .empty-state {
+      padding: 46px 22px;
+      text-align: center;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .source-footer {
+      margin-top: 34px;
+      padding: 25px;
+      border-radius: 20px;
+      background: #eef2f7;
+      border: 1px solid var(--line);
+      color: #475569;
+      font-size: 13px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .source-footer strong { color: var(--text); }
+
+    .site-footer {
+      margin-top: 50px;
+      padding: 28px 20px;
+      background: #0f172a;
+      color: rgba(255,255,255,.7);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .leaflet-container {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .leaflet-tooltip {
+      border: 0;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(15,23,42,.16);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    @media (max-width: 920px) {
+      .nav-links { display: none; }
+      .hero { padding-top: 46px; }
+      .main { margin-top: -20px; }
+      .map-shell { grid-template-columns: 1fr; }
+      .race-panel {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+        max-height: none;
+      }
+      #map { min-height: 500px; }
+      .race-list { grid-template-columns: 1fr; }
+      .race-card:nth-child(odd) { border-right: 0; }
+    }
+
+    @media (max-width: 560px) {
+      .nav { width: min(100% - 20px, 1240px); }
+      .brand-copy span { font-size: 14px; }
+      .brand-copy small { display: none; }
+      .hero { padding-left: 14px; padding-right: 14px; }
+      .main { width: min(100% - 16px, 1240px); }
+      .control-card { border-radius: 16px; }
+      .tabs, .view-tabs { width: 100%; }
+      .tab, .view-tab { flex: 1; padding: 11px 8px; }
+      #map { min-height: 430px; }
+      .race-panel { padding: 18px; }
+      .race-card { padding: 18px; }
+      .section-heading { align-items: start; flex-direction: column; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html">
+        <img src="riep-logo-sunburst-white.png" alt="RIEP logo">
+        <span class="brand-copy">
+          <span>Rhode Island Elections Project</span>
+          <small>Nonpartisan election information</small>
+        </span>
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="map.html">Maps & Data</a>
+        <a href="running.html">Who's Running?</a>
+        <a href="finance.html">Campaign Finance</a>
+        <a href="endorsements.html">Endorsements</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow"><span class="live-dot"></span> Primary Election 2026</div>
+      <h1>2026 Rhode Island Primary Results</h1>
+      <p class="hero-subtitle">
+        Follow Rhode Island State House and State Senate primary results as they are reported.
+        Explore contested races on the map and browse every primary below.
+      </p>
+
+      <div class="hero-meta">
+        <span>Election Day: <strong>September 9, 2026</strong></span>
+        <span>Results: <strong id="statusText">Unofficial</strong></span>
+        <span>Last updated: <strong id="lastUpdated">Awaiting results</strong></span>
+      </div>
+    </div>
+  </section>
+
+  <main class="main">
+    <div class="control-card">
+      <div class="tabs" aria-label="Choose chamber">
+        <button class="tab active" data-chamber="house">State House</button>
+        <button class="tab" data-chamber="senate">State Senate</button>
+      </div>
+
+      <div class="status-note">
+        Map highlights contested primaries. Select a district to view its results.
+      </div>
+    </div>
+
+    <section class="section" id="competitiveSection">
+      <div class="section-heading">
+        <div>
+          <h2>Contested Primaries</h2>
+          <p>
+            The map highlights districts with contested primaries. As results arrive,
+            closer races receive stronger emphasis. Click any highlighted district for details.
+          </p>
+        </div>
+      </div>
+
+      <div class="map-shell">
+        <div id="map" aria-label="Interactive Rhode Island legislative primary map"></div>
+        <aside class="race-panel" id="racePanel">
+          <div class="panel-kicker">Select a district</div>
+          <h3>Primary race details</h3>
+          <p style="color:#64748b;line-height:1.55;margin-top:8px">
+            Click a highlighted district on the map to view candidates, votes,
+            percentages, and reporting status.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="allResultsSection">
+      <div class="section-heading">
+        <div>
+          <h2>All Primary Results</h2>
+          <p>
+            Browse every contested primary in the selected chamber. Search by district,
+            candidate, or party.
+          </p>
+        </div>
+      </div>
+
+      <div class="results-card">
+        <div class="results-toolbar">
+          <div class="search-wrap">
+            <input
+              id="resultsSearch"
+              class="search-input"
+              type="search"
+              placeholder="Search district, candidate, or party…"
+              autocomplete="off"
+            />
+          </div>
+          <div class="results-count" id="resultsCount">Loading races…</div>
+        </div>
+
+        <div class="race-list" id="raceList">
+          <div class="empty-state">Loading primary results template…</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="source-footer">
+      <strong>Unofficial election results.</strong>
+      Results shown on this page are for informational purposes and may change as additional
+      ballots are counted. Source: <strong id="sourceText">Rhode Island Board of Elections</strong>.
+      Official and certified results are determined by Rhode Island election authorities.
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    Rhode Island Elections Project · Nonpartisan election information and analysis
+  </footer>
+
+  <script>
+    const RESULTS_URL = "data/primary_results_2026.json";
+
+    const GEO = {
+      house: "data/house_new.geojson",
+      senate: "data/senate_new.geojson"
+    };
+
+    let currentChamber = "house";
+    let resultsData = null;
+    let geoCache = {};
+    let geoLayer = null;
+    let selectedRaceKey = null;
+
+    const map = L.map("map", {
+      zoomControl: true,
+      scrollWheelZoom: false,
+      attributionControl: true
+    }).setView([41.68, -71.52], 9);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 18,
+      attribution: "&copy; OpenStreetMap contributors"
+    }).addTo(map);
+
+    const legend = L.control({position: "bottomright"});
+    legend.onAdd = function () {
+      const div = L.DomUtil.create("div", "map-legend");
+      div.innerHTML = `
+        <strong>Primary map</strong>
+        <div class="legend-row"><span class="swatch" style="background:#93c5fd"></span> Democratic primary</div>
+        <div class="legend-row"><span class="swatch" style="background:#fca5a5"></span> Republican primary</div>
+        <div class="legend-row"><span class="swatch" style="background:#c4b5fd"></span> Multiple contested primaries</div>
+        <div class="legend-row"><span class="swatch" style="background:#e5e7eb"></span> No contested primary</div>
+      `;
+      return div;
+    };
+    legend.addTo(map);
+
+    function getFeatureDistrict(feature) {
+      const p = feature.properties || {};
+      const raw =
+        p.district_number ??
+        p.DIST_NUM ??
+        p.SLDUST ??
+        p.DISTRICT ??
+        p.District ??
+        p.NAME ??
+        p.NAMELSAD;
+
+      const match = String(raw ?? "").match(/\d+/);
+      return match ? Number(match[0]) : null;
+    }
+
+    function normalizeParty(party) {
+      const p = String(party || "").toLowerCase();
+      if (p.startsWith("dem")) return "Democratic";
+      if (p.startsWith("rep")) return "Republican";
+      return party || "Primary";
+    }
+
+    function partyClass(party) {
+      const p = normalizeParty(party).toLowerCase();
+      if (p.includes("dem")) return "democratic";
+      if (p.includes("rep")) return "republican";
+      return "";
+    }
+
+    function raceKey(race) {
+      return `${race.chamber}-${race.district}-${normalizeParty(race.party)}`;
+    }
+
+    function racesForChamber(chamber) {
+      if (!resultsData?.races) return [];
+      return resultsData.races
+        .filter(r => String(r.chamber).toLowerCase() === chamber)
+        .filter(r => r.contested !== false)
+        .sort((a, b) => Number(a.district) - Number(b.district) ||
+                         normalizeParty(a.party).localeCompare(normalizeParty(b.party)));
+    }
+
+    function racesForDistrict(chamber, district) {
+      return racesForChamber(chamber)
+        .filter(r => Number(r.district) === Number(district));
+    }
+
+    function calculatedPct(candidate, race) {
+      if (candidate.pct !== null && candidate.pct !== undefined && candidate.pct !== "") {
+        return Number(candidate.pct);
+      }
+
+      const total = (race.candidates || []).reduce((sum, c) => {
+        return sum + (Number(c.votes) || 0);
+      }, 0);
+
+      if (!total || candidate.votes === null || candidate.votes === undefined) return null;
+      return (Number(candidate.votes) / total) * 100;
+    }
+
+    function sortedCandidates(race) {
+      return [...(race.candidates || [])].sort((a, b) => {
+        const av = Number(a.votes);
+        const bv = Number(b.votes);
+        if (Number.isFinite(av) && Number.isFinite(bv)) return bv - av;
+        return 0;
+      });
+    }
+
+    function reportingLabel(race) {
+      if (race.precincts_reporting !== null &&
+          race.precincts_reporting !== undefined &&
+          race.precincts_total) {
+        const pct = (Number(race.precincts_reporting) / Number(race.precincts_total)) * 100;
+        return `${race.precincts_reporting} of ${race.precincts_total} precincts reporting (${pct.toFixed(0)}%)`;
+      }
+
+      if (race.reporting_pct !== null && race.reporting_pct !== undefined) {
+        return `${Number(race.reporting_pct).toFixed(0)}% reporting`;
+      }
+
+      const hasVotes = (race.candidates || []).some(c => Number(c.votes) > 0);
+      return hasVotes ? "Reporting status unavailable" : "Not yet reporting";
+    }
+
+    function raceStatus(race) {
+      if ((race.candidates || []).some(c => c.advanced === true)) {
+        return {label: "Called", cls: "called"};
+      }
+
+      const hasVotes = (race.candidates || []).some(c => Number(c.votes) > 0);
+      if (hasVotes) return {label: "Reporting", cls: "reporting"};
+
+      return {label: "Awaiting results", cls: ""};
+    }
+
+    function closeness(race) {
+      const candidates = sortedCandidates(race);
+      if (candidates.length < 2) return null;
+
+      const p1 = calculatedPct(candidates[0], race);
+      const p2 = calculatedPct(candidates[1], race);
+      if (p1 === null || p2 === null) return null;
+
+      return Math.abs(p1 - p2);
+    }
+
+    function districtStyle(chamber, district) {
+      const races = racesForDistrict(chamber, district);
+
+      if (!races.length) {
+        return {
+          color: "#ffffff",
+          weight: 1,
+          fillColor: "#e5e7eb",
+          fillOpacity: .22
+        };
+      }
+
+      const parties = [...new Set(races.map(r => normalizeParty(r.party)))];
+      let fillColor = "#c4b5fd";
+
+      if (parties.length === 1 && parties[0] === "Democratic") fillColor = "#93c5fd";
+      if (parties.length === 1 && parties[0] === "Republican") fillColor = "#fca5a5";
+
+      const margins = races.map(closeness).filter(v => v !== null);
+      const closest = margins.length ? Math.min(...margins) : null;
+
+      // Close races become more visually prominent as results arrive.
+      let fillOpacity = .62;
+      if (closest !== null) {
+        if (closest <= 5) fillOpacity = .95;
+        else if (closest <= 10) fillOpacity = .84;
+        else if (closest <= 20) fillOpacity = .73;
+      }
+
+      return {
+        color: "#ffffff",
+        weight: 1.6,
+        fillColor,
+        fillOpacity
+      };
+    }
+
+    function formatVotes(votes) {
+      if (votes === null || votes === undefined || votes === "") return "—";
+      const n = Number(votes);
+      return Number.isFinite(n) ? n.toLocaleString("en-US") : "—";
+    }
+
+    function candidateRows(race) {
+      const candidates = sortedCandidates(race);
+
+      if (!candidates.length) {
+        return `<div class="empty-state" style="padding:20px 0">Candidate information not available.</div>`;
+      }
+
+      return candidates.map((candidate, index) => {
+        const pct = calculatedPct(candidate, race);
+        const advanced = candidate.advanced === true;
+        const width = pct === null ? 0 : Math.max(0, Math.min(100, pct));
+
+        return `
+          <div class="candidate-row">
+            <div class="candidate-topline">
+              <div class="candidate-name">
+                ${advanced ? '<span class="winner-mark">✓</span>' : ''}
+                ${escapeHtml(candidate.name || "Candidate")}
+              </div>
+              <div class="candidate-pct">${pct === null ? "—" : pct.toFixed(1) + "%"}</div>
+            </div>
+            <div class="candidate-bottom">
+              <span>${formatVotes(candidate.votes)} votes</span>
+              <span>${advanced ? "Advanced" : (index === 0 && pct !== null ? "Leading" : "")}</span>
+            </div>
+            <div class="progress"><span style="width:${width}%"></span></div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function renderRacePanel(raceOrRaces) {
+      const panel = document.getElementById("racePanel");
+      const races = Array.isArray(raceOrRaces) ? raceOrRaces : [raceOrRaces];
+      const validRaces = races.filter(Boolean);
+
+      if (!validRaces.length) {
+        panel.innerHTML = `
+          <div class="panel-kicker">No contested primary</div>
+          <h3>This district is not highlighted</h3>
+          <p style="color:#64748b;line-height:1.55">
+            No contested primary is listed for this district in the current results file.
+          </p>
+        `;
+        return;
+      }
+
+      panel.innerHTML = validRaces.map((race, idx) => `
+        <div ${idx ? 'style="margin-top:28px;padding-top:24px;border-top:2px solid #e2e8f0"' : ""}>
+          <div class="panel-kicker">${currentChamber === "house" ? "State House" : "State Senate"}</div>
+          <h3>District ${race.district}</h3>
+          <div class="party-pill ${partyClass(race.party)}">${escapeHtml(normalizeParty(race.party))} Primary</div>
+          ${candidateRows(race)}
+          <div class="reporting-box">
+            <strong>${reportingLabel(race)}</strong>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    async function loadGeo(chamber) {
+      if (geoCache[chamber]) return geoCache[chamber];
+
+      const response = await fetch(GEO[chamber], { cache: "no-store" });
+      if (!response.ok) throw new Error(`Could not load ${chamber} district map.`);
+
+      const geo = await response.json();
+      geoCache[chamber] = geo;
+      return geo;
+    }
+
+    async function renderMap() {
+      const geo = await loadGeo(currentChamber);
+
+      if (geoLayer) {
+        geoLayer.remove();
+        geoLayer = null;
+      }
+
+      geoLayer = L.geoJSON(geo, {
+        style: feature => {
+          const district = getFeatureDistrict(feature);
+          return districtStyle(currentChamber, district);
+        },
+
+        onEachFeature: (feature, layer) => {
+          const district = getFeatureDistrict(feature);
+          const races = racesForDistrict(currentChamber, district);
+
+          if (races.length) {
+            const parties = races.map(r => normalizeParty(r.party)).join(" / ");
+            layer.bindTooltip(
+              `${currentChamber === "house" ? "House" : "Senate"} District ${district}<br>${parties} primary`,
+              {sticky: true}
+            );
+
+            layer.on("click", () => {
+              selectedRaceKey = `${currentChamber}-${district}`;
+              renderRacePanel(races);
+              geoLayer.setStyle(f => {
+                const d = getFeatureDistrict(f);
+                const base = districtStyle(currentChamber, d);
+                if (Number(d) === Number(district)) {
+                  return {...base, color: "#0f172a", weight: 3};
+                }
+                return base;
+              });
+            });
+          } else {
+            layer.on("click", () => renderRacePanel([]));
+          }
+        }
+      }).addTo(map);
+
+      try {
+        map.fitBounds(geoLayer.getBounds(), {padding: [14, 14]});
+      } catch (e) {
+        map.setView([41.68, -71.52], 9);
+      }
+    }
+
+    function renderRaceList() {
+      const list = document.getElementById("raceList");
+      const query = document.getElementById("resultsSearch").value.trim().toLowerCase();
+
+      let races = racesForChamber(currentChamber);
+
+      if (query) {
+        races = races.filter(race => {
+          const haystack = [
+            race.district,
+            race.party,
+            normalizeParty(race.party),
+            ...(race.candidates || []).map(c => c.name)
+          ].join(" ").toLowerCase();
+
+          return haystack.includes(query);
+        });
+      }
+
+      document.getElementById("resultsCount").textContent =
+        `${races.length} contested ${races.length === 1 ? "primary" : "primaries"}`;
+
+      if (!races.length) {
+        list.innerHTML = `
+          <div class="empty-state" style="grid-column:1/-1">
+            No races match your search.
+          </div>
+        `;
+        return;
+      }
+
+      list.innerHTML = races.map(race => {
+        const status = raceStatus(race);
+
+        return `
+          <article class="race-card">
+            <div class="race-card-header">
+              <div>
+                <h3>${currentChamber === "house" ? "State House" : "State Senate"} District ${race.district}</h3>
+                <div class="party-pill ${partyClass(race.party)}" style="margin-bottom:0">
+                  ${escapeHtml(normalizeParty(race.party))} Primary
+                </div>
+              </div>
+              <div class="race-status ${status.cls}">${status.label}</div>
+            </div>
+
+            ${candidateRows(race)}
+
+            <div class="reporting-box">
+              <strong>${reportingLabel(race)}</strong>
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    function updateHeaderMetadata() {
+      document.getElementById("lastUpdated").textContent =
+        resultsData?.last_updated || "Awaiting results";
+
+      document.getElementById("sourceText").textContent =
+        resultsData?.source || "Rhode Island Board of Elections";
+
+      document.getElementById("statusText").textContent =
+        resultsData?.status
+          ? String(resultsData.status).replace(/\b\w/g, c => c.toUpperCase())
+          : "Unofficial";
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    async function loadResults() {
+      try {
+        const response = await fetch(RESULTS_URL, {cache: "no-store"});
+        if (!response.ok) throw new Error(`Results file returned ${response.status}`);
+        resultsData = await response.json();
+      } catch (error) {
+        console.error(error);
+
+        // Minimal fallback lets the page render before the real JSON file is uploaded.
+        resultsData = {
+          election: "2026 Rhode Island Statewide Primary",
+          date: "2026-09-09",
+          source: "Rhode Island Board of Elections",
+          last_updated: "",
+          status: "unofficial",
+          races: []
+        };
+      }
+
+      updateHeaderMetadata();
+      renderRaceList();
+
+      try {
+        await renderMap();
+      } catch (error) {
+        console.error(error);
+        document.getElementById("map").innerHTML = `
+          <div class="empty-state" style="padding-top:160px">
+            The district map could not be loaded.
+          </div>
+        `;
+      }
+    }
+
+    document.querySelectorAll(".tab").forEach(button => {
+      button.addEventListener("click", async () => {
+        document.querySelectorAll(".tab").forEach(b => b.classList.remove("active"));
+        button.classList.add("active");
+        currentChamber = button.dataset.chamber;
+        selectedRaceKey = null;
+
+        document.getElementById("resultsSearch").value = "";
+        document.getElementById("racePanel").innerHTML = `
+          <div class="panel-kicker">Select a district</div>
+          <h3>Primary race details</h3>
+          <p style="color:#64748b;line-height:1.55;margin-top:8px">
+            Click a highlighted district on the map to view candidates, votes,
+            percentages, and reporting status.
+          </p>
+        `;
+
+        renderRaceList();
+        await renderMap();
+      });
+    });
+
+    document.getElementById("resultsSearch").addEventListener("input", renderRaceList);
+
+    loadResults();
+  </script>
+</body>
+</html>
