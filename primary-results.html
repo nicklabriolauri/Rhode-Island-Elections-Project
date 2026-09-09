@@ -246,8 +246,8 @@
 
     .map-shell {
       display: grid;
-      grid-template-columns: minmax(0, 1.55fr) minmax(320px, .7fr);
-      min-height: 610px;
+      grid-template-columns: minmax(0, 1.9fr) minmax(300px, .58fr);
+      min-height: 700px;
       background: white;
       border: 1px solid var(--line);
       border-radius: 24px;
@@ -256,7 +256,7 @@
     }
 
     #map {
-      min-height: 610px;
+      min-height: 700px;
       width: 100%;
       background: #eef2f7;
     }
@@ -266,7 +266,7 @@
       padding: 24px;
       background: #fff;
       overflow-y: auto;
-      max-height: 610px;
+      max-height: 700px;
     }
 
     .district-selector-wrap {
@@ -591,7 +591,7 @@
         border-top: 1px solid var(--line);
         max-height: none;
       }
-      #map { min-height: 500px; }
+      #map { min-height: 540px; }
       .race-list { grid-template-columns: 1fr; }
       .race-card:nth-child(odd) { border-right: 0; }
     }
@@ -751,7 +751,7 @@
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 18,
-      opacity: 0.42,
+      opacity: 0.28,
       attribution: "&copy; OpenStreetMap contributors"
     }).addTo(map);
 
@@ -899,9 +899,9 @@
 
       let fillOpacity = .76;
       if (closest !== null) {
-        if (closest <= 5) fillOpacity = .98;
-        else if (closest <= 10) fillOpacity = .92;
-        else if (closest <= 20) fillOpacity = .87;
+        if (closest <= 5) fillOpacity = 1;
+        else if (closest <= 10) fillOpacity = .96;
+        else if (closest <= 20) fillOpacity = .92;
       }
 
       return {
