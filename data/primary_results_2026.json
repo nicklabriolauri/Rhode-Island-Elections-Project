@@ -2,31 +2,531 @@
   "election": "2026 Rhode Island Statewide Primary",
   "date": "2026-09-09",
   "source": "Rhode Island Board of Elections",
-  "last_updated": "",
+  "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/RI2026StatewidePrimary",
+  "last_updated": "2026-09-09 06:41:31 PM EDT",
   "status": "unofficial",
   "races": [
     {
-      "chamber": "senate",
-      "district": 5,
+      "chamber": "house",
+      "district": 1,
       "party": "Democratic",
+      "party_code": "DEM",
       "contested": true,
-      "precincts_reporting": null,
-      "precincts_total": null,
-      "reporting_pct": null,
       "candidates": [
         {
-          "name": "Samuel W. Bell",
+          "name": "Edith H Ajello",
           "votes": null,
           "pct": null,
           "advanced": false
         },
         {
-          "name": "Candidate Two",
+          "name": "Michael J Garman",
           "votes": null,
           "pct": null,
           "advanced": false
         }
-      ]
+      ],
+      "precincts_reporting": null,
+      "precincts_total": null,
+      "reporting_pct": null
+    },
+    {
+      "chamber": "house",
+      "district": 7,
+      "party": "Democratic",
+      "party_code": "DEM",
+      "contested": true,
+      "candidates": [
+        {
+          "name": "Amy J Santiago",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        },
+        {
+          "name": "Jo-Ann Ryan",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        }
+      ],
+      "precincts_reporting": null,
+      "precincts_total": null,
+      "reporting_pct": null
+    },
+    {
+      "chamber": "house",
+      "district": 9,
+      "party": "Democratic",
+      "party_code": "DEM",
+      "contested": true,
+      "candidates": [
+        {
+          "name": "Enrique George Sanchez",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        },
+        {
+          "name": "Santos Javier",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        }
+      ],
+      "precincts_reporting": null,
+      "precincts_total": null,
+      "reporting_pct": null
+    },
+    {
+      "chamber": "house",
+      "district": 12,
+      "party": "Democratic",
+      "party_code": "DEM",
+      "contested": true,
+      "candidates": [
+        {
+          "name": "Arlette Hidalgo",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        },
+        {
+          "name": "Carlos Cedeno",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        }
+      ],
+      "precincts_reporting": null,
+      "precincts_total": null,
+      "reporting_pct": null
+    },
+    {
+      "chamber": "house",
+      "district": 14,
+      "party": "Democratic",
+      "party_code": "DEM",
+      "contested": true,
+      "candidates": [
+        {
+          "name": "Charlene M Lima",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        },
+        {
+          "name": "Naiommi Baret",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        }
+      ],
+      "precincts_reporting": null,
+      "precincts_total": null,
+      "reporting_pct": null
+    },
+    {
+      "chamber": "house",
+      "district": 22,
+      "party": "Democratic",
+      "party_code": "DEM",
+      "contested": true,
+      "candidates": [
+        {
+          "name": "Janie Lee Segui",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        },
+        {
+          "name": "Zakary J Pereira",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        }
+      ],
+      "precincts_reporting": null,
+      "precincts_total": null,
+      "reporting_pct": null
+    },
+    {
+      "chamber": "house",
+      "district": 23,
+      "party": "Democratic",
+      "party_code": "DEM",
+      "contested": true,
+      "candidates": [
+        {
+          "name": "Timothy Howe",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        },
+        {
+          "name": "William Muto",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        }
+      ],
+      "precincts_reporting": null,
+      "precincts_total": null,
+      "reporting_pct": null
+    },
+    {
+      "chamber": "house",
+      "district": 31,
+      "party": "Democratic",
+      "party_code": "DEM",
+      "contested": true,
+      "candidates": [
+        {
+          "name": "James C Sheehan",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        },
+        {
+          "name": "Matthew B McCoy",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        },
+        {
+          "name": "Thomas N Menec",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        }
+      ],
+      "precincts_reporting": null,
+      "precincts_total": null,
+      "reporting_pct": null
+    },
+    {
+      "chamber": "house",
+      "district": 32,
+      "party": "Democratic",
+      "party_code": "DEM",
+      "contested": true,
+      "candidates": [
+        {
+          "name": "Kevin Hoyle",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        },
+        {
+          "name": "Robert E Craven Jr",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        }
+      ],
+      "precincts_reporting": null,
+      "precincts_total": null,
+      "reporting_pct": null
+    },
+    {
+      "chamber": "house",
+      "district": 36,
+      "party": "Democratic",
+      "party_code": "DEM",
+      "contested": true,
+      "candidates": [
+        {
+          "name": "Leah J Boisclair",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        },
+        {
+          "name": "Tina L Spears",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        }
+      ],
+      "precincts_reporting": null,
+      "precincts_total": null,
+      "reporting_pct": null
+    },
+    {
+      "chamber": "house",
+      "district": 38,
+      "party": "Democratic",
+      "party_code": "DEM",
+      "contested": true,
+      "candidates": [
+        {
+          "name": "Brian Patrick Kennedy",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        },
+        {
+          "name": "Stephen C Moffitt",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        }
+      ],
+      "precincts_reporting": null,
+      "precincts_total": null,
+      "reporting_pct": null
+    },
+    {
+      "chamber": "house",
+      "district": 57,
+      "party": "Democratic",
+      "party_code": "DEM",
+      "contested": true,
+      "candidates": [
+        {
+          "name": "Brandon T Voas",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        },
+        {
+          "name": "James McLaughlin",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        }
+      ],
+      "precincts_reporting": null,
+      "precincts_total": null,
+      "reporting_pct": null
+    },
+    {
+      "chamber": "house",
+      "district": 61,
+      "party": "Democratic",
+      "party_code": "DEM",
+      "contested": true,
+      "candidates": [
+        {
+          "name": "Leonela Felix",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        },
+        {
+          "name": "Mark A Theroux",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        }
+      ],
+      "precincts_reporting": null,
+      "precincts_total": null,
+      "reporting_pct": null
+    },
+    {
+      "chamber": "house",
+      "district": 65,
+      "party": "Democratic",
+      "party_code": "DEM",
+      "contested": true,
+      "candidates": [
+        {
+          "name": "Cameron St Germain",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        },
+        {
+          "name": "Grant Webber Wosencroft",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        },
+        {
+          "name": "Matthew Dawson",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        }
+      ],
+      "precincts_reporting": null,
+      "precincts_total": null,
+      "reporting_pct": null
+    },
+    {
+      "chamber": "house",
+      "district": 67,
+      "party": "Democratic",
+      "party_code": "DEM",
+      "contested": true,
+      "candidates": [
+        {
+          "name": "Nicole P Jellinek",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        },
+        {
+          "name": "Ronald Paul Jarvais Jr",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        }
+      ],
+      "precincts_reporting": null,
+      "precincts_total": null,
+      "reporting_pct": null
+    },
+    {
+      "chamber": "senate",
+      "district": 5,
+      "party": "Democratic",
+      "party_code": "DEM",
+      "contested": true,
+      "candidates": [
+        {
+          "name": "Cameron Moquin",
+          "votes": 0,
+          "pct": null,
+          "advanced": false
+        },
+        {
+          "name": "Samuel W Bell",
+          "votes": 0,
+          "pct": null,
+          "advanced": false
+        },
+        {
+          "name": "Theodore Newcomer Jr",
+          "votes": 0,
+          "pct": null,
+          "advanced": false
+        }
+      ],
+      "precincts_reporting": null,
+      "precincts_total": null,
+      "reporting_pct": null
+    },
+    {
+      "chamber": "senate",
+      "district": 8,
+      "party": "Democratic",
+      "party_code": "DEM",
+      "contested": true,
+      "candidates": [
+        {
+          "name": "Gena Felix",
+          "votes": 0,
+          "pct": null,
+          "advanced": false
+        },
+        {
+          "name": "Lori Urso",
+          "votes": 0,
+          "pct": null,
+          "advanced": false
+        }
+      ],
+      "precincts_reporting": null,
+      "precincts_total": null,
+      "reporting_pct": null
+    },
+    {
+      "chamber": "senate",
+      "district": 13,
+      "party": "Democratic",
+      "party_code": "DEM",
+      "contested": true,
+      "candidates": [
+        {
+          "name": "Angela Lima",
+          "votes": 0,
+          "pct": null,
+          "advanced": false
+        },
+        {
+          "name": "Dawn Euer",
+          "votes": 0,
+          "pct": null,
+          "advanced": false
+        }
+      ],
+      "precincts_reporting": null,
+      "precincts_total": null,
+      "reporting_pct": null
+    },
+    {
+      "chamber": "senate",
+      "district": 15,
+      "party": "Democratic",
+      "party_code": "DEM",
+      "contested": true,
+      "candidates": [
+        {
+          "name": "Meghan E Kallman",
+          "votes": 0,
+          "pct": null,
+          "advanced": false
+        },
+        {
+          "name": "Vanessa Lopez",
+          "votes": 0,
+          "pct": null,
+          "advanced": false
+        }
+      ],
+      "precincts_reporting": null,
+      "precincts_total": null,
+      "reporting_pct": null
+    },
+    {
+      "chamber": "senate",
+      "district": 19,
+      "party": "Democratic",
+      "party_code": "DEM",
+      "contested": true,
+      "candidates": [
+        {
+          "name": "James Metivier",
+          "votes": 0,
+          "pct": null,
+          "advanced": false
+        },
+        {
+          "name": "Ryan W Pearson",
+          "votes": 0,
+          "pct": null,
+          "advanced": false
+        }
+      ],
+      "precincts_reporting": null,
+      "precincts_total": null,
+      "reporting_pct": null
+    },
+    {
+      "chamber": "senate",
+      "district": 36,
+      "party": "Democratic",
+      "party_code": "DEM",
+      "contested": true,
+      "candidates": [
+        {
+          "name": "Alana M DiMario",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        },
+        {
+          "name": "Mark Mesrobian",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        }
+      ],
+      "precincts_reporting": null,
+      "precincts_total": null,
+      "reporting_pct": null
     }
   ]
 }
