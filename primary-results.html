@@ -839,6 +839,12 @@
     }
 
     function reportingLabel(race) {
+      if (race.votes_counted_pct !== null &&
+          race.votes_counted_pct !== undefined &&
+          race.votes_counted_pct !== "") {
+        return `${Number(race.votes_counted_pct).toFixed(0)}% of votes counted`;
+      }
+
       if (race.precincts_reporting !== null &&
           race.precincts_reporting !== undefined &&
           race.precincts_total) {
@@ -851,7 +857,7 @@
       }
 
       const hasVotes = (race.candidates || []).some(c => Number(c.votes) > 0);
-      return hasVotes ? "Reporting status unavailable" : "Not yet reporting";
+      return hasVotes ? "Counting in progress" : "0% of votes counted";
     }
 
     function raceStatus(race) {
