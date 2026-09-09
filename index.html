@@ -342,6 +342,81 @@
     .hero-search-result-value { margin-top:5px;color:#0f172a;font-size:15px;font-weight:800;line-height:1.3; }
     .hero-search-result-copy { margin-top:5px;color:#475569;font-size:13px;line-height:1.5; }
     .hero-search-address-card { min-height:100%; }
+
+    .primary-progress-card {
+      max-width: 680px;
+      margin: 0 auto 18px auto;
+      padding: 14px 18px;
+      border-radius: 22px;
+      border: 1px solid rgba(125,211,252,0.32);
+      background:
+        linear-gradient(135deg, rgba(14,165,233,0.18) 0%, rgba(37,99,235,0.16) 52%, rgba(124,58,237,0.14) 100%);
+      box-shadow: 0 16px 34px rgba(5,10,28,0.18);
+      text-decoration: none;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      text-align: left;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: heroRise .9s ease forwards;
+      animation-delay: .31s;
+      transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease;
+    }
+
+    .primary-progress-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(186,230,253,0.52);
+      box-shadow: 0 20px 38px rgba(5,10,28,0.22);
+    }
+
+    .primary-progress-copy {
+      min-width: 0;
+    }
+
+    .primary-progress-title {
+      font-family: "Sora", sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+
+    .primary-progress-subtitle {
+      margin-top: 4px;
+      color: rgba(241,245,249,0.76);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .primary-progress-badge {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: rgba(254,243,199,0.96);
+      color: #92400e;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      box-shadow: 0 8px 20px rgba(245,158,11,0.16);
+    }
+
+    .primary-progress-badge::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #f59e0b;
+      box-shadow: 0 0 0 4px rgba(245,158,11,0.14);
+    }
+
     .cta-row { display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-bottom:28px;opacity:0;transform:translateY(16px);animation:heroRise .9s ease forwards;animation-delay:.32s; }
 
     .feature-tools { display:grid;gap:14px;margin-top:8px; }
@@ -547,6 +622,13 @@
             <p class="hero-search-hint" id="homeSearchHint">Start typing a candidate name to jump straight to the right district and candidate tools.</p>
             <div class="hero-search-results" id="homeSearchResults" hidden></div>
           </section>
+          <a class="primary-progress-card" href="primary-results.html" aria-label="Open 2026 Rhode Island Primary Results">
+            <div class="primary-progress-copy">
+              <div class="primary-progress-title">2026 Rhode Island Primary Results</div>
+              <div class="primary-progress-subtitle">Follow contested State House and State Senate primaries as results are reported.</div>
+            </div>
+            <span class="primary-progress-badge">In Progress</span>
+          </a>
           <div class="cta-row" id="homeCtaRow"></div>
           <div class="feature-tools">
             <button type="button" class="feature-toggle" id="homeFeatureToggle" aria-expanded="false" aria-controls="homeFeaturePanel">More map views</button>

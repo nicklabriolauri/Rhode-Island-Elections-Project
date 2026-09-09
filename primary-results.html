@@ -681,6 +681,7 @@
 
   <script>
     const RESULTS_URL = "data/primary_results_2026.json";
+    const CANDIDATES_URL = "data/whos_running_2026.json";
 
     const GEO = {
       house: "data/house_new.geojson",
@@ -1067,24 +1068,152 @@
         .replaceAll("'", "&#039;");
     }
 
+
+    function deriveContestedRacesFromCandidates(payload) {
+      const derived = [];
+
+      ["house", "senate"].forEach(chamber => {
+        const districts = payload?.chambers?.[chamber] || {};
+
+        Object.values(districts).forEach(record => {
+          const district = Number(record?.district_number);
+          if (!Number.isFinite(district)) return;
+
+          const allCandidates = Array.isArray(record?.candidates) ? record.candidates : [];
+
+          [
+            { code: "DEM", label: "Democratic" },
+            { code: "REP", label: "Republican" }
+          ].forEach(party => {
+            const candidates = allCandidates.filter(candidate =>
+              String(candidate?.party || "").toUpperCase() === party.code &&
+              candidate?.on_primary_ballot !== false
+            );
+
+            // A primary is contested only when at least two candidates from the same party are on the ballot.
+            if (candidates.length < 2) return;
+
+            derived.push({
+              chamber,
+              district,
+              party: party.label,
+              contested: true,
+              precincts_reporting: null,
+              precincts_total: null,
+              reporting_pct: null,
+              candidates: candidates.map(candidate => ({
+                name: candidate.name,
+                votes: null,
+                pct: null,
+                advanced: false
+              }))
+            });
+          });
+        });
+      });
+
+      return derived;
+    }
+
+    function mergeDerivedRacesWithResults(derivedRaces, resultRaces) {
+      const byKey = new Map();
+
+      derivedRaces.forEach(race => {
+        byKey.set(raceKey(race), race);
+      });
+
+      (resultRaces || []).forEach(resultRace => {
+        const normalizedResult = {
+          ...resultRace,
+          chamber: String(resultRace.chamber || "").toLowerCase(),
+          party: normalizeParty(resultRace.party),
+          contested: resultRace.contested !== false
+        };
+
+        const key = raceKey(normalizedResult);
+        const base = byKey.get(key);
+
+        if (!base) {
+          byKey.set(key, normalizedResult);
+          return;
+        }
+
+        const resultCandidates = new Map(
+          (normalizedResult.candidates || []).map(candidate => [
+            String(candidate.name || "").trim().toLowerCase(),
+            candidate
+          ])
+        );
+
+        const mergedCandidates = (base.candidates || []).map(candidate => {
+          const match = resultCandidates.get(String(candidate.name || "").trim().toLowerCase());
+          return match ? { ...candidate, ...match } : candidate;
+        });
+
+        // Preserve any result candidate not already present in the candidate dataset.
+        (normalizedResult.candidates || []).forEach(candidate => {
+          const keyName = String(candidate.name || "").trim().toLowerCase();
+          if (!mergedCandidates.some(existing =>
+            String(existing.name || "").trim().toLowerCase() === keyName
+          )) {
+            mergedCandidates.push(candidate);
+          }
+        });
+
+        byKey.set(key, {
+          ...base,
+          ...normalizedResult,
+          candidates: mergedCandidates
+        });
+      });
+
+      return Array.from(byKey.values());
+    }
+
     async function loadResults() {
+      let resultPayload = {
+        election: "2026 Rhode Island Statewide Primary",
+        date: "2026-09-09",
+        source: "Rhode Island Board of Elections",
+        last_updated: "",
+        status: "unofficial",
+        races: []
+      };
+
+      let candidatePayload = null;
+
       try {
-        const response = await fetch(RESULTS_URL, {cache: "no-store"});
-        if (!response.ok) throw new Error(`Results file returned ${response.status}`);
-        resultsData = await response.json();
+        const [resultsResponse, candidatesResponse] = await Promise.all([
+          fetch(RESULTS_URL, {cache: "no-store"}),
+          fetch(CANDIDATES_URL, {cache: "no-store"})
+        ]);
+
+        if (resultsResponse.ok) {
+          resultPayload = await resultsResponse.json();
+        } else {
+          console.warn(`Results file returned ${resultsResponse.status}`);
+        }
+
+        if (candidatesResponse.ok) {
+          candidatePayload = await candidatesResponse.json();
+        } else {
+          console.warn(`Candidate file returned ${candidatesResponse.status}`);
+        }
       } catch (error) {
         console.error(error);
-
-        // Minimal fallback lets the page render before the real JSON file is uploaded.
-        resultsData = {
-          election: "2026 Rhode Island Statewide Primary",
-          date: "2026-09-09",
-          source: "Rhode Island Board of Elections",
-          last_updated: "",
-          status: "unofficial",
-          races: []
-        };
       }
+
+      const derivedRaces = candidatePayload
+        ? deriveContestedRacesFromCandidates(candidatePayload)
+        : [];
+
+      resultsData = {
+        ...resultPayload,
+        races: mergeDerivedRacesWithResults(
+          derivedRaces,
+          Array.isArray(resultPayload?.races) ? resultPayload.races : []
+        )
+      };
 
       updateHeaderMetadata();
       renderRaceList();
