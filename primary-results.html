@@ -258,7 +258,7 @@
     #map {
       min-height: 610px;
       width: 100%;
-      background: #eef2f7;
+      background: #f8fafc;
     }
 
     .race-panel {
@@ -347,7 +347,7 @@
       margin-top: 8px;
       width: 100%;
       height: 7px;
-      background: #eef2f7;
+      background: #f8fafc;
       border-radius: 999px;
       overflow: hidden;
     }
@@ -499,7 +499,7 @@
       margin-top: 34px;
       padding: 25px;
       border-radius: 20px;
-      background: #eef2f7;
+      background: #f8fafc;
       border: 1px solid var(--line);
       color: #475569;
       font-size: 13px;
@@ -520,6 +520,22 @@
 
     .leaflet-container {
       font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .district-label {
+      background: rgba(255,255,255,.92) !important;
+      border: 0 !important;
+      border-radius: 999px !important;
+      box-shadow: 0 2px 8px rgba(15,23,42,.16) !important;
+      color: #0f172a !important;
+      font-size: 10px !important;
+      font-weight: 900 !important;
+      padding: 3px 6px !important;
+      white-space: nowrap !important;
+    }
+
+    .district-label::before {
+      display: none !important;
     }
 
     .leaflet-tooltip {
@@ -617,8 +633,7 @@
         <div>
           <h2>Contested Primaries</h2>
           <p>
-            The map highlights districts with contested primaries. As results arrive,
-            closer races receive stronger emphasis. Click any highlighted district for details.
+            Highlighted districts have contested 2026 primaries. Blue marks Democratic primaries, red marks Republican primaries, and purple marks districts with both. Click a highlighted district for details.
           </p>
         </div>
       </div>
@@ -700,16 +715,11 @@
       attributionControl: true
     }).setView([41.68, -71.52], 9);
 
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 18,
-      attribution: "&copy; OpenStreetMap contributors"
-    }).addTo(map);
-
     const legend = L.control({position: "bottomright"});
     legend.onAdd = function () {
       const div = L.DomUtil.create("div", "map-legend");
       div.innerHTML = `
-        <strong>Primary map</strong>
+        <strong>Contested primary map</strong>
         <div class="legend-row"><span class="swatch" style="background:#93c5fd"></span> Democratic primary</div>
         <div class="legend-row"><span class="swatch" style="background:#fca5a5"></span> Republican primary</div>
         <div class="legend-row"><span class="swatch" style="background:#c4b5fd"></span> Multiple contested primaries</div>
@@ -831,33 +841,32 @@
 
       if (!races.length) {
         return {
-          color: "#ffffff",
+          color: "#cbd5e1",
           weight: 1,
-          fillColor: "#e5e7eb",
-          fillOpacity: .22
+          fillColor: "#e2e8f0",
+          fillOpacity: .34
         };
       }
 
       const parties = [...new Set(races.map(r => normalizeParty(r.party)))];
-      let fillColor = "#c4b5fd";
+      let fillColor = "#8b5cf6";
 
-      if (parties.length === 1 && parties[0] === "Democratic") fillColor = "#93c5fd";
-      if (parties.length === 1 && parties[0] === "Republican") fillColor = "#fca5a5";
+      if (parties.length === 1 && parties[0] === "Democratic") fillColor = "#3b82f6";
+      if (parties.length === 1 && parties[0] === "Republican") fillColor = "#ef4444";
 
       const margins = races.map(closeness).filter(v => v !== null);
       const closest = margins.length ? Math.min(...margins) : null;
 
-      // Close races become more visually prominent as results arrive.
-      let fillOpacity = .62;
+      let fillOpacity = .82;
       if (closest !== null) {
-        if (closest <= 5) fillOpacity = .95;
-        else if (closest <= 10) fillOpacity = .84;
-        else if (closest <= 20) fillOpacity = .73;
+        if (closest <= 5) fillOpacity = 1;
+        else if (closest <= 10) fillOpacity = .94;
+        else if (closest <= 20) fillOpacity = .88;
       }
 
       return {
         color: "#ffffff",
-        weight: 1.6,
+        weight: 2,
         fillColor,
         fillOpacity
       };
@@ -961,8 +970,12 @@
           if (races.length) {
             const parties = races.map(r => normalizeParty(r.party)).join(" / ");
             layer.bindTooltip(
-              `${currentChamber === "house" ? "House" : "Senate"} District ${district}<br>${parties} primary`,
-              {sticky: true}
+              `${currentChamber === "house" ? "H" : "S"}${district}`,
+              {
+                permanent: true,
+                direction: "center",
+                className: "district-label"
+              }
             );
 
             layer.on("click", () => {
@@ -1080,18 +1093,21 @@
           if (!Number.isFinite(district)) return;
 
           const allCandidates = Array.isArray(record?.candidates) ? record.candidates : [];
+          const status = String(record?.primary_status || "").toLowerCase();
 
-          [
-            { code: "DEM", label: "Democratic" },
-            { code: "REP", label: "Republican" }
-          ].forEach(party => {
+          const partyConfigs = [
+            { code: "DEM", label: "Democratic", active: status === "dem_primary" || status === "both_primaries" },
+            { code: "REP", label: "Republican", active: status === "rep_primary" || status === "both_primaries" }
+          ];
+
+          partyConfigs.forEach(party => {
             const candidates = allCandidates.filter(candidate =>
               String(candidate?.party || "").toUpperCase() === party.code &&
               candidate?.on_primary_ballot !== false
             );
 
-            // A primary is contested only when at least two candidates from the same party are on the ballot.
-            if (candidates.length < 2) return;
+            const contestedByCount = candidates.length >= 2;
+            if (!party.active && !contestedByCount) return;
 
             derived.push({
               chamber,
