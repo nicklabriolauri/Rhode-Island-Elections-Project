@@ -1,0 +1,32 @@
+{
+  "election": "2026 Rhode Island Statewide Primary",
+  "date": "2026-09-09",
+  "source": "Rhode Island Board of Elections",
+  "last_updated": "",
+  "status": "unofficial",
+  "races": [
+    {
+      "chamber": "senate",
+      "district": 5,
+      "party": "Democratic",
+      "contested": true,
+      "precincts_reporting": null,
+      "precincts_total": null,
+      "reporting_pct": null,
+      "candidates": [
+        {
+          "name": "Samuel W. Bell",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        },
+        {
+          "name": "Candidate Two",
+          "votes": null,
+          "pct": null,
+          "advanced": false
+        }
+      ]
+    }
+  ]
+}
