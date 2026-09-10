@@ -68,6 +68,10 @@
       const key=raceKey(s.chamber,s.district); if(!byRace.has(key)) byRace.set(key,[]); byRace.get(key).push(s);
     });
     decorate();
-    new MutationObserver(ms=>ms.forEach(m=>m.addedNodes.forEach(n=>{if(n.nodeType===1) decorate(n)}))).observe(document.body,{childList:true,subtree:true});
+    [180,550,1300].forEach(ms=>setTimeout(()=>decorate(document),ms));
+    let timer=0;
+    const refresh=()=>{clearTimeout(timer);timer=setTimeout(()=>decorate(document),70);};
+    document.addEventListener('input',refresh,true);
+    document.addEventListener('change',refresh,true);
   }).catch(e=>console.warn('RIEP post-primary status layer:',e));
 })();
