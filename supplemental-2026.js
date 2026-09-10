@@ -58,15 +58,18 @@
     resultRaces=res.races||[];resultRaces.forEach(r=>(r.candidates||[]).forEach(c=>contestedByCandidate.set(norm(c.name),r)));
     decorate(document);
 
-    // Dynamic pages can add many nodes at once. Debounce one document pass instead of
-    // rescanning the entire page for every DOM mutation; this was causing visible lag.
-    let timer=0;
-    const observer=new MutationObserver(()=>{
-      clearTimeout(timer);
-      timer=setTimeout(()=>decorate(document),120);
-    });
-    observer.observe(document.body,{childList:true,subtree:true});
-    // Results/ballot renderers finish asynchronously; one cheap delayed pass catches them.
-    setTimeout(()=>decorate(document),500);
+    // Avoid persistent DOM observers: they can loop with dynamic search/result renderers.
+    // Use a few bounded passes plus user-input hooks so navigation stays responsive.
+    [150,500,1200].forEach(ms=>setTimeout(()=>decorate(document),ms));
+    let inputTimer=0;
+    const refreshAfterInput=()=>{
+      clearTimeout(inputTimer);
+      inputTimer=setTimeout(()=>decorate(document),60);
+    };
+    document.addEventListener('input',refreshAfterInput,true);
+    document.addEventListener('change',refreshAfterInput,true);
+    document.addEventListener('click',e=>{
+      if(e.target.closest('button,a,[role="button"]')) setTimeout(()=>decorate(document),80);
+    },true);
   });
 })();
