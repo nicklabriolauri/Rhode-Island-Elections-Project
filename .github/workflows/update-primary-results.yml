@@ -35,8 +35,7 @@ jobs:
 
       - name: Fetch official Rhode Island primary results
         env:
-          RI_RESULTS_URL: "https://electionresults.ri.gov/results/public/RhodeIsland/elections/RI2026StatewidePrimary"
-          # Election-night window in America/New_York.
+         RI_RESULTS_URL: "https://electionresults.ri.gov/results/public/RhodeIsland/elections/RI2026StatewidePrimary?cg=General%20Assembly"
           # Scheduled runs outside this window exit without changing files.
           ELECTION_START: "2026-09-09T19:45:00-04:00"
           ELECTION_END: "2026-09-10T02:00:00-04:00"
