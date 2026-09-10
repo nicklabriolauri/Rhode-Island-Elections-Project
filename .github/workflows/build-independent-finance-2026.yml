@@ -1,0 +1,42 @@
+name: Build 2026 independent campaign finance pages
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build_independent_finance_pages_2026.py'
+      - 'independent-finance-bridge.js'
+      - '.github/workflows/build-independent-finance-2026.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate independent finance pages and recount-aware statuses
+        run: python scripts/build_independent_finance_pages_2026.py
+      - name: Connect Who's Running and My Ballot to finance pages
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          tag='<script src="/independent-finance-bridge.js?v=20260910"></script>'
+          for fn in ['running.html','ballot.html','index.html']:
+              p=Path(fn)
+              if not p.exists(): continue
+              s=p.read_text()
+              if tag not in s:
+                  s=s.replace('</body>',tag+'\n</body>')
+                  p.write_text(s)
+          PY
+      - name: Commit generated finance pages and routing
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add finance-candidates data/independent_finance_index_2026.json data/post_primary_status_2026.json running.html ballot.html index.html
+          if git diff --cached --quiet; then
+            echo 'No generated changes.'
+          else
+            git commit -m 'Add independent finance pages and recount-aware candidate routing'
+            git push
+          fi
