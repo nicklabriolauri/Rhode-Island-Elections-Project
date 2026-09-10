@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# 2026-09-10 funding-source refresh
 import json,re,html
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
