@@ -12,6 +12,11 @@
     .race-card .candidate-row.riep-called-winner{background:#172554!important;color:#fff!important;border-radius:14px;padding:14px 14px!important;margin:8px 0 10px;border-top:0!important}
     .race-card .candidate-row.riep-called-winner *{color:#fff!important}.race-card .candidate-row.riep-called-winner .progress{background:rgba(255,255,255,.24)!important}.race-card .candidate-row.riep-called-winner .progress span{background:#fff!important}
     .riep-result-focus{outline:4px solid rgba(46,107,255,.22);outline-offset:4px;scroll-margin-top:24px}.riep-candidate-focus{outline:3px solid rgba(255,255,255,.5);outline-offset:-3px}
+    .riep-primary-summary{border-color:#cbd5e1!important;background:linear-gradient(180deg,#fff 0%,#f8fafc 100%)!important}
+    .riep-primary-summary .hero-search-result-value{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .riep-primary-summary .riep-result-winner{font-weight:900;color:#0f172a}
+    .riep-primary-summary .riep-result-candidate{margin-top:6px;color:#475569;font-size:13px;line-height:1.45}
+    .riep-primary-summary .riep-result-link{display:inline-block;margin-top:7px;color:#1d4ed8;font-size:12px;font-weight:900}
   `;
   document.head.appendChild(style);
   let statuses=new Map(), financeByName=new Map(), financeById=new Map(), contestedByCandidate=new Map(), resultRaces=[];
@@ -24,6 +29,24 @@
       const name=el.textContent.trim(), s=statuses.get(norm(name)), box=el.closest('.hero-search-match')||candidateBox(el); if(!box)return;
       if(s){const parent=el.parentElement;if(parent&&!parent.querySelector('.riep-search-status')){const b=document.createElement('span');b.className=`riep-search-status ${statusClass(s)}`;b.textContent=s.status_label;parent.appendChild(b);}}
       const race=contestedByCandidate.get(norm(name));
+      if(s?.election_status==='lost_primary' && race){
+        const candidates=[...(race.candidates||[])].filter(c=>Number.isFinite(Number(c.votes))).sort((a,b)=>Number(b.votes)-Number(a.votes));
+        const winner=candidates[0], own=candidates.find(c=>norm(c.name)===norm(name));
+        const total=candidates.reduce((sum,c)=>sum+Number(c.votes||0),0);
+        const ownPct=own ? (own.pct!==null&&own.pct!==undefined ? Number(own.pct) : (total?Number(own.votes||0)/total*100:null)) : null;
+        const target=primaryTarget(race,name);
+        const resultCard=box.querySelector('.hero-search-result-card');
+        if(resultCard && winner){
+          resultCard.classList.add('riep-primary-summary');
+          resultCard.href=target;
+          resultCard.classList.add('is-link');
+          resultCard.innerHTML=`
+            <div class="hero-search-result-label">2026 ${String(race.party||'').toUpperCase().startsWith('REP')?'REPUBLICAN':'DEMOCRATIC'} PRIMARY RESULT</div>
+            <div class="hero-search-result-value"><span class="riep-result-winner">${winner.name} won</span></div>
+            ${own?`<div class="riep-result-candidate">${name}: ${Number(own.votes||0).toLocaleString('en-US')} votes${ownPct!==null?` · ${ownPct.toFixed(1)}%`:''}</div>`:''}
+            <span class="riep-result-link">View full primary result →</span>`;
+        }
+      }
       const view=box.querySelector('.hero-search-action.primary')||[...box.querySelectorAll('a')].find(a=>/view race|candidate|result/i.test(a.textContent||''));
       if(s && (s.election_status==='lost_primary'||s.election_status==='primary_pending') && race){
         const target=primaryTarget(race,name);
