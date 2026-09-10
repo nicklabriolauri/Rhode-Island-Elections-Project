@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30",
+  "generated_at": "2026-09-10",
   "methodology": {
     "roster": "Valid 2026 Rhode Island legislative candidates from the declared-candidate workbook used by the project.",
     "website_audit": "Campaign websites were reconciled against the updated candidate website audit workbook supplied on 2026-08-30. Government pages, social profiles, news articles, and generic voter-guide pages were not treated as campaign websites.",
@@ -505,6 +505,12 @@
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser_or_candidate_official_source",
           "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "NASW-RI PACE",
+          "source_url": "https://naswri.socialworkers.org/Advocacy/PACE",
+          "source_type": "endorser_official_source",
+          "date_checked": "2026-09-10"
         }
       ]
     },
@@ -602,6 +608,12 @@
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser_or_candidate_official_source",
           "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "NASW-RI PACE",
+          "source_url": "https://naswri.socialworkers.org/Advocacy/PACE",
+          "source_type": "endorser_official_source",
+          "date_checked": "2026-09-10"
         }
       ]
     },
@@ -695,6 +707,12 @@
           "source_url": "https://workingfamilies.org/2026/06/rhode-island-working-families-party-endorses-4-first-time-candidates-challenging-new-state-leadership-to-govern-boldly/",
           "source_type": "endorser_or_candidate_official_source",
           "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "NASW-RI PACE",
+          "source_url": "https://naswri.socialworkers.org/Advocacy/PACE",
+          "source_type": "endorser_official_source",
+          "date_checked": "2026-09-10"
         }
       ]
     },
@@ -1310,6 +1328,12 @@
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser_or_candidate_official_source",
           "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "NASW-RI PACE",
+          "source_url": "https://naswri.socialworkers.org/Advocacy/PACE",
+          "source_type": "endorser_official_source",
+          "date_checked": "2026-09-10"
         }
       ]
     },
@@ -1436,6 +1460,12 @@
           "source_url": "https://www.neari.org/votes",
           "source_type": "endorser_or_candidate_official_source",
           "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "NASW-RI PACE",
+          "source_url": "https://naswri.socialworkers.org/Advocacy/PACE",
+          "source_type": "endorser_official_source",
+          "date_checked": "2026-09-10"
         }
       ]
     },
@@ -1519,7 +1549,14 @@
           "source_url": "https://chrisblazejewski.com/"
         }
       ],
-      "endorsements": []
+      "endorsements": [
+        {
+          "organization": "Clean Water Action",
+          "source_url": "https://cleanwater.org/be-clean-water-voter-2026-rhode-island-endorsements",
+          "source_type": "endorser_official_source",
+          "date_checked": "2026-09-10"
+        }
+      ]
     },
     {
       "candidate_id": "house-3-dem-primary-nathan-w-biah",
@@ -1606,6 +1643,12 @@
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser_or_candidate_official_source",
           "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "NASW-RI PACE",
+          "source_url": "https://naswri.socialworkers.org/Advocacy/PACE",
+          "source_type": "endorser_official_source",
+          "date_checked": "2026-09-10"
         }
       ]
     },
@@ -1630,35 +1673,42 @@
       "party": "Independent-Socialist",
       "campaign_website": "https://brittanyforri.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-30",
-      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "website_checked": "2026-09-10",
+      "website_audit_note": "Official 2026 campaign website verified.",
       "priorities": [
         {
           "title": "Housing",
-          "summary": "Support a statewide rent freeze and publicly owned affordable housing.",
+          "summary": "Calls for a statewide rent freeze and expansion of affordable, publicly owned housing.",
           "source_label": "Official campaign website",
           "source_url": "https://brittanyforri.com/"
         },
         {
           "title": "Healthcare",
-          "summary": "Provide healthcare to Rhode Islanders free at the point of service.",
+          "summary": "Supports healthcare for Rhode Islanders that is free at the point of service.",
           "source_label": "Official campaign website",
           "source_url": "https://brittanyforri.com/"
         },
         {
-          "title": "Workers' rights and wages",
-          "summary": "Support a $30 minimum wage, union organizing, and the right to strike.",
+          "title": "Power in the workplace",
+          "summary": "Supports a $30 minimum wage, freedom to unionize, and the right to strike.",
           "source_label": "Official campaign website",
           "source_url": "https://brittanyforri.com/"
         },
         {
-          "title": "Public energy and transit",
-          "summary": "Support public ownership of Rhode Island Energy and full funding for RIPTA.",
+          "title": "Energy and infrastructure",
+          "summary": "Supports public ownership of Rhode Island Energy and full funding for RIPTA and public transportation.",
           "source_label": "Official campaign website",
           "source_url": "https://brittanyforri.com/"
         }
       ],
-      "endorsements": []
+      "endorsements": [
+        {
+          "organization": "Rhode Island Democratic Socialists of America",
+          "source_url": "https://ridsa.org/endorsements",
+          "source_type": "endorser_official_source",
+          "date_checked": "2026-09-10"
+        }
+      ]
     },
     {
       "candidate_id": "house-6-dem-primary-raymond-a-hull",
@@ -2236,6 +2286,12 @@
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser_or_candidate_official_source",
           "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "NASW-RI PACE",
+          "source_url": "https://naswri.socialworkers.org/Advocacy/PACE",
+          "source_type": "endorser_official_source",
+          "date_checked": "2026-09-10"
         }
       ]
     },
@@ -4065,6 +4121,12 @@
           "source_url": "https://www.neari.org/votes",
           "source_type": "endorser_or_candidate_official_source",
           "date_checked": "2026-08-28"
+        },
+        {
+          "organization": "NASW-RI PACE",
+          "source_url": "https://naswri.socialworkers.org/Advocacy/PACE",
+          "source_type": "endorser_official_source",
+          "date_checked": "2026-09-10"
         }
       ]
     },
