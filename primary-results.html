@@ -532,8 +532,24 @@
       border-radius: 8px;
     }
 
+    .incumbent-badge {
+      display: inline-flex;
+      align-items: center;
+      margin-left: 8px;
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      vertical-align: middle;
+    }
+
     .candidate-row.winner {
-      background: #1e3a8a;
+      background: #172554;
       color: #ffffff;
       border-radius: 12px;
       padding: 14px 12px;
@@ -553,8 +569,14 @@
       color: #ffffff;
     }
 
+    .candidate-row.winner .incumbent-badge {
+      background: rgba(255,255,255,.12);
+      color: #ffffff;
+      border-color: rgba(255,255,255,.35);
+    }
+
     .candidate-row.winner .progress {
-      background: rgba(255,255,255,.25);
+      background: rgba(255,255,255,.22);
     }
 
     .candidate-row.winner .progress span {
@@ -912,6 +934,38 @@
       "senate-19"
     ]);
 
+    const INCUMBENTS = new Set([
+      "edith h ajello",
+      "amy j santiago",
+      "charlene m lima",
+      "william muto",
+      "james c sheehan",
+      "robert e craven jr",
+      "tina l spears",
+      "brian patrick kennedy",
+      "mark a theroux",
+      "matthew dawson",
+      "nicole p jellinek",
+      "samuel w bell",
+      "lori urso",
+      "dawn euer",
+      "meghan e kallman",
+      "ryan w pearson",
+      "alana m dimario"
+    ]);
+
+    function normalizeCandidateName(value) {
+      return String(value || "")
+        .toLowerCase()
+        .replace(/[^a-z0-9 ]+/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+
+    function isIncumbent(candidate) {
+      return INCUMBENTS.has(normalizeCandidateName(candidate?.name));
+    }
+
     function isRaceCalled(race) {
       const key = `${String(race.chamber || "").toLowerCase()}-${Number(race.district)}`;
       return !UNCALLED_RACES.has(key);
@@ -989,20 +1043,26 @@
       }
 
       const called = isRaceCalled(race);
-      const voteValues = candidates
+      const validVotes = candidates
         .map(c => Number(c.votes))
-        .filter(v => Number.isFinite(v) && v >= 0);
-      const topVotes = voteValues.length ? Math.max(...voteValues) : null;
+        .filter(v => Number.isFinite(v));
+      const topVotes = validVotes.length ? Math.max(...validVotes) : null;
+      const topCount = topVotes === null
+        ? 0
+        : candidates.filter(c => Number(c.votes) === topVotes).length;
 
       return candidates.map((candidate, index) => {
         const pct = calculatedPct(candidate, race);
         const width = pct === null ? 0 : Math.max(0, Math.min(100, pct));
         const votes = Number(candidate.votes);
-        const winner = called &&
+        const winner =
+          called &&
           topVotes !== null &&
+          topCount === 1 &&
           Number.isFinite(votes) &&
-          votes === topVotes &&
-          candidates.filter(c => Number(c.votes) === topVotes).length === 1;
+          votes === topVotes;
+
+        const incumbent = isIncumbent(candidate);
 
         return `
           <div class="candidate-row ${winner ? "winner" : ""}">
@@ -1010,6 +1070,7 @@
               <div class="candidate-name">
                 ${winner ? '<span class="winner-mark">✓</span>' : ''}
                 ${escapeHtml(candidate.name || "Candidate")}
+                ${incumbent ? '<span class="incumbent-badge">Incumbent</span>' : ''}
               </div>
               <div class="candidate-pct">${pct === null ? "—" : pct.toFixed(1) + "%"}</div>
             </div>
