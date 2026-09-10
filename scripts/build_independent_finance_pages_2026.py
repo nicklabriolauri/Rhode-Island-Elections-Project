@@ -11,6 +11,53 @@ SUPPLEMENT={
  'Jon D Brien': {'through':'June 30, 2026','receipts':15352.90,'spending':1196.49,'cash':25097.59,'liabilities':22689.98,'source':'Rhode Island Board of Elections CF-2 / CF-4 filings (Q1 + Q2 2026)'},
  'Jean P Barros': {'through':'March 31, 2026','receipts':0.0,'spending':400.0,'cash':51656.18,'liabilities':10204.68,'source':'Rhode Island Board of Elections CF-2 / CF-4 filing (Q1 2026)'},
 }
+CONTRIBUTIONS={
+ 'Brittany M Kubicek':{
+  'mix':[('Individual cash contributions',16771.76),('Political parties',0.0),('PACs',0.0),('Loan proceeds',0.0)],
+  'note':'Q1 and Q2 CF-2 summaries report all 2026 cash receipts as individual contributions. In-kind contributions are reported separately from cash receipts.',
+  'items':[
+   ('2026-04-09','Eric Giammarco','Individual','West Warwick, RI',990.00),
+   ('2026-04-04','Brian Flowers','Individual','Pawtucket, RI',500.00),
+   ('2026-04-29','Brian Flowers','Individual','Pawtucket, RI',200.00),
+   ('2026-04-04','Raymond Johnson','Individual','Providence, RI',500.00),
+   ('2026-04-04','Daniel Camp','Individual','Providence, RI',200.00),
+   ('2026-06-02','Samy Masadi','Individual','Woonsocket, RI',200.00),
+   ('2026-06-15','Joel Agnitti','Individual','Springfield, MA',200.00),
+  ]
+ },
+ 'Jon D Brien':{
+  'mix':[('Individuals — Q2',3350.00),('PACs — Q2',1102.90),('Political parties — Q2',0.0),('Loan proceeds — Q2',0.0)],
+  'note':'The Q2 CF-2 summary reports $3,350 from individuals and $1,102.90 from PACs during April–June 2026. The candidate also carried previously reported loan liabilities; loans payable are not counted here as Q2 contribution receipts.',
+  'items':[
+   ('2026-06-10','Martin V Fisher Jr','Individual','South Boston, MA',1000.00),
+   ('2026-05-27','RI Automobile Dealers PAC','PAC','Warwick, RI',252.90),
+   ('2026-04-03','RI Troopers Association PAC','PAC','East Greenwich, RI',250.00),
+   ('2026-05-27','RI Hospitality PAC','PAC','Cranston, RI',250.00),
+   ('2026-04-24','Christopher Boyle','Individual','Newport, RI',250.00),
+   ('2026-04-03','Catherine Cromwell','Individual','Bristol, RI',250.00),
+   ('2026-05-27','Joseph Walsh','Individual','Warwick, RI',250.00),
+   ('2026-05-27','William Walsh','Individual','Warwick, RI',250.00),
+   ('2026-05-27','Gayle Wolf','Individual','Narragansett, RI',250.00),
+   ('2026-05-27','RI Health Care Association PAC','PAC','Warwick, RI',200.00),
+   ('2026-05-27','David A Balasco','Individual','Jamestown, RI',200.00),
+  ]
+ },
+ 'Jean P Barros':{
+  'mix':[('Cash receipts — Q1',0.0)],
+  'note':'The Q1 CF-2 summary reports no cash receipts during January–March 2026. The filing begins with an existing cash balance from prior periods.',
+  'items':[]
+ }
+}
+
+def contributions_html(name):
+    data=CONTRIBUTIONS.get(name)
+    if not data: return ''
+    mix=''.join(f'<div class="spend-category"><span>{html.escape(label)}</span><b>{money(amount)}</b></div>' for label,amount in data['mix'])
+    items=data.get('items',[])
+    rows=''.join(f'<tr><td>{date}</td><td><strong>{html.escape(source)}</strong><small>{html.escape(kind)} · {html.escape(place)}</small></td><td>{money(amount)}</td></tr>' for date,source,kind,place,amount in items)
+    table=f'<div class="table-wrap"><table><thead><tr><th>Date</th><th>Contributor / source</th><th>Amount</th></tr></thead><tbody>{rows}</tbody></table></div>' if rows else '<p class="intro">No itemized cash contributions are listed for the reporting period summarized here.</p>'
+    return f'''<section class="panel detail"><div class="section-label">FUNDING SOURCES</div><h2>Where the money came from</h2><p class="intro">{html.escape(data['note'])}</p><div class="spend-categories">{mix}</div>{table}</section>'''
+
 EXPENDITURES={
  'Brittany M Kubicek':[
   ('2026-06-18','Advertising','All the Answers Inc','Palmcard order',210.90),
@@ -74,7 +121,7 @@ def page(c,fin):
     if fin:
         lead=f"{name}'s latest 2026 filing data reports {money(fin['receipts'])} in receipts and {money(fin['spending'])} in spending. The campaign closed the reported period with {money(fin['cash'])} in cash on hand."
         quick=f"Verified RIEP filing data through {fin['through']}."; stats=[('RAISED IN 2026',fin['receipts'],'mint'),('SPENT IN 2026',fin['spending'],'coral'),('CASH ON HAND',fin['cash'],'violet'),('LIABILITIES',fin['liabilities'],'amber')]
-        cards=''.join(f'<div class="stat {tone}"><span>{lab}</span><b>{money(val)}</b></div>' for lab,val,tone in stats); source=f"<div class='plain'><b>Source</b><br>{html.escape(fin['source'])}. Figures are reproduced from filed reports supplied to RIEP.</div>"; detail=spending_html(rawname)
+        cards=''.join(f'<div class="stat {tone}"><span>{lab}</span><b>{money(val)}</b></div>' for lab,val,tone in stats); source=f"<div class='plain'><b>Source</b><br>{html.escape(fin['source'])}. Figures are reproduced from filed reports supplied to RIEP.</div>"; detail=contributions_html(rawname)+spending_html(rawname)
     else:
         lead=f"RIEP has created a dedicated 2026 campaign-finance page for {name}. A current 2026 filing has not yet been added to the RIEP dataset."
         quick='This finance profile is being built. Use the official Board of Elections filing system for the authoritative record while RIEP adds and verifies filings.'; cards=''; source=''; detail=''
