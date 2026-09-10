@@ -493,21 +493,6 @@
       border-right: 1px solid var(--line);
     }
 
-    .race-card.called-race .race-card-header {
-      background: #172554;
-      color: #ffffff;
-      border-radius: 14px;
-      padding: 14px;
-      margin: -8px -8px 14px;
-    }
-    .race-card.called-race .race-card-header h3,
-    .race-card.called-race .race-card-header .race-status {
-      color: #ffffff;
-    }
-    .race-card.called-race .race-card-header .race-status {
-      background: rgba(255,255,255,.14);
-    }
-
     .race-card-header {
       display: flex;
       justify-content: space-between;
@@ -1304,10 +1289,10 @@
         const status = raceStatus(race);
 
         return `
-          <article class="race-card ${isRaceCalled(race) ? "called-race" : ""}">
+          <article class="race-card">
             <div class="race-card-header">
               <div>
-                <h3 class="${isRaceCalled(race) ? "called-district-title" : ""}">${currentChamber === "house" ? "State House" : "State Senate"} District ${race.district}</h3>
+                <h3>${currentChamber === "house" ? "State House" : "State Senate"} District ${race.district}</h3>
                 <div class="party-pill ${partyClass(race.party)}" style="margin-bottom:0">
                   ${escapeHtml(normalizeParty(race.party))} Primary
                 </div>
