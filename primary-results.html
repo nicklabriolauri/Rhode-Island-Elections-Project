@@ -400,6 +400,18 @@
       background: var(--navy);
     }
 
+    .race-page-link {
+      display: inline-flex;
+      margin-top: 14px;
+      padding: 9px 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 999px;
+      background: #fff;
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
     .reporting-box {
       margin-top: 18px;
       padding: 13px 14px;
@@ -1301,6 +1313,8 @@
             </div>
 
             ${candidateRows(race)}
+
+            <a class="race-page-link" href="/races/${currentChamber}-${race.district}-${normalizeParty(race.party).toLowerCase()}.html">Open this primary race page</a>
 
             <div class="reporting-box">
               <strong>${reportingLabel(race)}</strong>
