@@ -33,6 +33,10 @@
   fetch('/data/independent_finance_index_2026.json?v=20260910',{cache:'no-store'}).then(r=>r.json()).then(p=>{
     (p.candidates||[]).forEach(c=>{mapById.set(c.candidate_id,c);mapByName.set(norm(c.name),c)});
     reroute();
-    new MutationObserver(ms=>ms.forEach(m=>m.addedNodes.forEach(n=>{if(n.nodeType===1)reroute(n)}))).observe(document.body,{childList:true,subtree:true});
+    [200,600,1400].forEach(ms=>setTimeout(()=>reroute(document),ms));
+    let timer=0;
+    const refresh=()=>{clearTimeout(timer);timer=setTimeout(()=>reroute(document),80);};
+    document.addEventListener('input',refresh,true);
+    document.addEventListener('change',refresh,true);
   }).catch(e=>console.warn('Independent finance routing:',e));
 })();
