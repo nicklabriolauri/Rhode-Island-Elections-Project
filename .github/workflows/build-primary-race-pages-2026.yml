@@ -1,0 +1,27 @@
+name: Build 2026 primary race pages
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build_primary_race_pages_2026.py'
+      - 'data/primary_results_2026.json'
+      - '.github/workflows/build-primary-race-pages-2026.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python scripts/build_primary_race_pages_2026.py
+      - name: Commit primary race pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add races/
+          git diff --cached --quiet || git commit -m "Generate individual 2026 primary race pages"
+          git push
