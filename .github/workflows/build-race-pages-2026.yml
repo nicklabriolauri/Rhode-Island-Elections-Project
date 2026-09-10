@@ -1,0 +1,35 @@
+name: Build 2026 race pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build_race_pages_2026.py'
+      - 'race-page.js'
+      - 'data/whos_running_2026.json'
+      - 'data/post_primary_status_2026.json'
+      - 'data/candidate_finance_2026.json'
+      - 'data/independent_finance_index_2026.json'
+      - '.github/workflows/build-race-pages-2026.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Generate race pages
+        run: python scripts/build_race_pages_2026.py
+      - name: Commit generated pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add races/
+          git diff --cached --quiet || git commit -m "Generate 2026 legislative race pages"
+          git push
