@@ -45,16 +45,28 @@
     const q=new URLSearchParams(location.search),ch=q.get('chamber'),d=Number(q.get('district')||0),candidate=q.get('candidate');if(ch&&d){const r=resultRaces.find(x=>String(x.chamber).toLowerCase()===String(ch).toLowerCase()&&Number(x.district||x.district_number)===d&&(!q.get('party')||partyCode(x.party)===partyCode(q.get('party'))));const card=r&&findRaceCard(r);if(card){card.classList.add('riep-result-focus');if(candidate){const row=[...card.querySelectorAll('.candidate-row')].find(x=>norm(x.querySelector('.candidate-name')?.textContent)===norm(candidate));if(row)row.classList.add('riep-candidate-focus');}setTimeout(()=>card.scrollIntoView({behavior:'smooth',block:'center'}),100);}}
   }
   function decorate(root=document){decorateSearch(root);routeFinance(root);cleanBallotFinance(root);if(root===document)decoratePrimaryResults();}
+  const loadJSON=url=>fetch(url,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(url+' '+r.status);return r.json();}).catch(e=>{console.warn('RIEP optional data load:',e);return {};});
   Promise.all([
-    fetch('/data/post_primary_status_2026.json?v=20260910f',{cache:'no-store'}).then(r=>r.json()),
-    fetch('/data/independent_finance_index_2026.json?v=20260910f',{cache:'no-store'}).then(r=>r.json()),
-    fetch('/data/candidate_finance_2026.json?v=20260910f',{cache:'no-store'}).then(r=>r.json()),
-    fetch('/data/primary_results_2026.json?v=20260910f',{cache:'no-store'}).then(r=>r.json())
-  ]).then(([s,ind,fin,res])=>{
-    (s.candidates||[]).forEach(x=>statuses.set(norm(x.name),x));
+    loadJSON('/data/post_primary_status_2026.json?v=20260910g'),
+    loadJSON('/data/independent_finance_index_2026.json?v=20260910g'),
+    loadJSON('/data/candidate_finance_2026.json?v=20260910g'),
+    loadJSON('/data/primary_results_2026.json?v=20260910g')
+  ]).then(([statusData,ind,fin,res])=>{
+    (statusData.candidates||[]).forEach(x=>statuses.set(norm(x.name),x));
     (fin.directory||[]).forEach(x=>{if(x.slug){const u=`/finance.html?slug=${encodeURIComponent(x.slug)}`;financeByName.set(norm(x.candidate_name),u);financeById.set(x.candidate_id,u);}});
     (ind.candidates||[]).forEach(x=>{financeByName.set(norm(x.name),x.url);financeById.set(x.candidate_id,x.url);});
     resultRaces=res.races||[];resultRaces.forEach(r=>(r.candidates||[]).forEach(c=>contestedByCandidate.set(norm(c.name),r)));
-    decorate(document);new MutationObserver(()=>decorate(document)).observe(document.body,{childList:true,subtree:true});
-  }).catch(e=>console.warn('RIEP supplemental 2026 layer:',e));
+    decorate(document);
+
+    // Dynamic pages can add many nodes at once. Debounce one document pass instead of
+    // rescanning the entire page for every DOM mutation; this was causing visible lag.
+    let timer=0;
+    const observer=new MutationObserver(()=>{
+      clearTimeout(timer);
+      timer=setTimeout(()=>decorate(document),120);
+    });
+    observer.observe(document.body,{childList:true,subtree:true});
+    // Results/ballot renderers finish asynchronously; one cheap delayed pass catches them.
+    setTimeout(()=>decorate(document),500);
+  });
 })();
