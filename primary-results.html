@@ -3,8 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>2026 Rhode Island Primary Results | Rhode Island Elections Project</title>
-  <meta name="description" content="Live unofficial 2026 Rhode Island State House and State Senate primary election results from the Rhode Island Elections Project." />
+  <title>2026 Rhode Island Primary Election Results | RI House & Senate</title>
+  <meta name="description" content="Live 2026 Rhode Island primary election results for the Rhode Island State House and State Senate. View contested Democratic and Republican primaries, vote totals, percentages, and district results." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://www.rhodeislandelectionsproject.org/primary-results.html" />
+  <meta property="og:title" content="2026 Rhode Island Primary Election Results | RI House & Senate" />
+  <meta property="og:description" content="Live 2026 Rhode Island State House and State Senate primary election results, including contested races, vote totals, percentages, and district results." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.rhodeislandelectionsproject.org/primary-results.html" />
 
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
@@ -514,8 +520,45 @@
     }
 
     .race-status.called {
-      background: #dcfce7;
-      color: #166534;
+      background: #dbeafe;
+      color: #1e3a8a;
+    }
+
+    .called-district-title {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e3a8a;
+      padding: 5px 9px;
+      border-radius: 8px;
+    }
+
+    .candidate-row.winner {
+      background: #1e3a8a;
+      color: #ffffff;
+      border-radius: 12px;
+      padding: 14px 12px;
+      margin: 7px 0;
+    }
+
+    .candidate-row.winner .candidate-name,
+    .candidate-row.winner .candidate-pct {
+      color: #ffffff;
+    }
+
+    .candidate-row.winner .candidate-bottom {
+      color: #dbeafe;
+    }
+
+    .candidate-row.winner .winner-mark {
+      color: #ffffff;
+    }
+
+    .candidate-row.winner .progress {
+      background: rgba(255,255,255,.25);
+    }
+
+    .candidate-row.winner .progress span {
+      background: #ffffff;
     }
 
     .race-status.reporting {
@@ -637,10 +680,10 @@
   <section class="hero">
     <div class="hero-inner">
       <div class="eyebrow"><span class="live-dot"></span> Primary Election 2026</div>
-      <h1>2026 Rhode Island Primary Results</h1>
+      <h1>2026 Rhode Island Primary Election Results</h1>
       <p class="hero-subtitle">
-        Follow Rhode Island State House and State Senate primary results as they are reported.
-        Explore contested races on the map and browse every primary below.
+        Live results for contested Rhode Island State House and State Senate primaries.
+        Follow Democratic and Republican primary results by district, including candidate vote totals, percentages, and reporting progress.
       </p>
 
       <div class="hero-meta">
@@ -860,13 +903,27 @@
       return hasVotes ? "Counting in progress" : "0% of votes counted";
     }
 
+    const UNCALLED_RACES = new Set([
+      "house-9",
+      "house-12",
+      "house-14",
+      "house-23",
+      "house-61",
+      "senate-19"
+    ]);
+
+    function isRaceCalled(race) {
+      const key = `${String(race.chamber || "").toLowerCase()}-${Number(race.district)}`;
+      return !UNCALLED_RACES.has(key);
+    }
+
     function raceStatus(race) {
-      if ((race.candidates || []).some(c => c.advanced === true)) {
+      if (isRaceCalled(race)) {
         return {label: "Called", cls: "called"};
       }
 
       const hasVotes = (race.candidates || []).some(c => Number(c.votes) > 0);
-      if (hasVotes) return {label: "Reporting", cls: "reporting"};
+      if (hasVotes) return {label: "Too close to call", cls: "reporting"};
 
       return {label: "Awaiting results", cls: ""};
     }
@@ -931,23 +988,34 @@
         return `<div class="empty-state" style="padding:20px 0">Candidate information not available.</div>`;
       }
 
+      const called = isRaceCalled(race);
+      const voteValues = candidates
+        .map(c => Number(c.votes))
+        .filter(v => Number.isFinite(v) && v >= 0);
+      const topVotes = voteValues.length ? Math.max(...voteValues) : null;
+
       return candidates.map((candidate, index) => {
         const pct = calculatedPct(candidate, race);
-        const advanced = candidate.advanced === true;
         const width = pct === null ? 0 : Math.max(0, Math.min(100, pct));
+        const votes = Number(candidate.votes);
+        const winner = called &&
+          topVotes !== null &&
+          Number.isFinite(votes) &&
+          votes === topVotes &&
+          candidates.filter(c => Number(c.votes) === topVotes).length === 1;
 
         return `
-          <div class="candidate-row">
+          <div class="candidate-row ${winner ? "winner" : ""}">
             <div class="candidate-topline">
               <div class="candidate-name">
-                ${advanced ? '<span class="winner-mark">✓</span>' : ''}
+                ${winner ? '<span class="winner-mark">✓</span>' : ''}
                 ${escapeHtml(candidate.name || "Candidate")}
               </div>
               <div class="candidate-pct">${pct === null ? "—" : pct.toFixed(1) + "%"}</div>
             </div>
             <div class="candidate-bottom">
               <span>${formatVotes(candidate.votes)} votes</span>
-              <span>${advanced ? "Advanced" : (index === 0 && pct !== null ? "Leading" : "")}</span>
+              <span>${winner ? "Winner" : (!called && index === 0 && pct !== null ? "Leading" : "")}</span>
             </div>
             <div class="progress"><span style="width:${width}%"></span></div>
           </div>
@@ -1047,7 +1115,7 @@
         ${validRaces.map((race, idx) => `
           <div ${idx ? 'style="margin-top:28px;padding-top:24px;border-top:2px solid #e2e8f0"' : ""}>
             <div class="panel-kicker">${currentChamber === "house" ? "State House" : "State Senate"}</div>
-            <h3>District ${race.district}</h3>
+            <h3 class="${isRaceCalled(race) ? "called-district-title" : ""}">District ${race.district}</h3>
             <div class="party-pill ${partyClass(race.party)}">${escapeHtml(normalizeParty(race.party))} Primary</div>
             ${candidateRows(race)}
             <div class="reporting-box">
@@ -1163,7 +1231,7 @@
           <article class="race-card">
             <div class="race-card-header">
               <div>
-                <h3>${currentChamber === "house" ? "State House" : "State Senate"} District ${race.district}</h3>
+                <h3 class="${isRaceCalled(race) ? "called-district-title" : ""}">${currentChamber === "house" ? "State House" : "State Senate"} District ${race.district}</h3>
                 <div class="party-pill ${partyClass(race.party)}" style="margin-bottom:0">
                   ${escapeHtml(normalizeParty(race.party))} Primary
                 </div>
