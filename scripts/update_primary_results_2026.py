@@ -3,12 +3,9 @@
 Update RIEP's 2026 Rhode Island Statewide Primary results from the
 official Rhode Island Board of Elections Enhanced Voting results page.
 
-The scraper deliberately matches the live page against RIEP's own
-data/whos_running_2026.json candidate list. That makes the parser less
-dependent on Enhanced Voting's internal API structure.
-
-Official source:
-https://electionresults.ri.gov/results/public/RhodeIsland/elections/RI2026StatewidePrimary
+This version is designed for the General Assembly category and handles
+lazy/virtualized result cards by parsing races while scrolling through
+the page, instead of assuming every race is present in the DOM at once.
 """
 
 from __future__ import annotations
@@ -29,7 +26,7 @@ OUTPUT_PATH = ROOT / "data" / "primary_results_2026.json"
 
 RESULTS_URL = os.environ.get(
     "RI_RESULTS_URL",
-    "https://electionresults.ri.gov/results/public/RhodeIsland/elections/RI2026StatewidePrimary",
+    "https://electionresults.ri.gov/results/public/RhodeIsland/elections/RI2026StatewidePrimary?cg=General%20Assembly",
 )
 
 NY = ZoneInfo("America/New_York")
@@ -144,11 +141,6 @@ def parse_vote_number(value: str) -> int | None:
 
 
 def parse_candidate_from_block(block_text: str, candidate_name: str, next_names: list[str]) -> tuple[int | None, float | None]:
-    """
-    Enhanced Voting visually renders rows in the order:
-    Candidate / party / percentage / votes.
-    We locate a known RIEP candidate and inspect the lines immediately after the name.
-    """
     lines = text_lines(block_text)
     aliases = candidate_aliases(candidate_name)
 
@@ -162,7 +154,6 @@ def parse_candidate_from_block(block_text: str, candidate_name: str, next_names:
     if start_idx is None:
         return None, None
 
-    # Stop before another known candidate if encountered.
     stop = min(len(lines), start_idx + 10)
     other_aliases = [a for name in next_names for a in candidate_aliases(name)]
 
@@ -182,11 +173,8 @@ def parse_candidate_from_block(block_text: str, candidate_name: str, next_names:
             continue
 
         number = parse_vote_number(line)
-        if number is not None:
-            # Party labels and years are filtered by numeric-only matching; the
-            # vote total is normally the first integer after the percentage.
-            if votes is None:
-                votes = number
+        if number is not None and votes is None:
+            votes = number
 
     return votes, pct
 
@@ -226,7 +214,7 @@ def find_race_block(page, race: dict) -> tuple[str, str] | None:
     for i in range(headings.count()):
         el = headings.nth(i)
         try:
-            title = el.inner_text(timeout=1000).strip()
+            title = el.inner_text(timeout=500).strip()
         except Exception:
             continue
 
@@ -234,12 +222,11 @@ def find_race_block(page, race: dict) -> tuple[str, str] | None:
         if score < 5:
             continue
 
-        # Find the smallest ancestor that contains the race's candidate names.
         block_text = ""
         for levels in range(1, 8):
             locator = el.locator("xpath=" + "/.." * levels)
             try:
-                text = locator.inner_text(timeout=1000)
+                text = locator.inner_text(timeout=500)
             except Exception:
                 continue
 
@@ -264,10 +251,6 @@ def find_race_block(page, race: dict) -> tuple[str, str] | None:
 
 
 def parse_reporting_status(body_text: str) -> tuple[int | None, int | None, float | None]:
-    """
-    Enhanced Voting exposes a statewide precinct reporting block. This is not
-    literally percent of ballots counted, so we store it as reporting_pct.
-    """
     text = re.sub(r"\s+", " ", body_text)
 
     patterns = [
@@ -284,6 +267,40 @@ def parse_reporting_status(body_text: str) -> tuple[int | None, int | None, floa
             return reporting, total, pct
 
     return None, None, None
+
+
+def try_parse_visible_races(page, races: list[dict], parsed_keys: set[tuple]) -> int:
+    newly_parsed = 0
+
+    for race in races:
+        key = (race["chamber"], race["district"], race["party_code"])
+        if key in parsed_keys:
+            continue
+
+        found = find_race_block(page, race)
+        if not found:
+            continue
+
+        _, block_text = found
+
+        any_votes = False
+        for candidate in race["candidates"]:
+            other_names = [
+                c["name"] for c in race["candidates"]
+                if c["name"] != candidate["name"]
+            ]
+            votes, pct = parse_candidate_from_block(block_text, candidate["name"], other_names)
+            if votes is not None:
+                candidate["votes"] = votes
+                candidate["pct"] = pct
+                any_votes = True
+
+        if any_votes:
+            parsed_keys.add(key)
+            newly_parsed += 1
+            print(f"Parsed {race['chamber']} district {race['district']} {race['party_code']}")
+
+    return newly_parsed
 
 
 def scrape() -> dict:
@@ -304,45 +321,63 @@ def scrape() -> dict:
             page.goto(RESULTS_URL, wait_until="domcontentloaded", timeout=90000)
             page.wait_for_timeout(8000)
 
-            # Enhanced Voting pages auto-refresh. Give the results DOM a chance to populate.
             try:
                 page.wait_for_selector("text=Candidate", timeout=30000)
             except PlaywrightTimeoutError:
                 pass
 
+            parsed_keys: set[tuple] = set()
+
+            # Critical fix:
+            # The Enhanced Voting General Assembly page lazy-loads/virtualizes
+            # race cards. Parse what is visible, scroll, then parse again.
+            # This catches House races that are not present in the DOM initially.
+            last_y = -1
+            stagnant = 0
+
+            for _ in range(120):
+                try_parse_visible_races(page, races, parsed_keys)
+
+                y = page.evaluate("window.scrollY")
+                h = page.evaluate("window.innerHeight")
+                total_h = page.evaluate("document.documentElement.scrollHeight")
+
+                if y + h >= total_h - 50:
+                    # One last parse at the bottom.
+                    page.wait_for_timeout(800)
+                    try_parse_visible_races(page, races, parsed_keys)
+                    break
+
+                page.evaluate("window.scrollBy(0, Math.max(700, window.innerHeight * 0.8))")
+                page.wait_for_timeout(350)
+
+                new_y = page.evaluate("window.scrollY")
+                if new_y == last_y:
+                    stagnant += 1
+                else:
+                    stagnant = 0
+                last_y = new_y
+
+                if stagnant >= 5:
+                    break
+
+            # Some sites render more after scrolling. Sweep back upward too.
+            for _ in range(60):
+                try_parse_visible_races(page, races, parsed_keys)
+                y = page.evaluate("window.scrollY")
+                if y <= 0:
+                    break
+                page.evaluate("window.scrollBy(0, -900)")
+                page.wait_for_timeout(250)
+
             body_text = page.locator("body").inner_text(timeout=10000)
             precincts_reporting, precincts_total, reporting_pct = parse_reporting_status(body_text)
 
-            parsed_count = 0
-
             for race in races:
-                found = find_race_block(page, race)
-                if not found:
-                    race["precincts_reporting"] = precincts_reporting
-                    race["precincts_total"] = precincts_total
-                    race["reporting_pct"] = reporting_pct
-                    continue
-
-                _, block_text = found
-
-                for candidate in race["candidates"]:
-                    other_names = [
-                        c["name"] for c in race["candidates"]
-                        if c["name"] != candidate["name"]
-                    ]
-                    votes, pct = parse_candidate_from_block(block_text, candidate["name"], other_names)
-                    candidate["votes"] = votes
-                    candidate["pct"] = pct
-
-                if any(c["votes"] is not None for c in race["candidates"]):
-                    parsed_count += 1
-
                 race["precincts_reporting"] = precincts_reporting
                 race["precincts_total"] = precincts_total
                 race["reporting_pct"] = reporting_pct
 
-                # Mark a winner only after statewide precinct reporting reaches 100%.
-                # RIEP is not making projections; this simply marks the top reported total.
                 if reporting_pct == 100:
                     with_votes = [c for c in race["candidates"] if c["votes"] is not None]
                     if with_votes:
@@ -351,12 +386,11 @@ def scrape() -> dict:
                             for c in with_votes:
                                 c["advanced"] = c["votes"] == top_votes
 
-            print(f"Parsed live vote totals for {parsed_count} of {len(races)} contested races.")
+            print(f"Parsed live vote totals for {len(parsed_keys)} of {len(races)} contested races.")
 
         finally:
             browser.close()
 
-    # Do not overwrite a populated file with all blanks if the live site changes.
     populated = sum(
         1 for race in races
         if any(c.get("votes") is not None for c in race.get("candidates", []))
