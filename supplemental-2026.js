@@ -24,7 +24,20 @@
       const name=el.textContent.trim(), s=statuses.get(norm(name)), box=el.closest('.hero-search-match')||candidateBox(el); if(!box)return;
       if(s){const parent=el.parentElement;if(parent&&!parent.querySelector('.riep-search-status')){const b=document.createElement('span');b.className=`riep-search-status ${statusClass(s)}`;b.textContent=s.status_label;parent.appendChild(b);}}
       const race=contestedByCandidate.get(norm(name));
-      if(race){const target=primaryTarget(race,name);const view=box.querySelector('.hero-search-action.primary')||[...box.querySelectorAll('a')].find(a=>/view race|candidate|result/i.test(a.textContent||''));if(view){view.href=target;view.textContent='View primary results';}box.dataset.cardHref=target;box.setAttribute('aria-label',`View ${name} primary results`);}
+      const view=box.querySelector('.hero-search-action.primary')||[...box.querySelectorAll('a')].find(a=>/view race|candidate|result/i.test(a.textContent||''));
+      if(s && (s.election_status==='lost_primary'||s.election_status==='primary_pending') && race){
+        const target=primaryTarget(race,name);
+        if(view){view.href=target;view.textContent='View primary results';}
+        box.dataset.cardHref=target;box.setAttribute('aria-label',`View ${name} primary results`);
+      } else if(s && s.chamber && s.district){
+        const target=`/races/${encodeURIComponent(String(s.chamber).toLowerCase())}-${encodeURIComponent(s.district)}.html`;
+        if(view){view.href=target;view.textContent='View race page';}
+        box.dataset.cardHref=target;box.setAttribute('aria-label',`View ${name} race page`);
+      } else if(race){
+        const target=primaryTarget(race,name);
+        if(view){view.href=target;view.textContent='View primary results';}
+        box.dataset.cardHref=target;
+      }
       const route=financeByName.get(norm(name)); if(route){const actions=box.querySelector('.hero-search-match-actions');if(actions){let a=actions.querySelector('a.finance');if(!a){a=document.createElement('a');a.className='hero-search-action finance';a.textContent='Campaign finance';actions.appendChild(a);}a.href=route;}}
     });
   }
