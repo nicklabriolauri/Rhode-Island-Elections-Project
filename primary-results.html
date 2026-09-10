@@ -493,6 +493,21 @@
       border-right: 1px solid var(--line);
     }
 
+    .race-card.called-race .race-card-header {
+      background: #172554;
+      color: #ffffff;
+      border-radius: 14px;
+      padding: 14px;
+      margin: -8px -8px 14px;
+    }
+    .race-card.called-race .race-card-header h3,
+    .race-card.called-race .race-card-header .race-status {
+      color: #ffffff;
+    }
+    .race-card.called-race .race-card-header .race-status {
+      background: rgba(255,255,255,.14);
+    }
+
     .race-card-header {
       display: flex;
       justify-content: space-between;
@@ -922,14 +937,18 @@
       return "<95% reporting";
     }
 
-    const UNCALLED_RACES = new Set([
-      "house-9",
-      "house-12",
-      "house-14",
-      "house-23",
-      "house-61",
-      "senate-19"
-    ]);
+    // A legislative primary is treated as called only when the reported vote
+    // margin is outside Rhode Island's recount range.
+    function isWithinRecountRange(race) {
+      const candidates = sortedCandidates(race);
+      const votes = candidates.map(c => Number(c.votes)).filter(Number.isFinite);
+      if (votes.length < 2) return true;
+      const total = votes.reduce((a,b)=>a+b,0);
+      const top = votes[0], second = votes[1];
+      if (!total || top === second) return true;
+      const threshold = Math.min(total * 0.02, 200);
+      return (top - second) < threshold;
+    }
 
     const INCUMBENTS = new Set([
       // State Senate incumbents in the contested 2026 primaries
@@ -964,8 +983,7 @@
     }
 
     function isRaceCalled(race) {
-      const key = `${String(race.chamber || "").toLowerCase()}-${Number(race.district)}`;
-      return !UNCALLED_RACES.has(key);
+      return !isWithinRecountRange(race);
     }
 
     function raceStatus(race) {
@@ -1286,7 +1304,7 @@
         const status = raceStatus(race);
 
         return `
-          <article class="race-card">
+          <article class="race-card ${isRaceCalled(race) ? "called-race" : ""}">
             <div class="race-card-header">
               <div>
                 <h3 class="${isRaceCalled(race) ? "called-district-title" : ""}">${currentChamber === "house" ? "State House" : "State Senate"} District ${race.district}</h3>
