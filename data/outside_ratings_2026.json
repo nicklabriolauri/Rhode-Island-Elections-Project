@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-29",
+  "updated_at": "2026-09-11",
   "scope": "2025 Rhode Island General Assembly members; the site displays an entry only when name, chamber, and district match a 2026 candidate.",
   "methodology": "RIEP reproduces organization-specific scores only when the publishing organization provides a legislator-specific result and a source can be linked. Scores from different organizations are not combined, normalized, ranked, or converted into an RIEP score. The 2025 League scorecard is currently the newest statewide Rhode Island legislative scorecard located in this audit that publishes a numerical score for substantially every member of both chambers.",
   "research_audit": [
@@ -14,7 +14,7 @@
       "organization": "ACLU of Rhode Island",
       "included": false,
       "latest_reviewed": "2025-2026 Legislative Voting Record",
-      "reason": "Current and useful voting record, but ACLU of Rhode Island presents selected roll-call votes rather than an overall legislator score. RIEP will not manufacture an ACLU score from those votes.",
+      "reason": "Current and useful voting record published July 2026, but ACLU of Rhode Island presents selected roll-call votes rather than an overall legislator score. RIEP does not manufacture a numerical ACLU score.",
       "source_url": "https://www.riaclu.org/publications/"
     },
     {
@@ -30,6 +30,20 @@
       "latest_reviewed": "Rhode Island Freedom Index / interactive scorecard",
       "reason": "The Center publishes an ideologically framed Freedom Index, but the current public pages located in this audit point to older scorecard cycles rather than a verified 2025-2026 statewide legislator table. RIEP does not substitute an old score for a current one.",
       "source_url": "https://rifreedom.org/freedomindex/"
+    },
+    {
+      "organization": "NAACP",
+      "included": false,
+      "latest_reviewed": "Civil Rights Scorecard",
+      "reason": "The current NAACP Civil Rights Scorecard located in this audit is a federal U.S. Senate scorecard, not a Rhode Island General Assembly scorecard, so it is not applicable to state legislative candidate profiles.",
+      "source_url": "https://naacp.org/campaigns/civil-rights-scorecard"
+    },
+    {
+      "organization": "League of Women Voters",
+      "included": false,
+      "latest_reviewed": "2025 scorecard search",
+      "reason": "The current scorecard located is from the League of Women Voters of Maine; no current Rhode Island General Assembly legislator scorecard with candidate-by-candidate numerical ratings was verified in this audit.",
+      "source_url": "https://www.lwv.org/redistricting/2025-redistricting-scorecards"
     }
   ],
   "ratings": [
