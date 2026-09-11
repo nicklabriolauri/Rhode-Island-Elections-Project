@@ -1029,7 +1029,11 @@
     }
 
     function buildRunningHref(candidate) {
-      return `running.html?chamber=${encodeURIComponent(candidate.chamber)}&district=${encodeURIComponent(candidate.district_number)}`;
+      // Every active 2026 candidate should land on the stable district race page.
+      // That page preserves the full field (including unopposed general-election
+      // candidates) and exposes candidate details such as priorities,
+      // endorsements, ratings, precinct, and campaign-finance links.
+      return `races/${encodeURIComponent(candidate.chamber)}-${encodeURIComponent(candidate.district_number)}.html`;
     }
 
     function buildMeetHref(candidate) {
