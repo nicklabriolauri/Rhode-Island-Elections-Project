@@ -713,7 +713,7 @@
       <div class="site-footer-meta">
         <div class="site-footer-links">
           <a href="map.html">Map</a>
-          <a href="running.html">Who's Running?</a>
+          <a href="running.html?v=20260912c">Who's Running?</a>
           <a href="meet.html">Meet the Candidates</a>
           <a href="finance.html">Campaign Finance</a>
           <a href="lookup.html">Find My Precinct</a>
@@ -1029,7 +1029,7 @@
     }
 
     function buildRunningHref(candidate) {
-      return `running.html?chamber=${encodeURIComponent(candidate.chamber)}&district=${encodeURIComponent(candidate.district_number)}&election=general`;
+      return `running.html?v=20260912c&chamber=${encodeURIComponent(candidate.chamber)}&district=${encodeURIComponent(candidate.district_number)}&election=general`;
     }
 
     function buildMeetHref(candidate) {
@@ -1784,7 +1784,7 @@
   })();
   </script>
   <script src="post-primary-2026.js?v=20260910h"></script>
-  <script src="supplemental-2026.js?v=20260912b"></script>
+  <script src="supplemental-2026.js?v=20260912c"></script>
 <script src="/independent-finance-bridge.js?v=20260910h"></script>
 <script src="/independent-finance-bridge.js?v=20260910"></script>
 </body>
