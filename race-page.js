@@ -17,8 +17,11 @@
     fetch('/data/candidate_finance_2026.json?v=20260910-race',{cache:'no-store'}).then(r=>r.json()).catch(()=>({})),
     fetch('/data/independent_finance_index_2026.json?v=20260910-race',{cache:'no-store'}).then(r=>r.json()).catch(()=>({})),
     fetch(geoUrl,{cache:'force-cache'}).then(r=>r.json()),
-    fetch('/data/ri_turnout_2024_precinct.geojson',{cache:'force-cache'}).then(r=>r.json()).catch(()=>({features:[]}))
-  ]).then(([running,status,finance,indFinance,geo,precincts])=>{
+    fetch('/data/ri_turnout_2024_precinct.geojson',{cache:'force-cache'}).then(r=>r.json()).catch(()=>({features:[]})),
+    fetch('/data/candidate_research_2026_with_endorsements.json?v=20260912-race',{cache:'no-store'}).then(r=>r.json()).catch(()=>({candidates:[]})),
+    fetch('/data/candidate_profiles_2026.json?v=20260912-race',{cache:'no-store'}).then(r=>r.json()).catch(()=>({profiles:[]})),
+    fetch('/data/outside_ratings_2026.json?v=20260912-race',{cache:'no-store'}).then(r=>r.json()).catch(()=>({ratings:[]}))
+  ]).then(([running,status,finance,indFinance,geo,precincts,researchData,profileData,ratingsData])=>{
     const rec=running?.chambers?.[chamber]?.[String(district)]||{};
     const all=[...(rec.candidates||[]),...(rec.general_candidates||[])];
     const seen=new Set();
@@ -31,6 +34,15 @@
     const financeById=new Map(),financeByName=new Map();
     (finance.directory||[]).forEach(x=>{if(x.slug){const u='/finance.html?slug='+encodeURIComponent(x.slug);financeById.set(x.candidate_id,u);financeByName.set(norm(x.candidate_name),u);}});
     (indFinance.candidates||[]).forEach(x=>{financeById.set(x.candidate_id,x.url);financeByName.set(norm(x.name),x.url);});
+    const researchById=new Map((researchData.candidates||[]).map(x=>[x.candidate_id,x]));
+    const researchByName=new Map((researchData.candidates||[]).map(x=>[norm(x.candidate_name),x]));
+    const profilesById=new Map((profileData.profiles||[]).map(x=>[x.candidate_id,x]));
+    const ratingsByName=new Map();
+    (ratingsData.ratings||[]).forEach(x=>{
+      const key=norm(x.candidate_name);
+      if(!ratingsByName.has(key)) ratingsByName.set(key,[]);
+      ratingsByName.get(key).push(x);
+    });
 
     document.querySelector('[data-race-title]').textContent=`${titleChamber} District ${district}`;
     document.title=`${titleChamber} District ${district} | 2026 Rhode Island Election | RIEP`;
@@ -42,14 +54,34 @@
       const st=statusByName.get(norm(c.name))||c;
       const fin=financeById.get(c.candidate_id)||financeByName.get(norm(c.name));
       const home=[c.hometown,c.zip_code].filter(Boolean).join(' ');
+      const research=researchById.get(c.candidate_id)||researchByName.get(norm(c.name))||{};
+      const profile=profilesById.get(c.candidate_id)||{};
+      const priorities=(profile.priorities&&profile.priorities.length?profile.priorities:research.priorities)||[];
+      const endorsements=[];
+      const seenEnd=new Set();
+      (research.endorsements||[]).forEach(e=>{const label=e.organization||e.name;if(label&&!seenEnd.has(norm(label))){seenEnd.add(norm(label));endorsements.push({label,url:e.source_url||''});}});
+      const ratings=ratingsByName.get(norm(c.name))||[];
+      const campaign=profile.campaign_url||research.campaign_website||c.campaign_url||'';
+      const email=profile.email_override||c.email||'';
+      const phone=profile.phone_override||c.phone||'';
+      const priorityHtml=priorities.length?`<div class="candidate-detail"><div class="detail-label">Top priorities</div><div class="priority-list">${priorities.slice(0,5).map(p=>`<div class="priority"><strong>${esc(p.title)}</strong><span>${esc(p.summary||'')}</span></div>`).join('')}</div></div>`:'';
+      const endHtml=endorsements.length?`<div class="candidate-detail"><div class="detail-label">Verified endorsements</div><div class="chip-row">${endorsements.map(e=>e.url?`<a class="chip" href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.label)}</a>`:`<span class="chip">${esc(e.label)}</span>`).join('')}</div></div>`:'';
+      const ratingHtml=ratings.length?`<div class="candidate-detail"><div class="detail-label">Outside ratings & scorecards</div>${ratings.map(r=>`<div class="rating-row"><div><strong>${esc(r.organization)}</strong><span>${esc(r.year||'')}</span></div><b>${esc(r.rating)}</b><a href="${esc(r.source_url)}" target="_blank" rel="noopener">Source ↗</a></div>`).join('')}</div>`:'';
       return `<article class="candidate-card">
         <div class="candidate-top"><div><span class="party ${String(c.party||'OTH').toLowerCase()}">${esc(partyLabel(c.party))}</span><h2>${esc(c.name)}</h2></div>
         <span class="status">${esc(st.status_label||'General Election Candidate')}</span></div>
         <p class="candidate-meta">${esc(home||'Rhode Island')} ${c.home_precinct_name?`· Home precinct ${esc(c.home_precinct_code)}`:''}</p>
         <div class="actions">
+          ${campaign?`<a href="${esc(campaign)}" target="_blank" rel="noopener">Campaign website</a>`:''}
+          ${email?`<a href="mailto:${esc(email)}">Email</a>`:''}
+          ${phone?`<a href="tel:${esc(String(phone).replace(/[^\\d+]/g,''))}">Call</a>`:''}
           ${fin?`<a href="${esc(fin)}">Campaign finance</a>`:''}
-          ${c.campaign_url?`<a href="${esc(c.campaign_url)}" target="_blank" rel="noopener">Campaign website</a>`:''}
+          <a href="/running.html?chamber=${encodeURIComponent(chamber)}&district=${encodeURIComponent(district)}">Open full Races & Candidates workspace</a>
         </div>
+        ${profile.summary?`<p class="candidate-summary">${esc(profile.summary)}</p>`:''}
+        ${priorityHtml}
+        ${endHtml}
+        ${ratingHtml}
       </article>`;
     }).join(''):'<p class="empty">No general-election candidate records are currently available for this district.</p>';
 
