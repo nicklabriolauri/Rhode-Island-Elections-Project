@@ -36,7 +36,20 @@ for chamber, districts in payload.get('chambers', {}).items():
             party = str(c.get('party','')).upper()
             rr = race_results.get((chamber, str(district), party))
             result = rr.get(norm(c.get('name'))) if rr else None
-            won = result[2] if result else True  # no contested result means no primary opponent in this dataset
+            # If an official contested-primary result exists for this party/district,
+            # a filed candidate who does not appear in that result did not make the
+            # actual primary ballot (or otherwise was not an active primary choice).
+            # Never treat a missing result inside a contested race as a win.
+            if rr and result is None:
+                won = False
+                c['primary_result'] = 'not_on_ballot'
+                c['election_status'] = 'not_qualified_primary'
+                c['on_primary_ballot'] = False
+                c['on_election_ballot'] = False
+                c['ballot_stage'] = 'primary_not_qualified'
+                lost.append(c)
+                continue
+            won = result[2] if result else True  # no contested result means uncontested nomination
             c['primary_result'] = 'won' if won else 'lost'
             c['election_status'] = 'general_candidate' if won else 'lost_primary'
             c['on_primary_ballot'] = True
@@ -64,7 +77,9 @@ for chamber, districts in payload.get('chambers', {}).items():
         for c in rec['candidates']:
             c['unopposed_general'] = len(active)==1 and c.get('election_status')=='general_candidate'
             party_label = c.get('party_label') or c.get('party_raw') or c.get('party') or ''
-            if c.get('election_status')=='lost_primary':
+            if c.get('election_status')=='not_qualified_primary':
+                label = 'Did Not Qualify for Primary Ballot'
+            elif c.get('election_status')=='lost_primary':
                 label = f'Lost {party_label} Primary'.replace('Democratic Primary','Democratic Primary').replace('Republican Primary','Republican Primary')
             elif c.get('unopposed_general'):
                 label = 'Unopposed in General Election'
