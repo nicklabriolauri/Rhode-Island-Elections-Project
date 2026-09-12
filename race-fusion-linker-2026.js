@@ -1,0 +1,1 @@
+(()=>{if(!location.pathname.toLowerCase().endsWith('/primary-results.html')&&!location.pathname.toLowerCase().endsWith('primary-results.html'))return;const add=()=>{document.querySelectorAll('a.race-page-link[href^="/races/"]').forEach(a=>{a.textContent='Open results & candidate profiles';});};add();[300,900,1600].forEach(t=>setTimeout(add,t));})();
