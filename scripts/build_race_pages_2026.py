@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# refresh 2026-09-12 combined pages
 import json, html
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
@@ -58,7 +59,7 @@ h1{{font-size:clamp(38px,6vw,68px);line-height:1;margin:10px 0 12px;letter-spaci
 <section class="panel" style="margin-top:18px" hidden><h2>2026 primary history</h2><p class="muted">Candidates who did not advance remain available here for historical context.</p><div data-primary-history></div></section>
 <section class="panel" style="margin-top:18px"><h2>About this race page</h2><p class="muted">RIEP publishes district boundaries, candidate status, campaign-finance links, and public filing home-precinct context so journalists, voters, and other organizations can link directly to a stable district page. Exact residential addresses are not published.</p></section>
 </main>
-<script src="/race-page.js?v=20260910a"></script>
+<script src="/race-page.js?v=20260912b"></script>
 </body></html>'''
 
 count=0
