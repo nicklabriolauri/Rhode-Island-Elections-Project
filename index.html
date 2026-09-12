@@ -1029,6 +1029,21 @@
     }
 
     function buildRunningHref(candidate) {
+      const primaryHistory =
+        candidate?.on_primary_ballot === true &&
+        (candidate?.party === "DEM" || candidate?.party === "REP") &&
+        (
+          candidate?.election_status === "lost_primary" ||
+          candidate?.election_status === "not_qualified_primary" ||
+          candidate?.primary_result === "lost" ||
+          candidate?.primary_result === "not_on_ballot"
+        );
+
+      if (primaryHistory) {
+        const partySlug = candidate.party === "DEM" ? "democratic" : "republican";
+        return `/races/${encodeURIComponent(candidate.chamber)}-${encodeURIComponent(candidate.district_number)}-${partySlug}.html`;
+      }
+
       return `running.html?v=20260912c&chamber=${encodeURIComponent(candidate.chamber)}&district=${encodeURIComponent(candidate.district_number)}&election=general`;
     }
 
