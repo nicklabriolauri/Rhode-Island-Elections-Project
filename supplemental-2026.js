@@ -53,9 +53,9 @@
         if(view){view.href=target;view.textContent='View primary results';}
         box.dataset.cardHref=target;box.setAttribute('aria-label',`View ${name} primary results`);
       } else if(s && s.chamber && s.district){
-        const target=`/races/${encodeURIComponent(String(s.chamber).toLowerCase())}-${encodeURIComponent(s.district)}.html`;
+        const target=`/running.html?chamber=${encodeURIComponent(String(s.chamber).toLowerCase())}&district=${encodeURIComponent(s.district)}&election=general`;
         if(view){view.href=target;view.textContent='View race & candidates';}
-        box.dataset.cardHref=target;box.setAttribute('aria-label',`View ${name} race page`);
+        box.dataset.cardHref=target;box.setAttribute('aria-label',`View ${name} race and candidate information`);
       } else if(race){
         const target=primaryTarget(race,name);
         if(view){view.href=target;view.textContent='View primary results';}
