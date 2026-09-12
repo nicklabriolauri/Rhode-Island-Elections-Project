@@ -54,7 +54,7 @@
         box.dataset.cardHref=target;box.setAttribute('aria-label',`View ${name} primary results`);
       } else if(s && s.chamber && s.district){
         const target=`/races/${encodeURIComponent(String(s.chamber).toLowerCase())}-${encodeURIComponent(s.district)}.html`;
-        if(view){view.href=target;view.textContent='View race page';}
+        if(view){view.href=target;view.textContent='View race & candidates';}
         box.dataset.cardHref=target;box.setAttribute('aria-label',`View ${name} race page`);
       } else if(race){
         const target=primaryTarget(race,name);
