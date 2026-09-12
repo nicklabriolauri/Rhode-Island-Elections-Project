@@ -1029,11 +1029,7 @@
     }
 
     function buildRunningHref(candidate) {
-      // Every active 2026 candidate should land on the stable district race page.
-      // That page preserves the full field (including unopposed general-election
-      // candidates) and exposes candidate details such as priorities,
-      // endorsements, ratings, precinct, and campaign-finance links.
-      return `races/${encodeURIComponent(candidate.chamber)}-${encodeURIComponent(candidate.district_number)}.html`;
+      return `running.html?chamber=${encodeURIComponent(candidate.chamber)}&district=${encodeURIComponent(candidate.district_number)}&election=general`;
     }
 
     function buildMeetHref(candidate) {
@@ -1788,7 +1784,7 @@
   })();
   </script>
   <script src="post-primary-2026.js?v=20260910h"></script>
-  <script src="supplemental-2026.js?v=20260910f"></script>
+  <script src="supplemental-2026.js?v=20260912b"></script>
 <script src="/independent-finance-bridge.js?v=20260910h"></script>
 <script src="/independent-finance-bridge.js?v=20260910"></script>
 </body>
