@@ -146,7 +146,7 @@
     <a class="brand" href="index.html"><img src="riep-logo-light.png" alt="Rhode Island Elections Project"><strong>Rhode Island Elections Project</strong></a>
     <nav>
       <a href="index.html">Home</a>
-      <a href="running.html">Races & Candidates</a>
+      <a href="running.html?v=20260912c">Races & Candidates</a>
       <a href="finance.html">Campaign Finance</a>
       <a href="endorsements.html">Endorsements</a>
       <a href="map.html">Election Results</a>
@@ -432,7 +432,7 @@
     return `<section class="race-section">
       <div class="race-head"><div><div class="eyebrow" style="color:#71839c">Your 2026 ${label} race</div><h2>Rhode Island ${label} District ${esc(district)}</h2>
       <div class="race-summary">${candidates.length} primary candidate${candidates.length===1?"":"s"} currently listed. ${record?.general_candidate_total || 0} general-election candidate${Number(record?.general_candidate_total||0)===1?"":"s"} currently preserved in the dataset.</div></div>
-      <div class="actions"><a href="running.html?chamber=${chamber}&district=${encodeURIComponent(district)}">Open full district page</a></div></div>
+      <div class="actions"><a href="running.html?v=20260912c&chamber=${chamber}&district=${encodeURIComponent(district)}">Open full district page</a></div></div>
       <div class="primary-summary">${primary.join("")}</div>
       <div class="candidate-grid">${candidates.length?candidates.map(candidate=>candidateCard({...candidate,chamber,district_number:Number(district)})).join(""):`<div class="empty">No primary candidates are currently listed for this district.</div>`}</div>
     </section>`;
@@ -467,7 +467,7 @@
 })();
 </script>
   <script src="post-primary-2026.js?v=20260910h"></script>
-  <script src="supplemental-2026.js?v=20260910f"></script>
+  <script src="supplemental-2026.js?v=20260912c"></script>
 <script src="/independent-finance-bridge.js?v=20260910h"></script>
 <script src="/independent-finance-bridge.js?v=20260910"></script>
 </body>
