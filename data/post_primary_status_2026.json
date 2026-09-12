@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T15:15:15.218386+00:00",
+  "generated_at": "2026-09-12T15:09:36.374772+00:00",
   "candidates": [
     {
       "candidate_id": "house-1-dem-primary-edith-h-ajello",
@@ -250,8 +250,8 @@
       "party_label": "Democratic",
       "election_status": "general_candidate",
       "primary_result": "won",
-      "unopposed_general": false,
-      "status_label": "Won Democratic Primary"
+      "unopposed_general": true,
+      "status_label": "Unopposed in General Election"
     },
     {
       "candidate_id": "house-14-dem-primary-kassielle-m-ramos",
@@ -260,10 +260,10 @@
       "district": 14,
       "party": "DEM",
       "party_label": "Democratic",
-      "election_status": "general_candidate",
-      "primary_result": "won",
+      "election_status": "not_qualified_primary",
+      "primary_result": "not_on_ballot",
       "unopposed_general": false,
-      "status_label": "Won Democratic Primary"
+      "status_label": "Did Not Qualify for Primary Ballot"
     },
     {
       "candidate_id": "house-14-dem-primary-naiommi-baret",
