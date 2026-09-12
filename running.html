@@ -117,6 +117,10 @@
     .candidate-card{
       border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,#fff,#fbfdff);padding:17px
     }
+    .candidate-card.is-eliminated{opacity:.58;background:#f5f7fa;border-color:#d8e0e9;filter:saturate(.45)}
+    .badge.eliminated{background:#e8edf3;color:#4f5f73;border:1px solid #cbd5e1}
+    .candidate-section-label{grid-column:1/-1;margin:12px 0 0;padding-top:16px;border-top:1px solid #e2e8f0;color:#71839c;font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+
     .candidate-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
     .candidate-name{font-family:Sora,sans-serif;font-size:22px;font-weight:800;letter-spacing:-.04em;color:var(--navy)}
     .candidate-sub{margin-top:5px;color:var(--muted);font-size:12px}
@@ -336,11 +340,15 @@
         <button id="houseBtn" class="active" type="button">State House</button>
         <button id="senateBtn" type="button">State Senate</button>
       </div>
+      <div class="segmented election-mode">
+        <button id="generalModeBtn" class="active" type="button">2026 General</button>
+        <button id="primaryModeBtn" type="button">2026 Primary</button>
+      </div>
       <div class="filters">
         <button class="active" data-filter="all" type="button">All districts</button>
-        <button data-filter="competitive" type="button">Competitive primaries</button>
-        <button data-filter="dem" type="button">Democratic filed</button>
-        <button data-filter="rep" type="button">Republican filed</button>
+        <button data-filter="competitive" type="button">Competitive general</button>
+        <button data-filter="dem" type="button">Democratic nominee</button>
+        <button data-filter="rep" type="button">Republican nominee</button>
       </div>
       <input id="districtSearch" class="search" type="search" placeholder="Search district number or candidate">
     </div>
@@ -348,7 +356,7 @@
     <section class="workspace">
       <div class="map-panel">
         <div id="map"></div>
-        <div class="map-help">Select a district on the map or use the district buttons. Purple indicates candidates from more than one party filed; blue and red indicate only one major party currently filed.</div>
+        <div class="map-help">Select a district on the map or use the district buttons. General map: purple = competitive general election; blue = unopposed Democratic nominee; red = unopposed Republican nominee. Switch to 2026 Primary to review the completed primary field.</div>
       </div>
 
       <aside class="detail-panel">
@@ -375,9 +383,9 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
   (() => {
-    const DATA_URL = "data/whos_running_2026.json?v=20260828-unified";
+    const DATA_URL = "data/whos_running_2026.json?v=20260912-general";
     const PROFILE_URL = "data/candidate_profiles_2026.json?v=20260828-unified";
-    const RESEARCH_URL = "data/candidate_research_2026_with_endorsements.json?v=20260828-phase2";
+    const RESEARCH_URL = "data/candidate_research_2026_with_endorsements.json?v=20260912-general";
     const RATINGS_URL = "data/outside_ratings_2026.json?v=20260829-ratings";
     const OFFICE_URL = "data/incumbent_records_2026.json?v=20260829-office";
     const GEO = {
@@ -395,6 +403,7 @@
     let chamber = "house";
     let selectedDistrict = "1";
     let filter = "all";
+    let electionMode = "general";
     let map = null;
     let layer = null;
     let geoCache = {};
@@ -411,37 +420,76 @@
 
     const getRecord = district => data?.chambers?.[chamber]?.[String(district)] || null;
 
+    function primaryCandidates(record){
+      return (record?.candidates || []).filter(c => c.on_primary_ballot === true);
+    }
+
+    function generalCandidates(record){
+      const seen = new Set();
+      return [...(record?.candidates || []), ...(record?.general_candidates || [])].filter(c => {
+        const key = c.candidate_id || String(c.name || "").toLowerCase();
+        if(seen.has(key)) return false;
+        seen.add(key);
+        return c.election_status === "general_candidate" && c.on_election_ballot !== false;
+      });
+    }
+
+    function historicalCandidates(record){
+      return (record?.candidates || []).filter(c =>
+        c.election_status === "lost_primary" ||
+        c.election_status === "not_qualified_primary" ||
+        c.primary_result === "lost" ||
+        c.primary_result === "not_on_ballot"
+      );
+    }
+
+    function rowsForMode(record){
+      return electionMode === "general" ? generalCandidates(record) : primaryCandidates(record);
+    }
+
     function counts(record){
-      const rows = record?.candidates || [];
+      const rows = rowsForMode(record);
       return {
         dem: rows.filter(c => c.party === "DEM").length,
         rep: rows.filter(c => c.party === "REP").length,
+        ind: rows.filter(c => !["DEM","REP"].includes(c.party)).length,
         total: rows.length
       };
     }
 
     function isCompetitive(record){
+      const rows = rowsForMode(record);
+      if(electionMode === "general") return rows.length > 1;
       const c = counts(record);
       return c.dem > 1 || c.rep > 1;
     }
 
     function matchesFilter(record){
+      const rows = rowsForMode(record);
       const c = counts(record);
       if(filter === "competitive") return isCompetitive(record);
-      if(filter === "dem") return c.dem > 0;
-      if(filter === "rep") return c.rep > 0;
+      if(filter === "dem") return rows.some(x=>x.party==="DEM");
+      if(filter === "rep") return rows.some(x=>x.party==="REP");
       return true;
     }
 
     function districtColor(record) {
       if (!record) return "#d7deea";
+      const rows = rowsForMode(record);
+      if(!rows.length) return "#d7deea";
+
+      if(electionMode === "general"){
+        if(rows.length > 1) return "#7c3aed";
+        if(rows[0].party === "DEM") return "#2764e8";
+        if(rows[0].party === "REP") return "#e4575e";
+        return "#64748b";
+      }
 
       const c = counts(record);
-      if (c.dem > 0 && c.rep > 0) return "#7c3aed";
-      if (c.dem > 0) return "#2764e8";
-      if (c.rep > 0) return "#e4575e";
-      if (c.total > 0) return "#0f9b8e";
-      return "#d7deea";
+      if(c.dem > 1 || c.rep > 1) return "#7c3aed";
+      if(c.dem > 0) return "#2764e8";
+      if(c.rep > 0) return "#e4575e";
+      return "#64748b";
     }
 
     function districtNumberFromFeature(feature) {
@@ -552,7 +600,7 @@
       candidateMarkerLayer.clearLayers();
       if(!record) return;
 
-      const allCandidates = [...(record.candidates || []), ...(record.general_candidates || [])];
+      const allCandidates = rowsForMode(record);
       const candidatesByPrecinct = {};
 
       allCandidates.forEach(candidate => {
@@ -838,8 +886,9 @@
       if(phone) links.push(`<a href="tel:${esc(String(phone).replace(/[^\d+]/g,''))}">Call</a>`);
       links.push(`<a class="finance" href="finance.html?candidate=${encodeURIComponent(candidate.candidate_id)}">Campaign finance</a>`);
 
+      const eliminated = candidate.election_status === "lost_primary" || candidate.election_status === "not_qualified_primary" || candidate.primary_result === "lost" || candidate.primary_result === "not_on_ballot";
       return `
-        <article class="candidate-card">
+        <article class="candidate-card${eliminated ? " is-eliminated" : ""}">
           <div class="candidate-top">
             <div>
               <div class="candidate-name">${esc(profile?.candidate_name || candidate.name)}</div>
@@ -847,6 +896,7 @@
             </div>
             <div class="badges">
               ${partyBadge(candidate)}
+              ${eliminated ? `<span class="badge eliminated">${esc(candidate.status_label || "Primary history")}</span>` : ""}
               ${hasPriorities ? `<span class="badge response">Priorities available</span>` : `<span class="badge">Profile incomplete</span>`}
               ${web?.endorsements?.length ? `<span class="badge response">${web.endorsements.length} endorsement${web.endorsements.length===1?"":"s"}</span>` : ""}
             </div>
@@ -896,32 +946,44 @@
         return;
       }
 
-      const c = counts(rec);
-      document.getElementById("districtSummary").textContent =
-        `${c.total} primary candidate${c.total === 1 ? "" : "s"} currently listed. ${rec.general_candidate_total || 0} general-election candidate${Number(rec.general_candidate_total||0)===1 ? "" : "s"} currently preserved in the dataset.`;
+      const activeGeneral = generalCandidates(rec);
+      const primary = primaryCandidates(rec);
+      const historical = historicalCandidates(rec);
 
-      const boxes = [];
-      if(c.dem > 1){
-        boxes.push(`<div class="primary-box dem"><strong>Competitive Democratic primary</strong><span>${rec.candidates.filter(x=>x.party==="DEM").map(x=>esc(x.name)).join(" vs ")}</span></div>`);
-      } else if(c.dem === 1){
-        boxes.push(`<div class="primary-box dem"><strong>Democratic filing</strong><span>${esc(rec.candidates.find(x=>x.party==="DEM").name)}</span></div>`);
+      if(electionMode === "general"){
+        document.getElementById("districtSummary").textContent =
+          activeGeneral.length === 0 ? "No general-election candidate currently listed." :
+          activeGeneral.length === 1 ? `1 general-election candidate · ${activeGeneral[0].party_label || activeGeneral[0].party_raw || activeGeneral[0].party} nominee is unopposed.` :
+          `${activeGeneral.length} general-election candidates currently listed.`;
+
+        const parties=[...new Set(activeGeneral.map(c=>c.party_label || c.party_raw || c.party))];
+        document.getElementById("primarySummary").innerHTML = activeGeneral.length
+          ? `<div class="primary-box"><strong>${activeGeneral.length > 1 ? "Competitive general election" : "Unopposed general election"}</strong><span>${activeGeneral.map(x=>esc(x.name)).join(" vs ")}${parties.length ? " · "+parties.map(esc).join(" / ") : ""}</span></div>`
+          : `<div class="primary-box"><strong>No general-election candidate</strong><span>No active November candidate is currently listed.</span></div>`;
+
+        const sections=[];
+        if(activeGeneral.length) sections.push(activeGeneral.map(c=>candidateCard(c,selectedDistrict)).join(""));
+        if(historical.length){
+          sections.push(`<div class="candidate-section-label">2026 primary history</div>`);
+          sections.push(historical.map(c=>candidateCard(c,selectedDistrict)).join(""));
+        }
+        document.getElementById("candidateGrid").innerHTML = sections.join("") || `<div class="empty">No candidates currently listed.</div>`;
+      } else {
+        const c = counts(rec);
+        document.getElementById("districtSummary").textContent =
+          `${primary.length} primary candidate${primary.length===1?"":"s"} on the 2026 primary ballot.`;
+
+        const boxes=[];
+        const dem=primary.filter(x=>x.party==="DEM"), rep=primary.filter(x=>x.party==="REP");
+        if(dem.length>1) boxes.push(`<div class="primary-box dem"><strong>Democratic primary</strong><span>${dem.map(x=>esc(x.name)).join(" vs ")}</span></div>`);
+        else if(dem.length===1) boxes.push(`<div class="primary-box dem"><strong>Democratic primary ballot</strong><span>${esc(dem[0].name)}</span></div>`);
+        if(rep.length>1) boxes.push(`<div class="primary-box rep"><strong>Republican primary</strong><span>${rep.map(x=>esc(x.name)).join(" vs ")}</span></div>`);
+        else if(rep.length===1) boxes.push(`<div class="primary-box rep"><strong>Republican primary ballot</strong><span>${esc(rep[0].name)}</span></div>`);
+        document.getElementById("primarySummary").innerHTML = boxes.join("") || `<div class="primary-box"><strong>No major-party primary</strong><span>No Democratic or Republican primary ballot was required in this district.</span></div>`;
+        document.getElementById("candidateGrid").innerHTML = primary.length
+          ? primary.map(c=>candidateCard(c,selectedDistrict)).join("")
+          : `<div class="empty">No primary candidates listed.</div>`;
       }
-
-      if(c.rep > 1){
-        boxes.push(`<div class="primary-box rep"><strong>Competitive Republican primary</strong><span>${rec.candidates.filter(x=>x.party==="REP").map(x=>esc(x.name)).join(" vs ")}</span></div>`);
-      } else if(c.rep === 1){
-        boxes.push(`<div class="primary-box rep"><strong>Republican filing</strong><span>${esc(rec.candidates.find(x=>x.party==="REP").name)}</span></div>`);
-      }
-
-      if(!boxes.length){
-        boxes.push(`<div class="primary-box"><strong>No active major-party primary</strong><span>No Democratic or Republican primary candidate is currently listed in this district.</span></div>`);
-      }
-      document.getElementById("primarySummary").innerHTML = boxes.join("");
-
-      const candidates = rec.candidates || [];
-      document.getElementById("candidateGrid").innerHTML = candidates.length
-        ? candidates.map(cand => candidateCard(cand, selectedDistrict)).join("")
-        : `<div class="empty">No primary candidates are currently listed for this district.</div>`;
     }
 
     async function selectDistrict(district, updateUrl=false){
@@ -976,6 +1038,7 @@
         const params = new URLSearchParams(location.search);
         params.set("chamber", chamber);
         params.set("district", selectedDistrict);
+        params.set("election", electionMode);
         history.replaceState({}, "", `${location.pathname}?${params.toString()}`);
       }
 
@@ -986,6 +1049,8 @@
       chamber = next;
       document.getElementById("houseBtn").classList.toggle("active", chamber==="house");
       document.getElementById("senateBtn").classList.toggle("active", chamber==="senate");
+      document.getElementById("generalModeBtn").classList.toggle("active", electionMode==="general");
+      document.getElementById("primaryModeBtn").classList.toggle("active", electionMode==="primary");
 
       const max = chamber === "house" ? 75 : 38;
       if(Number(selectedDistrict) > max) selectedDistrict = "1";
@@ -1001,6 +1066,28 @@
       document.getElementById("houseBtn").addEventListener("click",()=>setChamber("house"));
       document.getElementById("senateBtn").addEventListener("click",()=>setChamber("senate"));
       document.getElementById("districtSearch").addEventListener("input",renderDistrictList);
+
+      const setElectionMode = async next => {
+        electionMode = next;
+        filter = "all";
+        document.getElementById("generalModeBtn").classList.toggle("active", electionMode==="general");
+        document.getElementById("primaryModeBtn").classList.toggle("active", electionMode==="primary");
+        const filterButtons=[...document.querySelectorAll("[data-filter]")];
+        filterButtons.forEach(x=>x.classList.toggle("active",x.dataset.filter==="all"));
+        const labels = electionMode==="general"
+          ? {all:"All districts",competitive:"Competitive general",dem:"Democratic nominee",rep:"Republican nominee"}
+          : {all:"All districts",competitive:"Competitive primaries",dem:"Democratic primary",rep:"Republican primary"};
+        filterButtons.forEach(x=>x.textContent=labels[x.dataset.filter]||x.textContent);
+        document.querySelector(".map-help").textContent = electionMode==="general"
+          ? "2026 General: purple = competitive race; blue = unopposed Democratic nominee; red = unopposed Republican nominee; gray = unopposed independent/other candidate."
+          : "2026 Primary: purple = competitive major-party primary; blue = Democratic primary; red = Republican primary. Primary results and eliminated candidates are preserved in this view.";
+        renderDistrictList();
+        renderDetails();
+        await drawMap();
+        renderSelectedDistrictMarkers(getRecord(selectedDistrict));
+      };
+      document.getElementById("generalModeBtn").addEventListener("click",()=>setElectionMode("general"));
+      document.getElementById("primaryModeBtn").addEventListener("click",()=>setElectionMode("primary"));
 
       document.querySelectorAll("[data-filter]").forEach(btn=>{
         btn.addEventListener("click",async()=>{
@@ -1093,8 +1180,10 @@
       const params = new URLSearchParams(location.search);
       const requestedChamber = params.get("chamber");
       const requestedDistrict = params.get("district");
+      const requestedElection = params.get("election");
       if(["house","senate"].includes(requestedChamber)) chamber = requestedChamber;
       if(requestedDistrict) selectedDistrict = requestedDistrict;
+      if(["general","primary"].includes(requestedElection)) electionMode = requestedElection;
 
       initEvents();
       document.getElementById("houseBtn").classList.toggle("active", chamber==="house");
