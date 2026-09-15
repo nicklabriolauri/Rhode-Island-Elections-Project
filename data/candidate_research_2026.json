@@ -910,8 +910,31 @@
       "website_status": "no_official_campaign_site_located",
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
-      "priorities": [],
-      "endorsements": []
+      "priorities": [
+        {
+          "title": "Local Control of Zoning",
+          "description": "Opposes state-level zoning mandates that override local decision-making and supports preserving municipal authority over local land-use and zoning policy."
+        },
+        {
+          "title": "Electricity Costs and Climate Policy",
+          "description": "Seeks to reduce electricity costs and opposes state climate and energy policies that he argues increase utility bills for Rhode Island residents and businesses."
+        },
+        {
+          "title": "Unfunded Mandates",
+          "description": "Opposes unfunded state mandates that require municipalities or other local entities to implement policies without sufficient state funding."
+        },
+        {
+          "title": "Second Amendment Rights",
+          "description": "Supports strong protections for Second Amendment rights, including constitutional carry, interstate reciprocity for firearm permits, and legal access to suppressors."
+        },
+        {
+          "title": "Agriculture and Rural Communities",
+          "description": "Supports policies addressing the needs of farmers, agricultural businesses, and rural communities, with an emphasis on protecting Rhode Island agriculture and the rural economy."
+        }
+      ],
+      "endorsements": [],
+      "priorities_source": "candidate_response",
+      "priorities_source_note": "Candidate priorities provided directly to the Rhode Island Elections Project."
     },
     {
       "candidate_id": "senate-22-dem-primary-david-p-tikoian",
