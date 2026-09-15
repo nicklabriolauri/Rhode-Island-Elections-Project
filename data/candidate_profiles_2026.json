@@ -324,35 +324,45 @@
       "response_status": "published_source",
       "summary": "Campaign priorities summarized from Jonathon Acosta's published campaign website.",
       "issue_tags": [
+        "criminal-justice",
+        "healthcare",
+        "taxes",
+        "housing",
         "jobs",
         "environment",
-        "housing",
-        "healthcare",
         "education"
       ],
       "priorities": [
         {
-          "title": "Jobs and wages",
-          "summary": "Supports a $15 minimum wage with a cost-of-living provision and equal pay for equal work."
+          "title": "Criminal Justice Reform",
+          "summary": "Supports reforming solitary confinement and restrictive housing, including oversight of its use in Rhode Island correctional facilities."
         },
         {
-          "title": "Climate and clean energy",
-          "summary": "Supports a Green New Deal and a transition to 100% clean energy by 2030."
+          "title": "Health Care",
+          "summary": "Supports protecting and expanding health-care access, including Medicaid, and opposing reductions that would restrict coverage or services."
         },
         {
-          "title": "Affordable housing",
-          "summary": "Supports a recurring state budget commitment for affordable housing."
+          "title": "Progressive Taxation",
+          "summary": "Supports a higher income-tax rate on high-income earners. The 2026 proposal would add a 3% rate on taxable income above $640,000; earlier versions used a lower inflation-adjusted threshold."
         },
         {
-          "title": "Healthcare",
-          "summary": "Supports a single-payer health insurance system and access to women's health care."
+          "title": "Housing",
+          "summary": "Supports expanding affordable housing and policies intended to increase the development and preservation of affordable homes."
+        },
+        {
+          "title": "Jobs and Wages",
+          "summary": "Supports policies aimed at increasing wages and improving economic conditions for working families."
+        },
+        {
+          "title": "Climate and Clean Energy",
+          "summary": "Supports policies to accelerate clean-energy development and address climate change."
         },
         {
           "title": "Education",
-          "summary": "Supports increased public-education funding, changes to the funding formula, additional support for special populations, low-income students and English-language learners, and tuition-free public college."
+          "summary": "Supports increased public-education funding and additional support for high-need students, multilingual learners, and other special populations."
         }
       ],
-      "source_label": "Official campaign website",
+      "source_label": "Official campaign website and Rhode Island General Assembly legislative record",
       "source_url": "https://www.jonacosta.com/"
     }
   ]
