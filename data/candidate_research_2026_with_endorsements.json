@@ -660,8 +660,8 @@
       "chamber": "senate",
       "district_number": 16,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
+      "campaign_website": "https://www.jonacosta.com/",
+      "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
@@ -670,12 +670,6 @@
           "name": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
           "source_type": "endorser"
-        },
-        {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
         },
         {
           "organization": "Providence Streets Coalition",
