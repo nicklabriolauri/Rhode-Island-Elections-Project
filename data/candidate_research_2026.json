@@ -667,15 +667,22 @@
       "priorities": [],
       "endorsements": [
         {
-          "name": "Clean Water Action",
+          "organization": "Clean Water Action",
           "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "source_type": "endorser_official_source",
+          "date_checked": "2026-09-15"
         },
         {
           "organization": "Providence Streets Coalition",
           "source_url": "https://pvdstreets.org/vote/",
           "source_type": "endorser_official_source",
-          "date_checked": "2026-09-11"
+          "date_checked": "2026-09-15"
+        },
+        {
+          "organization": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements",
+          "source_type": "endorser_official_source",
+          "date_checked": "2026-09-15"
         }
       ]
     },
@@ -4555,6 +4562,6 @@
       ]
     }
   ],
-  "endorsement_research_updated_at": "2026-08-28",
+  "endorsement_research_updated_at": "2026-09-15",
   "endorsement_methodology": "Endorsements are included only when an endorsing organization or candidate's official campaign site explicitly states the endorsement. Donations, event appearances, photos, and inferred support are excluded. Existing candidate priority lists are not modified by this endorsement update."
 }
