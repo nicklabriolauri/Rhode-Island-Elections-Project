@@ -3,18 +3,54 @@
   "project_name": "Meet the Candidates",
   "questionnaire_prompt": "Select up to five issues that matter most to you, then choose your House or Senate district to compare candidate priorities.",
   "issue_catalog": [
-    { "id": "affordability", "label": "Affordability" },
-    { "id": "housing", "label": "Housing" },
-    { "id": "healthcare", "label": "Healthcare" },
-    { "id": "mental-health", "label": "Mental health" },
-    { "id": "accountability", "label": "Government accountability" },
-    { "id": "economy", "label": "Economy" },
-    { "id": "jobs", "label": "Jobs and wages" },
-    { "id": "small-business", "label": "Small business" },
-    { "id": "education", "label": "Education" },
-    { "id": "infrastructure", "label": "Infrastructure" },
-    { "id": "energy", "label": "Energy costs" },
-    { "id": "environment", "label": "Environment" }
+    {
+      "id": "affordability",
+      "label": "Affordability"
+    },
+    {
+      "id": "housing",
+      "label": "Housing"
+    },
+    {
+      "id": "healthcare",
+      "label": "Healthcare"
+    },
+    {
+      "id": "mental-health",
+      "label": "Mental health"
+    },
+    {
+      "id": "accountability",
+      "label": "Government accountability"
+    },
+    {
+      "id": "economy",
+      "label": "Economy"
+    },
+    {
+      "id": "jobs",
+      "label": "Jobs and wages"
+    },
+    {
+      "id": "small-business",
+      "label": "Small business"
+    },
+    {
+      "id": "education",
+      "label": "Education"
+    },
+    {
+      "id": "infrastructure",
+      "label": "Infrastructure"
+    },
+    {
+      "id": "energy",
+      "label": "Energy costs"
+    },
+    {
+      "id": "environment",
+      "label": "Environment"
+    }
   ],
   "profiles": [
     {
@@ -277,6 +313,47 @@
           "summary": "Garman argues that Rhode Island's tax structure should be more equitable and that those with the most should pay their fair share to support safety-net programs such as Medicaid and SNAP. He supports investing in public services and safety-net programs so Rhode Island is affordable and attractive for residents."
         }
       ]
+    },
+    {
+      "candidate_id": "senate-16-dem-primary-jonathon-acosta",
+      "candidate_name": "Jonathon Acosta",
+      "chamber": "senate",
+      "district_number": 16,
+      "party": "DEM",
+      "ballot_stage": "general",
+      "response_status": "published_source",
+      "summary": "Campaign priorities summarized from Jonathon Acosta's published campaign website.",
+      "issue_tags": [
+        "jobs",
+        "environment",
+        "housing",
+        "healthcare",
+        "education"
+      ],
+      "priorities": [
+        {
+          "title": "Jobs and wages",
+          "summary": "Supports a $15 minimum wage with a cost-of-living provision and equal pay for equal work."
+        },
+        {
+          "title": "Climate and clean energy",
+          "summary": "Supports a Green New Deal and a transition to 100% clean energy by 2030."
+        },
+        {
+          "title": "Affordable housing",
+          "summary": "Supports a recurring state budget commitment for affordable housing."
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Supports a single-payer health insurance system and access to women's health care."
+        },
+        {
+          "title": "Education",
+          "summary": "Supports increased public-education funding, changes to the funding formula, additional support for special populations, low-income students and English-language learners, and tuition-free public college."
+        }
+      ],
+      "source_label": "Official campaign website",
+      "source_url": "https://www.jonacosta.com/"
     }
   ]
 }
