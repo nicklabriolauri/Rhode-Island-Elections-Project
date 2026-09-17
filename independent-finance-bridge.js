@@ -14,6 +14,45 @@
       });
     });
   }
+  function isRobertCravenJrName(value){
+    const t=String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+    return t.includes('robert') && t.includes('craven') && (t.includes(' jr') || t.includes('junior'));
+  }
+  function fixCravenJr(root=document){
+    if(!root.querySelectorAll)return;
+    root.querySelectorAll('.hero-search-match').forEach(card=>{
+      const name=card.querySelector('.hero-search-match-name')?.textContent||'';
+      if(!isRobertCravenJrName(name))return;
+      card.querySelectorAll('.hero-search-match-status.is-incumbent').forEach(n=>n.remove());
+      card.querySelectorAll('.hero-search-result-grid').forEach(grid=>{
+        const label=grid.querySelector('.hero-search-result-label')?.textContent||'';
+        if(/2024 candidate performance/i.test(label))grid.remove();
+      });
+    });
+    root.querySelectorAll('.candidate-card').forEach(card=>{
+      const name=card.querySelector('.candidate-name')?.textContent||'';
+      if(!isRobertCravenJrName(name))return;
+      card.querySelectorAll('.office-record,.outside-rating-block').forEach(n=>n.remove());
+    });
+  }
+  function dedupeEndorsements(root=document){
+    if(!root.querySelectorAll)return;
+    root.querySelectorAll('.endorsement-block').forEach(block=>{
+      const seen=new Set();
+      block.querySelectorAll('.endorsement-chip').forEach(chip=>{
+        const key=String(chip.textContent||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+        if(!key)return;
+        if(seen.has(key))chip.remove(); else seen.add(key);
+      });
+      const card=block.closest('.candidate-card');
+      if(card){
+        const count=block.querySelectorAll('.endorsement-chip').length;
+        const badge=[...card.querySelectorAll('.badge.response')].find(b=>/endorsement/i.test(b.textContent||''));
+        if(badge)badge.textContent=`${count} endorsement${count===1?'':'s'}`;
+      }
+    });
+  }
+  function applyCorrections(root=document){fixCravenJr(root);dedupeEndorsements(root);}
   function reroute(root=document){
     if(!root.querySelectorAll)return;
     root.querySelectorAll('a[href*="finance.html?candidate="]').forEach(a=>{
@@ -29,14 +68,23 @@
       if(a) a.href=rec.url;
     });
     cleanBallotFinance(root);
+    applyCorrections(root);
   }
   fetch('/data/independent_finance_index_2026.json?v=20260910',{cache:'no-store'}).then(r=>r.json()).then(p=>{
     (p.candidates||[]).forEach(c=>{mapById.set(c.candidate_id,c);mapByName.set(norm(c.name),c)});
     reroute();
-    [200,600,1400].forEach(ms=>setTimeout(()=>reroute(document),ms));
+    [100,250,600,1200,2500].forEach(ms=>setTimeout(()=>reroute(document),ms));
     let timer=0;
-    const refresh=()=>{clearTimeout(timer);timer=setTimeout(()=>reroute(document),80);};
+    const refresh=()=>{clearTimeout(timer);timer=setTimeout(()=>reroute(document),60);};
     document.addEventListener('input',refresh,true);
     document.addEventListener('change',refresh,true);
-  }).catch(e=>console.warn('Independent finance routing:',e));
+    document.addEventListener('click',()=>setTimeout(()=>reroute(document),80),true);
+    const observer=new MutationObserver(()=>refresh());
+    observer.observe(document.body,{childList:true,subtree:true});
+  }).catch(e=>{
+    console.warn('Independent finance routing:',e);
+    applyCorrections(document);
+    const observer=new MutationObserver(()=>applyCorrections(document));
+    observer.observe(document.body,{childList:true,subtree:true});
+  });
 })();
