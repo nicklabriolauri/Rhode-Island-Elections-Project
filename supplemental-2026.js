@@ -70,6 +70,15 @@
     root.querySelectorAll('.candidate-name,[data-candidate-name],.hero-search-match-name,h2,h3,h4').forEach(el=>{const route=financeByName.get(norm(el.textContent));if(!route)return;const box=candidateBox(el);if(!box)return;const a=[...box.querySelectorAll('a')].find(x=>/campaign finance/i.test(x.textContent||''));if(a)a.href=route;});
   }
   function cleanBallotFinance(root=document){if(!isBallot||!root.querySelectorAll)return;root.querySelectorAll('.riep-finance-supplement,.independent-finance-summary,[data-riep-finance-summary]').forEach(n=>n.remove());}
+  function removeCravenJrIncumbency(root=document){
+    if(!root.querySelectorAll)return;
+    root.querySelectorAll('.candidate-card').forEach(card=>{
+      const name=(card.querySelector('.candidate-name')?.textContent||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+      if(name.includes('robert') && name.includes('craven') && (name.includes('jr') || name.includes('junior'))){
+        card.querySelectorAll('.office-record').forEach(node=>node.remove());
+      }
+    });
+  }
   function findRaceCard(r){const title=`${String(r.chamber).toLowerCase()==='house'?'House':'Senate'} District ${Number(r.district||r.district_number)}`;return [...document.querySelectorAll('.race-card')].find(c=>{const h=c.querySelector('h3');if(!h||!h.textContent.includes(title))return false;const pill=c.querySelector('.party-pill');return !pill||norm(pill.textContent).includes(norm(String(r.party||'').replace('DEM','Democratic').replace('REP','Republican')));});}
   function decoratePrimaryResults(){
     if(!isPrimaryResults)return;
@@ -80,7 +89,7 @@
     });
     const q=new URLSearchParams(location.search),ch=q.get('chamber'),d=Number(q.get('district')||0),candidate=q.get('candidate');if(ch&&d){const r=resultRaces.find(x=>String(x.chamber).toLowerCase()===String(ch).toLowerCase()&&Number(x.district||x.district_number)===d&&(!q.get('party')||partyCode(x.party)===partyCode(q.get('party'))));const card=r&&findRaceCard(r);if(card){card.classList.add('riep-result-focus');if(candidate){const row=[...card.querySelectorAll('.candidate-row')].find(x=>norm(x.querySelector('.candidate-name')?.textContent)===norm(candidate));if(row)row.classList.add('riep-candidate-focus');}setTimeout(()=>card.scrollIntoView({behavior:'smooth',block:'center'}),100);}}
   }
-  function decorate(root=document){decorateSearch(root);routeFinance(root);cleanBallotFinance(root);if(root===document)decoratePrimaryResults();}
+  function decorate(root=document){decorateSearch(root);routeFinance(root);cleanBallotFinance(root);removeCravenJrIncumbency(root);if(root===document)decoratePrimaryResults();}
   const loadJSON=url=>fetch(url,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(url+' '+r.status);return r.json();}).catch(e=>{console.warn('RIEP optional data load:',e);return {};});
   Promise.all([
     loadJSON('/data/post_primary_status_2026.json?v=20260910g'),
@@ -93,9 +102,6 @@
     (ind.candidates||[]).forEach(x=>{financeByName.set(norm(x.name),x.url);financeById.set(x.candidate_id,x.url);});
     resultRaces=res.races||[];resultRaces.forEach(r=>(r.candidates||[]).forEach(c=>contestedByCandidate.set(norm(c.name),r)));
     decorate(document);
-
-    // Avoid persistent DOM observers: they can loop with dynamic search/result renderers.
-    // Use a few bounded passes plus user-input hooks so navigation stays responsive.
     [150,500,1200].forEach(ms=>setTimeout(()=>decorate(document),ms));
     let inputTimer=0;
     const refreshAfterInput=()=>{
