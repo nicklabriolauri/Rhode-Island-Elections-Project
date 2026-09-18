@@ -2587,7 +2587,7 @@
     }
 
     function buildDonorHighlights(profile) {
-      const donors = (profile.top_donors || []).slice(0, 10);
+      const donors = profile.slug === "robert-e-craven-jr" ? (profile.top_donors || []) : (profile.top_donors || []).slice(0, 10);
       if (!donors.length) {
         const unnamedBucket = (profile.source_buckets || []).find(bucket => normalizeBucketClass(bucket) === "aggregate");
         return `
