@@ -2670,7 +2670,7 @@
         <article class="panel section-card jump-target" id="spending-breakdown">
           <div class="section-label">Spending breakdown</div>
           <h3>What the money was spent on${buildHelp("This section summarizes the visible spending categories described in the filing. Use the original PDF links on this page if you want to verify the exact line items yourself.")}</h3>
-          <p class="section-copy">The filing does report what the money was spent on. This page groups those outlays into a few readable categories so visitors do not have to parse every line item first.</p>
+          <p class="section-copy">The filing reports what the money was spent on. This page groups those outlays into clear spending categories for an at-a-glance overview.</p>
           <div class="spending-list">
             ${categories.map((item, index) => `
               <div class="spending-item">
@@ -2679,18 +2679,7 @@
                   <div>
                     <div class="spending-title">${escapeHtml(item.title || item.label || "Campaign spending")}</div>
                     <div class="spending-copy">${escapeHtml(item.summary || item.description || "")}</div>
-                    ${Array.isArray(item.items) && item.items.length ? `
-                      <div class="spending-detail-list">
-                        ${item.items.map(detail => `
-                          <div class="spending-detail-row">
-                            <span class="spending-detail-date">${escapeHtml(detail.date || "")}</span>
-                            <span class="spending-detail-vendor">${escapeHtml(detail.vendor || "Unitemized / aggregate")}</span>
-                            <span class="spending-detail-purpose">${escapeHtml(detail.purpose || "")}</span>
-                            <span class="spending-detail-amount">${formatCurrency(detail.amount)}</span>
-                          </div>
-                        `).join("")}
-                      </div>
-                    ` : ""}
+
                   </div>
                   ${typeof item.amount === "number" ? `<div class="spending-amount">${formatCurrency(item.amount)}</div>` : ""}
                 </div>
