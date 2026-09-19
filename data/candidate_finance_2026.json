@@ -8129,7 +8129,28 @@
           "interest_group": "Education / Labor"
         }
       ],
-      "spending_categories": [],
+      "spending_categories": [
+        {
+          "label": "Political Donations",
+          "amount": 2000,
+          "description": "Contributions to other political committees/candidates reported as political donations."
+        },
+        {
+          "label": "Food, Beverages and Meals",
+          "amount": 858.24,
+          "description": "Food, beverages and meals reported in the Q2 filing."
+        },
+        {
+          "label": "Advertising",
+          "amount": 390,
+          "description": "USPS stamps for constituent mailings, reported as advertising."
+        },
+        {
+          "label": "Bank Fees",
+          "amount": 3.93,
+          "description": "Bank fees reported as aggregate expenditure."
+        }
+      ],
       "takeaways": [],
       "explainer_cards": [],
       "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing."
@@ -8277,7 +8298,48 @@
           "notes": "Three $20 contributions during the filing period."
         }
       ],
-      "spending_categories": [],
+      "spending_categories": [
+        {
+          "label": "Office Equipment & Supplies",
+          "amount": 766.36,
+          "description": "Office equipment, supplies, subscriptions and related items reported under this filing category."
+        },
+        {
+          "label": "Political Donations",
+          "amount": 650,
+          "description": "Political donations reported in the Q2 filing."
+        },
+        {
+          "label": "Donations (All Others)",
+          "amount": 495.88,
+          "description": "Non-political donations reported in the Q2 filing."
+        },
+        {
+          "label": "Food, Beverages and Meals",
+          "amount": 241.01,
+          "description": "Food, beverages and meals reported in the Q2 filing."
+        },
+        {
+          "label": "Advertising",
+          "amount": 155,
+          "description": "Advertising reported in the Q2 filing."
+        },
+        {
+          "label": "Consultant & Professional Services",
+          "amount": 64.2,
+          "description": "Consultant and professional services reported in the Q2 filing."
+        },
+        {
+          "label": "Travel & Lodging",
+          "amount": 41.22,
+          "description": "Travel and lodging reported in the Q2 filing."
+        },
+        {
+          "label": "Bank Fees",
+          "amount": 31.1,
+          "description": "ActBlue processing/bank fees reported in the Q2 filing."
+        }
+      ],
       "takeaways": [],
       "explainer_cards": [],
       "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing."
@@ -8466,7 +8528,18 @@
           "interest_group": "Education / Labor"
         }
       ],
-      "spending_categories": [],
+      "spending_categories": [
+        {
+          "label": "Political Donations",
+          "amount": 1000,
+          "description": "Political donation reported in the Q2 filing."
+        },
+        {
+          "label": "Donations (All Others)",
+          "amount": 405,
+          "description": "Other donations reported in the Q2 filing."
+        }
+      ],
       "takeaways": [],
       "explainer_cards": [],
       "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing."
@@ -8597,7 +8670,48 @@
           "interest_group": "Labor / Unions"
         }
       ],
-      "spending_categories": [],
+      "spending_categories": [
+        {
+          "label": "Consultant & Professional Services",
+          "amount": 4517.59,
+          "description": "Website, printing, canvassing materials, mailings and related professional services reported in the Q2 filing."
+        },
+        {
+          "label": "Food, Beverages and Meals",
+          "amount": 2234.87,
+          "description": "Food, beverages and meals reported in the Q2 filing."
+        },
+        {
+          "label": "Office Equipment & Supplies",
+          "amount": 1233.21,
+          "description": "Printing and canvassing supplies reported in the Q2 filing."
+        },
+        {
+          "label": "Fundraising Expenses",
+          "amount": 790.9,
+          "description": "Fundraising expenses reported in the Q2 filing."
+        },
+        {
+          "label": "Advertising",
+          "amount": 525,
+          "description": "Social-media advertising reported in the Q2 filing."
+        },
+        {
+          "label": "Donations (All Others)",
+          "amount": 250,
+          "description": "Other donations reported in the Q2 filing."
+        },
+        {
+          "label": "Bank Fees",
+          "amount": 63.59,
+          "description": "ActBlue processing fees reported as aggregate expenditure."
+        },
+        {
+          "label": "Travel & Lodging",
+          "amount": 60.65,
+          "description": "Travel and lodging reported in the Q2 filing."
+        }
+      ],
       "takeaways": [],
       "explainer_cards": [],
       "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing."
