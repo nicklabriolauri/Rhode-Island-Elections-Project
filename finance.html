@@ -1248,6 +1248,29 @@
       line-height: 1.6;
     }
 
+    .spending-detail-list {
+      display: grid;
+      gap: 7px;
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid #e6edf5;
+    }
+    .spending-detail-row {
+      display: grid;
+      grid-template-columns: 88px minmax(130px, 1.2fr) minmax(150px, 1.8fr) auto;
+      gap: 10px;
+      align-items: baseline;
+      color: #5f738b;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+    .spending-detail-vendor { color: var(--navy); font-weight: 800; }
+    .spending-detail-amount { color: var(--navy); font-weight: 900; white-space: nowrap; text-align: right; }
+    @media (max-width: 700px) {
+      .spending-detail-row { grid-template-columns: 1fr auto; }
+      .spending-detail-date, .spending-detail-purpose { grid-column: 1 / -1; }
+    }
+
     .spending-footer {
       margin-top: 16px;
       padding-top: 14px;
@@ -2645,6 +2668,18 @@
                   <div>
                     <div class="spending-title">${escapeHtml(item.title || item.label || "Campaign spending")}</div>
                     <div class="spending-copy">${escapeHtml(item.summary || item.description || "")}</div>
+                    ${Array.isArray(item.items) && item.items.length ? `
+                      <div class="spending-detail-list">
+                        ${item.items.map(detail => `
+                          <div class="spending-detail-row">
+                            <span class="spending-detail-date">${escapeHtml(detail.date || "")}</span>
+                            <span class="spending-detail-vendor">${escapeHtml(detail.vendor || "Unitemized / aggregate")}</span>
+                            <span class="spending-detail-purpose">${escapeHtml(detail.purpose || "")}</span>
+                            <span class="spending-detail-amount">${formatCurrency(detail.amount)}</span>
+                          </div>
+                        `).join("")}
+                      </div>
+                    ` : ""}
                   </div>
                   ${typeof item.amount === "number" ? `<div class="spending-amount">${formatCurrency(item.amount)}</div>` : ""}
                 </div>
