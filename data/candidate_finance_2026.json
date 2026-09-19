@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T18:56:18.363Z",
+  "generated_at": "2026-09-19T19:06:15.489Z",
   "cycle": "2026-q2",
   "directory": [
     {
@@ -16917,8 +16917,8 @@
       "office_sought": "State Senator",
       "report_label": "Q2 2026 campaign finance filing",
       "reporting_period_label": "April 1, 2026 to June 30, 2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
       "original_documents": [],
       "beginning_cash": 12251.72,
       "money_raised": 21330,
@@ -16928,7 +16928,7 @@
       "total_cash_receipts": 21330,
       "campaign_expenses": 0,
       "aggregate_expenses": 6531.75,
-      "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "This profile uses Stefano V Famiglietti's original Q2 2026 filing for contribution and spending-category detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -16951,16 +16951,153 @@
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
+          "label": "Aggregate individual contributions",
+          "amount": 15980,
           "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 21330,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "description": "Individual contributions reported in aggregate."
+        },
+        {
+          "label": "Itemized individual donors",
+          "amount": 4050,
+          "class_name": "itemized-individual-donors",
+          "description": "14 named individual contribution records."
+        },
+        {
+          "label": "PAC contributions",
+          "amount": 1300,
+          "class_name": "pac-contributions",
+          "description": "5 named PAC contribution records."
         }
       ],
-      "top_donors": [],
-      "spending_categories": [],
+      "top_donors": [
+        {
+          "donor": "Deborah Mercure",
+          "amount": 500,
+          "type": "Individual"
+        },
+        {
+          "donor": "Edward Albert",
+          "amount": 500,
+          "type": "Individual"
+        },
+        {
+          "donor": "RI Brotherhood Of Correctional Officers PAC",
+          "amount": 300,
+          "type": "PAC",
+          "interest_group": "Public Safety / Labor"
+        },
+        {
+          "donor": "Val Lawson",
+          "amount": 300,
+          "type": "Individual"
+        },
+        {
+          "donor": "Anthony Thompson",
+          "amount": 250,
+          "type": "Individual"
+        },
+        {
+          "donor": "Charles Garganese",
+          "amount": 250,
+          "type": "Individual"
+        },
+        {
+          "donor": "David Tikoian",
+          "amount": 250,
+          "type": "Individual"
+        },
+        {
+          "donor": "Domenic Greico",
+          "amount": 250,
+          "type": "Individual"
+        },
+        {
+          "donor": "Dominick J Ruggerio",
+          "amount": 250,
+          "type": "Individual"
+        },
+        {
+          "donor": "Elvira Famiglietti",
+          "amount": 250,
+          "type": "Individual"
+        },
+        {
+          "donor": "Karin Gormin",
+          "amount": 250,
+          "type": "Individual"
+        },
+        {
+          "donor": "Lawrance Mancini",
+          "amount": 250,
+          "type": "Individual"
+        },
+        {
+          "donor": "Lisa Andosia",
+          "amount": 250,
+          "type": "Individual"
+        },
+        {
+          "donor": "RI Troopers Association PAC",
+          "amount": 250,
+          "type": "PAC",
+          "interest_group": "Public Safety / Labor"
+        },
+        {
+          "donor": "Rocco Quattrocchi",
+          "amount": 250,
+          "type": "Individual"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Donations (All Others)",
+          "amount": 2093.13,
+          "description": "Non-political donations and sponsorships."
+        },
+        {
+          "label": "Food, Beverages and Meals",
+          "amount": 1664.8,
+          "description": "Meals and refreshments connected with campaign activity."
+        },
+        {
+          "label": "Donations (Political)",
+          "amount": 1400,
+          "description": "Political donations."
+        },
+        {
+          "label": "Fundraising Expenses",
+          "amount": 550,
+          "description": "Fundraising-related expenses."
+        },
+        {
+          "label": "Advertising",
+          "amount": 324.21,
+          "description": "Advertising and campaign promotion."
+        },
+        {
+          "label": "Other",
+          "amount": 312,
+          "description": "Other campaign expenditures reported in the filing."
+        },
+        {
+          "label": "Office Equipment & Supplies",
+          "amount": 178.61,
+          "description": "Office equipment and supplies."
+        },
+        {
+          "label": "Bank Fees",
+          "amount": 9,
+          "description": "Payment-processing and bank fees."
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+      "itemized_contribution_records": 19,
+      "individual_contribution_records": 14,
+      "pac_contribution_records": 5,
+      "in_kind_contributions": 0,
+      "in_kind_contribution_records": 0
     },
     {
       "candidate_id": "senate-5-cameron-moquin",
@@ -22429,8 +22566,8 @@
       "office_sought": "State Senator",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
       "original_documents": [],
       "beginning_cash": 9675.45,
       "money_raised": 4849.09,
@@ -22440,7 +22577,7 @@
       "total_cash_receipts": 4849.09,
       "campaign_expenses": 0,
       "aggregate_expenses": 1209.59,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "This profile uses Samantha R Wilcox's original Q2 2026 filing for contribution and spending-category detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -22463,16 +22600,76 @@
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
+          "label": "Aggregate individual contributions",
+          "amount": 2120.2,
           "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 4849.09,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "description": "Individual contributions reported in aggregate."
+        },
+        {
+          "label": "Itemized individual donors",
+          "amount": 2728,
+          "class_name": "itemized-individual-donors",
+          "description": "8 named individual contribution records."
+        },
+        {
+          "label": "Interest received",
+          "amount": 0.89,
+          "class_name": "other-receipts",
+          "description": "Interest received by the campaign."
         }
       ],
-      "top_donors": [],
-      "spending_categories": [],
+      "top_donors": [
+        {
+          "donor": "Anne Holland",
+          "amount": 2000,
+          "type": "Individual"
+        },
+        {
+          "donor": "Jeanne Arthur",
+          "amount": 300,
+          "type": "Individual"
+        },
+        {
+          "donor": "Pamela Rohland",
+          "amount": 128,
+          "type": "Individual"
+        },
+        {
+          "donor": "David Bengtson",
+          "amount": 100,
+          "type": "Individual"
+        },
+        {
+          "donor": "Etta Zasloff",
+          "amount": 100,
+          "type": "Individual"
+        },
+        {
+          "donor": "Tammy Walsh",
+          "amount": 100,
+          "type": "Individual"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Advertising",
+          "amount": 1037.35,
+          "description": "Advertising and campaign promotion."
+        },
+        {
+          "label": "Bank Fees",
+          "amount": 172.24,
+          "description": "Payment-processing and bank fees."
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+      "itemized_contribution_records": 8,
+      "individual_contribution_records": 8,
+      "pac_contribution_records": 0,
+      "in_kind_contributions": 126.77,
+      "in_kind_contribution_records": 4
     },
     {
       "candidate_id": "senate-35-bridget-g-valverde",
