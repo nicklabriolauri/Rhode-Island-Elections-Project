@@ -5501,7 +5501,28 @@
           "type": "Individual"
         }
       ],
-      "spending_categories": [],
+      "spending_categories": [
+        {
+          "label": "Fundraising Expenses",
+          "amount": 2333.81
+        },
+        {
+          "label": "Political Donations",
+          "amount": 1200
+        },
+        {
+          "label": "Office Equipment & Supplies",
+          "amount": 381.09
+        },
+        {
+          "label": "Telephone",
+          "amount": 249.24
+        },
+        {
+          "label": "Advertising",
+          "amount": 124.63
+        }
+      ],
       "takeaways": [],
       "explainer_cards": [],
       "itemized_contribution_records": 75,
@@ -5658,7 +5679,28 @@
           "type": "Individual"
         }
       ],
-      "spending_categories": [],
+      "spending_categories": [
+        {
+          "label": "Advertising",
+          "amount": 465.18
+        },
+        {
+          "label": "Donations (All Others)",
+          "amount": 645
+        },
+        {
+          "label": "Political Donations",
+          "amount": 225
+        },
+        {
+          "label": "Bank Fees",
+          "amount": 63.26
+        },
+        {
+          "label": "Food, Beverages and Meals",
+          "amount": 4.09
+        }
+      ],
       "takeaways": [],
       "explainer_cards": [],
       "itemized_contribution_records": 19,
@@ -6135,7 +6177,25 @@
           "type": "Individual"
         }
       ],
-      "spending_categories": [],
+      "spending_categories": [
+        {
+          "label": "Other",
+          "amount": 3749.19,
+          "description": "Change in investment value reported as Other in the filing."
+        },
+        {
+          "label": "Consultant & Professional Services",
+          "amount": 164.25
+        },
+        {
+          "label": "Advertising",
+          "amount": 69.95
+        },
+        {
+          "label": "Bank Fees",
+          "amount": 21.67
+        }
+      ],
       "takeaways": [],
       "explainer_cards": [],
       "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
@@ -6480,7 +6540,16 @@
           "interest_group": "Labor / Unions"
         }
       ],
-      "spending_categories": [],
+      "spending_categories": [
+        {
+          "label": "Consultant & Professional Services",
+          "amount": 5382.65
+        },
+        {
+          "label": "Political Donations",
+          "amount": 650
+        }
+      ],
       "takeaways": [],
       "explainer_cards": [],
       "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
@@ -6768,7 +6837,33 @@
           "type": "Individual"
         }
       ],
-      "spending_categories": [],
+      "spending_categories": [
+        {
+          "label": "Donations (All Others)",
+          "amount": 850
+        },
+        {
+          "label": "Political Donations",
+          "amount": 300
+        },
+        {
+          "label": "Advertising",
+          "amount": 246.95
+        },
+        {
+          "label": "Travel & Lodging",
+          "amount": 180.88
+        },
+        {
+          "label": "Food, Beverages and Meals",
+          "amount": 31.5
+        },
+        {
+          "label": "Other reported spending",
+          "amount": 100,
+          "description": "Residual amount needed to reconcile to the filing total; the retrieved CF-4 text did not expose its category clearly."
+        }
+      ],
       "takeaways": [],
       "explainer_cards": [],
       "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
@@ -6939,7 +7034,24 @@
           "type": "Individual"
         }
       ],
-      "spending_categories": [],
+      "spending_categories": [
+        {
+          "label": "Advertising",
+          "amount": 710.3
+        },
+        {
+          "label": "Office Equipment & Supplies",
+          "amount": 325
+        },
+        {
+          "label": "Consultant & Professional Services",
+          "amount": 95
+        },
+        {
+          "label": "Bank Fees",
+          "amount": 15
+        }
+      ],
       "takeaways": [],
       "explainer_cards": [],
       "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
