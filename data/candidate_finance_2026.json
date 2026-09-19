@@ -5378,8 +5378,8 @@
       "office_sought": "State Representative",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; itemized donor and PAC detail included",
       "original_documents": [],
       "beginning_cash": 29600.73,
       "money_raised": 14275,
@@ -5389,7 +5389,7 @@
       "total_cash_receipts": 14275,
       "campaign_expenses": 0,
       "aggregate_expenses": 4289.04,
-      "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "This profile uses David A. Bennett's original Q2 2026 filing for donor detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -5412,16 +5412,102 @@
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
-          "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 14275,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 6675,
+          "description": "36 individual contribution records reported in the original Q2 filing."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 7600,
+          "description": "39 PAC contribution records reported in the original Q2 filing."
         }
       ],
-      "top_donors": [],
+      "top_donors": [
+        {
+          "donor": "Ralph A. Palumbo",
+          "amount": 2000,
+          "type": "Individual"
+        },
+        {
+          "donor": "Compassionate Care Inc.",
+          "amount": 500,
+          "type": "Individual"
+        },
+        {
+          "donor": "COVENTRY PROFESSIONAL FIREFIGHTERS PAC",
+          "amount": 500,
+          "type": "PAC"
+        },
+        {
+          "donor": "RHODE ISLAND ENERGY PAC (RIE PAC)",
+          "amount": 500,
+          "type": "PAC"
+        },
+        {
+          "donor": "RHODE ISLAND PROFESSIONAL FIREFIGHTERS",
+          "amount": 500,
+          "type": "PAC"
+        },
+        {
+          "donor": "WARWICK FIREFIGHTER PAC 1",
+          "amount": 500,
+          "type": "PAC"
+        },
+        {
+          "donor": "IBEW LOCAL 99 PAC",
+          "amount": 300,
+          "type": "PAC"
+        },
+        {
+          "donor": "RI BROTHERHOOD OF CORRECTIONAL OFFICERS PAC",
+          "amount": 300,
+          "type": "PAC"
+        },
+        {
+          "donor": "RI FEDERATION OF TEACHERS COPE PAC",
+          "amount": 300,
+          "type": "PAC"
+        },
+        {
+          "donor": "NEARI PACE",
+          "amount": 250,
+          "type": "PAC"
+        },
+        {
+          "donor": "RI AFL-CIO PAC",
+          "amount": 250,
+          "type": "PAC"
+        },
+        {
+          "donor": "RI HOSPITALITY PAC",
+          "amount": 250,
+          "type": "PAC"
+        },
+        {
+          "donor": "Steven Vincent Ceceri",
+          "amount": 250,
+          "type": "Individual"
+        },
+        {
+          "donor": "William G. Walsh",
+          "amount": 250,
+          "type": "Individual"
+        },
+        {
+          "donor": "Ryan A. Palumbo",
+          "amount": 250,
+          "type": "Individual"
+        }
+      ],
       "spending_categories": [],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "itemized_contribution_records": 75,
+      "individual_contribution_records": 36,
+      "pac_contribution_records": 39,
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing. The original filing contains itemized individual and PAC contribution detail."
     },
     {
       "candidate_id": "house-21-marie-a-hopkins",
@@ -5434,8 +5520,8 @@
       "office_sought": "State Representative",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; itemized donor and PAC detail included",
       "original_documents": [],
       "beginning_cash": 24148.9,
       "money_raised": 2305.38,
@@ -5445,7 +5531,7 @@
       "total_cash_receipts": 2305.38,
       "campaign_expenses": 0,
       "aggregate_expenses": 1402.53,
-      "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "This profile uses Marie A. Hopkins's original Q2 2026 filing for donor detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -5468,16 +5554,113 @@
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
-          "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 2305.38,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 1955.38,
+          "description": "15 individual contribution records reported in the original Q2 filing."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 350,
+          "description": "4 PAC contribution records reported in the original Q2 filing."
         }
       ],
-      "top_donors": [],
+      "top_donors": [
+        {
+          "donor": "Bryan Monteiro",
+          "amount": 780.76,
+          "type": "Individual"
+        },
+        {
+          "donor": "Robert Pezzullo",
+          "amount": 260.25,
+          "type": "Individual"
+        },
+        {
+          "donor": "Vito Buonomano",
+          "amount": 200,
+          "type": "Individual"
+        },
+        {
+          "donor": "Kenneth Naylor",
+          "amount": 156.15,
+          "type": "Individual"
+        },
+        {
+          "donor": "Robert Habershaw",
+          "amount": 150,
+          "type": "Individual"
+        },
+        {
+          "donor": "Scott McCarthy",
+          "amount": 104.1,
+          "type": "Individual"
+        },
+        {
+          "donor": "REALTORS PAC OF RI",
+          "amount": 100,
+          "type": "PAC"
+        },
+        {
+          "donor": "RI MEDICAL PAC",
+          "amount": 100,
+          "type": "PAC"
+        },
+        {
+          "donor": "RI STATE NURSES ASSOCIATION",
+          "amount": 100,
+          "type": "PAC"
+        },
+        {
+          "donor": "Frank Woods",
+          "amount": 78.09,
+          "type": "Individual",
+          "notes": "Three contributions of $26.03 each during the filing period."
+        },
+        {
+          "donor": "Brian Murtha",
+          "amount": 50,
+          "type": "Individual"
+        },
+        {
+          "donor": "Lynda Hawkins",
+          "amount": 50,
+          "type": "Individual"
+        },
+        {
+          "donor": "Michael Luciano",
+          "amount": 50,
+          "type": "Individual"
+        },
+        {
+          "donor": "PROVIDENCE RI CENTRAL FEDERATED COUNCIL AFL-CIO",
+          "amount": 50,
+          "type": "PAC"
+        },
+        {
+          "donor": "Lonnie Barham",
+          "amount": 26.03,
+          "type": "Individual"
+        },
+        {
+          "donor": "Ruth Page",
+          "amount": 25,
+          "type": "Individual"
+        },
+        {
+          "donor": "Walter Richardson",
+          "amount": 25,
+          "type": "Individual"
+        }
+      ],
       "spending_categories": [],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "itemized_contribution_records": 19,
+      "individual_contribution_records": 15,
+      "pac_contribution_records": 4,
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing. The original filing contains itemized individual and PAC contribution detail."
     },
     {
       "candidate_id": "house-22-barbara-quigley",
