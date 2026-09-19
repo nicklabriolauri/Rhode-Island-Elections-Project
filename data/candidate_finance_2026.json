@@ -8839,8 +8839,8 @@
       "office_sought": "State Representative",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
       "original_documents": [],
       "beginning_cash": 24648.62,
       "money_raised": 2475,
@@ -8850,7 +8850,7 @@
       "total_cash_receipts": 2475,
       "campaign_expenses": 0,
       "aggregate_expenses": 8612.41,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it spent more during the period than it raised.",
+      "summary_intro": "This profile uses Tina L Spears's original Q2 2026 filing for contribution and expenditure detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -8873,16 +8873,198 @@
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
+          "label": "Aggregate individual contributions",
           "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 2475,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "amount": 375,
+          "description": "Q2 ActBlue contributions reported in aggregate without donor names."
+        },
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 1300,
+          "description": "Named individual contributions in the original Q2 filing."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 800,
+          "description": "Five PAC contributions in the original Q2 filing."
         }
       ],
-      "top_donors": [],
-      "spending_categories": [],
+      "top_donors": [
+        {
+          "donor": "Lise Iwon",
+          "amount": 500,
+          "type": "Individual"
+        },
+        {
+          "donor": "Samuel Salganik",
+          "amount": 500,
+          "type": "Individual"
+        },
+        {
+          "donor": "RI Brotherhood of Correctional Officers",
+          "amount": 250,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "Kathleen Ellis",
+          "amount": 200,
+          "type": "Individual"
+        },
+        {
+          "donor": "RI Laborer's Political League",
+          "amount": 200,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "Citizens Bank PACOM",
+          "amount": 150,
+          "type": "PAC",
+          "interest_group": "Banking / Finance"
+        },
+        {
+          "donor": "EGFFA PAC (East Greenwich Fire Fighters Association)",
+          "amount": 150,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "Leonard Lopes",
+          "amount": 100,
+          "type": "Individual"
+        },
+        {
+          "donor": "Cranston Teachers' Alliance",
+          "amount": 50,
+          "type": "PAC",
+          "interest_group": "Education / Labor"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Advertising",
+          "amount": 7735.01,
+          "description": "Itemized advertising reported in the original Q2 filing.",
+          "items": [
+            {
+              "date": "06/22/2026",
+              "vendor": "BrandX360",
+              "purpose": "Yard Signs",
+              "amount": 2876.48
+            },
+            {
+              "date": "06/25/2026",
+              "vendor": "BrandX360",
+              "purpose": "Palm Cards",
+              "amount": 3135.48
+            },
+            {
+              "date": "06/30/2026",
+              "vendor": "BrandX360",
+              "purpose": "Print mailer",
+              "amount": 1158.09
+            },
+            {
+              "date": "04/27/2026",
+              "vendor": "WIX",
+              "purpose": "Social media ads",
+              "amount": 564.96
+            }
+          ]
+        },
+        {
+          "label": "Food, Beverages and Meals",
+          "amount": 323.49,
+          "description": "Itemized food, beverages and meals reported in the original Q2 filing.",
+          "items": [
+            {
+              "date": "05/08/2026",
+              "vendor": "Caf Bar",
+              "purpose": "Tea with Tina",
+              "amount": 24.14
+            },
+            {
+              "date": "04/06/2026",
+              "vendor": "Caf Bar",
+              "purpose": "Tea with Tina event",
+              "amount": 55.91
+            },
+            {
+              "date": "05/11/2026",
+              "vendor": "Wetherbee's",
+              "purpose": "Volunteer lunch",
+              "amount": 243.44
+            }
+          ]
+        },
+        {
+          "label": "Office Equipment & Supplies",
+          "amount": 225.03,
+          "description": "Itemized office equipment & supplies reported in the original Q2 filing.",
+          "items": [
+            {
+              "date": "06/08/2026",
+              "vendor": "Amazon Marketplace",
+              "purpose": "Canvassing supplies",
+              "amount": 213.99
+            },
+            {
+              "date": "06/30/2026",
+              "vendor": "Walmart",
+              "purpose": "TY Cards",
+              "amount": 11.04
+            }
+          ]
+        },
+        {
+          "label": "Consultant & Professional Services",
+          "amount": 200,
+          "description": "Itemized consultant & professional services reported in the original Q2 filing.",
+          "items": [
+            {
+              "date": "06/29/2026",
+              "vendor": "Sophia McKean",
+              "purpose": "Digital media support",
+              "amount": 200
+            }
+          ]
+        },
+        {
+          "label": "Travel & Lodging",
+          "amount": 122.2,
+          "description": "Itemized travel & lodging reported in the original Q2 filing.",
+          "items": [
+            {
+              "date": "05/08/2026",
+              "vendor": "Block Island Ferry",
+              "purpose": "Transport to BI for campaign activities",
+              "amount": 122.2
+            }
+          ]
+        },
+        {
+          "label": "Bank Fees",
+          "amount": 6.68,
+          "description": "Itemized bank fees reported in the original Q2 filing.",
+          "items": [
+            {
+              "date": "06/30/2026",
+              "vendor": "ActBlue",
+              "purpose": "Q2 Transaction Fees",
+              "amount": 6.68
+            }
+          ]
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+      "itemized_contribution_records": 9,
+      "individual_contribution_records": 4,
+      "pac_contribution_records": 5
     },
     {
       "candidate_id": "house-37-christopher-m-stanton",
@@ -8926,8 +9108,8 @@
       "office_sought": "State Representative",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
       "original_documents": [],
       "beginning_cash": 14178.71,
       "money_raised": 7525,
@@ -8937,7 +9119,7 @@
       "total_cash_receipts": 7525,
       "campaign_expenses": 0,
       "aggregate_expenses": 1925.43,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "This profile uses Samuel Angelo Azzinaro's original Q2 2026 filing for contribution and expenditure detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -8960,16 +9142,150 @@
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
+          "label": "Aggregate individual contributions",
           "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 7525,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "amount": 5625,
+          "description": "Campaign donations reported in aggregate without donor names."
+        },
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 1200,
+          "description": "Three named individual contributions in the original Q2 filing."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 700,
+          "description": "Two PAC contributions in the original Q2 filing."
         }
       ],
-      "top_donors": [],
-      "spending_categories": [],
+      "top_donors": [
+        {
+          "donor": "Arthur Corvese",
+          "amount": 500,
+          "type": "Individual"
+        },
+        {
+          "donor": "RI Brotherhood of Correctional Officers",
+          "amount": 400,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "Thomas McAndrew",
+          "amount": 350,
+          "type": "Individual"
+        },
+        {
+          "donor": "John Petrarca",
+          "amount": 350,
+          "type": "Individual"
+        },
+        {
+          "donor": "Rhode Island Energy PAC (RIE PAC)",
+          "amount": 300,
+          "type": "PAC",
+          "interest_group": "Energy / Utilities"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Office Equipment & Supplies",
+          "amount": 573.99,
+          "description": "Itemized office equipment & supplies reported in the original Q2 filing.",
+          "items": [
+            {
+              "date": "04/06/2026",
+              "vendor": "Staples",
+              "purpose": "Office supplies",
+              "amount": 244.43
+            },
+            {
+              "date": "05/12/2026",
+              "vendor": "The Westerly Sun",
+              "purpose": "Office supplies",
+              "amount": 224
+            },
+            {
+              "date": "04/11/2026",
+              "vendor": "US Post Office",
+              "purpose": "Stamps",
+              "amount": 78
+            },
+            {
+              "date": "04/14/2026",
+              "vendor": "Walmart",
+              "purpose": "Office supplies",
+              "amount": 27.56
+            }
+          ]
+        },
+        {
+          "label": "Fundraising Expenses",
+          "amount": 593.24,
+          "description": "Itemized fundraising expenses reported in the original Q2 filing.",
+          "items": [
+            {
+              "date": "05/07/2026",
+              "vendor": "Brian Kennedy",
+              "purpose": "Reimbursement for joint fundraiser",
+              "amount": 500
+            },
+            {
+              "date": "04/03/2026",
+              "vendor": "Printing Plus",
+              "purpose": "Tickets for fundraiser",
+              "amount": 93.24
+            }
+          ]
+        },
+        {
+          "label": "Donations (All Others)",
+          "amount": 308.2,
+          "description": "Itemized donations (all others) reported in the original Q2 filing.",
+          "items": [
+            {
+              "date": "04/29/2026",
+              "vendor": "Aggregate expenditure",
+              "purpose": "Donations",
+              "amount": 308.2
+            }
+          ]
+        },
+        {
+          "label": "Entertainment",
+          "amount": 250,
+          "description": "Itemized entertainment reported in the original Q2 filing.",
+          "items": [
+            {
+              "date": "06/06/2026",
+              "vendor": "Reginal Centraccio",
+              "purpose": "Entertainment at the Veterans Home in Bristol",
+              "amount": 250
+            }
+          ]
+        },
+        {
+          "label": "Donations (Political)",
+          "amount": 200,
+          "description": "Itemized donations (political) reported in the original Q2 filing.",
+          "items": [
+            {
+              "date": "04/24/2026",
+              "vendor": "Rep. Gregg Amore",
+              "purpose": "Political donation",
+              "amount": 200
+            }
+          ]
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+      "itemized_contribution_records": 5,
+      "individual_contribution_records": 3,
+      "pac_contribution_records": 2
     },
     {
       "candidate_id": "house-38-brian-patrick-kennedy",
@@ -9349,8 +9665,8 @@
       "office_sought": "State Representative",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
       "original_documents": [],
       "beginning_cash": 23212.55,
       "money_raised": 14940.5,
@@ -9360,7 +9676,7 @@
       "total_cash_receipts": 14940.5,
       "campaign_expenses": 0,
       "aggregate_expenses": 9552.85,
-      "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "This profile uses Megan L Cotter's original Q2 2026 filing for contribution and expenditure detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -9383,16 +9699,396 @@
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
+          "label": "Aggregate individual contributions",
           "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 14940.5,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "amount": 3335,
+          "description": "Q2 individual contributions reported in aggregate."
+        },
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 8880.5,
+          "description": "Named individual contributions in the original Q2 filing."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 2725,
+          "description": "PAC contributions in the original Q2 filing."
         }
       ],
-      "top_donors": [],
-      "spending_categories": [],
+      "top_donors": [
+        {
+          "donor": "Adam Sepe",
+          "amount": 2000,
+          "type": "Individual"
+        },
+        {
+          "donor": "Anne Holland",
+          "amount": 1998,
+          "type": "Individual"
+        },
+        {
+          "donor": "Julie Casimiro",
+          "amount": 1000,
+          "type": "Individual"
+        },
+        {
+          "donor": "Robert Verrier",
+          "amount": 1000,
+          "type": "Individual"
+        },
+        {
+          "donor": "United Food & Commercial Workers",
+          "amount": 1000,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "Mathew Cook",
+          "amount": 500,
+          "type": "Individual"
+        },
+        {
+          "donor": "Joanna Brown",
+          "amount": 450,
+          "type": "Individual"
+        },
+        {
+          "donor": "Keith Hoffman",
+          "amount": 200,
+          "type": "Individual"
+        },
+        {
+          "donor": "Myrth York",
+          "amount": 200,
+          "type": "Individual"
+        },
+        {
+          "donor": "RI Medical PAC",
+          "amount": 200,
+          "type": "PAC",
+          "interest_group": "Health Care"
+        },
+        {
+          "donor": "Plumbers & Pipefitters Local 51 PAC",
+          "amount": 150,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "RI State Association of Firefighters",
+          "amount": 150,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "CAREPAC of Blue Cross & Blue Shield",
+          "amount": 150,
+          "type": "PAC",
+          "interest_group": "Health Care"
+        },
+        {
+          "donor": "Richard McAuliffe",
+          "amount": 150,
+          "type": "Individual"
+        },
+        {
+          "donor": "Margaret Sweeney",
+          "amount": 150,
+          "type": "Individual"
+        },
+        {
+          "donor": "Cranston FF's for Public Safety",
+          "amount": 125,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "Pannone Lopes Devereaux & O'Gara LLC",
+          "amount": 125,
+          "type": "PAC",
+          "interest_group": "Legal / Professional Services"
+        },
+        {
+          "donor": "RI Association of Nurse Anesthetists PAC",
+          "amount": 125,
+          "type": "PAC",
+          "interest_group": "Health Care"
+        },
+        {
+          "donor": "Mikaila Arthur",
+          "amount": 100,
+          "type": "Individual"
+        },
+        {
+          "donor": "Michael Beauregard",
+          "amount": 100,
+          "type": "Individual"
+        },
+        {
+          "donor": "Wendy Becker",
+          "amount": 100,
+          "type": "Individual"
+        },
+        {
+          "donor": "Joyce Flanagan",
+          "amount": 100,
+          "type": "Individual"
+        },
+        {
+          "donor": "John Glasson",
+          "amount": 100,
+          "type": "Individual"
+        },
+        {
+          "donor": "Philora Kittay",
+          "amount": 100,
+          "type": "Individual"
+        },
+        {
+          "donor": "Sarah Leibel",
+          "amount": 100,
+          "type": "Individual"
+        },
+        {
+          "donor": "Kathy Leveille",
+          "amount": 100,
+          "type": "Individual"
+        },
+        {
+          "donor": "IBEW Local 99 PAC",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "Iron Workers Local 37",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "NEARI PACE",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Education / Labor"
+        },
+        {
+          "donor": "Providence RI Central Federated Council AFL-CIO",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "RI AFL-CIO PAC",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "RI NAGE/IBPO PAC",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "Maggie Callahan",
+          "amount": 75,
+          "type": "Individual"
+        },
+        {
+          "donor": "Roberta Ricci",
+          "amount": 75,
+          "type": "Individual"
+        },
+        {
+          "donor": "Cranston Teachers' Alliance",
+          "amount": 50,
+          "type": "PAC",
+          "interest_group": "Education / Labor"
+        },
+        {
+          "donor": "Fire Chiefs PAC",
+          "amount": 50,
+          "type": "PAC",
+          "interest_group": "Public Safety"
+        },
+        {
+          "donor": "David Cox",
+          "amount": 25,
+          "type": "Individual"
+        },
+        {
+          "donor": "William Morse",
+          "amount": 7.5,
+          "type": "Individual"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Advertising",
+          "amount": 5770.21,
+          "description": "Itemized advertising reported in the original Q2 filing.",
+          "items": [
+            {
+              "date": "06/26/2026",
+              "vendor": "Regine Printing",
+              "purpose": "Print campaign literature",
+              "amount": 425.86
+            },
+            {
+              "date": "05/19/2026",
+              "vendor": "Union Made Stickers",
+              "purpose": "Campaign lapel stickers",
+              "amount": 686.8
+            },
+            {
+              "date": "04/30/2026",
+              "vendor": "Wix",
+              "purpose": "Social Ad Boost",
+              "amount": 249.53
+            },
+            {
+              "date": "05/20/2026",
+              "vendor": "Wix",
+              "purpose": "Social ad boost",
+              "amount": 128.4
+            },
+            {
+              "date": "06/30/2026",
+              "vendor": "Wix",
+              "purpose": "Q2 Gmail subscription",
+              "amount": 26.97
+            },
+            {
+              "date": "06/20/2026",
+              "vendor": "Wix",
+              "purpose": "Social ad boosting",
+              "amount": 252.65
+            },
+            {
+              "date": "06/16/2026",
+              "vendor": "WorkWell Designs",
+              "purpose": "Website design",
+              "amount": 4000
+            }
+          ]
+        },
+        {
+          "label": "Other",
+          "amount": 1587.59,
+          "description": "Itemized other reported in the original Q2 filing.",
+          "items": [
+            {
+              "date": "06/30/2026",
+              "vendor": "Action Network",
+              "purpose": "Q2 fees (Apr, May, June)",
+              "amount": 16.05
+            },
+            {
+              "date": "05/16/2026",
+              "vendor": "HobbyLobby",
+              "purpose": "Supplies for Exeter parade float",
+              "amount": 63.01
+            },
+            {
+              "date": "06/30/2026",
+              "vendor": "OpenAI",
+              "purpose": "Q2 subscription (April, May, June)",
+              "amount": 151.82
+            },
+            {
+              "date": "04/19/2026",
+              "vendor": "Stop & Shop",
+              "purpose": "Stamps (roll of 100)",
+              "amount": 78
+            },
+            {
+              "date": "06/24/2026",
+              "vendor": "USPS",
+              "purpose": "Postage",
+              "amount": 1107.6
+            },
+            {
+              "date": "05/11/2026",
+              "vendor": "Wayfair.com",
+              "purpose": "Exeter parade float supplies",
+              "amount": 171.11
+            }
+          ]
+        },
+        {
+          "label": "Consultant & Professional Services",
+          "amount": 1118.55,
+          "description": "Itemized consultant & professional services reported in the original Q2 filing.",
+          "items": [
+            {
+              "date": "05/16/2026",
+              "vendor": "Linda Kleineberg Photographer",
+              "purpose": "Photography",
+              "amount": 300
+            },
+            {
+              "date": "06/26/2026",
+              "vendor": "Regine Printing",
+              "purpose": "Mailer printing",
+              "amount": 818.55
+            }
+          ]
+        },
+        {
+          "label": "Fundraising Expenses",
+          "amount": 753.91,
+          "description": "Itemized fundraising expenses reported in the original Q2 filing.",
+          "items": [
+            {
+              "date": "04/09/2026",
+              "vendor": "Regine Printing",
+              "purpose": "Tickets",
+              "amount": 192.6
+            },
+            {
+              "date": "05/29/2026",
+              "vendor": "The District",
+              "purpose": "Venue and refreshments",
+              "amount": 561.31
+            }
+          ]
+        },
+        {
+          "label": "Bank Fees",
+          "amount": 222.59,
+          "description": "Itemized bank fees reported in the original Q2 filing.",
+          "items": [
+            {
+              "date": "06/30/2026",
+              "vendor": "ActBlue",
+              "purpose": "Q2 Transaction Fees",
+              "amount": 222.59
+            }
+          ]
+        },
+        {
+          "label": "Donations (Political)",
+          "amount": 100,
+          "description": "Itemized donations (political) reported in the original Q2 filing.",
+          "items": [
+            {
+              "date": "06/17/2026",
+              "vendor": "Exeter Democratic Town Committee",
+              "purpose": "Political donation",
+              "amount": 100
+            }
+          ]
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+      "itemized_contribution_records": 40,
+      "individual_contribution_records": 24,
+      "pac_contribution_records": 16
     },
     {
       "candidate_id": "house-40-michael-chippendale",
@@ -9636,8 +10332,8 @@
       "office_sought": "State Representative",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
       "original_documents": [],
       "beginning_cash": 378.04,
       "money_raised": 250,
@@ -9647,7 +10343,7 @@
       "total_cash_receipts": 250,
       "campaign_expenses": 0,
       "aggregate_expenses": 9.48,
-      "summary_intro": "This filing shows only a limited cash reserve heading into the next stretch of the campaign. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "This profile uses Shaina N Smith's original Q2 2026 filing for contribution and expenditure detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -9670,16 +10366,40 @@
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
-          "class_name": "small-dollar-aggregate-online-receipts",
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
           "amount": 250,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "description": "One named individual contribution in the original Q2 filing."
         }
       ],
-      "top_donors": [],
-      "spending_categories": [],
+      "top_donors": [
+        {
+          "donor": "Gregory Thuotte",
+          "amount": 250,
+          "type": "Individual"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Bank Fees",
+          "amount": 9.48,
+          "description": "Itemized bank fees reported in the original Q2 filing.",
+          "items": [
+            {
+              "date": "06/29/2026",
+              "vendor": "ActBlue",
+              "purpose": "Processing Fees",
+              "amount": 9.48
+            }
+          ]
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+      "itemized_contribution_records": 1,
+      "individual_contribution_records": 1,
+      "pac_contribution_records": 0
     },
     {
       "candidate_id": "house-42-edward-w-stravato",
@@ -9802,8 +10522,8 @@
       "office_sought": "State Representative",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
       "original_documents": [],
       "beginning_cash": 9225.35,
       "money_raised": 1897.56,
@@ -9813,7 +10533,7 @@
       "total_cash_receipts": 1897.56,
       "campaign_expenses": 0,
       "aggregate_expenses": 1389.35,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "This profile uses Richard R Fascia's original Q2 2026 filing for contribution and expenditure detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -9836,16 +10556,231 @@
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
+          "label": "Aggregate individual contributions",
           "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 1897.56,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "amount": 225,
+          "description": "Individual contributions reported in aggregate without donor names."
+        },
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 572.56,
+          "description": "Named individual contributions in the original Q2 filing."
+        },
+        {
+          "label": "Aggregate PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 100,
+          "description": "PAC contribution reported in aggregate; the filing does not identify a PAC name."
+        },
+        {
+          "label": "Loan proceeds",
+          "class_name": "other-receipts",
+          "amount": 1000,
+          "description": "Candidate loan proceeds reported in the original Q2 filing."
         }
       ],
-      "top_donors": [],
-      "spending_categories": [],
+      "top_donors": [
+        {
+          "donor": "Richard R. Fascia",
+          "amount": 1000,
+          "type": "Loan"
+        },
+        {
+          "donor": "Kevin Vigilante",
+          "amount": 364.36,
+          "type": "Individual"
+        },
+        {
+          "donor": "Michael Pino",
+          "amount": 208.2,
+          "type": "Individual"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Advertising",
+          "amount": 742.05,
+          "description": "Itemized advertising reported in the original Q2 filing.",
+          "items": [
+            {
+              "date": "06/10/2026",
+              "vendor": "Beacon Communications",
+              "purpose": "",
+              "amount": 140
+            },
+            {
+              "date": "05/22/2026",
+              "vendor": "BORI Graphics",
+              "purpose": "",
+              "amount": 230.04
+            },
+            {
+              "date": "06/25/2026",
+              "vendor": "GotPrint.com",
+              "purpose": "",
+              "amount": 207.08
+            },
+            {
+              "date": "06/22/2026",
+              "vendor": "Imprint",
+              "purpose": "",
+              "amount": 164.93
+            }
+          ]
+        },
+        {
+          "label": "Donations (Political)",
+          "amount": 263.39,
+          "description": "Itemized donations (political) reported in the original Q2 filing.",
+          "items": [
+            {
+              "date": "05/04/2026",
+              "vendor": "Aggregate expenditure",
+              "purpose": "",
+              "amount": 29.15
+            },
+            {
+              "date": "05/18/2026",
+              "vendor": "RI Republican State Central Committee",
+              "purpose": "",
+              "amount": 78.08
+            },
+            {
+              "date": "06/22/2026",
+              "vendor": "RI Republican State Central Committee",
+              "purpose": "",
+              "amount": 156.16
+            }
+          ]
+        },
+        {
+          "label": "Food, Beverages and Meals",
+          "amount": 173.12,
+          "description": "Itemized food, beverages and meals reported in the original Q2 filing.",
+          "items": [
+            {
+              "date": "04/21/2026",
+              "vendor": "Aggregate expenditure",
+              "purpose": "",
+              "amount": 75.99
+            },
+            {
+              "date": "05/28/2026",
+              "vendor": "Aggregate expenditure",
+              "purpose": "Staff meeting",
+              "amount": 35.65
+            },
+            {
+              "date": "06/29/2026",
+              "vendor": "Aggregate expenditure",
+              "purpose": "Signature event",
+              "amount": 61.48
+            }
+          ]
+        },
+        {
+          "label": "Consultant & Professional Services",
+          "amount": 75,
+          "description": "Itemized consultant & professional services reported in the original Q2 filing.",
+          "items": [
+            {
+              "date": "05/26/2026",
+              "vendor": "Lakeside Compliance Services",
+              "purpose": "",
+              "amount": 75
+            }
+          ]
+        },
+        {
+          "label": "Donations (All Others)",
+          "amount": 50,
+          "description": "Itemized donations (all others) reported in the original Q2 filing.",
+          "items": [
+            {
+              "date": "04/06/2026",
+              "vendor": "Aggregate expenditure",
+              "purpose": "",
+              "amount": 50
+            }
+          ]
+        },
+        {
+          "label": "Fundraising Expenses",
+          "amount": 50,
+          "description": "Itemized fundraising expenses reported in the original Q2 filing.",
+          "items": [
+            {
+              "date": "06/22/2026",
+              "vendor": "Atwood Grill",
+              "purpose": "Deposit",
+              "amount": 50
+            }
+          ]
+        },
+        {
+          "label": "Bank Fees",
+          "amount": 22.56,
+          "description": "Itemized bank fees reported in the original Q2 filing.",
+          "items": [
+            {
+              "date": "06/05/2026",
+              "vendor": "WinRed",
+              "purpose": "",
+              "amount": 8.2
+            },
+            {
+              "date": "05/29/2026",
+              "vendor": "WinRed",
+              "purpose": "",
+              "amount": 14.36
+            }
+          ]
+        },
+        {
+          "label": "Office Equipment & Supplies",
+          "amount": 13.23,
+          "description": "Itemized office equipment & supplies reported in the original Q2 filing.",
+          "items": [
+            {
+              "date": "04/02/2026",
+              "vendor": "Apple",
+              "purpose": "",
+              "amount": 2.99
+            },
+            {
+              "date": "06/01/2026",
+              "vendor": "Apple",
+              "purpose": "",
+              "amount": 2.99
+            },
+            {
+              "date": "06/02/2026",
+              "vendor": "Apple",
+              "purpose": "",
+              "amount": 2.13
+            },
+            {
+              "date": "04/20/2026",
+              "vendor": "Apple",
+              "purpose": "",
+              "amount": 2.13
+            },
+            {
+              "date": "05/04/2026",
+              "vendor": "Apple",
+              "purpose": "",
+              "amount": 2.99
+            }
+          ]
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+      "itemized_contribution_records": 3,
+      "individual_contribution_records": 2,
+      "pac_contribution_records": 0
     },
     {
       "candidate_id": "house-43-deborah-a-fellela",
