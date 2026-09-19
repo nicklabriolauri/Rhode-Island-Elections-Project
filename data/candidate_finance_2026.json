@@ -6065,8 +6065,8 @@
       "office_sought": "State Representative",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; contribution detail included",
       "original_documents": [],
       "beginning_cash": 170.5,
       "money_raised": 31856.78,
@@ -6076,7 +6076,7 @@
       "total_cash_receipts": 31856.78,
       "campaign_expenses": 0,
       "aggregate_expenses": 4005.06,
-      "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "This profile uses Dana James Traversie's original Q2 2026 filing for contribution detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -6099,16 +6099,49 @@
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
+          "label": "Named individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 1250,
+          "description": "Named individual contributions reported in the original Q2 filing."
+        },
+        {
+          "label": "Aggregate individual contributions",
           "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 31856.78,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "amount": 300,
+          "description": "Individual contributions reported in aggregate without donor names."
+        },
+        {
+          "label": "Loan proceeds",
+          "class_name": "other-reported-sources",
+          "amount": 30000,
+          "description": "Loan proceeds reported during the filing period."
+        },
+        {
+          "label": "Interest received",
+          "class_name": "other-reported-sources",
+          "amount": 306.78,
+          "description": "Interest and investment receipts reported during the filing period."
         }
       ],
-      "top_donors": [],
+      "top_donors": [
+        {
+          "donor": "Stephen T. Skoly Jr.",
+          "amount": 1000,
+          "type": "Individual"
+        },
+        {
+          "donor": "Scott Deutsch",
+          "amount": 250,
+          "type": "Individual"
+        }
+      ],
       "spending_categories": [],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+      "itemized_contribution_records": 2,
+      "individual_contribution_records": 2,
+      "pac_contribution_records": 0
     },
     {
       "candidate_id": "house-23-timothy-howe",
@@ -6376,8 +6409,8 @@
       "office_sought": "State Representative",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; contribution detail included",
       "original_documents": [],
       "beginning_cash": 37289.82,
       "money_raised": 1100.88,
@@ -6387,7 +6420,7 @@
       "total_cash_receipts": 1100.88,
       "campaign_expenses": 0,
       "aggregate_expenses": 6032.65,
-      "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it spent more during the period than it raised.",
+      "summary_intro": "This profile uses Evan Patrick Shanley's original Q2 2026 filing for contribution detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -6410,16 +6443,50 @@
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
-          "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 1100.88,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 500,
+          "description": "Named individual contributions reported in the original Q2 filing."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 600,
+          "description": "Two PAC contributions reported in the original Q2 filing."
+        },
+        {
+          "label": "Interest received",
+          "class_name": "other-reported-sources",
+          "amount": 0.88,
+          "description": "Interest reported during the filing period."
         }
       ],
-      "top_donors": [],
+      "top_donors": [
+        {
+          "donor": "John R. Koza",
+          "amount": 500,
+          "type": "Individual"
+        },
+        {
+          "donor": "AMALGAMATED TRANSIT UNION COPE-RHODE ISLAND",
+          "amount": 300,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "TEAMSTERS LU251 DRIVE PAC",
+          "amount": 300,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        }
+      ],
       "spending_categories": [],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+      "itemized_contribution_records": 3,
+      "individual_contribution_records": 1,
+      "pac_contribution_records": 2
     },
     {
       "candidate_id": "house-25-thomas-e-noret",
@@ -6432,8 +6499,8 @@
       "office_sought": "State Representative",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; contribution detail included",
       "original_documents": [],
       "beginning_cash": 94278.56,
       "money_raised": 781.99,
@@ -6443,7 +6510,7 @@
       "total_cash_receipts": 781.99,
       "campaign_expenses": 0,
       "aggregate_expenses": 6756.79,
-      "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it spent more during the period than it raised.",
+      "summary_intro": "This profile uses Thomas E Noret's original Q2 2026 filing for contribution detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -6466,16 +6533,69 @@
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
-          "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 781.99,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 700,
+          "description": "Six named individual contributions reported in the original Q2 filing."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 50,
+          "description": "One PAC contribution reported in the original Q2 filing."
+        },
+        {
+          "label": "Other receipts",
+          "class_name": "other-reported-sources",
+          "amount": 31.99,
+          "description": "Other receipt reported during the filing period."
         }
       ],
-      "top_donors": [],
+      "top_donors": [
+        {
+          "donor": "David Balasco",
+          "amount": 200,
+          "type": "Individual"
+        },
+        {
+          "donor": "Charles Petrarca",
+          "amount": 200,
+          "type": "Individual"
+        },
+        {
+          "donor": "Will Farrell",
+          "amount": 100,
+          "type": "Individual"
+        },
+        {
+          "donor": "Daniel Ryan",
+          "amount": 100,
+          "type": "Individual"
+        },
+        {
+          "donor": "Paul McAllister",
+          "amount": 50,
+          "type": "Individual"
+        },
+        {
+          "donor": "Thomas O'Brien",
+          "amount": 50,
+          "type": "Individual"
+        },
+        {
+          "donor": "CRANSTON TEACHERS' ALLIANCE",
+          "amount": 50,
+          "type": "PAC",
+          "interest_group": "Education / Labor"
+        }
+      ],
       "spending_categories": [],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+      "itemized_contribution_records": 7,
+      "individual_contribution_records": 6,
+      "pac_contribution_records": 1
     },
     {
       "candidate_id": "house-26-earl-a-read-iii",
@@ -6488,8 +6608,8 @@
       "office_sought": "State Representative",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; contribution detail included",
       "original_documents": [],
       "beginning_cash": 33317.78,
       "money_raised": 1885,
@@ -6499,7 +6619,7 @@
       "total_cash_receipts": 1885,
       "campaign_expenses": 0,
       "aggregate_expenses": 1709.33,
-      "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "This profile uses Earl A Read III's original Q2 2026 filing for contribution detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -6522,16 +6642,139 @@
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
-          "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 1885,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 1385,
+          "description": "Fourteen named individual contributions reported in the original Q2 filing."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 500,
+          "description": "Seven PAC contributions reported in the original Q2 filing."
         }
       ],
-      "top_donors": [],
+      "top_donors": [
+        {
+          "donor": "William Murphy",
+          "amount": 300,
+          "type": "Individual"
+        },
+        {
+          "donor": "Steven Ceceri",
+          "amount": 250,
+          "type": "Individual"
+        },
+        {
+          "donor": "Stanley Tabak",
+          "amount": 150,
+          "type": "Individual"
+        },
+        {
+          "donor": "David Balasco",
+          "amount": 100,
+          "type": "Individual"
+        },
+        {
+          "donor": "Patricia Serpa",
+          "amount": 100,
+          "type": "Individual"
+        },
+        {
+          "donor": "George Zainyeh",
+          "amount": 100,
+          "type": "Individual"
+        },
+        {
+          "donor": "PROVIDENCE LODGE 3 COPE",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "PROVIDENCE RI CENTRAL FEDERATED COUNCIL AFL-CIO",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "PROVIDENCE TEACHERS COPE",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Education / Labor"
+        },
+        {
+          "donor": "Frank Mcgee",
+          "amount": 60,
+          "type": "Individual"
+        },
+        {
+          "donor": "Sean Carey",
+          "amount": 50,
+          "type": "Individual"
+        },
+        {
+          "donor": "James Jackson",
+          "amount": 50,
+          "type": "Individual"
+        },
+        {
+          "donor": "Vincent Maccarone",
+          "amount": 50,
+          "type": "Individual"
+        },
+        {
+          "donor": "Eric Norberg",
+          "amount": 50,
+          "type": "Individual"
+        },
+        {
+          "donor": "Gerard Tellier",
+          "amount": 50,
+          "type": "Individual"
+        },
+        {
+          "donor": "James Tiernan",
+          "amount": 50,
+          "type": "Individual"
+        },
+        {
+          "donor": "AMICA / RI PAC",
+          "amount": 50,
+          "type": "PAC",
+          "interest_group": "Insurance"
+        },
+        {
+          "donor": "CRANSTON TEACHERS' ALLIANCE",
+          "amount": 50,
+          "type": "PAC",
+          "interest_group": "Education / Labor"
+        },
+        {
+          "donor": "IBEW LOCAL 99 PAC",
+          "amount": 50,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "RI FEDERATION OF TEACHERS COPE PAC",
+          "amount": 50,
+          "type": "PAC",
+          "interest_group": "Education / Labor"
+        },
+        {
+          "donor": "Elizabeth Tattrie",
+          "amount": 25,
+          "type": "Individual"
+        }
+      ],
       "spending_categories": [],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+      "itemized_contribution_records": 21,
+      "individual_contribution_records": 14,
+      "pac_contribution_records": 7
     },
     {
       "candidate_id": "house-27-angela-s-coburn",
@@ -6616,18 +6859,18 @@
       "office_sought": "State Representative",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; contribution detail included",
       "original_documents": [],
       "beginning_cash": 5853.61,
-      "money_raised": 2544.3,
+      "money_raised": 1731.8,
       "money_spent": 1145.3,
-      "ending_cash": 7252.61,
-      "net_change": 1399,
-      "total_cash_receipts": 2544.3,
+      "ending_cash": 6440.11,
+      "net_change": 586.5,
+      "total_cash_receipts": 1731.8,
       "campaign_expenses": 0,
       "aggregate_expenses": 1145.3,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "This profile uses Lawrence Paul Almagno Jr's original Q2 2026 filing for contribution detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -6641,25 +6884,68 @@
         {
           "label": "Q2 2026",
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
-          "money_raised": 2544.3,
+          "money_raised": 1731.8,
           "money_spent": 1145.3,
-          "ending_cash": 7252.61,
-          "net_change": 1399,
+          "ending_cash": 6440.11,
+          "net_change": 586.5,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 736.1,
+          "description": "Four named individual contributions reported in the original Q2 filing."
+        },
+        {
+          "label": "Aggregate individual contributions",
           "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 2544.3,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "amount": 745.7,
+          "description": "Individual contributions reported in aggregate without donor names."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 250,
+          "description": "One PAC contribution reported in the original Q2 filing."
         }
       ],
-      "top_donors": [],
+      "top_donors": [
+        {
+          "donor": "Mike Chippendale",
+          "amount": 500,
+          "type": "Individual"
+        },
+        {
+          "donor": "THE LEAGUE OF RI BUSINESSES WEST WARWICK",
+          "amount": 250,
+          "type": "PAC",
+          "interest_group": "Business"
+        },
+        {
+          "donor": "John Loughlin",
+          "amount": 100,
+          "type": "Individual"
+        },
+        {
+          "donor": "Antonio DiSano",
+          "amount": 86.1,
+          "type": "Individual"
+        },
+        {
+          "donor": "Henry Barth",
+          "amount": 50,
+          "type": "Individual"
+        }
+      ],
       "spending_categories": [],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+      "itemized_contribution_records": 5,
+      "individual_contribution_records": 4,
+      "pac_contribution_records": 1
     },
     {
       "candidate_id": "house-28-george-a-nardone",
