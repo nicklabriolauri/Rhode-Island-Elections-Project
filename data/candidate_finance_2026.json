@@ -14217,8 +14217,8 @@
       "office_sought": "State Representative",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
       "original_documents": [],
       "beginning_cash": 142597.73,
       "money_raised": 68900,
@@ -14228,7 +14228,7 @@
       "total_cash_receipts": 68900,
       "campaign_expenses": 0,
       "aggregate_expenses": 25674.86,
-      "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "This profile uses Katherine Sheena Kazarian's original Q2 2026 filing for contribution and spending-category detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -14251,16 +14251,175 @@
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
+          "label": "Aggregate individual contributions",
+          "amount": 22550,
           "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 68900,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "description": "Individual contributions reported in aggregate."
+        },
+        {
+          "label": "Itemized individual donors",
+          "amount": 27350,
+          "class_name": "itemized-individual-donors",
+          "description": "Sixty-three named individual contribution records."
+        },
+        {
+          "label": "Aggregate PAC contributions",
+          "amount": 1850,
+          "class_name": "pac-contributions",
+          "description": "PAC contributions reported in aggregate."
+        },
+        {
+          "label": "PAC contributions",
+          "amount": 17150,
+          "class_name": "pac-contributions",
+          "description": "Forty-three named PAC contribution records."
         }
       ],
-      "top_donors": [],
-      "spending_categories": [],
+      "top_donors": [
+        {
+          "donor": "Ralph Palumbo",
+          "amount": 2000,
+          "type": "Individual"
+        },
+        {
+          "donor": "Thomas G Casale",
+          "amount": 1000,
+          "type": "Individual"
+        },
+        {
+          "donor": "Stephen Ucci",
+          "amount": 1000,
+          "type": "Individual"
+        },
+        {
+          "donor": "Sandra Petrarca",
+          "amount": 1000,
+          "type": "Individual"
+        },
+        {
+          "donor": "Robert E Craven",
+          "amount": 1000,
+          "type": "Individual"
+        },
+        {
+          "donor": "Richard R Beretta",
+          "amount": 1000,
+          "type": "Individual"
+        },
+        {
+          "donor": "Peter Petrarca",
+          "amount": 1000,
+          "type": "Individual"
+        },
+        {
+          "donor": "John Koza",
+          "amount": 1000,
+          "type": "Individual"
+        },
+        {
+          "donor": "Jason Robins",
+          "amount": 1000,
+          "type": "Individual"
+        },
+        {
+          "donor": "Dennis Gamba",
+          "amount": 1000,
+          "type": "Individual"
+        },
+        {
+          "donor": "Coventry Professional Firefighters PAC",
+          "amount": 1000,
+          "type": "PAC",
+          "interest_group": "Public Safety / Labor"
+        },
+        {
+          "donor": "East Greenwich Fire Fighters Association PAC",
+          "amount": 1000,
+          "type": "PAC",
+          "interest_group": "Public Safety / Labor"
+        },
+        {
+          "donor": "IBEW Local 2323 PAC",
+          "amount": 1000,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "Rhode Island Partnership for Home Care",
+          "amount": 1000,
+          "type": "PAC",
+          "interest_group": "Health Care"
+        },
+        {
+          "donor": "Rhode Island Professional Firefighters",
+          "amount": 1000,
+          "type": "PAC",
+          "interest_group": "Public Safety / Labor"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Fundraising Expenses",
+          "amount": 15669.47,
+          "description": "Fundraising-related expenses."
+        },
+        {
+          "label": "Advertising",
+          "amount": 4789.28,
+          "description": "Advertising and campaign promotion."
+        },
+        {
+          "label": "Travel & Lodging",
+          "amount": 1798.6,
+          "description": "Travel and lodging connected with campaign activity."
+        },
+        {
+          "label": "Donations (All Others)",
+          "amount": 1462.95,
+          "description": "Non-political donations and sponsorships."
+        },
+        {
+          "label": "Food, Beverages and Meals",
+          "amount": 589.11,
+          "description": "Meals and refreshments connected with campaign activity."
+        },
+        {
+          "label": "Donations (Political)",
+          "amount": 450,
+          "description": "Political donations."
+        },
+        {
+          "label": "Other",
+          "amount": 356.17,
+          "description": "Other campaign expenditures reported in the filing."
+        },
+        {
+          "label": "Rent & Utilities",
+          "amount": 215,
+          "description": "Rent and utilities."
+        },
+        {
+          "label": "Bank Fees",
+          "amount": 191.56,
+          "description": "Payment-processing and bank fees."
+        },
+        {
+          "label": "Gifts",
+          "amount": 117.69,
+          "description": "Gifts reported as campaign expenditures."
+        },
+        {
+          "label": "Office Equipment & Supplies",
+          "amount": 35.03,
+          "description": "Office equipment and supplies."
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+      "itemized_contribution_records": 106,
+      "individual_contribution_records": 63,
+      "pac_contribution_records": 43
     },
     {
       "candidate_id": "house-64-jenni-a-furtado",
@@ -14273,18 +14432,18 @@
       "office_sought": "State Representative",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
       "original_documents": [],
-      "beginning_cash": 11275.64,
-      "money_raised": 503.66,
+      "beginning_cash": 10875.64,
+      "money_raised": 353.66,
       "money_spent": 1061.13,
-      "ending_cash": 10718.17,
-      "net_change": -557.47,
+      "ending_cash": 10168.17,
+      "net_change": -707.47,
       "total_cash_receipts": 503.66,
       "campaign_expenses": 0,
       "aggregate_expenses": 1061.13,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it spent more during the period than it raised.",
+      "summary_intro": "This profile uses Jenni A Furtado's original Q2 2026 filing for contribution and spending-category detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -14298,25 +14457,72 @@
         {
           "label": "Q2 2026",
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
-          "money_raised": 503.66,
+          "money_raised": 353.66,
           "money_spent": 1061.13,
-          "ending_cash": 10718.17,
-          "net_change": -557.47,
+          "ending_cash": 10168.17,
+          "net_change": -707.47,
           "notes": "The campaign spent more than it raised in this reporting period."
         }
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
+          "label": "Aggregate individual contributions",
+          "amount": 28.66,
           "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 503.66,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "description": "ActBlue individual contributions reported in aggregate."
+        },
+        {
+          "label": "Itemized individual donors",
+          "amount": 325,
+          "class_name": "itemized-individual-donors",
+          "description": "Five named individual contribution records."
         }
       ],
-      "top_donors": [],
-      "spending_categories": [],
+      "top_donors": [
+        {
+          "donor": "William J Murphy",
+          "amount": 125,
+          "type": "Individual"
+        },
+        {
+          "donor": "Mark Poirier",
+          "amount": 100,
+          "type": "Individual"
+        },
+        {
+          "donor": "Antonio Desimas",
+          "amount": 50,
+          "type": "Individual"
+        },
+        {
+          "donor": "William Irons",
+          "amount": 50,
+          "type": "Individual"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Donations (Political)",
+          "amount": 525,
+          "description": "Political donations."
+        },
+        {
+          "label": "Food, Beverages and Meals",
+          "amount": 317.85,
+          "description": "Meals and refreshments connected with campaign activity."
+        },
+        {
+          "label": "Advertising",
+          "amount": 218.28,
+          "description": "Advertising and campaign promotion."
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+      "itemized_contribution_records": 5,
+      "individual_contribution_records": 5,
+      "pac_contribution_records": 0
     },
     {
       "candidate_id": "house-65-cameron-st-germain",
@@ -14636,8 +14842,8 @@
       "office_sought": "State Representative",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
       "original_documents": [],
       "beginning_cash": 33826.39,
       "money_raised": 781,
@@ -14647,7 +14853,7 @@
       "total_cash_receipts": 781,
       "campaign_expenses": 0,
       "aggregate_expenses": 1320.04,
-      "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it spent more during the period than it raised.",
+      "summary_intro": "This profile uses Jennifer Smith Boylan's original Q2 2026 filing for contribution and spending-category detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -14670,16 +14876,100 @@
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
-          "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 781,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "label": "Itemized individual donors",
+          "amount": 431,
+          "class_name": "itemized-individual-donors",
+          "description": "Twelve individual contribution records."
+        },
+        {
+          "label": "PAC contributions",
+          "amount": 350,
+          "class_name": "pac-contributions",
+          "description": "Two named PAC contributions."
         }
       ],
-      "top_donors": [],
-      "spending_categories": [],
+      "top_donors": [
+        {
+          "donor": "RI Medical PAC",
+          "amount": 200,
+          "type": "PAC",
+          "interest_group": "Health Care"
+        },
+        {
+          "donor": "CAREPAC of Blue Cross & Blue Shield of RI",
+          "amount": 150,
+          "type": "PAC",
+          "interest_group": "Insurance"
+        },
+        {
+          "donor": "Peter Trafton",
+          "amount": 100,
+          "type": "Individual"
+        },
+        {
+          "donor": "Mark Hilty",
+          "amount": 75,
+          "type": "Individual"
+        },
+        {
+          "donor": "Nancy Ruzzo",
+          "amount": 75,
+          "type": "Individual"
+        },
+        {
+          "donor": "Robert Kemp",
+          "amount": 50,
+          "type": "Individual"
+        },
+        {
+          "donor": "Anna Clancy",
+          "amount": 50,
+          "type": "Individual"
+        },
+        {
+          "donor": "Howard Boksenbaum",
+          "amount": 36,
+          "type": "Individual"
+        },
+        {
+          "donor": "Bonnie Moore",
+          "amount": 25,
+          "type": "Individual"
+        },
+        {
+          "donor": "Laura Ward",
+          "amount": 20,
+          "type": "Individual"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Advertising",
+          "amount": 703,
+          "description": "Advertising and campaign promotion."
+        },
+        {
+          "label": "Other",
+          "amount": 450.21,
+          "description": "Other campaign expenditures reported in the filing."
+        },
+        {
+          "label": "Fundraising Expenses",
+          "amount": 111.19,
+          "description": "Fundraising-related expenses."
+        },
+        {
+          "label": "Office Equipment & Supplies",
+          "amount": 55.64,
+          "description": "Office equipment and supplies."
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+      "itemized_contribution_records": 14,
+      "individual_contribution_records": 12,
+      "pac_contribution_records": 2
     },
     {
       "candidate_id": "house-67-nicole-p-jellinek",
@@ -14692,8 +14982,8 @@
       "office_sought": "State Representative",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
       "original_documents": [],
       "beginning_cash": 21315.8,
       "money_raised": 370,
@@ -14703,7 +14993,7 @@
       "total_cash_receipts": 370,
       "campaign_expenses": 0,
       "aggregate_expenses": 2043.05,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it spent more during the period than it raised.",
+      "summary_intro": "This profile uses Nicole P Jellinek's original Q2 2026 filing for contribution and spending-category detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -14726,16 +15016,52 @@
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
-          "class_name": "small-dollar-aggregate-online-receipts",
+          "label": "Itemized individual donors",
           "amount": 370,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "class_name": "itemized-individual-donors",
+          "description": "Four individual contribution records."
         }
       ],
-      "top_donors": [],
-      "spending_categories": [],
+      "top_donors": [
+        {
+          "donor": "Tim Faulkner",
+          "amount": 250,
+          "type": "Individual"
+        },
+        {
+          "donor": "Shoshana Landow",
+          "amount": 100,
+          "type": "Individual"
+        },
+        {
+          "donor": "Cynthia Rosengard",
+          "amount": 20,
+          "type": "Individual"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Fundraising Expenses",
+          "amount": 1878.54,
+          "description": "Fundraising-related expenses."
+        },
+        {
+          "label": "Office Equipment & Supplies",
+          "amount": 149.9,
+          "description": "Office equipment and supplies."
+        },
+        {
+          "label": "Bank Fees",
+          "amount": 14.61,
+          "description": "Payment-processing and bank fees."
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+      "itemized_contribution_records": 4,
+      "individual_contribution_records": 4,
+      "pac_contribution_records": 0
     },
     {
       "candidate_id": "house-67-ronald-paul-jarvais-jr",
@@ -14886,18 +15212,18 @@
       "office_sought": "State Representative",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
       "original_documents": [],
       "beginning_cash": 10614.61,
-      "money_raised": 6671.84,
-      "money_spent": 4488.9,
-      "ending_cash": 12797.55,
-      "net_change": 2182.94,
+      "money_raised": 5346.84,
+      "money_spent": 4455.84,
+      "ending_cash": 11505.61,
+      "net_change": 891,
       "total_cash_receipts": 6671.84,
       "campaign_expenses": 0,
       "aggregate_expenses": 4488.9,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "This profile uses June S Speakman's original Q2 2026 filing for contribution and spending-category detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -14911,25 +15237,125 @@
         {
           "label": "Q2 2026",
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
-          "money_raised": 6671.84,
-          "money_spent": 4488.9,
-          "ending_cash": 12797.55,
-          "net_change": 2182.94,
+          "money_raised": 5346.84,
+          "money_spent": 4455.84,
+          "ending_cash": 11505.61,
+          "net_change": 891,
           "notes": "The campaign raised more than it spent in this reporting period."
         }
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
-          "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 6671.84,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "label": "Itemized individual donors",
+          "amount": 3946.84,
+          "class_name": "itemized-individual-donors",
+          "description": "Seventeen named individual contribution records."
+        },
+        {
+          "label": "PAC contributions",
+          "amount": 1400,
+          "class_name": "pac-contributions",
+          "description": "Twelve named PAC contribution records."
         }
       ],
-      "top_donors": [],
-      "spending_categories": [],
+      "top_donors": [
+        {
+          "donor": "Diane Palumbo",
+          "amount": 2000,
+          "type": "Individual"
+        },
+        {
+          "donor": "Susan Donovan",
+          "amount": 421.84,
+          "type": "Individual"
+        },
+        {
+          "donor": "Jessie Kingston",
+          "amount": 250,
+          "type": "Individual"
+        },
+        {
+          "donor": "NEARI PACE",
+          "amount": 250,
+          "type": "PAC",
+          "interest_group": "Education / Labor"
+        },
+        {
+          "donor": "RI Medical PAC",
+          "amount": 200,
+          "type": "PAC",
+          "interest_group": "Health Care"
+        },
+        {
+          "donor": "Anthony Simon",
+          "amount": 150,
+          "type": "Individual"
+        },
+        {
+          "donor": "Margaret Sweeney",
+          "amount": 150,
+          "type": "Individual"
+        },
+        {
+          "donor": "CAREPAC of Blue Cross & Blue Shield of RI",
+          "amount": 150,
+          "type": "PAC",
+          "interest_group": "Insurance"
+        },
+        {
+          "donor": "RI State Association of Firefighters",
+          "amount": 150,
+          "type": "PAC",
+          "interest_group": "Public Safety / Labor"
+        },
+        {
+          "donor": "IBEW Local 99 PAC",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "Plumbers & Pipefitters Local 51 PAC",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "RI AFL-CIO PAC",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "Sheet Metal Workers Political Action",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Advertising",
+          "amount": 2221.84,
+          "description": "Advertising and campaign promotion."
+        },
+        {
+          "label": "Consultant & Professional Services",
+          "amount": 2000,
+          "description": "Campaign consulting and professional services."
+        },
+        {
+          "label": "Other",
+          "amount": 234,
+          "description": "Other campaign expenditures reported in the filing."
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+      "itemized_contribution_records": 29,
+      "individual_contribution_records": 17,
+      "pac_contribution_records": 12
     },
     {
       "candidate_id": "house-69-susan-ann-donovan",
