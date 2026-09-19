@@ -10793,8 +10793,8 @@
       "office_sought": "State Representative",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
       "original_documents": [],
       "beginning_cash": 5527.81,
       "money_raised": 8200,
@@ -10804,7 +10804,7 @@
       "total_cash_receipts": 8200,
       "campaign_expenses": 0,
       "aggregate_expenses": 3588.53,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "This profile uses Deborah A Fellela's original Q2 2026 filing for contribution and spending-category detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -10827,16 +10827,200 @@
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
-          "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 8200,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "label": "Itemized individual donors",
+          "amount": 3800,
+          "class_name": "itemized-individual-donors",
+          "description": "35 named individual contributions reported in the original Q2 filing."
+        },
+        {
+          "label": "PAC contributions",
+          "amount": 4400,
+          "class_name": "pac-contributions",
+          "description": "17 named PAC contributions reported in the original Q2 filing."
         }
       ],
-      "top_donors": [],
-      "spending_categories": [],
+      "top_donors": [
+        {
+          "donor": "Johnston Association Firefighters Local",
+          "amount": 1500,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "Johnston Federation of Teachers Local",
+          "amount": 500,
+          "type": "PAC",
+          "interest_group": "Education / Labor"
+        },
+        {
+          "donor": "Robert Russo",
+          "amount": 500,
+          "type": "Individual"
+        },
+        {
+          "donor": "IBEW Local 99 PAC",
+          "amount": 300,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "PEOPLE, RI Council 94, AFSCME AFL-CIO PAC",
+          "amount": 300,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "RI Brotherhood of Correctional Officers",
+          "amount": 300,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "District 1199 SEIU Political Action Committee",
+          "amount": 200,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "North Providence Federation of Teachers",
+          "amount": 200,
+          "type": "PAC",
+          "interest_group": "Education / Labor"
+        },
+        {
+          "donor": "RI Federation of Teachers COPE PAC",
+          "amount": 200,
+          "type": "PAC",
+          "interest_group": "Education / Labor"
+        },
+        {
+          "donor": "Douglas Jeffrey",
+          "amount": 200,
+          "type": "Individual"
+        },
+        {
+          "donor": "Kevin Milonzzi",
+          "amount": 200,
+          "type": "Individual"
+        },
+        {
+          "donor": "William Murphy",
+          "amount": 200,
+          "type": "Individual"
+        },
+        {
+          "donor": "Patricia Serpa",
+          "amount": 200,
+          "type": "Individual"
+        },
+        {
+          "donor": "RI Association of Nurse Anesthetists PAC",
+          "amount": 150,
+          "type": "PAC",
+          "interest_group": "Health Care"
+        },
+        {
+          "donor": "RI State Association of Firefighters",
+          "amount": 150,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "Cranston Teachers' Alliance",
+          "amount": 50,
+          "type": "PAC",
+          "interest_group": "Education / Labor"
+        },
+        {
+          "donor": "Iron Workers Local 37",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "NEARI PACE",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Education / Labor"
+        },
+        {
+          "donor": "Providence RI Central Federated Council AFL-CIO",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "Providence Teachers COPE",
+          "amount": 50,
+          "type": "PAC",
+          "interest_group": "Education / Labor"
+        },
+        {
+          "donor": "RI Laborers' State Employees",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "RI NAGE/IBPO PAC",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Advertising",
+          "amount": 1097.9,
+          "description": "Advertising, signs and promotional placements."
+        },
+        {
+          "label": "Fundraising Expenses",
+          "amount": 800,
+          "description": "Fundraising-related expenses."
+        },
+        {
+          "label": "Food, Beverages and Meals",
+          "amount": 571.24,
+          "description": "Meals and refreshments connected with campaign activity."
+        },
+        {
+          "label": "Donations (Political)",
+          "amount": 450,
+          "description": "Contributions to political committees or candidates."
+        },
+        {
+          "label": "Donations (All Others)",
+          "amount": 418.5,
+          "description": "Non-political donations and sponsorships."
+        },
+        {
+          "label": "Travel & Lodging",
+          "amount": 80,
+          "description": "Campaign-related travel and lodging."
+        },
+        {
+          "label": "Gifts",
+          "amount": 72.7,
+          "description": "Gifts reported as campaign expenditures."
+        },
+        {
+          "label": "Office Equipment & Supplies",
+          "amount": 68.19,
+          "description": "Office and constituent-related supplies."
+        },
+        {
+          "label": "Bank Fees",
+          "amount": 30,
+          "description": "Banking and transaction fees."
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+      "itemized_contribution_records": 52,
+      "individual_contribution_records": 35,
+      "pac_contribution_records": 17
     },
     {
       "candidate_id": "house-44-gregory-costantino",
@@ -10971,8 +11155,8 @@
       "office_sought": "State Representative",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
       "original_documents": [],
       "beginning_cash": 56540.45,
       "money_raised": 525,
@@ -10982,7 +11166,7 @@
       "total_cash_receipts": 525,
       "campaign_expenses": 0,
       "aggregate_expenses": 7602.07,
-      "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it spent more during the period than it raised.",
+      "summary_intro": "This profile uses Mia A Ackerman's original Q2 2026 filing for contribution and spending-category detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -11005,16 +11189,92 @@
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
-          "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 525,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "label": "Aggregate PAC contributions",
+          "amount": 350,
+          "class_name": "pac-contributions",
+          "description": "Aggregate contribution identified in the filing as HARI & RI Medical PACs."
+        },
+        {
+          "label": "PAC contributions",
+          "amount": 175,
+          "class_name": "pac-contributions",
+          "description": "Named PAC contributions."
+        },
+        {
+          "label": "In-kind contribution",
+          "amount": 31,
+          "class_name": "other-receipts",
+          "description": "Candidate in-kind contribution reported separately; not included in cash receipts."
         }
       ],
-      "top_donors": [],
-      "spending_categories": [],
+      "top_donors": [
+        {
+          "donor": "HARI & RI Medical PACs (aggregate)",
+          "amount": 350,
+          "type": "PAC",
+          "interest_group": "Health Care"
+        },
+        {
+          "donor": "AMICA / RI PAC",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Insurance"
+        },
+        {
+          "donor": "Providence RI Central Federated Council AFL-CIO",
+          "amount": 75,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Advertising",
+          "amount": 4159.25,
+          "description": "Advertising and campaign promotion."
+        },
+        {
+          "label": "Food, Beverages and Meals",
+          "amount": 925.3,
+          "description": "Meals and refreshments connected with campaign activity."
+        },
+        {
+          "label": "Other",
+          "amount": 755,
+          "description": "Other campaign expenditures reported in the filing."
+        },
+        {
+          "label": "Donations (Political)",
+          "amount": 550,
+          "description": "Political donations."
+        },
+        {
+          "label": "Travel & Lodging",
+          "amount": 476.8,
+          "description": "Campaign-related travel and lodging."
+        },
+        {
+          "label": "Donations (All Others)",
+          "amount": 350,
+          "description": "Non-political donations."
+        },
+        {
+          "label": "Office Equipment & Supplies",
+          "amount": 327.3,
+          "description": "Office equipment and supplies."
+        },
+        {
+          "label": "Telephone",
+          "amount": 58.42,
+          "description": "Campaign telephone expenses."
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+      "itemized_contribution_records": 3,
+      "individual_contribution_records": 0,
+      "pac_contribution_records": 2
     },
     {
       "candidate_id": "house-46-mary-ann-shallcross-smith",
@@ -11027,8 +11287,8 @@
       "office_sought": "State Representative",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
       "original_documents": [],
       "beginning_cash": 35725.12,
       "money_raised": 7346.8,
@@ -11038,7 +11298,7 @@
       "total_cash_receipts": 7346.8,
       "campaign_expenses": 0,
       "aggregate_expenses": 1929.31,
-      "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "This profile uses Mary Ann Shallcross Smith's original Q2 2026 filing for contribution and spending-category detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -11061,16 +11321,183 @@
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
-          "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 7346.8,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "label": "Itemized individual donors",
+          "amount": 4875,
+          "class_name": "itemized-individual-donors",
+          "description": "Named individual contributions reported in the original Q2 filing."
+        },
+        {
+          "label": "PAC contributions",
+          "amount": 2400,
+          "class_name": "pac-contributions",
+          "description": "Named PAC contributions reported in the original Q2 filing."
+        },
+        {
+          "label": "Interest received",
+          "amount": 71.8,
+          "class_name": "other-receipts",
+          "description": "Interest received during the reporting period."
         }
       ],
-      "top_donors": [],
-      "spending_categories": [],
+      "top_donors": [
+        {
+          "donor": "John R. Koza",
+          "amount": 250,
+          "type": "Individual"
+        },
+        {
+          "donor": "Richard McAuliffe",
+          "amount": 250,
+          "type": "Individual"
+        },
+        {
+          "donor": "RI Brotherhood of Correctional Officers",
+          "amount": 200,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "United Food & Commercial Workers",
+          "amount": 250,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "CAREPAC of Blue Cross & Blue Shield of RI",
+          "amount": 150,
+          "type": "PAC",
+          "interest_group": "Health Care"
+        },
+        {
+          "donor": "RI Association of Nurse Anesthetists PAC",
+          "amount": 125,
+          "type": "PAC",
+          "interest_group": "Health Care"
+        },
+        {
+          "donor": "Citizens Bank PACOM",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Banking / Finance"
+        },
+        {
+          "donor": "Fire Chiefs PAC",
+          "amount": 50,
+          "type": "PAC",
+          "interest_group": "Public Safety"
+        },
+        {
+          "donor": "IBEW Local 99 PAC",
+          "amount": 75,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "NEA RI Retired PAC",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Education / Labor"
+        },
+        {
+          "donor": "NEARI PACE",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Education / Labor"
+        },
+        {
+          "donor": "Northern RI Chamber of Commerce PAC",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Business"
+        },
+        {
+          "donor": "PEOPLE, RI Council 94, AFSCME AFL-CIO PAC",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "Providence RI Central Federated Council AFL-CIO",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "Providence Teachers COPE",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Education / Labor"
+        },
+        {
+          "donor": "Rhode Island Energy PAC",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Energy / Utilities"
+        },
+        {
+          "donor": "RI AFL-CIO PAC",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "RI AFT Retirees COPE PAC",
+          "amount": 50,
+          "type": "PAC",
+          "interest_group": "Education / Labor"
+        },
+        {
+          "donor": "RI Federation of Teachers COPE PAC",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Education / Labor"
+        },
+        {
+          "donor": "RI Health Care Association PAC",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Health Care"
+        },
+        {
+          "donor": "RI Laborer's Political League",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "RI Laborers' State Employees",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "RI NAGE/IBPO PAC",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "RI State Association of Firefighters",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Fundraising Expenses",
+          "amount": 1629.31,
+          "description": "Fundraising platform fees, facility costs, invitations and thank-you materials."
+        },
+        {
+          "label": "Consultant & Professional Services",
+          "amount": 300,
+          "description": "Professional services."
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing."
     },
     {
       "candidate_id": "house-47-david-j-place",
@@ -11083,8 +11510,8 @@
       "office_sought": "State Representative",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
       "original_documents": [],
       "beginning_cash": 2768.55,
       "money_raised": 3796.96,
@@ -11094,7 +11521,7 @@
       "total_cash_receipts": 3796.96,
       "campaign_expenses": 0,
       "aggregate_expenses": 2138.02,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "This profile uses David J Place's original Q2 2026 filing for contribution and spending-category detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -11117,16 +11544,74 @@
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
+          "label": "Aggregate individual contributions",
+          "amount": 1330.13,
           "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 3796.96,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "description": "Aggregate individual contributions, including fundraiser proceeds."
+        },
+        {
+          "label": "Itemized individual donors",
+          "amount": 1041.02,
+          "class_name": "itemized-individual-donors",
+          "description": "Named individual contribution."
+        },
+        {
+          "label": "Aggregate PAC contributions",
+          "amount": 1125,
+          "class_name": "pac-contributions",
+          "description": "PAC receipts reported in aggregate in the filing."
+        },
+        {
+          "label": "PAC contributions",
+          "amount": 300,
+          "class_name": "pac-contributions",
+          "description": "Named PAC contribution."
+        },
+        {
+          "label": "Interest received",
+          "amount": 0.81,
+          "class_name": "other-receipts",
+          "description": "Interest received during the reporting period."
         }
       ],
-      "top_donors": [],
-      "spending_categories": [],
+      "top_donors": [
+        {
+          "donor": "Victor Mellor",
+          "amount": 1041.02,
+          "type": "Individual"
+        },
+        {
+          "donor": "RI Brotherhood of Correctional Officers",
+          "amount": 300,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Fundraising Expenses",
+          "amount": 943.04,
+          "description": "Fundraising expenses and fees."
+        },
+        {
+          "label": "Food, Beverages and Meals",
+          "amount": 822.42,
+          "description": "Meals and refreshments connected with campaign activity."
+        },
+        {
+          "label": "Advertising",
+          "amount": 365.08,
+          "description": "Advertising and campaign promotion."
+        },
+        {
+          "label": "Office Equipment & Supplies",
+          "amount": 7.48,
+          "description": "Office equipment and supplies."
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing."
     },
     {
       "candidate_id": "house-48-brian-c-newberry",
@@ -11139,8 +11624,8 @@
       "office_sought": "State Representative",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
       "original_documents": [],
       "beginning_cash": 15262.76,
       "money_raised": 1905.86,
@@ -11150,7 +11635,7 @@
       "total_cash_receipts": 1905.86,
       "campaign_expenses": 0,
       "aggregate_expenses": 2160.13,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it spent more during the period than it raised.",
+      "summary_intro": "This profile uses Brian C Newberry's original Q2 2026 filing for contribution and spending-category detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -11173,16 +11658,62 @@
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
+          "label": "Aggregate individual contributions",
+          "amount": 1104.1,
           "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 1905.86,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "description": "Individual contributions reported in aggregate."
+        },
+        {
+          "label": "Itemized individual donors",
+          "amount": 250,
+          "class_name": "itemized-individual-donors",
+          "description": "Named individual contribution."
+        },
+        {
+          "label": "Aggregate PAC contributions",
+          "amount": 550,
+          "class_name": "pac-contributions",
+          "description": "PAC contributions reported in aggregate without PAC names."
+        },
+        {
+          "label": "Interest received",
+          "amount": 1.76,
+          "class_name": "other-receipts",
+          "description": "Interest received during the reporting period."
         }
       ],
-      "top_donors": [],
-      "spending_categories": [],
+      "top_donors": [
+        {
+          "donor": "Louis Paolino",
+          "amount": 250,
+          "type": "Individual"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Food, Beverages and Meals",
+          "amount": 1511.15,
+          "description": "Meals and refreshments connected with campaign activity."
+        },
+        {
+          "label": "Donations (All Others)",
+          "amount": 598.94,
+          "description": "Non-political donations."
+        },
+        {
+          "label": "Travel & Lodging",
+          "amount": 42,
+          "description": "Campaign-related travel and lodging."
+        },
+        {
+          "label": "Fundraising Expenses",
+          "amount": 8.04,
+          "description": "Fundraising platform fees."
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing."
     },
     {
       "candidate_id": "house-49-veronicka-vega",
