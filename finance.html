@@ -2643,8 +2643,8 @@
                 <div class="spending-top">
                   <div class="spending-rank">${index + 1}</div>
                   <div>
-                    <div class="spending-title">${escapeHtml(item.title || "Campaign spending")}</div>
-                    <div class="spending-copy">${escapeHtml(item.summary || "")}</div>
+                    <div class="spending-title">${escapeHtml(item.title || item.label || "Campaign spending")}</div>
+                    <div class="spending-copy">${escapeHtml(item.summary || item.description || "")}</div>
                   </div>
                   ${typeof item.amount === "number" ? `<div class="spending-amount">${formatCurrency(item.amount)}</div>` : ""}
                 </div>
