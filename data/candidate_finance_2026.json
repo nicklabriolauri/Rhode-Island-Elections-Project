@@ -5600,17 +5600,20 @@
         {
           "donor": "REALTORS PAC OF RI",
           "amount": 100,
-          "type": "PAC"
+          "type": "PAC",
+          "interest_group": "Real Estate"
         },
         {
           "donor": "RI MEDICAL PAC",
           "amount": 100,
-          "type": "PAC"
+          "type": "PAC",
+          "interest_group": "Health Care"
         },
         {
           "donor": "RI STATE NURSES ASSOCIATION",
           "amount": 100,
-          "type": "PAC"
+          "type": "PAC",
+          "interest_group": "Health Care"
         },
         {
           "donor": "Frank Woods",
@@ -5636,7 +5639,8 @@
         {
           "donor": "PROVIDENCE RI CENTRAL FEDERATED COUNCIL AFL-CIO",
           "amount": 50,
-          "type": "PAC"
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
         },
         {
           "donor": "Lonnie Barham",
