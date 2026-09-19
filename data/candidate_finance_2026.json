@@ -6958,8 +6958,8 @@
       "office_sought": "State Representative",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; contribution detail included",
       "original_documents": [],
       "beginning_cash": 5354.95,
       "money_raised": 100,
@@ -6969,7 +6969,7 @@
       "total_cash_receipts": 100,
       "campaign_expenses": 0,
       "aggregate_expenses": 0,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "This profile uses George A Nardone's original Q2 2026 filing for contribution detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -6992,16 +6992,20 @@
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
+          "label": "Aggregate individual contributions",
           "class_name": "small-dollar-aggregate-online-receipts",
           "amount": 100,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "description": "Individual contributions reported in aggregate without donor names."
         }
       ],
       "top_donors": [],
       "spending_categories": [],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+      "itemized_contribution_records": 0,
+      "individual_contribution_records": 0,
+      "pac_contribution_records": 0
     },
     {
       "candidate_id": "house-29-sherry-l-roberts",
@@ -7991,8 +7995,8 @@
       "office_sought": "State Representative",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; contribution detail included",
       "original_documents": [],
       "beginning_cash": 79585.09,
       "money_raised": 7650,
@@ -8002,7 +8006,7 @@
       "total_cash_receipts": 7650,
       "campaign_expenses": 0,
       "aggregate_expenses": 3252.17,
-      "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "This profile uses Carol Hagan McEntee's original Q2 2026 filing for contribution detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -8025,16 +8029,110 @@
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
+          "label": "Aggregate individual contributions",
           "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 7650,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "amount": 100,
+          "description": "Individual contributions reported in aggregate without donor names."
+        },
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 5000,
+          "description": "Named individual contributions reported in the original Q2 filing."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 2550,
+          "description": "PAC contributions reported in the original Q2 filing."
         }
       ],
-      "top_donors": [],
+      "top_donors": [
+        {
+          "donor": "Carol A. O'Donnell",
+          "amount": 1000,
+          "type": "Individual"
+        },
+        {
+          "donor": "Herbert J. Brennan",
+          "amount": 500,
+          "type": "Individual"
+        },
+        {
+          "donor": "John R. Koza",
+          "amount": 500,
+          "type": "Individual"
+        },
+        {
+          "donor": "RHODE ISLAND COALITION OF HOUSING PROVIDERS",
+          "amount": 500,
+          "type": "PAC",
+          "interest_group": "Housing / Real Estate"
+        },
+        {
+          "donor": "RI HOSPITALITY PAC",
+          "amount": 500,
+          "type": "PAC",
+          "interest_group": "Hospitality"
+        },
+        {
+          "donor": "RI LABORER'S POLITICAL LEAGUE",
+          "amount": 300,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "RI HEALTH CARE ASSOCIATION PAC",
+          "amount": 250,
+          "type": "PAC",
+          "interest_group": "Health Care"
+        },
+        {
+          "donor": "RIOA PAC (RI Optometric Association)",
+          "amount": 250,
+          "type": "PAC",
+          "interest_group": "Health Care"
+        },
+        {
+          "donor": "Thomas E. Furey",
+          "amount": 250,
+          "type": "Individual"
+        },
+        {
+          "donor": "RI LABORERS' STATE EMPLOYEES",
+          "amount": 200,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "RI MEDICAL PAC",
+          "amount": 200,
+          "type": "PAC",
+          "interest_group": "Health Care"
+        },
+        {
+          "donor": "CITIZENS BANK PACOM",
+          "amount": 150,
+          "type": "PAC",
+          "interest_group": "Banking / Finance"
+        },
+        {
+          "donor": "PROVIDENCE TEACHERS COPE",
+          "amount": 150,
+          "type": "PAC",
+          "interest_group": "Education / Labor"
+        },
+        {
+          "donor": "CRANSTON TEACHERS' ALLIANCE",
+          "amount": 50,
+          "type": "PAC",
+          "interest_group": "Education / Labor"
+        }
+      ],
       "spending_categories": [],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing."
     },
     {
       "candidate_id": "house-33-jessica-drew-day",
@@ -8103,8 +8201,8 @@
       "office_sought": "State Representative",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; contribution detail included",
       "original_documents": [],
       "beginning_cash": 5665.22,
       "money_raised": 2897.5,
@@ -8114,7 +8212,7 @@
       "total_cash_receipts": 2897.5,
       "campaign_expenses": 0,
       "aggregate_expenses": 2444.77,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "This profile uses Teresa A Tanzi's original Q2 2026 filing for contribution detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -8137,16 +8235,52 @@
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
+          "label": "Aggregate individual contributions",
           "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 2897.5,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "amount": 1587.5,
+          "description": "Individual contributions reported in aggregate without donor names."
+        },
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 810,
+          "description": "Named individual contributions reported in the original Q2 filing."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 500,
+          "description": "One PAC contribution reported in the original Q2 filing."
         }
       ],
-      "top_donors": [],
+      "top_donors": [
+        {
+          "donor": "Jessie Kingston",
+          "amount": 500,
+          "type": "Individual"
+        },
+        {
+          "donor": "AMALGAMATED TRANSIT UNION COPE-RHODE ISLAND",
+          "amount": 500,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "Carolyn Mark",
+          "amount": 250,
+          "type": "Individual"
+        },
+        {
+          "donor": "Deborah Kopech",
+          "amount": 60,
+          "type": "Individual",
+          "notes": "Three $20 contributions during the filing period."
+        }
+      ],
       "spending_categories": [],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing."
     },
     {
       "candidate_id": "house-35-jennifer-p-nerbonne",
@@ -8215,8 +8349,8 @@
       "office_sought": "State Representative",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; contribution detail included",
       "original_documents": [],
       "beginning_cash": 10226.4,
       "money_raised": 1900,
@@ -8226,7 +8360,7 @@
       "total_cash_receipts": 1900,
       "campaign_expenses": 0,
       "aggregate_expenses": 1405,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "This profile uses Kathleen A Fogarty's original Q2 2026 filing for contribution detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -8249,16 +8383,93 @@
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
+          "label": "Aggregate individual contributions",
           "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 1900,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "amount": 350,
+          "description": "Individual contributions reported in aggregate without donor names."
+        },
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 600,
+          "description": "Three named individual contributions reported in the original Q2 filing."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 950,
+          "description": "PAC contributions reported in the original Q2 filing."
         }
       ],
-      "top_donors": [],
+      "top_donors": [
+        {
+          "donor": "Joseph Walsh",
+          "amount": 200,
+          "type": "Individual"
+        },
+        {
+          "donor": "William Walsh",
+          "amount": 200,
+          "type": "Individual"
+        },
+        {
+          "donor": "Gayle Wolf",
+          "amount": 200,
+          "type": "Individual"
+        },
+        {
+          "donor": "RI HEALTH CARE ASSOCIATION PAC",
+          "amount": 200,
+          "type": "PAC",
+          "interest_group": "Health Care"
+        },
+        {
+          "donor": "RI LABORERS' STATE EMPLOYEES",
+          "amount": 200,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "AMERICAN ASSOCIATION OF UNIVERSITY PROFESSORS / UNIVERSITY OF RI CHAPTER",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Education / Labor"
+        },
+        {
+          "donor": "AMICA / RI PAC",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Insurance"
+        },
+        {
+          "donor": "PROVIDENCE RI CENTRAL FEDERATED COUNCIL AFL-CIO",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "PROVIDENCE TEACHERS COPE",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Education / Labor"
+        },
+        {
+          "donor": "RI LABORER'S POLITICAL LEAGUE",
+          "amount": 100,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        },
+        {
+          "donor": "CRANSTON TEACHERS' ALLIANCE",
+          "amount": 50,
+          "type": "PAC",
+          "interest_group": "Education / Labor"
+        }
+      ],
       "spending_categories": [],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing."
     },
     {
       "candidate_id": "house-36-leah-j-boisclair",
@@ -8271,8 +8482,8 @@
       "office_sought": "State Representative",
       "report_label": "6/30/2026",
       "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
+      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+      "coverage_note": "Original Q2 filing; contribution detail included",
       "original_documents": [],
       "beginning_cash": 15639.91,
       "money_raised": 7009.69,
@@ -8282,7 +8493,7 @@
       "total_cash_receipts": 7009.69,
       "campaign_expenses": 0,
       "aggregate_expenses": 9675.81,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it spent more during the period than it raised.",
+      "summary_intro": "This profile uses Leah J Boisclair's original Q2 2026 filing for contribution detail.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -8305,16 +8516,91 @@
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
+          "label": "Aggregate individual contributions",
           "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 7009.69,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "amount": 3125,
+          "description": "ActBlue and check contributions reported in aggregate without donor names."
+        },
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 3734.69,
+          "description": "Named individual contributions reported in the original Q2 filing."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 150,
+          "description": "One PAC contribution reported in the original Q2 filing."
         }
       ],
-      "top_donors": [],
+      "top_donors": [
+        {
+          "donor": "Mark Mesrobian",
+          "amount": 684.69,
+          "type": "Individual"
+        },
+        {
+          "donor": "Andrew Dimitri",
+          "amount": 500,
+          "type": "Individual"
+        },
+        {
+          "donor": "Gerard DiSanto II",
+          "amount": 500,
+          "type": "Individual"
+        },
+        {
+          "donor": "Cindy Burns",
+          "amount": 300,
+          "type": "Individual"
+        },
+        {
+          "donor": "James Howe",
+          "amount": 300,
+          "type": "Individual"
+        },
+        {
+          "donor": "Jeffrey Benn",
+          "amount": 250,
+          "type": "Individual"
+        },
+        {
+          "donor": "William C Dimitri",
+          "amount": 250,
+          "type": "Individual"
+        },
+        {
+          "donor": "Kevin Hoyle",
+          "amount": 250,
+          "type": "Individual"
+        },
+        {
+          "donor": "John MacDonald",
+          "amount": 250,
+          "type": "Individual"
+        },
+        {
+          "donor": "Chelsea McGrory",
+          "amount": 250,
+          "type": "Individual"
+        },
+        {
+          "donor": "Joe Harvey",
+          "amount": 200,
+          "type": "Individual"
+        },
+        {
+          "donor": "EGFFA PAC (East Greenwich Fire Fighters Association)",
+          "amount": 150,
+          "type": "PAC",
+          "interest_group": "Labor / Unions"
+        }
+      ],
       "spending_categories": [],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing."
     },
     {
       "candidate_id": "house-36-tina-l-spears",
