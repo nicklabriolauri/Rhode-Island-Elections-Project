@@ -1,8 +1,15 @@
 {
-  "updated_at": "2026-09-11",
+  "updated_at": "2026-09-21",
   "scope": "2025 Rhode Island General Assembly members; the site displays an entry only when name, chamber, and district match a 2026 candidate.",
-  "methodology": "RIEP reproduces organization-specific scores only when the publishing organization provides a legislator-specific result and a source can be linked. Scores from different organizations are not combined, normalized, ranked, or converted into an RIEP score. The 2025 League scorecard is currently the newest statewide Rhode Island legislative scorecard located in this audit that publishes a numerical score for substantially every member of both chambers.",
+  "methodology": "RIEP reproduces organization-specific scores only when the publishing organization provides a legislator-specific result and a source can be linked. Scores from different organizations are not combined, normalized, ranked, or converted into an RIEP score. The 2025 League scorecard is currently the newest statewide Rhode Island legislative scorecard located in this audit that publishes a numerical score for substantially every member of both chambers. State Legislative Effectiveness Scores from the Center for Effective Lawmaking are displayed as a distinct research measure, with the covered session and comparison group shown; they are not converted into an RIEP grade or combined with voting scorecards.",
   "research_audit": [
+    {
+      "organization": "Center for Effective Lawmaking (University of Virginia and Vanderbilt University)",
+      "included": true,
+      "latest_reviewed": "2023–2024 Rhode Island State Legislative Effectiveness Scores",
+      "reason": "Nonpartisan research measure of legislators' demonstrated ability to advance sponsored bills through the legislative process. Displayed separately from advocacy-group voting scorecards.",
+      "source_url": "https://thelawmakers.org/state-legislative-effectiveness-scores/announcing-the-release-of-the-68th-north-dakota-legislative-assembly-2023-2024-and-the-2023-2024-rhode-island-general-assembly-legislative-sessions-state-legislative-effectiveness-scores-sles"
+    },
     {
       "organization": "Rhode Island League of Cities and Towns",
       "included": true,
@@ -826,6 +833,31 @@
       "source_url": "https://cdn.ymaws.com/rileague.org/resource/resmgr/2025_leg_documents/2025_legislative_scorecard.pdf",
       "source_type": "organization legislative scorecard",
       "note": "This is the Rhode Island League of Cities and Towns' score, not an RIEP assessment. Denominators below nine reflect absences, recusals, or other non-votes in the League's published scorecard."
+    },
+    {
+      "candidate_name": "John G. Edwards",
+      "chamber": "house",
+      "district_number": 70,
+      "organization": "Center for Effective Lawmaking",
+      "year": "2023–2024",
+      "rating": "2.33",
+      "measure": "State Legislative Effectiveness Score measuring the demonstrated ability to advance sponsored bills through the legislative process, weighted by the substantive significance of the proposals.",
+      "source_url": "https://thelawmakers.org/wp-content/uploads/2026/04/Highlights-from-the-2023-2024-Rhode-Island-General-Assembly-State-Legislative-Effectiveness-Scores.pdf",
+      "methodology_url": "https://thelawmakers.org/methodology",
+      "source_type": "state legislative effectiveness score",
+      "expectation": "Above Expectations",
+      "comparison_group": "House Democrats",
+      "party_rank": 2,
+      "chamber_average": 1,
+      "bills": {
+        "introduced": 53,
+        "committee_action": 51,
+        "beyond_committee": 26,
+        "passed_chamber": 26,
+        "became_law": 16
+      },
+      "above_expectations_streak": 7,
+      "note": "The score is produced by the Center for Effective Lawmaking at the University of Virginia and Vanderbilt University, not by RIEP. Scores average 1.0 within each chamber and session. The Center compares lawmakers with peers based on majority-party status, seniority, and committee-chair status."
     },
     {
       "candidate_name": "Richard R. Fascia",
