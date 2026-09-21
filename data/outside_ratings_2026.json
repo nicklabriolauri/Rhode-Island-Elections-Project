@@ -848,7 +848,8 @@
       "expectation": "Above Expectations",
       "comparison_group": "House Democrats",
       "party_rank": 2,
-      "chamber_average": 1,
+      "party_total": 66,
+      "benchmark": 1.013,
       "bills": {
         "introduced": 53,
         "committee_action": 51,
@@ -856,8 +857,24 @@
         "passed_chamber": 26,
         "became_law": 16
       },
+      "bill_categories": [
+        {"label": "Commemorative", "short": "C", "introduced": 0, "committee_action": 0, "beyond_committee": 0, "passed_chamber": 0, "became_law": 0},
+        {"label": "Substantive", "short": "S", "introduced": 52, "committee_action": 50, "beyond_committee": 25, "passed_chamber": 25, "became_law": 15},
+        {"label": "Substantive and significant", "short": "SS", "introduced": 1, "committee_action": 1, "beyond_committee": 1, "passed_chamber": 1, "became_law": 1}
+      ],
+      "history": [
+        {"term": "2023–2024", "score": 2.33, "rank": "2 of 66"},
+        {"term": "2021–2022", "score": 2.55, "rank": "2 of 65"},
+        {"term": "2019–2020", "score": 3.40, "rank": "1 of 68"},
+        {"term": "2017–2018", "score": 2.49, "rank": "3 of 64"},
+        {"term": "2015–2016", "score": 2.36, "rank": "5 of 64"},
+        {"term": "2013–2014", "score": 1.58, "rank": "13 of 70"},
+        {"term": "2011–2012", "score": 1.71, "rank": "13 of 65"},
+        {"term": "2009–2010", "score": 1.09, "rank": "26 of 70"}
+      ],
+      "glossary_url": "https://thelawmakers.org/glossary",
       "above_expectations_streak": 7,
-      "note": "The score is produced by the Center for Effective Lawmaking at the University of Virginia and Vanderbilt University, not by RIEP. Scores average 1.0 within each chamber and session. The Center compares lawmakers with peers based on majority-party status, seniority, and committee-chair status."
+      "note": "The score is produced by the Center for Effective Lawmaking at the University of Virginia and Vanderbilt University, not by RIEP. The benchmark is the expected score for a comparable legislator based on factors including majority-party status, seniority, and committee-chair status."
     },
     {
       "candidate_name": "Richard R. Fascia",
