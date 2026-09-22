@@ -430,6 +430,7 @@
     const RESEARCH_URL = "data/candidate_research_2026_with_endorsements.json?v=20260912-general";
     const RATINGS_URL = "data/outside_ratings_2026.json?v=20260922-cel-all";
     const OFFICE_URL = "data/incumbent_records_2026.json?v=20260829-office";
+    const HOUSE_PROGRESS_URL = "data/house_legislative_progress_2025_2026.json?v=20260922-full-house";
     const GEO = {
       house: "/data/house_new.geojson",
       senate: "/data/senate_new.geojson",
@@ -442,6 +443,7 @@
     let researchByName = new Map();
     let outsideRatings = [];
     let incumbentRecords = [];
+    let houseProgressRecords = [];
     let chamber = "house";
     let selectedDistrict = "1";
     let filter = "all";
@@ -804,7 +806,7 @@
     function provisionalEdwardsIndex(candidate, record){
       if(String(candidate.chamber).toLowerCase()!=="house" || String(candidate.district_number)!=="70" || normPersonName(candidate.name)!=="john g edwards") return "";
       const stages=["prime_sponsored","passed_chamber","became_law"];
-      const peers=incumbentRecords.filter(x => x.is_incumbent && String(x.chamber).toLowerCase()==="house" && stages.every(k => Number.isFinite(Number(x.legislation?.[k]))));
+      const peers=houseProgressRecords.filter(x => stages.every(k => Number.isFinite(Number(x.legislation?.[k]))));
       if(peers.length!==75) return `<section class="provisional-index">
         <div class="provisional-index-head">
           <div><span class="provisional-index-kicker">Experimental RIEP calculation · 2025–2026 to date</span><h4>Three-stage legislative progress index</h4></div>
@@ -816,7 +818,7 @@
       if(!peers.length || stages.some(k=>!totals[k])) return "";
       const calculate=x => peers.length/stages.length*stages.reduce((sum,k)=>sum+Number(x.legislation[k])/totals[k],0);
       const score=calculate(record);
-      const rank=[...peers].sort((a,b)=>calculate(b)-calculate(a)).findIndex(x=>x===record)+1;
+      const rank=1+peers.filter(x=>calculate(x)>score).length;
       const L=record.legislation;
       return `<section class="provisional-index">
         <div class="provisional-index-head">
@@ -1271,7 +1273,7 @@
       // Phase 2 research and precinct geometry are enhancements, not dependencies.
       // If either fails, the district map, candidate cards, and campaign-finance links
       // still load normally.
-      const [researchPayload, precinctGeo, ratingsPayload, officePayload] = await Promise.all([
+      const [researchPayload, precinctGeo, ratingsPayload, officePayload, houseProgressPayload] = await Promise.all([
         fetch(RESEARCH_URL,{cache:"no-store"})
           .then(r => r.ok ? r.json() : {candidates:[]})
           .catch(() => ({candidates:[]})),
@@ -1282,6 +1284,9 @@
           .then(r => r.ok ? r.json() : {ratings:[]})
           .catch(() => ({ratings:[]})),
         fetch(OFFICE_URL,{cache:"no-store"})
+          .then(r => r.ok ? r.json() : {records:[]})
+          .catch(() => ({records:[]})),
+        fetch(HOUSE_PROGRESS_URL,{cache:"no-store"})
           .then(r => r.ok ? r.json() : {records:[]})
           .catch(() => ({records:[]}))
       ]);
@@ -1294,6 +1299,7 @@
       researchByName = new Map(researchRows.map(p=>[String(p.candidate_name || p.name || "").toLowerCase(),p]));
       outsideRatings = ratingsPayload?.ratings || [];
       incumbentRecords = officePayload?.records || [];
+      houseProgressRecords = houseProgressPayload?.records || [];
 
       precinctFeatureByCode = {};
       (precinctGeo?.features || []).forEach(feature => {
