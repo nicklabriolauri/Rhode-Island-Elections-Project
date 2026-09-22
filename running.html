@@ -1140,7 +1140,21 @@
     function initEvents(){
       document.getElementById("houseBtn").addEventListener("click",()=>setChamber("house"));
       document.getElementById("senateBtn").addEventListener("click",()=>setChamber("senate"));
-      document.getElementById("districtSearch").addEventListener("input",renderDistrictList);
+      const districtSearch = document.getElementById("districtSearch");
+      const openUniqueSearchResult = () => {
+        renderDistrictList();
+        const query = districtSearch.value.trim();
+        if(query && visibleDistricts.length === 1 && String(visibleDistricts[0]) !== String(selectedDistrict)){
+          selectDistrict(visibleDistricts[0], true);
+        }
+      };
+      districtSearch.addEventListener("input",openUniqueSearchResult);
+      districtSearch.addEventListener("keydown",event => {
+        if(event.key === "Enter"){
+          event.preventDefault();
+          openUniqueSearchResult();
+        }
+      });
 
       const setElectionMode = async next => {
         electionMode = next;
