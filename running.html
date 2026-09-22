@@ -289,10 +289,19 @@
     .effectiveness-copy{margin:11px 0 0;color:var(--muted);font-size:10px;line-height:1.5}
     .effectiveness-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
     .effectiveness-links a{color:#315f91;font-size:10px;font-weight:800;text-decoration:none}
+    .effectiveness-period-warning{margin-top:11px;padding:9px 10px;border-left:4px solid #315f91;background:#fff;color:#244f7a;font-size:10px;font-weight:800;line-height:1.45}
+    .provisional-index{margin-top:13px;padding:14px;border:1px solid #e2c66f;border-radius:10px;background:#fffaf0}
+    .provisional-index-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}
+    .provisional-index-kicker{display:block;color:#87651b;font-size:9px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+    .provisional-index h4{margin:4px 0 0;color:var(--navy);font-size:14px}
+    .provisional-index-score{text-align:right}.provisional-index-score b{display:block;color:var(--navy);font-size:26px;line-height:1}.provisional-index-score span{display:block;margin-top:5px;color:#765c27;font-size:9px;font-weight:800}
+    .provisional-index-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-top:12px}.provisional-index-grid div{padding:9px;border:1px solid #ead9a7;border-radius:6px;background:#fff;text-align:center}.provisional-index-grid b{display:block;color:var(--navy);font-size:17px}.provisional-index-grid span{display:block;margin-top:4px;color:#786b4c;font-size:9px}
+    .provisional-index-note{margin:10px 0 0;color:#6f6245;font-size:10px;line-height:1.5}
     @media(max-width:760px){
       .outside-rating-row{grid-template-columns:1fr;gap:5px}
       .effectiveness-head{display:block}.effectiveness-score{margin-top:10px;text-align:left}
       .effectiveness-funnel{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .provisional-index-head{display:block}.provisional-index-score{margin-top:9px;text-align:left}
     }
 
   
@@ -792,6 +801,29 @@
           (rn===n || (last && rlast===last));
       }) || null;
     }
+    function provisionalEdwardsIndex(candidate, record){
+      if(String(candidate.chamber).toLowerCase()!=="house" || String(candidate.district_number)!=="70" || normPersonName(candidate.name)!=="john g edwards") return "";
+      const stages=["prime_sponsored","passed_chamber","became_law"];
+      const peers=incumbentRecords.filter(x => x.is_incumbent && String(x.chamber).toLowerCase()==="house" && stages.every(k => Number.isFinite(Number(x.legislation?.[k]))));
+      const totals=Object.fromEntries(stages.map(k => [k,peers.reduce((sum,x)=>sum+Number(x.legislation[k]),0)]));
+      if(!peers.length || stages.some(k=>!totals[k])) return "";
+      const calculate=x => peers.length/stages.length*stages.reduce((sum,k)=>sum+Number(x.legislation[k])/totals[k],0);
+      const score=calculate(record);
+      const rank=[...peers].sort((a,b)=>calculate(b)-calculate(a)).findIndex(x=>x===record)+1;
+      const L=record.legislation;
+      return `<section class="provisional-index">
+        <div class="provisional-index-head">
+          <div><span class="provisional-index-kicker">Experimental RIEP calculation · 2025–2026 to date</span><h4>Three-stage legislative progress index</h4></div>
+          <div class="provisional-index-score"><b>${score.toFixed(2)}</b><span>#${rank} of ${peers.length} comparable House records</span></div>
+        </div>
+        <div class="provisional-index-grid">
+          <div><b>${esc(L.prime_sponsored)}</b><span>Lead-sponsored</span></div>
+          <div><b>${esc(L.passed_chamber)}</b><span>Passed House</span></div>
+          <div><b>${esc(L.became_law)}</b><span>Became law</span></div>
+        </div>
+        <p class="provisional-index-note"><strong>Prototype only.</strong> This RIEP index normalizes three currently verified stages against the available House comparison set. It is not a Center for Effective Lawmaking score, does not yet include committee-action stages or bill-significance weights, and will change as the 2025–2026 term progresses.</p>
+      </section>`;
+    }
     function officeRecordBlock(candidate){
       const r=officeRecordFor(candidate);
       if(!r || !r.is_incumbent) return "";
@@ -854,6 +886,8 @@
           ${metric(L.became_law,"Lead bills became law")}
         </div>
 
+        ${provisionalEdwardsIndex(candidate,r)}
+
         ${attendanceHtml}
 
         ${leadership.length?`<div class="office-list"><strong>Leadership:</strong> ${leadership.map(esc).join(" · ")}</div>`:""}
@@ -901,6 +935,7 @@
                 <div><span class="effectiveness-kicker">Legislative effectiveness · ${esc(item.year)}</span><strong>${esc(item.organization)}</strong></div>
                 <div class="effectiveness-score"><b>${esc(item.rating)}</b><span>Expected benchmark: ${esc(item.benchmark ?? "—")}</span></div>
               </div>
+              <div class="effectiveness-period-warning">Historical score covering the 2023–2024 legislative session. It does not measure the legislator’s 2025–2026 record.</div>
               <div class="effectiveness-context"><span>${esc(item.expectation || "")}</span><span>#${esc(item.party_rank)} of ${esc(item.party_total || "—")} ${esc(item.comparison_group || "peers")}</span></div>
               <div class="effectiveness-funnel">
                 <div><b>${esc(bills.introduced ?? "—")}</b><span>Sponsored</span></div>
