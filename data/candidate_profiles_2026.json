@@ -54,6 +54,35 @@
   ],
   "profiles": [
     {
+      "candidate_id": "senate-7-dem-primary-frank-a-ciccone",
+      "candidate_name": "Frank A Ciccone",
+      "chamber": "senate",
+      "district_number": 7,
+      "party": "DEM",
+      "ballot_stage": "general",
+      "response_status": "submitted",
+      "summary": "Campaign priorities provided directly to the Rhode Island Elections Project.",
+      "issue_tags": [
+        "affordability",
+        "housing",
+        "healthcare"
+      ],
+      "priorities": [
+        {
+          "title": "An Affordable State Budget",
+          "summary": "Support an affordable budget for the State of Rhode Island."
+        },
+        {
+          "title": "Increase Housing",
+          "summary": "Increase Rhode Island's housing supply."
+        },
+        {
+          "title": "Affordable Health Care",
+          "summary": "Make health care more affordable for Rhode Islanders."
+        }
+      ]
+    },
+    {
       "candidate_id": "senate-8-dem-primary-gena-felix",
       "candidate_name": "Gena Felix",
       "chamber": "senate",

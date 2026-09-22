@@ -1121,11 +1121,36 @@
       "chamber": "senate",
       "district_number": 31,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-30",
-      "website_audit_note": "No official campaign website located in this audit.",
-      "priorities": [],
+      "campaign_website": "https://mattlamountain.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-09-22",
+      "website_audit_note": "Official campaign website and platform page located and verified.",
+      "priorities": [
+        {
+          "title": "Helping working families and seniors",
+          "summary": "Support state budgets without broad-based tax increases, expand the pension and annuity income tax exemption, and provide energy and heating-cost relief.",
+          "source_label": "Official campaign platform",
+          "source_url": "https://mattlamountain.com/platform/"
+        },
+        {
+          "title": "Improving education and child care",
+          "summary": "Invest in school construction, universal Pre-K, tuition assistance at CCRI and Rhode Island College, English-language learners, Head Start, and state aid for Warwick and Cranston schools.",
+          "source_label": "Official campaign platform",
+          "source_url": "https://mattlamountain.com/platform/"
+        },
+        {
+          "title": "Making housing more affordable",
+          "summary": "Increase housing production by streamlining permitting and accessory-dwelling-unit rules, and support a $120 million housing bond.",
+          "source_label": "Official campaign platform",
+          "source_url": "https://mattlamountain.com/platform/"
+        },
+        {
+          "title": "Protecting Rhode Islanders",
+          "summary": "Expand temporary caregiver insurance, strengthen the primary-care workforce, protect reproductive-health coverage, and support environmental and coastline protections.",
+          "source_label": "Official campaign platform",
+          "source_url": "https://mattlamountain.com/platform/"
+        }
+      ],
       "endorsements": [
         {
           "name": "Clean Water Action",
@@ -1198,9 +1223,40 @@
       "party": "Democrat",
       "campaign_website": "https://www.leoraptakis.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-30",
-      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "website_checked": "2026-09-22",
+      "website_audit_note": "Official campaign website and priorities page located and verified.",
+      "priorities": [
+        {
+          "title": "Securing social justice grants",
+          "summary": "Secure more than $30,000 annually in grants supporting public safety, small businesses, and nonprofit organizations serving youth and minority communities.",
+          "source_label": "Official priorities page",
+          "source_url": "https://www.repgracediaz.com/priorities"
+        },
+        {
+          "title": "Fighting to improve education",
+          "summary": "Expand Pre-K and English-language programs, improve Providence school buildings, require financial-literacy education, address racial disparities in discipline, protect children in DCYF care, and improve access to adult education.",
+          "source_label": "Official priorities page",
+          "source_url": "https://www.repgracediaz.com/priorities"
+        },
+        {
+          "title": "Advocating for marginalized communities",
+          "summary": "Support residents living in poverty, protect elderly residents from abuse and neglect, strengthen nursing-home oversight, and require equitable behavioral-health coverage.",
+          "source_label": "Official priorities page",
+          "source_url": "https://www.repgracediaz.com/priorities"
+        },
+        {
+          "title": "Protecting voting rights",
+          "summary": "Improve emergency mail-ballot procedures so Rhode Islanders can vote more safely and easily.",
+          "source_label": "Official priorities page",
+          "source_url": "https://www.repgracediaz.com/priorities"
+        },
+        {
+          "title": "Fighting for families",
+          "summary": "Make high-quality child care more affordable for working families and support paid sick leave for people caring for sick relatives.",
+          "source_label": "Official priorities page",
+          "source_url": "https://www.repgracediaz.com/priorities"
+        }
+      ],
       "endorsements": []
     },
     {
