@@ -988,15 +988,16 @@
 
     function renderDistrictList(){
       const chamberData = data?.chambers?.[chamber] || {};
-      const query = document.getElementById("districtSearch").value.trim().toLowerCase();
+      const rawQuery = document.getElementById("districtSearch").value.trim();
+      const query = normPersonName(rawQuery);
 
       visibleDistricts = Object.keys(chamberData).filter(d => {
         const rec = chamberData[d];
         if(!matchesFilter(rec)) return false;
-        if(!query) return true;
-        if(String(d).includes(query)) return true;
+        if(!rawQuery) return true;
+        if(String(d).includes(rawQuery)) return true;
         return [...(rec.candidates || []), ...(rec.general_candidates || [])]
-          .some(c => String(c.name || "").toLowerCase().includes(query));
+          .some(c => normPersonName(c.name).includes(query));
       });
 
       document.getElementById("districtList").innerHTML = visibleDistricts.map(d => `
