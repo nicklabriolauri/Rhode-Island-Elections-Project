@@ -258,8 +258,41 @@
       font-size:10px;
       line-height:1.45;
     }
+    .effectiveness-card{
+      margin-top:12px;
+      padding:15px;
+      border:1px solid #bfdbee;
+      border-radius:12px;
+      background:linear-gradient(145deg,#f8fbff,#eff6ff);
+    }
+    .effectiveness-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}
+    .effectiveness-kicker{display:block;color:#486784;font-size:9px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+    .effectiveness-head strong{display:block;margin-top:4px;color:var(--navy);font-size:14px}
+    .effectiveness-score{text-align:right}
+    .effectiveness-score b{display:block;color:var(--navy);font-size:26px;line-height:1}
+    .effectiveness-score span{display:block;margin-top:5px;color:#61758c;font-size:10px}
+    .effectiveness-context{display:flex;gap:7px;flex-wrap:wrap;margin-top:11px}
+    .effectiveness-context span{padding:5px 8px;border:1px solid #c9deef;border-radius:999px;background:#fff;color:#315f91;font-size:9px;font-weight:800}
+    .effectiveness-funnel{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin-top:12px}
+    .effectiveness-funnel div{padding:9px 5px;border:1px solid #d7e5f1;border-radius:7px;background:#fff;text-align:center}
+    .effectiveness-funnel b{display:block;color:var(--navy);font-size:17px}
+    .effectiveness-funnel span{display:block;margin-top:4px;color:#6b7d92;font-size:8px;line-height:1.25}
+    .effectiveness-details{margin-top:12px;border:1px solid #d7e5f1;border-radius:8px;background:#fff}
+    .effectiveness-details summary{padding:10px 11px;color:#244f7a;font-size:10px;font-weight:900;cursor:pointer}
+    .effectiveness-table-wrap{overflow-x:auto;padding:0 10px 10px}
+    .effectiveness-table{width:100%;border-collapse:collapse;font-size:9px}
+    .effectiveness-table th,.effectiveness-table td{padding:7px 6px;border-top:1px solid #e7edf3;text-align:right;white-space:nowrap}
+    .effectiveness-table th:first-child{text-align:left}
+    .effectiveness-table tbody th span{display:inline-block;min-width:24px;color:#244f7a;font-weight:900}
+    .effectiveness-details h4{margin:3px 10px 7px;color:var(--navy);font-size:11px}
+    .effectiveness-key{margin:0 10px 12px;color:#708098;font-size:9px}
+    .effectiveness-copy{margin:11px 0 0;color:var(--muted);font-size:10px;line-height:1.5}
+    .effectiveness-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .effectiveness-links a{color:#315f91;font-size:10px;font-weight:800;text-decoration:none}
     @media(max-width:760px){
       .outside-rating-row{grid-template-columns:1fr;gap:5px}
+      .effectiveness-head{display:block}.effectiveness-score{margin-top:10px;text-align:left}
+      .effectiveness-funnel{grid-template-columns:repeat(2,minmax(0,1fr))}
     }
 
   
@@ -848,23 +881,65 @@
     function outsideRatingsBlock(candidate){
       const items = ratingsFor(candidate);
       if(!items.length) return "";
+      const renderRating = item => {
+        if(item.source_type === "state legislative effectiveness score"){
+          const bills = item.bills || {};
+          const categoryRows = (item.bill_categories || []).map(row => `
+            <tr>
+              <th><span>${esc(row.short)}</span>${esc(row.label)}</th>
+              <td>${esc(row.introduced)}</td>
+              <td>${esc(row.committee_action)}</td>
+              <td>${esc(row.beyond_committee)}</td>
+              <td>${esc(row.passed_chamber)}</td>
+              <td>${esc(row.became_law)}</td>
+            </tr>`).join("");
+          const historyRows = (item.history || []).map(row => `
+            <tr><th>${esc(row.term)}</th><td>${esc(Number(row.score).toFixed(2))}</td><td>${esc(row.rank)}</td></tr>`).join("");
+          return `
+            <section class="effectiveness-card">
+              <div class="effectiveness-head">
+                <div><span class="effectiveness-kicker">Legislative effectiveness · ${esc(item.year)}</span><strong>${esc(item.organization)}</strong></div>
+                <div class="effectiveness-score"><b>${esc(item.rating)}</b><span>Expected benchmark: ${esc(item.benchmark ?? "—")}</span></div>
+              </div>
+              <div class="effectiveness-context"><span>${esc(item.expectation || "")}</span><span>#${esc(item.party_rank)} of ${esc(item.party_total || "—")} ${esc(item.comparison_group || "peers")}</span></div>
+              <div class="effectiveness-funnel">
+                <div><b>${esc(bills.introduced ?? "—")}</b><span>Sponsored</span></div>
+                <div><b>${esc(bills.committee_action ?? "—")}</b><span>Committee action</span></div>
+                <div><b>${esc(bills.beyond_committee ?? "—")}</b><span>Beyond committee</span></div>
+                <div><b>${esc(bills.passed_chamber ?? "—")}</b><span>Passed chamber</span></div>
+                <div><b>${esc(bills.became_law ?? "—")}</b><span>Became law</span></div>
+              </div>
+              <details class="effectiveness-details">
+                <summary>View legislative effectiveness details</summary>
+                ${categoryRows ? `<div class="effectiveness-table-wrap"><table class="effectiveness-table"><thead><tr><th>Bill category</th><th>Sponsored</th><th>Committee action</th><th>Beyond committee</th><th>Passed chamber</th><th>Became law</th></tr></thead><tbody>${categoryRows}</tbody></table></div><p class="effectiveness-key"><b>C</b> commemorative · <b>S</b> substantive · <b>SS</b> substantive and significant</p>` : ""}
+                ${historyRows ? `<h4>Historical scores</h4><div class="effectiveness-table-wrap"><table class="effectiveness-table"><thead><tr><th>Session</th><th>Score</th><th>Party rank</th></tr></thead><tbody>${historyRows}</tbody></table></div>` : ""}
+              </details>
+              <p class="effectiveness-copy">${esc(item.note || item.measure || "")}</p>
+              <div class="effectiveness-links">
+                <a href="${esc(item.source_url)}" target="_blank" rel="noopener">View source report ↗</a>
+                ${item.methodology_url ? `<a href="${esc(item.methodology_url)}" target="_blank" rel="noopener">Methodology ↗</a>` : ""}
+                ${item.glossary_url ? `<a href="${esc(item.glossary_url)}" target="_blank" rel="noopener">Glossary ↗</a>` : ""}
+              </div>
+            </section>`;
+        }
+        return `
+          <div class="outside-rating-row">
+            <div class="outside-rating-org">
+              ${esc(item.organization)}
+              <span class="outside-rating-year">${esc(item.year)}</span>
+            </div>
+            <div class="outside-rating-score">${esc(item.rating)}</div>
+            <div class="outside-rating-measure">
+              ${esc(item.measure)}
+              <div class="outside-rating-note">${esc(item.note || "This is the organization's score or rating, not an RIEP assessment.")}</div>
+            </div>
+            <a class="outside-rating-source" href="${esc(item.source_url)}" target="_blank" rel="noopener">Source ↗</a>
+          </div>`;
+      };
       return `
         <div class="outside-rating-block">
           <div class="priority-label">Outside ratings & scorecards</div>
-          ${items.map(item => `
-            <div class="outside-rating-row">
-              <div class="outside-rating-org">
-                ${esc(item.organization)}
-                <span class="outside-rating-year">${esc(item.year)}</span>
-              </div>
-              <div class="outside-rating-score">${esc(item.rating)}</div>
-              <div class="outside-rating-measure">
-                ${esc(item.measure)}
-                <div class="outside-rating-note">${esc(item.note || "This is the organization's score or rating, not an RIEP assessment.")}</div>
-              </div>
-              <a class="outside-rating-source" href="${esc(item.source_url)}" target="_blank" rel="noopener">Source ↗</a>
-            </div>
-          `).join("")}
+          ${items.map(renderRating).join("")}
           <div class="outside-rating-note">
             RIEP does not combine outside ratings into an overall candidate score. Each organization selects its own issues and methodology.
           </div>
