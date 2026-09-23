@@ -19,7 +19,12 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        }
+      ]
     },
     {
       "candidate_id": "senate-2-dem-primary-ana-b-quezada",
@@ -78,15 +83,20 @@
       ],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Climate Action Rhode Island",
+          "source_url": "https://world.350.org/rhodeisland/cari-announces-endorsements-for-the-2026-general-election/"
+        },
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        },
+        {
+          "endorser": "Rhode Island Coalition Against Gun Violence",
+          "source_url": "https://ricagv.org/wp-content/uploads/2026/09/RICAGV-Announces-2026-General-Election-Endorsements.pdf"
         }
       ]
     },
@@ -114,7 +124,17 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "Endorsed"
+        },
+        {
+          "endorser": "AFL-CIO Rhode Island",
+          "source_url": "https://bluevoterguide.org/state/RI?lang=en"
+        }
+      ]
     },
     {
       "candidate_id": "senate-5-dem-primary-samuel-w-bell",
@@ -129,9 +149,26 @@
       "priorities": [],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
+        },
+        {
+          "endorser": "NEARI PACE",
+          "source_url": "https://www.neari.org/votes",
+          "designation": "Primary endorsement"
+        },
+        {
+          "endorser": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements",
+          "designation": "Incumbent"
+        },
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        },
+        {
+          "endorser": "Rhode Island Coalition Against Gun Violence",
+          "source_url": "https://ricagv.org/wp-content/uploads/2026/09/RICAGV-Announces-2026-General-Election-Endorsements.pdf"
         }
       ]
     },
@@ -146,7 +183,13 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "Primary endorsement"
+        }
+      ]
     },
     {
       "candidate_id": "senate-5-dem-primary-cameron-moquin",
@@ -192,9 +235,8 @@
       ],
       "endorsements": [
         {
-          "name": "IAFF Local 799",
-          "source_url": "https://www.cameronmoquin.com/",
-          "source_type": "candidate_site"
+          "endorser": "IAFF Local 799",
+          "source_url": "https://www.cameronmoquin.com/"
         }
       ]
     },
@@ -253,7 +295,17 @@
           "source_url": "https://www.tiaramackdistrict6.com/en/what-we-believe"
         }
       ],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements",
+          "designation": "Incumbent"
+        },
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        }
+      ]
     },
     {
       "candidate_id": "senate-7-dem-primary-frank-a-ciccone",
@@ -266,7 +318,12 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "AFL-CIO Rhode Island",
+          "source_url": "https://bluevoterguide.org/state/RI?lang=en"
+        }
+      ]
     },
     {
       "candidate_id": "senate-8-dem-primary-lori-urso",
@@ -312,16 +369,16 @@
       ],
       "endorsements": [
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "NEARI PACE",
-          "source_url": "https://www.neari.org/votes",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "NEARI PACE",
+          "source_url": "https://www.neari.org/votes"
+        },
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
       ]
     },
@@ -363,27 +420,16 @@
       ],
       "endorsements": [
         {
-          "name": "Rhode Island Working Families Party",
-          "source_url": "https://www.riwfp.org/endorsements",
-          "source_type": "endorser"
+          "endorser": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements"
         },
         {
-          "organization": "Rhode Island Working Families Party",
-          "source_url": "https://workingfamilies.org/2026/06/rhode-island-working-families-party-endorses-4-first-time-candidates-challenging-new-state-leadership-to-govern-boldly/",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Providence Streets Coalition",
+          "source_url": "https://pvdstreets.org/vote/"
         },
         {
-          "organization": "Providence Streets Coalition",
-          "source_url": "https://pvdstreets.org/vote/",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-11"
-        },
-        {
-          "organization": "Reclaim RI",
-          "source_url": "https://www.reclaimri.org/canvass",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-11"
+          "endorser": "Reclaim RI",
+          "source_url": "https://www.reclaimri.org/canvass"
         }
       ]
     },
@@ -445,15 +491,17 @@
       ],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements",
+          "designation": "Incumbent"
+        },
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
       ]
     },
@@ -508,21 +556,25 @@
       ],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements",
+          "designation": "Incumbent"
         },
         {
-          "organization": "NASW-RI PACE",
-          "source_url": "https://naswri.socialworkers.org/Advocacy/PACE",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-10"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        },
+        {
+          "endorser": "NASW-RI PACE",
+          "source_url": "https://naswri.socialworkers.org/Advocacy/PACE"
+        },
+        {
+          "endorser": "SEIU 1199 New England (RI/CT)",
+          "source_url": "https://bluevoterguide.org/endorser-org/SEIU_1199_New_England_%28RI%29/RI/6833"
         }
       ]
     },
@@ -537,7 +589,12 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "AFL-CIO Rhode Island",
+          "source_url": "https://bluevoterguide.org/state/RI?lang=en"
+        }
+      ]
     },
     {
       "candidate_id": "senate-14-dem-primary-valarie-jean-lawson",
@@ -552,10 +609,20 @@
       "priorities": [],
       "endorsements": [
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
+        },
+        {
+          "endorser": "Climate Action Rhode Island",
+          "source_url": "https://world.350.org/rhodeisland/cari-announces-endorsements-for-the-2026-general-election/"
+        },
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        },
+        {
+          "endorser": "AFL-CIO Rhode Island",
+          "source_url": "https://bluevoterguide.org/state/RI?lang=en"
         }
       ]
     },
@@ -616,28 +683,33 @@
       ],
       "endorsements": [
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "NASW-RI PACE",
-          "source_url": "https://naswri.socialworkers.org/Advocacy/PACE",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-10"
+          "endorser": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements",
+          "designation": "Incumbent"
         },
         {
-          "organization": "Providence Streets Coalition",
-          "source_url": "https://pvdstreets.org/vote/",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-11"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         },
         {
-          "organization": "Reclaim RI",
-          "source_url": "https://www.reclaimri.org/canvass",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-11"
+          "endorser": "NASW-RI PACE",
+          "source_url": "https://naswri.socialworkers.org/Advocacy/PACE"
+        },
+        {
+          "endorser": "Providence Streets Coalition",
+          "source_url": "https://pvdstreets.org/vote/"
+        },
+        {
+          "endorser": "Reclaim RI",
+          "source_url": "https://www.reclaimri.org/canvass"
+        },
+        {
+          "endorser": "SEIU 1199 New England (RI/CT)",
+          "source_url": "https://bluevoterguide.org/endorser-org/SEIU_1199_New_England_%28RI%29/RI/6833"
         }
       ]
     },
@@ -667,15 +739,21 @@
       "priorities": [],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Providence Streets Coalition",
-          "source_url": "https://pvdstreets.org/vote/",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-11"
+          "endorser": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements",
+          "designation": "Incumbent"
+        },
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        },
+        {
+          "endorser": "Providence Streets Coalition",
+          "source_url": "https://pvdstreets.org/vote/"
         }
       ]
     },
@@ -711,38 +789,28 @@
       ],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "name": "Rhode Island Working Families Party",
-          "source_url": "https://www.riwfp.org/endorsements",
-          "source_type": "endorser"
+          "endorser": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Climate Action Rhode Island",
+          "source_url": "https://world.350.org/rhodeisland/cari-announces-endorsements-for-the-2026-general-election/"
         },
         {
-          "organization": "Rhode Island Working Families Party",
-          "source_url": "https://workingfamilies.org/2026/06/rhode-island-working-families-party-endorses-4-first-time-candidates-challenging-new-state-leadership-to-govern-boldly/",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         },
         {
-          "organization": "NASW-RI PACE",
-          "source_url": "https://naswri.socialworkers.org/Advocacy/PACE",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-10"
+          "endorser": "NASW-RI PACE",
+          "source_url": "https://naswri.socialworkers.org/Advocacy/PACE"
         },
         {
-          "organization": "Reclaim RI",
-          "source_url": "https://www.reclaimri.org/canvass",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-11"
+          "endorser": "Reclaim RI",
+          "source_url": "https://www.reclaimri.org/canvass"
         }
       ]
     },
@@ -798,15 +866,8 @@
       "priorities": [],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
-        },
-        {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         }
       ]
     },
@@ -842,15 +903,16 @@
       ],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Climate Action Rhode Island",
+          "source_url": "https://world.350.org/rhodeisland/cari-announces-endorsements-for-the-2026-general-election/"
+        },
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
       ]
     },
@@ -865,7 +927,13 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "Primary endorsement"
+        }
+      ]
     },
     {
       "candidate_id": "senate-19-oth-general-james-d-purcell",
@@ -917,7 +985,16 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "Rhode Island State Fraternal Order of Police",
+          "source_url": "https://coalitionnews.com/charlestown-south-kingstown-block-island-westerly-house-candidate-leah-boisclair-earns-endorsement-from-the-rhode-island-sta-2/"
+        },
+        {
+          "endorser": "AFL-CIO Rhode Island",
+          "source_url": "https://bluevoterguide.org/state/RI?lang=en"
+        }
+      ]
     },
     {
       "candidate_id": "senate-23-rep-primary-jessica-de-la-cruz",
@@ -945,15 +1022,12 @@
       "priorities": [],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
       ]
     },
@@ -981,7 +1055,12 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "Rhode Island State Fraternal Order of Police",
+          "source_url": "https://coalitionnews.com/charlestown-south-kingstown-block-island-westerly-house-candidate-leah-boisclair-earns-endorsement-from-the-rhode-island-sta-2/"
+        }
+      ]
     },
     {
       "candidate_id": "senate-27-dem-primary-hanna-m-gallo",
@@ -1040,21 +1119,16 @@
       ],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         },
         {
-          "organization": "Providence Streets Coalition",
-          "source_url": "https://pvdstreets.org/vote/",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-11"
+          "endorser": "Providence Streets Coalition",
+          "source_url": "https://pvdstreets.org/vote/"
         }
       ]
     },
@@ -1069,7 +1143,16 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "Rhode Island State Fraternal Order of Police",
+          "source_url": "https://coalitionnews.com/charlestown-south-kingstown-block-island-westerly-house-candidate-leah-boisclair-earns-endorsement-from-the-rhode-island-sta-2/"
+        },
+        {
+          "endorser": "AFL-CIO Rhode Island",
+          "source_url": "https://bluevoterguide.org/state/RI?lang=en"
+        }
+      ]
     },
     {
       "candidate_id": "senate-30-dem-primary-mark-mckenney",
@@ -1113,7 +1196,12 @@
           "source_url": "https://www.markmckenney.com/"
         }
       ],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        }
+      ]
     },
     {
       "candidate_id": "senate-31-dem-primary-matthew-l-lamountain",
@@ -1153,15 +1241,16 @@
       ],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        },
+        {
+          "endorser": "Rhode Island State Fraternal Order of Police",
+          "source_url": "https://coalitionnews.com/charlestown-south-kingstown-block-island-westerly-house-candidate-leah-boisclair-earns-endorsement-from-the-rhode-island-sta-2/"
         }
       ]
     },
@@ -1209,9 +1298,17 @@
       ],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
+        },
+        {
+          "endorser": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements",
+          "designation": "Incumbent"
+        },
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
       ]
     },
@@ -1257,7 +1354,17 @@
           "source_url": "https://www.repgracediaz.com/priorities"
         }
       ],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "Incumbent endorsement"
+        },
+        {
+          "endorser": "Rhode Island State Fraternal Order of Police",
+          "source_url": "https://coalitionnews.com/charlestown-south-kingstown-block-island-westerly-house-candidate-leah-boisclair-earns-endorsement-from-the-rhode-island-sta-2/"
+        }
+      ]
     },
     {
       "candidate_id": "senate-33-rep-primary-james-p-pierson",
@@ -1316,21 +1423,16 @@
       "priorities": [],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Climate Action Rhode Island",
+          "source_url": "https://world.350.org/rhodeisland/cari-announces-endorsements-for-the-2026-general-election/"
         },
         {
-          "organization": "Richmond Democratic Town Committee",
-          "source_url": "https://www.richmonddtc.com/",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Richmond Democratic Town Committee",
+          "source_url": "https://www.richmonddtc.com/"
         }
       ]
     },
@@ -1391,15 +1493,12 @@
       ],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
       ]
     },
@@ -1416,22 +1515,29 @@
       "priorities": [],
       "endorsements": [
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "NASW-RI PACE",
-          "source_url": "https://naswri.socialworkers.org/Advocacy/PACE",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-10"
+          "endorser": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements",
+          "designation": "Incumbent"
         },
         {
-          "organization": "Providence Streets Coalition",
-          "source_url": "https://pvdstreets.org/vote/",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-11"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        },
+        {
+          "endorser": "NASW-RI PACE",
+          "source_url": "https://naswri.socialworkers.org/Advocacy/PACE"
+        },
+        {
+          "endorser": "Providence Streets Coalition",
+          "source_url": "https://pvdstreets.org/vote/"
+        },
+        {
+          "endorser": "SEIU 1199 New England (RI/CT)",
+          "source_url": "https://bluevoterguide.org/endorser-org/SEIU_1199_New_England_%28RI%29/RI/6833"
         }
       ]
     },
@@ -1446,7 +1552,13 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "Primary endorsement"
+        }
+      ]
     },
     {
       "candidate_id": "senate-37-dem-primary-virginia-susan-sosnowski",
@@ -1459,7 +1571,12 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        }
+      ]
     },
     {
       "candidate_id": "senate-38-dem-primary-victoria-gu",
@@ -1505,15 +1622,21 @@
       ],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements",
+          "designation": "Incumbent"
+        },
+        {
+          "endorser": "Climate Action Rhode Island",
+          "source_url": "https://world.350.org/rhodeisland/cari-announces-endorsements-for-the-2026-general-election/"
+        },
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
       ]
     },
@@ -1528,7 +1651,13 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "General-election endorsement"
+        }
+      ]
     },
     {
       "candidate_id": "house-1-dem-primary-edith-h-ajello",
@@ -1543,39 +1672,37 @@
       "priorities": [],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "NEARI PACE",
+          "source_url": "https://www.neari.org/votes"
         },
         {
-          "organization": "NEARI PACE",
-          "source_url": "https://www.neari.org/votes",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements",
+          "designation": "Incumbent"
         },
         {
-          "organization": "NASW-RI PACE",
-          "source_url": "https://naswri.socialworkers.org/Advocacy/PACE",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-10"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         },
         {
-          "organization": "Providence Streets Coalition",
-          "source_url": "https://pvdstreets.org/vote/",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-11"
+          "endorser": "NASW-RI PACE",
+          "source_url": "https://naswri.socialworkers.org/Advocacy/PACE"
         },
         {
-          "organization": "Reclaim RI",
-          "source_url": "https://www.reclaimri.org/canvass",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-11"
+          "endorser": "Providence Streets Coalition",
+          "source_url": "https://pvdstreets.org/vote/"
+        },
+        {
+          "endorser": "Reclaim RI",
+          "source_url": "https://www.reclaimri.org/canvass"
+        },
+        {
+          "endorser": "AFL-CIO Rhode Island",
+          "source_url": "https://bluevoterguide.org/state/RI?lang=en"
         }
       ]
     },
@@ -1661,10 +1788,8 @@
       ],
       "endorsements": [
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/be-clean-water-voter-2026-rhode-island-endorsements",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-10"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
       ]
     },
@@ -1744,27 +1869,25 @@
       ],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements",
+          "designation": "Incumbent"
         },
         {
-          "organization": "NASW-RI PACE",
-          "source_url": "https://naswri.socialworkers.org/Advocacy/PACE",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-10"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         },
         {
-          "organization": "Providence Streets Coalition",
-          "source_url": "https://pvdstreets.org/vote/",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-11"
+          "endorser": "NASW-RI PACE",
+          "source_url": "https://naswri.socialworkers.org/Advocacy/PACE"
+        },
+        {
+          "endorser": "Providence Streets Coalition",
+          "source_url": "https://pvdstreets.org/vote/"
         }
       ]
     },
@@ -1779,7 +1902,16 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        },
+        {
+          "endorser": "Rhode Island Coalition Against Gun Violence",
+          "source_url": "https://ricagv.org/wp-content/uploads/2026/09/RICAGV-Announces-2026-General-Election-Endorsements.pdf"
+        }
+      ]
     },
     {
       "candidate_id": "house-5-oth-general-brittany-m-kubicek",
@@ -1819,10 +1951,9 @@
       ],
       "endorsements": [
         {
-          "organization": "Rhode Island Democratic Socialists of America",
+          "endorser": "Rhode Island DSA",
           "source_url": "https://ridsa.org/endorsements",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-10"
+          "designation": "Independent-Socialist"
         }
       ]
     },
@@ -1837,7 +1968,12 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "Rhode Island State Fraternal Order of Police",
+          "source_url": "https://coalitionnews.com/charlestown-south-kingstown-block-island-westerly-house-candidate-leah-boisclair-earns-endorsement-from-the-rhode-island-sta-2/"
+        }
+      ]
     },
     {
       "candidate_id": "house-7-dem-primary-amy-j-santiago",
@@ -1871,27 +2007,32 @@
       ],
       "endorsements": [
         {
-          "name": "Rhode Island Working Families Party",
-          "source_url": "https://www.riwfp.org/endorsements",
-          "source_type": "endorser"
+          "endorser": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements"
         },
         {
-          "organization": "Rhode Island Working Families Party",
-          "source_url": "https://workingfamilies.org/2026/06/rhode-island-working-families-party-endorses-4-first-time-candidates-challenging-new-state-leadership-to-govern-boldly/",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Climate Action Rhode Island",
+          "source_url": "https://world.350.org/rhodeisland/cari-announces-endorsements-for-the-2026-general-election/"
         },
         {
-          "organization": "Providence Streets Coalition",
-          "source_url": "https://pvdstreets.org/vote/",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-11"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         },
         {
-          "organization": "Reclaim RI",
-          "source_url": "https://www.reclaimri.org/canvass",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-11"
+          "endorser": "Rhode Island Coalition Against Gun Violence",
+          "source_url": "https://ricagv.org/wp-content/uploads/2026/09/RICAGV-Announces-2026-General-Election-Endorsements.pdf"
+        },
+        {
+          "endorser": "Providence Streets Coalition",
+          "source_url": "https://pvdstreets.org/vote/"
+        },
+        {
+          "endorser": "Reclaim RI",
+          "source_url": "https://www.reclaimri.org/canvass"
+        },
+        {
+          "endorser": "SEIU 1199 New England (RI/CT)",
+          "source_url": "https://bluevoterguide.org/endorser-org/SEIU_1199_New_England_%28RI%29/RI/6833"
         }
       ]
     },
@@ -1937,7 +2078,12 @@
           "source_url": "https://www.joannryan.com/"
         }
       ],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "AFL-CIO Rhode Island",
+          "source_url": "https://bluevoterguide.org/state/RI?lang=en"
+        }
+      ]
     },
     {
       "candidate_id": "house-7-rep-primary-christopher-l-ireland",
@@ -1950,7 +2096,13 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "Endorsed"
+        }
+      ]
     },
     {
       "candidate_id": "house-8-dem-primary-john-joseph-lombardi",
@@ -1965,15 +2117,8 @@
       "priorities": [],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
-        },
-        {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         }
       ]
     },
@@ -2009,10 +2154,13 @@
       ],
       "endorsements": [
         {
-          "organization": "Collective Action for Education",
-          "source_url": "https://collectiveactionri.org/collective-action-for-education-announces-first-round-of-2026-rhode-island-primary-candidate-endorsements/",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Collective Action for Education",
+          "source_url": "https://collectiveactionri.org/collective-action-for-education-announces-first-round-of-2026-rhode-island-primary-candidate-endorsements/"
+        },
+        {
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "Primary endorsement"
         }
       ]
     },
@@ -2029,15 +2177,17 @@
       "priorities": [],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements",
+          "designation": "Incumbent"
+        },
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
       ]
     },
@@ -2054,10 +2204,8 @@
       "priorities": [],
       "endorsements": [
         {
-          "organization": "Collective Action for Education",
-          "source_url": "https://collectiveactionri.org/collective-action-for-education-endorses-slate-of-state-legislators-and-providence-city-councilors-for-re-election/",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Collective Action for Education",
+          "source_url": "https://collectiveactionri.org/collective-action-for-education-endorses-slate-of-state-legislators-and-providence-city-councilors-for-re-election/"
         }
       ]
     },
@@ -2074,21 +2222,12 @@
       "priorities": [],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
-        },
-        {
-          "organization": "Collective Action for Education",
-          "source_url": "https://collectiveactionri.org/collective-action-for-education-endorses-slate-of-state-legislators-and-providence-city-councilors-for-re-election/",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Collective Action for Education",
+          "source_url": "https://collectiveactionri.org/collective-action-for-education-endorses-slate-of-state-legislators-and-providence-city-councilors-for-re-election/"
         }
       ]
     },
@@ -2149,21 +2288,16 @@
       ],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Collective Action for Education",
+          "source_url": "https://collectiveactionri.org/collective-action-for-education-announces-first-round-of-2026-rhode-island-primary-candidate-endorsements/"
         },
         {
-          "organization": "Collective Action for Education",
-          "source_url": "https://collectiveactionri.org/collective-action-for-education-announces-first-round-of-2026-rhode-island-primary-candidate-endorsements/",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
       ]
     },
@@ -2180,10 +2314,8 @@
       "priorities": [],
       "endorsements": [
         {
-          "organization": "Collective Action for Education",
-          "source_url": "https://collectiveactionri.org/collective-action-for-education-endorses-slate-of-state-legislators-and-providence-city-councilors-for-re-election/",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Collective Action for Education",
+          "source_url": "https://collectiveactionri.org/collective-action-for-education-endorses-slate-of-state-legislators-and-providence-city-councilors-for-re-election/"
         }
       ]
     },
@@ -2242,7 +2374,12 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "AFL-CIO Rhode Island",
+          "source_url": "https://bluevoterguide.org/state/RI?lang=en"
+        }
+      ]
     },
     {
       "candidate_id": "house-14-dem-primary-naiommi-baret",
@@ -2257,10 +2394,8 @@
       "priorities": [],
       "endorsements": [
         {
-          "organization": "Collective Action for Education",
-          "source_url": "https://collectiveactionri.org/collective-action-for-education-announces-first-round-of-2026-rhode-island-primary-candidate-endorsements/",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Collective Action for Education",
+          "source_url": "https://collectiveactionri.org/collective-action-for-education-announces-first-round-of-2026-rhode-island-primary-candidate-endorsements/"
         }
       ]
     },
@@ -2358,7 +2493,12 @@
           "source_url": "https://www.brandonpotterri.com/issues"
         }
       ],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        }
+      ]
     },
     {
       "candidate_id": "house-17-dem-primary-jacquelyn-baginski",
@@ -2405,27 +2545,29 @@
       "priorities": [],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements",
+          "designation": "Incumbent"
         },
         {
-          "organization": "NASW-RI PACE",
-          "source_url": "https://naswri.socialworkers.org/Advocacy/PACE",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-10"
+          "endorser": "Climate Action Rhode Island",
+          "source_url": "https://world.350.org/rhodeisland/cari-announces-endorsements-for-the-2026-general-election/"
         },
         {
-          "organization": "Providence Streets Coalition",
-          "source_url": "https://pvdstreets.org/vote/",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-11"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        },
+        {
+          "endorser": "NASW-RI PACE",
+          "source_url": "https://naswri.socialworkers.org/Advocacy/PACE"
+        },
+        {
+          "endorser": "Providence Streets Coalition",
+          "source_url": "https://pvdstreets.org/vote/"
         }
       ]
     },
@@ -2440,7 +2582,13 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "General-election endorsement"
+        }
+      ]
     },
     {
       "candidate_id": "house-19-dem-primary-joseph-mcnamara",
@@ -2455,15 +2603,16 @@
       "priorities": [],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        },
+        {
+          "endorser": "Rhode Island Coalition Against Gun Violence",
+          "source_url": "https://ricagv.org/wp-content/uploads/2026/09/RICAGV-Announces-2026-General-Election-Endorsements.pdf"
         }
       ]
     },
@@ -2478,7 +2627,13 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "General-election endorsement"
+        }
+      ]
     },
     {
       "candidate_id": "house-20-dem-primary-david-a-bennett",
@@ -2523,7 +2678,17 @@
           "source_url": "https://www.marie4ri.com/vision"
         }
       ],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "Incumbent endorsement"
+        },
+        {
+          "endorser": "Rhode Island State Fraternal Order of Police",
+          "source_url": "https://coalitionnews.com/charlestown-south-kingstown-block-island-westerly-house-candidate-leah-boisclair-earns-endorsement-from-the-rhode-island-sta-2/"
+        }
+      ]
     },
     {
       "candidate_id": "house-22-dem-primary-janie-lee-segui",
@@ -2595,21 +2760,32 @@
       ],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "NEARI PACE",
+          "source_url": "https://www.neari.org/votes"
         },
         {
-          "organization": "NEARI PACE",
-          "source_url": "https://www.neari.org/votes",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements"
+        },
+        {
+          "endorser": "Climate Action Rhode Island",
+          "source_url": "https://world.350.org/rhodeisland/cari-announces-endorsements-for-the-2026-general-election/"
+        },
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        },
+        {
+          "endorser": "Rhode Island Coalition Against Gun Violence",
+          "source_url": "https://ricagv.org/wp-content/uploads/2026/09/RICAGV-Announces-2026-General-Election-Endorsements.pdf"
+        },
+        {
+          "endorser": "SEIU 1199 New England (RI/CT)",
+          "source_url": "https://bluevoterguide.org/endorser-org/SEIU_1199_New_England_%28RI%29/RI/6833"
         }
       ]
     },
@@ -2624,7 +2800,13 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "General-election endorsement"
+        }
+      ]
     },
     {
       "candidate_id": "house-23-dem-primary-william-muto",
@@ -2664,15 +2846,20 @@
       ],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Climate Action Rhode Island",
+          "source_url": "https://world.350.org/rhodeisland/cari-announces-endorsements-for-the-2026-general-election/"
+        },
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        },
+        {
+          "endorser": "Rhode Island Coalition Against Gun Violence",
+          "source_url": "https://ricagv.org/wp-content/uploads/2026/09/RICAGV-Announces-2026-General-Election-Endorsements.pdf"
         }
       ]
     },
@@ -2687,7 +2874,13 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "NEARI PACE",
+          "source_url": "https://www.neari.org/votes",
+          "designation": "Primary endorsement"
+        }
+      ]
     },
     {
       "candidate_id": "house-23-rep-primary-dana-james-traversie",
@@ -2725,7 +2918,13 @@
           "source_url": "https://www.djt4ri.us/"
         }
       ],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "General-election endorsement"
+        }
+      ]
     },
     {
       "candidate_id": "house-24-dem-primary-evan-patrick-shanley",
@@ -2751,7 +2950,12 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "Rhode Island State Fraternal Order of Police",
+          "source_url": "https://coalitionnews.com/charlestown-south-kingstown-block-island-westerly-house-candidate-leah-boisclair-earns-endorsement-from-the-rhode-island-sta-2/"
+        }
+      ]
     },
     {
       "candidate_id": "house-26-dem-primary-earl-a-read-iii",
@@ -2764,7 +2968,12 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "Rhode Island State Fraternal Order of Police",
+          "source_url": "https://coalitionnews.com/charlestown-south-kingstown-block-island-westerly-house-candidate-leah-boisclair-earns-endorsement-from-the-rhode-island-sta-2/"
+        }
+      ]
     },
     {
       "candidate_id": "house-27-dem-primary-angela-s-coburn",
@@ -2790,7 +2999,13 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "General-election endorsement"
+        }
+      ]
     },
     {
       "candidate_id": "house-28-rep-primary-george-a-nardone",
@@ -2829,7 +3044,12 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        }
+      ]
     },
     {
       "candidate_id": "house-31-dem-primary-james-c-sheehan",
@@ -2842,7 +3062,13 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "NEARI PACE",
+          "source_url": "https://www.neari.org/votes",
+          "designation": "Primary endorsement"
+        }
+      ]
     },
     {
       "candidate_id": "house-31-dem-primary-thomas-n-menec",
@@ -2855,7 +3081,16 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "Rhode Island State Fraternal Order of Police",
+          "source_url": "https://coalitionnews.com/charlestown-south-kingstown-block-island-westerly-house-candidate-leah-boisclair-earns-endorsement-from-the-rhode-island-sta-2/"
+        },
+        {
+          "endorser": "AFL-CIO Rhode Island",
+          "source_url": "https://bluevoterguide.org/state/RI?lang=en"
+        }
+      ]
     },
     {
       "candidate_id": "house-31-dem-primary-matthew-b-mccoy",
@@ -2870,15 +3105,20 @@
       "priorities": [],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements"
+        },
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        },
+        {
+          "endorser": "SEIU 1199 New England (RI/CT)",
+          "source_url": "https://bluevoterguide.org/endorser-org/SEIU_1199_New_England_%28RI%29/RI/6833"
         }
       ]
     },
@@ -2914,94 +3154,44 @@
       ],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "name": "AFL-CIO",
-          "source_url": "https://www.cravenforri.com/",
-          "source_type": "candidate_site"
+          "endorser": "NEARI PACE",
+          "source_url": "https://www.neari.org/votes"
         },
         {
-          "name": "National Education Association Rhode Island",
-          "source_url": "https://www.cravenforri.com/",
-          "source_type": "candidate_site"
+          "endorser": "American Federation of Teachers and Healthcare Professionals",
+          "source_url": "https://www.cravenforri.com/"
         },
         {
-          "name": "SEIU",
-          "source_url": "https://www.cravenforri.com/",
-          "source_type": "candidate_site"
+          "endorser": "Climate Action Rhode Island",
+          "source_url": "https://world.350.org/rhodeisland/cari-announces-endorsements-for-the-2026-general-election/"
         },
         {
-          "name": "Planned Parenthood Votes! Rhode Island",
-          "source_url": "https://www.cravenforri.com/",
-          "source_type": "candidate_site"
+          "endorser": "Laborers&#x27; International Union of North America",
+          "source_url": "https://www.cravenforri.com/"
         },
         {
-          "name": "Rhode Island Coalition Against Gun Violence",
-          "source_url": "https://www.cravenforri.com/",
-          "source_type": "candidate_site"
+          "endorser": "National Education Association Rhode Island",
+          "source_url": "https://www.cravenforri.com/"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Planned Parenthood Votes! Rhode Island",
+          "source_url": "https://www.cravenforri.com/"
         },
         {
-          "organization": "NEARI PACE",
-          "source_url": "https://www.neari.org/votes",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         },
         {
-          "organization": "Planned Parenthood Votes! Rhode Island PAC",
-          "source_url": "https://www.cravenforri.com/",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Rhode Island Troopers Association",
+          "source_url": "https://www.cravenforri.com/"
         },
         {
-          "organization": "AFL-CIO",
-          "source_url": "https://www.cravenforri.com/",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
-        },
-        {
-          "organization": "National Education Association Rhode Island",
-          "source_url": "https://www.cravenforri.com/",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
-        },
-        {
-          "organization": "American Federation of Teachers and Healthcare Professionals",
-          "source_url": "https://www.cravenforri.com/",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
-        },
-        {
-          "organization": "SEIU",
-          "source_url": "https://www.cravenforri.com/",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
-        },
-        {
-          "organization": "Rhode Island Troopers Association",
-          "source_url": "https://www.cravenforri.com/",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
-        },
-        {
-          "organization": "Climate Action Rhode Island",
-          "source_url": "https://www.cravenforri.com/",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
-        },
-        {
-          "organization": "Laborers' International Union of North America",
-          "source_url": "https://www.cravenforri.com/",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "SEIU 1199 New England (RI/CT)",
+          "source_url": "https://bluevoterguide.org/endorser-org/SEIU_1199_New_England_%28RI%29/RI/6833"
         }
       ]
     },
@@ -3043,9 +3233,9 @@
       ],
       "endorsements": [
         {
-          "name": "League of Rhode Island Businesses",
-          "source_url": "https://www.voteforkevin.com/",
-          "source_type": "candidate_site"
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "Primary endorsement"
         }
       ]
     },
@@ -3062,15 +3252,20 @@
       "priorities": [],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Climate Action Rhode Island",
+          "source_url": "https://world.350.org/rhodeisland/cari-announces-endorsements-for-the-2026-general-election/"
+        },
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        },
+        {
+          "endorser": "Rhode Island Coalition Against Gun Violence",
+          "source_url": "https://ricagv.org/wp-content/uploads/2026/09/RICAGV-Announces-2026-General-Election-Endorsements.pdf"
         }
       ]
     },
@@ -3085,7 +3280,13 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "General-election endorsement"
+        }
+      ]
     },
     {
       "candidate_id": "house-34-dem-primary-teresa-a-tanzi",
@@ -3100,21 +3301,21 @@
       "priorities": [],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements",
+          "designation": "Incumbent"
         },
         {
-          "organization": "Providence Streets Coalition",
-          "source_url": "https://pvdstreets.org/vote/",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-11"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        },
+        {
+          "endorser": "Providence Streets Coalition",
+          "source_url": "https://pvdstreets.org/vote/"
         }
       ]
     },
@@ -3131,21 +3332,24 @@
       "priorities": [],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Climate Action Rhode Island",
+          "source_url": "https://world.350.org/rhodeisland/cari-announces-endorsements-for-the-2026-general-election/"
         },
         {
-          "organization": "Providence Streets Coalition",
-          "source_url": "https://pvdstreets.org/vote/",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-11"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        },
+        {
+          "endorser": "Rhode Island Coalition Against Gun Violence",
+          "source_url": "https://ricagv.org/wp-content/uploads/2026/09/RICAGV-Announces-2026-General-Election-Endorsements.pdf"
+        },
+        {
+          "endorser": "Providence Streets Coalition",
+          "source_url": "https://pvdstreets.org/vote/"
         }
       ]
     },
@@ -3160,7 +3364,13 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "General-election endorsement"
+        }
+      ]
     },
     {
       "candidate_id": "house-36-dem-primary-tina-l-spears",
@@ -3206,21 +3416,24 @@
       ],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "NEARI PACE",
+          "source_url": "https://www.neari.org/votes"
         },
         {
-          "organization": "NEARI PACE",
-          "source_url": "https://www.neari.org/votes",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        },
+        {
+          "endorser": "SEIU 1199 New England (RI/CT)",
+          "source_url": "https://bluevoterguide.org/endorser-org/SEIU_1199_New_England_%28RI%29/RI/6833"
+        },
+        {
+          "endorser": "AFL-CIO Rhode Island",
+          "source_url": "https://bluevoterguide.org/state/RI?lang=en"
         }
       ]
     },
@@ -3266,7 +3479,17 @@
           "source_url": "https://www.leahforri-district36.com/"
         }
       ],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "Primary endorsement"
+        },
+        {
+          "endorser": "Rhode Island State Fraternal Order of Police",
+          "source_url": "https://coalitionnews.com/charlestown-south-kingstown-block-island-westerly-house-candidate-leah-boisclair-earns-endorsement-from-the-rhode-island-sta-2/"
+        }
+      ]
     },
     {
       "candidate_id": "house-37-dem-primary-samuel-angelo-azzinaro",
@@ -3292,7 +3515,13 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "General-election endorsement"
+        }
+      ]
     },
     {
       "candidate_id": "house-38-dem-primary-brian-patrick-kennedy",
@@ -3307,10 +3536,12 @@
       "priorities": [],
       "endorsements": [
         {
-          "organization": "NEARI PACE",
-          "source_url": "https://www.neari.org/votes",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "NEARI PACE",
+          "source_url": "https://www.neari.org/votes"
+        },
+        {
+          "endorser": "AFL-CIO Rhode Island",
+          "source_url": "https://bluevoterguide.org/state/RI?lang=en"
         }
       ]
     },
@@ -3340,10 +3571,12 @@
       "priorities": [],
       "endorsements": [
         {
-          "organization": "Reclaim RI",
-          "source_url": "https://www.reclaimri.org/canvass",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-11"
+          "endorser": "Climate Action Rhode Island",
+          "source_url": "https://world.350.org/rhodeisland/cari-announces-endorsements-for-the-2026-general-election/"
+        },
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
       ]
     },
@@ -3389,7 +3622,13 @@
           "source_url": "https://jasminroy4ri.org/"
         }
       ],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "General-election endorsement"
+        }
+      ]
     },
     {
       "candidate_id": "house-40-rep-primary-michael-chippendale",
@@ -3415,7 +3654,12 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "Climate Action Rhode Island",
+          "source_url": "https://world.350.org/rhodeisland/cari-announces-endorsements-for-the-2026-general-election/"
+        }
+      ]
     },
     {
       "candidate_id": "house-41-rep-primary-michael-j-riley",
@@ -3428,7 +3672,13 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "General-election endorsement"
+        }
+      ]
     },
     {
       "candidate_id": "house-42-dem-primary-edward-w-stravato",
@@ -3454,7 +3704,13 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "Incumbent endorsement"
+        }
+      ]
     },
     {
       "candidate_id": "house-43-dem-primary-deborah-a-fellela",
@@ -3480,7 +3736,13 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "Incumbent endorsement"
+        }
+      ]
     },
     {
       "candidate_id": "house-44-rep-primary-joseph-hosey",
@@ -3635,21 +3897,20 @@
       "priorities": [],
       "endorsements": [
         {
-          "name": "Rhode Island Working Families Party",
-          "source_url": "https://www.riwfp.org/endorsements",
-          "source_type": "endorser"
+          "endorser": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements"
         },
         {
-          "organization": "Rhode Island Working Families Party",
-          "source_url": "https://workingfamilies.org/2026/06/rhode-island-working-families-party-endorses-4-first-time-candidates-challenging-new-state-leadership-to-govern-boldly/",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Climate Action Rhode Island",
+          "source_url": "https://world.350.org/rhodeisland/cari-announces-endorsements-for-the-2026-general-election/"
         },
         {
-          "organization": "Reclaim RI",
-          "source_url": "https://www.reclaimri.org/canvass",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-11"
+          "endorser": "Rhode Island Coalition Against Gun Violence",
+          "source_url": "https://ricagv.org/wp-content/uploads/2026/09/RICAGV-Announces-2026-General-Election-Endorsements.pdf"
+        },
+        {
+          "endorser": "Reclaim RI",
+          "source_url": "https://www.reclaimri.org/canvass"
         }
       ]
     },
@@ -3664,7 +3925,13 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "Incumbent endorsement"
+        }
+      ]
     },
     {
       "candidate_id": "house-50-dem-primary-stephen-casey",
@@ -3690,7 +3957,13 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "Incumbent endorsement"
+        }
+      ]
     },
     {
       "candidate_id": "house-52-dem-primary-alex-d-marszalkowski",
@@ -3731,9 +4004,16 @@
       ],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
+        },
+        {
+          "endorser": "Climate Action Rhode Island",
+          "source_url": "https://world.350.org/rhodeisland/cari-announces-endorsements-for-the-2026-general-election/"
+        },
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
       ]
     },
@@ -3748,7 +4028,13 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "Incumbent endorsement"
+        }
+      ]
     },
     {
       "candidate_id": "house-54-dem-primary-william-w-o-brien",
@@ -3814,10 +4100,8 @@
       "priorities": [],
       "endorsements": [
         {
-          "organization": "Collective Action for Education",
-          "source_url": "https://collectiveactionri.org/collective-action-for-education-endorses-slate-of-state-legislators-and-providence-city-councilors-for-re-election/",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Collective Action for Education",
+          "source_url": "https://collectiveactionri.org/collective-action-for-education-endorses-slate-of-state-legislators-and-providence-city-councilors-for-re-election/"
         }
       ]
     },
@@ -3834,21 +4118,20 @@
       "priorities": [],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "NEARI PACE",
+          "source_url": "https://www.neari.org/votes"
         },
         {
-          "organization": "NEARI PACE",
-          "source_url": "https://www.neari.org/votes",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        },
+        {
+          "endorser": "AFL-CIO Rhode Island",
+          "source_url": "https://bluevoterguide.org/state/RI?lang=en"
         }
       ]
     },
@@ -3863,7 +4146,13 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "Primary endorsement"
+        }
+      ]
     },
     {
       "candidate_id": "house-58-dem-primary-cherie-l-cruz",
@@ -3907,7 +4196,12 @@
           "source_url": "https://cheriecruzri.com/issues"
         }
       ],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        }
+      ]
     },
     {
       "candidate_id": "house-59-dem-primary-jennifer-a-stewart",
@@ -3922,16 +4216,25 @@
       "priorities": [],
       "endorsements": [
         {
-          "organization": "Providence Streets Coalition",
-          "source_url": "https://pvdstreets.org/vote/",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-11"
+          "endorser": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements",
+          "designation": "Incumbent"
         },
         {
-          "organization": "Reclaim RI",
-          "source_url": "https://www.reclaimri.org/canvass",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-11"
+          "endorser": "Climate Action Rhode Island",
+          "source_url": "https://world.350.org/rhodeisland/cari-announces-endorsements-for-the-2026-general-election/"
+        },
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        },
+        {
+          "endorser": "Providence Streets Coalition",
+          "source_url": "https://pvdstreets.org/vote/"
+        },
+        {
+          "endorser": "Reclaim RI",
+          "source_url": "https://www.reclaimri.org/canvass"
         }
       ]
     },
@@ -3959,7 +4262,12 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        }
+      ]
     },
     {
       "candidate_id": "house-60-rep-primary-luis-ernesto-sandoval-jr",
@@ -4031,16 +4339,25 @@
       ],
       "endorsements": [
         {
-          "organization": "Providence Streets Coalition",
-          "source_url": "https://pvdstreets.org/vote/",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-11"
+          "endorser": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements",
+          "designation": "Incumbent"
         },
         {
-          "organization": "Reclaim RI",
-          "source_url": "https://www.reclaimri.org/canvass",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-11"
+          "endorser": "Climate Action Rhode Island",
+          "source_url": "https://world.350.org/rhodeisland/cari-announces-endorsements-for-the-2026-general-election/"
+        },
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        },
+        {
+          "endorser": "Providence Streets Coalition",
+          "source_url": "https://pvdstreets.org/vote/"
+        },
+        {
+          "endorser": "Reclaim RI",
+          "source_url": "https://www.reclaimri.org/canvass"
         }
       ]
     },
@@ -4068,7 +4385,12 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        }
+      ]
     },
     {
       "candidate_id": "house-64-dem-primary-jenni-a-furtado",
@@ -4102,15 +4424,12 @@
       ],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
       ]
     },
@@ -4127,21 +4446,16 @@
       "priorities": [],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "NEARI PACE",
+          "source_url": "https://www.neari.org/votes"
         },
         {
-          "organization": "NEARI PACE",
-          "source_url": "https://www.neari.org/votes",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
       ]
     },
@@ -4184,10 +4498,8 @@
       ],
       "endorsements": [
         {
-          "organization": "Collective Action for Education",
-          "source_url": "https://collectiveactionri.org/collective-action-for-education-announces-first-round-of-2026-rhode-island-primary-candidate-endorsements/",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Collective Action for Education",
+          "source_url": "https://collectiveactionri.org/collective-action-for-education-announces-first-round-of-2026-rhode-island-primary-candidate-endorsements/"
         }
       ]
     },
@@ -4235,21 +4547,21 @@
       ],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements",
+          "designation": "Incumbent"
         },
         {
-          "organization": "Providence Streets Coalition",
-          "source_url": "https://pvdstreets.org/vote/",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-11"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        },
+        {
+          "endorser": "Providence Streets Coalition",
+          "source_url": "https://pvdstreets.org/vote/"
         }
       ]
     },
@@ -4297,33 +4609,32 @@
       ],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "NEARI PACE",
+          "source_url": "https://www.neari.org/votes"
         },
         {
-          "organization": "NEARI PACE",
-          "source_url": "https://www.neari.org/votes",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Climate Action Rhode Island",
+          "source_url": "https://world.350.org/rhodeisland/cari-announces-endorsements-for-the-2026-general-election/"
         },
         {
-          "organization": "NASW-RI PACE",
-          "source_url": "https://naswri.socialworkers.org/Advocacy/PACE",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-10"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         },
         {
-          "organization": "Providence Streets Coalition",
-          "source_url": "https://pvdstreets.org/vote/",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-11"
+          "endorser": "Rhode Island Coalition Against Gun Violence",
+          "source_url": "https://ricagv.org/wp-content/uploads/2026/09/RICAGV-Announces-2026-General-Election-Endorsements.pdf"
+        },
+        {
+          "endorser": "NASW-RI PACE",
+          "source_url": "https://naswri.socialworkers.org/Advocacy/PACE"
+        },
+        {
+          "endorser": "Providence Streets Coalition",
+          "source_url": "https://pvdstreets.org/vote/"
         }
       ]
     },
@@ -4338,7 +4649,13 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [
+        {
+          "endorser": "League of Rhode Island Businesses",
+          "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
+          "designation": "Open-seat endorsement"
+        }
+      ]
     },
     {
       "candidate_id": "house-67-oth-general-joseph-a-depasquale",
@@ -4366,21 +4683,21 @@
       "priorities": [],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Rhode Island Working Families Party",
+          "source_url": "https://www.riwfp.org/endorsements",
+          "designation": "Incumbent"
         },
         {
-          "organization": "Providence Streets Coalition",
-          "source_url": "https://pvdstreets.org/vote/",
-          "source_type": "endorser_official_source",
-          "date_checked": "2026-09-11"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
+        },
+        {
+          "endorser": "Providence Streets Coalition",
+          "source_url": "https://pvdstreets.org/vote/"
         }
       ]
     },
@@ -4428,15 +4745,12 @@
       ],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
       ]
     },
@@ -4453,15 +4767,12 @@
       "priorities": [],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
       ]
     },
@@ -4503,15 +4814,8 @@
       ],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
-        },
-        {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         }
       ]
     },
@@ -4598,19 +4902,16 @@
       ],
       "endorsements": [
         {
-          "name": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser"
+          "endorser": "Clean Water Action",
+          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements"
         },
         {
-          "organization": "Clean Water Action",
-          "source_url": "https://cleanwater.org/releases/clean-water-action-announces-2026-rhode-island-endorsements",
-          "source_type": "endorser_or_candidate_official_source",
-          "date_checked": "2026-08-28"
+          "endorser": "Planned Parenthood Votes! Rhode Island PAC",
+          "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
       ]
     }
   ],
-  "endorsement_research_updated_at": "2026-08-28",
-  "endorsement_methodology": "Endorsements are included only when an endorsing organization or candidate's official campaign site explicitly states the endorsement. Donations, event appearances, photos, and inferred support are excluded. Existing candidate priority lists are not modified by this endorsement update."
+  "endorsement_research_updated_at": "2026-09-23",
+  "endorsement_methodology": "Endorsements are synchronized from RIEP's systematically reviewed 2026 endorsement collection. Only explicit, publicly verifiable endorsement/support records are included; organization terminology is preserved where available. Collection remains developing and is not exhaustive."
 }
