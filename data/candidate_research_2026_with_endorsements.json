@@ -2577,11 +2577,30 @@
       "chamber": "house",
       "district_number": 18,
       "party": "Republican",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-30",
-      "website_audit_note": "No official campaign website located in this audit.",
-      "priorities": [],
+      "campaign_website": "https://jessica4cranston.com/issues",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-09-24",
+      "website_audit_note": "Official campaign issues page verified on 2026-09-24.",
+      "priorities": [
+        {
+          "title": "Affordability",
+          "summary": "Make living in Cranston more affordable through representation at the State House focused on lowering costs.",
+          "source_label": "Official campaign website",
+          "source_url": "https://jessica4cranston.com/issues"
+        },
+        {
+          "title": "Education and parental choice",
+          "summary": "Protect parental choice, support homeschool families, and expand resources for students.",
+          "source_label": "Official campaign website",
+          "source_url": "https://jessica4cranston.com/issues"
+        },
+        {
+          "title": "Small business",
+          "summary": "Reduce unnecessary red tape, rising costs, and confusing state requirements that make it harder to build and operate local businesses.",
+          "source_label": "Official campaign website",
+          "source_url": "https://jessica4cranston.com/issues"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "League of Rhode Island Businesses",
