@@ -427,6 +427,76 @@
       ],
       "source_label": "Official campaign website and Rhode Island General Assembly legislative record",
       "source_url": "https://www.jonacosta.com/"
+    },
+    {
+      "candidate_id": "house-25-dem-primary-thomas-e-noret",
+      "candidate_name": "Thomas E Noret",
+      "chamber": "house",
+      "district_number": 25,
+      "party": "DEM",
+      "ballot_stage": "general",
+      "response_status": "submitted",
+      "summary": "Campaign priorities and statement provided directly to the Rhode Island Elections Project.",
+      "issue_tags": [
+        "healthcare",
+        "public-safety",
+        "law-enforcement"
+      ],
+      "priorities": [
+        {
+          "title": "Health Care",
+          "summary": "Prioritize health care, including affordability, access to care, and support for Rhode Island's health care system."
+        },
+        {
+          "title": "Law and Order",
+          "summary": "Prioritize public safety and law enforcement, informed by his experience as a former police officer."
+        },
+        {
+          "title": "Approach to Public Service",
+          "summary": "“Not an advocate, but an elected official.”"
+        }
+      ]
+    },
+    {
+      "candidate_id": "house-43-dem-primary-deborah-a-fellela",
+      "candidate_name": "Deborah A Fellela",
+      "chamber": "house",
+      "district_number": 43,
+      "party": "DEM",
+      "ballot_stage": "general",
+      "response_status": "submitted",
+      "summary": "Campaign priorities provided directly to the Rhode Island Elections Project.",
+      "issue_tags": [
+        "housing",
+        "education",
+        "retirement",
+        "healthcare",
+        "veterans",
+        "constituent-services",
+        "government-reform"
+      ],
+      "priorities": [
+        {
+          "title": "Housing",
+          "summary": "Work with the new governor on Rhode Island's housing crisis, support development where appropriate without overburdening municipal infrastructure, and expand affordable housing for older residents and veterans."
+        },
+        {
+          "title": "Teacher Retirement",
+          "summary": "Continue working with teachers' unions and NEARI to reduce the combined age-and-service retirement threshold from 95 to 90."
+        },
+        {
+          "title": "Hospital Safe Staffing",
+          "summary": "Continue work related to a study commission on safe staffing in hospitals, with an emphasis on worker and patient safety."
+        },
+        {
+          "title": "Constituent and Veterans' Issues",
+          "summary": "Develop legislation in response to constituent concerns and work with the House Veterans' Affairs Committee leadership on measures addressing veterans' needs."
+        },
+        {
+          "title": "Reviewing Existing Laws",
+          "summary": "Review antiquated laws already on the books and consider updating them rather than assuming that additional legislation is always necessary."
+        }
+      ]
     }
   ]
 }
