@@ -427,6 +427,35 @@
       ],
       "source_label": "Official campaign website and Rhode Island General Assembly legislative record",
       "source_url": "https://www.jonacosta.com/"
+    },
+    {
+      "candidate_id": "house-25-dem-primary-thomas-e-noret",
+      "candidate_name": "Thomas E Noret",
+      "chamber": "house",
+      "district_number": 25,
+      "party": "DEM",
+      "ballot_stage": "general",
+      "response_status": "submitted",
+      "summary": "Campaign priorities and statement provided directly to the Rhode Island Elections Project.",
+      "issue_tags": [
+        "healthcare",
+        "public-safety",
+        "law-enforcement"
+      ],
+      "priorities": [
+        {
+          "title": "Health Care",
+          "summary": "Prioritize health care, including affordability, access to care, and support for Rhode Island's health care system."
+        },
+        {
+          "title": "Law and Order",
+          "summary": "Prioritize public safety and law enforcement, informed by his experience as a former police officer."
+        },
+        {
+          "title": "Approach to Public Service",
+          "summary": "“Not an advocate, but an elected official.”"
+        }
+      ]
     }
   ]
 }
