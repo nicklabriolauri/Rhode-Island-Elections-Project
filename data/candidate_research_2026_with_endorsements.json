@@ -18,13 +18,45 @@
       "website_status": "no_official_campaign_site_located",
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Housing",
+          "summary": "Expand affordable rental and homeownership options.",
+          "source_label": "BallotReady candidate profile",
+          "source_url": "https://www.ballotready.org/people/jacob-bissaillon"
+        },
+        {
+          "title": "Education",
+          "summary": "Improve Providence public schools through stakeholder collaboration, safe facilities, and access to school meals.",
+          "source_label": "BallotReady candidate profile",
+          "source_url": "https://www.ballotready.org/people/jacob-bissaillon"
+        },
+        {
+          "title": "Working families",
+          "summary": "Support higher wages, better working conditions, accessible child care, and affordable healthcare.",
+          "source_label": "BallotReady candidate profile",
+          "source_url": "https://www.ballotready.org/people/jacob-bissaillon"
+        },
+        {
+          "title": "Public safety",
+          "summary": "Support gun-safety laws and the Providence Police Department.",
+          "source_label": "BallotReady candidate profile",
+          "source_url": "https://www.ballotready.org/people/jacob-bissaillon"
+        },
+        {
+          "title": "Small business and veterans",
+          "summary": "Reduce regulatory burdens on small businesses and support state programs for seniors, veterans, and people with developmental disabilities.",
+          "source_label": "BallotReady candidate profile",
+          "source_url": "https://www.ballotready.org/people/jacob-bissaillon"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "Planned Parenthood Votes! Rhode Island PAC",
           "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
-      ]
+      ],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "senate-2-dem-primary-ana-b-quezada",
@@ -471,20 +503,14 @@
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
-          "title": "Affordable healthcare",
-          "summary": "Expand access to universal, comprehensive, affordable healthcare.",
+          "title": "Environmental protection",
+          "summary": "Build on the Act on Climate, fund climate mitigation and resilience, oppose additional fossil-fuel infrastructure, and address plastic and PFAS contamination.",
           "source_label": "Official campaign website",
           "source_url": "https://www.ujifusa4ri.com/priorities"
         },
         {
-          "title": "Insurance and prescription costs",
-          "summary": "Rein in pharmacy benefit managers and insurance practices that restrict care or raise costs.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.ujifusa4ri.com/priorities"
-        },
-        {
-          "title": "Mental health",
-          "summary": "Reduce barriers to mental-health and substance-use treatment.",
+          "title": "Healthcare",
+          "summary": "Pursue universal, comprehensive and affordable healthcare, address private-equity and corporate influence in medicine, and strengthen mental-health coverage.",
           "source_label": "Official campaign website",
           "source_url": "https://www.ujifusa4ri.com/priorities"
         }
@@ -503,7 +529,8 @@
           "endorser": "Planned Parenthood Votes! Rhode Island PAC",
           "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
-      ]
+      ],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "senate-12-dem-primary-louis-dipalma",
@@ -958,8 +985,40 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
-      "endorsements": []
+      "priorities": [
+        {
+          "title": "Public education",
+          "summary": "Increase state funding for Woonsocket and Cumberland public schools, students, and teachers.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.thompsonforri.com/"
+        },
+        {
+          "title": "Affordability and family supports",
+          "summary": "Support larger child tax credits, tax relief on Social Security and pensions, expanded paid family leave, and more accessible child care.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.thompsonforri.com/"
+        },
+        {
+          "title": "Public safety",
+          "summary": "Support policies intended to improve public safety and community safety.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.thompsonforri.com/"
+        },
+        {
+          "title": "Jobs and economic growth",
+          "summary": "Expand job-training opportunities that connect workers with employers seeking skilled labor.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.thompsonforri.com/"
+        },
+        {
+          "title": "Small business and vulnerable residents",
+          "summary": "Reduce unnecessary red tape for small businesses and strengthen protections against abuse of seniors, people with disabilities, domestic-abuse victims, and animals.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.thompsonforri.com/"
+        }
+      ],
+      "endorsements": [],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "senate-21-rep-primary-gordon-e-rogers",
@@ -1019,7 +1078,38 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Healthcare affordability",
+          "summary": "Limit medical-debt consequences and reduce out-of-pocket costs for diabetes care.",
+          "source_label": "BallotReady candidate profile",
+          "source_url": "https://www.ballotready.org/people/melissa-a-murray"
+        },
+        {
+          "title": "Housing",
+          "summary": "Reduce barriers to renting and strengthen tenant and lead-safety protections.",
+          "source_label": "BallotReady candidate profile",
+          "source_url": "https://www.ballotready.org/people/melissa-a-murray"
+        },
+        {
+          "title": "Education",
+          "summary": "Protect state education funding for Woonsocket and North Smithfield.",
+          "source_label": "BallotReady candidate profile",
+          "source_url": "https://www.ballotready.org/people/melissa-a-murray"
+        },
+        {
+          "title": "Seniors and working families",
+          "summary": "Expand paid family leave, retirement savings access, and utility protections for vulnerable households.",
+          "source_label": "BallotReady candidate profile",
+          "source_url": "https://www.ballotready.org/people/melissa-a-murray"
+        },
+        {
+          "title": "Veterans and seniors",
+          "summary": "Support tax relief for military pensions and property-tax relief for low-income seniors.",
+          "source_label": "BallotReady candidate profile",
+          "source_url": "https://www.ballotready.org/people/melissa-a-murray"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "Clean Water Action",
@@ -1029,7 +1119,8 @@
           "endorser": "Planned Parenthood Votes! Rhode Island PAC",
           "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
-      ]
+      ],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "senate-25-dem-primary-andrew-r-dimitri",
@@ -1267,33 +1358,33 @@
       "priorities": [
         {
           "title": "Healthcare",
-          "summary": "Expand affordable and accessible healthcare, mental-health services, and the healthcare workforce.",
-          "source_label": "Official campaign website",
-          "source_url": "https://pamlauria.com/issues1/"
+          "summary": "Reduce prescription and out-of-pocket costs, improve access to primary, specialty and mental-health care, and strengthen the healthcare workforce.",
+          "source_label": "BallotReady candidate profile",
+          "source_url": "https://www.ballotready.org/people/pamela-j-lauria"
         },
         {
           "title": "Education",
-          "summary": "Support equitable public education, fair school funding, and student mental-health resources.",
-          "source_label": "Official campaign website",
-          "source_url": "https://pamlauria.com/issues1/"
-        },
-        {
-          "title": "Gun violence prevention",
-          "summary": "Strengthen safe-storage laws and other measures intended to reduce gun violence.",
-          "source_label": "Official campaign website",
-          "source_url": "https://pamlauria.com/issues1/"
+          "summary": "Keep education from pre-K through college or career training affordable and accessible and prioritize school social workers and counselors.",
+          "source_label": "BallotReady candidate profile",
+          "source_url": "https://www.ballotready.org/people/pamela-j-lauria"
         },
         {
           "title": "Environment",
-          "summary": "Reduce carbon emissions, strengthen climate resilience, and protect open space and drinking water.",
-          "source_label": "Official campaign website",
-          "source_url": "https://pamlauria.com/issues1/"
+          "summary": "Advance the goals of the Act on Climate while protecting open space and drinking water.",
+          "source_label": "BallotReady candidate profile",
+          "source_url": "https://www.ballotready.org/people/pamela-j-lauria"
         },
         {
-          "title": "Housing and seniors",
-          "summary": "Expand affordable housing and help older residents age safely in their communities.",
-          "source_label": "Official campaign website",
-          "source_url": "https://pamlauria.com/issues1/"
+          "title": "Gun safety",
+          "summary": "Support safe-storage legislation and an assault-weapons ban.",
+          "source_label": "BallotReady candidate profile",
+          "source_url": "https://www.ballotready.org/people/pamela-j-lauria"
+        },
+        {
+          "title": "Aging in place",
+          "summary": "Support seniors aging safely at home through accessible transportation and in-home health services.",
+          "source_label": "BallotReady candidate profile",
+          "source_url": "https://www.ballotready.org/people/pamela-j-lauria"
         }
       ],
       "endorsements": [
@@ -1310,7 +1401,8 @@
           "endorser": "Planned Parenthood Votes! Rhode Island PAC",
           "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
-      ]
+      ],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "senate-33-dem-primary-leonidas-peter-raptakis",
@@ -1512,7 +1604,38 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Affordability",
+          "summary": "Raise wages, lower utility costs, provide tax relief, and expand affordable housing and healthcare.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.alana4ri.com/"
+        },
+        {
+          "title": "Families and education",
+          "summary": "Strengthen child care and education and expand mental-health and primary-care access.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.alana4ri.com/"
+        },
+        {
+          "title": "Jobs and aging",
+          "summary": "Grow jobs and support retirees who want to age in place.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.alana4ri.com/"
+        },
+        {
+          "title": "Civil rights",
+          "summary": "Address institutional bias and protect LGBTQ rights.",
+          "source_label": "BallotReady candidate profile",
+          "source_url": "https://www.ballotready.org/people/alana-dimario"
+        },
+        {
+          "title": "Environment",
+          "summary": "Protect natural resources and promote renewable energy while considering costs to ratepayers.",
+          "source_label": "BallotReady candidate profile",
+          "source_url": "https://www.ballotready.org/people/alana-dimario"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "Clean Water Action",
@@ -1539,7 +1662,8 @@
           "endorser": "SEIU 1199 New England (RI/CT)",
           "source_url": "https://bluevoterguide.org/endorser-org/SEIU_1199_New_England_%28RI%29/RI/6833"
         }
-      ]
+      ],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "senate-36-dem-primary-mark-mesrobian",
@@ -1591,31 +1715,31 @@
       "priorities": [
         {
           "title": "Affordability",
-          "summary": "Lower costs for families and seniors, including housing, healthcare, childcare, and utilities.",
+          "summary": "Address housing, utility, food, healthcare, and child-care costs so local families and seniors can remain in South County.",
           "source_label": "Official campaign website",
           "source_url": "https://victoria4ri.com/the-issues/"
         },
         {
-          "title": "Healthcare",
-          "summary": "Improve healthcare access, including community paramedicine and provider recruitment.",
+          "title": "Healthcare access",
+          "summary": "Support community paramedicine and other approaches to improve access to care.",
           "source_label": "Official campaign website",
           "source_url": "https://victoria4ri.com/the-issues/"
         },
         {
-          "title": "Environment and shoreline access",
-          "summary": "Strengthen climate resilience and protect public access to Rhode Island's shoreline.",
+          "title": "Climate and shoreline",
+          "summary": "Strengthen climate resilience and protect and expand public shoreline access.",
           "source_label": "Official campaign website",
           "source_url": "https://victoria4ri.com/the-issues/"
         },
         {
-          "title": "Transportation",
-          "summary": "Improve Westerly Station and expand affordable transportation options.",
+          "title": "Utilities and transportation",
+          "summary": "Reform for-profit utilities and seek improvements to Westerly Station for more frequent, affordable transportation.",
           "source_label": "Official campaign website",
           "source_url": "https://victoria4ri.com/the-issues/"
         },
         {
-          "title": "Small business and public safety",
-          "summary": "Support small businesses while pursuing gun-safety and community-safety measures.",
+          "title": "Small business",
+          "summary": "Reduce barriers and costs associated with starting and operating small businesses.",
           "source_label": "Official campaign website",
           "source_url": "https://victoria4ri.com/the-issues/"
         }
@@ -1638,7 +1762,8 @@
           "endorser": "Planned Parenthood Votes! Rhode Island PAC",
           "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
-      ]
+      ],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "senate-38-rep-primary-westin-j-place",
@@ -3382,14 +3507,34 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Affordability",
+          "summary": "Focus on reducing the cost of living in Rhode Island.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/"
+        },
+        {
+          "title": "Small business",
+          "summary": "Use tax incentives, streamline permitting, and reduce regulations affecting small businesses.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/"
+        },
+        {
+          "title": "Environment and shoreline",
+          "summary": "Strengthen pollution controls, promote community sustainability, and protect beach access.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "League of Rhode Island Businesses",
           "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
           "designation": "General-election endorsement"
         }
-      ]
+      ],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "house-36-dem-primary-tina-l-spears",
@@ -4932,5 +5077,6 @@
     }
   ],
   "endorsement_research_updated_at": "2026-09-23",
-  "endorsement_methodology": "Endorsements are synchronized from RIEP's systematically reviewed 2026 endorsement collection. Only explicit, publicly verifiable endorsement/support records are included; organization terminology is preserved where available. Collection remains developing and is not exhaustive."
+  "endorsement_methodology": "Endorsements are synchronized from RIEP's systematically reviewed 2026 endorsement collection. Only explicit, publicly verifiable endorsement/support records are included; organization terminology is preserved where available. Collection remains developing and is not exhaustive.",
+  "priority_research_updated_at": "2026-09-25"
 }
