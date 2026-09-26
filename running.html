@@ -258,11 +258,13 @@
       font-size:10px;
       line-height:1.45;
     }
-    .aclu-vote-grid{display:grid;grid-template-columns:repeat(11,minmax(32px,1fr));gap:5px;margin-top:10px}
-    .aclu-vote{padding:6px 3px;border:1px solid #d7e1ec;border-radius:6px;background:#fff;text-align:center;font-size:9px;line-height:1.15}
-    .aclu-vote b{display:block;font-size:13px;color:var(--navy)}.aclu-vote span{display:block;margin-top:3px;color:#6b7d92}
-    .aclu-vote.aligned{background:#f2faf5;border-color:#bddfc9}.aclu-vote.opposed{background:#fff5f5;border-color:#e7c4c4}.aclu-vote.absent,.aclu-vote.recused,.aclu-vote.no_vote{background:#f7f8fa}
-    .aclu-vote-key{margin-top:7px;color:#78879a;font-size:9px;line-height:1.4}@media(max-width:760px){.aclu-vote-grid{grid-template-columns:repeat(6,minmax(32px,1fr))}}
+    .aclu-vote-trigger{margin-top:10px;padding:7px 10px;border:1px solid #cbd8e6;border-radius:6px;background:#f8fbff;color:#315f91;font:inherit;font-size:10px;font-weight:800;cursor:pointer}
+    .aclu-vote-trigger:hover{background:#eef6ff}
+    .aclu-vote-dialog{width:min(720px,calc(100vw - 32px));max-height:82vh;border:0;border-radius:10px;padding:0;box-shadow:0 18px 60px rgba(11,23,56,.25)}
+    .aclu-vote-dialog::backdrop{background:rgba(11,23,56,.42)}
+    .aclu-dialog-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;padding:18px 20px;border-bottom:1px solid #e5ebf2}.aclu-dialog-head h3{margin:0;color:var(--navy);font-size:16px}.aclu-dialog-head p{margin:4px 0 0;color:#6b7d92;font-size:10px;line-height:1.4}
+    .aclu-dialog-close{border:0;background:transparent;color:#315f91;font-size:22px;line-height:1;cursor:pointer}
+    .aclu-dialog-list{padding:8px 20px 18px;overflow:auto;max-height:62vh}.aclu-dialog-vote{display:grid;grid-template-columns:28px 1fr auto;gap:10px;align-items:start;padding:10px 0;border-bottom:1px solid #edf1f5}.aclu-dialog-vote:last-child{border-bottom:0}.aclu-dialog-num{font-weight:900;color:var(--navy)}.aclu-dialog-issue{font-size:11px;font-weight:800;color:var(--navy)}.aclu-dialog-status{white-space:nowrap;font-size:10px;font-weight:800}.aclu-dialog-status.aligned{color:#237a45}.aclu-dialog-status.opposed{color:#a33a3a}.aclu-dialog-status.absent,.aclu-dialog-status.recused,.aclu-dialog-status.no_vote{color:#68778a}
     .effectiveness-card{
       margin-top:12px;
       padding:15px;
@@ -980,7 +982,7 @@
             <div class="outside-rating-score">${esc(item.rating)}</div>
             <div class="outside-rating-measure">
               ${esc(item.measure)}
-              ${item.organization === "ACLU of Rhode Island" && Array.isArray(item.votes) ? `<div class="aclu-vote-grid">${item.votes.map(v => { const symbol=v.status==="aligned"?"✓":v.status==="opposed"?"×":v.status==="absent"?"A":v.status==="recused"?"R":"•"; const label=v.status==="aligned"?"Aligned with ACLU position":v.status==="opposed"?"Opposed ACLU position":v.status==="absent"?"Absent":v.status==="recused"?"Recused":"No vote"; return `<div class="aclu-vote ${esc(v.status)}" title="${esc(v.issue)} — ${esc(label)}"><b>${symbol}</b><span>${esc(v.number)}</span></div>`; }).join("")}</div><div class="aclu-vote-key">✓ aligned with ACLU position · × opposed · A absent · R recused · • no vote. Hover over a numbered vote for the issue.</div>` : ""}
+              ${item.organization === "ACLU of Rhode Island" && Array.isArray(item.votes) ? (() => { const dialogId="aclu-votes-"+String(item.chamber||"").replace(/[^a-z0-9]/gi,"")+"-"+String(item.district_number||"").replace(/[^a-z0-9]/gi,""); return `<button type="button" class="aclu-vote-trigger" onclick="document.getElementById('${dialogId}').showModal()">View 11 individual votes</button><dialog class="aclu-vote-dialog" id="${dialogId}"><div class="aclu-dialog-head"><div><h3>ACLU of Rhode Island · 2025 voting record</h3><p>These are votes selected by the ACLU and compared with the ACLU's stated position. This is not an RIEP score or endorsement.</p></div><button type="button" class="aclu-dialog-close" aria-label="Close" onclick="this.closest('dialog').close()">×</button></div><div class="aclu-dialog-list">${item.votes.map(v => { const symbol=v.status==="aligned"?"✓":v.status==="opposed"?"×":v.status==="absent"?"A":v.status==="recused"?"R":"•"; const label=v.status==="aligned"?"Aligned with ACLU position":v.status==="opposed"?"Opposed ACLU position":v.status==="absent"?"Absent":v.status==="recused"?"Recused":"No vote"; return `<div class="aclu-dialog-vote"><div class="aclu-dialog-num">${esc(v.number)}</div><div class="aclu-dialog-issue">${esc(v.issue)}</div><div class="aclu-dialog-status ${esc(v.status)}">${symbol} ${esc(label)}</div></div>`; }).join("")}</div></dialog>`; })() : ""}
               <div class="outside-rating-note">${esc(item.note || "This is the organization's score or rating, not an RIEP assessment.")}</div>
             </div>
             <a class="outside-rating-source" href="${esc(item.source_url)}" target="_blank" rel="noopener">Source ↗</a>
