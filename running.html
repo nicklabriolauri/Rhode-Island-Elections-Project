@@ -258,6 +258,11 @@
       font-size:10px;
       line-height:1.45;
     }
+    .aclu-vote-grid{display:grid;grid-template-columns:repeat(11,minmax(32px,1fr));gap:5px;margin-top:10px}
+    .aclu-vote{padding:6px 3px;border:1px solid #d7e1ec;border-radius:6px;background:#fff;text-align:center;font-size:9px;line-height:1.15}
+    .aclu-vote b{display:block;font-size:13px;color:var(--navy)}.aclu-vote span{display:block;margin-top:3px;color:#6b7d92}
+    .aclu-vote.aligned{background:#f2faf5;border-color:#bddfc9}.aclu-vote.opposed{background:#fff5f5;border-color:#e7c4c4}.aclu-vote.absent,.aclu-vote.recused,.aclu-vote.no_vote{background:#f7f8fa}
+    .aclu-vote-key{margin-top:7px;color:#78879a;font-size:9px;line-height:1.4}@media(max-width:760px){.aclu-vote-grid{grid-template-columns:repeat(6,minmax(32px,1fr))}}
     .effectiveness-card{
       margin-top:12px;
       padding:15px;
@@ -428,7 +433,7 @@
     const DATA_URL = "data/whos_running_2026.json?v=20260925-status";
     const PROFILE_URL = "data/candidate_profiles_2026.json?v=20260924-gomes-noret";
     const RESEARCH_URL = "data/candidate_research_2026_with_endorsements.json?v=20260925-burke";
-    const RATINGS_URL = "data/outside_ratings_2026.json?v=20260925-aclu";
+    const RATINGS_URL = "data/outside_ratings_2026.json?v=20260925-aclu-votes";
     const OFFICE_URL = "data/incumbent_records_2026.json?v=20260829-office";
     const HOUSE_PROGRESS_URL = "data/house_legislative_progress_2025_2026.json?v=20260922-full-house";
     const GEO = {
@@ -975,6 +980,7 @@
             <div class="outside-rating-score">${esc(item.rating)}</div>
             <div class="outside-rating-measure">
               ${esc(item.measure)}
+              ${item.organization === "ACLU of Rhode Island" && Array.isArray(item.votes) ? `<div class="aclu-vote-grid">${item.votes.map(v => { const symbol=v.status==="aligned"?"✓":v.status==="opposed"?"×":v.status==="absent"?"A":v.status==="recused"?"R":"•"; const label=v.status==="aligned"?"Aligned with ACLU position":v.status==="opposed"?"Opposed ACLU position":v.status==="absent"?"Absent":v.status==="recused"?"Recused":"No vote"; return `<div class="aclu-vote ${esc(v.status)}" title="${esc(v.issue)} — ${esc(label)}"><b>${symbol}</b><span>${esc(v.number)}</span></div>`; }).join("")}</div><div class="aclu-vote-key">✓ aligned with ACLU position · × opposed · A absent · R recused · • no vote. Hover over a numbered vote for the issue.</div>` : ""}
               <div class="outside-rating-note">${esc(item.note || "This is the organization's score or rating, not an RIEP assessment.")}</div>
             </div>
             <a class="outside-rating-source" href="${esc(item.source_url)}" target="_blank" rel="noopener">Source ↗</a>
