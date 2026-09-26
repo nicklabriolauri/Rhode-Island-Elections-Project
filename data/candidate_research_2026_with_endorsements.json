@@ -491,12 +491,38 @@
       "chamber": "senate",
       "district_number": 9,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-30",
-      "website_audit_note": "No official campaign website located in this audit.",
-      "priorities": [],
-      "endorsements": []
+      "campaign_website": "https://www.votejohnburke.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-09-25",
+      "website_audit_note": "Official Committee to Elect John Burke campaign website located in September 2026 audit.",
+      "priorities": [
+        {
+          "title": "Small businesses",
+          "summary": "Work with local and state officials to help small businesses recover and remain economically viable.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.votejohnburke.com/meet_john"
+        },
+        {
+          "title": "Affordable housing",
+          "summary": "Work to expand affordable housing for Rhode Islanders.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.votejohnburke.com/meet_john"
+        },
+        {
+          "title": "Seniors",
+          "summary": "Support issues affecting senior citizens.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.votejohnburke.com/meet_john"
+        },
+        {
+          "title": "Veterans",
+          "summary": "Support issues affecting veterans.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.votejohnburke.com/meet_john"
+        }
+      ],
+      "endorsements": [],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "senate-10-dem-primary-walter-s-felag-jr",
