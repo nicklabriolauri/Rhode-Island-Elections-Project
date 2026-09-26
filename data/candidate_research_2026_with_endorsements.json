@@ -155,7 +155,20 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Tax policy",
+          "summary": "Reduce Rhode Island personal income-tax rates through a phased reduction.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/city/north_providence"
+        },
+        {
+          "title": "Housing and property taxes",
+          "summary": "Limit property-tax increases on rental units in municipalities that adopt local rent-control ordinances.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/city/north_providence"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "League of Rhode Island Businesses",
@@ -166,7 +179,8 @@
           "endorser": "AFL-CIO Rhode Island",
           "source_url": "https://bluevoterguide.org/state/RI?lang=en"
         }
-      ]
+      ],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "senate-5-dem-primary-samuel-w-bell",
@@ -178,7 +192,26 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Healthcare",
+          "summary": "Expand healthcare access and strengthen the social safety net.",
+          "source_label": "Candidate interview",
+          "source_url": "https://www.jejunemagazine.com/home/sam-bell-rhode-island-senate-district-5"
+        },
+        {
+          "title": "Housing",
+          "summary": "Increase affordable housing, including greater use of available federal housing support.",
+          "source_label": "Candidate interview",
+          "source_url": "https://www.jejunemagazine.com/home/sam-bell-rhode-island-senate-district-5"
+        },
+        {
+          "title": "Economic policy",
+          "summary": "Oppose tax reductions that he argues would reduce resources for public services and vulnerable residents.",
+          "source_label": "Candidate interview",
+          "source_url": "https://www.jejunemagazine.com/home/sam-bell-rhode-island-senate-district-5"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "Clean Water Action",
@@ -202,7 +235,8 @@
           "endorser": "Rhode Island Coalition Against Gun Violence",
           "source_url": "https://ricagv.org/wp-content/uploads/2026/09/RICAGV-Announces-2026-General-Election-Endorsements.pdf"
         }
-      ]
+      ],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "senate-5-dem-primary-theodore-newcomer-jr",
@@ -538,12 +572,44 @@
       "chamber": "senate",
       "district_number": 12,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
+      "campaign_website": "https://www.dipalma4ri.com/",
+      "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
-      "priorities": [],
-      "endorsements": []
+      "priorities": [
+        {
+          "title": "State budget and economic growth",
+          "summary": "Support fiscally responsible budgets intended to grow Rhode Island's economy.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.dipalma4ri.com/"
+        },
+        {
+          "title": "Infrastructure",
+          "summary": "Invest in roads and bridges.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.dipalma4ri.com/"
+        },
+        {
+          "title": "Education",
+          "summary": "Improve education through state budget investments.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.dipalma4ri.com/"
+        },
+        {
+          "title": "Vulnerable residents",
+          "summary": "Protect vulnerable Rhode Islanders through state programs and funding.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.dipalma4ri.com/"
+        },
+        {
+          "title": "Property-tax relief",
+          "summary": "Continue pursuing property-tax relief for residents.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.dipalma4ri.com/"
+        }
+      ],
+      "endorsements": [],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "senate-13-dem-primary-dawn-euer",
@@ -873,12 +939,44 @@
       "chamber": "senate",
       "district_number": 17,
       "party": "Independent",
-      "campaign_website": "https://petrarcalaw.com/team-member/jina-petrarca-esq/",
+      "campaign_website": "https://jinaforsenate.com/",
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
-      "endorsements": []
+      "priorities": [
+        {
+          "title": "Jobs and opportunity",
+          "summary": "Create conditions that allow Rhode Island graduates to find career opportunities and remain in the state.",
+          "source_label": "Official campaign website",
+          "source_url": "https://jinaforsenate.com/"
+        },
+        {
+          "title": "Seniors",
+          "summary": "Help older residents remain in their communities.",
+          "source_label": "Official campaign website",
+          "source_url": "https://jinaforsenate.com/"
+        },
+        {
+          "title": "Small business",
+          "summary": "Improve conditions for businesses to grow and remain in Rhode Island.",
+          "source_label": "Official campaign website",
+          "source_url": "https://jinaforsenate.com/"
+        },
+        {
+          "title": "Healthcare and housing",
+          "summary": "Improve timely access to quality healthcare and housing.",
+          "source_label": "Official campaign website",
+          "source_url": "https://jinaforsenate.com/"
+        },
+        {
+          "title": "Public-service compensation",
+          "summary": "Decline state health insurance and donate General Assembly salary to local charities if elected.",
+          "source_label": "Official campaign website",
+          "source_url": "https://jinaforsenate.com/"
+        }
+      ],
+      "endorsements": [],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "senate-18-dem-primary-robert-britto",
@@ -1065,8 +1163,22 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
-      "endorsements": []
+      "priorities": [
+        {
+          "title": "Tax relief",
+          "summary": "Reduce personal state income-tax rates through a phased reduction with legislative fiscal review.",
+          "source_label": "Rhode Island General Assembly",
+          "source_url": "https://www.rilegislature.gov/pressrelease/_layouts/15/ril.pressrelease.inputform/DisplayForm.aspx?ID=376173&List=c8baae31-3c10-431c-8dcd-9dbbe21ce3e9"
+        },
+        {
+          "title": "Zambarano Hospital",
+          "summary": "Continue support for rebuilding and revitalizing the Zambarano unit of Eleanor Slater Hospital.",
+          "source_label": "Rhode Island General Assembly",
+          "source_url": "https://www.rilegislature.gov/senators/de%20la%20Cruz/Pages/Biography.aspx"
+        }
+      ],
+      "endorsements": [],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "senate-24-dem-primary-melissa-murray",
@@ -1159,12 +1271,38 @@
       "chamber": "senate",
       "district_number": 27,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
+      "campaign_website": "https://senatorgallo.com/",
+      "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
-      "priorities": [],
-      "endorsements": []
+      "priorities": [
+        {
+          "title": "Affordable housing",
+          "summary": "Support housing and homelessness programs, including down-payment assistance.",
+          "source_label": "Official campaign website",
+          "source_url": "https://senatorgallo.com/"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Promote access to quality healthcare for families.",
+          "source_label": "Official campaign website",
+          "source_url": "https://senatorgallo.com/"
+        },
+        {
+          "title": "Children and education",
+          "summary": "Invest in children and public education.",
+          "source_label": "Official campaign website",
+          "source_url": "https://senatorgallo.com/"
+        },
+        {
+          "title": "Workers and small businesses",
+          "summary": "Support workers and provide relief for small businesses and employers.",
+          "source_label": "Official campaign website",
+          "source_url": "https://senatorgallo.com/"
+        }
+      ],
+      "endorsements": [],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "senate-28-dem-primary-lammis-j-vargas",
@@ -1508,11 +1646,42 @@
       "chamber": "senate",
       "district_number": 34,
       "party": "Democrat",
-      "campaign_website": "https://samforrichmond.com/",
+      "campaign_website": "https://samwilcoxforri.com/",
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Affordability",
+          "summary": "Lower housing and utility costs and expand affordable housing options.",
+          "source_label": "Official campaign website",
+          "source_url": "https://samwilcoxforri.com/posts/"
+        },
+        {
+          "title": "Education",
+          "summary": "Support consistent academic standards and predictable state school funding.",
+          "source_label": "Official campaign website",
+          "source_url": "https://samwilcoxforri.com/posts/"
+        },
+        {
+          "title": "Small business and rural development",
+          "summary": "Support local agriculture, trades, and economic development suited to rural communities.",
+          "source_label": "Official campaign website",
+          "source_url": "https://samwilcoxforri.com/posts/"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Lower prescription-drug costs, support local providers, and strengthen mental-health access.",
+          "source_label": "Official campaign website",
+          "source_url": "https://samwilcoxforri.com/posts/"
+        },
+        {
+          "title": "Environment and infrastructure",
+          "summary": "Protect clean water, farmland and open space while investing in roads, bridges and storm resilience.",
+          "source_label": "Official campaign website",
+          "source_url": "https://samwilcoxforri.com/posts/"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "Clean Water Action",
@@ -1526,7 +1695,8 @@
           "endorser": "Richmond Democratic Town Committee",
           "source_url": "https://www.richmonddtc.com/"
         }
-      ]
+      ],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "senate-34-rep-primary-elaine-j-morgan",
@@ -1675,14 +1845,46 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Economy and affordability",
+          "summary": "Address high housing costs, taxes, and limited economic opportunity while retaining more Rhode Island graduates.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.mark4ri.com/"
+        },
+        {
+          "title": "Education",
+          "summary": "Improve educational outcomes and make more efficient use of state education funding.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.mark4ri.com/"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Address primary-care shortages and provider reimbursement levels that affect recruitment and retention.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.mark4ri.com/"
+        },
+        {
+          "title": "Energy and environment",
+          "summary": "Address high energy costs while protecting clean air, water, shoreline access and coastal communities.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.mark4ri.com/"
+        },
+        {
+          "title": "Infrastructure",
+          "summary": "Invest in water, wastewater and other aging infrastructure in District 36.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.mark4ri.com/"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "League of Rhode Island Businesses",
           "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
           "designation": "Primary endorsement"
         }
-      ]
+      ],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "senate-37-dem-primary-virginia-susan-sosnowski",
@@ -1771,18 +1973,38 @@
       "chamber": "senate",
       "district_number": 38,
       "party": "Republican",
-      "campaign_website": "https://westin4ri-com.translate.goog/?_x_tr_sl=en&_x_tr_tl=it&_x_tr_hl=it&_x_tr_pto=sc",
+      "campaign_website": "https://westin4ri.com/",
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Healthcare affordability",
+          "summary": "Address rising healthcare costs and the complexity families face navigating the healthcare system.",
+          "source_label": "Official campaign website",
+          "source_url": "https://westin4ri.com/"
+        },
+        {
+          "title": "Small business",
+          "summary": "Reduce regulatory burdens affecting small businesses.",
+          "source_label": "Official campaign website",
+          "source_url": "https://westin4ri.com/"
+        },
+        {
+          "title": "Working-family costs",
+          "summary": "Address financial pressures affecting working families.",
+          "source_label": "Official campaign website",
+          "source_url": "https://westin4ri.com/"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "League of Rhode Island Businesses",
           "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
           "designation": "General-election endorsement"
         }
-      ]
+      ],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "house-1-dem-primary-edith-h-ajello",
@@ -1794,7 +2016,38 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Housing",
+          "summary": "Support tenant protections and measures addressing practices that can raise rents.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/hd/1"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Support Medicaid reimbursement and reproductive-health access.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/hd/1"
+        },
+        {
+          "title": "Voting access and election administration",
+          "summary": "Protect voting access and support post-election audits.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/hd/1"
+        },
+        {
+          "title": "Gun policy",
+          "summary": "Support restrictions on high-capacity magazines and assault weapons.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/hd/1"
+        },
+        {
+          "title": "Privacy and climate",
+          "summary": "Support digital-location privacy protections and climate policy.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/hd/1"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "Clean Water Action",
@@ -1829,7 +2082,8 @@
           "endorser": "AFL-CIO Rhode Island",
           "source_url": "https://bluevoterguide.org/state/RI?lang=en"
         }
-      ]
+      ],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "house-1-dem-primary-michael-j-garman",
@@ -2092,13 +2346,27 @@
       "website_status": "no_official_campaign_site_located",
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Healthcare reimbursement",
+          "summary": "Prevent insurers from reimbursing providers below approved Medicaid rates.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/city/north_providence"
+        },
+        {
+          "title": "Law-enforcement accountability",
+          "summary": "Support due-process, accountability and transparency reforms for law-enforcement officers.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/city/north_providence"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "Rhode Island State Fraternal Order of Police",
           "source_url": "https://coalitionnews.com/charlestown-south-kingstown-block-island-westerly-house-candidate-leah-boisclair-earns-endorsement-from-the-rhode-island-sta-2/"
         }
-      ]
+      ],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "house-7-dem-primary-amy-j-santiago",
@@ -2344,7 +2612,32 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Child care",
+          "summary": "Strengthen the Child Care Assistance Program and reimbursement rates for providers.",
+          "source_label": "Official website",
+          "source_url": "https://www.repgracediaz.com/"
+        },
+        {
+          "title": "Families and poverty reduction",
+          "summary": "Advocate for children, families, older residents and people working to move out of poverty.",
+          "source_label": "Official website",
+          "source_url": "https://www.repgracediaz.com/"
+        },
+        {
+          "title": "Small business and immigrant communities",
+          "summary": "Support small-business owners and residents seeking a new start in Rhode Island.",
+          "source_label": "Official website",
+          "source_url": "https://www.repgracediaz.com/"
+        },
+        {
+          "title": "Behavioral healthcare",
+          "summary": "Improve affordability of behavioral-health counseling and medication-management visits.",
+          "source_label": "Rhode Island General Assembly",
+          "source_url": "https://www.rilegislature.gov/representatives/diaz/Pages/Biography.aspx"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "Clean Water Action",
@@ -2354,7 +2647,8 @@
           "endorser": "Collective Action for Education",
           "source_url": "https://collectiveactionri.org/collective-action-for-education-endorses-slate-of-state-legislators-and-providence-city-councilors-for-re-election/"
         }
-      ]
+      ],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "house-12-dem-primary-carlos-cedeno",
@@ -2770,14 +3064,46 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Government accountability",
+          "summary": "Root out corruption and increase transparency in public spending and decision-making.",
+          "source_label": "Campaign website",
+          "source_url": "https://maloneyformayor.com/"
+        },
+        {
+          "title": "Infrastructure",
+          "summary": "Prioritize infrastructure and sewer investment over discretionary projects.",
+          "source_label": "Campaign website",
+          "source_url": "https://maloneyformayor.com/"
+        },
+        {
+          "title": "Tax administration",
+          "summary": "Modernize online tax payments and keep tax-payment processing local.",
+          "source_label": "Campaign website",
+          "source_url": "https://maloneyformayor.com/"
+        },
+        {
+          "title": "Small business",
+          "summary": "Support large and small local businesses and reduce obstacles they face.",
+          "source_label": "Campaign website",
+          "source_url": "https://maloneyformayor.com/"
+        },
+        {
+          "title": "Schools",
+          "summary": "Support school programs and seek greater state reimbursement for school construction.",
+          "source_label": "Campaign website",
+          "source_url": "https://maloneyformayor.com/"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "League of Rhode Island Businesses",
           "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
           "designation": "General-election endorsement"
         }
-      ]
+      ],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "house-20-dem-primary-david-a-bennett",
@@ -3017,14 +3343,22 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Government and constituent service",
+          "summary": "Emphasize responsive representation and practical problem-solving for Warwick residents.",
+          "source_label": "Campaign website",
+          "source_url": "https://howeri.com/"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "NEARI PACE",
           "source_url": "https://www.neari.org/votes",
           "designation": "Primary endorsement"
         }
-      ]
+      ],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "house-23-rep-primary-dana-james-traversie",
@@ -3076,12 +3410,44 @@
       "chamber": "house",
       "district_number": 24,
       "party": "Democrat",
-      "campaign_website": "https://rilaborlaw.com/attorneys/evan-shanley/",
+      "campaign_website": "https://evanshanleyforri.com/",
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
-      "endorsements": []
+      "priorities": [
+        {
+          "title": "Education",
+          "summary": "Support state education aid and school construction in Warwick and East Greenwich.",
+          "source_label": "Official campaign website",
+          "source_url": "https://evanshanleyforri.com/"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Improve healthcare affordability, provider reimbursement and primary-care capacity.",
+          "source_label": "Official campaign website",
+          "source_url": "https://evanshanleyforri.com/"
+        },
+        {
+          "title": "Tax relief",
+          "summary": "Continue tax relief for residents, retirees and small businesses.",
+          "source_label": "Official campaign website",
+          "source_url": "https://evanshanleyforri.com/"
+        },
+        {
+          "title": "Disability services",
+          "summary": "Support workers with disabilities and community-service providers.",
+          "source_label": "Official campaign website",
+          "source_url": "https://evanshanleyforri.com/about/"
+        },
+        {
+          "title": "Climate resilience",
+          "summary": "Support local climate resilience and alternative-energy initiatives.",
+          "source_label": "Official campaign website",
+          "source_url": "https://evanshanleyforri.com/about/"
+        }
+      ],
+      "endorsements": [],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "house-25-dem-primary-thomas-e-noret",
@@ -3142,14 +3508,40 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Workers and small business",
+          "summary": "Protect workers' rights and support local businesses.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/city/coventry"
+        },
+        {
+          "title": "Taxes and affordability",
+          "summary": "End retirement taxes, freeze property taxes, and lower electricity costs.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/city/coventry"
+        },
+        {
+          "title": "Healthcare workforce",
+          "summary": "Improve reimbursement rates to help Rhode Island retain and attract doctors.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/city/coventry"
+        },
+        {
+          "title": "Energy",
+          "summary": "Explore alternatives to offshore wind development.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/city/coventry"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "League of Rhode Island Businesses",
           "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
           "designation": "General-election endorsement"
         }
-      ]
+      ],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "house-28-rep-primary-george-a-nardone",
@@ -3187,13 +3579,45 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Workers",
+          "summary": "Strengthen protections against wage theft.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/city/east_greenwich"
+        },
+        {
+          "title": "Voting and campaigns",
+          "summary": "Support voting access and allow campaign funds to cover child care connected to campaigning or officeholding.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/city/east_greenwich"
+        },
+        {
+          "title": "Healthcare and reproductive rights",
+          "summary": "Protect reproductive rights and address pharmacy and opioid-related healthcare practices.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/city/east_greenwich"
+        },
+        {
+          "title": "Gun safety",
+          "summary": "Support assault-weapon, ghost-gun, high-capacity-magazine and safe-storage restrictions.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/city/east_greenwich"
+        },
+        {
+          "title": "Environment",
+          "summary": "Address high-heat waste facilities and plastic-bottle waste.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/city/east_greenwich"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "Planned Parenthood Votes! Rhode Island PAC",
           "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
-      ]
+      ],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "house-31-dem-primary-james-c-sheehan",
@@ -3423,14 +3847,40 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Affordability",
+          "summary": "Reduce costs affecting Rhode Island residents and businesses.",
+          "source_label": "Official campaign website",
+          "source_url": "https://jessicadrewday.com/"
+        },
+        {
+          "title": "Small business",
+          "summary": "Reduce corporate tax rates and filing fees for small businesses.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Expand telehealth and encourage additional healthcare providers to enter Rhode Island.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/"
+        },
+        {
+          "title": "Energy",
+          "summary": "Oppose offshore-wind mandates and support additional natural-gas and Canadian hydropower supply.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "League of Rhode Island Businesses",
           "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
           "designation": "General-election endorsement"
         }
-      ]
+      ],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "house-34-dem-primary-teresa-a-tanzi",
@@ -3719,8 +4169,34 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
-      "endorsements": []
+      "priorities": [
+        {
+          "title": "Affordability and government spending",
+          "summary": "Ease costs for residents while increasing accountability for state spending.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/city/westerly"
+        },
+        {
+          "title": "Individual rights",
+          "summary": "Protect individual rights and personal freedoms.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/city/westerly"
+        },
+        {
+          "title": "Education",
+          "summary": "Promote equal access to quality education and support public-education funding.",
+          "source_label": "BallotReady candidate profile",
+          "source_url": "https://www.ballotready.org/people/stephen-moffitt"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Increase primary-care availability and strengthen recruitment and retention of healthcare professionals.",
+          "source_label": "BallotReady candidate profile",
+          "source_url": "https://www.ballotready.org/people/stephen-moffitt"
+        }
+      ],
+      "endorsements": [],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "house-39-dem-primary-megan-l-cotter",
@@ -3732,7 +4208,32 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Healthcare",
+          "summary": "Strengthen Medicaid, improve reimbursement rates, protect discounted drug programs and address childhood lead exposure.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/city/richmond"
+        },
+        {
+          "title": "Land conservation",
+          "summary": "Protect farmland, forests and open space through state investment.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/city/richmond"
+        },
+        {
+          "title": "Government oversight",
+          "summary": "Support an independent Inspector General and auditing of state transportation spending.",
+          "source_label": "Richmond Democratic Town Committee candidate profile",
+          "source_url": "https://www.richmonddtc.com/primary26"
+        },
+        {
+          "title": "Education",
+          "summary": "Increase state aid for local schools.",
+          "source_label": "Richmond Democratic Town Committee candidate profile",
+          "source_url": "https://www.richmonddtc.com/primary26"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "Climate Action Rhode Island",
@@ -3742,7 +4243,8 @@
           "endorser": "Planned Parenthood Votes! Rhode Island PAC",
           "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
-      ]
+      ],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "house-39-rep-primary-jasmin-roy",
@@ -3817,13 +4319,39 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Disability inclusion",
+          "summary": "Improve accessibility and inclusion in transportation, housing and public venues.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/hd/41"
+        },
+        {
+          "title": "Local infrastructure",
+          "summary": "Seek fair compensation for Scituate's role hosting the Providence water-supply reservoir and direct resources to local infrastructure.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/hd/41"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Remove insurance barriers, improve access and reduce healthcare costs.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/hd/41"
+        },
+        {
+          "title": "Public safety",
+          "summary": "Support local police and volunteer fire departments while opposing top-down mandates.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/hd/41"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "Climate Action Rhode Island",
           "source_url": "https://world.350.org/rhodeisland/cari-announces-endorsements-for-the-2026-general-election/"
         }
-      ]
+      ],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "house-41-rep-primary-michael-j-riley",
@@ -3854,8 +4382,40 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
-      "endorsements": []
+      "priorities": [
+        {
+          "title": "Small business",
+          "summary": "Reduce red tape and create incentives for businesses to remain and grow in Rhode Island.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.edfor42.com/"
+        },
+        {
+          "title": "Taxpayer oversight",
+          "summary": "Support an Inspector General and stronger oversight of fraud and waste.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.edfor42.com/"
+        },
+        {
+          "title": "Police and first responders",
+          "summary": "Fund police and ensure first responders have training and equipment.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.edfor42.com/"
+        },
+        {
+          "title": "Addiction treatment",
+          "summary": "Increase emphasis on long-term responses to addiction and strengthen oversight of treatment facilities.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.edfor42.com/"
+        },
+        {
+          "title": "Seniors",
+          "summary": "Increase senior-program support, lower prescription-drug costs and remove the state tax on Social Security.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.edfor42.com/"
+        }
+      ],
+      "endorsements": [],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "house-42-rep-primary-richard-r-fascia",
@@ -3962,8 +4522,34 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
-      "endorsements": []
+      "priorities": [
+        {
+          "title": "Consumer protection",
+          "summary": "Protect consumers' ability to pay in cash and address debit-card fraud.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/city/cumberland"
+        },
+        {
+          "title": "Tax relief",
+          "summary": "Support reductions in personal income taxes and prior elimination of the car tax.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/city/cumberland"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Expand insurance coverage for biomarker testing and improve access to cancer research and data.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/city/cumberland"
+        },
+        {
+          "title": "Child health",
+          "summary": "Address childhood lead exposure and other preventable health risks.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/city/cumberland"
+        }
+      ],
+      "endorsements": [],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "house-46-dem-primary-mary-ann-shallcross-smith",
@@ -4045,8 +4631,34 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
-      "endorsements": []
+      "priorities": [
+        {
+          "title": "State spending",
+          "summary": "Reduce government spending and oppose corporate subsidies.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/city/north_smithfield"
+        },
+        {
+          "title": "Campaign finance",
+          "summary": "Support changes to campaign-finance law and disclosure.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/city/north_smithfield"
+        },
+        {
+          "title": "Infrastructure",
+          "summary": "Address Route 146 and other local transportation issues.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/city/north_smithfield"
+        },
+        {
+          "title": "Climate policy",
+          "summary": "Oppose the state's 2021 Act on Climate approach.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/city/north_smithfield"
+        }
+      ],
+      "endorsements": [],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "house-49-dem-primary-veronicka-vega",
@@ -4607,7 +5219,20 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Constituent service and state improvement",
+          "summary": "Focus on improving Rhode Island and the quality of life of East Providence residents.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.dawsonforep.com/about"
+        },
+        {
+          "title": "Public safety and justice",
+          "summary": "Apply experience as a former state prosecutor to public-safety and justice issues.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.dawsonforep.com/about"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "Clean Water Action",
@@ -4621,7 +5246,8 @@
           "endorser": "Planned Parenthood Votes! Rhode Island PAC",
           "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
-      ]
+      ],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "house-65-dem-primary-grant-webber-wosencroft",
@@ -4808,18 +5434,32 @@
       "chamber": "house",
       "district_number": 67,
       "party": "Democrat",
-      "campaign_website": "https://ron4ri.online/meet-ron-jarvais-jr-1",
+      "campaign_website": "https://ron4ri.online/",
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "priorities": [
+        {
+          "title": "Affordability",
+          "summary": "Address high property taxes and rising utility bills affecting seniors and young families.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/city/warren"
+        },
+        {
+          "title": "First responders",
+          "summary": "Support police, firefighters and other first responders.",
+          "source_label": "Rhode Island Voter Guide",
+          "source_url": "https://rhodeislandvoterguide.com/2026/primary/city/warren"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "League of Rhode Island Businesses",
           "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
           "designation": "Open-seat endorsement"
         }
-      ]
+      ],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "house-67-oth-general-joseph-a-depasquale",
@@ -5019,8 +5659,40 @@
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
-      "endorsements": []
+      "priorities": [
+        {
+          "title": "Affordability and budgeting",
+          "summary": "Address housing, insurance and everyday costs while maintaining a sustainable state budget.",
+          "source_label": "2026 legislative outlook interview",
+          "source_url": "https://whatsupnewp.com/2025/12/legislative-outlook-finkelman-the-economy-and-environment-critical-issues-in-2026/"
+        },
+        {
+          "title": "Environment and climate resilience",
+          "summary": "Plan for climate-related risks affecting coastal communities and reduce carbon emissions.",
+          "source_label": "2026 legislative outlook interview",
+          "source_url": "https://whatsupnewp.com/2025/12/legislative-outlook-finkelman-the-economy-and-environment-critical-issues-in-2026/"
+        },
+        {
+          "title": "Small business and economic competitiveness",
+          "summary": "Reduce unnecessary barriers for small and medium-sized businesses and strengthen Rhode Island's economy.",
+          "source_label": "BallotReady candidate profile",
+          "source_url": "https://www.ballotready.org/people/alex-s-finkelman"
+        },
+        {
+          "title": "Housing",
+          "summary": "Expand affordable and accessible housing.",
+          "source_label": "BallotReady candidate profile",
+          "source_url": "https://www.ballotready.org/people/alex-s-finkelman"
+        },
+        {
+          "title": "Healthcare and seniors",
+          "summary": "Improve access to home healthcare, mental-health services and supports for seniors and vulnerable residents.",
+          "source_label": "BallotReady candidate profile",
+          "source_url": "https://www.ballotready.org/people/alex-s-finkelman"
+        }
+      ],
+      "endorsements": [],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "house-75-dem-primary-lauren-h-carson",
