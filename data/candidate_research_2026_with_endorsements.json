@@ -278,12 +278,32 @@
       "chamber": "senate",
       "district_number": 5,
       "party": "Republican",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-30",
+      "campaign_website": "https://angelconnell.net/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-09-25",
       "website_audit_note": "No official campaign website located in this audit.",
-      "priorities": [],
-      "endorsements": []
+      "priorities": [
+        {
+          "title": "Decentralized local government",
+          "summary": "Move toward a decentralized confederation of Rhode Island cities and towns.",
+          "source_label": "Candidate campaign website",
+          "source_url": "https://angelconnell.net/"
+        },
+        {
+          "title": "Taxes and regulation",
+          "summary": "Reduce taxes and regulations as part of a more decentralized approach to state government.",
+          "source_label": "Candidate campaign website",
+          "source_url": "https://angelconnell.net/"
+        },
+        {
+          "title": "Family and community life",
+          "summary": "Prioritize family life and nature-based communities in the organization of local government.",
+          "source_label": "Candidate campaign website",
+          "source_url": "https://angelconnell.net/"
+        }
+      ],
+      "endorsements": [],
+      "priority_research_updated_at": "2026-09-25"
     },
     {
       "candidate_id": "senate-6-dem-primary-tiara-t-mack",
