@@ -425,9 +425,9 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
   (() => {
-    const DATA_URL = "data/whos_running_2026.json?v=20260912-general";
+    const DATA_URL = "data/whos_running_2026.json?v=20260925-schaefer";
     const PROFILE_URL = "data/candidate_profiles_2026.json?v=20260924-gomes-noret";
-    const RESEARCH_URL = "data/candidate_research_2026_with_endorsements.json?v=20260925-priorities";
+    const RESEARCH_URL = "data/candidate_research_2026_with_endorsements.json?v=20260925-priorities27";
     const RATINGS_URL = "data/outside_ratings_2026.json?v=20260922-cel-all";
     const OFFICE_URL = "data/incumbent_records_2026.json?v=20260829-office";
     const HOUSE_PROGRESS_URL = "data/house_legislative_progress_2025_2026.json?v=20260922-full-house";
@@ -752,9 +752,11 @@
       }
 
       if(web?.priorities?.length){
+        const prioritySource = web.priorities[0]?.source_label || "published source";
+        const priorityUrl = web.priorities[0]?.source_url || web.campaign_website || "";
         return `
           <div class="priority-block">
-            <div class="priority-label">Top campaign priorities · official campaign website</div>
+            <div class="priority-label">Published priorities / positions · ${esc(prioritySource)}</div>
             <div class="priority-list">
               ${web.priorities.slice(0,5).map(p => `
                 <div class="priority">
@@ -763,7 +765,7 @@
                 </div>
               `).join("")}
             </div>
-            <div class="source-note">Source: <a href="${esc(web.campaign_website)}" target="_blank" rel="noopener">official campaign website</a>. RIEP summarizes the candidate's published positions without adding inferred positions.</div>
+            <div class="source-note">Source: ${priorityUrl ? `<a href="${esc(priorityUrl)}" target="_blank" rel="noopener">${esc(prioritySource)}</a>` : esc(prioritySource)}. RIEP summarizes published positions and does not infer positions from party affiliation.</div>
           </div>`;
       }
 
