@@ -250,9 +250,9 @@
         <div class="source-note">Source: candidate response submitted directly to the Rhode Island Elections Project.</div></div>`;
     }
     if(web?.priorities?.length){
-      return `<div class="priority-block"><div class="priority-label">Top campaign priorities · official campaign website</div>
+      return `<div class="priority-block"><div class="priority-label">Top campaign priorities · ${esc(web.priorities[0].source_label || "official campaign website")}</div>
         <div class="priority-list">${web.priorities.slice(0,5).map(p=>`<div class="priority"><strong>${esc(p.title)}</strong><p>${esc(p.summary)}</p></div>`).join("")}</div>
-        <div class="source-note">Source: ${web.campaign_website ? `<a href="${esc(web.campaign_website)}" target="_blank" rel="noopener">official campaign website</a>` : "official campaign materials"}.</div></div>`;
+        <div class="source-note">Source: ${(web.priorities[0].source_url || web.campaign_website) ? `<a href="${esc((web.priorities[0].source_url || web.campaign_website))}" target="_blank" rel="noopener">${esc(web.priorities[0].source_label || "official campaign website")}</a>` : "official campaign materials"}.</div></div>`;
     }
     return `<div class="awaiting">Campaign priorities have not yet been published in this profile. RIEP does not infer positions from party affiliation.</div>`;
   }
