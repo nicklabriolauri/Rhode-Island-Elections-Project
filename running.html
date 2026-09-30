@@ -123,6 +123,8 @@
 
     .candidate-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
     .candidate-name{font-family:Sora,sans-serif;font-size:22px;font-weight:800;letter-spacing:-.04em;color:var(--navy)}
+    .candidate-name a{text-decoration:underline;text-decoration-color:#a8b9d3;text-underline-offset:4px}
+    .candidate-name a:hover{text-decoration-color:var(--navy)}
     .candidate-sub{margin-top:5px;color:var(--muted);font-size:12px}
     .badges{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
     .badge{padding:5px 8px;border-radius:999px;background:#eef3f8;color:#637188;font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.07em}
@@ -1011,6 +1013,8 @@
       if(campaign) links.push(`<a href="${esc(campaign)}" target="_blank" rel="noopener">Campaign website</a>`);
       if(email) links.push(`<a href="mailto:${esc(email)}">Email</a>`);
       if(phone) links.push(`<a href="tel:${esc(String(phone).replace(/[^\d+]/g,''))}">Call</a>`);
+      const burkeProfile = chamber === "senate" && Number(district) === 9 && candidate.candidate_id === "senate-9-dem-primary-john-burke";
+      if(burkeProfile) links.unshift(`<a href="candidates/john-burke.html">Candidate profile</a>`);
       links.push(`<a class="finance" href="finance.html?candidate=${encodeURIComponent(candidate.candidate_id)}">Campaign finance</a>`);
 
       const eliminated = candidate.election_status === "lost_primary" || candidate.election_status === "not_qualified_primary" || candidate.primary_result === "lost" || candidate.primary_result === "not_on_ballot";
@@ -1018,7 +1022,7 @@
         <article class="candidate-card${eliminated ? " is-eliminated" : ""}">
           <div class="candidate-top">
             <div>
-              <div class="candidate-name">${esc(profile?.candidate_name || candidate.name)}</div>
+              <div class="candidate-name">${burkeProfile ? `<a href="candidates/john-burke.html">${esc(profile?.candidate_name || candidate.name)}</a>` : esc(profile?.candidate_name || candidate.name)}</div>
               <div class="candidate-sub">${esc(chamber === "house" ? "House" : "Senate")} District ${esc(district)} · ${esc(candidate.home_label || candidate.hometown || "")}</div>
             </div>
             <div class="badges">
