@@ -308,6 +308,12 @@
     .hero-search-status { padding:12px 14px;border-radius:16px;border:1px solid rgba(191,219,254,0.18);background:rgba(15,23,42,0.18);color:rgba(241,245,249,0.84);font-size:13px;line-height:1.5; }
     .hero-search-status.error { border-color:rgba(252,165,165,0.2);background:rgba(127,29,29,0.18);color:#fee2e2; }
     .hero-search-overview { padding:18px 18px 16px;border-radius:24px;border:1px solid rgba(191,219,254,0.18);background:rgba(255,255,255,0.94);color:#0f172a;box-shadow:0 18px 36px rgba(15,23,42,0.12); }
+    .hero-search-overview.is-single { position:relative;cursor:pointer;transition:border-color 160ms ease,box-shadow 160ms ease; }
+    .hero-search-overview.is-single:hover,.hero-search-overview.is-single:focus-within { border-color:#60a5fa;box-shadow:0 18px 36px rgba(37,99,235,0.16); }
+    .hero-search-overview-link { position:absolute;inset:0;z-index:1;border-radius:inherit; }
+    .hero-search-overview-link:focus-visible { outline:3px solid #2563eb;outline-offset:3px; }
+    .hero-search-overview.is-single .hero-search-match-cover { display:none; }
+    .hero-search-overview.is-single .hero-search-match-actions { z-index:2; }
     .hero-search-overview-head { display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px; }
     .hero-search-kicker { display:inline-flex;align-items:center;min-height:30px;padding:0 11px;border-radius:999px;border:1px solid rgba(96,165,250,0.24);background:#eff6ff;color:#1d4ed8;font-size:11px;font-weight:900;letter-spacing:0.08em;text-transform:uppercase;white-space:nowrap;flex:0 0 auto; }
     .hero-search-title { margin:0;font-family:"Sora",sans-serif;font-size:30px;line-height:1;letter-spacing:-0.05em;color:#0f172a; }
@@ -1319,7 +1325,8 @@
 
       results.hidden = false;
       results.innerHTML = `
-        <div class="hero-search-overview">
+        <div class="hero-search-overview${matches.length === 1 ? " is-single" : ""}">
+          ${matches.length === 1 ? `<a class="hero-search-overview-link" href="${buildRunningHref(matches[0])}" aria-label="${escapeHtml(`View race and candidates for ${matches[0].name}`)}"></a>` : ""}
           <div class="hero-search-overview-head">
             <div>
               <h4 class="hero-search-title">${matches.length === 1 ? escapeHtml(matches[0].name) : "Closest candidate matches"}</h4>
