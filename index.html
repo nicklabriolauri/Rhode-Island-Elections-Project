@@ -1058,6 +1058,12 @@
       return `running.html?v=20260912d&chamber=${encodeURIComponent(candidate.chamber)}&district=${encodeURIComponent(candidate.district_number)}&election=general`;
     }
 
+    function buildCandidateProfileHref(candidate) {
+      return candidate?.chamber === "senate" && Number(candidate?.district_number) === 9 &&
+        normalizeSearchText(candidate?.name || "").replace(/\b(p|p\.)\b/g, "").replace(/\s+/g, " ").trim() === "john burke"
+        ? "candidates/john-burke.html" : "";
+    }
+
     function buildMeetHref(candidate) {
       const params = new URLSearchParams();
       params.set("chamber", candidate.chamber);
@@ -1326,7 +1332,7 @@
       results.hidden = false;
       results.innerHTML = `
         <div class="hero-search-overview${matches.length === 1 ? " is-single" : ""}">
-          ${matches.length === 1 ? `<a class="hero-search-overview-link" href="${buildRunningHref(matches[0])}" aria-label="${escapeHtml(`View race and candidates for ${matches[0].name}`)}"></a>` : ""}
+          ${matches.length === 1 ? `<a class="hero-search-overview-link" href="${buildCandidateProfileHref(matches[0]) || buildRunningHref(matches[0])}" aria-label="${escapeHtml(`${buildCandidateProfileHref(matches[0]) ? "View candidate profile" : "View race and candidates"} for ${matches[0].name}`)}"></a>` : ""}
           <div class="hero-search-overview-head">
             <div>
               <h4 class="hero-search-title">${matches.length === 1 ? escapeHtml(matches[0].name) : "Closest candidate matches"}</h4>
@@ -1346,9 +1352,10 @@
           <div class="hero-search-match-list">
           ${matches.map(candidate => {
             const financeHref = buildFinanceHref(candidate);
+            const candidateProfileHref = buildCandidateProfileHref(candidate);
             return `
               <article class="hero-search-match is-clickable">
-                <a class="hero-search-match-cover" href="${buildRunningHref(candidate)}" aria-label="${escapeHtml(`View race and candidates for ${candidate.name}`)}"></a>
+                <a class="hero-search-match-cover" href="${candidateProfileHref || buildRunningHref(candidate)}" aria-label="${escapeHtml(`${candidateProfileHref ? "View candidate profile" : "View race and candidates"} for ${candidate.name}`)}"></a>
                 <div class="hero-search-match-copy">
                   <h5 class="hero-search-match-name">${escapeHtml(candidate.name)}</h5>
                   <p class="hero-search-match-meta">
@@ -1359,6 +1366,7 @@
                   ${buildCandidatePerformanceCard(candidate)}
                 </div>
                 <div class="hero-search-match-actions">
+                  ${candidateProfileHref ? `<a class="hero-search-action" href="${candidateProfileHref}">Candidate profile</a>` : ""}
                   <a class="hero-search-action primary" href="${buildRunningHref(candidate)}">View race & candidates</a>
                   ${financeHref ? `<a class="hero-search-action finance" href="${financeHref}">Campaign finance</a>` : ""}
                 </div>
