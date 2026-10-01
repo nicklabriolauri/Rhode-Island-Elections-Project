@@ -17,3 +17,43 @@
 .vote-records-scroll{max-height:560px;overflow:auto;overscroll-behavior:contain;border:1px solid var(--line);border-radius:4px;scrollbar-gutter:stable}.vote-records-scroll:focus-visible{outline:3px solid var(--navy);outline-offset:3px}.vote-records-table{width:100%;min-width:760px;border-collapse:separate;border-spacing:0;text-align:left;font-size:13px;line-height:1.6}.vote-records-table caption{text-align:left;padding:12px;color:var(--muted)}.vote-records-table th,.vote-records-table td{padding:12px;vertical-align:top;border-bottom:1px solid var(--line)}.vote-records-table thead th{position:sticky;top:0;background:#f3f7fb;color:var(--navy);z-index:1}.vote-records-table td:nth-child(2){width:48%}.vote-records-table td:nth-child(3){width:24%}.vote-records-table time{white-space:nowrap}.vote-position{font-weight:800;color:var(--navy)}@media(max-width:600px){.vote-records-scroll{max-height:480px}}
 
 .bill-foldout{margin-top:18px}.bill-foldout>summary{font-size:15px;line-height:1.6}.bill-foldout[open]>summary{margin-bottom:16px}.foldout-count{font-size:12px;font-weight:500;color:var(--muted);margin-left:8px}
+
+/* Navigation accents: blue for exploration, teal for finance, amber for work in progress. */
+:root{--action:#194f9b;--action-tint:#edf4fd;--finance-accent:#126355;--finance-tint:#eef7f4;--notice-accent:#805a16}
+.preview{background:#fff6e3;color:var(--notice-accent);border-bottom-color:#e6cf9e}
+.card{border-top:3px solid #d5e0ed}
+#elections,#primaries,#bills,#ratings{border-top-color:var(--action)}
+#finance{border-top-color:var(--finance-accent)}
+#sources{border-top-color:#bc8a32}
+.tabs a{color:var(--action)}
+.tabs a:hover,.tabs a:focus-visible{background:var(--action-tint);border-bottom-color:var(--action)}
+.tabs a[href="#finance"]{color:var(--finance-accent)}
+.tabs a[href="#sources"]{color:var(--notice-accent)}
+.button.primary{background:var(--action);border-color:var(--action)}
+.button.secondary{background:var(--action-tint);border-color:#a8bfdf;color:var(--action)}
+.button:hover{background:#123c78;border-color:#123c78;color:#fff}
+.finance-profile-button{background:var(--finance-accent);border-color:var(--finance-accent)}
+.finance-profile-button:hover{background:#0c4c41;border-color:#0c4c41}
+#finance .metric{background:var(--finance-tint);border-color:#c4ded6}
+#finance .metric b{color:var(--finance-accent)}
+.election-link{background:var(--action-tint);border:1px solid #b9cee9;border-radius:4px;justify-content:center;padding:0 6px;font-size:12px}
+.election-link:hover{background:#dceafd;color:#123c78;border-color:var(--action)}
+.card .source a,.mini a,#sources .empty a{display:inline-block;color:var(--action);font-weight:700;text-decoration:underline;text-underline-offset:3px;padding:4px 2px;margin-right:5px}
+.card .source a:hover,.mini a:hover,#sources .empty a:hover{background:var(--action-tint);color:#123c78}
+.bill-foldout{padding:0;border-color:#b9cee9}
+.bill-foldout>summary{padding:15px 16px;background:var(--action-tint);color:var(--action);border-radius:3px;min-height:52px}
+.bill-foldout>summary:hover{background:#dfebfb}
+.bill-foldout[open]>summary{border-bottom:1px solid #b9cee9;margin-bottom:16px}
+.bill-foldout>p,.bill-foldout>.table-scroll{margin-left:16px;margin-right:16px}
+.bill-foldout>.sponsored-bills-scroll,.bill-foldout>.vote-records-scroll{margin:0 16px}
+.bill-foldout>.source:last-child{margin-bottom:16px}
+.lawmaker details{border-color:#a8bfdf}
+.lawmaker summary{color:var(--action);min-height:32px}
+.sponsored-bill summary{color:var(--action);text-decoration:underline;text-underline-offset:3px}
+.aclu-vote-trigger{background:var(--action);border-color:var(--action);color:#fff;min-height:44px;padding:10px 15px;font-size:12px}
+.aclu-vote-trigger:hover{background:#123c78}
+.linklist a{display:flex;align-items:center;justify-content:space-between;min-height:44px;padding:10px 12px;background:var(--action-tint);border:1px solid #b9cee9;border-radius:4px;text-decoration:none;color:var(--action)}
+.linklist a::after{content:'→';margin-left:10px;font-size:16px}
+.linklist a:hover{background:#dfebfb;border-color:var(--action)}
+.linklist a[href*="finance.html"]{background:var(--finance-tint);border-color:#b4d4ca;color:var(--finance-accent)}
+summary:focus-visible,button:focus-visible{outline:3px solid #d79326;outline-offset:3px}
