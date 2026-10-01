@@ -19,7 +19,7 @@ def page(chamber,district,record):
 <meta name="description" content="{html.escape(desc)}">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://www.rhodeislandelectionsproject.org/races/{chamber}-{district}.html">
-<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.ico?v=20261001-logo" sizes="any">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
