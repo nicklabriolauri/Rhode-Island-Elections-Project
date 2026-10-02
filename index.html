@@ -1059,9 +1059,11 @@
     }
 
     function buildCandidateProfileHref(candidate) {
-      return candidate?.chamber === "senate" && Number(candidate?.district_number) === 9 &&
-        normalizeSearchText(candidate?.name || "").replace(/\b(p|p\.)\b/g, "").replace(/\s+/g, " ").trim() === "john burke"
-        ? "candidates/john-burke.html" : "";
+      if(candidate?.chamber !== "senate") return "";
+      const profiles = {7: ["ciccone", "frank-a-ciccone"], 8: ["urso", "lori-urso"], 9: ["burke", "john-burke"]};
+      const profile = profiles[Number(candidate.district_number)];
+      return profile && normalizeSearchText(candidate.name || "").split(" ").includes(profile[0])
+        ? `candidates/${profile[1]}.html` : "";
     }
 
     function buildMeetHref(candidate) {

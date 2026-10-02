@@ -1,0 +1,4110 @@
+{
+  "source": "https://thelawmakers.org:3000/vis",
+  "term": "2023\u20132024",
+  "records": [
+    {
+      "row": {
+        "slesId": 17470,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 1.418913152,
+        "district": 73,
+        "isMajority": true,
+        "name": "Abney, Marvin",
+        "party": "D",
+        "partyRank": 54,
+        "partyTotal": 66,
+        "sles": 0.558660348,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 7,
+        "s_aic": 5,
+        "s_abc": 2,
+        "s_pass": 2,
+        "s_law": 2,
+        "ss_bill": 2,
+        "ss_aic": 2,
+        "ss_abc": 2,
+        "ss_pass": 2,
+        "ss_law": 2
+      }
+    },
+    {
+      "row": {
+        "chamber": "lower",
+        "slesId": 17494,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.958313543,
+        "district": 75,
+        "isMajority": true,
+        "name": "Carson, Lauren",
+        "party": "D",
+        "partyRank": 12,
+        "partyTotal": 66,
+        "sles": 1.665117505,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 42,
+        "s_aic": 41,
+        "s_abc": 16,
+        "s_pass": 15,
+        "s_law": 10,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "slesId": 17488,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.886063843,
+        "district": 49,
+        "isMajority": true,
+        "name": "Brien, Jon D.",
+        "party": "D",
+        "partyRank": 61,
+        "partyTotal": 66,
+        "sles": 0.366227934,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 14,
+        "s_aic": 13,
+        "s_abc": 3,
+        "s_pass": 3,
+        "s_law": 2,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "chamber": "lower",
+        "slesId": 17486,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.994438393,
+        "district": 2,
+        "isMajority": true,
+        "name": "Blazejewski, Christopher",
+        "party": "D",
+        "partyRank": 64,
+        "partyTotal": 66,
+        "sles": 0.336228815,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 4,
+        "s_aic": 4,
+        "s_abc": 4,
+        "s_pass": 4,
+        "s_law": 4,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "slesId": 17498,
+        "benchmark": 0.565127446,
+        "district": 40,
+        "isMajority": false,
+        "name": "Chippendale, Michael",
+        "party": "R",
+        "partyRank": 2,
+        "partyTotal": 9,
+        "sles": 0.929474214,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 29,
+        "s_aic": 25,
+        "s_abc": 6,
+        "s_pass": 6,
+        "s_law": 5,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "chamber": "lower",
+        "slesId": 17471,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.976375968,
+        "district": 45,
+        "isMajority": true,
+        "name": "Ackerman, Mia",
+        "party": "D",
+        "partyRank": 31,
+        "partyTotal": 66,
+        "sles": 0.989118855,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 18,
+        "s_aic": 18,
+        "s_abc": 9,
+        "s_pass": 9,
+        "s_law": 7,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "slesId": 17479,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "lower",
+        "benchmark": 1.455038002,
+        "district": 37,
+        "isMajority": true,
+        "name": "Azzinaro, Samuel",
+        "party": "D",
+        "partyRank": 21,
+        "partyTotal": 66,
+        "sles": 1.226301948,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 32,
+        "s_aic": 29,
+        "s_abc": 14,
+        "s_pass": 14,
+        "s_law": 8,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17472,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 1.157000217,
+        "district": 1,
+        "isMajority": true,
+        "name": "Ajello, Edith",
+        "party": "D",
+        "partyRank": 46,
+        "partyTotal": 66,
+        "sles": 0.751698803,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 20,
+        "s_aic": 19,
+        "s_abc": 7,
+        "s_pass": 7,
+        "s_law": 3,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "slesId": 17484,
+        "benchmark": 1.436975577,
+        "district": 20,
+        "isMajority": true,
+        "name": "Bennett, David",
+        "party": "D",
+        "partyRank": 19,
+        "partyTotal": 66,
+        "sles": 1.344184849,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 39,
+        "s_aic": 35,
+        "s_abc": 14,
+        "s_pass": 14,
+        "s_law": 9,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "slesId": 17496,
+        "benchmark": 1.418913152,
+        "district": 50,
+        "isMajority": true,
+        "name": "Casey, Stephen",
+        "party": "D",
+        "partyRank": 25,
+        "partyTotal": 66,
+        "sles": 1.131914632,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 35,
+        "s_aic": 32,
+        "s_abc": 10,
+        "s_pass": 10,
+        "s_law": 9,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17509,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "lower",
+        "benchmark": 0.976375968,
+        "district": 44,
+        "isMajority": true,
+        "name": "Costantino, Gregory",
+        "party": "D",
+        "partyRank": 49,
+        "partyTotal": 66,
+        "sles": 0.72344849,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 11,
+        "s_aic": 11,
+        "s_abc": 7,
+        "s_pass": 7,
+        "s_law": 4,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "slesId": 17497,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.940251118,
+        "district": 31,
+        "isMajority": true,
+        "name": "Casimiro, Julie",
+        "party": "D",
+        "partyRank": 8,
+        "partyTotal": 66,
+        "sles": 1.882525114,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 53,
+        "s_aic": 50,
+        "s_abc": 18,
+        "s_pass": 18,
+        "s_law": 15,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17523,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 1.048625668,
+        "district": 11,
+        "isMajority": true,
+        "name": "Diaz, Grace",
+        "party": "D",
+        "partyRank": 39,
+        "partyTotal": 66,
+        "sles": 0.875157089,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 26,
+        "s_aic": 24,
+        "s_abc": 8,
+        "s_pass": 8,
+        "s_law": 7,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17507,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 1.545350127,
+        "district": 55,
+        "isMajority": true,
+        "name": "Corvese, Arthur",
+        "party": "D",
+        "partyRank": 14,
+        "partyTotal": 66,
+        "sles": 1.50105648,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 39,
+        "s_aic": 39,
+        "s_abc": 15,
+        "s_pass": 15,
+        "s_law": 12,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "slesId": 17526,
+        "benchmark": 1.382788302,
+        "district": 69,
+        "isMajority": true,
+        "name": "Donovan, Susan",
+        "party": "D",
+        "partyRank": 22,
+        "partyTotal": 66,
+        "sles": 1.209472615,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 32,
+        "s_aic": 30,
+        "s_abc": 12,
+        "s_pass": 12,
+        "s_law": 10,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17529,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "lower",
+        "benchmark": 1.012500818,
+        "district": 70,
+        "isMajority": true,
+        "name": "Edwards, John",
+        "party": "D",
+        "partyRank": 2,
+        "partyTotal": 66,
+        "sles": 2.332055212,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 52,
+        "s_aic": 50,
+        "s_abc": 25,
+        "s_pass": 25,
+        "s_law": 15,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "slesId": 17533,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 1.030563243,
+        "district": 43,
+        "isMajority": true,
+        "name": "Fellela, Deborah",
+        "party": "D",
+        "partyRank": 37,
+        "partyTotal": 66,
+        "sles": 0.897897634,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 20,
+        "s_aic": 19,
+        "s_abc": 7,
+        "s_pass": 7,
+        "s_law": 6,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "chamber": "lower",
+        "slesId": 17514,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 1.418913152,
+        "district": 32,
+        "isMajority": true,
+        "name": "Craven, Robert",
+        "party": "D",
+        "partyRank": 3,
+        "partyTotal": 66,
+        "sles": 2.268820951,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 49,
+        "s_aic": 47,
+        "s_abc": 17,
+        "s_pass": 17,
+        "s_law": 14,
+        "ss_bill": 3,
+        "ss_aic": 3,
+        "ss_abc": 3,
+        "ss_pass": 3,
+        "ss_law": 3
+      }
+    },
+    {
+      "row": {
+        "chamber": "lower",
+        "slesId": 17597,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 1.400850727,
+        "district": 33,
+        "isMajority": true,
+        "name": "McEntee, Hagan",
+        "party": "D",
+        "partyRank": 6,
+        "partyTotal": 66,
+        "sles": 1.976159937,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 43,
+        "s_aic": 43,
+        "s_abc": 19,
+        "s_pass": 19,
+        "s_law": 15,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "slesId": 17570,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "lower",
+        "benchmark": 0.940251118,
+        "district": 67,
+        "isMajority": true,
+        "name": "Knight, Jason",
+        "party": "D",
+        "partyRank": 30,
+        "partyTotal": 66,
+        "sles": 1.012447409,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 24,
+        "s_aic": 22,
+        "s_abc": 12,
+        "s_pass": 12,
+        "s_law": 7,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17577,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "lower",
+        "benchmark": 1.157000217,
+        "district": 14,
+        "isMajority": true,
+        "name": "Lima, Charlene",
+        "party": "D",
+        "partyRank": 62,
+        "partyTotal": 66,
+        "sles": 0.363985677,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 22,
+        "s_aic": 21,
+        "s_abc": 1,
+        "s_pass": 1,
+        "s_law": 1,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17556,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 1.066688092,
+        "district": 18,
+        "isMajority": true,
+        "name": "Handy, Arthur",
+        "party": "D",
+        "partyRank": 32,
+        "partyTotal": 66,
+        "sles": 0.952715072,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 21,
+        "s_aic": 20,
+        "s_abc": 8,
+        "s_pass": 8,
+        "s_law": 8,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "chamber": "lower",
+        "slesId": 17579,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.976375968,
+        "district": 8,
+        "isMajority": true,
+        "name": "Lombardi, John",
+        "party": "D",
+        "partyRank": 35,
+        "partyTotal": 66,
+        "sles": 0.912250297,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 53,
+        "s_aic": 48,
+        "s_abc": 4,
+        "s_pass": 4,
+        "s_law": 2,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17539,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 1.400850727,
+        "district": 35,
+        "isMajority": true,
+        "name": "Fogarty, Kathleen",
+        "party": "D",
+        "partyRank": 24,
+        "partyTotal": 66,
+        "sles": 1.16307886,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 34,
+        "s_aic": 34,
+        "s_abc": 12,
+        "s_pass": 12,
+        "s_law": 7,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17565,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.976375968,
+        "district": 63,
+        "isMajority": true,
+        "name": "Kazarian, Katherine",
+        "party": "D",
+        "partyRank": 27,
+        "partyTotal": 66,
+        "sles": 1.116079064,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 20,
+        "s_aic": 20,
+        "s_abc": 10,
+        "s_pass": 10,
+        "s_law": 9,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "slesId": 17559,
+        "benchmark": 0.994438393,
+        "district": 6,
+        "isMajority": true,
+        "name": "Hull, Raymond",
+        "party": "D",
+        "partyRank": 45,
+        "partyTotal": 66,
+        "sles": 0.762524915,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 18,
+        "s_aic": 18,
+        "s_abc": 9,
+        "s_pass": 9,
+        "s_law": 5,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17612,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.474815321,
+        "district": 26,
+        "isMajority": false,
+        "name": "Morgan, Patricia",
+        "party": "R",
+        "partyRank": 5,
+        "partyTotal": 9,
+        "sles": 0.334245598,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 26,
+        "s_aic": 23,
+        "s_abc": 0,
+        "s_pass": 0,
+        "s_law": 0,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17590,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.940251118,
+        "district": 52,
+        "isMajority": true,
+        "name": "Marszalkowski, Alex",
+        "party": "D",
+        "partyRank": 65,
+        "partyTotal": 66,
+        "sles": 0.320652288,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 5,
+        "s_aic": 5,
+        "s_abc": 4,
+        "s_pass": 4,
+        "s_law": 3,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17622,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.583189871,
+        "district": 48,
+        "isMajority": false,
+        "name": "Newberry, Brian",
+        "party": "R",
+        "partyRank": 3,
+        "partyTotal": 9,
+        "sles": 0.597908118,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 16,
+        "s_aic": 16,
+        "s_abc": 3,
+        "s_pass": 3,
+        "s_law": 3,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "slesId": 17606,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 1.012500818,
+        "district": 62,
+        "isMajority": true,
+        "name": "Messier, Mary",
+        "party": "D",
+        "partyRank": 60,
+        "partyTotal": 66,
+        "sles": 0.40229589,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 12,
+        "s_aic": 10,
+        "s_abc": 4,
+        "s_pass": 4,
+        "s_law": 3,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17645,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.510940171,
+        "district": 41,
+        "isMajority": false,
+        "name": "Quattrocchi, Robert",
+        "party": "R",
+        "partyRank": 4,
+        "partyTotal": 9,
+        "sles": 0.361477519,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 11,
+        "s_aic": 11,
+        "s_abc": 3,
+        "s_pass": 3,
+        "s_law": 3,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17624,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.976375968,
+        "district": 54,
+        "isMajority": true,
+        "name": "O'Brien, William",
+        "party": "D",
+        "partyRank": 23,
+        "partyTotal": 66,
+        "sles": 1.1687488,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 46,
+        "s_aic": 43,
+        "s_abc": 6,
+        "s_pass": 6,
+        "s_law": 5,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "slesId": 17567,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 1.193125067,
+        "district": 38,
+        "isMajority": true,
+        "name": "Kennedy, Brian",
+        "party": "D",
+        "partyRank": 15,
+        "partyTotal": 66,
+        "sles": 1.462309023,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 28,
+        "s_aic": 28,
+        "s_abc": 17,
+        "s_pass": 17,
+        "s_law": 13,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17636,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.904126268,
+        "district": 13,
+        "isMajority": true,
+        "name": "Perez, Ramon",
+        "party": "D",
+        "partyRank": 55,
+        "partyTotal": 66,
+        "sles": 0.549100761,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 26,
+        "s_aic": 26,
+        "s_abc": 4,
+        "s_pass": 4,
+        "s_law": 1,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17601,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "lower",
+        "benchmark": 1.581474977,
+        "district": 19,
+        "isMajority": true,
+        "name": "McNamara, Joseph",
+        "party": "D",
+        "partyRank": 7,
+        "partyTotal": 66,
+        "sles": 1.928440902,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 55,
+        "s_aic": 54,
+        "s_abc": 19,
+        "s_pass": 19,
+        "s_law": 10,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17639,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "lower",
+        "benchmark": 0.994438393,
+        "district": 51,
+        "isMajority": true,
+        "name": "Phillips, Robert",
+        "party": "D",
+        "partyRank": 50,
+        "partyTotal": 66,
+        "sles": 0.691795122,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 19,
+        "s_aic": 17,
+        "s_abc": 8,
+        "s_pass": 8,
+        "s_law": 4,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17664,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 1.473100427,
+        "district": 27,
+        "isMajority": true,
+        "name": "Serpa, Patricia",
+        "party": "D",
+        "partyRank": 10,
+        "partyTotal": 66,
+        "sles": 1.79791645,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 49,
+        "s_aic": 46,
+        "s_abc": 16,
+        "s_pass": 15,
+        "s_law": 8,
+        "ss_bill": 2,
+        "ss_aic": 2,
+        "ss_abc": 2,
+        "ss_pass": 2,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "slesId": 17677,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "lower",
+        "benchmark": 1.400850727,
+        "district": 22,
+        "isMajority": true,
+        "name": "Solomon, Joseph",
+        "party": "D",
+        "partyRank": 9,
+        "partyTotal": 66,
+        "sles": 1.878863019,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 54,
+        "s_aic": 51,
+        "s_abc": 19,
+        "s_pass": 19,
+        "s_law": 13,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17670,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.976375968,
+        "district": 23,
+        "isMajority": true,
+        "name": "Shekarchi, Joseph",
+        "party": "D",
+        "partyRank": 51,
+        "partyTotal": 66,
+        "sles": 0.60872737,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 7,
+        "s_aic": 6,
+        "s_abc": 5,
+        "s_pass": 5,
+        "s_law": 5,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "slesId": 17654,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.529002596,
+        "district": 29,
+        "isMajority": false,
+        "name": "Roberts, Sherry",
+        "party": "R",
+        "partyRank": 7,
+        "partyTotal": 9,
+        "sles": 0.232604021,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 9,
+        "s_aic": 9,
+        "s_abc": 0,
+        "s_pass": 0,
+        "s_law": 0,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17667,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 1.382788302,
+        "district": 24,
+        "isMajority": true,
+        "name": "Shanley, Evan",
+        "party": "D",
+        "partyRank": 16,
+        "partyTotal": 66,
+        "sles": 1.357519119,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 44,
+        "s_aic": 40,
+        "s_abc": 10,
+        "s_pass": 10,
+        "s_law": 7,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "chamber": "lower",
+        "slesId": 25378,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.474815321,
+        "district": 15,
+        "isMajority": false,
+        "name": "Fenton-Fung, Barbara Ann",
+        "party": "R",
+        "partyRank": 8,
+        "partyTotal": 9,
+        "sles": 0.220689588,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 11,
+        "s_aic": 11,
+        "s_abc": 1,
+        "s_pass": 1,
+        "s_law": 1,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17674,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.994438393,
+        "district": 10,
+        "isMajority": true,
+        "name": "Slater, Scott",
+        "party": "D",
+        "partyRank": 11,
+        "partyTotal": 66,
+        "sles": 1.670087865,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 43,
+        "s_aic": 40,
+        "s_abc": 19,
+        "s_pass": 19,
+        "s_law": 11,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17666,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.904126268,
+        "district": 46,
+        "isMajority": true,
+        "name": "Shallcross-Smith, Mary Ann",
+        "party": "D",
+        "partyRank": 57,
+        "partyTotal": 66,
+        "sles": 0.525600863,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 20,
+        "s_aic": 20,
+        "s_abc": 4,
+        "s_pass": 4,
+        "s_law": 3,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17681,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "lower",
+        "benchmark": 0.994438393,
+        "district": 34,
+        "isMajority": true,
+        "name": "Tanzi, Teresa",
+        "party": "D",
+        "partyRank": 13,
+        "partyTotal": 66,
+        "sles": 1.565483773,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 44,
+        "s_aic": 43,
+        "s_abc": 17,
+        "s_pass": 16,
+        "s_law": 10,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "slesId": 25388,
+        "benchmark": 0.492877746,
+        "district": 28,
+        "isMajority": false,
+        "name": "Nardone, George",
+        "party": "R",
+        "partyRank": 6,
+        "partyTotal": 9,
+        "sles": 0.28900578,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 16,
+        "s_aic": 16,
+        "s_abc": 1,
+        "s_pass": 1,
+        "s_law": 1,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "chamber": "lower",
+        "slesId": 25399,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.922188693,
+        "district": 56,
+        "isMajority": true,
+        "name": "Giraldo, Joshua",
+        "party": "D",
+        "partyRank": 36,
+        "partyTotal": 66,
+        "sles": 0.905492036,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 35,
+        "s_aic": 34,
+        "s_abc": 7,
+        "s_pass": 7,
+        "s_law": 5,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 25381,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.904126268,
+        "district": 64,
+        "isMajority": true,
+        "name": "Henries, Brianna",
+        "party": "D",
+        "partyRank": 56,
+        "partyTotal": 66,
+        "sles": 0.546092291,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 17,
+        "s_aic": 16,
+        "s_abc": 3,
+        "s_pass": 3,
+        "s_law": 3,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "chamber": "lower",
+        "slesId": 25400,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.922188693,
+        "district": 68,
+        "isMajority": true,
+        "name": "Speakman, June",
+        "party": "D",
+        "partyRank": 5,
+        "partyTotal": 66,
+        "sles": 1.978325407,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 50,
+        "s_aic": 45,
+        "s_abc": 19,
+        "s_pass": 19,
+        "s_law": 13,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "slesId": 25404,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.904126268,
+        "district": 61,
+        "isMajority": true,
+        "name": "Felix, Leonela",
+        "party": "D",
+        "partyRank": 29,
+        "partyTotal": 66,
+        "sles": 1.052779188,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 37,
+        "s_aic": 35,
+        "s_abc": 6,
+        "s_pass": 6,
+        "s_law": 5,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "chamber": "lower",
+        "slesId": 25402,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 1.364725877,
+        "district": 60,
+        "isMajority": true,
+        "name": "Alzate, Karen",
+        "party": "D",
+        "partyRank": 52,
+        "partyTotal": 66,
+        "sles": 0.593245399,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 27,
+        "s_aic": 23,
+        "s_abc": 4,
+        "s_pass": 4,
+        "s_law": 3,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 25380,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "lower",
+        "benchmark": 0.904126268,
+        "district": 16,
+        "isMajority": true,
+        "name": "Potter, Brandon",
+        "party": "D",
+        "partyRank": 42,
+        "partyTotal": 66,
+        "sles": 0.836679844,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 30,
+        "s_aic": 28,
+        "s_abc": 10,
+        "s_pass": 10,
+        "s_law": 1,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 25386,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.492877746,
+        "district": 47,
+        "isMajority": false,
+        "name": "Place, David",
+        "party": "R",
+        "partyRank": 1,
+        "partyTotal": 9,
+        "sles": 1.492025129,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 67,
+        "s_aic": 66,
+        "s_abc": 9,
+        "s_pass": 8,
+        "s_law": 8,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 25390,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "lower",
+        "benchmark": 1.346663452,
+        "district": 17,
+        "isMajority": true,
+        "name": "Baginski, Jacquelyn",
+        "party": "D",
+        "partyRank": 4,
+        "partyTotal": 66,
+        "sles": 2.035062994,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 52,
+        "s_aic": 49,
+        "s_abc": 16,
+        "s_pass": 16,
+        "s_law": 12,
+        "ss_bill": 2,
+        "ss_aic": 2,
+        "ss_abc": 2,
+        "ss_pass": 2,
+        "ss_law": 2
+      }
+    },
+    {
+      "row": {
+        "chamber": "lower",
+        "slesId": 17690,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 1.382788302,
+        "district": 21,
+        "isMajority": true,
+        "name": "Vella-Wilkinson, Camille",
+        "party": "D",
+        "partyRank": 41,
+        "partyTotal": 66,
+        "sles": 0.840286478,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 28,
+        "s_aic": 27,
+        "s_abc": 7,
+        "s_pass": 6,
+        "s_law": 1,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "slesId": 25385,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.904126268,
+        "district": 7,
+        "isMajority": true,
+        "name": "Morales, David",
+        "party": "D",
+        "partyRank": 17,
+        "partyTotal": 66,
+        "sles": 1.352045151,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 69,
+        "s_aic": 64,
+        "s_abc": 6,
+        "s_pass": 6,
+        "s_law": 1,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "slesId": 25397,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.904126268,
+        "district": 12,
+        "isMajority": true,
+        "name": "Batista, Jose",
+        "party": "D",
+        "partyRank": 44,
+        "partyTotal": 66,
+        "sles": 0.818597706,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 29,
+        "s_aic": 29,
+        "s_abc": 6,
+        "s_pass": 6,
+        "s_law": 6,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 25401,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "lower",
+        "benchmark": 0.922188693,
+        "district": 30,
+        "isMajority": true,
+        "name": "Caldwell, Justine",
+        "party": "D",
+        "partyRank": 34,
+        "partyTotal": 66,
+        "sles": 0.939216317,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 17,
+        "s_aic": 16,
+        "s_abc": 9,
+        "s_pass": 9,
+        "s_law": 6,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "chamber": "lower",
+        "slesId": 25387,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.904126268,
+        "district": 42,
+        "isMajority": true,
+        "name": "Cardillo, Edward",
+        "party": "D",
+        "partyRank": 66,
+        "partyTotal": 66,
+        "sles": 0.220854072,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 8,
+        "s_aic": 8,
+        "s_abc": 2,
+        "s_pass": 2,
+        "s_law": 1,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "chamber": "lower",
+        "slesId": 25415,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.922188693,
+        "district": 4,
+        "isMajority": true,
+        "name": "Kislak, Rebecca",
+        "party": "D",
+        "partyRank": 26,
+        "partyTotal": 66,
+        "sles": 1.12383795,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 32,
+        "s_aic": 32,
+        "s_abc": 11,
+        "s_pass": 11,
+        "s_law": 8,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 25411,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.904126268,
+        "district": 71,
+        "isMajority": true,
+        "name": "McGaw, Michelle",
+        "party": "D",
+        "partyRank": 43,
+        "partyTotal": 66,
+        "sles": 0.819959535,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 26,
+        "s_aic": 26,
+        "s_abc": 7,
+        "s_pass": 6,
+        "s_law": 3,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 25412,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "lower",
+        "benchmark": 0.904126268,
+        "district": 3,
+        "isMajority": true,
+        "name": "Biah, Nathan",
+        "party": "D",
+        "partyRank": 63,
+        "partyTotal": 66,
+        "sles": 0.349892054,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 5,
+        "s_aic": 5,
+        "s_abc": 4,
+        "s_pass": 4,
+        "s_law": 4,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 26786,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "lower",
+        "benchmark": 0.886063843,
+        "district": 66,
+        "isMajority": true,
+        "name": "Boylan, Jennifer",
+        "party": "D",
+        "partyRank": 33,
+        "partyTotal": 66,
+        "sles": 0.945886882,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 25,
+        "s_aic": 25,
+        "s_abc": 9,
+        "s_pass": 9,
+        "s_law": 8,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 26790,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "lower",
+        "benchmark": 0.886063843,
+        "district": 65,
+        "isMajority": true,
+        "name": "Dawson, Matthew",
+        "party": "D",
+        "partyRank": 28,
+        "partyTotal": 66,
+        "sles": 1.104592468,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 29,
+        "s_aic": 27,
+        "s_abc": 14,
+        "s_pass": 14,
+        "s_law": 5,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 25420,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "lower",
+        "benchmark": 0.922188693,
+        "district": 25,
+        "isMajority": true,
+        "name": "Noret, Thomas",
+        "party": "D",
+        "partyRank": 20,
+        "partyTotal": 66,
+        "sles": 1.31286731,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 44,
+        "s_aic": 40,
+        "s_abc": 13,
+        "s_pass": 13,
+        "s_law": 7,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "slesId": 26788,
+        "benchmark": 0.886063843,
+        "district": 39,
+        "isMajority": true,
+        "name": "Cotter, Megan",
+        "party": "D",
+        "partyRank": 40,
+        "partyTotal": 66,
+        "sles": 0.847121528,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 33,
+        "s_aic": 33,
+        "s_abc": 8,
+        "s_pass": 7,
+        "s_law": 3,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 25419,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.922188693,
+        "district": 72,
+        "isMajority": true,
+        "name": "Cortvriend, Terri-Denise",
+        "party": "D",
+        "partyRank": 1,
+        "partyTotal": 66,
+        "sles": 2.380313656,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 52,
+        "s_aic": 51,
+        "s_abc": 21,
+        "s_pass": 20,
+        "s_law": 19,
+        "ss_bill": 2,
+        "ss_aic": 2,
+        "ss_abc": 2,
+        "ss_pass": 2,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "chamber": "lower",
+        "slesId": 26792,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.886063843,
+        "district": 5,
+        "isMajority": true,
+        "name": "DeSimone, Anthony",
+        "party": "D",
+        "partyRank": 53,
+        "partyTotal": 66,
+        "sles": 0.572659415,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 11,
+        "s_aic": 11,
+        "s_abc": 6,
+        "s_pass": 6,
+        "s_law": 6,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 26789,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "lower",
+        "benchmark": 0.886063843,
+        "district": 58,
+        "isMajority": true,
+        "name": "Cruz, Cherie",
+        "party": "D",
+        "partyRank": 48,
+        "partyTotal": 66,
+        "sles": 0.740641574,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 29,
+        "s_aic": 25,
+        "s_abc": 6,
+        "s_pass": 5,
+        "s_law": 5,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 26799,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.886063843,
+        "district": 36,
+        "isMajority": true,
+        "name": "Spears, Tina",
+        "party": "D",
+        "partyRank": 38,
+        "partyTotal": 66,
+        "sles": 0.875492917,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 25,
+        "s_aic": 25,
+        "s_abc": 8,
+        "s_pass": 8,
+        "s_law": 7,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17525,
+        "chamber": "upper",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 1.478451102,
+        "district": 12,
+        "isMajority": true,
+        "name": "DiPalma, Louis",
+        "party": "D",
+        "partyRank": 3,
+        "partyTotal": 34,
+        "sles": 1.971122976,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 93,
+        "s_aic": 85,
+        "s_abc": 30,
+        "s_pass": 29,
+        "s_law": 21,
+        "ss_bill": 3,
+        "ss_aic": 3,
+        "ss_abc": 3,
+        "ss_pass": 3,
+        "ss_law": 3
+      }
+    },
+    {
+      "row": {
+        "slesId": 17532,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "upper",
+        "benchmark": 1.478451102,
+        "district": 10,
+        "isMajority": true,
+        "name": "Felag, Walter",
+        "party": "D",
+        "partyRank": 13,
+        "partyTotal": 34,
+        "sles": 1.278776968,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 56,
+        "s_aic": 44,
+        "s_abc": 28,
+        "s_pass": 27,
+        "s_law": 18,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 26800,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.886063843,
+        "district": 59,
+        "isMajority": true,
+        "name": "Stewart, Jennifer",
+        "party": "D",
+        "partyRank": 58,
+        "partyTotal": 66,
+        "sles": 0.461870603,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 19,
+        "s_aic": 18,
+        "s_abc": 1,
+        "s_pass": 1,
+        "s_law": 0,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "slesId": 26798,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "lower",
+        "benchmark": 0.886063843,
+        "district": 9,
+        "isMajority": true,
+        "name": "Sanchez, Enrique",
+        "party": "D",
+        "partyRank": 59,
+        "partyTotal": 66,
+        "sles": 0.429888267,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 33,
+        "s_aic": 30,
+        "s_abc": 0,
+        "s_pass": 0,
+        "s_law": 0,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17544,
+        "chamber": "upper",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.91242754,
+        "district": 27,
+        "isMajority": true,
+        "name": "Gallo, Hanna",
+        "party": "D",
+        "partyRank": 6,
+        "partyTotal": 34,
+        "sles": 1.677353608,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 61,
+        "s_aic": 45,
+        "s_abc": 31,
+        "s_pass": 31,
+        "s_law": 24,
+        "ss_bill": 3,
+        "ss_aic": 3,
+        "ss_abc": 3,
+        "ss_pass": 3,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "slesId": 17500,
+        "chamber": "upper",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 1.478451102,
+        "district": 7,
+        "isMajority": true,
+        "name": "Ciccone, Frank",
+        "party": "D",
+        "partyRank": 9,
+        "partyTotal": 34,
+        "sles": 1.531071278,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 75,
+        "s_aic": 66,
+        "s_abc": 26,
+        "s_pass": 25,
+        "s_law": 16,
+        "ss_bill": 2,
+        "ss_aic": 2,
+        "ss_abc": 2,
+        "ss_pass": 2,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "chamber": "lower",
+        "slesId": 26797,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.456752896,
+        "district": 53,
+        "isMajority": false,
+        "name": "Rea, Brian",
+        "party": "R",
+        "partyRank": 9,
+        "partyTotal": 9,
+        "sles": 0.122969145,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 9,
+        "s_aic": 9,
+        "s_abc": 0,
+        "s_pass": 0,
+        "s_law": 0,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 26803,
+        "chamber": "lower",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.886063843,
+        "district": 57,
+        "isMajority": true,
+        "name": "Voas, Brandon",
+        "party": "D",
+        "partyRank": 18,
+        "partyTotal": 66,
+        "sles": 1.345783638,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 22,
+        "s_aic": 22,
+        "s_abc": 14,
+        "s_pass": 13,
+        "s_law": 11,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "slesId": 17578,
+        "chamber": "upper",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.91242754,
+        "district": 26,
+        "isMajority": true,
+        "name": "Lombardi, Frank",
+        "party": "D",
+        "partyRank": 7,
+        "partyTotal": 34,
+        "sles": 1.60764511,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 72,
+        "s_aic": 65,
+        "s_abc": 27,
+        "s_pass": 27,
+        "s_law": 22,
+        "ss_bill": 2,
+        "ss_aic": 2,
+        "ss_abc": 2,
+        "ss_pass": 2,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "chamber": "upper",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "slesId": 17491,
+        "benchmark": 1.478451102,
+        "district": 8,
+        "isMajority": true,
+        "name": "Cano, Sandra",
+        "party": "D",
+        "partyRank": 8,
+        "partyTotal": 34,
+        "sles": 1.569218862,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 78,
+        "s_aic": 67,
+        "s_abc": 33,
+        "s_pass": 33,
+        "s_law": 13,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 26793,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "lower",
+        "benchmark": 0.886063843,
+        "district": 74,
+        "isMajority": true,
+        "name": "Finkelman, Alex",
+        "party": "D",
+        "partyRank": 47,
+        "partyTotal": 66,
+        "sles": 0.743446465,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 21,
+        "s_aic": 20,
+        "s_abc": 7,
+        "s_pass": 7,
+        "s_law": 6,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17552,
+        "chamber": "upper",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.91242754,
+        "district": 1,
+        "isMajority": true,
+        "name": "Goodwin, Maryellen",
+        "party": "D",
+        "partyRank": 32,
+        "partyTotal": 34,
+        "sles": 0.364691974,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 14,
+        "s_aic": 14,
+        "s_abc": 8,
+        "s_pass": 8,
+        "s_law": 5,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "chamber": "upper",
+        "slesId": 17531,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 1.478451102,
+        "district": 13,
+        "isMajority": true,
+        "name": "Euer, Dawn",
+        "party": "D",
+        "partyRank": 2,
+        "partyTotal": 34,
+        "sles": 2.073358662,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 78,
+        "s_aic": 75,
+        "s_abc": 40,
+        "s_pass": 40,
+        "s_law": 26,
+        "ss_bill": 2,
+        "ss_aic": 2,
+        "ss_abc": 2,
+        "ss_pass": 2,
+        "ss_law": 2
+      }
+    },
+    {
+      "row": {
+        "chamber": "upper",
+        "slesId": 17634,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.463445603,
+        "district": 17,
+        "isMajority": false,
+        "name": "Paolino, Thomas",
+        "party": "R",
+        "partyRank": 4,
+        "partyTotal": 5,
+        "sles": 0.306348983,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 22,
+        "s_aic": 16,
+        "s_abc": 4,
+        "s_pass": 4,
+        "s_law": 4,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17635,
+        "chamber": "upper",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.91242754,
+        "district": 19,
+        "isMajority": true,
+        "name": "Pearson, Ryan",
+        "party": "D",
+        "partyRank": 28,
+        "partyTotal": 34,
+        "sles": 0.540002495,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 21,
+        "s_aic": 19,
+        "s_abc": 11,
+        "s_pass": 11,
+        "s_law": 9,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17580,
+        "chamber": "upper",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.91242754,
+        "district": 25,
+        "isMajority": true,
+        "name": "Lombardo, Frank",
+        "party": "D",
+        "partyRank": 34,
+        "partyTotal": 34,
+        "sles": 0.196874202,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 6,
+        "s_aic": 6,
+        "s_abc": 4,
+        "s_pass": 4,
+        "s_law": 4,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17611,
+        "chamber": "upper",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.463445603,
+        "district": 34,
+        "isMajority": false,
+        "name": "Morgan, Elaine",
+        "party": "R",
+        "partyRank": 3,
+        "partyTotal": 5,
+        "sles": 0.401673055,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 44,
+        "s_aic": 21,
+        "s_abc": 4,
+        "s_pass": 4,
+        "s_law": 3,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "chamber": "upper",
+        "slesId": 17640,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 1.478451102,
+        "district": 20,
+        "isMajority": true,
+        "name": "Picard, Roger",
+        "party": "D",
+        "partyRank": 31,
+        "partyTotal": 34,
+        "sles": 0.424223024,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 31,
+        "s_aic": 18,
+        "s_abc": 6,
+        "s_pass": 6,
+        "s_law": 6,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17608,
+        "chamber": "upper",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 1.478451102,
+        "district": 28,
+        "isMajority": true,
+        "name": "Miller, Joshua",
+        "party": "D",
+        "partyRank": 15,
+        "partyTotal": 34,
+        "sles": 1.127030987,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 49,
+        "s_aic": 44,
+        "s_abc": 26,
+        "s_pass": 26,
+        "s_law": 12,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "chamber": "upper",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "slesId": 17648,
+        "benchmark": 0.91242754,
+        "district": 33,
+        "isMajority": true,
+        "name": "Raptakis, Leonidas",
+        "party": "D",
+        "partyRank": 25,
+        "partyTotal": 34,
+        "sles": 0.769776954,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 55,
+        "s_aic": 51,
+        "s_abc": 10,
+        "s_pass": 10,
+        "s_law": 7,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17646,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "upper",
+        "benchmark": 0.91242754,
+        "district": 2,
+        "isMajority": true,
+        "name": "Quezada, Ana",
+        "party": "D",
+        "partyRank": 27,
+        "partyTotal": 34,
+        "sles": 0.598314935,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 41,
+        "s_aic": 37,
+        "s_abc": 9,
+        "s_pass": 9,
+        "s_law": 5,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 25382,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "upper",
+        "benchmark": 0.91242754,
+        "district": 35,
+        "isMajority": true,
+        "name": "Valverde, Bridget",
+        "party": "D",
+        "partyRank": 14,
+        "partyTotal": 34,
+        "sles": 1.135360143,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 50,
+        "s_aic": 47,
+        "s_abc": 17,
+        "s_pass": 17,
+        "s_law": 14,
+        "ss_bill": 2,
+        "ss_aic": 2,
+        "ss_abc": 2,
+        "ss_pass": 2,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "slesId": 25389,
+        "chamber": "upper",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.463445603,
+        "district": 21,
+        "isMajority": false,
+        "name": "Rogers, Gordon",
+        "party": "R",
+        "partyRank": 2,
+        "partyTotal": 5,
+        "sles": 0.67913193,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 41,
+        "s_aic": 40,
+        "s_abc": 10,
+        "s_pass": 10,
+        "s_law": 8,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 25421,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "upper",
+        "benchmark": 0.91242754,
+        "district": 6,
+        "isMajority": true,
+        "name": "Mack, Tiara",
+        "party": "D",
+        "partyRank": 16,
+        "partyTotal": 34,
+        "sles": 1.0691707,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 66,
+        "s_aic": 60,
+        "s_abc": 13,
+        "s_pass": 13,
+        "s_law": 11,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "slesId": 25394,
+        "chamber": "upper",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.91242754,
+        "district": 9,
+        "isMajority": true,
+        "name": "Burke, John",
+        "party": "D",
+        "partyRank": 26,
+        "partyTotal": 34,
+        "sles": 0.636930618,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 35,
+        "s_aic": 28,
+        "s_abc": 11,
+        "s_pass": 11,
+        "s_law": 9,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 17656,
+        "chamber": "upper",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.91242754,
+        "district": 4,
+        "isMajority": true,
+        "name": "Ruggerio, Dominick",
+        "party": "D",
+        "partyRank": 18,
+        "partyTotal": 34,
+        "sles": 1.048010812,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 30,
+        "s_aic": 26,
+        "s_abc": 19,
+        "s_pass": 19,
+        "s_law": 15,
+        "ss_bill": 2,
+        "ss_aic": 2,
+        "ss_abc": 2,
+        "ss_pass": 2,
+        "ss_law": 2
+      }
+    },
+    {
+      "row": {
+        "chamber": "upper",
+        "slesId": 17678,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 1.478451102,
+        "district": 37,
+        "isMajority": true,
+        "name": "Sosnowski, V. Susan",
+        "party": "D",
+        "partyRank": 11,
+        "partyTotal": 34,
+        "sles": 1.318497576,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 55,
+        "s_aic": 50,
+        "s_abc": 24,
+        "s_pass": 24,
+        "s_law": 20,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "chamber": "upper",
+        "slesId": 25396,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.91242754,
+        "district": 16,
+        "isMajority": true,
+        "name": "Acosta, Jonathon",
+        "party": "D",
+        "partyRank": 19,
+        "partyTotal": 34,
+        "sles": 1.039653417,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 48,
+        "s_aic": 47,
+        "s_abc": 22,
+        "s_pass": 21,
+        "s_law": 8,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 26796,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "upper",
+        "benchmark": 0.91242754,
+        "district": 32,
+        "isMajority": true,
+        "name": "Lauria, Pamela",
+        "party": "D",
+        "partyRank": 17,
+        "partyTotal": 34,
+        "sles": 1.065088689,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 34,
+        "s_aic": 33,
+        "s_abc": 19,
+        "s_pass": 19,
+        "s_law": 13,
+        "ss_bill": 2,
+        "ss_aic": 2,
+        "ss_abc": 2,
+        "ss_pass": 2,
+        "ss_law": 2
+      }
+    },
+    {
+      "row": {
+        "chamber": "upper",
+        "slesId": 25416,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.91242754,
+        "district": 5,
+        "isMajority": true,
+        "name": "Bell, Samuel",
+        "party": "D",
+        "partyRank": 33,
+        "partyTotal": 34,
+        "sles": 0.264223205,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 21,
+        "s_aic": 19,
+        "s_abc": 3,
+        "s_pass": 3,
+        "s_law": 2,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "chamber": "upper",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "slesId": 25377,
+        "benchmark": 1.478451102,
+        "district": 36,
+        "isMajority": true,
+        "name": "DiMario, Alana",
+        "party": "D",
+        "partyRank": 1,
+        "partyTotal": 34,
+        "sles": 2.113179753,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 82,
+        "s_aic": 79,
+        "s_abc": 41,
+        "s_pass": 41,
+        "s_law": 25,
+        "ss_bill": 2,
+        "ss_aic": 2,
+        "ss_abc": 2,
+        "ss_pass": 2,
+        "ss_law": 2
+      }
+    },
+    {
+      "row": {
+        "chamber": "upper",
+        "slesId": 25393,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.463445603,
+        "district": 23,
+        "isMajority": false,
+        "name": "De La Cruz, Jessica",
+        "party": "R",
+        "partyRank": 1,
+        "partyTotal": 5,
+        "sles": 0.796611569,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 57,
+        "s_aic": 37,
+        "s_abc": 11,
+        "s_pass": 11,
+        "s_law": 11,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 26785,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "upper",
+        "benchmark": 0.91242754,
+        "district": 1,
+        "isMajority": true,
+        "name": "Bissaillon, Jacob",
+        "party": "D",
+        "partyRank": 21,
+        "partyTotal": 34,
+        "sles": 0.840836282,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 44,
+        "s_aic": 37,
+        "s_abc": 14,
+        "s_pass": 13,
+        "s_law": 8,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "chamber": "upper",
+        "slesId": 25422,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.91242754,
+        "district": 14,
+        "isMajority": true,
+        "name": "Lawson, Valarie",
+        "party": "D",
+        "partyRank": 12,
+        "partyTotal": 34,
+        "sles": 1.281933101,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 45,
+        "s_aic": 42,
+        "s_abc": 21,
+        "s_pass": 21,
+        "s_law": 13,
+        "ss_bill": 3,
+        "ss_aic": 3,
+        "ss_abc": 3,
+        "ss_pass": 3,
+        "ss_law": 3
+      }
+    },
+    {
+      "row": {
+        "slesId": 26787,
+        "chamber": "upper",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.91242754,
+        "district": 18,
+        "isMajority": true,
+        "name": "Britto, Robert",
+        "party": "D",
+        "partyRank": 22,
+        "partyTotal": 34,
+        "sles": 0.813139382,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 29,
+        "s_aic": 26,
+        "s_abc": 20,
+        "s_pass": 19,
+        "s_law": 11,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "chamber": "upper",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "slesId": 26791,
+        "benchmark": 0.463445603,
+        "district": 29,
+        "isMajority": false,
+        "name": "Deluca, Anthony",
+        "party": "R",
+        "partyRank": 5,
+        "partyTotal": 5,
+        "sles": 0.13346248,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 22,
+        "s_aic": 10,
+        "s_abc": 0,
+        "s_pass": 0,
+        "s_law": 0,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 25409,
+        "chamber": "upper",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.91242754,
+        "district": 15,
+        "isMajority": true,
+        "name": "Kallman, Meghan",
+        "party": "D",
+        "partyRank": 20,
+        "partyTotal": 34,
+        "sles": 0.940048862,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 62,
+        "s_aic": 55,
+        "s_abc": 6,
+        "s_pass": 6,
+        "s_law": 5,
+        "ss_bill": 3,
+        "ss_aic": 3,
+        "ss_abc": 3,
+        "ss_pass": 3,
+        "ss_law": 2
+      }
+    },
+    {
+      "row": {
+        "slesId": 25417,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "upper",
+        "benchmark": 0.91242754,
+        "district": 3,
+        "isMajority": true,
+        "name": "Zurier, Samuel",
+        "party": "D",
+        "partyRank": 29,
+        "partyTotal": 34,
+        "sles": 0.53284772,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 34,
+        "s_aic": 30,
+        "s_abc": 8,
+        "s_pass": 8,
+        "s_law": 6,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 25407,
+        "chamber": "upper",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 1.478451102,
+        "district": 30,
+        "isMajority": true,
+        "name": "McKenney, Mark",
+        "party": "D",
+        "partyRank": 10,
+        "partyTotal": 34,
+        "sles": 1.378030937,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 67,
+        "s_aic": 62,
+        "s_abc": 26,
+        "s_pass": 25,
+        "s_law": 19,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 26802,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "upper",
+        "benchmark": 0.91242754,
+        "district": 11,
+        "isMajority": true,
+        "name": "Ujifusa, Linda",
+        "party": "D",
+        "partyRank": 30,
+        "partyTotal": 34,
+        "sles": 0.50632992,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 44,
+        "s_aic": 36,
+        "s_abc": 5,
+        "s_pass": 5,
+        "s_law": 4,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    },
+    {
+      "row": {
+        "slesId": 25410,
+        "chamber": "upper",
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.91242754,
+        "district": 24,
+        "isMajority": true,
+        "name": "Murray, Melissa",
+        "party": "D",
+        "partyRank": 4,
+        "partyTotal": 34,
+        "sles": 1.697195529,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 54,
+        "s_aic": 51,
+        "s_abc": 25,
+        "s_pass": 25,
+        "s_law": 18,
+        "ss_bill": 6,
+        "ss_aic": 6,
+        "ss_abc": 6,
+        "ss_pass": 6,
+        "ss_law": 3
+      }
+    },
+    {
+      "row": {
+        "chamber": "upper",
+        "slesId": 26794,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.91242754,
+        "district": 38,
+        "isMajority": true,
+        "name": "Gu, Victoria",
+        "party": "D",
+        "partyRank": 24,
+        "partyTotal": 34,
+        "sles": 0.771082368,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 46,
+        "s_aic": 43,
+        "s_abc": 9,
+        "s_pass": 8,
+        "s_law": 8,
+        "ss_bill": 1,
+        "ss_aic": 1,
+        "ss_abc": 1,
+        "ss_pass": 1,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "chamber": "upper",
+        "slesId": 26795,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "benchmark": 0.91242754,
+        "district": 31,
+        "isMajority": true,
+        "name": "LaMountain, Matthew",
+        "party": "D",
+        "partyRank": 5,
+        "partyTotal": 34,
+        "sles": 1.696792168,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 71,
+        "s_aic": 67,
+        "s_abc": 31,
+        "s_pass": 31,
+        "s_law": 20,
+        "ss_bill": 2,
+        "ss_aic": 2,
+        "ss_abc": 2,
+        "ss_pass": 2,
+        "ss_law": 1
+      }
+    },
+    {
+      "row": {
+        "slesId": 26801,
+        "term": {
+          "startYear": 2023,
+          "endYear": 2024
+        },
+        "chamber": "upper",
+        "benchmark": 0.91242754,
+        "district": 22,
+        "isMajority": true,
+        "name": "Tikoian, David",
+        "party": "D",
+        "partyRank": 23,
+        "partyTotal": 34,
+        "sles": 0.804958766,
+        "state": "RI"
+      },
+      "overall": {
+        "c_bill": 0,
+        "c_aic": 0,
+        "c_abc": 0,
+        "c_pass": 0,
+        "c_law": 0,
+        "s_bill": 38,
+        "s_aic": 36,
+        "s_abc": 15,
+        "s_pass": 14,
+        "s_law": 12,
+        "ss_bill": 0,
+        "ss_aic": 0,
+        "ss_abc": 0,
+        "ss_pass": 0,
+        "ss_law": 0
+      }
+    }
+  ]
+}
