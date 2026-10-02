@@ -29,3 +29,16 @@ testLink('chamber=senate&district=8&party=DEM',true);testLink('district=8&party=
 let handlers={},shown=false,closed=false;const dialog={addEventListener:(n,f)=>handlers[n]=f,showModal:()=>shown=true,close:()=>closed=true};const trigger={addEventListener:(n,f)=>handlers.trigger=f};
 vm.runInNewContext(fs.readFileSync('candidates/candidate-profile.js','utf8'),{document:{getElementById:id=>id==='aclu-votes-dialog'?dialog:trigger}});handlers.trigger();assert(shown);handlers.click({target:dialog});assert(closed);
 console.log('PASS: 271 bills, 100 votes with original dates/positions, matching components, specific primary links, valid/invalid deep links, ACLU dialog');
+const ciccone=fs.readFileSync('candidates/frank-a-ciccone.html','utf8');
+const cicconeData=JSON.parse(fs.readFileSync('data/frank_a_ciccone_supplied_records_2026.json','utf8'));
+assert.equal(cicconeData.sponsored_bills.length,290);
+assert.equal((ciccone.match(/class="sponsored-bill"/g)||[]).length,290);
+const cicconeTable=ciccone.split('<table class="vote-records-table">')[1].split('</table>')[0];
+assert.equal((cicconeTable.match(/<th scope="row">/g)||[]).length,100);
+assert.equal((cicconeTable.match(/datetime="2026-06-10"/g)||[]).length,1);
+assert.equal((cicconeTable.match(/datetime="2026-06-11"/g)||[]).length,99);
+assert.equal((cicconeTable.match(/class="vote-position">Absent/g)||[]).length,2);
+assert.equal((cicconeTable.match(/class="vote-position">Yea/g)||[]).length,98);
+assert(cicconeTable.includes('Ciccone’s vote'));assert(!cicconeTable.includes('Urso’s vote'));
+assert(!ciccone.includes('billtrack50.com'));
+console.log('PASS: Ciccone 290 bills, 100 votes, 98 Yea / 2 Absent and original dates');
