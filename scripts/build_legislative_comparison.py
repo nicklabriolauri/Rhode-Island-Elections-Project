@@ -28,7 +28,7 @@ def build():
   output['records']+=result
  (ROOT/'data/legislative_comparison_2023_2024.json').write_text(json.dumps(output,indent=2)+'\n')
  with (ROOT/'data/legislative_comparison_2023_2024.csv').open('w') as f:
-  writer=csv.DictWriter(f,fieldnames=list(output['records'][0]));writer.writeheader();writer.writerows(output['records'])
+  writer=csv.DictWriter(f,fieldnames=list(output['records'][0]),lineterminator="\n");writer.writeheader();writer.writerows(output['records'])
  print(json.dumps(output['chambers'],indent=2))
  for r in output['records']:
   if any(n in r['name'] for n in ['Burke','Ciccone']):print(r)
