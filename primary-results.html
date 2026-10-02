@@ -814,7 +814,12 @@
       senate: "data/senate_new.geojson"
     };
 
-    let currentChamber = "house";
+    const profileLinkParams = new URLSearchParams(window.location.search);
+    const linkedChamber = profileLinkParams.get("chamber");
+    let currentChamber = ["house", "senate"].includes(linkedChamber) ? linkedChamber : "house";
+    document.querySelectorAll(".tab").forEach(button => {
+      button.classList.toggle("active", button.dataset.chamber === currentChamber);
+    });
     let resultsData = null;
     let geoCache = {};
     let geoLayer = null;
@@ -1451,6 +1456,31 @@
       return Array.from(byKey.values());
     }
 
+    function applyProfilePrimaryLink() {
+      const district = Number(profileLinkParams.get("district"));
+      const maxDistrict = currentChamber === "senate" ? 38 : 75;
+      if (!Number.isInteger(district) || district < 1 || district > maxDistrict) return;
+      const party = String(profileLinkParams.get("party") || "").toUpperCase();
+      const races = racesForDistrict(currentChamber, district)
+        .filter(race => !party || normalizeParty(race.party_code || race.party) === normalizeParty(party));
+      if (!races.length) return;
+      selectedRaceKey = `${currentChamber}-${district}`;
+      renderRacePanel(races);
+      if (geoLayer) {
+        geoLayer.setStyle(feature => {
+          const d = getFeatureDistrict(feature);
+          const base = districtStyle(currentChamber, d);
+          return Number(d) === district ? {...base, color: "#0f172a", weight: 3.2} : base;
+        });
+        geoLayer.eachLayer(layer => {
+          if (Number(getFeatureDistrict(layer.feature)) === district && layer.getBounds) {
+            map.fitBounds(layer.getBounds(), {padding: [50, 50], maxZoom: 11});
+          }
+        });
+      }
+      document.getElementById("racePanel").scrollIntoView({block: "start"});
+    }
+
     async function loadResults() {
       let resultPayload = {
         election: "2026 Rhode Island Statewide Primary",
@@ -1510,6 +1540,7 @@
           </div>
         `;
       }
+      applyProfilePrimaryLink();
     }
 
     document.querySelectorAll(".tab").forEach(button => {
