@@ -68,3 +68,7 @@ def build(name,slug,district,community,email,phone):
 if __name__=='__main__':
  build('Lori Urso','lori-urso',8,'Pawtucket','sen-urso@rilegislature.gov','(401) 276-5567')
  build('Frank A Ciccone','frank-a-ciccone',7,'Providence, Johnston','sen-ciccone@rilegislature.gov','(401) 276-5579')
+
+if __name__ == "__main__":
+ from candidate_profile_components import harmonize
+ for slug in ["lori-urso", "frank-a-ciccone"]: harmonize(slug)
