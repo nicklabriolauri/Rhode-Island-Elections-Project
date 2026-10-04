@@ -75,3 +75,6 @@ summary:focus-visible,button:focus-visible{outline:3px solid #d79326;outline-off
 
 /* Compact headings inside overview and campaign-priority boxes. */
 .card .mini > h3{margin:0 0 7px}
+
+/* Primary links open race results rather than general-election maps. */
+#primaries .election-link::after{content:'View result →'}

@@ -69,6 +69,14 @@ def ratings(rec):
    body+=''.join(f'<div class="aclu-dialog-vote"><span class="aclu-dialog-num">{v["number"]}</span><span class="aclu-dialog-issue">{esc(v["issue"])}</span><span class="aclu-dialog-status {esc(v["status"])}">{status[v["status"]]}</span></div>' for v in r['votes'])+'</div></dialog>'
   body+=f'<p class="source">{esc(r["note"])} <a href="{esc(r["source_url"])}">Source report ↗</a></p>'
  return section('ratings','Outside ratings &amp; scorecards',body)
+def ciccone_primary_rows():
+ entries=[
+  (2026,1930,'100%','Uncontested Democratic primary','https://electionresults.ri.gov/results/public/rhodeisland/elections/RI2026StatewidePrimary/ballot-items/01000000-553f-29ee-0e1f-08df0541a34a'),
+  (2024,548,'100%','Uncontested Democratic primary','https://www.ri.gov/election/results/2024/statewide_primary/races/59.html'),
+  (2022,1449,'67.7%','Contested Democratic primary','https://www.ri.gov/election/results/2022/statewide_primary/races/24.html'),
+  (2020,973,'100%','Uncontested Democratic primary','https://www.ri.gov/election/results/2020/statewide_primary/races/309.html')]
+ return [f'<div class="election"><a class="year election-link" href="{url}" aria-label="View {year} Democratic primary result">{year}</a><div><strong>Advanced · {votes:,} votes</strong><small>{label} · Official results</small></div><a class="result election-link" href="{url}" aria-label="View {year} primary result: {share} vote share">{share}</a></div>' for year,votes,share,label,url in entries]
+
 def harmonize(slug):
  p=ROOT/'candidates'/f'{slug}.html';page=p.read_text();rec=next(r for r in load('incumbent_records_2026')['records'] if r['candidate_id'].endswith(slug));name=rec['candidate_name'];district=rec['district_number']
  page=replace_section(page,'bills',bill_sections(rec,slug));page=replace_section(page,'ratings',ratings(rec))
@@ -84,9 +92,10 @@ def harmonize(slug):
     if candidate['name']==name:
      url=f'/primary-results.html?chamber=senate&amp;district={district}&amp;party=DEM#racePanel'
      rows.append(f'<div class="election"><a class="year election-link" href="{url}" aria-label="View 2026 Democratic primary results for Senate District {district}">2026</a><div><strong>{candidate["votes"]:,} votes</strong><small>Democratic primary · Districtwide</small></div><a class="result election-link" href="{url}" aria-label="View the primary race behind {candidate["pct"]}% vote share">{candidate["pct"]}%</a></div>')
- if slug=='frank-a-ciccone':
-  for year,count,url in [(2024,548,'https://www.ri.gov/election/results/2024/statewide_primary/races/59.html'),(2020,973,'https://www.ri.gov/election/results/2020/statewide_primary/races/309.html')]:rows.append(f'<div class="election"><a class="year election-link" href="{url}">{year}</a><div><strong>Advanced · {count:,} votes</strong><small>Uncontested Democratic primary</small></div><a class="result election-link" href="{url}">100%</a></div>')
+ if slug=='frank-a-ciccone': rows=ciccone_primary_rows()
  page=replace_section(page,'primaries',section('primaries','Democratic primary history',f'<p class="intro">Senate District {district} · Share of votes cast for named candidates. Select a year or vote share to open that specific primary race.</p><div class="timeline">'+(''.join(rows) or '<p>No primary returns are available in the current project dataset for this candidate. Additional primary history is under construction.</p>')+'</div><p class="source">2026 figures use RIEP’s unofficial September 10 snapshot. Earlier primary years are under construction. An uncontested 100% excludes undervotes.</p>'))
+ if slug=='frank-a-ciccone':
+  page=page.replace('2026 figures use RIEP’s unofficial September 10 snapshot. Earlier primary years are under construction. An uncontested 100% excludes undervotes.','Official Board of Elections returns for the years shown. An uncontested 100% is the share of votes for named candidates, excluding undervotes. Additional earlier years are under construction.')
  # Use Burke's finance grid, office-details list, and subhead styling.
  finance_start=page.index('<section class="card" id="finance">');finance_end=page.index('<section class="card" id="record">');page=page[:finance_start]+page[finance_start:finance_end].replace('class="record-grid"','class="metric-grid"')+page[finance_end:]
  page=page.replace('<h3>Session attendance</h3>','<h3 class="subheading">Session attendance</h3>')
