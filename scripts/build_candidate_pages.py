@@ -22,10 +22,12 @@ def build(name,slug,district,community,email,phone):
  supplied=next((r for r in load('candidate_profiles_2026')['profiles'] if r['candidate_id']==candidate['candidate_id']),{})
  fin=next(r for r in load('candidate_finance_2026')['profiles'] if r['slug']==slug)
  # Official RI AFL-CIO 2026 primary endorsement list checked October 2, 2026.
- research['endorsements']=[e for e in research['endorsements'] if 'AFL-CIO' not in e['endorser']] + [{'endorser':'Rhode Island AFL-CIO · 2026 primary endorsement','source_url':'https://rhodeislandaflcio.org/candidate-endorsement-applications-2026/'}]
+ if district in (7,8): research['endorsements']=[e for e in research['endorsements'] if 'AFL-CIO' not in e['endorser']] + [{'endorser':'Rhode Island AFL-CIO · 2026 primary endorsement','source_url':'https://rhodeislandaflcio.org/candidate-endorsement-applications-2026/'}]
  race=f'/running.html?chamber=senate&district={district}&election=general'; finance=f'/finance.html?slug={slug}'
- header=template[template.index('<header'):template.index('<main')]; header=header.replace('John Burke',name).replace('john-burke.png',slug+'.png').replace('john-burke',slug).replace('District 9',f'District {district}').replace('district=9',f'district={district}').replace('West Warwick',community);header=re.sub(r'<span class="tag">2024 general election unopposed</span>','',header);header=header.replace('September 2026','October 2, 2026')
- body=section('about','About this candidate',f'<p class="intro">{esc(name)} represents Senate District {district} ({esc(community)}). Campaign positions, public records and outside scorecards are shown with their source and reporting period.</p>'+ ('<p>First elected in November 2024; first legislative session: 2025–2026.</p>' if district==8 else '')+f'<p class="source">{link("https://www.rilegislature.gov/senators/"+("Urso" if district==8 else "Ciccone")+"/Pages/Biography.aspx","Official General Assembly biography")}</p>')
+ header=template[template.index('<header'):template.index('<main')]; header=header.replace('John Burke',name).replace('john-burke.png',slug+'.png').replace('john-burke',slug).replace('District 9',f'District {district}').replace('district=9',f'district={district}').replace('West Warwick',community);header=re.sub(r'<span class="tag">2024 general election unopposed</span>','',header);header=header.replace('September 2026','October 4, 2026')
+ if not (ROOT/'candidates'/f'{slug}.png').exists():
+  header=re.sub(r'<div><img class="portrait".*?</div>', '<div class="mini"><h2>Candidate portrait</h2><p>Photo under construction</p></div>',header,flags=re.S)
+ body=section('about','About this candidate',f'<p class="intro">{esc(name)} represents Senate District {district} ({esc(community)}). Campaign positions, public records and outside scorecards are shown with their source and reporting period.</p>'+ ('<p>First elected in November 2024; first legislative session: 2025–2026.</p>' if district==8 else '')+f'<p class="source">{link("https://www.rilegislature.gov/senators/"+name.split()[-1]+"/Pages/Biography.aspx","Official General Assembly biography")}</p>')
  priorities=supplied.get('priorities') or research['priorities']; body+=section('priorities','Campaign priorities','<div class="grid2">'+''.join(f'<div class="mini"><h3>{esc(p["title"])}</h3><p>{esc(p["summary"])}</p></div>' for p in priorities)+'</div>'+('<p class="source">Campaign response submitted directly to RIEP.</p>' if supplied.get('priorities') else f'<p class="source">{link(research["campaign_website"],"Official campaign website")}. Summaries attributed to the campaign.</p>'))
  elections=[]
  for r in sorted(load('race_data').values(),key=lambda r:int(r['year']),reverse=True):
@@ -56,13 +58,14 @@ def build(name,slug,district,community,email,phone):
   if r.get('votes'): ratingbody+=details('View 11 individual ACLU-selected votes','<ul>'+''.join(f'<li>{esc(v["issue"])}: {esc(v["status"])}</li>' for v in r['votes'])+'</ul>')
   ratingbody+=f'<p class="source">{esc(r.get("note",""))}</p><p>{link(r["source_url"],"Source report ↗")}</p></section>'
   if r['organization']=='Center for Effective Lawmaking': ratingbody+=current_index(rec)
- if not any(r['organization']=='Center for Effective Lawmaking' for r in ratings): ratingbody= '<p>Urso was first elected in November 2024. A 2023–2024 CEL score and historical RIEP index are not applicable to her.</p>'+current_index(rec)+ratingbody
+ if not any(r['organization']=='Center for Effective Lawmaking' for r in ratings): ratingbody= '<p>No 2023–2024 CEL score is available in the project dataset for this candidate.</p>'+current_index(rec)+ratingbody
  body+=section('ratings','Legislative scores &amp; voting records',ratingbody+'<p class="source">RIEP does not combine outside ratings into an overall candidate score. Organizations select different issues and methodologies.</p>')
  body+=section('endorsements','Endorsements',''.join('<div class="mini"><h3>'+esc(e['endorser'])+'</h3><p>'+link(e['source_url'],'View endorsement source ↗')+'</p></div>' for e in research['endorsements'])+'<p class="source">Entries from the project’s endorsement research; a linked voter guide is labeled by its source and is not an RIEP endorsement.</p>')
  body+=section('sources','Under construction','<p>Additional bill summaries, floor votes, earlier primary results and digital footprint research will be added after review.</p>')
  aside=f'<aside class="side"><section class="card"><h2>Contact &amp; district</h2><p>Senate District {district} · {esc(community)}</p><p>{link("mailto:"+email,email)}</p><p>{link("tel:"+re.sub(r"[^+0-9]","",phone),phone)}</p></section><section class="card"><h2>Explore more</h2><div class="linklist">{link(race,"Race & opponents →")}{link(finance,"Campaign finance →")}{link("legislative-comparison.html","2023–2024 score comparison →")}</div></section></aside>'
  out=head+'<body>'+header+'<main class="shell"><div class="layout"><div class="stack">'+body+'</div>'+aside+'</div></main><footer class="footer"><div class="shell">Rhode Island Elections Project · Source dates and reporting periods shown by section.</div></footer></body></html>'
  (ROOT/'candidates'/f'{slug}.html').write_text(out)
+NEW_PROFILES = [('Tiara T Mack','tiara-t-mack',6,'Providence','tiaramackri@gmail.com','(401) 288-1288'),('Samuel W Bell','samuel-w-bell',5,'Providence','swbell11@gmail.com','(301) 351-6650'),('Stefano V Famiglietti','stefano-v-famiglietti',4,'North Providence','sfamiglietti@yahoo.com','(401) 215-3462')]
 if __name__=='__main__':
  build('Lori Urso','lori-urso',8,'Pawtucket','sen-urso@rilegislature.gov','(401) 276-5567')
  build('Frank A Ciccone','frank-a-ciccone',7,'Providence, Johnston','sen-ciccone@rilegislature.gov','(401) 276-5579')
@@ -70,3 +73,8 @@ if __name__=='__main__':
 if __name__ == "__main__":
  from candidate_profile_components import harmonize
  for slug in ["lori-urso", "frank-a-ciccone"]: harmonize(slug)
+
+if __name__ == '__main__':
+ for name,slug,district,community,email,phone in NEW_PROFILES:
+  build(name,slug,district,community,email,phone)
+  harmonize(slug)
