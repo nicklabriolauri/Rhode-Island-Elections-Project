@@ -567,6 +567,23 @@
     }
 
     @media (prefers-reduced-motion:reduce){.brand-mark,.brand-mark-wrap::before,.brand-mark-wrap::after,.hero-line-text{animation:none!important;opacity:1!important;clip-path:none!important;transform:none!important}}
+    .address-candidates { margin-top:20px; }
+    .address-candidates > h4 { margin:0 0 12px;font-size:19px;color:#14233b; }
+    .address-candidate-grid { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px; }
+    .address-candidate-group { background:#fff;border:1px solid #cbd9eb;border-radius:14px;padding:16px;min-width:0; }
+    .address-candidate-group h5 { margin:0 0 12px;font-size:15px;color:#274e78; }
+    .address-candidate { display:flex;gap:12px;padding:12px 0;border-top:1px solid #e0e7ef;text-decoration:none;color:#172b45; }
+    .address-candidate img { object-fit:cover;object-position:top;border-radius:4px;flex-shrink:0; }
+    .address-candidate-text { display:flex;flex-direction:column;gap:5px;min-width:0; }
+    .address-candidate-text strong { font-size:16px;line-height:1.35; }
+    .address-candidate-text > span { font-size:13px;color:#53667d; }
+    .address-candidate-text .address-candidate-action { color:#175bb3;font-weight:800; }
+    .address-candidate:hover .address-candidate-action { text-decoration:underline; }
+    .address-candidate:focus-visible,.address-race-link:focus-visible,.address-history summary:focus-visible { outline:3px solid #e1a322;outline-offset:3px; }
+    .address-race-link { display:block;margin-top:10px;font-size:13px;color:#175bb3;font-weight:800; }
+    .address-history { margin-top:18px;color:#354c69; }
+    .address-history summary { cursor:pointer;font-size:14px;font-weight:700; }
+    @media(max-width:640px) { .address-candidate-grid { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
@@ -1462,13 +1479,29 @@
       return payload?.candidates || [];
     }
 
+    function buildAddressCandidateGroup(chamber, districtNumber) {
+      if (!districtNumber) return "";
+      const title = `${chamberLabel(chamber)} District ${districtNumber}`;
+      const raceHref = `running.html?chamber=${encodeURIComponent(chamber)}&district=${encodeURIComponent(String(districtNumber))}&election=general`;
+      const candidates = homepageCandidates.filter(c =>
+        c.chamber === chamber && Number(c.district_number) === Number(districtNumber) &&
+        c.election_status === "general_candidate" && c.on_election_ballot !== false
+      );
+      const rows = candidates.map(c => {
+        const profileHref = buildCandidateProfileHref(c);
+        const action = profileHref ? "View profile →" : "View race · Profile coming soon →";
+        const photo = profileHref ? `<img src="${escapeHtml(profileHref.replace(/\.html$/, ".png"))}" alt="" width="48" height="64" loading="lazy">` : "";
+        return `<a class="address-candidate" href="${escapeHtml(profileHref || raceHref)}" aria-label="${escapeHtml(`${c.name}: ${action.replace(" →", "")}`)}">${photo}<span class="address-candidate-text"><strong>${escapeHtml(c.name)}</strong><span>${escapeHtml(partyLongLabel(c.party))}</span><span class="address-candidate-action">${action}</span></span></a>`;
+      }).join("");
+      return `<section class="address-candidate-group" aria-label="${escapeHtml(title)} candidates"><h5>${escapeHtml(title)}</h5>${rows || '<p class="hero-search-result-copy">Candidate information is being updated.</p>'}<a class="address-race-link" href="${raceHref}">View race &amp; opponents →</a></section>`;
+    }
+
     function renderAddressSearchResult(query, candidate, lookupRecord) {
       const results = document.getElementById("homeSearchResults");
       if (!results) return;
 
       const matchedAddress = candidate.address || query;
       const precinctName = `${lookupRecord.municipality} Precinct ${lookupRecord.precinct_label || lookupRecord.precinct_code}`;
-      const lookupHref = buildLookupHref(matchedAddress);
 
       const ballotParams = new URLSearchParams();
       ballotParams.set("address", matchedAddress);
@@ -1497,7 +1530,7 @@
           <div class="hero-search-overview-head">
             <div>
               <h4 class="hero-search-title">Your voting information</h4>
-              <p class="hero-search-subtitle">We matched ${escapeHtml(matchedAddress)} to ${escapeHtml(precinctName)}. Open one ballot page to see the races RIEP can identify for this address.</p>
+              <p class="hero-search-subtitle">We matched ${escapeHtml(matchedAddress)} to ${escapeHtml(precinctName)}. Explore your 2026 legislative candidates below, or open My Ballot for more information.</p>
             </div>
             <span class="hero-search-kicker">Address match</span>
           </div>
@@ -1508,11 +1541,12 @@
             ${lookupRecord.senate_district ? `<span class="hero-search-chip">Senate District ${escapeHtml(String(lookupRecord.senate_district))}</span>` : ""}
           </div>
 
-          ${districtCards ? `<div class="hero-search-result-grid">${districtCards}</div>` : ""}
+          <div class="address-candidates"><h4>2026 candidates</h4><div class="address-candidate-grid">${buildAddressCandidateGroup("house", lookupRecord.house_district)}${buildAddressCandidateGroup("senate", lookupRecord.senate_district)}</div></div>
+          ${districtCards ? `<details class="address-history"><summary>2024 election results</summary><div class="hero-search-result-grid">${districtCards}</div></details>` : ""}
 
           <div class="hero-search-action-row">
             <a class="hero-search-action primary" href="${ballotHref}">My Ballot</a>
-            <a class="hero-search-action" href="${lookupHref}">Find My Precinct</a>
+            <a class="hero-search-action" href="candidate-profiles.html">All Candidate Profiles</a>
             <a class="hero-search-action compare" href="${resultsHref}">Election Results</a>
           </div>
         </div>
