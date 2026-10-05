@@ -1,0 +1,9 @@
+.comparison-table {width:100%;border-collapse:collapse;min-width:850px;}
+.comparison-table th,.comparison-table td {padding:14px 12px;border-bottom:1px solid #d5e1ec;text-align:left;}
+.comparison-table thead th {background:#eaf2fa;color:#173a5f;}
+.comparison-table tbody tr:nth-child(even) {background:#f6f9fc;}
+.comparison-table tr.ranking-selected {background:#fff0bf;outline:2px solid #b88416;outline-offset:-2px;}
+.comparison-table tr[hidden] {display:none;}
+.comparison-table a {color:#1454a3;text-decoration:underline;text-underline-offset:3px;}
+#ranking-clear {background:#19559a;color:white;border:0;border-radius:8px;padding:12px 18px;font:inherit;font-weight:700;cursor:pointer;}
+#ranking-clear:focus-visible,.comparison-table a:focus-visible {outline:3px solid #b88416;outline-offset:3px;}
