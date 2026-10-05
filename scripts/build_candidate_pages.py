@@ -40,7 +40,7 @@ def build(name,slug,district,community,email,phone):
  else:
   sources={(p.get('source_url'),p.get('source_label','Priority source')) for p in priorities if p.get('source_url')}
   prioritybody='<div class="grid2">'+''.join(f'<div class="mini"><h3>{esc(p["title"])}</h3><p>{esc(p["summary"])}</p></div>' for p in priorities)+'</div>'
-  prioritybody+=('<p class="source">Campaign response submitted directly to RIEP.</p>' if supplied.get('priorities') else '<p class="source">'+ ' · '.join(link(url,label) for url,label in sorted(sources)) +'. Summaries attributed to the sources shown.</p>')
+  prioritybody+=('<p class="source">'+esc(supplied.get('source_note','Campaign response submitted directly to RIEP.'))+'</p>' if supplied.get('priorities') else '<p class="source">'+ ' · '.join(link(url,label) for url,label in sorted(sources)) +'. Summaries attributed to the sources shown.</p>')
  body+=section('priorities','Campaign priorities',prioritybody)
  elections=[]
  for r in sorted(load('race_data').values(),key=lambda r:int(r['year']),reverse=True):

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03T12:00:00Z",
+  "updated_at": "2026-10-05",
   "project_name": "Meet the Candidates",
   "questionnaire_prompt": "Select up to five issues that matter most to you, then choose your House or Senate district to compare candidate priorities.",
   "issue_catalog": [
@@ -495,6 +495,41 @@
         {
           "title": "Reviewing Existing Laws",
           "summary": "Review antiquated laws already on the books and consider updating them rather than assuming that additional legislation is always necessary."
+        }
+      ]
+    },
+    {
+      "candidate_id": "senate-21-rep-primary-gordon-e-rogers",
+      "candidate_name": "Gordon E Rogers",
+      "chamber": "senate",
+      "district_number": 21,
+      "party": "REP",
+      "ballot_stage": "general",
+      "response_status": "provided_by_riep",
+      "summary": "Campaign priorities supplied to RIEP for publication.",
+      "source_label": "RIEP-provided priorities",
+      "source_note": "Campaign priority summaries supplied to RIEP for publication on October 5, 2026.",
+      "issue_tags": [],
+      "priorities": [
+        {
+          "title": "Local Control of Zoning",
+          "summary": "Opposes state-level zoning mandates that override local decision-making and supports preserving municipal authority over local land-use and zoning policy."
+        },
+        {
+          "title": "Electricity Costs and Climate Policy",
+          "summary": "Seeks to reduce electricity costs and opposes state climate and energy policies that he argues increase utility bills for Rhode Island residents and businesses."
+        },
+        {
+          "title": "Unfunded Mandates",
+          "summary": "Opposes unfunded state mandates that require municipalities or other local entities to implement policies without sufficient state funding."
+        },
+        {
+          "title": "Second Amendment Rights",
+          "summary": "Supports strong protections for Second Amendment rights, including constitutional carry, interstate reciprocity for firearm permits, and legal access to suppressors."
+        },
+        {
+          "title": "Agriculture and Rural Communities",
+          "summary": "Supports policies addressing the needs of farmers, agricultural businesses, and rural communities, with an emphasis on protecting Rhode Island agriculture and the rural economy."
         }
       ]
     }

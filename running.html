@@ -435,7 +435,7 @@
   <script>
   (() => {
     const DATA_URL = "data/whos_running_2026.json?v=20260925-status";
-    const PROFILE_URL = "data/candidate_profiles_2026.json?v=20260924-gomes-noret";
+    const PROFILE_URL = "data/candidate_profiles_2026.json?v=20261005-rogers-priorities";
     const RESEARCH_URL = "data/candidate_research_2026_with_endorsements.json?v=20260930-priorities";
     const RATINGS_URL = "data/outside_ratings_2026.json?v=20260925-aclu-counts-v2";
     const OFFICE_URL = "data/incumbent_records_2026.json?v=20260829-office";
@@ -747,7 +747,7 @@
       if(profile?.priorities?.length){
         return `
           <div class="priority-block">
-            <div class="priority-label">Top campaign priorities · candidate response</div>
+            <div class="priority-label">Top campaign priorities · ${esc(profile.source_label || "candidate response")}</div>
             <div class="priority-list">
               ${profile.priorities.slice(0,5).map(p => `
                 <div class="priority">
@@ -756,7 +756,7 @@
                 </div>
               `).join("")}
             </div>
-            <div class="source-note">Source: candidate response submitted directly to the Rhode Island Elections Project.</div>
+            <div class="source-note">Source: ${esc(profile.source_note || "candidate response submitted directly to the Rhode Island Elections Project.")}</div>
           </div>`;
       }
 
