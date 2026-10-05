@@ -499,20 +499,25 @@
       "candidates": [
         {
           "name": "James Metivier",
-          "votes": 1844,
-          "pct": 48.17,
+          "votes": 1863,
+          "pct": 48.15,
           "advanced": false
         },
         {
           "name": "Ryan W Pearson",
-          "votes": 1984,
-          "pct": 51.83,
-          "advanced": false
+          "votes": 2006,
+          "pct": 51.85,
+          "advanced": true
         }
       ],
       "precincts_reporting": null,
       "precincts_total": null,
-      "reporting_pct": null
+      "reporting_pct": null,
+      "status": "official",
+      "source": "Rhode Island Board of Elections",
+      "source_url": "https://electionresults.ri.gov/results/public/rhodeisland/elections/RI2026StatewidePrimary/ballot-items/01000000-553f-29ee-b294-08df0541a1cc",
+      "results_updated_at": "2026-09-15T17:17:17",
+      "retrieved_at": "2026-10-05"
     },
     {
       "chamber": "senate",
