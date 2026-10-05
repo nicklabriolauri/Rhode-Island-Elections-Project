@@ -354,5 +354,104 @@
       "source_label": "Rhode Island Board of Elections",
       "retrieved_at": "2026-10-05"
     }
+  ],
+  "gordon-e-rogers": [
+    {
+      "year": 2026,
+      "votes": 1111,
+      "share": "100%",
+      "party": "Republican",
+      "uncontested": true,
+      "source_url": "https://electionresults.ri.gov/results/public/rhodeisland/elections/RI2026StatewidePrimary/ballot-items/01000000-553f-29ee-b991-08df0541a02d",
+      "source_label": "Rhode Island Board of Elections",
+      "results_updated_at": "2026-09-15T17:17:17",
+      "retrieved_at": "2026-10-05"
+    },
+    {
+      "year": 2024,
+      "votes": 709,
+      "share": "100%",
+      "party": "Republican",
+      "uncontested": true,
+      "source_url": "https://www.ri.gov/election/results/2024/statewide_primary/races/10.html",
+      "source_label": "Rhode Island Board of Elections",
+      "retrieved_at": "2026-10-05"
+    },
+    {
+      "year": 2022,
+      "votes": 973,
+      "share": "100%",
+      "party": "Republican",
+      "uncontested": true,
+      "source_url": "https://www.ri.gov/election/results/2022/statewide_primary/races/50.html",
+      "source_label": "Rhode Island Board of Elections",
+      "retrieved_at": "2026-10-05"
+    }
+  ],
+  "david-p-tikoian": [
+    {
+      "year": 2026,
+      "votes": 2596,
+      "share": "100%",
+      "party": "Democratic",
+      "uncontested": true,
+      "source_url": "https://electionresults.ri.gov/results/public/rhodeisland/elections/RI2026StatewidePrimary/ballot-items/01000000-553f-29ee-957e-08df0541a3b8",
+      "source_label": "Rhode Island Board of Elections",
+      "results_updated_at": "2026-09-15T17:17:17",
+      "retrieved_at": "2026-10-05"
+    },
+    {
+      "year": 2024,
+      "votes": 1055,
+      "share": "100%",
+      "party": "Democratic",
+      "uncontested": true,
+      "source_url": "https://www.ri.gov/election/results/2024/statewide_primary/races/73.html",
+      "source_label": "Rhode Island Board of Elections",
+      "retrieved_at": "2026-10-05"
+    },
+    {
+      "year": 2022,
+      "votes": 1879,
+      "share": "63.9%",
+      "party": "Democratic",
+      "uncontested": false,
+      "source_url": "https://www.ri.gov/election/results/2022/statewide_primary/races/53.html",
+      "source_label": "Rhode Island Board of Elections",
+      "retrieved_at": "2026-10-05"
+    }
+  ],
+  "jessica-de-la-cruz": [
+    {
+      "year": 2026,
+      "votes": 1109,
+      "share": "100%",
+      "party": "Republican",
+      "uncontested": true,
+      "source_url": "https://electionresults.ri.gov/results/public/rhodeisland/elections/RI2026StatewidePrimary/ballot-items/01000000-553f-29ee-73ed-08df05419f5b",
+      "source_label": "Rhode Island Board of Elections",
+      "results_updated_at": "2026-09-15T17:17:17",
+      "retrieved_at": "2026-10-05"
+    },
+    {
+      "year": 2024,
+      "votes": 851,
+      "share": "100%",
+      "party": "Republican",
+      "uncontested": true,
+      "source_url": "https://www.ri.gov/election/results/2024/statewide_primary/races/11.html",
+      "source_label": "Rhode Island Board of Elections",
+      "retrieved_at": "2026-10-05"
+    },
+    {
+      "year": 2022,
+      "votes": 1001,
+      "share": "100%",
+      "party": "Republican",
+      "uncontested": true,
+      "source_url": "https://www.ri.gov/election/results/2022/statewide_primary/races/54.html",
+      "source_label": "Rhode Island Board of Elections",
+      "retrieved_at": "2026-10-05"
+    }
   ]
 }
