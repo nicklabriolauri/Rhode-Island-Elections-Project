@@ -78,3 +78,4 @@ summary:focus-visible,button:focus-visible{outline:3px solid #d79326;outline-off
 
 /* Primary links open race results rather than general-election maps. */
 #primaries .election-link::after{content:'View result →'}
+.score-context{font-size:13px;line-height:1.65;color:#4d5663;margin:14px 0}.score-context h4{font-size:14px;color:#60480f;margin:0 0 8px}.score-context p{margin:8px 0}.riep-progress .lawmaker-tags span{border-color:#dfd0aa;color:#60480f}.score-comparison-link{display:inline-block;margin:8px 0;padding:12px 16px;border:1px solid #94711d;border-radius:4px;background:#806017;color:#fff;font-weight:700;text-decoration:none;line-height:1.5}.score-comparison-link:hover{background:#60480f}.score-comparison-link:focus-visible{outline:3px solid #174772;outline-offset:3px}
