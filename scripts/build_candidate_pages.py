@@ -14,17 +14,18 @@ def current_index(record):
  calc=lambda r:len(peers)/3*sum(r['legislation'][k]/t for k,t in zip(keys,totals))
  score=calc(record); rank=1+sum(calc(p)>score for p in peers)
  return f'<section class="riep-progress"><p class="eyebrow">Experimental RIEP index · 2025–2026</p><h3>Legislative progress index</h3>{metrics([("RIEP index",f"{score:.2f}"),("Senate record rank",f"{rank} / 38")])}<p>Equal weight for lead-sponsored bills, bills passed by the Senate and bills that became law. A score of 1 is the average of the 38 current Senate district records. This is an RIEP calculation, separate from CEL.</p>'+details('Calculation and coverage',f'<p>38 ÷ 3 × ({" + ".join(str(record["legislation"][k])+" ÷ "+str(t) for k,t in zip(keys,totals))}) = {score:.6f}.</p><p>Snapshot updated August 30, 2026. Resolutions and cosponsorship excluded. This current-roster comparison does not include every person who served during the session.</p>')+'</section>'
-def build(name,slug,district,community,email,phone):
- template=(ROOT/'candidates/john-burke.html').read_text(); head=template.split('<body>')[0]; head=head.replace('John Burke',name).replace('Senate District 9',f'Senate District {district}')
+def build(name,slug,district,community,email,phone,chamber="senate"):
+ label="House" if chamber=="house" else "Senate"
+ template=(ROOT/'candidates/john-burke.html').read_text(); head=template.split('<body>')[0]; head=head.replace('John Burke',name).replace('Senate District 9',f'{label} District {district}')
  if 'href="candidate-additions.css"' not in head: head=head.replace('</head>','<link rel="stylesheet" href="candidate-additions.css">\n</head>')
- roster=load('whos_running_2026')['chambers']['senate'][str(district)]['candidates']; candidate=next(r for r in roster if r['candidate_id'].endswith('-'+slug)); surname=candidate['last_name']
- rec=next(r for r in load('incumbent_records_2026')['records'] if r['chamber']=='senate' and r['candidate_id']==candidate['candidate_id'])
+ roster=load('whos_running_2026')['chambers'][chamber][str(district)]['candidates']; candidate=next(r for r in roster if r['candidate_id'].endswith('-'+slug)); surname=candidate['last_name']
+ rec=next(r for r in load('incumbent_records_2026')['records'] if r['chamber']==chamber and r['candidate_id']==candidate['candidate_id'])
  research=next(r for r in load('candidate_research_2026_with_endorsements')['candidates'] if r['candidate_id']==candidate['candidate_id'])
  supplied=next((r for r in load('candidate_profiles_2026')['profiles'] if r['candidate_id']==candidate['candidate_id']),{})
  fin=next(r for r in load('candidate_finance_2026')['profiles'] if r['slug']==slug)
  # Official RI AFL-CIO 2026 primary endorsement list checked October 2, 2026.
  if district in (7,8): research['endorsements']=[e for e in research['endorsements'] if 'AFL-CIO' not in e['endorser']] + [{'endorser':'Rhode Island AFL-CIO · 2026 primary endorsement','source_url':'https://rhodeislandaflcio.org/candidate-endorsement-applications-2026/'}]
- race=f'/running.html?chamber=senate&district={district}&election=general'; finance=f'/finance.html?slug={slug}'
+ race=f'/running.html?chamber={chamber}&district={district}&election=general'; finance=f'/finance.html?slug={slug}'
  header=template[template.index('<header'):template.index('<main')]; header=header.replace('John Burke',name).replace('john-burke.png',slug+'.png').replace('john-burke',slug).replace('District 9',f'District {district}').replace('district=9',f'district={district}').replace('West Warwick',community);header=re.sub(r'<span class="tag">2024 general election unopposed</span>','',header);header=header.replace('September 2026','October 5, 2026' if district in (14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35) else 'October 4, 2026')
  if candidate['party']=='REP': header=header.replace('Democratic','Republican').replace('Democrat','Republican')
  if not (ROOT/'candidates'/f'{slug}.png').exists():
@@ -44,15 +45,15 @@ def build(name,slug,district,community,email,phone):
  body+=section('priorities','Campaign priorities',prioritybody)
  elections=[]
  for r in sorted(load('race_data').values(),key=lambda r:int(r['year']),reverse=True):
-  if r['chamber'].lower()=='senate' and int(r['district_number'])==district:
+  if r['chamber'].lower()==chamber and int(r['district_number'])==district:
    for c in r['candidates']:
     if surname.lower() in c["name"].lower():
-     url=f"/map.html?mode=results&chamber=senate&year={r['year']}&view=party&district={district}"
+     url=f"/map.html?mode=results&chamber={chamber}&year={r['year']}&view=party&district={district}"
      elections.append(f'<div class="election"><a class="year election-link" href="{esc(url)}" aria-label="View {r["year"]} Senate District {district} general election results">{r["year"]}</a><div><strong>{esc(c["role"])} · {esc(c["votes"])} votes</strong><small>Districtwide general election</small></div><span class="result">{esc(c["pct"])}</span></div>')
  body+=section('elections','Past electoral performance','<p class="intro">Districtwide general election results. Select a year to open RIEP’s results map.</p><div class="timeline">'+''.join(elections)+'</div>')
  primary=[]
  for r in load('primary_results_2026')['races']:
-  if r['chamber']=='senate' and r['district']==district:
+  if r['chamber']==chamber and r['district']==district:
    for c in r['candidates']:
     if name.split()[-1].lower() in c['name'].lower(): primary.append(f'<p><strong>2026 · {c["votes"]:,} votes · {c["pct"]}%</strong></p>')
  if district==7:
@@ -63,7 +64,7 @@ def build(name,slug,district,community,email,phone):
  bills=rec['legislation_detail']; passed={(x['year'],x['bill']) for x in bills['passed_chamber']}; laws={(x['year'],x['bill']) for x in bills['became_law']}
  billbody='<div class="bill-scroll" tabindex="0" aria-label="Lead-sponsored bill records"><table><thead><tr><th>Year</th><th>Bill</th><th>Progress</th></tr></thead><tbody>'+''.join(f'<tr><td>{b["year"]}</td><td>{esc(b["bill"])}</td><td>{"Became law" if (b["year"],b["bill"]) in laws else "Passed Senate" if (b["year"],b["bill"]) in passed else "Introduced"}</td></tr>' for b in bills['lead_sponsored'])+'</tbody></table></div>'
  body+=section('bills','Bills &amp; votes',details('Lead-sponsored records · 2025–2026',billbody)+'<p class="source">Official Bill Status/History records in RIEP’s August 30 snapshot. Individual floor-vote records are under construction; advocacy-selected votes appear under scorecards.</p>')
- ratings=[r for r in load('outside_ratings_2026')['ratings'] if r['chamber']=='senate' and r['district_number']==district]; ratingbody=''
+ ratings=[r for r in load('outside_ratings_2026')['ratings'] if r['chamber']==chamber and r['district_number']==district]; ratingbody=''
  for r in ratings:
   ratingbody+=f'<section class="mini"><h3>{esc(r["organization"])}</h3><p><strong>{esc(r["rating"])}</strong> · {esc(r["year"])}</p><p>{esc(r["measure"])}</p>'
   if r.get('bills'):
@@ -77,6 +78,7 @@ def build(name,slug,district,community,email,phone):
  body+=section('sources','Under construction','<p>Additional bill summaries, floor votes, earlier primary results and digital footprint research will be added after review.</p>')
  aside=f'<aside class="side"><section class="card"><h2>Contact &amp; district</h2><p>Senate District {district} · {esc(community)}</p><p>{link("mailto:"+email,email)}</p><p>{link("tel:"+re.sub(r"[^+0-9]","",phone),phone)}</p></section><section class="card"><h2>Explore more</h2><div class="linklist">{link(race,"Race & opponents →")}{link(finance,"Campaign finance →")}{link("legislative-comparison.html","2023–2024 score comparison →")}</div></section></aside>'
  out=head+'<body>'+header+'<main class="shell"><div class="layout"><div class="stack">'+body+'</div>'+aside+'</div></main><footer class="footer"><div class="shell">Rhode Island Elections Project · Source dates and reporting periods shown by section.</div></footer></body></html>'
+ if chamber=='house': out=out.replace('Rhode Island Senate','Rhode Island House').replace('Senate District','House District').replace('Passed Senate','Passed House').replace('Senate Journals','House Journals').replace('/senators/','/representatives/')
  (ROOT/'candidates'/f'{slug}.html').write_text(out)
 NEW_PROFILES = [('Tiara T Mack','tiara-t-mack',6,'Providence','tiaramackri@gmail.com','(401) 288-1288'),('Samuel W Bell','samuel-w-bell',5,'Providence','swbell11@gmail.com','(301) 351-6650'),('Stefano V Famiglietti','stefano-v-famiglietti',4,'North Providence','sfamiglietti@yahoo.com','(401) 215-3462')]
 NEW_PROFILES += [('Samuel D Zurier','samuel-d-zurier',3,'Providence','sen-zurier@rilegislature.gov','(401) 644-0925'),('Ana B Quezada','ana-b-quezada',2,'Providence','sen-quezada@rilegislature.gov','(401) 255-0345'),('Jacob Bissaillon','jacob-bissaillon',1,'Providence','sen-bissaillon@rilegislature.gov','(401) 276-5563')]
@@ -105,3 +107,7 @@ if __name__ == '__main__':
  build_burdette()
  build_challenger("james-p-pierson")
  build_challenger("samantha-r-wilcox")
+
+if __name__ == "__main__":
+ import runpy
+ runpy.run_path(str(ROOT / "scripts/build_south_kingstown_profiles.py"))
