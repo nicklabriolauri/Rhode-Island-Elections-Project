@@ -1060,7 +1060,7 @@
 
     function buildCandidateProfileHref(candidate) {
       if(candidate?.chamber !== "senate") return "";
-      const profiles = {4: ["famiglietti","stefano-v-famiglietti"],5: ["bell","samuel-w-bell"],6: ["mack","tiara-t-mack"],7: ["ciccone", "frank-a-ciccone"], 8: ["urso", "lori-urso"], 9: ["burke", "john-burke"]};
+      const profiles = {1: ["bissaillon","jacob-bissaillon"],2: ["quezada","ana-b-quezada"],3: ["zurier","samuel-d-zurier"],4: ["famiglietti","stefano-v-famiglietti"],5: ["bell","samuel-w-bell"],6: ["mack","tiara-t-mack"],7: ["ciccone", "frank-a-ciccone"], 8: ["urso", "lori-urso"], 9: ["burke", "john-burke"]};
       const profile = profiles[Number(candidate.district_number)];
       return profile && normalizeSearchText(candidate.name || "").split(" ").includes(profile[0])
         ? `candidates/${profile[1]}.html` : "";
