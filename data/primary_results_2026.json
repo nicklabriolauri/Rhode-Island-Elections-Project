@@ -441,20 +441,25 @@
       "candidates": [
         {
           "name": "Angela Lima",
-          "votes": 1273,
-          "pct": 32.58,
+          "votes": 1293,
+          "pct": 32.69,
           "advanced": false
         },
         {
           "name": "Dawn Euer",
-          "votes": 2634,
-          "pct": 67.42,
-          "advanced": false
+          "votes": 2662,
+          "pct": 67.31,
+          "advanced": true
         }
       ],
       "precincts_reporting": null,
       "precincts_total": null,
-      "reporting_pct": null
+      "reporting_pct": null,
+      "source": "Rhode Island Board of Elections · Official results",
+      "source_url": "https://electionresults.ri.gov/results/public/rhodeisland/elections/RI2026StatewidePrimary/ballot-items/01000000-553f-29ee-e6de-08df0541a30e",
+      "results_updated_at": "2026-09-15T17:17:17",
+      "retrieved_at": "2026-10-04",
+      "status": "official"
     },
     {
       "chamber": "senate",

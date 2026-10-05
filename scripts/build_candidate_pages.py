@@ -17,7 +17,7 @@ def current_index(record):
 def build(name,slug,district,community,email,phone):
  template=(ROOT/'candidates/john-burke.html').read_text(); head=template.split('<body>')[0]; head=head.replace('John Burke',name).replace('Senate District 9',f'Senate District {district}')
  if 'href="candidate-additions.css"' not in head: head=head.replace('</head>','<link rel="stylesheet" href="candidate-additions.css">\n</head>')
- roster=load('whos_running_2026')['chambers']['senate'][str(district)]['candidates']; candidate=next(r for r in roster if name.split()[-1].lower() in r['name'].lower())
+ roster=load('whos_running_2026')['chambers']['senate'][str(district)]['candidates']; candidate=next(r for r in roster if r['candidate_id'].endswith('-'+slug)); surname=candidate['last_name']
  rec=next(r for r in load('incumbent_records_2026')['records'] if r['chamber']=='senate' and r['district_number']==district)
  research=next(r for r in load('candidate_research_2026_with_endorsements')['candidates'] if r['candidate_id']==candidate['candidate_id'])
  supplied=next((r for r in load('candidate_profiles_2026')['profiles'] if r['candidate_id']==candidate['candidate_id']),{})
@@ -28,10 +28,12 @@ def build(name,slug,district,community,email,phone):
  header=template[template.index('<header'):template.index('<main')]; header=header.replace('John Burke',name).replace('john-burke.png',slug+'.png').replace('john-burke',slug).replace('District 9',f'District {district}').replace('district=9',f'district={district}').replace('West Warwick',community);header=re.sub(r'<span class="tag">2024 general election unopposed</span>','',header);header=header.replace('September 2026','October 4, 2026')
  if not (ROOT/'candidates'/f'{slug}.png').exists():
   header=re.sub(r'<div><img class="portrait".*?</div>', '<div class="mini"><h2>Candidate portrait</h2><p>Photo under construction</p></div>',header,flags=re.S)
- body=section('about','About this candidate',f'<p class="intro">{esc(name)} represents Senate District {district} ({esc(community)}). Campaign positions, public records and outside scorecards are shown with their source and reporting period.</p>'+ ('<p>First elected in November 2024; first legislative session: 2025–2026.</p>' if district==8 else '')+f'<p class="source">{link("https://www.rilegislature.gov/senators/"+name.split()[-1]+"/Pages/Biography.aspx","Official General Assembly biography")}</p>')
+ body=section('about','About this candidate',f'<p class="intro">{esc(name)} represents Senate District {district} ({esc(community)}). Campaign positions, public records and outside scorecards are shown with their source and reporting period.</p>'+ ('<p>First elected in November 2024; first legislative session: 2025–2026.</p>' if district==8 else '')+f'<p class="source">{link("https://www.rilegislature.gov/senators/"+surname+"/Pages/Biography.aspx","Official General Assembly biography")}</p>')
  priorities=supplied.get('priorities') or research['priorities']
  if slug=='ana-b-quezada':
   prioritybody='<div class="empty"><strong>Campaign priorities not provided</strong><p>As of October 4, 2026, Ana B. Quezada has not responded to RIEP’s written or verbal requests for campaign priorities.</p></div><p class="source">Outreach status reported by RIEP. This section will be updated if a response is received.</p>'
+ elif not priorities:
+  prioritybody='<div class="empty"><strong>Campaign priorities under construction</strong><p>No campaign priorities are currently recorded for this candidate in RIEP’s research. This section will be updated after verification.</p></div>'
  else:
   sources={(p.get('source_url'),p.get('source_label','Priority source')) for p in priorities if p.get('source_url')}
   prioritybody='<div class="grid2">'+''.join(f'<div class="mini"><h3>{esc(p["title"])}</h3><p>{esc(p["summary"])}</p></div>' for p in priorities)+'</div>'
@@ -41,7 +43,7 @@ def build(name,slug,district,community,email,phone):
  for r in sorted(load('race_data').values(),key=lambda r:int(r['year']),reverse=True):
   if r['chamber'].lower()=='senate' and int(r['district_number'])==district:
    for c in r['candidates']:
-    if name.split()[-1].lower() in c["name"].lower():
+    if surname.lower() in c["name"].lower():
      url=f"/map.html?mode=results&chamber=senate&year={r['year']}&view=party&district={district}"
      elections.append(f'<div class="election"><a class="year election-link" href="{esc(url)}" aria-label="View {r["year"]} Senate District {district} general election results">{r["year"]}</a><div><strong>{esc(c["role"])} · {esc(c["votes"])} votes</strong><small>Districtwide general election</small></div><span class="result">{esc(c["pct"])}</span></div>')
  body+=section('elections','Past electoral performance','<p class="intro">Districtwide general election results. Select a year to open RIEP’s results map.</p><div class="timeline">'+''.join(elections)+'</div>')
@@ -75,6 +77,7 @@ def build(name,slug,district,community,email,phone):
  (ROOT/'candidates'/f'{slug}.html').write_text(out)
 NEW_PROFILES = [('Tiara T Mack','tiara-t-mack',6,'Providence','tiaramackri@gmail.com','(401) 288-1288'),('Samuel W Bell','samuel-w-bell',5,'Providence','swbell11@gmail.com','(301) 351-6650'),('Stefano V Famiglietti','stefano-v-famiglietti',4,'North Providence','sfamiglietti@yahoo.com','(401) 215-3462')]
 NEW_PROFILES += [('Samuel D Zurier','samuel-d-zurier',3,'Providence','sen-zurier@rilegislature.gov','(401) 644-0925'),('Ana B Quezada','ana-b-quezada',2,'Providence','sen-quezada@rilegislature.gov','(401) 255-0345'),('Jacob Bissaillon','jacob-bissaillon',1,'Providence','sen-bissaillon@rilegislature.gov','(401) 276-5563')]
+NEW_PROFILES += [('Walter S Felag Jr','walter-s-felag-jr',10,'Warren, Bristol, Tiverton','sen-felag@rilegislature.gov','(401) 245-7521'),('Linda L Ujifusa','linda-l-ujifusa',11,'Portsmouth, Bristol','sen-ujifusa@rilegislature.gov','(401) 472-4721'),('Louis DiPalma','louis-dipalma',12,'Middletown, Little Compton, Newport, Tiverton','sen-dipalma@rilegislature.gov','(401) 847-8540'),('Dawn Euer','dawn-euer',13,'Newport, Jamestown','sen-euer@rilegislature.gov','(401) 276-5589')]
 if __name__=='__main__':
  build('Lori Urso','lori-urso',8,'Pawtucket','sen-urso@rilegislature.gov','(401) 276-5567')
  build('Frank A Ciccone','frank-a-ciccone',7,'Providence, Johnston','sen-ciccone@rilegislature.gov','(401) 276-5579')
