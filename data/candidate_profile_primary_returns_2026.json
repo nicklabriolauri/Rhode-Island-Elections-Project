@@ -264,5 +264,95 @@
       "source_label": "Rhode Island Board of Elections",
       "retrieved_at": "2026-10-05"
     }
+  ],
+  "robert-britto": [
+    {
+      "year": 2026,
+      "votes": 3068,
+      "share": "100%",
+      "party": "Democratic",
+      "uncontested": true,
+      "source_url": "https://electionresults.ri.gov/results/public/rhodeisland/elections/RI2026StatewidePrimary/ballot-items/01000000-553f-29ee-8b13-08df0541a254",
+      "source_label": "Rhode Island Board of Elections",
+      "results_updated_at": "2026-09-15T17:17:17",
+      "retrieved_at": "2026-10-05"
+    },
+    {
+      "year": 2024,
+      "votes": 1386,
+      "share": "100%",
+      "party": "Democratic",
+      "uncontested": true,
+      "source_url": "https://www.ri.gov/election/results/2024/statewide_primary/races/70.html",
+      "source_label": "Rhode Island Board of Elections",
+      "retrieved_at": "2026-10-05"
+    },
+    {
+      "year": 2022,
+      "votes": 1779,
+      "share": "55.1%",
+      "party": "Democratic",
+      "uncontested": false,
+      "source_url": "https://www.ri.gov/election/results/2022/statewide_primary/races/45.html",
+      "source_label": "Rhode Island Board of Elections",
+      "retrieved_at": "2026-10-05"
+    }
+  ],
+  "ryan-w-pearson": [
+    {
+      "year": 2026,
+      "votes": 2006,
+      "share": "51.85%",
+      "party": "Democratic",
+      "uncontested": false,
+      "source_url": "https://electionresults.ri.gov/results/public/rhodeisland/elections/RI2026StatewidePrimary/ballot-items/01000000-553f-29ee-b294-08df0541a1cc",
+      "source_label": "Rhode Island Board of Elections",
+      "results_updated_at": "2026-09-15T17:17:17",
+      "retrieved_at": "2026-10-05",
+      "display_url": "/primary-results.html?chamber=senate&district=19&party=DEM#racePanel"
+    },
+    {
+      "year": 2024,
+      "votes": 1412,
+      "share": "100%",
+      "party": "Democratic",
+      "uncontested": true,
+      "source_url": "https://www.ri.gov/election/results/2024/statewide_primary/races/71.html",
+      "source_label": "Rhode Island Board of Elections",
+      "retrieved_at": "2026-10-05"
+    },
+    {
+      "year": 2022,
+      "votes": 2625,
+      "share": "100%",
+      "party": "Democratic",
+      "uncontested": true,
+      "source_url": "https://www.ri.gov/election/results/2022/statewide_primary/races/47.html",
+      "source_label": "Rhode Island Board of Elections",
+      "retrieved_at": "2026-10-05"
+    }
+  ],
+  "brian-j-thompson": [
+    {
+      "year": 2026,
+      "votes": 1966,
+      "share": "100%",
+      "party": "Democratic",
+      "uncontested": true,
+      "source_url": "https://electionresults.ri.gov/results/public/rhodeisland/elections/RI2026StatewidePrimary/ballot-items/01000000-553f-29ee-26db-08df0541a1d8",
+      "source_label": "Rhode Island Board of Elections",
+      "results_updated_at": "2026-09-15T17:17:17",
+      "retrieved_at": "2026-10-05"
+    },
+    {
+      "year": 2024,
+      "votes": 1230,
+      "share": "65.8%",
+      "party": "Democratic",
+      "uncontested": false,
+      "source_url": "https://www.ri.gov/election/results/2024/statewide_primary/races/72.html",
+      "source_label": "Rhode Island Board of Elections",
+      "retrieved_at": "2026-10-05"
+    }
   ]
 }
