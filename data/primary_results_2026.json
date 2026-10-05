@@ -470,20 +470,25 @@
       "candidates": [
         {
           "name": "Meghan E Kallman",
-          "votes": 2586,
-          "pct": 70.89,
-          "advanced": false
+          "votes": 2865,
+          "pct": 71.25,
+          "advanced": true
         },
         {
           "name": "Vanessa Lopez",
-          "votes": 1062,
-          "pct": 29.11,
+          "votes": 1156,
+          "pct": 28.75,
           "advanced": false
         }
       ],
       "precincts_reporting": null,
       "precincts_total": null,
-      "reporting_pct": null
+      "reporting_pct": null,
+      "status": "official",
+      "source": "Rhode Island Board of Elections",
+      "source_url": "https://electionresults.ri.gov/results/public/rhodeisland/elections/RI2026StatewidePrimary/ballot-items/01000000-553f-29ee-e308-08df0541a4d9",
+      "results_updated_at": "2026-09-15T17:17:17",
+      "retrieved_at": "2026-10-05"
     },
     {
       "chamber": "senate",

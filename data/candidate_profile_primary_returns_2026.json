@@ -164,5 +164,105 @@
       "source_label": "Rhode Island Board of Elections",
       "retrieved_at": "2026-10-04"
     }
+  ],
+  "valarie-jean-lawson": [
+    {
+      "year": 2026,
+      "votes": 2781,
+      "share": "100%",
+      "party": "Democratic",
+      "uncontested": true,
+      "source_url": "https://electionresults.ri.gov/results/public/rhodeisland/elections/RI2026StatewidePrimary/ballot-items/01000000-553f-29ee-818e-08df0541a248",
+      "source_label": "Rhode Island Board of Elections",
+      "results_updated_at": "2026-09-15T17:17:17",
+      "retrieved_at": "2026-10-05"
+    },
+    {
+      "year": 2024,
+      "votes": 1558,
+      "share": "75.3%",
+      "party": "Democratic",
+      "uncontested": false,
+      "source_url": "https://www.ri.gov/election/results/2024/statewide_primary/races/66.html",
+      "source_label": "Rhode Island Board of Elections",
+      "retrieved_at": "2026-10-05"
+    },
+    {
+      "year": 2022,
+      "votes": 2043,
+      "share": "62.2%",
+      "party": "Democratic",
+      "uncontested": false,
+      "source_url": "https://www.ri.gov/election/results/2022/statewide_primary/races/38.html",
+      "source_label": "Rhode Island Board of Elections",
+      "retrieved_at": "2026-10-05"
+    }
+  ],
+  "meghan-e-kallman": [
+    {
+      "year": 2026,
+      "votes": 2865,
+      "share": "71.25%",
+      "party": "Democratic",
+      "uncontested": false,
+      "source_url": "https://electionresults.ri.gov/results/public/rhodeisland/elections/RI2026StatewidePrimary/ballot-items/01000000-553f-29ee-e308-08df0541a4d9",
+      "source_label": "Rhode Island Board of Elections",
+      "results_updated_at": "2026-09-15T17:17:17",
+      "retrieved_at": "2026-10-05",
+      "display_url": "/primary-results.html?chamber=senate&district=15&party=DEM#racePanel"
+    },
+    {
+      "year": 2024,
+      "votes": 1731,
+      "share": "100%",
+      "party": "Democratic",
+      "uncontested": true,
+      "source_url": "https://www.ri.gov/election/results/2024/statewide_primary/races/67.html",
+      "source_label": "Rhode Island Board of Elections",
+      "retrieved_at": "2026-10-05"
+    },
+    {
+      "year": 2022,
+      "votes": 2797,
+      "share": "100%",
+      "party": "Democratic",
+      "uncontested": true,
+      "source_url": "https://www.ri.gov/election/results/2022/statewide_primary/races/40.html",
+      "source_label": "Rhode Island Board of Elections",
+      "retrieved_at": "2026-10-05"
+    }
+  ],
+  "jonathon-acosta": [
+    {
+      "year": 2026,
+      "votes": 1053,
+      "share": "100%",
+      "party": "Democratic",
+      "uncontested": true,
+      "source_url": "https://electionresults.ri.gov/results/public/rhodeisland/elections/RI2026StatewidePrimary/ballot-items/01000000-553f-29ee-b2cf-08df05419f8a",
+      "source_label": "Rhode Island Board of Elections",
+      "results_updated_at": "2026-09-15T17:17:17",
+      "retrieved_at": "2026-10-05"
+    },
+    {
+      "year": 2024,
+      "votes": 509,
+      "share": "100%",
+      "party": "Democratic",
+      "uncontested": true,
+      "source_url": "https://www.ri.gov/election/results/2024/statewide_primary/races/68.html",
+      "source_label": "Rhode Island Board of Elections",
+      "retrieved_at": "2026-10-05"
+    },
+    {
+      "year": 2022,
+      "votes": 1025,
+      "share": "100%",
+      "party": "Democratic",
+      "uncontested": true,
+      "source_url": "https://www.ri.gov/election/results/2022/statewide_primary/races/41.html",
+      "source_label": "Rhode Island Board of Elections",
+      "retrieved_at": "2026-10-05"
+    }
   ]
 }
