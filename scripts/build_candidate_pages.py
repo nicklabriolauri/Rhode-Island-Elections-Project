@@ -25,7 +25,7 @@ def build(name,slug,district,community,email,phone):
  # Official RI AFL-CIO 2026 primary endorsement list checked October 2, 2026.
  if district in (7,8): research['endorsements']=[e for e in research['endorsements'] if 'AFL-CIO' not in e['endorser']] + [{'endorser':'Rhode Island AFL-CIO · 2026 primary endorsement','source_url':'https://rhodeislandaflcio.org/candidate-endorsement-applications-2026/'}]
  race=f'/running.html?chamber=senate&district={district}&election=general'; finance=f'/finance.html?slug={slug}'
- header=template[template.index('<header'):template.index('<main')]; header=header.replace('John Burke',name).replace('john-burke.png',slug+'.png').replace('john-burke',slug).replace('District 9',f'District {district}').replace('district=9',f'district={district}').replace('West Warwick',community);header=re.sub(r'<span class="tag">2024 general election unopposed</span>','',header);header=header.replace('September 2026','October 5, 2026' if district in (14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) else 'October 4, 2026')
+ header=template[template.index('<header'):template.index('<main')]; header=header.replace('John Burke',name).replace('john-burke.png',slug+'.png').replace('john-burke',slug).replace('District 9',f'District {district}').replace('district=9',f'district={district}').replace('West Warwick',community);header=re.sub(r'<span class="tag">2024 general election unopposed</span>','',header);header=header.replace('September 2026','October 5, 2026' if district in (14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35) else 'October 4, 2026')
  if candidate['party']=='REP': header=header.replace('Democratic','Republican').replace('Democrat','Republican')
  if not (ROOT/'candidates'/f'{slug}.png').exists():
   header=re.sub(r'<div><img class="portrait".*?</div>', '<div class="mini"><h2>Candidate portrait</h2><p>Photo under construction</p></div>',header,flags=re.S)
@@ -86,6 +86,7 @@ NEW_PROFILES += [('Robert Britto', 'robert-britto', 18, 'East Providence, Pawtuc
 NEW_PROFILES += [('Gordon E Rogers', 'gordon-e-rogers', 21, 'Foster, Coventry, Scituate, West Greenwich', 'sen-rogers@rilegislature.gov', '(401) 222-2708'), ('David P Tikoian', 'david-p-tikoian', 22, 'Smithfield, North Providence, Lincoln', 'sen-tikoian@rilegislature.gov', '(401) 276-5563'), ('Jessica de la Cruz', 'jessica-de-la-cruz', 23, 'North Smithfield, Burrillville, Glocester', 'sen-delacruz@rilegislature.gov', '(401) 484-0155')]
 NEW_PROFILES += [('Melissa Murray', 'melissa-murray', 24, 'Woonsocket, North Smithfield', 'sen-murray@rilegislature.gov', '(401) 276-5568'), ('Andrew R Dimitri', 'andrew-r-dimitri', 25, 'Johnston', 'sen-dimitri@rilegislature.gov', '(401) 276-5563'), ('Todd M Patalano', 'todd-m-patalano', 26, 'Cranston', 'sen-patalano@rilegislature.gov', '(401) 276-5592'), ('Hanna M Gallo', 'hanna-m-gallo', 27, 'Cranston, West Warwick', 'sen-gallo@rilegislature.gov', '(401) 222-4901')]
 NEW_PROFILES += [('Lammis J Vargas', 'lammis-j-vargas', 28, 'Cranston, Providence', 'sen-vargas@rilegislature.gov', '(401) 276-5584'), ('Peter A Appollonio Jr', 'peter-a-appollonio-jr', 29, 'Warwick', 'sen-appollonio@rilegislature.gov', '(401) 276-5589'), ('Mark McKenney', 'mark-mckenney', 30, 'Warwick', 'sen-mckenney@rilegislature.gov', '(401) 578-6258'), ('Matthew L LaMountain', 'matthew-l-lamountain', 31, 'Warwick, Cranston', 'sen-lamountain@rilegislature.gov', '(401) 206-0822'), ('Thomas J Paolino', 'thomas-j-paolino', 17, 'Lincoln, North Smithfield, North Providence', 'sen-paolino@rilegislature.gov', '(401) 222-2708')]
+NEW_PROFILES += [('Pamela J Lauria', 'pamela-j-lauria', 32, 'Barrington, Bristol, East Providence', 'sen-lauria@rilegislature.gov', '(401) 431-0013'), ('Leonidas Peter Raptakis', 'leonidas-peter-raptakis', 33, 'Coventry, West Greenwich', 'sen-raptakis@rilegislature.gov', '(401) 276-5567'), ('Elaine J Morgan', 'elaine-j-morgan', 34, 'Hopkinton, Charlestown, Exeter, Richmond, West Greenwich', 'sen-morgan@rilegislature.gov', '(401) 222-2708'), ('Bridget G Valverde', 'bridget-g-valverde', 35, 'North Kingstown, East Greenwich, South Kingstown', 'sen-valverde@rilegislature.gov', '(401) 276-5561')]
 if __name__=='__main__':
  build('Lori Urso','lori-urso',8,'Pawtucket','sen-urso@rilegislature.gov','(401) 276-5567')
  build('Frank A Ciccone','frank-a-ciccone',7,'Providence, Johnston','sen-ciccone@rilegislature.gov','(401) 276-5579')
@@ -100,5 +101,7 @@ if __name__ == '__main__':
   harmonize(slug)
 
 if __name__ == '__main__':
- from build_challenger_pages import build_burdette
+ from build_challenger_pages import build_burdette, build_challenger
  build_burdette()
+ build_challenger("james-p-pierson")
+ build_challenger("samantha-r-wilcox")
