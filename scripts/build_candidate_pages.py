@@ -18,14 +18,14 @@ def build(name,slug,district,community,email,phone):
  template=(ROOT/'candidates/john-burke.html').read_text(); head=template.split('<body>')[0]; head=head.replace('John Burke',name).replace('Senate District 9',f'Senate District {district}')
  if 'href="candidate-additions.css"' not in head: head=head.replace('</head>','<link rel="stylesheet" href="candidate-additions.css">\n</head>')
  roster=load('whos_running_2026')['chambers']['senate'][str(district)]['candidates']; candidate=next(r for r in roster if r['candidate_id'].endswith('-'+slug)); surname=candidate['last_name']
- rec=next(r for r in load('incumbent_records_2026')['records'] if r['chamber']=='senate' and r['district_number']==district)
+ rec=next(r for r in load('incumbent_records_2026')['records'] if r['chamber']=='senate' and r['candidate_id']==candidate['candidate_id'])
  research=next(r for r in load('candidate_research_2026_with_endorsements')['candidates'] if r['candidate_id']==candidate['candidate_id'])
  supplied=next((r for r in load('candidate_profiles_2026')['profiles'] if r['candidate_id']==candidate['candidate_id']),{})
  fin=next(r for r in load('candidate_finance_2026')['profiles'] if r['slug']==slug)
  # Official RI AFL-CIO 2026 primary endorsement list checked October 2, 2026.
  if district in (7,8): research['endorsements']=[e for e in research['endorsements'] if 'AFL-CIO' not in e['endorser']] + [{'endorser':'Rhode Island AFL-CIO · 2026 primary endorsement','source_url':'https://rhodeislandaflcio.org/candidate-endorsement-applications-2026/'}]
  race=f'/running.html?chamber=senate&district={district}&election=general'; finance=f'/finance.html?slug={slug}'
- header=template[template.index('<header'):template.index('<main')]; header=header.replace('John Burke',name).replace('john-burke.png',slug+'.png').replace('john-burke',slug).replace('District 9',f'District {district}').replace('district=9',f'district={district}').replace('West Warwick',community);header=re.sub(r'<span class="tag">2024 general election unopposed</span>','',header);header=header.replace('September 2026','October 5, 2026' if district in (14,15,16,18,19,20,21,22,23,24,25,26,27) else 'October 4, 2026')
+ header=template[template.index('<header'):template.index('<main')]; header=header.replace('John Burke',name).replace('john-burke.png',slug+'.png').replace('john-burke',slug).replace('District 9',f'District {district}').replace('district=9',f'district={district}').replace('West Warwick',community);header=re.sub(r'<span class="tag">2024 general election unopposed</span>','',header);header=header.replace('September 2026','October 5, 2026' if district in (14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) else 'October 4, 2026')
  if candidate['party']=='REP': header=header.replace('Democratic','Republican').replace('Democrat','Republican')
  if not (ROOT/'candidates'/f'{slug}.png').exists():
   header=re.sub(r'<div><img class="portrait".*?</div>', '<div class="mini"><h2>Candidate portrait</h2><p>Photo under construction</p></div>',header,flags=re.S)
@@ -85,6 +85,7 @@ NEW_PROFILES += [('Valarie Jean Lawson', 'valarie-jean-lawson', 14, 'East Provid
 NEW_PROFILES += [('Robert Britto', 'robert-britto', 18, 'East Providence, Pawtucket', 'sen-britto@rilegislature.gov', '(401) 447-4226'), ('Ryan W Pearson', 'ryan-w-pearson', 19, 'Cumberland, Lincoln', 'sen-pearson@rilegislature.gov', '(401) 276-5535'), ('Brian J Thompson', 'brian-j-thompson', 20, 'Woonsocket, Cumberland', 'sen-thompson@rilegislature.gov', '(401) 276-5568')]
 NEW_PROFILES += [('Gordon E Rogers', 'gordon-e-rogers', 21, 'Foster, Coventry, Scituate, West Greenwich', 'sen-rogers@rilegislature.gov', '(401) 222-2708'), ('David P Tikoian', 'david-p-tikoian', 22, 'Smithfield, North Providence, Lincoln', 'sen-tikoian@rilegislature.gov', '(401) 276-5563'), ('Jessica de la Cruz', 'jessica-de-la-cruz', 23, 'North Smithfield, Burrillville, Glocester', 'sen-delacruz@rilegislature.gov', '(401) 484-0155')]
 NEW_PROFILES += [('Melissa Murray', 'melissa-murray', 24, 'Woonsocket, North Smithfield', 'sen-murray@rilegislature.gov', '(401) 276-5568'), ('Andrew R Dimitri', 'andrew-r-dimitri', 25, 'Johnston', 'sen-dimitri@rilegislature.gov', '(401) 276-5563'), ('Todd M Patalano', 'todd-m-patalano', 26, 'Cranston', 'sen-patalano@rilegislature.gov', '(401) 276-5592'), ('Hanna M Gallo', 'hanna-m-gallo', 27, 'Cranston, West Warwick', 'sen-gallo@rilegislature.gov', '(401) 222-4901')]
+NEW_PROFILES += [('Lammis J Vargas', 'lammis-j-vargas', 28, 'Cranston, Providence', 'sen-vargas@rilegislature.gov', '(401) 276-5584'), ('Peter A Appollonio Jr', 'peter-a-appollonio-jr', 29, 'Warwick', 'sen-appollonio@rilegislature.gov', '(401) 276-5589'), ('Mark McKenney', 'mark-mckenney', 30, 'Warwick', 'sen-mckenney@rilegislature.gov', '(401) 578-6258'), ('Matthew L LaMountain', 'matthew-l-lamountain', 31, 'Warwick, Cranston', 'sen-lamountain@rilegislature.gov', '(401) 206-0822'), ('Thomas J Paolino', 'thomas-j-paolino', 17, 'Lincoln, North Smithfield, North Providence', 'sen-paolino@rilegislature.gov', '(401) 222-2708')]
 if __name__=='__main__':
  build('Lori Urso','lori-urso',8,'Pawtucket','sen-urso@rilegislature.gov','(401) 276-5567')
  build('Frank A Ciccone','frank-a-ciccone',7,'Providence, Johnston','sen-ciccone@rilegislature.gov','(401) 276-5579')
@@ -97,3 +98,7 @@ if __name__ == '__main__':
  for name,slug,district,community,email,phone in NEW_PROFILES:
   build(name,slug,district,community,email,phone)
   harmonize(slug)
+
+if __name__ == '__main__':
+ from build_challenger_pages import build_burdette
+ build_burdette()
