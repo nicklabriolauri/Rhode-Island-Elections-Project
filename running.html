@@ -1013,7 +1013,7 @@
       if(campaign) links.push(`<a href="${esc(campaign)}" target="_blank" rel="noopener">Campaign website</a>`);
       if(email) links.push(`<a href="mailto:${esc(email)}">Email</a>`);
       if(phone) links.push(`<a href="tel:${esc(String(phone).replace(/[^\d+]/g,''))}">Call</a>`);
-      const candidateProfile = ({"senate-4-dem-primary-stefano-v-famiglietti":"stefano-v-famiglietti", "senate-5-dem-primary-samuel-w-bell":"samuel-w-bell", "senate-6-dem-primary-tiara-t-mack":"tiara-t-mack", "senate-9-dem-primary-john-burke":"john-burke", "senate-8-dem-primary-lori-urso":"lori-urso", "senate-7-dem-primary-frank-a-ciccone":"frank-a-ciccone"})[candidate.candidate_id];
+      const candidateProfile = ({"senate-1-dem-primary-jacob-bissaillon":"jacob-bissaillon", "senate-2-dem-primary-ana-b-quezada":"ana-b-quezada", "senate-3-dem-primary-samuel-d-zurier":"samuel-d-zurier", "senate-4-dem-primary-stefano-v-famiglietti":"stefano-v-famiglietti", "senate-5-dem-primary-samuel-w-bell":"samuel-w-bell", "senate-6-dem-primary-tiara-t-mack":"tiara-t-mack", "senate-9-dem-primary-john-burke":"john-burke", "senate-8-dem-primary-lori-urso":"lori-urso", "senate-7-dem-primary-frank-a-ciccone":"frank-a-ciccone"})[candidate.candidate_id];
       if(candidateProfile) links.unshift(`<a href="candidates/${candidateProfile}.html">Candidate profile</a>`);
       links.push(`<a class="finance" href="finance.html?candidate=${encodeURIComponent(candidate.candidate_id)}">Campaign finance</a>`);
 

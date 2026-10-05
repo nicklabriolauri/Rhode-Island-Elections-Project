@@ -93,8 +93,13 @@ def harmonize(slug):
      url=f'/primary-results.html?chamber=senate&amp;district={district}&amp;party=DEM#racePanel'
      rows.append(f'<div class="election"><a class="year election-link" href="{url}" aria-label="View 2026 Democratic primary results for Senate District {district}">2026</a><div><strong>{candidate["votes"]:,} votes</strong><small>Democratic primary · Districtwide</small></div><a class="result election-link" href="{url}" aria-label="View the primary race behind {candidate["pct"]}% vote share">{candidate["pct"]}%</a></div>')
  if slug=='frank-a-ciccone': rows=ciccone_primary_rows()
+ official_primary_path=ROOT/'data/candidate_profile_primary_returns_2026.json'
+ official_primary=json.loads(official_primary_path.read_text()).get(slug) if official_primary_path.exists() else None
+ if official_primary:
+  entry=official_primary;url=esc(entry['source_url']);year=entry['year']
+  rows=[f'<div class="election"><a class="year election-link" href="{url}" aria-label="View {year} Senate District {district} Democratic primary result">{year}</a><div><strong>Advanced · {entry["votes"]:,} votes</strong><small>Uncontested Democratic primary · Official results</small></div><a class="result election-link" href="{url}" aria-label="View {year} primary result: {entry["share"]} vote share">{entry["share"]}</a></div>']
  page=replace_section(page,'primaries',section('primaries','Democratic primary history',f'<p class="intro">Senate District {district} · Share of votes cast for named candidates. Select a year or vote share to open that specific primary race.</p><div class="timeline">'+(''.join(rows) or '<p>No primary returns are available in the current project dataset for this candidate. Additional primary history is under construction.</p>')+'</div><p class="source">2026 figures use RIEP’s unofficial September 10 snapshot. Earlier primary years are under construction. An uncontested 100% excludes undervotes.</p>'))
- if slug=='frank-a-ciccone':
+ if slug=='frank-a-ciccone' or official_primary:
   page=page.replace('2026 figures use RIEP’s unofficial September 10 snapshot. Earlier primary years are under construction. An uncontested 100% excludes undervotes.','Official Board of Elections returns for the years shown. An uncontested 100% is the share of votes for named candidates, excluding undervotes. Additional earlier years are under construction.')
  # Use Burke's finance grid, office-details list, and subhead styling.
  finance_start=page.index('<section class="card" id="finance">');finance_end=page.index('<section class="card" id="record">');page=page[:finance_start]+page[finance_start:finance_end].replace('class="record-grid"','class="metric-grid"')+page[finance_end:]
@@ -108,7 +113,13 @@ def harmonize(slug):
  page=replace_section(page,'endorsements',section('endorsements','Endorsements','<p class="intro">Published endorsements from outside organizations. Select an organization to view its endorsement source.</p>'+''.join(f'<div class="endorsement-entry"><a class="endorsement-chip" href="{esc(e["source_url"])}" target="_blank" rel="noopener">{esc(e["endorser"])} ↗</a><p class="endorsement-period">2026 election · Senate District {district}</p></div>' for e in endorsements)+'<p class="source">Outside organizations’ endorsements, not RIEP endorsements. Sources may include organization lists and voter-guide records.</p>'))
  # Sidebar labels and contact formatting are shared with Burke.
  email='sen-urso@rilegislature.gov' if district==8 else 'sen-ciccone@rilegislature.gov' if district==7 else roster['email'];phone='(401) 276-5567' if district==8 else '(401) 276-5579' if district==7 else roster['phone']
- contact=section('contact','Contact &amp; district','<dl class="details">'+''.join(f'<div><dt>{label}</dt><dd>{value}</dd></div>' for label,value in [('District',f'Senate District {district}'),('Community',esc(community)),('Phone',f'<a href="tel:+1{re.sub(r"[^0-9]","",phone)}">{phone}</a>'),('Legislative email' if district in (7,8) else 'Roster contact email',f'<a href="mailto:{email}">{email}</a>')])+'</dl>')
+ official_contacts={1:('sen-bissaillon@rilegislature.gov','(401) 276-5563'),2:('sen-quezada@rilegislature.gov','(401) 255-0345'),3:('sen-zurier@rilegislature.gov','(401) 644-0925')}
+ if district in official_contacts: email,phone=official_contacts[district]
+ contact=section('contact','Contact &amp; district','<dl class="details">'+''.join(f'<div><dt>{label}</dt><dd>{value}</dd></div>' for label,value in [('District',f'Senate District {district}'),('Community',esc(community)),('Phone',f'<a href="tel:+1{re.sub(r"[^0-9]","",phone)}">{phone}</a>'),('Legislative email' if district in (1,2,3,7,8) else 'Roster contact email',f'<a href="mailto:{email}">{email}</a>')])+'</dl>')
  page=re.sub(r'(<aside class="side"[^>]*>)<section class="card">.*?</section>',lambda m:m[1]+contact,page,count=1,flags=re.S)
  page=page.replace('</body>','<script src="candidate-profile.js"></script></body>')
+ if district in official_contacts:
+  surname=name.split()[-1].lower();bio=f'https://www.rilegislature.gov/senators/{surname}/Pages/Biography.aspx'
+  page=page.replace('Portrait supplied by the project',f'Portrait: <a href="{bio}" target="_blank" rel="noopener">Rhode Island General Assembly ↗</a>').replace('width="402" height="536"','width="450" height="600"')
+  if not endorsements:page=page.replace('Published endorsements from outside organizations. Select an organization to view its endorsement source.','No published endorsements are currently recorded for this candidate in RIEP’s research. Additional endorsements will be added after verification.')
  p.write_text(page)
