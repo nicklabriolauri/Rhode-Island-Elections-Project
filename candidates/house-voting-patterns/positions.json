@@ -1,0 +1,2775 @@
+{
+  "title": "Rhode Island House voting patterns",
+  "period": "2025\u20132026",
+  "latest_journal": "2026-06-11",
+  "inventory_checked": "2026-10-06",
+  "status": "experimental website preview",
+  "scope": {
+    "journals": 91,
+    "years": {
+      "2025": 46,
+      "2026": 45
+    },
+    "people_in_historical_roster": 75,
+    "current_representatives": 75,
+    "binary_rollcalls": 1210,
+    "validated_rollcalls": 1210,
+    "quarantined_rollcalls": 0,
+    "validated_divided_rollcalls": 450,
+    "nonbinary_ballots": 2
+  },
+  "model": {
+    "package": "wnominate",
+    "version": "1.5",
+    "dimensions": 1,
+    "minority_cutoff": 0.025,
+    "minimum_votes": 20,
+    "bootstrap_trials": 50,
+    "native_bootstrap_success": true,
+    "positive_anchor": "Michael Chippendale",
+    "higher_is_better": false,
+    "interpretation": "Relative positions within the House and vote set; not an effectiveness score. Liberal/conservative labels are provisional; separately fitted House and Senate coordinates are not directly comparable."
+  },
+  "sensitivity": {
+    "cutoff_5pct": {
+      "common_legislators": 75,
+      "votes_used": 370,
+      "spearman": 0.9571
+    },
+    "cutoff_10pct": {
+      "common_legislators": 75,
+      "votes_used": 252,
+      "spearman": 0.9744
+    },
+    "year_2025": {
+      "common_legislators": 75,
+      "votes_used": 263,
+      "spearman": 0.8978
+    },
+    "year_2026": {
+      "common_legislators": 75,
+      "votes_used": 187,
+      "spearman": 0.8663
+    },
+    "passage_only": {
+      "common_legislators": 75,
+      "votes_used": 380,
+      "spearman": 0.9437
+    }
+  },
+  "positions": [
+    {
+      "name": "Kathleen A Fogarty",
+      "district": 35,
+      "party": "DEM",
+      "position": -1.0,
+      "bootstrap_standard_error": 0.0546954087913036,
+      "recorded_votes_used": 420,
+      "correct_classification": 0.969047619047619
+    },
+    {
+      "name": "David Morales",
+      "district": 7,
+      "party": "DEM",
+      "position": -0.984147787094116,
+      "bootstrap_standard_error": 0.0526417940855026,
+      "recorded_votes_used": 417,
+      "correct_classification": 0.959232613908873
+    },
+    {
+      "name": "Jennifer A Stewart",
+      "district": 59,
+      "party": "DEM",
+      "position": -0.973560512065887,
+      "bootstrap_standard_error": 0.0618267953395844,
+      "recorded_votes_used": 444,
+      "correct_classification": 0.95045045045045
+    },
+    {
+      "name": "Arthur Handy",
+      "district": 18,
+      "party": "DEM",
+      "position": -0.963436663150787,
+      "bootstrap_standard_error": 0.062620110809803,
+      "recorded_votes_used": 362,
+      "correct_classification": 0.99171270718232
+    },
+    {
+      "name": "Julie Casimiro",
+      "district": 31,
+      "party": "DEM",
+      "position": -0.948864459991455,
+      "bootstrap_standard_error": 0.0556530952453613,
+      "recorded_votes_used": 416,
+      "correct_classification": 0.975961538461538
+    },
+    {
+      "name": "Edith H Ajello",
+      "district": 1,
+      "party": "DEM",
+      "position": -0.94375467300415,
+      "bootstrap_standard_error": 0.0595466792583466,
+      "recorded_votes_used": 406,
+      "correct_classification": 0.943349753694581
+    },
+    {
+      "name": "Rebecca M Kislak",
+      "district": 4,
+      "party": "DEM",
+      "position": -0.935982286930084,
+      "bootstrap_standard_error": 0.0611604452133179,
+      "recorded_votes_used": 435,
+      "correct_classification": 0.988505747126437
+    },
+    {
+      "name": "Joseph Shekarchi",
+      "district": 23,
+      "party": "DEM",
+      "position": -0.932204306125641,
+      "bootstrap_standard_error": 0.0530597753822803,
+      "recorded_votes_used": 291,
+      "correct_classification": 1.0
+    },
+    {
+      "name": "Lauren H Carson",
+      "district": 75,
+      "party": "DEM",
+      "position": -0.924587309360504,
+      "bootstrap_standard_error": 0.0663041770458221,
+      "recorded_votes_used": 417,
+      "correct_classification": 0.976019184652278
+    },
+    {
+      "name": "June S Speakman",
+      "district": 68,
+      "party": "DEM",
+      "position": -0.916665971279144,
+      "bootstrap_standard_error": 0.0588604807853699,
+      "recorded_votes_used": 439,
+      "correct_classification": 0.988610478359909
+    },
+    {
+      "name": "Robert E Craven Jr",
+      "district": 32,
+      "party": "DEM",
+      "position": -0.907279670238495,
+      "bootstrap_standard_error": 0.050451185554266,
+      "recorded_votes_used": 426,
+      "correct_classification": 1.0
+    },
+    {
+      "name": "Jennifer Smith Boylan",
+      "district": 66,
+      "party": "DEM",
+      "position": -0.903806090354919,
+      "bootstrap_standard_error": 0.0495753437280655,
+      "recorded_votes_used": 446,
+      "correct_classification": 0.991031390134529
+    },
+    {
+      "name": "Terri-Denise Cortvriend",
+      "district": 72,
+      "party": "DEM",
+      "position": -0.902829229831696,
+      "bootstrap_standard_error": 0.0590358749032021,
+      "recorded_votes_used": 423,
+      "correct_classification": 0.978723404255319
+    },
+    {
+      "name": "Justine Caldwell",
+      "district": 30,
+      "party": "DEM",
+      "position": -0.893433511257172,
+      "bootstrap_standard_error": 0.0440434888005257,
+      "recorded_votes_used": 443,
+      "correct_classification": 1.0
+    },
+    {
+      "name": "Karen Alzate",
+      "district": 60,
+      "party": "DEM",
+      "position": -0.889648199081421,
+      "bootstrap_standard_error": 0.0551463924348354,
+      "recorded_votes_used": 421,
+      "correct_classification": 0.995249406175772
+    },
+    {
+      "name": "Mary Ann Shallcross Smith",
+      "district": 46,
+      "party": "DEM",
+      "position": -0.888498187065125,
+      "bootstrap_standard_error": 0.0503112263977528,
+      "recorded_votes_used": 432,
+      "correct_classification": 1.0
+    },
+    {
+      "name": "Anthony J DeSimone",
+      "district": 5,
+      "party": "DEM",
+      "position": -0.887042105197906,
+      "bootstrap_standard_error": 0.0543806292116642,
+      "recorded_votes_used": 448,
+      "correct_classification": 1.0
+    },
+    {
+      "name": "Susan Ann Donovan",
+      "district": 69,
+      "party": "DEM",
+      "position": -0.886985123157501,
+      "bootstrap_standard_error": 0.0498179905116558,
+      "recorded_votes_used": 446,
+      "correct_classification": 1.0
+    },
+    {
+      "name": "Jenni A Furtado",
+      "district": 64,
+      "party": "DEM",
+      "position": -0.886985003948212,
+      "bootstrap_standard_error": 0.0553747341036797,
+      "recorded_votes_used": 450,
+      "correct_classification": 1.0
+    },
+    {
+      "name": "Marvin Abney",
+      "district": 73,
+      "party": "DEM",
+      "position": -0.886932551860809,
+      "bootstrap_standard_error": 0.0423128008842468,
+      "recorded_votes_used": 443,
+      "correct_classification": 1.0
+    },
+    {
+      "name": "Katherine Sheena Kazarian",
+      "district": 63,
+      "party": "DEM",
+      "position": -0.886618793010712,
+      "bootstrap_standard_error": 0.053072065114975,
+      "recorded_votes_used": 442,
+      "correct_classification": 1.0
+    },
+    {
+      "name": "Brandon Potter",
+      "district": 16,
+      "party": "DEM",
+      "position": -0.88567054271698,
+      "bootstrap_standard_error": 0.0515566915273666,
+      "recorded_votes_used": 413,
+      "correct_classification": 0.997578692493947
+    },
+    {
+      "name": "Christopher R Blazejewski",
+      "district": 2,
+      "party": "DEM",
+      "position": -0.885037481784821,
+      "bootstrap_standard_error": 0.0573473870754242,
+      "recorded_votes_used": 433,
+      "correct_classification": 1.0
+    },
+    {
+      "name": "John G Edwards",
+      "district": 70,
+      "party": "DEM",
+      "position": -0.885011494159698,
+      "bootstrap_standard_error": 0.056794460862875,
+      "recorded_votes_used": 364,
+      "correct_classification": 0.909340659340659
+    },
+    {
+      "name": "Grace Diaz",
+      "district": 11,
+      "party": "DEM",
+      "position": -0.884647190570831,
+      "bootstrap_standard_error": 0.0550632886588573,
+      "recorded_votes_used": 395,
+      "correct_classification": 0.994936708860759
+    },
+    {
+      "name": "Joseph McNamara",
+      "district": 19,
+      "party": "DEM",
+      "position": -0.88120037317276,
+      "bootstrap_standard_error": 0.0597508139908314,
+      "recorded_votes_used": 420,
+      "correct_classification": 0.997619047619048
+    },
+    {
+      "name": "Joshua J Giraldo",
+      "district": 56,
+      "party": "DEM",
+      "position": -0.879550397396088,
+      "bootstrap_standard_error": 0.0482710562646389,
+      "recorded_votes_used": 438,
+      "correct_classification": 0.988584474885845
+    },
+    {
+      "name": "Matthew Dawson",
+      "district": 65,
+      "party": "DEM",
+      "position": -0.879170179367065,
+      "bootstrap_standard_error": 0.0512744449079037,
+      "recorded_votes_used": 413,
+      "correct_classification": 0.997578692493947
+    },
+    {
+      "name": "Teresa A Tanzi",
+      "district": 34,
+      "party": "DEM",
+      "position": -0.868111729621887,
+      "bootstrap_standard_error": 0.048090685158968,
+      "recorded_votes_used": 429,
+      "correct_classification": 0.937062937062937
+    },
+    {
+      "name": "Carol Hagan McEntee",
+      "district": 33,
+      "party": "DEM",
+      "position": -0.862375617027283,
+      "bootstrap_standard_error": 0.0578972436487675,
+      "recorded_votes_used": 447,
+      "correct_classification": 0.995525727069351
+    },
+    {
+      "name": "Alex Finkelman",
+      "district": 74,
+      "party": "DEM",
+      "position": -0.862371981143951,
+      "bootstrap_standard_error": 0.0525471456348896,
+      "recorded_votes_used": 342,
+      "correct_classification": 0.991228070175439
+    },
+    {
+      "name": "Mia A Ackerman",
+      "district": 45,
+      "party": "DEM",
+      "position": -0.861398935317993,
+      "bootstrap_standard_error": 0.0465386733412743,
+      "recorded_votes_used": 410,
+      "correct_classification": 0.997560975609756
+    },
+    {
+      "name": "Tina L Spears",
+      "district": 36,
+      "party": "DEM",
+      "position": -0.859983205795288,
+      "bootstrap_standard_error": 0.048161830753088,
+      "recorded_votes_used": 430,
+      "correct_classification": 0.997674418604651
+    },
+    {
+      "name": "Brandon T Voas",
+      "district": 57,
+      "party": "DEM",
+      "position": -0.859734237194061,
+      "bootstrap_standard_error": 0.0510307922959328,
+      "recorded_votes_used": 433,
+      "correct_classification": 0.997690531177829
+    },
+    {
+      "name": "Jason Knight",
+      "district": 67,
+      "party": "DEM",
+      "position": -0.857377767562866,
+      "bootstrap_standard_error": 0.0515715889632702,
+      "recorded_votes_used": 409,
+      "correct_classification": 0.970660146699266
+    },
+    {
+      "name": "Michelle E McGaw",
+      "district": 71,
+      "party": "DEM",
+      "position": -0.856480002403259,
+      "bootstrap_standard_error": 0.0524696744978428,
+      "recorded_votes_used": 438,
+      "correct_classification": 0.972602739726027
+    },
+    {
+      "name": "Jose Batista",
+      "district": 12,
+      "party": "DEM",
+      "position": -0.855668842792511,
+      "bootstrap_standard_error": 0.0468521751463413,
+      "recorded_votes_used": 397,
+      "correct_classification": 0.954659949622166
+    },
+    {
+      "name": "Nathan W Biah",
+      "district": 3,
+      "party": "DEM",
+      "position": -0.848203420639038,
+      "bootstrap_standard_error": 0.0493465587496758,
+      "recorded_votes_used": 392,
+      "correct_classification": 0.982142857142857
+    },
+    {
+      "name": "Cherie L Cruz",
+      "district": 58,
+      "party": "DEM",
+      "position": -0.848008871078491,
+      "bootstrap_standard_error": 0.0485017448663712,
+      "recorded_votes_used": 390,
+      "correct_classification": 0.935897435897436
+    },
+    {
+      "name": "Alex D Marszalkowski",
+      "district": 52,
+      "party": "DEM",
+      "position": -0.846681416034698,
+      "bootstrap_standard_error": 0.0551372319459915,
+      "recorded_votes_used": 405,
+      "correct_classification": 0.997530864197531
+    },
+    {
+      "name": "Scott A Slater",
+      "district": 10,
+      "party": "DEM",
+      "position": -0.840168297290802,
+      "bootstrap_standard_error": 0.0441270060837269,
+      "recorded_votes_used": 403,
+      "correct_classification": 0.990074441687345
+    },
+    {
+      "name": "Mary Duffy Messier",
+      "district": 62,
+      "party": "DEM",
+      "position": -0.818323910236359,
+      "bootstrap_standard_error": 0.0489546842873096,
+      "recorded_votes_used": 443,
+      "correct_classification": 0.988713318284424
+    },
+    {
+      "name": "Raymond A Hull",
+      "district": 6,
+      "party": "DEM",
+      "position": -0.810755908489227,
+      "bootstrap_standard_error": 0.0481948927044868,
+      "recorded_votes_used": 418,
+      "correct_classification": 0.988038277511962
+    },
+    {
+      "name": "Earl A Read III",
+      "district": 26,
+      "party": "DEM",
+      "position": -0.791599333286285,
+      "bootstrap_standard_error": 0.0472324416041374,
+      "recorded_votes_used": 448,
+      "correct_classification": 0.979910714285714
+    },
+    {
+      "name": "Evan Patrick Shanley",
+      "district": 24,
+      "party": "DEM",
+      "position": -0.790637671947479,
+      "bootstrap_standard_error": 0.0571376830339432,
+      "recorded_votes_used": 394,
+      "correct_classification": 0.977157360406091
+    },
+    {
+      "name": "Leonela Felix",
+      "district": 61,
+      "party": "DEM",
+      "position": -0.787748873233795,
+      "bootstrap_standard_error": 0.0505732148885727,
+      "recorded_votes_used": 409,
+      "correct_classification": 0.941320293398533
+    },
+    {
+      "name": "Brian Patrick Kennedy",
+      "district": 38,
+      "party": "DEM",
+      "position": -0.775616466999054,
+      "bootstrap_standard_error": 0.0432054586708546,
+      "recorded_votes_used": 408,
+      "correct_classification": 0.982843137254902
+    },
+    {
+      "name": "Patricia Serpa",
+      "district": 27,
+      "party": "DEM",
+      "position": -0.773779213428497,
+      "bootstrap_standard_error": 0.0513741597533226,
+      "recorded_votes_used": 399,
+      "correct_classification": 0.977443609022556
+    },
+    {
+      "name": "William W O'Brien",
+      "district": 54,
+      "party": "DEM",
+      "position": -0.766974151134491,
+      "bootstrap_standard_error": 0.0548607259988785,
+      "recorded_votes_used": 372,
+      "correct_classification": 0.978494623655914
+    },
+    {
+      "name": "Deborah A Fellela",
+      "district": 43,
+      "party": "DEM",
+      "position": -0.765046656131744,
+      "bootstrap_standard_error": 0.0522695109248161,
+      "recorded_votes_used": 429,
+      "correct_classification": 0.979020979020979
+    },
+    {
+      "name": "Samuel Angelo Azzinaro",
+      "district": 37,
+      "party": "DEM",
+      "position": -0.738933145999908,
+      "bootstrap_standard_error": 0.0545206815004349,
+      "recorded_votes_used": 437,
+      "correct_classification": 0.974828375286041
+    },
+    {
+      "name": "David A Bennett",
+      "district": 20,
+      "party": "DEM",
+      "position": -0.704752087593079,
+      "bootstrap_standard_error": 0.052185844630003,
+      "recorded_votes_used": 441,
+      "correct_classification": 0.975056689342404
+    },
+    {
+      "name": "John Joseph Lombardi",
+      "district": 8,
+      "party": "DEM",
+      "position": -0.693715274333954,
+      "bootstrap_standard_error": 0.0509803183376789,
+      "recorded_votes_used": 403,
+      "correct_classification": 0.925558312655087
+    },
+    {
+      "name": "Arthur J Corvese",
+      "district": 55,
+      "party": "DEM",
+      "position": -0.670425355434418,
+      "bootstrap_standard_error": 0.0666839182376862,
+      "recorded_votes_used": 429,
+      "correct_classification": 0.962703962703963
+    },
+    {
+      "name": "Joseph Solomon",
+      "district": 22,
+      "party": "DEM",
+      "position": -0.653384804725647,
+      "bootstrap_standard_error": 0.0555227361619473,
+      "recorded_votes_used": 436,
+      "correct_classification": 0.970183486238532
+    },
+    {
+      "name": "Megan L Cotter",
+      "district": 39,
+      "party": "DEM",
+      "position": -0.644082725048065,
+      "bootstrap_standard_error": 0.0643923729658127,
+      "recorded_votes_used": 439,
+      "correct_classification": 0.96127562642369
+    },
+    {
+      "name": "Enrique George Sanchez",
+      "district": 9,
+      "party": "DEM",
+      "position": -0.637113869190216,
+      "bootstrap_standard_error": 0.0616283640265465,
+      "recorded_votes_used": 443,
+      "correct_classification": 0.869074492099323
+    },
+    {
+      "name": "Thomas E Noret",
+      "district": 25,
+      "party": "DEM",
+      "position": -0.585607171058655,
+      "bootstrap_standard_error": 0.072480708360672,
+      "recorded_votes_used": 399,
+      "correct_classification": 0.932330827067669
+    },
+    {
+      "name": "Stephen Casey",
+      "district": 50,
+      "party": "DEM",
+      "position": -0.553527414798737,
+      "bootstrap_standard_error": 0.0806187316775322,
+      "recorded_votes_used": 437,
+      "correct_classification": 0.949656750572082
+    },
+    {
+      "name": "Jacquelyn Baginski",
+      "district": 17,
+      "party": "DEM",
+      "position": -0.5449338555336,
+      "bootstrap_standard_error": 0.0716433823108673,
+      "recorded_votes_used": 378,
+      "correct_classification": 0.907407407407407
+    },
+    {
+      "name": "Robert D Phillips",
+      "district": 51,
+      "party": "DEM",
+      "position": -0.466229170560837,
+      "bootstrap_standard_error": 0.0873767659068108,
+      "recorded_votes_used": 436,
+      "correct_classification": 0.928899082568807
+    },
+    {
+      "name": "Jon D Brien",
+      "district": 49,
+      "party": "IND",
+      "position": -0.429880380630493,
+      "bootstrap_standard_error": 0.0860323905944824,
+      "recorded_votes_used": 349,
+      "correct_classification": 0.925501432664756
+    },
+    {
+      "name": "Charlene M Lima",
+      "district": 14,
+      "party": "DEM",
+      "position": -0.368659287691116,
+      "bootstrap_standard_error": 0.0991808921098709,
+      "recorded_votes_used": 359,
+      "correct_classification": 0.927576601671309
+    },
+    {
+      "name": "Gregory Costantino",
+      "district": 44,
+      "party": "DEM",
+      "position": -0.307705014944077,
+      "bootstrap_standard_error": 0.102249674499035,
+      "recorded_votes_used": 385,
+      "correct_classification": 0.875324675324675
+    },
+    {
+      "name": "Ramon Perez",
+      "district": 13,
+      "party": "DEM",
+      "position": -0.285060822963715,
+      "bootstrap_standard_error": 0.0990457832813263,
+      "recorded_votes_used": 173,
+      "correct_classification": 0.855491329479769
+    },
+    {
+      "name": "Marie A Hopkins",
+      "district": 21,
+      "party": "REP",
+      "position": 0.21373738348484,
+      "bootstrap_standard_error": 0.103981353342533,
+      "recorded_votes_used": 423,
+      "correct_classification": 0.822695035460993
+    },
+    {
+      "name": "Christopher G Paplauskas",
+      "district": 15,
+      "party": "REP",
+      "position": 0.470081001520157,
+      "bootstrap_standard_error": 0.0974483862519264,
+      "recorded_votes_used": 402,
+      "correct_classification": 0.875621890547264
+    },
+    {
+      "name": "Brian C Newberry",
+      "district": 48,
+      "party": "REP",
+      "position": 0.627645313739777,
+      "bootstrap_standard_error": 0.105520725250244,
+      "recorded_votes_used": 422,
+      "correct_classification": 0.824644549763033
+    },
+    {
+      "name": "Richard R Fascia",
+      "district": 42,
+      "party": "REP",
+      "position": 0.695917189121246,
+      "bootstrap_standard_error": 0.109192550182343,
+      "recorded_votes_used": 438,
+      "correct_classification": 0.867579908675799
+    },
+    {
+      "name": "David J Place",
+      "district": 47,
+      "party": "REP",
+      "position": 0.76041704416275,
+      "bootstrap_standard_error": 0.107706002891064,
+      "recorded_votes_used": 443,
+      "correct_classification": 0.774266365688488
+    },
+    {
+      "name": "Paul M Santucci",
+      "district": 53,
+      "party": "REP",
+      "position": 0.765335261821747,
+      "bootstrap_standard_error": 0.109947197139263,
+      "recorded_votes_used": 441,
+      "correct_classification": 0.80952380952381
+    },
+    {
+      "name": "George A Nardone",
+      "district": 28,
+      "party": "REP",
+      "position": 0.771096646785736,
+      "bootstrap_standard_error": 0.101745620369911,
+      "recorded_votes_used": 449,
+      "correct_classification": 0.870824053452116
+    },
+    {
+      "name": "Michael Chippendale",
+      "district": 40,
+      "party": "REP",
+      "position": 0.771184384822845,
+      "bootstrap_standard_error": 0.106554269790649,
+      "recorded_votes_used": 441,
+      "correct_classification": 0.861678004535147
+    },
+    {
+      "name": "Robert Quattrocchi",
+      "district": 41,
+      "party": "REP",
+      "position": 0.965411901473999,
+      "bootstrap_standard_error": 0.0292276181280613,
+      "recorded_votes_used": 368,
+      "correct_classification": 0.926630434782609
+    },
+    {
+      "name": "Sherry L Roberts",
+      "district": 29,
+      "party": "REP",
+      "position": 1.0,
+      "bootstrap_standard_error": 0.0137447100132704,
+      "recorded_votes_used": 425,
+      "correct_classification": 0.950588235294118
+    }
+  ],
+  "periods": {
+    "combined": [
+      {
+        "name": "Kathleen A Fogarty",
+        "district": 35,
+        "party": "DEM",
+        "position": -1.0,
+        "bootstrap_standard_error": 0.0546954087913036,
+        "recorded_votes_used": 420,
+        "correct_classification": 0.969047619047619
+      },
+      {
+        "name": "David Morales",
+        "district": 7,
+        "party": "DEM",
+        "position": -0.984147787094116,
+        "bootstrap_standard_error": 0.0526417940855026,
+        "recorded_votes_used": 417,
+        "correct_classification": 0.959232613908873
+      },
+      {
+        "name": "Jennifer A Stewart",
+        "district": 59,
+        "party": "DEM",
+        "position": -0.973560512065887,
+        "bootstrap_standard_error": 0.0618267953395844,
+        "recorded_votes_used": 444,
+        "correct_classification": 0.95045045045045
+      },
+      {
+        "name": "Arthur Handy",
+        "district": 18,
+        "party": "DEM",
+        "position": -0.963436663150787,
+        "bootstrap_standard_error": 0.062620110809803,
+        "recorded_votes_used": 362,
+        "correct_classification": 0.99171270718232
+      },
+      {
+        "name": "Julie Casimiro",
+        "district": 31,
+        "party": "DEM",
+        "position": -0.948864459991455,
+        "bootstrap_standard_error": 0.0556530952453613,
+        "recorded_votes_used": 416,
+        "correct_classification": 0.975961538461538
+      },
+      {
+        "name": "Edith H Ajello",
+        "district": 1,
+        "party": "DEM",
+        "position": -0.94375467300415,
+        "bootstrap_standard_error": 0.0595466792583466,
+        "recorded_votes_used": 406,
+        "correct_classification": 0.943349753694581
+      },
+      {
+        "name": "Rebecca M Kislak",
+        "district": 4,
+        "party": "DEM",
+        "position": -0.935982286930084,
+        "bootstrap_standard_error": 0.0611604452133179,
+        "recorded_votes_used": 435,
+        "correct_classification": 0.988505747126437
+      },
+      {
+        "name": "Joseph Shekarchi",
+        "district": 23,
+        "party": "DEM",
+        "position": -0.932204306125641,
+        "bootstrap_standard_error": 0.0530597753822803,
+        "recorded_votes_used": 291,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Lauren H Carson",
+        "district": 75,
+        "party": "DEM",
+        "position": -0.924587309360504,
+        "bootstrap_standard_error": 0.0663041770458221,
+        "recorded_votes_used": 417,
+        "correct_classification": 0.976019184652278
+      },
+      {
+        "name": "June S Speakman",
+        "district": 68,
+        "party": "DEM",
+        "position": -0.916665971279144,
+        "bootstrap_standard_error": 0.0588604807853699,
+        "recorded_votes_used": 439,
+        "correct_classification": 0.988610478359909
+      },
+      {
+        "name": "Robert E Craven Jr",
+        "district": 32,
+        "party": "DEM",
+        "position": -0.907279670238495,
+        "bootstrap_standard_error": 0.050451185554266,
+        "recorded_votes_used": 426,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Jennifer Smith Boylan",
+        "district": 66,
+        "party": "DEM",
+        "position": -0.903806090354919,
+        "bootstrap_standard_error": 0.0495753437280655,
+        "recorded_votes_used": 446,
+        "correct_classification": 0.991031390134529
+      },
+      {
+        "name": "Terri-Denise Cortvriend",
+        "district": 72,
+        "party": "DEM",
+        "position": -0.902829229831696,
+        "bootstrap_standard_error": 0.0590358749032021,
+        "recorded_votes_used": 423,
+        "correct_classification": 0.978723404255319
+      },
+      {
+        "name": "Justine Caldwell",
+        "district": 30,
+        "party": "DEM",
+        "position": -0.893433511257172,
+        "bootstrap_standard_error": 0.0440434888005257,
+        "recorded_votes_used": 443,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Karen Alzate",
+        "district": 60,
+        "party": "DEM",
+        "position": -0.889648199081421,
+        "bootstrap_standard_error": 0.0551463924348354,
+        "recorded_votes_used": 421,
+        "correct_classification": 0.995249406175772
+      },
+      {
+        "name": "Mary Ann Shallcross Smith",
+        "district": 46,
+        "party": "DEM",
+        "position": -0.888498187065125,
+        "bootstrap_standard_error": 0.0503112263977528,
+        "recorded_votes_used": 432,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Anthony J DeSimone",
+        "district": 5,
+        "party": "DEM",
+        "position": -0.887042105197906,
+        "bootstrap_standard_error": 0.0543806292116642,
+        "recorded_votes_used": 448,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Susan Ann Donovan",
+        "district": 69,
+        "party": "DEM",
+        "position": -0.886985123157501,
+        "bootstrap_standard_error": 0.0498179905116558,
+        "recorded_votes_used": 446,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Jenni A Furtado",
+        "district": 64,
+        "party": "DEM",
+        "position": -0.886985003948212,
+        "bootstrap_standard_error": 0.0553747341036797,
+        "recorded_votes_used": 450,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Marvin Abney",
+        "district": 73,
+        "party": "DEM",
+        "position": -0.886932551860809,
+        "bootstrap_standard_error": 0.0423128008842468,
+        "recorded_votes_used": 443,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Katherine Sheena Kazarian",
+        "district": 63,
+        "party": "DEM",
+        "position": -0.886618793010712,
+        "bootstrap_standard_error": 0.053072065114975,
+        "recorded_votes_used": 442,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Brandon Potter",
+        "district": 16,
+        "party": "DEM",
+        "position": -0.88567054271698,
+        "bootstrap_standard_error": 0.0515566915273666,
+        "recorded_votes_used": 413,
+        "correct_classification": 0.997578692493947
+      },
+      {
+        "name": "Christopher R Blazejewski",
+        "district": 2,
+        "party": "DEM",
+        "position": -0.885037481784821,
+        "bootstrap_standard_error": 0.0573473870754242,
+        "recorded_votes_used": 433,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "John G Edwards",
+        "district": 70,
+        "party": "DEM",
+        "position": -0.885011494159698,
+        "bootstrap_standard_error": 0.056794460862875,
+        "recorded_votes_used": 364,
+        "correct_classification": 0.909340659340659
+      },
+      {
+        "name": "Grace Diaz",
+        "district": 11,
+        "party": "DEM",
+        "position": -0.884647190570831,
+        "bootstrap_standard_error": 0.0550632886588573,
+        "recorded_votes_used": 395,
+        "correct_classification": 0.994936708860759
+      },
+      {
+        "name": "Joseph McNamara",
+        "district": 19,
+        "party": "DEM",
+        "position": -0.88120037317276,
+        "bootstrap_standard_error": 0.0597508139908314,
+        "recorded_votes_used": 420,
+        "correct_classification": 0.997619047619048
+      },
+      {
+        "name": "Joshua J Giraldo",
+        "district": 56,
+        "party": "DEM",
+        "position": -0.879550397396088,
+        "bootstrap_standard_error": 0.0482710562646389,
+        "recorded_votes_used": 438,
+        "correct_classification": 0.988584474885845
+      },
+      {
+        "name": "Matthew Dawson",
+        "district": 65,
+        "party": "DEM",
+        "position": -0.879170179367065,
+        "bootstrap_standard_error": 0.0512744449079037,
+        "recorded_votes_used": 413,
+        "correct_classification": 0.997578692493947
+      },
+      {
+        "name": "Teresa A Tanzi",
+        "district": 34,
+        "party": "DEM",
+        "position": -0.868111729621887,
+        "bootstrap_standard_error": 0.048090685158968,
+        "recorded_votes_used": 429,
+        "correct_classification": 0.937062937062937
+      },
+      {
+        "name": "Carol Hagan McEntee",
+        "district": 33,
+        "party": "DEM",
+        "position": -0.862375617027283,
+        "bootstrap_standard_error": 0.0578972436487675,
+        "recorded_votes_used": 447,
+        "correct_classification": 0.995525727069351
+      },
+      {
+        "name": "Alex Finkelman",
+        "district": 74,
+        "party": "DEM",
+        "position": -0.862371981143951,
+        "bootstrap_standard_error": 0.0525471456348896,
+        "recorded_votes_used": 342,
+        "correct_classification": 0.991228070175439
+      },
+      {
+        "name": "Mia A Ackerman",
+        "district": 45,
+        "party": "DEM",
+        "position": -0.861398935317993,
+        "bootstrap_standard_error": 0.0465386733412743,
+        "recorded_votes_used": 410,
+        "correct_classification": 0.997560975609756
+      },
+      {
+        "name": "Tina L Spears",
+        "district": 36,
+        "party": "DEM",
+        "position": -0.859983205795288,
+        "bootstrap_standard_error": 0.048161830753088,
+        "recorded_votes_used": 430,
+        "correct_classification": 0.997674418604651
+      },
+      {
+        "name": "Brandon T Voas",
+        "district": 57,
+        "party": "DEM",
+        "position": -0.859734237194061,
+        "bootstrap_standard_error": 0.0510307922959328,
+        "recorded_votes_used": 433,
+        "correct_classification": 0.997690531177829
+      },
+      {
+        "name": "Jason Knight",
+        "district": 67,
+        "party": "DEM",
+        "position": -0.857377767562866,
+        "bootstrap_standard_error": 0.0515715889632702,
+        "recorded_votes_used": 409,
+        "correct_classification": 0.970660146699266
+      },
+      {
+        "name": "Michelle E McGaw",
+        "district": 71,
+        "party": "DEM",
+        "position": -0.856480002403259,
+        "bootstrap_standard_error": 0.0524696744978428,
+        "recorded_votes_used": 438,
+        "correct_classification": 0.972602739726027
+      },
+      {
+        "name": "Jose Batista",
+        "district": 12,
+        "party": "DEM",
+        "position": -0.855668842792511,
+        "bootstrap_standard_error": 0.0468521751463413,
+        "recorded_votes_used": 397,
+        "correct_classification": 0.954659949622166
+      },
+      {
+        "name": "Nathan W Biah",
+        "district": 3,
+        "party": "DEM",
+        "position": -0.848203420639038,
+        "bootstrap_standard_error": 0.0493465587496758,
+        "recorded_votes_used": 392,
+        "correct_classification": 0.982142857142857
+      },
+      {
+        "name": "Cherie L Cruz",
+        "district": 58,
+        "party": "DEM",
+        "position": -0.848008871078491,
+        "bootstrap_standard_error": 0.0485017448663712,
+        "recorded_votes_used": 390,
+        "correct_classification": 0.935897435897436
+      },
+      {
+        "name": "Alex D Marszalkowski",
+        "district": 52,
+        "party": "DEM",
+        "position": -0.846681416034698,
+        "bootstrap_standard_error": 0.0551372319459915,
+        "recorded_votes_used": 405,
+        "correct_classification": 0.997530864197531
+      },
+      {
+        "name": "Scott A Slater",
+        "district": 10,
+        "party": "DEM",
+        "position": -0.840168297290802,
+        "bootstrap_standard_error": 0.0441270060837269,
+        "recorded_votes_used": 403,
+        "correct_classification": 0.990074441687345
+      },
+      {
+        "name": "Mary Duffy Messier",
+        "district": 62,
+        "party": "DEM",
+        "position": -0.818323910236359,
+        "bootstrap_standard_error": 0.0489546842873096,
+        "recorded_votes_used": 443,
+        "correct_classification": 0.988713318284424
+      },
+      {
+        "name": "Raymond A Hull",
+        "district": 6,
+        "party": "DEM",
+        "position": -0.810755908489227,
+        "bootstrap_standard_error": 0.0481948927044868,
+        "recorded_votes_used": 418,
+        "correct_classification": 0.988038277511962
+      },
+      {
+        "name": "Earl A Read III",
+        "district": 26,
+        "party": "DEM",
+        "position": -0.791599333286285,
+        "bootstrap_standard_error": 0.0472324416041374,
+        "recorded_votes_used": 448,
+        "correct_classification": 0.979910714285714
+      },
+      {
+        "name": "Evan Patrick Shanley",
+        "district": 24,
+        "party": "DEM",
+        "position": -0.790637671947479,
+        "bootstrap_standard_error": 0.0571376830339432,
+        "recorded_votes_used": 394,
+        "correct_classification": 0.977157360406091
+      },
+      {
+        "name": "Leonela Felix",
+        "district": 61,
+        "party": "DEM",
+        "position": -0.787748873233795,
+        "bootstrap_standard_error": 0.0505732148885727,
+        "recorded_votes_used": 409,
+        "correct_classification": 0.941320293398533
+      },
+      {
+        "name": "Brian Patrick Kennedy",
+        "district": 38,
+        "party": "DEM",
+        "position": -0.775616466999054,
+        "bootstrap_standard_error": 0.0432054586708546,
+        "recorded_votes_used": 408,
+        "correct_classification": 0.982843137254902
+      },
+      {
+        "name": "Patricia Serpa",
+        "district": 27,
+        "party": "DEM",
+        "position": -0.773779213428497,
+        "bootstrap_standard_error": 0.0513741597533226,
+        "recorded_votes_used": 399,
+        "correct_classification": 0.977443609022556
+      },
+      {
+        "name": "William W O'Brien",
+        "district": 54,
+        "party": "DEM",
+        "position": -0.766974151134491,
+        "bootstrap_standard_error": 0.0548607259988785,
+        "recorded_votes_used": 372,
+        "correct_classification": 0.978494623655914
+      },
+      {
+        "name": "Deborah A Fellela",
+        "district": 43,
+        "party": "DEM",
+        "position": -0.765046656131744,
+        "bootstrap_standard_error": 0.0522695109248161,
+        "recorded_votes_used": 429,
+        "correct_classification": 0.979020979020979
+      },
+      {
+        "name": "Samuel Angelo Azzinaro",
+        "district": 37,
+        "party": "DEM",
+        "position": -0.738933145999908,
+        "bootstrap_standard_error": 0.0545206815004349,
+        "recorded_votes_used": 437,
+        "correct_classification": 0.974828375286041
+      },
+      {
+        "name": "David A Bennett",
+        "district": 20,
+        "party": "DEM",
+        "position": -0.704752087593079,
+        "bootstrap_standard_error": 0.052185844630003,
+        "recorded_votes_used": 441,
+        "correct_classification": 0.975056689342404
+      },
+      {
+        "name": "John Joseph Lombardi",
+        "district": 8,
+        "party": "DEM",
+        "position": -0.693715274333954,
+        "bootstrap_standard_error": 0.0509803183376789,
+        "recorded_votes_used": 403,
+        "correct_classification": 0.925558312655087
+      },
+      {
+        "name": "Arthur J Corvese",
+        "district": 55,
+        "party": "DEM",
+        "position": -0.670425355434418,
+        "bootstrap_standard_error": 0.0666839182376862,
+        "recorded_votes_used": 429,
+        "correct_classification": 0.962703962703963
+      },
+      {
+        "name": "Joseph Solomon",
+        "district": 22,
+        "party": "DEM",
+        "position": -0.653384804725647,
+        "bootstrap_standard_error": 0.0555227361619473,
+        "recorded_votes_used": 436,
+        "correct_classification": 0.970183486238532
+      },
+      {
+        "name": "Megan L Cotter",
+        "district": 39,
+        "party": "DEM",
+        "position": -0.644082725048065,
+        "bootstrap_standard_error": 0.0643923729658127,
+        "recorded_votes_used": 439,
+        "correct_classification": 0.96127562642369
+      },
+      {
+        "name": "Enrique George Sanchez",
+        "district": 9,
+        "party": "DEM",
+        "position": -0.637113869190216,
+        "bootstrap_standard_error": 0.0616283640265465,
+        "recorded_votes_used": 443,
+        "correct_classification": 0.869074492099323
+      },
+      {
+        "name": "Thomas E Noret",
+        "district": 25,
+        "party": "DEM",
+        "position": -0.585607171058655,
+        "bootstrap_standard_error": 0.072480708360672,
+        "recorded_votes_used": 399,
+        "correct_classification": 0.932330827067669
+      },
+      {
+        "name": "Stephen Casey",
+        "district": 50,
+        "party": "DEM",
+        "position": -0.553527414798737,
+        "bootstrap_standard_error": 0.0806187316775322,
+        "recorded_votes_used": 437,
+        "correct_classification": 0.949656750572082
+      },
+      {
+        "name": "Jacquelyn Baginski",
+        "district": 17,
+        "party": "DEM",
+        "position": -0.5449338555336,
+        "bootstrap_standard_error": 0.0716433823108673,
+        "recorded_votes_used": 378,
+        "correct_classification": 0.907407407407407
+      },
+      {
+        "name": "Robert D Phillips",
+        "district": 51,
+        "party": "DEM",
+        "position": -0.466229170560837,
+        "bootstrap_standard_error": 0.0873767659068108,
+        "recorded_votes_used": 436,
+        "correct_classification": 0.928899082568807
+      },
+      {
+        "name": "Jon D Brien",
+        "district": 49,
+        "party": "IND",
+        "position": -0.429880380630493,
+        "bootstrap_standard_error": 0.0860323905944824,
+        "recorded_votes_used": 349,
+        "correct_classification": 0.925501432664756
+      },
+      {
+        "name": "Charlene M Lima",
+        "district": 14,
+        "party": "DEM",
+        "position": -0.368659287691116,
+        "bootstrap_standard_error": 0.0991808921098709,
+        "recorded_votes_used": 359,
+        "correct_classification": 0.927576601671309
+      },
+      {
+        "name": "Gregory Costantino",
+        "district": 44,
+        "party": "DEM",
+        "position": -0.307705014944077,
+        "bootstrap_standard_error": 0.102249674499035,
+        "recorded_votes_used": 385,
+        "correct_classification": 0.875324675324675
+      },
+      {
+        "name": "Ramon Perez",
+        "district": 13,
+        "party": "DEM",
+        "position": -0.285060822963715,
+        "bootstrap_standard_error": 0.0990457832813263,
+        "recorded_votes_used": 173,
+        "correct_classification": 0.855491329479769
+      },
+      {
+        "name": "Marie A Hopkins",
+        "district": 21,
+        "party": "REP",
+        "position": 0.21373738348484,
+        "bootstrap_standard_error": 0.103981353342533,
+        "recorded_votes_used": 423,
+        "correct_classification": 0.822695035460993
+      },
+      {
+        "name": "Christopher G Paplauskas",
+        "district": 15,
+        "party": "REP",
+        "position": 0.470081001520157,
+        "bootstrap_standard_error": 0.0974483862519264,
+        "recorded_votes_used": 402,
+        "correct_classification": 0.875621890547264
+      },
+      {
+        "name": "Brian C Newberry",
+        "district": 48,
+        "party": "REP",
+        "position": 0.627645313739777,
+        "bootstrap_standard_error": 0.105520725250244,
+        "recorded_votes_used": 422,
+        "correct_classification": 0.824644549763033
+      },
+      {
+        "name": "Richard R Fascia",
+        "district": 42,
+        "party": "REP",
+        "position": 0.695917189121246,
+        "bootstrap_standard_error": 0.109192550182343,
+        "recorded_votes_used": 438,
+        "correct_classification": 0.867579908675799
+      },
+      {
+        "name": "David J Place",
+        "district": 47,
+        "party": "REP",
+        "position": 0.76041704416275,
+        "bootstrap_standard_error": 0.107706002891064,
+        "recorded_votes_used": 443,
+        "correct_classification": 0.774266365688488
+      },
+      {
+        "name": "Paul M Santucci",
+        "district": 53,
+        "party": "REP",
+        "position": 0.765335261821747,
+        "bootstrap_standard_error": 0.109947197139263,
+        "recorded_votes_used": 441,
+        "correct_classification": 0.80952380952381
+      },
+      {
+        "name": "George A Nardone",
+        "district": 28,
+        "party": "REP",
+        "position": 0.771096646785736,
+        "bootstrap_standard_error": 0.101745620369911,
+        "recorded_votes_used": 449,
+        "correct_classification": 0.870824053452116
+      },
+      {
+        "name": "Michael Chippendale",
+        "district": 40,
+        "party": "REP",
+        "position": 0.771184384822845,
+        "bootstrap_standard_error": 0.106554269790649,
+        "recorded_votes_used": 441,
+        "correct_classification": 0.861678004535147
+      },
+      {
+        "name": "Robert Quattrocchi",
+        "district": 41,
+        "party": "REP",
+        "position": 0.965411901473999,
+        "bootstrap_standard_error": 0.0292276181280613,
+        "recorded_votes_used": 368,
+        "correct_classification": 0.926630434782609
+      },
+      {
+        "name": "Sherry L Roberts",
+        "district": 29,
+        "party": "REP",
+        "position": 1.0,
+        "bootstrap_standard_error": 0.0137447100132704,
+        "recorded_votes_used": 425,
+        "correct_classification": 0.950588235294118
+      }
+    ],
+    "2025": [
+      {
+        "name": "Jennifer Smith Boylan",
+        "district": 66,
+        "party": "DEM",
+        "position": -1.0,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 261,
+        "correct_classification": 0.988505747126437
+      },
+      {
+        "name": "Terri-Denise Cortvriend",
+        "district": 72,
+        "party": "DEM",
+        "position": -1.0,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 247,
+        "correct_classification": 0.967611336032389
+      },
+      {
+        "name": "Arthur Handy",
+        "district": 18,
+        "party": "DEM",
+        "position": -1.0,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 176,
+        "correct_classification": 0.994318181818182
+      },
+      {
+        "name": "June S Speakman",
+        "district": 68,
+        "party": "DEM",
+        "position": -1.0,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 252,
+        "correct_classification": 0.984126984126984
+      },
+      {
+        "name": "Jennifer A Stewart",
+        "district": 59,
+        "party": "DEM",
+        "position": -1.0,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 260,
+        "correct_classification": 0.942307692307692
+      },
+      {
+        "name": "Jenni A Furtado",
+        "district": 64,
+        "party": "DEM",
+        "position": -0.98748242855072,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 263,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Anthony J DeSimone",
+        "district": 5,
+        "party": "DEM",
+        "position": -0.987279772758484,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 262,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Marvin Abney",
+        "district": 73,
+        "party": "DEM",
+        "position": -0.987057685852051,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 259,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Susan Ann Donovan",
+        "district": 69,
+        "party": "DEM",
+        "position": -0.987015902996063,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 262,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Robert E Craven Jr",
+        "district": 32,
+        "party": "DEM",
+        "position": -0.986314296722412,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 257,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Justine Caldwell",
+        "district": 30,
+        "party": "DEM",
+        "position": -0.986299395561218,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 258,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Katherine Sheena Kazarian",
+        "district": 63,
+        "party": "DEM",
+        "position": -0.986019849777222,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 257,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Christopher R Blazejewski",
+        "district": 2,
+        "party": "DEM",
+        "position": -0.983400404453278,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 253,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Joseph Shekarchi",
+        "district": 23,
+        "party": "DEM",
+        "position": -0.978235006332397,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 257,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Karen Alzate",
+        "district": 60,
+        "party": "DEM",
+        "position": -0.975633263587952,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 251,
+        "correct_classification": 0.99203187250996
+      },
+      {
+        "name": "Carol Hagan McEntee",
+        "district": 33,
+        "party": "DEM",
+        "position": -0.972874820232391,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 260,
+        "correct_classification": 0.996153846153846
+      },
+      {
+        "name": "Mary Ann Shallcross Smith",
+        "district": 46,
+        "party": "DEM",
+        "position": -0.972261130809784,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 248,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Joseph McNamara",
+        "district": 19,
+        "party": "DEM",
+        "position": -0.96245950460434,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 237,
+        "correct_classification": 0.9957805907173
+      },
+      {
+        "name": "Grace Diaz",
+        "district": 11,
+        "party": "DEM",
+        "position": -0.961796641349792,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 240,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Brandon Potter",
+        "district": 16,
+        "party": "DEM",
+        "position": -0.960130631923676,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 247,
+        "correct_classification": 0.995951417004049
+      },
+      {
+        "name": "Matthew Dawson",
+        "district": 65,
+        "party": "DEM",
+        "position": -0.955479502677917,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 260,
+        "correct_classification": 0.996153846153846
+      },
+      {
+        "name": "Rebecca M Kislak",
+        "district": 4,
+        "party": "DEM",
+        "position": -0.955221951007843,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 253,
+        "correct_classification": 0.99604743083004
+      },
+      {
+        "name": "Joshua J Giraldo",
+        "district": 56,
+        "party": "DEM",
+        "position": -0.946960687637329,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 253,
+        "correct_classification": 0.988142292490119
+      },
+      {
+        "name": "Kathleen A Fogarty",
+        "district": 35,
+        "party": "DEM",
+        "position": -0.946814954280853,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 234,
+        "correct_classification": 0.957264957264957
+      },
+      {
+        "name": "Lauren H Carson",
+        "district": 75,
+        "party": "DEM",
+        "position": -0.938220143318176,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 234,
+        "correct_classification": 0.965811965811966
+      },
+      {
+        "name": "Alex Finkelman",
+        "district": 74,
+        "party": "DEM",
+        "position": -0.937642812728882,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 208,
+        "correct_classification": 0.990384615384615
+      },
+      {
+        "name": "Mia A Ackerman",
+        "district": 45,
+        "party": "DEM",
+        "position": -0.925805747509003,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 231,
+        "correct_classification": 0.995670995670996
+      },
+      {
+        "name": "Mary Duffy Messier",
+        "district": 62,
+        "party": "DEM",
+        "position": -0.924647331237793,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 260,
+        "correct_classification": 0.996153846153846
+      },
+      {
+        "name": "Jason Knight",
+        "district": 67,
+        "party": "DEM",
+        "position": -0.911246359348297,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 258,
+        "correct_classification": 0.968992248062015
+      },
+      {
+        "name": "Nathan W Biah",
+        "district": 3,
+        "party": "DEM",
+        "position": -0.904505968093872,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 242,
+        "correct_classification": 0.975206611570248
+      },
+      {
+        "name": "David Morales",
+        "district": 7,
+        "party": "DEM",
+        "position": -0.896077334880829,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 256,
+        "correct_classification": 0.94921875
+      },
+      {
+        "name": "Julie Casimiro",
+        "district": 31,
+        "party": "DEM",
+        "position": -0.893818140029907,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 242,
+        "correct_classification": 0.975206611570248
+      },
+      {
+        "name": "Tina L Spears",
+        "district": 36,
+        "party": "DEM",
+        "position": -0.887536406517029,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 251,
+        "correct_classification": 0.99601593625498
+      },
+      {
+        "name": "Brandon T Voas",
+        "district": 57,
+        "party": "DEM",
+        "position": -0.881214320659637,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 251,
+        "correct_classification": 0.99601593625498
+      },
+      {
+        "name": "Scott A Slater",
+        "district": 10,
+        "party": "DEM",
+        "position": -0.878433346748352,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 228,
+        "correct_classification": 0.995614035087719
+      },
+      {
+        "name": "Alex D Marszalkowski",
+        "district": 52,
+        "party": "DEM",
+        "position": -0.83644962310791,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 239,
+        "correct_classification": 0.99581589958159
+      },
+      {
+        "name": "Deborah A Fellela",
+        "district": 43,
+        "party": "DEM",
+        "position": -0.806668639183044,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 251,
+        "correct_classification": 0.98804780876494
+      },
+      {
+        "name": "Michelle E McGaw",
+        "district": 71,
+        "party": "DEM",
+        "position": -0.796724319458008,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 256,
+        "correct_classification": 0.95703125
+      },
+      {
+        "name": "Cherie L Cruz",
+        "district": 58,
+        "party": "DEM",
+        "position": -0.795757710933685,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 246,
+        "correct_classification": 0.922764227642276
+      },
+      {
+        "name": "Edith H Ajello",
+        "district": 1,
+        "party": "DEM",
+        "position": -0.789726555347443,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 232,
+        "correct_classification": 0.935344827586207
+      },
+      {
+        "name": "Jose Batista",
+        "district": 12,
+        "party": "DEM",
+        "position": -0.780248165130615,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 237,
+        "correct_classification": 0.953586497890295
+      },
+      {
+        "name": "Teresa A Tanzi",
+        "district": 34,
+        "party": "DEM",
+        "position": -0.757936537265778,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 245,
+        "correct_classification": 0.914285714285714
+      },
+      {
+        "name": "Raymond A Hull",
+        "district": 6,
+        "party": "DEM",
+        "position": -0.718175232410431,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 233,
+        "correct_classification": 0.978540772532189
+      },
+      {
+        "name": "Evan Patrick Shanley",
+        "district": 24,
+        "party": "DEM",
+        "position": -0.711407065391541,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 209,
+        "correct_classification": 0.961722488038278
+      },
+      {
+        "name": "Earl A Read III",
+        "district": 26,
+        "party": "DEM",
+        "position": -0.710124254226685,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 263,
+        "correct_classification": 0.965779467680608
+      },
+      {
+        "name": "Patricia Serpa",
+        "district": 27,
+        "party": "DEM",
+        "position": -0.708378612995148,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 228,
+        "correct_classification": 0.964912280701754
+      },
+      {
+        "name": "Samuel Angelo Azzinaro",
+        "district": 37,
+        "party": "DEM",
+        "position": -0.684288203716278,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 261,
+        "correct_classification": 0.977011494252874
+      },
+      {
+        "name": "Brian Patrick Kennedy",
+        "district": 38,
+        "party": "DEM",
+        "position": -0.680872142314911,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 236,
+        "correct_classification": 0.978813559322034
+      },
+      {
+        "name": "Leonela Felix",
+        "district": 61,
+        "party": "DEM",
+        "position": -0.675496280193329,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 236,
+        "correct_classification": 0.927966101694915
+      },
+      {
+        "name": "William W O'Brien",
+        "district": 54,
+        "party": "DEM",
+        "position": -0.653065800666809,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 206,
+        "correct_classification": 0.985436893203884
+      },
+      {
+        "name": "Jacquelyn Baginski",
+        "district": 17,
+        "party": "DEM",
+        "position": -0.622558355331421,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 222,
+        "correct_classification": 0.954954954954955
+      },
+      {
+        "name": "Arthur J Corvese",
+        "district": 55,
+        "party": "DEM",
+        "position": -0.609591066837311,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 255,
+        "correct_classification": 0.956862745098039
+      },
+      {
+        "name": "John Joseph Lombardi",
+        "district": 8,
+        "party": "DEM",
+        "position": -0.569168329238892,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 225,
+        "correct_classification": 0.902222222222222
+      },
+      {
+        "name": "Megan L Cotter",
+        "district": 39,
+        "party": "DEM",
+        "position": -0.563721179962158,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 258,
+        "correct_classification": 0.965116279069767
+      },
+      {
+        "name": "David A Bennett",
+        "district": 20,
+        "party": "DEM",
+        "position": -0.549486517906189,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 254,
+        "correct_classification": 0.964566929133858
+      },
+      {
+        "name": "Joseph Solomon",
+        "district": 22,
+        "party": "DEM",
+        "position": -0.512002885341644,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 255,
+        "correct_classification": 0.964705882352941
+      },
+      {
+        "name": "Thomas E Noret",
+        "district": 25,
+        "party": "DEM",
+        "position": -0.495373338460922,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 243,
+        "correct_classification": 0.925925925925926
+      },
+      {
+        "name": "Enrique George Sanchez",
+        "district": 9,
+        "party": "DEM",
+        "position": -0.480797350406647,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 262,
+        "correct_classification": 0.82824427480916
+      },
+      {
+        "name": "John G Edwards",
+        "district": 70,
+        "party": "DEM",
+        "position": -0.467424094676971,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 186,
+        "correct_classification": 0.860215053763441
+      },
+      {
+        "name": "Stephen Casey",
+        "district": 50,
+        "party": "DEM",
+        "position": -0.44463261961937,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 251,
+        "correct_classification": 0.956175298804781
+      },
+      {
+        "name": "Robert D Phillips",
+        "district": 51,
+        "party": "DEM",
+        "position": -0.381190419197083,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 251,
+        "correct_classification": 0.944223107569721
+      },
+      {
+        "name": "Jon D Brien",
+        "district": 49,
+        "party": "IND",
+        "position": -0.271031349897385,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 172,
+        "correct_classification": 0.918604651162791
+      },
+      {
+        "name": "Gregory Costantino",
+        "district": 44,
+        "party": "DEM",
+        "position": -0.192843094468117,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 217,
+        "correct_classification": 0.861751152073733
+      },
+      {
+        "name": "Charlene M Lima",
+        "district": 14,
+        "party": "DEM",
+        "position": -0.162711188197136,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 217,
+        "correct_classification": 0.898617511520737
+      },
+      {
+        "name": "Ramon Perez",
+        "district": 13,
+        "party": "DEM",
+        "position": -0.0106964437291026,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 117,
+        "correct_classification": 0.914529914529915
+      },
+      {
+        "name": "Marie A Hopkins",
+        "district": 21,
+        "party": "REP",
+        "position": 0.551849186420441,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 255,
+        "correct_classification": 0.819607843137255
+      },
+      {
+        "name": "Christopher G Paplauskas",
+        "district": 15,
+        "party": "REP",
+        "position": 0.699045121669769,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 229,
+        "correct_classification": 0.860262008733624
+      },
+      {
+        "name": "Brian C Newberry",
+        "district": 48,
+        "party": "REP",
+        "position": 0.775486528873444,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 254,
+        "correct_classification": 0.84251968503937
+      },
+      {
+        "name": "Paul M Santucci",
+        "district": 53,
+        "party": "REP",
+        "position": 0.890083193778992,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 256,
+        "correct_classification": 0.796875
+      },
+      {
+        "name": "Richard R Fascia",
+        "district": 42,
+        "party": "REP",
+        "position": 0.938092410564423,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 256,
+        "correct_classification": 0.8828125
+      },
+      {
+        "name": "David J Place",
+        "district": 47,
+        "party": "REP",
+        "position": 0.967918217182159,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 259,
+        "correct_classification": 0.768339768339768
+      },
+      {
+        "name": "George A Nardone",
+        "district": 28,
+        "party": "REP",
+        "position": 0.997505366802216,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 262,
+        "correct_classification": 0.866412213740458
+      },
+      {
+        "name": "Michael Chippendale",
+        "district": 40,
+        "party": "REP",
+        "position": 1.0,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 260,
+        "correct_classification": 0.861538461538462
+      },
+      {
+        "name": "Robert Quattrocchi",
+        "district": 41,
+        "party": "REP",
+        "position": 1.0,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 202,
+        "correct_classification": 0.905940594059406
+      },
+      {
+        "name": "Sherry L Roberts",
+        "district": 29,
+        "party": "REP",
+        "position": 1.0,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 246,
+        "correct_classification": 0.934959349593496
+      }
+    ],
+    "2026": [
+      {
+        "name": "John G Edwards",
+        "district": 70,
+        "party": "DEM",
+        "position": -1.0,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 178,
+        "correct_classification": 0.98314606741573
+      },
+      {
+        "name": "Kathleen A Fogarty",
+        "district": 35,
+        "party": "DEM",
+        "position": -1.0,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 186,
+        "correct_classification": 0.973118279569892
+      },
+      {
+        "name": "Edith H Ajello",
+        "district": 1,
+        "party": "DEM",
+        "position": -0.966324031352997,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 174,
+        "correct_classification": 0.959770114942529
+      },
+      {
+        "name": "David Morales",
+        "district": 7,
+        "party": "DEM",
+        "position": -0.937078475952148,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 161,
+        "correct_classification": 0.975155279503106
+      },
+      {
+        "name": "Rebecca M Kislak",
+        "district": 4,
+        "party": "DEM",
+        "position": -0.909746050834656,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 182,
+        "correct_classification": 0.978021978021978
+      },
+      {
+        "name": "Julie Casimiro",
+        "district": 31,
+        "party": "DEM",
+        "position": -0.897318005561829,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 174,
+        "correct_classification": 0.977011494252874
+      },
+      {
+        "name": "Lauren H Carson",
+        "district": 75,
+        "party": "DEM",
+        "position": -0.888956189155579,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 183,
+        "correct_classification": 0.989071038251366
+      },
+      {
+        "name": "Jennifer A Stewart",
+        "district": 59,
+        "party": "DEM",
+        "position": -0.888004243373871,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 184,
+        "correct_classification": 0.967391304347826
+      },
+      {
+        "name": "Teresa A Tanzi",
+        "district": 34,
+        "party": "DEM",
+        "position": -0.885372996330261,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 184,
+        "correct_classification": 0.967391304347826
+      },
+      {
+        "name": "Arthur Handy",
+        "district": 18,
+        "party": "DEM",
+        "position": -0.883362770080566,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 186,
+        "correct_classification": 0.989247311827957
+      },
+      {
+        "name": "Jose Batista",
+        "district": 12,
+        "party": "DEM",
+        "position": -0.872700929641724,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 160,
+        "correct_classification": 0.95625
+      },
+      {
+        "name": "Leonela Felix",
+        "district": 61,
+        "party": "DEM",
+        "position": -0.869636654853821,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 173,
+        "correct_classification": 0.959537572254335
+      },
+      {
+        "name": "Joseph Shekarchi",
+        "district": 23,
+        "party": "DEM",
+        "position": -0.86541622877121,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 34,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Michelle E McGaw",
+        "district": 71,
+        "party": "DEM",
+        "position": -0.848894596099854,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 182,
+        "correct_classification": 0.994505494505495
+      },
+      {
+        "name": "Cherie L Cruz",
+        "district": 58,
+        "party": "DEM",
+        "position": -0.837968647480011,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 144,
+        "correct_classification": 0.958333333333333
+      },
+      {
+        "name": "William W O'Brien",
+        "district": 54,
+        "party": "DEM",
+        "position": -0.829745709896088,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 166,
+        "correct_classification": 0.987951807228916
+      },
+      {
+        "name": "Robert E Craven Jr",
+        "district": 32,
+        "party": "DEM",
+        "position": -0.821001768112183,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 169,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Terri-Denise Cortvriend",
+        "district": 72,
+        "party": "DEM",
+        "position": -0.820938885211945,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 176,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Brandon Potter",
+        "district": 16,
+        "party": "DEM",
+        "position": -0.820868611335754,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 166,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Alex D Marszalkowski",
+        "district": 52,
+        "party": "DEM",
+        "position": -0.81887686252594,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 166,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Justine Caldwell",
+        "district": 30,
+        "party": "DEM",
+        "position": -0.817013442516327,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 185,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Mary Ann Shallcross Smith",
+        "district": 46,
+        "party": "DEM",
+        "position": -0.81688404083252,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 184,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Matthew Dawson",
+        "district": 65,
+        "party": "DEM",
+        "position": -0.816256761550903,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 153,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Karen Alzate",
+        "district": 60,
+        "party": "DEM",
+        "position": -0.815402448177338,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 170,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Anthony J DeSimone",
+        "district": 5,
+        "party": "DEM",
+        "position": -0.814331531524658,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 186,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "David A Bennett",
+        "district": 20,
+        "party": "DEM",
+        "position": -0.81409627199173,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 187,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Jenni A Furtado",
+        "district": 64,
+        "party": "DEM",
+        "position": -0.81409627199173,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 187,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "June S Speakman",
+        "district": 68,
+        "party": "DEM",
+        "position": -0.81409627199173,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 187,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Katherine Sheena Kazarian",
+        "district": 63,
+        "party": "DEM",
+        "position": -0.814073920249939,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 185,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Marvin Abney",
+        "district": 73,
+        "party": "DEM",
+        "position": -0.814047157764435,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 184,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Susan Ann Donovan",
+        "district": 69,
+        "party": "DEM",
+        "position": -0.814047157764435,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 184,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Joseph McNamara",
+        "district": 19,
+        "party": "DEM",
+        "position": -0.813974261283875,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 183,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Raymond A Hull",
+        "district": 6,
+        "party": "DEM",
+        "position": -0.813946962356567,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 185,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Jennifer Smith Boylan",
+        "district": 66,
+        "party": "DEM",
+        "position": -0.813811063766479,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 185,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Earl A Read III",
+        "district": 26,
+        "party": "DEM",
+        "position": -0.813765823841095,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 185,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Mia A Ackerman",
+        "district": 45,
+        "party": "DEM",
+        "position": -0.812755048274994,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 179,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Grace Diaz",
+        "district": 11,
+        "party": "DEM",
+        "position": -0.812704026699066,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 155,
+        "correct_classification": 0.987096774193548
+      },
+      {
+        "name": "Christopher R Blazejewski",
+        "district": 2,
+        "party": "DEM",
+        "position": -0.812563538551331,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 180,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Brandon T Voas",
+        "district": 57,
+        "party": "DEM",
+        "position": -0.811054170131683,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 182,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Joshua J Giraldo",
+        "district": 56,
+        "party": "DEM",
+        "position": -0.809252202510834,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 185,
+        "correct_classification": 0.989189189189189
+      },
+      {
+        "name": "Tina L Spears",
+        "district": 36,
+        "party": "DEM",
+        "position": -0.808632135391235,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 179,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Scott A Slater",
+        "district": 10,
+        "party": "DEM",
+        "position": -0.799534440040588,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 175,
+        "correct_classification": 0.982857142857143
+      },
+      {
+        "name": "Brian Patrick Kennedy",
+        "district": 38,
+        "party": "DEM",
+        "position": -0.79680871963501,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 172,
+        "correct_classification": 0.988372093023256
+      },
+      {
+        "name": "Evan Patrick Shanley",
+        "district": 24,
+        "party": "DEM",
+        "position": -0.796781182289124,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 185,
+        "correct_classification": 0.994594594594595
+      },
+      {
+        "name": "Alex Finkelman",
+        "district": 74,
+        "party": "DEM",
+        "position": -0.78727787733078,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 134,
+        "correct_classification": 0.992537313432836
+      },
+      {
+        "name": "Jason Knight",
+        "district": 67,
+        "party": "DEM",
+        "position": -0.786360263824463,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 151,
+        "correct_classification": 0.973509933774834
+      },
+      {
+        "name": "Carol Hagan McEntee",
+        "district": 33,
+        "party": "DEM",
+        "position": -0.780486106872559,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 187,
+        "correct_classification": 0.994652406417112
+      },
+      {
+        "name": "Nathan W Biah",
+        "district": 3,
+        "party": "DEM",
+        "position": -0.777386128902435,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 150,
+        "correct_classification": 0.993333333333333
+      },
+      {
+        "name": "Patricia Serpa",
+        "district": 27,
+        "party": "DEM",
+        "position": -0.777274310588837,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 171,
+        "correct_classification": 0.994152046783626
+      },
+      {
+        "name": "Enrique George Sanchez",
+        "district": 9,
+        "party": "DEM",
+        "position": -0.770830035209656,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 181,
+        "correct_classification": 0.922651933701657
+      },
+      {
+        "name": "Joseph Solomon",
+        "district": 22,
+        "party": "DEM",
+        "position": -0.763772964477539,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 181,
+        "correct_classification": 0.994475138121547
+      },
+      {
+        "name": "John Joseph Lombardi",
+        "district": 8,
+        "party": "DEM",
+        "position": -0.760847687721252,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 178,
+        "correct_classification": 0.960674157303371
+      },
+      {
+        "name": "Samuel Angelo Azzinaro",
+        "district": 37,
+        "party": "DEM",
+        "position": -0.744004189968109,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 176,
+        "correct_classification": 0.971590909090909
+      },
+      {
+        "name": "Mary Duffy Messier",
+        "district": 62,
+        "party": "DEM",
+        "position": -0.738440990447998,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 183,
+        "correct_classification": 0.978142076502732
+      },
+      {
+        "name": "Deborah A Fellela",
+        "district": 43,
+        "party": "DEM",
+        "position": -0.69389933347702,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 178,
+        "correct_classification": 0.966292134831461
+      },
+      {
+        "name": "Arthur J Corvese",
+        "district": 55,
+        "party": "DEM",
+        "position": -0.662068486213684,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 174,
+        "correct_classification": 0.954022988505747
+      },
+      {
+        "name": "Megan L Cotter",
+        "district": 39,
+        "party": "DEM",
+        "position": -0.660144209861755,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 181,
+        "correct_classification": 0.939226519337017
+      },
+      {
+        "name": "Thomas E Noret",
+        "district": 25,
+        "party": "DEM",
+        "position": -0.599574208259583,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 156,
+        "correct_classification": 0.935897435897436
+      },
+      {
+        "name": "Stephen Casey",
+        "district": 50,
+        "party": "DEM",
+        "position": -0.584117591381073,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 186,
+        "correct_classification": 0.935483870967742
+      },
+      {
+        "name": "Jon D Brien",
+        "district": 49,
+        "party": "IND",
+        "position": -0.466583251953125,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 177,
+        "correct_classification": 0.932203389830508
+      },
+      {
+        "name": "Robert D Phillips",
+        "district": 51,
+        "party": "DEM",
+        "position": -0.450859695672989,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 185,
+        "correct_classification": 0.924324324324324
+      },
+      {
+        "name": "Jacquelyn Baginski",
+        "district": 17,
+        "party": "DEM",
+        "position": -0.42822203040123,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 156,
+        "correct_classification": 0.897435897435897
+      },
+      {
+        "name": "Charlene M Lima",
+        "district": 14,
+        "party": "DEM",
+        "position": -0.404755145311356,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 142,
+        "correct_classification": 0.943661971830986
+      },
+      {
+        "name": "Ramon Perez",
+        "district": 13,
+        "party": "DEM",
+        "position": -0.344829499721527,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 56,
+        "correct_classification": 0.714285714285714
+      },
+      {
+        "name": "Gregory Costantino",
+        "district": 44,
+        "party": "DEM",
+        "position": -0.280440777540207,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 168,
+        "correct_classification": 0.875
+      },
+      {
+        "name": "Marie A Hopkins",
+        "district": 21,
+        "party": "REP",
+        "position": 0.00448132539168,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 168,
+        "correct_classification": 0.869047619047619
+      },
+      {
+        "name": "Christopher G Paplauskas",
+        "district": 15,
+        "party": "REP",
+        "position": 0.510981321334839,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 173,
+        "correct_classification": 0.901734104046243
+      },
+      {
+        "name": "Richard R Fascia",
+        "district": 42,
+        "party": "REP",
+        "position": 0.698772728443146,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 182,
+        "correct_classification": 0.89010989010989
+      },
+      {
+        "name": "Michael Chippendale",
+        "district": 40,
+        "party": "REP",
+        "position": 0.837773203849792,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 181,
+        "correct_classification": 0.861878453038674
+      },
+      {
+        "name": "George A Nardone",
+        "district": 28,
+        "party": "REP",
+        "position": 0.838455319404602,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 187,
+        "correct_classification": 0.86096256684492
+      },
+      {
+        "name": "Brian C Newberry",
+        "district": 48,
+        "party": "REP",
+        "position": 0.839770078659058,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 168,
+        "correct_classification": 0.827380952380952
+      },
+      {
+        "name": "David J Place",
+        "district": 47,
+        "party": "REP",
+        "position": 0.867028951644897,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 184,
+        "correct_classification": 0.777173913043478
+      },
+      {
+        "name": "Robert Quattrocchi",
+        "district": 41,
+        "party": "REP",
+        "position": 0.97038060426712,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 166,
+        "correct_classification": 0.921686746987952
+      },
+      {
+        "name": "Sherry L Roberts",
+        "district": 29,
+        "party": "REP",
+        "position": 1.0,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 179,
+        "correct_classification": 0.949720670391061
+      },
+      {
+        "name": "Paul M Santucci",
+        "district": 53,
+        "party": "REP",
+        "position": 1.0,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 185,
+        "correct_classification": 0.875675675675676
+      }
+    ]
+  },
+  "period_counts": {
+    "combined": 450,
+    "2025": 263,
+    "2026": 187
+  }
+}
