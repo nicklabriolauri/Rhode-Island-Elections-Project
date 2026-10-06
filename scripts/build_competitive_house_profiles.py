@@ -33,13 +33,19 @@ def build():
       elections.append(f'<div class="election"><a class="year election-link" href="{esc(url)}">{race["year"]}</a><div><strong>{esc(result["role"])} · {esc(result["votes"])} votes</strong><small>Districtwide general election</small></div><span class="result">{esc(result["pct"])}</span></div>')
   replace('elections','Past electoral performance','<div class="timeline">'+(''.join(elections) or '<p class="intro">No earlier House general-election result is recorded for this candidate in RIEP’s historical dataset. The 2026 general election has not occurred.</p>')+'</div><p class="source">District history and other candidates’ results are separate from this candidate’s individual record.</p>')
   rows=[]
+  official=load('candidate_profile_primary_returns_2026').get(slug,[])
+  if isinstance(official,dict):official=[official]
+  for result in official:
+   url=result['source_url'];label=('Uncontested ' if result.get('uncontested') else '')+result['party']+' primary · Official results'
+   rows.append(f'<div class="election"><a class="year election-link" href="{esc(url)}">{result["year"]}</a><div><strong>{result["votes"]:,} votes</strong><small>{esc(label)}</small></div><a class="result election-link" href="{esc(url)}">{esc(result["share"])}</a></div>')
   for race in load('primary_results_2026')['races']:
-   if race['chamber']=='house' and race['district']==district and race['party_code']==c['party']:
+   if not official and race['chamber']=='house' and race['district']==district and race['party_code']==c['party']:
     for result in race['candidates']:
      if candidate_name_matches(name,result['name']):
       url=f'/races/house-{district}-'+('democratic' if c['party']=='DEM' else 'republican')+'.html'
       rows.append(f'<div class="election"><a class="year election-link" href="{url}">2026</a><div><strong>{result["votes"]:,} votes</strong><small>{esc(party)} primary · Unofficial September 10 snapshot</small></div><a class="result election-link" href="{url}">{result["pct"]}%</a></div>')
-  replace('primaries','Primary history',('<p class="intro">Independent general-election candidate; a party-primary vote total is not assigned.</p>' if c['party']=='OTH' else '<div class="timeline">'+(''.join(rows) or '<p>Primary vote totals are under construction. No vote total is assigned from another race.</p>')+'</div><p class="source">2026 figures, where shown, use RIEP’s unofficial September 10 snapshot. Earlier primary years are under construction.</p>'))
+  primary_source=(' · '.join(link(r['source_url'],r['source_label']+' ↗') for r in official)+'. Official 2026 results updated September 15, 2026. Earlier primary years are under construction.' if official else '2026 figures, where shown, use RIEP’s unofficial September 10 snapshot. Earlier primary years are under construction.')
+  replace('primaries','Primary history',('<p class="intro">Independent general-election candidate; a party-primary vote total is not assigned.</p>' if c['party']=='OTH' else '<div class="timeline">'+(''.join(rows) or '<p>Primary vote totals are under construction. No vote total is assigned from another race.</p>')+'</div><p class="source">'+primary_source+'</p>'))
   if c['party']=='OTH':
    fin=next(r for r in load('independent_finance_supplement_2026')['candidates'] if r['name']==name)
    period='Year to date through June 30, 2026 · Q1 and Q2 filings';items=[('Raised in 2026',fin['ytd_receipts']),('Spent in 2026',fin['ytd_campaign_expenses']),('Cash at period end',fin['cash_on_hand'])]

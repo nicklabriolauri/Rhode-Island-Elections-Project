@@ -14,3 +14,9 @@ const sanchez=fs.readFileSync('candidates/enrique-george-sanchez.html','utf8');c
 const kubicek=fs.readFileSync('candidates/brittany-m-kubicek.html','utf8');for(const amount of ['$16,771.76','$12,753.07','$4,018.69'])assert(kubicek.includes(amount));assert(kubicek.includes('/finance-candidates/house-5-oth-general-brittany-m-kubicek.html'));assert(kubicek.includes('Year to date through June 30, 2026'));assert(kubicek.includes('Independent Socialist'));
 assert(fs.readFileSync('candidates/christopher-l-ireland.html','utf8').includes('Photo under construction'));
 console.log('PASS: four competitive profiles, correct incumbent/challenger records, finance routes, profile links and Sanchez election history');
+
+const ireland=fs.readFileSync('candidates/christopher-l-ireland.html','utf8');
+const primary=ireland.slice(ireland.indexOf('id="primaries"'),ireland.indexOf('id="finance"'));
+assert(primary.includes('82 votes'));assert(primary.includes('100%'));assert(primary.includes('Uncontested Republican primary · Official results'));
+assert(primary.includes('01000000-553f-29ee-d576-08df0541a753'));assert(!primary.includes('Unofficial'));assert(!primary.includes('Primary vote totals are under construction'));
+console.log('PASS: Ireland official uncontested 2026 primary history and source link');
