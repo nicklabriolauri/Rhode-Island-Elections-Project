@@ -1,4 +1,4 @@
-"""Build the first Providence House profiles from existing, dated RIEP records."""
+"""Build the published Providence-area House profiles from existing, dated RIEP records."""
 import json, re
 from urllib.parse import quote
 from pathlib import Path
@@ -6,6 +6,7 @@ import build_candidate_pages as base
 from candidate_profile_components import section, replace_section, ratings, bill_sections, current_index
 ROOT=Path(__file__).resolve().parents[1]
 CONFIGS=[('Edith H Ajello','edith-h-ajello',1,'ajello','edith_ajello', '(401) 222-2296'),('Christopher R Blazejewski','christopher-r-blazejewski',2,'blazejewski','christopher_blazejewski','(401) 222-2466'),('Nathan W Biah','nathan-w-biah',3,'biah','nathan_biah','(401) 222-1224'),('Rebecca M Kislak','rebecca-m-kislak',4,'Kislak','rebecca_kislak','(401) 222-1591')]
+CONFIGS += [('Raymond A Hull','raymond-a-hull',6,'Hull','raymond_hull','(401) 222-1723'),('John Joseph Lombardi','john-joseph-lombardi',8,'lombardi','john_lombardi','(401) 222-1721'),('Enrique George Sanchez','enrique-george-sanchez',9,'Sanchez','enrique_sanchez','(401) 222-1162'),('Scott A Slater','scott-a-slater',10,'slater','scott_slater','(401) 222-1591')]
 
 def build():
  # The shared component withholds the House index until all district records exist.
@@ -18,15 +19,16 @@ def build():
  registry={}
  for name,slug,district,surname,image,phone in CONFIGS:
   bio=f'https://www.rilegislature.gov/representatives/{surname}/Pages/Biography.aspx'
+  community='Providence, North Providence' if district==6 else 'Providence'
   email=f'rep-{surname.lower()}@rilegislature.gov'
-  base.build(name,slug,district,'Providence',email,phone,'house')
+  base.build(name,slug,district,community,email,phone,'house')
   path=ROOT/'candidates'/f'{slug}.html';page=path.read_text()
   rec=next(r for r in records if r['chamber']=='house' and r['district_number']==district)
   registry[rec['candidate_id']]=slug
   page=replace_section(page,'bills',bill_sections(rec,slug))
   page=replace_section(page,'ratings',ratings(rec))
-  page=replace_section(page,'about',section('about','About this candidate',f'<p class="intro">{base.esc(name)} represents House District {district} · Providence.</p><div class="grid2"><div class="mini"><h3>At a glance</h3><p>Democratic incumbent in the 2026 candidate roster.</p></div><div class="mini"><h3>How to read this page</h3><p>Campaign positions, election returns, campaign finance and outside scorecards are labeled by source and period.</p></div></div><p class="source">'+base.link(bio,'Official General Assembly biography ↗')+'</p>'))
-  contact=section('contact','Contact &amp; district','<dl class="details">'+''.join(f'<div><dt>{k}</dt><dd>{v}</dd></div>' for k,v in [('District',f'House District {district}'),('Community','Providence'),('Phone',base.link('tel:+1'+re.sub('[^0-9]','',phone),phone)),('Legislative email',base.link('mailto:'+email,email))])+'</dl><p class="source">'+base.link(bio,'Official General Assembly contact details ↗')+'</p>')
+  page=replace_section(page,'about',section('about','About this candidate',f'<p class="intro">{base.esc(name)} represents House District {district} · {base.esc(community)}.</p><div class="grid2"><div class="mini"><h3>At a glance</h3><p>Democratic incumbent in the 2026 candidate roster.</p></div><div class="mini"><h3>How to read this page</h3><p>Campaign positions, election returns, campaign finance and outside scorecards are labeled by source and period.</p></div></div><p class="source">'+base.link(bio,'Official General Assembly biography ↗')+'</p>'))
+  contact=section('contact','Contact &amp; district','<dl class="details">'+''.join(f'<div><dt>{k}</dt><dd>{v}</dd></div>' for k,v in [('District',f'House District {district}'),('Community',base.esc(community)),('Phone',base.link('tel:+1'+re.sub('[^0-9]','',phone),phone)),('Legislative email',base.link('mailto:'+email,email))])+'</dl><p class="source">'+base.link(bio,'Official General Assembly contact details ↗')+'</p>')
   page=re.sub(r'(<aside class="side"[^>]*>)<section class="card">.*?</section>',lambda m:m[1]+contact,page,count=1,flags=re.S)
   rows=[]
   for race in primary:
@@ -66,12 +68,10 @@ def build():
   page,n=re.subn(r'const candidateProfile = \((\{.*?\})\)\[candidate.candidate_id\]',extend,page);assert n==1
   path.write_text(page)
  path=ROOT/'index.html';page=path.read_text();marker='      if(candidate?.chamber !== "senate") return "";'
- house='''      if(candidate?.chamber === "house") {
-        const profiles = {1:["ajello","edith-h-ajello"],2:["blazejewski","christopher-r-blazejewski"],3:["biah","nathan-w-biah"],4:["kislak","rebecca-m-kislak"]};
-        const profile = profiles[Number(candidate.district_number)];
-        return profile && normalizeSearchText(candidate.name || "").split(" ").includes(profile[0]) ? `candidates/${profile[1]}.html` : "";
-      }
-'''
- if house not in page:page=page.replace(marker,house+marker,1)
+ profiles={district:[name.split()[-1].lower(),slug] for name,slug,district,*_ in CONFIGS}
+ house='      if(candidate?.chamber === "house") {\n        const profiles = '+json.dumps(profiles,separators=(',',':'))+';\n        const profile = profiles[Number(candidate.district_number)];\n        return profile && normalizeSearchText(candidate.name || "").split(" ").includes(profile[0]) ? `candidates/${profile[1]}.html` : "";\n      }\n'
+ pattern=r'      if\(candidate\?\.chamber === "house"\) \{\n.*?\n      \}\n'
+ if re.search(pattern,page,re.S):page=re.sub(pattern,lambda m:house,page,count=1,flags=re.S)
+ else:page=page.replace(marker,house+marker,1)
  path.write_text(page)
 if __name__=='__main__':build()

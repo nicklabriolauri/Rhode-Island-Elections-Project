@@ -1,5 +1,6 @@
 const fs=require('fs'),assert=require('assert/strict'),vm=require('vm');
 const profiles=[['edith-h-ajello','Edith H Ajello',1],['christopher-r-blazejewski','Christopher R Blazejewski',2],['nathan-w-biah','Nathan W Biah',3],['rebecca-m-kislak','Rebecca M Kislak',4]];
+profiles.push(['raymond-a-hull','Raymond A Hull',6],['john-joseph-lombardi','John Joseph Lombardi',8],['enrique-george-sanchez','Enrique George Sanchez',9],['scott-a-slater','Scott A Slater',10]);
 const ballot=fs.readFileSync('ballot.html','utf8'),running=fs.readFileSync('running.html','utf8'),index=fs.readFileSync('index.html','utf8'),directory=fs.readFileSync('candidate-profiles.html','utf8');
 const records=JSON.parse(fs.readFileSync('data/incumbent_records_2026.json')).records;
 const finance=JSON.parse(fs.readFileSync('data/candidate_finance_2026.json')).profiles;
@@ -15,5 +16,7 @@ for(const [slug,name,district] of profiles){
  assert.equal(ctx.buildCandidateProfileHref({name,chamber:'house',district_number:district}),`candidates/${slug}.html`);assert.equal(ctx.buildCandidateProfileHref({name:'Other candidate',chamber:'house',district_number:district}),'');assert(directory.includes(`href="candidates/${slug}.html"`));
 }
 assert(fs.readFileSync('candidates/edith-h-ajello.html','utf8').includes('1,528 votes'));
-for(const slug of ['christopher-r-blazejewski','nathan-w-biah','rebecca-m-kislak'])assert(fs.readFileSync('candidates/'+slug+'.html','utf8').includes('Primary vote totals are under construction'));
-console.log('PASS: four House profiles, dated finance, official contacts, bills, voting widgets, primary coverage and all profile routes');
+for(const slug of ['christopher-r-blazejewski','nathan-w-biah','rebecca-m-kislak','raymond-a-hull','john-joseph-lombardi','scott-a-slater'])assert(fs.readFileSync('candidates/'+slug+'.html','utf8').includes('Primary vote totals are under construction'));
+assert(fs.readFileSync('candidates/enrique-george-sanchez.html','utf8').includes('879 votes'));
+assert(fs.readFileSync('candidates/raymond-a-hull.html','utf8').includes('Providence, North Providence'));
+console.log('PASS: eight House profiles, dated finance, official contacts, bills, voting widgets, primary coverage and all profile routes');

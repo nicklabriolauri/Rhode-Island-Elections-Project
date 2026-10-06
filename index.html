@@ -1082,7 +1082,7 @@
         if(name.includes("nerbonne")) return "candidates/jennifer-p-nerbonne.html";
       }
       if(candidate?.chamber === "house") {
-        const profiles = {1:["ajello","edith-h-ajello"],2:["blazejewski","christopher-r-blazejewski"],3:["biah","nathan-w-biah"],4:["kislak","rebecca-m-kislak"]};
+        const profiles = {"1":["ajello","edith-h-ajello"],"2":["blazejewski","christopher-r-blazejewski"],"3":["biah","nathan-w-biah"],"4":["kislak","rebecca-m-kislak"],"6":["hull","raymond-a-hull"],"8":["lombardi","john-joseph-lombardi"],"9":["sanchez","enrique-george-sanchez"],"10":["slater","scott-a-slater"]};
         const profile = profiles[Number(candidate.district_number)];
         return profile && normalizeSearchText(candidate.name || "").split(" ").includes(profile[0]) ? `candidates/${profile[1]}.html` : "";
       }
