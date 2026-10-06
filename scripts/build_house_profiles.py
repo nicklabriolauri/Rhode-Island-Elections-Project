@@ -8,6 +8,8 @@ ROOT=Path(__file__).resolve().parents[1]
 CONFIGS=[('Edith H Ajello','edith-h-ajello',1,'ajello','edith_ajello', '(401) 222-2296'),('Christopher R Blazejewski','christopher-r-blazejewski',2,'blazejewski','christopher_blazejewski','(401) 222-2466'),('Nathan W Biah','nathan-w-biah',3,'biah','nathan_biah','(401) 222-1224'),('Rebecca M Kislak','rebecca-m-kislak',4,'Kislak','rebecca_kislak','(401) 222-1591')]
 CONFIGS += [('Raymond A Hull','raymond-a-hull',6,'Hull','raymond_hull','(401) 222-1723'),('John Joseph Lombardi','john-joseph-lombardi',8,'lombardi','john_lombardi','(401) 222-1721'),('Enrique George Sanchez','enrique-george-sanchez',9,'Sanchez','enrique_sanchez','(401) 222-1162'),('Scott A Slater','scott-a-slater',10,'slater','scott_slater','(401) 222-1591')]
 
+CONFIGS += [('Anthony J DeSimone','anthony-j-desimone',5,'desimone','anthony_desimone','(401) 222-2447')]
+
 def build():
  # Use the complete 75-member calculation dataset for the House index.
  base.current_index=current_index
@@ -68,8 +70,11 @@ def build():
   page,n=re.subn(r'const candidateProfile = \((\{.*?\})\)\[candidate.candidate_id\]',extend,page);assert n==1
   path.write_text(page)
  path=ROOT/'index.html';page=path.read_text();marker='      if(candidate?.chamber !== "senate") return "";'
- profiles={district:[name.split()[-1].lower(),slug] for name,slug,district,*_ in CONFIGS}
- house='      if(candidate?.chamber === "house") {\n        const profiles = '+json.dumps(profiles,separators=(',',':'))+';\n        const profile = profiles[Number(candidate.district_number)];\n        return profile && normalizeSearchText(candidate.name || "").split(" ").includes(profile[0]) ? `candidates/${profile[1]}.html` : "";\n      }\n'
+ all_registry=json.loads(re.search(r'const candidateProfile = \((\{.*?\})\)\[candidate.candidate_id\]',(ROOT/'ballot.html').read_text())[1])
+ profiles={}
+ for d,race in base.load('whos_running_2026')['chambers']['house'].items():
+  profiles[d]=[[c['name'].split()[-1].lower(),all_registry[c['candidate_id']]] for c in race['candidates'] if c['candidate_id'] in all_registry]
+ house='      if(candidate?.chamber === "house") {\n        const profiles = '+json.dumps(profiles,separators=(',',':'))+';\n        const profile = (profiles[Number(candidate.district_number)] || []).find(p=>normalizeSearchText(candidate.name || "").split(" ").includes(p[0]));\n        return profile ? `candidates/${profile[1]}.html` : "";\n      }\n'
  pattern=r'      if\(candidate\?\.chamber === "house"\) \{\n.*?\n      \}\n'
  if re.search(pattern,page,re.S):page=re.sub(pattern,lambda m:house,page,count=1,flags=re.S)
  else:page=page.replace(marker,house+marker,1)

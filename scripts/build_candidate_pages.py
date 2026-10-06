@@ -14,6 +14,10 @@ def current_index(record):
  calc=lambda r:len(peers)/3*sum(r['legislation'][k]/t for k,t in zip(keys,totals))
  score=calc(record); rank=1+sum(calc(p)>score for p in peers)
  return f'<section class="riep-progress"><p class="eyebrow">Experimental RIEP index · 2025–2026</p><h3>Legislative progress index</h3>{metrics([("RIEP index",f"{score:.2f}"),("Senate record rank",f"{rank} / 38")])}<p>Equal weight for lead-sponsored bills, bills passed by the Senate and bills that became law. A score of 1 is the average of the 38 current Senate district records. This is an RIEP calculation, separate from CEL.</p>'+details('Calculation and coverage',f'<p>38 ÷ 3 × ({" + ".join(str(record["legislation"][k])+" ÷ "+str(t) for k,t in zip(keys,totals))}) = {score:.6f}.</p><p>Snapshot updated August 30, 2026. Resolutions and cosponsorship excluded. This current-roster comparison does not include every person who served during the session.</p>')+'</section>'
+def candidate_name_matches(candidate_name,result_name):
+ tokens=lambda value:re.findall(r"[a-z]+",value.lower())
+ candidate=tokens(candidate_name);result=tokens(result_name)
+ return bool(candidate and result and candidate[0]==result[0] and candidate[-1]==result[-1])
 def build(name,slug,district,community,email,phone,chamber="senate"):
  label="House" if chamber=="house" else "Senate"
  template=(ROOT/'candidates/john-burke.html').read_text(); head=template.split('<body>')[0]; head=head.replace('John Burke',name).replace('Senate District 9',f'{label} District {district}')
@@ -47,7 +51,7 @@ def build(name,slug,district,community,email,phone,chamber="senate"):
  for r in sorted(load('race_data').values(),key=lambda r:int(r['year']),reverse=True):
   if r['chamber'].lower()==chamber and int(r['district_number'])==district:
    for c in r['candidates']:
-    if surname.lower() in c["name"].lower():
+    if candidate_name_matches(name,c["name"]):
      url=f"/map.html?mode=results&chamber={chamber}&year={r['year']}&view=party&district={district}"
      elections.append(f'<div class="election"><a class="year election-link" href="{esc(url)}" aria-label="View {r["year"]} Senate District {district} general election results">{r["year"]}</a><div><strong>{esc(c["role"])} · {esc(c["votes"])} votes</strong><small>Districtwide general election</small></div><span class="result">{esc(c["pct"])}</span></div>')
  body+=section('elections','Past electoral performance','<p class="intro">Districtwide general election results. Select a year to open RIEP’s results map.</p><div class="timeline">'+''.join(elections)+'</div>')
