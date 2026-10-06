@@ -9,7 +9,7 @@ CONFIGS=[('Edith H Ajello','edith-h-ajello',1,'ajello','edith_ajello', '(401) 22
 CONFIGS += [('Raymond A Hull','raymond-a-hull',6,'Hull','raymond_hull','(401) 222-1723'),('John Joseph Lombardi','john-joseph-lombardi',8,'lombardi','john_lombardi','(401) 222-1721'),('Enrique George Sanchez','enrique-george-sanchez',9,'Sanchez','enrique_sanchez','(401) 222-1162'),('Scott A Slater','scott-a-slater',10,'slater','scott_slater','(401) 222-1591')]
 
 def build():
- # The shared component withholds the House index until all district records exist.
+ # Use the complete 75-member calculation dataset for the House index.
  base.current_index=current_index
  fogarty=(ROOT/'candidates/kathleen-a-fogarty.html').read_text()
  widget=re.search(r'<section class="card voting-pilot" id="voting-patterns">.*?</section>',fogarty,re.S).group()

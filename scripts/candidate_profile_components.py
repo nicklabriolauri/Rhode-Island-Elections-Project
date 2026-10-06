@@ -49,6 +49,9 @@ def billtrack_sections(slug):
 def expectation_explainer(cel):
  return '<p class="score-context">The party rank compares this legislator with other members of the same party in the same chamber. CEL’s expectations label uses a separate benchmark that accounts for party status, seniority and committee leadership. “Meets Expectations” means a score between 50% and 150% of that benchmark; it does not mean an average party rank. <a href="'+esc(cel['glossary_url'])+'">How CEL defines expectations ↗</a></p>'
 def current_index(rec):
+ if rec["chamber"]=="house":
+  from house_legislative_index import house_current_index
+  return house_current_index(rec)
  peers=[r for r in load('incumbent_records_2026')['records'] if r['chamber']==rec['chamber']];keys=['prime_sponsored','passed_chamber','became_law'];totals=[sum(r['legislation'][k] for r in peers) for k in keys]
  n=75 if rec["chamber"]=="house" else 38
  if len(peers)!=n or len({r['district_number'] for r in peers})!=n:
