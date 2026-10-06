@@ -10,6 +10,7 @@ CONFIGS += [('Raymond A Hull','raymond-a-hull',6,'Hull','raymond_hull','(401) 22
 
 CONFIGS += [('Anthony J DeSimone','anthony-j-desimone',5,'desimone','anthony_desimone','(401) 222-2447')]
 CONFIGS += [('Grace Diaz','grace-diaz',11,'diaz','grace_diaz','(401) 222-2258'),('Ramon Perez','ramon-perez',13,'perez','ramon_perez','(401) 222-1725'),('Charlene M Lima','charlene-m-lima',14,'Lima','charlene_lima','(401) 222-2447')]
+CONFIGS += [('Brandon Potter','brandon-potter',16,'potter','brandon_potter','(401) 222-2447'),('Jacquelyn Baginski','jacquelyn-baginski',17,'baginski','jacquelyn_baginski','(401) 222-4263'),('Arthur Handy','arthur-handy',18,'Handy','arthur_handy','(401) 222-1725')]
 
 def build(slugs=None):
  # Use the complete 75-member calculation dataset for the House index.
@@ -23,7 +24,7 @@ def build(slugs=None):
  for name,slug,district,surname,image,phone in CONFIGS:
   if slugs is not None and slug not in slugs:continue
   bio=f'https://www.rilegislature.gov/representatives/{surname}/Pages/Biography.aspx'
-  community={6:'Providence, North Providence',13:'Providence, Johnston',14:'Cranston, Providence'}.get(district,'Providence')
+  community={6:'Providence, North Providence',13:'Providence, Johnston',14:'Cranston, Providence',16:'Cranston',17:'Cranston',18:'Cranston'}.get(district,'Providence')
   email=f'rep-{surname.lower()}@rilegislature.gov'
   base.build(name,slug,district,community,email,phone,'house')
   path=ROOT/'candidates'/f'{slug}.html';page=path.read_text()
