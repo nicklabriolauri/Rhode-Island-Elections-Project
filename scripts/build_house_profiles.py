@@ -12,6 +12,8 @@ CONFIGS += [('Anthony J DeSimone','anthony-j-desimone',5,'desimone','anthony_des
 CONFIGS += [('Grace Diaz','grace-diaz',11,'diaz','grace_diaz','(401) 222-2258'),('Ramon Perez','ramon-perez',13,'perez','ramon_perez','(401) 222-1725'),('Charlene M Lima','charlene-m-lima',14,'Lima','charlene_lima','(401) 222-2447')]
 CONFIGS += [('Brandon Potter','brandon-potter',16,'potter','brandon_potter','(401) 222-2447'),('Jacquelyn Baginski','jacquelyn-baginski',17,'baginski','jacquelyn_baginski','(401) 222-4263'),('Arthur Handy','arthur-handy',18,'Handy','arthur_handy','(401) 222-1725')]
 
+CONFIGS += [('Christopher G Paplauskas','christopher-g-paplauskas',15,'Paplauskas','christopher_paplauskas','(401) 222-2259')]
+
 def build(slugs=None):
  # Use the complete 75-member calculation dataset for the House index.
  base.current_index=current_index
@@ -24,15 +26,17 @@ def build(slugs=None):
  for name,slug,district,surname,image,phone in CONFIGS:
   if slugs is not None and slug not in slugs:continue
   bio=f'https://www.rilegislature.gov/representatives/{surname}/Pages/Biography.aspx'
-  community={6:'Providence, North Providence',13:'Providence, Johnston',14:'Cranston, Providence',16:'Cranston',17:'Cranston',18:'Cranston'}.get(district,'Providence')
+  community={6:'Providence, North Providence',13:'Providence, Johnston',14:'Cranston, Providence',15:'Cranston',16:'Cranston',17:'Cranston',18:'Cranston'}.get(district,'Providence')
   email=f'rep-{surname.lower()}@rilegislature.gov'
   base.build(name,slug,district,community,email,phone,'house')
   path=ROOT/'candidates'/f'{slug}.html';page=path.read_text()
   rec=next(r for r in records if r['chamber']=='house' and r['district_number']==district)
   registry[rec['candidate_id']]=slug
+  candidate=next(c for c in base.load('whos_running_2026')['chambers']['house'][str(district)]['candidates'] if c['candidate_id']==rec['candidate_id'])
+  party_code=candidate['party'];party=candidate['party_label']
   page=replace_section(page,'bills',bill_sections(rec,slug))
   page=replace_section(page,'ratings',ratings(rec))
-  page=replace_section(page,'about',section('about','About this candidate',f'<p class="intro">{base.esc(name)} represents House District {district} · {base.esc(community)}.</p><div class="grid2"><div class="mini"><h3>At a glance</h3><p>Democratic incumbent in the 2026 candidate roster.</p></div><div class="mini"><h3>How to read this page</h3><p>Campaign positions, election returns, campaign finance and outside scorecards are labeled by source and period.</p></div></div><p class="source">'+base.link(bio,'Official General Assembly biography ↗')+'</p>'))
+  page=replace_section(page,'about',section('about','About this candidate',f'<p class="intro">{base.esc(name)} represents House District {district} · {base.esc(community)}.</p><div class="grid2"><div class="mini"><h3>At a glance</h3><p>{base.esc(party)} incumbent in the 2026 candidate roster.</p></div><div class="mini"><h3>How to read this page</h3><p>Campaign positions, election returns, campaign finance and outside scorecards are labeled by source and period.</p></div></div><p class="source">'+base.link(bio,'Official General Assembly biography ↗')+'</p>'))
   contact=section('contact','Contact &amp; district','<dl class="details">'+''.join(f'<div><dt>{k}</dt><dd>{v}</dd></div>' for k,v in [('District',f'House District {district}'),('Community',base.esc(community)),('Phone',base.link('tel:+1'+re.sub('[^0-9]','',phone),phone)),('Legislative email',base.link('mailto:'+email,email))])+'</dl><p class="source">'+base.link(bio,'Official General Assembly contact details ↗')+'</p>')
   page=re.sub(r'(<aside class="side"[^>]*>)<section class="card">.*?</section>',lambda m:m[1]+contact,page,count=1,flags=re.S)
   rows=[]
@@ -42,14 +46,14 @@ def build(slugs=None):
    url=result['source_url'];label=('Uncontested ' if result.get('uncontested') else '')+result['party']+' primary · Official results'
    rows.append(f'<div class="election"><a class="year election-link" href="{base.esc(url)}">{result["year"]}</a><div><strong>{result["votes"]:,} votes</strong><small>{base.esc(label)}</small></div><a class="result election-link" href="{base.esc(url)}">{base.esc(result["share"])}</a></div>')
   for race in ([] if official else primary):
-   if race['chamber']!='house' or int(race['district'])!=district or race['party_code']!='DEM':continue
+   if race['chamber']!='house' or int(race['district'])!=district or race['party_code']!=party_code:continue
    for c in race['candidates']:
     if c['name']!=name:continue
-    url=f'/races/house-{district}-democratic.html'
-    rows.append(f'<div class="election"><a class="year election-link" href="{url}">2026</a><div><strong>{c["votes"]:,} votes</strong><small>Democratic primary · Unofficial September 10 snapshot</small></div><a class="result election-link" href="{url}">{c["pct"]}%</a></div>')
+    url=f'/races/house-{district}-'+('democratic' if party_code=='DEM' else 'republican')+'.html'
+    rows.append(f'<div class="election"><a class="year election-link" href="{url}">2026</a><div><strong>{c["votes"]:,} votes</strong><small>{base.esc(party)} primary · Unofficial September 10 snapshot</small></div><a class="result election-link" href="{url}">{c["pct"]}%</a></div>')
   body=f'<p class="intro">House District {district} · Share of votes cast for named candidates.</p><div class="timeline">'+(''.join(rows) or '<p>Primary vote totals are under construction. No vote total is assigned from a different race.</p>')+'</div><p class="source">'+('2026 figures use RIEP’s unofficial September 10 snapshot. Earlier primary years are under construction. ' if rows else '')+base.link('https://electionresults.ri.gov/results/public/rhodeisland/elections/RI2026StatewidePrimary','Official 2026 Board of Elections results ↗')+'</p>'
   if official:body=f'<p class="intro">House District {district} · Share of votes cast for named candidates.</p><div class="timeline">'+''.join(rows)+'</div><p class="source">'+ ' · '.join(base.link(r['source_url'],r['source_label']+' ↗') for r in official)+'. Official 2026 results updated September 15, 2026. Earlier primary years are under construction.</p>'
-  page=replace_section(page,'primaries',section('primaries','Democratic primary history',body))
+  page=replace_section(page,'primaries',section('primaries',party+' primary history',body))
   research=next(r for r in base.load('candidate_research_2026_with_endorsements')['candidates'] if r['candidate_id']==rec['candidate_id'])
   endorsements=research['endorsements']
   page=replace_section(page,'endorsements',section('endorsements','Endorsements',('<p class="intro">Published endorsements from outside organizations. Select an organization to view its endorsement source.</p>' if endorsements else '<p class="intro">No published endorsements are currently recorded for this candidate in RIEP’s research. Additional endorsements will be added after verification.</p>')+''.join(f'<div class="endorsement-entry"><a class="endorsement-chip" href="{base.esc(e["source_url"])}" target="_blank" rel="noopener">{base.esc(e["endorser"])} ↗</a><p class="endorsement-period">2026 election · House District {district}</p></div>' for e in endorsements)+'<p class="source">Outside organizations’ endorsements, not RIEP endorsements. Sources may include organization lists and voter-guide records.</p>'))

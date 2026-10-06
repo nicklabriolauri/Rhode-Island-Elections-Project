@@ -5,7 +5,7 @@ from build_candidate_pages import load,esc,link,metrics,candidate_name_matches
 from candidate_profile_components import section,replace_section
 ROOT=Path(__file__).resolve().parents[1]
 SLUGS={'amy-j-santiago':7,'christopher-l-ireland':7,'brittany-m-kubicek':5}
-SLUGS.update({'arlette-hidalgo':12,'derick-a-reels':13})
+SLUGS.update({'arlette-hidalgo':12,'derick-a-reels':13,'colleen-m-crudele':15,'allan-w-fung':15})
 def build(slugs=None):
  incumbent=ROOT/'candidates/anthony-j-desimone.html'
  incumbent.write_text(incumbent.read_text().replace('/running.html?chamber=house&amp;district=5&amp;election=general','/races/house-5.html'))
@@ -14,16 +14,22 @@ def build(slugs=None):
   if slugs is not None and slug not in slugs:continue
   c=next(c for c in roster[str(district)]['candidates'] if c['candidate_id'].endswith('-'+slug));name=c['name'];candidate_id=c['candidate_id'];registry[candidate_id]=slug
   research=next(r for r in load('candidate_research_2026_with_endorsements')['candidates'] if r['candidate_id']==candidate_id)
-  party={'DEM':'Democratic','REP':'Republican','OTH':'Independent Socialist'}[c['party']]
-  website=research.get('campaign_website','');finance=f'/finance.html?slug={slug}' if slug!='brittany-m-kubicek' else '/finance-candidates/'+candidate_id+'.html'
+  party={'DEM':'Democratic','REP':'Republican','OTH':'Independent Socialist','IND':'Independent'}[c['party']]
+  community=c.get('hometown','Providence')
+  website=research.get('campaign_website','');finance=('/finance-candidates/'+candidate_id+'.html' if c['party'] in ('OTH','IND') else f'/finance.html?slug={slug}')
   page=(ROOT/'candidates/anthony-j-desimone.html').read_text().replace('Anthony J DeSimone',name).replace('anthony-j-desimone',slug).replace('District 5',f'District {district}').replace('district=5',f'district={district}').replace('/races/house-5.html',f'/races/house-{district}.html').replace('Democratic',party).replace('Democrat · Incumbent',party+' · Candidate')
+  page=page.replace('· Candidate · Providence','· Candidate · '+community)
   page=page.replace('Portrait of Rhode Island Representative '+name,'Portrait of '+name)
   page=replace_section(page,'voting-patterns','');page=page.replace('<a href="#voting-patterns">Voting patterns</a>','')
   page=re.sub(r'<link[^>]+href="house-voting-patterns/[^>]+>','',page);page=re.sub(r'<script src="house-voting-patterns/[^>]+></script>','',page)
   def replace(id,title,body):
    nonlocal page
    page=replace_section(page,id,section(id,title,body))
-  replace('about','About this candidate',f'<p class="intro">{esc(party)} candidate for House District {district} · Providence.</p><div class="grid2"><div class="mini"><h3>At a glance</h3><p>Candidate in the 2026 general election. Campaign statements and public records are labeled by source and reporting period.</p></div><div class="mini"><h3>How to read this page</h3><p>A candidate without a General Assembly service record is not assigned a legislative score of zero.</p></div></div>'+('<p class="source">'+link(website,'Official campaign website ↗')+'</p>' if website else ''))
+  replace('about','About this candidate',f'<p class="intro">{esc(party)} candidate for House District {district} · {esc(community)}.</p><div class="grid2"><div class="mini"><h3>At a glance</h3><p>Candidate in the 2026 general election. Campaign statements and public records are labeled by source and reporting period.</p></div><div class="mini"><h3>How to read this page</h3><p>A candidate without a General Assembly service record is not assigned a legislative score of zero.</p></div></div>'+('<p class="source">'+link(website,'Official campaign website ↗')+'</p>' if website else ''))
+  if research.get('prior_public_service'):
+   prior=research['prior_public_service']
+   old=re.search(r'<section class="card" id="about">.*?</section>',page,re.S).group()
+   page=page.replace(old,old.replace('</section>',f'<div class="mini"><h3>Earlier public service</h3><p>{esc(prior["summary"])}</p><p class="source">'+link(prior['source_url'],prior['source_label']+' ↗')+'</p></div></section>'))
   priorities=research['priorities'];sources=sorted({(p['source_url'],p.get('source_label','Campaign source')) for p in priorities if p.get('source_url')})
   replace('priorities','Campaign priorities',('<div class="grid2">'+''.join(f'<div class="mini"><h3>{esc(p["title"])}</h3><p>{esc(p["summary"])}</p></div>' for p in priorities)+'</div><p class="source">'+' · '.join(link(u,label) for u,label in sources)+'. Campaign positions, not RIEP assessments.</p>') if priorities else '<div class="empty"><strong>Campaign priorities under construction</strong><p>No campaign priorities are currently recorded for this candidate in RIEP’s research. This section will be updated after verification.</p></div>')
   elections=[]
@@ -47,10 +53,10 @@ def build(slugs=None):
       url=f'/races/house-{district}-'+('democratic' if c['party']=='DEM' else 'republican')+'.html'
       rows.append(f'<div class="election"><a class="year election-link" href="{url}">2026</a><div><strong>{result["votes"]:,} votes</strong><small>{esc(party)} primary · Unofficial September 10 snapshot</small></div><a class="result election-link" href="{url}">{result["pct"]}%</a></div>')
   primary_source=(' · '.join(link(r['source_url'],r['source_label']+' ↗') for r in official)+'. Official 2026 results updated September 15, 2026. Earlier primary years are under construction.' if official else '2026 figures, where shown, use RIEP’s unofficial September 10 snapshot. Earlier primary years are under construction.')
-  replace('primaries','Primary history',('<p class="intro">Independent general-election candidate; a party-primary vote total is not assigned.</p>' if c['party']=='OTH' else '<div class="timeline">'+(''.join(rows) or '<p>Primary vote totals are under construction. No vote total is assigned from another race.</p>')+'</div><p class="source">'+primary_source+'</p>'))
-  if c['party']=='OTH':
-   fin=next(r for r in load('independent_finance_supplement_2026')['candidates'] if r['name']==name)
-   period='Year to date through June 30, 2026 · Q1 and Q2 filings';items=[('Raised in 2026',fin['ytd_receipts']),('Spent in 2026',fin['ytd_campaign_expenses']),('Cash at period end',fin['cash_on_hand'])]
+  replace('primaries','Primary history',('<p class="intro">Independent general-election candidate; a party-primary vote total is not assigned.</p>' if c['party'] in ('OTH','IND') else '<div class="timeline">'+(''.join(rows) or '<p>Primary vote totals are under construction. No vote total is assigned from another race.</p>')+'</div><p class="source">'+primary_source+'</p>'))
+  if c['party'] in ('OTH','IND'):
+   fin=next((r for r in load('independent_finance_supplement_2026')['candidates'] if r['name']==name),{})
+   period='Year to date through June 30, 2026 · Q1 and Q2 filings';items=[('Raised in 2026',fin.get('ytd_receipts')),('Spent in 2026',fin.get('ytd_campaign_expenses')),('Cash at period end',fin.get('cash_on_hand'))]
   else:
    fin=next(r for r in load('candidate_finance_2026')['profiles'] if r['slug']==slug);period=fin['report_label']+' · '+fin['reporting_period_label'];items=[('Raised during period',fin['money_raised']),('Spent during period',fin['money_spent']),('Cash at period end',fin['ending_cash'])]
   finance_body=(f'<p class="intro">{esc(period)}. Figures describe the stated reporting period.</p>'+metrics([(label,f'${value:,.2f}') for label,value in items]).replace('record-grid','metric-grid') if all(value is not None for _,value in items) else '<div class="empty"><strong>Campaign finance details under construction</strong><p>No financial summary is currently available in RIEP’s dataset for this candidate. Missing figures are not treated as zero.</p></div>')
@@ -61,7 +67,7 @@ def build(slugs=None):
   endorsements=research['endorsements']
   replace('endorsements','Endorsements',('<p class="intro">Published endorsements from outside organizations. Select an organization to view its source.</p>' if endorsements else '<p class="intro">No published endorsements are currently recorded for this candidate in RIEP’s research.</p>')+''.join(f'<div class="endorsement-entry"><a class="endorsement-chip" href="{esc(e["source_url"])}" target="_blank" rel="noopener">{esc(e["endorser"])} ↗</a><p class="endorsement-period">2026 election · House District {district}</p></div>' for e in endorsements)+'<p class="source">Outside endorsements, not RIEP endorsements.</p>')
   replace('sources','Under construction','<p class="intro">This candidate profile is under construction. Additional campaign information, election history and digital-footprint research will be added after verification.</p>')
-  replace('contact','Contact &amp; district','<dl class="details">'+''.join(f'<div><dt>{label}</dt><dd>{value}</dd></div>' for label,value in [('District',f'House District {district}'),('Community','Providence'),('Roster contact phone',link('tel:+1'+re.sub('[^0-9]','',c['phone']),c['phone'])),('Roster contact email',link('mailto:'+c['email'],c['email']))])+'</dl><p class="source">2026 Department of State candidate roster.</p>')
+  replace('contact','Contact &amp; district','<dl class="details">'+''.join(f'<div><dt>{label}</dt><dd>{value}</dd></div>' for label,value in [('District',f'House District {district}'),('Community',esc(community)),('Roster contact phone',link('tel:+1'+re.sub('[^0-9]','',c['phone']),c['phone'])),('Roster contact email',link('mailto:'+c['email'],c['email']))])+'</dl><p class="source">2026 Department of State candidate roster.</p>')
   portraits=load('candidate_portrait_sources_2026');portrait=next((p for p in portraits if p['slug']==slug),None)
   if portrait:
    if slug=='brittany-m-kubicek':page=page.replace('class="portrait"','class="portrait" style="object-position:25% top"')

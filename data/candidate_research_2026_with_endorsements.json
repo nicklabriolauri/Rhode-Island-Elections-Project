@@ -2666,11 +2666,18 @@
       "chamber": "house",
       "district_number": 15,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-30",
-      "website_audit_note": "No official campaign website located in this audit.",
-      "priorities": [],
+      "campaign_website": "https://www.colleenforcranston.com/",
+      "website_status": "official_campaign_site_verified",
+      "website_checked": "2026-10-06",
+      "website_audit_note": "Official District 15 campaign site verified October 6, 2026.",
+      "priorities": [
+        {
+          "title": "Accessible representation",
+          "summary": "Crudele says she will listen to constituents, remain accessible and bring budget review and problem-solving experience to District 15.",
+          "source_url": "https://www.colleenforcranston.com/",
+          "source_label": "Official campaign website · Why I’m Running"
+        }
+      ],
       "endorsements": []
     },
     {
@@ -2687,7 +2694,7 @@
       "endorsements": []
     },
     {
-      "candidate_id": "house-15-oth-general-allan-w-fung",
+      "candidate_id": "house-15-ind-general-allan-w-fung",
       "candidate_name": "Allan W Fung",
       "chamber": "house",
       "district_number": 15,
@@ -2697,7 +2704,12 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [],
+      "prior_public_service": {
+        "summary": "Allan Fung served as mayor of Cranston from 2009 to 2021. His municipal service is separate from a Rhode Island General Assembly legislative record.",
+        "source_url": "https://www.committee100.org/events/asian-american-career-ceilings-running-for-office/",
+        "source_label": "Committee of 100 · 2022 speaker biography"
+      }
     },
     {
       "candidate_id": "house-16-dem-primary-brandon-potter",
