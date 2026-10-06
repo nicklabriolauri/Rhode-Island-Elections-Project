@@ -1,0 +1,14 @@
+.bffi-card{margin-top:24px;padding:20px;border:1px solid var(--line);border-left:4px solid #14734f;border-radius:6px;background:#f8fbfa}
+.bffi-head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+.bffi-head h3{margin:7px 0 0;font-size:19px;line-height:1.4}
+.bffi-head .eyebrow{margin:0;color:#315b4c}
+.bffi-subtitle{margin:7px 0 0;color:var(--muted);font-size:12px}
+.bffi-badge{display:inline-flex;flex:none;align-items:center;border-radius:5px;background:#14734f;color:#fff;padding:9px 16px;font-size:19px;font-weight:800}
+.bffi-card>p,.bffi-card details{font-size:14px;line-height:1.7}
+.bffi-card details{border-top:1px solid var(--line);padding-top:14px}
+.bffi-card summary{cursor:pointer;color:var(--action,#194f9b);font-weight:800}
+.bffi-card summary:focus-visible{outline:3px solid #d79326;outline-offset:4px}
+.bffi-key{display:grid;grid-template-columns:70px minmax(0,1fr);gap:10px 14px;margin:18px 0}
+.bffi-key dt{font-weight:800}.bffi-key dd{margin:0}
+.bffi-card .source{margin-bottom:0;font-size:12px}
+@media(max-width:600px){.bffi-card{padding:16px}.bffi-head{gap:12px;flex-wrap:wrap}.bffi-head h3{font-size:17px}.bffi-badge{font-size:17px;padding:7px 13px}.bffi-key{grid-template-columns:60px minmax(0,1fr);gap:10px}}
