@@ -8,7 +8,8 @@ for(const c of roster){
  const slug=registry[c.candidate_id],s=read('candidates/'+slug+'.html');
  assert(s.includes('<h1>'+c.name+'</h1>'));
  assert(s.includes('House District 15'));assert(!s.includes('Providence'));
- assert(s.includes('/races/house-15.html'));
+ assert(s.includes('href="/running.html?chamber=house&amp;district=15&amp;election=general">View race &amp; opponents'));
+ assert(!s.includes('href="/races/house-15.html"'));
  assert(fs.existsSync('candidates/'+slug+'.png'));
  assert(read('candidate-profiles.html').includes('href="candidates/'+slug+'.html"'));
  assert(read('race-page.js').includes('"'+c.candidate_id+'":"'+slug+'"'));

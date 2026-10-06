@@ -72,6 +72,7 @@ def build(slugs=None):
   page=re.sub(r'<p><strong>Leadership:</strong> (.*?)</p><p><strong>Committees:</strong> (.*?)</p>',r'<dl class="office-details"><div><dt>Leadership</dt><dd>\1</dd></div><div><dt>Committees</dt><dd>\2</dd></div></dl>',page)
   if district==2:page=page.replace('<dd></dd>','<dd>No committee assignments listed in the recorded roster.</dd>')
   assert 'chamber=senate' not in page and 'Senate District' not in page
+  if district==15:page=page.replace('href="/races/house-15.html"','href="/running.html?chamber=house&amp;district=15&amp;election=general"')
   path.write_text(page)
   entry={'slug':slug,'portrait_url':f'https://www.rilegislature.gov/LegislationPictures/{image}.jpg','biography_url':bio,'retrieved_at':'2026-10-06','credit':'Rhode Island General Assembly','width':w,'height':h}
   portraits=[r for r in portraits if r['slug']!=slug]+[entry]

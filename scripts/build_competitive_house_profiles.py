@@ -77,6 +77,7 @@ def build(slugs=None):
   page=re.sub(r'href="/finance.html\?slug='+re.escape(slug)+r'"',lambda m:'href="'+finance+'"',page)
   page=re.sub(r'href="/running.html\?chamber=house(?:&amp;|&)district='+str(district)+r'(?:&amp;|&)election=general"',f'href="/races/house-{district}.html"',page)
   assert 'data-voting-widget' not in page and 'riep-legislative-index' not in page and 'rep-desimone' not in page
+  if district==15:page=page.replace('href="/races/house-15.html"','href="/running.html?chamber=house&amp;district=15&amp;election=general"')
   (ROOT/'candidates'/f'{slug}.html').write_text(page)
  for filename in ['ballot.html','running.html']:
   p=ROOT/filename;s=p.read_text()
