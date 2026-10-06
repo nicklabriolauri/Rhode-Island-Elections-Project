@@ -1,0 +1,1358 @@
+{
+  "title": "Rhode Island Senate voting patterns",
+  "period": "2025\u20132026",
+  "latest_journal": "2026-06-11",
+  "inventory_checked": "2026-10-05",
+  "status": "private research pilot",
+  "scope": {
+    "journals": 81,
+    "years": {
+      "2025": 38,
+      "2026": 43
+    },
+    "people_in_historical_roster": 39,
+    "current_senators": 38,
+    "binary_rollcalls": 1323,
+    "validated_rollcalls": 1271,
+    "quarantined_rollcalls": 52,
+    "validated_divided_rollcalls": 366,
+    "nonbinary_ballots": 1
+  },
+  "model": {
+    "package": "wnominate",
+    "version": "1.5",
+    "dimensions": 1,
+    "minority_cutoff": 0.025,
+    "minimum_votes": 20,
+    "bootstrap_trials": 50,
+    "positive_anchor": "Jessica de la Cruz",
+    "higher_is_better": false,
+    "interpretation": "Relative positions within this chamber and vote set; not an effectiveness score or a validated liberal/conservative label."
+  },
+  "sensitivity": {
+    "cutoff_5pct": {
+      "common_legislators": 38,
+      "votes_used": 275,
+      "spearman": 0.997
+    },
+    "cutoff_10pct": {
+      "common_legislators": 38,
+      "votes_used": 214,
+      "spearman": 0.9927
+    },
+    "year_2025": {
+      "common_legislators": 37,
+      "votes_used": 181,
+      "spearman": 0.9849
+    },
+    "year_2026": {
+      "common_legislators": 38,
+      "votes_used": 185,
+      "spearman": 0.9684
+    },
+    "passage_only": {
+      "common_legislators": 38,
+      "votes_used": 299,
+      "spearman": 0.9917
+    }
+  },
+  "positions": [
+    {
+      "name": "Samuel W Bell",
+      "district": 5,
+      "party": "DEM",
+      "position": -1.0,
+      "bootstrap_standard_error": 0.0336198732256889,
+      "recorded_votes_used": 365,
+      "correct_classification": 0.813698630136986
+    },
+    {
+      "name": "Tiara T Mack",
+      "district": 6,
+      "party": "DEM",
+      "position": -1.0,
+      "bootstrap_standard_error": 0.0272338427603245,
+      "recorded_votes_used": 356,
+      "correct_classification": 0.941011235955056
+    },
+    {
+      "name": "Dawn Euer",
+      "district": 13,
+      "party": "DEM",
+      "position": -0.976296663284302,
+      "bootstrap_standard_error": 0.0473423078656197,
+      "recorded_votes_used": 302,
+      "correct_classification": 0.890728476821192
+    },
+    {
+      "name": "Jonathon Acosta",
+      "district": 16,
+      "party": "DEM",
+      "position": -0.918142676353455,
+      "bootstrap_standard_error": 0.0728418976068497,
+      "recorded_votes_used": 358,
+      "correct_classification": 0.927374301675978
+    },
+    {
+      "name": "Meghan E Kallman",
+      "district": 15,
+      "party": "DEM",
+      "position": -0.897781729698181,
+      "bootstrap_standard_error": 0.0782187283039093,
+      "recorded_votes_used": 361,
+      "correct_classification": 0.952908587257618
+    },
+    {
+      "name": "Bridget G Valverde",
+      "district": 35,
+      "party": "DEM",
+      "position": -0.887404143810272,
+      "bootstrap_standard_error": 0.0799398869276047,
+      "recorded_votes_used": 335,
+      "correct_classification": 0.916417910447761
+    },
+    {
+      "name": "Ana B Quezada",
+      "district": 2,
+      "party": "DEM",
+      "position": -0.882882058620453,
+      "bootstrap_standard_error": 0.0789494216442108,
+      "recorded_votes_used": 349,
+      "correct_classification": 0.885386819484241
+    },
+    {
+      "name": "Ryan W Pearson",
+      "district": 19,
+      "party": "DEM",
+      "position": -0.880790591239929,
+      "bootstrap_standard_error": 0.0876503512263298,
+      "recorded_votes_used": 234,
+      "correct_classification": 0.893162393162393
+    },
+    {
+      "name": "Linda L Ujifusa",
+      "district": 11,
+      "party": "DEM",
+      "position": -0.873071730136871,
+      "bootstrap_standard_error": 0.086848571896553,
+      "recorded_votes_used": 365,
+      "correct_classification": 0.876712328767123
+    },
+    {
+      "name": "Pamela J Lauria",
+      "district": 32,
+      "party": "DEM",
+      "position": -0.857647836208344,
+      "bootstrap_standard_error": 0.0896099880337715,
+      "recorded_votes_used": 351,
+      "correct_classification": 0.937321937321937
+    },
+    {
+      "name": "Alana M DiMario",
+      "district": 36,
+      "party": "DEM",
+      "position": -0.838128566741943,
+      "bootstrap_standard_error": 0.0970749035477638,
+      "recorded_votes_used": 361,
+      "correct_classification": 0.947368421052632
+    },
+    {
+      "name": "Lammis J Vargas",
+      "district": 28,
+      "party": "DEM",
+      "position": -0.833606600761414,
+      "bootstrap_standard_error": 0.0996731966733932,
+      "recorded_votes_used": 349,
+      "correct_classification": 0.959885386819484
+    },
+    {
+      "name": "Samuel D Zurier",
+      "district": 3,
+      "party": "DEM",
+      "position": -0.832284927368164,
+      "bootstrap_standard_error": 0.0935622453689575,
+      "recorded_votes_used": 366,
+      "correct_classification": 0.942622950819672
+    },
+    {
+      "name": "Lori Urso",
+      "district": 8,
+      "party": "DEM",
+      "position": -0.75761204957962,
+      "bootstrap_standard_error": 0.128252759575844,
+      "recorded_votes_used": 361,
+      "correct_classification": 0.983379501385042
+    },
+    {
+      "name": "Robert Britto",
+      "district": 18,
+      "party": "DEM",
+      "position": -0.757252991199493,
+      "bootstrap_standard_error": 0.118321418762207,
+      "recorded_votes_used": 358,
+      "correct_classification": 0.983240223463687
+    },
+    {
+      "name": "Hanna M Gallo",
+      "district": 27,
+      "party": "DEM",
+      "position": -0.740413963794708,
+      "bootstrap_standard_error": 0.127225011587143,
+      "recorded_votes_used": 357,
+      "correct_classification": 0.985994397759104
+    },
+    {
+      "name": "Mark McKenney",
+      "district": 30,
+      "party": "DEM",
+      "position": -0.737281262874603,
+      "bootstrap_standard_error": 0.126502826809883,
+      "recorded_votes_used": 363,
+      "correct_classification": 0.997245179063361
+    },
+    {
+      "name": "Jacob Bissaillon",
+      "district": 1,
+      "party": "DEM",
+      "position": -0.730590283870697,
+      "bootstrap_standard_error": 0.12301416695118,
+      "recorded_votes_used": 363,
+      "correct_classification": 1.0
+    },
+    {
+      "name": "Victoria Gu",
+      "district": 38,
+      "party": "DEM",
+      "position": -0.726362824440002,
+      "bootstrap_standard_error": 0.122082427144051,
+      "recorded_votes_used": 357,
+      "correct_classification": 0.966386554621849
+    },
+    {
+      "name": "Louis DiPalma",
+      "district": 12,
+      "party": "DEM",
+      "position": -0.725386381149292,
+      "bootstrap_standard_error": 0.130584016442299,
+      "recorded_votes_used": 365,
+      "correct_classification": 1.0
+    },
+    {
+      "name": "Matthew L LaMountain",
+      "district": 31,
+      "party": "DEM",
+      "position": -0.724887013435364,
+      "bootstrap_standard_error": 0.126548007130623,
+      "recorded_votes_used": 364,
+      "correct_classification": 1.0
+    },
+    {
+      "name": "Valarie Jean Lawson",
+      "district": 14,
+      "party": "DEM",
+      "position": -0.723632872104645,
+      "bootstrap_standard_error": 0.12145708501339,
+      "recorded_votes_used": 357,
+      "correct_classification": 1.0
+    },
+    {
+      "name": "Virginia Susan Sosnowski",
+      "district": 37,
+      "party": "DEM",
+      "position": -0.721464991569519,
+      "bootstrap_standard_error": 0.129270449280739,
+      "recorded_votes_used": 345,
+      "correct_classification": 0.988405797101449
+    },
+    {
+      "name": "John Burke",
+      "district": 9,
+      "party": "DEM",
+      "position": -0.702194452285767,
+      "bootstrap_standard_error": 0.122599832713604,
+      "recorded_votes_used": 366,
+      "correct_classification": 0.983606557377049
+    },
+    {
+      "name": "Frank A Ciccone",
+      "district": 7,
+      "party": "DEM",
+      "position": -0.70106303691864,
+      "bootstrap_standard_error": 0.130028754472733,
+      "recorded_votes_used": 360,
+      "correct_classification": 0.980555555555556
+    },
+    {
+      "name": "Melissa Murray",
+      "district": 24,
+      "party": "DEM",
+      "position": -0.6988565325737,
+      "bootstrap_standard_error": 0.131703644990921,
+      "recorded_votes_used": 364,
+      "correct_classification": 0.978021978021978
+    },
+    {
+      "name": "Stefano V Famiglietti",
+      "district": 4,
+      "party": "DEM",
+      "position": -0.676444828510284,
+      "bootstrap_standard_error": 0.124116577208042,
+      "recorded_votes_used": 182,
+      "correct_classification": 0.994505494505495
+    },
+    {
+      "name": "Walter S Felag Jr",
+      "district": 10,
+      "party": "DEM",
+      "position": -0.632626175880432,
+      "bootstrap_standard_error": 0.129586592316628,
+      "recorded_votes_used": 365,
+      "correct_classification": 0.975342465753425
+    },
+    {
+      "name": "Peter A Appollonio Jr",
+      "district": 29,
+      "party": "DEM",
+      "position": -0.566366374492645,
+      "bootstrap_standard_error": 0.135418072342873,
+      "recorded_votes_used": 366,
+      "correct_classification": 0.978142076502732
+    },
+    {
+      "name": "David P Tikoian",
+      "district": 22,
+      "party": "DEM",
+      "position": -0.546608746051788,
+      "bootstrap_standard_error": 0.129191562533379,
+      "recorded_votes_used": 363,
+      "correct_classification": 0.966942148760331
+    },
+    {
+      "name": "Andrew R Dimitri",
+      "district": 25,
+      "party": "DEM",
+      "position": -0.537283658981323,
+      "bootstrap_standard_error": 0.135445982217789,
+      "recorded_votes_used": 360,
+      "correct_classification": 0.977777777777778
+    },
+    {
+      "name": "Brian J Thompson",
+      "district": 20,
+      "party": "DEM",
+      "position": -0.536081552505493,
+      "bootstrap_standard_error": 0.12856812775135,
+      "recorded_votes_used": 351,
+      "correct_classification": 0.962962962962963
+    },
+    {
+      "name": "Todd M Patalano",
+      "district": 26,
+      "party": "DEM",
+      "position": -0.435005366802216,
+      "bootstrap_standard_error": 0.140886262059212,
+      "recorded_votes_used": 346,
+      "correct_classification": 0.953757225433526
+    },
+    {
+      "name": "Leonidas Peter Raptakis",
+      "district": 33,
+      "party": "DEM",
+      "position": 0.087356723845005,
+      "bootstrap_standard_error": 0.0933981463313103,
+      "recorded_votes_used": 349,
+      "correct_classification": 0.965616045845272
+    },
+    {
+      "name": "Thomas J Paolino",
+      "district": 17,
+      "party": "REP",
+      "position": 0.972732961177826,
+      "bootstrap_standard_error": 0.118250861763954,
+      "recorded_votes_used": 363,
+      "correct_classification": 0.96969696969697
+    },
+    {
+      "name": "Elaine J Morgan",
+      "district": 34,
+      "party": "REP",
+      "position": 1.0,
+      "bootstrap_standard_error": 0.0611849725246429,
+      "recorded_votes_used": 346,
+      "correct_classification": 0.780346820809249
+    },
+    {
+      "name": "Gordon E Rogers",
+      "district": 21,
+      "party": "REP",
+      "position": 1.0,
+      "bootstrap_standard_error": 0.0586802251636982,
+      "recorded_votes_used": 365,
+      "correct_classification": 0.942465753424658
+    },
+    {
+      "name": "Jessica de la Cruz",
+      "district": 23,
+      "party": "REP",
+      "position": 1.0,
+      "bootstrap_standard_error": 0.0738525092601776,
+      "recorded_votes_used": 361,
+      "correct_classification": 0.975069252077562
+    }
+  ],
+  "periods": {
+    "combined": [
+      {
+        "name": "Samuel W Bell",
+        "district": 5,
+        "party": "DEM",
+        "position": -1.0,
+        "bootstrap_standard_error": 0.0336198732256889,
+        "recorded_votes_used": 365,
+        "correct_classification": 0.813698630136986
+      },
+      {
+        "name": "Tiara T Mack",
+        "district": 6,
+        "party": "DEM",
+        "position": -1.0,
+        "bootstrap_standard_error": 0.0272338427603245,
+        "recorded_votes_used": 356,
+        "correct_classification": 0.941011235955056
+      },
+      {
+        "name": "Dawn Euer",
+        "district": 13,
+        "party": "DEM",
+        "position": -0.976296663284302,
+        "bootstrap_standard_error": 0.0473423078656197,
+        "recorded_votes_used": 302,
+        "correct_classification": 0.890728476821192
+      },
+      {
+        "name": "Jonathon Acosta",
+        "district": 16,
+        "party": "DEM",
+        "position": -0.918142676353455,
+        "bootstrap_standard_error": 0.0728418976068497,
+        "recorded_votes_used": 358,
+        "correct_classification": 0.927374301675978
+      },
+      {
+        "name": "Meghan E Kallman",
+        "district": 15,
+        "party": "DEM",
+        "position": -0.897781729698181,
+        "bootstrap_standard_error": 0.0782187283039093,
+        "recorded_votes_used": 361,
+        "correct_classification": 0.952908587257618
+      },
+      {
+        "name": "Bridget G Valverde",
+        "district": 35,
+        "party": "DEM",
+        "position": -0.887404143810272,
+        "bootstrap_standard_error": 0.0799398869276047,
+        "recorded_votes_used": 335,
+        "correct_classification": 0.916417910447761
+      },
+      {
+        "name": "Ana B Quezada",
+        "district": 2,
+        "party": "DEM",
+        "position": -0.882882058620453,
+        "bootstrap_standard_error": 0.0789494216442108,
+        "recorded_votes_used": 349,
+        "correct_classification": 0.885386819484241
+      },
+      {
+        "name": "Ryan W Pearson",
+        "district": 19,
+        "party": "DEM",
+        "position": -0.880790591239929,
+        "bootstrap_standard_error": 0.0876503512263298,
+        "recorded_votes_used": 234,
+        "correct_classification": 0.893162393162393
+      },
+      {
+        "name": "Linda L Ujifusa",
+        "district": 11,
+        "party": "DEM",
+        "position": -0.873071730136871,
+        "bootstrap_standard_error": 0.086848571896553,
+        "recorded_votes_used": 365,
+        "correct_classification": 0.876712328767123
+      },
+      {
+        "name": "Pamela J Lauria",
+        "district": 32,
+        "party": "DEM",
+        "position": -0.857647836208344,
+        "bootstrap_standard_error": 0.0896099880337715,
+        "recorded_votes_used": 351,
+        "correct_classification": 0.937321937321937
+      },
+      {
+        "name": "Alana M DiMario",
+        "district": 36,
+        "party": "DEM",
+        "position": -0.838128566741943,
+        "bootstrap_standard_error": 0.0970749035477638,
+        "recorded_votes_used": 361,
+        "correct_classification": 0.947368421052632
+      },
+      {
+        "name": "Lammis J Vargas",
+        "district": 28,
+        "party": "DEM",
+        "position": -0.833606600761414,
+        "bootstrap_standard_error": 0.0996731966733932,
+        "recorded_votes_used": 349,
+        "correct_classification": 0.959885386819484
+      },
+      {
+        "name": "Samuel D Zurier",
+        "district": 3,
+        "party": "DEM",
+        "position": -0.832284927368164,
+        "bootstrap_standard_error": 0.0935622453689575,
+        "recorded_votes_used": 366,
+        "correct_classification": 0.942622950819672
+      },
+      {
+        "name": "Lori Urso",
+        "district": 8,
+        "party": "DEM",
+        "position": -0.75761204957962,
+        "bootstrap_standard_error": 0.128252759575844,
+        "recorded_votes_used": 361,
+        "correct_classification": 0.983379501385042
+      },
+      {
+        "name": "Robert Britto",
+        "district": 18,
+        "party": "DEM",
+        "position": -0.757252991199493,
+        "bootstrap_standard_error": 0.118321418762207,
+        "recorded_votes_used": 358,
+        "correct_classification": 0.983240223463687
+      },
+      {
+        "name": "Hanna M Gallo",
+        "district": 27,
+        "party": "DEM",
+        "position": -0.740413963794708,
+        "bootstrap_standard_error": 0.127225011587143,
+        "recorded_votes_used": 357,
+        "correct_classification": 0.985994397759104
+      },
+      {
+        "name": "Mark McKenney",
+        "district": 30,
+        "party": "DEM",
+        "position": -0.737281262874603,
+        "bootstrap_standard_error": 0.126502826809883,
+        "recorded_votes_used": 363,
+        "correct_classification": 0.997245179063361
+      },
+      {
+        "name": "Jacob Bissaillon",
+        "district": 1,
+        "party": "DEM",
+        "position": -0.730590283870697,
+        "bootstrap_standard_error": 0.12301416695118,
+        "recorded_votes_used": 363,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Victoria Gu",
+        "district": 38,
+        "party": "DEM",
+        "position": -0.726362824440002,
+        "bootstrap_standard_error": 0.122082427144051,
+        "recorded_votes_used": 357,
+        "correct_classification": 0.966386554621849
+      },
+      {
+        "name": "Louis DiPalma",
+        "district": 12,
+        "party": "DEM",
+        "position": -0.725386381149292,
+        "bootstrap_standard_error": 0.130584016442299,
+        "recorded_votes_used": 365,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Matthew L LaMountain",
+        "district": 31,
+        "party": "DEM",
+        "position": -0.724887013435364,
+        "bootstrap_standard_error": 0.126548007130623,
+        "recorded_votes_used": 364,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Valarie Jean Lawson",
+        "district": 14,
+        "party": "DEM",
+        "position": -0.723632872104645,
+        "bootstrap_standard_error": 0.12145708501339,
+        "recorded_votes_used": 357,
+        "correct_classification": 1.0
+      },
+      {
+        "name": "Virginia Susan Sosnowski",
+        "district": 37,
+        "party": "DEM",
+        "position": -0.721464991569519,
+        "bootstrap_standard_error": 0.129270449280739,
+        "recorded_votes_used": 345,
+        "correct_classification": 0.988405797101449
+      },
+      {
+        "name": "John Burke",
+        "district": 9,
+        "party": "DEM",
+        "position": -0.702194452285767,
+        "bootstrap_standard_error": 0.122599832713604,
+        "recorded_votes_used": 366,
+        "correct_classification": 0.983606557377049
+      },
+      {
+        "name": "Frank A Ciccone",
+        "district": 7,
+        "party": "DEM",
+        "position": -0.70106303691864,
+        "bootstrap_standard_error": 0.130028754472733,
+        "recorded_votes_used": 360,
+        "correct_classification": 0.980555555555556
+      },
+      {
+        "name": "Melissa Murray",
+        "district": 24,
+        "party": "DEM",
+        "position": -0.6988565325737,
+        "bootstrap_standard_error": 0.131703644990921,
+        "recorded_votes_used": 364,
+        "correct_classification": 0.978021978021978
+      },
+      {
+        "name": "Stefano V Famiglietti",
+        "district": 4,
+        "party": "DEM",
+        "position": -0.676444828510284,
+        "bootstrap_standard_error": 0.124116577208042,
+        "recorded_votes_used": 182,
+        "correct_classification": 0.994505494505495
+      },
+      {
+        "name": "Walter S Felag Jr",
+        "district": 10,
+        "party": "DEM",
+        "position": -0.632626175880432,
+        "bootstrap_standard_error": 0.129586592316628,
+        "recorded_votes_used": 365,
+        "correct_classification": 0.975342465753425
+      },
+      {
+        "name": "Peter A Appollonio Jr",
+        "district": 29,
+        "party": "DEM",
+        "position": -0.566366374492645,
+        "bootstrap_standard_error": 0.135418072342873,
+        "recorded_votes_used": 366,
+        "correct_classification": 0.978142076502732
+      },
+      {
+        "name": "David P Tikoian",
+        "district": 22,
+        "party": "DEM",
+        "position": -0.546608746051788,
+        "bootstrap_standard_error": 0.129191562533379,
+        "recorded_votes_used": 363,
+        "correct_classification": 0.966942148760331
+      },
+      {
+        "name": "Andrew R Dimitri",
+        "district": 25,
+        "party": "DEM",
+        "position": -0.537283658981323,
+        "bootstrap_standard_error": 0.135445982217789,
+        "recorded_votes_used": 360,
+        "correct_classification": 0.977777777777778
+      },
+      {
+        "name": "Brian J Thompson",
+        "district": 20,
+        "party": "DEM",
+        "position": -0.536081552505493,
+        "bootstrap_standard_error": 0.12856812775135,
+        "recorded_votes_used": 351,
+        "correct_classification": 0.962962962962963
+      },
+      {
+        "name": "Todd M Patalano",
+        "district": 26,
+        "party": "DEM",
+        "position": -0.435005366802216,
+        "bootstrap_standard_error": 0.140886262059212,
+        "recorded_votes_used": 346,
+        "correct_classification": 0.953757225433526
+      },
+      {
+        "name": "Leonidas Peter Raptakis",
+        "district": 33,
+        "party": "DEM",
+        "position": 0.087356723845005,
+        "bootstrap_standard_error": 0.0933981463313103,
+        "recorded_votes_used": 349,
+        "correct_classification": 0.965616045845272
+      },
+      {
+        "name": "Thomas J Paolino",
+        "district": 17,
+        "party": "REP",
+        "position": 0.972732961177826,
+        "bootstrap_standard_error": 0.118250861763954,
+        "recorded_votes_used": 363,
+        "correct_classification": 0.96969696969697
+      },
+      {
+        "name": "Elaine J Morgan",
+        "district": 34,
+        "party": "REP",
+        "position": 1.0,
+        "bootstrap_standard_error": 0.0611849725246429,
+        "recorded_votes_used": 346,
+        "correct_classification": 0.780346820809249
+      },
+      {
+        "name": "Gordon E Rogers",
+        "district": 21,
+        "party": "REP",
+        "position": 1.0,
+        "bootstrap_standard_error": 0.0586802251636982,
+        "recorded_votes_used": 365,
+        "correct_classification": 0.942465753424658
+      },
+      {
+        "name": "Jessica de la Cruz",
+        "district": 23,
+        "party": "REP",
+        "position": 1.0,
+        "bootstrap_standard_error": 0.0738525092601776,
+        "recorded_votes_used": 361,
+        "correct_classification": 0.975069252077562
+      }
+    ],
+    "2025": [
+      {
+        "name": "Jacob Bissaillon",
+        "district": 1,
+        "party": "DEM",
+        "position": -0.611920237541199,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 179
+      },
+      {
+        "name": "Ana B Quezada",
+        "district": 2,
+        "party": "DEM",
+        "position": -0.791831016540527,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 172
+      },
+      {
+        "name": "Samuel D Zurier",
+        "district": 3,
+        "party": "DEM",
+        "position": -0.696328580379486,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 181
+      },
+      {
+        "name": "Samuel W Bell",
+        "district": 5,
+        "party": "DEM",
+        "position": -1.0,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 180
+      },
+      {
+        "name": "Tiara T Mack",
+        "district": 6,
+        "party": "DEM",
+        "position": -0.96417498588562,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 180
+      },
+      {
+        "name": "Frank A Ciccone",
+        "district": 7,
+        "party": "DEM",
+        "position": -0.548002064228058,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 179
+      },
+      {
+        "name": "Lori Urso",
+        "district": 8,
+        "party": "DEM",
+        "position": -0.629714727401733,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 178
+      },
+      {
+        "name": "John Burke",
+        "district": 9,
+        "party": "DEM",
+        "position": -0.567185401916504,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 181
+      },
+      {
+        "name": "Walter S Felag Jr",
+        "district": 10,
+        "party": "DEM",
+        "position": -0.403840810060501,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 181
+      },
+      {
+        "name": "Linda L Ujifusa",
+        "district": 11,
+        "party": "DEM",
+        "position": -0.829002380371094,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 180
+      },
+      {
+        "name": "Louis DiPalma",
+        "district": 12,
+        "party": "DEM",
+        "position": -0.604500472545624,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 180
+      },
+      {
+        "name": "Dawn Euer",
+        "district": 13,
+        "party": "DEM",
+        "position": -0.982017993927002,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 122
+      },
+      {
+        "name": "Valarie Jean Lawson",
+        "district": 14,
+        "party": "DEM",
+        "position": -0.601800501346588,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 172
+      },
+      {
+        "name": "Meghan E Kallman",
+        "district": 15,
+        "party": "DEM",
+        "position": -0.82781571149826,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 177
+      },
+      {
+        "name": "Jonathon Acosta",
+        "district": 16,
+        "party": "DEM",
+        "position": -0.806727051734924,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 174
+      },
+      {
+        "name": "Thomas J Paolino",
+        "district": 17,
+        "party": "REP",
+        "position": 0.944332122802734,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 179
+      },
+      {
+        "name": "Robert Britto",
+        "district": 18,
+        "party": "DEM",
+        "position": -0.652644753456116,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 178
+      },
+      {
+        "name": "Ryan W Pearson",
+        "district": 19,
+        "party": "DEM",
+        "position": -0.909820258617401,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 62
+      },
+      {
+        "name": "Brian J Thompson",
+        "district": 20,
+        "party": "DEM",
+        "position": -0.313639551401138,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 174
+      },
+      {
+        "name": "Gordon E Rogers",
+        "district": 21,
+        "party": "REP",
+        "position": 0.921276807785034,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 181
+      },
+      {
+        "name": "David P Tikoian",
+        "district": 22,
+        "party": "DEM",
+        "position": -0.323373585939407,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 178
+      },
+      {
+        "name": "Jessica de la Cruz",
+        "district": 23,
+        "party": "REP",
+        "position": 1.0,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 176
+      },
+      {
+        "name": "Melissa Murray",
+        "district": 24,
+        "party": "DEM",
+        "position": -0.573011577129364,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 179
+      },
+      {
+        "name": "Andrew R Dimitri",
+        "district": 25,
+        "party": "DEM",
+        "position": -0.26352396607399,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 176
+      },
+      {
+        "name": "Todd M Patalano",
+        "district": 26,
+        "party": "DEM",
+        "position": -0.26030820608139,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 162
+      },
+      {
+        "name": "Hanna M Gallo",
+        "district": 27,
+        "party": "DEM",
+        "position": -0.641382873058319,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 181
+      },
+      {
+        "name": "Lammis J Vargas",
+        "district": 28,
+        "party": "DEM",
+        "position": -0.762546241283417,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 178
+      },
+      {
+        "name": "Peter A Appollonio Jr",
+        "district": 29,
+        "party": "DEM",
+        "position": -0.32716366648674,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 181
+      },
+      {
+        "name": "Mark McKenney",
+        "district": 30,
+        "party": "DEM",
+        "position": -0.633708357810974,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 179
+      },
+      {
+        "name": "Matthew L LaMountain",
+        "district": 31,
+        "party": "DEM",
+        "position": -0.604864180088043,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 180
+      },
+      {
+        "name": "Pamela J Lauria",
+        "district": 32,
+        "party": "DEM",
+        "position": -0.768670856952667,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 170
+      },
+      {
+        "name": "Leonidas Peter Raptakis",
+        "district": 33,
+        "party": "DEM",
+        "position": 0.189796939492226,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 178
+      },
+      {
+        "name": "Elaine J Morgan",
+        "district": 34,
+        "party": "REP",
+        "position": 1.0,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 170
+      },
+      {
+        "name": "Bridget G Valverde",
+        "district": 35,
+        "party": "DEM",
+        "position": -0.797996699810028,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 166
+      },
+      {
+        "name": "Alana M DiMario",
+        "district": 36,
+        "party": "DEM",
+        "position": -0.754786789417267,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 176
+      },
+      {
+        "name": "Virginia Susan Sosnowski",
+        "district": 37,
+        "party": "DEM",
+        "position": -0.581055581569672,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 180
+      },
+      {
+        "name": "Victoria Gu",
+        "district": 38,
+        "party": "DEM",
+        "position": -0.557551741600037,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 180
+      }
+    ],
+    "2026": [
+      {
+        "name": "Jacob Bissaillon",
+        "district": 1,
+        "party": "DEM",
+        "position": -0.772111475467682,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 184
+      },
+      {
+        "name": "Ana B Quezada",
+        "district": 2,
+        "party": "DEM",
+        "position": -0.914587318897247,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 177
+      },
+      {
+        "name": "Samuel D Zurier",
+        "district": 3,
+        "party": "DEM",
+        "position": -0.891189634799957,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 185
+      },
+      {
+        "name": "Stefano V Famiglietti",
+        "district": 4,
+        "party": "DEM",
+        "position": -0.747436344623566,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 182
+      },
+      {
+        "name": "Samuel W Bell",
+        "district": 5,
+        "party": "DEM",
+        "position": -1.0,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 185
+      },
+      {
+        "name": "Tiara T Mack",
+        "district": 6,
+        "party": "DEM",
+        "position": -1.0,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 176
+      },
+      {
+        "name": "Frank A Ciccone",
+        "district": 7,
+        "party": "DEM",
+        "position": -0.766340255737305,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 181
+      },
+      {
+        "name": "Lori Urso",
+        "district": 8,
+        "party": "DEM",
+        "position": -0.810538768768311,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 183
+      },
+      {
+        "name": "John Burke",
+        "district": 9,
+        "party": "DEM",
+        "position": -0.758125066757202,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 185
+      },
+      {
+        "name": "Walter S Felag Jr",
+        "district": 10,
+        "party": "DEM",
+        "position": -0.780598342418671,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 184
+      },
+      {
+        "name": "Linda L Ujifusa",
+        "district": 11,
+        "party": "DEM",
+        "position": -0.883028864860535,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 185
+      },
+      {
+        "name": "Louis DiPalma",
+        "district": 12,
+        "party": "DEM",
+        "position": -0.768970310688019,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 185
+      },
+      {
+        "name": "Dawn Euer",
+        "district": 13,
+        "party": "DEM",
+        "position": -0.96272200345993,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 180
+      },
+      {
+        "name": "Valarie Jean Lawson",
+        "district": 14,
+        "party": "DEM",
+        "position": -0.768970310688019,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 185
+      },
+      {
+        "name": "Meghan E Kallman",
+        "district": 15,
+        "party": "DEM",
+        "position": -0.91637110710144,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 184
+      },
+      {
+        "name": "Jonathon Acosta",
+        "district": 16,
+        "party": "DEM",
+        "position": -0.957461833953857,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 184
+      },
+      {
+        "name": "Thomas J Paolino",
+        "district": 17,
+        "party": "REP",
+        "position": 0.848684787750244,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 184
+      },
+      {
+        "name": "Robert Britto",
+        "district": 18,
+        "party": "DEM",
+        "position": -0.790842354297638,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 180
+      },
+      {
+        "name": "Ryan W Pearson",
+        "district": 19,
+        "party": "DEM",
+        "position": -0.876715481281281,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 172
+      },
+      {
+        "name": "Brian J Thompson",
+        "district": 20,
+        "party": "DEM",
+        "position": -0.668255507946014,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 177
+      },
+      {
+        "name": "Gordon E Rogers",
+        "district": 21,
+        "party": "REP",
+        "position": 0.92324835062027,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 184
+      },
+      {
+        "name": "David P Tikoian",
+        "district": 22,
+        "party": "DEM",
+        "position": -0.672033607959747,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 185
+      },
+      {
+        "name": "Jessica de la Cruz",
+        "district": 23,
+        "party": "REP",
+        "position": 1.0,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 185
+      },
+      {
+        "name": "Melissa Murray",
+        "district": 24,
+        "party": "DEM",
+        "position": -0.757823586463928,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 185
+      },
+      {
+        "name": "Andrew R Dimitri",
+        "district": 25,
+        "party": "DEM",
+        "position": -0.731830239295959,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 184
+      },
+      {
+        "name": "Todd M Patalano",
+        "district": 26,
+        "party": "DEM",
+        "position": -0.535656213760376,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 184
+      },
+      {
+        "name": "Hanna M Gallo",
+        "district": 27,
+        "party": "DEM",
+        "position": -0.769708931446075,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 176
+      },
+      {
+        "name": "Lammis J Vargas",
+        "district": 28,
+        "party": "DEM",
+        "position": -0.852127373218536,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 171
+      },
+      {
+        "name": "Peter A Appollonio Jr",
+        "district": 29,
+        "party": "DEM",
+        "position": -0.721095561981201,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 185
+      },
+      {
+        "name": "Mark McKenney",
+        "district": 30,
+        "party": "DEM",
+        "position": -0.767867386341095,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 184
+      },
+      {
+        "name": "Matthew L LaMountain",
+        "district": 31,
+        "party": "DEM",
+        "position": -0.767869055271149,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 184
+      },
+      {
+        "name": "Pamela J Lauria",
+        "district": 32,
+        "party": "DEM",
+        "position": -0.88759571313858,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 181
+      },
+      {
+        "name": "Leonidas Peter Raptakis",
+        "district": 33,
+        "party": "DEM",
+        "position": 0.0101547176018357,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 171
+      },
+      {
+        "name": "Elaine J Morgan",
+        "district": 34,
+        "party": "REP",
+        "position": 1.0,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 176
+      },
+      {
+        "name": "Bridget G Valverde",
+        "district": 35,
+        "party": "DEM",
+        "position": -0.920239388942719,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 169
+      },
+      {
+        "name": "Alana M DiMario",
+        "district": 36,
+        "party": "DEM",
+        "position": -0.867190897464752,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 185
+      },
+      {
+        "name": "Virginia Susan Sosnowski",
+        "district": 37,
+        "party": "DEM",
+        "position": -0.78347373008728,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 165
+      },
+      {
+        "name": "Victoria Gu",
+        "district": 38,
+        "party": "DEM",
+        "position": -0.817693471908569,
+        "bootstrap_standard_error": null,
+        "recorded_votes_used": 177
+      }
+    ]
+  },
+  "period_counts": {
+    "combined": 366,
+    "2025": 181,
+    "2026": 185
+  }
+}
