@@ -1,5 +1,5 @@
 """Generate reviewed candidate profiles from existing RIEP data (no network)."""
-import json, html, re
+import json, html, re, unicodedata
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def load(n): return json.loads((ROOT/'data'/f'{n}.json').read_text())
@@ -15,7 +15,7 @@ def current_index(record):
  score=calc(record); rank=1+sum(calc(p)>score for p in peers)
  return f'<section class="riep-progress"><p class="eyebrow">Experimental RIEP index · 2025–2026</p><h3>Legislative progress index</h3>{metrics([("RIEP index",f"{score:.2f}"),("Senate record rank",f"{rank} / 38")])}<p>Equal weight for lead-sponsored bills, bills passed by the Senate and bills that became law. A score of 1 is the average of the 38 current Senate district records. This is an RIEP calculation, separate from CEL.</p>'+details('Calculation and coverage',f'<p>38 ÷ 3 × ({" + ".join(str(record["legislation"][k])+" ÷ "+str(t) for k,t in zip(keys,totals))}) = {score:.6f}.</p><p>Snapshot updated August 30, 2026. Resolutions and cosponsorship excluded. This current-roster comparison does not include every person who served during the session.</p>')+'</section>'
 def candidate_name_matches(candidate_name,result_name):
- tokens=lambda value:re.findall(r"[a-z]+",value.lower())
+ tokens=lambda value:re.findall(r"[a-z]+",unicodedata.normalize('NFKD',value.lower()).encode('ascii','ignore').decode())
  candidate=tokens(candidate_name);result=tokens(result_name)
  return bool(candidate and result and candidate[0]==result[0] and candidate[-1]==result[-1])
 def build(name,slug,district,community,email,phone,chamber="senate"):

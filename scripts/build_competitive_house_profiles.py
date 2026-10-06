@@ -5,11 +5,13 @@ from build_candidate_pages import load,esc,link,metrics,candidate_name_matches
 from candidate_profile_components import section,replace_section
 ROOT=Path(__file__).resolve().parents[1]
 SLUGS={'amy-j-santiago':7,'christopher-l-ireland':7,'brittany-m-kubicek':5}
-def build():
+SLUGS.update({'arlette-hidalgo':12,'derick-a-reels':13})
+def build(slugs=None):
  incumbent=ROOT/'candidates/anthony-j-desimone.html'
  incumbent.write_text(incumbent.read_text().replace('/running.html?chamber=house&amp;district=5&amp;election=general','/races/house-5.html'))
  roster=load('whos_running_2026')['chambers']['house'];registry={}
  for slug,district in SLUGS.items():
+  if slugs is not None and slug not in slugs:continue
   c=next(c for c in roster[str(district)]['candidates'] if c['candidate_id'].endswith('-'+slug));name=c['name'];candidate_id=c['candidate_id'];registry[candidate_id]=slug
   research=next(r for r in load('candidate_research_2026_with_endorsements')['candidates'] if r['candidate_id']==candidate_id)
   party={'DEM':'Democratic','REP':'Republican','OTH':'Independent Socialist'}[c['party']]
@@ -51,7 +53,8 @@ def build():
    period='Year to date through June 30, 2026 · Q1 and Q2 filings';items=[('Raised in 2026',fin['ytd_receipts']),('Spent in 2026',fin['ytd_campaign_expenses']),('Cash at period end',fin['cash_on_hand'])]
   else:
    fin=next(r for r in load('candidate_finance_2026')['profiles'] if r['slug']==slug);period=fin['report_label']+' · '+fin['reporting_period_label'];items=[('Raised during period',fin['money_raised']),('Spent during period',fin['money_spent']),('Cash at period end',fin['ending_cash'])]
-  replace('finance','Campaign finance snapshot',f'<p class="intro">{esc(period)}. Figures describe the stated reporting period.</p>'+metrics([(label,f'${value:,.2f}') for label,value in items]).replace('record-grid','metric-grid')+f'<a class="finance-profile-button" href="{esc(finance)}">View {esc(name)}’s campaign finance →</a>')
+  finance_body=(f'<p class="intro">{esc(period)}. Figures describe the stated reporting period.</p>'+metrics([(label,f'${value:,.2f}') for label,value in items]).replace('record-grid','metric-grid') if all(value is not None for _,value in items) else '<div class="empty"><strong>Campaign finance details under construction</strong><p>No financial summary is currently available in RIEP’s dataset for this candidate. Missing figures are not treated as zero.</p></div>')
+  replace('finance','Campaign finance snapshot',finance_body+f'<a class="finance-profile-button" href="{esc(finance)}">View {esc(name)}’s campaign finance →</a>')
   replace('record','Record in office','<div class="empty"><strong>General Assembly record not applicable · Candidate</strong><p>No Rhode Island General Assembly service record is attributed to this candidate in RIEP’s dataset. Legislative sponsorship, attendance and committee roles are not assigned.</p></div>')
   replace('bills','Bills &amp; votes','<p class="intro">No General Assembly sponsored-bill or roll-call record is attributed to this candidate. Campaign positions are shown above.</p>')
   replace('ratings','Outside ratings &amp; scorecards','<p class="intro">CEL legislative-effectiveness scores, the RIEP legislative progress index and W-NOMINATE voting positions require a legislative record. They are not applicable to this candidate, and no incumbent’s or district-level score is transferred here.</p>')
