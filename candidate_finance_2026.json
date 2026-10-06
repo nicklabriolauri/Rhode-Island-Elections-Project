@@ -3274,45 +3274,106 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "Q2 2026 campaign finance filing",
-      "reporting_period_label": "April 1, 2026 to June 30, 2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website summary captured; quarter not reliably identified",
-      "original_documents": [],
-      "beginning_cash": 0,
-      "money_raised": 0,
-      "money_spent": 0,
-      "ending_cash": 0,
-      "net_change": 0,
-      "total_cash_receipts": 0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 0,
-      "summary_intro": "This filing shows the campaign closing the period without reported cash on hand. The report also shows that it raised more during the period than it spent.",
-      "filing_history": [
+      "report_label": "2026 CF-2 campaign finance filing",
+      "reporting_period_label": "June 22, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2 summary and CF-3/CF-4 schedules, committee key 3830; supplied to RIEP October 6, 2026.",
+      "coverage_note": "One filing covering June 22–October 5, 2026. This is not a standard Q1 or Q2 report; no quarterly totals are inferred. Summary classifies all receipts as individual contributions although two candidate receipt descriptions say loan to campaign.",
+      "original_documents": [
         {
-          "label": "Q1 2026",
-          "reporting_period_label": "January 1, 2026 to March 31, 2026",
-          "money_raised": 0,
-          "money_spent": 0,
-          "ending_cash": 0,
-          "net_change": 0,
-          "notes": "The campaign raised more than it spent in this reporting period."
-        },
-        {
-          "label": "Q2 2026",
-          "reporting_period_label": "April 1, 2026 to June 30, 2026",
-          "money_raised": 0,
-          "money_spent": 0,
-          "ending_cash": 0,
-          "net_change": 0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "label": "CF-2 summary with CF-3 contributions and CF-4 expenditures",
+          "period": "June 22, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/colleen-m-crudele-2026-10-05.pdf"
         }
       ],
-      "source_buckets": [],
-      "top_donors": [],
-      "spending_categories": [],
+      "beginning_cash": 0,
+      "money_raised": 11991.79,
+      "money_spent": 10345.14,
+      "ending_cash": 1646.65,
+      "net_change": 1646.65,
+      "total_cash_receipts": 11991.79,
+      "campaign_expenses": 10345.14,
+      "aggregate_expenses": 0,
+      "summary_intro": "Colleen M Crudele’s June 22–October 5, 2026 filing reports $11,991.79 in receipts, $10,345.14 in campaign expenses, and $1,646.65 in cash on hand. Of the receipts, $11,650.00 came from the candidate herself.",
+      "filing_history": [
+        {
+          "label": "June 22–October 5, 2026",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026",
+          "money_raised": 11991.79,
+          "money_spent": 10345.14,
+          "ending_cash": 1646.65,
+          "net_change": 1646.65,
+          "notes": "Single reporting period spanning portions of Q2, Q3 and Q4; not assigned to a standard quarter. The filing reports zero loan proceeds and zero loans payable despite two receipts described as campaign loans."
+        }
+      ],
+      "source_buckets": [
+        {
+          "label": "Itemized individual contributions, including candidate funds",
+          "class_name": "itemized-individual-donors",
+          "amount": 11991.79,
+          "description": "The CF-2 summary classifies all receipts as individual contributions. Candidate-funded receipts total $11,650.00; other named contributors total $341.79. Two candidate receipt descriptions say loan to campaign, but the summary reports zero loan proceeds."
+        }
+      ],
+      "top_donors": [
+        {
+          "donor": "Colleen Crudele",
+          "amount": 11650,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Five candidate-funded receipts. The filing classifies them as individual contributions; two descriptions totaling $2,650 say loan to campaign, while the CF-2 summary reports zero loan proceeds and zero loans payable. RIEP preserves the filing’s reported classification."
+        },
+        {
+          "donor": "Matthew Lenz",
+          "amount": 241.64,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Meta."
+        },
+        {
+          "donor": "Matthew Jerzyk",
+          "amount": 96.52,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as self-employed."
+        },
+        {
+          "donor": "Thomas Marlowe",
+          "amount": 3.63,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "Employer listed as Seton Hall University."
+        }
+      ],
+      "spending_categories": [
+        {
+          "title": "Advertising",
+          "amount": 8247.68,
+          "summary": "Campaign literature from Bluewave Solutions LLC ($6,727.68) and political signs from Benjamin Branchaud ($1,520.00)."
+        },
+        {
+          "title": "Other",
+          "amount": 1809,
+          "summary": "VAN list from RI Democratic Party ($1,780.00) and domain registration from Campaign Partner ($29.00)."
+        },
+        {
+          "title": "Telephone",
+          "amount": 179.81,
+          "summary": "Campaign phone and service from Walmart and T mobile/Walmart. Both separately listed August 27 charges of $39.97 are retained as reported."
+        },
+        {
+          "title": "Food, Beverages and Meals",
+          "amount": 58.65,
+          "summary": "Campaign meeting food from Whole Foods."
+        },
+        {
+          "title": "Bank Fees",
+          "amount": 50,
+          "summary": "Two $25 wire fees from The Washington Trust."
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "reporting_period_type": "custom",
+      "finance_status": "available"
     },
     {
       "candidate_id": "house-16-brandon-potter",

@@ -2546,7 +2546,7 @@
       return `
         <article class="panel section-card">
           <div class="section-label">Money flow</div>
-          <h3>Quarter snapshot${buildHelp("This compares what the campaign reported raising, spending, keeping in reserve, and gaining or losing during the filing period.")}</h3>
+          <h3>${profile.reporting_period_type === "custom" ? "Filing-period snapshot" : "Quarter snapshot"}${buildHelp("This compares what the campaign reported raising, spending, keeping in reserve, and gaining or losing during the filing period.")}</h3>
           <div class="money-flow-grid">
             <div class="meter-list">
               ${rows.map(row => `
@@ -2700,7 +2700,7 @@
       if (!history.length) return "";
       return `
         <article class="panel section-card">
-          <div class="section-label">Quarter history</div>
+          <div class="section-label">${profile.reporting_period_type === "custom" ? "Filing history" : "Quarter history"}</div>
           <h3>Track the campaign over time.</h3>
           <p class="section-copy">A single filing can be misleading on its own. Looking across quarters makes it easier to see whether a campaign is accelerating, holding steady, or drawing down its reserve.</p>
           <div class="timeline">
