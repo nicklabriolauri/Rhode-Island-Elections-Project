@@ -48,7 +48,8 @@ def build(name,slug,district,community,email,phone,chamber="senate"):
   sources={(p.get('source_url'),p.get('source_label','Priority source')) for p in priorities if p.get('source_url')}
   prioritybody='<div class="grid2">'+''.join(f'<div class="mini"><h3>{esc(p["title"])}</h3><p>{esc(p["summary"])}</p></div>' for p in priorities)+'</div>'
   prioritybody+=('<p class="source">'+esc(supplied.get('source_note','Campaign response submitted directly to RIEP.'))+'</p>' if supplied.get('priorities') else '<p class="source">'+ ' · '.join(link(url,label) for url,label in sorted(sources)) +'. Summaries attributed to the sources shown.</p>')
- body+=section('priorities','Campaign priorities',prioritybody)
+ if research.get('priority_context'):prioritybody='<p class="intro">'+esc(research['priority_context'])+'</p>'+prioritybody
+ body+=section('priorities',esc(research.get('priorities_heading','Campaign priorities')),prioritybody)
  elections=[]
  for r in sorted(load('race_data').values(),key=lambda r:int(r['year']),reverse=True):
   if r['chamber'].lower()==chamber and int(r['district_number'])==district:

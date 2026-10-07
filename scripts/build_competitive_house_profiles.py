@@ -10,7 +10,7 @@ SLUGS.update({'zakary-j-pereira':22,'barbara-quigley':22,'william-muto':23,'dana
 SLUGS.update({'james-c-sheehan':31,'robert-e-craven-jr':32,'jessica-drew-day':33})
 SLUGS.update({'christopher-m-stanton':37,'jasmin-roy':39})
 SLUGS.update({'shaina-n-smith':41,'michael-j-riley':41,'edward-w-stravato':42})
-SLUGS.update({'joseph-hosey':44,'veronicka-vega':49})
+SLUGS.update({'joseph-hosey':44,'veronicka-vega':49,'suzanna-l-alba':53})
 def build(slugs=None):
  incumbent=ROOT/'candidates/anthony-j-desimone.html'
  incumbent.write_text(incumbent.read_text().replace('/running.html?chamber=house&amp;district=5&amp;election=general','/races/house-5.html'))
@@ -97,8 +97,8 @@ def build(slugs=None):
   page=re.sub(r'href="/finance.html\?slug='+re.escape(slug)+r'"',lambda m:'href="'+finance+'"',page)
   page=re.sub(r'href="/running.html\?chamber=house(?:&amp;|&)district='+str(district)+r'(?:&amp;|&)election=general"',f'href="/races/house-{district}.html"',page)
   assert 'data-voting-widget' not in page and 'riep-legislative-index' not in page and 'rep-desimone' not in page
-  if district in (15,22,23,27,31,32,33,37,39,41,42,44,49):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
-  if district in (44,49):page=page.replace('October 6, 2026','October 7, 2026')
+  if district in (15,22,23,27,31,32,33,37,39,41,42,44,49,53):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
+  if district in (44,49,53):page=page.replace('October 6, 2026','October 7, 2026')
   (ROOT/'candidates'/f'{slug}.html').write_text(page)
  for filename in ['ballot.html','running.html']:
   p=ROOT/filename;s=p.read_text()
@@ -109,7 +109,7 @@ def build(slugs=None):
  houses={d:[] for d in roster}
  for d,race in roster.items():
   for candidate in race['candidates']:
-   if candidate['candidate_id'] in all_registry:houses[d].append([candidate['name'].split()[-1].lower(),all_registry[candidate['candidate_id']]])
+   if candidate['candidate_id'] in all_registry:houses[d].append([re.findall(r'[a-z0-9]+',candidate['name'].split()[-1].lower())[-1],all_registry[candidate['candidate_id']]])
  p=ROOT/'index.html';s=p.read_text();block='      if(candidate?.chamber === "house") {\n        const profiles = '+json.dumps(houses,separators=(',',':'))+';\n        const profile = (profiles[Number(candidate.district_number)] || []).find(p=>normalizeSearchText(candidate.name || "").split(" ").includes(p[0]));\n        return profile ? `candidates/${profile[1]}.html` : "";\n      }\n'
  s,n=re.subn(r'      if\(candidate\?\.chamber === "house"\) \{\n.*?\n      \}\n',lambda m:block,s,count=1,flags=re.S);assert n==1;p.write_text(s)
 if __name__=='__main__':build()

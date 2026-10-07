@@ -6,13 +6,14 @@ esc=lambda x:html.escape(str(x),quote=True)
 def build():
  registry=json.loads(re.search(r'const candidateProfile = \((\{.*?\})\)\[candidate.candidate_id\]',(ROOT/'ballot.html').read_text())[1])
  roster=json.loads((ROOT/'data/whos_running_2026.json').read_text())['chambers']
+ research={r['candidate_id']:r for r in json.loads((ROOT/'data/candidate_research_2026_with_endorsements.json').read_text())['candidates']}
  candidates={c['candidate_id']:dict(c,chamber=chamber,district_number=int(d)) for chamber,districts in roster.items() for d,race in districts.items() for c in race['candidates']}
  incumbent_ids={r['candidate_id'] for r in json.loads((ROOT/'data/incumbent_records_2026.json').read_text())['records']}
  cards=[];counts={'senate':0,'house':0};incumbents=0
  for id,slug in sorted(registry.items(),key=lambda x:(candidates[x[0]]['chamber']!='senate',candidates[x[0]]['district_number'],candidates[x[0]]['name'])):
   c=candidates[id];p=ROOT/'candidates'/f'{slug}.html';assert p.is_file(),p
-  page=p.read_text();photo=re.search(r'<img[^>]+src="([^\"]+\.(?:png|jpg))"[^>]*alt="[^\"]*'+re.escape(c['name'].split()[-1])+r'[^\"]*"',page,re.I)
-  if not photo:photo=re.search(r'src="('+re.escape(slug)+r'\.(?:png|jpg))"',page)
+  page=p.read_text();photo=re.search(r'<img[^>]+src="([^\"]+\.(?:png|jpg|webp))"[^>]*alt="[^\"]*'+re.escape(c['name'].split()[-1])+r'[^\"]*"',page,re.I)
+  if not photo:photo=re.search(r'src="('+re.escape(slug)+r'\.(?:png|jpg|webp))"',page)
   if photo:
    image='candidates/'+photo[1] if not photo[1].startswith('/') else photo[1];assert (ROOT/image.lstrip('/')).is_file(),image
    portrait_html=f'<img src="{esc(image)}" alt="" width="72" height="96" loading="lazy">'
@@ -21,7 +22,7 @@ def build():
    portrait_html=f'<span class="profile-placeholder" aria-label="Portrait under construction">{esc(initials)}</span>'
   counts[c['chamber']]+=1;incumbents+=c['chamber']=='senate' and id in incumbent_ids
   chamber=c['chamber'].title();party=c.get('party_label',c['party']);community=c.get('hometown','');status='Incumbent' if id in incumbent_ids else 'Candidate'
-  search=' '.join([c['name'],community,chamber,str(c['district_number']),party]).lower()
+  search=' '.join([c['name'],research.get(id,{}).get('campaign_name',''),community,chamber,str(c['district_number']),party]).lower()
   cards.append(f'<a class="profile-card" href="candidates/{slug}.html" data-search="{esc(search)}" data-chamber="{c["chamber"]}" data-party="{esc(c["party"])}">{portrait_html}<div><p class="district">{chamber} District {c["district_number"]}</p><h2>{esc(c["name"])}</h2><p class="community">{esc(community)}</p><p class="labels"><span class="party {c["party"].lower()}">{esc(party)}</span><span>{status}</span></p><span class="open-profile">View profile →</span></div></a>')
  template=(ROOT/'candidates/john-burke.html').read_text();header=template[template.index('<header'):template.index('<section class="hero"')] if '<section class="hero"' in template else ''
  # Keep the established RIEP masthead, without a candidate-specific hero.

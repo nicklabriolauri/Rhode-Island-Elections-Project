@@ -31,6 +31,8 @@ CONFIGS += [('Gregory Costantino','gregory-costantino',44,'Costantino','gregory_
 
 CONFIGS += [('Jon D Brien','jon-d-brien',49,'brien','jon_brien','(401) 222-1591'),('Stephen Casey','stephen-casey',50,'Casey','stephen_casey','(401) 222-8028'),('Robert D Phillips','robert-d-phillips',51,'Phillips','robert_phillips','(401) 222-1721'),('Alex D Marszalkowski','alex-d-marszalkowski',52,'Marszalkowski','alex_marszalkowski','(401) 222-1722')]
 
+CONFIGS += [('Paul M Santucci', 'paul-m-santucci', 53, 'Santucci', 'paul_santucci', '(401) 222-2259'), ("William W O'Brien", 'william-w-o-brien', 54, 'OBrien', 'william_obrien', '(401) 222-1882'), ('Arthur J Corvese', 'arthur-j-corvese', 55, 'Corvese', 'arthur_corvese', '(401) 222-1591'), ('Joshua J Giraldo', 'joshua-j-giraldo', 56, 'Giraldo', 'joshua_giraldo', '(401) 222-2447')]
+
 def build(slugs=None):
  # Use the complete 75-member calculation dataset for the House index.
  base.current_index=current_index
@@ -43,7 +45,7 @@ def build(slugs=None):
  for name,slug,district,surname,image,phone in CONFIGS:
   if slugs is not None and slug not in slugs:continue
   bio=f'https://www.rilegislature.gov/representatives/{surname}/Pages/Biography.aspx'
-  community={6:'Providence, North Providence',13:'Providence, Johnston',14:'Cranston, Providence',15:'Cranston',16:'Cranston',17:'Cranston',18:'Cranston',19:'Warwick, Cranston',20:'Warwick, Cranston',21:'Warwick',24:'Warwick, East Greenwich',25:'Coventry, West Warwick',26:'Coventry, West Warwick, Warwick',28:'Coventry',29:'Coventry, West Greenwich',30:'East Greenwich, West Greenwich',33:'Narragansett, South Kingstown',34:'Narragansett, South Kingstown',36:'Charlestown, New Shoreham, South Kingstown, Westerly',37:'Westerly',38:'Hopkinton, Westerly',39:'Exeter, Hopkinton, Richmond',40:'Coventry, Foster, Glocester',42:'Johnston, Cranston',43:'Johnston',44:'Johnston, Lincoln, Smithfield',45:'Cumberland, Lincoln',46:'Lincoln, Pawtucket',47:'Burrillville, Glocester',48:'Burrillville, North Smithfield',49:'Woonsocket, North Smithfield',50:'Woonsocket',51:'Woonsocket, Cumberland',52:'Cumberland'}.get(district,'Providence')
+  community={6:'Providence, North Providence',13:'Providence, Johnston',14:'Cranston, Providence',15:'Cranston',16:'Cranston',17:'Cranston',18:'Cranston',19:'Warwick, Cranston',20:'Warwick, Cranston',21:'Warwick',24:'Warwick, East Greenwich',25:'Coventry, West Warwick',26:'Coventry, West Warwick, Warwick',28:'Coventry',29:'Coventry, West Greenwich',30:'East Greenwich, West Greenwich',33:'Narragansett, South Kingstown',34:'Narragansett, South Kingstown',36:'Charlestown, New Shoreham, South Kingstown, Westerly',37:'Westerly',38:'Hopkinton, Westerly',39:'Exeter, Hopkinton, Richmond',40:'Coventry, Foster, Glocester',42:'Johnston, Cranston',43:'Johnston',44:'Johnston, Lincoln, Smithfield',45:'Cumberland, Lincoln',46:'Lincoln, Pawtucket',47:'Burrillville, Glocester',48:'Burrillville, North Smithfield',49:'Woonsocket, North Smithfield',50:'Woonsocket',51:'Woonsocket, Cumberland',52:'Cumberland',53:'Smithfield, Glocester',54:'North Providence',55:'North Providence',56:'Central Falls'}.get(district,'Providence')
   email=f'rep-{surname.lower()}@rilegislature.gov' if district!=46 else 'rep-shallcross-smith@rilegislature.gov'
   base.build(name,slug,district,community,email,phone,'house')
   path=ROOT/'candidates'/f'{slug}.html';page=path.read_text()
@@ -57,6 +59,9 @@ def build(slugs=None):
    page=re.sub(r'<span>#[0-9]+ of [0-9]+ House Democrats</span>','',page,count=1)
    page=page.replace('The party rank compares this legislator with other members of the same party in the same chamber. ', 'Brien is an Independent; the historical dataset’s Democratic comparison rank is omitted here. ')
   page=replace_section(page,'about',section('about','About this candidate',f'<p class="intro">{base.esc(name)} represents House District {district} · {base.esc(community)}.</p><div class="grid2"><div class="mini"><h3>At a glance</h3><p>{base.esc(party)} incumbent in the 2026 candidate roster.</p></div><div class="mini"><h3>How to read this page</h3><p>Campaign positions, election returns, campaign finance and outside scorecards are labeled by source and period.</p></div></div><p class="source">'+base.link(bio,'Official General Assembly biography ↗')+'</p>'))
+  if district==53:
+   page=page.replace('Republican incumbent in the 2026 candidate roster.','Republican incumbent in the 2026 candidate roster. First elected to the House in November 2024; first legislative session: 2025–2026.')
+   page=page.replace('No 2023–2024 CEL score is available in the project dataset for this candidate.','A 2023–2024 CEL score does not apply to Santucci’s House service, which began in 2025. His current-session RIEP index is shown below.')
   contact=section('contact','Contact &amp; district','<dl class="details">'+''.join(f'<div><dt>{k}</dt><dd>{v}</dd></div>' for k,v in [('District',f'House District {district}'),('Community',base.esc(community)),('Phone',base.link('tel:+1'+re.sub('[^0-9]','',phone),phone)),('Legislative email',base.link('mailto:'+email,email))])+'</dl><p class="source">'+base.link(bio,'Official General Assembly contact details ↗')+'</p>')
   page=re.sub(r'(<aside class="side"[^>]*>)<section class="card">.*?</section>',lambda m:m[1]+contact,page,count=1,flags=re.S)
   rows=[]
@@ -96,8 +101,8 @@ def build(slugs=None):
   page=re.sub(r'<p><strong>Leadership:</strong> (.*?)</p><p><strong>Committees:</strong> (.*?)</p>',r'<dl class="office-details"><div><dt>Leadership</dt><dd>\1</dd></div><div><dt>Committees</dt><dd>\2</dd></div></dl>',page)
   if district==2:page=page.replace('<dd></dd>','<dd>No committee assignments listed in the recorded roster.</dd>')
   assert 'chamber=senate' not in page and 'Senate District' not in page
-  if district in (15,19,20,21,24,25,26,28,29,30,33,34,36,37,38,39,40,42,43,44,45,46,47,48,49,50,51,52):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
-  if district in range(44,53):page=page.replace('October 6, 2026','October 7, 2026')
+  if district in (15,19,20,21,24,25,26,28,29,30,33,34,36,37,38,39,40,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
+  if district in range(44,57):page=page.replace('October 6, 2026','October 7, 2026')
   page=replace_section(page,'finance',finance_snapshot.replace('class="record-grid"','class="metric-grid"'))
   path.write_text(page)
   entry={'slug':slug,'portrait_url':('https://www.rilegislature.gov/representatives/Pictures/McEntee.jpg' if district==33 else f'https://www.rilegislature.gov/LegislationPictures/{image}.jpg'),'biography_url':bio,'retrieved_at':'2026-10-07','credit':'Rhode Island General Assembly','width':w,'height':h}
@@ -115,7 +120,7 @@ def build(slugs=None):
  all_registry=json.loads(re.search(r'const candidateProfile = \((\{.*?\})\)\[candidate.candidate_id\]',(ROOT/'ballot.html').read_text())[1])
  profiles={}
  for d,race in base.load('whos_running_2026')['chambers']['house'].items():
-  profiles[d]=[[c['name'].split()[-1].lower(),all_registry[c['candidate_id']]] for c in race['candidates'] if c['candidate_id'] in all_registry]
+  profiles[d]=[[re.findall(r'[a-z0-9]+',c['name'].split()[-1].lower())[-1],all_registry[c['candidate_id']]] for c in race['candidates'] if c['candidate_id'] in all_registry]
  house='      if(candidate?.chamber === "house") {\n        const profiles = '+json.dumps(profiles,separators=(',',':'))+';\n        const profile = (profiles[Number(candidate.district_number)] || []).find(p=>normalizeSearchText(candidate.name || "").split(" ").includes(p[0]));\n        return profile ? `candidates/${profile[1]}.html` : "";\n      }\n'
  pattern=r'      if\(candidate\?\.chamber === "house"\) \{\n.*?\n      \}\n'
  if re.search(pattern,page,re.S):page=re.sub(pattern,lambda m:house,page,count=1,flags=re.S)

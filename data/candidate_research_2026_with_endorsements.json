@@ -4732,20 +4732,50 @@
       "party": "Democrat",
       "campaign_website": "https://www.suzyalba.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-30",
-      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "website_checked": "2026-10-07",
+      "website_audit_note": "Current 2026 campaign website, priorities, biography and contact information verified.",
       "priorities": [
         {
-          "title": "Education",
-          "summary": "Make public education a central focus and engage residents directly on school issues.",
-          "source_label": "Official campaign website",
-          "source_url": "https://suzyalba.com/"
+          "title": "Public and higher education",
+          "summary": "Support school resources for students across communities and access to affordable college education.",
+          "source_url": "https://www.suzyalba.com/priorities/",
+          "source_label": "Official 2026 campaign priorities"
         },
         {
-          "title": "Responsive government",
-          "summary": "Emphasize constituent listening, bipartisan representation, and practical problem-solving.",
-          "source_label": "Official campaign website",
-          "source_url": "https://suzyalba.com/"
+          "title": "Affordability and cost of living",
+          "summary": "Address healthcare, housing, taxes, food and utility costs affecting families and businesses.",
+          "source_url": "https://www.suzyalba.com/priorities/",
+          "source_label": "Official 2026 campaign priorities"
+        },
+        {
+          "title": "Jobs and workforce development",
+          "summary": "Invest in workers and employers, career pathways, trades and apprenticeships that provide livable wages.",
+          "source_url": "https://www.suzyalba.com/priorities/",
+          "source_label": "Official 2026 campaign priorities"
+        },
+        {
+          "title": "Support for seniors",
+          "summary": "Protect senior services and people on fixed incomes, with support for aging at home.",
+          "source_url": "https://www.suzyalba.com/priorities/",
+          "source_label": "Official 2026 campaign priorities"
+        },
+        {
+          "title": "Open space and preservation",
+          "summary": "Protect natural resources, trails, parks and historic places, and seek funding to maintain them.",
+          "source_url": "https://www.suzyalba.com/priorities/",
+          "source_label": "Official 2026 campaign priorities"
+        },
+        {
+          "title": "Community investment",
+          "summary": "Build on local work involving community facilities, youth programs, schools, parks and animal services.",
+          "source_url": "https://www.suzyalba.com/priorities/",
+          "source_label": "Official 2026 campaign priorities"
+        },
+        {
+          "title": "Responsive representation",
+          "summary": "Remain accessible to residents and pursue local and state investments that improve quality of life.",
+          "source_url": "https://www.suzyalba.com/priorities/",
+          "source_label": "Official 2026 campaign priorities"
         }
       ],
       "endorsements": [
@@ -4761,7 +4791,19 @@
           "endorser": "Planned Parenthood Votes! Rhode Island PAC",
           "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
-      ]
+      ],
+      "campaign_name": "Suzy Alba",
+      "district_community": "Smithfield, Glocester",
+      "campaign_contact": {
+        "email": "SuzyAlbaforSmithfield@gmail.com",
+        "phone": "(401) 243-5744",
+        "source_url": "https://www.suzyalba.com/"
+      },
+      "prior_public_service": {
+        "summary": "Campaign biography: Suzy Alba served on the Smithfield Town Council from 2012\u20132022, including two terms as president. She has also served on the Governor\u2019s Workforce Board and works in civic education.",
+        "source_url": "https://www.suzyalba.com/meet-suzy/",
+        "source_label": "Official campaign biography"
+      }
     },
     {
       "candidate_id": "house-53-rep-primary-paul-m-santucci",
@@ -4803,35 +4845,37 @@
       "party": "Democrat",
       "campaign_website": "https://www.corveseforrepresentative.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-30",
-      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "website_checked": "2026-10-07",
+      "website_audit_note": "Campaign biography checked; it describes earlier accomplishments and contains older committee assignments. Current office roles use the official General Assembly roster.",
       "priorities": [
         {
           "title": "Education and local aid",
-          "summary": "Increase state support for schools and municipalities.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.corveseforrepresentative.com/about"
+          "summary": "Highlights efforts to increase state funding for schools and North Providence.",
+          "source_url": "https://www.corveseforrepresentative.com/about",
+          "source_label": "Official campaign biography \u00b7 stated record"
         },
         {
-          "title": "Taxes",
-          "summary": "Reduce tax burdens, including support for eliminating the car tax.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.corveseforrepresentative.com/about"
+          "title": "Tax relief",
+          "summary": "Highlights support for phasing out the car tax.",
+          "source_url": "https://www.corveseforrepresentative.com/about",
+          "source_label": "Official campaign biography \u00b7 stated record"
         },
         {
           "title": "Seniors and healthcare",
-          "summary": "Strengthen protections for seniors and expand affordable healthcare and prescription access.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.corveseforrepresentative.com/about"
+          "summary": "Describes work on senior and nursing-home protections, expanded health coverage and prescription costs.",
+          "source_url": "https://www.corveseforrepresentative.com/about",
+          "source_label": "Official campaign biography \u00b7 stated record"
         },
         {
-          "title": "Child welfare",
-          "summary": "Increase resources for child protection.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.corveseforrepresentative.com/about"
+          "title": "Child protection",
+          "summary": "Highlights efforts to secure additional DCYF funding for child protection.",
+          "source_url": "https://www.corveseforrepresentative.com/about",
+          "source_label": "Official campaign biography \u00b7 stated record"
         }
       ],
-      "endorsements": []
+      "endorsements": [],
+      "priorities_heading": "Campaign website: stated record",
+      "priority_context": "The campaign website highlights earlier legislative work. These summaries describe those campaign claims, which are separate from the current-session bill counts below."
     },
     {
       "candidate_id": "house-56-dem-primary-joshua-j-giraldo",
