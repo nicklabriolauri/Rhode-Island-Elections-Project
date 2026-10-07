@@ -312,6 +312,12 @@ def flatten_candidates(payload: dict[str, Any]) -> list[dict[str, Any]]:
     return rows
 
 
+def name_suffix(value: str) -> str:
+    """Keep generational suffixes when resolving legislator identity."""
+    match = re.search(r"\b(jr|sr|ii|iii|iv)\.?\s*$", value or "", re.I)
+    return match.group(1).lower() if match else ""
+
+
 def match_incumbent_candidates(seed_records: list[dict[str, Any]],
                                candidate_rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """
@@ -325,7 +331,8 @@ def match_incumbent_candidates(seed_records: list[dict[str, Any]],
     out = []
     for c in candidate_rows:
         possible = by_seat.get((c["chamber"], c["district_number"]), [])
-        exact = [r for r in possible if surname(r["candidate_name"]) == surname(c["candidate_name"])]
+        exact = [r for r in possible if surname(r["candidate_name"]) == surname(c["candidate_name"])
+                 and name_suffix(r["candidate_name"]) == name_suffix(c["candidate_name"])]
         if len(exact) == 1:
             row = dict(exact[0])
             row["candidate_id"] = c["candidate_id"]
@@ -333,6 +340,12 @@ def match_incumbent_candidates(seed_records: list[dict[str, Any]],
             out.append(row)
         elif len(exact) > 1:
             raise RuntimeError(f"Ambiguous incumbent match: {c}")
+    # Retain a verified retiring member under their own non-candidate identity.
+    # Never relabel this record with a relative's 2026 candidate ID.
+    matched_ids = {r["candidate_id"] for r in out}
+    out.extend(dict(r) for r in seed_records
+               if "-incumbent-" in r.get("candidate_id", "")
+               and r["candidate_id"] not in matched_ids)
     return out
 
 
@@ -436,7 +449,7 @@ def main() -> None:
     payload = {
         "updated_at": dt.date.today().isoformat(),
         "period": "2025–2026 General Assembly",
-        "scope": "Only current legislators who also match a valid 2026 RIEP candidate record.",
+        "scope": "Verified current legislative records. Retiring members with separate incumbent IDs are not attributed to 2026 candidates.",
         "methodology": (
             "RIEP reports raw descriptive measures only and does not calculate an effectiveness score. "
             "Lead sponsorship and cosponsorship are determined from the ordered sponsor list in official "
