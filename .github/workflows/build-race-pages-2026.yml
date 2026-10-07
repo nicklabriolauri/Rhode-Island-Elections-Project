@@ -16,6 +16,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: build-race-pages-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -30,6 +34,23 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add races/
-          git diff --cached --quiet || git commit -m "Generate 2026 legislative race pages"
-          git push
+          for attempt in 1 2 3; do
+            git add races/
+            if git diff --cached --quiet; then
+              echo "Race pages are already current."
+              exit 0
+            fi
+            git commit -m "Generate 2026 legislative race pages"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            if [ "$attempt" = 3 ]; then
+              echo "Unable to publish race pages after three attempts."
+              exit 1
+            fi
+            # Refresh this disposable runner checkout and regenerate against
+            # the latest main, preserving concurrent sitemap/data updates.
+            git fetch origin main
+            git reset --hard origin/main
+            python scripts/build_race_pages_2026.py
+          done

@@ -6,6 +6,7 @@ from candidate_profile_components import section,replace_section
 ROOT=Path(__file__).resolve().parents[1]
 SLUGS={'amy-j-santiago':7,'christopher-l-ireland':7,'brittany-m-kubicek':5}
 SLUGS.update({'arlette-hidalgo':12,'derick-a-reels':13,'colleen-m-crudele':15,'allan-w-fung':15})
+SLUGS.update({'zakary-j-pereira':22,'barbara-quigley':22})
 def build(slugs=None):
  incumbent=ROOT/'candidates/anthony-j-desimone.html'
  incumbent.write_text(incumbent.read_text().replace('/running.html?chamber=house&amp;district=5&amp;election=general','/races/house-5.html'))
@@ -67,7 +68,9 @@ def build(slugs=None):
   endorsements=research['endorsements']
   replace('endorsements','Endorsements',('<p class="intro">Published endorsements from outside organizations. Select an organization to view its source.</p>' if endorsements else '<p class="intro">No published endorsements are currently recorded for this candidate in RIEP’s research.</p>')+''.join(f'<div class="endorsement-entry"><a class="endorsement-chip" href="{esc(e["source_url"])}" target="_blank" rel="noopener">{esc(e["endorser"])} ↗</a><p class="endorsement-period">2026 election · House District {district}</p></div>' for e in endorsements)+'<p class="source">Outside endorsements, not RIEP endorsements.</p>')
   replace('sources','Under construction','<p class="intro">This candidate profile is under construction. Additional campaign information, election history and digital-footprint research will be added after verification.</p>')
-  replace('contact','Contact &amp; district','<dl class="details">'+''.join(f'<div><dt>{label}</dt><dd>{value}</dd></div>' for label,value in [('District',f'House District {district}'),('Community',esc(community)),('Roster contact phone',link('tel:+1'+re.sub('[^0-9]','',c['phone']),c['phone'])),('Roster contact email',link('mailto:'+c['email'],c['email']))])+'</dl><p class="source">2026 Department of State candidate roster.</p>')
+  contact=research.get('campaign_contact',{})
+  phone=contact.get('phone') or c.get('phone');email=contact.get('email') or c.get('email')
+  replace('contact','Contact &amp; district','<dl class="details">'+''.join(f'<div><dt>{label}</dt><dd>{value}</dd></div>' for label,value in [('District',f'House District {district}'),('Community',esc(community)),('Campaign phone' if contact.get('phone') else 'Roster contact phone',link('tel:+1'+re.sub('[^0-9]','',phone),phone) if phone else 'Not listed'),('Campaign email' if contact.get('email') else 'Roster contact email',link('mailto:'+email,email) if email else 'Not listed')])+'</dl><p class="source">'+(link(contact['source_url'],'Official campaign contact details ↗') if contact else '2026 Department of State candidate roster.')+'</p>')
   portraits=load('candidate_portrait_sources_2026');portrait=next((p for p in portraits if p['slug']==slug),None)
   if portrait:
    if slug=='brittany-m-kubicek':page=page.replace('class="portrait"','class="portrait" style="object-position:25% top"')
@@ -77,7 +80,7 @@ def build(slugs=None):
   page=re.sub(r'href="/finance.html\?slug='+re.escape(slug)+r'"',lambda m:'href="'+finance+'"',page)
   page=re.sub(r'href="/running.html\?chamber=house(?:&amp;|&)district='+str(district)+r'(?:&amp;|&)election=general"',f'href="/races/house-{district}.html"',page)
   assert 'data-voting-widget' not in page and 'riep-legislative-index' not in page and 'rep-desimone' not in page
-  if district==15:page=page.replace('href="/races/house-15.html"','href="/running.html?chamber=house&amp;district=15&amp;election=general"')
+  if district in (15,22):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
   (ROOT/'candidates'/f'{slug}.html').write_text(page)
  for filename in ['ballot.html','running.html']:
   p=ROOT/filename;s=p.read_text()

@@ -3107,7 +3107,13 @@
           "endorser": "SEIU 1199 New England (RI/CT)",
           "source_url": "https://bluevoterguide.org/endorser-org/SEIU_1199_New_England_%28RI%29/RI/6833"
         }
-      ]
+      ],
+      "campaign_contact": {
+        "phone": "(401) 287-8451",
+        "email": "ZakaryForRI@gmail.com",
+        "source_url": "https://www.zakaryforri.com/",
+        "checked_at": "2026-10-06"
+      }
     },
     {
       "candidate_id": "house-22-rep-primary-barbara-quigley",
@@ -3115,11 +3121,36 @@
       "chamber": "house",
       "district_number": 22,
       "party": "Republican",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-30",
-      "website_audit_note": "No official campaign website located in this audit.",
-      "priorities": [],
+      "campaign_website": "https://quigleyforri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-10-06",
+      "website_audit_note": "Official 2026 House District 22 campaign website verified; platform also supplied by RIEP in a screenshot.",
+      "priorities": [
+        {
+          "title": "Responsible Fiscal Management",
+          "summary": "Reduce wasteful spending, hold the line on taxes, and direct state spending toward District 22 residents.",
+          "source_label": "Official campaign platform · verified October 6, 2026",
+          "source_url": "https://quigleyforri.com/"
+        },
+        {
+          "title": "Affordable Healthcare and Patient Choice",
+          "summary": "Lower healthcare costs, protect patient choice, and expand access to quality care for district families.",
+          "source_label": "Official campaign platform · verified October 6, 2026",
+          "source_url": "https://quigleyforri.com/"
+        },
+        {
+          "title": "Parental Rights and Education",
+          "summary": "Defend parental rights, support school choice, and emphasize academic excellence.",
+          "source_label": "Official campaign platform · verified October 6, 2026",
+          "source_url": "https://quigleyforri.com/"
+        },
+        {
+          "title": "Economic Expansion and Small Business Growth",
+          "summary": "Reduce red tape and taxes on local entrepreneurs to support businesses and workers.",
+          "source_label": "Official campaign platform · verified October 6, 2026",
+          "source_url": "https://quigleyforri.com/"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "League of Rhode Island Businesses",

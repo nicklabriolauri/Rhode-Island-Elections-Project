@@ -15,6 +15,7 @@ CONFIGS += [('Brandon Potter','brandon-potter',16,'potter','brandon_potter','(40
 CONFIGS += [('Christopher G Paplauskas','christopher-g-paplauskas',15,'Paplauskas','christopher_paplauskas','(401) 222-2259')]
 
 CONFIGS += [('Joseph McNamara','joseph-mcnamara',19,'McNamara','joseph_mcnamara','(401) 222-2296')]
+CONFIGS += [('David A Bennett','david-a-bennett',20,'Bennett','david_bennett','(401) 222-2369'),('Marie A Hopkins','marie-a-hopkins',21,'Hopkins','marie_hopkins','(401) 222-2259')]
 
 def build(slugs=None):
  # Use the complete 75-member calculation dataset for the House index.
@@ -28,7 +29,7 @@ def build(slugs=None):
  for name,slug,district,surname,image,phone in CONFIGS:
   if slugs is not None and slug not in slugs:continue
   bio=f'https://www.rilegislature.gov/representatives/{surname}/Pages/Biography.aspx'
-  community={6:'Providence, North Providence',13:'Providence, Johnston',14:'Cranston, Providence',15:'Cranston',16:'Cranston',17:'Cranston',18:'Cranston',19:'Warwick, Cranston'}.get(district,'Providence')
+  community={6:'Providence, North Providence',13:'Providence, Johnston',14:'Cranston, Providence',15:'Cranston',16:'Cranston',17:'Cranston',18:'Cranston',19:'Warwick, Cranston',20:'Warwick, Cranston',21:'Warwick'}.get(district,'Providence')
   email=f'rep-{surname.lower()}@rilegislature.gov'
   base.build(name,slug,district,community,email,phone,'house')
   path=ROOT/'candidates'/f'{slug}.html';page=path.read_text()
@@ -74,7 +75,7 @@ def build(slugs=None):
   page=re.sub(r'<p><strong>Leadership:</strong> (.*?)</p><p><strong>Committees:</strong> (.*?)</p>',r'<dl class="office-details"><div><dt>Leadership</dt><dd>\1</dd></div><div><dt>Committees</dt><dd>\2</dd></div></dl>',page)
   if district==2:page=page.replace('<dd></dd>','<dd>No committee assignments listed in the recorded roster.</dd>')
   assert 'chamber=senate' not in page and 'Senate District' not in page
-  if district in (15,19):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
+  if district in (15,19,20,21):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
   path.write_text(page)
   entry={'slug':slug,'portrait_url':f'https://www.rilegislature.gov/LegislationPictures/{image}.jpg','biography_url':bio,'retrieved_at':'2026-10-06','credit':'Rhode Island General Assembly','width':w,'height':h}
   portraits=[r for r in portraits if r['slug']!=slug]+[entry]
