@@ -2,6 +2,7 @@ const fs=require('fs'),assert=require('assert/strict'),vm=require('vm');
 const profiles=[['edith-h-ajello','Edith H Ajello',1],['christopher-r-blazejewski','Christopher R Blazejewski',2],['nathan-w-biah','Nathan W Biah',3],['rebecca-m-kislak','Rebecca M Kislak',4]];
 profiles.push(['raymond-a-hull','Raymond A Hull',6],['john-joseph-lombardi','John Joseph Lombardi',8],['enrique-george-sanchez','Enrique George Sanchez',9],['scott-a-slater','Scott A Slater',10]);
 profiles.push(['brandon-potter','Brandon Potter',16],['jacquelyn-baginski','Jacquelyn Baginski',17],['arthur-handy','Arthur Handy',18]);
+profiles.push(['joseph-mcnamara','Joseph McNamara',19]);
 const ballot=fs.readFileSync('ballot.html','utf8'),running=fs.readFileSync('running.html','utf8'),index=fs.readFileSync('index.html','utf8'),directory=fs.readFileSync('candidate-profiles.html','utf8');
 const records=JSON.parse(fs.readFileSync('data/incumbent_records_2026.json')).records;
 const finance=JSON.parse(fs.readFileSync('data/candidate_finance_2026.json')).profiles;
@@ -21,4 +22,4 @@ for(const slug of ['christopher-r-blazejewski','nathan-w-biah','rebecca-m-kislak
 assert(fs.readFileSync('candidates/enrique-george-sanchez.html','utf8').includes('879 votes'));
 assert(fs.readFileSync('candidates/raymond-a-hull.html','utf8').includes('Providence, North Providence'));
 for(const [slug,votes] of [['brandon-potter','1,415'],['jacquelyn-baginski','1,322'],['arthur-handy','1,415']]){const page=fs.readFileSync('candidates/'+slug+'.html','utf8'),primary=page.slice(page.indexOf('id="primaries"'),page.indexOf('id="finance"'));assert(primary.includes(votes+' votes'));assert(primary.includes('Uncontested Democratic primary · Official results'));assert(primary.includes('100%'));assert(primary.includes('/ballot-items/'));assert(page.includes('Cranston'));assert(!page.includes('id="bffi-scorecard"'));}
-console.log('PASS: eleven House profiles, dated finance, official contacts, bills, voting widgets, primary coverage and all profile routes');
+console.log('PASS: twelve House profiles, dated finance, official contacts, bills, voting widgets, primary coverage and all profile routes');

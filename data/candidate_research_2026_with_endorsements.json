@@ -2926,15 +2926,15 @@
       ]
     },
     {
-      "candidate_id": "house-19-oth-general-patrick-e-maloney-jr",
+      "candidate_id": "house-19-ind-general-patrick-e-maloney-jr",
       "candidate_name": "Patrick E Maloney Jr",
       "chamber": "house",
       "district_number": 19,
       "party": "Independent",
-      "campaign_website": "https://maloneyformayor.com/",
-      "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-30",
-      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "campaign_website": "",
+      "website_status": "historical_campaign_site",
+      "website_checked": "2026-10-06",
+      "website_audit_note": "The linked website promotes Patrick Maloney’s earlier Warwick mayoral campaign. Current 2026 listings identify him as an Independent candidate for House District 19; RIEP has not verified a dedicated 2026 House campaign website.",
       "priorities": [],
       "endorsements": [
         {
@@ -2942,7 +2942,18 @@
           "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
           "designation": "General-election endorsement"
         }
-      ]
+      ],
+      "historical_campaign_website": "https://maloneyformayor.com/",
+      "ballot_verification": {
+        "checked_at": "2026-10-06",
+        "office": "Rhode Island House District 19",
+        "party": "Independent",
+        "sources": [
+          "https://ballotpedia.org/Patrick_Maloney_Jr._(Rhode_Island)",
+          "https://rhodeislandcurrent.com/2026/06/24/declared-safe-most-incumbent-state-lawmakers-unopposed-after-filing-deadline-passes/"
+        ],
+        "note": "Matches RIEP’s existing Department of State roster. Rhode Island Current explicitly confirmed the McNamara–Maloney matchup in its September 3 update. Historical mayoral website is not used as evidence of House campaign priorities."
+      }
     },
     {
       "candidate_id": "house-20-dem-primary-david-a-bennett",

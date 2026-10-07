@@ -1,0 +1,16 @@
+const fs=require('fs'),assert=require('assert/strict');
+const read=p=>fs.readFileSync(p,'utf8');
+const page=read('candidates/joseph-mcnamara.html');
+assert(page.includes('<h1>Joseph McNamara</h1>'));assert(page.includes('Warwick, Cranston'));assert(page.includes('2,647 votes'));
+assert(page.includes('data-candidate="Joseph McNamara"'));assert(page.includes('current-riep-house-ranking.html#district-19'));
+assert(page.includes('/running.html?chamber=house&amp;district=19&amp;election=general'));
+assert(page.includes('mailto:rep-mcnamara@rilegislature.gov'));
+for(const v of ['$10,705.00','$2,954.46','$49,932.40'])assert(page.includes(v));
+assert(!page.includes('District 15'));assert(!page.includes('bffi-scorecard'));
+const ids=[...page.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(ids.length,new Set(ids).size);
+for(const m of page.matchAll(/href="#([^"]+)"/g))assert(ids.includes(m[1]));
+const roster=JSON.parse(read('data/whos_running_2026.json')).chambers.house['19'];assert.equal(roster.general_status,'contested');assert.equal(roster.candidates.length,2);
+const c=JSON.parse(read('data/candidate_research_2026_with_endorsements.json')).candidates.find(c=>c.candidate_id==='house-19-ind-general-patrick-e-maloney-jr');
+assert(c);assert.equal(c.campaign_website,'');assert.equal(c.website_status,'historical_campaign_site');assert.equal(c.historical_campaign_website,'https://maloneyformayor.com/');assert.equal(c.priorities.length,0);
+assert(read('running.html').includes('Earlier mayoral campaign website ↗'));assert(read('races/house-19.html').includes('20261006-house19'));
+console.log('PASS: McNamara District 19 profile and primary result; Maloney retained as Independent opponent with historical-site disclosure');
