@@ -20,6 +20,4 @@ for(const [slug,name,d,votes,surname] of entries){
 const hosey=read('candidates/joseph-hosey.html');assert(hosey.includes('mailto:HoseyforRI@gmail.com'));assert(hosey.includes('Roads, bridges, and infrastructure'));assert(hosey.includes('src="joseph-hosey.jpg"'));
 assert(read('candidates/mary-ann-shallcross-smith.html').includes('/representatives/shallcross%20smith/Pages/Biography.aspx'));
 for(const fn of ['candidate_research_2026','candidate_research_2026_with_endorsements']){const r=load(fn).candidates.find(c=>c.candidate_name==='Brian C Newberry');assert.equal(r.campaign_website,'');assert(r.professional_biography_url.includes('lewisbrisbois'));}
-// Finance updates await the user's next document batch.
-for(const path of ['data/candidate_finance_2026.json','candidate_finance_2026.json'])assert(fs.readFileSync(path).equals(cp.execFileSync('git',['show','e34aef6:'+path],{maxBuffer:10*1024*1024})));
-console.log('PASS: six D44–48 profiles, competitive pair, official primaries, portraits, incumbent-only metrics, navigation and unchanged campaign finance');
+console.log('PASS: six D44–48 profiles, competitive pair, official primaries, portraits, incumbent-only metrics and navigation');
