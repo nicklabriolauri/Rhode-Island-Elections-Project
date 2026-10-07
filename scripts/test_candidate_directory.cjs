@@ -6,7 +6,7 @@ const cards = [...html.matchAll(/<a class="profile-card" href="([^"]+)" data-sea
   assert(fs.existsSync(m[1]), m[1]);
   return {dataset: {search:m[2], chamber:m[3], party:m[4]}, hidden:false};
 });
-assert.equal(cards.length,81);
+assert.equal(cards.length,86);
 const fields = {};
 ['profile-search','profile-chamber','profile-party','profile-count','profile-empty'].forEach(id => fields[id]={value:'',addEventListener(event,cb){this[event]=cb;}});
 const form={addEventListener(event,cb){this[event]=cb;}};
@@ -14,10 +14,10 @@ fields['profile-search'].closest=()=>form;
 vm.runInNewContext(fs.readFileSync('candidate-profiles.js','utf8'),{document:{querySelectorAll:()=>cards,getElementById:id=>fields[id]},setTimeout:cb=>cb()});
 const visible=()=>cards.filter(c=>!c.hidden).length;
 fields['profile-search'].value='Victoria Gu';fields['profile-search'].input();assert.equal(visible(),1);
-fields['profile-search'].value='';fields['profile-chamber'].value='house';fields['profile-chamber'].change();assert.equal(visible(),40);
-fields['profile-party'].value='REP';fields['profile-party'].change();assert.equal(visible(),10);
+fields['profile-search'].value='';fields['profile-chamber'].value='house';fields['profile-chamber'].change();assert.equal(visible(),45);
+fields['profile-party'].value='REP';fields['profile-party'].change();assert.equal(visible(),11);
 fields['profile-party'].value='IND';fields['profile-party'].change();assert.equal(visible(),1);assert(html.includes('<option value="IND">Independent</option>'));
 fields['profile-search'].value='no such person';fields['profile-search'].input();assert.equal(visible(),0);assert.equal(fields['profile-empty'].hidden,false);
-for(const id of ['profile-search','profile-chamber','profile-party'])fields[id].value='';form.reset();assert.equal(visible(),81);
-assert.equal((html.match(/<span>Incumbent<\/span>/g)||[]).length,64); // 38 Senate and 26 House incumbents.
-console.log('PASS: 81 existing profile destinations, search, chamber/party filters, empty state and reset');
+for(const id of ['profile-search','profile-chamber','profile-party'])fields[id].value='';form.reset();assert.equal(visible(),86);
+assert.equal((html.match(/<span>Incumbent<\/span>/g)||[]).length,66); // 38 Senate and 28 House incumbents.
+console.log('PASS: 86 existing profile destinations, search, chamber/party filters, empty state and reset');

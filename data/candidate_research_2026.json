@@ -2937,12 +2937,72 @@
       "chamber": "house",
       "district_number": 31,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-30",
-      "website_audit_note": "No official campaign website located in this audit.",
-      "priorities": [],
-      "endorsements": []
+      "campaign_website": "https://www.sheehan4ri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-10-07",
+      "website_audit_note": "Campaign homepage explicitly identifies the Rhode Island House candidacy.",
+      "priorities": [
+        {
+          "title": "Sludge plant and environmental protection",
+          "summary": "Oppose the proposed sewage sludge facility and protect neighborhoods, water supplies and public health.",
+          "source_url": "https://www.sheehan4ri.com/issues",
+          "source_label": "Official campaign priorities"
+        },
+        {
+          "title": "Quonset oversight",
+          "summary": "Increase oversight, transparency and local input on government and industrial-project decisions.",
+          "source_url": "https://www.sheehan4ri.com/issues",
+          "source_label": "Official campaign priorities"
+        },
+        {
+          "title": "Affordability",
+          "summary": "Address housing, health-insurance and childcare costs.",
+          "source_url": "https://www.sheehan4ri.com/issues",
+          "source_label": "Official campaign priorities"
+        },
+        {
+          "title": "Education and workforce",
+          "summary": "Prepare students and workers for economic change, including artificial intelligence.",
+          "source_url": "https://www.sheehan4ri.com/issues",
+          "source_label": "Official campaign priorities"
+        },
+        {
+          "title": "Quality jobs",
+          "summary": "Promote economic opportunity while protecting natural resources and local communities.",
+          "source_url": "https://www.sheehan4ri.com/issues",
+          "source_label": "Official campaign priorities"
+        },
+        {
+          "title": "Climate resilience",
+          "summary": "Strengthen infrastructure and emergency preparedness for climate change.",
+          "source_url": "https://www.sheehan4ri.com/issues",
+          "source_label": "Official campaign priorities"
+        },
+        {
+          "title": "Responsible development",
+          "summary": "Support growth that respects local character and community needs.",
+          "source_url": "https://www.sheehan4ri.com/issues",
+          "source_label": "Official campaign priorities"
+        },
+        {
+          "title": "Constitutional rights",
+          "summary": "Protect individual freedoms and state sovereignty while holding government accountable.",
+          "source_url": "https://www.sheehan4ri.com/issues",
+          "source_label": "Official campaign priorities"
+        }
+      ],
+      "endorsements": [],
+      "district_community": "North Kingstown, Exeter",
+      "prior_public_service": {
+        "summary": "Former Rhode Island state senator and former North Kingstown School Committee member. Earlier Senate service is separate from this House candidacy; no current House record or score is assigned.",
+        "source_url": "https://www.sheehan4ri.com/about-us",
+        "source_label": "Official campaign biography"
+      },
+      "race_context": {
+        "summary": "Open seat in 2026 following Julie Casimiro\u2019s retirement. Sheehan won the Democratic primary and is unopposed in the general election.",
+        "source_url": "https://rhodeislandcurrent.com/2026/08/07/it-all-comes-back-to-sludge-in-house-district-31/",
+        "source_label": "Rhode Island Current \u00b7 August 7, 2026"
+      }
     },
     {
       "candidate_id": "house-31-dem-primary-thomas-n-menec",
@@ -3103,7 +3163,18 @@
           "source_type": "endorser_or_candidate_official_source",
           "date_checked": "2026-08-28"
         }
-      ]
+      ],
+      "district_community": "North Kingstown",
+      "campaign_contact": {
+        "email": "cravenforri@gmail.com",
+        "source_url": "https://www.cravenforri.com/",
+        "checked_at": "2026-10-07"
+      },
+      "prior_public_service": {
+        "summary": "Policy and intergovernmental-relations director at the Rhode Island Treasury. He is the son of Representative Robert E. Craven Sr.; his father\u2019s House service, bills and legislative scores are not his own.",
+        "source_url": "https://www.cravenforri.com/",
+        "source_label": "Official campaign biography"
+      }
     },
     {
       "candidate_id": "house-32-dem-primary-kevin-hoyle",
@@ -3187,12 +3258,13 @@
       "priorities": [
         {
           "title": "Foster care",
-          "summary": "Proposes an information system to give foster families timely details on children’s education, health care, and routines and include them in school decisions.",
+          "summary": "Proposes an information system to give foster families timely details on children\u2019s education, health care, and routines and include them in school decisions.",
           "source_label": "Official campaign website",
           "source_url": "https://jessicadrewday.com/issues"
         }
       ],
-      "endorsements": []
+      "endorsements": [],
+      "district_community": "Narragansett, South Kingstown"
     },
     {
       "candidate_id": "house-34-dem-primary-teresa-a-tanzi",

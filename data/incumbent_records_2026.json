@@ -1,7 +1,7 @@
 {
   "updated_at": "2026-08-30",
   "period": "2025–2026 General Assembly",
-  "scope": "Only current legislators who also match a valid 2026 RIEP candidate record.",
+  "scope": "Current legislative records matched to verified people. Retiring District 32 representative Robert E. Craven Sr. is retained separately from his son’s 2026 candidacy.",
   "methodology": "RIEP reports raw descriptive measures only and does not calculate an effectiveness score. Lead sponsorship and cosponsorship are determined from the ordered sponsor list in official Rhode Island Bill Status/History records. Resolutions are excluded from headline bill counts. Originating-chamber passage is based on explicit House/Senate floor-passage actions. Became-law counts require an official signed/effective-without-signature action. Attendance remains unpublished until validated from official House/Senate Journals.",
   "records": [
     {
@@ -7280,7 +7280,7 @@
       }
     },
     {
-      "candidate_name": "Robert E Craven Jr",
+      "candidate_name": "Robert E Craven Sr",
       "chamber": "house",
       "district_number": 32,
       "period": "2025–2026 General Assembly",
@@ -7323,7 +7323,7 @@
         "committee_source_as_of": "2026-05-07",
         "attendance": "verified_from_official_journals"
       },
-      "candidate_id": "house-32-dem-primary-robert-e-craven-jr",
+      "candidate_id": "house-32-incumbent-robert-e-craven-sr",
       "legislation_detail": {
         "lead_sponsored": [
           {
@@ -7660,7 +7660,8 @@
         "unmatched_validated_session_dates": [],
         "status": "verified_from_official_journals",
         "note": "Session attendance only. A floor-vote 'Not Voting' entry is not counted as an absence."
-      }
+      },
+      "identity_note": "Robert E. Craven Sr. is the sitting representative. His son Robert E. Craven Jr. is the 2026 House District 32 candidate. Legislative records are not transferred between them."
     },
     {
       "candidate_name": "Carol Hagan McEntee",

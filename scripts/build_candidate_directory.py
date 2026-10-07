@@ -11,8 +11,8 @@ def build():
  cards=[];counts={'senate':0,'house':0};incumbents=0
  for id,slug in sorted(registry.items(),key=lambda x:(candidates[x[0]]['chamber']!='senate',candidates[x[0]]['district_number'],candidates[x[0]]['name'])):
   c=candidates[id];p=ROOT/'candidates'/f'{slug}.html';assert p.is_file(),p
-  page=p.read_text();photo=re.search(r'<img[^>]+src="([^\"]+\.png)"[^>]*alt="[^\"]*'+re.escape(c['name'].split()[-1])+r'[^\"]*"',page,re.I)
-  if not photo:photo=re.search(r'src="('+re.escape(slug)+r'\.png)"',page)
+  page=p.read_text();photo=re.search(r'<img[^>]+src="([^\"]+\.(?:png|jpg))"[^>]*alt="[^\"]*'+re.escape(c['name'].split()[-1])+r'[^\"]*"',page,re.I)
+  if not photo:photo=re.search(r'src="('+re.escape(slug)+r'\.(?:png|jpg))"',page)
   if photo:
    image='candidates/'+photo[1] if not photo[1].startswith('/') else photo[1];assert (ROOT/image.lstrip('/')).is_file(),image
    portrait_html=f'<img src="{esc(image)}" alt="" width="72" height="96" loading="lazy">'

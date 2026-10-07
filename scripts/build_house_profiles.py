@@ -21,6 +21,8 @@ CONFIGS += [('Evan Patrick Shanley','evan-patrick-shanley',24,'Shanley','evan_sh
 
 CONFIGS += [('George A Nardone','george-a-nardone',28,'Nardone','george_nardone','(401) 222-2259'),('Sherry L Roberts','sherry-l-roberts',29,'Roberts','sherry_roberts','(401) 222-2259'),('Justine Caldwell','justine-caldwell',30,'caldwell','justine_caldwell','(401) 222-4263')]
 
+CONFIGS += [('Carol Hagan McEntee','carol-hagan-mcentee',33,'McEntee','carol_hagan_mcentee','(401) 222-4435'),('Teresa A Tanzi','teresa-a-tanzi',34,'Tanzi','teresa_tanzi','(401) 222-1722')]
+
 def build(slugs=None):
  # Use the complete 75-member calculation dataset for the House index.
  base.current_index=current_index
@@ -33,7 +35,7 @@ def build(slugs=None):
  for name,slug,district,surname,image,phone in CONFIGS:
   if slugs is not None and slug not in slugs:continue
   bio=f'https://www.rilegislature.gov/representatives/{surname}/Pages/Biography.aspx'
-  community={6:'Providence, North Providence',13:'Providence, Johnston',14:'Cranston, Providence',15:'Cranston',16:'Cranston',17:'Cranston',18:'Cranston',19:'Warwick, Cranston',20:'Warwick, Cranston',21:'Warwick',24:'Warwick, East Greenwich',25:'Coventry, West Warwick',26:'Coventry, West Warwick, Warwick',28:'Coventry',29:'Coventry, West Greenwich',30:'East Greenwich, West Greenwich'}.get(district,'Providence')
+  community={6:'Providence, North Providence',13:'Providence, Johnston',14:'Cranston, Providence',15:'Cranston',16:'Cranston',17:'Cranston',18:'Cranston',19:'Warwick, Cranston',20:'Warwick, Cranston',21:'Warwick',24:'Warwick, East Greenwich',25:'Coventry, West Warwick',26:'Coventry, West Warwick, Warwick',28:'Coventry',29:'Coventry, West Greenwich',30:'East Greenwich, West Greenwich',33:'Narragansett, South Kingstown',34:'Narragansett, South Kingstown'}.get(district,'Providence')
   email=f'rep-{surname.lower()}@rilegislature.gov'
   base.build(name,slug,district,community,email,phone,'house')
   path=ROOT/'candidates'/f'{slug}.html';page=path.read_text()
@@ -72,17 +74,18 @@ def build(slugs=None):
   page=page.replace(f'/running.html?chamber=house&amp;district={district}&amp;election=general',f'/races/house-{district}.html')
   page=re.sub(r'<p class="photo-note">.*?</p>','<p class="photo-note">Portrait: '+base.link(bio,'Rhode Island General Assembly ↗')+'</p>',page)
   from PIL import Image
-  w,h=Image.open(ROOT/'candidates'/f'{slug}.png').size
+  photo=ROOT/'candidates'/f'{slug}.png'
+  w,h=Image.open(photo).size if photo.exists() else (0,0)
   page=re.sub(r'(class="portrait"[^>]*?)width="[0-9]+" height="[0-9]+"',lambda m:m[1]+f'width="{w}" height="{h}"',page)
   page=page.replace('<aside class="side">','<aside class="side" aria-label="Candidate details and navigation">').replace('<h3>Session attendance</h3>','<h3 class="subheading">Session attendance</h3>')
   start=page.index('<section class="card" id="finance">');end=page.index('<section class="card" id="record">');page=page[:start]+page[start:end].replace('class="record-grid"','class="metric-grid"')+page[end:]
   page=re.sub(r'<p><strong>Leadership:</strong> (.*?)</p><p><strong>Committees:</strong> (.*?)</p>',r'<dl class="office-details"><div><dt>Leadership</dt><dd>\1</dd></div><div><dt>Committees</dt><dd>\2</dd></div></dl>',page)
   if district==2:page=page.replace('<dd></dd>','<dd>No committee assignments listed in the recorded roster.</dd>')
   assert 'chamber=senate' not in page and 'Senate District' not in page
-  if district in (15,19,20,21,24,25,26,28,29,30):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
+  if district in (15,19,20,21,24,25,26,28,29,30,33,34):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
   path.write_text(page)
-  entry={'slug':slug,'portrait_url':f'https://www.rilegislature.gov/LegislationPictures/{image}.jpg','biography_url':bio,'retrieved_at':'2026-10-06','credit':'Rhode Island General Assembly','width':w,'height':h}
-  portraits=[r for r in portraits if r['slug']!=slug]+[entry]
+  entry={'slug':slug,'portrait_url':('https://www.rilegislature.gov/representatives/Pictures/McEntee.jpg' if district==33 else f'https://www.rilegislature.gov/LegislationPictures/{image}.jpg'),'biography_url':bio,'retrieved_at':'2026-10-06','credit':'Rhode Island General Assembly','width':w,'height':h}
+  if photo.exists():portraits=[r for r in portraits if r['slug']!=slug]+[entry]
  (ROOT/'data/candidate_portrait_sources_2026.json').write_text(json.dumps(portraits,indent=2)+'\n')
  for filename in ['ballot.html','running.html']:
   path=ROOT/filename;page=path.read_text()
