@@ -9,6 +9,7 @@ SLUGS.update({'arlette-hidalgo':12,'derick-a-reels':13,'colleen-m-crudele':15,'a
 SLUGS.update({'zakary-j-pereira':22,'barbara-quigley':22,'william-muto':23,'dana-james-traversie':23,'angela-s-coburn':27,'lawrence-paul-almagno-jr':27})
 SLUGS.update({'james-c-sheehan':31,'robert-e-craven-jr':32,'jessica-drew-day':33})
 SLUGS.update({'christopher-m-stanton':37,'jasmin-roy':39})
+SLUGS.update({'shaina-n-smith':41,'michael-j-riley':41,'edward-w-stravato':42})
 def build(slugs=None):
  incumbent=ROOT/'candidates/anthony-j-desimone.html'
  incumbent.write_text(incumbent.read_text().replace('/running.html?chamber=house&amp;district=5&amp;election=general','/races/house-5.html'))
@@ -37,8 +38,10 @@ def build(slugs=None):
    prior=research['prior_public_service']
    old=re.search(r'<section class="card" id="about">.*?</section>',page,re.S).group()
    page=page.replace(old,old.replace('</section>',f'<div class="mini"><h3>Earlier public service</h3><p>{esc(prior["summary"])}</p><p class="source">'+link(prior['source_url'],prior['source_label']+' ↗')+'</p></div></section>'))
-  priorities=research['priorities'];sources=sorted({(p['source_url'],p.get('source_label','Campaign source')) for p in priorities if p.get('source_url')})
-  replace('priorities','Campaign priorities',('<div class="grid2">'+''.join(f'<div class="mini"><h3>{esc(p["title"])}</h3><p>{esc(p["summary"])}</p></div>' for p in priorities)+'</div><p class="source">'+' · '.join(link(u,label) for u,label in sources)+'. Campaign positions, not RIEP assessments.</p>') if priorities else '<div class="empty"><strong>Campaign priorities under construction</strong><p>No campaign priorities are currently recorded for this candidate in RIEP’s research. This section will be updated after verification.</p></div>')
+  supplied=next((p for p in load('candidate_profiles_2026')['profiles'] if p['candidate_id']==candidate_id),{})
+  priorities=supplied.get('priorities') or research['priorities'];sources=sorted({(p['source_url'],p.get('source_label','Campaign source')) for p in priorities if p.get('source_url')})
+  priority_sources=('Campaign response submitted directly to RIEP' if supplied.get('priorities') else ' · '.join(link(u,label) for u,label in sources))
+  replace('priorities','Campaign priorities',('<div class="grid2">'+''.join(f'<div class="mini"><h3>{esc(p["title"])}</h3><p>{esc(p["summary"])}</p></div>' for p in priorities)+'</div><p class="source">'+priority_sources+'. Campaign positions, not RIEP assessments.</p>') if priorities else '<div class="empty"><strong>Campaign priorities under construction</strong><p>No campaign priorities are currently recorded for this candidate in RIEP’s research. This section will be updated after verification.</p></div>')
   elections=[]
   for race in sorted(load('race_data').values(),key=lambda r:int(r['year']),reverse=True):
    if race['chamber'].lower()=='house' and int(race['district_number'])==district:
@@ -67,6 +70,7 @@ def build(slugs=None):
   else:
    fin=next(r for r in load('candidate_finance_2026')['profiles'] if r['slug']==slug);period=fin['report_label']+' · '+fin['reporting_period_label'];items=[(fin.get('receipts_label','Raised during period'),fin['money_raised']),('Spent during period',fin['money_spent']),('Cash at period end',fin['ending_cash'])]
   finance_body=(f'<p class="intro">{esc(period)}. Figures describe the stated reporting period.</p>'+metrics([(label,f'${value:,.2f}') for label,value in items]).replace('record-grid','metric-grid') if all(value is not None for _,value in items) else '<div class="empty"><strong>Campaign finance details under construction</strong><p>No financial summary is currently available in RIEP’s dataset for this candidate. Missing figures are not treated as zero.</p></div>')
+  if fin.get('finance_status')=='available_historical':finance_body='<p class="intro">Historical filing only. No 2026 campaign-finance summary is available in RIEP’s dataset.</p>'+finance_body
   replace('finance','Campaign finance snapshot',finance_body+f'<a class="finance-profile-button" href="{esc(finance)}">View {esc(name)}’s campaign finance →</a>')
   if fin.get('latest_filing_href'):
    old=re.search(r'<section class="card" id="finance">.*?</section>',page,re.S).group()
@@ -83,6 +87,7 @@ def build(slugs=None):
   portraits=load('candidate_portrait_sources_2026');portrait=next((p for p in portraits if p['slug']==slug),None)
   if portrait:
    page=page.replace(slug+'.png',portrait.get('file_name',slug+'.png'))
+   if slug=='jasmin-roy':page=page.replace('class="portrait"','class="portrait" style="height:auto;object-fit:contain"')
    if slug=='christopher-m-stanton':page=page.replace('class="portrait"','class="portrait" style="object-position:20% top"')
    if slug=='brittany-m-kubicek':page=page.replace('class="portrait"','class="portrait" style="object-position:25% top"')
    page=re.sub(r'<p class="photo-note">.*?</p>', '<p class="photo-note">Portrait: '+link(portrait['biography_url'],portrait['credit']+' ↗')+'</p>',page)
@@ -91,7 +96,7 @@ def build(slugs=None):
   page=re.sub(r'href="/finance.html\?slug='+re.escape(slug)+r'"',lambda m:'href="'+finance+'"',page)
   page=re.sub(r'href="/running.html\?chamber=house(?:&amp;|&)district='+str(district)+r'(?:&amp;|&)election=general"',f'href="/races/house-{district}.html"',page)
   assert 'data-voting-widget' not in page and 'riep-legislative-index' not in page and 'rep-desimone' not in page
-  if district in (15,22,23,27,31,32,33,37,39):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
+  if district in (15,22,23,27,31,32,33,37,39,41,42):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
   (ROOT/'candidates'/f'{slug}.html').write_text(page)
  for filename in ['ballot.html','running.html']:
   p=ROOT/filename;s=p.read_text()

@@ -4320,14 +4320,15 @@
       "campaign_website": "https://scituatedemocrats.org/meet-shaina",
       "website_status": "verified_official_campaign_site",
       "website_checked": "2026-08-30",
-      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "website_audit_note": "Candidate biography is hosted by the Scituate Democratic Town Committee. The page references the November 5 election and is an earlier campaign source; no current campaign priorities are inferred.",
       "priorities": [],
       "endorsements": [
         {
           "endorser": "Climate Action Rhode Island",
           "source_url": "https://world.350.org/rhodeisland/cari-announces-endorsements-for-the-2026-general-election/"
         }
-      ]
+      ],
+      "district_community": "Scituate, Cranston"
     },
     {
       "candidate_id": "house-41-rep-primary-michael-j-riley",
@@ -4335,10 +4336,10 @@
       "chamber": "house",
       "district_number": 41,
       "party": "Republican",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-30",
-      "website_audit_note": "No official campaign website located in this audit.",
+      "campaign_website": "https://rileyforri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-10-07",
+      "website_audit_note": "Verified the 2026 House District 41 campaign for Michael J. Riley, known as Lou, a Scituate real-estate attorney.",
       "priorities": [],
       "endorsements": [
         {
@@ -4346,7 +4347,14 @@
           "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
           "designation": "General-election endorsement"
         }
-      ]
+      ],
+      "district_community": "Scituate, Cranston",
+      "campaign_contact": {
+        "phone": "(401) 647-6990",
+        "email": "TEAM@RileyforRI.com",
+        "source_url": "https://rileyforri.com/",
+        "checked_at": "2026-10-07"
+      }
     },
     {
       "candidate_id": "house-42-dem-primary-edward-w-stravato",
@@ -4356,8 +4364,8 @@
       "party": "Democrat",
       "campaign_website": "https://www.edfor42.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-30",
-      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "website_checked": "2026-10-07",
+      "website_audit_note": "Verified official 2026 campaign website and priorities.",
       "priorities": [
         {
           "title": "Small businesses",
@@ -4388,9 +4396,16 @@
           "summary": "Supports local residents having a voice in what is built in their neighborhoods.",
           "source_label": "Official campaign website",
           "source_url": "https://www.edfor42.com/"
+        },
+        {
+          "title": "Support seniors",
+          "summary": "Supports greater funding for senior programs, lower prescription costs and removing the state tax on Social Security.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.edfor42.com/"
         }
       ],
-      "endorsements": []
+      "endorsements": [],
+      "district_community": "Johnston, Cranston"
     },
     {
       "candidate_id": "house-42-rep-primary-richard-r-fascia",
@@ -4398,10 +4413,10 @@
       "chamber": "house",
       "district_number": 42,
       "party": "Republican",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-30",
-      "website_audit_note": "No official campaign website located in this audit.",
+      "campaign_website": "https://fasciarep42.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-10-07",
+      "website_audit_note": "Verified current re-election campaign site; its Legislative Recap describes office activity separately from campaign priorities.",
       "priorities": [],
       "endorsements": [
         {
@@ -4409,7 +4424,8 @@
           "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
           "designation": "Incumbent endorsement"
         }
-      ]
+      ],
+      "district_community": "Johnston, Cranston"
     },
     {
       "candidate_id": "house-43-dem-primary-deborah-a-fellela",
@@ -4422,7 +4438,8 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [],
+      "district_community": "Johnston"
     },
     {
       "candidate_id": "house-44-dem-primary-gregory-costantino",
