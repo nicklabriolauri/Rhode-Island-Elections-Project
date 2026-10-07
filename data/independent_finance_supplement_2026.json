@@ -23,14 +23,491 @@
       "latest_period_label": "2026 Q2",
       "cash_on_hand": 25097.59,
       "liabilities": 22689.98,
-      "ytd_receipts": 15352.90,
+      "ytd_receipts": 15352.9,
       "ytd_campaign_expenses": 1196.49,
       "ytd_in_kind": 0.0,
-      "source": "Rhode Island Board of Elections CF-2 filings"
+      "source": "Rhode Island Board of Elections CF-2 filings",
+      "latest_reporting_period": {
+        "candidate_id": "house-49-jon-d-brien",
+        "slug": "jon-d-brien",
+        "candidate_name": "Jon D Brien",
+        "chamber": "house",
+        "district_number": "49",
+        "party": "IND",
+        "party_label": "Independent",
+        "office_sought": "State Representative",
+        "original_documents": [
+          {
+            "label": "28-days-before-election report \u00b7 2026",
+            "period": "July 1, 2026 to October 5, 2026",
+            "href": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+            "embed": true
+          }
+        ],
+        "filing_history": [
+          {
+            "label": "2026 year to date through Q2",
+            "reporting_period_label": "January 1, 2026 to June 30, 2026",
+            "money_raised": 15352.9,
+            "money_spent": 1196.49,
+            "ending_cash": 25097.59,
+            "notes": "Year-to-date figures from the independent finance supplement; not a Q2-only period."
+          },
+          {
+            "label": "28-days-before-election report \u00b7 2026",
+            "reporting_period_label": "July 1, 2026 to October 5, 2026",
+            "money_raised": 6450,
+            "money_spent": 15082.02,
+            "ending_cash": 16465.57,
+            "net_change": -8632.02,
+            "notes": "The campaign reports $22,689.98 in total liabilities and $-6,224.41 in fund balance. Cash on hand is reported separately from debt.",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+          }
+        ],
+        "archived_reporting_periods": [
+          {
+            "name": "Jon D Brien",
+            "chamber": "house",
+            "district": 49,
+            "latest_period_end": "2026-06-30",
+            "latest_period_label": "2026 Q2",
+            "cash_on_hand": 25097.59,
+            "liabilities": 22689.98,
+            "ytd_receipts": 15352.9,
+            "ytd_campaign_expenses": 1196.49,
+            "ytd_in_kind": 0.0,
+            "source": "Rhode Island Board of Elections CF-2 filings"
+          }
+        ],
+        "report_label": "28-days-before-election report \u00b7 2026",
+        "reporting_period_label": "July 1, 2026 to October 5, 2026",
+        "reporting_period_type": "custom",
+        "reporting_period_start": "2026-07-01",
+        "reporting_period_end": "2026-10-05",
+        "receipts_label": "Total receipts",
+        "finance_status": "available",
+        "source_note": "Rhode Island Board of Elections CF-2, CF-3 and CF-4 report supplied to RIEP.",
+        "coverage_note": "Cash receipts exclude the beginning balance and in-kind contributions. Figures describe this reporting period, not year-to-date totals.",
+        "beginning_cash": 25097.59,
+        "money_raised": 6450,
+        "money_spent": 15082.02,
+        "ending_cash": 16465.57,
+        "net_change": -8632.02,
+        "total_cash_receipts": 6450,
+        "campaign_expenses": 15082.02,
+        "aggregate_expenses": 0,
+        "loan_proceeds": 0,
+        "loan_repayments": 0,
+        "loans_payable": 22689.98,
+        "accounts_payable": 0,
+        "total_liabilities": 22689.98,
+        "total_fund_balance": -6224.41,
+        "refunds_rebates": 0,
+        "interest_received": 0,
+        "in_kind_contributions": 0,
+        "receipt_transactions": [
+          {
+            "donor": "Corvese for Representative",
+            "amount": 500.0,
+            "type": "Individual",
+            "date": "2026-07-27",
+            "employer": "Retired",
+            "notes": "",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+          },
+          {
+            "donor": "William M Farrell",
+            "amount": 250.0,
+            "type": "Individual",
+            "date": "2026-09-25",
+            "employer": "William Farrell Associates LLC",
+            "notes": "",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+          },
+          {
+            "donor": "Friends of Alex Finkelman",
+            "amount": 1000.0,
+            "type": "Individual",
+            "date": "2026-07-27",
+            "employer": "The Egis Grouup",
+            "notes": "",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+          },
+          {
+            "donor": "Friends of Jackie Baginski",
+            "amount": 1000.0,
+            "type": "Individual",
+            "date": "2026-08-22",
+            "employer": "Professional Ambulance",
+            "notes": "",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+          },
+          {
+            "donor": "Friends of Thomas Noret",
+            "amount": 2000.0,
+            "type": "Individual",
+            "date": "2026-08-22",
+            "employer": "",
+            "notes": "",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+          },
+          {
+            "donor": "James Lepore",
+            "amount": 100.0,
+            "type": "Individual",
+            "date": "2026-09-30",
+            "employer": "Coia & Lepore",
+            "notes": "",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+          },
+          {
+            "donor": "Scott McGee",
+            "amount": 100.0,
+            "type": "Individual",
+            "date": "2026-08-22",
+            "employer": "",
+            "notes": "",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+          },
+          {
+            "donor": "John H Petrarca",
+            "amount": 1000.0,
+            "type": "Individual",
+            "date": "2026-09-25",
+            "employer": "Providence Auto Body",
+            "notes": "",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+          },
+          {
+            "donor": "Paul R Richer",
+            "amount": 100.0,
+            "type": "Individual",
+            "date": "2026-09-30",
+            "employer": "",
+            "notes": "",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+          },
+          {
+            "donor": "Ernest Shagalian Jr.",
+            "amount": 100.0,
+            "type": "Individual",
+            "date": "2026-07-03",
+            "employer": "",
+            "notes": "",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+          },
+          {
+            "donor": "Christopher Vitale",
+            "amount": 150.0,
+            "type": "Individual",
+            "date": "2026-07-03",
+            "employer": "",
+            "notes": "",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+          },
+          {
+            "donor": "RI STAFFING ASSOCIATION PAC",
+            "amount": 150.0,
+            "type": "PAC",
+            "date": "2026-09-25",
+            "employer": "",
+            "notes": "",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+          }
+        ],
+        "in_kind_transactions": [],
+        "expenditure_transactions": [
+          {
+            "date": "2026-09-30",
+            "amount": 397.72,
+            "category": "Office Equipment & Supplies",
+            "type": "Campaign Expenditure",
+            "payee": "Balloons Over RI",
+            "purpose": "Envelopes",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+          },
+          {
+            "date": "2026-07-28",
+            "amount": 482.72,
+            "category": "Fundraising Expenses",
+            "type": "Campaign Expenditure",
+            "payee": "Billboardflex",
+            "purpose": "campaign materials",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+          },
+          {
+            "date": "2026-09-29",
+            "amount": 405.26,
+            "category": "Fundraising Expenses",
+            "type": "Campaign Expenditure",
+            "payee": "FORMATT PRINTING",
+            "purpose": "ENVELOPES",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+          },
+          {
+            "date": "2026-08-25",
+            "amount": 500.0,
+            "category": "Donations (Political)",
+            "type": "Campaign Expenditure",
+            "payee": "Friends of Barbara Quigley",
+            "purpose": "",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+          },
+          {
+            "date": "2026-07-01",
+            "amount": 83.0,
+            "category": "Fundraising Expenses",
+            "type": "Campaign Expenditure",
+            "payee": "Friends of Daniel M. Gendron",
+            "purpose": "",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+          },
+          {
+            "date": "2026-07-27",
+            "amount": 100.0,
+            "category": "Advertising",
+            "type": "Campaign Expenditure",
+            "payee": "Friends of Valerie Gonzalez",
+            "purpose": "Donation",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+          },
+          {
+            "date": "2026-07-08",
+            "amount": 2160.0,
+            "category": "Fundraising Expenses",
+            "type": "Campaign Expenditure",
+            "payee": "i360",
+            "purpose": "voting models",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+          },
+          {
+            "date": "2026-07-28",
+            "amount": 4506.25,
+            "category": "Fundraising Expenses",
+            "type": "Campaign Expenditure",
+            "payee": "Majority Strategies",
+            "purpose": "flyers, doorhangers, cards",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+          },
+          {
+            "date": "2026-09-26",
+            "amount": 3978.92,
+            "category": "Advertising",
+            "type": "Campaign Expenditure",
+            "payee": "Majority Strategies",
+            "purpose": "flyers",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+          },
+          {
+            "date": "2026-08-25",
+            "amount": 568.15,
+            "category": "Fundraising Expenses",
+            "type": "Campaign Expenditure",
+            "payee": "VISTAPRINT",
+            "purpose": "Fliers and door hangers",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+          },
+          {
+            "date": "2026-07-16",
+            "amount": 1700.0,
+            "category": "Advertising",
+            "type": "Campaign Expenditure",
+            "payee": "WNRI 1380 AM",
+            "purpose": "Political radio ads",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+          },
+          {
+            "date": "2026-07-27",
+            "amount": 200.0,
+            "category": "Advertising",
+            "type": "Campaign Expenditure",
+            "payee": "WOON",
+            "purpose": "Political Radio Ads",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+          }
+        ],
+        "top_donors": [
+          {
+            "donor": "Friends of Thomas Noret",
+            "amount": 2000.0,
+            "type": "Individual",
+            "date": "2026-08-22",
+            "employer": "",
+            "notes": "Committee-named contributor classified as Individual in the original filing; classification reproduced as filed.",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+            "interest_group": "Individual",
+            "reporting_period_label": "July 1, 2026 to October 5, 2026"
+          },
+          {
+            "donor": "Friends of Alex Finkelman",
+            "amount": 1000.0,
+            "type": "Individual",
+            "date": "2026-07-27",
+            "employer": "The Egis Grouup",
+            "notes": "Committee-named contributor classified as Individual in the original filing; classification reproduced as filed.",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+            "interest_group": "Individual",
+            "reporting_period_label": "July 1, 2026 to October 5, 2026"
+          },
+          {
+            "donor": "Friends of Jackie Baginski",
+            "amount": 1000.0,
+            "type": "Individual",
+            "date": "2026-08-22",
+            "employer": "Professional Ambulance",
+            "notes": "Committee-named contributor classified as Individual in the original filing; classification reproduced as filed.",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+            "interest_group": "Individual",
+            "reporting_period_label": "July 1, 2026 to October 5, 2026"
+          },
+          {
+            "donor": "John H Petrarca",
+            "amount": 1000.0,
+            "type": "Individual",
+            "date": "2026-09-25",
+            "employer": "Providence Auto Body",
+            "notes": "",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+            "interest_group": "Individual",
+            "reporting_period_label": "July 1, 2026 to October 5, 2026"
+          },
+          {
+            "donor": "Corvese for Representative",
+            "amount": 500.0,
+            "type": "Individual",
+            "date": "2026-07-27",
+            "employer": "Retired",
+            "notes": "Committee-named contributor classified as Individual in the original filing; classification reproduced as filed.",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+            "interest_group": "Individual",
+            "reporting_period_label": "July 1, 2026 to October 5, 2026"
+          },
+          {
+            "donor": "William M Farrell",
+            "amount": 250.0,
+            "type": "Individual",
+            "date": "2026-09-25",
+            "employer": "William Farrell Associates LLC",
+            "notes": "",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+            "interest_group": "Individual",
+            "reporting_period_label": "July 1, 2026 to October 5, 2026"
+          },
+          {
+            "donor": "Christopher Vitale",
+            "amount": 150.0,
+            "type": "Individual",
+            "date": "2026-07-03",
+            "employer": "",
+            "notes": "",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+            "interest_group": "Individual",
+            "reporting_period_label": "July 1, 2026 to October 5, 2026"
+          },
+          {
+            "donor": "RI STAFFING ASSOCIATION PAC",
+            "amount": 150.0,
+            "type": "PAC",
+            "date": "2026-09-25",
+            "employer": "",
+            "notes": "",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+            "interest_group": "Political committee",
+            "reporting_period_label": "July 1, 2026 to October 5, 2026"
+          },
+          {
+            "donor": "Ernest Shagalian Jr.",
+            "amount": 100.0,
+            "type": "Individual",
+            "date": "2026-07-03",
+            "employer": "",
+            "notes": "",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+            "interest_group": "Individual",
+            "reporting_period_label": "July 1, 2026 to October 5, 2026"
+          },
+          {
+            "donor": "James Lepore",
+            "amount": 100.0,
+            "type": "Individual",
+            "date": "2026-09-30",
+            "employer": "Coia & Lepore",
+            "notes": "",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+            "interest_group": "Individual",
+            "reporting_period_label": "July 1, 2026 to October 5, 2026"
+          },
+          {
+            "donor": "Paul R Richer",
+            "amount": 100.0,
+            "type": "Individual",
+            "date": "2026-09-30",
+            "employer": "",
+            "notes": "",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+            "interest_group": "Individual",
+            "reporting_period_label": "July 1, 2026 to October 5, 2026"
+          },
+          {
+            "donor": "Scott McGee",
+            "amount": 100.0,
+            "type": "Individual",
+            "date": "2026-08-22",
+            "employer": "",
+            "notes": "",
+            "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+            "interest_group": "Individual",
+            "reporting_period_label": "July 1, 2026 to October 5, 2026"
+          }
+        ],
+        "source_buckets": [
+          {
+            "label": "Itemized individual donors",
+            "class_name": "itemized-individual-donors",
+            "amount": 6300.0,
+            "description": "Contribution classification reproduced from the original filing."
+          },
+          {
+            "label": "PAC contributions",
+            "class_name": "pac-contributions",
+            "amount": 150.0,
+            "description": "Contribution classification reproduced from the original filing."
+          }
+        ],
+        "spending_categories": [
+          {
+            "label": "Fundraising Expenses",
+            "amount": 8205.38,
+            "description": "Expenditures reported in the original filing."
+          },
+          {
+            "label": "Advertising",
+            "amount": 5978.92,
+            "description": "Expenditures reported in the original filing."
+          },
+          {
+            "label": "Donations (Political)",
+            "amount": 500.0,
+            "description": "Expenditures reported in the original filing."
+          },
+          {
+            "label": "Office Equipment & Supplies",
+            "amount": 397.72,
+            "description": "Expenditures reported in the original filing."
+          }
+        ],
+        "latest_filing_href": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+        "finance_snapshot_note": "The campaign reports $22,689.98 in total liabilities and $-6,224.41 in fund balance. Cash on hand is reported separately from debt.",
+        "summary_intro": "Jon D Brien\u2019s July 1\u2013October 5, 2026 filing reports $6,450.00 in cash receipts, $15,082.02 in cash disbursements and $16,465.57 in ending cash.",
+        "takeaways": [],
+        "explainer_cards": []
+      }
     },
     {
       "name": "Jean P Barros",
-      "aliases": ["Jean Philippe Barros"],
+      "aliases": [
+        "Jean Philippe Barros"
+      ],
       "chamber": "house",
       "district": 59,
       "latest_period_end": "2026-03-31",

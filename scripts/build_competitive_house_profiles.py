@@ -10,7 +10,7 @@ SLUGS.update({'zakary-j-pereira':22,'barbara-quigley':22,'william-muto':23,'dana
 SLUGS.update({'james-c-sheehan':31,'robert-e-craven-jr':32,'jessica-drew-day':33})
 SLUGS.update({'christopher-m-stanton':37,'jasmin-roy':39})
 SLUGS.update({'shaina-n-smith':41,'michael-j-riley':41,'edward-w-stravato':42})
-SLUGS.update({'joseph-hosey':44})
+SLUGS.update({'joseph-hosey':44,'veronicka-vega':49})
 def build(slugs=None):
  incumbent=ROOT/'candidates/anthony-j-desimone.html'
  incumbent.write_text(incumbent.read_text().replace('/running.html?chamber=house&amp;district=5&amp;election=general','/races/house-5.html'))
@@ -75,7 +75,7 @@ def build(slugs=None):
   replace('finance','Campaign finance snapshot',finance_body+f'<a class="finance-profile-button" href="{esc(finance)}">View {esc(name)}’s campaign finance →</a>')
   if fin.get('latest_filing_href'):
    old=re.search(r'<section class="card" id="finance">.*?</section>',page,re.S).group()
-   page=page.replace(old,old.replace('</section>',('<p class="intro">'+esc(fin['finance_snapshot_note'])+'</p>' if fin.get('finance_snapshot_note') else '')+'<p class="source">'+link(fin['latest_filing_href'],'Open 28-days-before-election financial report (PDF) ↗')+'</p></section>'))
+   page=page.replace(old,old.replace('</section>',('<p class="intro">'+esc(fin['finance_snapshot_note'])+'</p>' if fin.get('finance_snapshot_note') else '')+'<p class="source">'+link(fin['latest_filing_href'],'Open 28-days-before-election financial report (PDF) ↗')+'</p>'+ ('<details><summary>Read the financial report on this page</summary><iframe title="'+esc(name)+' campaign finance report" src="'+esc(fin['latest_filing_href'])+'" loading="lazy" style="width:100%;height:640px;border:1px solid #dbe4ef;margin-top:12px"></iframe></details>' if any(doc.get('embed') for doc in fin.get('original_documents',[]) if doc.get('href')==fin['latest_filing_href']) else '')+'</section>'))
   replace('record','Record in office','<div class="empty"><strong>General Assembly record not applicable · Candidate</strong><p>No Rhode Island General Assembly service record is attributed to this candidate in RIEP’s dataset. Legislative sponsorship, attendance and committee roles are not assigned.</p></div>')
   replace('bills','Bills &amp; votes','<p class="intro">No General Assembly sponsored-bill or roll-call record is attributed to this candidate. Campaign positions are shown above.</p>')
   replace('ratings','Outside ratings &amp; scorecards','<p class="intro">CEL legislative-effectiveness scores, the RIEP legislative progress index and W-NOMINATE voting positions require a legislative record. They are not applicable to this candidate, and no incumbent’s or district-level score is transferred here.</p>')
@@ -97,8 +97,8 @@ def build(slugs=None):
   page=re.sub(r'href="/finance.html\?slug='+re.escape(slug)+r'"',lambda m:'href="'+finance+'"',page)
   page=re.sub(r'href="/running.html\?chamber=house(?:&amp;|&)district='+str(district)+r'(?:&amp;|&)election=general"',f'href="/races/house-{district}.html"',page)
   assert 'data-voting-widget' not in page and 'riep-legislative-index' not in page and 'rep-desimone' not in page
-  if district in (15,22,23,27,31,32,33,37,39,41,42,44):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
-  if district==44:page=page.replace('October 6, 2026','October 7, 2026')
+  if district in (15,22,23,27,31,32,33,37,39,41,42,44,49):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
+  if district in (44,49):page=page.replace('October 6, 2026','October 7, 2026')
   (ROOT/'candidates'/f'{slug}.html').write_text(page)
  for filename in ['ballot.html','running.html']:
   p=ROOT/filename;s=p.read_text()

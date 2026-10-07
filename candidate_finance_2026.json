@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07",
+  "generated_at": "2026-10-07T00:00:00Z",
   "cycle": "2026-q2",
   "directory": [
     {
@@ -1590,6 +1590,16 @@
       "district_number": "38",
       "party": "REP",
       "office_sought": "State Senator",
+      "has_profile": true
+    },
+    {
+      "candidate_name": "Jon D Brien",
+      "slug": "jon-d-brien",
+      "candidate_id": "house-49-jon-d-brien",
+      "chamber": "house",
+      "district_number": "49",
+      "party": "IND",
+      "office_sought": "State Representative",
       "has_profile": true
     }
   ],
@@ -21555,20 +21565,27 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "alex-finkelman-q1-2026-combined.pdf",
-      "coverage_note": "",
-      "original_documents": [],
-      "beginning_cash": 3796.65,
-      "money_raised": 1384,
-      "money_spent": 106.2,
-      "ending_cash": 5074.45,
-      "net_change": 1277.8,
-      "total_cash_receipts": 1384,
-      "campaign_expenses": 1667.1,
+      "report_label": "28-days-before-election report \u00b7 2026",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2, CF-3 and CF-4 report supplied to RIEP.",
+      "coverage_note": "Cash receipts exclude the beginning balance and in-kind contributions. Figures describe this reporting period, not year-to-date totals.",
+      "original_documents": [
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "period": "July 1, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf",
+          "embed": true
+        }
+      ],
+      "beginning_cash": 5074.45,
+      "money_raised": 1878,
+      "money_spent": 3965.13,
+      "ending_cash": 2987.32,
+      "net_change": -2087.13,
+      "total_cash_receipts": 1878,
+      "campaign_expenses": 3965.13,
       "aggregate_expenses": 0,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "Veronicka Vega\u2019s July 1\u2013October 5, 2026 filing reports $1,878.00 in cash receipts, $3,965.13 in cash disbursements and $2,987.32 in ending cash.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -21587,107 +21604,628 @@
           "ending_cash": 5074.45,
           "net_change": 1277.8,
           "notes": "The campaign raised more than it spent in this reporting period."
+        },
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026",
+          "money_raised": 1878,
+          "money_spent": 3965.13,
+          "ending_cash": 2987.32,
+          "net_change": -2087.13,
+          "notes": "The campaign reports $0.00 in total liabilities and $2,987.32 in fund balance. Cash on hand is reported separately from debt. An additional $323.65 in in-kind contributions is excluded from cash receipts.",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
         }
       ],
       "source_buckets": [
         {
           "label": "Itemized individual donors",
           "class_name": "itemized-individual-donors",
-          "amount": 1384,
-          "description": "Named contributors reported individually in the filing."
+          "amount": 1878.0,
+          "description": "Contribution classification reproduced from the original filing."
         }
       ],
       "top_donors": [
         {
-          "donor": "Anne Holland",
-          "amount": 4000,
+          "donor": "Tom Preston-Warner",
+          "amount": 1000.0,
           "type": "Individual",
-          "notes": "Named individual contribution listed in the filing."
+          "date": "2026-07-20",
+          "employer": "Entrepreneur",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "Vimala Phongsavanh",
-          "amount": 1000,
+          "donor": "Michelle Cox",
+          "amount": 200.0,
           "type": "Individual",
-          "notes": "Named individual contribution listed in the filing."
+          "date": "2026-07-07",
+          "employer": "Providence Revolving Fund",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "Christopher Beauchamp",
-          "amount": 500,
+          "donor": "Jennifer Boylan",
+          "amount": 100.0,
           "type": "Individual",
-          "notes": "Named individual contribution listed in the filing."
+          "date": "2026-09-20",
+          "employer": "PacketLogix",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "David Soucy",
-          "amount": 400,
+          "donor": "Joseph Rogers",
+          "amount": 100.0,
           "type": "Individual",
-          "notes": "Named individual contribution listed in the filing."
+          "date": "2026-08-26",
+          "employer": "Sovereign Consulting",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "Lorina Esposito",
-          "amount": 300,
+          "donor": "Rebecca Kislak",
+          "amount": 100.0,
           "type": "Individual",
-          "notes": "Named individual contribution listed in the filing."
+          "date": "2026-09-27",
+          "employer": "Legal Key",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "Garrett Mancieri",
-          "amount": 200,
+          "donor": "Teresa Tanzi",
+          "amount": 100.0,
           "type": "Individual",
-          "notes": "Named individual contribution listed in the filing."
+          "date": "2026-09-20",
+          "employer": "State of RI",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "Jill Olson-Crowley",
-          "amount": 200,
+          "donor": "Alyssa McDermott",
+          "amount": 54.0,
           "type": "Individual",
-          "notes": "Named individual contribution listed in the filing."
+          "date": "2026-08-13",
+          "employer": "City of Providence",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "Kelley Auclair",
-          "amount": 200,
+          "donor": "Jeannine Giguere-Gagnon",
+          "amount": 50.0,
           "type": "Individual",
-          "notes": "Named individual contribution listed in the filing."
+          "date": "2026-09-01",
+          "employer": "Home Depot",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "Lisa Barksdale",
-          "amount": 200,
+          "donor": "Kevin Carriere",
+          "amount": 50.0,
           "type": "Individual",
-          "notes": "Named individual contribution listed in the filing."
+          "date": "2026-08-13",
+          "employer": "Stonehill College",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "Marisa Bouley",
-          "amount": 200,
+          "donor": "Nicholas Frayn",
+          "amount": 50.0,
           "type": "Individual",
-          "notes": "Named individual contribution listed in the filing."
+          "date": "2026-09-27",
+          "employer": "RI Public Defender",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Anusha Venkataraman",
+          "amount": 27.0,
+          "type": "Individual",
+          "date": "2026-08-13",
+          "employer": "Working Families Party",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Faith Hanson",
+          "amount": 27.0,
+          "type": "Individual",
+          "date": "2026-08-13",
+          "employer": "RINEC",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Erik Hernandez",
+          "amount": 10.0,
+          "type": "Individual",
+          "date": "2026-08-13",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Lisa Jones",
+          "amount": 10.0,
+          "type": "Individual",
+          "date": "2026-08-13",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         }
       ],
       "spending_categories": [
         {
-          "title": "Food, Beverages and Meals",
-          "summary": "Visible spending includes Lops Brewing, Pal Monte Catering.",
-          "amount": 1272
+          "label": "Advertising",
+          "amount": 2146.0,
+          "description": "Expenditures reported in the original filing."
         },
         {
-          "title": "Advertising",
-          "summary": "Visible spending includes Sophia Soukhamthath, Maicol Cardenas Zuluaga.",
-          "amount": 180
+          "label": "Office Equipment & Supplies",
+          "amount": 1069.13,
+          "description": "Expenditures reported in the original filing."
         },
         {
-          "title": "Office Equipment & Supplies",
-          "summary": "Visible spending includes Walmart Supercenter, United States Postal Service.",
-          "amount": 106.66
-        },
-        {
-          "title": "Bank Fees",
-          "summary": "Visible spending includes Harland Clarke Check.",
-          "amount": 70.98
-        },
-        {
-          "title": "Fundraising Expenses",
-          "summary": "Visible spending includes Dollar Tree.",
-          "amount": 37.46
+          "label": "Consultant & Professional Services",
+          "amount": 750.0,
+          "description": "Expenditures reported in the original filing."
         }
       ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "archived_reporting_periods": [
+        {
+          "candidate_id": "house-49-veronicka-vega",
+          "slug": "veronicka-vega",
+          "candidate_name": "Veronicka Vega",
+          "chamber": "house",
+          "district_number": "49",
+          "party": "DEM",
+          "party_label": "Democratic",
+          "office_sought": "State Representative",
+          "report_label": "6/30/2026",
+          "reporting_period_label": "6/30/2026",
+          "source_note": "alex-finkelman-q1-2026-combined.pdf",
+          "coverage_note": "",
+          "original_documents": [],
+          "beginning_cash": 3796.65,
+          "money_raised": 1384,
+          "money_spent": 106.2,
+          "ending_cash": 5074.45,
+          "net_change": 1277.8,
+          "total_cash_receipts": 1384,
+          "campaign_expenses": 1667.1,
+          "aggregate_expenses": 0,
+          "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it raised more during the period than it spent.",
+          "source_buckets": [
+            {
+              "label": "Itemized individual donors",
+              "class_name": "itemized-individual-donors",
+              "amount": 1384,
+              "description": "Named contributors reported individually in the filing."
+            }
+          ],
+          "top_donors": [
+            {
+              "donor": "Anne Holland",
+              "amount": 4000,
+              "type": "Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "Vimala Phongsavanh",
+              "amount": 1000,
+              "type": "Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "Christopher Beauchamp",
+              "amount": 500,
+              "type": "Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "David Soucy",
+              "amount": 400,
+              "type": "Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "Lorina Esposito",
+              "amount": 300,
+              "type": "Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "Garrett Mancieri",
+              "amount": 200,
+              "type": "Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "Jill Olson-Crowley",
+              "amount": 200,
+              "type": "Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "Kelley Auclair",
+              "amount": 200,
+              "type": "Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "Lisa Barksdale",
+              "amount": 200,
+              "type": "Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "Marisa Bouley",
+              "amount": 200,
+              "type": "Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            }
+          ],
+          "spending_categories": [
+            {
+              "title": "Food, Beverages and Meals",
+              "summary": "Visible spending includes Lops Brewing, Pal Monte Catering.",
+              "amount": 1272
+            },
+            {
+              "title": "Advertising",
+              "summary": "Visible spending includes Sophia Soukhamthath, Maicol Cardenas Zuluaga.",
+              "amount": 180
+            },
+            {
+              "title": "Office Equipment & Supplies",
+              "summary": "Visible spending includes Walmart Supercenter, United States Postal Service.",
+              "amount": 106.66
+            },
+            {
+              "title": "Bank Fees",
+              "summary": "Visible spending includes Harland Clarke Check.",
+              "amount": 70.98
+            },
+            {
+              "title": "Fundraising Expenses",
+              "summary": "Visible spending includes Dollar Tree.",
+              "amount": 37.46
+            }
+          ],
+          "takeaways": [],
+          "explainer_cards": []
+        }
+      ],
+      "reporting_period_type": "custom",
+      "reporting_period_start": "2026-07-01",
+      "reporting_period_end": "2026-10-05",
+      "receipts_label": "Total receipts",
+      "finance_status": "available",
+      "loan_proceeds": 0,
+      "loan_repayments": 0,
+      "loans_payable": 0,
+      "accounts_payable": 0,
+      "total_liabilities": 0,
+      "total_fund_balance": 2987.32,
+      "refunds_rebates": 0,
+      "interest_received": 0,
+      "in_kind_contributions": 323.65,
+      "receipt_transactions": [
+        {
+          "donor": "Jennifer Boylan",
+          "amount": 100.0,
+          "type": "Individual",
+          "date": "2026-09-20",
+          "employer": "PacketLogix",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Kevin Carriere",
+          "amount": 50.0,
+          "type": "Individual",
+          "date": "2026-08-13",
+          "employer": "Stonehill College",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Michelle Cox",
+          "amount": 100.0,
+          "type": "Individual",
+          "date": "2026-07-07",
+          "employer": "Providence Revolving Fund",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Michelle Cox",
+          "amount": 100.0,
+          "type": "Individual",
+          "date": "2026-07-07",
+          "employer": "Providence Revolving Fund",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Nicholas Frayn",
+          "amount": 50.0,
+          "type": "Individual",
+          "date": "2026-09-27",
+          "employer": "RI Public Defender",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Jeannine Giguere-Gagnon",
+          "amount": 50.0,
+          "type": "Individual",
+          "date": "2026-09-01",
+          "employer": "Home Depot",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Faith Hanson",
+          "amount": 27.0,
+          "type": "Individual",
+          "date": "2026-08-13",
+          "employer": "RINEC",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Erik Hernandez",
+          "amount": 10.0,
+          "type": "Individual",
+          "date": "2026-08-13",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Lisa Jones",
+          "amount": 10.0,
+          "type": "Individual",
+          "date": "2026-08-13",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Rebecca Kislak",
+          "amount": 100.0,
+          "type": "Individual",
+          "date": "2026-09-27",
+          "employer": "Legal Key",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Alyssa McDermott",
+          "amount": 54.0,
+          "type": "Individual",
+          "date": "2026-08-13",
+          "employer": "City of Providence",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Tom Preston-Warner",
+          "amount": 1000.0,
+          "type": "Individual",
+          "date": "2026-07-20",
+          "employer": "Entrepreneur",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Joseph Rogers",
+          "amount": 100.0,
+          "type": "Individual",
+          "date": "2026-08-26",
+          "employer": "Sovereign Consulting",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Teresa Tanzi",
+          "amount": 100.0,
+          "type": "Individual",
+          "date": "2026-09-20",
+          "employer": "State of RI",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Anusha Venkataraman",
+          "amount": 27.0,
+          "type": "Individual",
+          "date": "2026-08-13",
+          "employer": "Working Families Party",
+          "notes": "",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        }
+      ],
+      "in_kind_transactions": [
+        {
+          "donor": "RI WORKING FAMILIES PARTY PAC",
+          "amount": 214.98,
+          "type": "In-Kind - PAC",
+          "date": "2026-08-11",
+          "employer": "",
+          "notes": "staff time",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "RI WORKING FAMILIES PARTY PAC",
+          "amount": 33.09,
+          "type": "In-Kind - PAC",
+          "date": "2026-09-01",
+          "employer": "",
+          "notes": "staff time",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "RI WORKING FAMILIES PARTY PAC",
+          "amount": 75.58,
+          "type": "In-Kind - PAC",
+          "date": "2026-10-05",
+          "employer": "",
+          "notes": "staff time",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        }
+      ],
+      "expenditure_transactions": [
+        {
+          "date": "2026-10-01",
+          "amount": 95.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Campaign Verify",
+          "purpose": "texting service",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-04",
+          "amount": 750.0,
+          "category": "Consultant & Professional Services",
+          "type": "Campaign Expenditure",
+          "payee": "Community Labor",
+          "purpose": "votivate",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-28",
+          "amount": 820.0,
+          "category": "Office Equipment & Supplies",
+          "type": "Campaign Expenditure",
+          "payee": "Post Office",
+          "purpose": "postage",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-10",
+          "amount": 49.2,
+          "category": "Office Equipment & Supplies",
+          "type": "Campaign Expenditure",
+          "payee": "Post Office",
+          "purpose": "postage",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-01",
+          "amount": 82.0,
+          "category": "Office Equipment & Supplies",
+          "type": "Campaign Expenditure",
+          "payee": "Post Office",
+          "purpose": "postage",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-01",
+          "amount": 734.02,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Regine Printing",
+          "purpose": "yard signs",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-24",
+          "amount": 588.5,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Regine Printing",
+          "purpose": "palm card printing",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-07",
+          "amount": 417.3,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Sheahan Printing",
+          "purpose": "Mother T printing",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-30",
+          "amount": 125.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Sophia Soukhamthath",
+          "purpose": "Graphic design services",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-18",
+          "amount": 186.18,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Squarespace",
+          "purpose": "website hosting",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-10",
+          "amount": 18.71,
+          "category": "Office Equipment & Supplies",
+          "type": "Campaign Expenditure",
+          "payee": "Walgreens",
+          "purpose": "Tape and glue",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-11",
+          "amount": 99.22,
+          "category": "Office Equipment & Supplies",
+          "type": "Campaign Expenditure",
+          "payee": "Woonsocket Post Office",
+          "purpose": "Bought postage with debit card",
+          "source_url": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf"
+        }
+      ],
+      "latest_filing_href": "/data/finance-documents/veronicka-vega-2026-10-05-28-day.pdf",
+      "finance_snapshot_note": "The campaign reports $0.00 in total liabilities and $2,987.32 in fund balance. Cash on hand is reported separately from debt. An additional $323.65 in in-kind contributions is excluded from cash receipts."
     },
     {
       "candidate_id": "house-50-stephen-casey",
@@ -21698,20 +22236,27 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "alex-finkelman-q1-2026-combined.pdf",
-      "coverage_note": "",
-      "original_documents": [],
-      "beginning_cash": 9524.84,
-      "money_raised": 21850,
-      "money_spent": 7730.13,
-      "ending_cash": 23644.71,
-      "net_change": 14119.87,
-      "total_cash_receipts": 21850,
-      "campaign_expenses": 25073.46,
+      "report_label": "28-days-before-election report \u00b7 2026",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2, CF-3 and CF-4 report supplied to RIEP.",
+      "coverage_note": "Cash receipts exclude the beginning balance and in-kind contributions. Figures describe this reporting period, not year-to-date totals.",
+      "original_documents": [
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "period": "July 1, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf",
+          "embed": true
+        }
+      ],
+      "beginning_cash": 23644.71,
+      "money_raised": 750,
+      "money_spent": 14680.83,
+      "ending_cash": 9713.88,
+      "net_change": -13930.83,
+      "total_cash_receipts": 750,
+      "campaign_expenses": 14680.83,
       "aggregate_expenses": 0,
-      "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "Stephen Casey\u2019s July 1\u2013October 5, 2026 filing reports $750.00 in cash receipts, $14,680.83 in cash disbursements and $9,713.88 in ending cash.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -21730,123 +22275,983 @@
           "ending_cash": 23644.71,
           "net_change": 14119.87,
           "notes": "The campaign raised more than it spent in this reporting period."
+        },
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026",
+          "money_raised": 750,
+          "money_spent": 14680.83,
+          "ending_cash": 9713.88,
+          "net_change": -13930.83,
+          "notes": "The campaign reports $0.00 in total liabilities and $9,713.88 in fund balance. Cash on hand is reported separately from debt.",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
         }
       ],
       "source_buckets": [
         {
           "label": "Itemized individual donors",
           "class_name": "itemized-individual-donors",
-          "amount": 13950,
-          "description": "Named contributors reported individually in the filing."
+          "amount": 400.0,
+          "description": "Contribution classification reproduced from the original filing."
         },
         {
           "label": "PAC contributions",
           "class_name": "pac-contributions",
-          "amount": 7900,
-          "description": "Political committees and PACs listed in the filing."
+          "amount": 350.0,
+          "description": "Contribution classification reproduced from the original filing."
         }
       ],
       "top_donors": [
         {
-          "donor": "Daniel Abram",
-          "amount": 2000,
-          "type": "Individual",
-          "notes": "Employer listed as Self Employed."
-        },
-        {
-          "donor": "Douglas E",
-          "amount": 1500,
-          "type": "Individual",
-          "notes": "Employer listed as Lord."
-        },
-        {
-          "donor": "RI STATE ASSOCIATION OF FIREFIGHTERS",
-          "amount": 1000,
+          "donor": "RI LABORERS' PAC",
+          "amount": 250.0,
           "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing."
+          "date": "2026-08-15",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf",
+          "interest_group": "Political committee",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "Ralph Palumbo",
-          "amount": 1000,
+          "donor": "Christopher Vitale",
+          "amount": 200.0,
           "type": "Individual",
-          "notes": "Employer listed as Revity Energy."
+          "date": "2026-07-09",
+          "employer": "Self",
+          "notes": "",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "Stephen V",
-          "amount": 750,
+          "donor": "William Michael Farrell",
+          "amount": 200.0,
           "type": "Individual",
-          "notes": "Employer listed as Ceceri New England Property Services."
+          "date": "2026-08-25",
+          "employer": "Self",
+          "notes": "",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "Carol A",
-          "amount": 500,
-          "type": "Individual",
-          "notes": "Employer listed as Odonnell Emerald Reconstruction."
-        },
-        {
-          "donor": "IUOE LOCAL 57 (International Union of Operating Engineers)",
-          "amount": 500,
+          "donor": "PROVIDENCE RI CENTRAL FEDERATED COUNCIL AFL-CIO",
+          "amount": 100.0,
           "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing."
-        },
-        {
-          "donor": "JOHNSTON ASSOCIATION FIREFIGHTERS LOCAL 1950",
-          "amount": 500,
-          "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing."
-        },
-        {
-          "donor": "Karl A",
-          "amount": 500,
-          "type": "Individual",
-          "notes": "Employer listed as Wadensten Vibco."
-        },
-        {
-          "donor": "RHODE ISLAND COALITION OF HOUSING PROVIDERS",
-          "amount": 500,
-          "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing."
+          "date": "2026-07-25",
+          "employer": "IO",
+          "notes": "",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf",
+          "interest_group": "Political committee",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         }
       ],
       "spending_categories": [
         {
-          "title": "Food, Beverages and Meals",
-          "summary": "Visible spending includes Benjamin's Restaurantt, Capital Grille, Capriccio.",
-          "amount": 16158.68
+          "label": "Donations (Political)",
+          "amount": 4733.0,
+          "description": "Expenditures reported in the original filing."
         },
         {
-          "title": "Donations (All Others)",
-          "summary": "Visible spending includes Ancient Order of Hibernians, Dunkin Donuts, J.W. Hinson Scholarship.",
-          "amount": 5122.72
+          "label": "Food, Beverages and Meals",
+          "amount": 4702.71,
+          "description": "Expenditures reported in the original filing."
         },
         {
-          "title": "Donations (Political)",
-          "summary": "Visible spending includes Friends of Martin Crowley, WOONSOCKET DEMOCRATIC CITY COMMITTEE, Gregg Amore.",
-          "amount": 1760
+          "label": "Advertising",
+          "amount": 1411.0,
+          "description": "Expenditures reported in the original filing."
         },
         {
-          "title": "Advertising",
-          "summary": "Visible spending includes WNRI RADIO, Woonsocket Rotary, Manville Palace Pizza.",
-          "amount": 1539.42
+          "label": "Donations (All Others)",
+          "amount": 1325.3,
+          "description": "Expenditures reported in the original filing."
         },
         {
-          "title": "Other",
-          "summary": "Visible spending includes Park Square Florist, 616 South Water St Parking, Deluxe Check.",
-          "amount": 355.04
+          "label": "Refunds/Reimbursements",
+          "amount": 1125.0,
+          "description": "Expenditures reported in the original filing."
         },
         {
-          "title": "Fundraising Expenses",
-          "summary": "Visible spending includes Dollar Tree.",
-          "amount": 85.6
+          "label": "Travel & Lodging",
+          "amount": 759.2,
+          "description": "Expenditures reported in the original filing."
         },
         {
-          "title": "Bank Fees",
-          "summary": "Visible spending includes BLACKSTONE RIVER FCU.",
-          "amount": 52
+          "label": "Other",
+          "amount": 362.96,
+          "description": "Expenditures reported in the original filing."
+        },
+        {
+          "label": "Office Equipment & Supplies",
+          "amount": 252.66,
+          "description": "Expenditures reported in the original filing."
+        },
+        {
+          "label": "Bank Fees",
+          "amount": 9.0,
+          "description": "Expenditures reported in the original filing."
         }
       ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "archived_reporting_periods": [
+        {
+          "candidate_id": "house-50-stephen-casey",
+          "slug": "stephen-casey",
+          "candidate_name": "Stephen Casey",
+          "chamber": "house",
+          "district_number": "50",
+          "party": "DEM",
+          "party_label": "Democratic",
+          "office_sought": "State Representative",
+          "report_label": "6/30/2026",
+          "reporting_period_label": "6/30/2026",
+          "source_note": "alex-finkelman-q1-2026-combined.pdf",
+          "coverage_note": "",
+          "original_documents": [],
+          "beginning_cash": 9524.84,
+          "money_raised": 21850,
+          "money_spent": 7730.13,
+          "ending_cash": 23644.71,
+          "net_change": 14119.87,
+          "total_cash_receipts": 21850,
+          "campaign_expenses": 25073.46,
+          "aggregate_expenses": 0,
+          "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it raised more during the period than it spent.",
+          "source_buckets": [
+            {
+              "label": "Itemized individual donors",
+              "class_name": "itemized-individual-donors",
+              "amount": 13950,
+              "description": "Named contributors reported individually in the filing."
+            },
+            {
+              "label": "PAC contributions",
+              "class_name": "pac-contributions",
+              "amount": 7900,
+              "description": "Political committees and PACs listed in the filing."
+            }
+          ],
+          "top_donors": [
+            {
+              "donor": "Daniel Abram",
+              "amount": 2000,
+              "type": "Individual",
+              "notes": "Employer listed as Self Employed.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "Douglas E",
+              "amount": 1500,
+              "type": "Individual",
+              "notes": "Employer listed as Lord.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "RI STATE ASSOCIATION OF FIREFIGHTERS",
+              "amount": 1000,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Public Safety"
+            },
+            {
+              "donor": "Ralph Palumbo",
+              "amount": 1000,
+              "type": "Individual",
+              "notes": "Employer listed as Revity Energy.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "Stephen V",
+              "amount": 750,
+              "type": "Individual",
+              "notes": "Employer listed as Ceceri New England Property Services.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "Carol A",
+              "amount": 500,
+              "type": "Individual",
+              "notes": "Employer listed as Odonnell Emerald Reconstruction.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "IUOE LOCAL 57 (International Union of Operating Engineers)",
+              "amount": 500,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "JOHNSTON ASSOCIATION FIREFIGHTERS LOCAL 1950",
+              "amount": 500,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Public Safety"
+            },
+            {
+              "donor": "Karl A",
+              "amount": 500,
+              "type": "Individual",
+              "notes": "Employer listed as Wadensten Vibco.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "RHODE ISLAND COALITION OF HOUSING PROVIDERS",
+              "amount": 500,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Housing / Real Estate"
+            }
+          ],
+          "spending_categories": [
+            {
+              "title": "Food, Beverages and Meals",
+              "summary": "Visible spending includes Benjamin's Restaurantt, Capital Grille, Capriccio.",
+              "amount": 16158.68
+            },
+            {
+              "title": "Donations (All Others)",
+              "summary": "Visible spending includes Ancient Order of Hibernians, Dunkin Donuts, J.W. Hinson Scholarship.",
+              "amount": 5122.72
+            },
+            {
+              "title": "Donations (Political)",
+              "summary": "Visible spending includes Friends of Martin Crowley, WOONSOCKET DEMOCRATIC CITY COMMITTEE, Gregg Amore.",
+              "amount": 1760
+            },
+            {
+              "title": "Advertising",
+              "summary": "Visible spending includes WNRI RADIO, Woonsocket Rotary, Manville Palace Pizza.",
+              "amount": 1539.42
+            },
+            {
+              "title": "Other",
+              "summary": "Visible spending includes Park Square Florist, 616 South Water St Parking, Deluxe Check.",
+              "amount": 355.04
+            },
+            {
+              "title": "Fundraising Expenses",
+              "summary": "Visible spending includes Dollar Tree.",
+              "amount": 85.6
+            },
+            {
+              "title": "Bank Fees",
+              "summary": "Visible spending includes BLACKSTONE RIVER FCU.",
+              "amount": 52
+            }
+          ],
+          "takeaways": [],
+          "explainer_cards": []
+        }
+      ],
+      "reporting_period_type": "custom",
+      "reporting_period_start": "2026-07-01",
+      "reporting_period_end": "2026-10-05",
+      "receipts_label": "Total receipts",
+      "finance_status": "available",
+      "loan_proceeds": 0,
+      "loan_repayments": 0,
+      "loans_payable": 0,
+      "accounts_payable": 0,
+      "total_liabilities": 0,
+      "total_fund_balance": 9713.88,
+      "refunds_rebates": 0,
+      "interest_received": 0,
+      "in_kind_contributions": 0,
+      "receipt_transactions": [
+        {
+          "donor": "William Michael Farrell",
+          "amount": 200.0,
+          "type": "Individual",
+          "date": "2026-08-25",
+          "employer": "Self",
+          "notes": "",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Christopher Vitale",
+          "amount": 100.0,
+          "type": "Individual",
+          "date": "2026-07-09",
+          "employer": "Self",
+          "notes": "",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Christopher Vitale",
+          "amount": 100.0,
+          "type": "Individual",
+          "date": "2026-07-15",
+          "employer": "Self",
+          "notes": "",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "PROVIDENCE RI CENTRAL FEDERATED COUNCIL AFL-CIO",
+          "amount": 100.0,
+          "type": "PAC",
+          "date": "2026-07-25",
+          "employer": "IO",
+          "notes": "",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "RI LABORERS' PAC",
+          "amount": 250.0,
+          "type": "PAC",
+          "date": "2026-08-15",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        }
+      ],
+      "in_kind_transactions": [],
+      "expenditure_transactions": [
+        {
+          "date": "2026-08-29",
+          "amount": 200.0,
+          "category": "Donations (All Others)",
+          "type": "Campaign Expenditure",
+          "payee": "All Things Tropical",
+          "purpose": "Check to All Things Tropical for Sponsorship of Woonsocket Puerto Rican Festival",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-24",
+          "amount": 85.0,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Avvio",
+          "purpose": "Dinner with Senator Murray and RI business leaders",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-12",
+          "amount": 61.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Bacon N Beanz",
+          "purpose": "Meeting with Senator Murray Regarding Palm Card Design",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-10",
+          "amount": 100.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Christopher Beauchamp",
+          "purpose": "Campaign Donation",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-30",
+          "amount": 9.0,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "BLACKSTONE RIVER FCU",
+          "purpose": "3 Months Bank Fees",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-25",
+          "amount": 370.0,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Capital Grille",
+          "purpose": "Dinner with Reps, Senators and RI business and industry leaders at RI manufacturing Womens Leadership council Reception",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-25",
+          "amount": 150.0,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Capital Grille",
+          "purpose": "Meeting with RI business Leaders and Ri Manufacturers",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-12",
+          "amount": 250.0,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Capriccio",
+          "purpose": "Dinner with consultants regarding ongoing campaigns",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-09",
+          "amount": 100.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Carlos Cedeno",
+          "purpose": "Campaign Donation District 12 Rep",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-02",
+          "amount": 500.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Carlos Cedeno",
+          "purpose": "Campaign Donation",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-10",
+          "amount": 180.0,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Circe Restaurant",
+          "purpose": "Meeting with housing providers coalition",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-02",
+          "amount": 300.0,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "CIROS TAVERN",
+          "purpose": "Ciro's Tavern - Food and beverage for Democratic Signature Party",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-23",
+          "amount": 172.0,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "CIROS TAVERN",
+          "purpose": "Meeting with Woonsocket Democratic City Committee",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-27",
+          "amount": 125.3,
+          "category": "Donations (All Others)",
+          "type": "Campaign Expenditure",
+          "payee": "Citizens Bank",
+          "purpose": "Sponsorship of Newport Bridge Run to benefit Nonprofit Charities",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-01",
+          "amount": 2.5,
+          "category": "Other",
+          "type": "Campaign Expenditure",
+          "payee": "City of Providence",
+          "purpose": "Parking for Governors Fundraising Event",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-12",
+          "amount": 30.9,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Clube Social",
+          "purpose": "Meeting with State FOP Representatives",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-21",
+          "amount": 181.0,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Coast Guard House Restaurant",
+          "purpose": "Meeting with Narraganset council members regarding legislation for upcoming house session",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-14",
+          "amount": 40.0,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Davenports",
+          "purpose": "Meeting at campaign fundraiser",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-23",
+          "amount": 16.5,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Dunkin Donuts",
+          "purpose": "Airport food and Beverage prior to flight for Senator Reed RI Business Leaders Day",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-23",
+          "amount": 250.0,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Four Seasons",
+          "purpose": "Dinner With Rhode Island Business Leaders who attended Senator Reed's Business Leaders Conference",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-06",
+          "amount": 83.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Daniel Gendron",
+          "purpose": "Reimbursement for signature Party Expenses July 1 Signature Event at Woonsocket Elks Club",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-19",
+          "amount": 500.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Alana Gordon",
+          "purpose": "Campaign Donation",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-09",
+          "amount": 17.94,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Gulf Express Gas Station",
+          "purpose": "Ice for Coolers for Election Day Refreshments",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-16",
+          "amount": 200.0,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Hemenways",
+          "purpose": "Meeting with Providence Representatives about ongoing Campaigns",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-05",
+          "amount": 130.0,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Jackys Waterplace",
+          "purpose": "Meeting with Reps regarding ongoing campaigns",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-09",
+          "amount": 39.39,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Kay's Restaurant",
+          "purpose": "Election Day Sandwiches",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-05",
+          "amount": 115.1,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Kay's Restaurant",
+          "purpose": "Meeting with Senator Thompson",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-05",
+          "amount": 250.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Xaykham Khamsyvoravong",
+          "purpose": "Donation to Campaign for Lt. Governor",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-02",
+          "amount": 500.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Xaykham Khamsyvoravong",
+          "purpose": "Campaign Donation",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-14",
+          "amount": 220.0,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Kirkbrae Country Club",
+          "purpose": "Vip Reception for Reps and Senators at RIMA Charity Golf Tournament",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-06",
+          "amount": 250.0,
+          "category": "Donations (All Others)",
+          "type": "Campaign Expenditure",
+          "payee": "Libertarian Mutual Aide",
+          "purpose": "Summer Lunch Program Sponsorship",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-29",
+          "amount": 50.0,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Lucky's Bar and Grille",
+          "purpose": "Meeting with Reps at Fundraiser",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-05",
+          "amount": 37.0,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Manville Palace Pizza",
+          "purpose": "Donation of Food to Community",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-10",
+          "amount": 36.68,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Manville Palace Pizza",
+          "purpose": "Donation of Food to Community",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-24",
+          "amount": 159.37,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Manville Palace Pizza",
+          "purpose": "Donation of Food to the Community",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-02",
+          "amount": 200.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "David Marshall",
+          "purpose": "Campaign Donation",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-29",
+          "amount": 100.0,
+          "category": "Donations (All Others)",
+          "type": "Campaign Expenditure",
+          "payee": "Melrose High Class of 1986",
+          "purpose": "Donation to Graduating Class for Scholarships in Memory of Classmates who have passed",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-06",
+          "amount": 750.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Thomas Menec",
+          "purpose": "Campaign Donation",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-24",
+          "amount": 250.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Thomas Menec",
+          "purpose": "Campaign Donation",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-11",
+          "amount": 35.0,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Patricks Pub",
+          "purpose": "Fundraiser for District 7 Rep Seat",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-25",
+          "amount": 50.0,
+          "category": "Donations (All Others)",
+          "type": "Campaign Expenditure",
+          "payee": "Preservation Society of Newport County",
+          "purpose": "Donation for Golf Tournament",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-01",
+          "amount": 15.0,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Providence G Rooftop",
+          "purpose": "Beverage at Governors Fundraising Event",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-06",
+          "amount": 214.96,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Providence Oyster Bar",
+          "purpose": "Meeting with Representatives regarding ongoing campaigns.",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-14",
+          "amount": 250.0,
+          "category": "Donations (All Others)",
+          "type": "Campaign Expenditure",
+          "payee": "Rhode Island Manufacturers Association",
+          "purpose": "Sponsorship for RIMA Charity Golf Tournament",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-02",
+          "amount": 360.46,
+          "category": "Other",
+          "type": "Campaign Expenditure",
+          "payee": "RI Food Dealers Assn",
+          "purpose": "Senator Reed's RI Business Leader's Day Conference in Washington DC",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-29",
+          "amount": 200.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "RI State FOP",
+          "purpose": "Golf Tournament Sponsorship",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-19",
+          "amount": 210.0,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Rosaria Restaurant",
+          "purpose": "Dinner Meeting with Casey for Rhode Island advisory group",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-19",
+          "amount": 60.0,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Snookers",
+          "purpose": "Meeting with Reps",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-07",
+          "amount": 107.5,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Snookers",
+          "purpose": "Meeting with RI business Leaders",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-13",
+          "amount": 107.5,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Snookers",
+          "purpose": "Meeting with Reps and Senators regarding ongoing races",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-08",
+          "amount": 124.25,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Snookers",
+          "purpose": "Meeting with Reps on Campaign Strategy",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-29",
+          "amount": 250.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Joseph Solomon",
+          "purpose": "Campaign Donation For Attorney General",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-29",
+          "amount": 1000.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Joseph Solomon",
+          "purpose": "Campaign Donation",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-28",
+          "amount": 351.8,
+          "category": "Travel & Lodging",
+          "type": "Campaign Expenditure",
+          "payee": "SOuthwest Airlines",
+          "purpose": "Southwest Airlines Flight for Senator Reed's RI Business Leaders Day",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-12",
+          "amount": 407.4,
+          "category": "Travel & Lodging",
+          "type": "Campaign Expenditure",
+          "payee": "SOuthwest Airlines",
+          "purpose": "Southwest Airlines Return Floght from Washington DC for Senator Reed,s RI business Leaders Day",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-30",
+          "amount": 550.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Sport and Leisure",
+          "purpose": "In Kind - Donation of Food and Beverage Expenses for Jon Brien Political Fundraiser",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-29",
+          "amount": 100.0,
+          "category": "Donations (All Others)",
+          "type": "Campaign Expenditure",
+          "payee": "St. Stanislaus Church",
+          "purpose": "Donation",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-15",
+          "amount": 252.66,
+          "category": "Office Equipment & Supplies",
+          "type": "Campaign Expenditure",
+          "payee": "Staples",
+          "purpose": "Office Supplies for Constituent Mailing",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-09",
+          "amount": 135.0,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Sunrise Pizza",
+          "purpose": "Sunrise Pizza Expenses for Sandwiches on Election Day",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-02",
+          "amount": 375.0,
+          "category": "Refunds/Reimbursements",
+          "type": "Campaign Expenditure",
+          "payee": "Brian Thompson",
+          "purpose": "Reimbursement to Brian Thompson for Sponsorship of Troop2 Boy Scouts trip to Philmont",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-03",
+          "amount": 140.0,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Trattoria Romana",
+          "purpose": "Meeting with Northern RI Reps regarding Campaign Strategy",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-30",
+          "amount": 750.0,
+          "category": "Refunds/Reimbursements",
+          "type": "Campaign Expenditure",
+          "payee": "Melissa D Travis",
+          "purpose": "Reimbursement to Melissa Travis for $750. For Prepaid Hotel expenses For Senator Reed's RI Business Leaders Day in Washington DC 9/23/2026",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-08",
+          "amount": 80.0,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Twin Oaks",
+          "purpose": "Lunch with Cranston Rep",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-02",
+          "amount": 250.0,
+          "category": "Donations (All Others)",
+          "type": "Campaign Expenditure",
+          "payee": "Vida Church",
+          "purpose": "VIDA Church Golf tournament Sponsorship",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-17",
+          "amount": 125.14,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Walmart Supercenter",
+          "purpose": "Donation of Food to Community",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-09",
+          "amount": 172.48,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Walmart Supercenter",
+          "purpose": "Water, Gatorade and Snacks to Provide Refreshment to poll workers",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-01",
+          "amount": 145.0,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Waterman Grille",
+          "purpose": "Meeting with reps for Campaign Strategy",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-08",
+          "amount": 375.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "WNRI RADIO",
+          "purpose": "Advertising Expenses July 4th Week",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-28",
+          "amount": 125.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "WNRI RADIO",
+          "purpose": "Radio Advertising",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-08",
+          "amount": 200.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "WOON Radio",
+          "purpose": "Sponsorship of Leavitt AMP Concert Series",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-11",
+          "amount": 150.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Woonsocket Rotary",
+          "purpose": "Donation for Radio Thon Fundraiser",
+          "source_url": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf"
+        }
+      ],
+      "latest_filing_href": "/data/finance-documents/stephen-casey-2026-10-05-28-day.pdf",
+      "finance_snapshot_note": "The campaign reports $0.00 in total liabilities and $9,713.88 in fund balance. Cash on hand is reported separately from debt."
     },
     {
       "candidate_id": "house-51-robert-d-phillips",
@@ -21857,20 +23262,27 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
-      "original_documents": [],
-      "beginning_cash": 11970.05,
-      "money_raised": 6775,
-      "money_spent": 3417.73,
-      "ending_cash": 15327.32,
-      "net_change": 3357.27,
-      "total_cash_receipts": 6775,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 3417.73,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it raised more during the period than it spent.",
+      "report_label": "28-days-before-election report \u00b7 2026",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2, CF-3 and CF-4 report supplied to RIEP.",
+      "coverage_note": "Cash receipts exclude the beginning balance and in-kind contributions. Figures describe this reporting period, not year-to-date totals.",
+      "original_documents": [
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "period": "July 1, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf",
+          "embed": true
+        }
+      ],
+      "beginning_cash": 15327.32,
+      "money_raised": 7725,
+      "money_spent": 4053.09,
+      "ending_cash": 18999.23,
+      "net_change": 3671.91,
+      "total_cash_receipts": 7725,
+      "campaign_expenses": 4053.09,
+      "aggregate_expenses": 0,
+      "summary_intro": "Robert D Phillips\u2019s July 1\u2013October 5, 2026 filing reports $7,725.00 in cash receipts, $4,053.09 in cash disbursements and $18,999.23 in ending cash.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -21886,23 +23298,600 @@
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
           "money_raised": 6775,
           "money_spent": 3417.73,
-          "ending_cash": 15327.32,
+          "ending_cash": 15377.32,
           "net_change": 3357.27,
           "notes": "The campaign raised more than it spent in this reporting period."
+        },
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026",
+          "money_raised": 7725,
+          "money_spent": 4053.09,
+          "ending_cash": 18999.23,
+          "net_change": 3671.91,
+          "notes": "The campaign reports $5,617.53 in total liabilities and $13,381.70 in fund balance. Cash on hand is reported separately from debt. Accounts payable of $-82.47 are reproduced as filed. The beginning balance is $50.00 below the prior Q2 report\u2019s ending balance; both figures are preserved as reported.",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
         }
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
+          "label": "Aggregate individual contributions",
           "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 6775,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "amount": 1775.0,
+          "description": "Contribution classification reproduced from the original filing."
+        },
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 5500.0,
+          "description": "Contribution classification reproduced from the original filing."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 450.0,
+          "description": "Contribution classification reproduced from the original filing."
         }
       ],
-      "top_donors": [],
-      "spending_categories": [],
+      "top_donors": [
+        {
+          "donor": "Saba Tassawar",
+          "amount": 2000.0,
+          "type": "Individual",
+          "date": "2026-07-20",
+          "employer": "Retired",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Mukamil Shah",
+          "amount": 1500.0,
+          "type": "Individual",
+          "date": "2026-07-20",
+          "employer": "Stop Quick Mart",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Dung H Le",
+          "amount": 1000.0,
+          "type": "Individual",
+          "date": "2026-07-20",
+          "employer": "Le's Convenience Store",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Aisha Khurshid",
+          "amount": 500.0,
+          "type": "Individual",
+          "date": "2026-07-20",
+          "employer": "Retired",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Mahmood Qaisar",
+          "amount": 500.0,
+          "type": "Individual",
+          "date": "2026-07-20",
+          "employer": "Retired",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "RI TRUCKING ASSOCIATION PAC",
+          "amount": 250.0,
+          "type": "PAC",
+          "date": "2026-07-20",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf",
+          "interest_group": "Political committee",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "PROVIDENCE CHAMBER PAC",
+          "amount": 200.0,
+          "type": "PAC",
+          "date": "2026-07-20",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf",
+          "interest_group": "Political committee",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Advertising",
+          "amount": 1101.34,
+          "description": "Expenditures reported in the original filing."
+        },
+        {
+          "label": "Fundraising Expenses",
+          "amount": 1093.7,
+          "description": "Expenditures reported in the original filing."
+        },
+        {
+          "label": "Donations (Political)",
+          "amount": 1000.0,
+          "description": "Expenditures reported in the original filing."
+        },
+        {
+          "label": "Other",
+          "amount": 458.0,
+          "description": "Expenditures reported in the original filing."
+        },
+        {
+          "label": "Telephone",
+          "amount": 197.35,
+          "description": "Expenditures reported in the original filing."
+        },
+        {
+          "label": "Donations (All Others)",
+          "amount": 100.0,
+          "description": "Expenditures reported in the original filing."
+        },
+        {
+          "label": "Food, Beverages and Meals",
+          "amount": 92.0,
+          "description": "Expenditures reported in the original filing."
+        },
+        {
+          "label": "Travel & Lodging",
+          "amount": 10.7,
+          "description": "Expenditures reported in the original filing."
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "archived_reporting_periods": [
+        {
+          "candidate_id": "house-51-robert-d-phillips",
+          "slug": "robert-d-phillips",
+          "candidate_name": "Robert D Phillips",
+          "chamber": "house",
+          "district_number": "51",
+          "party": "DEM",
+          "party_label": "Democratic",
+          "office_sought": "State Representative",
+          "report_label": "6/30/2026",
+          "reporting_period_label": "6/30/2026",
+          "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+          "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
+          "original_documents": [],
+          "beginning_cash": 12020.05,
+          "money_raised": 6775,
+          "money_spent": 3417.73,
+          "ending_cash": 15377.32,
+          "net_change": 3357.27,
+          "total_cash_receipts": 6775,
+          "campaign_expenses": 0,
+          "aggregate_expenses": 3417.73,
+          "summary_intro": "This profile uses Robert D Phillips's original Q2 2026 filing for contribution and spending-category detail.",
+          "source_buckets": [
+            {
+              "label": "Aggregate individual contributions",
+              "amount": 3475,
+              "class_name": "small-dollar-aggregate-online-receipts",
+              "description": "Individual contributions reported in aggregate."
+            },
+            {
+              "label": "Itemized individual donors",
+              "amount": 250,
+              "class_name": "itemized-individual-donors",
+              "description": "Named individual contribution."
+            },
+            {
+              "label": "Aggregate PAC contributions",
+              "amount": 1850,
+              "class_name": "pac-contributions",
+              "description": "PAC contributions reported in aggregate."
+            },
+            {
+              "label": "PAC contributions",
+              "amount": 800,
+              "class_name": "pac-contributions",
+              "description": "Named PAC contributions."
+            },
+            {
+              "label": "Other receipts",
+              "amount": 400,
+              "class_name": "other-receipts",
+              "description": "Reimbursement reported as an other receipt."
+            }
+          ],
+          "top_donors": [
+            {
+              "donor": "Glenn Andreoni",
+              "amount": 250,
+              "type": "Individual"
+            },
+            {
+              "donor": "RI Brotherhood of Correctional Officers",
+              "amount": 300,
+              "type": "PAC",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "AMICA / RI PAC",
+              "amount": 250,
+              "type": "PAC",
+              "interest_group": "Insurance"
+            },
+            {
+              "donor": "Woonsocket Teacher Guild AFT 951",
+              "amount": 250,
+              "type": "PAC",
+              "interest_group": "Education / Labor"
+            }
+          ],
+          "spending_categories": [
+            {
+              "label": "Donations (All Others)",
+              "amount": 800,
+              "description": "Non-political donations and sponsorships."
+            },
+            {
+              "label": "Fundraising Expenses",
+              "amount": 646.4,
+              "description": "Fundraising-related expenses."
+            },
+            {
+              "label": "Advertising",
+              "amount": 488.91,
+              "description": "Advertising and campaign promotion."
+            },
+            {
+              "label": "Other",
+              "amount": 400,
+              "description": "Other campaign expenditures reported in the filing."
+            },
+            {
+              "label": "Donations (Political)",
+              "amount": 480,
+              "description": "Political donations."
+            },
+            {
+              "label": "Office Equipment & Supplies",
+              "amount": 234,
+              "description": "Office equipment and supplies."
+            },
+            {
+              "label": "Telephone",
+              "amount": 197.36,
+              "description": "Campaign telephone expenses."
+            },
+            {
+              "label": "Food, Beverages and Meals",
+              "amount": 105.56,
+              "description": "Meals and refreshments connected with campaign activity."
+            },
+            {
+              "label": "Gifts",
+              "amount": 65.5,
+              "description": "Gifts reported as campaign expenditures."
+            }
+          ],
+          "takeaways": [],
+          "explainer_cards": [],
+          "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+          "itemized_contribution_records": 4,
+          "individual_contribution_records": 1,
+          "pac_contribution_records": 3
+        }
+      ],
+      "reporting_period_type": "custom",
+      "reporting_period_start": "2026-07-01",
+      "reporting_period_end": "2026-10-05",
+      "receipts_label": "Total receipts",
+      "finance_status": "available",
+      "loan_proceeds": 0,
+      "loan_repayments": 0,
+      "loans_payable": 5700,
+      "accounts_payable": -82.47,
+      "total_liabilities": 5617.53,
+      "total_fund_balance": 13381.7,
+      "refunds_rebates": 0,
+      "interest_received": 0,
+      "in_kind_contributions": 0,
+      "receipt_transactions": [
+        {
+          "donor": "",
+          "amount": 800.0,
+          "type": "Aggregate - Individual",
+          "date": "2026-09-02",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 600.0,
+          "type": "Aggregate - Individual",
+          "date": "2026-09-02",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 375.0,
+          "type": "Aggregate - Individual",
+          "date": "2026-09-02",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Aisha Khurshid",
+          "amount": 500.0,
+          "type": "Individual",
+          "date": "2026-07-20",
+          "employer": "Retired",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Dung H Le",
+          "amount": 1000.0,
+          "type": "Individual",
+          "date": "2026-07-20",
+          "employer": "Le's Convenience Store",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Mahmood Qaisar",
+          "amount": 500.0,
+          "type": "Individual",
+          "date": "2026-07-20",
+          "employer": "Retired",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Mukamil Shah",
+          "amount": 1500.0,
+          "type": "Individual",
+          "date": "2026-07-20",
+          "employer": "Stop Quick Mart",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Saba Tassawar",
+          "amount": 2000.0,
+          "type": "Individual",
+          "date": "2026-07-20",
+          "employer": "Retired",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "PROVIDENCE CHAMBER PAC",
+          "amount": 200.0,
+          "type": "PAC",
+          "date": "2026-07-20",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "RI TRUCKING ASSOCIATION PAC",
+          "amount": 250.0,
+          "type": "PAC",
+          "date": "2026-07-20",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        }
+      ],
+      "in_kind_transactions": [],
+      "expenditure_transactions": [
+        {
+          "date": "2026-08-14",
+          "amount": 611.34,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Citizens Bank",
+          "purpose": "payment for pens.com.. engraved pens for constituents who sign nomination papers and when I canvass for election.",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-10",
+          "amount": 375.0,
+          "category": "Other",
+          "type": "Campaign Expenditure",
+          "payee": "Friends of Brian Thompson",
+          "purpose": "Reimburse for Girl Scouts going to national jamboree.",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-06",
+          "amount": 100.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Friends of Christopher Beauchamp",
+          "purpose": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-14",
+          "amount": 100.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "friends of Damon Flynn",
+          "purpose": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-01",
+          "amount": 83.0,
+          "category": "Other",
+          "type": "Campaign Expenditure",
+          "payee": "Friends of Daniel Gendron",
+          "purpose": "Reimburse for my portion of signature party.",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-10-02",
+          "amount": 300.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Friends of Jon Brien",
+          "purpose": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-04",
+          "amount": 200.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Friends of Mike Dubois",
+          "purpose": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-30",
+          "amount": 100.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Friends of Sharon Harmon",
+          "purpose": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-04",
+          "amount": 200.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Friends of Valerie Gonzalez",
+          "purpose": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-17",
+          "amount": 709.7,
+          "category": "Fundraising Expenses",
+          "type": "Campaign Expenditure",
+          "payee": "LJ'S Kitchen",
+          "purpose": "food for fundraiser on July 20th",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-20",
+          "amount": 150.0,
+          "category": "Fundraising Expenses",
+          "type": "Campaign Expenditure",
+          "payee": "LJ'S Kitchen",
+          "purpose": "tip for wait staff and cooks for fundraiser",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-20",
+          "amount": 92.0,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "LJ'S Kitchen",
+          "purpose": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-16",
+          "amount": 100.0,
+          "category": "Donations (All Others)",
+          "type": "Campaign Expenditure",
+          "payee": "Special Olympics RI",
+          "purpose": "Tee sign for golf tournament",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-11",
+          "amount": 100.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "The Fancie Dancer",
+          "purpose": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-10",
+          "amount": 10.7,
+          "category": "Travel & Lodging",
+          "type": "Campaign Expenditure",
+          "payee": "Union Station Parking",
+          "purpose": "parking for event",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-11",
+          "amount": 234.0,
+          "category": "Fundraising Expenses",
+          "type": "Campaign Expenditure",
+          "payee": "USPS",
+          "purpose": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-06",
+          "amount": 65.79,
+          "category": "Telephone",
+          "type": "Campaign Expenditure",
+          "payee": "verizon communication",
+          "purpose": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-14",
+          "amount": 65.78,
+          "category": "Telephone",
+          "type": "Campaign Expenditure",
+          "payee": "verizon communication",
+          "purpose": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-11",
+          "amount": 65.78,
+          "category": "Telephone",
+          "type": "Campaign Expenditure",
+          "payee": "verizon communication",
+          "purpose": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-08",
+          "amount": 200.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "WOON",
+          "purpose": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-10-02",
+          "amount": 190.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "WOON",
+          "purpose": "",
+          "source_url": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf"
+        }
+      ],
+      "latest_filing_href": "/data/finance-documents/robert-d-phillips-2026-10-05-28-day.pdf",
+      "finance_snapshot_note": "The campaign reports $5,617.53 in total liabilities and $13,381.70 in fund balance. Cash on hand is reported separately from debt. Accounts payable of $-82.47 are reproduced as filed. The beginning balance is $50.00 below the prior Q2 report\u2019s ending balance; both figures are preserved as reported."
     },
     {
       "candidate_id": "house-52-alex-d-marszalkowski",
@@ -21913,29 +23902,46 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
-      "original_documents": [],
-      "beginning_cash": 18010.04,
+      "report_label": "28-days-before-election report \u00b7 2026",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2, CF-3 and CF-4 report supplied to RIEP.",
+      "coverage_note": "Cash receipts exclude the beginning balance and in-kind contributions. Figures describe this reporting period, not year-to-date totals.",
+      "original_documents": [
+        {
+          "label": "Q1 2026 CF-2 report",
+          "period": "January 1, 2026 to March 31, 2026",
+          "href": "/data/finance-documents/alex-d-marszalkowski-q1-2026.pdf"
+        },
+        {
+          "label": "Q2 2026 CF-2 report",
+          "period": "April 1, 2026 to June 30, 2026",
+          "href": "/data/finance-documents/alex-d-marszalkowski-q2-2026.pdf"
+        },
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "period": "July 1, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/alex-d-marszalkowski-2026-10-05-28-day.pdf",
+          "embed": true
+        }
+      ],
+      "beginning_cash": 17680.8,
       "money_raised": 0,
-      "money_spent": 329.24,
-      "ending_cash": 17680.8,
-      "net_change": -329.24,
+      "money_spent": 1350,
+      "ending_cash": 16330.8,
+      "net_change": -1350.0,
       "total_cash_receipts": 0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 329.24,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it spent more during the period than it raised.",
+      "campaign_expenses": 1250,
+      "aggregate_expenses": 100,
+      "summary_intro": "Alex D Marszalkowski\u2019s July 1\u2013October 5, 2026 filing reports $0.00 in cash receipts, $1,350.00 in cash disbursements and $16,330.80 in ending cash.",
       "filing_history": [
         {
           "label": "Q1 2026",
           "reporting_period_label": "January 1, 2026 to March 31, 2026",
-          "money_raised": 0,
+          "money_raised": 100,
           "money_spent": 0,
           "ending_cash": 18010.04,
-          "net_change": 0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "net_change": 100,
+          "notes": "Q1 reported $100.00 in aggregate individual receipts."
         },
         {
           "label": "Q2 2026",
@@ -21944,14 +23950,136 @@
           "money_spent": 329.24,
           "ending_cash": 17680.8,
           "net_change": -329.24,
-          "notes": "The campaign spent more than it raised in this reporting period."
+          "notes": "Q2 is the standardized main display period."
+        },
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026",
+          "money_raised": 0,
+          "money_spent": 1350,
+          "ending_cash": 16330.8,
+          "net_change": -1350.0,
+          "notes": "The campaign reports $1,819.08 in total liabilities and $14,511.72 in fund balance. Cash on hand is reported separately from debt. Accounts payable of $319.08 are reproduced as filed.",
+          "source_url": "/data/finance-documents/alex-d-marszalkowski-2026-10-05-28-day.pdf"
         }
       ],
       "source_buckets": [],
       "top_donors": [],
-      "spending_categories": [],
+      "spending_categories": [
+        {
+          "label": "Donations (Political)",
+          "amount": 1250.0,
+          "description": "Expenditures reported in the original filing."
+        },
+        {
+          "label": "Donations (All Others)",
+          "amount": 100.0,
+          "description": "Expenditures reported in the original filing."
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_status": "available",
+      "archived_reporting_periods": [
+        {
+          "candidate_id": "house-52-alex-d-marszalkowski",
+          "slug": "alex-d-marszalkowski",
+          "candidate_name": "Alex D Marszalkowski",
+          "chamber": "house",
+          "district_number": "52",
+          "party": "DEM",
+          "party_label": "Democratic",
+          "office_sought": "State Representative",
+          "report_label": "Q2 2026 campaign finance filing",
+          "reporting_period_label": "April 1, 2026 to June 30, 2026",
+          "source_note": "Built from Alex D Marszalkowski's Rhode Island Q1 and Q2 2026 campaign finance filings supplied by the user.",
+          "coverage_note": "Q2 is the standardized main display. Q2 reports no new receipts and $329.24 in aggregate expenditures. Q1 is retained in filing history.",
+          "original_documents": [
+            {
+              "label": "Q1 2026 CF-2 report",
+              "period": "January 1, 2026 to March 31, 2026",
+              "href": "/data/finance-documents/alex-d-marszalkowski-q1-2026.pdf"
+            },
+            {
+              "label": "Q2 2026 CF-2 report",
+              "period": "April 1, 2026 to June 30, 2026",
+              "href": "/data/finance-documents/alex-d-marszalkowski-q2-2026.pdf"
+            }
+          ],
+          "beginning_cash": 18010.04,
+          "money_raised": 0,
+          "money_spent": 329.24,
+          "ending_cash": 17680.8,
+          "net_change": -329.24,
+          "total_cash_receipts": 0,
+          "campaign_expenses": 0,
+          "aggregate_expenses": 329.24,
+          "summary_intro": "Alex D Marszalkowski's Q2 2026 filing reports no new cash receipts, $329.24 in aggregate expenditures, and $17,680.80 in cash on hand.",
+          "source_buckets": [],
+          "top_donors": [],
+          "spending_categories": [
+            {
+              "title": "Donations (All Others)",
+              "summary": "Aggregate expenditures reported without individual payee names.",
+              "amount": 306.05
+            },
+            {
+              "title": "Advertising",
+              "summary": "Aggregate advertising expenditure reported without an individual payee name.",
+              "amount": 23.19
+            }
+          ],
+          "takeaways": [],
+          "explainer_cards": [],
+          "finance_status": "available"
+        }
+      ],
+      "reporting_period_type": "custom",
+      "reporting_period_start": "2026-07-01",
+      "reporting_period_end": "2026-10-05",
+      "receipts_label": "Total receipts",
+      "loan_proceeds": 0,
+      "loan_repayments": 0,
+      "loans_payable": 1500,
+      "accounts_payable": 319.08,
+      "total_liabilities": 1819.08,
+      "total_fund_balance": 14511.72,
+      "refunds_rebates": 0,
+      "interest_received": 0,
+      "in_kind_contributions": 0,
+      "receipt_transactions": [],
+      "in_kind_transactions": [],
+      "expenditure_transactions": [
+        {
+          "date": "2026-09-08",
+          "amount": 100.0,
+          "category": "Donations (All Others)",
+          "type": "Aggregate Expenditure",
+          "payee": "",
+          "purpose": "",
+          "source_url": "/data/finance-documents/alex-d-marszalkowski-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-29",
+          "amount": 1000.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "friends of Brandon Voas",
+          "purpose": "",
+          "source_url": "/data/finance-documents/alex-d-marszalkowski-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-08",
+          "amount": 250.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "friends of tina spears",
+          "purpose": "",
+          "source_url": "/data/finance-documents/alex-d-marszalkowski-2026-10-05-28-day.pdf"
+        }
+      ],
+      "latest_filing_href": "/data/finance-documents/alex-d-marszalkowski-2026-10-05-28-day.pdf",
+      "finance_snapshot_note": "The campaign reports $1,819.08 in total liabilities and $14,511.72 in fund balance. Cash on hand is reported separately from debt. Accounts payable of $319.08 are reproduced as filed."
     },
     {
       "candidate_id": "house-53-paul-m-santucci",
@@ -29772,6 +31900,481 @@
       "source_buckets": [],
       "top_donors": [],
       "spending_categories": [],
+      "takeaways": [],
+      "explainer_cards": []
+    },
+    {
+      "candidate_id": "house-49-jon-d-brien",
+      "slug": "jon-d-brien",
+      "candidate_name": "Jon D Brien",
+      "chamber": "house",
+      "district_number": "49",
+      "party": "IND",
+      "party_label": "Independent",
+      "office_sought": "State Representative",
+      "original_documents": [
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "period": "July 1, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+          "embed": true
+        }
+      ],
+      "filing_history": [
+        {
+          "label": "2026 year to date through Q2",
+          "reporting_period_label": "January 1, 2026 to June 30, 2026",
+          "money_raised": 15352.9,
+          "money_spent": 1196.49,
+          "ending_cash": 25097.59,
+          "notes": "Year-to-date figures from the independent finance supplement; not a Q2-only period."
+        },
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026",
+          "money_raised": 6450,
+          "money_spent": 15082.02,
+          "ending_cash": 16465.57,
+          "net_change": -8632.02,
+          "notes": "The campaign reports $22,689.98 in total liabilities and $-6,224.41 in fund balance. Cash on hand is reported separately from debt.",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+        }
+      ],
+      "archived_reporting_periods": [
+        {
+          "name": "Jon D Brien",
+          "chamber": "house",
+          "district": 49,
+          "latest_period_end": "2026-06-30",
+          "latest_period_label": "2026 Q2",
+          "cash_on_hand": 25097.59,
+          "liabilities": 22689.98,
+          "ytd_receipts": 15352.9,
+          "ytd_campaign_expenses": 1196.49,
+          "ytd_in_kind": 0.0,
+          "source": "Rhode Island Board of Elections CF-2 filings"
+        }
+      ],
+      "report_label": "28-days-before-election report \u00b7 2026",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "reporting_period_type": "custom",
+      "reporting_period_start": "2026-07-01",
+      "reporting_period_end": "2026-10-05",
+      "receipts_label": "Total receipts",
+      "finance_status": "available",
+      "source_note": "Rhode Island Board of Elections CF-2, CF-3 and CF-4 report supplied to RIEP.",
+      "coverage_note": "Cash receipts exclude the beginning balance and in-kind contributions. Figures describe this reporting period, not year-to-date totals.",
+      "beginning_cash": 25097.59,
+      "money_raised": 6450,
+      "money_spent": 15082.02,
+      "ending_cash": 16465.57,
+      "net_change": -8632.02,
+      "total_cash_receipts": 6450,
+      "campaign_expenses": 15082.02,
+      "aggregate_expenses": 0,
+      "loan_proceeds": 0,
+      "loan_repayments": 0,
+      "loans_payable": 22689.98,
+      "accounts_payable": 0,
+      "total_liabilities": 22689.98,
+      "total_fund_balance": -6224.41,
+      "refunds_rebates": 0,
+      "interest_received": 0,
+      "in_kind_contributions": 0,
+      "receipt_transactions": [
+        {
+          "donor": "Corvese for Representative",
+          "amount": 500.0,
+          "type": "Individual",
+          "date": "2026-07-27",
+          "employer": "Retired",
+          "notes": "",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "William M Farrell",
+          "amount": 250.0,
+          "type": "Individual",
+          "date": "2026-09-25",
+          "employer": "William Farrell Associates LLC",
+          "notes": "",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Friends of Alex Finkelman",
+          "amount": 1000.0,
+          "type": "Individual",
+          "date": "2026-07-27",
+          "employer": "The Egis Grouup",
+          "notes": "",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Friends of Jackie Baginski",
+          "amount": 1000.0,
+          "type": "Individual",
+          "date": "2026-08-22",
+          "employer": "Professional Ambulance",
+          "notes": "",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Friends of Thomas Noret",
+          "amount": 2000.0,
+          "type": "Individual",
+          "date": "2026-08-22",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "James Lepore",
+          "amount": 100.0,
+          "type": "Individual",
+          "date": "2026-09-30",
+          "employer": "Coia & Lepore",
+          "notes": "",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Scott McGee",
+          "amount": 100.0,
+          "type": "Individual",
+          "date": "2026-08-22",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "John H Petrarca",
+          "amount": 1000.0,
+          "type": "Individual",
+          "date": "2026-09-25",
+          "employer": "Providence Auto Body",
+          "notes": "",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Paul R Richer",
+          "amount": 100.0,
+          "type": "Individual",
+          "date": "2026-09-30",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Ernest Shagalian Jr.",
+          "amount": 100.0,
+          "type": "Individual",
+          "date": "2026-07-03",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Christopher Vitale",
+          "amount": 150.0,
+          "type": "Individual",
+          "date": "2026-07-03",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "RI STAFFING ASSOCIATION PAC",
+          "amount": 150.0,
+          "type": "PAC",
+          "date": "2026-09-25",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+        }
+      ],
+      "in_kind_transactions": [],
+      "expenditure_transactions": [
+        {
+          "date": "2026-09-30",
+          "amount": 397.72,
+          "category": "Office Equipment & Supplies",
+          "type": "Campaign Expenditure",
+          "payee": "Balloons Over RI",
+          "purpose": "Envelopes",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-28",
+          "amount": 482.72,
+          "category": "Fundraising Expenses",
+          "type": "Campaign Expenditure",
+          "payee": "Billboardflex",
+          "purpose": "campaign materials",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-29",
+          "amount": 405.26,
+          "category": "Fundraising Expenses",
+          "type": "Campaign Expenditure",
+          "payee": "FORMATT PRINTING",
+          "purpose": "ENVELOPES",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-25",
+          "amount": 500.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Friends of Barbara Quigley",
+          "purpose": "",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-01",
+          "amount": 83.0,
+          "category": "Fundraising Expenses",
+          "type": "Campaign Expenditure",
+          "payee": "Friends of Daniel M. Gendron",
+          "purpose": "",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-27",
+          "amount": 100.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Friends of Valerie Gonzalez",
+          "purpose": "Donation",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-08",
+          "amount": 2160.0,
+          "category": "Fundraising Expenses",
+          "type": "Campaign Expenditure",
+          "payee": "i360",
+          "purpose": "voting models",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-28",
+          "amount": 4506.25,
+          "category": "Fundraising Expenses",
+          "type": "Campaign Expenditure",
+          "payee": "Majority Strategies",
+          "purpose": "flyers, doorhangers, cards",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-09-26",
+          "amount": 3978.92,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Majority Strategies",
+          "purpose": "flyers",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-08-25",
+          "amount": 568.15,
+          "category": "Fundraising Expenses",
+          "type": "Campaign Expenditure",
+          "payee": "VISTAPRINT",
+          "purpose": "Fliers and door hangers",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-16",
+          "amount": 1700.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "WNRI 1380 AM",
+          "purpose": "Political radio ads",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "2026-07-27",
+          "amount": 200.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "WOON",
+          "purpose": "Political Radio Ads",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf"
+        }
+      ],
+      "top_donors": [
+        {
+          "donor": "Friends of Thomas Noret",
+          "amount": 2000.0,
+          "type": "Individual",
+          "date": "2026-08-22",
+          "employer": "",
+          "notes": "Committee-named contributor classified as Individual in the original filing; classification reproduced as filed.",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Friends of Alex Finkelman",
+          "amount": 1000.0,
+          "type": "Individual",
+          "date": "2026-07-27",
+          "employer": "The Egis Grouup",
+          "notes": "Committee-named contributor classified as Individual in the original filing; classification reproduced as filed.",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Friends of Jackie Baginski",
+          "amount": 1000.0,
+          "type": "Individual",
+          "date": "2026-08-22",
+          "employer": "Professional Ambulance",
+          "notes": "Committee-named contributor classified as Individual in the original filing; classification reproduced as filed.",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "John H Petrarca",
+          "amount": 1000.0,
+          "type": "Individual",
+          "date": "2026-09-25",
+          "employer": "Providence Auto Body",
+          "notes": "",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Corvese for Representative",
+          "amount": 500.0,
+          "type": "Individual",
+          "date": "2026-07-27",
+          "employer": "Retired",
+          "notes": "Committee-named contributor classified as Individual in the original filing; classification reproduced as filed.",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "William M Farrell",
+          "amount": 250.0,
+          "type": "Individual",
+          "date": "2026-09-25",
+          "employer": "William Farrell Associates LLC",
+          "notes": "",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Christopher Vitale",
+          "amount": 150.0,
+          "type": "Individual",
+          "date": "2026-07-03",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "RI STAFFING ASSOCIATION PAC",
+          "amount": 150.0,
+          "type": "PAC",
+          "date": "2026-09-25",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+          "interest_group": "Political committee",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Ernest Shagalian Jr.",
+          "amount": 100.0,
+          "type": "Individual",
+          "date": "2026-07-03",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "James Lepore",
+          "amount": 100.0,
+          "type": "Individual",
+          "date": "2026-09-30",
+          "employer": "Coia & Lepore",
+          "notes": "",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Paul R Richer",
+          "amount": 100.0,
+          "type": "Individual",
+          "date": "2026-09-30",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Scott McGee",
+          "amount": 100.0,
+          "type": "Individual",
+          "date": "2026-08-22",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        }
+      ],
+      "source_buckets": [
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 6300.0,
+          "description": "Contribution classification reproduced from the original filing."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 150.0,
+          "description": "Contribution classification reproduced from the original filing."
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Fundraising Expenses",
+          "amount": 8205.38,
+          "description": "Expenditures reported in the original filing."
+        },
+        {
+          "label": "Advertising",
+          "amount": 5978.92,
+          "description": "Expenditures reported in the original filing."
+        },
+        {
+          "label": "Donations (Political)",
+          "amount": 500.0,
+          "description": "Expenditures reported in the original filing."
+        },
+        {
+          "label": "Office Equipment & Supplies",
+          "amount": 397.72,
+          "description": "Expenditures reported in the original filing."
+        }
+      ],
+      "latest_filing_href": "/data/finance-documents/jon-d-brien-2026-10-05-28-day.pdf",
+      "finance_snapshot_note": "The campaign reports $22,689.98 in total liabilities and $-6,224.41 in fund balance. Cash on hand is reported separately from debt.",
+      "summary_intro": "Jon D Brien\u2019s July 1\u2013October 5, 2026 filing reports $6,450.00 in cash receipts, $15,082.02 in cash disbursements and $16,465.57 in ending cash.",
       "takeaways": [],
       "explainer_cards": []
     }

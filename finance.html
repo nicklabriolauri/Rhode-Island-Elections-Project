@@ -2753,6 +2753,7 @@
                 </div>
                 <a class="verification-link" href="${escapeHtml(item.href)}" target="_blank" rel="noopener">Open PDF</a>
               </div>
+              ${item.embed ? `<details><summary>Read this filing on the page</summary><iframe title="${escapeHtml(profile.candidate_name)} campaign finance report" src="${escapeHtml(item.href)}" loading="lazy" style="width:100%;height:640px;border:1px solid #dbe4ef;margin-top:12px"></iframe></details>` : ""}
             `).join("")}
           </div>
         </article>
