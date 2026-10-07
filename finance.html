@@ -2287,7 +2287,7 @@
       if (raw === "aggregate" || raw === "small-dollar-aggregate-online-receipts") return "aggregate";
       if (raw === "pacs" || raw === "pac-contributions") return "pacs";
       if (raw === "refunds" || raw === "refunds-rebates" || raw === "refund/rebate") return "refunds";
-      if (raw === "other" || raw === "other-reported-sources") return "default";
+      if (raw === "other" || raw === "other-reported-sources" || raw === "candidate-loan") return "default";
       return raw;
     }
 
@@ -2413,7 +2413,7 @@
       return `
         <div class="hero-stats">
           <a class="hero-stat-card jump-card raised" href="#top-donors">
-            <div class="hero-stat-label">Raised this period</div>
+            <div class="hero-stat-label">${escapeHtml(profile.receipts_label || "Raised this period")}</div>
             <div class="hero-stat-value">${formatCurrency(profile.money_raised)}</div>
             <div class="hero-stat-detail">Money reported as coming into the campaign during this filing period.</div>
             <div class="hero-stat-jump">Jump to donor list</div>
@@ -2516,7 +2516,7 @@
       const rows = [
         {
           key: "raised",
-          label: "Money raised",
+          label: profile.receipts_label || "Money raised",
           value: Number(profile.money_raised || 0),
           detail: "New money reported as coming into the campaign during this filing period."
         },
@@ -2712,7 +2712,7 @@
                 </div>
                 <div class="timeline-stats">
                   <div class="timeline-stat">
-                    <span class="k">Raised</span>
+                    <span class="k">${escapeHtml(item.receipts_label || "Raised")}</span>
                     <span class="v">${formatCurrency(item.money_raised)}</span>
                   </div>
                   <div class="timeline-stat">
@@ -3023,7 +3023,7 @@
           </div>
           <div class="finance-card-stats">
             <div class="finance-card-stat">
-              <div class="finance-card-stat-label">Raised</div>
+              <div class="finance-card-stat-label">${escapeHtml(profile?.receipts_label || "Raised")}</div>
               <div class="finance-card-stat-value">${profile ? formatCurrency(profile.money_raised) : "—"}</div>
             </div>
             <div class="finance-card-stat">

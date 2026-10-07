@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-14T12:28:39.180001+00:00",
+  "generated_at": "2026-10-06",
   "cycle": "2026-q2",
   "directory": [
     {
@@ -5363,20 +5363,36 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
-      "original_documents": [],
-      "beginning_cash": 0,
-      "money_raised": 0,
-      "money_spent": 293.15,
-      "ending_cash": 2706.85,
-      "net_change": -293.15,
-      "total_cash_receipts": 0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 293.15,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it spent more during the period than it raised.",
+      "report_label": "28-days-before-election report · 2026",
+      "reporting_period_label": "September 2, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2 filing supplied by the user; 28-days-before-election report, ending October 5, 2026.",
+      "coverage_note": "Figures cover September 2, 2026 to October 5, 2026. Receipts exclude beginning cash. Earlier quarterly figures are shown separately; no year-to-date total is inferred.",
+      "original_documents": [
+        {
+          "label": "Q1 2026 CF-2 report",
+          "period": "January 1, 2026 to March 31, 2026",
+          "href": "/data/finance-documents/james-c-sheehan-q1-2026.pdf"
+        },
+        {
+          "label": "Q2 2026 CF-2 report",
+          "period": "April 1, 2026 to June 30, 2026",
+          "href": "/data/finance-documents/james-c-sheehan-q2-2026.pdf"
+        },
+        {
+          "label": "28-days-before-election report · 2026 · CF-2 source PDF",
+          "period": "September 2, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/james-c-sheehan-2026-10-05-28-day.pdf"
+        }
+      ],
+      "beginning_cash": 3495.41,
+      "money_raised": 791.25,
+      "money_spent": 4082.38,
+      "ending_cash": 204.28,
+      "net_change": -3291.13,
+      "total_cash_receipts": 791.25,
+      "campaign_expenses": 4082.38,
+      "aggregate_expenses": 0,
+      "summary_intro": "James C Sheehan's 28-days-before-election filing covers September 2, 2026 to October 5, 2026. It reports $791.25 in total receipts, $4,082.38 in spending and $204.28 in ending cash. Receipts consist of a $250 individual contribution, a $300 candidate loan and a $241.25 yard-sign refund. The filing separately reports $66,243.01 in loans payable.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -5385,23 +5401,310 @@
           "money_spent": 0,
           "ending_cash": 0,
           "net_change": 0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "notes": "Q1 reported no cash activity."
         },
         {
           "label": "Q2 2026",
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
-          "money_raised": 0,
+          "money_raised": 3000,
           "money_spent": 293.15,
           "ending_cash": 2706.85,
-          "net_change": -293.15,
-          "notes": "The campaign spent more than it raised in this reporting period."
+          "net_change": 2706.85,
+          "notes": "Q2 is the standardized main display period."
+        },
+        {
+          "label": "28-days-before-election report · 2026",
+          "reporting_period_label": "September 2, 2026 to October 5, 2026",
+          "reporting_period_type": "custom",
+          "receipts_label": "Total receipts",
+          "beginning_cash": 3495.41,
+          "money_raised": 791.25,
+          "money_spent": 4082.38,
+          "ending_cash": 204.28,
+          "net_change": -3291.13,
+          "notes": "Separate filing period; includes only activity reported in this document. No missing interim filing is treated as zero."
         }
       ],
-      "source_buckets": [],
-      "top_donors": [],
-      "spending_categories": [],
+      "source_buckets": [
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 250.0,
+          "description": "Named individual contributions reported in the filing."
+        },
+        {
+          "label": "Candidate loan proceeds",
+          "class_name": "candidate-loan",
+          "amount": 300.0,
+          "description": "Loan proceeds are included in total receipts and are not donations."
+        },
+        {
+          "label": "Refunds / rebates",
+          "class_name": "refunds-rebates",
+          "amount": 241.25,
+          "description": "Refund for yard signs charged twice; included in receipts, not donations."
+        }
+      ],
+      "top_donors": [
+        {
+          "donor": "James Kupa",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/14/2026",
+          "employer": "Kupa Law Associates",
+          "notes": "Employer reported as Kupa Law Associates.",
+          "source_url": "/data/finance-documents/james-c-sheehan-2026-10-05-28-day.pdf",
+          "reporting_period_label": "September 2, 2026 to October 5, 2026"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Other",
+          "amount": 3386.74,
+          "description": "Expenditures reported under Other in this filing."
+        },
+        {
+          "label": "Employee Services",
+          "amount": 500.0,
+          "description": "Expenditures reported under Employee Services in this filing."
+        },
+        {
+          "label": "Refunds/Reimbursements",
+          "amount": 98.4,
+          "description": "Expenditures reported under Refunds/Reimbursements in this filing."
+        },
+        {
+          "label": "Food, Beverages and Meals",
+          "amount": 94.24,
+          "description": "Expenditures reported under Food, Beverages and Meals in this filing."
+        },
+        {
+          "label": "Bank Fees",
+          "amount": 3.0,
+          "description": "Expenditures reported under Bank Fees in this filing."
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_status": "available",
+      "archived_reporting_periods": [
+        {
+          "report_label": "Q2 2026 campaign finance filing",
+          "reporting_period_label": "April 1, 2026 to June 30, 2026",
+          "beginning_cash": 0,
+          "money_raised": 3000,
+          "money_spent": 293.15,
+          "ending_cash": 2706.85,
+          "net_change": 2706.85,
+          "source_buckets": [
+            {
+              "label": "Itemized individual donors",
+              "class_name": "itemized-individual-donors",
+              "amount": 2000,
+              "description": "Named individual contribution reported in Q2."
+            },
+            {
+              "label": "Candidate loan",
+              "class_name": "candidate-loan",
+              "amount": 1000,
+              "description": "Loan proceeds from James C Sheehan to the campaign."
+            }
+          ],
+          "top_donors": [
+            {
+              "donor": "Julie Casimiro",
+              "amount": 2000,
+              "type": "Individual",
+              "interest_group": "Individual",
+              "notes": "Employer listed as retired."
+            },
+            {
+              "donor": "James C Sheehan",
+              "amount": 1000,
+              "type": "Loan Proceeds",
+              "interest_group": "Other / Unclassified",
+              "notes": "Candidate loan proceeds reported in the filing."
+            }
+          ],
+          "spending_categories": [
+            {
+              "title": "Other",
+              "summary": "Visible spending includes OpenAI ChatGPT and Sign Rocket.",
+              "amount": 262.65
+            },
+            {
+              "title": "Bank Fees",
+              "summary": "Visible spending includes Citizens Bank.",
+              "amount": 30.5
+            }
+          ],
+          "source_note": "Built from James C Sheehan's Rhode Island Q1 and Q2 2026 campaign finance filings supplied by the user.",
+          "original_documents": [
+            {
+              "label": "Q1 2026 CF-2 report",
+              "period": "January 1, 2026 to March 31, 2026",
+              "href": "/data/finance-documents/james-c-sheehan-q1-2026.pdf"
+            },
+            {
+              "label": "Q2 2026 CF-2 report",
+              "period": "April 1, 2026 to June 30, 2026",
+              "href": "/data/finance-documents/james-c-sheehan-q2-2026.pdf"
+            }
+          ]
+        }
+      ],
+      "reporting_period_type": "custom",
+      "reporting_period_start": "2026-09-02",
+      "reporting_period_end": "2026-10-05",
+      "finance_source_note": "Latest display uses the supplied 28-days-before-election CF-2 report. Earlier quarterly filings remain in filing history.",
+      "latest_filing_href": "/data/finance-documents/james-c-sheehan-2026-10-05-28-day.pdf",
+      "receipts_label": "Total receipts",
+      "receipt_transactions": [
+        {
+          "donor": "James Kupa",
+          "amount": 250.0,
+          "type": "Individual",
+          "date": "09/14/2026",
+          "employer": "Kupa Law Associates",
+          "notes": "",
+          "source_url": "/data/finance-documents/james-c-sheehan-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "JAMES C SHEEHAN",
+          "amount": 300.0,
+          "type": "Loan Proceeds",
+          "date": "09/30/2026",
+          "employer": "WARWICK SCHOOL DEPARTMENT",
+          "notes": "",
+          "source_url": "/data/finance-documents/james-c-sheehan-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Sign Rocket",
+          "amount": 241.25,
+          "type": "Refund/Rebate",
+          "date": "09/02/2026",
+          "employer": "",
+          "notes": "Reimbursement for yard signs - charged twice",
+          "source_url": "/data/finance-documents/james-c-sheehan-2026-10-05-28-day.pdf"
+        }
+      ],
+      "expenditure_transactions": [
+        {
+          "date": "09/30/2026",
+          "amount": 3.0,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "Citizens Bank",
+          "purpose": "Monthly service charge",
+          "source_url": "/data/finance-documents/james-c-sheehan-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "10/01/2026",
+          "amount": 21.4,
+          "category": "Other",
+          "type": "Campaign Expenditure",
+          "payee": "Open AI Chat GPT",
+          "purpose": "Monthly subscription",
+          "source_url": "/data/finance-documents/james-c-sheehan-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/16/2026",
+          "amount": 364.95,
+          "category": "Other",
+          "type": "Campaign Expenditure",
+          "payee": "Pro Mail",
+          "purpose": "Processing and postage for campaign mailing",
+          "source_url": "/data/finance-documents/james-c-sheehan-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/09/2026",
+          "amount": 982.34,
+          "category": "Other",
+          "type": "Campaign Expenditure",
+          "payee": "Pro Mail",
+          "purpose": "",
+          "source_url": "/data/finance-documents/james-c-sheehan-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/10/2026",
+          "amount": 967.28,
+          "category": "Other",
+          "type": "Campaign Expenditure",
+          "payee": "Regine Printing Co., Inc.",
+          "purpose": "Printing of Mailer #5",
+          "source_url": "/data/finance-documents/james-c-sheehan-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/10/2026",
+          "amount": 94.24,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Socrates Pizza",
+          "purpose": "Pizza for campaign volunteers - polling places",
+          "source_url": "/data/finance-documents/james-c-sheehan-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/04/2026",
+          "amount": 66.77,
+          "category": "Other",
+          "type": "Campaign Expenditure",
+          "payee": "Staples",
+          "purpose": "Staples - Copies and folding Exeter letters",
+          "source_url": "/data/finance-documents/james-c-sheehan-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/02/2026",
+          "amount": 260.0,
+          "category": "Employee Services",
+          "type": "Campaign Expenditure",
+          "payee": "Brynn Stewart",
+          "purpose": "",
+          "source_url": "/data/finance-documents/james-c-sheehan-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/02/2026",
+          "amount": 98.4,
+          "category": "Refunds/Reimbursements",
+          "type": "Campaign Expenditure",
+          "payee": "Brynn Stewart",
+          "purpose": "Reimbursement for stamps for Exeter mailing",
+          "source_url": "/data/finance-documents/james-c-sheehan-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/15/2026",
+          "amount": 100.0,
+          "category": "Employee Services",
+          "type": "Campaign Expenditure",
+          "payee": "Brynn Stewart",
+          "purpose": "Paid intern",
+          "source_url": "/data/finance-documents/james-c-sheehan-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/08/2026",
+          "amount": 140.0,
+          "category": "Employee Services",
+          "type": "Campaign Expenditure",
+          "payee": "Brynn Stewart",
+          "purpose": "Paid intern",
+          "source_url": "/data/finance-documents/james-c-sheehan-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/04/2026",
+          "amount": 984.0,
+          "category": "Other",
+          "type": "Campaign Expenditure",
+          "payee": "USPS",
+          "purpose": "USPS - Stamps for letters to NK voters",
+          "source_url": "/data/finance-documents/james-c-sheehan-2026-10-05-28-day.pdf"
+        }
+      ],
+      "loan_proceeds": 300,
+      "refunds_rebates": 241.25,
+      "loans_payable": 66243.01,
+      "total_liabilities": 66243.01,
+      "total_fund_balance": -66038.73,
+      "finance_snapshot_note": "Total receipts include a $250 individual contribution, a $300 candidate loan and a $241.25 yard-sign refund. The filing reports $66,243.01 in loans payable."
     },
     {
       "candidate_id": "house-31-matthew-b-mccoy",
@@ -5587,20 +5890,26 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
-      "original_documents": [],
-      "beginning_cash": 22094.71,
-      "money_raised": 26770,
-      "money_spent": 2571.73,
-      "ending_cash": 46292.98,
-      "net_change": 24198.27,
-      "total_cash_receipts": 26770,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 2571.73,
-      "summary_intro": "This profile uses Robert E. Craven Jr.'s original Q2 2026 filing for donor and expenditure detail, rather than treating the later amended filing as a complete replacement.",
+      "report_label": "28-days-before-election report · 2026",
+      "reporting_period_label": "September 2, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2 filing supplied by the user; 28-days-before-election report, ending October 5, 2026.",
+      "coverage_note": "Figures cover September 2, 2026 to October 5, 2026. Receipts exclude beginning cash. Earlier quarterly figures are shown separately; no year-to-date total is inferred.",
+      "original_documents": [
+        {
+          "label": "28-days-before-election report · 2026 · CF-2 source PDF",
+          "period": "September 2, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        }
+      ],
+      "beginning_cash": 56056.98,
+      "money_raised": 2474,
+      "money_spent": 1016.59,
+      "ending_cash": 57514.39,
+      "net_change": 1457.41,
+      "total_cash_receipts": 2474,
+      "campaign_expenses": 1016.59,
+      "aggregate_expenses": 0,
+      "summary_intro": "Robert E Craven Jr's 28-days-before-election filing covers September 2, 2026 to October 5, 2026. It reports $2,474.00 in total receipts, $1,016.59 in spending and $57,514.39 in ending cash.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -5619,336 +5928,210 @@
           "ending_cash": 46292.98,
           "net_change": 24198.27,
           "notes": "The campaign raised more than it spent in this reporting period."
+        },
+        {
+          "label": "28-days-before-election report · 2026",
+          "reporting_period_label": "September 2, 2026 to October 5, 2026",
+          "reporting_period_type": "custom",
+          "receipts_label": "Total receipts",
+          "beginning_cash": 56056.98,
+          "money_raised": 2474,
+          "money_spent": 1016.59,
+          "ending_cash": 57514.39,
+          "net_change": 1457.41,
+          "notes": "Separate filing period; includes only activity reported in this document. No missing interim filing is treated as zero."
         }
       ],
       "source_buckets": [
         {
           "label": "Itemized individual donors",
           "class_name": "itemized-individual-donors",
-          "amount": 22870,
-          "description": "Named individual contributors reported in the original Q2 filing."
+          "amount": 2324.0,
+          "description": "Named individual contributions reported in the filing."
         },
         {
           "label": "PAC contributions",
           "class_name": "pac-contributions",
-          "amount": 3900,
-          "description": "27 PAC contribution records reported in the original Q2 filing."
+          "amount": 150.0,
+          "description": "Political action committee contributions reported in the filing."
         }
       ],
       "top_donors": [
         {
-          "donor": "Ernest L. Crivellone",
-          "amount": 2000,
-          "type": "Individual"
+          "donor": "Kevin Bernardo",
+          "amount": 500.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/04/2026",
+          "employer": "Beacon Communities",
+          "notes": "Employer reported as Beacon Communities.",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf",
+          "reporting_period_label": "September 2, 2026 to October 5, 2026"
         },
         {
-          "donor": "Anthony Victoria",
-          "amount": 1000,
-          "type": "Individual"
+          "donor": "Nicholas A. Mattiello",
+          "amount": 300.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/02/2026",
+          "employer": "Moses Ryan LTD",
+          "notes": "Employer reported as Moses Ryan LTD.",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf",
+          "reporting_period_label": "September 2, 2026 to October 5, 2026"
         },
         {
-          "donor": "Joseph Longo",
-          "amount": 1000,
-          "type": "Individual"
+          "donor": "Mark Ryan",
+          "amount": 300.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/02/2026",
+          "employer": "Moses Ryan LTD",
+          "notes": "Employer reported as Moses Ryan LTD.",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf",
+          "reporting_period_label": "September 2, 2026 to October 5, 2026"
         },
         {
-          "donor": "Steven Ceceri",
-          "amount": 1000,
-          "type": "Individual"
+          "donor": "Louis C. Yip",
+          "amount": 300.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "10/03/2026",
+          "employer": "Tai-O Associates",
+          "notes": "Employer reported as Tai-O Associates.",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf",
+          "reporting_period_label": "September 2, 2026 to October 5, 2026"
         },
         {
-          "donor": "Eileen Cheng",
-          "amount": 500,
-          "type": "Individual"
+          "donor": "Thomas Moses",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/02/2026",
+          "employer": "Moses Ryan LTD",
+          "notes": "Employer reported as Moses Ryan LTD.",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf",
+          "reporting_period_label": "September 2, 2026 to October 5, 2026"
         },
         {
-          "donor": "Keith Hoffmann",
-          "amount": 500,
-          "type": "Individual"
+          "donor": "Henry Monti",
+          "amount": 150.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/02/2026",
+          "employer": "Gemma Law Associates",
+          "notes": "Employer reported as Gemma Law Associates.",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf",
+          "reporting_period_label": "September 2, 2026 to October 5, 2026"
         },
         {
-          "donor": "Matthew Lopes",
-          "amount": 500,
-          "type": "Individual"
-        },
-        {
-          "donor": "RI TROOPERS ASSOCIATION PAC",
-          "amount": 500,
+          "donor": "RI STAFFING ASSOCIATION PAC",
+          "amount": 150.0,
           "type": "PAC",
-          "interest_group": "Public Safety"
+          "interest_group": "Other / Unclassified",
+          "date": "09/11/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf",
+          "reporting_period_label": "September 2, 2026 to October 5, 2026"
         },
         {
-          "donor": "Thomas G Casale",
-          "amount": 500,
-          "type": "Individual"
+          "donor": "Kevin Elliott",
+          "amount": 100.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/02/2026",
+          "employer": "State of Rhode Island",
+          "notes": "Employer reported as State of Rhode Island.",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf",
+          "reporting_period_label": "September 2, 2026 to October 5, 2026"
         },
         {
-          "donor": "Nicholas Fede",
-          "amount": 300,
-          "type": "Individual"
+          "donor": "David Meeghan",
+          "amount": 100.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/05/2026",
+          "employer": "Unemployed",
+          "notes": "Employer reported as Unemployed.",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf",
+          "reporting_period_label": "September 2, 2026 to October 5, 2026"
         },
         {
-          "donor": "RI FEDERATION OF TEACHERS COPE PAC",
-          "amount": 300,
-          "type": "PAC",
-          "interest_group": "Education",
-          "notes": "Two PAC contributions totaling $300 during the filing period."
+          "donor": "Robert Rahill",
+          "amount": 100.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/02/2026",
+          "employer": "Retired",
+          "notes": "Employer reported as Retired.",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf",
+          "reporting_period_label": "September 2, 2026 to October 5, 2026"
         },
         {
-          "donor": "Andrew S Wandyes",
-          "amount": 250,
-          "type": "Individual"
+          "donor": "David Reilly",
+          "amount": 100.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/02/2026",
+          "employer": "Law Offices of David F. Reilly, ESQ., LLC",
+          "notes": "Employer reported as Law Offices of David F. Reilly, ESQ., LLC.",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf",
+          "reporting_period_label": "September 2, 2026 to October 5, 2026"
         },
         {
-          "donor": "David W Hayes",
-          "amount": 250,
-          "type": "Individual"
+          "donor": "Kenneth Filarski",
+          "amount": 50.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/04/2026",
+          "employer": "FILARSKI/ARCHITECTURE+PLANNING+RESEARCH",
+          "notes": "Employer reported as FILARSKI/ARCHITECTURE+PLANNING+RESEARCH.",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf",
+          "reporting_period_label": "September 2, 2026 to October 5, 2026"
         },
         {
-          "donor": "Francis Lennon",
-          "amount": 250,
-          "type": "Individual"
+          "donor": "Dianne Izzo",
+          "amount": 50.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "10/02/2026",
+          "employer": "Self Employed Attorney",
+          "notes": "Employer reported as Self Employed Attorney.",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf",
+          "reporting_period_label": "September 2, 2026 to October 5, 2026"
         },
         {
-          "donor": "Grace Voll",
-          "amount": 250,
-          "type": "Individual"
-        },
-        {
-          "donor": "Jo-Ann Ryan",
-          "amount": 250,
-          "type": "Individual"
-        },
-        {
-          "donor": "John C. Manni",
-          "amount": 250,
-          "type": "Individual"
-        },
-        {
-          "donor": "John Simmons",
-          "amount": 250,
-          "type": "Individual"
-        },
-        {
-          "donor": "Kyle A Rocha",
-          "amount": 250,
-          "type": "Individual"
-        },
-        {
-          "donor": "Lammis Vargas",
-          "amount": 250,
-          "type": "Individual"
-        },
-        {
-          "donor": "Leo Skenyon",
-          "amount": 250,
-          "type": "Individual"
-        },
-        {
-          "donor": "Norman Beretta",
-          "amount": 250,
-          "type": "Individual"
-        },
-        {
-          "donor": "NORTH KINGSTOWN FIREFIGHTERS LOCAL 1651",
-          "amount": 250,
-          "type": "PAC",
-          "interest_group": "Public Safety"
-        },
-        {
-          "donor": "Randy Bottella",
-          "amount": 250,
-          "type": "Individual"
-        },
-        {
-          "donor": "Robert D. Goldberg",
-          "amount": 250,
-          "type": "Individual"
-        },
-        {
-          "donor": "Thomas Craven",
-          "amount": 250,
-          "type": "Individual"
-        },
-        {
-          "donor": "William Farrell",
-          "amount": 250,
-          "type": "Individual"
-        },
-        {
-          "donor": "JOHNSTON FEDERATION OF TEACHERS LOCAL 1702 PAC",
-          "amount": 200,
-          "type": "PAC",
-          "interest_group": "Education"
-        },
-        {
-          "donor": "NEA RI RETIRED PAC (National Education Association RI Retired)",
-          "amount": 200,
-          "type": "PAC",
-          "interest_group": "Education"
-        },
-        {
-          "donor": "RI HOSPITALITY PAC",
-          "amount": 200,
-          "type": "PAC",
-          "interest_group": "Hospitality / Tourism"
-        },
-        {
-          "donor": "UNITED FOOD & COMMERCIAL WORKERS UNION LOCAL 328 RI PAC",
-          "amount": 200,
-          "type": "PAC",
-          "interest_group": "Labor / Unions"
-        },
-        {
-          "donor": "EGFFA PAC (East Greenwich Fire Fighters Association)",
-          "amount": 150,
-          "type": "PAC",
-          "interest_group": "Public Safety"
-        },
-        {
-          "donor": "PEOPLE, RI COUNCIL 94, AFSCME AFL-CIO PAC",
-          "amount": 150,
-          "type": "PAC",
-          "interest_group": "Labor / Unions"
-        },
-        {
-          "donor": "RI ASSOCIATION OF NURSE ANESTHETISTS PAC",
-          "amount": 150,
-          "type": "PAC",
-          "interest_group": "Health Care"
-        },
-        {
-          "donor": "RI LABORERS' STATE EMPLOYEES",
-          "amount": 150,
-          "type": "PAC",
-          "interest_group": "Labor / Unions"
-        },
-        {
-          "donor": "RI STATE ASSOCIATION OF FIREFIGHTERS",
-          "amount": 150,
-          "type": "PAC",
-          "interest_group": "Public Safety"
-        },
-        {
-          "donor": "AMICA / RI PAC",
-          "amount": 100,
-          "type": "PAC",
-          "interest_group": "Finance / Insurance"
-        },
-        {
-          "donor": "CRANSTON FIREFIGHTERS LOCAL 1363 COPE",
-          "amount": 100,
-          "type": "PAC",
-          "interest_group": "Public Safety"
-        },
-        {
-          "donor": "CRANSTON TEACHERS' ALLIANCE",
-          "amount": 100,
-          "type": "PAC",
-          "interest_group": "Education"
-        },
-        {
-          "donor": "INDEPENDENT CONSTABLE ASSOCIATION PAC",
-          "amount": 100,
-          "type": "PAC",
-          "interest_group": "Public Safety"
-        },
-        {
-          "donor": "IRON WORKERS LOCAL 37",
-          "amount": 100,
-          "type": "PAC",
-          "interest_group": "Labor / Unions"
-        },
-        {
-          "donor": "NORTH PROVIDENCE FEDERATION OF TEACHERS LOCAL 920",
-          "amount": 100,
-          "type": "PAC",
-          "interest_group": "Education"
-        },
-        {
-          "donor": "PROVIDENCE RI CENTRAL FEDERATED COUNCIL AFL-CIO",
-          "amount": 100,
-          "type": "PAC",
-          "interest_group": "Labor / Unions"
-        },
-        {
-          "donor": "PROVIDENCE TEACHERS COPE",
-          "amount": 100,
-          "type": "PAC",
-          "interest_group": "Education"
-        },
-        {
-          "donor": "RI AFL-CIO PAC",
-          "amount": 100,
-          "type": "PAC",
-          "interest_group": "Labor / Unions"
-        },
-        {
-          "donor": "RI HEALTH CARE ASSOCIATION PAC",
-          "amount": 100,
-          "type": "PAC",
-          "interest_group": "Health Care"
-        },
-        {
-          "donor": "RI NAGE/IBPO PAC (National Assoc of Gov Employ/International Brotherhood)",
-          "amount": 100,
-          "type": "PAC",
-          "interest_group": "Labor / Unions"
-        },
-        {
-          "donor": "WARWICK TEACHER'S UNION 915",
-          "amount": 100,
-          "type": "PAC",
-          "interest_group": "Education"
-        },
-        {
-          "donor": "IBEW LOCAL 99 PAC (International Brotherhood of Electrical Workers)",
-          "amount": 75,
-          "type": "PAC",
-          "interest_group": "Labor / Unions"
-        },
-        {
-          "donor": "RI CHAPTER 94 RETIREES",
-          "amount": 25,
-          "type": "PAC",
-          "interest_group": "Labor / Unions"
+          "donor": "Kerri Sparling",
+          "amount": 24.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/05/2026",
+          "employer": "Self-Employed",
+          "notes": "Employer reported as Self-Employed.",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf",
+          "reporting_period_label": "September 2, 2026 to October 5, 2026"
         }
       ],
       "spending_categories": [
         {
-          "title": "Sign Rocket - large 4x4 signs",
-          "summary": "Purchase of large 4x4 campaign signs on June 17, 2026.",
-          "amount": 1048.75
+          "label": "Advertising",
+          "amount": 639.17,
+          "description": "Expenditures reported under Advertising in this filing."
         },
         {
-          "title": "The Ballyhoo Group - advertising",
-          "summary": "Advertising expenditure reported on April 13, 2026.",
-          "amount": 728.38
+          "label": "Food, Beverages and Meals",
+          "amount": 253.27,
+          "description": "Expenditures reported under Food, Beverages and Meals in this filing."
         },
         {
-          "title": "Sign Rocket - yard signs",
-          "summary": "Yard signs purchased on June 9, 2026.",
-          "amount": 538.45
+          "label": "Bank Fees",
+          "amount": 114.25,
+          "description": "Expenditures reported under Bank Fees in this filing."
         },
         {
-          "title": "ActBlue - processing fees",
-          "summary": "ActBlue processing fees reported on June 30, 2026.",
-          "amount": 241.15
-        },
-        {
-          "title": "BankNewport - bank fee",
-          "summary": "Bank fee reported on April 30, 2026.",
-          "amount": 5
-        },
-        {
-          "title": "BankNewport - bank fee",
-          "summary": "Bank fee reported on May 29, 2026.",
-          "amount": 5
-        },
-        {
-          "title": "BankNewport - bank fee",
-          "summary": "Bank fee reported on June 30, 2026.",
-          "amount": 5
+          "label": "Other",
+          "amount": 9.9,
+          "description": "Expenditures reported under Other in this filing."
         }
       ],
       "takeaways": [],
@@ -5956,7 +6139,612 @@
       "itemized_contribution_records": 166,
       "individual_contribution_records": 139,
       "pac_contribution_records": 27,
-      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing. The amended filing reports changes only and should not be treated as a replacement for the itemized detail in the original filing."
+      "finance_source_note": "Latest display uses the supplied 28-days-before-election CF-2 report. Earlier quarterly filings remain in filing history.",
+      "archived_reporting_periods": [
+        {
+          "report_label": "6/30/2026",
+          "reporting_period_label": "6/30/2026",
+          "beginning_cash": 22094.71,
+          "money_raised": 26770,
+          "money_spent": 2571.73,
+          "ending_cash": 46292.98,
+          "net_change": 24198.27,
+          "source_buckets": [
+            {
+              "label": "Itemized individual donors",
+              "class_name": "itemized-individual-donors",
+              "amount": 22870,
+              "description": "Named individual contributors reported in the original Q2 filing."
+            },
+            {
+              "label": "PAC contributions",
+              "class_name": "pac-contributions",
+              "amount": 3900,
+              "description": "27 PAC contribution records reported in the original Q2 filing."
+            }
+          ],
+          "top_donors": [
+            {
+              "donor": "Ernest L. Crivellone",
+              "amount": 2000,
+              "type": "Individual"
+            },
+            {
+              "donor": "Anthony Victoria",
+              "amount": 1000,
+              "type": "Individual"
+            },
+            {
+              "donor": "Joseph Longo",
+              "amount": 1000,
+              "type": "Individual"
+            },
+            {
+              "donor": "Steven Ceceri",
+              "amount": 1000,
+              "type": "Individual"
+            },
+            {
+              "donor": "Eileen Cheng",
+              "amount": 500,
+              "type": "Individual"
+            },
+            {
+              "donor": "Keith Hoffmann",
+              "amount": 500,
+              "type": "Individual"
+            },
+            {
+              "donor": "Matthew Lopes",
+              "amount": 500,
+              "type": "Individual"
+            },
+            {
+              "donor": "RI TROOPERS ASSOCIATION PAC",
+              "amount": 500,
+              "type": "PAC",
+              "interest_group": "Public Safety"
+            },
+            {
+              "donor": "Thomas G Casale",
+              "amount": 500,
+              "type": "Individual"
+            },
+            {
+              "donor": "Nicholas Fede",
+              "amount": 300,
+              "type": "Individual"
+            },
+            {
+              "donor": "RI FEDERATION OF TEACHERS COPE PAC",
+              "amount": 300,
+              "type": "PAC",
+              "interest_group": "Education",
+              "notes": "Two PAC contributions totaling $300 during the filing period."
+            },
+            {
+              "donor": "Andrew S Wandyes",
+              "amount": 250,
+              "type": "Individual"
+            },
+            {
+              "donor": "David W Hayes",
+              "amount": 250,
+              "type": "Individual"
+            },
+            {
+              "donor": "Francis Lennon",
+              "amount": 250,
+              "type": "Individual"
+            },
+            {
+              "donor": "Grace Voll",
+              "amount": 250,
+              "type": "Individual"
+            },
+            {
+              "donor": "Jo-Ann Ryan",
+              "amount": 250,
+              "type": "Individual"
+            },
+            {
+              "donor": "John C. Manni",
+              "amount": 250,
+              "type": "Individual"
+            },
+            {
+              "donor": "John Simmons",
+              "amount": 250,
+              "type": "Individual"
+            },
+            {
+              "donor": "Kyle A Rocha",
+              "amount": 250,
+              "type": "Individual"
+            },
+            {
+              "donor": "Lammis Vargas",
+              "amount": 250,
+              "type": "Individual"
+            },
+            {
+              "donor": "Leo Skenyon",
+              "amount": 250,
+              "type": "Individual"
+            },
+            {
+              "donor": "Norman Beretta",
+              "amount": 250,
+              "type": "Individual"
+            },
+            {
+              "donor": "NORTH KINGSTOWN FIREFIGHTERS LOCAL 1651",
+              "amount": 250,
+              "type": "PAC",
+              "interest_group": "Public Safety"
+            },
+            {
+              "donor": "Randy Bottella",
+              "amount": 250,
+              "type": "Individual"
+            },
+            {
+              "donor": "Robert D. Goldberg",
+              "amount": 250,
+              "type": "Individual"
+            },
+            {
+              "donor": "Thomas Craven",
+              "amount": 250,
+              "type": "Individual"
+            },
+            {
+              "donor": "William Farrell",
+              "amount": 250,
+              "type": "Individual"
+            },
+            {
+              "donor": "JOHNSTON FEDERATION OF TEACHERS LOCAL 1702 PAC",
+              "amount": 200,
+              "type": "PAC",
+              "interest_group": "Education"
+            },
+            {
+              "donor": "NEA RI RETIRED PAC (National Education Association RI Retired)",
+              "amount": 200,
+              "type": "PAC",
+              "interest_group": "Education"
+            },
+            {
+              "donor": "RI HOSPITALITY PAC",
+              "amount": 200,
+              "type": "PAC",
+              "interest_group": "Hospitality / Tourism"
+            },
+            {
+              "donor": "UNITED FOOD & COMMERCIAL WORKERS UNION LOCAL 328 RI PAC",
+              "amount": 200,
+              "type": "PAC",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "EGFFA PAC (East Greenwich Fire Fighters Association)",
+              "amount": 150,
+              "type": "PAC",
+              "interest_group": "Public Safety"
+            },
+            {
+              "donor": "PEOPLE, RI COUNCIL 94, AFSCME AFL-CIO PAC",
+              "amount": 150,
+              "type": "PAC",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "RI ASSOCIATION OF NURSE ANESTHETISTS PAC",
+              "amount": 150,
+              "type": "PAC",
+              "interest_group": "Health Care"
+            },
+            {
+              "donor": "RI LABORERS' STATE EMPLOYEES",
+              "amount": 150,
+              "type": "PAC",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "RI STATE ASSOCIATION OF FIREFIGHTERS",
+              "amount": 150,
+              "type": "PAC",
+              "interest_group": "Public Safety"
+            },
+            {
+              "donor": "AMICA / RI PAC",
+              "amount": 100,
+              "type": "PAC",
+              "interest_group": "Finance / Insurance"
+            },
+            {
+              "donor": "CRANSTON FIREFIGHTERS LOCAL 1363 COPE",
+              "amount": 100,
+              "type": "PAC",
+              "interest_group": "Public Safety"
+            },
+            {
+              "donor": "CRANSTON TEACHERS' ALLIANCE",
+              "amount": 100,
+              "type": "PAC",
+              "interest_group": "Education"
+            },
+            {
+              "donor": "INDEPENDENT CONSTABLE ASSOCIATION PAC",
+              "amount": 100,
+              "type": "PAC",
+              "interest_group": "Public Safety"
+            },
+            {
+              "donor": "IRON WORKERS LOCAL 37",
+              "amount": 100,
+              "type": "PAC",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "NORTH PROVIDENCE FEDERATION OF TEACHERS LOCAL 920",
+              "amount": 100,
+              "type": "PAC",
+              "interest_group": "Education"
+            },
+            {
+              "donor": "PROVIDENCE RI CENTRAL FEDERATED COUNCIL AFL-CIO",
+              "amount": 100,
+              "type": "PAC",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "PROVIDENCE TEACHERS COPE",
+              "amount": 100,
+              "type": "PAC",
+              "interest_group": "Education"
+            },
+            {
+              "donor": "RI AFL-CIO PAC",
+              "amount": 100,
+              "type": "PAC",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "RI HEALTH CARE ASSOCIATION PAC",
+              "amount": 100,
+              "type": "PAC",
+              "interest_group": "Health Care"
+            },
+            {
+              "donor": "RI NAGE/IBPO PAC (National Assoc of Gov Employ/International Brotherhood)",
+              "amount": 100,
+              "type": "PAC",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "WARWICK TEACHER'S UNION 915",
+              "amount": 100,
+              "type": "PAC",
+              "interest_group": "Education"
+            },
+            {
+              "donor": "IBEW LOCAL 99 PAC (International Brotherhood of Electrical Workers)",
+              "amount": 75,
+              "type": "PAC",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "RI CHAPTER 94 RETIREES",
+              "amount": 25,
+              "type": "PAC",
+              "interest_group": "Labor / Unions"
+            }
+          ],
+          "spending_categories": [
+            {
+              "title": "Sign Rocket - large 4x4 signs",
+              "summary": "Purchase of large 4x4 campaign signs on June 17, 2026.",
+              "amount": 1048.75
+            },
+            {
+              "title": "The Ballyhoo Group - advertising",
+              "summary": "Advertising expenditure reported on April 13, 2026.",
+              "amount": 728.38
+            },
+            {
+              "title": "Sign Rocket - yard signs",
+              "summary": "Yard signs purchased on June 9, 2026.",
+              "amount": 538.45
+            },
+            {
+              "title": "ActBlue - processing fees",
+              "summary": "ActBlue processing fees reported on June 30, 2026.",
+              "amount": 241.15
+            },
+            {
+              "title": "BankNewport - bank fee",
+              "summary": "Bank fee reported on April 30, 2026.",
+              "amount": 5
+            },
+            {
+              "title": "BankNewport - bank fee",
+              "summary": "Bank fee reported on May 29, 2026.",
+              "amount": 5
+            },
+            {
+              "title": "BankNewport - bank fee",
+              "summary": "Bank fee reported on June 30, 2026.",
+              "amount": 5
+            }
+          ],
+          "source_note": "RI Campaign Finance website summary",
+          "original_documents": []
+        }
+      ],
+      "reporting_period_type": "custom",
+      "reporting_period_start": "2026-09-02",
+      "reporting_period_end": "2026-10-05",
+      "latest_filing_href": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf",
+      "receipts_label": "Total receipts",
+      "finance_status": "available",
+      "receipt_transactions": [
+        {
+          "donor": "Kevin Bernardo",
+          "amount": 500.0,
+          "type": "Individual",
+          "date": "09/04/2026",
+          "employer": "Beacon Communities",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Kevin Elliott",
+          "amount": 100.0,
+          "type": "Individual",
+          "date": "09/02/2026",
+          "employer": "State of Rhode Island",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Kenneth Filarski",
+          "amount": 50.0,
+          "type": "Individual",
+          "date": "09/04/2026",
+          "employer": "FILARSKI/ARCHITECTURE+PLANNING+RESEARCH",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Dianne Izzo",
+          "amount": 50.0,
+          "type": "Individual",
+          "date": "10/02/2026",
+          "employer": "Self Employed Attorney",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Nicholas A. Mattiello",
+          "amount": 300.0,
+          "type": "Individual",
+          "date": "09/02/2026",
+          "employer": "Moses Ryan LTD",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "David Meeghan",
+          "amount": 100.0,
+          "type": "Individual",
+          "date": "09/05/2026",
+          "employer": "Unemployed",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Henry Monti",
+          "amount": 150.0,
+          "type": "Individual",
+          "date": "09/02/2026",
+          "employer": "Gemma Law Associates",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Thomas Moses",
+          "amount": 250.0,
+          "type": "Individual",
+          "date": "09/02/2026",
+          "employer": "Moses Ryan LTD",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Robert Rahill",
+          "amount": 100.0,
+          "type": "Individual",
+          "date": "09/02/2026",
+          "employer": "Retired",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "David Reilly",
+          "amount": 100.0,
+          "type": "Individual",
+          "date": "09/02/2026",
+          "employer": "Law Offices of David F. Reilly, ESQ., LLC",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Mark Ryan",
+          "amount": 300.0,
+          "type": "Individual",
+          "date": "09/02/2026",
+          "employer": "Moses Ryan LTD",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Kerri Sparling",
+          "amount": 24.0,
+          "type": "Individual",
+          "date": "09/05/2026",
+          "employer": "Self-Employed",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Louis C. Yip",
+          "amount": 300.0,
+          "type": "Individual",
+          "date": "10/03/2026",
+          "employer": "Tai-O Associates",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "RI STAFFING ASSOCIATION PAC",
+          "amount": 150.0,
+          "type": "PAC",
+          "date": "09/11/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        }
+      ],
+      "expenditure_transactions": [
+        {
+          "date": "09/02/2026",
+          "amount": 79.55,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "ActBlue",
+          "purpose": "Aggregated ActBlue processing fees",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "10/05/2026",
+          "amount": 24.7,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "ActBlue",
+          "purpose": "ActBlue Bank fees",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/30/2026",
+          "amount": 5.0,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "BankNewport",
+          "purpose": "Bank fee",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/02/2026",
+          "amount": 5.0,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "BankNewport",
+          "purpose": "Bank fees",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/02/2026",
+          "amount": 95.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Campaign Verify",
+          "purpose": "Text message verification fee",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/10/2026",
+          "amount": 253.27,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Carriage Inn",
+          "purpose": "Food and beverage for election night event",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/10/2026",
+          "amount": 9.9,
+          "category": "Other",
+          "type": "Campaign Expenditure",
+          "payee": "Home Depot",
+          "purpose": "Sign posts for election day",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "10/02/2026",
+          "amount": 30.2,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Meta",
+          "purpose": "Social media advertising",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/02/2026",
+          "amount": 38.97,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Meta",
+          "purpose": "Social media advertising",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/04/2026",
+          "amount": 85.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Meta",
+          "purpose": "",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/04/2026",
+          "amount": 85.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Meta",
+          "purpose": "Social media advertising",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/09/2026",
+          "amount": 255.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Meta",
+          "purpose": "Social media advertising",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/02/2026",
+          "amount": 25.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Meta",
+          "purpose": "Social media advertising",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/02/2026",
+          "amount": 25.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Meta",
+          "purpose": "Social media advertising",
+          "source_url": "/data/finance-documents/robert-e-craven-jr-2026-10-05-28-day.pdf"
+        }
+      ]
     },
     {
       "candidate_id": "house-33-carol-hagan-mcentee",
@@ -5967,20 +6755,26 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
-      "original_documents": [],
-      "beginning_cash": 79585.09,
-      "money_raised": 7650,
-      "money_spent": 3252.17,
-      "ending_cash": 83982.92,
-      "net_change": 4397.83,
-      "total_cash_receipts": 7650,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 3252.17,
-      "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it raised more during the period than it spent.",
+      "report_label": "28-days-before-election report · 2026",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2 filing supplied by the user; 28-days-before-election report, ending October 5, 2026.",
+      "coverage_note": "Figures cover July 1, 2026 to October 5, 2026. Receipts exclude beginning cash. Earlier quarterly figures are shown separately; no year-to-date total is inferred.",
+      "original_documents": [
+        {
+          "label": "28-days-before-election report · 2026 · CF-2 source PDF",
+          "period": "July 1, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        }
+      ],
+      "beginning_cash": 83982.92,
+      "money_raised": 3350,
+      "money_spent": 11339.79,
+      "ending_cash": 75993.13,
+      "net_change": -7989.79,
+      "total_cash_receipts": 3350,
+      "campaign_expenses": 11326.48,
+      "aggregate_expenses": 13.31,
+      "summary_intro": "Carol Hagan McEntee's 28-days-before-election filing covers July 1, 2026 to October 5, 2026. It reports $3,350.00 in total receipts, $11,339.79 in spending and $75,993.13 in ending cash.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -5999,20 +6793,547 @@
           "ending_cash": 83982.92,
           "net_change": 4397.83,
           "notes": "The campaign raised more than it spent in this reporting period."
+        },
+        {
+          "label": "28-days-before-election report · 2026",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026",
+          "reporting_period_type": "custom",
+          "receipts_label": "Total receipts",
+          "beginning_cash": 83982.92,
+          "money_raised": 3350,
+          "money_spent": 11339.79,
+          "ending_cash": 75993.13,
+          "net_change": -7989.79,
+          "notes": "Separate filing period; includes only activity reported in this document. No missing interim filing is treated as zero."
         }
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
-          "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 7650,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 2350.0,
+          "description": "Named individual contributions reported in the filing."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 1000.0,
+          "description": "Political action committee contributions reported in the filing."
         }
       ],
-      "top_donors": [],
-      "spending_categories": [],
+      "top_donors": [
+        {
+          "donor": "Katherine Kazarian",
+          "amount": 1000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "10/02/2026",
+          "employer": "CMBG3 Law",
+          "notes": "Employer reported as CMBG3 Law. Contribution received.",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Ann H Webb",
+          "amount": 1000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/21/2026",
+          "employer": "Retired.",
+          "notes": "Employer reported as Retired.. Contribution received.",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "OCEAN STATE FORWARD PAC",
+          "amount": 1000.0,
+          "type": "PAC",
+          "interest_group": "Other / Unclassified",
+          "date": "09/28/2026",
+          "employer": "",
+          "notes": "Contribution received.",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "William Farrell",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "08/17/2026",
+          "employer": "William Farrell & Associates",
+          "notes": "Employer reported as William Farrell & Associates. Contribution received.",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Paula Carmichael",
+          "amount": 100.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "08/19/2026",
+          "employer": "Reliant Medical Group",
+          "notes": "Employer reported as Reliant Medical Group. Contribution received.",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Advertising",
+          "amount": 8496.04,
+          "description": "Expenditures reported under Advertising in this filing."
+        },
+        {
+          "label": "Donations (Political)",
+          "amount": 2250.0,
+          "description": "Expenditures reported under Donations (Political) in this filing."
+        },
+        {
+          "label": "Donations (All Others)",
+          "amount": 480.0,
+          "description": "Expenditures reported under Donations (All Others) in this filing."
+        },
+        {
+          "label": "Food, Beverages and Meals",
+          "amount": 100.44,
+          "description": "Expenditures reported under Food, Beverages and Meals in this filing."
+        },
+        {
+          "label": "Bank Fees",
+          "amount": 13.31,
+          "description": "Expenditures reported under Bank Fees in this filing."
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Latest display uses the supplied 28-days-before-election CF-2 report. Earlier quarterly filings remain in filing history.",
+      "archived_reporting_periods": [
+        {
+          "report_label": "6/30/2026",
+          "reporting_period_label": "6/30/2026",
+          "beginning_cash": 79585.09,
+          "money_raised": 7650,
+          "money_spent": 3252.17,
+          "ending_cash": 83982.92,
+          "net_change": 4397.83,
+          "source_buckets": [
+            {
+              "label": "Aggregate individual contributions",
+              "class_name": "small-dollar-aggregate-online-receipts",
+              "amount": 100,
+              "description": "Individual contributions reported in aggregate without donor names."
+            },
+            {
+              "label": "Itemized individual donors",
+              "class_name": "itemized-individual-donors",
+              "amount": 5000,
+              "description": "Named individual contributions reported in the original Q2 filing."
+            },
+            {
+              "label": "PAC contributions",
+              "class_name": "pac-contributions",
+              "amount": 2550,
+              "description": "PAC contributions reported in the original Q2 filing."
+            }
+          ],
+          "top_donors": [
+            {
+              "donor": "Carol A. O'Donnell",
+              "amount": 1000,
+              "type": "Individual"
+            },
+            {
+              "donor": "Herbert J. Brennan",
+              "amount": 500,
+              "type": "Individual"
+            },
+            {
+              "donor": "John R. Koza",
+              "amount": 500,
+              "type": "Individual"
+            },
+            {
+              "donor": "RHODE ISLAND COALITION OF HOUSING PROVIDERS",
+              "amount": 500,
+              "type": "PAC",
+              "interest_group": "Housing / Real Estate"
+            },
+            {
+              "donor": "RI HOSPITALITY PAC",
+              "amount": 500,
+              "type": "PAC",
+              "interest_group": "Hospitality"
+            },
+            {
+              "donor": "RI LABORER'S POLITICAL LEAGUE",
+              "amount": 300,
+              "type": "PAC",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "RI HEALTH CARE ASSOCIATION PAC",
+              "amount": 250,
+              "type": "PAC",
+              "interest_group": "Health Care"
+            },
+            {
+              "donor": "RIOA PAC (RI Optometric Association)",
+              "amount": 250,
+              "type": "PAC",
+              "interest_group": "Health Care"
+            },
+            {
+              "donor": "Thomas E. Furey",
+              "amount": 250,
+              "type": "Individual"
+            },
+            {
+              "donor": "RI LABORERS' STATE EMPLOYEES",
+              "amount": 200,
+              "type": "PAC",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "RI MEDICAL PAC",
+              "amount": 200,
+              "type": "PAC",
+              "interest_group": "Health Care"
+            },
+            {
+              "donor": "CITIZENS BANK PACOM",
+              "amount": 150,
+              "type": "PAC",
+              "interest_group": "Banking / Finance"
+            },
+            {
+              "donor": "PROVIDENCE TEACHERS COPE",
+              "amount": 150,
+              "type": "PAC",
+              "interest_group": "Education / Labor"
+            },
+            {
+              "donor": "CRANSTON TEACHERS' ALLIANCE",
+              "amount": 50,
+              "type": "PAC",
+              "interest_group": "Education / Labor"
+            }
+          ],
+          "spending_categories": [
+            {
+              "label": "Political Donations",
+              "amount": 2000,
+              "description": "Contributions to other political committees/candidates reported as political donations."
+            },
+            {
+              "label": "Food, Beverages and Meals",
+              "amount": 858.24,
+              "description": "Food, beverages and meals reported in the Q2 filing."
+            },
+            {
+              "label": "Advertising",
+              "amount": 390,
+              "description": "USPS stamps for constituent mailings, reported as advertising."
+            },
+            {
+              "label": "Bank Fees",
+              "amount": 3.93,
+              "description": "Bank fees reported as aggregate expenditure."
+            }
+          ],
+          "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+          "original_documents": []
+        }
+      ],
+      "reporting_period_type": "custom",
+      "reporting_period_start": "2026-07-01",
+      "reporting_period_end": "2026-10-05",
+      "latest_filing_href": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf",
+      "receipts_label": "Total receipts",
+      "finance_status": "available",
+      "receipt_transactions": [
+        {
+          "donor": "Paula Carmichael",
+          "amount": 100.0,
+          "type": "Individual",
+          "date": "08/19/2026",
+          "employer": "Reliant Medical Group",
+          "notes": "Contribution received.",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "William Farrell",
+          "amount": 250.0,
+          "type": "Individual",
+          "date": "08/17/2026",
+          "employer": "William Farrell & Associates",
+          "notes": "Contribution received.",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Katherine Kazarian",
+          "amount": 1000.0,
+          "type": "Individual",
+          "date": "10/02/2026",
+          "employer": "CMBG3 Law",
+          "notes": "Contribution received.",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Ann H Webb",
+          "amount": 1000.0,
+          "type": "Individual",
+          "date": "09/21/2026",
+          "employer": "Retired.",
+          "notes": "Contribution received.",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "OCEAN STATE FORWARD PAC",
+          "amount": 1000.0,
+          "type": "PAC",
+          "date": "09/28/2026",
+          "employer": "",
+          "notes": "Contribution received.",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        }
+      ],
+      "expenditure_transactions": [
+        {
+          "date": "08/17/2026",
+          "amount": 9.38,
+          "category": "Bank Fees",
+          "type": "Aggregate Expenditure",
+          "payee": "",
+          "purpose": "Bank fee.",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/19/2026",
+          "amount": 3.93,
+          "category": "Bank Fees",
+          "type": "Aggregate Expenditure",
+          "payee": "",
+          "purpose": "Bank fee.",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/09/2026",
+          "amount": 200.0,
+          "category": "Donations (All Others)",
+          "type": "Campaign Expenditure",
+          "payee": "Adoption RI",
+          "purpose": "Donation made to Adoption RI.",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "10/04/2026",
+          "amount": 250.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Kim Ahern",
+          "purpose": "Donation to Kim Ahern for RI (candidate for Attorney General).",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/17/2026",
+          "amount": 150.0,
+          "category": "Donations (All Others)",
+          "type": "Campaign Expenditure",
+          "payee": "All That Matters Yoga & Wellness",
+          "purpose": "Donation made to All That Matters Yoga & Wellness.",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/17/2026",
+          "amount": 200.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Patricia Alley",
+          "purpose": "Donation made to Friends of Patricia Alley (candidate for reelection to the South Kingstown Town Council).",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/30/2026",
+          "amount": 250.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Jack Cadman",
+          "purpose": "Donation made to Jack Cadman (candidate for School Committee, Town of South Kingstown).",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/23/2026",
+          "amount": 100.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Jack Cadman",
+          "purpose": "Donation to Friends of Jack Cadman (candidate for the Town of South Kingstown School Committee).",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/28/2026",
+          "amount": 100.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Jason Colonies",
+          "purpose": "Donation made to Friends of Jason Colonies (candidate for reelection to the Town of Narragansett).",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/28/2026",
+          "amount": 100.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "James Durkin",
+          "purpose": "Donation made to the Friends of Jim Durkin (candidate for reeelection to the Narragansett Town Council).",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/15/2026",
+          "amount": 100.44,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Kabuki Asian Sushi of Wakefield",
+          "purpose": "Food and drink: campaign meeting with elected oficials and campaign workers regarding upcoming legislation.",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/07/2026",
+          "amount": 250.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Jason Knight",
+          "purpose": "Donation to Friends of Jason Knight (candidate for Attorney General).",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/23/2026",
+          "amount": 100.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Jennifer Krueger",
+          "purpose": "Donation to Friends of Jennifer Krueger (candidate for the South Kingstown School Committee).",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/17/2026",
+          "amount": 200.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Michael Marran",
+          "purpose": "Donation to Friends of Michael Marran (candidate for reelection to the South Kingstown Town Council).",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/28/2026",
+          "amount": 100.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Alex Menzies",
+          "purpose": "Donation made to the Friends of Alex Menzies ( candidate for reelection to the Narragansett Town Council ).",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/15/2026",
+          "amount": 130.0,
+          "category": "Donations (All Others)",
+          "type": "Campaign Expenditure",
+          "payee": "Mettatuxet Improvement Association",
+          "purpose": "Donation made to the Mettatuxet Improvement Association.",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/29/2026",
+          "amount": 1982.33,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Pro Mail",
+          "purpose": "Mailhouse cost to mail out flyer.",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/16/2026",
+          "amount": 2101.01,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Pro Mail",
+          "purpose": "Mailhouse cost to mailout campaign flyer.",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/29/2026",
+          "amount": 1365.32,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Regine Printing Co., Inc.",
+          "purpose": "Printing cost for flyer mailed out.",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/15/2026",
+          "amount": 2426.78,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Regine Printing Co., Inc.",
+          "purpose": "Printing cost for flyer mailed out.",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/25/2026",
+          "amount": 620.6,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Regine Printing Co., Inc.",
+          "purpose": "Printing costs for the printing of palm cards.",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/23/2026",
+          "amount": 100.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "James Restivo",
+          "purpose": "Donation to Friends of James Restivo (candidate for reelection to the South Kingstown School Committee).",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/28/2026",
+          "amount": 100.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Ryan Torrealday",
+          "purpose": "Donation made to the Friends of Ryan Torrealday (candidate for reelection to the Narragansett Town Council).",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/23/2026",
+          "amount": 100.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Carol Vetter",
+          "purpose": "Donation to Friends of Carol Vetter (candidate for reelection to the South Kingstown School Committee).",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/28/2026",
+          "amount": 100.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Donna Vignali",
+          "purpose": "Donation made to Friends of Donna Vignali (candidate for reelection to the Narragansett Town Council).",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/17/2026",
+          "amount": 200.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Jay G Wegimont",
+          "purpose": "Donation to Friends of Jay Wegimont (cadidate for reelection to the South Kingstown Town Council).",
+          "source_url": "/data/finance-documents/carol-hagan-mcentee-2026-10-05-28-day.pdf"
+        }
+      ]
     },
     {
       "candidate_id": "house-33-jessica-drew-day",
@@ -6023,20 +7344,26 @@
       "party": "REP",
       "party_label": "Republican",
       "office_sought": "State Representative",
-      "report_label": "Q2 2026 campaign finance filing",
-      "reporting_period_label": "April 1, 2026 to June 30, 2026",
-      "source_note": "9372-RICF2 Q1/Q2 PDFs",
-      "coverage_note": "Detailed Q1/Q2 PDF data",
-      "original_documents": [],
-      "beginning_cash": 4444.7,
-      "money_raised": 2564.1,
-      "money_spent": 1697.19,
-      "ending_cash": 5311.61,
-      "net_change": 866.91,
-      "total_cash_receipts": 2564.1,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 1697.19,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it raised more during the period than it spent.",
+      "report_label": "28-days-before-election report · 2026",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2 filing supplied by the user; 28-days-before-election report, ending October 5, 2026.",
+      "coverage_note": "Figures cover July 1, 2026 to October 5, 2026. Receipts exclude beginning cash. Earlier quarterly figures are shown separately; no year-to-date total is inferred.",
+      "original_documents": [
+        {
+          "label": "28-days-before-election report · 2026 · CF-2 source PDF",
+          "period": "July 1, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf"
+        }
+      ],
+      "beginning_cash": 5311.61,
+      "money_raised": 1125,
+      "money_spent": 6192.31,
+      "ending_cash": 244.3,
+      "net_change": -5067.31,
+      "total_cash_receipts": 1125,
+      "campaign_expenses": 6192.31,
+      "aggregate_expenses": 0,
+      "summary_intro": "Jessica Drew Day's 28-days-before-election filing covers July 1, 2026 to October 5, 2026. It reports $1,125.00 in total receipts, $6,192.31 in spending and $244.30 in ending cash. Contributions consist of $525 reported without individual donor names and $600 from two PACs.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -6055,20 +7382,355 @@
           "ending_cash": 5311.61,
           "net_change": 866.91,
           "notes": "The campaign raised more than it spent in this reporting period."
+        },
+        {
+          "label": "28-days-before-election report · 2026",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026",
+          "reporting_period_type": "custom",
+          "receipts_label": "Total receipts",
+          "beginning_cash": 5311.61,
+          "money_raised": 1125,
+          "money_spent": 6192.31,
+          "ending_cash": 244.3,
+          "net_change": -5067.31,
+          "notes": "Separate filing period; includes only activity reported in this document. No missing interim filing is treated as zero."
         }
       ],
       "source_buckets": [
         {
-          "label": "Itemized individual donors",
-          "class_name": "itemized-individual-donors",
-          "amount": 2564.1,
-          "description": "Named contributors reported individually in the filing."
+          "label": "Aggregate individual contributions",
+          "class_name": "small-dollar-aggregate-online-receipts",
+          "amount": 525.0,
+          "description": "Individual contributions reported without donor names. These receipts cannot be attributed to named donors."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 600.0,
+          "description": "Political action committee contributions reported in the filing."
         }
       ],
-      "top_donors": [],
-      "spending_categories": [],
+      "top_donors": [
+        {
+          "donor": "TRANSFORM RI PAC",
+          "amount": 500.0,
+          "type": "PAC",
+          "interest_group": "Other / Unclassified",
+          "date": "07/28/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "TAXPAYERS UNITED RI",
+          "amount": 100.0,
+          "type": "PAC",
+          "interest_group": "Other / Unclassified",
+          "date": "07/28/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Advertising",
+          "amount": 5684.74,
+          "description": "Expenditures reported under Advertising in this filing."
+        },
+        {
+          "label": "Fundraising Expenses",
+          "amount": 434.24,
+          "description": "Expenditures reported under Fundraising Expenses in this filing."
+        },
+        {
+          "label": "Donations (Political)",
+          "amount": 52.05,
+          "description": "Expenditures reported under Donations (Political) in this filing."
+        },
+        {
+          "label": "Food, Beverages and Meals",
+          "amount": 14.98,
+          "description": "Expenditures reported under Food, Beverages and Meals in this filing."
+        },
+        {
+          "label": "Bank Fees",
+          "amount": 6.3,
+          "description": "Expenditures reported under Bank Fees in this filing."
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "archived_reporting_periods": [
+        {
+          "report_label": "Q2 2026 campaign finance filing",
+          "reporting_period_label": "April 1, 2026 to June 30, 2026",
+          "beginning_cash": 4444.7,
+          "money_raised": 2564.1,
+          "money_spent": 1697.19,
+          "ending_cash": 5311.61,
+          "net_change": 866.91,
+          "source_buckets": [
+            {
+              "label": "Itemized individual donors",
+              "class_name": "itemized-individual-donors",
+              "amount": 2564.1,
+              "description": "Named contributors reported individually in the filing."
+            }
+          ],
+          "top_donors": [],
+          "spending_categories": [],
+          "source_note": "9372-RICF2 Q1/Q2 PDFs",
+          "original_documents": []
+        }
+      ],
+      "reporting_period_type": "custom",
+      "reporting_period_start": "2026-07-01",
+      "reporting_period_end": "2026-10-05",
+      "finance_source_note": "Latest display uses the supplied 28-days-before-election CF-2 report. Earlier quarterly filings remain in filing history.",
+      "latest_filing_href": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf",
+      "receipts_label": "Total receipts",
+      "finance_status": "available",
+      "receipt_transactions": [
+        {
+          "donor": "",
+          "amount": 50.0,
+          "type": "Aggregate - Individual",
+          "date": "08/03/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 100.0,
+          "type": "Aggregate - Individual",
+          "date": "08/17/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 275.0,
+          "type": "Aggregate - Individual",
+          "date": "09/30/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 100.0,
+          "type": "Aggregate - Individual",
+          "date": "10/05/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "TAXPAYERS UNITED RI",
+          "amount": 100.0,
+          "type": "PAC",
+          "date": "07/28/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "TRANSFORM RI PAC",
+          "amount": 500.0,
+          "type": "PAC",
+          "date": "07/28/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf"
+        }
+      ],
+      "expenditure_transactions": [
+        {
+          "date": "10/05/2026",
+          "amount": 1.3,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "Anedot.com",
+          "purpose": "",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/30/2026",
+          "amount": 5.0,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "BaNK OF NEWPORT",
+          "purpose": "",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/29/2026",
+          "amount": 14.98,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "BJ'S WHOLESALE CLUB",
+          "purpose": "cider and donuts for volunteers",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/22/2026",
+          "amount": 99.35,
+          "category": "Fundraising Expenses",
+          "type": "Campaign Expenditure",
+          "payee": "BJ'S WHOLESALE CLUB",
+          "purpose": "",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/30/2026",
+          "amount": 26.97,
+          "category": "Fundraising Expenses",
+          "type": "Campaign Expenditure",
+          "payee": "BJ'S WHOLESALE CLUB",
+          "purpose": "",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/30/2026",
+          "amount": 66.92,
+          "category": "Fundraising Expenses",
+          "type": "Campaign Expenditure",
+          "payee": "Camdens",
+          "purpose": "",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/21/2026",
+          "amount": 1467.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Campion",
+          "purpose": "media ad",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "10/05/2026",
+          "amount": 760.31,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Daylight Films",
+          "purpose": "Print ad",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/06/2026",
+          "amount": 1360.5,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Daylight Films",
+          "purpose": "GRPAHIC DESIGN FOR AD & PLACEMENT",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/15/2026",
+          "amount": 63.39,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "home depot",
+          "purpose": "Sign stakes",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "10/05/2026",
+          "amount": 21.4,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "mail chimp",
+          "purpose": "",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/23/2026",
+          "amount": 241.0,
+          "category": "Fundraising Expenses",
+          "type": "Campaign Expenditure",
+          "payee": "Rose Hill Golf course",
+          "purpose": "Event",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/18/2026",
+          "amount": 147.65,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "STAPLES",
+          "purpose": "Ink",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/08/2026",
+          "amount": 84.21,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "STAPLES",
+          "purpose": "Printing",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/24/2026",
+          "amount": 1105.31,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Tap Printing",
+          "purpose": "Printing",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/10/2026",
+          "amount": 432.68,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "VISTAPRINT.COM",
+          "purpose": "printing campaign materials",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/10/2026",
+          "amount": 226.29,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "VISTAPRINT.COM",
+          "purpose": "printing materials",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/20/2026",
+          "amount": 8.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "x corp",
+          "purpose": "",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/18/2026",
+          "amount": 8.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "x corp",
+          "purpose": "",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/22/2026",
+          "amount": 52.05,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Young Republicans",
+          "purpose": "",
+          "source_url": "/data/finance-documents/jessica-drew-day-2026-10-05-28-day.pdf"
+        }
+      ]
     },
     {
       "candidate_id": "house-34-teresa-a-tanzi",
