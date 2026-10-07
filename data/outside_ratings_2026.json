@@ -15958,6 +15958,93 @@
         }
       ],
       "rating_label": "Votes aligned with ACLU position"
+    },
+    {
+      "candidate_name": "Carol Hagan McEntee",
+      "chamber": "house",
+      "district_number": 33,
+      "organization": "Center for Effective Lawmaking",
+      "year": "2023–2024",
+      "rating": "1.98",
+      "measure": "State Legislative Effectiveness Score measuring the demonstrated ability to advance sponsored bills through the legislative process, weighted by the substantive significance of the proposals.",
+      "source_url": "https://thelawmakers.org/wp-content/uploads/2026/04/Highlights-from-the-2023-2024-Rhode-Island-General-Assembly-State-Legislative-Effectiveness-Scores.pdf",
+      "methodology_url": "https://thelawmakers.org/methodology",
+      "source_type": "state legislative effectiveness score",
+      "expectation": "Meets Expectations",
+      "comparison_group": "House Democrats",
+      "party_rank": 6,
+      "party_total": 66,
+      "benchmark": 1.401,
+      "bills": {
+        "introduced": 44,
+        "committee_action": 44,
+        "beyond_committee": 20,
+        "passed_chamber": 20,
+        "became_law": 16
+      },
+      "bill_categories": [
+        {
+          "label": "Commemorative",
+          "short": "C",
+          "introduced": 0,
+          "committee_action": 0,
+          "beyond_committee": 0,
+          "passed_chamber": 0,
+          "became_law": 0
+        },
+        {
+          "label": "Substantive",
+          "short": "S",
+          "introduced": 43,
+          "committee_action": 43,
+          "beyond_committee": 19,
+          "passed_chamber": 19,
+          "became_law": 15
+        },
+        {
+          "label": "Substantive and significant",
+          "short": "SS",
+          "introduced": 1,
+          "committee_action": 1,
+          "beyond_committee": 1,
+          "passed_chamber": 1,
+          "became_law": 1
+        }
+      ],
+      "history": [
+        {
+          "term": "2023–2024",
+          "score": 1.98,
+          "rank": "6 of 66"
+        },
+        {
+          "term": "2021–2022",
+          "score": 2.52,
+          "rank": "3 of 65"
+        },
+        {
+          "term": "2019–2020",
+          "score": 2.52,
+          "rank": "6 of 68"
+        },
+        {
+          "term": "2017–2018",
+          "score": 1.58,
+          "rank": "9 of 64"
+        },
+        {
+          "term": "2015–2016",
+          "score": 0.81,
+          "rank": "39 of 64"
+        }
+      ],
+      "glossary_url": "https://thelawmakers.org/glossary",
+      "above_expectations_streak": 0,
+      "note": "The score is produced by the Center for Effective Lawmaking at the University of Virginia and Vanderbilt University, not by RIEP. The benchmark is the expected score for a comparable legislator based on factors including majority-party status, seniority, and committee-chair status.",
+      "cel_id": 17597,
+      "source_name": "McEntee, Hagan",
+      "identity_verification": "CEL ID 17597, House District 33, matches Carol Hagan McEntee. CEL uses Hagan as her given name.",
+      "retrieved_at": "2026-10-06"
     }
   ]
 }

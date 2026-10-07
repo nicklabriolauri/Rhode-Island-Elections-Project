@@ -52,6 +52,9 @@ def normalized_name(value: str) -> tuple[str, str]:
         value = f"{given} {last}"
     tokens = re.findall(r"[a-z]+", value.lower())
     tokens = [t for t in tokens if t not in {"jr", "sr", "ii", "iii", "iv"}]
+    # CEL uses Hagan as the given name for District 33's Carol Hagan McEntee.
+    if tokens == ["hagan", "mcentee"]:
+        tokens.insert(0, "carol")
     return (tokens[0], tokens[-1]) if len(tokens) >= 2 else (value.lower(), value.lower())
 
 
