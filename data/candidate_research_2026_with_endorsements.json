@@ -3410,7 +3410,18 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [],
+      "district_community": "West Warwick, Coventry",
+      "race_context": {
+        "summary": "Open seat in 2026 following Representative Patricia Serpa’s retirement. Neither candidate is assigned the outgoing representative’s legislative record.",
+        "source_url": "https://rhodeislandcurrent.com/2026/06/24/declared-safe-most-incumbent-state-lawmakers-unopposed-after-filing-deadline-passes/",
+        "source_label": "Rhode Island Current · 2026 candidate filings"
+      },
+      "prior_public_service": {
+        "summary": "Angela Coburn won the 2024 election for West Warwick School Committee, Ward 5. School committee service is separate from a General Assembly legislative record.",
+        "source_url": "https://www.ri.gov/election/results/2024/general_election/races/324.html",
+        "source_label": "Rhode Island Board of Elections · 2024 Ward 5 results"
+      }
     },
     {
       "candidate_id": "house-27-rep-primary-lawrence-paul-almagno-jr",
@@ -3418,18 +3429,44 @@
       "chamber": "house",
       "district_number": 27,
       "party": "Republican",
-      "campaign_website": "https://almagno-law.com/about/",
+      "campaign_website": "https://lawrencealmagno.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-30",
-      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
-      "priorities": [],
+      "website_checked": "2026-10-06",
+      "website_audit_note": "Verified the current District 27 campaign website and platform. The earlier link was a professional law-firm biography.",
+      "priorities": [
+        {
+          "title": "Make Rhode Island Affordable for Families",
+          "summary": "Lower utility costs and taxes, reduce government waste, freeze seniors’ property taxes, and eliminate state taxes on retirement income.",
+          "source_url": "https://lawrencealmagno.com/",
+          "source_label": "Official campaign platform · October 6, 2026"
+        },
+        {
+          "title": "Small Business and Economic Growth",
+          "summary": "Reduce bureaucracy, support local businesses, and prepare for artificial intelligence to create jobs.",
+          "source_url": "https://lawrencealmagno.com/",
+          "source_label": "Official campaign platform · October 6, 2026"
+        },
+        {
+          "title": "Fix Our Infrastructure and Keep Doctors Here",
+          "summary": "Repair roads, bridges, and schools, improve accountability, and raise physician reimbursement rates to match neighboring states.",
+          "source_url": "https://lawrencealmagno.com/",
+          "source_label": "Official campaign platform · October 6, 2026"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "League of Rhode Island Businesses",
           "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
           "designation": "General-election endorsement"
         }
-      ]
+      ],
+      "district_community": "West Warwick, Coventry",
+      "race_context": {
+        "summary": "Open seat in 2026 following Representative Patricia Serpa’s retirement. Neither candidate is assigned the outgoing representative’s legislative record.",
+        "source_url": "https://rhodeislandcurrent.com/2026/06/24/declared-safe-most-incumbent-state-lawmakers-unopposed-after-filing-deadline-passes/",
+        "source_label": "Rhode Island Current · 2026 candidate filings"
+      },
+      "professional_profile_url": "https://almagno-law.com/about/"
     },
     {
       "candidate_id": "house-28-rep-primary-george-a-nardone",
@@ -3463,17 +3500,18 @@
       "chamber": "house",
       "district_number": 30,
       "party": "Democrat",
-      "campaign_website": "http://www.justine4ri.com/",
-      "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-30",
-      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-10-06",
+      "website_audit_note": "Previously listed campaign domain returned HTTP 404 when checked October 6, 2026. It is retained as a last-known URL and not displayed as a verified current campaign website.",
       "priorities": [],
       "endorsements": [
         {
           "endorser": "Planned Parenthood Votes! Rhode Island PAC",
           "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
-      ]
+      ],
+      "last_known_campaign_website": "http://www.justine4ri.com/"
     },
     {
       "candidate_id": "house-31-dem-primary-james-c-sheehan",

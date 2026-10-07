@@ -6,7 +6,7 @@ from candidate_profile_components import section,replace_section
 ROOT=Path(__file__).resolve().parents[1]
 SLUGS={'amy-j-santiago':7,'christopher-l-ireland':7,'brittany-m-kubicek':5}
 SLUGS.update({'arlette-hidalgo':12,'derick-a-reels':13,'colleen-m-crudele':15,'allan-w-fung':15})
-SLUGS.update({'zakary-j-pereira':22,'barbara-quigley':22,'william-muto':23,'dana-james-traversie':23})
+SLUGS.update({'zakary-j-pereira':22,'barbara-quigley':22,'william-muto':23,'dana-james-traversie':23,'angela-s-coburn':27,'lawrence-paul-almagno-jr':27})
 def build(slugs=None):
  incumbent=ROOT/'candidates/anthony-j-desimone.html'
  incumbent.write_text(incumbent.read_text().replace('/running.html?chamber=house&amp;district=5&amp;election=general','/races/house-5.html'))
@@ -16,7 +16,7 @@ def build(slugs=None):
   c=next(c for c in roster[str(district)]['candidates'] if c['candidate_id'].endswith('-'+slug));name=c['name'];candidate_id=c['candidate_id'];registry[candidate_id]=slug
   research=next(r for r in load('candidate_research_2026_with_endorsements')['candidates'] if r['candidate_id']==candidate_id)
   party={'DEM':'Democratic','REP':'Republican','OTH':'Independent Socialist','IND':'Independent'}[c['party']]
-  community=c.get('hometown','Providence')
+  community=research.get('district_community') or c.get('hometown','Providence')
   website=research.get('campaign_website','');finance=('/finance-candidates/'+candidate_id+'.html' if c['party'] in ('OTH','IND') else f'/finance.html?slug={slug}')
   page=(ROOT/'candidates/anthony-j-desimone.html').read_text().replace('Anthony J DeSimone',name).replace('anthony-j-desimone',slug).replace('District 5',f'District {district}').replace('district=5',f'district={district}').replace('/races/house-5.html',f'/races/house-{district}.html').replace('Democratic',party).replace('Democrat · Incumbent',party+' · Candidate')
   page=page.replace('· Candidate · Providence','· Candidate · '+community)
@@ -27,6 +27,10 @@ def build(slugs=None):
    nonlocal page
    page=replace_section(page,id,section(id,title,body))
   replace('about','About this candidate',f'<p class="intro">{esc(party)} candidate for House District {district} · {esc(community)}.</p><div class="grid2"><div class="mini"><h3>At a glance</h3><p>Candidate in the 2026 general election. Campaign statements and public records are labeled by source and reporting period.</p></div><div class="mini"><h3>How to read this page</h3><p>A candidate without a General Assembly service record is not assigned a legislative score of zero.</p></div></div>'+('<p class="source">'+link(website,'Official campaign website ↗')+'</p>' if website else ''))
+  if research.get('race_context'):
+   old=re.search(r'<section class="card" id="about">.*?</section>',page,re.S).group()
+   context=research['race_context']
+   page=page.replace(old,old.replace('</section>',f'<p class="intro">{esc(context["summary"])}</p><p class="source">'+link(context['source_url'],context['source_label']+' ↗')+'</p></section>'))
   if research.get('prior_public_service'):
    prior=research['prior_public_service']
    old=re.search(r'<section class="card" id="about">.*?</section>',page,re.S).group()
@@ -80,7 +84,7 @@ def build(slugs=None):
   page=re.sub(r'href="/finance.html\?slug='+re.escape(slug)+r'"',lambda m:'href="'+finance+'"',page)
   page=re.sub(r'href="/running.html\?chamber=house(?:&amp;|&)district='+str(district)+r'(?:&amp;|&)election=general"',f'href="/races/house-{district}.html"',page)
   assert 'data-voting-widget' not in page and 'riep-legislative-index' not in page and 'rep-desimone' not in page
-  if district in (15,22,23):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
+  if district in (15,22,23,27):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
   (ROOT/'candidates'/f'{slug}.html').write_text(page)
  for filename in ['ballot.html','running.html']:
   p=ROOT/filename;s=p.read_text()

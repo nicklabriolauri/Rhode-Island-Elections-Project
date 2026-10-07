@@ -19,6 +19,8 @@ CONFIGS += [('David A Bennett','david-a-bennett',20,'Bennett','david_bennett','(
 
 CONFIGS += [('Evan Patrick Shanley','evan-patrick-shanley',24,'Shanley','evan_shanley','(401) 222-1224'),('Thomas E Noret','thomas-e-noret',25,'Noret','thomas_noret','(401) 222-4435'),('Earl A Read III','earl-a-read-iii',26,'Read','earl_read','(401) 222-2296')]
 
+CONFIGS += [('George A Nardone','george-a-nardone',28,'Nardone','george_nardone','(401) 222-2259'),('Sherry L Roberts','sherry-l-roberts',29,'Roberts','sherry_roberts','(401) 222-2259'),('Justine Caldwell','justine-caldwell',30,'caldwell','justine_caldwell','(401) 222-4263')]
+
 def build(slugs=None):
  # Use the complete 75-member calculation dataset for the House index.
  base.current_index=current_index
@@ -31,7 +33,7 @@ def build(slugs=None):
  for name,slug,district,surname,image,phone in CONFIGS:
   if slugs is not None and slug not in slugs:continue
   bio=f'https://www.rilegislature.gov/representatives/{surname}/Pages/Biography.aspx'
-  community={6:'Providence, North Providence',13:'Providence, Johnston',14:'Cranston, Providence',15:'Cranston',16:'Cranston',17:'Cranston',18:'Cranston',19:'Warwick, Cranston',20:'Warwick, Cranston',21:'Warwick',24:'Warwick, East Greenwich',25:'Coventry, West Warwick',26:'Coventry, West Warwick, Warwick'}.get(district,'Providence')
+  community={6:'Providence, North Providence',13:'Providence, Johnston',14:'Cranston, Providence',15:'Cranston',16:'Cranston',17:'Cranston',18:'Cranston',19:'Warwick, Cranston',20:'Warwick, Cranston',21:'Warwick',24:'Warwick, East Greenwich',25:'Coventry, West Warwick',26:'Coventry, West Warwick, Warwick',28:'Coventry',29:'Coventry, West Greenwich',30:'East Greenwich, West Greenwich'}.get(district,'Providence')
   email=f'rep-{surname.lower()}@rilegislature.gov'
   base.build(name,slug,district,community,email,phone,'house')
   path=ROOT/'candidates'/f'{slug}.html';page=path.read_text()
@@ -77,7 +79,7 @@ def build(slugs=None):
   page=re.sub(r'<p><strong>Leadership:</strong> (.*?)</p><p><strong>Committees:</strong> (.*?)</p>',r'<dl class="office-details"><div><dt>Leadership</dt><dd>\1</dd></div><div><dt>Committees</dt><dd>\2</dd></div></dl>',page)
   if district==2:page=page.replace('<dd></dd>','<dd>No committee assignments listed in the recorded roster.</dd>')
   assert 'chamber=senate' not in page and 'Senate District' not in page
-  if district in (15,19,20,21,24,25,26):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
+  if district in (15,19,20,21,24,25,26,28,29,30):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
   path.write_text(page)
   entry={'slug':slug,'portrait_url':f'https://www.rilegislature.gov/LegislationPictures/{image}.jpg','biography_url':bio,'retrieved_at':'2026-10-06','credit':'Rhode Island General Assembly','width':w,'height':h}
   portraits=[r for r in portraits if r['slug']!=slug]+[entry]
