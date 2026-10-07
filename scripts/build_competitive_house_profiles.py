@@ -6,7 +6,7 @@ from candidate_profile_components import section,replace_section
 ROOT=Path(__file__).resolve().parents[1]
 SLUGS={'amy-j-santiago':7,'christopher-l-ireland':7,'brittany-m-kubicek':5}
 SLUGS.update({'arlette-hidalgo':12,'derick-a-reels':13,'colleen-m-crudele':15,'allan-w-fung':15})
-SLUGS.update({'zakary-j-pereira':22,'barbara-quigley':22})
+SLUGS.update({'zakary-j-pereira':22,'barbara-quigley':22,'william-muto':23,'dana-james-traversie':23})
 def build(slugs=None):
  incumbent=ROOT/'candidates/anthony-j-desimone.html'
  incumbent.write_text(incumbent.read_text().replace('/running.html?chamber=house&amp;district=5&amp;election=general','/races/house-5.html'))
@@ -80,7 +80,7 @@ def build(slugs=None):
   page=re.sub(r'href="/finance.html\?slug='+re.escape(slug)+r'"',lambda m:'href="'+finance+'"',page)
   page=re.sub(r'href="/running.html\?chamber=house(?:&amp;|&)district='+str(district)+r'(?:&amp;|&)election=general"',f'href="/races/house-{district}.html"',page)
   assert 'data-voting-widget' not in page and 'riep-legislative-index' not in page and 'rep-desimone' not in page
-  if district in (15,22):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
+  if district in (15,22,23):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
   (ROOT/'candidates'/f'{slug}.html').write_text(page)
  for filename in ['ballot.html','running.html']:
   p=ROOT/filename;s=p.read_text()

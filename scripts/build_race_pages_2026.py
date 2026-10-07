@@ -59,7 +59,7 @@ h1{{font-size:clamp(38px,6vw,68px);line-height:1;margin:10px 0 12px;letter-spaci
 <section class="panel" style="margin-top:18px" hidden><h2>2026 primary history</h2><p class="muted">Candidates who did not advance remain available here for historical context.</p><div data-primary-history></div></section>
 <section class="panel" style="margin-top:18px"><h2>About this race page</h2><p class="muted">RIEP publishes district boundaries, candidate status, campaign-finance links, and public filing home-precinct context so journalists, voters, and other organizations can link directly to a stable district page. Exact residential addresses are not published.</p></section>
 </main>
-<script src="/race-page.js?v={"20261006-house20-22" if chamber=="house" and district in (20,21,22) else "20261006-house19" if chamber=="house" and district==19 else "20261006-house15" if chamber=="house" and district==15 else "20261006-house16-18" if chamber=="house" and district in (16,17,18) else "20261006-house11-14" if chamber=="house" and district in (11,12,13,14) else "20261006-profiles" if chamber=="house" and district in (5,7) else "20260912b"}"></script>
+<script src="/race-page.js?v={"20261006-house23-26" if chamber=="house" and district in (23,24,25,26) else "20261006-house20-22" if chamber=="house" and district in (20,21,22) else "20261006-house19" if chamber=="house" and district==19 else "20261006-house15" if chamber=="house" and district==15 else "20261006-house16-18" if chamber=="house" and district in (16,17,18) else "20261006-house11-14" if chamber=="house" and district in (11,12,13,14) else "20261006-profiles" if chamber=="house" and district in (5,7) else "20260912b"}"></script>
 </body></html>'''
 
 count=0

@@ -3193,6 +3193,36 @@
           "summary": "Emphasize transparent, data-driven government and accountability for public spending.",
           "source_label": "Official campaign website",
           "source_url": "https://www.mutoforwarwick.com/"
+        },
+        {
+          "title": "Local economy and jobs",
+          "summary": "Support small-business lending, living wages, job training, and local employment.",
+          "source_url": "https://www.mutoforwarwick.com/",
+          "source_label": "Official campaign website"
+        },
+        {
+          "title": "Environment and climate",
+          "summary": "Protect Narragansett Bay, invest in clean energy, and strengthen coastal flood resilience.",
+          "source_url": "https://www.mutoforwarwick.com/",
+          "source_label": "Official campaign website"
+        },
+        {
+          "title": "Public safety",
+          "summary": "Support first responders, community policing, addiction recovery, and mental-health crisis response.",
+          "source_url": "https://www.mutoforwarwick.com/",
+          "source_label": "Official campaign website"
+        },
+        {
+          "title": "Seniors and veterans",
+          "summary": "Support senior services and veterans’ housing, mental-health care, and pension income tax relief.",
+          "source_url": "https://www.mutoforwarwick.com/",
+          "source_label": "Official campaign website"
+        },
+        {
+          "title": "Transportation and infrastructure",
+          "summary": "Seek road and bridge funding, improved public transit, and safer biking and walking.",
+          "source_url": "https://www.mutoforwarwick.com/",
+          "source_label": "Official campaign website"
         }
       ],
       "endorsements": [
@@ -3212,7 +3242,12 @@
           "endorser": "Rhode Island Coalition Against Gun Violence",
           "source_url": "https://ricagv.org/wp-content/uploads/2026/09/RICAGV-Announces-2026-General-Election-Endorsements.pdf"
         }
-      ]
+      ],
+      "prior_public_service": {
+        "summary": "His campaign biography identifies him as Warwick’s Ward 6 city councilman. Local council service is separate from a General Assembly legislative record.",
+        "source_url": "https://www.mutoforwarwick.com/meet-bill-muto",
+        "source_label": "Official campaign biography"
+      }
     },
     {
       "candidate_id": "house-23-dem-primary-timothy-howe",
@@ -3286,6 +3321,24 @@
           "summary": "Address the high costs of fuel, groceries, and everyday goods.",
           "source_label": "Official campaign website",
           "source_url": "https://www.djt4ri.us/"
+        },
+        {
+          "title": "Education and parental rights",
+          "summary": "Support parental rights, school choice, and school safety.",
+          "source_url": "https://www.djt4ri.us/issues/",
+          "source_label": "Official campaign issues page"
+        },
+        {
+          "title": "Environment and energy",
+          "summary": "Seek changes to the Act on Climate and explore alternatives to large wind and solar projects.",
+          "source_url": "https://www.djt4ri.us/issues/",
+          "source_label": "Official campaign issues page"
+        },
+        {
+          "title": "Government spending and accountability",
+          "summary": "Reduce spending and state debt, oppose corporate subsidies, and address waste, fraud, and duplication.",
+          "source_url": "https://www.djt4ri.us/issues/",
+          "source_label": "Official campaign issues page"
         }
       ],
       "endorsements": [
@@ -3302,12 +3355,13 @@
       "chamber": "house",
       "district_number": 24,
       "party": "Democrat",
-      "campaign_website": "https://rilaborlaw.com/attorneys/evan-shanley/",
-      "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-30",
-      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-10-06",
+      "website_audit_note": "The previously linked page is a law-firm professional biography, not a verified campaign website. No campaign priorities are inferred from professional practice.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [],
+      "professional_profile_url": "https://rilaborlaw.com/attorneys/evan-shanley/"
     },
     {
       "candidate_id": "house-25-dem-primary-thomas-e-noret",
