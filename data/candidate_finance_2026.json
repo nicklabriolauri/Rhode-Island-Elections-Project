@@ -5796,60 +5796,272 @@
       "party": "REP",
       "party_label": "Republican",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "alex-finkelman-q1-2026-combined.pdf",
-      "coverage_note": "",
-      "original_documents": [],
-      "beginning_cash": 0,
-      "money_raised": 5,
-      "money_spent": 0,
-      "ending_cash": 5,
-      "net_change": 5,
-      "total_cash_receipts": 5,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 0,
-      "summary_intro": "This filing shows only a limited cash reserve heading into the next stretch of the campaign. The report also shows that it raised more during the period than it spent.",
-      "filing_history": [
+      "report_label": "2026 CF-2 filing · updated summary",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2 summary and CF-3/CF-4 schedules, committee key 9705, filing 241928; both supplied PDFs reviewed October 6, 2026.",
+      "coverage_note": "July 1–October 5, 2026 reporting period, spanning Q3 and five days of Q4. The second PDF updates the same filing with a $25 October 5 contribution; overlapping summary totals are not added together. Individual-contribution classifications follow the filing, including three receipts whose descriptions name candidate committees.",
+      "original_documents": [
         {
-          "label": "Q1 2026",
-          "reporting_period_label": "January 1, 2026 to March 31, 2026",
-          "money_raised": 0,
-          "money_spent": 0,
-          "ending_cash": 0,
-          "net_change": 0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "label": "Initial CF-2 summary and full CF-3/CF-4 schedules",
+          "period": "July 1, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/barbara-quigley-2026-10-05-initial.pdf"
         },
         {
-          "label": "Q2 2026",
-          "reporting_period_label": "April 1, 2026 to June 30, 2026",
-          "money_raised": 5,
-          "money_spent": 0,
-          "ending_cash": 5,
-          "net_change": 5,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "label": "Updated CF-2 summary and additional October 5 contribution",
+          "period": "July 1, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/barbara-quigley-2026-10-05-updated.pdf"
+        }
+      ],
+      "beginning_cash": 5,
+      "money_raised": 5952.82,
+      "money_spent": 1739.79,
+      "ending_cash": 4218.03,
+      "net_change": 4213.03,
+      "total_cash_receipts": 5952.82,
+      "campaign_expenses": 1739.79,
+      "aggregate_expenses": 0,
+      "summary_intro": "Barbara Quigley’s updated July 1–October 5, 2026 filing reports $5,952.82 received, $1,739.79 spent, and $4,218.03 in cash on hand. Receipts include $3,352.82 classified as individual contributions and $2,600.00 from PACs. The $5.00 beginning balance is separate from money raised.",
+      "filing_history": [
+        {
+          "label": "July 1–October 5, 2026 · updated",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026",
+          "money_raised": 5952.82,
+          "money_spent": 1739.79,
+          "ending_cash": 4218.03,
+          "net_change": 4213.03,
+          "notes": "The second supplied summary includes an additional $25 receipt. The two PDFs cover the same period; no double counting or quarterly allocation is made."
         }
       ],
       "source_buckets": [
         {
-          "label": "Itemized individual donors",
+          "label": "Itemized individual contributions",
           "class_name": "itemized-individual-donors",
-          "amount": 10,
-          "description": "Named contributors reported individually in the filing."
+          "amount": 3352.82,
+          "description": "26 receipts classified as individual contributions in the filing, including the additional $25 October 5 receipt. Three descriptions identify candidate committees; RIEP retains their reported classification."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 2600,
+          "description": "Five PAC receipts: Rhode Island Second Amendment PAC ($1,000), three separately listed League of RI Businesses committees ($500 each), and Warwick FOP Lodge #7 PAC ($100)."
         }
       ],
       "top_donors": [
         {
-          "donor": "BARBARA J QUIGLEY RO",
-          "amount": 10,
+          "donor": "RHODE ISLAND SECOND AMENDMENT PAC",
+          "amount": 1000.0,
+          "type": "PAC",
+          "interest_group": "Other / Unclassified"
+        },
+        {
+          "donor": "Jon Brien",
+          "amount": 500.0,
           "type": "Individual",
-          "notes": "Named individual contribution listed in the filing.",
+          "notes": "Classified as an individual contribution in the filing; receipt description identifies Friends of Jon Brien.",
+          "interest_group": "Individual"
+        },
+        {
+          "donor": "THE LEAGUE OF RI BUSINESSES MIDDLETOWN",
+          "amount": 500.0,
+          "type": "PAC",
+          "interest_group": "Business / Commerce"
+        },
+        {
+          "donor": "THE LEAGUE OF RI BUSINESSES SMITHFIELD",
+          "amount": 500.0,
+          "type": "PAC",
+          "interest_group": "Business / Commerce"
+        },
+        {
+          "donor": "THE LEAGUE OF RI BUSINESSES WARWICK",
+          "amount": 500.0,
+          "type": "PAC",
+          "interest_group": "Business / Commerce"
+        },
+        {
+          "donor": "Victor Mellor",
+          "amount": 500.0,
+          "type": "Individual",
+          "interest_group": "Individual"
+        },
+        {
+          "donor": "Leah Boisclair",
+          "amount": 374.64,
+          "type": "Individual",
+          "interest_group": "Individual"
+        },
+        {
+          "donor": "Jonathan Wheeler",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual"
+        },
+        {
+          "donor": "Mike Chippendale",
+          "amount": 250.0,
+          "type": "Individual",
+          "notes": "Classified as an individual contribution in the filing; receipt description identifies Committee to elect Mike Chippendale.",
+          "interest_group": "Individual"
+        },
+        {
+          "donor": "Robert E Coogan",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual"
+        },
+        {
+          "donor": "Marie Hopkins",
+          "amount": 240.15,
+          "type": "Individual",
+          "notes": "Classified as an individual contribution in the filing; receipt description identifies Friends of Marie Hopkins.",
+          "interest_group": "Individual"
+        },
+        {
+          "donor": "Lisa Daft",
+          "amount": 200.0,
+          "type": "Individual",
+          "interest_group": "Individual"
+        },
+        {
+          "donor": "Anthony Thompson",
+          "amount": 175.0,
+          "type": "Individual",
+          "interest_group": "Individual"
+        },
+        {
+          "donor": "Allyn Myers",
+          "amount": 100.0,
+          "type": "Individual",
+          "interest_group": "Individual"
+        },
+        {
+          "donor": "Cheryl L Gillard",
+          "amount": 100.0,
+          "type": "Individual",
+          "interest_group": "Individual"
+        },
+        {
+          "donor": "WARWICK FOP LODGE #7 PAC",
+          "amount": 100.0,
+          "type": "PAC",
+          "interest_group": "Public Safety"
+        },
+        {
+          "donor": "Dana Hayter",
+          "amount": 50.0,
+          "type": "Individual",
+          "interest_group": "Individual"
+        },
+        {
+          "donor": "Don Hornbeck",
+          "amount": 48.03,
+          "type": "Individual",
+          "interest_group": "Individual"
+        },
+        {
+          "donor": "Brian Noref",
+          "amount": 25.0,
+          "type": "Individual",
+          "interest_group": "Individual"
+        },
+        {
+          "donor": "David Stone",
+          "amount": 25.0,
+          "type": "Individual",
+          "interest_group": "Individual"
+        },
+        {
+          "donor": "Deborah Doyle",
+          "amount": 25.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "notes": "October 5 contribution listed in the supplemental schedule; included once in the updated summary."
+        },
+        {
+          "donor": "Don Horn",
+          "amount": 25.0,
+          "type": "Individual",
+          "interest_group": "Individual"
+        },
+        {
+          "donor": "Jacueline Quigley",
+          "amount": 25.0,
+          "type": "Individual",
+          "interest_group": "Individual"
+        },
+        {
+          "donor": "Jim Martin",
+          "amount": 25.0,
+          "type": "Individual",
+          "interest_group": "Individual"
+        },
+        {
+          "donor": "Laura Colannino",
+          "amount": 25.0,
+          "type": "Individual",
+          "interest_group": "Individual"
+        },
+        {
+          "donor": "Michael Stefanik",
+          "amount": 25.0,
+          "type": "Individual",
+          "interest_group": "Individual"
+        },
+        {
+          "donor": "Pat Maloney",
+          "amount": 25.0,
+          "type": "Individual",
+          "interest_group": "Individual"
+        },
+        {
+          "donor": "Pat Martin",
+          "amount": 25.0,
+          "type": "Individual",
+          "interest_group": "Individual"
+        },
+        {
+          "donor": "Rosemarie Doughty",
+          "amount": 25.0,
+          "type": "Individual",
+          "interest_group": "Individual"
+        },
+        {
+          "donor": "Jeanne Kelly",
+          "amount": 20.0,
+          "type": "Individual",
+          "interest_group": "Individual"
+        },
+        {
+          "donor": "Micholas Creedle",
+          "amount": 20.0,
+          "type": "Individual",
           "interest_group": "Individual"
         }
       ],
-      "spending_categories": [],
+      "spending_categories": [
+        {
+          "title": "Advertising",
+          "amount": 1577.61,
+          "summary": "Formatt Printing ($980.66), Right Insight ($132.87), and Super Cheap Signs ($464.08)."
+        },
+        {
+          "title": "Fundraising Expenses",
+          "amount": 125,
+          "summary": "RIMAssociation networking-event ticket."
+        },
+        {
+          "title": "Other",
+          "amount": 37.18,
+          "summary": "Right Insight app/software."
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "reporting_period_type": "custom",
+      "finance_status": "available",
+      "itemized_contribution_records": 31,
+      "individual_contribution_records": 26,
+      "pac_contribution_records": 5
     },
     {
       "candidate_id": "house-22-janie-lee-segui",
@@ -24563,19 +24775,6 @@
       "slug": "grace-diaz"
     },
     {
-      "donor": "BARBARA J QUIGLEY RO",
-      "amount": 10,
-      "type": "Individual",
-      "interest_group": "Individual",
-      "notes": "Named individual contribution listed in the filing.",
-      "candidate_id": "house-22-barbara-quigley",
-      "candidate_name": "Barbara Quigley",
-      "chamber": "house",
-      "district_number": "22",
-      "party": "REP",
-      "slug": "barbara-quigley"
-    },
-    {
       "donor": "Barbara Traverse",
       "amount": 200,
       "type": "Individual",
@@ -32283,6 +32482,382 @@
       "district_number": "15",
       "party": "DEM",
       "slug": "colleen-m-crudele"
+    },
+    {
+      "donor": "RHODE ISLAND SECOND AMENDMENT PAC",
+      "amount": 1000.0,
+      "type": "PAC",
+      "interest_group": "Other / Unclassified",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "Jon Brien",
+      "amount": 500.0,
+      "type": "Individual",
+      "notes": "Classified as an individual contribution in the filing; receipt description identifies Friends of Jon Brien.",
+      "interest_group": "Individual",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "THE LEAGUE OF RI BUSINESSES MIDDLETOWN",
+      "amount": 500.0,
+      "type": "PAC",
+      "interest_group": "Business / Commerce",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "THE LEAGUE OF RI BUSINESSES SMITHFIELD",
+      "amount": 500.0,
+      "type": "PAC",
+      "interest_group": "Business / Commerce",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "THE LEAGUE OF RI BUSINESSES WARWICK",
+      "amount": 500.0,
+      "type": "PAC",
+      "interest_group": "Business / Commerce",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "Victor Mellor",
+      "amount": 500.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "Leah Boisclair",
+      "amount": 374.64,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "Jonathan Wheeler",
+      "amount": 250.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "Mike Chippendale",
+      "amount": 250.0,
+      "type": "Individual",
+      "notes": "Classified as an individual contribution in the filing; receipt description identifies Committee to elect Mike Chippendale.",
+      "interest_group": "Individual",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "Robert E Coogan",
+      "amount": 250.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "Marie Hopkins",
+      "amount": 240.15,
+      "type": "Individual",
+      "notes": "Classified as an individual contribution in the filing; receipt description identifies Friends of Marie Hopkins.",
+      "interest_group": "Individual",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "Lisa Daft",
+      "amount": 200.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "Anthony Thompson",
+      "amount": 175.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "Allyn Myers",
+      "amount": 100.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "Cheryl L Gillard",
+      "amount": 100.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "WARWICK FOP LODGE #7 PAC",
+      "amount": 100.0,
+      "type": "PAC",
+      "interest_group": "Public Safety",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "Dana Hayter",
+      "amount": 50.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "Don Hornbeck",
+      "amount": 48.03,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "Brian Noref",
+      "amount": 25.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "David Stone",
+      "amount": 25.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "Deborah Doyle",
+      "amount": 25.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "notes": "October 5 contribution listed in the supplemental schedule; included once in the updated summary.",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "Don Horn",
+      "amount": 25.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "Jacueline Quigley",
+      "amount": 25.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "Jim Martin",
+      "amount": 25.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "Laura Colannino",
+      "amount": 25.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "Michael Stefanik",
+      "amount": 25.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "Pat Maloney",
+      "amount": 25.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "Pat Martin",
+      "amount": 25.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "Rosemarie Doughty",
+      "amount": 25.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "Jeanne Kelly",
+      "amount": 20.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
+    },
+    {
+      "donor": "Micholas Creedle",
+      "amount": 20.0,
+      "type": "Individual",
+      "interest_group": "Individual",
+      "candidate_id": "house-22-barbara-quigley",
+      "candidate_name": "Barbara Quigley",
+      "chamber": "house",
+      "district_number": "22",
+      "party": "REP",
+      "slug": "barbara-quigley"
     }
   ],
   "donor_search_scope_note": "Donor search covers named donors currently listed in published campaign-finance profiles. Aggregate receipts reported without donor names cannot be searched."
