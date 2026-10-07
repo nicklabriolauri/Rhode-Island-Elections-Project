@@ -27,6 +27,8 @@ CONFIGS += [('Tina L Spears', 'tina-l-spears', 36, 'spears', 'tina_spears', '(40
 
 CONFIGS += [('Richard R Fascia','richard-r-fascia',42,'Fascia','richard_fascia','(401) 222-2259'),('Deborah A Fellela','deborah-a-fellela',43,'Fellela','deborah_fellela','(401) 222-1723')]
 
+CONFIGS += [('Gregory Costantino','gregory-costantino',44,'Costantino','gregory_costantino','(401) 222-1721'),('Mia A Ackerman','mia-a-ackerman',45,'Ackerman','mia_ackerman','(401) 222-1723'),('Mary Ann Shallcross Smith','mary-ann-shallcross-smith',46,'shallcross%20smith','mary_ann_shallcross_smith','(401) 222-1721'),('David J Place','david-j-place',47,'Place','david_place','(401) 222-2259'),('Brian C Newberry','brian-c-newberry',48,'Newberry','brian_newberry','(401) 222-2259')]
+
 def build(slugs=None):
  # Use the complete 75-member calculation dataset for the House index.
  base.current_index=current_index
@@ -39,8 +41,8 @@ def build(slugs=None):
  for name,slug,district,surname,image,phone in CONFIGS:
   if slugs is not None and slug not in slugs:continue
   bio=f'https://www.rilegislature.gov/representatives/{surname}/Pages/Biography.aspx'
-  community={6:'Providence, North Providence',13:'Providence, Johnston',14:'Cranston, Providence',15:'Cranston',16:'Cranston',17:'Cranston',18:'Cranston',19:'Warwick, Cranston',20:'Warwick, Cranston',21:'Warwick',24:'Warwick, East Greenwich',25:'Coventry, West Warwick',26:'Coventry, West Warwick, Warwick',28:'Coventry',29:'Coventry, West Greenwich',30:'East Greenwich, West Greenwich',33:'Narragansett, South Kingstown',34:'Narragansett, South Kingstown',36:'Charlestown, New Shoreham, South Kingstown, Westerly',37:'Westerly',38:'Hopkinton, Westerly',39:'Exeter, Hopkinton, Richmond',40:'Coventry, Foster, Glocester',42:'Johnston, Cranston',43:'Johnston'}.get(district,'Providence')
-  email=f'rep-{surname.lower()}@rilegislature.gov'
+  community={6:'Providence, North Providence',13:'Providence, Johnston',14:'Cranston, Providence',15:'Cranston',16:'Cranston',17:'Cranston',18:'Cranston',19:'Warwick, Cranston',20:'Warwick, Cranston',21:'Warwick',24:'Warwick, East Greenwich',25:'Coventry, West Warwick',26:'Coventry, West Warwick, Warwick',28:'Coventry',29:'Coventry, West Greenwich',30:'East Greenwich, West Greenwich',33:'Narragansett, South Kingstown',34:'Narragansett, South Kingstown',36:'Charlestown, New Shoreham, South Kingstown, Westerly',37:'Westerly',38:'Hopkinton, Westerly',39:'Exeter, Hopkinton, Richmond',40:'Coventry, Foster, Glocester',42:'Johnston, Cranston',43:'Johnston',44:'Johnston, Lincoln, Smithfield',45:'Cumberland, Lincoln',46:'Lincoln, Pawtucket',47:'Burrillville, Glocester',48:'Burrillville, North Smithfield'}.get(district,'Providence')
+  email=f'rep-{surname.lower()}@rilegislature.gov' if district!=46 else 'rep-shallcross-smith@rilegislature.gov'
   base.build(name,slug,district,community,email,phone,'house')
   path=ROOT/'candidates'/f'{slug}.html';page=path.read_text()
   rec=next(r for r in records if r['chamber']=='house' and r['district_number']==district)
@@ -79,6 +81,7 @@ def build(slugs=None):
   page=re.sub(r'<p class="photo-note">.*?</p>','<p class="photo-note">Portrait: '+base.link(bio,'Rhode Island General Assembly ↗')+'</p>',page)
   from PIL import Image
   photo=ROOT/'candidates'/f'{slug}.png'
+  if not photo.exists():photo=ROOT/'candidates'/f'{slug}.jpg'
   w,h=Image.open(photo).size if photo.exists() else (0,0)
   page=re.sub(r'(class="portrait"[^>]*?)width="[0-9]+" height="[0-9]+"',lambda m:m[1]+f'width="{w}" height="{h}"',page)
   page=page.replace('<aside class="side">','<aside class="side" aria-label="Candidate details and navigation">').replace('<h3>Session attendance</h3>','<h3 class="subheading">Session attendance</h3>')
@@ -86,9 +89,11 @@ def build(slugs=None):
   page=re.sub(r'<p><strong>Leadership:</strong> (.*?)</p><p><strong>Committees:</strong> (.*?)</p>',r'<dl class="office-details"><div><dt>Leadership</dt><dd>\1</dd></div><div><dt>Committees</dt><dd>\2</dd></div></dl>',page)
   if district==2:page=page.replace('<dd></dd>','<dd>No committee assignments listed in the recorded roster.</dd>')
   assert 'chamber=senate' not in page and 'Senate District' not in page
-  if district in (15,19,20,21,24,25,26,28,29,30,33,34,36,37,38,39,40,42,43):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
+  if district in (15,19,20,21,24,25,26,28,29,30,33,34,36,37,38,39,40,42,43,44,45,46,47,48):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
+  if district in range(44,49):page=page.replace('October 6, 2026','October 7, 2026')
   path.write_text(page)
-  entry={'slug':slug,'portrait_url':('https://www.rilegislature.gov/representatives/Pictures/McEntee.jpg' if district==33 else f'https://www.rilegislature.gov/LegislationPictures/{image}.jpg'),'biography_url':bio,'retrieved_at':'2026-10-06','credit':'Rhode Island General Assembly','width':w,'height':h}
+  entry={'slug':slug,'portrait_url':('https://www.rilegislature.gov/representatives/Pictures/McEntee.jpg' if district==33 else f'https://www.rilegislature.gov/LegislationPictures/{image}.jpg'),'biography_url':bio,'retrieved_at':'2026-10-07','credit':'Rhode Island General Assembly','width':w,'height':h}
+  if photo.exists():entry['file_name']=photo.name
   if photo.exists():portraits=[r for r in portraits if r['slug']!=slug]+[entry]
  (ROOT/'data/candidate_portrait_sources_2026.json').write_text(json.dumps(portraits,indent=2)+'\n')
  for filename in ['ballot.html','running.html']:

@@ -4449,7 +4449,7 @@
       "party": "Democrat",
       "campaign_website": "",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-30",
+      "website_checked": "2026-10-07",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
       "endorsements": [
@@ -4458,7 +4458,8 @@
           "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
           "designation": "Incumbent endorsement"
         }
-      ]
+      ],
+      "district_community": "Johnston, Lincoln, Smithfield"
     },
     {
       "candidate_id": "house-44-rep-primary-joseph-hosey",
@@ -4468,41 +4469,65 @@
       "party": "Republican",
       "campaign_website": "https://hoseyforri.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-30",
+      "website_checked": "2026-10-07",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
-          "title": "Affordability and taxes",
-          "summary": "Lower cost burdens and keep more money in residents' pockets.",
+          "title": "Lower taxes and affordability",
+          "summary": "Reduce tax burdens and the cost pressures facing families, retirees, and businesses.",
           "source_label": "Official campaign website",
-          "source_url": "https://hoseyforri.com/"
+          "source_url": "https://hoseyforri.com/#issues"
         },
         {
           "title": "Housing affordability",
           "summary": "Make housing more attainable for working people and families.",
           "source_label": "Official campaign website",
-          "source_url": "https://hoseyforri.com/"
+          "source_url": "https://hoseyforri.com/#issues"
         },
         {
-          "title": "Healthcare",
-          "summary": "Improve healthcare affordability, access, and accountability.",
+          "title": "Healthcare access",
+          "summary": "Improve healthcare access by addressing provider reimbursement and physician recruitment.",
           "source_label": "Official campaign website",
-          "source_url": "https://hoseyforri.com/"
+          "source_url": "https://hoseyforri.com/#issues"
+        },
+        {
+          "title": "Roads, bridges, and infrastructure",
+          "summary": "Invest in infrastructure with closer oversight of spending and results.",
+          "source_label": "Official campaign website",
+          "source_url": "https://hoseyforri.com/#issues"
+        },
+        {
+          "title": "Small business",
+          "summary": "Improve conditions for starting, growing, and operating local businesses.",
+          "source_label": "Official campaign website",
+          "source_url": "https://hoseyforri.com/#issues"
+        },
+        {
+          "title": "Economic opportunity",
+          "summary": "Support policies that reward work, investment, and entrepreneurship.",
+          "source_label": "Official campaign website",
+          "source_url": "https://hoseyforri.com/#issues"
         },
         {
           "title": "Energy costs",
-          "summary": "Seek relief from high electricity and natural-gas costs.",
+          "summary": "Seek affordable, reliable energy and remove mandates he believes increase costs.",
           "source_label": "Official campaign website",
-          "source_url": "https://hoseyforri.com/"
+          "source_url": "https://hoseyforri.com/#issues"
         },
         {
           "title": "Government accountability",
-          "summary": "Target waste, fraud, corruption, and unnecessary spending.",
+          "summary": "Reduce corruption, fraud, waste, and unnecessary government spending.",
           "source_label": "Official campaign website",
-          "source_url": "https://hoseyforri.com/"
+          "source_url": "https://hoseyforri.com/#issues"
         }
       ],
-      "endorsements": []
+      "endorsements": [],
+      "district_community": "Johnston, Lincoln, Smithfield",
+      "campaign_contact": {
+        "phone": "401-492-8945",
+        "email": "HoseyforRI@gmail.com",
+        "source_url": "https://hoseyforri.com/"
+      }
     },
     {
       "candidate_id": "house-45-dem-primary-mia-a-ackerman",
@@ -4512,10 +4537,11 @@
       "party": "Democrat",
       "campaign_website": "https://www.miaforri.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-30",
+      "website_checked": "2026-10-07",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [],
+      "district_community": "Cumberland, Lincoln"
     },
     {
       "candidate_id": "house-46-dem-primary-mary-ann-shallcross-smith",
@@ -4525,8 +4551,8 @@
       "party": "Democrat",
       "campaign_website": "https://friendsofmaryannshallcrosssmith.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-30",
-      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "website_checked": "2026-10-07",
+      "website_audit_note": "Accessible campaign site includes older election material; priorities reflect its published issue statements, not a newly dated 2026 platform. Older testimonials are not treated as current endorsements.",
       "priorities": [
         {
           "title": "Small business",
@@ -4547,7 +4573,8 @@
           "source_url": "https://friendsofmaryannshallcrosssmith.com/"
         }
       ],
-      "endorsements": []
+      "endorsements": [],
+      "district_community": "Lincoln, Pawtucket"
     },
     {
       "candidate_id": "house-47-rep-primary-david-j-place",
@@ -4557,7 +4584,7 @@
       "party": "Republican",
       "campaign_website": "https://www.davidjplace.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-30",
+      "website_checked": "2026-10-07",
       "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
       "priorities": [
         {
@@ -4585,7 +4612,8 @@
           "source_url": "https://www.davidjplace.com/"
         }
       ],
-      "endorsements": []
+      "endorsements": [],
+      "district_community": "Burrillville, Glocester"
     },
     {
       "candidate_id": "house-48-rep-primary-brian-c-newberry",
@@ -4593,12 +4621,14 @@
       "chamber": "house",
       "district_number": 48,
       "party": "Republican",
-      "campaign_website": "https://lewisbrisbois.com/attorneys/newberry-brian-c",
-      "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-30",
-      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "campaign_website": "",
+      "website_status": "no_official_campaign_site_located",
+      "website_checked": "2026-10-07",
+      "website_audit_note": "Previously recorded URL is a law-firm professional biography, not a campaign website. No campaign priorities inferred from it.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [],
+      "district_community": "Burrillville, North Smithfield",
+      "professional_biography_url": "https://lewisbrisbois.com/attorneys/newberry-brian-c"
     },
     {
       "candidate_id": "house-49-dem-primary-veronicka-vega",
