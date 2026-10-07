@@ -27,8 +27,8 @@ for(const [slug,name,district,votes,share,surname] of [
 assert(read('candidates/michael-j-riley.html').includes('Campaign response submitted directly to RIEP'));
 assert(read('candidates/michael-j-riley.html').includes('Repeal the Assault Weapons Ban'));
 assert(read('candidates/michael-j-riley.html').includes('mailto:TEAM@RileyforRI.com'));
-assert(read('candidates/michael-j-riley.html').includes('Historical filing only. No 2026'));
-assert(read('candidates/michael-j-riley.html').includes('2019'));
+assert(read('candidates/michael-j-riley.html').includes('June 22, 2026 to October 5, 2026'));
+assert(read('candidates/michael-j-riley.html').includes('$28,520.00'));
 assert(read('candidates/edward-w-stravato.html').includes('Support seniors'));
 assert(read('candidates/richard-r-fascia.html').includes('No 2023–2024 CEL score is available'));
 assert(read('candidates/deborah-a-fellela.html').includes('#37 of 66 House Democrats'));

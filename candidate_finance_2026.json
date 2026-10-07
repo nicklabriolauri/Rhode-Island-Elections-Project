@@ -13446,45 +13446,839 @@
       "party": "REP",
       "party_label": "Republican",
       "office_sought": "State Representative",
-      "report_label": "9/30/2019",
-      "reporting_period_label": "9/30/2019",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website summary captured; quarter not reliably identified",
-      "original_documents": [],
-      "beginning_cash": 0,
-      "money_raised": 0,
-      "money_spent": 0,
-      "ending_cash": 0,
-      "net_change": 0,
-      "total_cash_receipts": 0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 0,
-      "summary_intro": "This filing shows the campaign closing the period without reported cash on hand. The report also shows that it raised more during the period than it spent.",
-      "filing_history": [
+      "report_label": "28-days-before-election report · 2026",
+      "reporting_period_label": "June 22, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2 filing supplied by the user; report ending October 5, 2026.",
+      "coverage_note": "Figures cover June 22, 2026 to October 5, 2026. Cash receipts exclude beginning cash. Earlier filing periods are separate; no year-to-date total is inferred.",
+      "original_documents": [
         {
-          "label": "Q1 2026",
-          "reporting_period_label": "January 1, 2026 to March 31, 2026",
-          "money_raised": 0,
-          "money_spent": 0,
-          "ending_cash": 0,
-          "net_change": 0,
-          "notes": "The campaign raised more than it spent in this reporting period."
-        },
-        {
-          "label": "Q2 2026",
-          "reporting_period_label": "April 1, 2026 to June 30, 2026",
-          "money_raised": 0,
-          "money_spent": 0,
-          "ending_cash": 0,
-          "net_change": 0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "label": "28-days-before-election report · 2026 · CF-2 source PDF",
+          "period": "June 22, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
         }
       ],
-      "source_buckets": [],
-      "top_donors": [],
-      "spending_categories": [],
+      "beginning_cash": 0,
+      "money_raised": 28520,
+      "money_spent": 4823.43,
+      "ending_cash": 23696.57,
+      "net_change": 23696.57,
+      "total_cash_receipts": 28520,
+      "campaign_expenses": 4823.43,
+      "aggregate_expenses": 0,
+      "summary_intro": "Michael J Riley's 2026 pre-election filing covers June 22, 2026 to October 5, 2026. It reports $28,520.00 in cash receipts, $4,823.43 in spending and $23,696.57 in ending cash. This is a current 2026 filing. Earlier historical information remains in filing history. Receipts include $27,880.00 in individual contributions and $640.00 in PAC contributions, including aggregate receipts without names.",
+      "filing_history": [
+        {
+          "label": "2019 On-Going Quarterly (3rd)",
+          "reporting_period_label": "Period ending September 30, 2019",
+          "money_raised": 0,
+          "money_spent": 0,
+          "ending_cash": 0,
+          "net_change": 0,
+          "notes": "Historical filing only; no 2026 financial summary supplied."
+        },
+        {
+          "label": "28-days-before-election report · 2026",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026",
+          "reporting_period_type": "custom",
+          "receipts_label": "Total receipts",
+          "beginning_cash": 0,
+          "money_raised": 28520,
+          "money_spent": 4823.43,
+          "ending_cash": 23696.57,
+          "net_change": 23696.57,
+          "notes": "Separate filing period. Cash receipts exclude beginning cash. No missing interim filing is treated as zero."
+        }
+      ],
+      "source_buckets": [
+        {
+          "label": "Aggregate individual contributions",
+          "class_name": "small-dollar-aggregate-online-receipts",
+          "amount": 3880.0,
+          "description": "Individual cash contributions reported without donor names. No named donor is inferred."
+        },
+        {
+          "label": "Aggregate PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 400.0,
+          "description": "PAC cash contributions reported without a committee name. No named committee is inferred."
+        },
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 24000.0,
+          "description": "Named individual cash contributions reported in the filing."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 240.0,
+          "description": "Named PAC cash contributions reported in the filing."
+        }
+      ],
+      "top_donors": [
+        {
+          "donor": "Thomas Badway",
+          "amount": 2000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/29/2026",
+          "employer": "Law Office of Thomas E. Badway & Assoc",
+          "notes": "Employer reported as Law Office of Thomas E. Badway & Assoc.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Peter Bibby Jr",
+          "amount": 2000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/29/2026",
+          "employer": "City of Providence",
+          "notes": "Employer reported as City of Providence.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Walter Bronhard",
+          "amount": 2000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/17/2026",
+          "employer": "Walter L. Bronhard Real Estate",
+          "notes": "Employer reported as Walter L. Bronhard Real Estate.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Brian Coucher",
+          "amount": 2000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/17/2026",
+          "employer": "Viking Distribution",
+          "notes": "Employer reported as Viking Distribution.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Peter Kasabian",
+          "amount": 2000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/29/2026",
+          "employer": "Kasabian Construction",
+          "notes": "Employer reported as Kasabian Construction.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Yvonne Sousa",
+          "amount": 2000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/29/2026",
+          "employer": "RISE Real Estate Consultants",
+          "notes": "Employer reported as RISE Real Estate Consultants.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Andrew Dimitri",
+          "amount": 1000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/29/2026",
+          "employer": "William Dimitri Law",
+          "notes": "Employer reported as William Dimitri Law.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "William Dimitri",
+          "amount": 1000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/29/2026",
+          "employer": "William Dimitri Law",
+          "notes": "Employer reported as William Dimitri Law.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Raymond Duquette",
+          "amount": 1000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/29/2026",
+          "employer": "Semper Home Loans",
+          "notes": "Employer reported as Semper Home Loans.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Anthony Rosciti",
+          "amount": 1000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/29/2026",
+          "employer": "Rosciti Construction",
+          "notes": "Employer reported as Rosciti Construction.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Michael Chippendale",
+          "amount": 500.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/29/2026",
+          "employer": "State of Rhode Island",
+          "notes": "Employer reported as State of Rhode Island.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Daniel Giroux",
+          "amount": 500.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/29/2026",
+          "employer": "New American Funding",
+          "notes": "Employer reported as New American Funding.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Dennis Hamel",
+          "amount": 500.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/29/2026",
+          "employer": "Retired",
+          "notes": "Employer reported as Retired.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Erik Maluk",
+          "amount": 500.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/29/2026",
+          "employer": "Semper Home Loans",
+          "notes": "Employer reported as Semper Home Loans.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Kenneth Marandola Jr",
+          "amount": 500.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/29/2026",
+          "employer": "Security Solutions",
+          "notes": "Employer reported as Security Solutions.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Theodore Newcomer",
+          "amount": 500.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/17/2026",
+          "employer": "Realty Quarters",
+          "notes": "Employer reported as Realty Quarters.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Gregoy Porcardo",
+          "amount": 500.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/29/2026",
+          "employer": "Otrando Porcaro & Associates, Ltd",
+          "notes": "Employer reported as Otrando Porcaro & Associates, Ltd.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Carlos Rego",
+          "amount": 500.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/29/2026",
+          "employer": "Rego's Auto Body",
+          "notes": "Employer reported as Rego's Auto Body.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Michael Rego",
+          "amount": 500.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/29/2026",
+          "employer": "Five Star Home Improvement",
+          "notes": "Employer reported as Five Star Home Improvement.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Michael Riley",
+          "amount": 500.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "07/01/2026",
+          "employer": "Law Offices of Michael J. Riley",
+          "notes": "Employer reported as Law Offices of Michael J. Riley.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Justin St Andre",
+          "amount": 500.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/29/2026",
+          "employer": "Milliman",
+          "notes": "Employer reported as Milliman.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Albert Cardente",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/24/2026",
+          "employer": "Cardente & Associates Tax Advisors",
+          "notes": "Employer reported as Cardente & Associates Tax Advisors.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Stephen Debankah",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/29/2026",
+          "employer": "North Eastern Tree Service",
+          "notes": "Employer reported as North Eastern Tree Service.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Vincent Dinofrio",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/29/2026",
+          "employer": "Vinny's Auto & Truck, Inc.",
+          "notes": "Employer reported as Vinny's Auto & Truck, Inc..",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Reyna Garcia",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/29/2026",
+          "employer": "Brown Health",
+          "notes": "Employer reported as Brown Health.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "William Hunt",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/29/2026",
+          "employer": "Shove Insurance Agency Inc",
+          "notes": "Employer reported as Shove Insurance Agency Inc.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Arastou Mahjoory",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/29/2026",
+          "employer": "St Michael's Federal Credit Union",
+          "notes": "Employer reported as St Michael's Federal Credit Union.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "John Mendonsa",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/29/2026",
+          "employer": "New England Tree Inc",
+          "notes": "Employer reported as New England Tree Inc.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Alan Porporino",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/15/2026",
+          "employer": "Porporino Real Estate LLC",
+          "notes": "Employer reported as Porporino Real Estate LLC.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "James Safford",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/29/2026",
+          "employer": "New England Tree Inc",
+          "notes": "Employer reported as New England Tree Inc.",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "William William",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/29/2026",
+          "employer": "Government Strategies, Inc.",
+          "notes": "Employer reported as Government Strategies, Inc..",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "RHODE ISLAND REPUBLICAN CONSERVATIVE CAUCUS",
+          "amount": 240.0,
+          "type": "PAC",
+          "interest_group": "Other / Unclassified",
+          "date": "07/14/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+          "reporting_period_label": "June 22, 2026 to October 5, 2026"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Fundraising Expenses",
+          "amount": 3888.54,
+          "description": "Expenditures reported under Fundraising Expenses in this filing."
+        },
+        {
+          "label": "Advertising",
+          "amount": 934.89,
+          "description": "Expenditures reported under Advertising in this filing."
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_status": "available",
+      "archived_reporting_periods": [
+        {
+          "candidate_id": "house-41-michael-j-riley",
+          "slug": "michael-j-riley",
+          "candidate_name": "Michael J Riley",
+          "chamber": "house",
+          "district_number": "41",
+          "party": "REP",
+          "party_label": "Republican",
+          "office_sought": "State Representative",
+          "report_label": "2019 On-Going Quarterly (3rd) filing",
+          "reporting_period_label": "Period ending September 30, 2019",
+          "source_note": "Historical campaign-finance summary supplied by the user. No 2026 financial summary was provided for this update.",
+          "coverage_note": "Historical data only. This filing is from 2019 and should not be compared directly with 2026 candidate filings.",
+          "original_documents": [],
+          "beginning_cash": 0,
+          "money_raised": 0,
+          "money_spent": 0,
+          "ending_cash": 0,
+          "net_change": 0,
+          "total_cash_receipts": 0,
+          "campaign_expenses": 0,
+          "aggregate_expenses": 0,
+          "summary_intro": "The latest financial summary supplied for Michael J Riley is historical: a 2019 On-Going Quarterly (3rd) filing with a period end date of September 30, 2019. It reports $0.00 total cash, $0.00 total liabilities, a $0.00 beginning balance, and a $0.00 ending balance.",
+          "source_buckets": [],
+          "top_donors": [],
+          "spending_categories": [],
+          "takeaways": [],
+          "explainer_cards": [],
+          "finance_status": "available_historical"
+        }
+      ],
+      "reporting_period_type": "custom",
+      "reporting_period_start": "2026-06-22",
+      "reporting_period_end": "2026-10-05",
+      "finance_source_note": "Latest display uses the supplied 2026 pre-election CF-2 filing. Earlier filings remain in filing history.",
+      "latest_filing_href": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf",
+      "receipts_label": "Total receipts",
+      "receipt_transactions": [
+        {
+          "donor": "",
+          "amount": 200.0,
+          "type": "Aggregate - Individual",
+          "date": "09/28/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 3680.0,
+          "type": "Aggregate - Individual",
+          "date": "09/30/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 400.0,
+          "type": "Aggregate - PAC",
+          "date": "09/30/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Thomas Badway",
+          "amount": 2000.0,
+          "type": "Individual",
+          "date": "09/29/2026",
+          "employer": "Law Office of Thomas E. Badway & Assoc",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Peter Bibby Jr",
+          "amount": 2000.0,
+          "type": "Individual",
+          "date": "09/29/2026",
+          "employer": "City of Providence",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Walter Bronhard",
+          "amount": 2000.0,
+          "type": "Individual",
+          "date": "09/17/2026",
+          "employer": "Walter L. Bronhard Real Estate",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Albert Cardente",
+          "amount": 250.0,
+          "type": "Individual",
+          "date": "09/24/2026",
+          "employer": "Cardente & Associates Tax Advisors",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Michael Chippendale",
+          "amount": 500.0,
+          "type": "Individual",
+          "date": "09/29/2026",
+          "employer": "State of Rhode Island",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Brian Coucher",
+          "amount": 2000.0,
+          "type": "Individual",
+          "date": "09/17/2026",
+          "employer": "Viking Distribution",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Stephen Debankah",
+          "amount": 250.0,
+          "type": "Individual",
+          "date": "09/29/2026",
+          "employer": "North Eastern Tree Service",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Andrew Dimitri",
+          "amount": 1000.0,
+          "type": "Individual",
+          "date": "09/29/2026",
+          "employer": "William Dimitri Law",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "William Dimitri",
+          "amount": 1000.0,
+          "type": "Individual",
+          "date": "09/29/2026",
+          "employer": "William Dimitri Law",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Vincent Dinofrio",
+          "amount": 250.0,
+          "type": "Individual",
+          "date": "09/29/2026",
+          "employer": "Vinny's Auto & Truck, Inc.",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Raymond Duquette",
+          "amount": 1000.0,
+          "type": "Individual",
+          "date": "09/29/2026",
+          "employer": "Semper Home Loans",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Reyna Garcia",
+          "amount": 250.0,
+          "type": "Individual",
+          "date": "09/29/2026",
+          "employer": "Brown Health",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Daniel Giroux",
+          "amount": 500.0,
+          "type": "Individual",
+          "date": "09/29/2026",
+          "employer": "New American Funding",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Dennis Hamel",
+          "amount": 500.0,
+          "type": "Individual",
+          "date": "09/29/2026",
+          "employer": "Retired",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "William Hunt",
+          "amount": 250.0,
+          "type": "Individual",
+          "date": "09/29/2026",
+          "employer": "Shove Insurance Agency Inc",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Peter Kasabian",
+          "amount": 2000.0,
+          "type": "Individual",
+          "date": "09/29/2026",
+          "employer": "Kasabian Construction",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Arastou Mahjoory",
+          "amount": 250.0,
+          "type": "Individual",
+          "date": "09/29/2026",
+          "employer": "St Michael's Federal Credit Union",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Erik Maluk",
+          "amount": 500.0,
+          "type": "Individual",
+          "date": "09/29/2026",
+          "employer": "Semper Home Loans",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Kenneth Marandola Jr",
+          "amount": 500.0,
+          "type": "Individual",
+          "date": "09/29/2026",
+          "employer": "Security Solutions",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "John Mendonsa",
+          "amount": 250.0,
+          "type": "Individual",
+          "date": "09/29/2026",
+          "employer": "New England Tree Inc",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Theodore Newcomer",
+          "amount": 500.0,
+          "type": "Individual",
+          "date": "09/17/2026",
+          "employer": "Realty Quarters",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Gregoy Porcardo",
+          "amount": 500.0,
+          "type": "Individual",
+          "date": "09/29/2026",
+          "employer": "Otrando Porcaro & Associates, Ltd",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Alan Porporino",
+          "amount": 250.0,
+          "type": "Individual",
+          "date": "09/15/2026",
+          "employer": "Porporino Real Estate LLC",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Carlos Rego",
+          "amount": 500.0,
+          "type": "Individual",
+          "date": "09/29/2026",
+          "employer": "Rego's Auto Body",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Michael Rego",
+          "amount": 500.0,
+          "type": "Individual",
+          "date": "09/29/2026",
+          "employer": "Five Star Home Improvement",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Michael Riley",
+          "amount": 500.0,
+          "type": "Individual",
+          "date": "07/01/2026",
+          "employer": "Law Offices of Michael J. Riley",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Anthony Rosciti",
+          "amount": 1000.0,
+          "type": "Individual",
+          "date": "09/29/2026",
+          "employer": "Rosciti Construction",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "James Safford",
+          "amount": 250.0,
+          "type": "Individual",
+          "date": "09/29/2026",
+          "employer": "New England Tree Inc",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Yvonne Sousa",
+          "amount": 2000.0,
+          "type": "Individual",
+          "date": "09/29/2026",
+          "employer": "RISE Real Estate Consultants",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Justin St Andre",
+          "amount": 500.0,
+          "type": "Individual",
+          "date": "09/29/2026",
+          "employer": "Milliman",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "William William",
+          "amount": 250.0,
+          "type": "Individual",
+          "date": "09/29/2026",
+          "employer": "Government Strategies, Inc.",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "RHODE ISLAND REPUBLICAN CONSERVATIVE CAUCUS",
+          "amount": 240.0,
+          "type": "PAC",
+          "date": "07/14/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        }
+      ],
+      "expenditure_transactions": [
+        {
+          "date": "10/05/2026",
+          "amount": 934.89,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "DP Sales Distributors, Inc.",
+          "purpose": "palm cards, yard signs",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/30/2026",
+          "amount": 100.0,
+          "category": "Fundraising Expenses",
+          "type": "Campaign Expenditure",
+          "payee": "Merola’s Restaurant & Bar",
+          "purpose": "FR deposit",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "10/05/2026",
+          "amount": 3788.54,
+          "category": "Fundraising Expenses",
+          "type": "Campaign Expenditure",
+          "payee": "Michael J Riley",
+          "purpose": "Reimburse Credit Card purchase Alpine Country Club 251 Pippin Orchard Rd Cranston RI 02921",
+          "source_url": "/data/finance-documents/michael-j-riley-2026-10-05-28-day.pdf"
+        }
+      ],
+      "in_kind_contributions": 0,
+      "in_kind_transactions": [],
+      "accounts_payable": 0,
+      "loans_payable": 0,
+      "total_liabilities": 0,
+      "total_fund_balance": 23696.57,
+      "refunds_rebates": 0,
+      "other_receipts": 0,
+      "loan_proceeds": 0,
+      "filing_key_number": "7352",
+      "finance_snapshot_note": "This is a current 2026 filing. Earlier historical information remains in filing history. Receipts include $27,880.00 in individual contributions and $640.00 in PAC contributions, including aggregate receipts without names."
     },
     {
       "candidate_id": "house-41-shaina-n-smith",
@@ -13495,20 +14289,26 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
-      "original_documents": [],
-      "beginning_cash": 378.04,
-      "money_raised": 250,
-      "money_spent": 9.48,
-      "ending_cash": 618.56,
-      "net_change": 240.52,
-      "total_cash_receipts": 250,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 9.48,
-      "summary_intro": "This filing shows only a limited cash reserve heading into the next stretch of the campaign. The report also shows that it raised more during the period than it spent.",
+      "report_label": "28-days-before-election report · 2026",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2 filing supplied by the user; report ending October 5, 2026.",
+      "coverage_note": "Figures cover July 1, 2026 to October 5, 2026. Cash receipts exclude beginning cash. Earlier filing periods are separate; no year-to-date total is inferred.",
+      "original_documents": [
+        {
+          "label": "28-days-before-election report · 2026 · CF-2 source PDF",
+          "period": "July 1, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/shaina-n-smith-2026-10-05-28-day.pdf"
+        }
+      ],
+      "beginning_cash": 618.56,
+      "money_raised": 1402,
+      "money_spent": 466.03,
+      "ending_cash": 1554.53,
+      "net_change": 935.97,
+      "total_cash_receipts": 1402,
+      "campaign_expenses": 258.94,
+      "aggregate_expenses": 207.09,
+      "summary_intro": "Shaina N Smith's 2026 pre-election filing covers July 1, 2026 to October 5, 2026. It reports $1,402.00 in cash receipts, $466.03 in spending and $1,554.53 in ending cash. The filing separately reports $1,500.00 in loans payable. This is an outstanding liability, not new loan proceeds during this reporting period.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -13527,20 +14327,225 @@
           "ending_cash": 618.56,
           "net_change": 240.52,
           "notes": "The campaign raised more than it spent in this reporting period."
+        },
+        {
+          "label": "28-days-before-election report · 2026",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026",
+          "reporting_period_type": "custom",
+          "receipts_label": "Total receipts",
+          "beginning_cash": 618.56,
+          "money_raised": 1402,
+          "money_spent": 466.03,
+          "ending_cash": 1554.53,
+          "net_change": 935.97,
+          "notes": "Separate filing period. Cash receipts exclude beginning cash. No missing interim filing is treated as zero."
         }
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
+          "label": "Aggregate individual contributions",
           "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 250,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "amount": 902.0,
+          "description": "Individual cash contributions reported without donor names. No named donor is inferred."
+        },
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 500.0,
+          "description": "Named individual cash contributions reported in the filing."
         }
       ],
-      "top_donors": [],
-      "spending_categories": [],
+      "top_donors": [
+        {
+          "donor": "Mr. Timothy Smith",
+          "amount": 500.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "08/24/2026",
+          "employer": "Self Employed",
+          "notes": "Employer reported as Self Employed.",
+          "source_url": "/data/finance-documents/shaina-n-smith-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Advertising",
+          "amount": 258.94,
+          "description": "Expenditures reported under Advertising in this filing."
+        },
+        {
+          "label": "Other",
+          "amount": 172.31,
+          "description": "Expenditures reported under Other in this filing."
+        },
+        {
+          "label": "Bank Fees",
+          "amount": 34.78,
+          "description": "Expenditures reported under Bank Fees in this filing."
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Latest display uses the supplied 2026 pre-election CF-2 filing. Earlier filings remain in filing history.",
+      "itemized_contribution_records": 1,
+      "individual_contribution_records": 1,
+      "pac_contribution_records": 0,
+      "archived_reporting_periods": [
+        {
+          "candidate_id": "house-41-shaina-n-smith",
+          "slug": "shaina-n-smith",
+          "candidate_name": "Shaina N Smith",
+          "chamber": "house",
+          "district_number": "41",
+          "party": "DEM",
+          "party_label": "Democratic",
+          "office_sought": "State Representative",
+          "report_label": "6/30/2026",
+          "reporting_period_label": "6/30/2026",
+          "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+          "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
+          "original_documents": [],
+          "beginning_cash": 378.04,
+          "money_raised": 250,
+          "money_spent": 9.48,
+          "ending_cash": 618.56,
+          "net_change": 240.52,
+          "total_cash_receipts": 250,
+          "campaign_expenses": 0,
+          "aggregate_expenses": 9.48,
+          "summary_intro": "This profile uses Shaina N Smith's original Q2 2026 filing for contribution and expenditure detail.",
+          "source_buckets": [
+            {
+              "label": "Itemized individual donors",
+              "class_name": "itemized-individual-donors",
+              "amount": 250,
+              "description": "One named individual contribution in the original Q2 filing."
+            }
+          ],
+          "top_donors": [
+            {
+              "donor": "Gregory Thuotte",
+              "amount": 250,
+              "type": "Individual"
+            }
+          ],
+          "spending_categories": [
+            {
+              "label": "Bank Fees",
+              "amount": 9.48,
+              "description": "Itemized bank fees reported in the original Q2 filing.",
+              "items": [
+                {
+                  "date": "06/29/2026",
+                  "vendor": "ActBlue",
+                  "purpose": "Processing Fees",
+                  "amount": 9.48
+                }
+              ]
+            }
+          ],
+          "takeaways": [],
+          "explainer_cards": [],
+          "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+          "itemized_contribution_records": 1,
+          "individual_contribution_records": 1,
+          "pac_contribution_records": 0
+        }
+      ],
+      "reporting_period_type": "custom",
+      "reporting_period_start": "2026-07-01",
+      "reporting_period_end": "2026-10-05",
+      "latest_filing_href": "/data/finance-documents/shaina-n-smith-2026-10-05-28-day.pdf",
+      "receipts_label": "Total receipts",
+      "finance_status": "available",
+      "receipt_transactions": [
+        {
+          "donor": "",
+          "amount": 300.0,
+          "type": "Aggregate - Individual",
+          "date": "07/01/2026",
+          "employer": "",
+          "notes": "Contributions from family members none of which exceed 200.00 for period or year to date",
+          "source_url": "/data/finance-documents/shaina-n-smith-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 250.0,
+          "type": "Aggregate - Individual",
+          "date": "07/02/2026",
+          "employer": "",
+          "notes": "Contributions from individuals for the period or year to date that did not exceed 200.00",
+          "source_url": "/data/finance-documents/shaina-n-smith-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 352.0,
+          "type": "Aggregate - Individual",
+          "date": "10/05/2026",
+          "employer": "",
+          "notes": "Contributions for period none of which exceed 200.00 for period or YTD",
+          "source_url": "/data/finance-documents/shaina-n-smith-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Mr. Timothy Smith",
+          "amount": 500.0,
+          "type": "Individual",
+          "date": "08/24/2026",
+          "employer": "Self Employed",
+          "notes": "",
+          "source_url": "/data/finance-documents/shaina-n-smith-2026-10-05-28-day.pdf"
+        }
+      ],
+      "expenditure_transactions": [
+        {
+          "date": "10/01/2026",
+          "amount": 34.78,
+          "category": "Bank Fees",
+          "type": "Aggregate Expenditure",
+          "payee": "",
+          "purpose": "Act Blue Fees",
+          "source_url": "/data/finance-documents/shaina-n-smith-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "10/04/2026",
+          "amount": 172.31,
+          "category": "Other",
+          "type": "Aggregate Expenditure",
+          "payee": "",
+          "purpose": "General expenditures during the period none of which exceeded 200.00 for the period",
+          "source_url": "/data/finance-documents/shaina-n-smith-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/02/2026",
+          "amount": 9.94,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Actblue",
+          "purpose": "Act Blue Fees",
+          "source_url": "/data/finance-documents/shaina-n-smith-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/08/2026",
+          "amount": 249.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Dirt Cheap Signs",
+          "purpose": "Yard Signs",
+          "source_url": "/data/finance-documents/shaina-n-smith-2026-10-05-28-day.pdf"
+        }
+      ],
+      "in_kind_contributions": 0,
+      "in_kind_transactions": [],
+      "accounts_payable": 0,
+      "loans_payable": 1500,
+      "total_liabilities": 1500,
+      "total_fund_balance": 54.53,
+      "refunds_rebates": 0,
+      "other_receipts": 0,
+      "loan_proceeds": 0,
+      "filing_key_number": "9957",
+      "finance_snapshot_note": "The filing separately reports $1,500.00 in loans payable. This is an outstanding liability, not new loan proceeds during this reporting period."
     },
     {
       "candidate_id": "house-42-edward-w-stravato",
@@ -13551,45 +14556,1243 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
-      "original_documents": [],
-      "beginning_cash": 0,
-      "money_raised": 0,
-      "money_spent": 4550.3,
-      "ending_cash": 45724.7,
-      "net_change": -4550.3,
-      "total_cash_receipts": 0,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 4550.3,
-      "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it spent more during the period than it raised.",
-      "filing_history": [
+      "report_label": "28-days-before-election report · 2026",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2 filing supplied by the user; report ending October 5, 2026.",
+      "coverage_note": "Figures cover July 1, 2026 to October 5, 2026. Cash receipts exclude beginning cash. Earlier filing periods are separate; no year-to-date total is inferred.",
+      "original_documents": [
         {
-          "label": "Q1 2026",
-          "reporting_period_label": "January 1, 2026 to March 31, 2026",
-          "money_raised": 0,
-          "money_spent": 0,
-          "ending_cash": 0,
-          "net_change": 0,
-          "notes": "The campaign raised more than it spent in this reporting period."
+          "label": "Q2 2026 CF-2 report",
+          "period": "April 1, 2026 to June 30, 2026",
+          "href": "/data/finance-documents/edward-w-stravato-q2-2026.pdf"
         },
+        {
+          "label": "28-days-before-election report · 2026 · CF-2 source PDF",
+          "period": "July 1, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        }
+      ],
+      "beginning_cash": 45724.7,
+      "money_raised": 3863,
+      "money_spent": 22946.59,
+      "ending_cash": 26641.11,
+      "net_change": -19083.59,
+      "total_cash_receipts": 3863,
+      "campaign_expenses": 22946.59,
+      "aggregate_expenses": 0,
+      "summary_intro": "Edward W Stravato's 2026 pre-election filing covers July 1, 2026 to October 5, 2026. It reports $3,863.00 in cash receipts, $22,946.59 in spending and $26,641.11 in ending cash. The filing reports $50,000.00 in loans payable and a fund balance of -$23,358.89. These are separate from the $26,641.11 ending cash balance; no new loan proceeds are reported in this period.",
+      "filing_history": [
         {
           "label": "Q2 2026",
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
-          "money_raised": 0,
+          "money_raised": 50275,
           "money_spent": 4550.3,
           "ending_cash": 45724.7,
-          "net_change": -4550.3,
-          "notes": "The campaign spent more than it raised in this reporting period."
+          "net_change": 45724.7,
+          "notes": "Q2 is the standardized main display period."
+        },
+        {
+          "label": "28-days-before-election report · 2026",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026",
+          "reporting_period_type": "custom",
+          "receipts_label": "Total receipts",
+          "beginning_cash": 45724.7,
+          "money_raised": 3863,
+          "money_spent": 22946.59,
+          "ending_cash": 26641.11,
+          "net_change": -19083.59,
+          "notes": "Separate filing period. Cash receipts exclude beginning cash. No missing interim filing is treated as zero."
         }
       ],
-      "source_buckets": [],
-      "top_donors": [],
-      "spending_categories": [],
+      "source_buckets": [
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 2863.0,
+          "description": "Named individual cash contributions reported in the filing."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 1000.0,
+          "description": "Named PAC cash contributions reported in the filing."
+        }
+      ],
+      "top_donors": [
+        {
+          "donor": "Katherine Kazarian",
+          "amount": 1000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/26/2026",
+          "employer": "CMBG3 Law",
+          "notes": "Employer reported as CMBG3 Law.",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "OCEAN STATE FORWARD PAC",
+          "amount": 1000.0,
+          "type": "PAC",
+          "interest_group": "Other / Unclassified",
+          "date": "09/21/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Rodger Zeng",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/25/2026",
+          "employer": "Johnston Acupuncture Clinic",
+          "notes": "Employer reported as Johnston Acupuncture Clinic.",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Albert Cournoyer",
+          "amount": 200.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/27/2026",
+          "employer": "Retired Teacher",
+          "notes": "Employer reported as Retired Teacher.",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Paul Dimaio",
+          "amount": 200.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "08/30/2026",
+          "employer": "Self Employed Attorney",
+          "notes": "Employer reported as Self Employed Attorney.",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Diana Lam",
+          "amount": 200.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "07/03/2026",
+          "employer": "Self Employed NP",
+          "notes": "Employer reported as Self Employed NP.",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Steven Mejieka",
+          "amount": 200.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/21/2026",
+          "employer": "Retired",
+          "notes": "Employer reported as Retired.",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Matthew Lenz",
+          "amount": 150.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "08/05/2026",
+          "employer": "META",
+          "notes": "Employer reported as META.",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Anthony Gesualdi",
+          "amount": 100.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "08/31/2026",
+          "employer": "New England Aquarium",
+          "notes": "Employer reported as New England Aquarium.",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Vincent Labianca",
+          "amount": 100.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/25/2026",
+          "employer": "Retired",
+          "notes": "Employer reported as Retired.",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Kyle Mason",
+          "amount": 100.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/28/2026",
+          "employer": "Point32Health",
+          "notes": "Employer reported as Point32Health.",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Brenda Pacheco",
+          "amount": 100.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/27/2026",
+          "employer": "Retired",
+          "notes": "Employer reported as Retired.",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Rebekah Staubach",
+          "amount": 100.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/29/2026",
+          "employer": "Summit Settlement",
+          "notes": "Employer reported as Summit Settlement.",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Caroline Caprio",
+          "amount": 50.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "10/01/2026",
+          "employer": "Retired",
+          "notes": "Employer reported as Retired.",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Diane Casteullucci",
+          "amount": 50.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/24/2026",
+          "employer": "Retired",
+          "notes": "Employer reported as Retired.",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Dennis DiMoenico",
+          "amount": 50.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/24/2026",
+          "employer": "REMAX",
+          "notes": "Employer reported as REMAX.",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Thomas Marlowe",
+          "amount": 5.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "08/31/2026",
+          "employer": "Retired",
+          "notes": "Employer reported as Retired.",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Thomas Marlowe",
+          "amount": 4.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "08/31/2026",
+          "employer": "Retired",
+          "notes": "Employer reported as Retired.",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Thomas Marlowe",
+          "amount": 4.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/24/2026",
+          "employer": "Retired",
+          "notes": "Employer reported as Retired.",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Advertising",
+          "amount": 11745.83,
+          "description": "Expenditures reported under Advertising in this filing."
+        },
+        {
+          "label": "Fundraising Expenses",
+          "amount": 5224.78,
+          "description": "Expenditures reported under Fundraising Expenses in this filing."
+        },
+        {
+          "label": "Other",
+          "amount": 2344.48,
+          "description": "Expenditures reported under Other in this filing."
+        },
+        {
+          "label": "Office Equipment & Supplies",
+          "amount": 1313.72,
+          "description": "Expenditures reported under Office Equipment & Supplies in this filing."
+        },
+        {
+          "label": "Food, Beverages and Meals",
+          "amount": 1287.16,
+          "description": "Expenditures reported under Food, Beverages and Meals in this filing."
+        },
+        {
+          "label": "Consultant & Professional Services",
+          "amount": 550.0,
+          "description": "Expenditures reported under Consultant & Professional Services in this filing."
+        },
+        {
+          "label": "Donations (All Others)",
+          "amount": 350.0,
+          "description": "Expenditures reported under Donations (All Others) in this filing."
+        },
+        {
+          "label": "Gifts",
+          "amount": 100.0,
+          "description": "Expenditures reported under Gifts in this filing."
+        },
+        {
+          "label": "Bank Fees",
+          "amount": 30.62,
+          "description": "Expenditures reported under Bank Fees in this filing."
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_status": "available",
+      "archived_reporting_periods": [
+        {
+          "candidate_id": "house-42-edward-w-stravato",
+          "slug": "edward-w-stravato",
+          "candidate_name": "Edward W Stravato",
+          "chamber": "house",
+          "district_number": "42",
+          "party": "DEM",
+          "party_label": "Democratic",
+          "office_sought": "State Representative",
+          "report_label": "Q2 2026 campaign finance filing",
+          "reporting_period_label": "April 1, 2026 to June 30, 2026",
+          "source_note": "Built from Edward William Stravato's Rhode Island Q2 2026 campaign finance filing supplied by the user.",
+          "coverage_note": "Q2 is the standardized main display. Total cash receipts include a $50,000 candidate loan and $275 in individual contributions.",
+          "original_documents": [
+            {
+              "label": "Q2 2026 CF-2 report",
+              "period": "April 1, 2026 to June 30, 2026",
+              "href": "/data/finance-documents/edward-w-stravato-q2-2026.pdf"
+            }
+          ],
+          "beginning_cash": 0,
+          "money_raised": 50275,
+          "money_spent": 4550.3,
+          "ending_cash": 45724.7,
+          "net_change": 45724.7,
+          "total_cash_receipts": 50275,
+          "campaign_expenses": 4550.3,
+          "aggregate_expenses": 0,
+          "summary_intro": "Edward W Stravato's Q2 2026 filing reports $50,275.00 in total cash received, including a $50,000.00 candidate loan, $4,550.30 in campaign expenses, and $45,724.70 in cash on hand.",
+          "source_buckets": [
+            {
+              "label": "Itemized individual donors",
+              "class_name": "itemized-individual-donors",
+              "amount": 275,
+              "description": "Named individual cash contributions reported in Q2."
+            },
+            {
+              "label": "Candidate loan",
+              "class_name": "candidate-loan",
+              "amount": 50000,
+              "description": "Loan proceeds from Edward W Stravato to the campaign."
+            }
+          ],
+          "top_donors": [
+            {
+              "donor": "Edward W Stravato",
+              "amount": 50000,
+              "type": "Loan Proceeds",
+              "interest_group": "Other / Unclassified",
+              "notes": "Candidate loan proceeds reported in the filing."
+            },
+            {
+              "donor": "William Bennell",
+              "amount": 125,
+              "type": "Individual",
+              "interest_group": "Individual",
+              "notes": "Employer listed as Federal Hill Signs."
+            },
+            {
+              "donor": "Jason Lampert",
+              "amount": 100,
+              "type": "Individual",
+              "interest_group": "Individual",
+              "notes": "Employer listed as Salzano Ettinger Lampert."
+            },
+            {
+              "donor": "Casey Perry",
+              "amount": 50,
+              "type": "Individual",
+              "interest_group": "Individual",
+              "notes": "Employer listed as Summit Settlement."
+            }
+          ],
+          "spending_categories": [
+            {
+              "title": "Advertising",
+              "summary": "Visible spending includes 4Imprint Inc., GoDaddy.com, HUB Federal Signs, Makestickers.com, and Pens.com.",
+              "amount": 4390.23
+            },
+            {
+              "title": "Office Equipment & Supplies",
+              "summary": "Visible spending includes Walmart.",
+              "amount": 134.81
+            },
+            {
+              "title": "Food, Beverages and Meals",
+              "summary": "Visible spending includes Market Basket.",
+              "amount": 19.92
+            },
+            {
+              "title": "Bank Fees",
+              "summary": "Visible spending includes ActBlue.",
+              "amount": 5.34
+            }
+          ],
+          "takeaways": [],
+          "explainer_cards": [],
+          "finance_status": "available"
+        }
+      ],
+      "reporting_period_type": "custom",
+      "reporting_period_start": "2026-07-01",
+      "reporting_period_end": "2026-10-05",
+      "finance_source_note": "Latest display uses the supplied 2026 pre-election CF-2 filing. Earlier filings remain in filing history.",
+      "latest_filing_href": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf",
+      "receipts_label": "Total receipts",
+      "receipt_transactions": [
+        {
+          "donor": "Caroline Caprio",
+          "amount": 50.0,
+          "type": "Individual",
+          "date": "10/01/2026",
+          "employer": "Retired",
+          "notes": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Diane Casteullucci",
+          "amount": 50.0,
+          "type": "Individual",
+          "date": "09/24/2026",
+          "employer": "Retired",
+          "notes": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Albert Cournoyer",
+          "amount": 200.0,
+          "type": "Individual",
+          "date": "09/27/2026",
+          "employer": "Retired Teacher",
+          "notes": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Paul Dimaio",
+          "amount": 200.0,
+          "type": "Individual",
+          "date": "08/30/2026",
+          "employer": "Self Employed Attorney",
+          "notes": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Dennis DiMoenico",
+          "amount": 50.0,
+          "type": "Individual",
+          "date": "09/24/2026",
+          "employer": "REMAX",
+          "notes": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Anthony Gesualdi",
+          "amount": 100.0,
+          "type": "Individual",
+          "date": "08/31/2026",
+          "employer": "New England Aquarium",
+          "notes": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Katherine Kazarian",
+          "amount": 1000.0,
+          "type": "Individual",
+          "date": "09/26/2026",
+          "employer": "CMBG3 Law",
+          "notes": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Vincent Labianca",
+          "amount": 100.0,
+          "type": "Individual",
+          "date": "09/25/2026",
+          "employer": "Retired",
+          "notes": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Diana Lam",
+          "amount": 200.0,
+          "type": "Individual",
+          "date": "07/03/2026",
+          "employer": "Self Employed NP",
+          "notes": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Matthew Lenz",
+          "amount": 150.0,
+          "type": "Individual",
+          "date": "08/05/2026",
+          "employer": "META",
+          "notes": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Thomas Marlowe",
+          "amount": 4.0,
+          "type": "Individual",
+          "date": "08/31/2026",
+          "employer": "Retired",
+          "notes": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Thomas Marlowe",
+          "amount": 5.0,
+          "type": "Individual",
+          "date": "08/31/2026",
+          "employer": "Retired",
+          "notes": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Thomas Marlowe",
+          "amount": 4.0,
+          "type": "Individual",
+          "date": "09/24/2026",
+          "employer": "Retired",
+          "notes": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Kyle Mason",
+          "amount": 100.0,
+          "type": "Individual",
+          "date": "09/28/2026",
+          "employer": "Point32Health",
+          "notes": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Steven Mejieka",
+          "amount": 200.0,
+          "type": "Individual",
+          "date": "09/21/2026",
+          "employer": "Retired",
+          "notes": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Brenda Pacheco",
+          "amount": 100.0,
+          "type": "Individual",
+          "date": "09/27/2026",
+          "employer": "Retired",
+          "notes": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Rebekah Staubach",
+          "amount": 100.0,
+          "type": "Individual",
+          "date": "09/29/2026",
+          "employer": "Summit Settlement",
+          "notes": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Rodger Zeng",
+          "amount": 250.0,
+          "type": "Individual",
+          "date": "09/25/2026",
+          "employer": "Johnston Acupuncture Clinic",
+          "notes": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "OCEAN STATE FORWARD PAC",
+          "amount": 1000.0,
+          "type": "PAC",
+          "date": "09/21/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        }
+      ],
+      "expenditure_transactions": [
+        {
+          "date": "07/16/2026",
+          "amount": 1233.98,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "4Imprint Inc.",
+          "purpose": "Tshirts and Polos for Volunteers",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/03/2026",
+          "amount": 6.73,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "ActBlue",
+          "purpose": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/05/2026",
+          "amount": 5.11,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "ActBlue",
+          "purpose": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/31/2026",
+          "amount": 0.37,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "ActBlue",
+          "purpose": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/31/2026",
+          "amount": 3.48,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "ActBlue",
+          "purpose": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/14/2026",
+          "amount": 0.4,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "ActBlue",
+          "purpose": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/24/2026",
+          "amount": 1.86,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "ActBlue",
+          "purpose": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/24/2026",
+          "amount": 1.86,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "ActBlue",
+          "purpose": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/24/2026",
+          "amount": 0.37,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "ActBlue",
+          "purpose": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/27/2026",
+          "amount": 3.48,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "ActBlue",
+          "purpose": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/28/2026",
+          "amount": 3.48,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "ActBlue",
+          "purpose": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/29/2026",
+          "amount": 3.48,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "ActBlue",
+          "purpose": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "10/05/2026",
+          "amount": 1.86,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "ActBlue",
+          "purpose": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/06/2026",
+          "amount": 130.25,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Atwood Grill",
+          "purpose": "Dinner with Volunteers",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/02/2026",
+          "amount": 131.55,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Bar Lazio",
+          "purpose": "Staff Meeting",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/11/2026",
+          "amount": 174.47,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Bar'Lino",
+          "purpose": "Dinner with Volunteers",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/08/2026",
+          "amount": 370.16,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Beacon Media",
+          "purpose": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/15/2026",
+          "amount": 740.32,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Beacon Media",
+          "purpose": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "10/02/2026",
+          "amount": 740.32,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Beacon Media",
+          "purpose": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/17/2026",
+          "amount": 41.95,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "BJs",
+          "purpose": "Dessert for Pell residents",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/25/2026",
+          "amount": 45.57,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Brewed Awakenings",
+          "purpose": "Volunteer Lunch",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/14/2026",
+          "amount": 7.75,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Brewed Awakenings",
+          "purpose": "Volunteer Coffee",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "10/02/2026",
+          "amount": 95.0,
+          "category": "Other",
+          "type": "Campaign Expenditure",
+          "payee": "Campaign Verify",
+          "purpose": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/31/2026",
+          "amount": 34.02,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Casa Noble",
+          "purpose": "Meeting with Senators",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/17/2026",
+          "amount": 58.41,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Casa Noble",
+          "purpose": "Lunch for Town Council",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/17/2026",
+          "amount": 50.0,
+          "category": "Gifts",
+          "type": "Campaign Expenditure",
+          "payee": "CVS Pharmacy",
+          "purpose": "Gift Cards",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/09/2026",
+          "amount": 122.93,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Dunkin Donuts",
+          "purpose": "Breakfast for Poll Workers- Primary Day",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/30/2026",
+          "amount": 3783.84,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "EastCoast Printing",
+          "purpose": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/30/2026",
+          "amount": 1531.47,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "EastCoast Printing",
+          "purpose": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/26/2026",
+          "amount": 300.0,
+          "category": "Consultant & Professional Services",
+          "type": "Campaign Expenditure",
+          "payee": "Gabriella Federico",
+          "purpose": "Website Build",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/23/2026",
+          "amount": 128.27,
+          "category": "Other",
+          "type": "Campaign Expenditure",
+          "payee": "GoDaddy.com",
+          "purpose": "Yearly Website Fee",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/23/2026",
+          "amount": 10.69,
+          "category": "Other",
+          "type": "Campaign Expenditure",
+          "payee": "GoDaddy.com",
+          "purpose": "Website Monthly Fee",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/24/2026",
+          "amount": 10.69,
+          "category": "Other",
+          "type": "Campaign Expenditure",
+          "payee": "GoDaddy.com",
+          "purpose": "Monthly fee",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/23/2026",
+          "amount": 10.69,
+          "category": "Other",
+          "type": "Campaign Expenditure",
+          "payee": "GoDaddy.com",
+          "purpose": "Monthly Website fee",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/11/2026",
+          "amount": 250.0,
+          "category": "Consultant & Professional Services",
+          "type": "Campaign Expenditure",
+          "payee": "Hanna Pro LLC",
+          "purpose": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/18/2026",
+          "amount": 55.51,
+          "category": "Other",
+          "type": "Campaign Expenditure",
+          "payee": "Home Depot",
+          "purpose": "Hardware for Sign install",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/18/2026",
+          "amount": 157.94,
+          "category": "Other",
+          "type": "Campaign Expenditure",
+          "payee": "Home Depot",
+          "purpose": "Lumber for Large Signs",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/18/2026",
+          "amount": 31.2,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Home Fries",
+          "purpose": "Breakfast for Volunteers",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/03/2026",
+          "amount": 802.5,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "HUB Federal Signs",
+          "purpose": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/18/2026",
+          "amount": 1718.25,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "HUB Federal Signs",
+          "purpose": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "10/03/2026",
+          "amount": 72.94,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Il Fico",
+          "purpose": "Lunch for Volunteers",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/25/2026",
+          "amount": 57.58,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Il Fico",
+          "purpose": "Lunch for Volunteers",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/02/2026",
+          "amount": 100.0,
+          "category": "Donations (All Others)",
+          "type": "Campaign Expenditure",
+          "payee": "Italo American Club",
+          "purpose": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/20/2026",
+          "amount": 9.61,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Kaffeinated",
+          "purpose": "Coffee for Volunteers",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/31/2026",
+          "amount": 13.59,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Latte Love",
+          "purpose": "Volunteer Refreshments",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/02/2026",
+          "amount": 112.45,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Makestickers.com",
+          "purpose": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/17/2026",
+          "amount": 50.0,
+          "category": "Gifts",
+          "type": "Campaign Expenditure",
+          "payee": "Market Basket",
+          "purpose": "Gift Cards",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/17/2026",
+          "amount": 587.08,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Oriental Taste",
+          "purpose": "Pell Manor Event",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/30/2026",
+          "amount": 250.0,
+          "category": "Donations (All Others)",
+          "type": "Campaign Expenditure",
+          "payee": "Original Italian Bakery",
+          "purpose": "Donation for St Roccos Feast doughboys",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/21/2026",
+          "amount": 56.5,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Palermos Pizza",
+          "purpose": "Pizza for Volunteers",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "10/01/2026",
+          "amount": 4874.78,
+          "category": "Fundraising Expenses",
+          "type": "Campaign Expenditure",
+          "payee": "Ralph's Catering",
+          "purpose": "Fundraiser Event 10/7/26",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/13/2026",
+          "amount": 350.0,
+          "category": "Fundraising Expenses",
+          "type": "Campaign Expenditure",
+          "payee": "Ralph's Catering",
+          "purpose": "Deposit for October Fundraiser",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/21/2026",
+          "amount": 405.53,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Regine Printing",
+          "purpose": "",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/31/2026",
+          "amount": 1750.0,
+          "category": "Other",
+          "type": "Campaign Expenditure",
+          "payee": "RI Democratic Party",
+          "purpose": "VAN Access",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/30/2026",
+          "amount": 171.69,
+          "category": "Office Equipment & Supplies",
+          "type": "Campaign Expenditure",
+          "payee": "Staples",
+          "purpose": "Copying",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/02/2026",
+          "amount": 228.82,
+          "category": "Office Equipment & Supplies",
+          "type": "Campaign Expenditure",
+          "payee": "Staples",
+          "purpose": "Copying Costs",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/02/2026",
+          "amount": 116.17,
+          "category": "Office Equipment & Supplies",
+          "type": "Campaign Expenditure",
+          "payee": "Staples",
+          "purpose": "Copying",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/02/2026",
+          "amount": 192.01,
+          "category": "Office Equipment & Supplies",
+          "type": "Campaign Expenditure",
+          "payee": "Staples",
+          "purpose": "Copying",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/02/2026",
+          "amount": 34.24,
+          "category": "Office Equipment & Supplies",
+          "type": "Campaign Expenditure",
+          "payee": "Staples",
+          "purpose": "Binders",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/01/2026",
+          "amount": 125.69,
+          "category": "Other",
+          "type": "Campaign Expenditure",
+          "payee": "Super Cheap Signs",
+          "purpose": "Metal Sign Brackets",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/28/2026",
+          "amount": 59.0,
+          "category": "Office Equipment & Supplies",
+          "type": "Campaign Expenditure",
+          "payee": "The Paper Store",
+          "purpose": "Thank You Notes",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/14/2026",
+          "amount": 48.15,
+          "category": "Office Equipment & Supplies",
+          "type": "Campaign Expenditure",
+          "payee": "The Paper Store",
+          "purpose": "Thank You Cards",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/13/2026",
+          "amount": 21.4,
+          "category": "Office Equipment & Supplies",
+          "type": "Campaign Expenditure",
+          "payee": "The Paper Store",
+          "purpose": "Thank You Notes",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/18/2026",
+          "amount": 82.0,
+          "category": "Office Equipment & Supplies",
+          "type": "Campaign Expenditure",
+          "payee": "USPS",
+          "purpose": "Stamps for thank you notes",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/28/2026",
+          "amount": 82.0,
+          "category": "Office Equipment & Supplies",
+          "type": "Campaign Expenditure",
+          "payee": "USPS",
+          "purpose": "Stamps for Thank You Notes",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/21/2026",
+          "amount": 82.0,
+          "category": "Office Equipment & Supplies",
+          "type": "Campaign Expenditure",
+          "payee": "USPS",
+          "purpose": "Stamps for Thank You Notes",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "10/02/2026",
+          "amount": 164.0,
+          "category": "Office Equipment & Supplies",
+          "type": "Campaign Expenditure",
+          "payee": "USPS",
+          "purpose": "Stamps for Thank you Notes",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/20/2026",
+          "amount": 16.91,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Walmart",
+          "purpose": "Beverages for Simmonsvillage Event",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/26/2026",
+          "amount": 32.24,
+          "category": "Office Equipment & Supplies",
+          "type": "Campaign Expenditure",
+          "payee": "Walmart",
+          "purpose": "Supplies",
+          "source_url": "/data/finance-documents/edward-w-stravato-2026-10-05-28-day.pdf"
+        }
+      ],
+      "in_kind_contributions": 0,
+      "in_kind_transactions": [],
+      "accounts_payable": 0,
+      "loans_payable": 50000,
+      "total_liabilities": 50000,
+      "total_fund_balance": -23358.89,
+      "refunds_rebates": 0,
+      "other_receipts": 0,
+      "loan_proceeds": 0,
+      "filing_key_number": "10230",
+      "finance_snapshot_note": "The filing reports $50,000.00 in loans payable and a fund balance of -$23,358.89. These are separate from the $26,641.11 ending cash balance; no new loan proceeds are reported in this period."
     },
     {
       "candidate_id": "house-42-richard-r-fascia",
@@ -13600,20 +15803,26 @@
       "party": "REP",
       "party_label": "Republican",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
-      "original_documents": [],
-      "beginning_cash": 9225.35,
-      "money_raised": 1897.56,
-      "money_spent": 1389.35,
-      "ending_cash": 9733.56,
-      "net_change": 508.21,
-      "total_cash_receipts": 1897.56,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 1389.35,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it raised more during the period than it spent.",
+      "report_label": "28-days-before-election report · 2026",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2 filing supplied by the user; report ending October 5, 2026.",
+      "coverage_note": "Figures cover July 1, 2026 to October 5, 2026. Cash receipts exclude beginning cash. Earlier filing periods are separate; no year-to-date total is inferred.",
+      "original_documents": [
+        {
+          "label": "28-days-before-election report · 2026 · CF-2 source PDF",
+          "period": "July 1, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        }
+      ],
+      "beginning_cash": 9733.56,
+      "money_raised": 17248.25,
+      "money_spent": 9750.21,
+      "ending_cash": 17231.6,
+      "net_change": 7498.04,
+      "total_cash_receipts": 17248.25,
+      "campaign_expenses": 8881.42,
+      "aggregate_expenses": 868.79,
+      "summary_intro": "Richard R Fascia's 2026 pre-election filing covers July 1, 2026 to October 5, 2026. It reports $17,248.25 in cash receipts, $9,750.21 in spending and $17,231.60 in ending cash. Cash receipts include $3,000.00 from political parties and a $225.00 fundraiser refund, separate from individual and PAC donations. The filing also reports $2,017.00 in loans payable.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -13632,20 +15841,1879 @@
           "ending_cash": 9733.56,
           "net_change": 508.21,
           "notes": "The campaign raised more than it spent in this reporting period."
+        },
+        {
+          "label": "28-days-before-election report · 2026",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026",
+          "reporting_period_type": "custom",
+          "receipts_label": "Total receipts",
+          "beginning_cash": 9733.56,
+          "money_raised": 17248.25,
+          "money_spent": 9750.21,
+          "ending_cash": 17231.6,
+          "net_change": 7498.04,
+          "notes": "Separate filing period. Cash receipts exclude beginning cash. No missing interim filing is treated as zero."
         }
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
+          "label": "Aggregate individual contributions",
           "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 1897.56,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "amount": 4914.29,
+          "description": "Individual cash contributions reported without donor names. No named donor is inferred."
+        },
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 5718.96,
+          "description": "Named individual cash contributions reported in the filing."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 3390.0,
+          "description": "Named PAC cash contributions reported in the filing."
+        },
+        {
+          "label": "Political party contributions",
+          "class_name": "other-reported-sources",
+          "amount": 3000.0,
+          "description": "Named political party cash contributions, separate from PAC contributions."
+        },
+        {
+          "label": "Refunds / rebates",
+          "class_name": "refunds-rebates",
+          "amount": 225.0,
+          "description": "Refunds or rebates are cash receipts, separate from donations."
         }
       ],
-      "top_donors": [],
-      "spending_categories": [],
+      "top_donors": [
+        {
+          "donor": "Mary Louise Sanborn",
+          "amount": 2000.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "08/24/2026",
+          "employer": "Retired",
+          "notes": "Employer reported as Retired.",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "RI REPUBLICAN STATE COMMITTEE",
+          "amount": 2000.0,
+          "type": "Party",
+          "interest_group": "Political Party",
+          "date": "09/30/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "JOHNSTON ASSOCIATION FIREFIGHTERS LOCAL 1950",
+          "amount": 1000.0,
+          "type": "PAC",
+          "interest_group": "Other / Unclassified",
+          "date": "08/08/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "JOHNSTON REPUBLICAN TOWN COMMITTEE",
+          "amount": 1000.0,
+          "type": "Party",
+          "interest_group": "Political Party",
+          "date": "08/28/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Dr Stephen Skoly",
+          "amount": 500.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/16/2026",
+          "employer": "Dr. Stephen T. Skoly Jr, DMD",
+          "notes": "Employer reported as Dr. Stephen T. Skoly Jr, DMD.",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Gerald Diebold",
+          "amount": 300.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/24/2026",
+          "employer": "Brown University",
+          "notes": "Employer reported as Brown University.",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Christopher Paplauskas",
+          "amount": 300.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/16/2026",
+          "employer": "City of Cranston",
+          "notes": "Employer reported as City of Cranston.",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Walter Thierfelder",
+          "amount": 260.25,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "07/17/2026",
+          "employer": "Retired",
+          "notes": "Employer reported as Retired.",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Nicholas Acquaviva",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "07/29/2026",
+          "employer": "Retired",
+          "notes": "Employer reported as Retired.",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Salvatore Marinosci",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/16/2026",
+          "employer": "Retired",
+          "notes": "Employer reported as Retired.",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Nicholas Passarelli",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "07/29/2026",
+          "employer": "Phenix Home Care",
+          "notes": "Employer reported as Phenix Home Care.",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Akshay Talwar",
+          "amount": 250.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "07/27/2026",
+          "employer": "Briarcliffe",
+          "notes": "Employer reported as Briarcliffe.",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "PROVIDENCE LODGE 3 COPE",
+          "amount": 250.0,
+          "type": "PAC",
+          "interest_group": "Other / Unclassified",
+          "date": "08/25/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "THE LEAGUE OF RI BUSINESSES BRISTOL",
+          "amount": 250.0,
+          "type": "PAC",
+          "interest_group": "Other / Unclassified",
+          "date": "07/29/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "THE LEAGUE OF RI BUSINESSES JOHNSTON",
+          "amount": 250.0,
+          "type": "PAC",
+          "interest_group": "Other / Unclassified",
+          "date": "07/29/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "THE LEAGUE OF RI BUSINESSES LINCOLN",
+          "amount": 250.0,
+          "type": "PAC",
+          "interest_group": "Other / Unclassified",
+          "date": "07/29/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "THE LEAGUE OF RI BUSINESSES MIDDLETOWN",
+          "amount": 250.0,
+          "type": "PAC",
+          "interest_group": "Other / Unclassified",
+          "date": "07/29/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "RHODE ISLAND REPUBLICAN CONSERVATIVE CAUCUS",
+          "amount": 240.0,
+          "type": "PAC",
+          "interest_group": "Other / Unclassified",
+          "date": "07/20/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "RI NAGE/IBPO PAC (National Assoc of Gov Employ/International Brotherhood)",
+          "amount": 225.0,
+          "type": "PAC",
+          "interest_group": "Other / Unclassified",
+          "date": "09/16/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Lisa Daft",
+          "amount": 208.2,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "08/07/2026",
+          "employer": "Lisa Daft DMD & Associates",
+          "notes": "Employer reported as Lisa Daft DMD & Associates.",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Thomas Lopardo",
+          "amount": 200.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "07/29/2026",
+          "employer": "Providence Apartment Association",
+          "notes": "Employer reported as Providence Apartment Association.",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Anthony Thompson",
+          "amount": 200.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "07/29/2026",
+          "employer": "Sigil Services Inc",
+          "notes": "Employer reported as Sigil Services Inc.",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "HOUSE REPUBLICAN LEADERSHIP PAC",
+          "amount": 200.0,
+          "type": "PAC",
+          "interest_group": "Other / Unclassified",
+          "date": "09/16/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "RI REPUBLICAN ASSEMBLY PAC",
+          "amount": 200.0,
+          "type": "PAC",
+          "interest_group": "Other / Unclassified",
+          "date": "09/24/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "RI NAGE/IBPO PAC (National Assoc of Gov Employ/International Brotherhood)",
+          "amount": 150.0,
+          "type": "PAC",
+          "interest_group": "Other / Unclassified",
+          "date": "07/29/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Albert Colannino",
+          "amount": 130.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "07/29/2026",
+          "employer": "Retired",
+          "notes": "Employer reported as Retired.",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "RI STATE ASSOCIATION OF FIREFIGHTERS",
+          "amount": 125.0,
+          "type": "PAC",
+          "interest_group": "Other / Unclassified",
+          "date": "07/29/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Roberta Czajkowski",
+          "amount": 104.1,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "07/18/2026",
+          "employer": "Brightview Senior Living",
+          "notes": "Employer reported as Brightview Senior Living.",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Sandra Taylor",
+          "amount": 104.1,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/14/2026",
+          "employer": "William Raveis",
+          "notes": "Employer reported as William Raveis.",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Greg Weiss",
+          "amount": 104.1,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "07/27/2026",
+          "employer": "J and W Property",
+          "notes": "Employer reported as J and W Property.",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Albert Colannino",
+          "amount": 100.0,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/16/2026",
+          "employer": "Retired",
+          "notes": "Employer reported as Retired.",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Walter Thierfelder",
+          "amount": 78.08,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "09/15/2026",
+          "employer": "Retired",
+          "notes": "Employer reported as Retired.",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Walter Thierfelder",
+          "amount": 78.08,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "08/24/2026",
+          "employer": "Retired",
+          "notes": "Employer reported as Retired.",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Walter Thierfelder",
+          "amount": 52.05,
+          "type": "Individual",
+          "interest_group": "Individual",
+          "date": "08/29/2026",
+          "employer": "Retired",
+          "notes": "Employer reported as Retired.",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Advertising",
+          "amount": 4335.04,
+          "description": "Expenditures reported under Advertising in this filing."
+        },
+        {
+          "label": "Fundraising Expenses",
+          "amount": 3643.51,
+          "description": "Expenditures reported under Fundraising Expenses in this filing."
+        },
+        {
+          "label": "Food, Beverages and Meals",
+          "amount": 795.61,
+          "description": "Expenditures reported under Food, Beverages and Meals in this filing."
+        },
+        {
+          "label": "Consultant & Professional Services",
+          "amount": 314.99,
+          "description": "Expenditures reported under Consultant & Professional Services in this filing."
+        },
+        {
+          "label": "Donations (Political)",
+          "amount": 297.7,
+          "description": "Expenditures reported under Donations (Political) in this filing."
+        },
+        {
+          "label": "Office Equipment & Supplies",
+          "amount": 254.65,
+          "description": "Expenditures reported under Office Equipment & Supplies in this filing."
+        },
+        {
+          "label": "Bank Fees",
+          "amount": 108.71,
+          "description": "Expenditures reported under Bank Fees in this filing."
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Latest display uses the supplied 2026 pre-election CF-2 filing. Earlier filings remain in filing history.",
+      "itemized_contribution_records": 3,
+      "individual_contribution_records": 2,
+      "pac_contribution_records": 0,
+      "archived_reporting_periods": [
+        {
+          "candidate_id": "house-42-richard-r-fascia",
+          "slug": "richard-r-fascia",
+          "candidate_name": "Richard R Fascia",
+          "chamber": "house",
+          "district_number": "42",
+          "party": "REP",
+          "party_label": "Republican",
+          "office_sought": "State Representative",
+          "report_label": "6/30/2026",
+          "reporting_period_label": "6/30/2026",
+          "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+          "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
+          "original_documents": [],
+          "beginning_cash": 9225.35,
+          "money_raised": 1897.56,
+          "money_spent": 1389.35,
+          "ending_cash": 9733.56,
+          "net_change": 508.21,
+          "total_cash_receipts": 1897.56,
+          "campaign_expenses": 0,
+          "aggregate_expenses": 1389.35,
+          "summary_intro": "This profile uses Richard R Fascia's original Q2 2026 filing for contribution and expenditure detail.",
+          "source_buckets": [
+            {
+              "label": "Aggregate individual contributions",
+              "class_name": "small-dollar-aggregate-online-receipts",
+              "amount": 225,
+              "description": "Individual contributions reported in aggregate without donor names."
+            },
+            {
+              "label": "Itemized individual donors",
+              "class_name": "itemized-individual-donors",
+              "amount": 572.56,
+              "description": "Named individual contributions in the original Q2 filing."
+            },
+            {
+              "label": "Aggregate PAC contributions",
+              "class_name": "pac-contributions",
+              "amount": 100,
+              "description": "PAC contribution reported in aggregate; the filing does not identify a PAC name."
+            },
+            {
+              "label": "Loan proceeds",
+              "class_name": "other-receipts",
+              "amount": 1000,
+              "description": "Candidate loan proceeds reported in the original Q2 filing."
+            }
+          ],
+          "top_donors": [
+            {
+              "donor": "Richard R. Fascia",
+              "amount": 1000,
+              "type": "Loan"
+            },
+            {
+              "donor": "Kevin Vigilante",
+              "amount": 364.36,
+              "type": "Individual"
+            },
+            {
+              "donor": "Michael Pino",
+              "amount": 208.2,
+              "type": "Individual"
+            }
+          ],
+          "spending_categories": [
+            {
+              "label": "Advertising",
+              "amount": 742.05,
+              "description": "Itemized advertising reported in the original Q2 filing.",
+              "items": [
+                {
+                  "date": "06/10/2026",
+                  "vendor": "Beacon Communications",
+                  "purpose": "",
+                  "amount": 140
+                },
+                {
+                  "date": "05/22/2026",
+                  "vendor": "BORI Graphics",
+                  "purpose": "",
+                  "amount": 230.04
+                },
+                {
+                  "date": "06/25/2026",
+                  "vendor": "GotPrint.com",
+                  "purpose": "",
+                  "amount": 207.08
+                },
+                {
+                  "date": "06/22/2026",
+                  "vendor": "Imprint",
+                  "purpose": "",
+                  "amount": 164.93
+                }
+              ]
+            },
+            {
+              "label": "Donations (Political)",
+              "amount": 263.39,
+              "description": "Itemized donations (political) reported in the original Q2 filing.",
+              "items": [
+                {
+                  "date": "05/04/2026",
+                  "vendor": "Aggregate expenditure",
+                  "purpose": "",
+                  "amount": 29.15
+                },
+                {
+                  "date": "05/18/2026",
+                  "vendor": "RI Republican State Central Committee",
+                  "purpose": "",
+                  "amount": 78.08
+                },
+                {
+                  "date": "06/22/2026",
+                  "vendor": "RI Republican State Central Committee",
+                  "purpose": "",
+                  "amount": 156.16
+                }
+              ]
+            },
+            {
+              "label": "Food, Beverages and Meals",
+              "amount": 173.12,
+              "description": "Itemized food, beverages and meals reported in the original Q2 filing.",
+              "items": [
+                {
+                  "date": "04/21/2026",
+                  "vendor": "Aggregate expenditure",
+                  "purpose": "",
+                  "amount": 75.99
+                },
+                {
+                  "date": "05/28/2026",
+                  "vendor": "Aggregate expenditure",
+                  "purpose": "Staff meeting",
+                  "amount": 35.65
+                },
+                {
+                  "date": "06/29/2026",
+                  "vendor": "Aggregate expenditure",
+                  "purpose": "Signature event",
+                  "amount": 61.48
+                }
+              ]
+            },
+            {
+              "label": "Consultant & Professional Services",
+              "amount": 75,
+              "description": "Itemized consultant & professional services reported in the original Q2 filing.",
+              "items": [
+                {
+                  "date": "05/26/2026",
+                  "vendor": "Lakeside Compliance Services",
+                  "purpose": "",
+                  "amount": 75
+                }
+              ]
+            },
+            {
+              "label": "Donations (All Others)",
+              "amount": 50,
+              "description": "Itemized donations (all others) reported in the original Q2 filing.",
+              "items": [
+                {
+                  "date": "04/06/2026",
+                  "vendor": "Aggregate expenditure",
+                  "purpose": "",
+                  "amount": 50
+                }
+              ]
+            },
+            {
+              "label": "Fundraising Expenses",
+              "amount": 50,
+              "description": "Itemized fundraising expenses reported in the original Q2 filing.",
+              "items": [
+                {
+                  "date": "06/22/2026",
+                  "vendor": "Atwood Grill",
+                  "purpose": "Deposit",
+                  "amount": 50
+                }
+              ]
+            },
+            {
+              "label": "Bank Fees",
+              "amount": 22.56,
+              "description": "Itemized bank fees reported in the original Q2 filing.",
+              "items": [
+                {
+                  "date": "06/05/2026",
+                  "vendor": "WinRed",
+                  "purpose": "",
+                  "amount": 8.2
+                },
+                {
+                  "date": "05/29/2026",
+                  "vendor": "WinRed",
+                  "purpose": "",
+                  "amount": 14.36
+                }
+              ]
+            },
+            {
+              "label": "Office Equipment & Supplies",
+              "amount": 13.23,
+              "description": "Itemized office equipment & supplies reported in the original Q2 filing.",
+              "items": [
+                {
+                  "date": "04/02/2026",
+                  "vendor": "Apple",
+                  "purpose": "",
+                  "amount": 2.99
+                },
+                {
+                  "date": "06/01/2026",
+                  "vendor": "Apple",
+                  "purpose": "",
+                  "amount": 2.99
+                },
+                {
+                  "date": "06/02/2026",
+                  "vendor": "Apple",
+                  "purpose": "",
+                  "amount": 2.13
+                },
+                {
+                  "date": "04/20/2026",
+                  "vendor": "Apple",
+                  "purpose": "",
+                  "amount": 2.13
+                },
+                {
+                  "date": "05/04/2026",
+                  "vendor": "Apple",
+                  "purpose": "",
+                  "amount": 2.99
+                }
+              ]
+            }
+          ],
+          "takeaways": [],
+          "explainer_cards": [],
+          "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+          "itemized_contribution_records": 3,
+          "individual_contribution_records": 2,
+          "pac_contribution_records": 0
+        }
+      ],
+      "reporting_period_type": "custom",
+      "reporting_period_start": "2026-07-01",
+      "reporting_period_end": "2026-10-05",
+      "latest_filing_href": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf",
+      "receipts_label": "Total receipts",
+      "finance_status": "available",
+      "receipt_transactions": [
+        {
+          "donor": "",
+          "amount": 26.03,
+          "type": "Aggregate - Individual",
+          "date": "07/15/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 67.67,
+          "type": "Aggregate - Individual",
+          "date": "07/17/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 52.05,
+          "type": "Aggregate - Individual",
+          "date": "07/22/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 130.0,
+          "type": "Aggregate - Individual",
+          "date": "07/23/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 256.15,
+          "type": "Aggregate - Individual",
+          "date": "07/29/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 26.03,
+          "type": "Aggregate - Individual",
+          "date": "07/30/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 180.13,
+          "type": "Aggregate - Individual",
+          "date": "07/31/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 2345.0,
+          "type": "Aggregate - Individual",
+          "date": "08/03/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 26.03,
+          "type": "Aggregate - Individual",
+          "date": "08/11/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 100.0,
+          "type": "Aggregate - Individual",
+          "date": "08/13/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 100.0,
+          "type": "Aggregate - Individual",
+          "date": "08/17/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 26.03,
+          "type": "Aggregate - Individual",
+          "date": "08/18/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 100.0,
+          "type": "Aggregate - Individual",
+          "date": "08/24/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 104.1,
+          "type": "Aggregate - Individual",
+          "date": "08/27/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 100.0,
+          "type": "Aggregate - Individual",
+          "date": "08/31/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 52.05,
+          "type": "Aggregate - Individual",
+          "date": "09/10/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 104.1,
+          "type": "Aggregate - Individual",
+          "date": "09/16/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 75.0,
+          "type": "Aggregate - Individual",
+          "date": "09/17/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 513.79,
+          "type": "Aggregate - Individual",
+          "date": "09/18/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 400.0,
+          "type": "Aggregate - Individual",
+          "date": "09/18/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 26.03,
+          "type": "Aggregate - Individual",
+          "date": "09/22/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "amount": 104.1,
+          "type": "Aggregate - Individual",
+          "date": "09/25/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Nicholas Acquaviva",
+          "amount": 250.0,
+          "type": "Individual",
+          "date": "07/29/2026",
+          "employer": "Retired",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Albert Colannino",
+          "amount": 130.0,
+          "type": "Individual",
+          "date": "07/29/2026",
+          "employer": "Retired",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Albert Colannino",
+          "amount": 100.0,
+          "type": "Individual",
+          "date": "09/16/2026",
+          "employer": "Retired",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Roberta Czajkowski",
+          "amount": 104.1,
+          "type": "Individual",
+          "date": "07/18/2026",
+          "employer": "Brightview Senior Living",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Lisa Daft",
+          "amount": 208.2,
+          "type": "Individual",
+          "date": "08/07/2026",
+          "employer": "Lisa Daft DMD & Associates",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Gerald Diebold",
+          "amount": 300.0,
+          "type": "Individual",
+          "date": "09/24/2026",
+          "employer": "Brown University",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Thomas Lopardo",
+          "amount": 200.0,
+          "type": "Individual",
+          "date": "07/29/2026",
+          "employer": "Providence Apartment Association",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Salvatore Marinosci",
+          "amount": 250.0,
+          "type": "Individual",
+          "date": "09/16/2026",
+          "employer": "Retired",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Christopher Paplauskas",
+          "amount": 300.0,
+          "type": "Individual",
+          "date": "09/16/2026",
+          "employer": "City of Cranston",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Nicholas Passarelli",
+          "amount": 250.0,
+          "type": "Individual",
+          "date": "07/29/2026",
+          "employer": "Phenix Home Care",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Mary Louise Sanborn",
+          "amount": 2000.0,
+          "type": "Individual",
+          "date": "08/24/2026",
+          "employer": "Retired",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Dr Stephen Skoly",
+          "amount": 500.0,
+          "type": "Individual",
+          "date": "09/16/2026",
+          "employer": "Dr. Stephen T. Skoly Jr, DMD",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Akshay Talwar",
+          "amount": 250.0,
+          "type": "Individual",
+          "date": "07/27/2026",
+          "employer": "Briarcliffe",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Sandra Taylor",
+          "amount": 104.1,
+          "type": "Individual",
+          "date": "09/14/2026",
+          "employer": "William Raveis",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Walter Thierfelder",
+          "amount": 78.08,
+          "type": "Individual",
+          "date": "09/15/2026",
+          "employer": "Retired",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Walter Thierfelder",
+          "amount": 78.08,
+          "type": "Individual",
+          "date": "08/24/2026",
+          "employer": "Retired",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Walter Thierfelder",
+          "amount": 260.25,
+          "type": "Individual",
+          "date": "07/17/2026",
+          "employer": "Retired",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Walter Thierfelder",
+          "amount": 52.05,
+          "type": "Individual",
+          "date": "08/29/2026",
+          "employer": "Retired",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Anthony Thompson",
+          "amount": 200.0,
+          "type": "Individual",
+          "date": "07/29/2026",
+          "employer": "Sigil Services Inc",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Greg Weiss",
+          "amount": 104.1,
+          "type": "Individual",
+          "date": "07/27/2026",
+          "employer": "J and W Property",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "HOUSE REPUBLICAN LEADERSHIP PAC",
+          "amount": 200.0,
+          "type": "PAC",
+          "date": "09/16/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "JOHNSTON ASSOCIATION FIREFIGHTERS LOCAL 1950",
+          "amount": 1000.0,
+          "type": "PAC",
+          "date": "08/08/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "PROVIDENCE LODGE 3 COPE",
+          "amount": 250.0,
+          "type": "PAC",
+          "date": "08/25/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "RHODE ISLAND REPUBLICAN CONSERVATIVE CAUCUS",
+          "amount": 240.0,
+          "type": "PAC",
+          "date": "07/20/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "RI NAGE/IBPO PAC (National Assoc of Gov Employ/International Brotherhood)",
+          "amount": 150.0,
+          "type": "PAC",
+          "date": "07/29/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "RI NAGE/IBPO PAC (National Assoc of Gov Employ/International Brotherhood)",
+          "amount": 225.0,
+          "type": "PAC",
+          "date": "09/16/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "RI REPUBLICAN ASSEMBLY PAC",
+          "amount": 200.0,
+          "type": "PAC",
+          "date": "09/24/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "RI STATE ASSOCIATION OF FIREFIGHTERS",
+          "amount": 125.0,
+          "type": "PAC",
+          "date": "07/29/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "THE LEAGUE OF RI BUSINESSES BRISTOL",
+          "amount": 250.0,
+          "type": "PAC",
+          "date": "07/29/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "THE LEAGUE OF RI BUSINESSES JOHNSTON",
+          "amount": 250.0,
+          "type": "PAC",
+          "date": "07/29/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "THE LEAGUE OF RI BUSINESSES LINCOLN",
+          "amount": 250.0,
+          "type": "PAC",
+          "date": "07/29/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "THE LEAGUE OF RI BUSINESSES MIDDLETOWN",
+          "amount": 250.0,
+          "type": "PAC",
+          "date": "07/29/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "JOHNSTON REPUBLICAN TOWN COMMITTEE",
+          "amount": 1000.0,
+          "type": "Party",
+          "date": "08/28/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "RI REPUBLICAN STATE COMMITTEE",
+          "amount": 2000.0,
+          "type": "Party",
+          "date": "09/30/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Ember To Ash",
+          "amount": 225.0,
+          "type": "Refund/Rebate",
+          "date": "09/21/2026",
+          "employer": "",
+          "notes": "miscount of attendees for 9/16 FR",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        }
+      ],
+      "expenditure_transactions": [
+        {
+          "date": "07/01/2026",
+          "amount": 36.92,
+          "category": "Food, Beverages and Meals",
+          "type": "Aggregate Expenditure",
+          "payee": "",
+          "purpose": "signature event",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/07/2026",
+          "amount": 72.24,
+          "category": "Food, Beverages and Meals",
+          "type": "Aggregate Expenditure",
+          "payee": "",
+          "purpose": "signature event",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/21/2026",
+          "amount": 63.46,
+          "category": "Donations (Political)",
+          "type": "Aggregate Expenditure",
+          "payee": "",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/27/2026",
+          "amount": 20.27,
+          "category": "Advertising",
+          "type": "Aggregate Expenditure",
+          "payee": "",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/03/2026",
+          "amount": 15.49,
+          "category": "Advertising",
+          "type": "Aggregate Expenditure",
+          "payee": "",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/09/2026",
+          "amount": 12.51,
+          "category": "Advertising",
+          "type": "Aggregate Expenditure",
+          "payee": "",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/11/2026",
+          "amount": 55.98,
+          "category": "Advertising",
+          "type": "Aggregate Expenditure",
+          "payee": "",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/12/2026",
+          "amount": 40.82,
+          "category": "Food, Beverages and Meals",
+          "type": "Aggregate Expenditure",
+          "payee": "",
+          "purpose": "food for volunteers",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/13/2026",
+          "amount": 22.63,
+          "category": "Food, Beverages and Meals",
+          "type": "Aggregate Expenditure",
+          "payee": "",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/26/2026",
+          "amount": 54.07,
+          "category": "Advertising",
+          "type": "Aggregate Expenditure",
+          "payee": "",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/28/2026",
+          "amount": 27.57,
+          "category": "Food, Beverages and Meals",
+          "type": "Aggregate Expenditure",
+          "payee": "",
+          "purpose": "staff meeting",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/06/2026",
+          "amount": 20.97,
+          "category": "Advertising",
+          "type": "Aggregate Expenditure",
+          "payee": "",
+          "purpose": "staff meeting",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/08/2026",
+          "amount": 18.81,
+          "category": "Advertising",
+          "type": "Aggregate Expenditure",
+          "payee": "",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/08/2026",
+          "amount": 89.99,
+          "category": "Consultant & Professional Services",
+          "type": "Aggregate Expenditure",
+          "payee": "",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/10/2026",
+          "amount": 46.79,
+          "category": "Food, Beverages and Meals",
+          "type": "Aggregate Expenditure",
+          "payee": "",
+          "purpose": "staff meeting",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/25/2026",
+          "amount": 8.56,
+          "category": "Office Equipment & Supplies",
+          "type": "Aggregate Expenditure",
+          "payee": "",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/28/2026",
+          "amount": 200.0,
+          "category": "Consultant & Professional Services",
+          "type": "Aggregate Expenditure",
+          "payee": "",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/29/2026",
+          "amount": 27.74,
+          "category": "Food, Beverages and Meals",
+          "type": "Aggregate Expenditure",
+          "payee": "",
+          "purpose": "staff meeting",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "10/01/2026",
+          "amount": 33.97,
+          "category": "Food, Beverages and Meals",
+          "type": "Aggregate Expenditure",
+          "payee": "",
+          "purpose": "food for coffee hour",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/21/2026",
+          "amount": 230.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "AGE Graphics",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/22/2026",
+          "amount": 220.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "AGE Graphics",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/11/2026",
+          "amount": 280.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "AGE Graphics",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/14/2026",
+          "amount": 310.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "AGE Graphics",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/29/2026",
+          "amount": 606.3,
+          "category": "Fundraising Expenses",
+          "type": "Campaign Expenditure",
+          "payee": "Atwood Grill",
+          "purpose": "venue & food",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/23/2026",
+          "amount": 49.12,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Bishop Hill Tavern",
+          "purpose": "staff meeting",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/14/2026",
+          "amount": 55.36,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Bishop Hill Tavern",
+          "purpose": "staff meeting",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/08/2026",
+          "amount": 35.12,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Bishop Hill Tavern",
+          "purpose": "staff meeting",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/27/2026",
+          "amount": 32.87,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Bishop Hill Tavern",
+          "purpose": "staff meeting",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/16/2026",
+          "amount": 2400.0,
+          "category": "Fundraising Expenses",
+          "type": "Campaign Expenditure",
+          "payee": "Ember To Ash",
+          "purpose": "FR venue",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/31/2026",
+          "amount": 206.91,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "GotPrint.com",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/01/2026",
+          "amount": 21.7,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "GotPrint.com",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/10/2026",
+          "amount": 129.99,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "GotPrint.com",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/15/2026",
+          "amount": 35.2,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "J. Palmieri's Pizzeria & Pub",
+          "purpose": "staff meetin",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/20/2026",
+          "amount": 37.87,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "J. Palmieri's Pizzeria & Pub",
+          "purpose": "staff meeting",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/17/2026",
+          "amount": 28.89,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "J. Palmieri's Pizzeria & Pub",
+          "purpose": "staff meeting",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/18/2026",
+          "amount": 19.93,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "J. Palmieri's Pizzeria & Pub",
+          "purpose": "staff meeting",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/21/2026",
+          "amount": 48.08,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "J. Palmieri's Pizzeria & Pub",
+          "purpose": "staff meeting",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/08/2026",
+          "amount": 53.69,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "J. Palmieri's Pizzeria & Pub",
+          "purpose": "staff meeting",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/16/2026",
+          "amount": 52.45,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "J. Palmieri's Pizzeria & Pub",
+          "purpose": "staff meeting",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/04/2026",
+          "amount": 38.35,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "J. Palmieri's Pizzeria & Pub",
+          "purpose": "staff meeting",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/19/2026",
+          "amount": 25.0,
+          "category": "Consultant & Professional Services",
+          "type": "Campaign Expenditure",
+          "payee": "Lakeside Compliance Servcies",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/21/2026",
+          "amount": 78.08,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "RI Republican State Central Committee",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/21/2026",
+          "amount": 78.08,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "RI Republican State Central Committee",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/21/2026",
+          "amount": 78.08,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "RI Republican State Central Committee",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/31/2026",
+          "amount": 12.09,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Right Insite",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/18/2026",
+          "amount": 750.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Ryan Ardito Film LLC",
+          "purpose": "video",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/22/2026",
+          "amount": 637.21,
+          "category": "Fundraising Expenses",
+          "type": "Campaign Expenditure",
+          "payee": "Tap Printing, Inc.",
+          "purpose": "mailer",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/31/2026",
+          "amount": 1976.25,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Viamedia Inc.",
+          "purpose": "cable ads",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/05/2026",
+          "amount": 246.09,
+          "category": "Office Equipment & Supplies",
+          "type": "Campaign Expenditure",
+          "payee": "WalMart",
+          "purpose": "printer",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/12/2026",
+          "amount": 8.2,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "WinRed",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/11/2026",
+          "amount": 1.03,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "WinRed",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/26/2026",
+          "amount": 3.08,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "WinRed",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/17/2026",
+          "amount": 1.03,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "WinRed",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/17/2026",
+          "amount": 2.67,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "WinRed",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/15/2026",
+          "amount": 1.03,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "WinRed",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/23/2026",
+          "amount": 5.12,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "WinRed",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/22/2026",
+          "amount": 4.1,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "WinRed",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/22/2026",
+          "amount": 12.3,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "WinRed",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/29/2026",
+          "amount": 14.19,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "WinRed",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/30/2026",
+          "amount": 1.03,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "WinRed",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/31/2026",
+          "amount": 7.1,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "WinRed",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/01/2026",
+          "amount": 2.05,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "WinRed",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/27/2026",
+          "amount": 4.1,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "WinRed",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/16/2026",
+          "amount": 8.2,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "WinRed",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/17/2026",
+          "amount": 6.04,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "WinRed",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/18/2026",
+          "amount": 20.26,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "WinRed",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/10/2026",
+          "amount": 2.05,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "WinRed",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/22/2026",
+          "amount": 1.03,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "WinRed",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/25/2026",
+          "amount": 4.1,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "WinRed",
+          "purpose": "",
+          "source_url": "/data/finance-documents/richard-r-fascia-2026-10-05-28-day.pdf"
+        }
+      ],
+      "in_kind_contributions": 0,
+      "in_kind_transactions": [],
+      "accounts_payable": 0,
+      "loans_payable": 2017,
+      "total_liabilities": 2017,
+      "total_fund_balance": 15214.6,
+      "refunds_rebates": 225.0,
+      "other_receipts": 0,
+      "loan_proceeds": 0,
+      "filing_key_number": "7247",
+      "finance_snapshot_note": "Cash receipts include $3,000.00 from political parties and a $225.00 fundraiser refund, separate from individual and PAC donations. The filing also reports $2,017.00 in loans payable."
     },
     {
       "candidate_id": "house-43-deborah-a-fellela",
@@ -13656,20 +17724,26 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
-      "original_documents": [],
-      "beginning_cash": 5527.81,
-      "money_raised": 8200,
-      "money_spent": 3588.53,
-      "ending_cash": 10139.28,
-      "net_change": 4611.47,
-      "total_cash_receipts": 8200,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 3588.53,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it raised more during the period than it spent.",
+      "report_label": "28-days-before-election report · 2026",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2 filing supplied by the user; report ending October 5, 2026.",
+      "coverage_note": "Figures cover July 1, 2026 to October 5, 2026. Cash receipts exclude beginning cash. Earlier filing periods are separate; no year-to-date total is inferred.",
+      "original_documents": [
+        {
+          "label": "28-days-before-election report · 2026 · CF-2 source PDF",
+          "period": "July 1, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        }
+      ],
+      "beginning_cash": 10139.28,
+      "money_raised": 300,
+      "money_spent": 2501.29,
+      "ending_cash": 7937.99,
+      "net_change": -2201.29,
+      "total_cash_receipts": 300,
+      "campaign_expenses": 2501.29,
+      "aggregate_expenses": 0,
+      "summary_intro": "Deborah A Fellela's 2026 pre-election filing covers July 1, 2026 to October 5, 2026. It reports $300.00 in cash receipts, $2,501.29 in spending and $7,937.99 in ending cash. The filing reports $300.00 in PAC contributions and no individual cash contributions for this reporting period.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -13688,20 +17762,658 @@
           "ending_cash": 10139.28,
           "net_change": 4611.47,
           "notes": "The campaign raised more than it spent in this reporting period."
+        },
+        {
+          "label": "28-days-before-election report · 2026",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026",
+          "reporting_period_type": "custom",
+          "receipts_label": "Total receipts",
+          "beginning_cash": 10139.28,
+          "money_raised": 300,
+          "money_spent": 2501.29,
+          "ending_cash": 7937.99,
+          "net_change": -2201.29,
+          "notes": "Separate filing period. Cash receipts exclude beginning cash. No missing interim filing is treated as zero."
         }
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
-          "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 8200,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 300.0,
+          "description": "Named PAC cash contributions reported in the filing."
         }
       ],
-      "top_donors": [],
-      "spending_categories": [],
+      "top_donors": [
+        {
+          "donor": "PROVIDENCE CHAMBER PAC",
+          "amount": 200.0,
+          "type": "PAC",
+          "interest_group": "Other / Unclassified",
+          "date": "07/19/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "RHODE ISLAND ENERGY PAC (RIE PAC)",
+          "amount": 100.0,
+          "type": "PAC",
+          "interest_group": "Other / Unclassified",
+          "date": "07/30/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Food, Beverages and Meals",
+          "amount": 840.1,
+          "description": "Expenditures reported under Food, Beverages and Meals in this filing."
+        },
+        {
+          "label": "Advertising",
+          "amount": 630.05,
+          "description": "Expenditures reported under Advertising in this filing."
+        },
+        {
+          "label": "Donations (All Others)",
+          "amount": 434.99,
+          "description": "Expenditures reported under Donations (All Others) in this filing."
+        },
+        {
+          "label": "Donations (Political)",
+          "amount": 300.0,
+          "description": "Expenditures reported under Donations (Political) in this filing."
+        },
+        {
+          "label": "Gifts",
+          "amount": 173.59,
+          "description": "Expenditures reported under Gifts in this filing."
+        },
+        {
+          "label": "Other",
+          "amount": 68.3,
+          "description": "Expenditures reported under Other in this filing."
+        },
+        {
+          "label": "Bank Fees",
+          "amount": 30.0,
+          "description": "Expenditures reported under Bank Fees in this filing."
+        },
+        {
+          "label": "Office Equipment & Supplies",
+          "amount": 24.26,
+          "description": "Expenditures reported under Office Equipment & Supplies in this filing."
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "finance_source_note": "Latest display uses the supplied 2026 pre-election CF-2 filing. Earlier filings remain in filing history.",
+      "itemized_contribution_records": 52,
+      "individual_contribution_records": 35,
+      "pac_contribution_records": 17,
+      "archived_reporting_periods": [
+        {
+          "candidate_id": "house-43-deborah-a-fellela",
+          "slug": "deborah-a-fellela",
+          "candidate_name": "Deborah A Fellela",
+          "chamber": "house",
+          "district_number": "43",
+          "party": "DEM",
+          "party_label": "Democratic",
+          "office_sought": "State Representative",
+          "report_label": "6/30/2026",
+          "reporting_period_label": "6/30/2026",
+          "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+          "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
+          "original_documents": [],
+          "beginning_cash": 5527.81,
+          "money_raised": 8200,
+          "money_spent": 3588.53,
+          "ending_cash": 10139.28,
+          "net_change": 4611.47,
+          "total_cash_receipts": 8200,
+          "campaign_expenses": 0,
+          "aggregate_expenses": 3588.53,
+          "summary_intro": "This profile uses Deborah A Fellela's original Q2 2026 filing for contribution and spending-category detail.",
+          "source_buckets": [
+            {
+              "label": "Itemized individual donors",
+              "amount": 3800,
+              "class_name": "itemized-individual-donors",
+              "description": "35 named individual contributions reported in the original Q2 filing."
+            },
+            {
+              "label": "PAC contributions",
+              "amount": 4400,
+              "class_name": "pac-contributions",
+              "description": "17 named PAC contributions reported in the original Q2 filing."
+            }
+          ],
+          "top_donors": [
+            {
+              "donor": "Johnston Association Firefighters Local",
+              "amount": 1500,
+              "type": "PAC",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "Johnston Federation of Teachers Local",
+              "amount": 500,
+              "type": "PAC",
+              "interest_group": "Education / Labor"
+            },
+            {
+              "donor": "Robert Russo",
+              "amount": 500,
+              "type": "Individual"
+            },
+            {
+              "donor": "IBEW Local 99 PAC",
+              "amount": 300,
+              "type": "PAC",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "PEOPLE, RI Council 94, AFSCME AFL-CIO PAC",
+              "amount": 300,
+              "type": "PAC",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "RI Brotherhood of Correctional Officers",
+              "amount": 300,
+              "type": "PAC",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "District 1199 SEIU Political Action Committee",
+              "amount": 200,
+              "type": "PAC",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "North Providence Federation of Teachers",
+              "amount": 200,
+              "type": "PAC",
+              "interest_group": "Education / Labor"
+            },
+            {
+              "donor": "RI Federation of Teachers COPE PAC",
+              "amount": 200,
+              "type": "PAC",
+              "interest_group": "Education / Labor"
+            },
+            {
+              "donor": "Douglas Jeffrey",
+              "amount": 200,
+              "type": "Individual"
+            },
+            {
+              "donor": "Kevin Milonzzi",
+              "amount": 200,
+              "type": "Individual"
+            },
+            {
+              "donor": "William Murphy",
+              "amount": 200,
+              "type": "Individual"
+            },
+            {
+              "donor": "Patricia Serpa",
+              "amount": 200,
+              "type": "Individual"
+            },
+            {
+              "donor": "RI Association of Nurse Anesthetists PAC",
+              "amount": 150,
+              "type": "PAC",
+              "interest_group": "Health Care"
+            },
+            {
+              "donor": "RI State Association of Firefighters",
+              "amount": 150,
+              "type": "PAC",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "Cranston Teachers' Alliance",
+              "amount": 50,
+              "type": "PAC",
+              "interest_group": "Education / Labor"
+            },
+            {
+              "donor": "Iron Workers Local 37",
+              "amount": 100,
+              "type": "PAC",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "NEARI PACE",
+              "amount": 100,
+              "type": "PAC",
+              "interest_group": "Education / Labor"
+            },
+            {
+              "donor": "Providence RI Central Federated Council AFL-CIO",
+              "amount": 100,
+              "type": "PAC",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "Providence Teachers COPE",
+              "amount": 50,
+              "type": "PAC",
+              "interest_group": "Education / Labor"
+            },
+            {
+              "donor": "RI Laborers' State Employees",
+              "amount": 100,
+              "type": "PAC",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "RI NAGE/IBPO PAC",
+              "amount": 100,
+              "type": "PAC",
+              "interest_group": "Labor / Unions"
+            }
+          ],
+          "spending_categories": [
+            {
+              "label": "Advertising",
+              "amount": 1097.9,
+              "description": "Advertising, signs and promotional placements."
+            },
+            {
+              "label": "Fundraising Expenses",
+              "amount": 800,
+              "description": "Fundraising-related expenses."
+            },
+            {
+              "label": "Food, Beverages and Meals",
+              "amount": 571.24,
+              "description": "Meals and refreshments connected with campaign activity."
+            },
+            {
+              "label": "Donations (Political)",
+              "amount": 450,
+              "description": "Contributions to political committees or candidates."
+            },
+            {
+              "label": "Donations (All Others)",
+              "amount": 418.5,
+              "description": "Non-political donations and sponsorships."
+            },
+            {
+              "label": "Travel & Lodging",
+              "amount": 80,
+              "description": "Campaign-related travel and lodging."
+            },
+            {
+              "label": "Gifts",
+              "amount": 72.7,
+              "description": "Gifts reported as campaign expenditures."
+            },
+            {
+              "label": "Office Equipment & Supplies",
+              "amount": 68.19,
+              "description": "Office and constituent-related supplies."
+            },
+            {
+              "label": "Bank Fees",
+              "amount": 30,
+              "description": "Banking and transaction fees."
+            }
+          ],
+          "takeaways": [],
+          "explainer_cards": [],
+          "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+          "itemized_contribution_records": 52,
+          "individual_contribution_records": 35,
+          "pac_contribution_records": 17
+        }
+      ],
+      "reporting_period_type": "custom",
+      "reporting_period_start": "2026-07-01",
+      "reporting_period_end": "2026-10-05",
+      "latest_filing_href": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf",
+      "receipts_label": "Total receipts",
+      "finance_status": "available",
+      "receipt_transactions": [
+        {
+          "donor": "PROVIDENCE CHAMBER PAC",
+          "amount": 200.0,
+          "type": "PAC",
+          "date": "07/19/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "RHODE ISLAND ENERGY PAC (RIE PAC)",
+          "amount": 100.0,
+          "type": "PAC",
+          "date": "07/30/2026",
+          "employer": "",
+          "notes": "",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        }
+      ],
+      "expenditure_transactions": [
+        {
+          "date": "07/03/2026",
+          "amount": 100.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Act Blue, LLC",
+          "purpose": "political donation for upcoming candidate election: Robert Craven, Jr.",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/25/2026",
+          "amount": 23.38,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Bar Lazio",
+          "purpose": "drinks at fundraising event",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/17/2026",
+          "amount": 350.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "BEACON COMMUNICATIONS",
+          "purpose": "ad in local newspaper (new school year)",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/24/2026",
+          "amount": 24.99,
+          "category": "Donations (All Others)",
+          "type": "Campaign Expenditure",
+          "payee": "BJ'S",
+          "purpose": "donation of cookies towards Confirmation event",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/06/2026",
+          "amount": 31.68,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Cranston Diner",
+          "purpose": "breakfast with constituent",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/12/2026",
+          "amount": 24.0,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "D. PALMIERI'S BAKERY",
+          "purpose": "pizza for feast party",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/19/2026",
+          "amount": 15.0,
+          "category": "Gifts",
+          "type": "Campaign Expenditure",
+          "payee": "DUNKIN DONUTS",
+          "purpose": "gift card toward someone who gave extra service",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/16/2026",
+          "amount": 50.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Lauren Garzone",
+          "purpose": "donation",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/31/2026",
+          "amount": 60.0,
+          "category": "Donations (All Others)",
+          "type": "Campaign Expenditure",
+          "payee": "Gloria Gemma Foundation",
+          "purpose": "Gloria Gemma walk upcoming for Oct 4, 2026",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/14/2026",
+          "amount": 55.64,
+          "category": "Gifts",
+          "type": "Campaign Expenditure",
+          "payee": "Il Fico",
+          "purpose": "gift cert for raffle at local elderly complex",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/27/2026",
+          "amount": 285.88,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Il Fico",
+          "purpose": "dinner for volunteers on campaigns",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/11/2026",
+          "amount": 100.0,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "ITALO AMERICAN CHARITABLE TRUST",
+          "purpose": "Dinner ticket for Senator Ciccone Person of the Year dinner.",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/11/2026",
+          "amount": 75.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "Italo American Club of RI",
+          "purpose": "fee for ad booklet honoring Senator Ciccone",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/10/2026",
+          "amount": 57.08,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "KNIGHT'S LIQUORS",
+          "purpose": "liquor towards feast party",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/24/2026",
+          "amount": 40.0,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Luigi's",
+          "purpose": "dinner with legislators",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/08/2026",
+          "amount": 102.95,
+          "category": "Gifts",
+          "type": "Campaign Expenditure",
+          "payee": "Market Basket",
+          "purpose": "pastry/pizza for church donations- events",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/31/2026",
+          "amount": 116.82,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Market Basket",
+          "purpose": "food for Our Lady of Grace Feast party",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/27/2026",
+          "amount": 50.0,
+          "category": "Other",
+          "type": "Campaign Expenditure",
+          "payee": "Providence Municipal Court",
+          "purpose": "city of Providence parking violation for a Veterans event.",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/21/2026",
+          "amount": 123.05,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "REGINE PRINGTING",
+          "purpose": "note cards to correspond with constituents",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/02/2026",
+          "amount": 50.0,
+          "category": "Donations (All Others)",
+          "type": "Campaign Expenditure",
+          "payee": "RIBCO SCHOLARSHIP FUND",
+          "purpose": "",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/13/2026",
+          "amount": 29.24,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "Sando's Pizzeria",
+          "purpose": "pizza gathering with possible volunteers for upcoming elections",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/11/2026",
+          "amount": 150.0,
+          "category": "Donations (Political)",
+          "type": "Campaign Expenditure",
+          "payee": "Joseph Solomon Jr",
+          "purpose": "donation",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/11/2026",
+          "amount": 50.0,
+          "category": "Donations (All Others)",
+          "type": "Campaign Expenditure",
+          "payee": "SPECIAL OLYMPICS RI",
+          "purpose": "Johnston heat fundraiser (senior center)",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/20/2026",
+          "amount": 250.0,
+          "category": "Donations (All Others)",
+          "type": "Campaign Expenditure",
+          "payee": "SPECIAL OLYMPICS RI",
+          "purpose": "donation",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/24/2026",
+          "amount": 24.26,
+          "category": "Office Equipment & Supplies",
+          "type": "Campaign Expenditure",
+          "payee": "STAPLES",
+          "purpose": "copies made for campaign materials",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/11/2026",
+          "amount": 28.87,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "STOP & SHOP",
+          "purpose": "essentials for feast party",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/24/2026",
+          "amount": 48.48,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "STOP & SHOP",
+          "purpose": "food for annual Our Lady of Grace Feast party",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "08/31/2026",
+          "amount": 10.0,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "TD BANK",
+          "purpose": "bank maintenance fee",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/30/2026",
+          "amount": 10.0,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "TD BANK",
+          "purpose": "bank maintenance fee",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/31/2026",
+          "amount": 10.0,
+          "category": "Bank Fees",
+          "type": "Campaign Expenditure",
+          "payee": "TD BANK",
+          "purpose": "bank maintenance fees",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/26/2026",
+          "amount": 54.67,
+          "category": "Food, Beverages and Meals",
+          "type": "Campaign Expenditure",
+          "payee": "The Last Resort",
+          "purpose": "drinks at fundraising bingo event for Special Olympics",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "09/21/2026",
+          "amount": 82.0,
+          "category": "Advertising",
+          "type": "Campaign Expenditure",
+          "payee": "USPS",
+          "purpose": "stamps roll",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        },
+        {
+          "date": "07/22/2026",
+          "amount": 18.3,
+          "category": "Other",
+          "type": "Campaign Expenditure",
+          "payee": "USPS",
+          "purpose": "mailing of citation and other envelopes",
+          "source_url": "/data/finance-documents/deborah-a-fellela-2026-10-05-28-day.pdf"
+        }
+      ],
+      "in_kind_contributions": 0,
+      "in_kind_transactions": [],
+      "accounts_payable": 0,
+      "loans_payable": 0,
+      "total_liabilities": 0,
+      "total_fund_balance": 7937.99,
+      "refunds_rebates": 0,
+      "other_receipts": 0,
+      "loan_proceeds": 0,
+      "filing_key_number": "6385",
+      "finance_snapshot_note": "The filing reports $300.00 in PAC contributions and no individual cash contributions for this reporting period."
     },
     {
       "candidate_id": "house-44-gregory-costantino",
