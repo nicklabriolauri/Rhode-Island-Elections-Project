@@ -82,6 +82,7 @@ def build(slugs=None):
   page=page.replace('<section class="card" id="bills">',selected+'<section class="card" id="bills">',1)
   page=page.replace('href="voting-patterns/pilot.css','href="house-voting-patterns/pilot.css')
   page=page.replace('</body>','<script src="candidate-profile.js"></script><script src="house-voting-patterns/pilot.js?v=20261006-house"></script></body>')
+  finance_snapshot=re.search(r'<section class="card" id="finance">.*?</section>',page,re.S).group()
   page=page.replace('Rhode Island Senator','Rhode Island Representative').replace('chamber=senate','chamber=house').replace('October 4, 2026','October 6, 2026').replace('October 5, 2026','October 6, 2026')
   page=page.replace(f'/running.html?chamber=house&amp;district={district}&amp;election=general',f'/races/house-{district}.html')
   page=re.sub(r'<p class="photo-note">.*?</p>','<p class="photo-note">Portrait: '+base.link(bio,'Rhode Island General Assembly ↗')+'</p>',page)
@@ -97,6 +98,7 @@ def build(slugs=None):
   assert 'chamber=senate' not in page and 'Senate District' not in page
   if district in (15,19,20,21,24,25,26,28,29,30,33,34,36,37,38,39,40,42,43,44,45,46,47,48,49,50,51,52):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
   if district in range(44,53):page=page.replace('October 6, 2026','October 7, 2026')
+  page=replace_section(page,'finance',finance_snapshot.replace('class="record-grid"','class="metric-grid"'))
   path.write_text(page)
   entry={'slug':slug,'portrait_url':('https://www.rilegislature.gov/representatives/Pictures/McEntee.jpg' if district==33 else f'https://www.rilegislature.gov/LegislationPictures/{image}.jpg'),'biography_url':bio,'retrieved_at':'2026-10-07','credit':'Rhode Island General Assembly','width':w,'height':h}
   if photo.exists():entry['file_name']=photo.name
