@@ -3941,38 +3941,26 @@
       "party": "Democrat",
       "campaign_website": "https://www.tinaspearsri.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-30",
-      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "website_checked": "2026-10-06",
+      "website_audit_note": "Verified current campaign priority pages; former /priorities address returns 404.",
       "priorities": [
         {
-          "title": "Healthcare",
-          "summary": "Expand access to affordable healthcare and strengthen local healthcare services.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.tinaspearsri.com/priorities"
+          "title": "Affordability for seniors and working families",
+          "summary": "Supports tax relief, lower everyday costs, expanded childcare and policies that help families remain in Rhode Island.",
+          "source_url": "https://www.tinaspearsri.com/affordability",
+          "source_label": "Official campaign priorities"
         },
         {
-          "title": "Housing",
-          "summary": "Address housing affordability and homelessness.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.tinaspearsri.com/priorities"
+          "title": "Affordable healthcare",
+          "summary": "Supports quality, affordable healthcare, stronger primary care and community-based services for seniors, children and people with disabilities.",
+          "source_url": "https://www.tinaspearsri.com/healthcare",
+          "source_label": "Official campaign priorities"
         },
         {
-          "title": "Education",
-          "summary": "Support schools, special education, and education funding.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.tinaspearsri.com/priorities"
-        },
-        {
-          "title": "Climate resilience",
-          "summary": "Strengthen coastal preparedness and environmental resilience.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.tinaspearsri.com/priorities"
-        },
-        {
-          "title": "Seniors and transportation",
-          "summary": "Help seniors age in place and improve transportation for rural communities.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.tinaspearsri.com/priorities"
+          "title": "Environmental resilience",
+          "summary": "Supports conservation, clean water, shoreline access, recycling and practical measures to strengthen climate resilience.",
+          "source_url": "https://www.tinaspearsri.com/resiliency",
+          "source_label": "Official campaign priorities"
         }
       ],
       "endorsements": [
@@ -3996,7 +3984,8 @@
           "endorser": "AFL-CIO Rhode Island",
           "source_url": "https://bluevoterguide.org/state/RI?lang=en"
         }
-      ]
+      ],
+      "district_community": "Charlestown, New Shoreham, South Kingstown, Westerly"
     },
     {
       "candidate_id": "house-36-dem-primary-leah-j-boisclair",
@@ -4050,7 +4039,8 @@
           "endorser": "Rhode Island State Fraternal Order of Police",
           "source_url": "https://coalitionnews.com/charlestown-south-kingstown-block-island-westerly-house-candidate-leah-boisclair-earns-endorsement-from-the-rhode-island-sta-2/"
         }
-      ]
+      ],
+      "district_community": "Charlestown, New Shoreham, South Kingstown, Westerly"
     },
     {
       "candidate_id": "house-37-dem-primary-samuel-angelo-azzinaro",
@@ -4063,7 +4053,8 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [],
+      "district_community": "Westerly"
     },
     {
       "candidate_id": "house-37-rep-primary-christopher-m-stanton",
@@ -4071,18 +4062,73 @@
       "chamber": "house",
       "district_number": 37,
       "party": "Republican",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-30",
-      "website_audit_note": "No official campaign website located in this audit.",
-      "priorities": [],
+      "campaign_website": "https://stanton4ri.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-10-06",
+      "website_audit_note": "Campaign homepage identifies Chris Stanton as House District 37 candidate.",
+      "priorities": [
+        {
+          "title": "Affordability and fiscal responsibility",
+          "summary": "Supports scrutiny of public budgets and lower Rhode Island taxes.",
+          "source_url": "https://stanton4ri.com/",
+          "source_label": "Official campaign priorities"
+        },
+        {
+          "title": "Local jobs and small businesses",
+          "summary": "Supports more well-paying local jobs and assistance for small businesses.",
+          "source_url": "https://stanton4ri.com/",
+          "source_label": "Official campaign priorities"
+        },
+        {
+          "title": "Coastline, farms and open spaces",
+          "summary": "Supports preserving the coastline, farmland and open spaces.",
+          "source_url": "https://stanton4ri.com/",
+          "source_label": "Official campaign priorities"
+        },
+        {
+          "title": "Affordable healthcare",
+          "summary": "Supports reducing red tape and protecting community health centers.",
+          "source_url": "https://stanton4ri.com/",
+          "source_label": "Official campaign priorities"
+        },
+        {
+          "title": "Lower energy costs",
+          "summary": "Calls for lower utility bills.",
+          "source_url": "https://stanton4ri.com/",
+          "source_label": "Official campaign priorities"
+        },
+        {
+          "title": "Constitutional rights",
+          "summary": "Supports protecting constitutional rights and a people-over-party approach.",
+          "source_url": "https://stanton4ri.com/",
+          "source_label": "Official campaign priorities"
+        },
+        {
+          "title": "Second-home tax",
+          "summary": "Opposes a second-home tax, arguing that coastal homeowners already pay their share.",
+          "source_url": "https://stanton4ri.com/",
+          "source_label": "Official campaign priorities"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "League of Rhode Island Businesses",
           "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
           "designation": "General-election endorsement"
         }
-      ]
+      ],
+      "district_community": "Westerly",
+      "campaign_contact": {
+        "phone": "(401) 524-1856",
+        "email": "Stanton@Stanton4RI.com",
+        "source_url": "https://stanton4ri.com/",
+        "checked_at": "2026-10-06"
+      },
+      "prior_public_service": {
+        "summary": "Westerly Finance Board member and local contractor and business owner. This local service is separate from a General Assembly record.",
+        "source_url": "https://stanton4ri.com/",
+        "source_label": "Official campaign biography"
+      }
     },
     {
       "candidate_id": "house-38-dem-primary-brian-patrick-kennedy",
@@ -4104,7 +4150,8 @@
           "endorser": "AFL-CIO Rhode Island",
           "source_url": "https://bluevoterguide.org/state/RI?lang=en"
         }
-      ]
+      ],
+      "district_community": "Hopkinton, Westerly"
     },
     {
       "candidate_id": "house-38-dem-primary-stephen-c-moffitt",
@@ -4142,7 +4189,8 @@
           "source_url": "https://moffittforri.com/"
         }
       ],
-      "endorsements": []
+      "endorsements": [],
+      "district_community": "Hopkinton, Westerly"
     },
     {
       "candidate_id": "house-39-dem-primary-megan-l-cotter",
@@ -4195,7 +4243,8 @@
           "endorser": "Planned Parenthood Votes! Rhode Island PAC",
           "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
-      ]
+      ],
+      "district_community": "Exeter, Hopkinton, Richmond"
     },
     {
       "candidate_id": "house-39-rep-primary-jasmin-roy",
@@ -4245,7 +4294,8 @@
           "source_url": "https://theleagueofribusinesses.com/%22the-wall%22",
           "designation": "General-election endorsement"
         }
-      ]
+      ],
+      "district_community": "Exeter, Hopkinton, Richmond"
     },
     {
       "candidate_id": "house-40-rep-primary-michael-chippendale",
@@ -4258,7 +4308,8 @@
       "website_checked": "2026-08-30",
       "website_audit_note": "No official campaign website located in this audit.",
       "priorities": [],
-      "endorsements": []
+      "endorsements": [],
+      "district_community": "Coventry, Foster, Glocester"
     },
     {
       "candidate_id": "house-41-dem-primary-shaina-n-smith",

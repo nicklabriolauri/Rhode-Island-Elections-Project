@@ -8,6 +8,7 @@ SLUGS={'amy-j-santiago':7,'christopher-l-ireland':7,'brittany-m-kubicek':5}
 SLUGS.update({'arlette-hidalgo':12,'derick-a-reels':13,'colleen-m-crudele':15,'allan-w-fung':15})
 SLUGS.update({'zakary-j-pereira':22,'barbara-quigley':22,'william-muto':23,'dana-james-traversie':23,'angela-s-coburn':27,'lawrence-paul-almagno-jr':27})
 SLUGS.update({'james-c-sheehan':31,'robert-e-craven-jr':32,'jessica-drew-day':33})
+SLUGS.update({'christopher-m-stanton':37,'jasmin-roy':39})
 def build(slugs=None):
  incumbent=ROOT/'candidates/anthony-j-desimone.html'
  incumbent.write_text(incumbent.read_text().replace('/running.html?chamber=house&amp;district=5&amp;election=general','/races/house-5.html'))
@@ -82,6 +83,7 @@ def build(slugs=None):
   portraits=load('candidate_portrait_sources_2026');portrait=next((p for p in portraits if p['slug']==slug),None)
   if portrait:
    page=page.replace(slug+'.png',portrait.get('file_name',slug+'.png'))
+   if slug=='christopher-m-stanton':page=page.replace('class="portrait"','class="portrait" style="object-position:20% top"')
    if slug=='brittany-m-kubicek':page=page.replace('class="portrait"','class="portrait" style="object-position:25% top"')
    page=re.sub(r'<p class="photo-note">.*?</p>', '<p class="photo-note">Portrait: '+link(portrait['biography_url'],portrait['credit']+' ↗')+'</p>',page)
    page=re.sub(r'(class="portrait"[^>]*?)width="[0-9]+" height="[0-9]+"',lambda m:m[1]+f'width="{portrait["width"]}" height="{portrait["height"]}"',page)
@@ -89,7 +91,7 @@ def build(slugs=None):
   page=re.sub(r'href="/finance.html\?slug='+re.escape(slug)+r'"',lambda m:'href="'+finance+'"',page)
   page=re.sub(r'href="/running.html\?chamber=house(?:&amp;|&)district='+str(district)+r'(?:&amp;|&)election=general"',f'href="/races/house-{district}.html"',page)
   assert 'data-voting-widget' not in page and 'riep-legislative-index' not in page and 'rep-desimone' not in page
-  if district in (15,22,23,27,31,32,33):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
+  if district in (15,22,23,27,31,32,33,37,39):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
   (ROOT/'candidates'/f'{slug}.html').write_text(page)
  for filename in ['ballot.html','running.html']:
   p=ROOT/filename;s=p.read_text()
