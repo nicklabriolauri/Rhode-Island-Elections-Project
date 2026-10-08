@@ -4952,36 +4952,66 @@
       "party": "Democrat",
       "campaign_website": "https://cheriecruzri.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-30",
-      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "website_checked": "2026-10-07",
+      "website_audit_note": "Official campaign website and issues page verified October 7, 2026.",
       "priorities": [
         {
           "title": "Housing",
-          "summary": "Expand affordable and accessible housing.",
+          "summary": "Increase affordable and accessible housing.",
           "source_label": "Official campaign website",
           "source_url": "https://cheriecruzri.com/issues"
         },
         {
-          "title": "Working families and wages",
-          "summary": "Strengthen family supports and secure living wages and worker protections.",
+          "title": "Working families",
+          "summary": "Improve supports for families and children and help parents navigate school and social systems.",
+          "source_label": "Official campaign website",
+          "source_url": "https://cheriecruzri.com/issues"
+        },
+        {
+          "title": "Wages and working conditions",
+          "summary": "Support safe working conditions, fair pay and benefits.",
+          "source_label": "Official campaign website",
+          "source_url": "https://cheriecruzri.com/issues"
+        },
+        {
+          "title": "Seniors",
+          "summary": "Invest in care and quality of life for seniors.",
           "source_label": "Official campaign website",
           "source_url": "https://cheriecruzri.com/issues"
         },
         {
           "title": "Healthcare",
-          "summary": "Expand comprehensive healthcare and reduce prescription costs.",
+          "summary": "Support comprehensive coverage and caps on prescription costs.",
           "source_label": "Official campaign website",
           "source_url": "https://cheriecruzri.com/issues"
         },
         {
           "title": "Education and childcare",
-          "summary": "Invest in public education, teachers, school programs, and childcare.",
+          "summary": "Invest in public schools, teachers, curricula and childcare.",
           "source_label": "Official campaign website",
           "source_url": "https://cheriecruzri.com/issues"
         },
         {
-          "title": "Justice and climate",
-          "summary": "Reform the criminal legal system and pursue climate action and green jobs.",
+          "title": "Justice",
+          "summary": "Address root causes of harm and improve housing and employment opportunities for people with records.",
+          "source_label": "Official campaign website",
+          "source_url": "https://cheriecruzri.com/issues"
+        },
+        {
+          "title": "Climate",
+          "summary": "Support green jobs, cleaner transportation and energy infrastructure.",
+          "source_label": "Official campaign website",
+          "source_url": "https://cheriecruzri.com/issues"
+        },
+        {
+          "title": "Addiction treatment",
+          "summary": "Expand behavioral and medical care for people with addiction.",
+          "source_label": "Official campaign website",
+          "source_url": "https://cheriecruzri.com/issues"
+        },
+        {
+          "title": "Gun safety",
+          "summary": "Support gun violence prevention, including a ban on military-style assault weapons.",
           "source_label": "Official campaign website",
           "source_url": "https://cheriecruzri.com/issues"
         }
