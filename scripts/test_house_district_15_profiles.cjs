@@ -20,12 +20,12 @@ for(const c of roster){
   assert(s.includes('Republican · Incumbent · Cranston'));assert(!s.includes('Democratic'));
   assert(section(s,'primaries').includes('575 votes'));assert(section(s,'primaries').includes('Uncontested Republican'));
   assert(s.includes('data-candidate="Christopher G Paplauskas"'));assert(s.includes('current-riep-house-ranking.html#district-15'));
-  assert(s.includes('$28,314.70'));assert(s.includes('No 2023–2024 CEL score'));
+  assert(s.includes('$20,511.54'));assert(s.includes('No 2023–2024 CEL score'));
  }else{
   assert(!s.includes('data-voting-widget'));assert(!s.includes('class="riep-progress"'));
   if(c.party==='IND')assert(section(s,'finance').includes('Missing figures are not treated as zero'));
   else for(const amount of ['$11,991.79','$10,345.14','$1,646.65'])assert(section(s,'finance').includes(amount));
-  assert(!s.includes('rep-paplauskas'));assert(!s.includes('$28,314.70'));
+  assert(!s.includes('rep-paplauskas'));assert(!s.includes('$20,511.54'));
   if(c.party==='DEM')assert(section(s,'primaries').includes('1,258 votes'));
   else{
    assert(s.includes('Independent · Candidate · Cranston'));assert(!s.includes('Independent Socialist'));

@@ -4441,10 +4441,10 @@
       "party": "REP",
       "party_label": "Republican",
       "office_sought": "State Representative",
-      "report_label": "Q2 2026 campaign finance filing",
-      "reporting_period_label": "April 1, 2026 to June 30, 2026",
-      "source_note": "Built from Christopher G Paplauskas's Rhode Island Q1 and Q2 2026 campaign finance filings supplied by the user.",
-      "coverage_note": "Detailed Q1/Q2 filing data; Q2 is the standardized main display.",
+      "report_label": "28 days before election · 2026 campaign finance filing",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2/CF-3/CF-4, committee key 7490; supplied October 8, 2026.",
+      "coverage_note": "Latest filing covers July 1–October 5. Q2 retained as a separate full snapshot in the reporting-period selector. Cash and in-kind contributions are separated.",
       "original_documents": [
         {
           "label": "Q1 2026 CF-2 report",
@@ -4455,17 +4455,22 @@
           "label": "Q2 2026 CF-2 report",
           "period": "April 1, 2026 to June 30, 2026",
           "href": "/data/finance-documents/christopher-g-paplauskas-q2-2026.pdf"
+        },
+        {
+          "label": "28 days before election CF-2 with CF-3/CF-4 schedules",
+          "period": "July 1, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/christopher-g-paplauskas-2026-10-05-28-day.pdf"
         }
       ],
-      "beginning_cash": 22270.85,
-      "money_raised": 12440,
-      "money_spent": 6396.15,
-      "ending_cash": 28314.7,
-      "net_change": 6043.85,
-      "total_cash_receipts": 12440,
-      "campaign_expenses": 6396.15,
+      "beginning_cash": 28314.7,
+      "money_raised": 19220.5,
+      "money_spent": 27023.66,
+      "ending_cash": 20511.54,
+      "net_change": -7803.16,
+      "total_cash_receipts": 19220.5,
+      "campaign_expenses": 27023.66,
       "aggregate_expenses": 0,
-      "summary_intro": "Christopher G Paplauskas's Q2 2026 filing reports $12,440.00 in receipts, $6,396.15 in campaign expenses, and $28,314.70 in cash on hand.",
+      "summary_intro": "Christopher G Paplauskas’s July 1–October 5 filing reports $19,220.50 in cash receipts, $27,023.66 in expenses and $20,511.54 in cash on hand. In-kind contributions of $483.00 are separate.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -4484,148 +4489,1931 @@
           "ending_cash": 28314.7,
           "net_change": 6043.85,
           "notes": "Q2 is the standardized main display period."
+        },
+        {
+          "reporting_period_label": "July 1, 2026 to October 5, 2026",
+          "money_raised": 19220.5,
+          "money_spent": 27023.66,
+          "ending_cash": 20511.54,
+          "net_change": -7803.16,
+          "label": "28 days before election · 2026",
+          "notes": "July 1–October 5 filing. $483 in-kind is separate from cash receipts."
         }
       ],
       "source_buckets": [
         {
-          "label": "Itemized individual donors",
+          "label": "Individual contributions",
           "class_name": "itemized-individual-donors",
-          "amount": 9540,
-          "description": "Individual contributions reported in Q2."
+          "amount": 17325,
+          "description": "Cash contributions classified as reported in CF-2."
         },
         {
           "label": "PAC contributions",
           "class_name": "pac-contributions",
-          "amount": 2900,
-          "description": "Political action committee contributions reported in Q2."
+          "amount": 1895.5,
+          "description": "Cash contributions classified as reported in CF-2."
         }
       ],
       "top_donors": [
         {
-          "donor": "INTERNATIONAL BROTHERHOOD OF POLICE OFFICERS LOCAL 301",
-          "amount": 2000,
-          "type": "PAC",
-          "interest_group": "Public Safety",
-          "notes": "Named contribution listed in the filing."
+          "donor": "JAMES DONAHUE",
+          "type": "Individual",
+          "amount": 1000.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: OLD STURBRIDGE VILLAGE"
         },
         {
-          "donor": "Friends of Ken Hopkins",
-          "amount": 2000,
+          "donor": "Steven Frias",
           "type": "Individual",
+          "amount": 1000.0,
           "interest_group": "Individual",
-          "notes": "Reported as an individual contribution in the filing, despite the committee-style name."
+          "notes": "Classified as reported in the filing. Employer: Keegan Werlin LLP"
         },
         {
-          "donor": "James Donahue",
-          "amount": 1000,
+          "donor": "Robert Murray",
           "type": "Individual",
+          "amount": 1000.0,
           "interest_group": "Individual",
-          "notes": "Employer listed as Old Sturbridge Village."
+          "notes": "Classified as reported in the filing. Employer: Taft & McSally"
+        },
+        {
+          "donor": "Ralph Palumbo",
+          "type": "Individual",
+          "amount": 1000.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Revity Energy"
+        },
+        {
+          "donor": "George Cappello",
+          "type": "Individual",
+          "amount": 650.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Cappelllo Law"
+        },
+        {
+          "donor": "Ronn David",
+          "type": "Individual",
+          "amount": 500.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: David Building Co."
+        },
+        {
+          "donor": "ANDREW DELLI CARPINI",
+          "type": "Individual",
+          "amount": 500.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Colbea Enterprises"
+        },
+        {
+          "donor": "Dennis Gamba",
+          "type": "Individual",
+          "amount": 500.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Cranston Collision"
+        },
+        {
+          "donor": "John Manni",
+          "type": "Individual",
+          "amount": 500.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Law Office of John C. Manni"
         },
         {
           "donor": "John H Petrarca",
-          "amount": 1000,
           "type": "Individual",
+          "amount": 500.0,
           "interest_group": "Individual",
-          "notes": "Employer listed as Providence Auto Body."
+          "notes": "Classified as reported in the filing. Employer: Providence Auto Body"
         },
         {
-          "donor": "Alan Muoio",
-          "amount": 500,
+          "donor": "Ronald Rossi",
           "type": "Individual",
+          "amount": 500.0,
           "interest_group": "Individual",
-          "notes": "Employer listed as Lawn Beauticians Inc."
+          "notes": "Classified as reported in the filing. Employer: Rossi Farm & Excavation Inc."
+        },
+        {
+          "donor": "FRANCIS P SULLIVAN",
+          "type": "Individual",
+          "amount": 500.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: RETIRED"
         },
         {
           "donor": "CRANSTON FIREFIGHTERS LOCAL 1363 COPE",
-          "amount": 500,
           "type": "PAC",
-          "interest_group": "Public Safety",
-          "notes": "Named contribution listed in the filing."
+          "amount": 500.0,
+          "interest_group": "PAC",
+          "notes": "Classified as reported in the filing."
         },
         {
-          "donor": "James Pagliarini",
-          "amount": 500,
+          "donor": "CRANSTON POLICE UNION ADVANCEMENT",
+          "type": "PAC",
+          "amount": 500.0,
+          "interest_group": "PAC",
+          "notes": "Classified as reported in the filing."
+        },
+        {
+          "donor": "Gregory Beaune",
           "type": "Individual",
+          "amount": 400.0,
           "interest_group": "Individual",
-          "notes": "Employer listed as Central Nursery."
+          "notes": "Classified as reported in the filing. Employer: Garden Hills Deli"
         },
         {
-          "donor": "Rusell Henry III",
-          "amount": 500,
+          "donor": "Bruce Lane",
           "type": "Individual",
+          "amount": 400.0,
           "interest_group": "Individual",
-          "notes": "Employer listed as City of Cranston."
+          "notes": "Classified as reported in the filing. Employer: Bruce Lane - Lane Ceceri Group"
         },
         {
-          "donor": "Denise Paplauskas",
-          "amount": 300,
+          "donor": "Thomas Disegna",
           "type": "Individual",
+          "amount": 350.0,
           "interest_group": "Individual",
-          "notes": "Employer listed as retired."
+          "notes": "Classified as reported in the filing. Employer: Retired"
         },
         {
-          "donor": "RI LABORERS' PAC",
-          "amount": 200,
-          "type": "PAC",
-          "interest_group": "Labor / Unions",
-          "notes": "Named contribution listed in the filing."
+          "donor": "Anthony Paolino",
+          "type": "Individual",
+          "amount": 350.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: A. Paolino & Co. Inc."
         },
         {
-          "donor": "RHODE ISLAND ENERGY PAC (RIE PAC)",
-          "amount": 100,
-          "type": "PAC",
-          "interest_group": "Energy / Utilities",
-          "notes": "Named contribution listed in the filing."
+          "donor": "Jennifer Fredette",
+          "type": "Individual",
+          "amount": 300.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: GameDay Mens Health"
         },
         {
-          "donor": "RI STATE LODGE FOP PAC (Fraternal Order of Police)",
-          "amount": 100,
+          "donor": "Frank Mastrati Jr.",
+          "type": "Individual",
+          "amount": 300.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Frank Mastrati, Jr. Esq"
+        },
+        {
+          "donor": "RHODE ISLAND PROFESSIONAL FIREFIGHTERS",
           "type": "PAC",
-          "interest_group": "Public Safety",
-          "notes": "Named contribution listed in the filing."
+          "amount": 300.0,
+          "interest_group": "PAC",
+          "notes": "Classified as reported in the filing."
+        },
+        {
+          "donor": "Lisa Andoscia",
+          "type": "Individual",
+          "amount": 250.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Rosewood Consulting"
+        },
+        {
+          "donor": "Barbara Barone",
+          "type": "Individual",
+          "amount": 250.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Retired"
+        },
+        {
+          "donor": "Dennis DiPrete",
+          "type": "Individual",
+          "amount": 250.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: DiPrete Engineering"
+        },
+        {
+          "donor": "Peter Germani",
+          "type": "Individual",
+          "amount": 250.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Nu-Lux Cleaners"
+        },
+        {
+          "donor": "Steven Marocco",
+          "type": "Individual",
+          "amount": 250.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: retired"
+        },
+        {
+          "donor": "Stephen Marsella",
+          "type": "Individual",
+          "amount": 250.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Viera DiGianfilippo Ltd."
+        },
+        {
+          "donor": "Lynne A. Moceri",
+          "type": "Individual",
+          "amount": 250.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Homemaker"
+        },
+        {
+          "donor": "Robert Moll",
+          "type": "Individual",
+          "amount": 250.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: R&M builders Inc."
+        },
+        {
+          "donor": "Joseph Natale",
+          "type": "Individual",
+          "amount": 250.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Self Employed Contractor"
+        },
+        {
+          "donor": "RHODE ISLAND REPUBLICAN CONSERVATIVE CAUCUS",
+          "type": "PAC",
+          "amount": 245.5,
+          "interest_group": "PAC",
+          "notes": "Classified as reported in the filing."
+        },
+        {
+          "donor": "James Bellini",
+          "type": "Individual",
+          "amount": 200.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Bellini Corp"
+        },
+        {
+          "donor": "Richard Bzdyra",
+          "type": "Individual",
+          "amount": 200.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Ocean State Planners"
+        },
+        {
+          "donor": "Earl Croft III",
+          "type": "Individual",
+          "amount": 200.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: RETIRED"
+        },
+        {
+          "donor": "Donald S. Smith",
+          "type": "Individual",
+          "amount": 200.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: INTEGRITY INVESTMENTS"
+        },
+        {
+          "donor": "Anthony Thompson",
+          "type": "Individual",
+          "amount": 200.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Sigil Services"
+        },
+        {
+          "donor": "Paul Valletta",
+          "type": "Individual",
+          "amount": 200.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Retired"
+        },
+        {
+          "donor": "PORTSMOUTH FIREFIGHTERS ASSOCIATION",
+          "type": "PAC",
+          "amount": 200.0,
+          "interest_group": "PAC",
+          "notes": "Classified as reported in the filing."
+        },
+        {
+          "donor": "THOMAS W BRECKEL",
+          "type": "Individual",
+          "amount": 150.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Retired"
+        },
+        {
+          "donor": "Sabrina Campanella",
+          "type": "Individual",
+          "amount": 150.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Campanella's Restaurant"
+        },
+        {
+          "donor": "Janice Casali",
+          "type": "Individual",
+          "amount": 150.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: A & T Casali Liquors"
+        },
+        {
+          "donor": "Frank A Ciccone",
+          "type": "Individual",
+          "amount": 150.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Retired"
+        },
+        {
+          "donor": "Dennis DeJesus",
+          "type": "Individual",
+          "amount": 150.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Retired"
+        },
+        {
+          "donor": "Vincent Dinofrio Jr",
+          "type": "Individual",
+          "amount": 150.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Vinny's Auto & Truck Inc."
+        },
+        {
+          "donor": "David Disegna",
+          "type": "Individual",
+          "amount": 150.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Harrington Vitale & Bernardo Ltd"
+        },
+        {
+          "donor": "Paul Durfree",
+          "type": "Individual",
+          "amount": 150.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Durfrees Hardware"
+        },
+        {
+          "donor": "Chris Hopkins",
+          "type": "Individual",
+          "amount": 150.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Retired"
+        },
+        {
+          "donor": "Bernard A Jackvony",
+          "type": "Individual",
+          "amount": 150.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Pannone Devereaux & O'Gara LLC"
+        },
+        {
+          "donor": "Anthony Mastantuono",
+          "type": "Individual",
+          "amount": 150.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Retired"
+        },
+        {
+          "donor": "ANGELO RUO Jr.",
+          "type": "Individual",
+          "amount": 150.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: EAST SIDE ENTERPRISES"
+        },
+        {
+          "donor": "Ray Sinapi",
+          "type": "Individual",
+          "amount": 150.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Retired"
+        },
+        {
+          "donor": "Marcus Stephenson",
+          "type": "Individual",
+          "amount": 150.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: The Blind Guy"
+        },
+        {
+          "donor": "Michael Traficante",
+          "type": "Individual",
+          "amount": 150.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: RI Laborers"
+        },
+        {
+          "donor": "Manuel Vieira",
+          "type": "Individual",
+          "amount": 150.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: RETIRED"
+        },
+        {
+          "donor": "RI NAGE/IBPO PAC (National Assoc of Gov Employ/Inte rnational Brotherhood)",
+          "type": "PAC",
+          "amount": 150.0,
+          "interest_group": "PAC",
+          "notes": "Classified as reported in the filing."
+        },
+        {
+          "donor": "Gary Bucci",
+          "type": "Individual",
+          "amount": 100.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Capital City Insurance"
+        },
+        {
+          "donor": "Steven Calenda",
+          "type": "Individual",
+          "amount": 100.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Retired"
+        },
+        {
+          "donor": "Nicholas Fede",
+          "type": "Individual",
+          "amount": 100.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Kingston Liquor Mart"
+        },
+        {
+          "donor": "Michael Lombardi",
+          "type": "Individual",
+          "amount": 100.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Cranston Country Club"
+        },
+        {
+          "donor": "James Malachowski",
+          "type": "Individual",
+          "amount": 100.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Retired"
+        },
+        {
+          "donor": "Richard Mancini",
+          "type": "Individual",
+          "amount": 100.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: City of Cranston"
+        },
+        {
+          "donor": "Christopher Maselli",
+          "type": "Individual",
+          "amount": 100.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Christopher Maselli Attorney at Law"
+        },
+        {
+          "donor": "Friends of Anthony Melillo",
+          "type": "Individual",
+          "amount": 100.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: DiLanna Foodservice and Paper Products"
+        },
+        {
+          "donor": "JAMES O'HARA",
+          "type": "Individual",
+          "amount": 100.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: FALVEY LINEN"
+        },
+        {
+          "donor": "ROSEMARY PAPLAUSKAS",
+          "type": "Individual",
+          "amount": 100.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: MIRIAM HOSPITAL"
+        },
+        {
+          "donor": "Mona Albanase",
+          "type": "Individual",
+          "amount": 50.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Bridge Group llc"
+        },
+        {
+          "donor": "Dolores Dimeo Carroll",
+          "type": "Individual",
+          "amount": 50.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Williams & Stuart Real Estate"
+        },
+        {
+          "donor": "Thomas Dorsey",
+          "type": "Individual",
+          "amount": 50.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: Retired"
+        },
+        {
+          "donor": "GEORGE ROBILLARD",
+          "type": "Individual",
+          "amount": 50.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: EMC"
+        },
+        {
+          "donor": "Ronald Reuter",
+          "type": "Individual",
+          "amount": 25.0,
+          "interest_group": "Individual",
+          "notes": "Classified as reported in the filing. Employer: RETIRED"
         }
       ],
       "spending_categories": [
         {
-          "title": "Food, Beverages and Meals",
-          "summary": "Visible spending includes Bajas, Bar Lazio, Circe Prime, Harukis, Legal Sea Foods, The Capital Grille, The Thirsty Beaver, and Twin Oaks.",
-          "amount": 1479.05
-        },
-        {
-          "title": "Fundraising Expenses",
-          "summary": "Visible spending includes Revolution American Bistro and Rhode Island Yacht Club.",
-          "amount": 1331.4
+          "title": "Advertising",
+          "amount": 18882.29,
+          "summary": "CF-4 category; see dated expense transactions for payees and purposes."
         },
         {
           "title": "Donations (Political)",
-          "summary": "Visible spending includes Cranston Republican City Committee and Friends of Anthony Melillo.",
-          "amount": 1200
+          "amount": 3250.0,
+          "summary": "CF-4 category; see dated expense transactions for payees and purposes."
         },
         {
-          "title": "Travel & Lodging",
-          "summary": "Visible spending includes AC Hotel, Lyft, and Uber for a Community Leaders of America conference.",
-          "amount": 708.13
+          "title": "Food, Beverages and Meals",
+          "amount": 2062.99,
+          "summary": "CF-4 category; see dated expense transactions for payees and purposes."
+        },
+        {
+          "title": "Office Equipment & Supplies",
+          "amount": 1044.38,
+          "summary": "CF-4 category; see dated expense transactions for payees and purposes."
         },
         {
           "title": "Donations (All Others)",
-          "summary": "Visible spending includes Cranston Historical Society, Edgewood Garden Club, Lowe's, and Western Cranston Garden Club.",
-          "amount": 677.57
-        },
-        {
-          "title": "Advertising",
-          "summary": "Visible spending includes Cranston East Little League, Cranston Hall of Fame, and Cranston West Little League.",
-          "amount": 650
+          "amount": 916.2,
+          "summary": "CF-4 category; see dated expense transactions for payees and purposes."
         },
         {
           "title": "Consultant & Professional Services",
-          "summary": "Visible spending includes Joseph F Agresti.",
-          "amount": 350
+          "amount": 800.0,
+          "summary": "CF-4 category; see dated expense transactions for payees and purposes."
+        },
+        {
+          "title": "Fundraising Expenses",
+          "amount": 67.8,
+          "summary": "CF-4 category; see dated expense transactions for payees and purposes."
         }
       ],
       "takeaways": [],
       "explainer_cards": [],
-      "finance_status": "available"
+      "finance_status": "available",
+      "archived_reporting_periods": [
+        {
+          "candidate_id": "house-15-christopher-g-paplauskas",
+          "slug": "christopher-g-paplauskas",
+          "candidate_name": "Christopher G Paplauskas",
+          "chamber": "house",
+          "district_number": "15",
+          "party": "REP",
+          "party_label": "Republican",
+          "office_sought": "State Representative",
+          "report_label": "Q2 2026 campaign finance filing",
+          "reporting_period_label": "April 1, 2026 to June 30, 2026",
+          "source_note": "Built from Christopher G Paplauskas's Rhode Island Q1 and Q2 2026 campaign finance filings supplied by the user.",
+          "coverage_note": "Detailed Q1/Q2 filing data; Q2 is the standardized main display.",
+          "original_documents": [
+            {
+              "label": "Q1 2026 CF-2 report",
+              "period": "January 1, 2026 to March 31, 2026",
+              "href": "/data/finance-documents/christopher-g-paplauskas-q1-2026.pdf"
+            },
+            {
+              "label": "Q2 2026 CF-2 report",
+              "period": "April 1, 2026 to June 30, 2026",
+              "href": "/data/finance-documents/christopher-g-paplauskas-q2-2026.pdf"
+            }
+          ],
+          "beginning_cash": 22270.85,
+          "money_raised": 12440,
+          "money_spent": 6396.15,
+          "ending_cash": 28314.7,
+          "net_change": 6043.85,
+          "total_cash_receipts": 12440,
+          "campaign_expenses": 6396.15,
+          "aggregate_expenses": 0,
+          "summary_intro": "Christopher G Paplauskas's Q2 2026 filing reports $12,440.00 in receipts, $6,396.15 in campaign expenses, and $28,314.70 in cash on hand.",
+          "source_buckets": [
+            {
+              "label": "Itemized individual donors",
+              "class_name": "itemized-individual-donors",
+              "amount": 9540,
+              "description": "Individual contributions reported in Q2."
+            },
+            {
+              "label": "PAC contributions",
+              "class_name": "pac-contributions",
+              "amount": 2900,
+              "description": "Political action committee contributions reported in Q2."
+            }
+          ],
+          "top_donors": [
+            {
+              "donor": "INTERNATIONAL BROTHERHOOD OF POLICE OFFICERS LOCAL 301",
+              "amount": 2000,
+              "type": "PAC",
+              "interest_group": "Public Safety",
+              "notes": "Named contribution listed in the filing."
+            },
+            {
+              "donor": "Friends of Ken Hopkins",
+              "amount": 2000,
+              "type": "Individual",
+              "interest_group": "Individual",
+              "notes": "Reported as an individual contribution in the filing, despite the committee-style name."
+            },
+            {
+              "donor": "James Donahue",
+              "amount": 1000,
+              "type": "Individual",
+              "interest_group": "Individual",
+              "notes": "Employer listed as Old Sturbridge Village."
+            },
+            {
+              "donor": "John H Petrarca",
+              "amount": 1000,
+              "type": "Individual",
+              "interest_group": "Individual",
+              "notes": "Employer listed as Providence Auto Body."
+            },
+            {
+              "donor": "Alan Muoio",
+              "amount": 500,
+              "type": "Individual",
+              "interest_group": "Individual",
+              "notes": "Employer listed as Lawn Beauticians Inc."
+            },
+            {
+              "donor": "CRANSTON FIREFIGHTERS LOCAL 1363 COPE",
+              "amount": 500,
+              "type": "PAC",
+              "interest_group": "Public Safety",
+              "notes": "Named contribution listed in the filing."
+            },
+            {
+              "donor": "James Pagliarini",
+              "amount": 500,
+              "type": "Individual",
+              "interest_group": "Individual",
+              "notes": "Employer listed as Central Nursery."
+            },
+            {
+              "donor": "Rusell Henry III",
+              "amount": 500,
+              "type": "Individual",
+              "interest_group": "Individual",
+              "notes": "Employer listed as City of Cranston."
+            },
+            {
+              "donor": "Denise Paplauskas",
+              "amount": 300,
+              "type": "Individual",
+              "interest_group": "Individual",
+              "notes": "Employer listed as retired."
+            },
+            {
+              "donor": "RI LABORERS' PAC",
+              "amount": 200,
+              "type": "PAC",
+              "interest_group": "Labor / Unions",
+              "notes": "Named contribution listed in the filing."
+            },
+            {
+              "donor": "RHODE ISLAND ENERGY PAC (RIE PAC)",
+              "amount": 100,
+              "type": "PAC",
+              "interest_group": "Energy / Utilities",
+              "notes": "Named contribution listed in the filing."
+            },
+            {
+              "donor": "RI STATE LODGE FOP PAC (Fraternal Order of Police)",
+              "amount": 100,
+              "type": "PAC",
+              "interest_group": "Public Safety",
+              "notes": "Named contribution listed in the filing."
+            }
+          ],
+          "spending_categories": [
+            {
+              "title": "Food, Beverages and Meals",
+              "summary": "Visible spending includes Bajas, Bar Lazio, Circe Prime, Harukis, Legal Sea Foods, The Capital Grille, The Thirsty Beaver, and Twin Oaks.",
+              "amount": 1479.05
+            },
+            {
+              "title": "Fundraising Expenses",
+              "summary": "Visible spending includes Revolution American Bistro and Rhode Island Yacht Club.",
+              "amount": 1331.4
+            },
+            {
+              "title": "Donations (Political)",
+              "summary": "Visible spending includes Cranston Republican City Committee and Friends of Anthony Melillo.",
+              "amount": 1200
+            },
+            {
+              "title": "Travel & Lodging",
+              "summary": "Visible spending includes AC Hotel, Lyft, and Uber for a Community Leaders of America conference.",
+              "amount": 708.13
+            },
+            {
+              "title": "Donations (All Others)",
+              "summary": "Visible spending includes Cranston Historical Society, Edgewood Garden Club, Lowe's, and Western Cranston Garden Club.",
+              "amount": 677.57
+            },
+            {
+              "title": "Advertising",
+              "summary": "Visible spending includes Cranston East Little League, Cranston Hall of Fame, and Cranston West Little League.",
+              "amount": 650
+            },
+            {
+              "title": "Consultant & Professional Services",
+              "summary": "Visible spending includes Joseph F Agresti.",
+              "amount": 350
+            }
+          ],
+          "takeaways": [],
+          "explainer_cards": [],
+          "finance_status": "available",
+          "reporting_period_start": "2026-04-01",
+          "reporting_period_end": "2026-06-30",
+          "reporting_period_type": "quarter"
+        }
+      ],
+      "reporting_period_type": "custom",
+      "latest_filing_href": "/data/finance-documents/christopher-g-paplauskas-2026-10-05-28-day.pdf",
+      "reporting_period_start": "2026-07-01",
+      "reporting_period_end": "2026-10-05",
+      "receipt_transactions": [
+        {
+          "donor": "Mona Albanase",
+          "employer": "Bridge Group llc",
+          "type": "Individual",
+          "amount": 50.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Lisa Andoscia",
+          "employer": "Rosewood Consulting",
+          "type": "Individual",
+          "amount": 250.0,
+          "date": "2026-10-03",
+          "notes": ""
+        },
+        {
+          "donor": "Barbara Barone",
+          "employer": "Retired",
+          "type": "Individual",
+          "amount": 250.0,
+          "date": "2026-08-01",
+          "notes": ""
+        },
+        {
+          "donor": "Gregory Beaune",
+          "employer": "Garden Hills Deli",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-09-23",
+          "notes": ""
+        },
+        {
+          "donor": "Gregory Beaune",
+          "employer": "Garden Hills Deli",
+          "type": "Individual",
+          "amount": 250.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "James Bellini",
+          "employer": "Bellini Corp",
+          "type": "Individual",
+          "amount": 200.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "THOMAS W BRECKEL",
+          "employer": "Retired",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-10-03",
+          "notes": ""
+        },
+        {
+          "donor": "Gary Bucci",
+          "employer": "Capital City Insurance",
+          "type": "Individual",
+          "amount": 100.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Richard Bzdyra",
+          "employer": "Ocean State Planners",
+          "type": "Individual",
+          "amount": 200.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Steven Calenda",
+          "employer": "Retired",
+          "type": "Individual",
+          "amount": 100.0,
+          "date": "2026-09-14",
+          "notes": ""
+        },
+        {
+          "donor": "Sabrina Campanella",
+          "employer": "Campanella's Restaurant",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "George Cappello",
+          "employer": "Cappelllo Law",
+          "type": "Individual",
+          "amount": 500.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "George Cappello",
+          "employer": "Cappelllo Law",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-10-03",
+          "notes": ""
+        },
+        {
+          "donor": "Janice Casali",
+          "employer": "A & T Casali Liquors",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-09-14",
+          "notes": ""
+        },
+        {
+          "donor": "Frank A Ciccone",
+          "employer": "Retired",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-09-14",
+          "notes": ""
+        },
+        {
+          "donor": "Earl Croft III",
+          "employer": "RETIRED",
+          "type": "Individual",
+          "amount": 200.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Ronn David",
+          "employer": "David Building Co.",
+          "type": "Individual",
+          "amount": 500.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Dennis DeJesus",
+          "employer": "Retired",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "ANDREW DELLI CARPINI",
+          "employer": "Colbea Enterprises",
+          "type": "Individual",
+          "amount": 500.0,
+          "date": "2026-09-14",
+          "notes": ""
+        },
+        {
+          "donor": "Dolores Dimeo Carroll",
+          "employer": "Williams & Stuart Real Estate",
+          "type": "Individual",
+          "amount": 50.0,
+          "date": "2026-09-14",
+          "notes": ""
+        },
+        {
+          "donor": "Vincent Dinofrio Jr",
+          "employer": "Vinny's Auto & Truck Inc.",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Dennis DiPrete",
+          "employer": "DiPrete Engineering",
+          "type": "Individual",
+          "amount": 250.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "David Disegna",
+          "employer": "Harrington Vitale & Bernardo Ltd",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Thomas Disegna",
+          "employer": "Retired",
+          "type": "Individual",
+          "amount": 200.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Thomas Disegna",
+          "employer": "Retired",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-09-14",
+          "notes": ""
+        },
+        {
+          "donor": "JAMES DONAHUE",
+          "employer": "OLD STURBRIDGE VILLAGE",
+          "type": "Individual",
+          "amount": 1000.0,
+          "date": "2026-09-03",
+          "notes": ""
+        },
+        {
+          "donor": "Thomas Dorsey",
+          "employer": "Retired",
+          "type": "Individual",
+          "amount": 50.0,
+          "date": "2026-09-14",
+          "notes": ""
+        },
+        {
+          "donor": "Paul Durfree",
+          "employer": "Durfrees Hardware",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Nicholas Fede",
+          "employer": "Kingston Liquor Mart",
+          "type": "Individual",
+          "amount": 100.0,
+          "date": "2026-07-18",
+          "notes": ""
+        },
+        {
+          "donor": "Jennifer Fredette",
+          "employer": "GameDay Mens Health",
+          "type": "Individual",
+          "amount": 300.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Steven Frias",
+          "employer": "Keegan Werlin LLP",
+          "type": "Individual",
+          "amount": 1000.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Dennis Gamba",
+          "employer": "Cranston Collision",
+          "type": "Individual",
+          "amount": 500.0,
+          "date": "2026-09-14",
+          "notes": ""
+        },
+        {
+          "donor": "Peter Germani",
+          "employer": "Nu-Lux Cleaners",
+          "type": "Individual",
+          "amount": 250.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Chris Hopkins",
+          "employer": "Retired",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-10-03",
+          "notes": ""
+        },
+        {
+          "donor": "Bernard A Jackvony",
+          "employer": "Pannone Devereaux & O'Gara LLC",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Bruce Lane",
+          "employer": "Bruce Lane - Lane Ceceri Group",
+          "type": "Individual",
+          "amount": 250.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Bruce Lane",
+          "employer": "Bruce Lane - Lane Ceceri Group",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-09-23",
+          "notes": ""
+        },
+        {
+          "donor": "Michael Lombardi",
+          "employer": "Cranston Country Club",
+          "type": "Individual",
+          "amount": 100.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "James Malachowski",
+          "employer": "Retired",
+          "type": "Individual",
+          "amount": 100.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Richard Mancini",
+          "employer": "City of Cranston",
+          "type": "Individual",
+          "amount": 100.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "John Manni",
+          "employer": "Law Office of John C. Manni",
+          "type": "Individual",
+          "amount": 500.0,
+          "date": "2026-09-23",
+          "notes": ""
+        },
+        {
+          "donor": "Steven Marocco",
+          "employer": "retired",
+          "type": "Individual",
+          "amount": 250.0,
+          "date": "2026-09-14",
+          "notes": ""
+        },
+        {
+          "donor": "Stephen Marsella",
+          "employer": "Viera DiGianfilippo Ltd.",
+          "type": "Individual",
+          "amount": 250.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Christopher Maselli",
+          "employer": "Christopher Maselli Attorney at Law",
+          "type": "Individual",
+          "amount": 100.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Anthony Mastantuono",
+          "employer": "Retired",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Frank Mastrati Jr.",
+          "employer": "Frank Mastrati, Jr. Esq",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Frank Mastrati Jr.",
+          "employer": "Frank Mastrati, Jr. Esq",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-09-14",
+          "notes": ""
+        },
+        {
+          "donor": "Friends of Anthony Melillo",
+          "employer": "DiLanna Foodservice and Paper Products",
+          "type": "Individual",
+          "amount": 100.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Lynne A. Moceri",
+          "employer": "Homemaker",
+          "type": "Individual",
+          "amount": 250.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Robert Moll",
+          "employer": "R&M builders Inc.",
+          "type": "Individual",
+          "amount": 250.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Robert Murray",
+          "employer": "Taft & McSally",
+          "type": "Individual",
+          "amount": 500.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Robert Murray",
+          "employer": "Taft & McSally",
+          "type": "Individual",
+          "amount": 500.0,
+          "date": "2026-07-18",
+          "notes": ""
+        },
+        {
+          "donor": "Joseph Natale",
+          "employer": "Self Employed Contractor",
+          "type": "Individual",
+          "amount": 250.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "JAMES O'HARA",
+          "employer": "FALVEY LINEN",
+          "type": "Individual",
+          "amount": 100.0,
+          "date": "2026-09-23",
+          "notes": ""
+        },
+        {
+          "donor": "Ralph Palumbo",
+          "employer": "Revity Energy",
+          "type": "Individual",
+          "amount": 1000.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Anthony Paolino",
+          "employer": "A. Paolino & Co. Inc.",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-09-14",
+          "notes": ""
+        },
+        {
+          "donor": "Anthony Paolino",
+          "employer": "A. Paolino & Co. Inc.",
+          "type": "Individual",
+          "amount": 200.0,
+          "date": "2026-07-18",
+          "notes": ""
+        },
+        {
+          "donor": "ROSEMARY PAPLAUSKAS",
+          "employer": "MIRIAM HOSPITAL",
+          "type": "Individual",
+          "amount": 100.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "John H Petrarca",
+          "employer": "Providence Auto Body",
+          "type": "Individual",
+          "amount": 500.0,
+          "date": "2026-10-03",
+          "notes": ""
+        },
+        {
+          "donor": "Ronald Reuter",
+          "employer": "RETIRED",
+          "type": "Individual",
+          "amount": 25.0,
+          "date": "2026-08-01",
+          "notes": ""
+        },
+        {
+          "donor": "GEORGE ROBILLARD",
+          "employer": "EMC",
+          "type": "Individual",
+          "amount": 50.0,
+          "date": "2026-09-14",
+          "notes": ""
+        },
+        {
+          "donor": "Ronald Rossi",
+          "employer": "Rossi Farm & Excavation Inc.",
+          "type": "Individual",
+          "amount": 500.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "ANGELO RUO Jr.",
+          "employer": "EAST SIDE ENTERPRISES",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-10-01",
+          "notes": ""
+        },
+        {
+          "donor": "Ray Sinapi",
+          "employer": "Retired",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Donald S. Smith",
+          "employer": "INTEGRITY INVESTMENTS",
+          "type": "Individual",
+          "amount": 200.0,
+          "date": "2026-09-14",
+          "notes": ""
+        },
+        {
+          "donor": "Marcus Stephenson",
+          "employer": "The Blind Guy",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "FRANCIS P SULLIVAN",
+          "employer": "RETIRED",
+          "type": "Individual",
+          "amount": 500.0,
+          "date": "2026-07-18",
+          "notes": ""
+        },
+        {
+          "donor": "Anthony Thompson",
+          "employer": "Sigil Services",
+          "type": "Individual",
+          "amount": 200.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Michael Traficante",
+          "employer": "RI Laborers",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Paul Valletta",
+          "employer": "Retired",
+          "type": "Individual",
+          "amount": 100.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "Paul Valletta",
+          "employer": "Retired",
+          "type": "Individual",
+          "amount": 100.0,
+          "date": "2026-10-01",
+          "notes": ""
+        },
+        {
+          "donor": "Manuel Vieira",
+          "employer": "RETIRED",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-09-23",
+          "notes": ""
+        },
+        {
+          "donor": "CRANSTON FIREFIGHTERS LOCAL 1363 COPE",
+          "employer": "",
+          "type": "PAC",
+          "amount": 500.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "CRANSTON POLICE UNION ADVANCEMENT",
+          "employer": "",
+          "type": "PAC",
+          "amount": 500.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "PORTSMOUTH FIREFIGHTERS ASSOCIATION",
+          "employer": "",
+          "type": "PAC",
+          "amount": 200.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "RHODE ISLAND PROFESSIONAL FIREFIGHTERS",
+          "employer": "",
+          "type": "PAC",
+          "amount": 150.0,
+          "date": "2026-08-18",
+          "notes": ""
+        },
+        {
+          "donor": "RHODE ISLAND PROFESSIONAL FIREFIGHTERS",
+          "employer": "",
+          "type": "PAC",
+          "amount": 150.0,
+          "date": "2026-10-01",
+          "notes": ""
+        },
+        {
+          "donor": "RHODE ISLAND REPUBLICAN CONSERVATIVE CAUCUS",
+          "employer": "",
+          "type": "PAC",
+          "amount": 245.5,
+          "date": "2026-07-18",
+          "notes": ""
+        },
+        {
+          "donor": "RI NAGE/IBPO PAC (National Assoc of Gov Employ/Inte rnational Brotherhood)",
+          "type": "PAC",
+          "amount": 150.0,
+          "date": "2026-08-18",
+          "notes": ""
+        }
+      ],
+      "expenditure_transactions": [
+        {
+          "payee": "48HOURPRINT.COM",
+          "type": "Campaign Expenditure",
+          "category": "Fundraising Expenses",
+          "amount": 67.8,
+          "date": "2026-07-07",
+          "purpose": "Business Cards"
+        },
+        {
+          "payee": "48HOURPRINT.COM",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 1060.74,
+          "date": "2026-07-20",
+          "purpose": "Mailers"
+        },
+        {
+          "payee": "48HOURPRINT.COM",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 408.27,
+          "date": "2026-07-29",
+          "purpose": "Palm Cards"
+        },
+        {
+          "payee": "48HOURPRINT.COM",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 79.85,
+          "date": "2026-08-03",
+          "purpose": "Business Cards"
+        },
+        {
+          "payee": "48HOURPRINT.COM",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 1168.07,
+          "date": "2026-08-27",
+          "purpose": "mailers"
+        },
+        {
+          "payee": "48HOURPRINT.COM",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 245.52,
+          "date": "2026-09-03",
+          "purpose": "Fundraiser Tickets"
+        },
+        {
+          "payee": "48HOURPRINT.COM",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 1089.47,
+          "date": "2026-09-04",
+          "purpose": "Business Cards and Envelopes"
+        },
+        {
+          "payee": "48HOURPRINT.COM",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 52.76,
+          "date": "2026-09-08",
+          "purpose": ""
+        },
+        {
+          "payee": "48HOURPRINT.COM",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 1772.44,
+          "date": "2026-09-21",
+          "purpose": "mailers"
+        },
+        {
+          "payee": "48HOURPRINT.COM",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 301.1,
+          "date": "2026-09-28",
+          "purpose": ""
+        },
+        {
+          "payee": "bar lazio",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 152.1,
+          "date": "2026-10-02",
+          "purpose": "Political strategy/volunteer Meeting"
+        },
+        {
+          "payee": "bar lazio",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 201.3,
+          "date": "2026-08-27",
+          "purpose": "political meeting"
+        },
+        {
+          "payee": "bar lazio",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 60.44,
+          "date": "2026-08-19",
+          "purpose": "political meeting"
+        },
+        {
+          "payee": "Best Buy",
+          "type": "Campaign Expenditure",
+          "category": "Office Equipment & Supplies",
+          "amount": 187.2,
+          "date": "2026-08-20",
+          "purpose": "printer ink"
+        },
+        {
+          "payee": "Best Buy",
+          "type": "Campaign Expenditure",
+          "category": "Office Equipment & Supplies",
+          "amount": 85.77,
+          "date": "2026-08-10",
+          "purpose": "printer ink"
+        },
+        {
+          "payee": "BORI graphix",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 452.93,
+          "date": "2026-08-09",
+          "purpose": "Signs"
+        },
+        {
+          "payee": "BORI graphix",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 452.93,
+          "date": "2026-08-19",
+          "purpose": "signs"
+        },
+        {
+          "payee": "BORI graphix",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 557.43,
+          "date": "2026-08-24",
+          "purpose": "signs"
+        },
+        {
+          "payee": "BORI graphix",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 718.08,
+          "date": "2026-08-05",
+          "purpose": "Signs"
+        },
+        {
+          "payee": "BORI graphix",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 408.95,
+          "date": "2026-07-23",
+          "purpose": "signs"
+        },
+        {
+          "payee": "Richard D Campopiano",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 250.0,
+          "date": "2026-09-14",
+          "purpose": ""
+        },
+        {
+          "payee": "circe prime",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 94.52,
+          "date": "2026-09-08",
+          "purpose": "meeting with consultant"
+        },
+        {
+          "payee": "circe prime",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 304.08,
+          "date": "2026-09-19",
+          "purpose": "political meeting"
+        },
+        {
+          "payee": "circe prime",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 131.07,
+          "date": "2026-08-07",
+          "purpose": "political meeting"
+        },
+        {
+          "payee": "circe prime",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 72.96,
+          "date": "2026-08-25",
+          "purpose": "political meeting"
+        },
+        {
+          "payee": "Meghan Foster",
+          "type": "Campaign Expenditure",
+          "category": "Consultant & Professional Services",
+          "amount": 200.0,
+          "date": "2026-07-29",
+          "purpose": "Graphic Design"
+        },
+        {
+          "payee": "Friends of Joseph Iannitti",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 100.0,
+          "date": "2026-08-12",
+          "purpose": ""
+        },
+        {
+          "payee": "Friends of Justin Erickson",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 150.0,
+          "date": "2026-08-25",
+          "purpose": ""
+        },
+        {
+          "payee": "Friends of Richard Fascia",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 300.0,
+          "date": "2026-09-21",
+          "purpose": ""
+        },
+        {
+          "payee": "Geo's Restaurant Breakfast & Lunch",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 62.35,
+          "date": "2026-08-08",
+          "purpose": "Breakfast for Volunteers"
+        },
+        {
+          "payee": "Ryan Golditch",
+          "type": "Campaign Expenditure",
+          "category": "Consultant & Professional Services",
+          "amount": 200.0,
+          "date": "2026-08-03",
+          "purpose": "Campaign Coordinator"
+        },
+        {
+          "payee": "Ryan Golditch",
+          "type": "Campaign Expenditure",
+          "category": "Consultant & Professional Services",
+          "amount": 200.0,
+          "date": "2026-10-05",
+          "purpose": ""
+        },
+        {
+          "payee": "Ryan Golditch",
+          "type": "Campaign Expenditure",
+          "category": "Consultant & Professional Services",
+          "amount": 200.0,
+          "date": "2026-09-15",
+          "purpose": ""
+        },
+        {
+          "payee": "Harukis",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 65.27,
+          "date": "2026-09-10",
+          "purpose": "Political meeting"
+        },
+        {
+          "payee": "Latte Love",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 31.2,
+          "date": "2026-09-05",
+          "purpose": "political meeting"
+        },
+        {
+          "payee": "LOWE'S",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 55.21,
+          "date": "2026-08-31",
+          "purpose": "hardware and wood for signs"
+        },
+        {
+          "payee": "Marchetti's",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 402.79,
+          "date": "2026-08-18",
+          "purpose": "8/18 Fundraiser"
+        },
+        {
+          "payee": "Michelangelo's Delicatessen",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 49.3,
+          "date": "2026-10-03",
+          "purpose": "Lunch for Volunteers"
+        },
+        {
+          "payee": "Michelangelo's Delicatessen",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 69.8,
+          "date": "2026-07-09",
+          "purpose": "meeting with constituent"
+        },
+        {
+          "payee": "MS Dream Center of Rhode Island",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 257.5,
+          "date": "2026-09-03",
+          "purpose": ""
+        },
+        {
+          "payee": "RI Fire Chiefs Honor Flight",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 150.0,
+          "date": "2026-07-16",
+          "purpose": ""
+        },
+        {
+          "payee": "RI Fraternal Order of Police",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 150.0,
+          "date": "2026-07-20",
+          "purpose": "T-Sign sponsorship"
+        },
+        {
+          "payee": "RI House Republican Leadership PAC",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 2000.0,
+          "date": "2026-09-21",
+          "purpose": ""
+        },
+        {
+          "payee": "rosario society",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 100.0,
+          "date": "2026-08-27",
+          "purpose": "T-Sign sponsorship for their golf tournament"
+        },
+        {
+          "payee": "St. Mary's Feast Society",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 200.0,
+          "date": "2026-08-12",
+          "purpose": ""
+        },
+        {
+          "payee": "St. Mary's Feast Society",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 150.0,
+          "date": "2026-07-08",
+          "purpose": "5K road race sponsorship"
+        },
+        {
+          "payee": "staples",
+          "type": "Campaign Expenditure",
+          "category": "Office Equipment & Supplies",
+          "amount": 207.54,
+          "date": "2026-07-27",
+          "purpose": "Envelopes and Printer Ink"
+        },
+        {
+          "payee": "staples",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 685.08,
+          "date": "2026-09-29",
+          "purpose": "Printing"
+        },
+        {
+          "payee": "staples",
+          "type": "Campaign Expenditure",
+          "category": "Office Equipment & Supplies",
+          "amount": 112.32,
+          "date": "2026-09-29",
+          "purpose": "Printer Ink and rubber bands"
+        },
+        {
+          "payee": "staples",
+          "type": "Campaign Expenditure",
+          "category": "Office Equipment & Supplies",
+          "amount": 171.17,
+          "date": "2026-08-24",
+          "purpose": "Printer ink and envelopes"
+        },
+        {
+          "payee": "staples",
+          "type": "Campaign Expenditure",
+          "category": "Office Equipment & Supplies",
+          "amount": 280.38,
+          "date": "2026-09-08",
+          "purpose": "Printer Ink, Rubber Bands, Envelopes"
+        },
+        {
+          "payee": "Marcus Stephenson",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 200.0,
+          "date": "2026-09-25",
+          "purpose": ""
+        },
+        {
+          "payee": "Marcus Stephenson",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 250.0,
+          "date": "2026-07-23",
+          "purpose": ""
+        },
+        {
+          "payee": "The Big Cheese",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 61.46,
+          "date": "2026-07-31",
+          "purpose": "food for campaign volunteers"
+        },
+        {
+          "payee": "The Capital Grille",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 255.06,
+          "date": "2026-08-10",
+          "purpose": "Political meeting"
+        },
+        {
+          "payee": "Tommys Pizza Too",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 50.18,
+          "date": "2026-08-16",
+          "purpose": "Pizza for volunteers"
+        },
+        {
+          "payee": "Tommys Pizza Too",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 90.75,
+          "date": "2026-10-01",
+          "purpose": "Pizza's for Volunteers"
+        },
+        {
+          "payee": "U R My Sunshine Foundation",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 308.7,
+          "date": "2026-09-04",
+          "purpose": "U R My Sunshine Foundation 501(c)(3)"
+        },
+        {
+          "payee": "USPS",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 1230.0,
+          "date": "2026-09-05",
+          "purpose": "stamps"
+        },
+        {
+          "payee": "USPS",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 595.48,
+          "date": "2026-09-17",
+          "purpose": "mailing"
+        },
+        {
+          "payee": "USPS",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 1138.28,
+          "date": "2026-09-21",
+          "purpose": "mailing"
+        },
+        {
+          "payee": "USPS",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 2022.48,
+          "date": "2026-09-29",
+          "purpose": "Mailing and stamps"
+        },
+        {
+          "payee": "USPS",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 1014.14,
+          "date": "2026-08-20",
+          "purpose": "mailing"
+        },
+        {
+          "payee": "USPS",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 614.9,
+          "date": "2026-08-24",
+          "purpose": "mailing"
+        },
+        {
+          "payee": "USPS",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 425.62,
+          "date": "2026-07-31",
+          "purpose": "mailing"
+        },
+        {
+          "payee": "USPS",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 899.54,
+          "date": "2026-07-31",
+          "purpose": "mailing"
+        },
+        {
+          "payee": "USPS",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 941.38,
+          "date": "2026-07-27",
+          "purpose": "Mailing & Stamps"
+        }
+      ],
+      "in_kind_transactions": [
+        {
+          "donor": "David Marchetti",
+          "employer": "Marchetti's Restaurant",
+          "type": "In-Kind - Individual",
+          "amount": 483.0,
+          "date": "2026-08-18",
+          "notes": "In-Kind donation of food for 8/18/26 Fundraiser"
+        }
+      ],
+      "in_kind_contributions": 483.0,
+      "loans_payable": 0,
+      "accounts_payable": 0
     },
     {
       "candidate_id": "house-15-colleen-m-crudele",
@@ -4639,7 +6427,7 @@
       "report_label": "2026 CF-2 campaign finance filing",
       "reporting_period_label": "June 22, 2026 to October 5, 2026",
       "source_note": "Rhode Island Board of Elections CF-2 summary and CF-3/CF-4 schedules, committee key 3830; supplied to RIEP October 6, 2026.",
-      "coverage_note": "One filing covering June 22\u2013October 5, 2026. This is not a standard Q1 or Q2 report; no quarterly totals are inferred. Summary classifies all receipts as individual contributions although two candidate receipt descriptions say loan to campaign.",
+      "coverage_note": "One filing covering June 22–October 5, 2026. This is not a standard Q1 or Q2 report; no quarterly totals are inferred. Summary classifies all receipts as individual contributions although two candidate receipt descriptions say loan to campaign.",
       "original_documents": [
         {
           "label": "CF-2 summary with CF-3 contributions and CF-4 expenditures",
@@ -4655,10 +6443,10 @@
       "total_cash_receipts": 11991.79,
       "campaign_expenses": 10345.14,
       "aggregate_expenses": 0,
-      "summary_intro": "Colleen M Crudele\u2019s June 22\u2013October 5, 2026 filing reports $11,991.79 in receipts, $10,345.14 in campaign expenses, and $1,646.65 in cash on hand. Of the receipts, $11,650.00 came from the candidate herself.",
+      "summary_intro": "Colleen M Crudele’s June 22–October 5, 2026 filing reports $11,991.79 in receipts, $10,345.14 in campaign expenses, and $1,646.65 in cash on hand. Of the receipts, $11,650.00 came from the candidate herself.",
       "filing_history": [
         {
-          "label": "June 22\u2013October 5, 2026",
+          "label": "June 22–October 5, 2026",
           "reporting_period_label": "June 22, 2026 to October 5, 2026",
           "money_raised": 11991.79,
           "money_spent": 10345.14,
@@ -4681,7 +6469,7 @@
           "amount": 11650,
           "type": "Individual",
           "interest_group": "Individual",
-          "notes": "Five candidate-funded receipts. The filing classifies them as individual contributions; two descriptions totaling $2,650 say loan to campaign, while the CF-2 summary reports zero loan proceeds and zero loans payable. RIEP preserves the filing\u2019s reported classification."
+          "notes": "Five candidate-funded receipts. The filing classifies them as individual contributions; two descriptions totaling $2,650 say loan to campaign, while the CF-2 summary reports zero loan proceeds and zero loans payable. RIEP preserves the filing’s reported classification."
         },
         {
           "donor": "Matthew Lenz",
@@ -4735,7 +6523,185 @@
       "takeaways": [],
       "explainer_cards": [],
       "finance_status": "available",
-      "reporting_period_type": "custom"
+      "reporting_period_type": "custom",
+      "reporting_period_start": "2026-06-22",
+      "reporting_period_end": "2026-10-05",
+      "receipt_transactions": [
+        {
+          "donor": "colleen crudele",
+          "employer": "Colleen Crudele Esq. P.C.",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-07-21",
+          "notes": "loan to campaign"
+        },
+        {
+          "donor": "colleen crudele",
+          "employer": "Colleen Crudele Esq. P.C.",
+          "type": "Individual",
+          "amount": 5000.0,
+          "date": "2026-08-03",
+          "notes": ""
+        },
+        {
+          "donor": "colleen crudele",
+          "employer": "Colleen Crudele Esq. P.C.",
+          "type": "Individual",
+          "amount": 2500.0,
+          "date": "2026-09-16",
+          "notes": "Loan to campaign"
+        },
+        {
+          "donor": "colleen crudele",
+          "employer": "Colleen Crudele Esq. P.C.",
+          "type": "Individual",
+          "amount": 2000.0,
+          "date": "2026-09-16",
+          "notes": ""
+        },
+        {
+          "donor": "colleen crudele",
+          "employer": "Colleen Crudele Esq. P.C.",
+          "type": "Individual",
+          "amount": 2000.0,
+          "date": "2026-09-18",
+          "notes": ""
+        },
+        {
+          "donor": "Matthew Jerzyk",
+          "employer": "Self Employed",
+          "type": "Individual",
+          "amount": 96.52,
+          "date": "2026-09-17",
+          "notes": "Donor contribution"
+        },
+        {
+          "donor": "Matthew Lenz",
+          "employer": "Meta",
+          "type": "Individual",
+          "amount": 241.64,
+          "date": "2026-09-23",
+          "notes": ""
+        },
+        {
+          "donor": "Thomas Marlowe",
+          "employer": "Seton Hall University",
+          "type": "Individual",
+          "amount": 3.63,
+          "date": "2026-09-28",
+          "notes": "Campaign donation"
+        }
+      ],
+      "expenditure_transactions": [
+        {
+          "payee": "Bluewave Solutions LLC",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 4998.77,
+          "date": "2026-09-08",
+          "purpose": "campaign literature"
+        },
+        {
+          "payee": "Bluewave Solutions LLC",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 1728.91,
+          "date": "2026-09-18",
+          "purpose": "Campaign literature"
+        },
+        {
+          "payee": "Benjamin Branchaud",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 150.0,
+          "date": "2026-07-21",
+          "purpose": "deposit for political signs"
+        },
+        {
+          "payee": "Benjamin Branchaud",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 1370.0,
+          "date": "2026-08-14",
+          "purpose": "lawn signs"
+        },
+        {
+          "payee": "Campaign Partner",
+          "type": "Campaign Expenditure",
+          "category": "Other",
+          "amount": 29.0,
+          "date": "2026-09-14",
+          "purpose": "online Domain registration payment"
+        },
+        {
+          "payee": "RI Democratic Party",
+          "type": "Campaign Expenditure",
+          "category": "Other",
+          "amount": 1780.0,
+          "date": "2026-09-10",
+          "purpose": "VAN list"
+        },
+        {
+          "payee": "T mobile/Walmart",
+          "type": "Campaign Expenditure",
+          "category": "Telephone",
+          "amount": 65.92,
+          "date": "2026-09-18",
+          "purpose": "campaign cell phone monthly service"
+        },
+        {
+          "payee": "The Washington Trust",
+          "type": "Campaign Expenditure",
+          "category": "Bank Fees",
+          "amount": 25.0,
+          "date": "2026-09-18",
+          "purpose": "WIRE Fee for payment of campaign literature"
+        },
+        {
+          "payee": "The Washington Trust",
+          "type": "Campaign Expenditure",
+          "category": "Bank Fees",
+          "amount": 25.0,
+          "date": "2026-09-08",
+          "purpose": "Wire fee"
+        },
+        {
+          "payee": "Walmart",
+          "type": "Campaign Expenditure",
+          "category": "Telephone",
+          "amount": 39.97,
+          "date": "2026-08-27",
+          "purpose": "campaign cell phone"
+        },
+        {
+          "payee": "Walmart",
+          "type": "Campaign Expenditure",
+          "category": "Telephone",
+          "amount": 39.97,
+          "date": "2026-08-27",
+          "purpose": "campaign cell phone"
+        },
+        {
+          "payee": "Walmart",
+          "type": "Campaign Expenditure",
+          "category": "Telephone",
+          "amount": 33.95,
+          "date": "2026-08-27",
+          "purpose": "Campaign cell phone service"
+        },
+        {
+          "payee": "WHOLE FOODS",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 58.65,
+          "date": "2026-08-27",
+          "purpose": "campaign meeting food"
+        }
+      ],
+      "in_kind_transactions": [],
+      "in_kind_contributions": 0,
+      "loans_payable": 0,
+      "accounts_payable": 0
     },
     {
       "candidate_id": "house-16-brandon-potter",
@@ -48451,17 +50417,914 @@
       "slug": "jacquelyn-baginski"
     },
     {
-      "donor": "Alan Muoio",
-      "amount": 500,
+      "donor": "JAMES DONAHUE",
       "type": "Individual",
+      "amount": 1000.0,
       "interest_group": "Individual",
-      "notes": "Employer listed as Lawn Beauticians Inc.",
+      "notes": "Classified as reported in the filing. Employer: OLD STURBRIDGE VILLAGE",
+      "slug": "christopher-g-paplauskas",
       "candidate_id": "house-15-christopher-g-paplauskas",
       "candidate_name": "Christopher G Paplauskas",
       "chamber": "house",
       "district_number": "15",
-      "party": "REP",
-      "slug": "christopher-g-paplauskas"
+      "party": "REP"
+    },
+    {
+      "donor": "Steven Frias",
+      "type": "Individual",
+      "amount": 1000.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Keegan Werlin LLP",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Robert Murray",
+      "type": "Individual",
+      "amount": 1000.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Taft & McSally",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Ralph Palumbo",
+      "type": "Individual",
+      "amount": 1000.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Revity Energy",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "George Cappello",
+      "type": "Individual",
+      "amount": 650.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Cappelllo Law",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Ronn David",
+      "type": "Individual",
+      "amount": 500.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: David Building Co.",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "ANDREW DELLI CARPINI",
+      "type": "Individual",
+      "amount": 500.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Colbea Enterprises",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Dennis Gamba",
+      "type": "Individual",
+      "amount": 500.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Cranston Collision",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "John Manni",
+      "type": "Individual",
+      "amount": 500.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Law Office of John C. Manni",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "John H Petrarca",
+      "type": "Individual",
+      "amount": 500.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Providence Auto Body",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Ronald Rossi",
+      "type": "Individual",
+      "amount": 500.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Rossi Farm & Excavation Inc.",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "FRANCIS P SULLIVAN",
+      "type": "Individual",
+      "amount": 500.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: RETIRED",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "CRANSTON FIREFIGHTERS LOCAL 1363 COPE",
+      "type": "PAC",
+      "amount": 500.0,
+      "interest_group": "PAC",
+      "notes": "Classified as reported in the filing.",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "CRANSTON POLICE UNION ADVANCEMENT",
+      "type": "PAC",
+      "amount": 500.0,
+      "interest_group": "PAC",
+      "notes": "Classified as reported in the filing.",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Gregory Beaune",
+      "type": "Individual",
+      "amount": 400.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Garden Hills Deli",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Bruce Lane",
+      "type": "Individual",
+      "amount": 400.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Bruce Lane - Lane Ceceri Group",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Thomas Disegna",
+      "type": "Individual",
+      "amount": 350.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Retired",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Anthony Paolino",
+      "type": "Individual",
+      "amount": 350.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: A. Paolino & Co. Inc.",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Jennifer Fredette",
+      "type": "Individual",
+      "amount": 300.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: GameDay Mens Health",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Frank Mastrati Jr.",
+      "type": "Individual",
+      "amount": 300.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Frank Mastrati, Jr. Esq",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "RHODE ISLAND PROFESSIONAL FIREFIGHTERS",
+      "type": "PAC",
+      "amount": 300.0,
+      "interest_group": "PAC",
+      "notes": "Classified as reported in the filing.",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Lisa Andoscia",
+      "type": "Individual",
+      "amount": 250.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Rosewood Consulting",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Barbara Barone",
+      "type": "Individual",
+      "amount": 250.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Retired",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Dennis DiPrete",
+      "type": "Individual",
+      "amount": 250.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: DiPrete Engineering",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Peter Germani",
+      "type": "Individual",
+      "amount": 250.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Nu-Lux Cleaners",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Steven Marocco",
+      "type": "Individual",
+      "amount": 250.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: retired",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Stephen Marsella",
+      "type": "Individual",
+      "amount": 250.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Viera DiGianfilippo Ltd.",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Lynne A. Moceri",
+      "type": "Individual",
+      "amount": 250.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Homemaker",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Robert Moll",
+      "type": "Individual",
+      "amount": 250.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: R&M builders Inc.",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Joseph Natale",
+      "type": "Individual",
+      "amount": 250.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Self Employed Contractor",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "RHODE ISLAND REPUBLICAN CONSERVATIVE CAUCUS",
+      "type": "PAC",
+      "amount": 245.5,
+      "interest_group": "PAC",
+      "notes": "Classified as reported in the filing.",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "James Bellini",
+      "type": "Individual",
+      "amount": 200.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Bellini Corp",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Richard Bzdyra",
+      "type": "Individual",
+      "amount": 200.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Ocean State Planners",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Earl Croft III",
+      "type": "Individual",
+      "amount": 200.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: RETIRED",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Donald S. Smith",
+      "type": "Individual",
+      "amount": 200.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: INTEGRITY INVESTMENTS",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Anthony Thompson",
+      "type": "Individual",
+      "amount": 200.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Sigil Services",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Paul Valletta",
+      "type": "Individual",
+      "amount": 200.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Retired",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "PORTSMOUTH FIREFIGHTERS ASSOCIATION",
+      "type": "PAC",
+      "amount": 200.0,
+      "interest_group": "PAC",
+      "notes": "Classified as reported in the filing.",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "THOMAS W BRECKEL",
+      "type": "Individual",
+      "amount": 150.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Retired",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Sabrina Campanella",
+      "type": "Individual",
+      "amount": 150.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Campanella's Restaurant",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Janice Casali",
+      "type": "Individual",
+      "amount": 150.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: A & T Casali Liquors",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Frank A Ciccone",
+      "type": "Individual",
+      "amount": 150.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Retired",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Dennis DeJesus",
+      "type": "Individual",
+      "amount": 150.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Retired",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Vincent Dinofrio Jr",
+      "type": "Individual",
+      "amount": 150.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Vinny's Auto & Truck Inc.",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "David Disegna",
+      "type": "Individual",
+      "amount": 150.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Harrington Vitale & Bernardo Ltd",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Paul Durfree",
+      "type": "Individual",
+      "amount": 150.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Durfrees Hardware",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Chris Hopkins",
+      "type": "Individual",
+      "amount": 150.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Retired",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Bernard A Jackvony",
+      "type": "Individual",
+      "amount": 150.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Pannone Devereaux & O'Gara LLC",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Anthony Mastantuono",
+      "type": "Individual",
+      "amount": 150.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Retired",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "ANGELO RUO Jr.",
+      "type": "Individual",
+      "amount": 150.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: EAST SIDE ENTERPRISES",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Ray Sinapi",
+      "type": "Individual",
+      "amount": 150.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Retired",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Marcus Stephenson",
+      "type": "Individual",
+      "amount": 150.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: The Blind Guy",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Michael Traficante",
+      "type": "Individual",
+      "amount": 150.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: RI Laborers",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Manuel Vieira",
+      "type": "Individual",
+      "amount": 150.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: RETIRED",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "RI NAGE/IBPO PAC (National Assoc of Gov Employ/Inte rnational Brotherhood)",
+      "type": "PAC",
+      "amount": 150.0,
+      "interest_group": "PAC",
+      "notes": "Classified as reported in the filing.",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Gary Bucci",
+      "type": "Individual",
+      "amount": 100.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Capital City Insurance",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Steven Calenda",
+      "type": "Individual",
+      "amount": 100.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Retired",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Nicholas Fede",
+      "type": "Individual",
+      "amount": 100.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Kingston Liquor Mart",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Michael Lombardi",
+      "type": "Individual",
+      "amount": 100.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Cranston Country Club",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "James Malachowski",
+      "type": "Individual",
+      "amount": 100.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Retired",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Richard Mancini",
+      "type": "Individual",
+      "amount": 100.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: City of Cranston",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Christopher Maselli",
+      "type": "Individual",
+      "amount": 100.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Christopher Maselli Attorney at Law",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Friends of Anthony Melillo",
+      "type": "Individual",
+      "amount": 100.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: DiLanna Foodservice and Paper Products",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "JAMES O'HARA",
+      "type": "Individual",
+      "amount": 100.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: FALVEY LINEN",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "ROSEMARY PAPLAUSKAS",
+      "type": "Individual",
+      "amount": 100.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: MIRIAM HOSPITAL",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Mona Albanase",
+      "type": "Individual",
+      "amount": 50.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Bridge Group llc",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Dolores Dimeo Carroll",
+      "type": "Individual",
+      "amount": 50.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Williams & Stuart Real Estate",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Thomas Dorsey",
+      "type": "Individual",
+      "amount": 50.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: Retired",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "GEORGE ROBILLARD",
+      "type": "Individual",
+      "amount": 50.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: EMC",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
+    },
+    {
+      "donor": "Ronald Reuter",
+      "type": "Individual",
+      "amount": 25.0,
+      "interest_group": "Individual",
+      "notes": "Classified as reported in the filing. Employer: RETIRED",
+      "slug": "christopher-g-paplauskas",
+      "candidate_id": "house-15-christopher-g-paplauskas",
+      "candidate_name": "Christopher G Paplauskas",
+      "chamber": "house",
+      "district_number": "15",
+      "party": "REP"
     },
     {
       "donor": "Albert Gianfrancesco",
@@ -49790,19 +52653,6 @@
       "slug": "jessica-de-la-cruz"
     },
     {
-      "donor": "CRANSTON FIREFIGHTERS LOCAL 1363 COPE",
-      "amount": 500,
-      "type": "PAC",
-      "interest_group": "Public Safety",
-      "notes": "Named contribution listed in the filing.",
-      "candidate_id": "house-15-christopher-g-paplauskas",
-      "candidate_name": "Christopher G Paplauskas",
-      "chamber": "house",
-      "district_number": "15",
-      "party": "REP",
-      "slug": "christopher-g-paplauskas"
-    },
-    {
       "donor": "CREDIT UNION PAC OF RI",
       "amount": 500,
       "type": "PAC",
@@ -50074,19 +52924,6 @@
       "district_number": "6",
       "party": "DEM",
       "slug": "raymond-a-hull"
-    },
-    {
-      "donor": "Denise Paplauskas",
-      "amount": 300,
-      "type": "Individual",
-      "interest_group": "Individual",
-      "notes": "Employer listed as retired.",
-      "candidate_id": "house-15-christopher-g-paplauskas",
-      "candidate_name": "Christopher G Paplauskas",
-      "chamber": "house",
-      "district_number": "15",
-      "party": "REP",
-      "slug": "christopher-g-paplauskas"
     },
     {
       "donor": "Diane Palumbo",
@@ -50505,19 +53342,6 @@
       "slug": "william-muto"
     },
     {
-      "donor": "Friends of Ken Hopkins",
-      "amount": 2000,
-      "type": "Individual",
-      "interest_group": "Individual",
-      "notes": "Reported as an individual contribution in the filing, despite the committee-style name.",
-      "candidate_id": "house-15-christopher-g-paplauskas",
-      "candidate_name": "Christopher G Paplauskas",
-      "chamber": "house",
-      "district_number": "15",
-      "party": "REP",
-      "slug": "christopher-g-paplauskas"
-    },
-    {
       "donor": "Garrett Mancieri",
       "amount": 200,
       "type": "Individual",
@@ -50844,19 +53668,6 @@
     },
     {
       "donor": "INTERNATIONAL BROTHERHOOD OF POLICE OFFICERS LOCAL 301",
-      "amount": 2000,
-      "type": "PAC",
-      "interest_group": "Public Safety",
-      "notes": "Named contribution listed in the filing.",
-      "candidate_id": "house-15-christopher-g-paplauskas",
-      "candidate_name": "Christopher G Paplauskas",
-      "chamber": "house",
-      "district_number": "15",
-      "party": "REP",
-      "slug": "christopher-g-paplauskas"
-    },
-    {
-      "donor": "INTERNATIONAL BROTHERHOOD OF POLICE OFFICERS LOCAL 301",
       "amount": 500,
       "type": "PAC",
       "interest_group": "Public Safety",
@@ -50932,19 +53743,6 @@
       "district_number": "7",
       "party": "DEM",
       "slug": "amy-j-santiago"
-    },
-    {
-      "donor": "James Donahue",
-      "amount": 1000,
-      "type": "Individual",
-      "interest_group": "Individual",
-      "notes": "Employer listed as Old Sturbridge Village.",
-      "candidate_id": "house-15-christopher-g-paplauskas",
-      "candidate_name": "Christopher G Paplauskas",
-      "chamber": "house",
-      "district_number": "15",
-      "party": "REP",
-      "slug": "christopher-g-paplauskas"
     },
     {
       "donor": "James Grundy",
@@ -51036,19 +53834,6 @@
       "district_number": "6",
       "party": "DEM",
       "slug": "tiara-t-mack"
-    },
-    {
-      "donor": "James Pagliarini",
-      "amount": 500,
-      "type": "Individual",
-      "interest_group": "Individual",
-      "notes": "Employer listed as Central Nursery.",
-      "candidate_id": "house-15-christopher-g-paplauskas",
-      "candidate_name": "Christopher G Paplauskas",
-      "chamber": "house",
-      "district_number": "15",
-      "party": "REP",
-      "slug": "christopher-g-paplauskas"
     },
     {
       "donor": "James Silverthorn",
@@ -51374,19 +54159,6 @@
       "district_number": "23",
       "party": "DEM",
       "slug": "william-muto"
-    },
-    {
-      "donor": "John H Petrarca",
-      "amount": 1000,
-      "type": "Individual",
-      "interest_group": "Individual",
-      "notes": "Employer listed as Providence Auto Body.",
-      "candidate_id": "house-15-christopher-g-paplauskas",
-      "candidate_name": "Christopher G Paplauskas",
-      "chamber": "house",
-      "district_number": "15",
-      "party": "REP",
-      "slug": "christopher-g-paplauskas"
     },
     {
       "donor": "John H Petrarca",
@@ -53807,19 +56579,6 @@
       "slug": "jacquelyn-baginski"
     },
     {
-      "donor": "RHODE ISLAND ENERGY PAC (RIE PAC)",
-      "amount": 100,
-      "type": "PAC",
-      "interest_group": "Energy / Utilities",
-      "notes": "Named contribution listed in the filing.",
-      "candidate_id": "house-15-christopher-g-paplauskas",
-      "candidate_name": "Christopher G Paplauskas",
-      "chamber": "house",
-      "district_number": "15",
-      "party": "REP",
-      "slug": "christopher-g-paplauskas"
-    },
-    {
       "donor": "RHODE ISLAND SECOND AMENDMENT PAC",
       "amount": 1000,
       "type": "PAC",
@@ -54145,19 +56904,6 @@
       "slug": "pamela-j-lauria"
     },
     {
-      "donor": "RI LABORERS' PAC",
-      "amount": 200,
-      "type": "PAC",
-      "interest_group": "Labor / Unions",
-      "notes": "Named contribution listed in the filing.",
-      "candidate_id": "house-15-christopher-g-paplauskas",
-      "candidate_name": "Christopher G Paplauskas",
-      "chamber": "house",
-      "district_number": "15",
-      "party": "REP",
-      "slug": "christopher-g-paplauskas"
-    },
-    {
       "donor": "RI LABORERS' PUBLIC EMPLOYEES PAC",
       "amount": 500,
       "type": "PAC",
@@ -54247,19 +56993,6 @@
       "district_number": "30",
       "party": "DEM",
       "slug": "justine-caldwell"
-    },
-    {
-      "donor": "RI STATE LODGE FOP PAC (Fraternal Order of Police)",
-      "amount": 100,
-      "type": "PAC",
-      "interest_group": "Public Safety",
-      "notes": "Named contribution listed in the filing.",
-      "candidate_id": "house-15-christopher-g-paplauskas",
-      "candidate_name": "Christopher G Paplauskas",
-      "chamber": "house",
-      "district_number": "15",
-      "party": "REP",
-      "slug": "christopher-g-paplauskas"
     },
     {
       "donor": "RI TROOPERS ASSOCIATION PAC",
@@ -54494,19 +57227,6 @@
       "district_number": "6",
       "party": "DEM",
       "slug": "raymond-a-hull"
-    },
-    {
-      "donor": "Rusell Henry III",
-      "amount": 500,
-      "type": "Individual",
-      "interest_group": "Individual",
-      "notes": "Employer listed as City of Cranston.",
-      "candidate_id": "house-15-christopher-g-paplauskas",
-      "candidate_name": "Christopher G Paplauskas",
-      "chamber": "house",
-      "district_number": "15",
-      "party": "REP",
-      "slug": "christopher-g-paplauskas"
     },
     {
       "donor": "Sabir Hussain",

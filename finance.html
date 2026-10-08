@@ -2381,6 +2381,7 @@
         <section class="hero">
           <div class="panel hero-story">
             <h2>Follow the money behind ${escapeHtml(profile.candidate_name)}.</h2>
+            ${profile.chamber === "house" && String(profile.district_number) === "15" ? '<p><a href="/house-15-finance-model.html">Explore the District 15 cash-burn test →</a></p>' : ""}
             <p>${escapeHtml(profile.summary_intro || "This page turns a Rhode Island campaign finance filing into a simpler public summary.")}</p>
             <div class="finance-progress-note">
               <div>
