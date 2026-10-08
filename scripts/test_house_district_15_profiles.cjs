@@ -23,7 +23,7 @@ for(const c of roster){
   assert(s.includes('$20,511.54'));assert(s.includes('No 2023–2024 CEL score'));
  }else{
   assert(!s.includes('data-voting-widget'));assert(!s.includes('class="riep-progress"'));
-  if(c.party==='IND')assert(section(s,'finance').includes('Missing figures are not treated as zero'));
+  if(c.party==='IND')assert(section(s,'finance').includes('$58,188.38'));
   else for(const amount of ['$11,991.79','$10,345.14','$1,646.65'])assert(section(s,'finance').includes(amount));
   assert(!s.includes('rep-paplauskas'));assert(!s.includes('$20,511.54'));
   if(c.party==='DEM')assert(section(s,'primaries').includes('1,258 votes'));

@@ -518,6 +518,846 @@
       "ytd_campaign_expenses": 400.0,
       "ytd_in_kind": 0.0,
       "source": "Rhode Island Board of Elections CF-2 filing"
+    },
+    {
+      "candidate_id": "house-15-ind-general-allan-w-fung",
+      "name": "Allan W Fung",
+      "chamber": "house",
+      "district": 15,
+      "party": "IND",
+      "report_label": "28 days before election \u00b7 2026 campaign finance filing",
+      "cash_on_hand": 58188.38,
+      "liabilities": 93685,
+      "latest_reporting_period": {
+        "candidate_id": "house-15-ind-general-allan-w-fung",
+        "slug": "allan-w-fung",
+        "candidate_name": "Allan W Fung",
+        "chamber": "house",
+        "district_number": "15",
+        "party": "IND",
+        "party_label": "Independent",
+        "office_sought": "State Representative",
+        "finance_status": "available",
+        "report_label": "28 days before election \u00b7 2026 campaign finance filing",
+        "reporting_period_label": "June 22, 2026 to October 5, 2026",
+        "reporting_period_type": "custom",
+        "reporting_period_start": "2026-06-22",
+        "reporting_period_end": "2026-10-05",
+        "source_note": "Rhode Island Board of Elections CF-2/CF-3/CF-4, committee key 5080; supplied October 8, 2026.",
+        "coverage_note": "CF-2 reports $43,685 in accounts payable and a $50,000 candidate loan outstanding. The supplied CF-4 lists only $7,000 in account-payable entries; the remaining $36,685 is not itemized in this document. RIEP preserves the reported summary and does not invent payees. One $6,000 entry says paid October 6; it remains payable in the October 5 snapshot.",
+        "original_documents": [
+          {
+            "label": "28-days-before-election CF-2/CF-3/CF-4",
+            "period": "June 22, 2026 to October 5, 2026",
+            "href": "/data/finance-documents/allan-w-fung-2026-10-05-28-day.pdf",
+            "embed": true
+          }
+        ],
+        "latest_filing_href": "/data/finance-documents/allan-w-fung-2026-10-05-28-day.pdf",
+        "beginning_cash": 0,
+        "money_raised": 71550,
+        "total_cash_receipts": 71550,
+        "money_spent": 13361.62,
+        "campaign_expenses": 13361.62,
+        "aggregate_expenses": 0,
+        "ending_cash": 58188.38,
+        "net_change": 58188.38,
+        "accounts_payable": 43685,
+        "loans_payable": 50000,
+        "total_liabilities": 93685,
+        "total_fund_balance": -35496.62,
+        "in_kind_contributions": 3030,
+        "receipt_transactions": [
+          {
+            "donor": "Reported in aggregate",
+            "employer": "",
+            "type": "Aggregate - Individual",
+            "amount": 2600.0,
+            "date": "2026-10-03",
+            "notes": "Individual contributors not named in the aggregate entry."
+          },
+          {
+            "donor": "Lisa Andoscia",
+            "employer": "Rosewood Consulting",
+            "type": "Individual",
+            "amount": 250.0,
+            "date": "2026-09-30",
+            "notes": ""
+          },
+          {
+            "donor": "John Battista",
+            "employer": "Reef Wellness",
+            "type": "Individual",
+            "amount": 500.0,
+            "date": "2026-09-30",
+            "notes": ""
+          },
+          {
+            "donor": "Christopher Beauchamp",
+            "employer": "City of Woonsocket",
+            "type": "Individual",
+            "amount": 250.0,
+            "date": "2026-09-30",
+            "notes": ""
+          },
+          {
+            "donor": "Andrew Berg",
+            "employer": "Sammartino & Berg LLP",
+            "type": "Individual",
+            "amount": 250.0,
+            "date": "2026-09-24",
+            "notes": ""
+          },
+          {
+            "donor": "Richard A. Bernardo",
+            "employer": "Retired",
+            "type": "Individual",
+            "amount": 1000.0,
+            "date": "2026-09-30",
+            "notes": ""
+          },
+          {
+            "donor": "Bernard Buoncervello",
+            "employer": "Retired",
+            "type": "Individual",
+            "amount": 500.0,
+            "date": "2026-09-16",
+            "notes": ""
+          },
+          {
+            "donor": "Bill Catauro",
+            "employer": "Quality Food Company",
+            "type": "Individual",
+            "amount": 300.0,
+            "date": "2026-09-25",
+            "notes": ""
+          },
+          {
+            "donor": "Charles Chin",
+            "employer": "Asia Grile",
+            "type": "Individual",
+            "amount": 2000.0,
+            "date": "2026-09-30",
+            "notes": ""
+          },
+          {
+            "donor": "Shannon L. Cornicelli",
+            "employer": "Dream Big, Inc.",
+            "type": "Individual",
+            "amount": 250.0,
+            "date": "2026-09-25",
+            "notes": ""
+          },
+          {
+            "donor": "Michael S Danahy",
+            "employer": "Bally's",
+            "type": "Individual",
+            "amount": 250.0,
+            "date": "2026-10-02",
+            "notes": ""
+          },
+          {
+            "donor": "Anthony DelGrande",
+            "employer": "Retired",
+            "type": "Individual",
+            "amount": 300.0,
+            "date": "2026-09-30",
+            "notes": ""
+          },
+          {
+            "donor": "Ronald Desnoyers",
+            "employer": "Law Office of Ronald Desnoyers",
+            "type": "Individual",
+            "amount": 500.0,
+            "date": "2026-09-30",
+            "notes": ""
+          },
+          {
+            "donor": "Mark Fay",
+            "employer": "Murphy and Fay",
+            "type": "Individual",
+            "amount": 200.0,
+            "date": "2026-09-30",
+            "notes": ""
+          },
+          {
+            "donor": "Michael J. Fenton",
+            "employer": "Retired",
+            "type": "Individual",
+            "amount": 1000.0,
+            "date": "2026-09-30",
+            "notes": ""
+          },
+          {
+            "donor": "Barbara Ann Fenton-Fung",
+            "employer": "Brown University Health",
+            "type": "Individual",
+            "amount": 2000.0,
+            "date": "2026-09-21",
+            "notes": ""
+          },
+          {
+            "donor": "Anna Fung-Panciera",
+            "employer": "MetLife",
+            "type": "Individual",
+            "amount": 2000.0,
+            "date": "2026-09-18",
+            "notes": ""
+          },
+          {
+            "donor": "John Harpootian",
+            "employer": "Paster & Harpootian",
+            "type": "Individual",
+            "amount": 1000.0,
+            "date": "2026-09-23",
+            "notes": ""
+          },
+          {
+            "donor": "Brian Jordan",
+            "employer": "Partridge Snow & Hahn",
+            "type": "Individual",
+            "amount": 200.0,
+            "date": "2026-09-21",
+            "notes": ""
+          },
+          {
+            "donor": "Matthew Lafazia",
+            "employer": "RICON",
+            "type": "Individual",
+            "amount": 500.0,
+            "date": "2026-09-30",
+            "notes": ""
+          },
+          {
+            "donor": "MICHAEL LEPIZZERA",
+            "employer": "LEPIZZERA & LAPROCINA",
+            "type": "Individual",
+            "amount": 1000.0,
+            "date": "2026-09-30",
+            "notes": ""
+          },
+          {
+            "donor": "Leonard L Lopes",
+            "employer": "The Victor Group",
+            "type": "Individual",
+            "amount": 250.0,
+            "date": "2026-09-30",
+            "notes": ""
+          },
+          {
+            "donor": "Matthew Lopes",
+            "employer": "Partridge Snow & Hahn",
+            "type": "Individual",
+            "amount": 300.0,
+            "date": "2026-09-21",
+            "notes": ""
+          },
+          {
+            "donor": "Anthony A. Manzo Jr",
+            "employer": "ANTHONY'S JEWELERS",
+            "type": "Individual",
+            "amount": 1000.0,
+            "date": "2026-09-30",
+            "notes": ""
+          },
+          {
+            "donor": "Gregory Marcogliese",
+            "employer": "City of Providence",
+            "type": "Individual",
+            "amount": 250.0,
+            "date": "2026-09-30",
+            "notes": ""
+          },
+          {
+            "donor": "Michael Matracia",
+            "employer": "City of Providence",
+            "type": "Individual",
+            "amount": 250.0,
+            "date": "2026-08-11",
+            "notes": ""
+          },
+          {
+            "donor": "David Nabb",
+            "employer": "Arlen Corporation",
+            "type": "Individual",
+            "amount": 250.0,
+            "date": "2026-09-27",
+            "notes": ""
+          },
+          {
+            "donor": "Jason Pannone",
+            "employer": "Bentley Construction",
+            "type": "Individual",
+            "amount": 500.0,
+            "date": "2026-09-30",
+            "notes": ""
+          },
+          {
+            "donor": "Daniel Parrillo",
+            "employer": "Town of Coventry",
+            "type": "Individual",
+            "amount": 500.0,
+            "date": "2026-09-30",
+            "notes": ""
+          },
+          {
+            "donor": "Michael St. Germain",
+            "employer": "SSG Global LLC",
+            "type": "Individual",
+            "amount": 200.0,
+            "date": "2026-09-30",
+            "notes": ""
+          },
+          {
+            "donor": "Gina Valelli",
+            "employer": "Valelli Mulchworks, Landscape, and Construction",
+            "type": "Individual",
+            "amount": 500.0,
+            "date": "2026-09-18",
+            "notes": ""
+          },
+          {
+            "donor": "Louis Yip",
+            "employer": "CHINA INN RESTAURANT",
+            "type": "Individual",
+            "amount": 500.0,
+            "date": "2026-09-25",
+            "notes": ""
+          },
+          {
+            "donor": "Gerald P. Zarrella Jr.",
+            "employer": "Zarrella Development",
+            "type": "Individual",
+            "amount": 200.0,
+            "date": "2026-09-24",
+            "notes": ""
+          },
+          {
+            "donor": "Allan W Fung",
+            "employer": "City of Cranston",
+            "type": "Loan Proceeds",
+            "amount": 50000.0,
+            "date": "2026-06-26",
+            "notes": "Personal loan to the campaign"
+          }
+        ],
+        "in_kind_transactions": [
+          {
+            "donor": "James E. Donahue",
+            "employer": "Old Sturbridge Village",
+            "type": "In-Kind - Individual",
+            "amount": 1010.0,
+            "date": "2026-09-30",
+            "notes": "Fundraiser at Alpine"
+          },
+          {
+            "donor": "Donald S Smith",
+            "employer": "Integrity Investments",
+            "type": "In-Kind - Individual",
+            "amount": 1010.0,
+            "date": "2026-09-30",
+            "notes": "Fundraiser at Alpine"
+          },
+          {
+            "donor": "Justin St. Andre",
+            "employer": "Reef Wellness",
+            "type": "In-Kind - Individual",
+            "amount": 1010.0,
+            "date": "2026-09-30",
+            "notes": "Fundraiser at Alpine"
+          }
+        ],
+        "expenditure_transactions": [
+          {
+            "payee": "Anedot",
+            "type": "Campaign Expenditure",
+            "category": "Bank Fees",
+            "amount": 6.3,
+            "date": "2026-09-18",
+            "purpose": "Anedot"
+          },
+          {
+            "payee": "Anedot",
+            "type": "Campaign Expenditure",
+            "category": "Bank Fees",
+            "amount": 4.3,
+            "date": "2026-09-20",
+            "purpose": "Anedot"
+          },
+          {
+            "payee": "Anedot",
+            "type": "Campaign Expenditure",
+            "category": "Bank Fees",
+            "amount": 32.9,
+            "date": "2026-09-26",
+            "purpose": "Anedot"
+          },
+          {
+            "payee": "Anedot",
+            "type": "Campaign Expenditure",
+            "category": "Advertising",
+            "amount": 16.6,
+            "date": "2026-09-28",
+            "purpose": "Anedot"
+          },
+          {
+            "payee": "Anedot",
+            "type": "Campaign Expenditure",
+            "category": "Advertising",
+            "amount": 16.6,
+            "date": "2026-09-28",
+            "purpose": "Anedot"
+          },
+          {
+            "payee": "Anedot",
+            "type": "Campaign Expenditure",
+            "category": "Bank Fees",
+            "amount": 6.3,
+            "date": "2026-09-30",
+            "purpose": "Anedot"
+          },
+          {
+            "payee": "Anedot",
+            "type": "Campaign Expenditure",
+            "category": "Bank Fees",
+            "amount": 20.9,
+            "date": "2026-10-02",
+            "purpose": "Anedot"
+          },
+          {
+            "payee": "Citizens Bank",
+            "type": "Campaign Expenditure",
+            "category": "Bank Fees",
+            "amount": 3.0,
+            "date": "2026-08-31",
+            "purpose": ""
+          },
+          {
+            "payee": "Citizens Bank",
+            "type": "Campaign Expenditure",
+            "category": "Bank Fees",
+            "amount": 3.0,
+            "date": "2026-09-30",
+            "purpose": ""
+          },
+          {
+            "payee": "Citizens Bank",
+            "type": "Campaign Expenditure",
+            "category": "Bank Fees",
+            "amount": 227.4,
+            "date": "2026-07-09",
+            "purpose": "Check book / ledger"
+          },
+          {
+            "payee": "Citizens Bank",
+            "type": "Campaign Expenditure",
+            "category": "Bank Fees",
+            "amount": 3.0,
+            "date": "2026-07-31",
+            "purpose": ""
+          },
+          {
+            "payee": "CLCF Softball",
+            "type": "Campaign Expenditure",
+            "category": "Donations (All Others)",
+            "amount": 100.0,
+            "date": "2026-07-17",
+            "purpose": "Donation to the 12U All Stars"
+          },
+          {
+            "payee": "Express Printing",
+            "type": "Campaign Expenditure",
+            "category": "Advertising",
+            "amount": 820.79,
+            "date": "2026-09-10",
+            "purpose": ""
+          },
+          {
+            "payee": "Paiva Works LLC",
+            "type": "Campaign Expenditure",
+            "category": "Consultant & Professional Services",
+            "amount": 1000.0,
+            "date": "2026-08-10",
+            "purpose": "Consulting / Video Production"
+          },
+          {
+            "payee": "Signs on the Cheap",
+            "type": "Campaign Expenditure",
+            "category": "Advertising",
+            "amount": 3192.02,
+            "date": "2026-07-20",
+            "purpose": "Yard Signs"
+          },
+          {
+            "payee": "Sir Speedy",
+            "type": "Campaign Expenditure",
+            "category": "Advertising",
+            "amount": 4493.25,
+            "date": "2026-07-08",
+            "purpose": "Mailing"
+          },
+          {
+            "payee": "Sir Speedy",
+            "type": "Campaign Expenditure",
+            "category": "Fundraising Expenses",
+            "amount": 555.52,
+            "date": "2026-09-15",
+            "purpose": "Fundraising Mailer"
+          },
+          {
+            "payee": "USPS",
+            "type": "Campaign Expenditure",
+            "category": "Advertising",
+            "amount": 234.0,
+            "date": "2026-07-13",
+            "purpose": "Stamps"
+          },
+          {
+            "payee": "Veer Right Strategies",
+            "type": "Campaign Expenditure",
+            "category": "Consultant & Professional Services",
+            "amount": 1171.39,
+            "date": "2026-10-05",
+            "purpose": "Texting"
+          },
+          {
+            "payee": "Vistaprint",
+            "type": "Campaign Expenditure",
+            "category": "Advertising",
+            "amount": 793.11,
+            "date": "2026-06-29",
+            "purpose": "Campaign literature"
+          },
+          {
+            "payee": "Vistaprint",
+            "type": "Campaign Expenditure",
+            "category": "Advertising",
+            "amount": 661.24,
+            "date": "2026-08-05",
+            "purpose": "Palm Cards"
+          }
+        ],
+        "accounts_payable_transactions": [
+          {
+            "payee": "Paiva Works LLC",
+            "type": "Account Payable",
+            "category": "Consultant & Professional Services",
+            "amount": 1000.0,
+            "date": "2026-09-16",
+            "purpose": "Check paid, not yet cashed"
+          },
+          {
+            "payee": "Veer Right Strategies",
+            "type": "Account Payable",
+            "category": "Consultant & Professional Services",
+            "amount": 6000.0,
+            "date": "2026-10-03",
+            "purpose": "Mailer - online banking delay in processing (paid 10/6)"
+          }
+        ],
+        "source_buckets": [
+          {
+            "label": "Itemized individual contributions",
+            "class_name": "itemized-individual-donors",
+            "amount": 18950,
+            "description": "Cash contributions listed individually."
+          },
+          {
+            "label": "Aggregate individual contributions",
+            "class_name": "aggregate",
+            "amount": 2600,
+            "description": "Individual cash contributions without contributor names."
+          },
+          {
+            "label": "Candidate loan proceeds",
+            "class_name": "loan-proceeds",
+            "amount": 50000,
+            "description": "Allan W Fung personal loan received June 26, 2026; loan remains outstanding."
+          }
+        ],
+        "top_donors": [
+          {
+            "donor": "Allan W Fung",
+            "type": "Loan Proceeds",
+            "amount": 50000.0,
+            "interest_group": "Individual",
+            "notes": "Personal loan to the campaign"
+          },
+          {
+            "donor": "Reported in aggregate",
+            "type": "Aggregate - Individual",
+            "amount": 2600.0,
+            "interest_group": "Individual",
+            "notes": "Individual contributors not named in the aggregate entry."
+          },
+          {
+            "donor": "Charles Chin",
+            "type": "Individual",
+            "amount": 2000.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "Barbara Ann Fenton-Fung",
+            "type": "Individual",
+            "amount": 2000.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "Anna Fung-Panciera",
+            "type": "Individual",
+            "amount": 2000.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "Richard A. Bernardo",
+            "type": "Individual",
+            "amount": 1000.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "Michael J. Fenton",
+            "type": "Individual",
+            "amount": 1000.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "John Harpootian",
+            "type": "Individual",
+            "amount": 1000.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "MICHAEL LEPIZZERA",
+            "type": "Individual",
+            "amount": 1000.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "Anthony A. Manzo Jr",
+            "type": "Individual",
+            "amount": 1000.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "John Battista",
+            "type": "Individual",
+            "amount": 500.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "Bernard Buoncervello",
+            "type": "Individual",
+            "amount": 500.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "Ronald Desnoyers",
+            "type": "Individual",
+            "amount": 500.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "Matthew Lafazia",
+            "type": "Individual",
+            "amount": 500.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "Jason Pannone",
+            "type": "Individual",
+            "amount": 500.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "Daniel Parrillo",
+            "type": "Individual",
+            "amount": 500.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "Gina Valelli",
+            "type": "Individual",
+            "amount": 500.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "Louis Yip",
+            "type": "Individual",
+            "amount": 500.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "Bill Catauro",
+            "type": "Individual",
+            "amount": 300.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "Anthony DelGrande",
+            "type": "Individual",
+            "amount": 300.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "Matthew Lopes",
+            "type": "Individual",
+            "amount": 300.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "Lisa Andoscia",
+            "type": "Individual",
+            "amount": 250.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "Christopher Beauchamp",
+            "type": "Individual",
+            "amount": 250.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "Andrew Berg",
+            "type": "Individual",
+            "amount": 250.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "Shannon L. Cornicelli",
+            "type": "Individual",
+            "amount": 250.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "Michael S Danahy",
+            "type": "Individual",
+            "amount": 250.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "Leonard L Lopes",
+            "type": "Individual",
+            "amount": 250.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "Gregory Marcogliese",
+            "type": "Individual",
+            "amount": 250.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "Michael Matracia",
+            "type": "Individual",
+            "amount": 250.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "David Nabb",
+            "type": "Individual",
+            "amount": 250.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "Mark Fay",
+            "type": "Individual",
+            "amount": 200.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "Brian Jordan",
+            "type": "Individual",
+            "amount": 200.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "Michael St. Germain",
+            "type": "Individual",
+            "amount": 200.0,
+            "interest_group": "Individual",
+            "notes": ""
+          },
+          {
+            "donor": "Gerald P. Zarrella Jr.",
+            "type": "Individual",
+            "amount": 200.0,
+            "interest_group": "Individual",
+            "notes": ""
+          }
+        ],
+        "spending_categories": [
+          {
+            "title": "Advertising",
+            "amount": 10227.61,
+            "summary": "Paid cash expenditures in the CF-4 schedule; unpaid bills are separate."
+          },
+          {
+            "title": "Consultant & Professional Services",
+            "amount": 2171.39,
+            "summary": "Paid cash expenditures in the CF-4 schedule; unpaid bills are separate."
+          },
+          {
+            "title": "Fundraising Expenses",
+            "amount": 555.52,
+            "summary": "Paid cash expenditures in the CF-4 schedule; unpaid bills are separate."
+          },
+          {
+            "title": "Bank Fees",
+            "amount": 307.1,
+            "summary": "Paid cash expenditures in the CF-4 schedule; unpaid bills are separate."
+          },
+          {
+            "title": "Donations (All Others)",
+            "amount": 100.0,
+            "summary": "Paid cash expenditures in the CF-4 schedule; unpaid bills are separate."
+          }
+        ],
+        "summary_intro": "Allan W Fung\u2019s June 22\u2013October 5 filing reports $71,550.00 in cash receipts, including a $50,000.00 personal loan, $13,361.62 in paid campaign expenses and $58,188.38 cash on hand. Accounts payable total $43,685.00 and loans payable total $50,000.00.",
+        "filing_history": [
+          {
+            "label": "June 22\u2013October 5, 2026",
+            "reporting_period_label": "June 22, 2026 to October 5, 2026",
+            "money_raised": 71550,
+            "money_spent": 13361.62,
+            "ending_cash": 58188.38,
+            "net_change": 58188.38,
+            "notes": "CF-2 reports $43,685 in accounts payable and a $50,000 candidate loan outstanding. The supplied CF-4 lists only $7,000 in account-payable entries; the remaining $36,685 is not itemized in this document. RIEP preserves the reported summary and does not invent payees. One $6,000 entry says paid October 6; it remains payable in the October 5 snapshot."
+          }
+        ],
+        "takeaways": [],
+        "explainer_cards": []
+      },
+      "source": "Rhode Island Board of Elections CF-2/CF-3/CF-4, committee key 5080; supplied October 8, 2026."
     }
   ]
 }
