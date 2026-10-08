@@ -1100,7 +1100,6 @@
           : `<div class="primary-box"><strong>No general-election candidate</strong><span>No active November candidate is currently listed.</span></div>`;
 
         const sections=[];
-        if(chamber === "house" && String(selectedDistrict) === "15") sections.push(`<div class="primary-box"><strong>District 15 cash-burn test</strong><a href="/house-15-finance-model.html">Compare cash, spending &amp; final-weeks scenarios →</a></div>`);
         if(activeGeneral.length) sections.push(activeGeneral.map(c=>candidateCard(c,selectedDistrict)).join(""));
         if(historical.length){
           sections.push(`<div class="candidate-section-label">2026 primary history</div>`);
