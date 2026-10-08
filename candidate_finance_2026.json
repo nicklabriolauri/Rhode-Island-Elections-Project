@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T01:27:39.203047Z",
+  "generated_at": "2026-10-08T01:00:00Z",
   "cycle": "2026-q2",
   "directory": [
     {
@@ -30266,20 +30266,27 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
-      "original_documents": [],
-      "beginning_cash": 142597.73,
-      "money_raised": 68900,
-      "money_spent": 25674.86,
-      "ending_cash": 185822.87,
-      "net_change": 43225.14,
-      "total_cash_receipts": 68900,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 25674.86,
-      "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it raised more during the period than it spent.",
+      "report_label": "28-days-before-election report \u00b7 2026",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2, CF-3 and CF-4 report supplied to RIEP.",
+      "coverage_note": "Cash receipts exclude the beginning balance and in-kind contributions. Figures describe this reporting period, not year-to-date totals.",
+      "original_documents": [
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "period": "July 1, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf",
+          "embed": true
+        }
+      ],
+      "beginning_cash": 185822.87,
+      "money_raised": 12325,
+      "money_spent": 40849.95,
+      "ending_cash": 157297.92,
+      "net_change": -28524.95,
+      "total_cash_receipts": 12325,
+      "campaign_expenses": 40530.11,
+      "aggregate_expenses": 319.84,
+      "summary_intro": "Katherine Sheena Kazarian\u2019s July 1, 2026 to October 5, 2026 filing reports $12,325.00 in cash receipts, $40,849.95 in cash disbursements and $157,297.92 in ending cash.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -30298,20 +30305,1449 @@
           "ending_cash": 185822.87,
           "net_change": 43225.14,
           "notes": "The campaign raised more than it spent in this reporting period."
+        },
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026",
+          "money_raised": 12325,
+          "money_spent": 40849.95,
+          "ending_cash": 157297.92,
+          "net_change": -28524.95,
+          "notes": "The filing reports $240.15 in total liabilities and $157,057.77 in fund balance. Ending cash is shown separately from debt.",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
         }
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
-          "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 68900,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "label": "Aggregate PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 725.0,
+          "description": "Contribution classification reproduced from the original filing."
+        },
+        {
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 7100.0,
+          "description": "Contribution classification reproduced from the original filing."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 4500.0,
+          "description": "Contribution classification reproduced from the original filing."
         }
       ],
-      "top_donors": [],
-      "spending_categories": [],
+      "top_donors": [
+        {
+          "donor": "Carol Waterson",
+          "employer": "not employed",
+          "type": "Individual",
+          "amount": 2000.0,
+          "date": "2026-08-03",
+          "notes": "ActBlue",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "RI ALLIANCE SSE SEIU COPE (Social Service Employees)",
+          "employer": "",
+          "type": "PAC",
+          "amount": 2000.0,
+          "date": "2026-08-21",
+          "notes": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf",
+          "interest_group": "Political committee",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "ENTERPRISE HOLDINGS, INC/ ENTERPRISE MOBILITY PAC OF RHODE ISLAND",
+          "employer": "",
+          "type": "PAC",
+          "amount": 1600.0,
+          "date": "2026-08-21",
+          "notes": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf",
+          "interest_group": "Political committee",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Chris Waterson",
+          "employer": "Waterson Terminal Services LLC",
+          "type": "Individual",
+          "amount": 1000.0,
+          "date": "2026-08-04",
+          "notes": "ActBlue",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Edward H Manning",
+          "employer": "State of RI JCLS",
+          "type": "Individual",
+          "amount": 1000.0,
+          "date": "2026-08-01",
+          "notes": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Kayleigh Fischer",
+          "employer": "not employed",
+          "type": "Individual",
+          "amount": 500.0,
+          "date": "2026-08-13",
+          "notes": "ActBlue",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Lauren Waterson",
+          "employer": "Waterson Terminal Services",
+          "type": "Individual",
+          "amount": 500.0,
+          "date": "2026-08-04",
+          "notes": "ActBlue",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Mark Mandell",
+          "employer": "Mandell, Boisclair & Mandell, Ltd.",
+          "type": "Individual",
+          "amount": 500.0,
+          "date": "2026-07-15",
+          "notes": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "RI LABORER'S POLITICAL LEAGUE",
+          "employer": "",
+          "type": "PAC",
+          "amount": 500.0,
+          "date": "2026-08-12",
+          "notes": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf",
+          "interest_group": "Political committee",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Elizabeth Messier",
+          "employer": "Waterson Terminal Services LLC",
+          "type": "Individual",
+          "amount": 250.0,
+          "date": "2026-08-19",
+          "notes": "ActBlue",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Mr William Fischer",
+          "employer": "True North Communications",
+          "type": "Individual",
+          "amount": 250.0,
+          "date": "2026-08-12",
+          "notes": "ActBlue",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "William Brody",
+          "employer": "ProvPort, Inc.",
+          "type": "Individual",
+          "amount": 250.0,
+          "date": "2026-08-04",
+          "notes": "ActBlue",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "ACEC-RI PAC",
+          "employer": "",
+          "type": "PAC",
+          "amount": 200.0,
+          "date": "2026-09-25",
+          "notes": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf",
+          "interest_group": "Political committee",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Mr William Irons",
+          "employer": "Retired",
+          "type": "Individual",
+          "amount": 200.0,
+          "date": "2026-07-15",
+          "notes": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "NEA RI RETIRED PAC (National Education Association RI Retired)",
+          "employer": "",
+          "type": "PAC",
+          "amount": 200.0,
+          "date": "2026-09-25",
+          "notes": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf",
+          "interest_group": "Political committee",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Peter Baptista",
+          "employer": "Capitol Communications Group",
+          "type": "Individual",
+          "amount": 200.0,
+          "date": "2026-07-01",
+          "notes": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Patrick Guida",
+          "employer": "",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-07-15",
+          "notes": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Evelyn Bain",
+          "employer": "retired",
+          "type": "Individual",
+          "amount": 100.0,
+          "date": "2026-07-15",
+          "notes": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "George Kassis",
+          "employer": "",
+          "type": "Individual",
+          "amount": 100.0,
+          "date": "2026-08-01",
+          "notes": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Joshua Miller",
+          "employer": "",
+          "type": "Individual",
+          "amount": 100.0,
+          "date": "2026-07-31",
+          "notes": "Act Blue",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Donations (Political)",
+          "amount": 30550.0,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
+        },
+        {
+          "label": "Advertising",
+          "amount": 2737.4,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
+        },
+        {
+          "label": "Food, Beverages and Meals",
+          "amount": 2621.86,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
+        },
+        {
+          "label": "Donations (All Others)",
+          "amount": 1855.0,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
+        },
+        {
+          "label": "Fundraising Expenses",
+          "amount": 1228.48,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
+        },
+        {
+          "label": "Travel & Lodging",
+          "amount": 1060.48,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
+        },
+        {
+          "label": "Other",
+          "amount": 499.97,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
+        },
+        {
+          "label": "Bank Fees",
+          "amount": 296.76,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "archived_reporting_periods": [
+        {
+          "candidate_id": "house-63-katherine-sheena-kazarian",
+          "slug": "katherine-sheena-kazarian",
+          "candidate_name": "Katherine Sheena Kazarian",
+          "chamber": "house",
+          "district_number": "63",
+          "party": "DEM",
+          "party_label": "Democratic",
+          "office_sought": "State Representative",
+          "report_label": "6/30/2026",
+          "reporting_period_label": "6/30/2026",
+          "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+          "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
+          "original_documents": [],
+          "beginning_cash": 142597.73,
+          "money_raised": 68900,
+          "money_spent": 25674.86,
+          "ending_cash": 185822.87,
+          "net_change": 43225.14,
+          "total_cash_receipts": 68900,
+          "campaign_expenses": 0,
+          "aggregate_expenses": 25674.86,
+          "summary_intro": "This profile uses Katherine Sheena Kazarian's original Q2 2026 filing for contribution and spending-category detail.",
+          "source_buckets": [
+            {
+              "label": "Aggregate individual contributions",
+              "amount": 22550,
+              "class_name": "small-dollar-aggregate-online-receipts",
+              "description": "Individual contributions reported in aggregate."
+            },
+            {
+              "label": "Itemized individual donors",
+              "amount": 27350,
+              "class_name": "itemized-individual-donors",
+              "description": "Sixty-three named individual contribution records."
+            },
+            {
+              "label": "Aggregate PAC contributions",
+              "amount": 1850,
+              "class_name": "pac-contributions",
+              "description": "PAC contributions reported in aggregate."
+            },
+            {
+              "label": "PAC contributions",
+              "amount": 17150,
+              "class_name": "pac-contributions",
+              "description": "Forty-three named PAC contribution records."
+            }
+          ],
+          "top_donors": [
+            {
+              "donor": "Ralph Palumbo",
+              "amount": 2000,
+              "type": "Individual"
+            },
+            {
+              "donor": "Thomas G Casale",
+              "amount": 1000,
+              "type": "Individual"
+            },
+            {
+              "donor": "Stephen Ucci",
+              "amount": 1000,
+              "type": "Individual"
+            },
+            {
+              "donor": "Sandra Petrarca",
+              "amount": 1000,
+              "type": "Individual"
+            },
+            {
+              "donor": "Robert E Craven",
+              "amount": 1000,
+              "type": "Individual"
+            },
+            {
+              "donor": "Richard R Beretta",
+              "amount": 1000,
+              "type": "Individual"
+            },
+            {
+              "donor": "Peter Petrarca",
+              "amount": 1000,
+              "type": "Individual"
+            },
+            {
+              "donor": "John Koza",
+              "amount": 1000,
+              "type": "Individual"
+            },
+            {
+              "donor": "Jason Robins",
+              "amount": 1000,
+              "type": "Individual"
+            },
+            {
+              "donor": "Dennis Gamba",
+              "amount": 1000,
+              "type": "Individual"
+            },
+            {
+              "donor": "Coventry Professional Firefighters PAC",
+              "amount": 1000,
+              "type": "PAC",
+              "interest_group": "Public Safety / Labor"
+            },
+            {
+              "donor": "East Greenwich Fire Fighters Association PAC",
+              "amount": 1000,
+              "type": "PAC",
+              "interest_group": "Public Safety / Labor"
+            },
+            {
+              "donor": "IBEW Local 2323 PAC",
+              "amount": 1000,
+              "type": "PAC",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "Rhode Island Partnership for Home Care",
+              "amount": 1000,
+              "type": "PAC",
+              "interest_group": "Health Care"
+            },
+            {
+              "donor": "Rhode Island Professional Firefighters",
+              "amount": 1000,
+              "type": "PAC",
+              "interest_group": "Public Safety / Labor"
+            }
+          ],
+          "spending_categories": [
+            {
+              "label": "Fundraising Expenses",
+              "amount": 15669.47,
+              "description": "Fundraising-related expenses."
+            },
+            {
+              "label": "Advertising",
+              "amount": 4789.28,
+              "description": "Advertising and campaign promotion."
+            },
+            {
+              "label": "Travel & Lodging",
+              "amount": 1798.6,
+              "description": "Travel and lodging connected with campaign activity."
+            },
+            {
+              "label": "Donations (All Others)",
+              "amount": 1462.95,
+              "description": "Non-political donations and sponsorships."
+            },
+            {
+              "label": "Food, Beverages and Meals",
+              "amount": 589.11,
+              "description": "Meals and refreshments connected with campaign activity."
+            },
+            {
+              "label": "Donations (Political)",
+              "amount": 450,
+              "description": "Political donations."
+            },
+            {
+              "label": "Other",
+              "amount": 356.17,
+              "description": "Other campaign expenditures reported in the filing."
+            },
+            {
+              "label": "Rent & Utilities",
+              "amount": 215,
+              "description": "Rent and utilities."
+            },
+            {
+              "label": "Bank Fees",
+              "amount": 191.56,
+              "description": "Payment-processing and bank fees."
+            },
+            {
+              "label": "Gifts",
+              "amount": 117.69,
+              "description": "Gifts reported as campaign expenditures."
+            },
+            {
+              "label": "Office Equipment & Supplies",
+              "amount": 35.03,
+              "description": "Office equipment and supplies."
+            }
+          ],
+          "takeaways": [],
+          "explainer_cards": [],
+          "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+          "itemized_contribution_records": 106,
+          "individual_contribution_records": 63,
+          "pac_contribution_records": 43
+        }
+      ],
+      "reporting_period_type": "custom",
+      "reporting_period_start": "2026-07-01",
+      "reporting_period_end": "2026-10-05",
+      "receipts_label": "Total cash receipts",
+      "finance_status": "available",
+      "loan_proceeds": 0,
+      "loan_repayments": 0,
+      "loans_payable": 0,
+      "accounts_payable": 240.15,
+      "total_liabilities": 240.15,
+      "total_fund_balance": 157057.77,
+      "refunds_rebates": 0,
+      "interest_received": 0,
+      "in_kind_contributions": 0,
+      "receipt_transactions": [
+        {
+          "donor": "",
+          "employer": "",
+          "type": "Aggregate - PAC",
+          "amount": 550.0,
+          "date": "2026-07-16",
+          "notes": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "employer": "",
+          "type": "Aggregate - PAC",
+          "amount": 175.0,
+          "date": "2026-09-29",
+          "notes": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Evelyn Bain",
+          "employer": "retired",
+          "type": "Individual",
+          "amount": 100.0,
+          "date": "2026-07-15",
+          "notes": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Peter Baptista",
+          "employer": "Capitol Communications Group",
+          "type": "Individual",
+          "amount": 200.0,
+          "date": "2026-07-01",
+          "notes": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "William Brody",
+          "employer": "ProvPort, Inc.",
+          "type": "Individual",
+          "amount": 250.0,
+          "date": "2026-08-04",
+          "notes": "ActBlue",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Kayleigh Fischer",
+          "employer": "not employed",
+          "type": "Individual",
+          "amount": 500.0,
+          "date": "2026-08-13",
+          "notes": "ActBlue",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Mr William Fischer",
+          "employer": "True North Communications",
+          "type": "Individual",
+          "amount": 250.0,
+          "date": "2026-08-12",
+          "notes": "ActBlue",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Patrick Guida",
+          "employer": "",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-07-15",
+          "notes": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Mr William Irons",
+          "employer": "Retired",
+          "type": "Individual",
+          "amount": 200.0,
+          "date": "2026-07-15",
+          "notes": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "George Kassis",
+          "employer": "",
+          "type": "Individual",
+          "amount": 100.0,
+          "date": "2026-08-01",
+          "notes": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Mark Mandell",
+          "employer": "Mandell, Boisclair & Mandell, Ltd.",
+          "type": "Individual",
+          "amount": 500.0,
+          "date": "2026-07-15",
+          "notes": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Edward H Manning",
+          "employer": "State of RI JCLS",
+          "type": "Individual",
+          "amount": 1000.0,
+          "date": "2026-08-01",
+          "notes": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Elizabeth Messier",
+          "employer": "Waterson Terminal Services LLC",
+          "type": "Individual",
+          "amount": 250.0,
+          "date": "2026-08-19",
+          "notes": "ActBlue",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Joshua Miller",
+          "employer": "",
+          "type": "Individual",
+          "amount": 100.0,
+          "date": "2026-07-31",
+          "notes": "Act Blue",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Carol Waterson",
+          "employer": "not employed",
+          "type": "Individual",
+          "amount": 1000.0,
+          "date": "2026-08-03",
+          "notes": "ActBlue",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Carol Waterson",
+          "employer": "not employed",
+          "type": "Individual",
+          "amount": 1000.0,
+          "date": "2026-08-03",
+          "notes": "ActBlue",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Chris Waterson",
+          "employer": "Waterson Terminal Services LLC",
+          "type": "Individual",
+          "amount": 1000.0,
+          "date": "2026-08-04",
+          "notes": "ActBlue",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Lauren Waterson",
+          "employer": "Waterson Terminal Services",
+          "type": "Individual",
+          "amount": 500.0,
+          "date": "2026-08-04",
+          "notes": "ActBlue",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "ACEC-RI PAC",
+          "employer": "",
+          "type": "PAC",
+          "amount": 200.0,
+          "date": "2026-09-25",
+          "notes": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "ENTERPRISE HOLDINGS, INC/ ENTERPRISE MOBILITY PAC OF RHODE ISLAND",
+          "employer": "",
+          "type": "PAC",
+          "amount": 1600.0,
+          "date": "2026-08-21",
+          "notes": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "NEA RI RETIRED PAC (National Education Association RI Retired)",
+          "employer": "",
+          "type": "PAC",
+          "amount": 200.0,
+          "date": "2026-09-25",
+          "notes": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "RI ALLIANCE SSE SEIU COPE (Social Service Employees)",
+          "employer": "",
+          "type": "PAC",
+          "amount": 2000.0,
+          "date": "2026-08-21",
+          "notes": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "RI LABORER'S POLITICAL LEAGUE",
+          "employer": "",
+          "type": "PAC",
+          "amount": 500.0,
+          "date": "2026-08-12",
+          "notes": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        }
+      ],
+      "in_kind_transactions": [],
+      "expenditure_transactions": [
+        {
+          "payee": "",
+          "type": "Aggregate Expenditure",
+          "category": "Travel & Lodging",
+          "amount": 246.04,
+          "date": "2026-07-29",
+          "purpose": "Misc. expenses during NCLS trip to Chicago",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "",
+          "type": "Aggregate Expenditure",
+          "category": "Travel & Lodging",
+          "amount": 73.8,
+          "date": "2026-08-21",
+          "purpose": "airport cab San Francisco",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "ActBlue",
+          "type": "Campaign Expenditure",
+          "category": "Bank Fees",
+          "amount": 37.69,
+          "date": "2026-08-19",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "ActBlue",
+          "type": "Campaign Expenditure",
+          "category": "Bank Fees",
+          "amount": 143.83,
+          "date": "2026-08-06",
+          "purpose": "ActBlue fees",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "ActBlue",
+          "type": "Campaign Expenditure",
+          "category": "Bank Fees",
+          "amount": 7.63,
+          "date": "2026-07-07",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Kimberly Ahern",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 500.0,
+          "date": "2026-09-26",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Edith Ajello",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 1000.0,
+          "date": "2026-07-13",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Suzanna Alba",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 1000.0,
+          "date": "2026-09-26",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "AMERICAN AIRLINES",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 918.79,
+          "date": "2026-08-21",
+          "purpose": "San Francisco airfare",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Armenian Cultural Association",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 125.0,
+          "date": "2026-08-13",
+          "purpose": "golf tee fundraiser sponsor",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Armenian Tree Project",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 30.0,
+          "date": "2026-08-25",
+          "purpose": "in memory tree planting",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Armenian Tree Project",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 30.0,
+          "date": "2026-09-19",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Avenue N",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 97.08,
+          "date": "2026-09-30",
+          "purpose": "constituent meeting",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Samuel Azzinaro",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 1000.0,
+          "date": "2026-09-26",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Boston Globe",
+          "type": "Campaign Expenditure",
+          "category": "Other",
+          "amount": 36.0,
+          "date": "2026-09-19",
+          "purpose": "Boston Globe online",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Boston Globe",
+          "type": "Campaign Expenditure",
+          "category": "Other",
+          "amount": 36.0,
+          "date": "2026-08-21",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Boston Globe",
+          "type": "Campaign Expenditure",
+          "category": "Other",
+          "amount": 36.0,
+          "date": "2026-07-24",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Brandon Voas",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 1000.0,
+          "date": "2026-07-13",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Bridgham Farm Land Conservation Trust",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 100.0,
+          "date": "2026-07-13",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Camp Haiastan",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 100.0,
+          "date": "2026-07-13",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Capital Grille",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 46.8,
+          "date": "2026-08-26",
+          "purpose": "rep meeting",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Checkmate Consulting Group",
+          "type": "Campaign Expenditure",
+          "category": "Fundraising Expenses",
+          "amount": 1228.48,
+          "date": "2026-07-13",
+          "purpose": "invitations and mailing for 5/28 fundraiser",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "China Gourmet",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 969.81,
+          "date": "2026-07-13",
+          "purpose": "Senior Residence dinner",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Citizens Bank",
+          "type": "Campaign Expenditure",
+          "category": "Bank Fees",
+          "amount": 107.61,
+          "date": "2026-07-27",
+          "purpose": "check order",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Coal Fire Pizza",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 146.21,
+          "date": "2026-07-27",
+          "purpose": "airport meal during layover to NCLS conference",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Angela Coburn",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 1000.0,
+          "date": "2026-09-26",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Committee to Elect Frank Rego",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 200.0,
+          "date": "2026-07-13",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Megan Cotter",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 1000.0,
+          "date": "2026-09-26",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Robert E Craven",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 1000.0,
+          "date": "2026-07-13",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Colleen Crudele",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 1000.0,
+          "date": "2026-09-26",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Anthony DeSimone",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 1000.0,
+          "date": "2026-09-26",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "East Bay Media Group",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 395.0,
+          "date": "2026-07-25",
+          "purpose": "East Providence Post ad",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "East Providence Animal Control",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 200.0,
+          "date": "2026-08-12",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "East Providence Hall of Fame",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 50.0,
+          "date": "2026-09-19",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "East Providence Recreation Department",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 47.0,
+          "date": "2026-09-14",
+          "purpose": "Winterfest Tree",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "El Paso Restaurant",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 476.78,
+          "date": "2026-09-03",
+          "purpose": "Legislator meal",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Kathleen Fogarty",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 1000.0,
+          "date": "2026-09-26",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Friends of Matt Dawson",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 1000.0,
+          "date": "2026-07-13",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Friends of Tina Spears",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 1000.0,
+          "date": "2026-07-13",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Friends of Townie Athletics",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 100.0,
+          "date": "2026-08-12",
+          "purpose": "In memory of Isadore Ramos",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Arthur Handy",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 1000.0,
+          "date": "2026-09-26",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Nicole Jellinek",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 1000.0,
+          "date": "2026-07-13",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Hon Brian Patrick Kennedy",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 1000.0,
+          "date": "2026-07-13",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Leonela Felix",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 1000.0,
+          "date": "2026-07-13",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Marriott Marquis Hotel",
+          "type": "Campaign Expenditure",
+          "category": "Travel & Lodging",
+          "amount": 740.64,
+          "date": "2026-07-31",
+          "purpose": "Hotel - Chicago NCSL",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Sabina Matos",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 500.0,
+          "date": "2026-09-26",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Carol McEntee",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 1000.0,
+          "date": "2026-09-26",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Joseph McNamara",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 1000.0,
+          "date": "2026-09-26",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "William Muto",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 1000.0,
+          "date": "2026-09-26",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Pawtucket Hall of Fame",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 50.0,
+          "date": "2026-09-11",
+          "purpose": "program sponsor",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Pawtucket Hall of Fame",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 50.0,
+          "date": "2026-09-26",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Zakary Pereira",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 1000.0,
+          "date": "2026-08-13",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Planed Parenthood",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 250.0,
+          "date": "2026-07-08",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Public Kitchen & Bar",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 1661.54,
+          "date": "2026-09-10",
+          "purpose": "Primary election night event",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Mr Ryan Queenan",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 100.0,
+          "date": "2026-07-13",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "RI Brrotherhood of Correctional Officers RIBCO",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 50.0,
+          "date": "2026-07-13",
+          "purpose": "Hector Poulin Scholarship",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "RI Democratic Party",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 5000.0,
+          "date": "2026-09-26",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Rumford Lions Club",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 230.0,
+          "date": "2026-09-26",
+          "purpose": "Harvest Supper",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Rumford Lions Club",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 40.0,
+          "date": "2026-10-05",
+          "purpose": "placemat ad",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Amy Santiago",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 1000.0,
+          "date": "2026-09-26",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Spaghetti Lane",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 80.88,
+          "date": "2026-09-28",
+          "purpose": "Legislator meeting",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Special Olympics",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 100.0,
+          "date": "2026-08-31",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Stop and Shop",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 40.4,
+          "date": "2026-07-01",
+          "purpose": "volunteer snacks",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Stop and Shop",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 46.9,
+          "date": "2026-09-28",
+          "purpose": "volunteer snacks",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Edward Stravato",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 1000.0,
+          "date": "2026-09-26",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Sts Sahag & Mesrob Armenian Church",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 50.0,
+          "date": "2026-09-14",
+          "purpose": "Bazaar placemat",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Sts Sahag & Mesrob Armenian Church",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 250.0,
+          "date": "2026-09-19",
+          "purpose": "ad booklet",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Sts Sahag & Mesrob Armenian Church",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 100.0,
+          "date": "2026-08-12",
+          "purpose": "golf tee sponsor",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Target Marketing Group",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 310.0,
+          "date": "2026-07-13",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "The Ararat Association",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 250.0,
+          "date": "2026-07-13",
+          "purpose": "Golf tee sponsor",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "The New York Times",
+          "type": "Campaign Expenditure",
+          "category": "Other",
+          "amount": 30.0,
+          "date": "2026-08-11",
+          "purpose": "NY Times online",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "The New York Times",
+          "type": "Campaign Expenditure",
+          "category": "Other",
+          "amount": 30.0,
+          "date": "2026-07-14",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "The New York Times",
+          "type": "Campaign Expenditure",
+          "category": "Other",
+          "amount": 30.0,
+          "date": "2026-09-08",
+          "purpose": "",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "The New York Times",
+          "type": "Campaign Expenditure",
+          "category": "Other",
+          "amount": 30.0,
+          "date": "2026-10-05",
+          "purpose": "online subscription",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Uncle Tony's Restaurant",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 72.07,
+          "date": "2026-08-11",
+          "purpose": "food for volunteers",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "USA Today",
+          "type": "Campaign Expenditure",
+          "category": "Other",
+          "amount": 35.99,
+          "date": "2026-08-10",
+          "purpose": "ProJo online",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "USA Today",
+          "type": "Campaign Expenditure",
+          "category": "Other",
+          "amount": 35.99,
+          "date": "2026-07-09",
+          "purpose": "ProJo",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "USA Today",
+          "type": "Campaign Expenditure",
+          "category": "Other",
+          "amount": 35.99,
+          "date": "2026-09-09",
+          "purpose": "online subscription",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "USPS",
+          "type": "Campaign Expenditure",
+          "category": "Other",
+          "amount": 164.0,
+          "date": "2026-09-28",
+          "purpose": "postage",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Whitehouse for Senate",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 2000.0,
+          "date": "2026-07-13",
+          "purpose": "Clambake fundraiser",
+          "source_url": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf"
+        }
+      ],
+      "latest_filing_href": "/data/finance-documents/katherine-sheena-kazarian-2026-10-05-28-day.pdf",
+      "finance_snapshot_note": "The filing reports $240.15 in total liabilities and $157,057.77 in fund balance. Ending cash is shown separately from debt."
     },
     {
       "candidate_id": "house-64-jenni-a-furtado",
@@ -30322,20 +31758,27 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
-      "original_documents": [],
-      "beginning_cash": 11275.64,
-      "money_raised": 503.66,
-      "money_spent": 1061.13,
-      "ending_cash": 10718.17,
-      "net_change": -557.47,
-      "total_cash_receipts": 503.66,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 1061.13,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it spent more during the period than it raised.",
+      "report_label": "28-days-before-election report \u00b7 2026",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2, CF-3 and CF-4 report supplied to RIEP.",
+      "coverage_note": "Cash receipts exclude the beginning balance and in-kind contributions. Figures describe this reporting period, not year-to-date totals.",
+      "original_documents": [
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "period": "July 1, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/jenni-a-furtado-2026-10-05-28-day.pdf",
+          "embed": true
+        }
+      ],
+      "beginning_cash": 10718.17,
+      "money_raised": 1096.07,
+      "money_spent": 2314.51,
+      "ending_cash": 9499.73,
+      "net_change": -1218.44,
+      "total_cash_receipts": 1096.07,
+      "campaign_expenses": 2314.51,
+      "aggregate_expenses": 0,
+      "summary_intro": "Jenni A Furtado\u2019s July 1, 2026 to October 5, 2026 filing reports $1,096.07 in cash receipts, $2,314.51 in cash disbursements and $9,499.73 in ending cash.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -30349,25 +31792,294 @@
         {
           "label": "Q2 2026",
           "reporting_period_label": "April 1, 2026 to June 30, 2026",
-          "money_raised": 503.66,
+          "money_raised": 353.66,
           "money_spent": 1061.13,
-          "ending_cash": 10718.17,
-          "net_change": -557.47,
+          "ending_cash": 10168.17,
+          "net_change": -707.47,
           "notes": "The campaign spent more than it raised in this reporting period."
+        },
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026",
+          "money_raised": 1096.07,
+          "money_spent": 2314.51,
+          "ending_cash": 9499.73,
+          "net_change": -1218.44,
+          "notes": "The filing reports no liabilities; fund balance equals ending cash.",
+          "source_url": "/data/finance-documents/jenni-a-furtado-2026-10-05-28-day.pdf"
         }
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
+          "label": "Aggregate individual contributions",
           "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 503.66,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "amount": 96.07,
+          "description": "Contribution classification reproduced from the original filing."
+        },
+        {
+          "label": "PAC contributions",
+          "class_name": "pac-contributions",
+          "amount": 1000.0,
+          "description": "Contribution classification reproduced from the original filing."
         }
       ],
-      "top_donors": [],
-      "spending_categories": [],
+      "top_donors": [
+        {
+          "donor": "OCEAN STATE FORWARD PAC",
+          "employer": "",
+          "type": "PAC",
+          "amount": 1000.0,
+          "date": "2026-07-13",
+          "notes": "",
+          "source_url": "/data/finance-documents/jenni-a-furtado-2026-10-05-28-day.pdf",
+          "interest_group": "Political committee",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Travel & Lodging",
+          "amount": 1035.2,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
+        },
+        {
+          "label": "Advertising",
+          "amount": 464.81,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
+        },
+        {
+          "label": "Entertainment",
+          "amount": 320.0,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
+        },
+        {
+          "label": "Donations (Political)",
+          "amount": 250.0,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
+        },
+        {
+          "label": "Food, Beverages and Meals",
+          "amount": 145.19,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
+        },
+        {
+          "label": "Gifts",
+          "amount": 79.31,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
+        },
+        {
+          "label": "Bank Fees",
+          "amount": 20.0,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "archived_reporting_periods": [
+        {
+          "candidate_id": "house-64-jenni-a-furtado",
+          "slug": "jenni-a-furtado",
+          "candidate_name": "Jenni A Furtado",
+          "chamber": "house",
+          "district_number": "64",
+          "party": "DEM",
+          "party_label": "Democratic",
+          "office_sought": "State Representative",
+          "report_label": "6/30/2026",
+          "reporting_period_label": "6/30/2026",
+          "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+          "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
+          "original_documents": [],
+          "beginning_cash": 10875.64,
+          "money_raised": 353.66,
+          "money_spent": 1061.13,
+          "ending_cash": 10168.17,
+          "net_change": -707.47,
+          "total_cash_receipts": 503.66,
+          "campaign_expenses": 0,
+          "aggregate_expenses": 1061.13,
+          "summary_intro": "This profile uses Jenni A Furtado's original Q2 2026 filing for contribution and spending-category detail.",
+          "source_buckets": [
+            {
+              "label": "Aggregate individual contributions",
+              "amount": 28.66,
+              "class_name": "small-dollar-aggregate-online-receipts",
+              "description": "ActBlue individual contributions reported in aggregate."
+            },
+            {
+              "label": "Itemized individual donors",
+              "amount": 325,
+              "class_name": "itemized-individual-donors",
+              "description": "Five named individual contribution records."
+            }
+          ],
+          "top_donors": [
+            {
+              "donor": "William J Murphy",
+              "amount": 125,
+              "type": "Individual"
+            },
+            {
+              "donor": "Mark Poirier",
+              "amount": 100,
+              "type": "Individual"
+            },
+            {
+              "donor": "Antonio Desimas",
+              "amount": 50,
+              "type": "Individual"
+            },
+            {
+              "donor": "William Irons",
+              "amount": 50,
+              "type": "Individual"
+            }
+          ],
+          "spending_categories": [
+            {
+              "label": "Donations (Political)",
+              "amount": 525,
+              "description": "Political donations."
+            },
+            {
+              "label": "Food, Beverages and Meals",
+              "amount": 317.85,
+              "description": "Meals and refreshments connected with campaign activity."
+            },
+            {
+              "label": "Advertising",
+              "amount": 218.28,
+              "description": "Advertising and campaign promotion."
+            }
+          ],
+          "takeaways": [],
+          "explainer_cards": [],
+          "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+          "itemized_contribution_records": 5,
+          "individual_contribution_records": 5,
+          "pac_contribution_records": 0
+        }
+      ],
+      "reporting_period_type": "custom",
+      "reporting_period_start": "2026-07-01",
+      "reporting_period_end": "2026-10-05",
+      "receipts_label": "Total cash receipts",
+      "finance_status": "available",
+      "loan_proceeds": 0,
+      "loan_repayments": 0,
+      "loans_payable": 0,
+      "accounts_payable": 0,
+      "total_liabilities": 0,
+      "total_fund_balance": 9499.73,
+      "refunds_rebates": 0,
+      "interest_received": 0,
+      "in_kind_contributions": 0,
+      "receipt_transactions": [
+        {
+          "donor": "",
+          "employer": "",
+          "type": "Aggregate - Individual",
+          "amount": 96.07,
+          "date": "2026-08-17",
+          "notes": "",
+          "source_url": "/data/finance-documents/jenni-a-furtado-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "OCEAN STATE FORWARD PAC",
+          "employer": "",
+          "type": "PAC",
+          "amount": 1000.0,
+          "date": "2026-07-13",
+          "notes": "",
+          "source_url": "/data/finance-documents/jenni-a-furtado-2026-10-05-28-day.pdf"
+        }
+      ],
+      "in_kind_transactions": [],
+      "expenditure_transactions": [
+        {
+          "payee": "American Airlines",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 464.81,
+          "date": "2026-07-09",
+          "purpose": "Flight to National Legistators Conference",
+          "source_url": "/data/finance-documents/jenni-a-furtado-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Beacon Bank",
+          "type": "Campaign Expenditure",
+          "category": "Bank Fees",
+          "amount": 20.0,
+          "date": "2026-07-21",
+          "purpose": "",
+          "source_url": "/data/finance-documents/jenni-a-furtado-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "East Providence Ward 4 Democratic Committee",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 200.0,
+          "date": "2026-08-12",
+          "purpose": "",
+          "source_url": "/data/finance-documents/jenni-a-furtado-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Friends of Kevin Pereira",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 50.0,
+          "date": "2026-08-28",
+          "purpose": "",
+          "source_url": "/data/finance-documents/jenni-a-furtado-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Hopper",
+          "type": "Campaign Expenditure",
+          "category": "Travel & Lodging",
+          "amount": 1035.2,
+          "date": "2026-07-07",
+          "purpose": "Hotel stay for National Conference of State Legislators in Chicago.",
+          "source_url": "/data/finance-documents/jenni-a-furtado-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Makmak Eatery",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 52.74,
+          "date": "2026-08-03",
+          "purpose": "Meet with constituent",
+          "source_url": "/data/finance-documents/jenni-a-furtado-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "The Outsider",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 92.45,
+          "date": "2026-09-21",
+          "purpose": "Meeting with constituents",
+          "source_url": "/data/finance-documents/jenni-a-furtado-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "World Trophies",
+          "type": "Campaign Expenditure",
+          "category": "Gifts",
+          "amount": 79.31,
+          "date": "2026-07-31",
+          "purpose": "Plaques for Peruvian event recipients",
+          "source_url": "/data/finance-documents/jenni-a-furtado-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Cesar Zubiaga",
+          "type": "Campaign Expenditure",
+          "category": "Entertainment",
+          "amount": 320.0,
+          "date": "2026-07-31",
+          "purpose": "Entertainment for Peruvian Event",
+          "source_url": "/data/finance-documents/jenni-a-furtado-2026-10-05-28-day.pdf"
+        }
+      ],
+      "latest_filing_href": "/data/finance-documents/jenni-a-furtado-2026-10-05-28-day.pdf",
+      "finance_snapshot_note": "The filing reports no liabilities; fund balance equals ending cash."
     },
     {
       "candidate_id": "house-65-cameron-st-germain",
@@ -30489,20 +32201,27 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "alex-finkelman-q1-2026-combined.pdf",
-      "coverage_note": "",
-      "original_documents": [],
-      "beginning_cash": 23099.14,
-      "money_raised": 1925,
-      "money_spent": 648.05,
-      "ending_cash": 24376.09,
-      "net_change": 1276.95,
-      "total_cash_receipts": 1925,
-      "campaign_expenses": 2381.8,
-      "aggregate_expenses": 0,
-      "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it raised more during the period than it spent.",
+      "report_label": "28-days-before-election report \u00b7 2026",
+      "reporting_period_label": "September 2, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2, CF-3 and CF-4 report supplied to RIEP.",
+      "coverage_note": "Cash receipts exclude the beginning balance and in-kind contributions. Figures describe this reporting period, not year-to-date totals.",
+      "original_documents": [
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "period": "September 2, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/matthew-dawson-2026-10-05-28-day.pdf",
+          "embed": true
+        }
+      ],
+      "beginning_cash": 28898.53,
+      "money_raised": 750,
+      "money_spent": 10079.27,
+      "ending_cash": 19569.26,
+      "net_change": -9329.27,
+      "total_cash_receipts": 750,
+      "campaign_expenses": 9979.27,
+      "aggregate_expenses": 100,
+      "summary_intro": "Matthew Dawson\u2019s September 2, 2026 to October 5, 2026 filing reports $750.00 in cash receipts, $10,079.27 in cash disbursements and $19,569.26 in ending cash.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -30521,113 +32240,364 @@
           "ending_cash": 24376.09,
           "net_change": 1276.95,
           "notes": "The campaign raised more than it spent in this reporting period."
+        },
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "reporting_period_label": "September 2, 2026 to October 5, 2026",
+          "money_raised": 750,
+          "money_spent": 10079.27,
+          "ending_cash": 19569.26,
+          "net_change": -9329.27,
+          "notes": "The filing reports no liabilities; fund balance equals ending cash.",
+          "source_url": "/data/finance-documents/matthew-dawson-2026-10-05-28-day.pdf"
         }
       ],
       "source_buckets": [
         {
           "label": "Itemized individual donors",
           "class_name": "itemized-individual-donors",
-          "amount": 2450,
-          "description": "Named contributors reported individually in the filing."
+          "amount": 250.0,
+          "description": "Contribution classification reproduced from the original filing."
         },
         {
-          "label": "PAC contributions",
-          "class_name": "pac-contributions",
-          "amount": 1400,
-          "description": "Political committees and PACs listed in the filing."
+          "label": "Party contributions",
+          "class_name": "party-contributions",
+          "amount": 500.0,
+          "description": "Contribution classification reproduced from the original filing."
         }
       ],
       "top_donors": [
         {
-          "donor": "RI HOSPITALITY PAC",
-          "amount": 1000,
-          "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing."
+          "donor": "EAST PROVIDENCE WARD ONE DEMOCRATIC CITY COMMITTEE",
+          "employer": "",
+          "type": "Party",
+          "amount": 500.0,
+          "date": "2026-09-02",
+          "notes": "",
+          "source_url": "/data/finance-documents/matthew-dawson-2026-10-05-28-day.pdf",
+          "interest_group": "Political committee",
+          "reporting_period_label": "September 2, 2026 to October 5, 2026"
         },
         {
-          "donor": "Alex Finkelman",
-          "amount": 700,
+          "donor": "William J Lynch",
+          "employer": "WJ Lynch Law",
           "type": "Individual",
-          "notes": "Named individual contribution listed in the filing."
-        },
-        {
-          "donor": "William G. Walsh",
-          "amount": 500,
-          "type": "Individual",
-          "notes": "Named individual contribution listed in the filing."
-        },
-        {
-          "donor": "Zachary G Darrow",
-          "amount": 500,
-          "type": "Individual",
-          "notes": "Named individual contribution listed in the filing."
-        },
-        {
-          "donor": "Barbara Traverse",
-          "amount": 200,
-          "type": "Individual",
-          "notes": "Named individual contribution listed in the filing."
-        },
-        {
-          "donor": "Henry Monti",
-          "amount": 200,
-          "type": "Individual",
-          "notes": "Named individual contribution listed in the filing."
-        },
-        {
-          "donor": "IBEW LOCAL 99 PAC (International Brotherhood of Ele",
-          "amount": 200,
-          "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing."
-        },
-        {
-          "donor": "Joseph W. Walsh",
-          "amount": 200,
-          "type": "Individual",
-          "notes": "Named individual contribution listed in the filing."
-        },
-        {
-          "donor": "RI ASSOCIATION OF NURSE ANESTHETISTS PAC",
-          "amount": 200,
-          "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing."
-        },
-        {
-          "donor": "William J Delaney",
-          "amount": 150,
-          "type": "Individual",
-          "notes": "Named individual contribution listed in the filing."
+          "amount": 250.0,
+          "date": "2026-09-02",
+          "notes": "",
+          "source_url": "/data/finance-documents/matthew-dawson-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "September 2, 2026 to October 5, 2026"
         }
       ],
       "spending_categories": [
         {
-          "title": "Consultant & Professional Services",
-          "summary": "Visible spending includes Wix.Com, Inc..",
-          "amount": 1335.36
+          "label": "Fundraising Expenses",
+          "amount": 6266.86,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         },
         {
-          "title": "Fundraising Expenses",
-          "summary": "tips for wait staff and bartenders at fundraiser",
-          "amount": 800
+          "label": "Advertising",
+          "amount": 1995.0,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         },
         {
-          "title": "Office Equipment & Supplies",
-          "summary": "Visible spending includes HP Instant, Ink.",
-          "amount": 133.5
+          "label": "Travel & Lodging",
+          "amount": 1247.44,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         },
         {
-          "title": "Bank Fees",
-          "summary": "Visible spending includes Act Blue.",
-          "amount": 86.24
+          "label": "Telephone",
+          "amount": 469.97,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         },
         {
-          "title": "Advertising",
-          "summary": "Visible spending includes HP Instant, Ink.",
-          "amount": 26.7
+          "label": "Food, Beverages and Meals",
+          "amount": 100.0,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         }
       ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "archived_reporting_periods": [
+        {
+          "candidate_id": "house-65-matthew-dawson",
+          "slug": "matthew-dawson",
+          "candidate_name": "Matthew Dawson",
+          "chamber": "house",
+          "district_number": "65",
+          "party": "DEM",
+          "party_label": "Democratic",
+          "office_sought": "State Representative",
+          "report_label": "6/30/2026",
+          "reporting_period_label": "6/30/2026",
+          "source_note": "alex-finkelman-q1-2026-combined.pdf",
+          "coverage_note": "",
+          "original_documents": [],
+          "beginning_cash": 23099.14,
+          "money_raised": 1925,
+          "money_spent": 648.05,
+          "ending_cash": 24376.09,
+          "net_change": 1276.95,
+          "total_cash_receipts": 1925,
+          "campaign_expenses": 2381.8,
+          "aggregate_expenses": 0,
+          "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it raised more during the period than it spent.",
+          "source_buckets": [
+            {
+              "label": "Itemized individual donors",
+              "class_name": "itemized-individual-donors",
+              "amount": 2450,
+              "description": "Named contributors reported individually in the filing."
+            },
+            {
+              "label": "PAC contributions",
+              "class_name": "pac-contributions",
+              "amount": 1400,
+              "description": "Political committees and PACs listed in the filing."
+            }
+          ],
+          "top_donors": [
+            {
+              "donor": "RI HOSPITALITY PAC",
+              "amount": 1000,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Health Care"
+            },
+            {
+              "donor": "Alex Finkelman",
+              "amount": 700,
+              "type": "Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "William G. Walsh",
+              "amount": 500,
+              "type": "Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "Zachary G Darrow",
+              "amount": 500,
+              "type": "Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "Barbara Traverse",
+              "amount": 200,
+              "type": "Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "Henry Monti",
+              "amount": 200,
+              "type": "Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "IBEW LOCAL 99 PAC (International Brotherhood of Ele",
+              "amount": 200,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "Joseph W. Walsh",
+              "amount": 200,
+              "type": "Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "RI ASSOCIATION OF NURSE ANESTHETISTS PAC",
+              "amount": 200,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Health Care"
+            },
+            {
+              "donor": "William J Delaney",
+              "amount": 150,
+              "type": "Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            }
+          ],
+          "spending_categories": [
+            {
+              "title": "Consultant & Professional Services",
+              "summary": "Visible spending includes Wix.Com, Inc..",
+              "amount": 1335.36
+            },
+            {
+              "title": "Fundraising Expenses",
+              "summary": "tips for wait staff and bartenders at fundraiser",
+              "amount": 800
+            },
+            {
+              "title": "Office Equipment & Supplies",
+              "summary": "Visible spending includes HP Instant, Ink.",
+              "amount": 133.5
+            },
+            {
+              "title": "Bank Fees",
+              "summary": "Visible spending includes Act Blue.",
+              "amount": 86.24
+            },
+            {
+              "title": "Advertising",
+              "summary": "Visible spending includes HP Instant, Ink.",
+              "amount": 26.7
+            }
+          ],
+          "takeaways": [],
+          "explainer_cards": []
+        }
+      ],
+      "reporting_period_type": "custom",
+      "reporting_period_start": "2026-09-02",
+      "reporting_period_end": "2026-10-05",
+      "receipts_label": "Total cash receipts",
+      "finance_status": "available",
+      "loan_proceeds": 0,
+      "loan_repayments": 0,
+      "loans_payable": 0,
+      "accounts_payable": 0,
+      "total_liabilities": 0,
+      "total_fund_balance": 19569.26,
+      "refunds_rebates": 0,
+      "interest_received": 0,
+      "in_kind_contributions": 0,
+      "receipt_transactions": [
+        {
+          "donor": "William J Lynch",
+          "employer": "WJ Lynch Law",
+          "type": "Individual",
+          "amount": 250.0,
+          "date": "2026-09-02",
+          "notes": "",
+          "source_url": "/data/finance-documents/matthew-dawson-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "EAST PROVIDENCE WARD ONE DEMOCRATIC CITY COMMITTEE",
+          "employer": "",
+          "type": "Party",
+          "amount": 500.0,
+          "date": "2026-09-02",
+          "notes": "",
+          "source_url": "/data/finance-documents/matthew-dawson-2026-10-05-28-day.pdf"
+        }
+      ],
+      "in_kind_transactions": [],
+      "expenditure_transactions": [
+        {
+          "payee": "",
+          "type": "Aggregate Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 100.0,
+          "date": "2026-09-22",
+          "purpose": "cash for food and beverage at the conference in DC",
+          "source_url": "/data/finance-documents/matthew-dawson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Checkmate Consulting Group",
+          "type": "Campaign Expenditure",
+          "category": "Fundraising Expenses",
+          "amount": 2503.52,
+          "date": "2026-09-03",
+          "purpose": "",
+          "source_url": "/data/finance-documents/matthew-dawson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "East Bay RI",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 1500.0,
+          "date": "2026-09-03",
+          "purpose": "",
+          "source_url": "/data/finance-documents/matthew-dawson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Rehoboth Reporter",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 495.0,
+          "date": "2026-09-28",
+          "purpose": "",
+          "source_url": "/data/finance-documents/matthew-dawson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "RI Food Dealers Association",
+          "type": "Campaign Expenditure",
+          "category": "Travel & Lodging",
+          "amount": 720.92,
+          "date": "2026-09-18",
+          "purpose": "Airfare and conference fee in DC 9/23/2026",
+          "source_url": "/data/finance-documents/matthew-dawson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Southwest Airlines",
+          "type": "Campaign Expenditure",
+          "category": "Travel & Lodging",
+          "amount": 33.0,
+          "date": "2026-09-25",
+          "purpose": "DC conference",
+          "source_url": "/data/finance-documents/matthew-dawson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Southwest Airlines",
+          "type": "Campaign Expenditure",
+          "category": "Travel & Lodging",
+          "amount": 463.4,
+          "date": "2026-09-17",
+          "purpose": "DC conference",
+          "source_url": "/data/finance-documents/matthew-dawson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "The Snug at Lucky's",
+          "type": "Campaign Expenditure",
+          "category": "Fundraising Expenses",
+          "amount": 328.38,
+          "date": "2026-09-11",
+          "purpose": "fundraiser",
+          "source_url": "/data/finance-documents/matthew-dawson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "The Snug at Lucky's",
+          "type": "Campaign Expenditure",
+          "category": "Fundraising Expenses",
+          "amount": 3434.96,
+          "date": "2026-09-14",
+          "purpose": "",
+          "source_url": "/data/finance-documents/matthew-dawson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Travel Guard International",
+          "type": "Campaign Expenditure",
+          "category": "Travel & Lodging",
+          "amount": 30.12,
+          "date": "2026-09-17",
+          "purpose": "travel insurance",
+          "source_url": "/data/finance-documents/matthew-dawson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Verizon Wireless",
+          "type": "Campaign Expenditure",
+          "category": "Telephone",
+          "amount": 469.97,
+          "date": "2026-09-29",
+          "purpose": "replacement of cell phone (25% of total cost)",
+          "source_url": "/data/finance-documents/matthew-dawson-2026-10-05-28-day.pdf"
+        }
+      ],
+      "latest_filing_href": "/data/finance-documents/matthew-dawson-2026-10-05-28-day.pdf",
+      "finance_snapshot_note": "The filing reports no liabilities; fund balance equals ending cash."
     },
     {
       "candidate_id": "house-66-jennifer-smith-boylan",

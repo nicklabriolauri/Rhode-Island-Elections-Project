@@ -16045,6 +16045,76 @@
       "source_name": "McEntee, Hagan",
       "identity_verification": "CEL ID 17597, House District 33, matches Carol Hagan McEntee. CEL uses Hagan as her given name.",
       "retrieved_at": "2026-10-06"
+    },
+    {
+      "candidate_name": "Jennifer A Stewart",
+      "chamber": "house",
+      "district_number": 59,
+      "organization": "ACLU of Rhode Island",
+      "year": 2025,
+      "rating": "11/11",
+      "measure": "Individual roll-call record on 11 House votes selected by the ACLU of Rhode Island as key civil-liberties issues for the 2025 session. The source shows, vote by vote, whether the legislator's vote matched the ACLU's stated position, opposed it, or was absent/otherwise not voting.",
+      "source_url": "https://www.riaclu.org/app/uploads/2025/07/legislativevotingrecord_2025.pdf",
+      "source_type": "advocacy organization legislative voting record",
+      "note": "This is an ACLU of Rhode Island voting record, not an RIEP score or endorsement. RIEP displays the underlying organization-selected record without converting it into a percentage, grade, rank, or aggregate candidate rating. The ACLU states that its selected votes do not cover every bill with civil-liberties implications and do not capture committee or floor leadership.",
+      "votes": [
+        {
+          "number": 1,
+          "issue": "Economic Justice",
+          "status": "aligned"
+        },
+        {
+          "number": 2,
+          "issue": "Freedom of Speech",
+          "status": "aligned"
+        },
+        {
+          "number": 3,
+          "issue": "Freedom to Read Act",
+          "status": "aligned"
+        },
+        {
+          "number": 4,
+          "issue": "Racial Justice",
+          "status": "aligned"
+        },
+        {
+          "number": 5,
+          "issue": "Criminal Justice",
+          "status": "aligned"
+        },
+        {
+          "number": 6,
+          "issue": "Voting Rights",
+          "status": "aligned"
+        },
+        {
+          "number": 7,
+          "issue": "HIV Testing Mandate Repeal",
+          "status": "aligned"
+        },
+        {
+          "number": 8,
+          "issue": "Hairstyle Discrimination",
+          "status": "aligned"
+        },
+        {
+          "number": 9,
+          "issue": "Criminal Justice — election officials",
+          "status": "aligned"
+        },
+        {
+          "number": 10,
+          "issue": "Student Privacy",
+          "status": "aligned"
+        },
+        {
+          "number": 11,
+          "issue": "Political Speech",
+          "status": "aligned"
+        }
+      ],
+      "rating_label": "Votes aligned with ACLU position"
     }
   ]
 }

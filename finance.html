@@ -2993,25 +2993,59 @@
       `;
     }
 
-    function renderProfile(profile, data) {
-      const app = document.getElementById("financeApp");
-      const titleBase = `${profile.candidate_name} | Campaign Finance`;
-      document.title = `${titleBase} | Rhode Island Elections Project`;
-      app.innerHTML = `
-        ${buildHero(profile)}
-        <section class="content-grid">
-          <div class="stack">
-            ${buildPacTopicPanel(profile)}
-            ${buildDonorHighlights(profile)}
-          </div>
-          <div class="stack">
-            ${buildSpendingHighlights(profile)}
-            ${buildHistory(profile)}
-            ${buildVerification(profile)}
-          </div>
-        </section>
-      `;
+    function filingChoices(profile) {
+      const snapshots = [profile, ...(profile.archived_reporting_periods || []).slice().reverse()];
+      return snapshots.map((snapshot, index) => {
+        const period = snapshot.reporting_period_label || snapshot.report_label || "Reporting period";
+        const q2 = /6\/30\/2026|Q2 2026|second.quarter/i.test(period);
+        const label = q2 ? "Q2 2026" : /28.days.before/i.test(snapshot.report_label || "")
+          ? `28 days before election · ${period}` : period;
+        return {key: index === 0 ? "latest" : `archive-${(profile.archived_reporting_periods || []).length - index}`, label, snapshot};
+      });
+    }
 
+    function filingView(choice, latest) {
+      // Use a complete snapshot, never fill missing historical amounts with latest data.
+      const selected = {...choice.snapshot};
+      selected.filing_history = latest.filing_history || [];
+      const docs = selected.original_documents || [];
+      selected.original_documents = selected.latest_filing_href
+        ? docs.filter(doc => doc.href === selected.latest_filing_href)
+        : docs.filter(doc => doc.period === selected.reporting_period_label || doc.label === selected.report_label);
+      return selected;
+    }
+
+    function buildTransactions(profile) {
+      const receipts = profile.receipt_transactions || [];
+      const expenses = profile.expenditure_transactions || [];
+      const rows = (records, expense) => records.map(row => `<tr><td>${escapeHtml(row.date || "—")}</td><td>${escapeHtml((expense ? row.payee : row.donor) || "Reported in aggregate")}</td><td>${escapeHtml(expense ? row.category || row.type : row.type)}</td><td>${formatCurrency(row.amount)}</td><td>${escapeHtml(expense ? row.purpose || "" : row.notes || "")}</td></tr>`).join("");
+      const table = (records, expense) => `<div style="overflow-x:auto"><table style="width:100%;text-align:left"><thead><tr><th>Date</th><th>${expense ? "Payee" : "Donor"}</th><th>Type</th><th>Amount</th><th>${expense ? "Purpose" : "Notes"}</th></tr></thead><tbody>${rows(records, expense)}</tbody></table></div>`;
+      return `<article class="panel section-card"><div class="section-label">Selected filing details</div><h3>Donors &amp; expenses</h3><p class="section-copy">${escapeHtml(profile.reporting_period_label || profile.report_label)}</p><details><summary>Contribution transactions (${receipts.length})</summary>${receipts.length ? table(receipts, false) : '<p>Contribution transactions have not been transcribed for this period. Available named donors are shown above; aggregate contributions do not identify individual donors.</p>'}</details><details><summary>Expense transactions (${expenses.length})</summary>${expenses.length ? table(expenses, true) : '<p>Expense transactions have not been transcribed for this period. Available spending categories are shown above. A payee-by-payee list requires the original filing detail.</p>'}</details></article>`;
+    }
+
+    function renderProfile(profile, data, requestedPeriod) {
+      const app = document.getElementById("financeApp");
+      const choices = filingChoices(profile);
+      const requested = requestedPeriod || new URLSearchParams(window.location.search).get("period") || "latest";
+      const choice = choices.find(item => item.key === requested) || choices[0];
+      const selected = filingView(choice, profile);
+      document.title = `${profile.candidate_name} | Campaign Finance | Rhode Island Elections Project`;
+      app.innerHTML = `
+        <section class="panel section-card" aria-label="Choose campaign finance filing"><label for="financeFilingSelect"><strong>Reporting period</strong></label>
+          <select id="financeFilingSelect" style="max-width:100%;padding:10px;margin:8px" aria-describedby="finance-filing-help">${choices.map(item => `<option value="${item.key}" ${item.key === choice.key ? "selected" : ""}>${escapeHtml(item.label)}${item.key === "latest" ? " (latest)" : ""}</option>`).join("")}</select>
+          <p id="finance-filing-help" class="section-copy">Choose a filing to view its totals, named donors, spending and available source documents. Historical transaction detail is shown where it has been added.</p></section>
+        ${buildHero(selected)}
+        <section class="content-grid">
+          <div class="stack">${buildPacTopicPanel(selected)}${buildDonorHighlights(selected)}</div>
+          <div class="stack">${buildSpendingHighlights(selected)}${buildHistory(selected)}${buildVerification(selected)}</div>
+        </section>${buildTransactions(selected)}
+      `;
+      document.getElementById("financeFilingSelect").addEventListener("change", event => {
+        const url = new URL(window.location.href);
+        url.searchParams.set("period", event.target.value);
+        window.history.replaceState(null, "", url);
+        renderProfile(profile, data, event.target.value);
+      });
     }
 
     function buildDirectoryCard(entry) {
