@@ -5077,11 +5077,30 @@
       "chamber": "house",
       "district_number": 60,
       "party": "Democrat",
-      "campaign_website": "",
-      "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-30",
-      "website_audit_note": "No official campaign website located in this audit.",
-      "priorities": [],
+      "campaign_website": "https://karenalzate.com/",
+      "website_status": "verified_official_campaign_site",
+      "website_checked": "2026-10-07",
+      "website_audit_note": "Official campaign website verified October 7, 2026. Committee and leadership assignments use the General Assembly record.",
+      "priorities": [
+        {
+          "title": "Housing",
+          "summary": "Support affordable housing and sustainable communities for working families.",
+          "source_label": "Official campaign website",
+          "source_url": "https://karenalzate.com/"
+        },
+        {
+          "title": "Education",
+          "summary": "Invest in schools and resources for students.",
+          "source_label": "Official campaign website",
+          "source_url": "https://karenalzate.com/"
+        },
+        {
+          "title": "Economic development",
+          "summary": "Support small businesses, entrepreneurship and a fair tax system.",
+          "source_label": "Official campaign website",
+          "source_url": "https://karenalzate.com/"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "Planned Parenthood Votes! Rhode Island PAC",
@@ -5123,38 +5142,44 @@
       "party": "Democrat",
       "campaign_website": "https://www.leonelafelix.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-30",
-      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "website_checked": "2026-10-07",
+      "website_audit_note": "Official campaign website and issues page verified October 7, 2026.",
       "priorities": [
         {
           "title": "Criminal justice reform",
-          "summary": "Reform the criminal legal system while supporting public safety.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.leonelafelix.com/"
+          "summary": "Reform sentencing and cash bail, support rehabilitation and reentry, and maintain public safety.",
+          "source_label": "Official campaign issues page",
+          "source_url": "https://www.leonelafelix.com/values"
         },
         {
           "title": "Housing",
-          "summary": "Protect tenants, expand affordable housing, and prevent displacement and homelessness.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.leonelafelix.com/"
+          "summary": "Protect tenants, expand affordable housing and prevent displacement and homelessness.",
+          "source_label": "Official campaign issues page",
+          "source_url": "https://www.leonelafelix.com/values"
         },
         {
           "title": "Reproductive justice",
-          "summary": "Protect bodily autonomy and access to reproductive healthcare.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.leonelafelix.com/"
+          "summary": "Protect bodily autonomy, abortion access and reproductive healthcare.",
+          "source_label": "Official campaign issues page",
+          "source_url": "https://www.leonelafelix.com/values"
+        },
+        {
+          "title": "Healthcare",
+          "summary": "Support Medicare for All and comprehensive, affordable coverage.",
+          "source_label": "Official campaign issues page",
+          "source_url": "https://www.leonelafelix.com/values"
+        },
+        {
+          "title": "Government transparency",
+          "summary": "Expand public access to government information and improve responsiveness and accountability.",
+          "source_label": "Official campaign issues page",
+          "source_url": "https://www.leonelafelix.com/values"
         },
         {
           "title": "Workers and wages",
-          "summary": "Raise wages, protect workers' rights, and support small businesses.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.leonelafelix.com/"
-        },
-        {
-          "title": "Education and opportunity",
-          "summary": "Strengthen schools and opportunities for Pawtucket families.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.leonelafelix.com/"
+          "summary": "Raise wages, protect workers\u2019 rights and support small businesses.",
+          "source_label": "Official campaign issues page",
+          "source_url": "https://www.leonelafelix.com/values"
         }
       ],
       "endorsements": [

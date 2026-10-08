@@ -3923,48 +3923,19 @@
             "profile_available": false,
             "response_status": "not_submitted",
             "campaign_url": "",
-            "issue_tags": []
+            "issue_tags": [],
+            "unopposed_general": true,
+            "status_label": "Unopposed in General Election"
           }
         ],
-        "general_candidates": [
-          {
-            "candidate_id": "house-59-ind-general-jean-p-barros",
-            "name": "Jean P Barros",
-            "first_name": "Jean",
-            "middle_name": "P",
-            "last_name": "Barros",
-            "suffix": "",
-            "party": "IND",
-            "party_label": "Independent",
-            "party_raw": "Independent",
-            "hometown": "Pawtucket",
-            "zip_code": "02860",
-            "home_label": "Pawtucket 02860",
-            "phone": "(401) 359-2254",
-            "email": "jeanphilippebarros@yahoo.com",
-            "declaration_status": "Valid",
-            "needs_nomination_papers": true,
-            "on_primary_ballot": false,
-            "on_election_ballot": true,
-            "required_signatures": 50,
-            "home_precinct_code": "2620",
-            "home_precinct_label": "2620",
-            "home_precinct_name": "Pawtucket Precinct 2620",
-            "official_source": "Rhode Island Department of State",
-            "ballot_stage": "general",
-            "profile_available": false,
-            "response_status": "not_submitted",
-            "campaign_url": "",
-            "issue_tags": []
-          }
-        ],
+        "general_candidates": [],
         "party_counts": {
           "DEM": 1
         },
         "candidate_total": 1,
-        "general_candidate_total": 1,
-        "general_status": "dem_only",
-        "general_label": "Democratic candidates filed only",
+        "general_candidate_total": 0,
+        "general_status": "unopposed",
+        "general_label": "Unopposed in general election",
         "primary_status": "no_primary",
         "primary_label": "No active primary in current filings",
         "hometowns": [
@@ -4003,52 +3974,22 @@
             "profile_available": false,
             "response_status": "not_submitted",
             "campaign_url": "",
-            "issue_tags": []
-          },
-          {
-            "candidate_id": "house-60-rep-primary-luis-ernesto-sandoval-jr",
-            "name": "Luis Ernesto Sandoval Jr",
-            "first_name": "Luis",
-            "middle_name": "Ernesto",
-            "last_name": "Sandoval",
-            "suffix": "Jr",
-            "party": "REP",
-            "party_label": "Republican",
-            "party_raw": "Republican",
-            "hometown": "Central Falls",
-            "zip_code": "02863",
-            "home_label": "Central Falls 02863",
-            "phone": "",
-            "email": "elmexicano021999@gmail.com",
-            "declaration_status": "Valid",
-            "needs_nomination_papers": true,
-            "on_primary_ballot": false,
-            "on_election_ballot": false,
-            "required_signatures": 50,
-            "home_precinct_code": "0407",
-            "home_precinct_label": "0407",
-            "home_precinct_name": "Central Falls Precinct 0407",
-            "official_source": "Rhode Island Department of State",
-            "ballot_stage": "primary",
-            "profile_available": false,
-            "response_status": "not_submitted",
-            "campaign_url": "",
-            "issue_tags": []
+            "issue_tags": [],
+            "unopposed_general": true,
+            "status_label": "Unopposed in General Election"
           }
         ],
         "general_candidates": [],
         "party_counts": {
-          "DEM": 1,
-          "REP": 1
+          "DEM": 1
         },
-        "candidate_total": 2,
+        "candidate_total": 1,
         "general_candidate_total": 0,
-        "general_status": "both_major",
-        "general_label": "Democratic and Republican candidates filed",
+        "general_status": "unopposed",
+        "general_label": "Unopposed in general election",
         "primary_status": "no_primary",
         "primary_label": "No active primary in current filings",
         "hometowns": [
-          "Central Falls 02863",
           "Pawtucket 02861"
         ]
       },
@@ -7382,5 +7323,19 @@
       "districts_with_primary_activity": 6,
       "districts_with_general_only_candidates": 4
     }
-  }
+  },
+  "manual_candidate_corrections": [
+    {
+      "candidate_id": "house-59-ind-general-jean-p-barros",
+      "action": "remove_candidate_listing",
+      "requested_at": "2026-10-07",
+      "source": "RIEP editorial correction requested by project maintainer"
+    },
+    {
+      "candidate_id": "house-60-rep-primary-luis-ernesto-sandoval-jr",
+      "action": "remove_candidate_listing",
+      "requested_at": "2026-10-07",
+      "source": "RIEP editorial correction requested by project maintainer"
+    }
+  ]
 }

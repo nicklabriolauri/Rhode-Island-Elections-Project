@@ -1,0 +1,31 @@
+const fs=require('fs'),assert=require('assert/strict'),vm=require('vm'),cp=require('child_process');
+const read=p=>fs.readFileSync(p,'utf8'),load=p=>JSON.parse(read(p));
+const before=p=>JSON.parse(cp.execFileSync('git',['show','3fadd03:'+p],{encoding:'utf8',maxBuffer:12e6}));
+const entries=[['jennifer-a-stewart','Jennifer A Stewart',59,1441,1985,83.33,44105.62,10,7],['karen-alzate','Karen Alzate',60,811,617,1900.28,2640.76,6,23],['leonela-felix','Leonela Felix',61,1006,-500,3918.03,8718.05,0,7],['mary-duffy-messier','Mary Duffy Messier',62,1201,0,2185.13,17274.30,0,8]];
+const main=load('data/candidate_finance_2026.json'),mirror=load('candidate_finance_2026.json'),old=before('data/candidate_finance_2026.json'),slugs=entries.map(x=>x[0]);
+const cents=n=>Math.round(n*100),sum=rows=>cents(rows.reduce((n,x)=>n+x.amount,0));
+for(const [slug,name,d,votes,raised,spent,end,nr,ne] of entries){
+ const p=main.profiles.find(p=>p.slug===slug),prior=old.profiles.find(p=>p.slug===slug),page=read(`candidates/${slug}.html`);
+ assert.deepEqual(p,mirror.profiles.find(p=>p.slug===slug));assert.deepEqual([p.money_raised,p.money_spent,p.ending_cash],[raised,spent,end]);assert.equal(cents(p.beginning_cash+raised-spent),cents(end));
+ assert.equal(sum(p.receipt_transactions)+sum(p.receipt_summary_adjustments||[]),cents(raised));assert.equal(sum(p.expenditure_transactions),cents(spent));assert.equal(sum(p.spending_categories),cents(spent));assert.equal(sum(p.source_buckets),cents(raised));
+ assert.equal(p.receipt_transactions.length,nr);assert.equal(p.expenditure_transactions.length,ne);assert.deepEqual(p.filing_history.slice(0,-1),prior.filing_history);assert.equal(p.archived_reporting_periods.at(-1).ending_cash,prior.ending_cash);
+ assert.equal(p.reporting_period_start,d===61?'2026-09-02':'2026-07-01');assert.equal(p.reporting_period_end,'2026-10-05');assert.equal(cents(end-p.total_liabilities),cents(p.total_fund_balance));
+ assert(page.includes(`<h1>${name}</h1>`));assert(page.includes(votes.toLocaleString('en-US')+' votes'));assert(page.includes('Official results'));assert(page.includes(d===61?'53.34%':'100%'));assert(page.includes(p.reporting_period_label));assert(page.includes(p.latest_filing_href));assert(page.includes('<iframe'));assert(p.original_documents.at(-1).embed);
+ for(const value of [raised,spent,end])assert(page.includes('$'+value.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})));
+ assert(page.includes('riep-legislative-index'));assert(page.includes('of 75 House district records'));assert(page.includes('data-voting-widget'));assert(page.includes('Center for Effective Lawmaking'));assert(page.includes('Session attendance'));assert(!page.includes('Senate District'));assert(page.includes(`/running.html?chamber=house&amp;district=${d}&amp;election=general`));
+ assert(load('candidates/house-voting-patterns/positions.json').positions.some(p=>p.name===name));
+ for(const route of ['index.html','ballot.html','running.html','race-page.js','candidate-profiles.html'])assert(read(route).includes(slug));
+ const ids=[...page.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(ids.length,new Set(ids).size);for(const m of page.matchAll(/href="#([^"]+)"/g))assert(ids.includes(m[1]));assert(read(`races/house-${d}.html`).includes('house59-62'));
+}
+for(const p of main.profiles)if(!slugs.includes(p.slug))assert.deepEqual(p,old.profiles.find(x=>x.slug===p.slug),p.slug);
+assert.deepEqual(main.donor_index.filter(x=>!slugs.includes(x.slug)),old.donor_index.filter(x=>!slugs.includes(x.slug)));
+const removed=['house-59-ind-general-jean-p-barros','house-60-rep-primary-luis-ernesto-sandoval-jr'];
+for(const path of ['data/whos_running_2026.json','data/whos_running_2026_precincts.json']){const d=load(path);for(const rec of Object.values(d.chambers.house))for(const key of ['candidates','primary_candidates','general_candidates','historical_candidates'])for(const c of rec[key]||[])assert(!removed.includes(c.candidate_id));for(const district of ['59','60']){assert.equal(d.chambers.house[district].candidates.length,1);assert.equal(d.chambers.house[district].general_status,'unopposed');}}
+for(const p of ['data/post_primary_status_2026.json','data/independent_finance_index_2026.json'])assert(load(p).candidates.every(c=>!removed.includes(c.candidate_id)));
+assert(main.directory.every(c=>!['luis-ernesto-sandoval-jr','jean-p-barros'].includes(c.slug)));
+const felix=main.profiles.find(x=>x.slug==='leonela-felix');assert.equal(felix.contribution_refund_transactions[0].amount,500);assert.equal(felix.contribution_refund_transactions[0].payee,'James Kingston');assert.equal(felix.receipt_summary_adjustments[0].donor,'');assert.equal(felix.receipt_summary_adjustments[0].date,'');assert.equal(felix.receipts_label,'Net cash receipts');
+const html=read('finance.html'),ctx={escapeHtml:s=>String(s),formatCurrency:n=>'$'+Number(n).toFixed(2),getBucketMeta:b=>({label:b.label})};vm.createContext(ctx);
+for(const name of ['buildReceiptAdjustments','buildHeroFundingMix','buildFundingMix']){let start=html.indexOf('    function '+name+'('),end=html.indexOf('\n    function ',start+5);vm.runInContext(html.slice(start,end),ctx);}
+for(const name of ['buildHeroFundingMix','buildFundingMix']){const rendered=ctx[name](felix);assert(rendered.includes('$-500.00'));assert(!rendered.includes('100.0%'));assert(!rendered.includes('mix-segment'));assert(rendered.includes('negative receipts'));}
+assert(read('candidates/karen-alzate.html').includes('https://karenalzate.com/'));assert(read('candidates/leonela-felix.html').includes('https://www.leonelafelix.com/values'));
+console.log('PASS: four D59–62 profiles, finance reconciliation/history, refund accounting, signed receipt display and two candidate removals');

@@ -35,6 +35,8 @@ CONFIGS += [('Paul M Santucci', 'paul-m-santucci', 53, 'Santucci', 'paul_santucc
 
 CONFIGS += [('Brandon T Voas','brandon-t-voas',57,'voas','brandon_voas','(401) 222-1224'),('Cherie L Cruz','cherie-l-cruz',58,'cruz','cherie_cruz','(401) 222-2447')]
 
+CONFIGS += [('Jennifer A Stewart', 'jennifer-a-stewart', 59, 'stewart', 'jennifer_stewart', '(401) 222-1721'), ('Karen Alzate', 'karen-alzate', 60, 'Alzate', 'karen_alzate', '(401) 222-1882'), ('Leonela Felix', 'leonela-felix', 61, 'felix', 'leonela_felix', '(401) 222-2447'), ('Mary Duffy Messier', 'mary-duffy-messier', 62, 'messier', 'mary_messier', '(401) 222-1725')]
+
 def build(slugs=None):
  # Use the complete 75-member calculation dataset for the House index.
  base.current_index=current_index
@@ -47,7 +49,7 @@ def build(slugs=None):
  for name,slug,district,surname,image,phone in CONFIGS:
   if slugs is not None and slug not in slugs:continue
   bio=f'https://www.rilegislature.gov/representatives/{surname}/Pages/Biography.aspx'
-  community={6:'Providence, North Providence',13:'Providence, Johnston',14:'Cranston, Providence',15:'Cranston',16:'Cranston',17:'Cranston',18:'Cranston',19:'Warwick, Cranston',20:'Warwick, Cranston',21:'Warwick',24:'Warwick, East Greenwich',25:'Coventry, West Warwick',26:'Coventry, West Warwick, Warwick',28:'Coventry',29:'Coventry, West Greenwich',30:'East Greenwich, West Greenwich',33:'Narragansett, South Kingstown',34:'Narragansett, South Kingstown',36:'Charlestown, New Shoreham, South Kingstown, Westerly',37:'Westerly',38:'Hopkinton, Westerly',39:'Exeter, Hopkinton, Richmond',40:'Coventry, Foster, Glocester',42:'Johnston, Cranston',43:'Johnston',44:'Johnston, Lincoln, Smithfield',45:'Cumberland, Lincoln',46:'Lincoln, Pawtucket',47:'Burrillville, Glocester',48:'Burrillville, North Smithfield',49:'Woonsocket, North Smithfield',50:'Woonsocket',51:'Woonsocket, Cumberland',52:'Cumberland',53:'Smithfield, Glocester',54:'North Providence',55:'North Providence',56:'Central Falls',57:'Central Falls, Cumberland',58:'Pawtucket'}.get(district,'Providence')
+  community={6:'Providence, North Providence',13:'Providence, Johnston',14:'Cranston, Providence',15:'Cranston',16:'Cranston',17:'Cranston',18:'Cranston',19:'Warwick, Cranston',20:'Warwick, Cranston',21:'Warwick',24:'Warwick, East Greenwich',25:'Coventry, West Warwick',26:'Coventry, West Warwick, Warwick',28:'Coventry',29:'Coventry, West Greenwich',30:'East Greenwich, West Greenwich',33:'Narragansett, South Kingstown',34:'Narragansett, South Kingstown',36:'Charlestown, New Shoreham, South Kingstown, Westerly',37:'Westerly',38:'Hopkinton, Westerly',39:'Exeter, Hopkinton, Richmond',40:'Coventry, Foster, Glocester',42:'Johnston, Cranston',43:'Johnston',44:'Johnston, Lincoln, Smithfield',45:'Cumberland, Lincoln',46:'Lincoln, Pawtucket',47:'Burrillville, Glocester',48:'Burrillville, North Smithfield',49:'Woonsocket, North Smithfield',50:'Woonsocket',51:'Woonsocket, Cumberland',52:'Cumberland',53:'Smithfield, Glocester',54:'North Providence',55:'North Providence',56:'Central Falls',57:'Central Falls, Cumberland',58:'Pawtucket',59:'Pawtucket',60:'Pawtucket, Central Falls',61:'Pawtucket',62:'Pawtucket'}.get(district,'Providence')
   email=f'rep-{surname.lower()}@rilegislature.gov' if district!=46 else 'rep-shallcross-smith@rilegislature.gov'
   base.build(name,slug,district,community,email,phone,'house')
   path=ROOT/'candidates'/f'{slug}.html';page=path.read_text()
@@ -103,8 +105,8 @@ def build(slugs=None):
   page=re.sub(r'<p><strong>Leadership:</strong> (.*?)</p><p><strong>Committees:</strong> (.*?)</p>',r'<dl class="office-details"><div><dt>Leadership</dt><dd>\1</dd></div><div><dt>Committees</dt><dd>\2</dd></div></dl>',page)
   if district==2:page=page.replace('<dd></dd>','<dd>No committee assignments listed in the recorded roster.</dd>')
   assert 'chamber=senate' not in page and 'Senate District' not in page
-  if district in (15,19,20,21,24,25,26,28,29,30,33,34,36,37,38,39,40,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
-  if district in range(44,59):page=page.replace('October 6, 2026','October 7, 2026')
+  if district in (15,19,20,21,24,25,26,28,29,30,33,34,36,37,38,39,40,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
+  if district in range(44,63):page=page.replace('October 6, 2026','October 7, 2026')
   page=replace_section(page,'finance',finance_snapshot.replace('class="record-grid"','class="metric-grid"'))
   path.write_text(page)
   entry={'slug':slug,'portrait_url':('https://www.rilegislature.gov/representatives/Pictures/McEntee.jpg' if district==33 else f'https://www.rilegislature.gov/LegislationPictures/{image}.jpg'),'biography_url':bio,'retrieved_at':'2026-10-07','credit':'Rhode Island General Assembly','width':w,'height':h}

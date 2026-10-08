@@ -1102,20 +1102,8 @@
       "party_label": "Democratic",
       "election_status": "general_candidate",
       "primary_result": "won",
-      "unopposed_general": false,
-      "status_label": "Won Democratic Primary"
-    },
-    {
-      "candidate_id": "house-59-ind-general-jean-p-barros",
-      "name": "Jean P Barros",
-      "chamber": "house",
-      "district": 59,
-      "party": "IND",
-      "party_label": "Independent",
-      "election_status": "general_candidate",
-      "primary_result": "won",
-      "unopposed_general": false,
-      "status_label": "Independent / General Election"
+      "unopposed_general": true,
+      "status_label": "Unopposed in General Election"
     },
     {
       "candidate_id": "house-60-dem-primary-karen-alzate",
@@ -1126,20 +1114,8 @@
       "party_label": "Democratic",
       "election_status": "general_candidate",
       "primary_result": "won",
-      "unopposed_general": false,
-      "status_label": "Won Democratic Primary"
-    },
-    {
-      "candidate_id": "house-60-rep-primary-luis-ernesto-sandoval-jr",
-      "name": "Luis Ernesto Sandoval Jr",
-      "chamber": "house",
-      "district": 60,
-      "party": "REP",
-      "party_label": "Republican",
-      "election_status": "general_candidate",
-      "primary_result": "won",
-      "unopposed_general": false,
-      "status_label": "Won Republican Primary"
+      "unopposed_general": true,
+      "status_label": "Unopposed in General Election"
     },
     {
       "candidate_id": "house-61-dem-primary-leonela-felix",

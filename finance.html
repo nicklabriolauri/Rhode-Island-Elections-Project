@@ -2352,9 +2352,11 @@
       const districtLabel = `${chamberLabel(profile.chamber)} District ${profile.district_number}`;
       const buckets = (profile.source_buckets || []).slice();
       const total = buckets.reduce((sum, bucket) => sum + Number(bucket.amount || 0), 0) || 1;
-      const strongestBucket = buckets.slice().sort((a, b) => (b.amount || 0) - (a.amount || 0))[0];
+      const strongestBucket = buckets.filter(bucket => Number(bucket.amount || 0) > 0).sort((a, b) => (b.amount || 0) - (a.amount || 0))[0];
       const unnamedBucket = buckets.find(bucket => normalizeBucketClass(bucket) === "aggregate");
-      const quarterRead = Number(profile.net_change || 0) >= 0
+      const quarterRead = (profile.receipt_summary_adjustments || []).length
+        ? "This filing reports a net reduction in receipts alongside campaign spending."
+        : Number(profile.net_change || 0) >= 0
         ? "This campaign raised more than it spent during the filing period."
         : "This campaign spent more than it raised during the filing period.";
       const partyTone = partyClass(profile.party);
@@ -2415,7 +2417,7 @@
           <a class="hero-stat-card jump-card raised" href="#top-donors">
             <div class="hero-stat-label">${escapeHtml(profile.receipts_label || "Raised this period")}</div>
             <div class="hero-stat-value">${formatCurrency(profile.money_raised)}</div>
-            <div class="hero-stat-detail">Money reported as coming into the campaign during this filing period.</div>
+            <div class="hero-stat-detail">${Number(profile.money_raised || 0) < 0 ? "Net reported receipts after adjustments during this filing period." : "Money reported as coming into the campaign during this filing period."}</div>
             <div class="hero-stat-jump">Jump to donor list</div>
           </a>
           <a class="hero-stat-card jump-card spent" href="#spending-breakdown">
@@ -2438,8 +2440,17 @@
       `;
     }
 
+    function buildReceiptAdjustments(profile) {
+      return `<div class="hero-mix">
+        <div class="section-label">Reported receipt adjustments</div>
+        <p class="section-copy">This filing includes negative receipts. Amounts are shown as filed; percentage shares would misrepresent these adjustments.</p>
+        <div class="mix-list">${(profile.source_buckets || []).map(bucket => `<div class="mix-row"><div class="mix-dot"></div><div class="mix-copy"><strong>${escapeHtml(getBucketMeta(bucket).label)}</strong><span>${escapeHtml(bucket.description || "")}</span></div><div class="mix-amount">${formatCurrency(bucket.amount)}</div></div>`).join("")}</div>
+      </div>`;
+    }
+
     function buildHeroFundingMix(profile) {
       const buckets = profile.source_buckets || [];
+      if (buckets.some(bucket => Number(bucket.amount || 0) < 0)) return buildReceiptAdjustments(profile);
       if (!buckets.length) return "";
       const total = buckets.reduce((sum, bucket) => sum + Number(bucket.amount || 0), 0) || 1;
       const unnamedBucket = buckets.find(bucket => normalizeBucketClass(bucket) === "aggregate");
@@ -2481,9 +2492,9 @@
       return `
         <section class="signal-grid">
           <article class="panel signal-card raised">
-            <div class="signal-label">Raised this period</div>
+            <div class="signal-label">${escapeHtml(profile.receipts_label || "Raised this period")}</div>
             <div class="signal-value">${formatCurrency(profile.money_raised)}</div>
-            <div class="signal-detail">Total money reported as coming into the campaign during this filing period.</div>
+            <div class="signal-detail">${Number(profile.money_raised || 0) < 0 ? "Net reported receipts after adjustments during this filing period." : "Total money reported as coming into the campaign during this filing period."}</div>
           </article>
           <article class="panel signal-card spent">
             <div class="signal-label">Spent this period</div>
@@ -2518,7 +2529,7 @@
           key: "raised",
           label: profile.receipts_label || "Money raised",
           value: Number(profile.money_raised || 0),
-          detail: "New money reported as coming into the campaign during this filing period."
+          detail: Number(profile.money_raised || 0) < 0 ? "Net receipt reduction reported in the filing; see the original report and refund notes." : "New money reported as coming into the campaign during this filing period."
         },
         {
           key: "spent",
@@ -2556,7 +2567,7 @@
                     <div class="meter-amount">${row.amountText || formatCurrency(row.value)}</div>
                   </div>
                   <div class="meter-track">
-                    <div class="meter-fill ${row.key}" style="width:${Math.max(8, (row.value / max) * 100).toFixed(1)}%"></div>
+                    <div class="meter-fill ${row.key}" style="width:${(row.value < 0 ? 0 : Math.max(8, (row.value / max) * 100)).toFixed(1)}%"></div>
                   </div>
                   <div class="meter-caption">${row.detail}</div>
                 </div>
@@ -2583,6 +2594,7 @@
 
     function buildFundingMix(profile) {
       const buckets = profile.source_buckets || [];
+      if (buckets.some(bucket => Number(bucket.amount || 0) < 0)) return `<article class="panel section-card">${buildReceiptAdjustments(profile)}</article>`;
       if (!buckets.length) return "";
       const total = buckets.reduce((sum, bucket) => sum + Number(bucket.amount || 0), 0) || 1;
       const unnamedBucket = buckets.find(bucket => normalizeBucketClass(bucket) === "aggregate");

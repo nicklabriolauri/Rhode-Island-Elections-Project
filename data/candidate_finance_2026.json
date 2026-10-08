@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T01:01:36.878831Z",
+  "generated_at": "2026-10-08T01:27:39.203047Z",
   "cycle": "2026-q2",
   "directory": [
     {
@@ -889,16 +889,6 @@
       "chamber": "house",
       "district_number": "60",
       "party": "DEM",
-      "office_sought": "State Representative",
-      "has_profile": true
-    },
-    {
-      "candidate_name": "Luis Ernesto Sandoval Jr",
-      "slug": "luis-ernesto-sandoval-jr",
-      "candidate_id": "house-60-luis-ernesto-sandoval-jr",
-      "chamber": "house",
-      "district_number": "60",
-      "party": "REP",
       "office_sought": "State Representative",
       "has_profile": true
     },
@@ -31108,20 +31098,27 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
-      "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
-      "original_documents": [],
-      "beginning_cash": 38151.68,
-      "money_raised": 4425,
-      "money_spent": 372.73,
-      "ending_cash": 42203.95,
-      "net_change": 4052.27,
-      "total_cash_receipts": 4425,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 372.73,
-      "summary_intro": "This profile uses Jennifer A Stewart's original Q2 2026 filing for contribution and spending-category detail.",
+      "report_label": "28-days-before-election report \u00b7 2026",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2, CF-3 and CF-4 report supplied to RIEP.",
+      "coverage_note": "Cash receipts exclude the beginning balance and in-kind contributions. Figures describe this reporting period, not year-to-date totals.",
+      "original_documents": [
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "period": "July 1, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf",
+          "embed": true
+        }
+      ],
+      "beginning_cash": 42203.95,
+      "money_raised": 1985,
+      "money_spent": 83.33,
+      "ending_cash": 44105.62,
+      "net_change": 1901.67,
+      "total_cash_receipts": 1985,
+      "campaign_expenses": 83.33,
+      "aggregate_expenses": 0,
+      "summary_intro": "Jennifer A Stewart\u2019s July 1, 2026 to October 5, 2026 filing reports $1,985.00 in cash receipts, $83.33 in cash disbursements and $44,105.62 in ending cash.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -31140,111 +31137,428 @@
           "ending_cash": 42203.95,
           "net_change": 4052.27,
           "notes": "The campaign raised more than it spent in this reporting period."
+        },
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026",
+          "money_raised": 1985,
+          "money_spent": 83.33,
+          "ending_cash": 44105.62,
+          "net_change": 1901.67,
+          "notes": "The filing reports no liabilities; fund balance equals ending cash.",
+          "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf"
         }
       ],
       "source_buckets": [
         {
           "label": "Itemized individual donors",
-          "amount": 4025,
           "class_name": "itemized-individual-donors",
-          "description": "Fifty-four named individual contribution records."
+          "amount": 1385.0,
+          "description": "Contribution classification reproduced from the original filing."
         },
         {
           "label": "PAC contributions",
-          "amount": 400,
           "class_name": "pac-contributions",
-          "description": "Four named PAC contributions."
+          "amount": 600.0,
+          "description": "Contribution classification reproduced from the original filing."
         }
       ],
       "top_donors": [
         {
-          "donor": "Meg Tunnicliffe",
-          "amount": 250,
-          "type": "Individual"
+          "donor": "Preston Werner",
+          "employer": "Preston-Werner Revocable Trust c/o Apercen Partners, LLC",
+          "type": "Individual",
+          "amount": 1000.0,
+          "date": "2026-08-06",
+          "notes": "candidate contribution, check #10975",
+          "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "John Miller",
-          "amount": 250,
-          "type": "Individual"
-        },
-        {
-          "donor": "Camilo Viveiros",
-          "amount": 250,
-          "type": "Individual"
-        },
-        {
-          "donor": "Anne Landis",
-          "amount": 250,
-          "type": "Individual"
-        },
-        {
-          "donor": "Maureen Dunnigan",
-          "amount": 200,
-          "type": "Individual"
-        },
-        {
-          "donor": "H. Phillip West",
-          "amount": 200,
-          "type": "Individual"
-        },
-        {
-          "donor": "Richard McAuliffe",
-          "amount": 150,
-          "type": "Individual"
-        },
-        {
-          "donor": "Olivia Krommes",
-          "amount": 150,
-          "type": "Individual"
-        },
-        {
-          "donor": "RI Association of Nurse Anesthetists PAC",
-          "amount": 125,
+          "donor": "PAWTUCKET FIREFIGHTERS LOCAL 1261 PAC",
+          "employer": "",
           "type": "PAC",
-          "interest_group": "Health Care"
+          "amount": 500.0,
+          "date": "2026-08-17",
+          "notes": "",
+          "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf",
+          "interest_group": "Political committee",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "NEARI PACE",
-          "amount": 100,
-          "type": "PAC",
-          "interest_group": "Education / Labor"
+          "donor": "Eric D Larson",
+          "employer": "U. of Mass. Dartmouth",
+          "type": "Individual",
+          "amount": 250.0,
+          "date": "2026-09-30",
+          "notes": "",
+          "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "RI AFL-CIO PAC",
-          "amount": 100,
+          "donor": "RI STATE ASSOCIATION OF FIREFIGHTERS",
+          "employer": "",
           "type": "PAC",
-          "interest_group": "Labor / Unions"
+          "amount": 100.0,
+          "date": "2026-08-06",
+          "notes": "",
+          "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf",
+          "interest_group": "Political committee",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "IBEW Local 99 PAC",
-          "amount": 75,
-          "type": "PAC",
-          "interest_group": "Labor / Unions"
+          "donor": "Jennifer Mcfadden",
+          "employer": "Moses Brown School",
+          "type": "Individual",
+          "amount": 75.0,
+          "date": "2026-09-03",
+          "notes": "",
+          "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Lois Harada",
+          "employer": "DWRI Letterpress",
+          "type": "Individual",
+          "amount": 50.0,
+          "date": "2026-08-03",
+          "notes": "",
+          "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Samuel Onorato",
+          "employer": "State of Rhode Island",
+          "type": "Individual",
+          "amount": 10.0,
+          "date": "2026-08-20",
+          "notes": "",
+          "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         }
       ],
       "spending_categories": [
         {
-          "label": "Fundraising Expenses",
-          "amount": 256.5,
-          "description": "Fundraising-related expenses."
+          "label": "Consultant & Professional Services",
+          "amount": 64.2,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         },
         {
           "label": "Bank Fees",
-          "amount": 68.08,
-          "description": "Payment-processing and bank fees."
-        },
-        {
-          "label": "Consultant & Professional Services",
-          "amount": 48.15,
-          "description": "Consulting and professional services."
+          "amount": 19.13,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         }
       ],
       "takeaways": [],
       "explainer_cards": [],
-      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
-      "itemized_contribution_records": 58,
-      "individual_contribution_records": 54,
-      "pac_contribution_records": 4
+      "archived_reporting_periods": [
+        {
+          "candidate_id": "house-59-jennifer-a-stewart",
+          "slug": "jennifer-a-stewart",
+          "candidate_name": "Jennifer A Stewart",
+          "chamber": "house",
+          "district_number": "59",
+          "party": "DEM",
+          "party_label": "Democratic",
+          "office_sought": "State Representative",
+          "report_label": "6/30/2026",
+          "reporting_period_label": "6/30/2026",
+          "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+          "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
+          "original_documents": [],
+          "beginning_cash": 38151.68,
+          "money_raised": 4425,
+          "money_spent": 372.73,
+          "ending_cash": 42203.95,
+          "net_change": 4052.27,
+          "total_cash_receipts": 4425,
+          "campaign_expenses": 0,
+          "aggregate_expenses": 372.73,
+          "summary_intro": "This profile uses Jennifer A Stewart's original Q2 2026 filing for contribution and spending-category detail.",
+          "source_buckets": [
+            {
+              "label": "Itemized individual donors",
+              "amount": 4025,
+              "class_name": "itemized-individual-donors",
+              "description": "Fifty-four named individual contribution records."
+            },
+            {
+              "label": "PAC contributions",
+              "amount": 400,
+              "class_name": "pac-contributions",
+              "description": "Four named PAC contributions."
+            }
+          ],
+          "top_donors": [
+            {
+              "donor": "Meg Tunnicliffe",
+              "amount": 250,
+              "type": "Individual"
+            },
+            {
+              "donor": "John Miller",
+              "amount": 250,
+              "type": "Individual"
+            },
+            {
+              "donor": "Camilo Viveiros",
+              "amount": 250,
+              "type": "Individual"
+            },
+            {
+              "donor": "Anne Landis",
+              "amount": 250,
+              "type": "Individual"
+            },
+            {
+              "donor": "Maureen Dunnigan",
+              "amount": 200,
+              "type": "Individual"
+            },
+            {
+              "donor": "H. Phillip West",
+              "amount": 200,
+              "type": "Individual"
+            },
+            {
+              "donor": "Richard McAuliffe",
+              "amount": 150,
+              "type": "Individual"
+            },
+            {
+              "donor": "Olivia Krommes",
+              "amount": 150,
+              "type": "Individual"
+            },
+            {
+              "donor": "RI Association of Nurse Anesthetists PAC",
+              "amount": 125,
+              "type": "PAC",
+              "interest_group": "Health Care"
+            },
+            {
+              "donor": "NEARI PACE",
+              "amount": 100,
+              "type": "PAC",
+              "interest_group": "Education / Labor"
+            },
+            {
+              "donor": "RI AFL-CIO PAC",
+              "amount": 100,
+              "type": "PAC",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "IBEW Local 99 PAC",
+              "amount": 75,
+              "type": "PAC",
+              "interest_group": "Labor / Unions"
+            }
+          ],
+          "spending_categories": [
+            {
+              "label": "Fundraising Expenses",
+              "amount": 256.5,
+              "description": "Fundraising-related expenses."
+            },
+            {
+              "label": "Bank Fees",
+              "amount": 68.08,
+              "description": "Payment-processing and bank fees."
+            },
+            {
+              "label": "Consultant & Professional Services",
+              "amount": 48.15,
+              "description": "Consulting and professional services."
+            }
+          ],
+          "takeaways": [],
+          "explainer_cards": [],
+          "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+          "itemized_contribution_records": 58,
+          "individual_contribution_records": 54,
+          "pac_contribution_records": 4
+        }
+      ],
+      "reporting_period_type": "custom",
+      "reporting_period_start": "2026-07-01",
+      "reporting_period_end": "2026-10-05",
+      "receipts_label": "Total cash receipts",
+      "finance_status": "available",
+      "loan_proceeds": 0,
+      "loan_repayments": 0,
+      "loans_payable": 0,
+      "accounts_payable": 0,
+      "total_liabilities": 0,
+      "total_fund_balance": 44105.62,
+      "refunds_rebates": 0,
+      "interest_received": 0,
+      "in_kind_contributions": 0,
+      "receipt_transactions": [
+        {
+          "donor": "Lois Harada",
+          "employer": "DWRI Letterpress",
+          "type": "Individual",
+          "amount": 50.0,
+          "date": "2026-08-03",
+          "notes": "",
+          "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Eric D Larson",
+          "employer": "U. of Mass. Dartmouth",
+          "type": "Individual",
+          "amount": 250.0,
+          "date": "2026-09-30",
+          "notes": "",
+          "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Jennifer Mcfadden",
+          "employer": "Moses Brown School",
+          "type": "Individual",
+          "amount": 25.0,
+          "date": "2026-09-03",
+          "notes": "",
+          "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Jennifer Mcfadden",
+          "employer": "Moses Brown School",
+          "type": "Individual",
+          "amount": 25.0,
+          "date": "2026-07-03",
+          "notes": "",
+          "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Jennifer Mcfadden",
+          "employer": "Moses Brown School",
+          "type": "Individual",
+          "amount": 25.0,
+          "date": "2026-08-03",
+          "notes": "",
+          "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Samuel Onorato",
+          "employer": "State of Rhode Island",
+          "type": "Individual",
+          "amount": 10.0,
+          "date": "2026-08-20",
+          "notes": "",
+          "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Preston Werner",
+          "employer": "Preston-Werner Revocable Trust c/o Apercen Partners, LLC",
+          "type": "Individual",
+          "amount": 500.0,
+          "date": "2026-08-06",
+          "notes": "candidate contribution, check #10975",
+          "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Preston Werner",
+          "employer": "Preston-Werner Revocable Trust c/o Apercen Partners, LLC",
+          "type": "Individual",
+          "amount": 500.0,
+          "date": "2026-08-06",
+          "notes": "Candidate contribution, check #10976",
+          "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "PAWTUCKET FIREFIGHTERS LOCAL 1261 PAC",
+          "employer": "",
+          "type": "PAC",
+          "amount": 500.0,
+          "date": "2026-08-17",
+          "notes": "",
+          "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "RI STATE ASSOCIATION OF FIREFIGHTERS",
+          "employer": "",
+          "type": "PAC",
+          "amount": 100.0,
+          "date": "2026-08-06",
+          "notes": "",
+          "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf"
+        }
+      ],
+      "in_kind_transactions": [],
+      "expenditure_transactions": [
+        {
+          "payee": "ActBlue LLC",
+          "type": "Campaign Expenditure",
+          "category": "Bank Fees",
+          "amount": 1.16,
+          "date": "2026-07-31",
+          "purpose": "",
+          "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "ActBlue LLC",
+          "type": "Campaign Expenditure",
+          "category": "Bank Fees",
+          "amount": 13.84,
+          "date": "2026-08-31",
+          "purpose": "",
+          "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "ActBlue LLC",
+          "type": "Campaign Expenditure",
+          "category": "Bank Fees",
+          "amount": 4.13,
+          "date": "2026-09-30",
+          "purpose": "",
+          "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "action network/Action Squared",
+          "type": "Campaign Expenditure",
+          "category": "Consultant & Professional Services",
+          "amount": 16.05,
+          "date": "2026-10-02",
+          "purpose": "",
+          "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "action network/Action Squared",
+          "type": "Campaign Expenditure",
+          "category": "Consultant & Professional Services",
+          "amount": 16.05,
+          "date": "2026-07-02",
+          "purpose": "",
+          "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "action network/Action Squared",
+          "type": "Campaign Expenditure",
+          "category": "Consultant & Professional Services",
+          "amount": 16.05,
+          "date": "2026-09-02",
+          "purpose": "",
+          "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "action network/Action Squared",
+          "type": "Campaign Expenditure",
+          "category": "Consultant & Professional Services",
+          "amount": 16.05,
+          "date": "2026-08-02",
+          "purpose": "",
+          "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf"
+        }
+      ],
+      "latest_filing_href": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf",
+      "finance_snapshot_note": "The filing reports no liabilities; fund balance equals ending cash."
     },
     {
       "candidate_id": "house-60-karen-alzate",
@@ -31255,20 +31569,27 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "alex-finkelman-q1-2026-combined.pdf",
-      "coverage_note": "",
-      "original_documents": [],
-      "beginning_cash": 4670.49,
-      "money_raised": 2375,
-      "money_spent": 4392.32,
-      "ending_cash": 2653.17,
-      "net_change": -2017.32,
-      "total_cash_receipts": 2375,
-      "campaign_expenses": 11862.26,
+      "report_label": "28-days-before-election report \u00b7 2026",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2, CF-3 and CF-4 report supplied to RIEP.",
+      "coverage_note": "Cash receipts exclude the beginning balance and in-kind contributions. Figures describe this reporting period, not year-to-date totals.",
+      "original_documents": [
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "period": "July 1, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf",
+          "embed": true
+        }
+      ],
+      "beginning_cash": 3924.04,
+      "money_raised": 617,
+      "money_spent": 1900.28,
+      "ending_cash": 2640.76,
+      "net_change": -1283.28,
+      "total_cash_receipts": 617,
+      "campaign_expenses": 1900.28,
       "aggregate_expenses": 0,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it spent more during the period than it raised.",
+      "summary_intro": "Karen Alzate\u2019s July 1, 2026 to October 5, 2026 filing reports $617.00 in cash receipts, $1,900.28 in cash disbursements and $2,640.76 in ending cash.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -31287,148 +31608,591 @@
           "ending_cash": 2653.17,
           "net_change": -2017.32,
           "notes": "The campaign spent more than it raised in this reporting period."
+        },
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026",
+          "money_raised": 617,
+          "money_spent": 1900.28,
+          "ending_cash": 2640.76,
+          "net_change": -1283.28,
+          "notes": "The filing reports $10.00 in total liabilities and $2,630.76 in fund balance. Ending cash is shown separately from debt.",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
         }
       ],
       "source_buckets": [
         {
           "label": "Itemized individual donors",
           "class_name": "itemized-individual-donors",
-          "amount": 1875,
-          "description": "Named contributors reported individually in the filing."
-        },
-        {
-          "label": "PAC contributions",
-          "class_name": "pac-contributions",
-          "amount": 500,
-          "description": "Political committees and PACs listed in the filing."
+          "amount": 617.0,
+          "description": "Contribution classification reproduced from the original filing."
         }
       ],
       "top_donors": [
         {
-          "donor": "CAREPAC OF BLUE CROSS & BLUE SHIELD OF RI",
-          "amount": 150,
-          "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing.",
-          "interest_group": "Health Care"
-        },
-        {
-          "donor": "Jean P",
-          "amount": 150,
+          "donor": "james kingston",
+          "employer": "unemplyed",
           "type": "Individual",
-          "notes": "Employer listed as Barros Unemlyed.",
-          "interest_group": "Individual"
+          "amount": 250.0,
+          "date": "2026-09-14",
+          "notes": "",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "Keith Hoffmann",
-          "amount": 150,
+          "donor": "Paula Carmichael",
+          "employer": "reliante Medical Group",
           "type": "Individual",
-          "notes": "Employer listed as Unemployeed.",
-          "interest_group": "Individual"
+          "amount": 100.0,
+          "date": "2026-08-17",
+          "notes": "",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "RI STATE ASSOCIATION OF FIREFIGHTERS",
-          "amount": 150,
-          "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing.",
-          "interest_group": "Public Safety"
-        },
-        {
-          "donor": "steven Ceceri",
-          "amount": 150,
+          "donor": "William m farrell",
+          "employer": "william A. Farrell & associates LLC",
           "type": "Individual",
-          "notes": "Employer listed as Owner-contractor.",
-          "interest_group": "Individual"
+          "amount": 100.0,
+          "date": "2026-08-13",
+          "notes": "",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "Carlos Vargas",
-          "amount": 100,
+          "donor": "Joshua Giraldo",
+          "employer": "City of Central Falls",
           "type": "Individual",
-          "notes": "Employer listed as Navigant Credit Union.",
-          "interest_group": "Individual"
+          "amount": 71.0,
+          "date": "2026-08-17",
+          "notes": "",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "EGFFA PAC (East Greenwich Fire Fighters Association)",
-          "amount": 100,
-          "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing.",
-          "interest_group": "Public Safety"
-        },
-        {
-          "donor": "Grant Pilkington",
-          "amount": 100,
+          "donor": "jonathon acosta",
+          "employer": "Student",
           "type": "Individual",
-          "notes": "Employer listed as Advocacy Solutions.",
-          "interest_group": "Individual"
+          "amount": 71.0,
+          "date": "2026-08-17",
+          "notes": "",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "IBEW LOCAL 99 PAC (International Brotherhood of Electrical Workers)",
-          "amount": 100,
-          "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing.",
-          "interest_group": "Labor / Unions"
-        },
-        {
-          "donor": "Pedro Espinal",
-          "amount": 100,
+          "donor": "Yamil Baez",
+          "employer": "Bristol-Warren Regional School District",
           "type": "Individual",
-          "notes": "Employer listed as councilmen.",
-          "interest_group": "Individual"
+          "amount": 25.0,
+          "date": "2026-08-09",
+          "notes": "",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         }
       ],
       "spending_categories": [
         {
-          "title": "Fundraising Expenses",
-          "summary": "Visible spending includes Regine Printing Co, CHECKMATE CONSULTING GROUP, The district.",
-          "amount": 5493.38
+          "label": "Donations (All Others)",
+          "amount": 358.3,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         },
         {
-          "title": "Donations (All Others)",
-          "summary": "Visible spending includes market basket, pawtucket st patricks day committee, city year.",
-          "amount": 2139.2
+          "label": "Other",
+          "amount": 312.0,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         },
         {
-          "title": "Food, Beverages and Meals",
-          "summary": "Visible spending includes Cafe Amore, FOUR SEASON, Harrys burger bar.",
-          "amount": 1471.82
+          "label": "Refunds/Reimbursements",
+          "amount": 300.0,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         },
         {
-          "title": "Donations (Political)",
-          "summary": "Visible spending includes Tatiana Baena, SETH MAGAZINE, Shelly Peterson.",
-          "amount": 1200
+          "label": "Gifts",
+          "amount": 284.15,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         },
         {
-          "title": "Travel & Lodging",
-          "summary": "Visible spending includes American Airlines, CIRCA EL BEBE, HOLIDAY INN.",
-          "amount": 680.96
+          "label": "Food, Beverages and Meals",
+          "amount": 256.6,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         },
         {
-          "title": "Consultant & Professional Services",
-          "summary": "Visible spending includes Action network, Den Den, Justin Case Media.",
-          "amount": 437.34
+          "label": "Donations (Political)",
+          "amount": 200.0,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         },
         {
-          "title": "Refunds/Reimbursements",
-          "summary": "Visible spending includes jonathon acosta.",
-          "amount": 200
+          "label": "Travel & Lodging",
+          "amount": 78.7,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         },
         {
-          "title": "Gifts",
-          "summary": "Visible spending includes Dollar Tree.",
-          "amount": 117.7
+          "label": "Advertising",
+          "amount": 64.35,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         },
         {
-          "title": "Advertising",
-          "summary": "Visible spending includes Action network.",
-          "amount": 64.2
-        },
-        {
-          "title": "Office Equipment & Supplies",
-          "summary": "Visible spending includes Action network, Staples.",
-          "amount": 40.8
+          "label": "Bank Fees",
+          "amount": 46.18,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         }
       ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "archived_reporting_periods": [
+        {
+          "candidate_id": "house-60-karen-alzate",
+          "slug": "karen-alzate",
+          "candidate_name": "Karen Alzate",
+          "chamber": "house",
+          "district_number": "60",
+          "party": "DEM",
+          "party_label": "Democratic",
+          "office_sought": "State Representative",
+          "report_label": "6/30/2026",
+          "reporting_period_label": "6/30/2026",
+          "source_note": "alex-finkelman-q1-2026-combined.pdf",
+          "coverage_note": "",
+          "original_documents": [],
+          "beginning_cash": 4670.49,
+          "money_raised": 2375,
+          "money_spent": 4392.32,
+          "ending_cash": 2653.17,
+          "net_change": -2017.32,
+          "total_cash_receipts": 2375,
+          "campaign_expenses": 11862.26,
+          "aggregate_expenses": 0,
+          "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it spent more during the period than it raised.",
+          "source_buckets": [
+            {
+              "label": "Itemized individual donors",
+              "class_name": "itemized-individual-donors",
+              "amount": 1875,
+              "description": "Named contributors reported individually in the filing."
+            },
+            {
+              "label": "PAC contributions",
+              "class_name": "pac-contributions",
+              "amount": 500,
+              "description": "Political committees and PACs listed in the filing."
+            }
+          ],
+          "top_donors": [
+            {
+              "donor": "CAREPAC OF BLUE CROSS & BLUE SHIELD OF RI",
+              "amount": 150,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Health Care"
+            },
+            {
+              "donor": "Jean P",
+              "amount": 150,
+              "type": "Individual",
+              "notes": "Employer listed as Barros Unemlyed.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "Keith Hoffmann",
+              "amount": 150,
+              "type": "Individual",
+              "notes": "Employer listed as Unemployeed.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "RI STATE ASSOCIATION OF FIREFIGHTERS",
+              "amount": 150,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Public Safety"
+            },
+            {
+              "donor": "steven Ceceri",
+              "amount": 150,
+              "type": "Individual",
+              "notes": "Employer listed as Owner-contractor.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "Carlos Vargas",
+              "amount": 100,
+              "type": "Individual",
+              "notes": "Employer listed as Navigant Credit Union.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "EGFFA PAC (East Greenwich Fire Fighters Association)",
+              "amount": 100,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Public Safety"
+            },
+            {
+              "donor": "Grant Pilkington",
+              "amount": 100,
+              "type": "Individual",
+              "notes": "Employer listed as Advocacy Solutions.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "IBEW LOCAL 99 PAC (International Brotherhood of Electrical Workers)",
+              "amount": 100,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "Pedro Espinal",
+              "amount": 100,
+              "type": "Individual",
+              "notes": "Employer listed as councilmen.",
+              "interest_group": "Individual"
+            }
+          ],
+          "spending_categories": [
+            {
+              "title": "Fundraising Expenses",
+              "summary": "Visible spending includes Regine Printing Co, CHECKMATE CONSULTING GROUP, The district.",
+              "amount": 5493.38
+            },
+            {
+              "title": "Donations (All Others)",
+              "summary": "Visible spending includes market basket, pawtucket st patricks day committee, city year.",
+              "amount": 2139.2
+            },
+            {
+              "title": "Food, Beverages and Meals",
+              "summary": "Visible spending includes Cafe Amore, FOUR SEASON, Harrys burger bar.",
+              "amount": 1471.82
+            },
+            {
+              "title": "Donations (Political)",
+              "summary": "Visible spending includes Tatiana Baena, SETH MAGAZINE, Shelly Peterson.",
+              "amount": 1200
+            },
+            {
+              "title": "Travel & Lodging",
+              "summary": "Visible spending includes American Airlines, CIRCA EL BEBE, HOLIDAY INN.",
+              "amount": 680.96
+            },
+            {
+              "title": "Consultant & Professional Services",
+              "summary": "Visible spending includes Action network, Den Den, Justin Case Media.",
+              "amount": 437.34
+            },
+            {
+              "title": "Refunds/Reimbursements",
+              "summary": "Visible spending includes jonathon acosta.",
+              "amount": 200
+            },
+            {
+              "title": "Gifts",
+              "summary": "Visible spending includes Dollar Tree.",
+              "amount": 117.7
+            },
+            {
+              "title": "Advertising",
+              "summary": "Visible spending includes Action network.",
+              "amount": 64.2
+            },
+            {
+              "title": "Office Equipment & Supplies",
+              "summary": "Visible spending includes Action network, Staples.",
+              "amount": 40.8
+            }
+          ],
+          "takeaways": [],
+          "explainer_cards": []
+        }
+      ],
+      "reporting_period_type": "custom",
+      "reporting_period_start": "2026-07-01",
+      "reporting_period_end": "2026-10-05",
+      "receipts_label": "Total cash receipts",
+      "finance_status": "available",
+      "loan_proceeds": 0,
+      "loan_repayments": 0,
+      "loans_payable": 10,
+      "accounts_payable": 0,
+      "total_liabilities": 10,
+      "total_fund_balance": 2630.76,
+      "refunds_rebates": 0,
+      "interest_received": 0,
+      "in_kind_contributions": 0,
+      "receipt_transactions": [
+        {
+          "donor": "jonathon acosta",
+          "employer": "Student",
+          "type": "Individual",
+          "amount": 71.0,
+          "date": "2026-08-17",
+          "notes": "",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Yamil Baez",
+          "employer": "Bristol-Warren Regional School District",
+          "type": "Individual",
+          "amount": 25.0,
+          "date": "2026-08-09",
+          "notes": "",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Paula Carmichael",
+          "employer": "reliante Medical Group",
+          "type": "Individual",
+          "amount": 100.0,
+          "date": "2026-08-17",
+          "notes": "",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "William m farrell",
+          "employer": "william A. Farrell & associates LLC",
+          "type": "Individual",
+          "amount": 100.0,
+          "date": "2026-08-13",
+          "notes": "",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Joshua Giraldo",
+          "employer": "City of Central Falls",
+          "type": "Individual",
+          "amount": 71.0,
+          "date": "2026-08-17",
+          "notes": "",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "james kingston",
+          "employer": "unemplyed",
+          "type": "Individual",
+          "amount": 250.0,
+          "date": "2026-09-14",
+          "notes": "",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        }
+      ],
+      "in_kind_transactions": [],
+      "expenditure_transactions": [
+        {
+          "payee": "Act Blue",
+          "type": "Campaign Expenditure",
+          "category": "Bank Fees",
+          "amount": 16.18,
+          "date": "2026-09-16",
+          "purpose": "",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Action network",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 16.05,
+          "date": "2026-09-14",
+          "purpose": "",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Action network",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 16.05,
+          "date": "2026-07-14",
+          "purpose": "",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Action network",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 16.05,
+          "date": "2026-08-14",
+          "purpose": "",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "apsara",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 35.48,
+          "date": "2026-09-24",
+          "purpose": "intern lunch",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "bajas taqueria",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 16.2,
+          "date": "2026-09-12",
+          "purpose": "intern lunch",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Cafe Amore",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 50.54,
+          "date": "2026-07-16",
+          "purpose": "consituent meeting",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "olga calderon",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 150.0,
+          "date": "2026-07-24",
+          "purpose": "Progresso Latino Donation",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "caprichos antoquesnos",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 13.47,
+          "date": "2026-07-21",
+          "purpose": "constituent meeting",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Delicias De mi Tierra",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 66.15,
+          "date": "2026-07-08",
+          "purpose": "strategy with Arlette",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Delicias De mi Tierra",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 53.0,
+          "date": "2026-09-15",
+          "purpose": "strategy with Arlette Hidalgo",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "economic progress insititute",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 108.3,
+          "date": "2026-09-23",
+          "purpose": "",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Friends of Tatiana Baena",
+          "type": "Campaign Expenditure",
+          "category": "Refunds/Reimbursements",
+          "amount": 300.0,
+          "date": "2026-08-04",
+          "purpose": "Womens Day event",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "gather ri",
+          "type": "Campaign Expenditure",
+          "category": "Other",
+          "amount": 312.0,
+          "date": "2026-09-24",
+          "purpose": "Alcove membership",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Arlette Hidalgo",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 100.0,
+          "date": "2026-07-02",
+          "purpose": "",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Lyft",
+          "type": "Campaign Expenditure",
+          "category": "Travel & Lodging",
+          "amount": 78.7,
+          "date": "2026-07-23",
+          "purpose": "BLLL conferfence",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Navigant credit union",
+          "type": "Campaign Expenditure",
+          "category": "Bank Fees",
+          "amount": 30.0,
+          "date": "2026-08-18",
+          "purpose": "",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "pan d bono",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 17.14,
+          "date": "2026-07-09",
+          "purpose": "constituent meeting",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "PPvotes",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 100.0,
+          "date": "2026-07-14",
+          "purpose": "",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Dillion Quinn",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 100.0,
+          "date": "2026-08-14",
+          "purpose": "John St Park donation",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Rose Bud",
+          "type": "Campaign Expenditure",
+          "category": "Gifts",
+          "amount": 41.07,
+          "date": "2026-07-20",
+          "purpose": "Colombian independence day celebration",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "steelbound",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 20.82,
+          "date": "2026-07-23",
+          "purpose": "BLLL conference",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "world trophies",
+          "type": "Campaign Expenditure",
+          "category": "Gifts",
+          "amount": 243.08,
+          "date": "2026-07-17",
+          "purpose": "Colombian independents day celebration awards",
+          "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf"
+        }
+      ],
+      "latest_filing_href": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf",
+      "finance_snapshot_note": "The filing reports $10.00 in total liabilities and $2,630.76 in fund balance. Ending cash is shown separately from debt."
     },
     {
       "candidate_id": "house-60-luis-ernesto-sandoval-jr",
@@ -31501,20 +32265,27 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "alex-finkelman-q1-2026-combined.pdf",
-      "coverage_note": "",
-      "original_documents": [],
-      "beginning_cash": 9549.68,
-      "money_raised": 2535,
-      "money_spent": 2959.03,
-      "ending_cash": 9460.65,
-      "net_change": -424.03,
-      "total_cash_receipts": 2535,
-      "campaign_expenses": 8323.76,
+      "report_label": "28-days-before-election report \u00b7 2026",
+      "reporting_period_label": "September 2, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2, CF-3 and CF-4 report supplied to RIEP.",
+      "coverage_note": "Cash receipts exclude the beginning balance and in-kind contributions. Figures describe this reporting period, not year-to-date totals. CF-2\u2019s negative PAC receipt is kept as filed; CF-4\u2019s contribution refund is separately retained without double counting.",
+      "original_documents": [
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "period": "September 2, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/leonela-felix-2026-10-05-28-day.pdf",
+          "embed": true
+        }
+      ],
+      "beginning_cash": 13136.08,
+      "money_raised": -500,
+      "money_spent": 3918.03,
+      "ending_cash": 8718.05,
+      "net_change": -4418.03,
+      "total_cash_receipts": -500,
+      "campaign_expenses": 3918.03,
       "aggregate_expenses": 0,
-      "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it spent more during the period than it raised.",
+      "summary_intro": "Leonela Felix\u2019s September 2, 2026 to October 5, 2026 filing reports $-500.00 in cash receipts, $3,918.03 in cash disbursements and $8,718.05 in ending cash. The filing reports a $500.00 contribution refund as negative receipts; it is not counted again in the campaign-expense total.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -31533,143 +32304,322 @@
           "ending_cash": 9460.65,
           "net_change": -424.03,
           "notes": "The campaign spent more than it raised in this reporting period."
+        },
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "reporting_period_label": "September 2, 2026 to October 5, 2026",
+          "money_raised": -500,
+          "money_spent": 3918.03,
+          "ending_cash": 8718.05,
+          "net_change": -4418.03,
+          "notes": "The filing reports no liabilities; fund balance equals ending cash. CF-2 reports negative $500.00 in PAC receipts and $3,918.03 in campaign expenses. The blank CF-3 provides no donor detail. CF-4 separately lists a $500.00 contribution refund to James Kingston on September 29, described as over the allowable limit. The refund is already reflected in CF-2\u2019s negative receipts and is not added again to campaign expenses. Filing classifications are preserved.",
+          "source_url": "/data/finance-documents/leonela-felix-2026-10-05-28-day.pdf"
         }
       ],
       "source_buckets": [
         {
-          "label": "Itemized individual donors",
-          "class_name": "itemized-individual-donors",
-          "amount": 3270,
-          "description": "Named contributors reported individually in the filing."
-        },
-        {
-          "label": "PAC contributions",
+          "label": "Net PAC receipts (as filed)",
           "class_name": "pac-contributions",
-          "amount": 1800,
-          "description": "Political committees and PACs listed in the filing."
+          "amount": -500.0,
+          "description": "Negative PAC receipt reproduced from CF-2. The CF-3 schedule is blank; the filing supplies no itemized receipt donor or date."
         }
       ],
-      "top_donors": [
-        {
-          "donor": "James Kingston",
-          "amount": 3000,
-          "type": "Individual",
-          "notes": "Named individual contribution listed in the filing.",
-          "interest_group": "Individual"
-        },
-        {
-          "donor": "RI LABORER'S POLITICAL LEAGUE",
-          "amount": 400,
-          "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing.",
-          "interest_group": "Labor / Unions"
-        },
-        {
-          "donor": "Alan Cohen",
-          "amount": 200,
-          "type": "Individual",
-          "notes": "Named individual contribution listed in the filing.",
-          "interest_group": "Individual"
-        },
-        {
-          "donor": "Angela Yingling",
-          "amount": 200,
-          "type": "Individual",
-          "notes": "Named individual contribution listed in the filing.",
-          "interest_group": "Individual"
-        },
-        {
-          "donor": "IBEW LOCAL 99 PAC (International Brotherhood of Electri",
-          "amount": 200,
-          "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing.",
-          "interest_group": "Labor / Unions"
-        },
-        {
-          "donor": "NEARI PACE (National Education Association of RI)",
-          "amount": 200,
-          "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing.",
-          "interest_group": "Education"
-        },
-        {
-          "donor": "PLUMBERS & PIPEFITTERS LOCAL 51 PAC",
-          "amount": 200,
-          "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing.",
-          "interest_group": "Labor / Unions"
-        },
-        {
-          "donor": "PROVIDENCE RI CENTRAL FEDERATED COUNCIL AFL-CIO",
-          "amount": 200,
-          "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing.",
-          "interest_group": "Labor / Unions"
-        },
-        {
-          "donor": "RI AFL-CIO PAC",
-          "amount": 200,
-          "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing.",
-          "interest_group": "Labor / Unions"
-        },
-        {
-          "donor": "RI FEDERATION OF TEACHERS COPE PAC",
-          "amount": 200,
-          "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing.",
-          "interest_group": "Education"
-        }
-      ],
+      "top_donors": [],
       "spending_categories": [
         {
-          "title": "Donations (Political)",
-          "summary": "Visible spending includes Friends of Jason Knight, The Womxn Project Education Fund, Friends of Gena Felix.",
-          "amount": 5734.48
+          "label": "Consultant & Professional Services",
+          "amount": 2986.62,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         },
         {
-          "title": "Advertising",
-          "summary": "Visible spending includes mailchimp, squarespace.",
-          "amount": 947.42
+          "label": "Advertising",
+          "amount": 610.0,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         },
         {
-          "title": "Food, Beverages and Meals",
-          "summary": "Visible spending includes dca, farm fresh RI, Reservoir.",
-          "amount": 736.98
+          "label": "Donations (All Others)",
+          "amount": 200.0,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         },
         {
-          "title": "Donations (All Others)",
-          "summary": "Visible spending includes Dominican Independence and Heritage Award Committee of Rhode Island.",
-          "amount": 300
+          "label": "Office Equipment & Supplies",
+          "amount": 100.93,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         },
         {
-          "title": "Travel & Lodging",
-          "summary": "Visible spending includes LAZ Parking, Uber.",
-          "amount": 190.12
-        },
-        {
-          "title": "Bank Fees",
-          "summary": "Visible spending includes ActBlue, mailchimp.",
-          "amount": 148.3
-        },
-        {
-          "title": "Other",
-          "summary": "Visible spending includes ActBlue, OpenAI.",
-          "amount": 117.26
-        },
-        {
-          "title": "Office Equipment & Supplies",
-          "summary": "Visible spending includes OpenAI, USPS.",
-          "amount": 116.8
-        },
-        {
-          "title": "Fundraising Expenses",
-          "summary": "Visible spending includes the guild.",
-          "amount": 32.4
+          "label": "Food, Beverages and Meals",
+          "amount": 20.48,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         }
       ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "archived_reporting_periods": [
+        {
+          "candidate_id": "house-61-leonela-felix",
+          "slug": "leonela-felix",
+          "candidate_name": "Leonela Felix",
+          "chamber": "house",
+          "district_number": "61",
+          "party": "DEM",
+          "party_label": "Democratic",
+          "office_sought": "State Representative",
+          "report_label": "6/30/2026",
+          "reporting_period_label": "6/30/2026",
+          "source_note": "alex-finkelman-q1-2026-combined.pdf",
+          "coverage_note": "",
+          "original_documents": [],
+          "beginning_cash": 9549.68,
+          "money_raised": 2535,
+          "money_spent": 2959.03,
+          "ending_cash": 9460.65,
+          "net_change": -424.03,
+          "total_cash_receipts": 2535,
+          "campaign_expenses": 8323.76,
+          "aggregate_expenses": 0,
+          "summary_intro": "This filing shows a modest cash reserve still available to the campaign. The report also shows that it spent more during the period than it raised.",
+          "source_buckets": [
+            {
+              "label": "Itemized individual donors",
+              "class_name": "itemized-individual-donors",
+              "amount": 3270,
+              "description": "Named contributors reported individually in the filing."
+            },
+            {
+              "label": "PAC contributions",
+              "class_name": "pac-contributions",
+              "amount": 1800,
+              "description": "Political committees and PACs listed in the filing."
+            }
+          ],
+          "top_donors": [
+            {
+              "donor": "James Kingston",
+              "amount": 3000,
+              "type": "Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "RI LABORER'S POLITICAL LEAGUE",
+              "amount": 400,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "Alan Cohen",
+              "amount": 200,
+              "type": "Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "Angela Yingling",
+              "amount": 200,
+              "type": "Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "IBEW LOCAL 99 PAC (International Brotherhood of Electri",
+              "amount": 200,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "NEARI PACE (National Education Association of RI)",
+              "amount": 200,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Education"
+            },
+            {
+              "donor": "PLUMBERS & PIPEFITTERS LOCAL 51 PAC",
+              "amount": 200,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "PROVIDENCE RI CENTRAL FEDERATED COUNCIL AFL-CIO",
+              "amount": 200,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "RI AFL-CIO PAC",
+              "amount": 200,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "RI FEDERATION OF TEACHERS COPE PAC",
+              "amount": 200,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Education"
+            }
+          ],
+          "spending_categories": [
+            {
+              "title": "Donations (Political)",
+              "summary": "Visible spending includes Friends of Jason Knight, The Womxn Project Education Fund, Friends of Gena Felix.",
+              "amount": 5734.48
+            },
+            {
+              "title": "Advertising",
+              "summary": "Visible spending includes mailchimp, squarespace.",
+              "amount": 947.42
+            },
+            {
+              "title": "Food, Beverages and Meals",
+              "summary": "Visible spending includes dca, farm fresh RI, Reservoir.",
+              "amount": 736.98
+            },
+            {
+              "title": "Donations (All Others)",
+              "summary": "Visible spending includes Dominican Independence and Heritage Award Committee of Rhode Island.",
+              "amount": 300
+            },
+            {
+              "title": "Travel & Lodging",
+              "summary": "Visible spending includes LAZ Parking, Uber.",
+              "amount": 190.12
+            },
+            {
+              "title": "Bank Fees",
+              "summary": "Visible spending includes ActBlue, mailchimp.",
+              "amount": 148.3
+            },
+            {
+              "title": "Other",
+              "summary": "Visible spending includes ActBlue, OpenAI.",
+              "amount": 117.26
+            },
+            {
+              "title": "Office Equipment & Supplies",
+              "summary": "Visible spending includes OpenAI, USPS.",
+              "amount": 116.8
+            },
+            {
+              "title": "Fundraising Expenses",
+              "summary": "Visible spending includes the guild.",
+              "amount": 32.4
+            }
+          ],
+          "takeaways": [],
+          "explainer_cards": []
+        }
+      ],
+      "reporting_period_type": "custom",
+      "reporting_period_start": "2026-09-02",
+      "reporting_period_end": "2026-10-05",
+      "receipts_label": "Net cash receipts",
+      "finance_status": "available",
+      "loan_proceeds": 0,
+      "loan_repayments": 0,
+      "loans_payable": 0,
+      "accounts_payable": 0,
+      "total_liabilities": 0,
+      "total_fund_balance": 8718.05,
+      "refunds_rebates": 0,
+      "interest_received": 0,
+      "in_kind_contributions": 0,
+      "receipt_transactions": [],
+      "in_kind_transactions": [],
+      "expenditure_transactions": [
+        {
+          "payee": "All the Answers, Inc.",
+          "type": "Campaign Expenditure",
+          "category": "Consultant & Professional Services",
+          "amount": 1071.43,
+          "date": "2026-09-02",
+          "purpose": "Mailer for primary \u2014 design and mailing",
+          "source_url": "/data/finance-documents/leonela-felix-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "All the Answers, Inc.",
+          "type": "Campaign Expenditure",
+          "category": "Consultant & Professional Services",
+          "amount": 1270.19,
+          "date": "2026-09-04",
+          "purpose": "Mailer design and mailing",
+          "source_url": "/data/finance-documents/leonela-felix-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Community Labor Administrative Services, Inc.",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 610.0,
+          "date": "2026-09-08",
+          "purpose": "GOTV full-service phone banking",
+          "source_url": "/data/finance-documents/leonela-felix-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Community Labor Administrative Services, Inc.",
+          "type": "Campaign Expenditure",
+          "category": "Consultant & Professional Services",
+          "amount": 645.0,
+          "date": "2026-09-02",
+          "purpose": "Full service phone banking",
+          "source_url": "/data/finance-documents/leonela-felix-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "notes coffee co",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 20.48,
+          "date": "2026-09-06",
+          "purpose": "Coffee for volunteer canvassers",
+          "source_url": "/data/finance-documents/leonela-felix-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Staples Connect",
+          "type": "Campaign Expenditure",
+          "category": "Office Equipment & Supplies",
+          "amount": 100.93,
+          "date": "2026-09-10",
+          "purpose": "Palm cards for primary day",
+          "source_url": "/data/finance-documents/leonela-felix-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Jennifer Vincent",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 200.0,
+          "date": "2026-10-05",
+          "purpose": "Donation for Love Like Matthew Trades Scholarship afundraiser",
+          "source_url": "/data/finance-documents/leonela-felix-2026-10-05-28-day.pdf"
+        }
+      ],
+      "latest_filing_href": "/data/finance-documents/leonela-felix-2026-10-05-28-day.pdf",
+      "finance_snapshot_note": "The filing reports no liabilities; fund balance equals ending cash. CF-2 reports negative $500.00 in PAC receipts and $3,918.03 in campaign expenses. The blank CF-3 provides no donor detail. CF-4 separately lists a $500.00 contribution refund to James Kingston on September 29, described as over the allowable limit. The refund is already reflected in CF-2\u2019s negative receipts and is not added again to campaign expenses. Filing classifications are preserved.",
+      "receipt_summary_adjustments": [
+        {
+          "donor": "",
+          "employer": "",
+          "type": "PAC",
+          "amount": -500,
+          "date": "",
+          "notes": "Negative PAC receipt from CF-2 summary; CF-3 schedule is blank. No contributor or receipt date is assigned.",
+          "source_url": "/data/finance-documents/leonela-felix-2026-10-05-28-day.pdf"
+        }
+      ],
+      "contribution_refund_transactions": [
+        {
+          "payee": "James Kingston",
+          "type": "Refund of Contribution",
+          "category": "Other",
+          "amount": 500.0,
+          "date": "2026-09-29",
+          "purpose": "Contribution was over the limit allowable under RIGL 17-25-10.1(a)",
+          "source_url": "/data/finance-documents/leonela-felix-2026-10-05-28-day.pdf"
+        }
+      ]
     },
     {
       "candidate_id": "house-61-mark-a-theroux",
@@ -31799,20 +32749,27 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
-      "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
-      "original_documents": [],
-      "beginning_cash": 16834.99,
-      "money_raised": 4721.04,
-      "money_spent": 2096.6,
-      "ending_cash": 19459.43,
-      "net_change": 2624.44,
-      "total_cash_receipts": 4721.04,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 2096.6,
-      "summary_intro": "This profile uses Mary Duffy Messier's original Q2 2026 filing for contribution and spending-category detail.",
+      "report_label": "28-days-before-election report \u00b7 2026",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2, CF-3 and CF-4 report supplied to RIEP.",
+      "coverage_note": "Cash receipts exclude the beginning balance and in-kind contributions. Figures describe this reporting period, not year-to-date totals.",
+      "original_documents": [
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "period": "July 1, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/mary-duffy-messier-2026-10-05-28-day.pdf",
+          "embed": true
+        }
+      ],
+      "beginning_cash": 19459.43,
+      "money_raised": 0,
+      "money_spent": 2185.13,
+      "ending_cash": 17274.3,
+      "net_change": -2185.13,
+      "total_cash_receipts": 0,
+      "campaign_expenses": 2185.13,
+      "aggregate_expenses": 0,
+      "summary_intro": "Mary Duffy Messier\u2019s July 1, 2026 to October 5, 2026 filing reports $0.00 in cash receipts, $2,185.13 in cash disbursements and $17,274.30 in ending cash.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -31831,135 +32788,284 @@
           "ending_cash": 19459.43,
           "net_change": 2624.44,
           "notes": "The campaign raised more than it spent in this reporting period."
+        },
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026",
+          "money_raised": 0,
+          "money_spent": 2185.13,
+          "ending_cash": 17274.3,
+          "net_change": -2185.13,
+          "notes": "The filing reports $0.92 in total liabilities and $17,273.38 in fund balance. Ending cash is shown separately from debt.",
+          "source_url": "/data/finance-documents/mary-duffy-messier-2026-10-05-28-day.pdf"
         }
       ],
-      "source_buckets": [
-        {
-          "label": "Itemized individual donors",
-          "amount": 2750,
-          "class_name": "itemized-individual-donors",
-          "description": "Twenty-four named individual contribution records."
-        },
-        {
-          "label": "PAC contributions",
-          "amount": 1775,
-          "class_name": "pac-contributions",
-          "description": "Fourteen named PAC contribution records."
-        },
-        {
-          "label": "Other receipts",
-          "amount": 196.04,
-          "class_name": "other-receipts",
-          "description": "Other receipt reported in the filing."
-        }
-      ],
-      "top_donors": [
-        {
-          "donor": "Anthony Simon",
-          "amount": 250,
-          "type": "Individual"
-        },
-        {
-          "donor": "William J Murphy",
-          "amount": 200,
-          "type": "Individual"
-        },
-        {
-          "donor": "Timothy Duffy",
-          "amount": 200,
-          "type": "Individual"
-        },
-        {
-          "donor": "Thomas Ryan Esq",
-          "amount": 200,
-          "type": "Individual"
-        },
-        {
-          "donor": "Donald R Grebien",
-          "amount": 200,
-          "type": "Individual"
-        },
-        {
-          "donor": "RI Brotherhood of Correctional Officers",
-          "amount": 200,
-          "type": "PAC",
-          "interest_group": "Public Safety / Labor"
-        },
-        {
-          "donor": "RI Laborer's Political League",
-          "amount": 200,
-          "type": "PAC",
-          "interest_group": "Labor / Unions"
-        },
-        {
-          "donor": "Richard McAuliffe Jr",
-          "amount": 150,
-          "type": "Individual"
-        },
-        {
-          "donor": "CAREPAC of Blue Cross & Blue Shield of RI",
-          "amount": 150,
-          "type": "PAC",
-          "interest_group": "Insurance"
-        },
-        {
-          "donor": "PEOPLE, RI Council 94, AFSCME AFL-CIO PAC",
-          "amount": 150,
-          "type": "PAC",
-          "interest_group": "Labor / Unions"
-        },
-        {
-          "donor": "RI Firefighters for Public Safety",
-          "amount": 150,
-          "type": "PAC",
-          "interest_group": "Public Safety / Labor"
-        },
-        {
-          "donor": "RI Association of Nurse Anesthetists PAC",
-          "amount": 125,
-          "type": "PAC",
-          "interest_group": "Health Care"
-        },
-        {
-          "donor": "Pannone Lopes Devereaux & O'Gara LLC PAC",
-          "amount": 125,
-          "type": "PAC",
-          "interest_group": "Legal / Professional Services"
-        }
-      ],
+      "source_buckets": [],
+      "top_donors": [],
       "spending_categories": [
         {
-          "label": "Advertising",
-          "amount": 1050.33,
-          "description": "Advertising, printing and mailing expense."
-        },
-        {
           "label": "Fundraising Expenses",
-          "amount": 422.4,
-          "description": "Fundraising-related expenses."
-        },
-        {
-          "label": "Other",
-          "amount": 398.87,
-          "description": "Other campaign expenditures reported in the filing."
-        },
-        {
-          "label": "Donations (Political)",
-          "amount": 150,
-          "description": "Political donations."
+          "amount": 1630.13,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         },
         {
           "label": "Donations (All Others)",
-          "amount": 75,
-          "description": "Non-political donations and sponsorships."
+          "amount": 355.0,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
+        },
+        {
+          "label": "Donations (Political)",
+          "amount": 200.0,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         }
       ],
       "takeaways": [],
       "explainer_cards": [],
-      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
-      "itemized_contribution_records": 38,
-      "individual_contribution_records": 24,
-      "pac_contribution_records": 14
+      "archived_reporting_periods": [
+        {
+          "candidate_id": "house-62-mary-duffy-messier",
+          "slug": "mary-duffy-messier",
+          "candidate_name": "Mary Duffy Messier",
+          "chamber": "house",
+          "district_number": "62",
+          "party": "DEM",
+          "party_label": "Democratic",
+          "office_sought": "State Representative",
+          "report_label": "6/30/2026",
+          "reporting_period_label": "6/30/2026",
+          "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+          "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
+          "original_documents": [],
+          "beginning_cash": 16834.99,
+          "money_raised": 4721.04,
+          "money_spent": 2096.6,
+          "ending_cash": 19459.43,
+          "net_change": 2624.44,
+          "total_cash_receipts": 4721.04,
+          "campaign_expenses": 0,
+          "aggregate_expenses": 2096.6,
+          "summary_intro": "This profile uses Mary Duffy Messier's original Q2 2026 filing for contribution and spending-category detail.",
+          "source_buckets": [
+            {
+              "label": "Itemized individual donors",
+              "amount": 2750,
+              "class_name": "itemized-individual-donors",
+              "description": "Twenty-four named individual contribution records."
+            },
+            {
+              "label": "PAC contributions",
+              "amount": 1775,
+              "class_name": "pac-contributions",
+              "description": "Fourteen named PAC contribution records."
+            },
+            {
+              "label": "Other receipts",
+              "amount": 196.04,
+              "class_name": "other-receipts",
+              "description": "Other receipt reported in the filing."
+            }
+          ],
+          "top_donors": [
+            {
+              "donor": "Anthony Simon",
+              "amount": 250,
+              "type": "Individual"
+            },
+            {
+              "donor": "William J Murphy",
+              "amount": 200,
+              "type": "Individual"
+            },
+            {
+              "donor": "Timothy Duffy",
+              "amount": 200,
+              "type": "Individual"
+            },
+            {
+              "donor": "Thomas Ryan Esq",
+              "amount": 200,
+              "type": "Individual"
+            },
+            {
+              "donor": "Donald R Grebien",
+              "amount": 200,
+              "type": "Individual"
+            },
+            {
+              "donor": "RI Brotherhood of Correctional Officers",
+              "amount": 200,
+              "type": "PAC",
+              "interest_group": "Public Safety / Labor"
+            },
+            {
+              "donor": "RI Laborer's Political League",
+              "amount": 200,
+              "type": "PAC",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "Richard McAuliffe Jr",
+              "amount": 150,
+              "type": "Individual"
+            },
+            {
+              "donor": "CAREPAC of Blue Cross & Blue Shield of RI",
+              "amount": 150,
+              "type": "PAC",
+              "interest_group": "Insurance"
+            },
+            {
+              "donor": "PEOPLE, RI Council 94, AFSCME AFL-CIO PAC",
+              "amount": 150,
+              "type": "PAC",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "RI Firefighters for Public Safety",
+              "amount": 150,
+              "type": "PAC",
+              "interest_group": "Public Safety / Labor"
+            },
+            {
+              "donor": "RI Association of Nurse Anesthetists PAC",
+              "amount": 125,
+              "type": "PAC",
+              "interest_group": "Health Care"
+            },
+            {
+              "donor": "Pannone Lopes Devereaux & O'Gara LLC PAC",
+              "amount": 125,
+              "type": "PAC",
+              "interest_group": "Legal / Professional Services"
+            }
+          ],
+          "spending_categories": [
+            {
+              "label": "Advertising",
+              "amount": 1050.33,
+              "description": "Advertising, printing and mailing expense."
+            },
+            {
+              "label": "Fundraising Expenses",
+              "amount": 422.4,
+              "description": "Fundraising-related expenses."
+            },
+            {
+              "label": "Other",
+              "amount": 398.87,
+              "description": "Other campaign expenditures reported in the filing."
+            },
+            {
+              "label": "Donations (Political)",
+              "amount": 150,
+              "description": "Political donations."
+            },
+            {
+              "label": "Donations (All Others)",
+              "amount": 75,
+              "description": "Non-political donations and sponsorships."
+            }
+          ],
+          "takeaways": [],
+          "explainer_cards": [],
+          "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+          "itemized_contribution_records": 38,
+          "individual_contribution_records": 24,
+          "pac_contribution_records": 14
+        }
+      ],
+      "reporting_period_type": "custom",
+      "reporting_period_start": "2026-07-01",
+      "reporting_period_end": "2026-10-05",
+      "receipts_label": "Total cash receipts",
+      "finance_status": "available",
+      "loan_proceeds": 0,
+      "loan_repayments": 0,
+      "loans_payable": 0.92,
+      "accounts_payable": 0,
+      "total_liabilities": 0.92,
+      "total_fund_balance": 17273.38,
+      "refunds_rebates": 0,
+      "interest_received": 0,
+      "in_kind_contributions": 0,
+      "receipt_transactions": [],
+      "in_kind_transactions": [],
+      "expenditure_transactions": [
+        {
+          "payee": "City of Pawtucket Arts Festival",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 100.0,
+          "date": "2026-08-08",
+          "purpose": "Annual Arts Festival Contribution",
+          "source_url": "/data/finance-documents/mary-duffy-messier-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Friends of Jo-Ann Ryan",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 100.0,
+          "date": "2026-08-25",
+          "purpose": "Campaign Contribution",
+          "source_url": "/data/finance-documents/mary-duffy-messier-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Jeanne Jugan Residence",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 55.0,
+          "date": "2026-08-12",
+          "purpose": "Annual Fundraiser Dinner",
+          "source_url": "/data/finance-documents/mary-duffy-messier-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Mike Arajo",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 50.0,
+          "date": "2026-09-25",
+          "purpose": "Pawtucket city Council Candidate Donation",
+          "source_url": "/data/finance-documents/mary-duffy-messier-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Pawtucket Hall of Fame",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 50.0,
+          "date": "2026-09-16",
+          "purpose": "Ad Booklet Donation",
+          "source_url": "/data/finance-documents/mary-duffy-messier-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "RI Brotherhood of Correctional Officiers",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 150.0,
+          "date": "2026-07-15",
+          "purpose": "Scholarship Fund Contribution",
+          "source_url": "/data/finance-documents/mary-duffy-messier-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Robert Moreno",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 50.0,
+          "date": "2026-09-25",
+          "purpose": "Pawtucket City Council Candidate Donation",
+          "source_url": "/data/finance-documents/mary-duffy-messier-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Stericycle, Inc.",
+          "type": "Campaign Expenditure",
+          "category": "Fundraising Expenses",
+          "amount": 1630.13,
+          "date": "2026-09-11",
+          "purpose": "Shred-It Event for Constitutients",
+          "source_url": "/data/finance-documents/mary-duffy-messier-2026-10-05-28-day.pdf"
+        }
+      ],
+      "latest_filing_href": "/data/finance-documents/mary-duffy-messier-2026-10-05-28-day.pdf",
+      "finance_snapshot_note": "The filing reports $0.92 in total liabilities and $17,273.38 in fund balance. Ending cash is shown separately from debt."
     },
     {
       "candidate_id": "house-63-katherine-sheena-kazarian",
@@ -42042,19 +43148,6 @@
       "slug": "jacquelyn-baginski"
     },
     {
-      "donor": "Alan Cohen",
-      "amount": 200,
-      "type": "Individual",
-      "interest_group": "Individual",
-      "notes": "Named individual contribution listed in the filing.",
-      "candidate_id": "house-61-leonela-felix",
-      "candidate_name": "Leonela Felix",
-      "chamber": "house",
-      "district_number": "61",
-      "party": "DEM",
-      "slug": "leonela-felix"
-    },
-    {
       "donor": "Alan Muoio",
       "amount": 500,
       "type": "Individual",
@@ -42274,19 +43367,6 @@
       "district_number": "1",
       "party": "DEM",
       "slug": "michael-j-garman"
-    },
-    {
-      "donor": "Angela Yingling",
-      "amount": 200,
-      "type": "Individual",
-      "interest_group": "Individual",
-      "notes": "Named individual contribution listed in the filing.",
-      "candidate_id": "house-61-leonela-felix",
-      "candidate_name": "Leonela Felix",
-      "chamber": "house",
-      "district_number": "61",
-      "party": "DEM",
-      "slug": "leonela-felix"
     },
     {
       "donor": "Angelica A. Colafrancesco",
@@ -43047,19 +44127,6 @@
       "amount": 150,
       "type": "PAC",
       "interest_group": "Health Care",
-      "notes": "Named PAC contribution listed in the filing.",
-      "candidate_id": "house-60-karen-alzate",
-      "candidate_name": "Karen Alzate",
-      "chamber": "house",
-      "district_number": "60",
-      "party": "DEM",
-      "slug": "karen-alzate"
-    },
-    {
-      "donor": "CAREPAC OF BLUE CROSS & BLUE SHIELD OF RI",
-      "amount": 150,
-      "type": "PAC",
-      "interest_group": "Health Care",
       "notes": "Named contribution listed in the Q2 filing.",
       "candidate_id": "house-4-rebecca-m-kislak",
       "candidate_name": "Rebecca M Kislak",
@@ -43080,19 +44147,6 @@
       "district_number": "36",
       "party": "DEM",
       "slug": "mark-mesrobian"
-    },
-    {
-      "donor": "Carlos Vargas",
-      "amount": 100,
-      "type": "Individual",
-      "interest_group": "Individual",
-      "notes": "Employer listed as Navigant Credit Union.",
-      "candidate_id": "house-60-karen-alzate",
-      "candidate_name": "Karen Alzate",
-      "chamber": "house",
-      "district_number": "60",
-      "party": "DEM",
-      "slug": "karen-alzate"
     },
     {
       "donor": "Carol A. O'Donnell",
@@ -44057,19 +45111,6 @@
       "slug": "bridget-g-valverde"
     },
     {
-      "donor": "EGFFA PAC (East Greenwich Fire Fighters Association)",
-      "amount": 100,
-      "type": "PAC",
-      "interest_group": "Public Safety",
-      "notes": "Named PAC contribution listed in the filing.",
-      "candidate_id": "house-60-karen-alzate",
-      "candidate_name": "Karen Alzate",
-      "chamber": "house",
-      "district_number": "60",
-      "party": "DEM",
-      "slug": "karen-alzate"
-    },
-    {
       "donor": "Elizabeth Beretta Perik",
       "amount": 1000,
       "type": "Individual",
@@ -44408,19 +45449,6 @@
       "slug": "jonathon-acosta"
     },
     {
-      "donor": "Grant Pilkington",
-      "amount": 100,
-      "type": "Individual",
-      "interest_group": "Individual",
-      "notes": "Employer listed as Advocacy Solutions.",
-      "candidate_id": "house-60-karen-alzate",
-      "candidate_name": "Karen Alzate",
-      "chamber": "house",
-      "district_number": "60",
-      "party": "DEM",
-      "slug": "karen-alzate"
-    },
-    {
       "donor": "Grant W Wosencroft",
       "amount": 4000,
       "type": "Loan Proceeds",
@@ -44629,32 +45657,6 @@
       "slug": "matthew-dawson"
     },
     {
-      "donor": "IBEW LOCAL 99 PAC (International Brotherhood of Electri",
-      "amount": 200,
-      "type": "PAC",
-      "interest_group": "Labor / Unions",
-      "notes": "Named PAC contribution listed in the filing.",
-      "candidate_id": "house-61-leonela-felix",
-      "candidate_name": "Leonela Felix",
-      "chamber": "house",
-      "district_number": "61",
-      "party": "DEM",
-      "slug": "leonela-felix"
-    },
-    {
-      "donor": "IBEW LOCAL 99 PAC (International Brotherhood of Electrical Workers)",
-      "amount": 100,
-      "type": "PAC",
-      "interest_group": "Labor / Unions",
-      "notes": "Named PAC contribution listed in the filing.",
-      "candidate_id": "house-60-karen-alzate",
-      "candidate_name": "Karen Alzate",
-      "chamber": "house",
-      "district_number": "60",
-      "party": "DEM",
-      "slug": "karen-alzate"
-    },
-    {
       "donor": "INTERNATIONAL BROTHERHOOD OF POLICE OFFICERS LOCAL 301",
       "amount": 2000,
       "type": "PAC",
@@ -44809,19 +45811,6 @@
       "district_number": "30",
       "party": "DEM",
       "slug": "justine-caldwell"
-    },
-    {
-      "donor": "James Kingston",
-      "amount": 3000,
-      "type": "Individual",
-      "interest_group": "Individual",
-      "notes": "Named individual contribution listed in the filing.",
-      "candidate_id": "house-61-leonela-felix",
-      "candidate_name": "Leonela Felix",
-      "chamber": "house",
-      "district_number": "61",
-      "party": "DEM",
-      "slug": "leonela-felix"
     },
     {
       "donor": "James Kingston",
@@ -44991,19 +45980,6 @@
       "district_number": "72",
       "party": "DEM",
       "slug": "terri-denise-cortvriend"
-    },
-    {
-      "donor": "Jean P",
-      "amount": 150,
-      "type": "Individual",
-      "interest_group": "Individual",
-      "notes": "Employer listed as Barros Unemlyed.",
-      "candidate_id": "house-60-karen-alzate",
-      "candidate_name": "Karen Alzate",
-      "chamber": "house",
-      "district_number": "60",
-      "party": "DEM",
-      "slug": "karen-alzate"
     },
     {
       "donor": "Jeffrey Bent",
@@ -46005,19 +46981,6 @@
       "district_number": "6",
       "party": "DEM",
       "slug": "tiara-t-mack"
-    },
-    {
-      "donor": "Keith Hoffmann",
-      "amount": 150,
-      "type": "Individual",
-      "interest_group": "Individual",
-      "notes": "Employer listed as Unemployeed.",
-      "candidate_id": "house-60-karen-alzate",
-      "candidate_name": "Karen Alzate",
-      "chamber": "house",
-      "district_number": "60",
-      "party": "DEM",
-      "slug": "karen-alzate"
     },
     {
       "donor": "Kenneth Gu",
@@ -47255,19 +48218,6 @@
       "slug": "marvin-abney"
     },
     {
-      "donor": "NEARI PACE (National Education Association of RI)",
-      "amount": 200,
-      "type": "PAC",
-      "interest_group": "Education",
-      "notes": "Named PAC contribution listed in the filing.",
-      "candidate_id": "house-61-leonela-felix",
-      "candidate_name": "Leonela Felix",
-      "chamber": "house",
-      "district_number": "61",
-      "party": "DEM",
-      "slug": "leonela-felix"
-    },
-    {
       "donor": "Nicholas Bornozis",
       "amount": 1000,
       "type": "Individual",
@@ -47463,19 +48413,6 @@
       "slug": "rebecca-m-kislak"
     },
     {
-      "donor": "Pedro Espinal",
-      "amount": 100,
-      "type": "Individual",
-      "interest_group": "Individual",
-      "notes": "Employer listed as councilmen.",
-      "candidate_id": "house-60-karen-alzate",
-      "candidate_name": "Karen Alzate",
-      "chamber": "house",
-      "district_number": "60",
-      "party": "DEM",
-      "slug": "karen-alzate"
-    },
-    {
       "donor": "PEOPLE, RI COUNCIL 94, AFSCME AFL-CIO PAC",
       "amount": 500,
       "type": "PAC",
@@ -47580,19 +48517,6 @@
       "slug": "leonidas-peter-raptakis"
     },
     {
-      "donor": "PLUMBERS & PIPEFITTERS LOCAL 51 PAC",
-      "amount": 200,
-      "type": "PAC",
-      "interest_group": "Labor / Unions",
-      "notes": "Named PAC contribution listed in the filing.",
-      "candidate_id": "house-61-leonela-felix",
-      "candidate_name": "Leonela Felix",
-      "chamber": "house",
-      "district_number": "61",
-      "party": "DEM",
-      "slug": "leonela-felix"
-    },
-    {
       "donor": "POLLY HOPKINS",
       "amount": 370,
       "type": "Individual",
@@ -47656,19 +48580,6 @@
       "district_number": "18",
       "party": "DEM",
       "slug": "arthur-handy"
-    },
-    {
-      "donor": "PROVIDENCE RI CENTRAL FEDERATED COUNCIL AFL-CIO",
-      "amount": 200,
-      "type": "PAC",
-      "interest_group": "Labor / Unions",
-      "notes": "Named PAC contribution listed in the filing.",
-      "candidate_id": "house-61-leonela-felix",
-      "candidate_name": "Leonela Felix",
-      "chamber": "house",
-      "district_number": "61",
-      "party": "DEM",
-      "slug": "leonela-felix"
     },
     {
       "donor": "Rachel Carpenter",
@@ -47957,19 +48868,6 @@
       "slug": "gordon-e-rogers"
     },
     {
-      "donor": "RI AFL-CIO PAC",
-      "amount": 200,
-      "type": "PAC",
-      "interest_group": "Labor / Unions",
-      "notes": "Named PAC contribution listed in the filing.",
-      "candidate_id": "house-61-leonela-felix",
-      "candidate_name": "Leonela Felix",
-      "chamber": "house",
-      "district_number": "61",
-      "party": "DEM",
-      "slug": "leonela-felix"
-    },
-    {
       "donor": "RI ALLIANCE SSE SEIU COPE (Social Service Employees)",
       "amount": 2000,
       "type": "PAC",
@@ -48085,19 +48983,6 @@
       "district_number": "19",
       "party": "DEM",
       "slug": "joseph-mcnamara"
-    },
-    {
-      "donor": "RI FEDERATION OF TEACHERS COPE PAC",
-      "amount": 200,
-      "type": "PAC",
-      "interest_group": "Education",
-      "notes": "Named PAC contribution listed in the filing.",
-      "candidate_id": "house-61-leonela-felix",
-      "candidate_name": "Leonela Felix",
-      "chamber": "house",
-      "district_number": "61",
-      "party": "DEM",
-      "slug": "leonela-felix"
     },
     {
       "donor": "RI HEALTH CARE ASSOCIATION PAC",
@@ -48283,19 +49168,6 @@
     },
     {
       "donor": "RI LABORER'S POLITICAL LEAGUE",
-      "amount": 400,
-      "type": "PAC",
-      "interest_group": "Labor / Unions",
-      "notes": "Named PAC contribution listed in the filing.",
-      "candidate_id": "house-61-leonela-felix",
-      "candidate_name": "Leonela Felix",
-      "chamber": "house",
-      "district_number": "61",
-      "party": "DEM",
-      "slug": "leonela-felix"
-    },
-    {
-      "donor": "RI LABORER'S POLITICAL LEAGUE",
       "amount": 300,
       "type": "PAC",
       "interest_group": "Labor / Unions",
@@ -48436,19 +49308,6 @@
       "district_number": "30",
       "party": "DEM",
       "slug": "justine-caldwell"
-    },
-    {
-      "donor": "RI STATE ASSOCIATION OF FIREFIGHTERS",
-      "amount": 150,
-      "type": "PAC",
-      "interest_group": "Public Safety",
-      "notes": "Named PAC contribution listed in the filing.",
-      "candidate_id": "house-60-karen-alzate",
-      "candidate_name": "Karen Alzate",
-      "chamber": "house",
-      "district_number": "60",
-      "party": "DEM",
-      "slug": "karen-alzate"
     },
     {
       "donor": "RI STATE LODGE FOP PAC (Fraternal Order of Police)",
@@ -48969,19 +49828,6 @@
       "district_number": "6",
       "party": "DEM",
       "slug": "tiara-t-mack"
-    },
-    {
-      "donor": "steven Ceceri",
-      "amount": 150,
-      "type": "Individual",
-      "interest_group": "Individual",
-      "notes": "Employer listed as Owner-contractor.",
-      "candidate_id": "house-60-karen-alzate",
-      "candidate_name": "Karen Alzate",
-      "chamber": "house",
-      "district_number": "60",
-      "party": "DEM",
-      "slug": "karen-alzate"
     },
     {
       "donor": "Steven Issa",
@@ -56694,6 +57540,227 @@
       "district_number": "58",
       "party": "DEM",
       "slug": "cherie-l-cruz"
+    },
+    {
+      "donor": "Preston Werner",
+      "employer": "Preston-Werner Revocable Trust c/o Apercen Partners, LLC",
+      "type": "Individual",
+      "amount": 1000.0,
+      "date": "2026-08-06",
+      "notes": "candidate contribution, check #10975",
+      "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf",
+      "interest_group": "Individual",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "candidate_id": "house-59-jennifer-a-stewart",
+      "candidate_name": "Jennifer A Stewart",
+      "chamber": "house",
+      "district_number": "59",
+      "party": "DEM",
+      "slug": "jennifer-a-stewart"
+    },
+    {
+      "donor": "PAWTUCKET FIREFIGHTERS LOCAL 1261 PAC",
+      "employer": "",
+      "type": "PAC",
+      "amount": 500.0,
+      "date": "2026-08-17",
+      "notes": "",
+      "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf",
+      "interest_group": "Political committee",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "candidate_id": "house-59-jennifer-a-stewart",
+      "candidate_name": "Jennifer A Stewart",
+      "chamber": "house",
+      "district_number": "59",
+      "party": "DEM",
+      "slug": "jennifer-a-stewart"
+    },
+    {
+      "donor": "Eric D Larson",
+      "employer": "U. of Mass. Dartmouth",
+      "type": "Individual",
+      "amount": 250.0,
+      "date": "2026-09-30",
+      "notes": "",
+      "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf",
+      "interest_group": "Individual",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "candidate_id": "house-59-jennifer-a-stewart",
+      "candidate_name": "Jennifer A Stewart",
+      "chamber": "house",
+      "district_number": "59",
+      "party": "DEM",
+      "slug": "jennifer-a-stewart"
+    },
+    {
+      "donor": "RI STATE ASSOCIATION OF FIREFIGHTERS",
+      "employer": "",
+      "type": "PAC",
+      "amount": 100.0,
+      "date": "2026-08-06",
+      "notes": "",
+      "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf",
+      "interest_group": "Political committee",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "candidate_id": "house-59-jennifer-a-stewart",
+      "candidate_name": "Jennifer A Stewart",
+      "chamber": "house",
+      "district_number": "59",
+      "party": "DEM",
+      "slug": "jennifer-a-stewart"
+    },
+    {
+      "donor": "Jennifer Mcfadden",
+      "employer": "Moses Brown School",
+      "type": "Individual",
+      "amount": 75.0,
+      "date": "2026-09-03",
+      "notes": "",
+      "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf",
+      "interest_group": "Individual",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "candidate_id": "house-59-jennifer-a-stewart",
+      "candidate_name": "Jennifer A Stewart",
+      "chamber": "house",
+      "district_number": "59",
+      "party": "DEM",
+      "slug": "jennifer-a-stewart"
+    },
+    {
+      "donor": "Lois Harada",
+      "employer": "DWRI Letterpress",
+      "type": "Individual",
+      "amount": 50.0,
+      "date": "2026-08-03",
+      "notes": "",
+      "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf",
+      "interest_group": "Individual",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "candidate_id": "house-59-jennifer-a-stewart",
+      "candidate_name": "Jennifer A Stewart",
+      "chamber": "house",
+      "district_number": "59",
+      "party": "DEM",
+      "slug": "jennifer-a-stewart"
+    },
+    {
+      "donor": "Samuel Onorato",
+      "employer": "State of Rhode Island",
+      "type": "Individual",
+      "amount": 10.0,
+      "date": "2026-08-20",
+      "notes": "",
+      "source_url": "/data/finance-documents/jennifer-a-stewart-2026-10-05-28-day.pdf",
+      "interest_group": "Individual",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "candidate_id": "house-59-jennifer-a-stewart",
+      "candidate_name": "Jennifer A Stewart",
+      "chamber": "house",
+      "district_number": "59",
+      "party": "DEM",
+      "slug": "jennifer-a-stewart"
+    },
+    {
+      "donor": "james kingston",
+      "employer": "unemplyed",
+      "type": "Individual",
+      "amount": 250.0,
+      "date": "2026-09-14",
+      "notes": "",
+      "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf",
+      "interest_group": "Individual",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "candidate_id": "house-60-karen-alzate",
+      "candidate_name": "Karen Alzate",
+      "chamber": "house",
+      "district_number": "60",
+      "party": "DEM",
+      "slug": "karen-alzate"
+    },
+    {
+      "donor": "Paula Carmichael",
+      "employer": "reliante Medical Group",
+      "type": "Individual",
+      "amount": 100.0,
+      "date": "2026-08-17",
+      "notes": "",
+      "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf",
+      "interest_group": "Individual",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "candidate_id": "house-60-karen-alzate",
+      "candidate_name": "Karen Alzate",
+      "chamber": "house",
+      "district_number": "60",
+      "party": "DEM",
+      "slug": "karen-alzate"
+    },
+    {
+      "donor": "William m farrell",
+      "employer": "william A. Farrell & associates LLC",
+      "type": "Individual",
+      "amount": 100.0,
+      "date": "2026-08-13",
+      "notes": "",
+      "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf",
+      "interest_group": "Individual",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "candidate_id": "house-60-karen-alzate",
+      "candidate_name": "Karen Alzate",
+      "chamber": "house",
+      "district_number": "60",
+      "party": "DEM",
+      "slug": "karen-alzate"
+    },
+    {
+      "donor": "Joshua Giraldo",
+      "employer": "City of Central Falls",
+      "type": "Individual",
+      "amount": 71.0,
+      "date": "2026-08-17",
+      "notes": "",
+      "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf",
+      "interest_group": "Individual",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "candidate_id": "house-60-karen-alzate",
+      "candidate_name": "Karen Alzate",
+      "chamber": "house",
+      "district_number": "60",
+      "party": "DEM",
+      "slug": "karen-alzate"
+    },
+    {
+      "donor": "jonathon acosta",
+      "employer": "Student",
+      "type": "Individual",
+      "amount": 71.0,
+      "date": "2026-08-17",
+      "notes": "",
+      "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf",
+      "interest_group": "Individual",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "candidate_id": "house-60-karen-alzate",
+      "candidate_name": "Karen Alzate",
+      "chamber": "house",
+      "district_number": "60",
+      "party": "DEM",
+      "slug": "karen-alzate"
+    },
+    {
+      "donor": "Yamil Baez",
+      "employer": "Bristol-Warren Regional School District",
+      "type": "Individual",
+      "amount": 25.0,
+      "date": "2026-08-09",
+      "notes": "",
+      "source_url": "/data/finance-documents/karen-alzate-2026-10-05-28-day.pdf",
+      "interest_group": "Individual",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "candidate_id": "house-60-karen-alzate",
+      "candidate_name": "Karen Alzate",
+      "chamber": "house",
+      "district_number": "60",
+      "party": "DEM",
+      "slug": "karen-alzate"
     }
   ],
   "donor_search_scope_note": "Donor search covers named donors currently listed in published campaign-finance profiles. Aggregate receipts reported without donor names cannot be searched."
