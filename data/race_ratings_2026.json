@@ -1,0 +1,3065 @@
+{
+  "updated": "2026-10-08",
+  "title": "2026 legislative race ratings \u00b7 baseline test",
+  "method": "Carry forward the 2024 top-two named-candidate margin, excluding write-ins, when the historical party matchup remains represented in the 2026 field. Rate only current contested races with a comparable margin of 20 percentage points or less. Incumbency is already embedded in historical results; no additional incumbent bonus is applied.",
+  "thresholds": [
+    {
+      "label": "Toss Up",
+      "min_pp": 0,
+      "max_exclusive_pp": 2
+    },
+    {
+      "label": "Tilt",
+      "min_pp": 2,
+      "max_exclusive_pp": 5
+    },
+    {
+      "label": "Lean",
+      "min_pp": 5,
+      "max_exclusive_pp": 10
+    },
+    {
+      "label": "Likely",
+      "min_pp": 10,
+      "max_exclusive_pp": 15
+    },
+    {
+      "label": "Solid",
+      "min_pp": 15,
+      "max_inclusive_pp": 20
+    }
+  ],
+  "margin_definition": "Difference between the top two candidates as a share of their combined votes, in percentage points. Ratings are party-level historical baselines, not candidate polling estimates.",
+  "races": [
+    {
+      "chamber": "house",
+      "district": 15,
+      "candidates": [
+        {
+          "name": "Colleen M Crudele",
+          "party": "DEM"
+        },
+        {
+          "name": "Christopher G Paplauskas",
+          "party": "REP"
+        },
+        {
+          "name": "Allan W Fung",
+          "party": "IND"
+        }
+      ],
+      "watch": true,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-15.html",
+      "rating": "Toss Up",
+      "status": "Rated",
+      "margin_pp": 0.2540415704387991,
+      "leading_party": "REP",
+      "notes": [
+        "The current race has more than two candidates. This label uses the historical two-candidate baseline; third-party vote shares and vote transfers are not estimated.",
+        "The existing District 15 conditional test also starts at Toss Up under its default assumptions: zero Democratic swing, zero campaign adjustment, Fung at 20%, and half of his support taken from each major party. These third-party assumptions are adjustable, not measured support.",
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Christopher G. Paplauskas",
+          "party": "REP",
+          "votes": 4341
+        },
+        {
+          "name": "Maria A. Bucci",
+          "party": "DEM",
+          "votes": 4319
+        }
+      ],
+      "category": "Toss Up",
+      "model_url": "/house-15-election-test.html"
+    },
+    {
+      "chamber": "senate",
+      "district": 34,
+      "candidates": [
+        {
+          "name": "Samantha R Wilcox",
+          "party": "DEM"
+        },
+        {
+          "name": "Elaine J Morgan",
+          "party": "REP"
+        }
+      ],
+      "watch": true,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-34.html",
+      "rating": "Lean R",
+      "status": "Rated",
+      "margin_pp": 7.1216968835170045,
+      "leading_party": "REP",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Elaine J. Morgan",
+          "party": "REP",
+          "votes": 9040
+        },
+        {
+          "name": "Stephen Moffitt",
+          "party": "DEM",
+          "votes": 7838
+        }
+      ],
+      "category": "Lean"
+    },
+    {
+      "chamber": "house",
+      "district": 44,
+      "candidates": [
+        {
+          "name": "Gregory Costantino",
+          "party": "DEM"
+        },
+        {
+          "name": "Joseph Hosey",
+          "party": "REP"
+        }
+      ],
+      "watch": true,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-44.html",
+      "rating": "Lean D",
+      "status": "Rated",
+      "margin_pp": 7.735176103432902,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Gregory J. Costantino",
+          "party": "DEM",
+          "votes": 4833
+        },
+        {
+          "name": "Peter Trementozzi",
+          "party": "REP",
+          "votes": 4139
+        }
+      ],
+      "category": "Lean"
+    },
+    {
+      "chamber": "house",
+      "district": 39,
+      "candidates": [
+        {
+          "name": "Megan L Cotter",
+          "party": "DEM"
+        },
+        {
+          "name": "Jasmin Roy",
+          "party": "REP"
+        }
+      ],
+      "watch": true,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-39.html",
+      "rating": "Lean D",
+      "status": "Rated",
+      "margin_pp": 8.074965293845441,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Megan L. Cotter",
+          "party": "DEM",
+          "votes": 4671
+        },
+        {
+          "name": "Justin K. Price",
+          "party": "REP",
+          "votes": 3973
+        }
+      ],
+      "category": "Lean"
+    },
+    {
+      "chamber": "house",
+      "district": 42,
+      "candidates": [
+        {
+          "name": "Edward W Stravato",
+          "party": "DEM"
+        },
+        {
+          "name": "Richard R Fascia",
+          "party": "REP"
+        }
+      ],
+      "watch": true,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-42.html",
+      "rating": "Lean R",
+      "status": "Rated",
+      "margin_pp": 9.48638787538591,
+      "leading_party": "REP",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Richard R. Fascia",
+          "party": "REP",
+          "votes": 3901
+        },
+        {
+          "name": "Kelsey K. Coletta",
+          "party": "DEM",
+          "votes": 3225
+        }
+      ],
+      "category": "Lean"
+    },
+    {
+      "chamber": "house",
+      "district": 53,
+      "candidates": [
+        {
+          "name": "Suzanna L Alba",
+          "party": "DEM"
+        },
+        {
+          "name": "Paul M Santucci",
+          "party": "REP"
+        }
+      ],
+      "watch": true,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-53.html",
+      "rating": "Likely R",
+      "status": "Rated",
+      "margin_pp": 10.458828981924919,
+      "leading_party": "REP",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Paul M. Santucci",
+          "party": "REP",
+          "votes": 3575
+        },
+        {
+          "name": "Bernard Hawkins",
+          "party": "DEM",
+          "votes": 2898
+        }
+      ],
+      "category": "Likely"
+    },
+    {
+      "chamber": "house",
+      "district": 22,
+      "candidates": [
+        {
+          "name": "Zakary J Pereira",
+          "party": "DEM"
+        },
+        {
+          "name": "Barbara Quigley",
+          "party": "REP"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-22.html",
+      "rating": "Likely D",
+      "status": "Rated",
+      "margin_pp": 14.017918676774638,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Joseph J. Solomon, Jr.",
+          "party": "DEM",
+          "votes": 4136
+        },
+        {
+          "name": "David Stone",
+          "party": "REP",
+          "votes": 3119
+        }
+      ],
+      "category": "Likely"
+    },
+    {
+      "chamber": "senate",
+      "district": 19,
+      "candidates": [
+        {
+          "name": "Ryan W Pearson",
+          "party": "DEM"
+        },
+        {
+          "name": "James D Purcell",
+          "party": "IND"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-19.html",
+      "rating": "Likely D",
+      "status": "Rated",
+      "margin_pp": 14.223132904684519,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Ryan W. Pearson",
+          "party": "DEM",
+          "votes": 8083
+        },
+        {
+          "name": "Amanda J. Blais",
+          "party": "IND",
+          "votes": 6070
+        }
+      ],
+      "category": "Likely"
+    },
+    {
+      "chamber": "senate",
+      "district": 17,
+      "candidates": [
+        {
+          "name": "Nelly Burdette",
+          "party": "DEM"
+        },
+        {
+          "name": "Thomas J Paolino",
+          "party": "REP"
+        },
+        {
+          "name": "Jina N Petrarca",
+          "party": "IND"
+        },
+        {
+          "name": "John Douglas Barr II",
+          "party": "IND"
+        }
+      ],
+      "watch": true,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-17.html",
+      "rating": "Solid R",
+      "status": "Rated",
+      "margin_pp": 16.2149563827662,
+      "leading_party": "REP",
+      "notes": [
+        "The current race has more than two candidates. This label uses the historical two-candidate baseline; third-party vote shares and vote transfers are not estimated.",
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Thomas J. Paolino",
+          "party": "REP",
+          "votes": 8726
+        },
+        {
+          "name": "Cameron J. Deutsch",
+          "party": "DEM",
+          "votes": 6291
+        }
+      ],
+      "category": "Solid"
+    },
+    {
+      "chamber": "senate",
+      "district": 38,
+      "candidates": [
+        {
+          "name": "Victoria Gu",
+          "party": "DEM"
+        },
+        {
+          "name": "Westin J Place",
+          "party": "REP"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-38.html",
+      "rating": "Solid D",
+      "status": "Rated",
+      "margin_pp": 16.371350137259796,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Victoria Gu",
+          "party": "DEM",
+          "votes": 9326
+        },
+        {
+          "name": "Westin J. Place",
+          "party": "REP",
+          "votes": 6702
+        }
+      ],
+      "category": "Solid"
+    },
+    {
+      "chamber": "senate",
+      "district": 33,
+      "candidates": [
+        {
+          "name": "Leonidas Peter Raptakis",
+          "party": "DEM"
+        },
+        {
+          "name": "James P Pierson",
+          "party": "REP"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-33.html",
+      "rating": "Solid D",
+      "status": "Rated",
+      "margin_pp": 16.739071409177303,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Leonidas P. Raptakis",
+          "party": "DEM",
+          "votes": 8599
+        },
+        {
+          "name": "James P. Pierson",
+          "party": "REP",
+          "votes": 6133
+        }
+      ],
+      "category": "Solid"
+    },
+    {
+      "chamber": "house",
+      "district": 33,
+      "candidates": [
+        {
+          "name": "Carol Hagan McEntee",
+          "party": "DEM"
+        },
+        {
+          "name": "Jessica Drew Day",
+          "party": "REP"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-33.html",
+      "rating": "Solid D",
+      "status": "Rated",
+      "margin_pp": 17.842523477004576,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Carol Hagan McEntee",
+          "party": "DEM",
+          "votes": 4894
+        },
+        {
+          "name": "Jessica Drew Day",
+          "party": "REP",
+          "votes": 3412
+        }
+      ],
+      "category": "Solid"
+    },
+    {
+      "chamber": "house",
+      "district": 1,
+      "candidates": [
+        {
+          "name": "Edith H Ajello",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-1.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 2,
+      "candidates": [
+        {
+          "name": "Christopher R Blazejewski",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-2.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 3,
+      "candidates": [
+        {
+          "name": "Nathan W Biah",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-3.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 4,
+      "candidates": [
+        {
+          "name": "Rebecca M Kislak",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-4.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 5,
+      "candidates": [
+        {
+          "name": "Anthony J DeSimone",
+          "party": "DEM"
+        },
+        {
+          "name": "Brittany M Kubicek",
+          "party": "OTH"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-5.html",
+      "rating": null,
+      "status": "No comparable baseline",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "The 2024 race was unopposed or lacks a comparable two-candidate result. An unopposed vote share is not a competitiveness estimate.",
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 6,
+      "candidates": [
+        {
+          "name": "Raymond A Hull",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-6.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 7,
+      "candidates": [
+        {
+          "name": "Amy J Santiago",
+          "party": "DEM"
+        },
+        {
+          "name": "Christopher L Ireland",
+          "party": "REP"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-7.html",
+      "rating": null,
+      "status": "No comparable baseline",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "The 2024 race was unopposed or lacks a comparable two-candidate result. An unopposed vote share is not a competitiveness estimate.",
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 8,
+      "candidates": [
+        {
+          "name": "John Joseph Lombardi",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-8.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 9,
+      "candidates": [
+        {
+          "name": "Enrique George Sanchez",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-9.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 10,
+      "candidates": [
+        {
+          "name": "Scott A Slater",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-10.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 11,
+      "candidates": [
+        {
+          "name": "Grace Diaz",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-11.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 12,
+      "candidates": [
+        {
+          "name": "Arlette Hidalgo",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-12.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 13,
+      "candidates": [
+        {
+          "name": "Ramon Perez",
+          "party": "DEM"
+        },
+        {
+          "name": "Derick A Reels",
+          "party": "REP"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-13.html",
+      "rating": null,
+      "status": "No comparable baseline",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "The 2024 race was unopposed or lacks a comparable two-candidate result. An unopposed vote share is not a competitiveness estimate.",
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 14,
+      "candidates": [
+        {
+          "name": "Charlene M Lima",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-14.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 16,
+      "candidates": [
+        {
+          "name": "Brandon Potter",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-16.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": 17.210007581501138,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Brandon C. Potter",
+          "party": "DEM",
+          "votes": 3865
+        },
+        {
+          "name": "Deborah J. Leong",
+          "party": "REP",
+          "votes": 2730
+        }
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 17,
+      "candidates": [
+        {
+          "name": "Jacquelyn Baginski",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-17.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 18,
+      "candidates": [
+        {
+          "name": "Arthur Handy",
+          "party": "DEM"
+        },
+        {
+          "name": "Jessica Gomes",
+          "party": "REP"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-18.html",
+      "rating": null,
+      "status": "No comparable baseline",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "The 2024 race was unopposed or lacks a comparable two-candidate result. An unopposed vote share is not a competitiveness estimate.",
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 19,
+      "candidates": [
+        {
+          "name": "Joseph McNamara",
+          "party": "DEM"
+        },
+        {
+          "name": "Patrick E Maloney Jr",
+          "party": "IND"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-19.html",
+      "rating": null,
+      "status": "No comparable baseline",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "The 2024 race was unopposed or lacks a comparable two-candidate result. An unopposed vote share is not a competitiveness estimate.",
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 20,
+      "candidates": [
+        {
+          "name": "David A Bennett",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-20.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 21,
+      "candidates": [
+        {
+          "name": "Marie A Hopkins",
+          "party": "REP"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-21.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": 1.205502765565168,
+      "leading_party": "REP",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Marie A. Hopkins",
+          "party": "REP",
+          "votes": 3568
+        },
+        {
+          "name": "James McElroy",
+          "party": "DEM",
+          "votes": 3483
+        }
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 23,
+      "candidates": [
+        {
+          "name": "William Muto",
+          "party": "DEM"
+        },
+        {
+          "name": "Dana James Traversie",
+          "party": "REP"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-23.html",
+      "rating": null,
+      "status": "No comparable baseline",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "The 2024 race was unopposed or lacks a comparable two-candidate result. An unopposed vote share is not a competitiveness estimate.",
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 24,
+      "candidates": [
+        {
+          "name": "Evan Patrick Shanley",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-24.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 25,
+      "candidates": [
+        {
+          "name": "Thomas E Noret",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-25.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 26,
+      "candidates": [
+        {
+          "name": "Earl A Read III",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-26.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": 16.805721096543504,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Earl A. Read, III",
+          "party": "DEM",
+          "votes": 3430
+        },
+        {
+          "name": "Jeffrey W. Fisher",
+          "party": "REP",
+          "votes": 2443
+        }
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 27,
+      "candidates": [
+        {
+          "name": "Angela S Coburn",
+          "party": "DEM"
+        },
+        {
+          "name": "Lawrence Paul Almagno Jr",
+          "party": "REP"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-27.html",
+      "rating": null,
+      "status": "Outside 20-point window",
+      "margin_pp": 20.206704650854643,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Patricia A. Serpa",
+          "party": "DEM",
+          "votes": 4536
+        },
+        {
+          "name": "Andrew N. Kowalski",
+          "party": "REP",
+          "votes": 3011
+        }
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 28,
+      "candidates": [
+        {
+          "name": "George A Nardone",
+          "party": "REP"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-28.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": 14.62470338453853,
+      "leading_party": "REP",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "George A. Nardone",
+          "party": "REP",
+          "votes": 4589
+        },
+        {
+          "name": "Scott Guthrie",
+          "party": "DEM",
+          "votes": 3418
+        }
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 29,
+      "candidates": [
+        {
+          "name": "Sherry L Roberts",
+          "party": "REP"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-29.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 30,
+      "candidates": [
+        {
+          "name": "Justine Caldwell",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-30.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 31,
+      "candidates": [
+        {
+          "name": "James C Sheehan",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-31.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": 19.24238903090867,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Julie A. Casimiro",
+          "party": "DEM",
+          "votes": 5131
+        },
+        {
+          "name": "Lisa Marie Leavitt",
+          "party": "REP",
+          "votes": 3475
+        }
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 32,
+      "candidates": [
+        {
+          "name": "Robert E Craven Jr",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-32.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 34,
+      "candidates": [
+        {
+          "name": "Teresa A Tanzi",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-34.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": 25.720355862435266,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Teresa Tanzi",
+          "party": "DEM",
+          "votes": 4734
+        },
+        {
+          "name": "Joanne R. Forti",
+          "party": "REP",
+          "votes": 2797
+        }
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 35,
+      "candidates": [
+        {
+          "name": "Kathleen A Fogarty",
+          "party": "DEM"
+        },
+        {
+          "name": "Jennifer P Nerbonne",
+          "party": "REP"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-35.html",
+      "rating": null,
+      "status": "Outside 20-point window",
+      "margin_pp": 24.437182280319536,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Kathleen A. Fogarty",
+          "party": "DEM",
+          "votes": 3427
+        },
+        {
+          "name": "Jennifer P. Nerbonne",
+          "party": "REP",
+          "votes": 2081
+        }
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 36,
+      "candidates": [
+        {
+          "name": "Tina L Spears",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-36.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 37,
+      "candidates": [
+        {
+          "name": "Samuel Angelo Azzinaro",
+          "party": "DEM"
+        },
+        {
+          "name": "Christopher M Stanton",
+          "party": "REP"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-37.html",
+      "rating": null,
+      "status": "No comparable baseline",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "The 2024 race was unopposed or lacks a comparable two-candidate result. An unopposed vote share is not a competitiveness estimate.",
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 38,
+      "candidates": [
+        {
+          "name": "Brian Patrick Kennedy",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-38.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 40,
+      "candidates": [
+        {
+          "name": "Michael Chippendale",
+          "party": "REP"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-40.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": 38.60097606321171,
+      "leading_party": "REP",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Michael W. Chippendale",
+          "party": "REP",
+          "votes": 5964
+        },
+        {
+          "name": "Linda A. Nichols",
+          "party": "DEM",
+          "votes": 2642
+        }
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 41,
+      "candidates": [
+        {
+          "name": "Shaina N Smith",
+          "party": "DEM"
+        },
+        {
+          "name": "Michael J Riley",
+          "party": "REP"
+        }
+      ],
+      "watch": true,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-41.html",
+      "rating": null,
+      "status": "Outside 20-point window",
+      "margin_pp": 30.142042277150207,
+      "leading_party": "REP",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Robert Quattrocchi",
+          "party": "REP",
+          "votes": 5818
+        },
+        {
+          "name": "Shaina N. Smith",
+          "party": "DEM",
+          "votes": 3123
+        }
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 43,
+      "candidates": [
+        {
+          "name": "Deborah A Fellela",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-43.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": 7.169601996949106,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Deborah A. Fellela",
+          "party": "DEM",
+          "votes": 3864
+        },
+        {
+          "name": "Nicola A. Grasso",
+          "party": "REP",
+          "votes": 3347
+        }
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 45,
+      "candidates": [
+        {
+          "name": "Mia A Ackerman",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-45.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 46,
+      "candidates": [
+        {
+          "name": "Mary Ann Shallcross Smith",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-46.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": 22.19527760051053,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Mary Ann Shallcross Smith",
+          "party": "DEM",
+          "votes": 4787
+        },
+        {
+          "name": "Angelo Kapsimalis",
+          "party": "REP",
+          "votes": 3048
+        }
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 47,
+      "candidates": [
+        {
+          "name": "David J Place",
+          "party": "REP"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-47.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": 39.28021285534239,
+      "leading_party": "REP",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "David J. Place",
+          "party": "REP",
+          "votes": 4973
+        },
+        {
+          "name": "Paul A. Roselli",
+          "party": "DEM",
+          "votes": 2168
+        }
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 48,
+      "candidates": [
+        {
+          "name": "Brian C Newberry",
+          "party": "REP"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-48.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 49,
+      "candidates": [
+        {
+          "name": "Veronicka Vega",
+          "party": "DEM"
+        },
+        {
+          "name": "Jon D Brien",
+          "party": "IND"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-49.html",
+      "rating": null,
+      "status": "Outside 20-point window",
+      "margin_pp": 57.85550458715596,
+      "leading_party": "IND",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Jon D. Brien",
+          "party": "IND",
+          "votes": 2753
+        },
+        {
+          "name": "Michael Disney",
+          "party": "IND",
+          "votes": 735
+        }
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 50,
+      "candidates": [
+        {
+          "name": "Stephen Casey",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-50.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 51,
+      "candidates": [
+        {
+          "name": "Robert D Phillips",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-51.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 52,
+      "candidates": [
+        {
+          "name": "Alex D Marszalkowski",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-52.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 54,
+      "candidates": [
+        {
+          "name": "William W O'Brien",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-54.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 55,
+      "candidates": [
+        {
+          "name": "Arthur J Corvese",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-55.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 56,
+      "candidates": [
+        {
+          "name": "Joshua J Giraldo",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-56.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 57,
+      "candidates": [
+        {
+          "name": "Brandon T Voas",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-57.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": 7.446808510638298,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Brandon T. Voas",
+          "party": "DEM",
+          "votes": 2525
+        },
+        {
+          "name": "James N. McLaughlin",
+          "party": "IND",
+          "votes": 2175
+        }
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 58,
+      "candidates": [
+        {
+          "name": "Cherie L Cruz",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-58.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 59,
+      "candidates": [
+        {
+          "name": "Jennifer A Stewart",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-59.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 60,
+      "candidates": [
+        {
+          "name": "Karen Alzate",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-60.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 61,
+      "candidates": [
+        {
+          "name": "Leonela Felix",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-61.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": 14.992053681794102,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Leonela Felix",
+          "party": "DEM",
+          "votes": 3256
+        },
+        {
+          "name": "Kevin J. Whalen",
+          "party": "REP",
+          "votes": 2407
+        }
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 62,
+      "candidates": [
+        {
+          "name": "Mary Duffy Messier",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-62.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 63,
+      "candidates": [
+        {
+          "name": "Katherine Sheena Kazarian",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-63.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 64,
+      "candidates": [
+        {
+          "name": "Jenni A Furtado",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-64.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 65,
+      "candidates": [
+        {
+          "name": "Matthew Dawson",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-65.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 66,
+      "candidates": [
+        {
+          "name": "Jennifer Smith Boylan",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-66.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": 29.34574976122254,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Jennifer Smith Boylan",
+          "party": "DEM",
+          "votes": 5417
+        },
+        {
+          "name": "Janine A. Wolf",
+          "party": "REP",
+          "votes": 2959
+        }
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 67,
+      "candidates": [
+        {
+          "name": "Nicole P Jellinek",
+          "party": "DEM"
+        },
+        {
+          "name": "Joseph A DePasquale",
+          "party": "IND"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-67.html",
+      "rating": null,
+      "status": "No comparable baseline",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "The 2024 race was unopposed or lacks a comparable two-candidate result. An unopposed vote share is not a competitiveness estimate.",
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 68,
+      "candidates": [
+        {
+          "name": "June S Speakman",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-68.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": 17.471723220226213,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "June S. Speakman",
+          "party": "DEM",
+          "votes": 4414
+        },
+        {
+          "name": "John W. Hanley",
+          "party": "IND",
+          "votes": 3101
+        }
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 69,
+      "candidates": [
+        {
+          "name": "Susan Ann Donovan",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-69.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": 27.649930264993028,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Susan Ann Donovan",
+          "party": "DEM",
+          "votes": 3661
+        },
+        {
+          "name": "Sergei M. Sharenko",
+          "party": "IND",
+          "votes": 2075
+        }
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 70,
+      "candidates": [
+        {
+          "name": "John G Edwards",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-70.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": 9.95475113122172,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "John G. Edwards",
+          "party": "DEM",
+          "votes": 4131
+        },
+        {
+          "name": "Christopher M. Borden",
+          "party": "REP",
+          "votes": 3383
+        }
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 71,
+      "candidates": [
+        {
+          "name": "Michelle E McGaw",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-71.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 72,
+      "candidates": [
+        {
+          "name": "Terri-Denise Cortvriend",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-72.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 73,
+      "candidates": [
+        {
+          "name": "Marvin Abney",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-73.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 74,
+      "candidates": [
+        {
+          "name": "Alex Finkelman",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-74.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "house",
+      "district": 75,
+      "candidates": [
+        {
+          "name": "Lauren H Carson",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-75.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 1,
+      "candidates": [
+        {
+          "name": "Jacob Bissaillon",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-1.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 2,
+      "candidates": [
+        {
+          "name": "Ana B Quezada",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-2.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 3,
+      "candidates": [
+        {
+          "name": "Samuel D Zurier",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-3.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 4,
+      "candidates": [
+        {
+          "name": "Stefano V Famiglietti",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-4.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 5,
+      "candidates": [
+        {
+          "name": "Samuel W Bell",
+          "party": "DEM"
+        },
+        {
+          "name": "William D Connell Jr",
+          "party": "REP"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-5.html",
+      "rating": null,
+      "status": "Outside 20-point window",
+      "margin_pp": 58.07608046205935,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Samuel W. Bell",
+          "party": "DEM",
+          "votes": 7937
+        },
+        {
+          "name": "William D. Connell, Jr.",
+          "party": "REP",
+          "votes": 2105
+        }
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 6,
+      "candidates": [
+        {
+          "name": "Tiara T Mack",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-6.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 7,
+      "candidates": [
+        {
+          "name": "Frank A Ciccone",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-7.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 8,
+      "candidates": [
+        {
+          "name": "Lori Urso",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-8.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": 30.98473007093904,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Lori Urso",
+          "party": "DEM",
+          "votes": 5447
+        },
+        {
+          "name": "Cathyann Palocsik",
+          "party": "IND",
+          "votes": 2870
+        }
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 9,
+      "candidates": [
+        {
+          "name": "John Burke",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-9.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 10,
+      "candidates": [
+        {
+          "name": "Walter S Felag Jr",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-10.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": 16.0566785306561,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Walter S. Felag, Jr.",
+          "party": "DEM",
+          "votes": 8641
+        },
+        {
+          "name": "Allyn E. Meyers",
+          "party": "REP",
+          "votes": 6250
+        }
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 11,
+      "candidates": [
+        {
+          "name": "Linda L Ujifusa",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-11.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 12,
+      "candidates": [
+        {
+          "name": "Louis DiPalma",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-12.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 13,
+      "candidates": [
+        {
+          "name": "Dawn Euer",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-13.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": 40.85217245146651,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Dawn Euer",
+          "party": "DEM",
+          "votes": 8380
+        },
+        {
+          "name": "David A. Quiroa",
+          "party": "REP",
+          "votes": 3519
+        }
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 14,
+      "candidates": [
+        {
+          "name": "Valarie Jean Lawson",
+          "party": "DEM"
+        },
+        {
+          "name": "Brian G Coogan",
+          "party": "IND"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-14.html",
+      "rating": null,
+      "status": "No comparable baseline",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "The 2024 race was unopposed or lacks a comparable two-candidate result. An unopposed vote share is not a competitiveness estimate.",
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 15,
+      "candidates": [
+        {
+          "name": "Meghan E Kallman",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-15.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 16,
+      "candidates": [
+        {
+          "name": "Jonathon Acosta",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-16.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 18,
+      "candidates": [
+        {
+          "name": "Robert Britto",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-18.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 20,
+      "candidates": [
+        {
+          "name": "Brian J Thompson",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-20.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 21,
+      "candidates": [
+        {
+          "name": "Gordon E Rogers",
+          "party": "REP"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-21.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 22,
+      "candidates": [
+        {
+          "name": "David P Tikoian",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-22.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 23,
+      "candidates": [
+        {
+          "name": "Jessica de la Cruz",
+          "party": "REP"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-23.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": 36.267258382643,
+      "leading_party": "REP",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Jessica de la Cruz",
+          "party": "REP",
+          "votes": 11054
+        },
+        {
+          "name": "Lewis J. Pryeor",
+          "party": "DEM",
+          "votes": 5170
+        }
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 24,
+      "candidates": [
+        {
+          "name": "Melissa Murray",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-24.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": 15.733678086619262,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Melissa Murray",
+          "party": "DEM",
+          "votes": 4476
+        },
+        {
+          "name": "Craig J. Lacouture",
+          "party": "REP",
+          "votes": 3259
+        }
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 25,
+      "candidates": [
+        {
+          "name": "Andrew R Dimitri",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-25.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": 16.5402775790528,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Andrew R. Dimitri",
+          "party": "DEM",
+          "votes": 8145
+        },
+        {
+          "name": "Karin N. Gorman",
+          "party": "REP",
+          "votes": 5833
+        }
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 26,
+      "candidates": [
+        {
+          "name": "Todd M Patalano",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-26.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": 15.51077443553725,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Todd M. Patalano",
+          "party": "DEM",
+          "votes": 7853
+        },
+        {
+          "name": "Jennifer L. Caputi",
+          "party": "REP",
+          "votes": 5744
+        }
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 27,
+      "candidates": [
+        {
+          "name": "Hanna M Gallo",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-27.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 28,
+      "candidates": [
+        {
+          "name": "Lammis J Vargas",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-28.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 29,
+      "candidates": [
+        {
+          "name": "Peter A Appollonio Jr",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-29.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": 0.47678427345411867,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Peter A. Appollonio, Jr.",
+          "party": "DEM",
+          "votes": 6849
+        },
+        {
+          "name": "Anthony P. DeLuca, II",
+          "party": "REP",
+          "votes": 6784
+        }
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 30,
+      "candidates": [
+        {
+          "name": "Mark McKenney",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-30.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 31,
+      "candidates": [
+        {
+          "name": "Matthew L LaMountain",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-31.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": 20.981929764745995,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Matthew L. LaMountain",
+          "party": "DEM",
+          "votes": 8871
+        },
+        {
+          "name": "Lisa Morse",
+          "party": "REP",
+          "votes": 5794
+        }
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 32,
+      "candidates": [
+        {
+          "name": "Pamela J Lauria",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-32.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 35,
+      "candidates": [
+        {
+          "name": "Bridget G Valverde",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-35.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 36,
+      "candidates": [
+        {
+          "name": "Alana M DiMario",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-36.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": null,
+      "leading_party": null,
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ]
+    },
+    {
+      "chamber": "senate",
+      "district": 37,
+      "candidates": [
+        {
+          "name": "Virginia Susan Sosnowski",
+          "party": "DEM"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-37.html",
+      "rating": null,
+      "status": "Unopposed",
+      "margin_pp": 32.32346772314146,
+      "leading_party": "DEM",
+      "notes": [
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Virginia S. Sosnowski",
+          "party": "DEM",
+          "votes": 8517
+        },
+        {
+          "name": "Raymond E. Gardner",
+          "party": "REP",
+          "votes": 4356
+        }
+      ]
+    }
+  ]
+}
