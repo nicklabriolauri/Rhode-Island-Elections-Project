@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T02:41:50.602798Z",
+  "generated_at": "2026-10-08T03:22:59.946260Z",
   "cycle": "2026-q2",
   "directory": [
     {
@@ -38293,20 +38293,27 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
-      "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
-      "original_documents": [],
-      "beginning_cash": 18041.06,
-      "money_raised": 4935.96,
-      "money_spent": 1787.75,
-      "ending_cash": 21189.27,
-      "net_change": 3148.21,
-      "total_cash_receipts": 4935.96,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 1787.75,
-      "summary_intro": "This profile uses Michelle E McGaw's original Q2 2026 filing for contribution and spending-category detail.",
+      "report_label": "28-days-before-election report \u00b7 2026",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2, CF-3 and CF-4 report supplied to RIEP.",
+      "coverage_note": "Cash receipts exclude the beginning balance and in-kind contributions. Figures describe this reporting period, not year-to-date totals.",
+      "original_documents": [
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "period": "July 1, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf",
+          "embed": true
+        }
+      ],
+      "beginning_cash": 21189.27,
+      "money_raised": 2615,
+      "money_spent": 3928,
+      "ending_cash": 19876.27,
+      "net_change": -1313,
+      "total_cash_receipts": 2615,
+      "campaign_expenses": 3699.5,
+      "aggregate_expenses": 228.5,
+      "summary_intro": "Michelle E McGaw\u2019s July 1, 2026 to October 5, 2026 filing reports $2,615.00 in cash receipts, $3,928.00 in cash disbursements and $19,876.27 in ending cash.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -38325,141 +38332,694 @@
           "ending_cash": 21189.27,
           "net_change": 3148.21,
           "notes": "The campaign raised more than it spent in this reporting period."
+        },
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026",
+          "money_raised": 2615,
+          "money_spent": 3928,
+          "ending_cash": 19876.27,
+          "net_change": -1313,
+          "notes": "The filing reports $10.00 in total liabilities and $19,866.27 in fund balance. Ending cash is shown separately from debt. Cash receipts include a $1,500.00 NCEL environmental-policy conference scholarship, classified as Other in the filing. In-kind support of $450.00 is reported separately from cash receipts.",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
         }
       ],
       "source_buckets": [
         {
           "label": "Itemized individual donors",
-          "amount": 3810.96,
           "class_name": "itemized-individual-donors",
-          "description": "38 named individual contribution records."
+          "amount": 765.0,
+          "description": "Contribution classification reproduced from the original filing."
+        },
+        {
+          "label": "Other receipts",
+          "class_name": "other-receipts",
+          "amount": 1500.0,
+          "description": "Contribution classification reproduced from the original filing."
         },
         {
           "label": "PAC contributions",
-          "amount": 1125,
           "class_name": "pac-contributions",
-          "description": "10 named PAC contribution records."
+          "amount": 350.0,
+          "description": "Contribution classification reproduced from the original filing."
         }
       ],
       "top_donors": [
         {
-          "donor": "Jackson Robinson",
-          "amount": 500,
-          "type": "Individual"
+          "donor": "John R Koza",
+          "employer": "John Koza",
+          "type": "Individual",
+          "amount": 250.0,
+          "date": "2026-08-06",
+          "notes": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "John Souza",
-          "amount": 300,
-          "type": "Individual"
-        },
-        {
-          "donor": "Nan Haffenreffer",
-          "amount": 200,
-          "type": "Individual"
-        },
-        {
-          "donor": "RI Medical PAC",
-          "amount": 200,
+          "donor": "PORTSMOUTH FIREFIGHTERS ASSOCIATION",
+          "employer": "",
           "type": "PAC",
-          "interest_group": "Health Care"
+          "amount": 250.0,
+          "date": "2026-08-06",
+          "notes": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf",
+          "interest_group": "Political committee",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "Carepac Of Blue Cross & Blue Shield Of RI",
-          "amount": 150,
+          "donor": "Leonard Cioe",
+          "employer": "Prospect Health",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-09-08",
+          "notes": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "Jeffrey Taylor",
+          "employer": "Mayforth Group",
+          "type": "Individual",
+          "amount": 100.0,
+          "date": "2026-09-02",
+          "notes": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        },
+        {
+          "donor": "PROVIDENCE RI CENTRAL FEDERATED COUNCIL AFL-CIO",
+          "employer": "",
           "type": "PAC",
-          "interest_group": "Health Care"
+          "amount": 100.0,
+          "date": "2026-07-10",
+          "notes": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf",
+          "interest_group": "Political committee",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "Linda Jenkins",
-          "amount": 150,
-          "type": "Individual"
+          "donor": "William Farrell",
+          "employer": "William Farrell & Associates",
+          "type": "Individual",
+          "amount": 100.0,
+          "date": "2026-08-13",
+          "notes": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "RI Federation Of Teachers Cope PAC",
-          "amount": 150,
-          "type": "PAC",
-          "interest_group": "Education / Labor"
+          "donor": "Casey Gartland",
+          "employer": "Perspectives Corp",
+          "type": "Individual",
+          "amount": 75.0,
+          "date": "2026-08-15",
+          "notes": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "Richard Mcauliffe",
-          "amount": 150,
-          "type": "Individual"
+          "donor": "Ari Rubenstein",
+          "employer": "Corporate Accountability",
+          "type": "Individual",
+          "amount": 60.0,
+          "date": "2026-10-04",
+          "notes": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "Margaret Sweeney",
-          "amount": 125,
-          "type": "Individual"
-        },
-        {
-          "donor": "RI Association Of Nurse Anesthetists PAC",
-          "amount": 125,
-          "type": "PAC",
-          "interest_group": "Health Care"
-        },
-        {
-          "donor": "Catherine Hillery",
-          "amount": 100,
-          "type": "Individual"
-        },
-        {
-          "donor": "David Segal",
-          "amount": 100,
-          "type": "Individual"
-        },
-        {
-          "donor": "Edward Lopes",
-          "amount": 100,
-          "type": "Individual"
-        },
-        {
-          "donor": "Eileen Browning",
-          "amount": 100,
-          "type": "Individual"
-        },
-        {
-          "donor": "Elizabeth Phinney",
-          "amount": 100,
-          "type": "Individual"
+          "donor": "Jacob McGaw",
+          "employer": "CVS",
+          "type": "Individual",
+          "amount": 30.0,
+          "date": "2026-08-10",
+          "notes": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         }
       ],
       "spending_categories": [
         {
           "label": "Travel & Lodging",
-          "amount": 785.35,
-          "description": "Travel and lodging connected with campaign activity."
-        },
-        {
-          "label": "Fundraising Expenses",
-          "amount": 491,
-          "description": "Fundraising-related expenses."
-        },
-        {
-          "label": "Advertising",
-          "amount": 268.15,
-          "description": "Advertising and campaign promotion."
-        },
-        {
-          "label": "Food, Beverages and Meals",
-          "amount": 171.65,
-          "description": "Meals and refreshments connected with campaign activity."
-        },
-        {
-          "label": "Bank Fees",
-          "amount": 50.37,
-          "description": "Payment-processing and bank fees."
+          "amount": 1995.7,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         },
         {
           "label": "Office Equipment & Supplies",
-          "amount": 21.23,
-          "description": "Office equipment and supplies."
+          "amount": 662.22,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
+        },
+        {
+          "label": "Consultant & Professional Services",
+          "amount": 500.0,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
+        },
+        {
+          "label": "Advertising",
+          "amount": 457.12,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
+        },
+        {
+          "label": "Rent & Utilities",
+          "amount": 222.0,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
+        },
+        {
+          "label": "Food, Beverages and Meals",
+          "amount": 59.62,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
+        },
+        {
+          "label": "Bank Fees",
+          "amount": 31.34,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         }
       ],
       "takeaways": [],
       "explainer_cards": [],
-      "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
-      "itemized_contribution_records": 48,
-      "individual_contribution_records": 38,
-      "pac_contribution_records": 10
+      "archived_reporting_periods": [
+        {
+          "candidate_id": "house-71-michelle-e-mcgaw",
+          "slug": "michelle-e-mcgaw",
+          "candidate_name": "Michelle E McGaw",
+          "chamber": "house",
+          "district_number": "71",
+          "party": "DEM",
+          "party_label": "Democratic",
+          "office_sought": "State Representative",
+          "report_label": "6/30/2026",
+          "reporting_period_label": "6/30/2026",
+          "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+          "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
+          "original_documents": [],
+          "beginning_cash": 18041.06,
+          "money_raised": 4935.96,
+          "money_spent": 1787.75,
+          "ending_cash": 21189.27,
+          "net_change": 3148.21,
+          "total_cash_receipts": 4935.96,
+          "campaign_expenses": 0,
+          "aggregate_expenses": 1787.75,
+          "summary_intro": "This profile uses Michelle E McGaw's original Q2 2026 filing for contribution and spending-category detail.",
+          "source_buckets": [
+            {
+              "label": "Itemized individual donors",
+              "amount": 3810.96,
+              "class_name": "itemized-individual-donors",
+              "description": "38 named individual contribution records."
+            },
+            {
+              "label": "PAC contributions",
+              "amount": 1125,
+              "class_name": "pac-contributions",
+              "description": "10 named PAC contribution records."
+            }
+          ],
+          "top_donors": [
+            {
+              "donor": "Jackson Robinson",
+              "amount": 500,
+              "type": "Individual"
+            },
+            {
+              "donor": "John Souza",
+              "amount": 300,
+              "type": "Individual"
+            },
+            {
+              "donor": "Nan Haffenreffer",
+              "amount": 200,
+              "type": "Individual"
+            },
+            {
+              "donor": "RI Medical PAC",
+              "amount": 200,
+              "type": "PAC",
+              "interest_group": "Health Care"
+            },
+            {
+              "donor": "Carepac Of Blue Cross & Blue Shield Of RI",
+              "amount": 150,
+              "type": "PAC",
+              "interest_group": "Health Care"
+            },
+            {
+              "donor": "Linda Jenkins",
+              "amount": 150,
+              "type": "Individual"
+            },
+            {
+              "donor": "RI Federation Of Teachers Cope PAC",
+              "amount": 150,
+              "type": "PAC",
+              "interest_group": "Education / Labor"
+            },
+            {
+              "donor": "Richard Mcauliffe",
+              "amount": 150,
+              "type": "Individual"
+            },
+            {
+              "donor": "Margaret Sweeney",
+              "amount": 125,
+              "type": "Individual"
+            },
+            {
+              "donor": "RI Association Of Nurse Anesthetists PAC",
+              "amount": 125,
+              "type": "PAC",
+              "interest_group": "Health Care"
+            },
+            {
+              "donor": "Catherine Hillery",
+              "amount": 100,
+              "type": "Individual"
+            },
+            {
+              "donor": "David Segal",
+              "amount": 100,
+              "type": "Individual"
+            },
+            {
+              "donor": "Edward Lopes",
+              "amount": 100,
+              "type": "Individual"
+            },
+            {
+              "donor": "Eileen Browning",
+              "amount": 100,
+              "type": "Individual"
+            },
+            {
+              "donor": "Elizabeth Phinney",
+              "amount": 100,
+              "type": "Individual"
+            }
+          ],
+          "spending_categories": [
+            {
+              "label": "Travel & Lodging",
+              "amount": 785.35,
+              "description": "Travel and lodging connected with campaign activity."
+            },
+            {
+              "label": "Fundraising Expenses",
+              "amount": 491,
+              "description": "Fundraising-related expenses."
+            },
+            {
+              "label": "Advertising",
+              "amount": 268.15,
+              "description": "Advertising and campaign promotion."
+            },
+            {
+              "label": "Food, Beverages and Meals",
+              "amount": 171.65,
+              "description": "Meals and refreshments connected with campaign activity."
+            },
+            {
+              "label": "Bank Fees",
+              "amount": 50.37,
+              "description": "Payment-processing and bank fees."
+            },
+            {
+              "label": "Office Equipment & Supplies",
+              "amount": 21.23,
+              "description": "Office equipment and supplies."
+            }
+          ],
+          "takeaways": [],
+          "explainer_cards": [],
+          "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+          "itemized_contribution_records": 48,
+          "individual_contribution_records": 38,
+          "pac_contribution_records": 10
+        }
+      ],
+      "reporting_period_type": "custom",
+      "reporting_period_start": "2026-07-01",
+      "reporting_period_end": "2026-10-05",
+      "receipts_label": "Total cash receipts",
+      "finance_status": "available",
+      "loan_proceeds": 0,
+      "loan_repayments": 0,
+      "loans_payable": 10,
+      "accounts_payable": 0,
+      "total_liabilities": 10,
+      "total_fund_balance": 19866.27,
+      "refunds_rebates": 0,
+      "interest_received": 0,
+      "returned_checks": 0,
+      "accounts_payable_repayments": 0,
+      "in_kind_contributions": 450.0,
+      "receipt_transactions": [
+        {
+          "donor": "Leonard Cioe",
+          "employer": "Prospect Health",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-09-08",
+          "notes": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "William Farrell",
+          "employer": "William Farrell & Associates",
+          "type": "Individual",
+          "amount": 100.0,
+          "date": "2026-08-13",
+          "notes": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Casey Gartland",
+          "employer": "Perspectives Corp",
+          "type": "Individual",
+          "amount": 25.0,
+          "date": "2026-08-15",
+          "notes": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Casey Gartland",
+          "employer": "Perspectives Corp",
+          "type": "Individual",
+          "amount": 25.0,
+          "date": "2026-07-15",
+          "notes": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Casey Gartland",
+          "employer": "Perspectives Corp",
+          "type": "Individual",
+          "amount": 25.0,
+          "date": "2026-09-15",
+          "notes": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "John R Koza",
+          "employer": "John Koza",
+          "type": "Individual",
+          "amount": 250.0,
+          "date": "2026-08-06",
+          "notes": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Jacob McGaw",
+          "employer": "CVS",
+          "type": "Individual",
+          "amount": 10.0,
+          "date": "2026-08-10",
+          "notes": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Jacob McGaw",
+          "employer": "CVS",
+          "type": "Individual",
+          "amount": 10.0,
+          "date": "2026-07-10",
+          "notes": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Jacob McGaw",
+          "employer": "CVS",
+          "type": "Individual",
+          "amount": 10.0,
+          "date": "2026-09-10",
+          "notes": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Ari Rubenstein",
+          "employer": "Corporate Accountability",
+          "type": "Individual",
+          "amount": 15.0,
+          "date": "2026-10-04",
+          "notes": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Ari Rubenstein",
+          "employer": "Corporate Accountability",
+          "type": "Individual",
+          "amount": 15.0,
+          "date": "2026-07-04",
+          "notes": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Ari Rubenstein",
+          "employer": "Corporate Accountability",
+          "type": "Individual",
+          "amount": 15.0,
+          "date": "2026-08-04",
+          "notes": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Ari Rubenstein",
+          "employer": "Corporate Accountability",
+          "type": "Individual",
+          "amount": 15.0,
+          "date": "2026-09-04",
+          "notes": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Jeffrey Taylor",
+          "employer": "Mayforth Group",
+          "type": "Individual",
+          "amount": 100.0,
+          "date": "2026-09-02",
+          "notes": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "",
+          "employer": "",
+          "type": "Other Receipt",
+          "amount": 1500.0,
+          "date": "2026-08-26",
+          "notes": "Scholarship from NCEL for environmental policy conference",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "PORTSMOUTH FIREFIGHTERS ASSOCIATION",
+          "employer": "",
+          "type": "PAC",
+          "amount": 250.0,
+          "date": "2026-08-06",
+          "notes": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "PROVIDENCE RI CENTRAL FEDERATED COUNCIL AFL-CIO",
+          "employer": "",
+          "type": "PAC",
+          "amount": 100.0,
+          "date": "2026-07-10",
+          "notes": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        }
+      ],
+      "in_kind_transactions": [
+        {
+          "donor": "Lisa Billeiter",
+          "employer": "Retired",
+          "type": "In-Kind - Individual",
+          "amount": 450.0,
+          "date": "2026-08-22",
+          "notes": "Photography services",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        }
+      ],
+      "expenditure_transactions": [
+        {
+          "payee": "",
+          "type": "Aggregate Expenditure",
+          "category": "Advertising",
+          "amount": 90.72,
+          "date": "2026-07-19",
+          "purpose": "Airport parking for NCEL conference",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "",
+          "type": "Aggregate Expenditure",
+          "category": "Advertising",
+          "amount": 54.29,
+          "date": "2026-09-05",
+          "purpose": "Allianz Travel - trip insurance for upcoming CSG East annual meeting",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "",
+          "type": "Aggregate Expenditure",
+          "category": "Travel & Lodging",
+          "amount": 24.6,
+          "date": "2026-09-21",
+          "purpose": "Locker for Luggage Storage related to NCEL program",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "",
+          "type": "Aggregate Expenditure",
+          "category": "Travel & Lodging",
+          "amount": 58.89,
+          "date": "2026-09-21",
+          "purpose": "Taxi from Airport to Hotel (NCEL program)",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "ActBlue",
+          "type": "Campaign Expenditure",
+          "category": "Bank Fees",
+          "amount": 30.51,
+          "date": "2026-10-05",
+          "purpose": "Fees for reporting period 7/1-10/5",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Action Network",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 16.05,
+          "date": "2026-09-29",
+          "purpose": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Action Network",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 16.05,
+          "date": "2026-08-29",
+          "purpose": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Action Network",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 16.05,
+          "date": "2026-07-29",
+          "purpose": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Gabrielle Godino",
+          "type": "Campaign Expenditure",
+          "category": "Consultant & Professional Services",
+          "amount": 500.0,
+          "date": "2026-07-29",
+          "purpose": "Campaign Bookkeeping",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Groundswell",
+          "type": "Campaign Expenditure",
+          "category": "Food, Beverages and Meals",
+          "amount": 59.62,
+          "date": "2026-08-19",
+          "purpose": "constituent meeting",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "JetBlue",
+          "type": "Campaign Expenditure",
+          "category": "Travel & Lodging",
+          "amount": 658.0,
+          "date": "2026-09-05",
+          "purpose": "Travel for for upcoming Annual Meeting of Council of State Governments East",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Logan Parking",
+          "type": "Campaign Expenditure",
+          "category": "Travel & Lodging",
+          "amount": 309.0,
+          "date": "2026-09-19",
+          "purpose": "",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Navigant Credit Union",
+          "type": "Campaign Expenditure",
+          "category": "Bank Fees",
+          "amount": 0.83,
+          "date": "2026-09-21",
+          "purpose": "Foreign Transaction Fees for expenses related to NCEL trip",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Remarkable",
+          "type": "Campaign Expenditure",
+          "category": "Office Equipment & Supplies",
+          "amount": 480.43,
+          "date": "2026-08-23",
+          "purpose": "Note taking tablet",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Squarespace",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 20.0,
+          "date": "2026-08-18",
+          "purpose": "Domain",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Squarespace",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 243.96,
+          "date": "2026-08-18",
+          "purpose": "website",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "The Fairmont Hotel",
+          "type": "Campaign Expenditure",
+          "category": "Travel & Lodging",
+          "amount": 945.21,
+          "date": "2026-07-26",
+          "purpose": "For the NCEL National Conference",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "USPS",
+          "type": "Campaign Expenditure",
+          "category": "Rent & Utilities",
+          "amount": 222.0,
+          "date": "2026-09-19",
+          "purpose": "PO Box",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Zoom",
+          "type": "Campaign Expenditure",
+          "category": "Office Equipment & Supplies",
+          "amount": 181.79,
+          "date": "2026-09-11",
+          "purpose": "Subscription",
+          "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf"
+        }
+      ],
+      "latest_filing_href": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf",
+      "finance_snapshot_note": "The filing reports $10.00 in total liabilities and $19,866.27 in fund balance. Ending cash is shown separately from debt. Cash receipts include a $1,500.00 NCEL environmental-policy conference scholarship, classified as Other in the filing. In-kind support of $450.00 is reported separately from cash receipts."
     },
     {
       "candidate_id": "house-72-terri-denise-cortvriend",
@@ -63209,6 +63769,159 @@
       "district_number": "75",
       "party": "DEM",
       "slug": "lauren-h-carson"
+    },
+    {
+      "donor": "John R Koza",
+      "employer": "John Koza",
+      "type": "Individual",
+      "amount": 250.0,
+      "date": "2026-08-06",
+      "notes": "",
+      "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf",
+      "interest_group": "Individual",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "candidate_id": "house-71-michelle-e-mcgaw",
+      "candidate_name": "Michelle E McGaw",
+      "chamber": "house",
+      "district_number": "71",
+      "party": "DEM",
+      "slug": "michelle-e-mcgaw"
+    },
+    {
+      "donor": "PORTSMOUTH FIREFIGHTERS ASSOCIATION",
+      "employer": "",
+      "type": "PAC",
+      "amount": 250.0,
+      "date": "2026-08-06",
+      "notes": "",
+      "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf",
+      "interest_group": "Political committee",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "candidate_id": "house-71-michelle-e-mcgaw",
+      "candidate_name": "Michelle E McGaw",
+      "chamber": "house",
+      "district_number": "71",
+      "party": "DEM",
+      "slug": "michelle-e-mcgaw"
+    },
+    {
+      "donor": "Leonard Cioe",
+      "employer": "Prospect Health",
+      "type": "Individual",
+      "amount": 150.0,
+      "date": "2026-09-08",
+      "notes": "",
+      "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf",
+      "interest_group": "Individual",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "candidate_id": "house-71-michelle-e-mcgaw",
+      "candidate_name": "Michelle E McGaw",
+      "chamber": "house",
+      "district_number": "71",
+      "party": "DEM",
+      "slug": "michelle-e-mcgaw"
+    },
+    {
+      "donor": "Jeffrey Taylor",
+      "employer": "Mayforth Group",
+      "type": "Individual",
+      "amount": 100.0,
+      "date": "2026-09-02",
+      "notes": "",
+      "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf",
+      "interest_group": "Individual",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "candidate_id": "house-71-michelle-e-mcgaw",
+      "candidate_name": "Michelle E McGaw",
+      "chamber": "house",
+      "district_number": "71",
+      "party": "DEM",
+      "slug": "michelle-e-mcgaw"
+    },
+    {
+      "donor": "PROVIDENCE RI CENTRAL FEDERATED COUNCIL AFL-CIO",
+      "employer": "",
+      "type": "PAC",
+      "amount": 100.0,
+      "date": "2026-07-10",
+      "notes": "",
+      "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf",
+      "interest_group": "Political committee",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "candidate_id": "house-71-michelle-e-mcgaw",
+      "candidate_name": "Michelle E McGaw",
+      "chamber": "house",
+      "district_number": "71",
+      "party": "DEM",
+      "slug": "michelle-e-mcgaw"
+    },
+    {
+      "donor": "William Farrell",
+      "employer": "William Farrell & Associates",
+      "type": "Individual",
+      "amount": 100.0,
+      "date": "2026-08-13",
+      "notes": "",
+      "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf",
+      "interest_group": "Individual",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "candidate_id": "house-71-michelle-e-mcgaw",
+      "candidate_name": "Michelle E McGaw",
+      "chamber": "house",
+      "district_number": "71",
+      "party": "DEM",
+      "slug": "michelle-e-mcgaw"
+    },
+    {
+      "donor": "Casey Gartland",
+      "employer": "Perspectives Corp",
+      "type": "Individual",
+      "amount": 75.0,
+      "date": "2026-08-15",
+      "notes": "",
+      "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf",
+      "interest_group": "Individual",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "candidate_id": "house-71-michelle-e-mcgaw",
+      "candidate_name": "Michelle E McGaw",
+      "chamber": "house",
+      "district_number": "71",
+      "party": "DEM",
+      "slug": "michelle-e-mcgaw"
+    },
+    {
+      "donor": "Ari Rubenstein",
+      "employer": "Corporate Accountability",
+      "type": "Individual",
+      "amount": 60.0,
+      "date": "2026-10-04",
+      "notes": "",
+      "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf",
+      "interest_group": "Individual",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "candidate_id": "house-71-michelle-e-mcgaw",
+      "candidate_name": "Michelle E McGaw",
+      "chamber": "house",
+      "district_number": "71",
+      "party": "DEM",
+      "slug": "michelle-e-mcgaw"
+    },
+    {
+      "donor": "Jacob McGaw",
+      "employer": "CVS",
+      "type": "Individual",
+      "amount": 30.0,
+      "date": "2026-08-10",
+      "notes": "",
+      "source_url": "/data/finance-documents/michelle-e-mcgaw-2026-10-05-28-day.pdf",
+      "interest_group": "Individual",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "candidate_id": "house-71-michelle-e-mcgaw",
+      "candidate_name": "Michelle E McGaw",
+      "chamber": "house",
+      "district_number": "71",
+      "party": "DEM",
+      "slug": "michelle-e-mcgaw"
     }
   ],
   "donor_search_scope_note": "Donor search covers named donors currently listed in published campaign-finance profiles. Aggregate receipts reported without donor names cannot be searched."
