@@ -1,0 +1,30 @@
+const fs=require('fs'),assert=require('assert/strict'),cp=require('child_process'),vm=require('vm'),crypto=require('crypto');
+const read=p=>fs.readFileSync(p,'utf8'),load=p=>JSON.parse(read(p));
+const main=load('data/candidate_finance_2026.json'),mirror=load('candidate_finance_2026.json');
+const old=JSON.parse(cp.execFileSync('git',['show','1cfb0d1:data/candidate_finance_2026.json'],{encoding:'utf8',maxBuffer:12e6}));
+const entries=[["terri-denise-cortvriend", 72, 897.5, 6508.16, 20030.04, 6, 17, 1631], ["marvin-abney", 73, 700, 273.53, 257113.93, 3, 2, 1160], ["alex-finkelman", 74, 200, 3957.63, 96784.44, 1, 6, 1888], ["lauren-h-carson", 75, 150, 5866.27, 21825.94, 1, 20, 1500]];
+const slugs=entries.map(x=>x[0]),cents=n=>Math.round(n*100),sum=rs=>cents(rs.reduce((n,r)=>n+r.amount,0));
+const sourceHashes={"terri-denise-cortvriend": "838b418a7463167e0e61716cd744b87344aa2530056ffda4410cd2c37a2b120e", "marvin-abney": "7f0f653e55a661bbd0d19f650edcb7239671cf0f3723c0762ac148b6036c6b0b", "alex-finkelman": "b54cf23065f865e7dfb9220248c55ba7e5530e51d384098be3d8c334c3bbaab8", "lauren-h-carson": "c2cfcdcfe0245ade19cb914f808e8ab36f4aa5e4d0220aaa84f13fc212650047"};
+for(const [slug,d,raised,spent,end,nr,ne,votes] of entries){
+ const p=main.profiles.find(p=>p.slug===slug),prior=old.profiles.find(p=>p.slug===slug),page=read(`candidates/${slug}.html`);
+ assert.deepEqual(p,mirror.profiles.find(p=>p.slug===slug));assert.deepEqual([p.money_raised,p.money_spent,p.ending_cash],[raised,spent,end]);
+ assert.equal(sum(p.receipt_transactions),cents(raised));assert.equal(sum(p.expenditure_transactions),cents(spent));assert.equal(sum(p.source_buckets),cents(raised));assert.equal(sum(p.spending_categories),cents(spent));assert.equal(cents(p.beginning_cash+raised-spent),cents(end));assert.equal(cents(end-p.total_liabilities),cents(p.total_fund_balance));
+ assert.equal(p.receipt_transactions.length,nr);assert.equal(p.expenditure_transactions.length,ne);assert.equal(p.reporting_period_start,'2026-07-01');
+ const snapshot={...prior};delete snapshot.filing_history;delete snapshot.archived_reporting_periods;assert.deepEqual(p.archived_reporting_periods.at(-1),snapshot);assert.deepEqual(p.filing_history.slice(0,-1),prior.filing_history);
+ assert.equal(crypto.createHash('sha256').update(fs.readFileSync(p.latest_filing_href.slice(1))).digest('hex'),sourceHashes[slug]);
+ for(const text of [p.reporting_period_label,p.latest_filing_href,'<iframe','Official results',votes.toLocaleString('en-US')+' votes'])assert(page.includes(text),slug+' '+text);
+ assert(!page.includes('Senate District'));assert(page.includes(`/running.html?chamber=house&amp;district=${d}&amp;election=general`));
+ assert(page.includes('of 75 House district records'));assert(page.includes('data-voting-widget'));assert(page.includes('Session attendance'));
+ for(const route of ['index.html','ballot.html','running.html','race-page.js','candidate-profiles.html'])assert(read(route).includes(slug));assert(read(`races/house-${d}.html`).includes('house71-75'));
+ const ids=[...page.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(ids.length,new Set(ids).size);for(const m of page.matchAll(/href="#([^"]+)"/g))assert(ids.includes(m[1]));assert(fs.statSync(`candidates/${slug}.jpg`).size>10000);
+}
+for(const p of main.profiles)if(!slugs.includes(p.slug))assert.deepEqual(p,old.profiles.find(x=>x.slug===p.slug),p.slug);
+assert.deepEqual(main.donor_index.filter(p=>!slugs.includes(p.slug)),old.donor_index.filter(p=>!slugs.includes(p.slug)));
+const mcgaw=main.profiles.find(p=>p.slug==='michelle-e-mcgaw'),mcpage=read('candidates/michelle-e-mcgaw.html');assert.deepEqual(mcgaw,old.profiles.find(p=>p.slug===mcgaw.slug));assert(!mcpage.includes('2026-10-05-28-day.pdf'));assert(mcpage.includes('1,728 votes'));assert(mcpage.includes('data-voting-widget'));assert(mcpage.includes('of 75 House district records'));assert(mcpage.includes('Little Compton, Portsmouth, Tiverton'));
+for(const route of ['index.html','ballot.html','running.html','race-page.js','candidate-profiles.html'])assert(read(route).includes('michelle-e-mcgaw'));
+const html=read('finance.html');let script=[...html.matchAll(/<script\b[^>]*>(.*?)<\/script>/gs)].map(m=>m[1]).join('\n').replace('    boot();','');
+const nodes={financeApp:{innerHTML:''},financeFilingSelect:{addEventListener(e,cb){this[e]=cb;}}},ctx={URL,URLSearchParams,console,Intl,window:{location:{search:'',href:'https://example.org/finance.html'},history:{replaceState(a,b,url){ctx.window.location.href=String(url);ctx.window.location.search=url.search;}}},document:{addEventListener(){},getElementById:id=>nodes[id]}};
+vm.createContext(ctx);vm.runInContext(script,ctx);let checked=0;
+for(const p of main.profiles)for(const c of ctx.filingChoices(p)){ctx.renderProfile(p,main,c.key);assert(!nodes.financeApp.innerHTML.includes('NaN'));assert.equal((nodes.financeApp.innerHTML.match(/id="financeFilingSelect"/g)||[]).length,1);assert(nodes.financeApp.innerHTML.indexOf('id="financeFilingSelect"')>nodes.financeApp.innerHTML.indexOf('<aside class="panel hero-side'));checked++;}
+const example=main.profiles.find(p=>p.slug==='terri-denise-cortvriend');ctx.renderProfile(example,main,'latest');assert(nodes.financeApp.innerHTML.includes(example.latest_filing_href));const q2=ctx.filingChoices(example).find(c=>c.label==='Q2 2026');nodes.financeFilingSelect.change({target:{value:q2.key}});assert(!nodes.financeApp.innerHTML.includes(example.latest_filing_href));assert(nodes.financeApp.innerHTML.includes('Q2 2026'));assert.equal(example.total_fund_balance,-2669.96);
+console.log('PASS: five D71–75 profiles, four reconciled reports, unchanged McGaw finance, preserved histories and '+checked+' filing renders');

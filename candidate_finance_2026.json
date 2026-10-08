@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T02:15:01.182013Z",
+  "generated_at": "2026-10-08T02:41:50.602798Z",
   "cycle": "2026-q2",
   "directory": [
     {
@@ -35413,20 +35413,27 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "alex-finkelman-q1-2026-combined.pdf",
-      "coverage_note": "",
-      "original_documents": [],
-      "beginning_cash": 27452.21,
-      "money_raised": 1878,
-      "money_spent": 3689.51,
-      "ending_cash": 25640.7,
-      "net_change": -1811.51,
-      "total_cash_receipts": 1878,
-      "campaign_expenses": 8291.24,
+      "report_label": "28-days-before-election report \u00b7 2026",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2, CF-3 and CF-4 report supplied to RIEP.",
+      "coverage_note": "Cash receipts exclude the beginning balance and in-kind contributions. Figures describe this reporting period, not year-to-date totals.",
+      "original_documents": [
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "period": "July 1, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf",
+          "embed": true
+        }
+      ],
+      "beginning_cash": 25640.7,
+      "money_raised": 897.5,
+      "money_spent": 6508.16,
+      "ending_cash": 20030.04,
+      "net_change": -5610.66,
+      "total_cash_receipts": 897.5,
+      "campaign_expenses": 6508.16,
       "aggregate_expenses": 0,
-      "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it spent more during the period than it raised.",
+      "summary_intro": "Terri-Denise Cortvriend\u2019s July 1, 2026 to October 5, 2026 filing reports $897.50 in cash receipts, $6,508.16 in cash disbursements and $20,030.04 in ending cash.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -35445,118 +35452,504 @@
           "ending_cash": 25640.7,
           "net_change": -1811.51,
           "notes": "The campaign spent more than it raised in this reporting period."
+        },
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026",
+          "money_raised": 897.5,
+          "money_spent": 6508.16,
+          "ending_cash": 20030.04,
+          "net_change": -5610.66,
+          "notes": "The filing reports $22,700.00 in total liabilities and $-2,669.96 in fund balance. Ending cash is shown separately from debt.",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf"
         }
       ],
       "source_buckets": [
         {
           "label": "Itemized individual donors",
           "class_name": "itemized-individual-donors",
-          "amount": 2706,
-          "description": "Named contributors reported individually in the filing."
-        },
-        {
-          "label": "PAC contributions",
-          "class_name": "pac-contributions",
-          "amount": 1050,
-          "description": "Political committees and PACs listed in the filing."
+          "amount": 897.5,
+          "description": "Contribution classification reproduced from the original filing."
         }
       ],
       "top_donors": [
         {
-          "donor": "Diane Palumbo",
-          "amount": 2000,
+          "donor": "Susan Donovan",
+          "employer": "Rhode Island General Assembly",
           "type": "Individual",
-          "notes": "Named individual contribution listed in the filing."
+          "amount": 260.0,
+          "date": "2026-10-01",
+          "notes": "For tix to Sen Whitehouse clambake",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "PORTSMOUTH FIREFIGHTERS ASSOCIATION",
-          "amount": 1000,
-          "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing."
-        },
-        {
-          "donor": "(not listed)",
-          "amount": 500,
-          "type": "Aggregate - Individual",
-          "notes": "Named individual contribution listed in the filing."
-        },
-        {
-          "donor": "James Kingston",
-          "amount": 500,
+          "donor": "John W Brooks",
+          "employer": "Retired",
           "type": "Individual",
-          "notes": "Named individual contribution listed in the filing."
+          "amount": 250.0,
+          "date": "2026-10-01",
+          "notes": "",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "Jay Edwards",
-          "amount": 500,
+          "donor": "Jennifer Boyle",
+          "employer": "PACKETLOGIX",
           "type": "Individual",
-          "notes": "Named individual contribution listed in the filing."
+          "amount": 130.0,
+          "date": "2026-09-21",
+          "notes": "For ticket to Sen Whitehouse Clambake",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "Patti Doyle",
-          "amount": 500,
+          "donor": "Jeffrey Taylor",
+          "employer": "Mayforth Group",
           "type": "Individual",
-          "notes": "Named individual contribution listed in the filing."
+          "amount": 103.0,
+          "date": "2026-09-02",
+          "notes": "",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "William Walsh",
-          "amount": 500,
+          "donor": "Nora Barre",
+          "employer": "Downtown Providence Park Network",
           "type": "Individual",
-          "notes": "Named individual contribution listed in the filing."
+          "amount": 103.0,
+          "date": "2026-09-28",
+          "notes": "",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "Richard McAuliffe",
-          "amount": 412,
+          "donor": "Larry Chretien",
+          "employer": "Green Energy Consumers Alliance",
           "type": "Individual",
-          "notes": "Named individual contribution listed in the filing."
-        },
-        {
-          "donor": "Joseph Walsh",
-          "amount": 400,
-          "type": "Individual",
-          "notes": "Named individual contribution listed in the filing."
-        },
-        {
-          "donor": "PANNONE LOPES DEVEREAUX & O'GARA LLC RI STATE PAC",
-          "amount": 400,
-          "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing."
+          "amount": 51.5,
+          "date": "2026-10-04",
+          "notes": "",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         }
       ],
       "spending_categories": [
         {
-          "title": "Consultant & Professional Services",
-          "summary": "Visible spending includes GODADDY.COM, Ionos, Zoom.us.",
-          "amount": 4097.54
+          "label": "Advertising",
+          "amount": 3011.04,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         },
         {
-          "title": "Donations (Political)",
-          "summary": "Visible spending includes Jason Knight.",
-          "amount": 3600
+          "label": "Travel & Lodging",
+          "amount": 2035.95,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         },
         {
-          "title": "Fundraising Expenses",
-          "summary": "Visible spending includes Regine Printing Co. Inc, Staples.",
-          "amount": 282.46
+          "label": "Donations (Political)",
+          "amount": 780.0,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         },
         {
-          "title": "Other",
-          "summary": "Visible spending includes IONOS.com, Zoom.us.",
-          "amount": 155.94
+          "label": "Consultant & Professional Services",
+          "amount": 600.0,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         },
         {
-          "title": "Bank Fees",
-          "summary": "Visible spending includes Square Space, ACTBLUE.",
-          "amount": 128.92
+          "label": "Other",
+          "amount": 70.16,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         },
         {
-          "title": "Advertising",
-          "summary": "Visible spending includes GODADDY.COM.",
-          "amount": 26.38
+          "label": "Bank Fees",
+          "amount": 11.01,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         }
       ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "archived_reporting_periods": [
+        {
+          "candidate_id": "house-72-terri-denise-cortvriend",
+          "slug": "terri-denise-cortvriend",
+          "candidate_name": "Terri-Denise Cortvriend",
+          "chamber": "house",
+          "district_number": "72",
+          "party": "DEM",
+          "party_label": "Democratic",
+          "office_sought": "State Representative",
+          "report_label": "6/30/2026",
+          "reporting_period_label": "6/30/2026",
+          "source_note": "alex-finkelman-q1-2026-combined.pdf",
+          "coverage_note": "",
+          "original_documents": [],
+          "beginning_cash": 27452.21,
+          "money_raised": 1878,
+          "money_spent": 3689.51,
+          "ending_cash": 25640.7,
+          "net_change": -1811.51,
+          "total_cash_receipts": 1878,
+          "campaign_expenses": 8291.24,
+          "aggregate_expenses": 0,
+          "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it spent more during the period than it raised.",
+          "source_buckets": [
+            {
+              "label": "Itemized individual donors",
+              "class_name": "itemized-individual-donors",
+              "amount": 2706,
+              "description": "Named contributors reported individually in the filing."
+            },
+            {
+              "label": "PAC contributions",
+              "class_name": "pac-contributions",
+              "amount": 1050,
+              "description": "Political committees and PACs listed in the filing."
+            }
+          ],
+          "top_donors": [
+            {
+              "donor": "Diane Palumbo",
+              "amount": 2000,
+              "type": "Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "PORTSMOUTH FIREFIGHTERS ASSOCIATION",
+              "amount": 1000,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Public Safety"
+            },
+            {
+              "donor": "(not listed)",
+              "amount": 500,
+              "type": "Aggregate - Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "James Kingston",
+              "amount": 500,
+              "type": "Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "Jay Edwards",
+              "amount": 500,
+              "type": "Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "Patti Doyle",
+              "amount": 500,
+              "type": "Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "William Walsh",
+              "amount": 500,
+              "type": "Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "Richard McAuliffe",
+              "amount": 412,
+              "type": "Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "Joseph Walsh",
+              "amount": 400,
+              "type": "Individual",
+              "notes": "Named individual contribution listed in the filing.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "PANNONE LOPES DEVEREAUX & O'GARA LLC RI STATE PAC",
+              "amount": 400,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Other / Unclassified"
+            }
+          ],
+          "spending_categories": [
+            {
+              "title": "Consultant & Professional Services",
+              "summary": "Visible spending includes GODADDY.COM, Ionos, Zoom.us.",
+              "amount": 4097.54
+            },
+            {
+              "title": "Donations (Political)",
+              "summary": "Visible spending includes Jason Knight.",
+              "amount": 3600
+            },
+            {
+              "title": "Fundraising Expenses",
+              "summary": "Visible spending includes Regine Printing Co. Inc, Staples.",
+              "amount": 282.46
+            },
+            {
+              "title": "Other",
+              "summary": "Visible spending includes IONOS.com, Zoom.us.",
+              "amount": 155.94
+            },
+            {
+              "title": "Bank Fees",
+              "summary": "Visible spending includes Square Space, ACTBLUE.",
+              "amount": 128.92
+            },
+            {
+              "title": "Advertising",
+              "summary": "Visible spending includes GODADDY.COM.",
+              "amount": 26.38
+            }
+          ],
+          "takeaways": [],
+          "explainer_cards": []
+        }
+      ],
+      "reporting_period_type": "custom",
+      "reporting_period_start": "2026-07-01",
+      "reporting_period_end": "2026-10-05",
+      "receipts_label": "Total cash receipts",
+      "finance_status": "available",
+      "loan_proceeds": 0,
+      "loan_repayments": 0,
+      "loans_payable": 22700,
+      "accounts_payable": 0,
+      "total_liabilities": 22700,
+      "total_fund_balance": -2669.96,
+      "refunds_rebates": 0,
+      "interest_received": 0,
+      "returned_checks": 0,
+      "accounts_payable_repayments": 0,
+      "in_kind_contributions": 0,
+      "receipt_transactions": [
+        {
+          "donor": "Nora Barre",
+          "employer": "Downtown Providence Park Network",
+          "type": "Individual",
+          "amount": 103.0,
+          "date": "2026-09-28",
+          "notes": "",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Jennifer Boyle",
+          "employer": "PACKETLOGIX",
+          "type": "Individual",
+          "amount": 130.0,
+          "date": "2026-09-21",
+          "notes": "For ticket to Sen Whitehouse Clambake",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "John W Brooks",
+          "employer": "Retired",
+          "type": "Individual",
+          "amount": 250.0,
+          "date": "2026-10-01",
+          "notes": "",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Larry Chretien",
+          "employer": "Green Energy Consumers Alliance",
+          "type": "Individual",
+          "amount": 51.5,
+          "date": "2026-10-04",
+          "notes": "",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Susan Donovan",
+          "employer": "Rhode Island General Assembly",
+          "type": "Individual",
+          "amount": 260.0,
+          "date": "2026-10-01",
+          "notes": "For tix to Sen Whitehouse clambake",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "Jeffrey Taylor",
+          "employer": "Mayforth Group",
+          "type": "Individual",
+          "amount": 103.0,
+          "date": "2026-09-02",
+          "notes": "",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf"
+        }
+      ],
+      "in_kind_transactions": [],
+      "expenditure_transactions": [
+        {
+          "payee": "Fleming & Associates",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 80.0,
+          "date": "2026-07-24",
+          "purpose": "newsletter",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Gabrielle Godino",
+          "type": "Campaign Expenditure",
+          "category": "Consultant & Professional Services",
+          "amount": 600.0,
+          "date": "2026-07-14",
+          "purpose": "campaign bookkeeping",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Hyatt Regency",
+          "type": "Campaign Expenditure",
+          "category": "Travel & Lodging",
+          "amount": 355.49,
+          "date": "2026-07-08",
+          "purpose": "Hotel for LEHI",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Ionos",
+          "type": "Campaign Expenditure",
+          "category": "Other",
+          "amount": 7.81,
+          "date": "2026-07-14",
+          "purpose": "",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Ionos",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 7.81,
+          "date": "2026-08-14",
+          "purpose": "",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Ionos",
+          "type": "Campaign Expenditure",
+          "category": "Other",
+          "amount": 7.81,
+          "date": "2026-09-14",
+          "purpose": "",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Orbitz",
+          "type": "Campaign Expenditure",
+          "category": "Travel & Lodging",
+          "amount": 7.79,
+          "date": "2026-07-01",
+          "purpose": "For Travel to Legislative Energy Horizon Institute (LEHI) Legislator Academy",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "PRO MAIL",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 990.33,
+          "date": "2026-07-24",
+          "purpose": "newsletter",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Regine Printing Co. Inc",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 1388.86,
+          "date": "2026-08-31",
+          "purpose": "Newsletter",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Southwest Airlines",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 338.6,
+          "date": "2026-07-02",
+          "purpose": "For travel to LEHI Legislator Academy",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Square Space",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 205.44,
+          "date": "2026-09-22",
+          "purpose": "website renewal",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Square Space",
+          "type": "Campaign Expenditure",
+          "category": "Bank Fees",
+          "amount": 11.01,
+          "date": "2026-09-30",
+          "purpose": "fees for online donations",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "The Fairmont Hotel",
+          "type": "Campaign Expenditure",
+          "category": "Travel & Lodging",
+          "amount": 1672.67,
+          "date": "2026-07-28",
+          "purpose": "NCEL National Conference",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Whitehouse",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 780.0,
+          "date": "2026-08-24",
+          "purpose": "Whitehouse Victory Fund for Clambake tickets",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Zoom.us",
+          "type": "Campaign Expenditure",
+          "category": "Other",
+          "amount": 18.18,
+          "date": "2026-09-14",
+          "purpose": "",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Zoom.us",
+          "type": "Campaign Expenditure",
+          "category": "Other",
+          "amount": 18.18,
+          "date": "2026-08-12",
+          "purpose": "",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Zoom.us",
+          "type": "Campaign Expenditure",
+          "category": "Other",
+          "amount": 18.18,
+          "date": "2026-07-13",
+          "purpose": "",
+          "source_url": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf"
+        }
+      ],
+      "latest_filing_href": "/data/finance-documents/terri-denise-cortvriend-2026-10-05-28-day.pdf",
+      "finance_snapshot_note": "The filing reports $22,700.00 in total liabilities and $-2,669.96 in fund balance. Ending cash is shown separately from debt."
     },
     {
       "candidate_id": "house-73-marvin-abney",
@@ -35567,20 +35960,27 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "alex-finkelman-q1-2026-combined.pdf",
-      "coverage_note": "",
-      "original_documents": [],
-      "beginning_cash": 251853.06,
-      "money_raised": 7350,
-      "money_spent": 2515.6,
-      "ending_cash": 256687.46,
-      "net_change": 4834.4,
-      "total_cash_receipts": 7350,
-      "campaign_expenses": 5353.18,
+      "report_label": "28-days-before-election report \u00b7 2026",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2, CF-3 and CF-4 report supplied to RIEP.",
+      "coverage_note": "Cash receipts exclude the beginning balance and in-kind contributions. Figures describe this reporting period, not year-to-date totals.",
+      "original_documents": [
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "period": "July 1, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/marvin-abney-2026-10-05-28-day.pdf",
+          "embed": true
+        }
+      ],
+      "beginning_cash": 256687.46,
+      "money_raised": 700,
+      "money_spent": 273.53,
+      "ending_cash": 257113.93,
+      "net_change": 426.47,
+      "total_cash_receipts": 700,
+      "campaign_expenses": 273.53,
       "aggregate_expenses": 0,
-      "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "Marvin Abney\u2019s July 1, 2026 to October 5, 2026 filing reports $700.00 in cash receipts, $273.53 in cash disbursements and $257,113.93 in ending cash.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -35599,108 +35999,285 @@
           "ending_cash": 256687.46,
           "net_change": 4834.4,
           "notes": "The campaign raised more than it spent in this reporting period."
+        },
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026",
+          "money_raised": 700,
+          "money_spent": 273.53,
+          "ending_cash": 257113.93,
+          "net_change": 426.47,
+          "notes": "The filing reports no liabilities; fund balance equals ending cash.",
+          "source_url": "/data/finance-documents/marvin-abney-2026-10-05-28-day.pdf"
         }
       ],
       "source_buckets": [
         {
           "label": "Itemized individual donors",
           "class_name": "itemized-individual-donors",
-          "amount": 3900,
-          "description": "Named contributors reported individually in the filing."
+          "amount": 150.0,
+          "description": "Contribution classification reproduced from the original filing."
         },
         {
           "label": "PAC contributions",
           "class_name": "pac-contributions",
-          "amount": 3450,
-          "description": "Political committees and PACs listed in the filing."
+          "amount": 550.0,
+          "description": "Contribution classification reproduced from the original filing."
         }
       ],
       "top_donors": [
         {
-          "donor": "Matthew A",
-          "amount": 1000,
-          "type": "Individual",
-          "notes": "Employer listed as Lopes Jr Pannone Lopes Devereaux & O'Gara."
-        },
-        {
-          "donor": "PEOPLE, RI COUNCIL 94, AFSCME AFL-CIO PAC",
-          "amount": 500,
+          "donor": "RI LABORERS' STATE EMPLOYEES",
+          "employer": "",
           "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing."
+          "amount": 300.0,
+          "date": "2026-07-14",
+          "notes": "",
+          "source_url": "/data/finance-documents/marvin-abney-2026-10-05-28-day.pdf",
+          "interest_group": "Political committee",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "REALTORS PAC OF RI",
-          "amount": 300,
+          "donor": "RI HOSPITALITY PAC",
+          "employer": "",
           "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing."
+          "amount": 250.0,
+          "date": "2026-07-11",
+          "notes": "",
+          "source_url": "/data/finance-documents/marvin-abney-2026-10-05-28-day.pdf",
+          "interest_group": "Political committee",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         },
         {
-          "donor": "CAREPAC OF BLUE CROSS & BLUE SHIELD OF RI",
-          "amount": 250,
-          "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing."
-        },
-        {
-          "donor": "Christopher Boyle",
-          "amount": 250,
+          "donor": "William Michael Farrell",
+          "employer": "William A. Farrell & Associates LLC",
           "type": "Individual",
-          "notes": "Employer listed as Christopher Boyle, Esq.."
-        },
-        {
-          "donor": "Leonard Lopes",
-          "amount": 250,
-          "type": "Individual",
-          "notes": "Employer listed as The Victor Group."
-        },
-        {
-          "donor": "M. Teresa",
-          "amount": 250,
-          "type": "Individual",
-          "notes": "Employer listed as Paiva Weed F/S Capitol Consulting, LLC."
-        },
-        {
-          "donor": "NEARI PACE (National Education Association of RI)",
-          "amount": 250,
-          "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing."
-        },
-        {
-          "donor": "Steven VincentCeceri",
-          "amount": 250,
-          "type": "Individual",
-          "notes": "Employer listed as NE Property Services Group, LLC."
-        },
-        {
-          "donor": "William J.",
-          "amount": 250,
-          "type": "Individual",
-          "notes": "Employer listed as Murphy Murphy & Fay, LLP."
+          "amount": 150.0,
+          "date": "2026-08-17",
+          "notes": "",
+          "source_url": "/data/finance-documents/marvin-abney-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         }
       ],
       "spending_categories": [
         {
-          "title": "Fundraising Expenses",
-          "summary": "Visible spending includes Public Kitchen & Bar, Regine Printing.",
-          "amount": 4026.6
+          "label": "Donations (Political)",
+          "amount": 250.0,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         },
         {
-          "title": "Office Equipment & Supplies",
-          "summary": "Visible spending includes Newport Navy Exchange, USPS.",
-          "amount": 1006.58
-        },
-        {
-          "title": "Donations (All Others)",
-          "summary": "Visible spending includes Dominican Independence & Heritage Award Committee.",
-          "amount": 300
-        },
-        {
-          "title": "Bank Fees",
-          "summary": "Visible spending includes Bank Newport.",
-          "amount": 20
+          "label": "Office Equipment & Supplies",
+          "amount": 23.53,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         }
       ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "archived_reporting_periods": [
+        {
+          "candidate_id": "house-73-marvin-abney",
+          "slug": "marvin-abney",
+          "candidate_name": "Marvin Abney",
+          "chamber": "house",
+          "district_number": "73",
+          "party": "DEM",
+          "party_label": "Democratic",
+          "office_sought": "State Representative",
+          "report_label": "6/30/2026",
+          "reporting_period_label": "6/30/2026",
+          "source_note": "alex-finkelman-q1-2026-combined.pdf",
+          "coverage_note": "",
+          "original_documents": [],
+          "beginning_cash": 251853.06,
+          "money_raised": 7350,
+          "money_spent": 2515.6,
+          "ending_cash": 256687.46,
+          "net_change": 4834.4,
+          "total_cash_receipts": 7350,
+          "campaign_expenses": 5353.18,
+          "aggregate_expenses": 0,
+          "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it raised more during the period than it spent.",
+          "source_buckets": [
+            {
+              "label": "Itemized individual donors",
+              "class_name": "itemized-individual-donors",
+              "amount": 3900,
+              "description": "Named contributors reported individually in the filing."
+            },
+            {
+              "label": "PAC contributions",
+              "class_name": "pac-contributions",
+              "amount": 3450,
+              "description": "Political committees and PACs listed in the filing."
+            }
+          ],
+          "top_donors": [
+            {
+              "donor": "Matthew A",
+              "amount": 1000,
+              "type": "Individual",
+              "notes": "Employer listed as Lopes Jr Pannone Lopes Devereaux & O'Gara.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "PEOPLE, RI COUNCIL 94, AFSCME AFL-CIO PAC",
+              "amount": 500,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Labor / Unions"
+            },
+            {
+              "donor": "REALTORS PAC OF RI",
+              "amount": 300,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Housing / Real Estate"
+            },
+            {
+              "donor": "CAREPAC OF BLUE CROSS & BLUE SHIELD OF RI",
+              "amount": 250,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Health Care"
+            },
+            {
+              "donor": "Christopher Boyle",
+              "amount": 250,
+              "type": "Individual",
+              "notes": "Employer listed as Christopher Boyle, Esq..",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "Leonard Lopes",
+              "amount": 250,
+              "type": "Individual",
+              "notes": "Employer listed as The Victor Group.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "M. Teresa",
+              "amount": 250,
+              "type": "Individual",
+              "notes": "Employer listed as Paiva Weed F/S Capitol Consulting, LLC.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "NEARI PACE (National Education Association of RI)",
+              "amount": 250,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Education"
+            },
+            {
+              "donor": "Steven VincentCeceri",
+              "amount": 250,
+              "type": "Individual",
+              "notes": "Employer listed as NE Property Services Group, LLC.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "William J.",
+              "amount": 250,
+              "type": "Individual",
+              "notes": "Employer listed as Murphy Murphy & Fay, LLP.",
+              "interest_group": "Individual"
+            }
+          ],
+          "spending_categories": [
+            {
+              "title": "Fundraising Expenses",
+              "summary": "Visible spending includes Public Kitchen & Bar, Regine Printing.",
+              "amount": 4026.6
+            },
+            {
+              "title": "Office Equipment & Supplies",
+              "summary": "Visible spending includes Newport Navy Exchange, USPS.",
+              "amount": 1006.58
+            },
+            {
+              "title": "Donations (All Others)",
+              "summary": "Visible spending includes Dominican Independence & Heritage Award Committee.",
+              "amount": 300
+            },
+            {
+              "title": "Bank Fees",
+              "summary": "Visible spending includes Bank Newport.",
+              "amount": 20
+            }
+          ],
+          "takeaways": [],
+          "explainer_cards": []
+        }
+      ],
+      "reporting_period_type": "custom",
+      "reporting_period_start": "2026-07-01",
+      "reporting_period_end": "2026-10-05",
+      "receipts_label": "Total cash receipts",
+      "finance_status": "available",
+      "loan_proceeds": 0,
+      "loan_repayments": 0,
+      "loans_payable": 0,
+      "accounts_payable": 0,
+      "total_liabilities": 0,
+      "total_fund_balance": 257113.93,
+      "refunds_rebates": 0,
+      "interest_received": 0,
+      "returned_checks": 0,
+      "accounts_payable_repayments": 0,
+      "in_kind_contributions": 0,
+      "receipt_transactions": [
+        {
+          "donor": "William Michael Farrell",
+          "employer": "William A. Farrell & Associates LLC",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-08-17",
+          "notes": "",
+          "source_url": "/data/finance-documents/marvin-abney-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "RI HOSPITALITY PAC",
+          "employer": "",
+          "type": "PAC",
+          "amount": 250.0,
+          "date": "2026-07-11",
+          "notes": "",
+          "source_url": "/data/finance-documents/marvin-abney-2026-10-05-28-day.pdf"
+        },
+        {
+          "donor": "RI LABORERS' STATE EMPLOYEES",
+          "employer": "",
+          "type": "PAC",
+          "amount": 300.0,
+          "date": "2026-07-14",
+          "notes": "",
+          "source_url": "/data/finance-documents/marvin-abney-2026-10-05-28-day.pdf"
+        }
+      ],
+      "in_kind_transactions": [],
+      "expenditure_transactions": [
+        {
+          "payee": "Friends of Jason Knight",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 250.0,
+          "date": "2026-07-01",
+          "purpose": "",
+          "source_url": "/data/finance-documents/marvin-abney-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Staples",
+          "type": "Campaign Expenditure",
+          "category": "Office Equipment & Supplies",
+          "amount": 23.53,
+          "date": "2026-08-04",
+          "purpose": "",
+          "source_url": "/data/finance-documents/marvin-abney-2026-10-05-28-day.pdf"
+        }
+      ],
+      "latest_filing_href": "/data/finance-documents/marvin-abney-2026-10-05-28-day.pdf",
+      "finance_snapshot_note": "The filing reports no liabilities; fund balance equals ending cash."
     },
     {
       "candidate_id": "house-74-alex-finkelman",
@@ -35711,20 +36288,27 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "alex-finkelman-q1-2026-combined.pdf",
-      "coverage_note": "",
-      "original_documents": [],
-      "beginning_cash": 100373.72,
-      "money_raised": 3345,
-      "money_spent": 3176.65,
-      "ending_cash": 100542.07,
-      "net_change": 168.35,
-      "total_cash_receipts": 3345,
-      "campaign_expenses": 12883.7,
+      "report_label": "28-days-before-election report \u00b7 2026",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2, CF-3 and CF-4 report supplied to RIEP.",
+      "coverage_note": "Cash receipts exclude the beginning balance and in-kind contributions. Figures describe this reporting period, not year-to-date totals.",
+      "original_documents": [
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "period": "July 1, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/alex-finkelman-2026-10-05-28-day.pdf",
+          "embed": true
+        }
+      ],
+      "beginning_cash": 100542.07,
+      "money_raised": 200,
+      "money_spent": 3957.63,
+      "ending_cash": 96784.44,
+      "net_change": -3757.63,
+      "total_cash_receipts": 200,
+      "campaign_expenses": 3957.63,
       "aggregate_expenses": 0,
-      "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it raised more during the period than it spent.",
+      "summary_intro": "Alex Finkelman\u2019s July 1, 2026 to October 5, 2026 filing reports $200.00 in cash receipts, $3,957.63 in cash disbursements and $96,784.44 in ending cash.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -35743,101 +36327,270 @@
           "ending_cash": 100542.07,
           "net_change": 168.35,
           "notes": "The campaign raised more than it spent in this reporting period."
+        },
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026",
+          "money_raised": 200,
+          "money_spent": 3957.63,
+          "ending_cash": 96784.44,
+          "net_change": -3757.63,
+          "notes": "The filing reports $20,000.00 in total liabilities and $76,784.44 in fund balance. Ending cash is shown separately from debt.",
+          "source_url": "/data/finance-documents/alex-finkelman-2026-10-05-28-day.pdf"
         }
       ],
       "source_buckets": [
         {
           "label": "Itemized individual donors",
           "class_name": "itemized-individual-donors",
-          "amount": 850,
-          "description": "Named contributors reported individually in the filing."
-        },
-        {
-          "label": "Receipts without donor names listed",
-          "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 1570,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
-        },
-        {
-          "label": "PAC contributions",
-          "class_name": "pac-contributions",
-          "amount": 925,
-          "description": "Political committees and PACs listed in the filing."
+          "amount": 200.0,
+          "description": "Contribution classification reproduced from the original filing."
         }
       ],
       "top_donors": [
         {
-          "donor": "George Zainyeh",
-          "amount": 500,
+          "donor": "William Farrell",
+          "employer": "William A Farrell Associates",
           "type": "Individual",
-          "notes": "Employer listed as Athena Solutions Group LLC."
-        },
-        {
-          "donor": "RI HOSPITALITY PAC",
-          "amount": 500,
-          "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing."
-        },
-        {
-          "donor": "PANNONE LOPES DEVEREAUX & O'GARA LLC RI STATE PAC",
-          "amount": 200,
-          "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing."
-        },
-        {
-          "donor": "William J",
-          "amount": 200,
-          "type": "Individual",
-          "notes": "Employer listed as Murphy Murphy & Fay LLP."
-        },
-        {
-          "donor": "Peter Baptista",
-          "amount": 150,
-          "type": "Individual",
-          "notes": "Employer listed as Capitol Communications Group."
-        },
-        {
-          "donor": "CITIZENS BANK PACOM",
-          "amount": 125,
-          "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing."
-        },
-        {
-          "donor": "REALTORS PAC OF RI",
-          "amount": 100,
-          "type": "PAC",
-          "notes": "Named PAC contribution listed in the filing."
+          "amount": 200.0,
+          "date": "2026-08-13",
+          "notes": "",
+          "source_url": "/data/finance-documents/alex-finkelman-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
         }
       ],
       "spending_categories": [
         {
-          "title": "Donations (Political)",
-          "summary": "Visible spending includes friends of Joe Shekarchi, Joseph Solomon Committee, Rhode Island Democatic State Committee.",
-          "amount": 6000
+          "label": "Donations (Political)",
+          "amount": 2350.0,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         },
         {
-          "title": "Fundraising Expenses",
-          "summary": "Visible spending includes Alex Finkelman, REGINE PRINTING.",
-          "amount": 4500.38
+          "label": "Donations (All Others)",
+          "amount": 1600.0,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         },
         {
-          "title": "Advertising",
-          "summary": "Visible spending includes Jamestown Press.",
-          "amount": 1170
-        },
-        {
-          "title": "Donations (All Others)",
-          "summary": "Visible spending includes Town of Jamestown.",
-          "amount": 1000
-        },
-        {
-          "title": "Bank Fees",
-          "summary": "Visible spending includes Act Blue.",
-          "amount": 213.32
+          "label": "Bank Fees",
+          "amount": 7.63,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
         }
       ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "archived_reporting_periods": [
+        {
+          "candidate_id": "house-74-alex-finkelman",
+          "slug": "alex-finkelman",
+          "candidate_name": "Alex Finkelman",
+          "chamber": "house",
+          "district_number": "74",
+          "party": "DEM",
+          "party_label": "Democratic",
+          "office_sought": "State Representative",
+          "report_label": "6/30/2026",
+          "reporting_period_label": "6/30/2026",
+          "source_note": "alex-finkelman-q1-2026-combined.pdf",
+          "coverage_note": "",
+          "original_documents": [],
+          "beginning_cash": 100373.72,
+          "money_raised": 3345,
+          "money_spent": 3176.65,
+          "ending_cash": 100542.07,
+          "net_change": 168.35,
+          "total_cash_receipts": 3345,
+          "campaign_expenses": 12883.7,
+          "aggregate_expenses": 0,
+          "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it raised more during the period than it spent.",
+          "source_buckets": [
+            {
+              "label": "Itemized individual donors",
+              "class_name": "itemized-individual-donors",
+              "amount": 850,
+              "description": "Named contributors reported individually in the filing."
+            },
+            {
+              "label": "Receipts without donor names listed",
+              "class_name": "small-dollar-aggregate-online-receipts",
+              "amount": 1570,
+              "description": "Money reported in aggregate form without individual donor names listed in the filing."
+            },
+            {
+              "label": "PAC contributions",
+              "class_name": "pac-contributions",
+              "amount": 925,
+              "description": "Political committees and PACs listed in the filing."
+            }
+          ],
+          "top_donors": [
+            {
+              "donor": "George Zainyeh",
+              "amount": 500,
+              "type": "Individual",
+              "notes": "Employer listed as Athena Solutions Group LLC.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "RI HOSPITALITY PAC",
+              "amount": 500,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Health Care"
+            },
+            {
+              "donor": "PANNONE LOPES DEVEREAUX & O'GARA LLC RI STATE PAC",
+              "amount": 200,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Other / Unclassified"
+            },
+            {
+              "donor": "William J",
+              "amount": 200,
+              "type": "Individual",
+              "notes": "Employer listed as Murphy Murphy & Fay LLP.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "Peter Baptista",
+              "amount": 150,
+              "type": "Individual",
+              "notes": "Employer listed as Capitol Communications Group.",
+              "interest_group": "Individual"
+            },
+            {
+              "donor": "CITIZENS BANK PACOM",
+              "amount": 125,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Finance / Insurance"
+            },
+            {
+              "donor": "REALTORS PAC OF RI",
+              "amount": 100,
+              "type": "PAC",
+              "notes": "Named PAC contribution listed in the filing.",
+              "interest_group": "Housing / Real Estate"
+            }
+          ],
+          "spending_categories": [
+            {
+              "title": "Donations (Political)",
+              "summary": "Visible spending includes friends of Joe Shekarchi, Joseph Solomon Committee, Rhode Island Democatic State Committee.",
+              "amount": 6000
+            },
+            {
+              "title": "Fundraising Expenses",
+              "summary": "Visible spending includes Alex Finkelman, REGINE PRINTING.",
+              "amount": 4500.38
+            },
+            {
+              "title": "Advertising",
+              "summary": "Visible spending includes Jamestown Press.",
+              "amount": 1170
+            },
+            {
+              "title": "Donations (All Others)",
+              "summary": "Visible spending includes Town of Jamestown.",
+              "amount": 1000
+            },
+            {
+              "title": "Bank Fees",
+              "summary": "Visible spending includes Act Blue.",
+              "amount": 213.32
+            }
+          ],
+          "takeaways": [],
+          "explainer_cards": []
+        }
+      ],
+      "reporting_period_type": "custom",
+      "reporting_period_start": "2026-07-01",
+      "reporting_period_end": "2026-10-05",
+      "receipts_label": "Total cash receipts",
+      "finance_status": "available",
+      "loan_proceeds": 0,
+      "loan_repayments": 0,
+      "loans_payable": 20000,
+      "accounts_payable": 0,
+      "total_liabilities": 20000,
+      "total_fund_balance": 76784.44,
+      "refunds_rebates": 0,
+      "interest_received": 0,
+      "returned_checks": 0,
+      "accounts_payable_repayments": 0,
+      "in_kind_contributions": 0,
+      "receipt_transactions": [
+        {
+          "donor": "William Farrell",
+          "employer": "William A Farrell Associates",
+          "type": "Individual",
+          "amount": 200.0,
+          "date": "2026-08-13",
+          "notes": "",
+          "source_url": "/data/finance-documents/alex-finkelman-2026-10-05-28-day.pdf"
+        }
+      ],
+      "in_kind_transactions": [],
+      "expenditure_transactions": [
+        {
+          "payee": "Act Blue",
+          "type": "Campaign Expenditure",
+          "category": "Bank Fees",
+          "amount": 7.63,
+          "date": "2026-08-17",
+          "purpose": "",
+          "source_url": "/data/finance-documents/alex-finkelman-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "FOP Lodge 21",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 600.0,
+          "date": "2026-08-07",
+          "purpose": "",
+          "source_url": "/data/finance-documents/alex-finkelman-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Friends of Jon Brien",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 1000.0,
+          "date": "2026-07-09",
+          "purpose": "",
+          "source_url": "/data/finance-documents/alex-finkelman-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Friends of Matt Dawson",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 350.0,
+          "date": "2026-07-01",
+          "purpose": "",
+          "source_url": "/data/finance-documents/alex-finkelman-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "joe Solomon Jr Comittee",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 1000.0,
+          "date": "2026-07-10",
+          "purpose": "",
+          "source_url": "/data/finance-documents/alex-finkelman-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "VHBC Pride",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 1000.0,
+          "date": "2026-09-10",
+          "purpose": "",
+          "source_url": "/data/finance-documents/alex-finkelman-2026-10-05-28-day.pdf"
+        }
+      ],
+      "latest_filing_href": "/data/finance-documents/alex-finkelman-2026-10-05-28-day.pdf",
+      "finance_snapshot_note": "The filing reports $20,000.00 in total liabilities and $76,784.44 in fund balance. Ending cash is shown separately from debt."
     },
     {
       "candidate_id": "house-75-lauren-h-carson",
@@ -35848,20 +36601,27 @@
       "party": "DEM",
       "party_label": "Democratic",
       "office_sought": "State Representative",
-      "report_label": "6/30/2026",
-      "reporting_period_label": "6/30/2026",
-      "source_note": "RI Campaign Finance website summary",
-      "coverage_note": "Website Q2 summary; donor detail unavailable",
-      "original_documents": [],
-      "beginning_cash": 30300.18,
-      "money_raised": 1400,
-      "money_spent": 4157.97,
-      "ending_cash": 27542.21,
-      "net_change": -2757.97,
-      "total_cash_receipts": 1400,
-      "campaign_expenses": 0,
-      "aggregate_expenses": 4157.97,
-      "summary_intro": "This filing shows a campaign that still has a substantial cash reserve. The report also shows that it spent more during the period than it raised.",
+      "report_label": "28-days-before-election report \u00b7 2026",
+      "reporting_period_label": "July 1, 2026 to October 5, 2026",
+      "source_note": "Rhode Island Board of Elections CF-2, CF-3 and CF-4 report supplied to RIEP.",
+      "coverage_note": "Cash receipts exclude the beginning balance and in-kind contributions. Figures describe this reporting period, not year-to-date totals.",
+      "original_documents": [
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "period": "July 1, 2026 to October 5, 2026",
+          "href": "/data/finance-documents/lauren-h-carson-2026-10-05-28-day.pdf",
+          "embed": true
+        }
+      ],
+      "beginning_cash": 27542.21,
+      "money_raised": 150,
+      "money_spent": 5866.27,
+      "ending_cash": 21825.94,
+      "net_change": -5716.27,
+      "total_cash_receipts": 150,
+      "campaign_expenses": 5866.27,
+      "aggregate_expenses": 0,
+      "summary_intro": "Lauren H Carson\u2019s July 1, 2026 to October 5, 2026 filing reports $150.00 in cash receipts, $5,866.27 in cash disbursements and $21,825.94 in ending cash.",
       "filing_history": [
         {
           "label": "Q1 2026",
@@ -35880,20 +36640,406 @@
           "ending_cash": 27542.21,
           "net_change": -2757.97,
           "notes": "The campaign spent more than it raised in this reporting period."
+        },
+        {
+          "label": "28-days-before-election report \u00b7 2026",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026",
+          "money_raised": 150,
+          "money_spent": 5866.27,
+          "ending_cash": 21825.94,
+          "net_change": -5716.27,
+          "notes": "The filing reports $21,300.00 in total liabilities and $525.94 in fund balance. Ending cash is shown separately from debt.",
+          "source_url": "/data/finance-documents/lauren-h-carson-2026-10-05-28-day.pdf"
         }
       ],
       "source_buckets": [
         {
-          "label": "Receipts without donor names listed",
-          "class_name": "small-dollar-aggregate-online-receipts",
-          "amount": 1400,
-          "description": "Money reported in aggregate form without individual donor names listed in the filing."
+          "label": "Itemized individual donors",
+          "class_name": "itemized-individual-donors",
+          "amount": 150.0,
+          "description": "Contribution classification reproduced from the original filing."
         }
       ],
-      "top_donors": [],
-      "spending_categories": [],
+      "top_donors": [
+        {
+          "donor": "JOSEPH WHITE",
+          "employer": "RETIRED",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-07-07",
+          "notes": "",
+          "source_url": "/data/finance-documents/lauren-h-carson-2026-10-05-28-day.pdf",
+          "interest_group": "Individual",
+          "reporting_period_label": "July 1, 2026 to October 5, 2026"
+        }
+      ],
+      "spending_categories": [
+        {
+          "label": "Advertising",
+          "amount": 4898.49,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
+        },
+        {
+          "label": "Consultant & Professional Services",
+          "amount": 450.0,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
+        },
+        {
+          "label": "Donations (Political)",
+          "amount": 346.4,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
+        },
+        {
+          "label": "Donations (All Others)",
+          "amount": 150.0,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
+        },
+        {
+          "label": "Office Equipment & Supplies",
+          "amount": 21.38,
+          "description": "Expenditures reported in the original filing, including negative adjustments as filed."
+        }
+      ],
       "takeaways": [],
-      "explainer_cards": []
+      "explainer_cards": [],
+      "archived_reporting_periods": [
+        {
+          "candidate_id": "house-75-lauren-h-carson",
+          "slug": "lauren-h-carson",
+          "candidate_name": "Lauren H Carson",
+          "chamber": "house",
+          "district_number": "75",
+          "party": "DEM",
+          "party_label": "Democratic",
+          "office_sought": "State Representative",
+          "report_label": "6/30/2026",
+          "reporting_period_label": "6/30/2026",
+          "source_note": "Original Q2 2026 Rhode Island Board of Elections filing",
+          "coverage_note": "Original Q2 filing; contribution and expenditure detail included",
+          "original_documents": [],
+          "beginning_cash": 30300.18,
+          "money_raised": 1400,
+          "money_spent": 4157.97,
+          "ending_cash": 27542.21,
+          "net_change": -2757.97,
+          "total_cash_receipts": 1400,
+          "campaign_expenses": 0,
+          "aggregate_expenses": 4157.97,
+          "summary_intro": "This profile uses Lauren H Carson's original Q2 2026 filing for contribution and spending-category detail.",
+          "source_buckets": [
+            {
+              "label": "Itemized individual donors",
+              "amount": 1300,
+              "class_name": "itemized-individual-donors",
+              "description": "8 named individual contribution records."
+            },
+            {
+              "label": "PAC contributions",
+              "amount": 100,
+              "class_name": "pac-contributions",
+              "description": "1 named PAC contribution records."
+            }
+          ],
+          "top_donors": [
+            {
+              "donor": "Diane Pfautz",
+              "amount": 250,
+              "type": "Individual"
+            },
+            {
+              "donor": "Maura Lindsay",
+              "amount": 250,
+              "type": "Individual"
+            },
+            {
+              "donor": "Barbara Roberts",
+              "amount": 200,
+              "type": "Individual"
+            },
+            {
+              "donor": "Julie Holden",
+              "amount": 200,
+              "type": "Individual"
+            },
+            {
+              "donor": "Ann Mcmahon",
+              "amount": 100,
+              "type": "Individual"
+            },
+            {
+              "donor": "Gayle Wolf",
+              "amount": 100,
+              "type": "Individual"
+            },
+            {
+              "donor": "Joseph Walsh",
+              "amount": 100,
+              "type": "Individual"
+            },
+            {
+              "donor": "RI Health Care Association PAC",
+              "amount": 100,
+              "type": "PAC",
+              "interest_group": "Health Care"
+            },
+            {
+              "donor": "William Walsh",
+              "amount": 100,
+              "type": "Individual"
+            }
+          ],
+          "spending_categories": [
+            {
+              "label": "Advertising",
+              "amount": 2830.87,
+              "description": "Advertising and campaign promotion."
+            },
+            {
+              "label": "Donations (Political)",
+              "amount": 500,
+              "description": "Political donations."
+            },
+            {
+              "label": "Donations (All Others)",
+              "amount": 482.63,
+              "description": "Non-political donations and sponsorships."
+            },
+            {
+              "label": "Consultant & Professional Services",
+              "amount": 270,
+              "description": "Campaign consulting and professional services."
+            },
+            {
+              "label": "Other",
+              "amount": 37.99,
+              "description": "Other campaign expenditures reported in the filing."
+            },
+            {
+              "label": "Bank Fees",
+              "amount": 36.48,
+              "description": "Payment-processing and bank fees."
+            }
+          ],
+          "takeaways": [],
+          "explainer_cards": [],
+          "finance_source_note": "Corrected from the original 04/01/2026-06/30/2026 filing.",
+          "itemized_contribution_records": 9,
+          "individual_contribution_records": 8,
+          "pac_contribution_records": 1
+        }
+      ],
+      "reporting_period_type": "custom",
+      "reporting_period_start": "2026-07-01",
+      "reporting_period_end": "2026-10-05",
+      "receipts_label": "Total cash receipts",
+      "finance_status": "available",
+      "loan_proceeds": 0,
+      "loan_repayments": 0,
+      "loans_payable": 21300,
+      "accounts_payable": 0,
+      "total_liabilities": 21300,
+      "total_fund_balance": 525.94,
+      "refunds_rebates": 0,
+      "interest_received": 0,
+      "returned_checks": 0,
+      "accounts_payable_repayments": 0,
+      "in_kind_contributions": 0,
+      "receipt_transactions": [
+        {
+          "donor": "JOSEPH WHITE",
+          "employer": "RETIRED",
+          "type": "Individual",
+          "amount": 150.0,
+          "date": "2026-07-07",
+          "notes": "",
+          "source_url": "/data/finance-documents/lauren-h-carson-2026-10-05-28-day.pdf"
+        }
+      ],
+      "in_kind_transactions": [],
+      "expenditure_transactions": [
+        {
+          "payee": "Contemporary Clarity",
+          "type": "Campaign Expenditure",
+          "category": "Consultant & Professional Services",
+          "amount": 270.0,
+          "date": "2026-07-27",
+          "purpose": "",
+          "source_url": "/data/finance-documents/lauren-h-carson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "DAVE'S MARKET",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 202.5,
+          "date": "2026-08-12",
+          "purpose": "",
+          "source_url": "/data/finance-documents/lauren-h-carson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Fleming and Assc.",
+          "type": "Campaign Expenditure",
+          "category": "Consultant & Professional Services",
+          "amount": 180.0,
+          "date": "2026-09-24",
+          "purpose": "",
+          "source_url": "/data/finance-documents/lauren-h-carson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Fleming and Assc.",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 80.0,
+          "date": "2026-07-15",
+          "purpose": "",
+          "source_url": "/data/finance-documents/lauren-h-carson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "friends of keith hoffman",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 74.92,
+          "date": "2026-08-10",
+          "purpose": "party for Keith Hoffman, candidate for treasurer",
+          "source_url": "/data/finance-documents/lauren-h-carson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "friends of keith hoffman",
+          "type": "Campaign Expenditure",
+          "category": "Donations (Political)",
+          "amount": 68.98,
+          "date": "2026-08-10",
+          "purpose": "",
+          "source_url": "/data/finance-documents/lauren-h-carson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Mailchimp",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 28.36,
+          "date": "2026-09-11",
+          "purpose": "",
+          "source_url": "/data/finance-documents/lauren-h-carson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Pro mail",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 1277.6,
+          "date": "2026-09-24",
+          "purpose": "",
+          "source_url": "/data/finance-documents/lauren-h-carson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Pro mail",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 1387.16,
+          "date": "2026-07-15",
+          "purpose": "",
+          "source_url": "/data/finance-documents/lauren-h-carson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "Regines printing",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 1768.71,
+          "date": "2026-07-27",
+          "purpose": "",
+          "source_url": "/data/finance-documents/lauren-h-carson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "SQUARESPACE.COM",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 14.98,
+          "date": "2026-08-07",
+          "purpose": "",
+          "source_url": "/data/finance-documents/lauren-h-carson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "SQUARESPACE.COM",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 14.98,
+          "date": "2026-07-07",
+          "purpose": "",
+          "source_url": "/data/finance-documents/lauren-h-carson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "SQUARESPACE.COM",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 17.12,
+          "date": "2026-09-08",
+          "purpose": "",
+          "source_url": "/data/finance-documents/lauren-h-carson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "staples",
+          "type": "Campaign Expenditure",
+          "category": "Office Equipment & Supplies",
+          "amount": 21.38,
+          "date": "2026-09-09",
+          "purpose": "funf raiser invitaiton envelopes",
+          "source_url": "/data/finance-documents/lauren-h-carson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "survey monkey",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 105.93,
+          "date": "2026-07-02",
+          "purpose": "constituent survey",
+          "source_url": "/data/finance-documents/lauren-h-carson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "survey monkey",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 105.93,
+          "date": "2026-08-03",
+          "purpose": "constituent survey",
+          "source_url": "/data/finance-documents/lauren-h-carson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "TAIN",
+          "type": "Campaign Expenditure",
+          "category": "Donations (All Others)",
+          "amount": 150.0,
+          "date": "2026-07-19",
+          "purpose": "Silber sponsorship",
+          "source_url": "/data/finance-documents/lauren-h-carson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "USPS",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 41.0,
+          "date": "2026-09-23",
+          "purpose": "fund raiser mailing",
+          "source_url": "/data/finance-documents/lauren-h-carson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "WWW.MAILCHIMP.COM",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 28.36,
+          "date": "2026-08-11",
+          "purpose": "",
+          "source_url": "/data/finance-documents/lauren-h-carson-2026-10-05-28-day.pdf"
+        },
+        {
+          "payee": "WWW.MAILCHIMP.COM",
+          "type": "Campaign Expenditure",
+          "category": "Advertising",
+          "amount": 28.36,
+          "date": "2026-07-13",
+          "purpose": "",
+          "source_url": "/data/finance-documents/lauren-h-carson-2026-10-05-28-day.pdf"
+        }
+      ],
+      "latest_filing_href": "/data/finance-documents/lauren-h-carson-2026-10-05-28-day.pdf",
+      "finance_snapshot_note": "The filing reports $21,300.00 in total liabilities and $525.94 in fund balance. Ending cash is shown separately from debt."
     },
     {
       "candidate_id": "senate-1-jacob-bissaillon",
