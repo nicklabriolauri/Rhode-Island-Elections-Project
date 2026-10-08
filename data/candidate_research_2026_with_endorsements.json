@@ -5534,11 +5534,66 @@
       "chamber": "house",
       "district_number": 68,
       "party": "Democrat",
-      "campaign_website": "",
+      "campaign_website": "https://www.junespeakman.com/",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-30",
-      "website_audit_note": "No official campaign website located in this audit.",
-      "priorities": [],
+      "website_checked": "2026-10-07",
+      "website_audit_note": "Official campaign website and issue positions verified October 7, 2026.",
+      "priorities": [
+        {
+          "title": "Housing",
+          "summary": "Expand access to affordable homes and address barriers to construction.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.junespeakman.com/"
+        },
+        {
+          "title": "Environment",
+          "summary": "Support renewable energy, coastal resilience, open space and clean drinking water; address PFAS contamination.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.junespeakman.com/"
+        },
+        {
+          "title": "Education",
+          "summary": "Improve school funding and mental health support for students.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.junespeakman.com/"
+        },
+        {
+          "title": "Women and families",
+          "summary": "Support pay equity, reproductive rights and affordable childcare.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.junespeakman.com/"
+        },
+        {
+          "title": "LGBTQ rights",
+          "summary": "Protect LGBTQ residents from discrimination.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.junespeakman.com/"
+        },
+        {
+          "title": "Substance use treatment",
+          "summary": "Expand evidence-based addiction treatment and recovery services.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.junespeakman.com/"
+        },
+        {
+          "title": "Gun safety",
+          "summary": "Support gun safety measures and behavioral health services.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.junespeakman.com/"
+        },
+        {
+          "title": "Small businesses",
+          "summary": "Improve tax and regulatory policy for local businesses and strengthen infrastructure oversight.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.junespeakman.com/"
+        },
+        {
+          "title": "Senior services",
+          "summary": "Support in-home care, housing options and safe, adequately staffed nursing homes.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.junespeakman.com/"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "Clean Water Action",
@@ -5618,11 +5673,42 @@
       "chamber": "house",
       "district_number": 70,
       "party": "Democrat",
-      "campaign_website": "",
+      "campaign_website": "https://www.elect-jay.com/",
       "website_status": "no_official_campaign_site_located",
-      "website_checked": "2026-08-30",
-      "website_audit_note": "No official campaign website located in this audit.",
-      "priorities": [],
+      "website_checked": "2026-10-07",
+      "website_audit_note": "Official campaign website and issue positions verified October 7, 2026.",
+      "priorities": [
+        {
+          "title": "Substance use policy",
+          "summary": "Support overdose prevention, treatment access and recovery services.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.elect-jay.com/issues"
+        },
+        {
+          "title": "Environment",
+          "summary": "Promote clean energy, land preservation and sustainable development.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.elect-jay.com/issues"
+        },
+        {
+          "title": "Finances",
+          "summary": "Support stable health-insurance costs and tax relief.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.elect-jay.com/issues"
+        },
+        {
+          "title": "Reproductive rights",
+          "summary": "Protect access to reproductive healthcare.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.elect-jay.com/issues"
+        },
+        {
+          "title": "Local issues",
+          "summary": "Advocate for Tiverton\u2019s finances and transportation needs.",
+          "source_label": "Official campaign website",
+          "source_url": "https://www.elect-jay.com/issues"
+        }
+      ],
       "endorsements": [
         {
           "endorser": "Clean Water Action",
@@ -5632,7 +5718,8 @@
           "endorser": "Planned Parenthood Votes! Rhode Island PAC",
           "source_url": "https://bluevoterguide.org/endorser-org/Planned_Parenthood_Votes%21_Rhode_Island_PAC/RI/6835?bvgVersion=2&electionId=614"
         }
-      ]
+      ],
+      "priority_context": "The campaign issues page also describes earlier legislative work, including laws already enacted. These summaries reflect published issue positions rather than a dated 2026 legislative agenda."
     },
     {
       "candidate_id": "house-71-dem-primary-michelle-e-mcgaw",
