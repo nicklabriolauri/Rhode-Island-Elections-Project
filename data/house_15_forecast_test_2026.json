@@ -1,0 +1,605 @@
+{
+  "updated": "2026-10-08",
+  "as_of": "2026-10-05",
+  "district": 15,
+  "title": "District 15 conditional election test",
+  "baseline": {
+    "year": 2024,
+    "dem_share": 0.498729792147806,
+    "dem_votes": 4319,
+    "rep_votes": 4341,
+    "total_major_party_votes": 8660,
+    "margin_votes": 22,
+    "source": "/data/race_data.json",
+    "method": "Carry forward the 2024 Democratic share of Democratic + Republican votes, before any scenario adjustments. Incumbent performance is already embedded; no additional incumbent bonus is applied."
+  },
+  "defaults": {
+    "dem_swing_pp": 0,
+    "campaign_adjustment_pp": 0,
+    "fung_share_pct": 20,
+    "fung_from_republican_pct": 50,
+    "fung_uncertainty_pp": 10
+  },
+  "uncertainty": {
+    "method": "Resample centered changes in Democratic two-party vote share among eligible adjacent-cycle contested House races through 2020. Perturb assumed Fung support with a uniform \u00b110-point range by default; that range is a user-adjustable assumption, not an estimate.",
+    "historical_errors_pp": [
+      -23.495499831282544,
+      -9.899660029727537,
+      0.642655491059546,
+      -1.2196120099969399,
+      -3.0943069504050125,
+      4.607730151241595,
+      -9.862214465728291,
+      -8.812903103769466,
+      3.026499153141593,
+      -3.908020834387027,
+      2.927380095425658,
+      2.0475579729381854,
+      -1.4982302110024217,
+      11.70762326800172,
+      4.513087275838623,
+      -1.967208743810711,
+      -0.4475891255111998,
+      1.2755556379634103,
+      3.9153460688934105,
+      4.103903386391472,
+      10.322461542249172,
+      14.164994728528058,
+      8.938108374124942,
+      6.989503419827219,
+      9.502087071862002,
+      -11.756129468111515,
+      -6.981800897571745,
+      7.290842250170515,
+      -3.611772841105077,
+      6.649168169139885,
+      6.452285963010562,
+      -10.376531401975514,
+      2.8664536553069997,
+      -6.869777131854,
+      -7.2459359581744,
+      1.8500741868406445,
+      2.9420480600257926,
+      -4.2423051396054685,
+      -0.01949683574080663,
+      -1.1169165273006487,
+      -4.220186431914641,
+      3.9107320169939563
+    ],
+    "training": {
+      "n": 42,
+      "mae_pp": 5.714449640376925,
+      "rmse_pp": 7.3563740367093216,
+      "mean_error_pp": -0.9156739679882285
+    },
+    "holdout_2024": {
+      "n": 18,
+      "mae_pp": 2.003120162085709,
+      "rmse_pp": 2.684418140018535,
+      "mean_error_pp": -0.8966620628549862
+    },
+    "pairs": [
+      {
+        "before": 2012,
+        "after": 2014,
+        "district": 28,
+        "change_pp": -24.411173799270774
+      },
+      {
+        "before": 2012,
+        "after": 2014,
+        "district": 29,
+        "change_pp": -10.815333997715765
+      },
+      {
+        "before": 2012,
+        "after": 2014,
+        "district": 31,
+        "change_pp": -0.27301847692868253
+      },
+      {
+        "before": 2012,
+        "after": 2014,
+        "district": 32,
+        "change_pp": -2.1352859779851685
+      },
+      {
+        "before": 2012,
+        "after": 2014,
+        "district": 34,
+        "change_pp": -4.009980918393241
+      },
+      {
+        "before": 2012,
+        "after": 2014,
+        "district": 35,
+        "change_pp": 3.692056183253367
+      },
+      {
+        "before": 2012,
+        "after": 2014,
+        "district": 39,
+        "change_pp": -10.77788843371652
+      },
+      {
+        "before": 2012,
+        "after": 2014,
+        "district": 40,
+        "change_pp": -9.728577071757694
+      },
+      {
+        "before": 2012,
+        "after": 2014,
+        "district": 44,
+        "change_pp": 2.1108251851533644
+      },
+      {
+        "before": 2012,
+        "after": 2014,
+        "district": 72,
+        "change_pp": -4.823694802375256
+      },
+      {
+        "before": 2014,
+        "after": 2016,
+        "district": 16,
+        "change_pp": 2.0117061274374293
+      },
+      {
+        "before": 2014,
+        "after": 2016,
+        "district": 28,
+        "change_pp": 1.1318840049499568
+      },
+      {
+        "before": 2014,
+        "after": 2016,
+        "district": 29,
+        "change_pp": -2.4139041789906504
+      },
+      {
+        "before": 2014,
+        "after": 2016,
+        "district": 31,
+        "change_pp": 10.791949300013492
+      },
+      {
+        "before": 2014,
+        "after": 2016,
+        "district": 32,
+        "change_pp": 3.5974133078503945
+      },
+      {
+        "before": 2014,
+        "after": 2016,
+        "district": 39,
+        "change_pp": -2.8828827117989397
+      },
+      {
+        "before": 2014,
+        "after": 2016,
+        "district": 40,
+        "change_pp": -1.3632630934994283
+      },
+      {
+        "before": 2014,
+        "after": 2016,
+        "district": 71,
+        "change_pp": 0.3598816699751817
+      },
+      {
+        "before": 2014,
+        "after": 2016,
+        "district": 72,
+        "change_pp": 2.999672100905182
+      },
+      {
+        "before": 2016,
+        "after": 2018,
+        "district": 16,
+        "change_pp": 3.1882294184032434
+      },
+      {
+        "before": 2016,
+        "after": 2018,
+        "district": 24,
+        "change_pp": 9.406787574260944
+      },
+      {
+        "before": 2016,
+        "after": 2018,
+        "district": 28,
+        "change_pp": 13.24932076053983
+      },
+      {
+        "before": 2016,
+        "after": 2018,
+        "district": 32,
+        "change_pp": 8.022434406136714
+      },
+      {
+        "before": 2016,
+        "after": 2018,
+        "district": 39,
+        "change_pp": 6.073829451838991
+      },
+      {
+        "before": 2016,
+        "after": 2018,
+        "district": 40,
+        "change_pp": 8.586413103873774
+      },
+      {
+        "before": 2016,
+        "after": 2018,
+        "district": 41,
+        "change_pp": -12.671803436099744
+      },
+      {
+        "before": 2016,
+        "after": 2018,
+        "district": 47,
+        "change_pp": -7.897474865559973
+      },
+      {
+        "before": 2016,
+        "after": 2018,
+        "district": 52,
+        "change_pp": 6.375168282182287
+      },
+      {
+        "before": 2016,
+        "after": 2018,
+        "district": 53,
+        "change_pp": -4.5274468090933055
+      },
+      {
+        "before": 2016,
+        "after": 2018,
+        "district": 72,
+        "change_pp": 5.7334942011516565
+      },
+      {
+        "before": 2016,
+        "after": 2018,
+        "district": 74,
+        "change_pp": 5.536611995022334
+      },
+      {
+        "before": 2018,
+        "after": 2020,
+        "district": 15,
+        "change_pp": -11.292205369963742
+      },
+      {
+        "before": 2018,
+        "after": 2020,
+        "district": 21,
+        "change_pp": 1.950779687318771
+      },
+      {
+        "before": 2018,
+        "after": 2020,
+        "district": 26,
+        "change_pp": -7.785451099842228
+      },
+      {
+        "before": 2018,
+        "after": 2020,
+        "district": 28,
+        "change_pp": -8.161609926162628
+      },
+      {
+        "before": 2018,
+        "after": 2020,
+        "district": 30,
+        "change_pp": 0.9344002188524159
+      },
+      {
+        "before": 2018,
+        "after": 2020,
+        "district": 39,
+        "change_pp": 2.026374092037564
+      },
+      {
+        "before": 2018,
+        "after": 2020,
+        "district": 40,
+        "change_pp": -5.157979107593697
+      },
+      {
+        "before": 2018,
+        "after": 2020,
+        "district": 41,
+        "change_pp": -0.9351708037290352
+      },
+      {
+        "before": 2018,
+        "after": 2020,
+        "district": 53,
+        "change_pp": -2.0325904952888774
+      },
+      {
+        "before": 2018,
+        "after": 2020,
+        "district": 61,
+        "change_pp": -5.135860399902869
+      },
+      {
+        "before": 2018,
+        "after": 2020,
+        "district": 72,
+        "change_pp": 2.9950580490057277
+      },
+      {
+        "before": 2022,
+        "after": 2024,
+        "district": 16,
+        "change_pp": 0.5364155307042817
+      },
+      {
+        "before": 2022,
+        "after": 2024,
+        "district": 21,
+        "change_pp": -0.9682765847833563
+      },
+      {
+        "before": 2022,
+        "after": 2024,
+        "district": 22,
+        "change_pp": 0.7925428106867471
+      },
+      {
+        "before": 2022,
+        "after": 2024,
+        "district": 27,
+        "change_pp": 1.4172209385659995
+      },
+      {
+        "before": 2022,
+        "after": 2024,
+        "district": 28,
+        "change_pp": 1.1931864132027126
+      },
+      {
+        "before": 2022,
+        "after": 2024,
+        "district": 31,
+        "change_pp": 0.6210466083400035
+      },
+      {
+        "before": 2022,
+        "after": 2024,
+        "district": 33,
+        "change_pp": -2.2568991810379413
+      },
+      {
+        "before": 2022,
+        "after": 2024,
+        "district": 34,
+        "change_pp": -0.10100269117570004
+      },
+      {
+        "before": 2022,
+        "after": 2024,
+        "district": 35,
+        "change_pp": -2.145370406900371
+      },
+      {
+        "before": 2022,
+        "after": 2024,
+        "district": 40,
+        "change_pp": -1.861859036700808
+      },
+      {
+        "before": 2022,
+        "after": 2024,
+        "district": 41,
+        "change_pp": 3.3286892162402495
+      },
+      {
+        "before": 2022,
+        "after": 2024,
+        "district": 42,
+        "change_pp": -7.1976674135441066
+      },
+      {
+        "before": 2022,
+        "after": 2024,
+        "district": 43,
+        "change_pp": 1.806847620363139
+      },
+      {
+        "before": 2022,
+        "after": 2024,
+        "district": 44,
+        "change_pp": -0.3408724803376284
+      },
+      {
+        "before": 2022,
+        "after": 2024,
+        "district": 47,
+        "change_pp": -2.4843943775929467
+      },
+      {
+        "before": 2022,
+        "after": 2024,
+        "district": 53,
+        "change_pp": -4.643319098884851
+      },
+      {
+        "before": 2022,
+        "after": 2024,
+        "district": 61,
+        "change_pp": -4.0983787535085465
+      },
+      {
+        "before": 2022,
+        "after": 2024,
+        "district": 70,
+        "change_pp": 0.2621737549733716
+      }
+    ],
+    "excluded_boundary_transition": "2020 to 2022 excluded because district boundaries changed.",
+    "limitations": "These checks validate a simple two-party persistence baseline, not the three-candidate model or candidate win probabilities. A sample drawn from contested races is selective. Earlier boundary regimes and candidate changes limit transferability."
+  },
+  "history": [
+    {
+      "year": 2012,
+      "uncontested": false,
+      "winner": "Nicholas A. MATTIELLO",
+      "party": "DEM",
+      "candidates": [
+        {
+          "name": "Nicholas A. MATTIELLO",
+          "party": "DEM",
+          "votes": 3856
+        },
+        {
+          "name": "Robert E. BACH",
+          "party": "REP",
+          "votes": 2792
+        }
+      ],
+      "two_party_dem_share": 0.5800240673886883,
+      "note": "Historical boundaries before 2022; context only."
+    },
+    {
+      "year": 2014,
+      "uncontested": true,
+      "winner": "Nicholas A. MATTIELLO",
+      "party": "DEM",
+      "candidates": [
+        {
+          "name": "Nicholas A. MATTIELLO",
+          "party": "DEM",
+          "votes": 4187
+        }
+      ],
+      "two_party_dem_share": null,
+      "note": "Excluded from baseline: uncontested."
+    },
+    {
+      "year": 2016,
+      "uncontested": false,
+      "winner": "Nicholas A. Mattiello",
+      "party": "DEM",
+      "candidates": [
+        {
+          "name": "Nicholas A. Mattiello",
+          "party": "DEM",
+          "votes": 3611
+        },
+        {
+          "name": "Steven Frias",
+          "party": "REP",
+          "votes": 3526
+        }
+      ],
+      "two_party_dem_share": null,
+      "note": "Historical boundaries before 2022; context only."
+    },
+    {
+      "year": 2018,
+      "uncontested": false,
+      "winner": "Nicholas A. Mattiello",
+      "party": "DEM",
+      "candidates": [
+        {
+          "name": "Nicholas A. Mattiello",
+          "party": "DEM",
+          "votes": 3464
+        },
+        {
+          "name": "Steven Frias",
+          "party": "REP",
+          "votes": 3135
+        }
+      ],
+      "two_party_dem_share": 0.5249280193968783,
+      "note": "Historical boundaries before 2022; context only."
+    },
+    {
+      "year": 2020,
+      "uncontested": false,
+      "winner": "Barbara Ann Fenton -Fung",
+      "party": "REP",
+      "candidates": [
+        {
+          "name": "Barbara Ann Fenton -Fung",
+          "party": "REP",
+          "votes": 4731
+        },
+        {
+          "name": "Nicholas A Mattiello",
+          "party": "DEM",
+          "votes": 3315
+        }
+      ],
+      "two_party_dem_share": 0.41200596569724085,
+      "note": "Historical boundaries before 2022; context only."
+    },
+    {
+      "year": 2022,
+      "uncontested": true,
+      "winner": "Barbara Ann Fenton Fung",
+      "party": "REP",
+      "candidates": [
+        {
+          "name": "Barbara Ann Fenton Fung",
+          "party": "REP",
+          "votes": 4978
+        }
+      ],
+      "two_party_dem_share": null,
+      "note": "Excluded from baseline: uncontested."
+    },
+    {
+      "year": 2024,
+      "uncontested": false,
+      "winner": "Christopher G. Paplauskas",
+      "party": "REP",
+      "candidates": [
+        {
+          "name": "Christopher G. Paplauskas",
+          "party": "REP",
+          "votes": 4341
+        },
+        {
+          "name": "Maria A. Bucci",
+          "party": "DEM",
+          "votes": 4319
+        }
+      ],
+      "two_party_dem_share": 0.498729792147806,
+      "note": "Current-boundary baseline."
+    }
+  ],
+  "missing_inputs": [
+    "No D15 horse-race poll in the model.",
+    "No presidential or statewide results reaggregated to current D15 boundaries in the repository.",
+    "No measured district-level support or vote-source split for Fung.",
+    "No historically estimated finance-to-vote coefficient.",
+    "No verified numerical national swing input; default is zero."
+  ],
+  "candidate_context": [
+    {
+      "name": "Christopher G Paplauskas",
+      "party": "REP",
+      "note": "Republican incumbent; 2024 D15 result is the baseline."
+    },
+    {
+      "name": "Colleen M Crudele",
+      "party": "DEM",
+      "note": "Democratic challenger; 2024 baseline belongs to Maria Bucci, not Crudele."
+    },
+    {
+      "name": "Allan W Fung",
+      "party": "IND",
+      "note": "Independent challenger. Repository biography records prior service as mayor of Cranston. No personal vote bonus is estimated from that biography."
+    }
+  ],
+  "finance_source": "/data/house_15_finance_model_2026.json",
+  "simulation_count": 10000,
+  "seed": 1502026
+}
