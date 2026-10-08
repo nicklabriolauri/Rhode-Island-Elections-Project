@@ -12,6 +12,7 @@ def page(chamber,district,record):
     status=record.get('general_label') or record.get('general_status') or '2026 general election'
     title=f'{label} District {district} | 2026 Rhode Island Election | RIEP'
     desc=f'2026 Rhode Island {label} District {district} race page with district map, candidates, campaign-finance links, candidate home precinct context, and primary history.'
+    finance_model = '<section class="panel" style="margin-bottom:18px"><h2>District 15 cash-burn test</h2><p class="muted">Compare October 5 cash, contributions and spending, then explore final-weeks finance scenarios.</p><a href="/house-15-finance-model.html">Open the experimental finance model →</a></section>' if chamber == 'house' and district == 15 else ''
     return f'''<!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -52,7 +53,7 @@ h1{{font-size:clamp(38px,6vw,68px);line-height:1;margin:10px 0 12px;letter-spaci
 <body data-chamber="{chamber}" data-district="{district}">
 <header><div class="nav"><a class="brand" href="/">Rhode Island Elections Project</a><nav><a href="/running.html">Who's Running?</a><a href="/finance.html">Campaign Finance</a><a href="/primary-results.html">Primary Results</a><a href="/map.html">Maps & Data</a></nav></div></header>
 <section class="hero"><div class="wrap"><div class="eyebrow">2026 Rhode Island legislative election</div><h1 data-race-title>{html.escape(label)} District {district}</h1><p data-race-status>{html.escape(str(status))}</p></div></section>
-<main><div class="grid">
+<main>{finance_model}<div class="grid">
 <section class="panel"><h2>District map</h2><div id="raceMap"></div><p class="map-note" data-map-note>Loading district map…</p></section>
 <section class="panel"><h2>2026 general-election candidates</h2><div data-candidates><p class="empty">Loading candidates…</p></div></section>
 </div>
