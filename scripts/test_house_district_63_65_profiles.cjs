@@ -18,14 +18,14 @@ for(const [slug,d,raised,spent,end,nr,ne] of entries){
  const ids=[...page.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(ids.length,new Set(ids).size);for(const m of page.matchAll(/href="#([^"]+)"/g))assert(ids.includes(m[1]));
  assert(fs.statSync(`candidates/${slug}.jpg`).size>10000);
 }
-for(const p of main.profiles)if(!slugs.includes(p.slug))assert.deepEqual(p,old.profiles.find(x=>x.slug===p.slug),p.slug);
-assert.deepEqual(main.donor_index.filter(p=>!slugs.includes(p.slug)),old.donor_index.filter(p=>!slugs.includes(p.slug)));
+for(const p of main.profiles)if(![...slugs,'jennifer-smith-boylan','nicole-p-jellinek','june-s-speakman','susan-ann-donovan','john-g-edwards'].includes(p.slug))assert.deepEqual(p,old.profiles.find(x=>x.slug===p.slug),p.slug);
+assert.deepEqual(main.donor_index.filter(p=>![...slugs,'jennifer-smith-boylan','nicole-p-jellinek','june-s-speakman','susan-ann-donovan','john-g-edwards'].includes(p.slug)),old.donor_index.filter(p=>![...slugs,'jennifer-smith-boylan','nicole-p-jellinek','june-s-speakman','susan-ann-donovan','john-g-edwards'].includes(p.slug)));
 const aclu=load('data/outside_ratings_2026.json').ratings.find(r=>r.organization==='ACLU of Rhode Island'&&r.chamber==='house'&&r.district_number===59);assert.equal(aclu.rating,'11/11');assert.equal(aclu.votes.length,11);assert(aclu.votes.every(v=>v.status==='aligned'));assert(read('candidates/jennifer-a-stewart.html').includes('<b>11/11</b>'));
 assert(read('candidates/jenni-a-furtado.html').includes('House service, which began in 2025'));
 const html=read('finance.html'),nodes={financeApp:{innerHTML:''},financeFilingSelect:{addEventListener(e,cb){this[e]=cb;}}};
 const ctx={URL,URLSearchParams,window:{location:{search:'?slug=jenni-a-furtado',href:'https://example.org/finance.html?slug=jenni-a-furtado'},history:{replaceState(a,b,url){ctx.window.location.href=String(url);ctx.window.location.search=url.search;}}},document:{getElementById:id=>nodes[id]},escapeHtml:s=>String(s),formatCurrency:n=>'$'+Number(n).toFixed(2)};
 vm.createContext(ctx);
-for(const name of ['filingChoices','filingView','buildTransactions','renderProfile']){const start=html.indexOf('    function '+name+'('),end=html.indexOf('\n    function ',start+5);assert(start>=0);vm.runInContext(html.slice(start,end),ctx);}
+for(const name of ['filingChoices','filingView','buildTransactions','buildFilingControl','renderProfile']){const start=html.indexOf('    function '+name+'('),end=html.indexOf('\n    function ',start+5);assert(start>=0);vm.runInContext(html.slice(start,end),ctx);}
 for(const name of ['buildHero','buildPacTopicPanel','buildDonorHighlights','buildSpendingHighlights','buildHistory','buildVerification'])ctx[name]=p=>JSON.stringify({raised:p.money_raised,donors:p.top_donors,expenses:p.spending_categories,docs:p.original_documents});
 for(const slug of [...slugs,'leonela-felix']){
  const p=main.profiles.find(p=>p.slug===slug),choices=ctx.filingChoices(p),q2=choices.find(x=>x.label==='Q2 2026');assert(q2,'Q2 option '+slug);

@@ -362,6 +362,17 @@
       text-transform: uppercase;
     }
 
+    .filing-control { margin-top: 20px; padding: 18px; border: 1px solid #d7e3f2; border-radius: 18px; background: linear-gradient(135deg, #f1f6ff, #f7fcff); }
+    .filing-control label { display: block; margin-bottom: 9px; font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #426082; }
+    .filing-select-wrap { position: relative; }
+    .filing-select-wrap::after { content: ""; position: absolute; right: 18px; top: 18px; width: 8px; height: 8px; border-right: 2px solid #3564cc; border-bottom: 2px solid #3564cc; transform: rotate(45deg); pointer-events: none; }
+    .filing-control select { display: block; width: 100%; min-width: 0; min-height: 48px; appearance: none; -webkit-appearance: none; padding: 12px 42px 12px 14px; border: 1px solid #bed0ed; border-radius: 12px; background: #fff; color: #173355; font: inherit; font-size: 15px; font-weight: 700; cursor: pointer; text-overflow: ellipsis; box-shadow: 0 2px 5px #19365b08; }
+    .filing-control select:hover { border-color: #4779dd; }
+    .filing-control select:focus-visible { outline: 3px solid #8eb5ff; outline-offset: 3px; }
+    .filing-control .filing-dates { margin: 10px 0 0; color: #426082; font-size: 13px; line-height: 1.5; overflow-wrap: anywhere; }
+    @media (max-width: 760px) { .hero .hero-side { order: -1; } }
+    .filing-control .filing-help { margin: 5px 0 0; font-size: 12px; color: #61738b; line-height: 1.5; }
+
     .subject-name {
       font-size: 34px;
       line-height: 0.98;
@@ -2348,7 +2359,7 @@
       return null;
     }
 
-    function buildHero(profile) {
+    function buildHero(profile, filingControl = "") {
       const districtLabel = `${chamberLabel(profile.chamber)} District ${profile.district_number}`;
       const buckets = (profile.source_buckets || []).slice();
       const total = buckets.reduce((sum, bucket) => sum + Number(bucket.amount || 0), 0) || 1;
@@ -2401,6 +2412,7 @@
                 Filing period: ${escapeHtml(profile.reporting_period_label)}
               </div>
             </div>
+            ${filingControl}
             <div class="subject-actions">
               <a href="running.html?chamber=${encodeURIComponent(profile.chamber)}&district=${encodeURIComponent(profile.district_number)}">Back to Who's Running?</a>
               <a href="meet.html?chamber=${encodeURIComponent(profile.chamber)}&district=${encodeURIComponent(profile.district_number)}">Back to Meet the Candidates</a>
@@ -2999,7 +3011,7 @@
         const period = snapshot.reporting_period_label || snapshot.report_label || "Reporting period";
         const q2 = /6\/30\/2026|Q2 2026|second.quarter/i.test(period);
         const label = q2 ? "Q2 2026" : /28.days.before/i.test(snapshot.report_label || "")
-          ? `28 days before election · ${period}` : period;
+          ? "28 days before election · 2026" : period;
         return {key: index === 0 ? "latest" : `archive-${(profile.archived_reporting_periods || []).length - index}`, label, snapshot};
       });
     }
@@ -3023,6 +3035,13 @@
       return `<article class="panel section-card"><div class="section-label">Selected filing details</div><h3>Donors &amp; expenses</h3><p class="section-copy">${escapeHtml(profile.reporting_period_label || profile.report_label)}</p><details><summary>Contribution transactions (${receipts.length})</summary>${receipts.length ? table(receipts, false) : '<p>Contribution transactions have not been transcribed for this period. Available named donors are shown above; aggregate contributions do not identify individual donors.</p>'}</details><details><summary>Expense transactions (${expenses.length})</summary>${expenses.length ? table(expenses, true) : '<p>Expense transactions have not been transcribed for this period. Available spending categories are shown above. A payee-by-payee list requires the original filing detail.</p>'}</details></article>`;
     }
 
+    function buildFilingControl(choices, choice, selected) {
+      return `<div class="filing-control" aria-label="Choose campaign finance filing"><label for="financeFilingSelect">Reporting period</label>
+        <div class="filing-select-wrap"><select id="financeFilingSelect" aria-describedby="finance-filing-dates finance-filing-help">${choices.map(item => `<option value="${item.key}" ${item.key === choice.key ? "selected" : ""}>${escapeHtml(item.label)}${item.key === "latest" ? " (latest)" : ""}</option>`).join("")}</select></div>
+        <p class="filing-dates" id="finance-filing-dates">${escapeHtml(selected.reporting_period_label || selected.report_label)}</p>
+        <p class="filing-help" id="finance-filing-help">Switch filings to compare totals, donors and spending.</p></div>`;
+    }
+
     function renderProfile(profile, data, requestedPeriod) {
       const app = document.getElementById("financeApp");
       const choices = filingChoices(profile);
@@ -3031,10 +3050,7 @@
       const selected = filingView(choice, profile);
       document.title = `${profile.candidate_name} | Campaign Finance | Rhode Island Elections Project`;
       app.innerHTML = `
-        <section class="panel section-card" aria-label="Choose campaign finance filing"><label for="financeFilingSelect"><strong>Reporting period</strong></label>
-          <select id="financeFilingSelect" style="max-width:100%;padding:10px;margin:8px" aria-describedby="finance-filing-help">${choices.map(item => `<option value="${item.key}" ${item.key === choice.key ? "selected" : ""}>${escapeHtml(item.label)}${item.key === "latest" ? " (latest)" : ""}</option>`).join("")}</select>
-          <p id="finance-filing-help" class="section-copy">Choose a filing to view its totals, named donors, spending and available source documents. Historical transaction detail is shown where it has been added.</p></section>
-        ${buildHero(selected)}
+        ${buildHero(selected, buildFilingControl(choices, choice, selected))}
         <section class="content-grid">
           <div class="stack">${buildPacTopicPanel(selected)}${buildDonorHighlights(selected)}</div>
           <div class="stack">${buildSpendingHighlights(selected)}${buildHistory(selected)}${buildVerification(selected)}</div>

@@ -11,6 +11,8 @@ SLUGS.update({'james-c-sheehan':31,'robert-e-craven-jr':32,'jessica-drew-day':33
 SLUGS.update({'christopher-m-stanton':37,'jasmin-roy':39})
 SLUGS.update({'shaina-n-smith':41,'michael-j-riley':41,'edward-w-stravato':42})
 SLUGS.update({'joseph-hosey':44,'veronicka-vega':49,'suzanna-l-alba':53})
+SLUGS.update({'nicole-p-jellinek':67})
+
 def build(slugs=None):
  incumbent=ROOT/'candidates/anthony-j-desimone.html'
  incumbent.write_text(incumbent.read_text().replace('/running.html?chamber=house&amp;district=5&amp;election=general','/races/house-5.html'))
@@ -97,8 +99,8 @@ def build(slugs=None):
   page=re.sub(r'href="/finance.html\?slug='+re.escape(slug)+r'"',lambda m:'href="'+finance+'"',page)
   page=re.sub(r'href="/running.html\?chamber=house(?:&amp;|&)district='+str(district)+r'(?:&amp;|&)election=general"',f'href="/races/house-{district}.html"',page)
   assert 'data-voting-widget' not in page and 'riep-legislative-index' not in page and 'rep-desimone' not in page
-  if district in (15,22,23,27,31,32,33,37,39,41,42,44,49,53):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
-  if district in (44,49,53):page=page.replace('October 6, 2026','October 7, 2026')
+  if district in (15,22,23,27,31,32,33,37,39,41,42,44,49,53,67):page=page.replace(f'href="/races/house-{district}.html"',f'href="/running.html?chamber=house&amp;district={district}&amp;election=general"')
+  if district in (44,49,53,67):page=page.replace('October 6, 2026','October 7, 2026')
   (ROOT/'candidates'/f'{slug}.html').write_text(page)
  for filename in ['ballot.html','running.html']:
   p=ROOT/filename;s=p.read_text()

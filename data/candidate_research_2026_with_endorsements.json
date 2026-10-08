@@ -5416,40 +5416,52 @@
       "chamber": "house",
       "district_number": 67,
       "party": "Democrat",
-      "campaign_website": "https://www.nicolejellinek.com/about",
+      "campaign_website": "https://www.nicolejellinek.com/",
       "website_status": "verified_official_campaign_site",
-      "website_checked": "2026-08-30",
-      "website_audit_note": "Official campaign website located and verified in the updated 2026 website audit.",
+      "website_checked": "2026-10-07",
+      "website_audit_note": "Official campaign biography and issues page verified October 7, 2026.",
       "priorities": [
         {
           "title": "Healthcare",
-          "summary": "Expand affordable physical and mental healthcare and address provider and prescription-cost barriers.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.nicolejellinek.com/about"
+          "summary": "Reduce healthcare costs and improve access to medical, reproductive and behavioral healthcare.",
+          "source_label": "Official campaign issues page",
+          "source_url": "https://www.nicolejellinek.com/contact-1"
         },
         {
-          "title": "Education",
-          "summary": "Support equitable school funding, teachers, counselors, and affordable education from pre-K through career training.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.nicolejellinek.com/about"
+          "title": "Public schools",
+          "summary": "Increase school funding and support students and teachers.",
+          "source_label": "Official campaign issues page",
+          "source_url": "https://www.nicolejellinek.com/contact-1"
         },
         {
-          "title": "Affordability and housing",
-          "summary": "Lower everyday costs and expand safe, stable, affordable housing.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.nicolejellinek.com/about"
+          "title": "Business and workers",
+          "summary": "Address rising costs and support small businesses and employees.",
+          "source_label": "Official campaign issues page",
+          "source_url": "https://www.nicolejellinek.com/contact-1"
         },
         {
-          "title": "Rights and families",
-          "summary": "Protect reproductive freedom, childcare access, pay equity, and anti-discrimination protections.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.nicolejellinek.com/about"
+          "title": "Housing",
+          "summary": "Expand housing supply while preserving community livability and local decision-making.",
+          "source_label": "Official campaign issues page",
+          "source_url": "https://www.nicolejellinek.com/contact-1"
+        },
+        {
+          "title": "Rights and equity",
+          "summary": "Protect individual freedoms and fair treatment.",
+          "source_label": "Official campaign issues page",
+          "source_url": "https://www.nicolejellinek.com/contact-1"
         },
         {
           "title": "Climate and environment",
-          "summary": "Reduce emissions, build a green economy, strengthen coastal resilience, and protect drinking water.",
-          "source_label": "Official campaign website",
-          "source_url": "https://www.nicolejellinek.com/about"
+          "summary": "Invest in clean energy and conserve natural resources.",
+          "source_label": "Official campaign issues page",
+          "source_url": "https://www.nicolejellinek.com/contact-1"
+        },
+        {
+          "title": "Accountable government",
+          "summary": "Make government transparent and responsive to residents.",
+          "source_label": "Official campaign issues page",
+          "source_url": "https://www.nicolejellinek.com/contact-1"
         }
       ],
       "endorsements": [
@@ -5481,7 +5493,8 @@
           "endorser": "Providence Streets Coalition",
           "source_url": "https://pvdstreets.org/vote/"
         }
-      ]
+      ],
+      "district_community": "Barrington, Warren"
     },
     {
       "candidate_id": "house-67-dem-primary-ronald-paul-jarvais-jr",
