@@ -64,6 +64,11 @@ def build():
     return data
 
 def render(data):
+    def surname(name):
+        parts=name.split()
+        while len(parts)>1 and parts[-1].rstrip('.').lower() in {'jr','sr','ii','iii','iv'}:
+            parts.pop()
+        return parts[-1]
     labels=['Solid D','Likely D','Lean D','Tilt D','Toss Up','Tilt R','Lean R','Likely R','Solid R']
     boards=''
     for swing in [6,7,8]:
@@ -74,9 +79,10 @@ def render(data):
                 matches=sorted([r for r in rows if next(x for x in r['scenarios'] if x['dem_vote_share_swing_pp']==swing)['rating']==label_text],key=lambda r:r['district'])
                 cls=label_text.lower().replace(' ','-');items=''
                 for r in matches:
-                    names=' / '.join(c['name'].split()[-1] for c in r['candidates']);prefix='HD' if chamber=='house' else 'SD'
+                    names=' / '.join(surname(c['name']) for c in r['candidates']);prefix='HD' if chamber=='house' else 'SD'
                     items+=f'<li><a href="{r["race_url"]}" aria-label="{chamber.title()} District {r["district"]}: {esc(names)}"><strong>{prefix} {r["district"]}</strong><span>{esc(names)}</span></a></li>'
-                columns.append((f'<th scope="col" class="{cls}">{label_text}<small>{len(matches)} races</small></th>',f'<td><ul>{items}</ul></td>'))
+                count_label='race' if len(matches)==1 else 'races'
+                columns.append((f'<th scope="col" class="{cls}">{label_text}<small>{len(matches)} {count_label}</small></th>',f'<td><ul>{items}</ul></td>'))
             boards+=f'<section class="ratings-board" data-swing="{swing}" data-chamber="{chamber}"'+(' hidden' if swing!=7 else '')+f'><h2>State {chamber.title()}</h2><div class="board-scroll"><table aria-label="{chamber.title()} ratings under a {swing}-point Democratic vote-share swing"><thead><tr>'+''.join(c[0] for c in columns)+'</tr></thead><tbody><tr>'+''.join(c[1] for c in columns)+'</tr></tbody></table></div></section>'
     comparisons=''
     for r in sorted([r for r in data['races'] if r['included']],key=lambda r:(r['chamber'],r['district'])):
