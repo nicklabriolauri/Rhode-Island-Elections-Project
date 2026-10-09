@@ -54,7 +54,7 @@
       "watch": true,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-17.html",
+      "race_url": "/running.html?chamber=senate&district=17&election=general",
       "rating": "Tilt R",
       "status": "Rated",
       "margin_pp": 16.2149563827662,
@@ -124,6 +124,7 @@
       ],
       "included": true,
       "baseline_dem_margin_pp": -16.2149563827662,
+      "model_rating": "Tilt R",
       "projected_flip": false
     },
     {
@@ -142,7 +143,7 @@
       "watch": true,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-53.html",
+      "race_url": "/running.html?chamber=house&district=53&election=general",
       "rating": "Tilt D",
       "status": "Rated",
       "margin_pp": 10.458828981924919,
@@ -210,6 +211,7 @@
       ],
       "included": true,
       "baseline_dem_margin_pp": -10.458828981924919,
+      "model_rating": "Tilt D",
       "projected_flip": true
     },
     {
@@ -228,7 +230,7 @@
       "watch": true,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-42.html",
+      "race_url": "/running.html?chamber=house&district=42&election=general",
       "rating": "Tilt D",
       "status": "Rated",
       "margin_pp": 9.48638787538591,
@@ -296,6 +298,7 @@
       ],
       "included": true,
       "baseline_dem_margin_pp": -9.48638787538591,
+      "model_rating": "Tilt D",
       "projected_flip": true
     },
     {
@@ -314,12 +317,13 @@
       "watch": true,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-34.html",
-      "rating": "Lean D",
+      "race_url": "/running.html?chamber=senate&district=34&election=general",
+      "rating": "Toss Up",
       "status": "Rated",
       "margin_pp": 7.1216968835170045,
-      "leading_party": "DEM",
+      "leading_party": null,
       "notes": [
+        "Published editorial rating selected by RIEP; underlying model calculations are retained separately.",
         "The 6%, 7% and 8% scenarios mean percentage-point gains in Democratic vote share, not changes of that size in the D\u2013R margin. They are user-specified scenarios, not measured forecasts.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
@@ -335,7 +339,7 @@
           "votes": 7838
         }
       ],
-      "category": "Lean",
+      "category": "Toss Up",
       "baseline_status": "Rated",
       "baseline_rating": "Lean R",
       "baseline_leading_party": "REP",
@@ -382,7 +386,9 @@
       ],
       "included": true,
       "baseline_dem_margin_pp": -7.1216968835170045,
-      "projected_flip": true
+      "model_rating": "Lean D",
+      "editorial_override": true,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -404,12 +410,13 @@
       "watch": true,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-15.html",
-      "rating": "Likely D",
+      "race_url": "/running.html?chamber=house&district=15&election=general",
+      "rating": "Lean D",
       "status": "Rated",
       "margin_pp": 0.2540415704387991,
       "leading_party": "DEM",
       "notes": [
+        "Published editorial rating selected by RIEP; underlying model calculations are retained separately.",
         "The 6%, 7% and 8% scenarios mean percentage-point gains in Democratic vote share, not changes of that size in the D\u2013R margin. They are user-specified scenarios, not measured forecasts.",
         "Fung remains at 20% with 50% of his support taken from Republicans, matching the existing conditional test. These are assumptions, not polling estimates.",
         "The current race has more than two candidates. This label uses the historical two-candidate baseline; third-party vote shares and vote transfers are not estimated.",
@@ -427,7 +434,7 @@
           "votes": 4319
         }
       ],
-      "category": "Likely",
+      "category": "Lean",
       "model_url": "/house-15-election-test.html",
       "baseline_status": "Rated",
       "baseline_rating": "Toss Up",
@@ -478,6 +485,8 @@
       ],
       "included": true,
       "baseline_dem_margin_pp": -0.2540415704387991,
+      "model_rating": "Likely D",
+      "editorial_override": true,
       "projected_flip": true
     },
     {
@@ -496,7 +505,7 @@
       "watch": true,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-41.html",
+      "race_url": "/running.html?chamber=house&district=41&election=general",
       "rating": "Solid R",
       "status": "Rated",
       "margin_pp": 30.142042277150207,
@@ -564,6 +573,7 @@
       "included": true,
       "baseline_dem_margin_pp": -30.142042277150207,
       "category": "Solid",
+      "model_rating": "Solid R",
       "projected_flip": false
     },
     {
@@ -582,7 +592,7 @@
       "watch": true,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-44.html",
+      "race_url": "/running.html?chamber=house&district=44&election=general",
       "rating": "Solid D",
       "status": "Rated",
       "margin_pp": 7.735176103432902,
@@ -650,6 +660,7 @@
       ],
       "included": true,
       "baseline_dem_margin_pp": 7.735176103432902,
+      "model_rating": "Solid D",
       "projected_flip": false
     },
     {
@@ -668,7 +679,7 @@
       "watch": true,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-39.html",
+      "race_url": "/running.html?chamber=house&district=39&election=general",
       "rating": "Solid D",
       "status": "Rated",
       "margin_pp": 8.074965293845441,
@@ -736,6 +747,7 @@
       ],
       "included": true,
       "baseline_dem_margin_pp": 8.074965293845441,
+      "model_rating": "Solid D",
       "projected_flip": false
     },
     {
@@ -754,7 +766,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-22.html",
+      "race_url": "/running.html?chamber=house&district=22&election=general",
       "rating": "Solid D",
       "status": "Rated",
       "margin_pp": 14.017918676774638,
@@ -822,6 +834,7 @@
       ],
       "included": true,
       "baseline_dem_margin_pp": 14.017918676774638,
+      "model_rating": "Solid D",
       "projected_flip": false
     },
     {
@@ -840,7 +853,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-38.html",
+      "race_url": "/running.html?chamber=senate&district=38&election=general",
       "rating": "Solid D",
       "status": "Rated",
       "margin_pp": 16.371350137259796,
@@ -908,6 +921,7 @@
       ],
       "included": true,
       "baseline_dem_margin_pp": 16.371350137259796,
+      "model_rating": "Solid D",
       "projected_flip": false
     },
     {
@@ -926,7 +940,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-33.html",
+      "race_url": "/running.html?chamber=senate&district=33&election=general",
       "rating": "Solid D",
       "status": "Rated",
       "margin_pp": 16.739071409177303,
@@ -994,6 +1008,7 @@
       ],
       "included": true,
       "baseline_dem_margin_pp": 16.739071409177303,
+      "model_rating": "Solid D",
       "projected_flip": false
     },
     {
@@ -1012,7 +1027,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-33.html",
+      "race_url": "/running.html?chamber=house&district=33&election=general",
       "rating": "Solid D",
       "status": "Rated",
       "margin_pp": 17.842523477004576,
@@ -1080,6 +1095,7 @@
       ],
       "included": true,
       "baseline_dem_margin_pp": 17.842523477004576,
+      "model_rating": "Solid D",
       "projected_flip": false
     },
     {
@@ -1098,7 +1114,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-27.html",
+      "race_url": "/running.html?chamber=house&district=27&election=general",
       "rating": "Solid D",
       "status": "Rated",
       "margin_pp": 20.206704650854643,
@@ -1166,6 +1182,7 @@
       ],
       "included": true,
       "baseline_dem_margin_pp": 20.206704650854643,
+      "model_rating": "Solid D",
       "projected_flip": false
     },
     {
@@ -1184,7 +1201,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-35.html",
+      "race_url": "/running.html?chamber=house&district=35&election=general",
       "rating": "Solid D",
       "status": "Rated",
       "margin_pp": 24.437182280319536,
@@ -1252,6 +1269,7 @@
       ],
       "included": true,
       "baseline_dem_margin_pp": 24.437182280319536,
+      "model_rating": "Solid D",
       "projected_flip": false
     },
     {
@@ -1270,7 +1288,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-19.html",
+      "race_url": "/running.html?chamber=senate&district=19&election=general",
       "rating": null,
       "status": "Not modeled",
       "margin_pp": 14.223132904684519,
@@ -1297,6 +1315,7 @@
       "baseline_leading_party": "DEM",
       "scenarios": [],
       "included": true,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -1315,7 +1334,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-5.html",
+      "race_url": "/running.html?chamber=senate&district=5&election=general",
       "rating": "Solid D",
       "status": "Outside 30-point window",
       "margin_pp": 58.07608046205935,
@@ -1383,6 +1402,7 @@
       "included": false,
       "baseline_dem_margin_pp": 58.07608046205935,
       "category": "Solid",
+      "model_rating": "Solid D",
       "projected_flip": false
     },
     {
@@ -1397,7 +1417,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-1.html",
+      "race_url": "/running.html?chamber=house&district=1&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -1410,6 +1430,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -1424,7 +1445,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-2.html",
+      "race_url": "/running.html?chamber=house&district=2&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -1437,6 +1458,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -1451,7 +1473,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-3.html",
+      "race_url": "/running.html?chamber=house&district=3&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -1464,6 +1486,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -1478,7 +1501,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-4.html",
+      "race_url": "/running.html?chamber=house&district=4&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -1491,6 +1514,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -1509,7 +1533,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-5.html",
+      "race_url": "/running.html?chamber=house&district=5&election=general",
       "rating": null,
       "status": "No comparable baseline",
       "margin_pp": null,
@@ -1523,6 +1547,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -1537,7 +1562,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-6.html",
+      "race_url": "/running.html?chamber=house&district=6&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -1550,6 +1575,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -1568,7 +1594,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-7.html",
+      "race_url": "/running.html?chamber=house&district=7&election=general",
       "rating": null,
       "status": "No comparable baseline",
       "margin_pp": null,
@@ -1582,6 +1608,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -1596,7 +1623,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-8.html",
+      "race_url": "/running.html?chamber=house&district=8&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -1609,6 +1636,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -1623,7 +1651,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-9.html",
+      "race_url": "/running.html?chamber=house&district=9&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -1636,6 +1664,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -1650,7 +1679,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-10.html",
+      "race_url": "/running.html?chamber=house&district=10&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -1663,6 +1692,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -1677,7 +1707,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-11.html",
+      "race_url": "/running.html?chamber=house&district=11&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -1690,6 +1720,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -1704,7 +1735,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-12.html",
+      "race_url": "/running.html?chamber=house&district=12&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -1717,6 +1748,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -1735,7 +1767,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-13.html",
+      "race_url": "/running.html?chamber=house&district=13&election=general",
       "rating": null,
       "status": "No comparable baseline",
       "margin_pp": null,
@@ -1749,6 +1781,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -1763,7 +1796,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-14.html",
+      "race_url": "/running.html?chamber=house&district=14&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -1776,6 +1809,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -1790,7 +1824,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-16.html",
+      "race_url": "/running.html?chamber=house&district=16&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": 17.210007581501138,
@@ -1815,6 +1849,7 @@
       "baseline_leading_party": "DEM",
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -1829,7 +1864,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-17.html",
+      "race_url": "/running.html?chamber=house&district=17&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -1842,6 +1877,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -1860,7 +1896,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-18.html",
+      "race_url": "/running.html?chamber=house&district=18&election=general",
       "rating": null,
       "status": "No comparable baseline",
       "margin_pp": null,
@@ -1874,6 +1910,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -1892,7 +1929,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-19.html",
+      "race_url": "/running.html?chamber=house&district=19&election=general",
       "rating": null,
       "status": "No comparable baseline",
       "margin_pp": null,
@@ -1906,6 +1943,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -1920,7 +1958,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-20.html",
+      "race_url": "/running.html?chamber=house&district=20&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -1933,6 +1971,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -1947,7 +1986,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-21.html",
+      "race_url": "/running.html?chamber=house&district=21&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": 1.205502765565168,
@@ -1972,6 +2011,7 @@
       "baseline_leading_party": "REP",
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -1990,7 +2030,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-23.html",
+      "race_url": "/running.html?chamber=house&district=23&election=general",
       "rating": null,
       "status": "No comparable baseline",
       "margin_pp": null,
@@ -2004,6 +2044,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2018,7 +2059,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-24.html",
+      "race_url": "/running.html?chamber=house&district=24&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -2031,6 +2072,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2045,7 +2087,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-25.html",
+      "race_url": "/running.html?chamber=house&district=25&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -2058,6 +2100,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2072,7 +2115,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-26.html",
+      "race_url": "/running.html?chamber=house&district=26&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": 16.805721096543504,
@@ -2097,6 +2140,7 @@
       "baseline_leading_party": "DEM",
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2111,7 +2155,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-28.html",
+      "race_url": "/running.html?chamber=house&district=28&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": 14.62470338453853,
@@ -2136,6 +2180,7 @@
       "baseline_leading_party": "REP",
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2150,7 +2195,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-29.html",
+      "race_url": "/running.html?chamber=house&district=29&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -2163,6 +2208,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2177,7 +2223,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-30.html",
+      "race_url": "/running.html?chamber=house&district=30&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -2190,6 +2236,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2204,7 +2251,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-31.html",
+      "race_url": "/running.html?chamber=house&district=31&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": 19.24238903090867,
@@ -2229,6 +2276,7 @@
       "baseline_leading_party": "DEM",
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2243,7 +2291,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-32.html",
+      "race_url": "/running.html?chamber=house&district=32&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -2256,6 +2304,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2270,7 +2319,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-34.html",
+      "race_url": "/running.html?chamber=house&district=34&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": 25.720355862435266,
@@ -2295,6 +2344,7 @@
       "baseline_leading_party": "DEM",
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2309,7 +2359,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-36.html",
+      "race_url": "/running.html?chamber=house&district=36&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -2322,6 +2372,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2340,7 +2391,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-37.html",
+      "race_url": "/running.html?chamber=house&district=37&election=general",
       "rating": null,
       "status": "No comparable baseline",
       "margin_pp": null,
@@ -2354,6 +2405,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2368,7 +2420,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-38.html",
+      "race_url": "/running.html?chamber=house&district=38&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -2381,6 +2433,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2395,7 +2448,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-40.html",
+      "race_url": "/running.html?chamber=house&district=40&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": 38.60097606321171,
@@ -2420,6 +2473,7 @@
       "baseline_leading_party": "REP",
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2434,7 +2488,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-43.html",
+      "race_url": "/running.html?chamber=house&district=43&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": 7.169601996949106,
@@ -2459,6 +2513,7 @@
       "baseline_leading_party": "DEM",
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2473,7 +2528,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-45.html",
+      "race_url": "/running.html?chamber=house&district=45&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -2486,6 +2541,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2500,7 +2556,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-46.html",
+      "race_url": "/running.html?chamber=house&district=46&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": 22.19527760051053,
@@ -2525,6 +2581,7 @@
       "baseline_leading_party": "DEM",
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2539,7 +2596,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-47.html",
+      "race_url": "/running.html?chamber=house&district=47&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": 39.28021285534239,
@@ -2564,6 +2621,7 @@
       "baseline_leading_party": "REP",
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2578,7 +2636,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-48.html",
+      "race_url": "/running.html?chamber=house&district=48&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -2591,6 +2649,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2609,7 +2668,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-49.html",
+      "race_url": "/running.html?chamber=house&district=49&election=general",
       "rating": null,
       "status": "Outside 30-point window",
       "margin_pp": 57.85550458715596,
@@ -2634,6 +2693,7 @@
       "baseline_leading_party": "IND",
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2648,7 +2708,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-50.html",
+      "race_url": "/running.html?chamber=house&district=50&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -2661,6 +2721,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2675,7 +2736,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-51.html",
+      "race_url": "/running.html?chamber=house&district=51&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -2688,6 +2749,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2702,7 +2764,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-52.html",
+      "race_url": "/running.html?chamber=house&district=52&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -2715,6 +2777,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2729,7 +2792,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-54.html",
+      "race_url": "/running.html?chamber=house&district=54&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -2742,6 +2805,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2756,7 +2820,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-55.html",
+      "race_url": "/running.html?chamber=house&district=55&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -2769,6 +2833,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2783,7 +2848,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-56.html",
+      "race_url": "/running.html?chamber=house&district=56&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -2796,6 +2861,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2810,7 +2876,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-57.html",
+      "race_url": "/running.html?chamber=house&district=57&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": 7.446808510638298,
@@ -2835,6 +2901,7 @@
       "baseline_leading_party": "DEM",
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2849,7 +2916,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-58.html",
+      "race_url": "/running.html?chamber=house&district=58&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -2862,6 +2929,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2876,7 +2944,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-59.html",
+      "race_url": "/running.html?chamber=house&district=59&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -2889,6 +2957,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2903,7 +2972,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-60.html",
+      "race_url": "/running.html?chamber=house&district=60&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -2916,6 +2985,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2930,7 +3000,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-61.html",
+      "race_url": "/running.html?chamber=house&district=61&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": 14.992053681794102,
@@ -2955,6 +3025,7 @@
       "baseline_leading_party": "DEM",
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2969,7 +3040,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-62.html",
+      "race_url": "/running.html?chamber=house&district=62&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -2982,6 +3053,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -2996,7 +3068,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-63.html",
+      "race_url": "/running.html?chamber=house&district=63&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -3009,6 +3081,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3023,7 +3096,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-64.html",
+      "race_url": "/running.html?chamber=house&district=64&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -3036,6 +3109,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3050,7 +3124,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-65.html",
+      "race_url": "/running.html?chamber=house&district=65&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -3063,6 +3137,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3077,7 +3152,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-66.html",
+      "race_url": "/running.html?chamber=house&district=66&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": 29.34574976122254,
@@ -3102,6 +3177,7 @@
       "baseline_leading_party": "DEM",
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3120,7 +3196,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-67.html",
+      "race_url": "/running.html?chamber=house&district=67&election=general",
       "rating": null,
       "status": "No comparable baseline",
       "margin_pp": null,
@@ -3134,6 +3210,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3148,7 +3225,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-68.html",
+      "race_url": "/running.html?chamber=house&district=68&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": 17.471723220226213,
@@ -3173,6 +3250,7 @@
       "baseline_leading_party": "DEM",
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3187,7 +3265,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-69.html",
+      "race_url": "/running.html?chamber=house&district=69&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": 27.649930264993028,
@@ -3212,6 +3290,7 @@
       "baseline_leading_party": "DEM",
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3226,7 +3305,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-70.html",
+      "race_url": "/running.html?chamber=house&district=70&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": 9.95475113122172,
@@ -3251,6 +3330,7 @@
       "baseline_leading_party": "DEM",
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3265,7 +3345,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-71.html",
+      "race_url": "/running.html?chamber=house&district=71&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -3278,6 +3358,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3292,7 +3373,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-72.html",
+      "race_url": "/running.html?chamber=house&district=72&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -3305,6 +3386,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3319,7 +3401,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-73.html",
+      "race_url": "/running.html?chamber=house&district=73&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -3332,6 +3414,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3346,7 +3429,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-74.html",
+      "race_url": "/running.html?chamber=house&district=74&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -3359,6 +3442,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3373,7 +3457,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/house-75.html",
+      "race_url": "/running.html?chamber=house&district=75&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -3386,6 +3470,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3400,7 +3485,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-1.html",
+      "race_url": "/running.html?chamber=senate&district=1&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -3413,6 +3498,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3427,7 +3513,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-2.html",
+      "race_url": "/running.html?chamber=senate&district=2&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -3440,6 +3526,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3454,7 +3541,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-3.html",
+      "race_url": "/running.html?chamber=senate&district=3&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -3467,6 +3554,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3481,7 +3569,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-4.html",
+      "race_url": "/running.html?chamber=senate&district=4&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -3494,6 +3582,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3508,7 +3597,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-6.html",
+      "race_url": "/running.html?chamber=senate&district=6&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -3521,6 +3610,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3535,7 +3625,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-7.html",
+      "race_url": "/running.html?chamber=senate&district=7&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -3548,6 +3638,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3562,7 +3653,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-8.html",
+      "race_url": "/running.html?chamber=senate&district=8&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": 30.98473007093904,
@@ -3587,6 +3678,7 @@
       "baseline_leading_party": "DEM",
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3601,7 +3693,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-9.html",
+      "race_url": "/running.html?chamber=senate&district=9&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -3614,6 +3706,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3628,7 +3721,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-10.html",
+      "race_url": "/running.html?chamber=senate&district=10&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": 16.0566785306561,
@@ -3653,6 +3746,7 @@
       "baseline_leading_party": "DEM",
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3667,7 +3761,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-11.html",
+      "race_url": "/running.html?chamber=senate&district=11&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -3680,6 +3774,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3694,7 +3789,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-12.html",
+      "race_url": "/running.html?chamber=senate&district=12&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -3707,6 +3802,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3721,7 +3817,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-13.html",
+      "race_url": "/running.html?chamber=senate&district=13&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": 40.85217245146651,
@@ -3746,6 +3842,7 @@
       "baseline_leading_party": "DEM",
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3764,7 +3861,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-14.html",
+      "race_url": "/running.html?chamber=senate&district=14&election=general",
       "rating": null,
       "status": "No comparable baseline",
       "margin_pp": null,
@@ -3778,6 +3875,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3792,7 +3890,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-15.html",
+      "race_url": "/running.html?chamber=senate&district=15&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -3805,6 +3903,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3819,7 +3918,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-16.html",
+      "race_url": "/running.html?chamber=senate&district=16&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -3832,6 +3931,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3846,7 +3946,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-18.html",
+      "race_url": "/running.html?chamber=senate&district=18&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -3859,6 +3959,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3873,7 +3974,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-20.html",
+      "race_url": "/running.html?chamber=senate&district=20&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -3886,6 +3987,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3900,7 +4002,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-21.html",
+      "race_url": "/running.html?chamber=senate&district=21&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -3913,6 +4015,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3927,7 +4030,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-22.html",
+      "race_url": "/running.html?chamber=senate&district=22&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -3940,6 +4043,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3954,7 +4058,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-23.html",
+      "race_url": "/running.html?chamber=senate&district=23&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": 36.267258382643,
@@ -3979,6 +4083,7 @@
       "baseline_leading_party": "REP",
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -3993,7 +4098,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-24.html",
+      "race_url": "/running.html?chamber=senate&district=24&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": 15.733678086619262,
@@ -4018,6 +4123,7 @@
       "baseline_leading_party": "DEM",
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -4032,7 +4138,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-25.html",
+      "race_url": "/running.html?chamber=senate&district=25&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": 16.5402775790528,
@@ -4057,6 +4163,7 @@
       "baseline_leading_party": "DEM",
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -4071,7 +4178,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-26.html",
+      "race_url": "/running.html?chamber=senate&district=26&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": 15.51077443553725,
@@ -4096,6 +4203,7 @@
       "baseline_leading_party": "DEM",
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -4110,7 +4218,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-27.html",
+      "race_url": "/running.html?chamber=senate&district=27&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -4123,6 +4231,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -4137,7 +4246,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-28.html",
+      "race_url": "/running.html?chamber=senate&district=28&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -4150,6 +4259,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -4164,7 +4274,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-29.html",
+      "race_url": "/running.html?chamber=senate&district=29&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": 0.47678427345411867,
@@ -4189,6 +4299,7 @@
       "baseline_leading_party": "DEM",
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -4203,7 +4314,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-30.html",
+      "race_url": "/running.html?chamber=senate&district=30&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -4216,6 +4327,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -4230,7 +4342,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-31.html",
+      "race_url": "/running.html?chamber=senate&district=31&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": 20.981929764745995,
@@ -4255,6 +4367,7 @@
       "baseline_leading_party": "DEM",
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -4269,7 +4382,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-32.html",
+      "race_url": "/running.html?chamber=senate&district=32&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -4282,6 +4395,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -4296,7 +4410,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-35.html",
+      "race_url": "/running.html?chamber=senate&district=35&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -4309,6 +4423,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -4323,7 +4438,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-36.html",
+      "race_url": "/running.html?chamber=senate&district=36&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": null,
@@ -4336,6 +4451,7 @@
       "baseline_leading_party": null,
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     },
     {
@@ -4350,7 +4466,7 @@
       "watch": false,
       "source_year": 2024,
       "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-37.html",
+      "race_url": "/running.html?chamber=senate&district=37&election=general",
       "rating": null,
       "status": "Unopposed",
       "margin_pp": 32.32346772314146,
@@ -4375,6 +4491,7 @@
       "baseline_leading_party": "DEM",
       "scenarios": [],
       "included": false,
+      "model_rating": null,
       "projected_flip": false
     }
   ],

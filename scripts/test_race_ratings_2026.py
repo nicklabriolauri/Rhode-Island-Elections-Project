@@ -15,9 +15,9 @@ class RatingsTests(unittest.TestCase):
    if r['status']=='Unopposed':self.assertIsNone(r['rating'])
  def test_specific_cases(self):
   rows={(r['chamber'],r['district']):r for r in build()['races']}
-  self.assertEqual(rows['house',15]['rating'],'Likely D');self.assertEqual(len(rows['house',15]['candidates']),3)
+  self.assertEqual(rows['house',15]['rating'],'Lean D');self.assertEqual(len(rows['house',15]['candidates']),3)
   self.assertEqual(rows['house',41]['status'],'Rated');self.assertTrue(rows['house',41]['watch'])
-  self.assertIsNone(rows['house',5]['rating']);self.assertEqual(rows['senate',34]['rating'],'Lean D')
+  self.assertIsNone(rows['house',5]['rating']);self.assertEqual(rows['senate',34]['rating'],'Toss Up')
  def test_swing_arithmetic(self):
   for r in build()['races']:
    for scenario in r['scenarios']:
@@ -31,7 +31,7 @@ class RatingsTests(unittest.TestCase):
    if r['scenarios']:
     self.assertEqual(r['included'],r['margin_pp']<=30 or any(s['leader_margin_pp']<=30 for s in r['scenarios']))
  def test_projected_flips(self):
-  d=build();self.assertEqual({(r['chamber'],r['district']) for r in d['races'] if r['projected_flip']},{('house',15),('house',42),('house',53),('senate',34)})
+  d=build();self.assertEqual({(r['chamber'],r['district']) for r in d['races'] if r['projected_flip']},{('house',15),('house',42),('house',53)})
   self.assertEqual(d['prediction_dem_vote_share_swing_pp'],7)
  def test_key_transitions_and_independents(self):
   rows={(r['chamber'],r['district']):r for r in build()['races']}
