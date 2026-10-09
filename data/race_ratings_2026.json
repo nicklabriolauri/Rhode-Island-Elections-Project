@@ -125,7 +125,8 @@
       "included": true,
       "baseline_dem_margin_pp": -16.2149563827662,
       "model_rating": "Tilt R",
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": true
     },
     {
       "chamber": "house",
@@ -212,7 +213,8 @@
       "included": true,
       "baseline_dem_margin_pp": -10.458828981924919,
       "model_rating": "Tilt D",
-      "projected_flip": true
+      "projected_flip": true,
+      "within_competitive_window": true
     },
     {
       "chamber": "house",
@@ -299,7 +301,8 @@
       "included": true,
       "baseline_dem_margin_pp": -9.48638787538591,
       "model_rating": "Tilt D",
-      "projected_flip": true
+      "projected_flip": true,
+      "within_competitive_window": true
     },
     {
       "chamber": "senate",
@@ -388,7 +391,8 @@
       "baseline_dem_margin_pp": -7.1216968835170045,
       "model_rating": "Lean D",
       "editorial_override": true,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": true
     },
     {
       "chamber": "house",
@@ -487,7 +491,8 @@
       "baseline_dem_margin_pp": -0.2540415704387991,
       "model_rating": "Likely D",
       "editorial_override": true,
-      "projected_flip": true
+      "projected_flip": true,
+      "within_competitive_window": true
     },
     {
       "chamber": "house",
@@ -574,7 +579,8 @@
       "baseline_dem_margin_pp": -30.142042277150207,
       "category": "Solid",
       "model_rating": "Solid R",
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": true
     },
     {
       "chamber": "house",
@@ -661,7 +667,8 @@
       "included": true,
       "baseline_dem_margin_pp": 7.735176103432902,
       "model_rating": "Solid D",
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": true
     },
     {
       "chamber": "house",
@@ -748,7 +755,8 @@
       "included": true,
       "baseline_dem_margin_pp": 8.074965293845441,
       "model_rating": "Solid D",
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": true
     },
     {
       "chamber": "house",
@@ -835,7 +843,8 @@
       "included": true,
       "baseline_dem_margin_pp": 14.017918676774638,
       "model_rating": "Solid D",
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": true
     },
     {
       "chamber": "senate",
@@ -922,7 +931,8 @@
       "included": true,
       "baseline_dem_margin_pp": 16.371350137259796,
       "model_rating": "Solid D",
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": true
     },
     {
       "chamber": "senate",
@@ -1009,7 +1019,8 @@
       "included": true,
       "baseline_dem_margin_pp": 16.739071409177303,
       "model_rating": "Solid D",
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": true
     },
     {
       "chamber": "house",
@@ -1096,7 +1107,8 @@
       "included": true,
       "baseline_dem_margin_pp": 17.842523477004576,
       "model_rating": "Solid D",
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": true
     },
     {
       "chamber": "house",
@@ -1183,7 +1195,8 @@
       "included": true,
       "baseline_dem_margin_pp": 20.206704650854643,
       "model_rating": "Solid D",
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": true
     },
     {
       "chamber": "house",
@@ -1270,53 +1283,8 @@
       "included": true,
       "baseline_dem_margin_pp": 24.437182280319536,
       "model_rating": "Solid D",
-      "projected_flip": false
-    },
-    {
-      "chamber": "senate",
-      "district": 19,
-      "candidates": [
-        {
-          "name": "Ryan W Pearson",
-          "party": "DEM"
-        },
-        {
-          "name": "James D Purcell",
-          "party": "IND"
-        }
-      ],
-      "watch": false,
-      "source_year": 2024,
-      "source_url": "/data/race_data.json",
-      "race_url": "/running.html?chamber=senate&district=19&election=general",
-      "rating": null,
-      "status": "Not modeled",
-      "margin_pp": 14.223132904684519,
-      "leading_party": "DEM",
-      "notes": [
-        "The uniform Democratic-versus-Republican swing is not applied to this Democratic-versus-Independent race. Its historical baseline remains visible.",
-        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ],
-      "baseline_candidates": [
-        {
-          "name": "Ryan W. Pearson",
-          "party": "DEM",
-          "votes": 8083
-        },
-        {
-          "name": "Amanda J. Blais",
-          "party": "IND",
-          "votes": 6070
-        }
-      ],
-      "category": "Likely",
-      "baseline_status": "Rated",
-      "baseline_rating": "Likely D",
-      "baseline_leading_party": "DEM",
-      "scenarios": [],
-      "included": true,
-      "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": true
     },
     {
       "chamber": "senate",
@@ -1335,11 +1303,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=5&election=general",
-      "rating": "Solid D",
-      "status": "Outside 30-point window",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": 58.07608046205935,
       "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "The 6%, 7% and 8% scenarios mean percentage-point gains in Democratic vote share, not changes of that size in the D\u2013R margin. They are user-specified scenarios, not measured forecasts.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
@@ -1399,11 +1368,13 @@
           "method": "Uniform two-party swing"
         }
       ],
-      "included": false,
+      "included": true,
       "baseline_dem_margin_pp": 58.07608046205935,
-      "category": "Solid",
+      "category": "Safe",
       "model_rating": "Solid D",
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -1418,20 +1389,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=1&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -1446,20 +1421,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=2&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -1474,20 +1453,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=3&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -1502,20 +1485,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=4&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -1534,11 +1521,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=5&election=general",
-      "rating": null,
-      "status": "No comparable baseline",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "The 2024 race was unopposed or lacks a comparable two-candidate result. An unopposed vote share is not a competitiveness estimate.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
@@ -1546,9 +1534,12 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -1563,20 +1554,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=6&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -1595,11 +1590,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=7&election=general",
-      "rating": null,
-      "status": "No comparable baseline",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "The 2024 race was unopposed or lacks a comparable two-candidate result. An unopposed vote share is not a competitiveness estimate.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
@@ -1607,9 +1603,12 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -1624,20 +1623,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=8&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -1652,20 +1655,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=9&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -1680,20 +1687,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=10&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -1708,20 +1719,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=11&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -1736,20 +1751,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=12&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -1768,11 +1787,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=13&election=general",
-      "rating": null,
-      "status": "No comparable baseline",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "The 2024 race was unopposed or lacks a comparable two-candidate result. An unopposed vote share is not a competitiveness estimate.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
@@ -1780,9 +1800,12 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -1797,20 +1820,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=14&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -1825,11 +1852,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=16&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": 17.210007581501138,
       "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -1848,9 +1876,12 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -1865,20 +1896,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=17&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -1897,11 +1932,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=18&election=general",
-      "rating": null,
-      "status": "No comparable baseline",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "The 2024 race was unopposed or lacks a comparable two-candidate result. An unopposed vote share is not a competitiveness estimate.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
@@ -1909,9 +1945,12 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -1930,11 +1969,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=19&election=general",
-      "rating": null,
-      "status": "No comparable baseline",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "The 2024 race was unopposed or lacks a comparable two-candidate result. An unopposed vote share is not a competitiveness estimate.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
@@ -1942,9 +1982,12 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -1959,20 +2002,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=20&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -1987,11 +2034,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=21&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe R",
+      "status": "Rated",
       "margin_pp": 1.205502765565168,
       "leading_party": "REP",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -2010,9 +2058,12 @@
       "baseline_rating": null,
       "baseline_leading_party": "REP",
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2031,11 +2082,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=23&election=general",
-      "rating": null,
-      "status": "No comparable baseline",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "The 2024 race was unopposed or lacks a comparable two-candidate result. An unopposed vote share is not a competitiveness estimate.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
@@ -2043,9 +2095,12 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2060,20 +2115,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=24&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2088,20 +2147,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=25&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2116,11 +2179,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=26&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": 16.805721096543504,
       "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -2139,9 +2203,12 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2156,11 +2223,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=28&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe R",
+      "status": "Rated",
       "margin_pp": 14.62470338453853,
       "leading_party": "REP",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -2179,9 +2247,12 @@
       "baseline_rating": null,
       "baseline_leading_party": "REP",
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2196,20 +2267,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=29&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe R",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "REP",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2224,20 +2299,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=30&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2252,11 +2331,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=31&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": 19.24238903090867,
       "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -2275,9 +2355,12 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2292,20 +2375,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=32&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2320,11 +2407,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=34&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": 25.720355862435266,
       "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -2343,9 +2431,12 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2360,20 +2451,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=36&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2392,11 +2487,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=37&election=general",
-      "rating": null,
-      "status": "No comparable baseline",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "The 2024 race was unopposed or lacks a comparable two-candidate result. An unopposed vote share is not a competitiveness estimate.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
@@ -2404,9 +2500,12 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2421,20 +2520,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=38&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2449,11 +2552,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=40&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe R",
+      "status": "Rated",
       "margin_pp": 38.60097606321171,
       "leading_party": "REP",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -2472,9 +2576,12 @@
       "baseline_rating": null,
       "baseline_leading_party": "REP",
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2489,11 +2596,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=43&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": 7.169601996949106,
       "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -2512,9 +2620,12 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2529,20 +2640,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=45&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2557,11 +2672,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=46&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": 22.19527760051053,
       "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -2580,9 +2696,12 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2597,11 +2716,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=47&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe R",
+      "status": "Rated",
       "margin_pp": 39.28021285534239,
       "leading_party": "REP",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -2620,9 +2740,12 @@
       "baseline_rating": null,
       "baseline_leading_party": "REP",
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2637,20 +2760,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=48&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe R",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "REP",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2669,11 +2796,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=49&election=general",
-      "rating": null,
-      "status": "Outside 30-point window",
+      "rating": "Safe Independent",
+      "status": "Rated",
       "margin_pp": 57.85550458715596,
       "leading_party": "IND",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -2692,9 +2820,12 @@
       "baseline_rating": null,
       "baseline_leading_party": "IND",
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2709,20 +2840,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=50&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2737,20 +2872,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=51&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2765,20 +2904,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=52&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2793,20 +2936,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=54&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2821,20 +2968,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=55&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2849,20 +3000,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=56&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2877,11 +3032,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=57&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": 7.446808510638298,
       "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -2900,9 +3056,12 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2917,20 +3076,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=58&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2945,20 +3108,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=59&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -2973,20 +3140,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=60&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -3001,11 +3172,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=61&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": 14.992053681794102,
       "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -3024,9 +3196,12 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -3041,20 +3216,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=62&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -3069,20 +3248,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=63&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -3097,20 +3280,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=64&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -3125,20 +3312,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=65&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -3153,11 +3344,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=66&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": 29.34574976122254,
       "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -3176,9 +3368,12 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -3197,11 +3392,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=67&election=general",
-      "rating": null,
-      "status": "No comparable baseline",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "The 2024 race was unopposed or lacks a comparable two-candidate result. An unopposed vote share is not a competitiveness estimate.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
@@ -3209,9 +3405,12 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -3226,11 +3425,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=68&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": 17.471723220226213,
       "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -3249,9 +3449,12 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -3266,11 +3469,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=69&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": 27.649930264993028,
       "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -3289,9 +3493,12 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -3306,11 +3513,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=70&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": 9.95475113122172,
       "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -3329,9 +3537,12 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -3346,20 +3557,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=71&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -3374,20 +3589,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=72&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -3402,20 +3621,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=73&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -3430,20 +3653,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=74&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "house",
@@ -3458,20 +3685,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=house&district=75&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -3486,20 +3717,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=1&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -3514,20 +3749,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=2&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -3542,20 +3781,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=3&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -3570,20 +3813,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=4&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -3598,20 +3845,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=6&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -3626,20 +3877,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=7&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -3654,11 +3909,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=8&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": 30.98473007093904,
       "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -3677,9 +3933,12 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -3694,20 +3953,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=9&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -3722,11 +3985,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=10&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": 16.0566785306561,
       "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -3745,9 +4009,12 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -3762,20 +4029,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=11&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -3790,20 +4061,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=12&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -3818,11 +4093,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=13&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": 40.85217245146651,
       "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -3841,9 +4117,12 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -3862,11 +4141,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=14&election=general",
-      "rating": null,
-      "status": "No comparable baseline",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "The 2024 race was unopposed or lacks a comparable two-candidate result. An unopposed vote share is not a competitiveness estimate.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
@@ -3874,9 +4154,12 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -3891,20 +4174,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=15&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -3919,20 +4206,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=16&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -3947,20 +4238,73 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=18&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
+    },
+    {
+      "chamber": "senate",
+      "district": 19,
+      "candidates": [
+        {
+          "name": "Ryan W Pearson",
+          "party": "DEM"
+        },
+        {
+          "name": "James D Purcell",
+          "party": "IND"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/running.html?chamber=senate&district=19&election=general",
+      "rating": "Safe D",
+      "status": "Rated",
+      "margin_pp": 14.223132904684519,
+      "leading_party": "DEM",
+      "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
+        "The uniform Democratic-versus-Republican swing is not applied to this Democratic-versus-Independent race. Its historical baseline remains visible.",
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Ryan W. Pearson",
+          "party": "DEM",
+          "votes": 8083
+        },
+        {
+          "name": "Amanda J. Blais",
+          "party": "IND",
+          "votes": 6070
+        }
+      ],
+      "category": "Safe",
+      "baseline_status": "Rated",
+      "baseline_rating": "Likely D",
+      "baseline_leading_party": "DEM",
+      "scenarios": [],
+      "included": true,
+      "model_rating": null,
+      "projected_flip": false,
+      "within_competitive_window": true,
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -3975,20 +4319,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=20&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -4003,20 +4351,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=21&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe R",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "REP",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -4031,20 +4383,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=22&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -4059,11 +4415,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=23&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe R",
+      "status": "Rated",
       "margin_pp": 36.267258382643,
       "leading_party": "REP",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -4082,9 +4439,12 @@
       "baseline_rating": null,
       "baseline_leading_party": "REP",
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -4099,11 +4459,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=24&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": 15.733678086619262,
       "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -4122,9 +4483,12 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -4139,11 +4503,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=25&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": 16.5402775790528,
       "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -4162,9 +4527,12 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -4179,11 +4547,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=26&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": 15.51077443553725,
       "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -4202,9 +4571,12 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -4219,20 +4591,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=27&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -4247,20 +4623,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=28&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -4275,11 +4655,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=29&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": 0.47678427345411867,
       "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -4298,9 +4679,12 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -4315,20 +4699,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=30&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -4343,11 +4731,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=31&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": 20.981929764745995,
       "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -4366,9 +4755,12 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -4383,20 +4775,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=32&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -4411,20 +4807,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=35&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -4439,20 +4839,24 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=36&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": null,
-      "leading_party": null,
+      "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_status": "Unopposed",
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     },
     {
       "chamber": "senate",
@@ -4467,11 +4871,12 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/running.html?chamber=senate&district=37&election=general",
-      "rating": null,
-      "status": "Unopposed",
+      "rating": "Safe D",
+      "status": "Rated",
       "margin_pp": 32.32346772314146,
       "leading_party": "DEM",
       "notes": [
+        "RIEP editorial safe-seat classification based on the current field and historical winning party; this is not a modeled vote margin or win probability.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -4490,9 +4895,12 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false,
+      "included": true,
       "model_rating": null,
-      "projected_flip": false
+      "projected_flip": false,
+      "within_competitive_window": false,
+      "category": "Safe",
+      "coverage_classification": true
     }
   ],
   "publication_status": "Preliminary prediction",

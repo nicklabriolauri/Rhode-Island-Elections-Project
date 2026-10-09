@@ -4,8 +4,8 @@ const functions=source.slice(source.indexOf('  function raceRatingLine('),source
 const data=JSON.parse(fs.readFileSync('data/race_ratings_2026.json')),roster=JSON.parse(fs.readFileSync('data/whos_running_2026.json'));
 const context={raceRatings:new Map(data.races.map(r=>[`${r.chamber}|${r.district}`,r])),esc:s=>String(s),candidateCard:c=>`<p>${c.name}</p>`};vm.createContext(context);vm.runInContext(functions,context);
 let output=context.raceSection('house',15,[],roster);assert(output.includes('Lean D'));assert(output.includes('Allan W Fung'));assert(output.includes('races/house-15.html'));assert(output.includes('Published preliminary prediction'));assert(output.includes('(Flip)'));
-output=context.raceSection('house',1,[],roster);assert(output.includes('Edith H Ajello'));assert(!output.includes('Michael J Garman'));assert(output.includes('Unopposed'));
-output=context.raceSection('senate',19,[],roster);assert(output.includes('Not rated'));assert(!output.includes('undefined'));
+output=context.raceSection('house',1,[],roster);assert(output.includes('Edith H Ajello'));assert(!output.includes('Michael J Garman'));assert(output.includes('Safe D'));
+output=context.raceSection('senate',19,[],roster);assert(output.includes('Safe D'));assert(!output.includes('undefined'));
 context.raceRatings=new Map();output=context.raceSection('house',15,[],roster);assert(output.includes('races/house-15.html'));assert(output.includes('Not rated'));
 const home=fs.readFileSync('index.html','utf8'),start=home.indexOf('    function buildAddressRatingLine('),end=home.indexOf('    function renderAddressSearchResult(',start);
 const ctx={homepageRaceRatings:new Map(data.races.map(r=>[`${r.chamber}|${r.district}`,r])),homepageCandidates:roster.chambers.house['15'].candidates.map(c=>({...c,chamber:'house',district_number:15})),escapeHtml:s=>String(s),chamberLabel:()=> 'House',buildCandidateProfileHref:()=>'',partyLongLabel:s=>s};vm.createContext(ctx);vm.runInContext(home.slice(start,end),ctx);output=ctx.buildAddressCandidateGroup('house',15);assert(output.includes('Lean D'));assert(output.includes('races/house-15.html'));assert(output.includes('Fung'));
