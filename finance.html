@@ -3025,7 +3025,7 @@
       selected.filing_history = latest.filing_history || [];
       const docs = selected.original_documents || [];
       selected.original_documents = selected.latest_filing_href
-        ? docs.filter(doc => doc.href === selected.latest_filing_href)
+        ? docs.filter(doc => doc.href === selected.latest_filing_href || doc.period === selected.reporting_period_label)
         : docs.filter(doc => doc.period === selected.reporting_period_label || doc.label === selected.report_label);
       return selected;
     }
