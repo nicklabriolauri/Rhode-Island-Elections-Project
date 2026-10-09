@@ -3012,7 +3012,7 @@
       const snapshots = [profile, ...(profile.archived_reporting_periods || []).slice().reverse()];
       return snapshots.map((snapshot, index) => {
         const period = snapshot.reporting_period_label || snapshot.report_label || "Reporting period";
-        const q2 = /6\/30\/2026|Q2 2026|second.quarter/i.test(period);
+        const q2 = /April 1, 2026 to June 30, 2026|4\/1\/2026.*6\/30\/2026|^Q2 2026$|second.quarter/i.test(period);
         const label = q2 ? "Q2 2026" : /28.days.before/i.test(snapshot.report_label || "")
           ? "28 days before election · 2026" : period;
         return {key: index === 0 ? "latest" : `archive-${(profile.archived_reporting_periods || []).length - index}`, label, snapshot};
