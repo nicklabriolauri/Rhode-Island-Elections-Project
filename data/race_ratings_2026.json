@@ -1,7 +1,7 @@
 {
   "updated": "2026-10-08",
-  "title": "2026 legislative race ratings \u00b7 baseline test",
-  "method": "Carry forward the 2024 top-two named-candidate margin, excluding write-ins, when the historical party matchup remains represented in the 2026 field. Rate only current contested races with a comparable margin of 20 percentage points or less. Incumbency is already embedded in historical results; no additional incumbent bonus is applied.",
+  "title": "2026 legislative race ratings \u00b7 Democratic swing scenarios",
+  "method": "Apply user-assumed Democratic vote-share gains of 6, 7 and 8 percentage points to comparable contested 2024 D\u2013R baselines. Each gain shifts the two-party margin by twice that amount. Keep previously rated races and add races entering the 20-point window in either scenario. The main rating uses the 7-point midpoint. Do not apply the D\u2013R shift to independent-versus-Democratic matchups.",
   "thresholds": [
     {
       "label": "Toss Up",
@@ -25,323 +25,11 @@
     },
     {
       "label": "Solid",
-      "min_pp": 15,
-      "max_inclusive_pp": 20
+      "min_pp": 15
     }
   ],
-  "margin_definition": "Difference between the top two candidates as a share of their combined votes, in percentage points. Ratings are party-level historical baselines, not candidate polling estimates.",
+  "margin_definition": "Scenario leader\u2019s gap over the runner-up in percentage points. For two-party races this is the D\u2013R margin; for District 15 it includes the assumed Fung share. The historical margin excludes write-ins.",
   "races": [
-    {
-      "chamber": "house",
-      "district": 15,
-      "candidates": [
-        {
-          "name": "Colleen M Crudele",
-          "party": "DEM"
-        },
-        {
-          "name": "Christopher G Paplauskas",
-          "party": "REP"
-        },
-        {
-          "name": "Allan W Fung",
-          "party": "IND"
-        }
-      ],
-      "watch": true,
-      "source_year": 2024,
-      "source_url": "/data/race_data.json",
-      "race_url": "/races/house-15.html",
-      "rating": "Toss Up",
-      "status": "Rated",
-      "margin_pp": 0.2540415704387991,
-      "leading_party": "REP",
-      "notes": [
-        "The current race has more than two candidates. This label uses the historical two-candidate baseline; third-party vote shares and vote transfers are not estimated.",
-        "The existing District 15 conditional test also starts at Toss Up under its default assumptions: zero Democratic swing, zero campaign adjustment, Fung at 20%, and half of his support taken from each major party. These third-party assumptions are adjustable, not measured support.",
-        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ],
-      "baseline_candidates": [
-        {
-          "name": "Christopher G. Paplauskas",
-          "party": "REP",
-          "votes": 4341
-        },
-        {
-          "name": "Maria A. Bucci",
-          "party": "DEM",
-          "votes": 4319
-        }
-      ],
-      "category": "Toss Up",
-      "model_url": "/house-15-election-test.html"
-    },
-    {
-      "chamber": "senate",
-      "district": 34,
-      "candidates": [
-        {
-          "name": "Samantha R Wilcox",
-          "party": "DEM"
-        },
-        {
-          "name": "Elaine J Morgan",
-          "party": "REP"
-        }
-      ],
-      "watch": true,
-      "source_year": 2024,
-      "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-34.html",
-      "rating": "Lean R",
-      "status": "Rated",
-      "margin_pp": 7.1216968835170045,
-      "leading_party": "REP",
-      "notes": [
-        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ],
-      "baseline_candidates": [
-        {
-          "name": "Elaine J. Morgan",
-          "party": "REP",
-          "votes": 9040
-        },
-        {
-          "name": "Stephen Moffitt",
-          "party": "DEM",
-          "votes": 7838
-        }
-      ],
-      "category": "Lean"
-    },
-    {
-      "chamber": "house",
-      "district": 44,
-      "candidates": [
-        {
-          "name": "Gregory Costantino",
-          "party": "DEM"
-        },
-        {
-          "name": "Joseph Hosey",
-          "party": "REP"
-        }
-      ],
-      "watch": true,
-      "source_year": 2024,
-      "source_url": "/data/race_data.json",
-      "race_url": "/races/house-44.html",
-      "rating": "Lean D",
-      "status": "Rated",
-      "margin_pp": 7.735176103432902,
-      "leading_party": "DEM",
-      "notes": [
-        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ],
-      "baseline_candidates": [
-        {
-          "name": "Gregory J. Costantino",
-          "party": "DEM",
-          "votes": 4833
-        },
-        {
-          "name": "Peter Trementozzi",
-          "party": "REP",
-          "votes": 4139
-        }
-      ],
-      "category": "Lean"
-    },
-    {
-      "chamber": "house",
-      "district": 39,
-      "candidates": [
-        {
-          "name": "Megan L Cotter",
-          "party": "DEM"
-        },
-        {
-          "name": "Jasmin Roy",
-          "party": "REP"
-        }
-      ],
-      "watch": true,
-      "source_year": 2024,
-      "source_url": "/data/race_data.json",
-      "race_url": "/races/house-39.html",
-      "rating": "Lean D",
-      "status": "Rated",
-      "margin_pp": 8.074965293845441,
-      "leading_party": "DEM",
-      "notes": [
-        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ],
-      "baseline_candidates": [
-        {
-          "name": "Megan L. Cotter",
-          "party": "DEM",
-          "votes": 4671
-        },
-        {
-          "name": "Justin K. Price",
-          "party": "REP",
-          "votes": 3973
-        }
-      ],
-      "category": "Lean"
-    },
-    {
-      "chamber": "house",
-      "district": 42,
-      "candidates": [
-        {
-          "name": "Edward W Stravato",
-          "party": "DEM"
-        },
-        {
-          "name": "Richard R Fascia",
-          "party": "REP"
-        }
-      ],
-      "watch": true,
-      "source_year": 2024,
-      "source_url": "/data/race_data.json",
-      "race_url": "/races/house-42.html",
-      "rating": "Lean R",
-      "status": "Rated",
-      "margin_pp": 9.48638787538591,
-      "leading_party": "REP",
-      "notes": [
-        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ],
-      "baseline_candidates": [
-        {
-          "name": "Richard R. Fascia",
-          "party": "REP",
-          "votes": 3901
-        },
-        {
-          "name": "Kelsey K. Coletta",
-          "party": "DEM",
-          "votes": 3225
-        }
-      ],
-      "category": "Lean"
-    },
-    {
-      "chamber": "house",
-      "district": 53,
-      "candidates": [
-        {
-          "name": "Suzanna L Alba",
-          "party": "DEM"
-        },
-        {
-          "name": "Paul M Santucci",
-          "party": "REP"
-        }
-      ],
-      "watch": true,
-      "source_year": 2024,
-      "source_url": "/data/race_data.json",
-      "race_url": "/races/house-53.html",
-      "rating": "Likely R",
-      "status": "Rated",
-      "margin_pp": 10.458828981924919,
-      "leading_party": "REP",
-      "notes": [
-        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ],
-      "baseline_candidates": [
-        {
-          "name": "Paul M. Santucci",
-          "party": "REP",
-          "votes": 3575
-        },
-        {
-          "name": "Bernard Hawkins",
-          "party": "DEM",
-          "votes": 2898
-        }
-      ],
-      "category": "Likely"
-    },
-    {
-      "chamber": "house",
-      "district": 22,
-      "candidates": [
-        {
-          "name": "Zakary J Pereira",
-          "party": "DEM"
-        },
-        {
-          "name": "Barbara Quigley",
-          "party": "REP"
-        }
-      ],
-      "watch": false,
-      "source_year": 2024,
-      "source_url": "/data/race_data.json",
-      "race_url": "/races/house-22.html",
-      "rating": "Likely D",
-      "status": "Rated",
-      "margin_pp": 14.017918676774638,
-      "leading_party": "DEM",
-      "notes": [
-        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ],
-      "baseline_candidates": [
-        {
-          "name": "Joseph J. Solomon, Jr.",
-          "party": "DEM",
-          "votes": 4136
-        },
-        {
-          "name": "David Stone",
-          "party": "REP",
-          "votes": 3119
-        }
-      ],
-      "category": "Likely"
-    },
-    {
-      "chamber": "senate",
-      "district": 19,
-      "candidates": [
-        {
-          "name": "Ryan W Pearson",
-          "party": "DEM"
-        },
-        {
-          "name": "James D Purcell",
-          "party": "IND"
-        }
-      ],
-      "watch": false,
-      "source_year": 2024,
-      "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-19.html",
-      "rating": "Likely D",
-      "status": "Rated",
-      "margin_pp": 14.223132904684519,
-      "leading_party": "DEM",
-      "notes": [
-        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ],
-      "baseline_candidates": [
-        {
-          "name": "Ryan W. Pearson",
-          "party": "DEM",
-          "votes": 8083
-        },
-        {
-          "name": "Amanda J. Blais",
-          "party": "IND",
-          "votes": 6070
-        }
-      ],
-      "category": "Likely"
-    },
     {
       "chamber": "senate",
       "district": 17,
@@ -367,11 +55,13 @@
       "source_year": 2024,
       "source_url": "/data/race_data.json",
       "race_url": "/races/senate-17.html",
-      "rating": "Solid R",
+      "rating": "Tilt R",
       "status": "Rated",
       "margin_pp": 16.2149563827662,
       "leading_party": "REP",
       "notes": [
+        "The 6%, 7% and 8% scenarios mean percentage-point gains in Democratic vote share, not changes of that size in the D\u2013R margin. They are user-specified scenarios, not measured forecasts.",
+        "The Senate 17 scenarios shift the major-party baseline only; shares for the two independent candidates are unknown.",
         "The current race has more than two candidates. This label uses the historical two-candidate baseline; third-party vote shares and vote transfers are not estimated.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
@@ -387,7 +77,743 @@
           "votes": 6291
         }
       ],
+      "category": "Tilt",
+      "baseline_status": "Rated",
+      "baseline_rating": "Solid R",
+      "baseline_leading_party": "REP",
+      "scenarios": [
+        {
+          "dem_vote_share_swing_pp": 6,
+          "dem_rep_margin_pp": -4.2149563827662035,
+          "leader_margin_pp": 4.2149563827662035,
+          "leading_party": "REP",
+          "rating": "Tilt R",
+          "category": "Tilt",
+          "conditional_shares_pct": {
+            "DEM": 47.8925218086169,
+            "REP": 52.1074781913831
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 7,
+          "dem_rep_margin_pp": -2.2149563827662035,
+          "leader_margin_pp": 2.2149563827662035,
+          "leading_party": "REP",
+          "rating": "Tilt R",
+          "category": "Tilt",
+          "conditional_shares_pct": {
+            "DEM": 48.8925218086169,
+            "REP": 51.1074781913831
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 8,
+          "dem_rep_margin_pp": -0.21495638276620355,
+          "leader_margin_pp": 0.21495638276620355,
+          "leading_party": "REP",
+          "rating": "Toss Up",
+          "category": "Toss Up",
+          "conditional_shares_pct": {
+            "DEM": 49.8925218086169,
+            "REP": 50.1074781913831
+          },
+          "method": "Uniform two-party swing"
+        }
+      ],
+      "included": true,
+      "baseline_dem_margin_pp": -16.2149563827662
+    },
+    {
+      "chamber": "house",
+      "district": 53,
+      "candidates": [
+        {
+          "name": "Suzanna L Alba",
+          "party": "DEM"
+        },
+        {
+          "name": "Paul M Santucci",
+          "party": "REP"
+        }
+      ],
+      "watch": true,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-53.html",
+      "rating": "Tilt D",
+      "status": "Rated",
+      "margin_pp": 10.458828981924919,
+      "leading_party": "DEM",
+      "notes": [
+        "The 6%, 7% and 8% scenarios mean percentage-point gains in Democratic vote share, not changes of that size in the D\u2013R margin. They are user-specified scenarios, not measured forecasts.",
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Paul M. Santucci",
+          "party": "REP",
+          "votes": 3575
+        },
+        {
+          "name": "Bernard Hawkins",
+          "party": "DEM",
+          "votes": 2898
+        }
+      ],
+      "category": "Tilt",
+      "baseline_status": "Rated",
+      "baseline_rating": "Likely R",
+      "baseline_leading_party": "REP",
+      "scenarios": [
+        {
+          "dem_vote_share_swing_pp": 6,
+          "dem_rep_margin_pp": 1.541171018075076,
+          "leader_margin_pp": 1.541171018075076,
+          "leading_party": "DEM",
+          "rating": "Toss Up",
+          "category": "Toss Up",
+          "conditional_shares_pct": {
+            "DEM": 50.77058550903754,
+            "REP": 49.22941449096246
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 7,
+          "dem_rep_margin_pp": 3.541171018075076,
+          "leader_margin_pp": 3.541171018075076,
+          "leading_party": "DEM",
+          "rating": "Tilt D",
+          "category": "Tilt",
+          "conditional_shares_pct": {
+            "DEM": 51.77058550903754,
+            "REP": 48.22941449096246
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 8,
+          "dem_rep_margin_pp": 5.541171018075076,
+          "leader_margin_pp": 5.541171018075076,
+          "leading_party": "DEM",
+          "rating": "Lean D",
+          "category": "Lean",
+          "conditional_shares_pct": {
+            "DEM": 52.77058550903754,
+            "REP": 47.22941449096246
+          },
+          "method": "Uniform two-party swing"
+        }
+      ],
+      "included": true,
+      "baseline_dem_margin_pp": -10.458828981924919
+    },
+    {
+      "chamber": "house",
+      "district": 42,
+      "candidates": [
+        {
+          "name": "Edward W Stravato",
+          "party": "DEM"
+        },
+        {
+          "name": "Richard R Fascia",
+          "party": "REP"
+        }
+      ],
+      "watch": true,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-42.html",
+      "rating": "Tilt D",
+      "status": "Rated",
+      "margin_pp": 9.48638787538591,
+      "leading_party": "DEM",
+      "notes": [
+        "The 6%, 7% and 8% scenarios mean percentage-point gains in Democratic vote share, not changes of that size in the D\u2013R margin. They are user-specified scenarios, not measured forecasts.",
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Richard R. Fascia",
+          "party": "REP",
+          "votes": 3901
+        },
+        {
+          "name": "Kelsey K. Coletta",
+          "party": "DEM",
+          "votes": 3225
+        }
+      ],
+      "category": "Tilt",
+      "baseline_status": "Rated",
+      "baseline_rating": "Lean R",
+      "baseline_leading_party": "REP",
+      "scenarios": [
+        {
+          "dem_vote_share_swing_pp": 6,
+          "dem_rep_margin_pp": 2.5136121246140846,
+          "leader_margin_pp": 2.5136121246140846,
+          "leading_party": "DEM",
+          "rating": "Tilt D",
+          "category": "Tilt",
+          "conditional_shares_pct": {
+            "DEM": 51.25680606230704,
+            "REP": 48.74319393769296
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 7,
+          "dem_rep_margin_pp": 4.513612124614085,
+          "leader_margin_pp": 4.513612124614085,
+          "leading_party": "DEM",
+          "rating": "Tilt D",
+          "category": "Tilt",
+          "conditional_shares_pct": {
+            "DEM": 52.25680606230704,
+            "REP": 47.74319393769296
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 8,
+          "dem_rep_margin_pp": 6.513612124614085,
+          "leader_margin_pp": 6.513612124614085,
+          "leading_party": "DEM",
+          "rating": "Lean D",
+          "category": "Lean",
+          "conditional_shares_pct": {
+            "DEM": 53.25680606230704,
+            "REP": 46.74319393769296
+          },
+          "method": "Uniform two-party swing"
+        }
+      ],
+      "included": true,
+      "baseline_dem_margin_pp": -9.48638787538591
+    },
+    {
+      "chamber": "senate",
+      "district": 34,
+      "candidates": [
+        {
+          "name": "Samantha R Wilcox",
+          "party": "DEM"
+        },
+        {
+          "name": "Elaine J Morgan",
+          "party": "REP"
+        }
+      ],
+      "watch": true,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-34.html",
+      "rating": "Lean D",
+      "status": "Rated",
+      "margin_pp": 7.1216968835170045,
+      "leading_party": "DEM",
+      "notes": [
+        "The 6%, 7% and 8% scenarios mean percentage-point gains in Democratic vote share, not changes of that size in the D\u2013R margin. They are user-specified scenarios, not measured forecasts.",
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Elaine J. Morgan",
+          "party": "REP",
+          "votes": 9040
+        },
+        {
+          "name": "Stephen Moffitt",
+          "party": "DEM",
+          "votes": 7838
+        }
+      ],
+      "category": "Lean",
+      "baseline_status": "Rated",
+      "baseline_rating": "Lean R",
+      "baseline_leading_party": "REP",
+      "scenarios": [
+        {
+          "dem_vote_share_swing_pp": 6,
+          "dem_rep_margin_pp": 4.878303116482996,
+          "leader_margin_pp": 4.878303116482996,
+          "leading_party": "DEM",
+          "rating": "Tilt D",
+          "category": "Tilt",
+          "conditional_shares_pct": {
+            "DEM": 52.4391515582415,
+            "REP": 47.5608484417585
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 7,
+          "dem_rep_margin_pp": 6.878303116482996,
+          "leader_margin_pp": 6.878303116482996,
+          "leading_party": "DEM",
+          "rating": "Lean D",
+          "category": "Lean",
+          "conditional_shares_pct": {
+            "DEM": 53.4391515582415,
+            "REP": 46.5608484417585
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 8,
+          "dem_rep_margin_pp": 8.878303116482996,
+          "leader_margin_pp": 8.878303116482996,
+          "leading_party": "DEM",
+          "rating": "Lean D",
+          "category": "Lean",
+          "conditional_shares_pct": {
+            "DEM": 54.4391515582415,
+            "REP": 45.5608484417585
+          },
+          "method": "Uniform two-party swing"
+        }
+      ],
+      "included": true,
+      "baseline_dem_margin_pp": -7.1216968835170045
+    },
+    {
+      "chamber": "house",
+      "district": 15,
+      "candidates": [
+        {
+          "name": "Colleen M Crudele",
+          "party": "DEM"
+        },
+        {
+          "name": "Christopher G Paplauskas",
+          "party": "REP"
+        },
+        {
+          "name": "Allan W Fung",
+          "party": "IND"
+        }
+      ],
+      "watch": true,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-15.html",
+      "rating": "Likely D",
+      "status": "Rated",
+      "margin_pp": 0.2540415704387991,
+      "leading_party": "DEM",
+      "notes": [
+        "The 6%, 7% and 8% scenarios mean percentage-point gains in Democratic vote share, not changes of that size in the D\u2013R margin. They are user-specified scenarios, not measured forecasts.",
+        "Fung remains at 20% with 50% of his support taken from Republicans, matching the existing conditional test. These are assumptions, not polling estimates.",
+        "The current race has more than two candidates. This label uses the historical two-candidate baseline; third-party vote shares and vote transfers are not estimated.",
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Christopher G. Paplauskas",
+          "party": "REP",
+          "votes": 4341
+        },
+        {
+          "name": "Maria A. Bucci",
+          "party": "DEM",
+          "votes": 4319
+        }
+      ],
+      "category": "Likely",
+      "model_url": "/house-15-election-test.html",
+      "baseline_status": "Rated",
+      "baseline_rating": "Toss Up",
+      "baseline_leading_party": "REP",
+      "scenarios": [
+        {
+          "dem_vote_share_swing_pp": 6,
+          "dem_rep_margin_pp": 11.745958429561199,
+          "leader_margin_pp": 11.745958429561199,
+          "leading_party": "DEM",
+          "rating": "Likely D",
+          "category": "Likely",
+          "conditional_shares_pct": {
+            "DEM": 45.8729792147806,
+            "REP": 34.1270207852194,
+            "IND": 20
+          },
+          "method": "District 15 conditional three-candidate split"
+        },
+        {
+          "dem_vote_share_swing_pp": 7,
+          "dem_rep_margin_pp": 13.745958429561199,
+          "leader_margin_pp": 13.745958429561199,
+          "leading_party": "DEM",
+          "rating": "Likely D",
+          "category": "Likely",
+          "conditional_shares_pct": {
+            "DEM": 46.8729792147806,
+            "REP": 33.1270207852194,
+            "IND": 20
+          },
+          "method": "District 15 conditional three-candidate split"
+        },
+        {
+          "dem_vote_share_swing_pp": 8,
+          "dem_rep_margin_pp": 15.745958429561199,
+          "leader_margin_pp": 15.745958429561199,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 47.8729792147806,
+            "REP": 32.1270207852194,
+            "IND": 20
+          },
+          "method": "District 15 conditional three-candidate split"
+        }
+      ],
+      "included": true,
+      "baseline_dem_margin_pp": -0.2540415704387991
+    },
+    {
+      "chamber": "house",
+      "district": 41,
+      "candidates": [
+        {
+          "name": "Shaina N Smith",
+          "party": "DEM"
+        },
+        {
+          "name": "Michael J Riley",
+          "party": "REP"
+        }
+      ],
+      "watch": true,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-41.html",
+      "rating": "Solid R",
+      "status": "Rated",
+      "margin_pp": 30.142042277150207,
+      "leading_party": "REP",
+      "notes": [
+        "The 6%, 7% and 8% scenarios mean percentage-point gains in Democratic vote share, not changes of that size in the D\u2013R margin. They are user-specified scenarios, not measured forecasts.",
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Robert Quattrocchi",
+          "party": "REP",
+          "votes": 5818
+        },
+        {
+          "name": "Shaina N. Smith",
+          "party": "DEM",
+          "votes": 3123
+        }
+      ],
+      "baseline_status": "Outside 20-point window",
+      "baseline_rating": "Solid R",
+      "baseline_leading_party": "REP",
+      "scenarios": [
+        {
+          "dem_vote_share_swing_pp": 6,
+          "dem_rep_margin_pp": -18.14204227715021,
+          "leader_margin_pp": 18.14204227715021,
+          "leading_party": "REP",
+          "rating": "Solid R",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 40.928978861424895,
+            "REP": 59.071021138575105
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 7,
+          "dem_rep_margin_pp": -16.14204227715021,
+          "leader_margin_pp": 16.14204227715021,
+          "leading_party": "REP",
+          "rating": "Solid R",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 41.928978861424895,
+            "REP": 58.071021138575105
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 8,
+          "dem_rep_margin_pp": -14.14204227715021,
+          "leader_margin_pp": 14.14204227715021,
+          "leading_party": "REP",
+          "rating": "Likely R",
+          "category": "Likely",
+          "conditional_shares_pct": {
+            "DEM": 42.928978861424895,
+            "REP": 57.071021138575105
+          },
+          "method": "Uniform two-party swing"
+        }
+      ],
+      "included": true,
+      "baseline_dem_margin_pp": -30.142042277150207,
       "category": "Solid"
+    },
+    {
+      "chamber": "house",
+      "district": 44,
+      "candidates": [
+        {
+          "name": "Gregory Costantino",
+          "party": "DEM"
+        },
+        {
+          "name": "Joseph Hosey",
+          "party": "REP"
+        }
+      ],
+      "watch": true,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-44.html",
+      "rating": "Solid D",
+      "status": "Rated",
+      "margin_pp": 7.735176103432902,
+      "leading_party": "DEM",
+      "notes": [
+        "The 6%, 7% and 8% scenarios mean percentage-point gains in Democratic vote share, not changes of that size in the D\u2013R margin. They are user-specified scenarios, not measured forecasts.",
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Gregory J. Costantino",
+          "party": "DEM",
+          "votes": 4833
+        },
+        {
+          "name": "Peter Trementozzi",
+          "party": "REP",
+          "votes": 4139
+        }
+      ],
+      "category": "Solid",
+      "baseline_status": "Rated",
+      "baseline_rating": "Lean D",
+      "baseline_leading_party": "DEM",
+      "scenarios": [
+        {
+          "dem_vote_share_swing_pp": 6,
+          "dem_rep_margin_pp": 19.735176103432906,
+          "leader_margin_pp": 19.735176103432906,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 59.86758805171645,
+            "REP": 40.13241194828355
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 7,
+          "dem_rep_margin_pp": 21.735176103432906,
+          "leader_margin_pp": 21.735176103432906,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 60.86758805171645,
+            "REP": 39.13241194828355
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 8,
+          "dem_rep_margin_pp": 23.735176103432906,
+          "leader_margin_pp": 23.735176103432906,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 61.86758805171645,
+            "REP": 38.13241194828355
+          },
+          "method": "Uniform two-party swing"
+        }
+      ],
+      "included": true,
+      "baseline_dem_margin_pp": 7.735176103432902
+    },
+    {
+      "chamber": "house",
+      "district": 39,
+      "candidates": [
+        {
+          "name": "Megan L Cotter",
+          "party": "DEM"
+        },
+        {
+          "name": "Jasmin Roy",
+          "party": "REP"
+        }
+      ],
+      "watch": true,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-39.html",
+      "rating": "Solid D",
+      "status": "Rated",
+      "margin_pp": 8.074965293845441,
+      "leading_party": "DEM",
+      "notes": [
+        "The 6%, 7% and 8% scenarios mean percentage-point gains in Democratic vote share, not changes of that size in the D\u2013R margin. They are user-specified scenarios, not measured forecasts.",
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Megan L. Cotter",
+          "party": "DEM",
+          "votes": 4671
+        },
+        {
+          "name": "Justin K. Price",
+          "party": "REP",
+          "votes": 3973
+        }
+      ],
+      "category": "Solid",
+      "baseline_status": "Rated",
+      "baseline_rating": "Lean D",
+      "baseline_leading_party": "DEM",
+      "scenarios": [
+        {
+          "dem_vote_share_swing_pp": 6,
+          "dem_rep_margin_pp": 20.074965293845437,
+          "leader_margin_pp": 20.074965293845437,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 60.03748264692272,
+            "REP": 39.96251735307728
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 7,
+          "dem_rep_margin_pp": 22.074965293845437,
+          "leader_margin_pp": 22.074965293845437,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 61.03748264692272,
+            "REP": 38.96251735307728
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 8,
+          "dem_rep_margin_pp": 24.074965293845437,
+          "leader_margin_pp": 24.074965293845437,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 62.03748264692272,
+            "REP": 37.96251735307728
+          },
+          "method": "Uniform two-party swing"
+        }
+      ],
+      "included": true,
+      "baseline_dem_margin_pp": 8.074965293845441
+    },
+    {
+      "chamber": "house",
+      "district": 22,
+      "candidates": [
+        {
+          "name": "Zakary J Pereira",
+          "party": "DEM"
+        },
+        {
+          "name": "Barbara Quigley",
+          "party": "REP"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-22.html",
+      "rating": "Solid D",
+      "status": "Rated",
+      "margin_pp": 14.017918676774638,
+      "leading_party": "DEM",
+      "notes": [
+        "The 6%, 7% and 8% scenarios mean percentage-point gains in Democratic vote share, not changes of that size in the D\u2013R margin. They are user-specified scenarios, not measured forecasts.",
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Joseph J. Solomon, Jr.",
+          "party": "DEM",
+          "votes": 4136
+        },
+        {
+          "name": "David Stone",
+          "party": "REP",
+          "votes": 3119
+        }
+      ],
+      "category": "Solid",
+      "baseline_status": "Rated",
+      "baseline_rating": "Likely D",
+      "baseline_leading_party": "DEM",
+      "scenarios": [
+        {
+          "dem_vote_share_swing_pp": 6,
+          "dem_rep_margin_pp": 26.01791867677464,
+          "leader_margin_pp": 26.01791867677464,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 63.00895933838732,
+            "REP": 36.99104066161268
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 7,
+          "dem_rep_margin_pp": 28.017918676774627,
+          "leader_margin_pp": 28.017918676774627,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 64.00895933838731,
+            "REP": 35.991040661612686
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 8,
+          "dem_rep_margin_pp": 30.017918676774627,
+          "leader_margin_pp": 30.017918676774627,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 65.00895933838731,
+            "REP": 34.991040661612686
+          },
+          "method": "Uniform two-party swing"
+        }
+      ],
+      "included": true,
+      "baseline_dem_margin_pp": 14.017918676774638
     },
     {
       "chamber": "senate",
@@ -411,6 +837,7 @@
       "margin_pp": 16.371350137259796,
       "leading_party": "DEM",
       "notes": [
+        "The 6%, 7% and 8% scenarios mean percentage-point gains in Democratic vote share, not changes of that size in the D\u2013R margin. They are user-specified scenarios, not measured forecasts.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -425,7 +852,53 @@
           "votes": 6702
         }
       ],
-      "category": "Solid"
+      "category": "Solid",
+      "baseline_status": "Rated",
+      "baseline_rating": "Solid D",
+      "baseline_leading_party": "DEM",
+      "scenarios": [
+        {
+          "dem_vote_share_swing_pp": 6,
+          "dem_rep_margin_pp": 28.37135013725981,
+          "leader_margin_pp": 28.37135013725981,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 64.1856750686299,
+            "REP": 35.814324931370095
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 7,
+          "dem_rep_margin_pp": 30.37135013725981,
+          "leader_margin_pp": 30.37135013725981,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 65.1856750686299,
+            "REP": 34.814324931370095
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 8,
+          "dem_rep_margin_pp": 32.37135013725981,
+          "leader_margin_pp": 32.37135013725981,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 66.1856750686299,
+            "REP": 33.814324931370095
+          },
+          "method": "Uniform two-party swing"
+        }
+      ],
+      "included": true,
+      "baseline_dem_margin_pp": 16.371350137259796
     },
     {
       "chamber": "senate",
@@ -449,6 +922,7 @@
       "margin_pp": 16.739071409177303,
       "leading_party": "DEM",
       "notes": [
+        "The 6%, 7% and 8% scenarios mean percentage-point gains in Democratic vote share, not changes of that size in the D\u2013R margin. They are user-specified scenarios, not measured forecasts.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -463,7 +937,53 @@
           "votes": 6133
         }
       ],
-      "category": "Solid"
+      "category": "Solid",
+      "baseline_status": "Rated",
+      "baseline_rating": "Solid D",
+      "baseline_leading_party": "DEM",
+      "scenarios": [
+        {
+          "dem_vote_share_swing_pp": 6,
+          "dem_rep_margin_pp": 28.739071409177313,
+          "leader_margin_pp": 28.739071409177313,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 64.36953570458866,
+            "REP": 35.63046429541134
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 7,
+          "dem_rep_margin_pp": 30.739071409177313,
+          "leader_margin_pp": 30.739071409177313,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 65.36953570458866,
+            "REP": 34.63046429541134
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 8,
+          "dem_rep_margin_pp": 32.73907140917731,
+          "leader_margin_pp": 32.73907140917731,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 66.36953570458866,
+            "REP": 33.63046429541134
+          },
+          "method": "Uniform two-party swing"
+        }
+      ],
+      "included": true,
+      "baseline_dem_margin_pp": 16.739071409177303
     },
     {
       "chamber": "house",
@@ -487,6 +1007,7 @@
       "margin_pp": 17.842523477004576,
       "leading_party": "DEM",
       "notes": [
+        "The 6%, 7% and 8% scenarios mean percentage-point gains in Democratic vote share, not changes of that size in the D\u2013R margin. They are user-specified scenarios, not measured forecasts.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
       ],
       "baseline_candidates": [
@@ -501,6 +1022,351 @@
           "votes": 3412
         }
       ],
+      "category": "Solid",
+      "baseline_status": "Rated",
+      "baseline_rating": "Solid D",
+      "baseline_leading_party": "DEM",
+      "scenarios": [
+        {
+          "dem_vote_share_swing_pp": 6,
+          "dem_rep_margin_pp": 29.84252347700459,
+          "leader_margin_pp": 29.84252347700459,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 64.9212617385023,
+            "REP": 35.078738261497705
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 7,
+          "dem_rep_margin_pp": 31.84252347700459,
+          "leader_margin_pp": 31.84252347700459,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 65.9212617385023,
+            "REP": 34.078738261497705
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 8,
+          "dem_rep_margin_pp": 33.84252347700459,
+          "leader_margin_pp": 33.84252347700459,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 66.9212617385023,
+            "REP": 33.078738261497705
+          },
+          "method": "Uniform two-party swing"
+        }
+      ],
+      "included": true,
+      "baseline_dem_margin_pp": 17.842523477004576
+    },
+    {
+      "chamber": "senate",
+      "district": 19,
+      "candidates": [
+        {
+          "name": "Ryan W Pearson",
+          "party": "DEM"
+        },
+        {
+          "name": "James D Purcell",
+          "party": "IND"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-19.html",
+      "rating": null,
+      "status": "Not modeled",
+      "margin_pp": 14.223132904684519,
+      "leading_party": "DEM",
+      "notes": [
+        "The uniform Democratic-versus-Republican swing is not applied to this Democratic-versus-Independent race. Its historical baseline remains visible.",
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Ryan W. Pearson",
+          "party": "DEM",
+          "votes": 8083
+        },
+        {
+          "name": "Amanda J. Blais",
+          "party": "IND",
+          "votes": 6070
+        }
+      ],
+      "category": "Likely",
+      "baseline_status": "Rated",
+      "baseline_rating": "Likely D",
+      "baseline_leading_party": "DEM",
+      "scenarios": [],
+      "included": true
+    },
+    {
+      "chamber": "house",
+      "district": 27,
+      "candidates": [
+        {
+          "name": "Angela S Coburn",
+          "party": "DEM"
+        },
+        {
+          "name": "Lawrence Paul Almagno Jr",
+          "party": "REP"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-27.html",
+      "rating": "Solid D",
+      "status": "Outside 20-point window",
+      "margin_pp": 20.206704650854643,
+      "leading_party": "DEM",
+      "notes": [
+        "The 6%, 7% and 8% scenarios mean percentage-point gains in Democratic vote share, not changes of that size in the D\u2013R margin. They are user-specified scenarios, not measured forecasts.",
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Patricia A. Serpa",
+          "party": "DEM",
+          "votes": 4536
+        },
+        {
+          "name": "Andrew N. Kowalski",
+          "party": "REP",
+          "votes": 3011
+        }
+      ],
+      "baseline_status": "Outside 20-point window",
+      "baseline_rating": "Solid D",
+      "baseline_leading_party": "DEM",
+      "scenarios": [
+        {
+          "dem_vote_share_swing_pp": 6,
+          "dem_rep_margin_pp": 32.20670465085465,
+          "leader_margin_pp": 32.20670465085465,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 66.10335232542732,
+            "REP": 33.89664767457268
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 7,
+          "dem_rep_margin_pp": 34.20670465085465,
+          "leader_margin_pp": 34.20670465085465,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 67.10335232542732,
+            "REP": 32.89664767457268
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 8,
+          "dem_rep_margin_pp": 36.20670465085465,
+          "leader_margin_pp": 36.20670465085465,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 68.10335232542732,
+            "REP": 31.896647674572677
+          },
+          "method": "Uniform two-party swing"
+        }
+      ],
+      "included": false,
+      "baseline_dem_margin_pp": 20.206704650854643,
+      "category": "Solid"
+    },
+    {
+      "chamber": "house",
+      "district": 35,
+      "candidates": [
+        {
+          "name": "Kathleen A Fogarty",
+          "party": "DEM"
+        },
+        {
+          "name": "Jennifer P Nerbonne",
+          "party": "REP"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-35.html",
+      "rating": "Solid D",
+      "status": "Outside 20-point window",
+      "margin_pp": 24.437182280319536,
+      "leading_party": "DEM",
+      "notes": [
+        "The 6%, 7% and 8% scenarios mean percentage-point gains in Democratic vote share, not changes of that size in the D\u2013R margin. They are user-specified scenarios, not measured forecasts.",
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Kathleen A. Fogarty",
+          "party": "DEM",
+          "votes": 3427
+        },
+        {
+          "name": "Jennifer P. Nerbonne",
+          "party": "REP",
+          "votes": 2081
+        }
+      ],
+      "baseline_status": "Outside 20-point window",
+      "baseline_rating": "Solid D",
+      "baseline_leading_party": "DEM",
+      "scenarios": [
+        {
+          "dem_vote_share_swing_pp": 6,
+          "dem_rep_margin_pp": 36.43718228031952,
+          "leader_margin_pp": 36.43718228031952,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 68.21859114015976,
+            "REP": 31.78140885984024
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 7,
+          "dem_rep_margin_pp": 38.43718228031952,
+          "leader_margin_pp": 38.43718228031952,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 69.21859114015976,
+            "REP": 30.78140885984024
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 8,
+          "dem_rep_margin_pp": 40.43718228031952,
+          "leader_margin_pp": 40.43718228031952,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 70.21859114015976,
+            "REP": 29.78140885984024
+          },
+          "method": "Uniform two-party swing"
+        }
+      ],
+      "included": false,
+      "baseline_dem_margin_pp": 24.437182280319536,
+      "category": "Solid"
+    },
+    {
+      "chamber": "senate",
+      "district": 5,
+      "candidates": [
+        {
+          "name": "Samuel W Bell",
+          "party": "DEM"
+        },
+        {
+          "name": "William D Connell Jr",
+          "party": "REP"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/senate-5.html",
+      "rating": "Solid D",
+      "status": "Outside 20-point window",
+      "margin_pp": 58.07608046205935,
+      "leading_party": "DEM",
+      "notes": [
+        "The 6%, 7% and 8% scenarios mean percentage-point gains in Democratic vote share, not changes of that size in the D\u2013R margin. They are user-specified scenarios, not measured forecasts.",
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Samuel W. Bell",
+          "party": "DEM",
+          "votes": 7937
+        },
+        {
+          "name": "William D. Connell, Jr.",
+          "party": "REP",
+          "votes": 2105
+        }
+      ],
+      "baseline_status": "Outside 20-point window",
+      "baseline_rating": "Solid D",
+      "baseline_leading_party": "DEM",
+      "scenarios": [
+        {
+          "dem_vote_share_swing_pp": 6,
+          "dem_rep_margin_pp": 70.07608046205934,
+          "leader_margin_pp": 70.07608046205934,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 85.03804023102967,
+            "REP": 14.961959768970331
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 7,
+          "dem_rep_margin_pp": 72.07608046205934,
+          "leader_margin_pp": 72.07608046205934,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 86.03804023102967,
+            "REP": 13.961959768970331
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 8,
+          "dem_rep_margin_pp": 74.07608046205934,
+          "leader_margin_pp": 74.07608046205934,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 87.03804023102967,
+            "REP": 12.961959768970331
+          },
+          "method": "Uniform two-party swing"
+        }
+      ],
+      "included": false,
+      "baseline_dem_margin_pp": 58.07608046205935,
       "category": "Solid"
     },
     {
@@ -522,7 +1388,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -543,7 +1414,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -564,7 +1440,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -585,7 +1466,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -611,7 +1497,12 @@
       "notes": [
         "The 2024 race was unopposed or lacks a comparable two-candidate result. An unopposed vote share is not a competitiveness estimate.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "No comparable baseline",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -632,7 +1523,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -658,7 +1554,12 @@
       "notes": [
         "The 2024 race was unopposed or lacks a comparable two-candidate result. An unopposed vote share is not a competitiveness estimate.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "No comparable baseline",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -679,7 +1580,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -700,7 +1606,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -721,7 +1632,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -742,7 +1658,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -763,7 +1684,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -789,7 +1715,12 @@
       "notes": [
         "The 2024 race was unopposed or lacks a comparable two-candidate result. An unopposed vote share is not a competitiveness estimate.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "No comparable baseline",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -810,7 +1741,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -843,7 +1779,12 @@
           "party": "REP",
           "votes": 2730
         }
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": "DEM",
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -864,7 +1805,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -890,7 +1836,12 @@
       "notes": [
         "The 2024 race was unopposed or lacks a comparable two-candidate result. An unopposed vote share is not a competitiveness estimate.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "No comparable baseline",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -916,7 +1867,12 @@
       "notes": [
         "The 2024 race was unopposed or lacks a comparable two-candidate result. An unopposed vote share is not a competitiveness estimate.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "No comparable baseline",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -937,7 +1893,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -970,7 +1931,12 @@
           "party": "DEM",
           "votes": 3483
         }
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": "REP",
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -996,7 +1962,12 @@
       "notes": [
         "The 2024 race was unopposed or lacks a comparable two-candidate result. An unopposed vote share is not a competitiveness estimate.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "No comparable baseline",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1017,7 +1988,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1038,7 +2014,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1071,44 +2052,12 @@
           "party": "REP",
           "votes": 2443
         }
-      ]
-    },
-    {
-      "chamber": "house",
-      "district": 27,
-      "candidates": [
-        {
-          "name": "Angela S Coburn",
-          "party": "DEM"
-        },
-        {
-          "name": "Lawrence Paul Almagno Jr",
-          "party": "REP"
-        }
       ],
-      "watch": false,
-      "source_year": 2024,
-      "source_url": "/data/race_data.json",
-      "race_url": "/races/house-27.html",
-      "rating": null,
-      "status": "Outside 20-point window",
-      "margin_pp": 20.206704650854643,
-      "leading_party": "DEM",
-      "notes": [
-        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ],
-      "baseline_candidates": [
-        {
-          "name": "Patricia A. Serpa",
-          "party": "DEM",
-          "votes": 4536
-        },
-        {
-          "name": "Andrew N. Kowalski",
-          "party": "REP",
-          "votes": 3011
-        }
-      ]
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": "DEM",
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1141,7 +2090,12 @@
           "party": "DEM",
           "votes": 3418
         }
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": "REP",
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1162,7 +2116,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1183,7 +2142,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1216,7 +2180,12 @@
           "party": "REP",
           "votes": 3475
         }
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": "DEM",
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1237,7 +2206,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1270,44 +2244,12 @@
           "party": "REP",
           "votes": 2797
         }
-      ]
-    },
-    {
-      "chamber": "house",
-      "district": 35,
-      "candidates": [
-        {
-          "name": "Kathleen A Fogarty",
-          "party": "DEM"
-        },
-        {
-          "name": "Jennifer P Nerbonne",
-          "party": "REP"
-        }
       ],
-      "watch": false,
-      "source_year": 2024,
-      "source_url": "/data/race_data.json",
-      "race_url": "/races/house-35.html",
-      "rating": null,
-      "status": "Outside 20-point window",
-      "margin_pp": 24.437182280319536,
-      "leading_party": "DEM",
-      "notes": [
-        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ],
-      "baseline_candidates": [
-        {
-          "name": "Kathleen A. Fogarty",
-          "party": "DEM",
-          "votes": 3427
-        },
-        {
-          "name": "Jennifer P. Nerbonne",
-          "party": "REP",
-          "votes": 2081
-        }
-      ]
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": "DEM",
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1328,7 +2270,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1354,7 +2301,12 @@
       "notes": [
         "The 2024 race was unopposed or lacks a comparable two-candidate result. An unopposed vote share is not a competitiveness estimate.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "No comparable baseline",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1375,7 +2327,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1408,44 +2365,12 @@
           "party": "DEM",
           "votes": 2642
         }
-      ]
-    },
-    {
-      "chamber": "house",
-      "district": 41,
-      "candidates": [
-        {
-          "name": "Shaina N Smith",
-          "party": "DEM"
-        },
-        {
-          "name": "Michael J Riley",
-          "party": "REP"
-        }
       ],
-      "watch": true,
-      "source_year": 2024,
-      "source_url": "/data/race_data.json",
-      "race_url": "/races/house-41.html",
-      "rating": null,
-      "status": "Outside 20-point window",
-      "margin_pp": 30.142042277150207,
-      "leading_party": "REP",
-      "notes": [
-        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ],
-      "baseline_candidates": [
-        {
-          "name": "Robert Quattrocchi",
-          "party": "REP",
-          "votes": 5818
-        },
-        {
-          "name": "Shaina N. Smith",
-          "party": "DEM",
-          "votes": 3123
-        }
-      ]
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": "REP",
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1478,7 +2403,12 @@
           "party": "REP",
           "votes": 3347
         }
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": "DEM",
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1499,7 +2429,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1532,7 +2467,12 @@
           "party": "REP",
           "votes": 3048
         }
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": "DEM",
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1565,7 +2505,12 @@
           "party": "DEM",
           "votes": 2168
         }
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": "REP",
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1586,7 +2531,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1623,7 +2573,12 @@
           "party": "IND",
           "votes": 735
         }
-      ]
+      ],
+      "baseline_status": "Outside 20-point window",
+      "baseline_rating": null,
+      "baseline_leading_party": "IND",
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1644,7 +2599,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1665,7 +2625,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1686,7 +2651,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1707,7 +2677,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1728,7 +2703,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1749,7 +2729,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1782,7 +2767,12 @@
           "party": "IND",
           "votes": 2175
         }
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": "DEM",
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1803,7 +2793,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1824,7 +2819,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1845,7 +2845,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1878,7 +2883,12 @@
           "party": "REP",
           "votes": 2407
         }
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": "DEM",
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1899,7 +2909,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1920,7 +2935,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1941,7 +2961,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1962,7 +2987,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -1995,7 +3025,12 @@
           "party": "REP",
           "votes": 2959
         }
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": "DEM",
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -2021,7 +3056,12 @@
       "notes": [
         "The 2024 race was unopposed or lacks a comparable two-candidate result. An unopposed vote share is not a competitiveness estimate.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "No comparable baseline",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -2054,7 +3094,12 @@
           "party": "IND",
           "votes": 3101
         }
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": "DEM",
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -2087,7 +3132,12 @@
           "party": "IND",
           "votes": 2075
         }
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": "DEM",
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -2120,7 +3170,12 @@
           "party": "REP",
           "votes": 3383
         }
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": "DEM",
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -2141,7 +3196,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -2162,7 +3222,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -2183,7 +3248,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -2204,7 +3274,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "house",
@@ -2225,7 +3300,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2246,7 +3326,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2267,7 +3352,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2288,7 +3378,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2309,44 +3404,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
-    },
-    {
-      "chamber": "senate",
-      "district": 5,
-      "candidates": [
-        {
-          "name": "Samuel W Bell",
-          "party": "DEM"
-        },
-        {
-          "name": "William D Connell Jr",
-          "party": "REP"
-        }
       ],
-      "watch": false,
-      "source_year": 2024,
-      "source_url": "/data/race_data.json",
-      "race_url": "/races/senate-5.html",
-      "rating": null,
-      "status": "Outside 20-point window",
-      "margin_pp": 58.07608046205935,
-      "leading_party": "DEM",
-      "notes": [
-        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ],
-      "baseline_candidates": [
-        {
-          "name": "Samuel W. Bell",
-          "party": "DEM",
-          "votes": 7937
-        },
-        {
-          "name": "William D. Connell, Jr.",
-          "party": "REP",
-          "votes": 2105
-        }
-      ]
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2367,7 +3430,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2388,7 +3456,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2421,7 +3494,12 @@
           "party": "IND",
           "votes": 2870
         }
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": "DEM",
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2442,7 +3520,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2475,7 +3558,12 @@
           "party": "REP",
           "votes": 6250
         }
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": "DEM",
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2496,7 +3584,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2517,7 +3610,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2550,7 +3648,12 @@
           "party": "REP",
           "votes": 3519
         }
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": "DEM",
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2576,7 +3679,12 @@
       "notes": [
         "The 2024 race was unopposed or lacks a comparable two-candidate result. An unopposed vote share is not a competitiveness estimate.",
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "No comparable baseline",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2597,7 +3705,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2618,7 +3731,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2639,7 +3757,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2660,7 +3783,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2681,7 +3809,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2702,7 +3835,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2735,7 +3873,12 @@
           "party": "DEM",
           "votes": 5170
         }
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": "REP",
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2768,7 +3911,12 @@
           "party": "REP",
           "votes": 3259
         }
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": "DEM",
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2801,7 +3949,12 @@
           "party": "REP",
           "votes": 5833
         }
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": "DEM",
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2834,7 +3987,12 @@
           "party": "REP",
           "votes": 5744
         }
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": "DEM",
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2855,7 +4013,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2876,7 +4039,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2909,7 +4077,12 @@
           "party": "REP",
           "votes": 6784
         }
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": "DEM",
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2930,7 +4103,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2963,7 +4141,12 @@
           "party": "REP",
           "votes": 5794
         }
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": "DEM",
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -2984,7 +4167,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -3005,7 +4193,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -3026,7 +4219,12 @@
       "leading_party": null,
       "notes": [
         "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": null,
+      "scenarios": [],
+      "included": false
     },
     {
       "chamber": "senate",
@@ -3059,7 +4257,18 @@
           "party": "REP",
           "votes": 4356
         }
-      ]
+      ],
+      "baseline_status": "Unopposed",
+      "baseline_rating": null,
+      "baseline_leading_party": "DEM",
+      "scenarios": [],
+      "included": false
     }
+  ],
+  "default_dem_vote_share_swing_pp": 7,
+  "scenario_swings_pp": [
+    6,
+    7,
+    8
   ]
 }
