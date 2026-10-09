@@ -63,6 +63,8 @@ def main(source):
   for field,target in [('receipt_transactions','money_raised'),('expenditure_transactions','money_spent')]:
    actual=round(sum(t['amount'] for t in new[field]),2)
    assert actual==new[target],(name,field,actual,new[target])
+  if p.get('reporting_period_label')==period(dates) and 'updated' in p.get('report_label','').lower() and p.get('money_raised')!=new['money_raised']:
+   raise ValueError(f"Conflicting same-period report for {p['candidate_name']}; preserve the reviewed updated filing until source versions are reconciled.")
   slug=p['slug'];href=f'/data/finance-documents/{slug}-28-days-before-election-2026.pdf';writer.write(ROOT/href.lstrip('/'))
   same=p.get('reporting_period_label')==period(dates) and p.get('money_raised')==new['money_raised'] and p.get('money_spent')==new['money_spent']
   archives=copy.deepcopy(p.get('archived_reporting_periods',[]))

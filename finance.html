@@ -3054,6 +3054,7 @@
       document.title = `${profile.candidate_name} | Campaign Finance | Rhode Island Elections Project`;
       app.innerHTML = `
         ${buildHero(selected, buildFilingControl(choices, choice, selected))}
+        ${selected.finance_audit_note ? `<article class="panel section-card" role="note"><div class="section-label">Source verification note</div><p>${escapeHtml(selected.finance_audit_note)}</p></article>` : ""}
         <section class="content-grid">
           <div class="stack">${buildPacTopicPanel(selected)}${buildDonorHighlights(selected)}</div>
           <div class="stack">${buildSpendingHighlights(selected)}${buildHistory(selected)}${buildVerification(selected)}</div>
