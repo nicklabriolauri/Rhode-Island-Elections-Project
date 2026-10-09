@@ -357,12 +357,13 @@
     .primary-progress-card {
       max-width: 860px;
       margin: 0 auto 20px;
-      padding: 22px 26px;
-      border-radius: 14px;
-      border: 1px solid rgba(191,219,254,.24);
-      background: #243452;
+      padding: 12px 20px;
+      border-radius: 10px;
+      border: 1px solid #dbe7f5;
+      border-left: 4px solid #3b82f6;
+      background: #fff;
       text-decoration: none;
-      color: #fff;
+      color: #152743;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -370,20 +371,20 @@
       text-align: left;
       transition: background .18s ease, border-color .18s ease;
     }
-    .primary-progress-card:hover { background:#2b3d5d; border-color:rgba(191,219,254,.5); }
+    .primary-progress-card:hover { background:#f4f8ff; border-color:#93baf2; }
     .primary-progress-card:focus-visible { outline:3px solid #a5d8ff; outline-offset:4px; }
     .primary-progress-copy { min-width:0; }
-    .primary-progress-eyebrow { display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:10px;color:#bfd1e8;font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase; }
-    .primary-progress-title { font-family:"Sora",sans-serif;font-size:20px;font-weight:650;letter-spacing:-.025em;line-height:1.3; }
-    .primary-progress-subtitle { margin-top:8px;color:#c7d3e4;font-size:13px;line-height:1.5; }
-    .primary-progress-badge { display:inline-flex;align-items:center;padding:3px 8px;border:1px solid rgba(191,219,254,.26);border-radius:4px;color:#dceaff;font-size:10px;letter-spacing:.04em; }
-    .primary-progress-action { display:flex;align-items:center;gap:12px;flex:0 0 auto;color:#deedff;font-size:13px;font-weight:600;white-space:nowrap; }
+    .primary-progress-eyebrow { display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:5px;color:#526781;font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase; }
+    .primary-progress-title { font-family:"Sora",sans-serif;font-size:18px;font-weight:650;letter-spacing:-.025em;line-height:1.3; }
+    .primary-progress-subtitle { margin-top:4px;color:#596a80;font-size:12px;line-height:1.5; }
+    .primary-progress-badge { display:inline-flex;align-items:center;padding:2px 7px;border:1px solid #b9d3fa;border-radius:4px;background:#eaf2ff;color:#235dab;font-size:10px;letter-spacing:.04em; }
+    .primary-progress-action { display:flex;align-items:center;gap:12px;flex:0 0 auto;color:#2563eb;font-size:13px;font-weight:600;white-space:nowrap; }
     .primary-progress-arrow { font-size:22px;font-weight:400; }
     @media(max-width:600px) {
-      .primary-progress-card { padding:20px;align-items:flex-start;gap:12px; }
-      .primary-progress-title { font-size:18px; }
+      .primary-progress-card { padding:12px 15px;align-items:flex-start;gap:12px; }
+      .primary-progress-title { font-size:16px; }
       .primary-progress-action-label { display:none; }
-      .primary-progress-action { margin-top:31px; }
+      .primary-progress-action { margin-top:23px; }
     }
 
     .cta-row { display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-bottom:28px;opacity:0;transform:translateY(16px);animation:heroRise .9s ease forwards;animation-delay:.32s; }
