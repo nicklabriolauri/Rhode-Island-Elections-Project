@@ -87,7 +87,6 @@
           ${email?`<a href="mailto:${esc(email)}">Email</a>`:''}
           ${phone?`<a href="tel:${esc(String(phone).replace(/[^\\d+]/g,''))}">Call</a>`:''}
           ${profilePage?`<a href="/candidates/${profilePage}.html">Candidate profile</a>`:''}
-          <a href="/voter-guides.html#${c.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}">League voter guide</a>
           ${fin?`<a href="${esc(fin)}">Campaign finance</a>`:''}
           <a href="/running.html?chamber=${encodeURIComponent(chamber)}&district=${encodeURIComponent(district)}">Open full Races & Candidates workspace</a>
         </div>
