@@ -28,7 +28,7 @@ class RatingsTests(unittest.TestCase):
   for key,labels in [(('house',53),['Toss Up','Tilt D','Lean D']),(('senate',17),['Tilt R','Tilt R','Toss Up']),(('house',41),['Solid R','Solid R','Likely R']),(('house',15),['Likely D','Likely D','Solid D'])]:self.assertEqual([x['rating'] for x in rows[key]['scenarios']],labels)
   self.assertEqual(rows['senate',19]['scenarios'],[]);self.assertEqual(rows['senate',19]['baseline_rating'],'Likely D');self.assertIsNone(rows['senate',19]['rating'])
  def test_reproducible_and_links(self):
-  self.assertEqual(build(),build());doc=html.fromstring(render(build()));self.assertEqual(len(doc.xpath('//tbody/tr')),113)
+  self.assertEqual(build(),build());doc=html.fromstring(render(build()));self.assertEqual(len(doc.xpath('//section[contains(@class,"ratings-board")]')),6);self.assertEqual(len(doc.xpath('//table[@class="comparison"]/tbody/tr')),13)
   for url in doc.xpath('//a[starts-with(@href,"/")]/@href'):
    path=url.split('?')[0].split('#')[0]
    if path!='/':self.assertTrue((ROOT/path.lstrip('/')).exists(),url)

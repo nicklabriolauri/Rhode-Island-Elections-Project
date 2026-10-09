@@ -1,6 +1,6 @@
 {
   "updated": "2026-10-08",
-  "title": "2026 legislative race ratings \u00b7 Democratic swing scenarios",
+  "title": "28 Days Before Elections Ratings",
   "method": "Apply user-assumed Democratic vote-share gains of 6, 7 and 8 percentage points to comparable contested 2024 D\u2013R baselines. Each gain shifts the two-party margin by twice that amount. Keep previously rated races and add races entering the 20-point window in either scenario. The main rating uses the 7-point midpoint. Do not apply the D\u2013R shift to independent-versus-Democratic matchups.",
   "thresholds": [
     {
@@ -4265,6 +4265,8 @@
       "included": false
     }
   ],
+  "publication_status": "Preliminary",
+  "final_ratings_notice": "Final ratings will be published before Election Day.",
   "default_dem_vote_share_swing_pp": 7,
   "scenario_swings_pp": [
     6,

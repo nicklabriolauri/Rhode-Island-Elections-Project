@@ -585,7 +585,7 @@
     .address-history summary { cursor:pointer;font-size:14px;font-weight:700; }
     @media(max-width:640px) { .address-candidate-grid { grid-template-columns:1fr; } }
   </style>
-</head>
+<style>.address-rating{font-size:13px;padding:9px 0;border-top:1px solid #d8dee5;border-bottom:1px solid #d8dee5}.address-rating a{color:#244f7b}.address-rating small{display:block;color:#596779;margin-top:3px}</style></head>
 <body>
   <div class="shell">
     <div class="topbar">
@@ -970,6 +970,7 @@
     let homepageFinanceByCompositeKey = new Map();
     let homepageCandidateHistoryById = new Map();
     let homepageRaceData = null;
+    let homepageRaceRatings = new Map();
     let homepagePrecinctGeojson = null;
     let homepagePrecinctLookup = null;
     let precinctAssetsPromise = null;
@@ -1283,10 +1284,11 @@
     async function loadHomepageSearchData() {
       if (homepageCandidates.length) return;
 
-      const [candidateResponse, financeResponse, raceResponse] = await Promise.all([
+      const [candidateResponse, financeResponse, raceResponse, ratingResponse] = await Promise.all([
         fetch("data/whos_running_2026.json", { cache: "no-store" }),
         fetch("data/candidate_finance_2026.json", { cache: "no-store" }),
-        fetch("data/race_data.json", { cache: "no-store" })
+        fetch("data/race_data.json", { cache: "no-store" }),
+        fetch("data/race_ratings_2026.json", { cache: "no-store" }).catch(()=>null)
       ]);
 
       if (!candidateResponse.ok) throw new Error("Candidate data could not be loaded.");
@@ -1294,6 +1296,8 @@
       const candidatePayload = await candidateResponse.json();
       homepageCandidates = flattenCandidateData(candidatePayload);
       homepageRaceData = raceResponse.ok ? await raceResponse.json() : {};
+      const ratingPayload=ratingResponse?.ok?await ratingResponse.json():{races:[]};
+      homepageRaceRatings=new Map((ratingPayload.races||[]).map(r=>[`${r.chamber}|${Number(r.district)}`,r]));
 
       if (financeResponse.ok) {
         const financePayload = await financeResponse.json();
@@ -1484,10 +1488,16 @@
       return payload?.candidates || [];
     }
 
+    function buildAddressRatingLine(chamber,districtNumber){
+      const row=homepageRaceRatings.get(`${chamber}|${Number(districtNumber)}`);
+      const value=row?.included&&row?.rating?row.rating:row?.status==='Unopposed'?'Unopposed':'Not rated';
+      return `<p class="address-rating"><a href="race-ratings.html">28 Days Before Elections Rating: <strong>${escapeHtml(value)}</strong></a>${row?.included&&row?.rating?'<small>Preliminary · +7-point Democratic swing assumption.</small>':''}</p>`;
+    }
+
     function buildAddressCandidateGroup(chamber, districtNumber) {
       if (!districtNumber) return "";
       const title = `${chamberLabel(chamber)} District ${districtNumber}`;
-      const raceHref = `running.html?chamber=${encodeURIComponent(chamber)}&district=${encodeURIComponent(String(districtNumber))}&election=general`;
+      const raceHref = `races/${chamber}-${Number(districtNumber)}.html`;
       const candidates = homepageCandidates.filter(c =>
         c.chamber === chamber && Number(c.district_number) === Number(districtNumber) &&
         c.election_status === "general_candidate" && c.on_election_ballot !== false
@@ -1498,7 +1508,7 @@
         const photo = profileHref ? `<img src="${escapeHtml(profileHref.replace(/\.html$/, ".png"))}" alt="" width="48" height="64" loading="lazy">` : "";
         return `<a class="address-candidate" href="${escapeHtml(profileHref || raceHref)}" aria-label="${escapeHtml(`${c.name}: ${action.replace(" →", "")}`)}">${photo}<span class="address-candidate-text"><strong>${escapeHtml(c.name)}</strong><span>${escapeHtml(partyLongLabel(c.party))}</span><span class="address-candidate-action">${action}</span></span></a>`;
       }).join("");
-      return `<section class="address-candidate-group" aria-label="${escapeHtml(title)} candidates"><h5>${escapeHtml(title)}</h5>${rows || '<p class="hero-search-result-copy">Candidate information is being updated.</p>'}<a class="address-race-link" href="${raceHref}">View race &amp; opponents →</a></section>`;
+      return `<section class="address-candidate-group" aria-label="${escapeHtml(title)} candidates"><h5>${escapeHtml(title)}</h5>${buildAddressRatingLine(chamber,districtNumber)}${rows || '<p class="hero-search-result-copy">Candidate information is being updated.</p>'}<a class="address-race-link" href="${raceHref}">View race &amp; opponents →</a></section>`;
     }
 
     function renderAddressSearchResult(query, candidate, lookupRecord) {

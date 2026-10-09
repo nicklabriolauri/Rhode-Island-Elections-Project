@@ -137,8 +137,8 @@
   const race=data.races.find(r=>r.chamber===chamber&&r.district===Number(district));if(!race||(!race.included&&!race.watch))return;
   const target=document.querySelector('[data-candidates]');if(!target)return;
   const section=document.createElement('section');section.style.cssText='padding:20px;margin:16px 0;border:1px solid #cbd8e7;border-radius:12px;background:#f5f8fc;';
-  const title=document.createElement('h2');title.textContent='Scenario rating · '+(race.rating||race.status);section.append(title);
-  const note=document.createElement('p');note.textContent=race.scenarios.length?('Assuming a +7-point Democratic vote-share swing. +6: '+race.scenarios[0].rating+'; +8: '+race.scenarios[2].rating+'. Conditional scenario, not a polling estimate.'):'No automatic D–R swing adjustment is available for this matchup.';section.append(note);
+  const title=document.createElement('h2');title.textContent='28 Days Before Elections Rating · '+(race.rating||race.status);section.append(title);
+  const note=document.createElement('p');note.textContent=race.scenarios.length?('Assuming a +7-point Democratic vote-share swing. +6: '+race.scenarios[0].rating+'; +8: '+race.scenarios[2].rating+'. Preliminary rating; final ratings will be published before Election Day.'):'No automatic D–R swing adjustment is available for this matchup.';section.append(note);
   if(race.candidates.length>2){const extra=document.createElement('p');extra.textContent=chamber==='house'&&Number(district)===15?'Fung held at an assumed 20%, with half his support drawn from each party.':'Independent support is not estimated; this rating shifts only the historical major-party baseline.';section.append(extra);}
   const link=document.createElement('a');link.href='/race-ratings.html';link.textContent='Compare +6, +7 and +8 scenarios and assumptions →';section.append(link);target.before(section);
  }).catch(()=>{});
