@@ -1,7 +1,7 @@
 {
   "updated": "2026-10-08",
   "title": "28 Days Before Elections Ratings",
-  "method": "Apply user-assumed Democratic vote-share gains of 6, 7 and 8 percentage points to comparable contested 2024 D\u2013R baselines. Each gain shifts the two-party margin by twice that amount. Keep previously rated races and add races entering the 20-point window in either scenario. The main rating uses the 7-point midpoint. Do not apply the D\u2013R shift to independent-versus-Democratic matchups.",
+  "method": "Apply user-assumed Democratic vote-share gains of 6, 7 and 8 percentage points to comparable contested 2024 D\u2013R baselines. Each gain shifts the two-party margin by twice that amount. Include comparable races within 30 points in 2024 or in any selected swing scenario. The main rating uses the 7-point midpoint. Do not apply the D\u2013R shift to independent-versus-Democratic matchups.",
   "thresholds": [
     {
       "label": "Toss Up",
@@ -512,7 +512,7 @@
           "votes": 3123
         }
       ],
-      "baseline_status": "Outside 20-point window",
+      "baseline_status": "Outside 30-point window",
       "baseline_rating": "Solid R",
       "baseline_leading_party": "REP",
       "scenarios": [
@@ -1071,6 +1071,176 @@
       "baseline_dem_margin_pp": 17.842523477004576
     },
     {
+      "chamber": "house",
+      "district": 27,
+      "candidates": [
+        {
+          "name": "Angela S Coburn",
+          "party": "DEM"
+        },
+        {
+          "name": "Lawrence Paul Almagno Jr",
+          "party": "REP"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-27.html",
+      "rating": "Solid D",
+      "status": "Rated",
+      "margin_pp": 20.206704650854643,
+      "leading_party": "DEM",
+      "notes": [
+        "The 6%, 7% and 8% scenarios mean percentage-point gains in Democratic vote share, not changes of that size in the D\u2013R margin. They are user-specified scenarios, not measured forecasts.",
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Patricia A. Serpa",
+          "party": "DEM",
+          "votes": 4536
+        },
+        {
+          "name": "Andrew N. Kowalski",
+          "party": "REP",
+          "votes": 3011
+        }
+      ],
+      "category": "Solid",
+      "baseline_status": "Rated",
+      "baseline_rating": "Solid D",
+      "baseline_leading_party": "DEM",
+      "scenarios": [
+        {
+          "dem_vote_share_swing_pp": 6,
+          "dem_rep_margin_pp": 32.20670465085465,
+          "leader_margin_pp": 32.20670465085465,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 66.10335232542732,
+            "REP": 33.89664767457268
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 7,
+          "dem_rep_margin_pp": 34.20670465085465,
+          "leader_margin_pp": 34.20670465085465,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 67.10335232542732,
+            "REP": 32.89664767457268
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 8,
+          "dem_rep_margin_pp": 36.20670465085465,
+          "leader_margin_pp": 36.20670465085465,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 68.10335232542732,
+            "REP": 31.896647674572677
+          },
+          "method": "Uniform two-party swing"
+        }
+      ],
+      "included": true,
+      "baseline_dem_margin_pp": 20.206704650854643
+    },
+    {
+      "chamber": "house",
+      "district": 35,
+      "candidates": [
+        {
+          "name": "Kathleen A Fogarty",
+          "party": "DEM"
+        },
+        {
+          "name": "Jennifer P Nerbonne",
+          "party": "REP"
+        }
+      ],
+      "watch": false,
+      "source_year": 2024,
+      "source_url": "/data/race_data.json",
+      "race_url": "/races/house-35.html",
+      "rating": "Solid D",
+      "status": "Rated",
+      "margin_pp": 24.437182280319536,
+      "leading_party": "DEM",
+      "notes": [
+        "The 6%, 7% and 8% scenarios mean percentage-point gains in Democratic vote share, not changes of that size in the D\u2013R margin. They are user-specified scenarios, not measured forecasts.",
+        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
+      ],
+      "baseline_candidates": [
+        {
+          "name": "Kathleen A. Fogarty",
+          "party": "DEM",
+          "votes": 3427
+        },
+        {
+          "name": "Jennifer P. Nerbonne",
+          "party": "REP",
+          "votes": 2081
+        }
+      ],
+      "category": "Solid",
+      "baseline_status": "Rated",
+      "baseline_rating": "Solid D",
+      "baseline_leading_party": "DEM",
+      "scenarios": [
+        {
+          "dem_vote_share_swing_pp": 6,
+          "dem_rep_margin_pp": 36.43718228031952,
+          "leader_margin_pp": 36.43718228031952,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 68.21859114015976,
+            "REP": 31.78140885984024
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 7,
+          "dem_rep_margin_pp": 38.43718228031952,
+          "leader_margin_pp": 38.43718228031952,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 69.21859114015976,
+            "REP": 30.78140885984024
+          },
+          "method": "Uniform two-party swing"
+        },
+        {
+          "dem_vote_share_swing_pp": 8,
+          "dem_rep_margin_pp": 40.43718228031952,
+          "leader_margin_pp": 40.43718228031952,
+          "leading_party": "DEM",
+          "rating": "Solid D",
+          "category": "Solid",
+          "conditional_shares_pct": {
+            "DEM": 70.21859114015976,
+            "REP": 29.78140885984024
+          },
+          "method": "Uniform two-party swing"
+        }
+      ],
+      "included": true,
+      "baseline_dem_margin_pp": 24.437182280319536
+    },
+    {
       "chamber": "senate",
       "district": 19,
       "candidates": [
@@ -1115,176 +1285,6 @@
       "included": true
     },
     {
-      "chamber": "house",
-      "district": 27,
-      "candidates": [
-        {
-          "name": "Angela S Coburn",
-          "party": "DEM"
-        },
-        {
-          "name": "Lawrence Paul Almagno Jr",
-          "party": "REP"
-        }
-      ],
-      "watch": false,
-      "source_year": 2024,
-      "source_url": "/data/race_data.json",
-      "race_url": "/races/house-27.html",
-      "rating": "Solid D",
-      "status": "Outside 20-point window",
-      "margin_pp": 20.206704650854643,
-      "leading_party": "DEM",
-      "notes": [
-        "The 6%, 7% and 8% scenarios mean percentage-point gains in Democratic vote share, not changes of that size in the D\u2013R margin. They are user-specified scenarios, not measured forecasts.",
-        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ],
-      "baseline_candidates": [
-        {
-          "name": "Patricia A. Serpa",
-          "party": "DEM",
-          "votes": 4536
-        },
-        {
-          "name": "Andrew N. Kowalski",
-          "party": "REP",
-          "votes": 3011
-        }
-      ],
-      "baseline_status": "Outside 20-point window",
-      "baseline_rating": "Solid D",
-      "baseline_leading_party": "DEM",
-      "scenarios": [
-        {
-          "dem_vote_share_swing_pp": 6,
-          "dem_rep_margin_pp": 32.20670465085465,
-          "leader_margin_pp": 32.20670465085465,
-          "leading_party": "DEM",
-          "rating": "Solid D",
-          "category": "Solid",
-          "conditional_shares_pct": {
-            "DEM": 66.10335232542732,
-            "REP": 33.89664767457268
-          },
-          "method": "Uniform two-party swing"
-        },
-        {
-          "dem_vote_share_swing_pp": 7,
-          "dem_rep_margin_pp": 34.20670465085465,
-          "leader_margin_pp": 34.20670465085465,
-          "leading_party": "DEM",
-          "rating": "Solid D",
-          "category": "Solid",
-          "conditional_shares_pct": {
-            "DEM": 67.10335232542732,
-            "REP": 32.89664767457268
-          },
-          "method": "Uniform two-party swing"
-        },
-        {
-          "dem_vote_share_swing_pp": 8,
-          "dem_rep_margin_pp": 36.20670465085465,
-          "leader_margin_pp": 36.20670465085465,
-          "leading_party": "DEM",
-          "rating": "Solid D",
-          "category": "Solid",
-          "conditional_shares_pct": {
-            "DEM": 68.10335232542732,
-            "REP": 31.896647674572677
-          },
-          "method": "Uniform two-party swing"
-        }
-      ],
-      "included": false,
-      "baseline_dem_margin_pp": 20.206704650854643,
-      "category": "Solid"
-    },
-    {
-      "chamber": "house",
-      "district": 35,
-      "candidates": [
-        {
-          "name": "Kathleen A Fogarty",
-          "party": "DEM"
-        },
-        {
-          "name": "Jennifer P Nerbonne",
-          "party": "REP"
-        }
-      ],
-      "watch": false,
-      "source_year": 2024,
-      "source_url": "/data/race_data.json",
-      "race_url": "/races/house-35.html",
-      "rating": "Solid D",
-      "status": "Outside 20-point window",
-      "margin_pp": 24.437182280319536,
-      "leading_party": "DEM",
-      "notes": [
-        "The 6%, 7% and 8% scenarios mean percentage-point gains in Democratic vote share, not changes of that size in the D\u2013R margin. They are user-specified scenarios, not measured forecasts.",
-        "Candidate changes, cash burn, endorsements and national trends are not given unvalidated numerical bonuses. This is a starting classification, not a calibrated win probability."
-      ],
-      "baseline_candidates": [
-        {
-          "name": "Kathleen A. Fogarty",
-          "party": "DEM",
-          "votes": 3427
-        },
-        {
-          "name": "Jennifer P. Nerbonne",
-          "party": "REP",
-          "votes": 2081
-        }
-      ],
-      "baseline_status": "Outside 20-point window",
-      "baseline_rating": "Solid D",
-      "baseline_leading_party": "DEM",
-      "scenarios": [
-        {
-          "dem_vote_share_swing_pp": 6,
-          "dem_rep_margin_pp": 36.43718228031952,
-          "leader_margin_pp": 36.43718228031952,
-          "leading_party": "DEM",
-          "rating": "Solid D",
-          "category": "Solid",
-          "conditional_shares_pct": {
-            "DEM": 68.21859114015976,
-            "REP": 31.78140885984024
-          },
-          "method": "Uniform two-party swing"
-        },
-        {
-          "dem_vote_share_swing_pp": 7,
-          "dem_rep_margin_pp": 38.43718228031952,
-          "leader_margin_pp": 38.43718228031952,
-          "leading_party": "DEM",
-          "rating": "Solid D",
-          "category": "Solid",
-          "conditional_shares_pct": {
-            "DEM": 69.21859114015976,
-            "REP": 30.78140885984024
-          },
-          "method": "Uniform two-party swing"
-        },
-        {
-          "dem_vote_share_swing_pp": 8,
-          "dem_rep_margin_pp": 40.43718228031952,
-          "leader_margin_pp": 40.43718228031952,
-          "leading_party": "DEM",
-          "rating": "Solid D",
-          "category": "Solid",
-          "conditional_shares_pct": {
-            "DEM": 70.21859114015976,
-            "REP": 29.78140885984024
-          },
-          "method": "Uniform two-party swing"
-        }
-      ],
-      "included": false,
-      "baseline_dem_margin_pp": 24.437182280319536,
-      "category": "Solid"
-    },
-    {
       "chamber": "senate",
       "district": 5,
       "candidates": [
@@ -1302,7 +1302,7 @@
       "source_url": "/data/race_data.json",
       "race_url": "/races/senate-5.html",
       "rating": "Solid D",
-      "status": "Outside 20-point window",
+      "status": "Outside 30-point window",
       "margin_pp": 58.07608046205935,
       "leading_party": "DEM",
       "notes": [
@@ -1321,7 +1321,7 @@
           "votes": 2105
         }
       ],
-      "baseline_status": "Outside 20-point window",
+      "baseline_status": "Outside 30-point window",
       "baseline_rating": "Solid D",
       "baseline_leading_party": "DEM",
       "scenarios": [
@@ -2556,7 +2556,7 @@
       "source_url": "/data/race_data.json",
       "race_url": "/races/house-49.html",
       "rating": null,
-      "status": "Outside 20-point window",
+      "status": "Outside 30-point window",
       "margin_pp": 57.85550458715596,
       "leading_party": "IND",
       "notes": [
@@ -2574,7 +2574,7 @@
           "votes": 735
         }
       ],
-      "baseline_status": "Outside 20-point window",
+      "baseline_status": "Outside 30-point window",
       "baseline_rating": null,
       "baseline_leading_party": "IND",
       "scenarios": [],
