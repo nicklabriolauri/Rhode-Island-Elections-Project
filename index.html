@@ -359,11 +359,11 @@
       margin: 0 auto 20px;
       padding: 12px 20px;
       border-radius: 10px;
-      border: 1px solid #dbe7f5;
-      border-left: 4px solid #3b82f6;
-      background: #fff;
+      border: 1px solid #78a6cb;
+      border-left: 4px solid #a5d8ff;
+      background: #285e8a;
       text-decoration: none;
-      color: #152743;
+      color: #fff;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -371,14 +371,14 @@
       text-align: left;
       transition: background .18s ease, border-color .18s ease;
     }
-    .primary-progress-card:hover { background:#f4f8ff; border-color:#93baf2; }
+    .primary-progress-card:hover { background:#326f9f; border-color:#b9dcff; }
     .primary-progress-card:focus-visible { outline:3px solid #a5d8ff; outline-offset:4px; }
     .primary-progress-copy { min-width:0; }
-    .primary-progress-eyebrow { display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:5px;color:#526781;font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase; }
+    .primary-progress-eyebrow { display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:5px;color:#d3e7f8;font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase; }
     .primary-progress-title { font-family:"Sora",sans-serif;font-size:18px;font-weight:650;letter-spacing:-.025em;line-height:1.3; }
-    .primary-progress-subtitle { margin-top:4px;color:#596a80;font-size:12px;line-height:1.5; }
-    .primary-progress-badge { display:inline-flex;align-items:center;padding:2px 7px;border:1px solid #b9d3fa;border-radius:4px;background:#eaf2ff;color:#235dab;font-size:10px;letter-spacing:.04em; }
-    .primary-progress-action { display:flex;align-items:center;gap:12px;flex:0 0 auto;color:#2563eb;font-size:13px;font-weight:600;white-space:nowrap; }
+    .primary-progress-subtitle { margin-top:4px;color:#e2eff9;font-size:12px;line-height:1.5; }
+    .primary-progress-badge { display:inline-flex;align-items:center;padding:2px 7px;border:1px solid #b9d3fa;border-radius:4px;background:#fff;color:#285e8a;font-size:10px;letter-spacing:.04em; }
+    .primary-progress-action { display:flex;align-items:center;gap:12px;flex:0 0 auto;color:#fff;font-size:13px;font-weight:600;white-space:nowrap; }
     .primary-progress-arrow { font-size:22px;font-weight:400; }
     @media(max-width:600px) {
       .primary-progress-card { padding:12px 15px;align-items:flex-start;gap:12px; }
@@ -613,7 +613,7 @@
             <div class="primary-progress-copy">
               <div class="primary-progress-eyebrow">2026 · House &amp; Senate <span class="primary-progress-badge">Preliminary</span></div>
               <div class="primary-progress-title">28 Days Before Elections Ratings</div>
-              <div class="primary-progress-subtitle">Our outlook for Rhode Island’s legislative races. Final ratings before Election Day.</div>
+              <div class="primary-progress-subtitle">Our predictions for Rhode Island’s legislative races. Final ratings before Election Day.</div>
             </div>
             <span class="primary-progress-action"><span class="primary-progress-action-label">View ratings</span><span class="primary-progress-arrow" aria-hidden="true">→</span></span>
           </a>
@@ -1451,7 +1451,7 @@
     function buildAddressRatingLine(chamber,districtNumber){
       const row=homepageRaceRatings.get(`${chamber}|${Number(districtNumber)}`);
       const value=row?.included&&row?.rating?row.rating:row?.status==='Unopposed'?'Unopposed':'Not rated';
-      return `<p class="address-rating"><a href="race-ratings.html">28 Days Before Elections Rating: <strong>${escapeHtml(value)}</strong></a>${row?.included&&row?.rating?'<small>Preliminary · +7-point Democratic swing assumption.</small>':''}</p>`;
+      return `<p class="address-rating"><a href="race-ratings.html">28 Days Before Elections Rating: <strong>${escapeHtml(value)}${row?.projected_flip?' (Flip)':''}</strong></a>${row?.included&&row?.rating?'<small>Published preliminary prediction.</small>':''}</p>`;
     }
 
     function buildAddressCandidateGroup(chamber, districtNumber) {

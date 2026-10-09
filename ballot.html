@@ -425,7 +425,7 @@
     const entry=raceRatings.get(`${chamber}|${Number(district)}`);
     const rating=entry?.included&&entry?.rating?entry.rating:entry?.status==='Unopposed'?'Unopposed':'Not rated';
     const cls=rating.endsWith(' D')?'dem':rating.endsWith(' R')?'rep':'';
-    return `<div class="ballot-race-rating"><a href="race-ratings.html"><strong>28 Days Before Elections Rating</strong></a><span class="ballot-rating-value ${cls}">${esc(rating)}</span>${entry?.included&&entry?.rating?'<small>Preliminary · assumes a +7-point Democratic vote-share swing.</small>':''}<small>Final ratings will be published before Election Day.</small></div>`;
+    return `<div class="ballot-race-rating"><a href="race-ratings.html"><strong>28 Days Before Elections Rating</strong></a><span class="ballot-rating-value ${cls}">${esc(rating)}${entry?.projected_flip?' (Flip)':''}</span>${entry?.included&&entry?.rating?'<small>Published preliminary prediction.</small>':''}<small>Final ratings will be published before Election Day.</small></div>`;
   }
   function raceSection(chamber,district,allCandidates,runningPayload){
     const label=chamber==="house"?"House":"Senate";

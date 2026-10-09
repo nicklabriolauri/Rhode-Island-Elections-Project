@@ -123,7 +123,8 @@
         }
       ],
       "included": true,
-      "baseline_dem_margin_pp": -16.2149563827662
+      "baseline_dem_margin_pp": -16.2149563827662,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -208,7 +209,8 @@
         }
       ],
       "included": true,
-      "baseline_dem_margin_pp": -10.458828981924919
+      "baseline_dem_margin_pp": -10.458828981924919,
+      "projected_flip": true
     },
     {
       "chamber": "house",
@@ -293,7 +295,8 @@
         }
       ],
       "included": true,
-      "baseline_dem_margin_pp": -9.48638787538591
+      "baseline_dem_margin_pp": -9.48638787538591,
+      "projected_flip": true
     },
     {
       "chamber": "senate",
@@ -378,7 +381,8 @@
         }
       ],
       "included": true,
-      "baseline_dem_margin_pp": -7.1216968835170045
+      "baseline_dem_margin_pp": -7.1216968835170045,
+      "projected_flip": true
     },
     {
       "chamber": "house",
@@ -473,7 +477,8 @@
         }
       ],
       "included": true,
-      "baseline_dem_margin_pp": -0.2540415704387991
+      "baseline_dem_margin_pp": -0.2540415704387991,
+      "projected_flip": true
     },
     {
       "chamber": "house",
@@ -558,7 +563,8 @@
       ],
       "included": true,
       "baseline_dem_margin_pp": -30.142042277150207,
-      "category": "Solid"
+      "category": "Solid",
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -643,7 +649,8 @@
         }
       ],
       "included": true,
-      "baseline_dem_margin_pp": 7.735176103432902
+      "baseline_dem_margin_pp": 7.735176103432902,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -728,7 +735,8 @@
         }
       ],
       "included": true,
-      "baseline_dem_margin_pp": 8.074965293845441
+      "baseline_dem_margin_pp": 8.074965293845441,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -813,7 +821,8 @@
         }
       ],
       "included": true,
-      "baseline_dem_margin_pp": 14.017918676774638
+      "baseline_dem_margin_pp": 14.017918676774638,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -898,7 +907,8 @@
         }
       ],
       "included": true,
-      "baseline_dem_margin_pp": 16.371350137259796
+      "baseline_dem_margin_pp": 16.371350137259796,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -983,7 +993,8 @@
         }
       ],
       "included": true,
-      "baseline_dem_margin_pp": 16.739071409177303
+      "baseline_dem_margin_pp": 16.739071409177303,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -1068,7 +1079,8 @@
         }
       ],
       "included": true,
-      "baseline_dem_margin_pp": 17.842523477004576
+      "baseline_dem_margin_pp": 17.842523477004576,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -1153,7 +1165,8 @@
         }
       ],
       "included": true,
-      "baseline_dem_margin_pp": 20.206704650854643
+      "baseline_dem_margin_pp": 20.206704650854643,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -1238,7 +1251,8 @@
         }
       ],
       "included": true,
-      "baseline_dem_margin_pp": 24.437182280319536
+      "baseline_dem_margin_pp": 24.437182280319536,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -1282,7 +1296,8 @@
       "baseline_rating": "Likely D",
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": true
+      "included": true,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -1367,7 +1382,8 @@
       ],
       "included": false,
       "baseline_dem_margin_pp": 58.07608046205935,
-      "category": "Solid"
+      "category": "Solid",
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -1393,7 +1409,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -1419,7 +1436,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -1445,7 +1463,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -1471,7 +1490,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -1502,7 +1522,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -1528,7 +1549,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -1559,7 +1581,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -1585,7 +1608,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -1611,7 +1635,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -1637,7 +1662,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -1663,7 +1689,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -1689,7 +1716,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -1720,7 +1748,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -1746,7 +1775,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -1784,7 +1814,8 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -1810,7 +1841,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -1841,7 +1873,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -1872,7 +1905,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -1898,7 +1932,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -1936,7 +1971,8 @@
       "baseline_rating": null,
       "baseline_leading_party": "REP",
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -1967,7 +2003,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -1993,7 +2030,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2019,7 +2057,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2057,7 +2096,8 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2095,7 +2135,8 @@
       "baseline_rating": null,
       "baseline_leading_party": "REP",
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2121,7 +2162,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2147,7 +2189,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2185,7 +2228,8 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2211,7 +2255,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2249,7 +2294,8 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2275,7 +2321,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2306,7 +2353,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2332,7 +2380,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2370,7 +2419,8 @@
       "baseline_rating": null,
       "baseline_leading_party": "REP",
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2408,7 +2458,8 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2434,7 +2485,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2472,7 +2524,8 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2510,7 +2563,8 @@
       "baseline_rating": null,
       "baseline_leading_party": "REP",
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2536,7 +2590,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2578,7 +2633,8 @@
       "baseline_rating": null,
       "baseline_leading_party": "IND",
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2604,7 +2660,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2630,7 +2687,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2656,7 +2714,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2682,7 +2741,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2708,7 +2768,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2734,7 +2795,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2772,7 +2834,8 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2798,7 +2861,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2824,7 +2888,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2850,7 +2915,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2888,7 +2954,8 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2914,7 +2981,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2940,7 +3008,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2966,7 +3035,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -2992,7 +3062,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -3030,7 +3101,8 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -3061,7 +3133,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -3099,7 +3172,8 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -3137,7 +3211,8 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -3175,7 +3250,8 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -3201,7 +3277,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -3227,7 +3304,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -3253,7 +3331,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -3279,7 +3358,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "house",
@@ -3305,7 +3385,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -3331,7 +3412,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -3357,7 +3439,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -3383,7 +3466,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -3409,7 +3493,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -3435,7 +3520,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -3461,7 +3547,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -3499,7 +3586,8 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -3525,7 +3613,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -3563,7 +3652,8 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -3589,7 +3679,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -3615,7 +3706,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -3653,7 +3745,8 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -3684,7 +3777,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -3710,7 +3804,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -3736,7 +3831,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -3762,7 +3858,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -3788,7 +3885,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -3814,7 +3912,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -3840,7 +3939,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -3878,7 +3978,8 @@
       "baseline_rating": null,
       "baseline_leading_party": "REP",
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -3916,7 +4017,8 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -3954,7 +4056,8 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -3992,7 +4095,8 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -4018,7 +4122,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -4044,7 +4149,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -4082,7 +4188,8 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -4108,7 +4215,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -4146,7 +4254,8 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -4172,7 +4281,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -4198,7 +4308,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -4224,7 +4335,8 @@
       "baseline_rating": null,
       "baseline_leading_party": null,
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     },
     {
       "chamber": "senate",
@@ -4262,15 +4374,17 @@
       "baseline_rating": null,
       "baseline_leading_party": "DEM",
       "scenarios": [],
-      "included": false
+      "included": false,
+      "projected_flip": false
     }
   ],
-  "publication_status": "Preliminary",
+  "publication_status": "Preliminary prediction",
   "final_ratings_notice": "Final ratings will be published before Election Day.",
   "default_dem_vote_share_swing_pp": 7,
   "scenario_swings_pp": [
     6,
     7,
     8
-  ]
+  ],
+  "prediction_dem_vote_share_swing_pp": 7
 }

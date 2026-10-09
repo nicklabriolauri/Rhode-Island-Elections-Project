@@ -30,12 +30,15 @@ class RatingsTests(unittest.TestCase):
   for r in rows.values():
    if r['scenarios']:
     self.assertEqual(r['included'],r['margin_pp']<=30 or any(s['leader_margin_pp']<=30 for s in r['scenarios']))
+ def test_projected_flips(self):
+  d=build();self.assertEqual({(r['chamber'],r['district']) for r in d['races'] if r['projected_flip']},{('house',15),('house',42),('house',53),('senate',34)})
+  self.assertEqual(d['prediction_dem_vote_share_swing_pp'],7)
  def test_key_transitions_and_independents(self):
   rows={(r['chamber'],r['district']):r for r in build()['races']}
   for key,labels in [(('house',53),['Toss Up','Tilt D','Lean D']),(('senate',17),['Tilt R','Tilt R','Toss Up']),(('house',41),['Solid R','Solid R','Likely R']),(('house',15),['Likely D','Likely D','Solid D'])]:self.assertEqual([x['rating'] for x in rows[key]['scenarios']],labels)
   self.assertEqual(rows['senate',19]['scenarios'],[]);self.assertEqual(rows['senate',19]['baseline_rating'],'Likely D');self.assertIsNone(rows['senate',19]['rating'])
  def test_reproducible_and_links(self):
-  self.assertEqual(build(),build());doc=html.fromstring(render(build()));self.assertEqual(len(doc.xpath('//section[contains(@class,"ratings-board")]')),6);self.assertEqual(len(doc.xpath('//table[@class="comparison"]/tbody/tr')),sum(r['included'] for r in build()['races']))
+  self.assertEqual(build(),build());doc=html.fromstring(render(build()));self.assertEqual(len(doc.xpath('//section[contains(@class,"ratings-board")]')),2);self.assertFalse(doc.xpath('//select[@id="swing"]'));self.assertEqual(len(doc.xpath('//em[@class="flip-label"]')),sum(r['projected_flip'] for r in build()['races']))
   for url in doc.xpath('//a[starts-with(@href,"/")]/@href'):
    path=url.split('?')[0].split('#')[0]
    if path!='/':self.assertTrue((ROOT/path.lstrip('/')).exists(),url)

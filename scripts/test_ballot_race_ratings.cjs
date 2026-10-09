@@ -3,7 +3,7 @@ const source=fs.readFileSync('ballot.html','utf8');
 const functions=source.slice(source.indexOf('  function raceRatingLine('),source.indexOf('  Promise.all(['));
 const data=JSON.parse(fs.readFileSync('data/race_ratings_2026.json')),roster=JSON.parse(fs.readFileSync('data/whos_running_2026.json'));
 const context={raceRatings:new Map(data.races.map(r=>[`${r.chamber}|${r.district}`,r])),esc:s=>String(s),candidateCard:c=>`<p>${c.name}</p>`};vm.createContext(context);vm.runInContext(functions,context);
-let output=context.raceSection('house',15,[],roster);assert(output.includes('Likely D'));assert(output.includes('Allan W Fung'));assert(output.includes('races/house-15.html'));assert(output.includes('+7-point'));
+let output=context.raceSection('house',15,[],roster);assert(output.includes('Likely D'));assert(output.includes('Allan W Fung'));assert(output.includes('races/house-15.html'));assert(output.includes('Published preliminary prediction'));assert(output.includes('(Flip)'));
 output=context.raceSection('house',1,[],roster);assert(output.includes('Edith H Ajello'));assert(!output.includes('Michael J Garman'));assert(output.includes('Unopposed'));
 output=context.raceSection('senate',19,[],roster);assert(output.includes('Not rated'));assert(!output.includes('undefined'));
 context.raceRatings=new Map();output=context.raceSection('house',15,[],roster);assert(output.includes('races/house-15.html'));assert(output.includes('Not rated'));
