@@ -1,3 +1,3 @@
-League of Women Voters guide temporarily withdrawn pending permission.
+League of Women Voters guide restoration archive.
 
-This directory is excluded from GitHub Pages by Jekyll. Original guide HTML, source PDF, data, and removed candidate sections are retained for restoration after approval. Race-page links were removed from running.html and race-page.js. No approval is implied.
+Publication restored October 10, 2026 following user confirmation that permission was received. Public guide HTML, original PDF, data, candidate sections and race-page links have been restored. This archive remains excluded from GitHub Pages.
