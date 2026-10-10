@@ -39,7 +39,7 @@ def parse(text):
     if 'Refund of Contribution' in m[3]:receipts.append(dict(date=m[1],donor=name or 'Returned contribution',amount=-amount,type='Returned contribution',notes=purpose))
     else:(unpaid if re.search(r'Account.? Payable',m[3]) else expenses).append(row)
    else:
-    before=line[:m.start()].strip();typ='Aggregate' if 'Aggregate' in before else 'PAC' if 'PAC' in before else 'Party' if 'Political Party' in before else 'Individual' if 'Individual' in before else 'Loan' if 'Loan' in before else 'Interest' if 'Interest' in before else 'Refund/Rebate' if 'Refund' in before else 'Other'
+    before=line[:m.start()].strip();typ='Aggregate' if 'Aggregate' in before else 'PAC' if 'PAC' in before else 'Party' if re.search(r'\bParty\b',before) else 'Individual' if 'Individual' in before else 'Loan' if 'Loan' in before else 'Interest' if 'Interest' in before else 'Refund/Rebate' if 'Refund' in before else 'Other'
     row=dict(date=m[1],donor=name or ('Unitemized / aggregate receipts' if typ=='Aggregate' else typ),amount=amount,type=typ,notes=purpose)
     (inkind if 'In-Kind' in before else receipts).append(row)
  returned=value('13. Returned Contributions')

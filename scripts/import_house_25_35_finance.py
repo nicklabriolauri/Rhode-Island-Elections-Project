@@ -28,8 +28,12 @@ def enrich(snapshot, values):
     for row in values['expenditure_transactions']:
         expenses[row['category']] += row['amount']
     snapshot.update(values)
-    snapshot.update(source_buckets=[dict(label=k, amount=round(v, 2),
-        description='Cash receipts in the selected filing.', class_name=k.lower()) for k,v in buckets.items()],
+    bucket_labels={'Individual':('Individual contributions','individuals'),
+        'PAC':('PAC contributions','pacs'),'Party':('Political party contributions','parties'),
+        'Aggregate':('Aggregate contributions','aggregate'),'Loan':('Loan proceeds','candidate-loan'),
+        'Refund/Rebate':('Refunds / rebates','refunds'),'Interest':('Interest received','other')}
+    snapshot.update(source_buckets=[dict(label=bucket_labels.get(k,(k,k.lower()))[0], amount=round(v, 2),
+        description='Cash receipts in the selected filing.', class_name=bucket_labels.get(k,(k,k.lower()))[1]) for k,v in buckets.items()],
         top_donors=[dict(donor=k[0], type=k[1], amount=round(v, 2),
         notes='Named contributor in the selected filing.') for k,v in sorted(donors.items(), key=lambda x:-x[1])],
         spending_categories=[dict(title=k, amount=round(v, 2),
@@ -43,6 +47,10 @@ def verify(text, values):
     assert spending == values['money_spent'], ('CF-2 spending', spending, values['money_spent'])
     for field, total in [('receipt_transactions', receipts), ('expenditure_transactions', spending)]:
         assert round(sum(r['amount'] for r in values[field]), 2) == total, field
+    for typ,label in [('Individual','2. Individuals'),('PAC','4. Political Action Committees'),
+            ('Party','3. Political Parties'),('Aggregate','1. Aggregate'),('Loan','5. Loan Proceeds'),
+            ('Interest','7. Interest Received'),('Refund/Rebate','9. Refund/Rebate')]:
+        assert round(sum(r['amount'] for r in values['receipt_transactions'] if r['type']==typ),2)==summary_value(text,label),(typ,'Receipt classification differs from CF-2')
     assert round(values['beginning_cash'] + receipts - spending, 2) == values['ending_cash']
     assert round(values['ending_cash'] - values['total_liabilities'], 2) == values['total_fund_balance']
     values['in_kind_contributions'] = summary_value(text, '6. Report of In-Kind Contributions')
@@ -151,7 +159,7 @@ def main(source):
         p=r['profile']
         for d in p['top_donors']:data['donor_index'].append(dict(d,**{k:p[k] for k in ['candidate_id','candidate_name','chamber','district_number','party','slug']}))
     for f in ['data/candidate_finance_2026.json','candidate_finance_2026.json']:(ROOT/f).write_text(json.dumps(data,indent=2)+'\n')
-    manifest=dict(source=source.name,report_count=len(records),findings=[dict(slug=r['profile']['slug'],
+    manifest=dict(source=source.name,report_count=len(records),publication_note='Verified October 9 upload: 13 candidate reports, 121 source pages, with prior snapshots retained.',findings=[dict(slug=r['profile']['slug'],
         candidate_name=r['profile']['candidate_name'],pdf_candidate_name=r['name'],district=r['profile']['district_number'],
         source_start_page=r['start_page'],source_end_page=r['end_page'],reporting_period=r['profile']['reporting_period_label'],
         identity_verified=True,summary_lines_verified=True,schedules_reconciled=True,

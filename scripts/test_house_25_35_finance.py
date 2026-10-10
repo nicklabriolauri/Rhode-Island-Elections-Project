@@ -48,6 +48,9 @@ almagno=profiles['lawrence-paul-almagno-jr']
 assert almagno['in_kind_contributions']==752.48
 assert almagno['loan_proceeds']==0 and almagno['loans_payable']==100
 assert almagno['beginning_cash']==7252.61
+assert sum(r['amount'] for r in almagno['receipt_transactions'] if r['type']=='Party')==2200
+assert almagno['top_donors'][0]['donor']=='RI REPUBLICAN STATE COMMITTEE'
+assert almagno['top_donors'][0]['type']=='Party'
 assert '6,440.11' in almagno['finance_audit_note']
 assert profiles['james-c-sheehan']['loan_proceeds']==300
 assert profiles['james-c-sheehan']['refunds_rebates']==241.25

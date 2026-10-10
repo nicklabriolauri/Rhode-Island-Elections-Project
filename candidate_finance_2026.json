@@ -23002,10 +23002,10 @@
       ],
       "source_buckets": [
         {
-          "label": "Individual",
+          "label": "Individual contributions",
           "amount": 100.0,
           "description": "Cash receipts in the selected filing.",
-          "class_name": "individual"
+          "class_name": "individuals"
         }
       ],
       "top_donors": [
@@ -23415,16 +23415,16 @@
       ],
       "source_buckets": [
         {
-          "label": "Individual",
+          "label": "Individual contributions",
           "amount": 8785.0,
           "description": "Cash receipts in the selected filing.",
-          "class_name": "individual"
+          "class_name": "individuals"
         },
         {
-          "label": "PAC",
+          "label": "PAC contributions",
           "amount": 2450.0,
           "description": "Cash receipts in the selected filing.",
-          "class_name": "pac"
+          "class_name": "pacs"
         }
       ],
       "top_donors": [
@@ -24872,37 +24872,43 @@
       ],
       "source_buckets": [
         {
-          "label": "Aggregate",
+          "label": "Aggregate contributions",
           "amount": 200.0,
           "description": "Cash receipts in the selected filing.",
           "class_name": "aggregate"
         },
         {
-          "label": "Individual",
+          "label": "Individual contributions",
           "amount": 5655.42,
           "description": "Cash receipts in the selected filing.",
-          "class_name": "individual"
+          "class_name": "individuals"
         },
         {
-          "label": "PAC",
+          "label": "PAC contributions",
           "amount": 750.0,
           "description": "Cash receipts in the selected filing.",
-          "class_name": "pac"
+          "class_name": "pacs"
         },
         {
-          "label": "Other",
+          "label": "Political party contributions",
           "amount": 2200.0,
           "description": "Cash receipts in the selected filing.",
-          "class_name": "other"
+          "class_name": "parties"
         },
         {
-          "label": "Refund/Rebate",
+          "label": "Refunds / rebates",
           "amount": 40.0,
           "description": "Cash receipts in the selected filing.",
-          "class_name": "refund/rebate"
+          "class_name": "refunds"
         }
       ],
       "top_donors": [
+        {
+          "donor": "RI REPUBLICAN STATE COMMITTEE",
+          "type": "Party",
+          "amount": 2000.0,
+          "notes": "Named contributor in the selected filing."
+        },
         {
           "donor": "Gregory Rice",
           "type": "Individual",
@@ -24984,6 +24990,12 @@
         {
           "donor": "Stephen T Skoly Jr",
           "type": "Individual",
+          "amount": 200.0,
+          "notes": "Named contributor in the selected filing."
+        },
+        {
+          "donor": "COVENTRY REPUBLICAN TOWN COMMITTEE",
+          "type": "Party",
           "amount": 200.0,
           "notes": "Named contributor in the selected filing."
         },
@@ -25458,14 +25470,14 @@
           "date": "09/25/2026",
           "donor": "COVENTRY REPUBLICAN TOWN COMMITTEE",
           "amount": 200.0,
-          "type": "Other",
+          "type": "Party",
           "notes": "Check #1923."
         },
         {
           "date": "10/03/2026",
           "donor": "RI REPUBLICAN STATE COMMITTEE",
           "amount": 2000.0,
-          "type": "Other",
+          "type": "Party",
           "notes": "Check #156."
         },
         {
@@ -26133,7 +26145,7 @@
       ],
       "source_buckets": [
         {
-          "label": "Aggregate",
+          "label": "Aggregate contributions",
           "amount": 100.0,
           "description": "Cash receipts in the selected filing.",
           "class_name": "aggregate"
@@ -26288,10 +26300,10 @@
       ],
       "source_buckets": [
         {
-          "label": "Interest",
+          "label": "Interest received",
           "amount": 0.01,
           "description": "Cash receipts in the selected filing.",
-          "class_name": "interest"
+          "class_name": "other"
         }
       ],
       "top_donors": [],
@@ -26454,16 +26466,16 @@
       ],
       "source_buckets": [
         {
-          "label": "Individual",
+          "label": "Individual contributions",
           "amount": 30.0,
           "description": "Cash receipts in the selected filing.",
-          "class_name": "individual"
+          "class_name": "individuals"
         },
         {
-          "label": "PAC",
+          "label": "PAC contributions",
           "amount": 200.0,
           "description": "Cash receipts in the selected filing.",
-          "class_name": "pac"
+          "class_name": "pacs"
         }
       ],
       "top_donors": [
@@ -26817,22 +26829,22 @@
       ],
       "source_buckets": [
         {
-          "label": "Individual",
+          "label": "Individual contributions",
           "amount": 250.0,
           "description": "Cash receipts in the selected filing.",
-          "class_name": "individual"
+          "class_name": "individuals"
         },
         {
-          "label": "Loan",
+          "label": "Loan proceeds",
           "amount": 300.0,
           "description": "Cash receipts in the selected filing.",
-          "class_name": "loan"
+          "class_name": "candidate-loan"
         },
         {
-          "label": "Refund/Rebate",
+          "label": "Refunds / rebates",
           "amount": 241.25,
           "description": "Cash receipts in the selected filing.",
-          "class_name": "refund/rebate"
+          "class_name": "refunds"
         }
       ],
       "top_donors": [
@@ -27421,16 +27433,16 @@
       ],
       "source_buckets": [
         {
-          "label": "Individual",
+          "label": "Individual contributions",
           "amount": 2324.0,
           "description": "Cash receipts in the selected filing.",
-          "class_name": "individual"
+          "class_name": "individuals"
         },
         {
-          "label": "PAC",
+          "label": "PAC contributions",
           "amount": 150.0,
           "description": "Cash receipts in the selected filing.",
-          "class_name": "pac"
+          "class_name": "pacs"
         }
       ],
       "top_donors": [
@@ -28186,16 +28198,16 @@
       ],
       "source_buckets": [
         {
-          "label": "Individual",
+          "label": "Individual contributions",
           "amount": 2350.0,
           "description": "Cash receipts in the selected filing.",
-          "class_name": "individual"
+          "class_name": "individuals"
         },
         {
-          "label": "PAC",
+          "label": "PAC contributions",
           "amount": 1000.0,
           "description": "Cash receipts in the selected filing.",
-          "class_name": "pac"
+          "class_name": "pacs"
         }
       ],
       "top_donors": [
@@ -28729,16 +28741,16 @@
       ],
       "source_buckets": [
         {
-          "label": "Aggregate",
+          "label": "Aggregate contributions",
           "amount": 525.0,
           "description": "Cash receipts in the selected filing.",
           "class_name": "aggregate"
         },
         {
-          "label": "PAC",
+          "label": "PAC contributions",
           "amount": 600.0,
           "description": "Cash receipts in the selected filing.",
-          "class_name": "pac"
+          "class_name": "pacs"
         }
       ],
       "top_donors": [
@@ -29753,22 +29765,22 @@
       ],
       "source_buckets": [
         {
-          "label": "Aggregate",
+          "label": "Aggregate contributions",
           "amount": 346.5,
           "description": "Cash receipts in the selected filing.",
           "class_name": "aggregate"
         },
         {
-          "label": "Individual",
+          "label": "Individual contributions",
           "amount": 2000.0,
           "description": "Cash receipts in the selected filing.",
-          "class_name": "individual"
+          "class_name": "individuals"
         },
         {
-          "label": "PAC",
+          "label": "PAC contributions",
           "amount": 600.0,
           "description": "Cash receipts in the selected filing.",
-          "class_name": "pac"
+          "class_name": "pacs"
         }
       ],
       "top_donors": [
@@ -29983,22 +29995,22 @@
       ],
       "source_buckets": [
         {
-          "label": "Aggregate",
+          "label": "Aggregate contributions",
           "amount": 150.0,
           "description": "Cash receipts in the selected filing.",
           "class_name": "aggregate"
         },
         {
-          "label": "Individual",
+          "label": "Individual contributions",
           "amount": 550.0,
           "description": "Cash receipts in the selected filing.",
-          "class_name": "individual"
+          "class_name": "individuals"
         },
         {
-          "label": "PAC",
+          "label": "PAC contributions",
           "amount": 200.0,
           "description": "Cash receipts in the selected filing.",
-          "class_name": "pac"
+          "class_name": "pacs"
         }
       ],
       "top_donors": [
@@ -87679,6 +87691,18 @@
       "slug": "brittany-m-kubicek"
     },
     {
+      "donor": "RI REPUBLICAN STATE COMMITTEE",
+      "type": "Party",
+      "amount": 2000.0,
+      "notes": "Named contributor in the selected filing.",
+      "candidate_id": "house-27-lawrence-paul-almagno-jr",
+      "candidate_name": "Lawrence Paul Almagno Jr",
+      "chamber": "house",
+      "district_number": "27",
+      "party": "REP",
+      "slug": "lawrence-paul-almagno-jr"
+    },
+    {
       "donor": "Gregory Rice",
       "type": "Individual",
       "amount": 1000.0,
@@ -87837,6 +87861,18 @@
     {
       "donor": "Stephen T Skoly Jr",
       "type": "Individual",
+      "amount": 200.0,
+      "notes": "Named contributor in the selected filing.",
+      "candidate_id": "house-27-lawrence-paul-almagno-jr",
+      "candidate_name": "Lawrence Paul Almagno Jr",
+      "chamber": "house",
+      "district_number": "27",
+      "party": "REP",
+      "slug": "lawrence-paul-almagno-jr"
+    },
+    {
+      "donor": "COVENTRY REPUBLICAN TOWN COMMITTEE",
+      "type": "Party",
       "amount": 200.0,
       "notes": "Named contributor in the selected filing.",
       "candidate_id": "house-27-lawrence-paul-almagno-jr",
