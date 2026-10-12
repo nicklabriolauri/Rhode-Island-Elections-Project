@@ -3,6 +3,14 @@ import unittest
 from build_race_ratings_2026 import build,build_baseline,category,render,ROOT,RATING_WINDOW_PP
 from lxml import html
 class RatingsTests(unittest.TestCase):
+ def test_gain_segments(self):
+  doc=html.fromstring(render(build()))
+  house=doc.xpath('//article[@data-chamber="house"]')[0]
+  segments=house.xpath('.//span[contains(@class,"balance-segment")]')
+  self.assertEqual([s.attrib['title'] for s in segments],['Democrats: 64 seats retained','Democrats: 3 projected gains','Independents: 1 seats retained','Republicans: 7 seats retained'])
+  self.assertEqual(len(house.xpath('.//span[contains(@class,"dem gain")]')),1)
+  self.assertIn('+3 projected gains',house.text_content())
+  self.assertFalse(doc.xpath('//article[@data-chamber="senate"]//span[contains(@class," gain")]'))
  def test_balance_totals_and_toss_up(self):
   doc=html.fromstring(render(build()))
   for chamber,expected in [('house',[67,1,7]),('senate',[34,0,3,1])]:
