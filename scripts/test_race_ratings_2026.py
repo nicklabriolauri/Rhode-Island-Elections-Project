@@ -3,6 +3,14 @@ import unittest
 from build_race_ratings_2026 import build,build_baseline,category,render,ROOT,RATING_WINDOW_PP
 from lxml import html
 class RatingsTests(unittest.TestCase):
+ def test_balance_totals_and_toss_up(self):
+  doc=html.fromstring(render(build()))
+  for chamber,expected in [('house',[67,1,7]),('senate',[34,0,3,1])]:
+   card=doc.xpath(f'//article[@data-chamber="{chamber}"]')[0]
+   self.assertEqual([int(n) for n in card.xpath('.//dd/text()')],expected)
+   self.assertEqual(sum(expected),75 if chamber=='house' else 38)
+  self.assertIn('SD 34 remains a Toss Up',doc.text_content())
+  self.assertEqual(sum(float(s.attrib['style'].split(':')[1].rstrip('%')) for s in doc.xpath('//article[@data-chamber="senate"]//span[contains(@class,"balance-segment")]')),100)
  def test_boundaries(self):
   for margin,expected in [(0,'Toss Up'),(1.999,'Toss Up'),(2,'Tilt'),(4.999,'Tilt'),(5,'Lean'),(9.999,'Lean'),(10,'Likely'),(14.999,'Likely'),(15,'Solid'),(20,'Solid')]:self.assertEqual(category(margin),expected)
  def test_all_districts(self):
