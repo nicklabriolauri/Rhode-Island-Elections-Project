@@ -25,7 +25,7 @@ def main():
      for s in [f]+list(reversed(f.get('archived_reporting_periods',[]))):
       label=s.get('reporting_period_label') or s.get('report_label','Reporting period')
       snaps.append({k:s.get(k) for k in ['report_label','reporting_period_label','money_raised','money_spent','ending_cash','finance_audit_note']}|{'pdf':s.get('latest_filing_href')})
-    rows.append(dict(id=c['candidate_id'],slug=slug,name=c['name'],party=c.get('party','OTH'),chamber=chamber,district=int(district),hometown=c.get('hometown',''),status=c.get('status_label',''),profile=profile,photo=photo,priorities=raw[:3],finance=snaps,finance_url='/finance.html?slug='+slug if f else None))
+    rows.append(dict(id=c['candidate_id'],slug=slug,name=c['name'],party=c.get('party','OTH'),chamber=chamber,district=int(district),hometown=c.get('hometown',''),status=c.get('status_label',''),profile=profile,photo=photo,priorities=raw,finance=snaps,finance_url='/finance.html?slug='+slug if f else None))
  data=dict(updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),cycle=2026,candidates=rows,ratings=[{k:r.get(k) for k in ['chamber','district','rating','projected_flip','included']} for r in ratings])
  (ROOT/'data/mobile_guide_2026.json').write_text(json.dumps(data,separators=(',',':'))+'\n')
  print(len(rows),'general-election candidates;', (ROOT/'data/mobile_guide_2026.json').stat().st_size,'bytes')
