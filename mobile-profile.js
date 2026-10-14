@@ -42,6 +42,15 @@ function sections(html, c) {
   const doc = new DOMParser().parseFromString(html, 'text/html');
   const main = doc.querySelector('main');
   if (!main) throw Error('Profile sections are unavailable.');
+  // Give RIEP's own score a distinct section rather than burying it with outside ratings.
+  const index = main.querySelector('#riep-legislative-index');
+  if (index) {
+    const parent = index.parentElement.closest('section');
+    const title = doc.createElement('h2');
+    title.textContent = 'Experimental RIEP score · 2025–2026';
+    index.prepend(title);
+    if (parent) parent.before(index);
+  }
   // ACLU vote records normally open in a desktop dialog. Make them an inline foldout.
   doc.querySelectorAll('dialog').forEach(dialog => {
     const details = doc.createElement('details');
@@ -62,7 +71,7 @@ function sections(html, c) {
     const id = el.id || 'profile-section-' + i;
     el.querySelector('h2').remove();
     clean(el, base);
-    return {id, title, html:el.innerHTML, open:['about','priorities'].includes(id)};
+    return {id, title, html:el.innerHTML, open:['about','priorities','riep-legislative-index'].includes(id)};
   });
 }
 async function load(c, target) {
