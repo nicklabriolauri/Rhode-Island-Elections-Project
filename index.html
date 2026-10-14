@@ -4,6 +4,13 @@
   <meta charset="utf-8" />
   <title>Rhode Island Elections Project | Rhode Island Election Results, Turnout, and Precinct Maps</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    // Phone visitors start in the mobile guide; its full-site link opts out.
+    if (window.matchMedia('(max-width: 767px)').matches &&
+        new URLSearchParams(window.location.search).get('view') !== 'full') {
+      window.location.replace('/mobile-guide.html');
+    }
+  </script>
   <meta name="description" content="The Rhode Island Elections Project: a data-driven guide to Rhode Island election results, turnout maps, precinct lookup, and district-level election tools." />
   <meta name="application-name" content="Rhode Island Elections Project" />
   <meta name="robots" content="index,follow" />
