@@ -1,0 +1,443 @@
+{
+  "checked": "2026-10-14",
+  "election_date": "2026-11-03",
+  "roster_source": "https://vote.sos.ri.gov/Candidates/CandidateSearchSummary?CityTown=00028&Election=18144",
+  "officeholder_source": "https://council.providenceri.gov/council/members/",
+  "primary_source": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/RI2026StatewidePrimary?cg=City+%26+Town",
+  "races": [
+    {
+      "ward": 1,
+      "current": {
+        "name": "John Goncalves",
+        "party": "DEM",
+        "on_general_ballot": false,
+        "primary_status": "Lost Democratic primary"
+      },
+      "candidates": [
+        {
+          "name": "Miguel Martinez Youngs",
+          "party": "DEM",
+          "primary_contested": true
+        }
+      ],
+      "primary_results": [
+        {
+          "name": "Miguel Martinez Youngs",
+          "votes": 1305,
+          "percent": 51.357733175914994
+        },
+        {
+          "name": "John Goncalves",
+          "votes": 1236,
+          "percent": 48.642266824085006
+        }
+      ],
+      "primary_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/RI2026StatewidePrimary/ballot-items/01000000-553f-29ee-2efe-08df0541a614"
+    },
+    {
+      "ward": 2,
+      "current": {
+        "name": "Jill S. Davidson",
+        "party": "DEM",
+        "on_general_ballot": true,
+        "primary_status": "Unopposed Democratic nominee"
+      },
+      "candidates": [
+        {
+          "name": "Jill Susan Davidson",
+          "party": "DEM",
+          "primary_contested": false
+        }
+      ],
+      "primary_results": []
+    },
+    {
+      "ward": 3,
+      "current": {
+        "name": "Sue AnderBois",
+        "party": "DEM",
+        "on_general_ballot": false,
+        "primary_status": "Not on the general-election ballot"
+      },
+      "candidates": [
+        {
+          "name": "Yulyana M. Torres",
+          "party": "DEM",
+          "primary_contested": true
+        }
+      ],
+      "primary_results": [
+        {
+          "name": "Yulyana Torres",
+          "votes": 2498,
+          "percent": 70.90547828555209
+        },
+        {
+          "name": "Jason Kashdan",
+          "votes": 630,
+          "percent": 17.882486517172865
+        },
+        {
+          "name": "Steven London",
+          "votes": 395,
+          "percent": 11.21203519727505
+        }
+      ],
+      "primary_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/RI2026StatewidePrimary/ballot-items/01000000-553f-29ee-15e1-08df0541a620"
+    },
+    {
+      "ward": 4,
+      "current": {
+        "name": "Justin Roias",
+        "party": "DEM",
+        "on_general_ballot": true,
+        "primary_status": "Won Democratic primary"
+      },
+      "candidates": [
+        {
+          "name": "Justin M. Roias",
+          "party": "DEM",
+          "primary_contested": true
+        }
+      ],
+      "primary_results": [
+        {
+          "name": "Justin M. Roias",
+          "votes": 750,
+          "percent": 51.90311418685121
+        },
+        {
+          "name": "Joseph A. Casoli",
+          "votes": 695,
+          "percent": 48.09688581314879
+        }
+      ],
+      "primary_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/RI2026StatewidePrimary/ballot-items/01000000-553f-29ee-3210-08df0541a62c"
+    },
+    {
+      "ward": 5,
+      "current": {
+        "name": "Jo-Ann Ryan",
+        "party": "DEM",
+        "on_general_ballot": false,
+        "primary_status": "Not on the general-election ballot"
+      },
+      "candidates": [
+        {
+          "name": "Jacqueline Esther Goldman",
+          "party": "DEM",
+          "primary_contested": true
+        },
+        {
+          "name": "Christopher L. Woodley",
+          "party": "REP",
+          "primary_contested": false
+        },
+        {
+          "name": "Timothy Daniel Donahue",
+          "party": "IND",
+          "primary_contested": null
+        }
+      ],
+      "primary_results": [
+        {
+          "name": "Jacqueline Goldman",
+          "votes": 1370,
+          "percent": 52.936630602782074
+        },
+        {
+          "name": "Michael A. Solomon",
+          "votes": 935,
+          "percent": 36.128284389489956
+        },
+        {
+          "name": "Simon Sarkisian",
+          "votes": 283,
+          "percent": 10.935085007727976
+        }
+      ],
+      "primary_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/RI2026StatewidePrimary/ballot-items/01000000-553f-29ee-fb09-08df0541a637"
+    },
+    {
+      "ward": 6,
+      "current": {
+        "name": "Miguel Sanchez",
+        "party": "DEM",
+        "on_general_ballot": true,
+        "primary_status": "Won Democratic primary"
+      },
+      "candidates": [
+        {
+          "name": "Miguel Angel Sanchez",
+          "party": "DEM",
+          "primary_contested": true
+        },
+        {
+          "name": "Jorge Porras",
+          "party": "IND",
+          "primary_contested": null
+        }
+      ],
+      "primary_results": [
+        {
+          "name": "Miguel Angel Sanchez",
+          "votes": 601,
+          "percent": 56.27340823970037
+        },
+        {
+          "name": "Jenny G. Mercado",
+          "votes": 467,
+          "percent": 43.72659176029963
+        }
+      ],
+      "primary_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/RI2026StatewidePrimary/ballot-items/01000000-553f-29ee-0faa-08df0541a644"
+    },
+    {
+      "ward": 7,
+      "current": {
+        "name": "Ana Vargas",
+        "party": "DEM",
+        "on_general_ballot": false,
+        "primary_status": "Lost Democratic primary"
+      },
+      "candidates": [
+        {
+          "name": "David D. Marshall",
+          "party": "DEM",
+          "primary_contested": true
+        }
+      ],
+      "primary_results": [
+        {
+          "name": "David D. Marshall",
+          "votes": 553,
+          "percent": 53.02013422818792
+        },
+        {
+          "name": "Ana S. Vargas",
+          "votes": 490,
+          "percent": 46.97986577181208
+        }
+      ],
+      "primary_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/RI2026StatewidePrimary/ballot-items/01000000-553f-29ee-70cb-08df0541a650"
+    },
+    {
+      "ward": 8,
+      "current": {
+        "name": "James Taylor",
+        "party": "DEM",
+        "on_general_ballot": true,
+        "primary_status": "Unopposed Democratic nominee"
+      },
+      "candidates": [
+        {
+          "name": "James Earl Taylor",
+          "party": "DEM",
+          "primary_contested": false
+        }
+      ],
+      "primary_results": []
+    },
+    {
+      "ward": 9,
+      "current": {
+        "name": "Juan M. Pichardo",
+        "party": "DEM",
+        "on_general_ballot": true,
+        "primary_status": "Won Democratic primary"
+      },
+      "candidates": [
+        {
+          "name": "Juan M. Pichardo",
+          "party": "DEM",
+          "primary_contested": true
+        },
+        {
+          "name": "Diego Tomas Arene Morley",
+          "party": "IND",
+          "party_label": "Independent \u2013 For All Neighbors",
+          "primary_contested": null
+        }
+      ],
+      "primary_results": [
+        {
+          "name": "Juan M. Pichardo",
+          "votes": 652,
+          "percent": 50.42536736272235
+        },
+        {
+          "name": "Carmen L. Castillo",
+          "votes": 641,
+          "percent": 49.57463263727765
+        }
+      ],
+      "primary_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/RI2026StatewidePrimary/ballot-items/01000000-553f-29ee-ebbc-08df0541a65c"
+    },
+    {
+      "ward": 10,
+      "current": {
+        "name": "Pedro Espinal",
+        "party": "DEM",
+        "on_general_ballot": true,
+        "primary_status": "Won Democratic primary"
+      },
+      "candidates": [
+        {
+          "name": "Pedro J. Espinal",
+          "party": "DEM",
+          "primary_contested": true
+        }
+      ],
+      "primary_results": [
+        {
+          "name": "Pedro J. Espinal",
+          "votes": 971,
+          "percent": 70.4644412191582
+        },
+        {
+          "name": "Aubrey Planitz",
+          "votes": 407,
+          "percent": 29.5355587808418
+        }
+      ],
+      "primary_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/RI2026StatewidePrimary/ballot-items/01000000-553f-29ee-5e1b-08df0541a669"
+    },
+    {
+      "ward": 11,
+      "current": {
+        "name": "Mary Kay Harris",
+        "party": "DEM",
+        "on_general_ballot": false,
+        "primary_status": "Not on the general-election ballot"
+      },
+      "candidates": [
+        {
+          "name": "Brian Daniel Guzman",
+          "party": "DEM",
+          "primary_contested": true
+        }
+      ],
+      "primary_results": [
+        {
+          "name": "Brian Guzman",
+          "votes": 798,
+          "percent": 66.44462947543714
+        },
+        {
+          "name": "Dwayne C. Keys",
+          "votes": 175,
+          "percent": 14.571190674437968
+        },
+        {
+          "name": "Ronald A. Crosson",
+          "votes": 145,
+          "percent": 12.073272273105745
+        },
+        {
+          "name": "Gilberto Reynoso",
+          "votes": 83,
+          "percent": 6.910907577019151
+        }
+      ],
+      "primary_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/RI2026StatewidePrimary/ballot-items/01000000-553f-29ee-0286-08df0541a676"
+    },
+    {
+      "ward": 12,
+      "current": {
+        "name": "Althea Graves",
+        "party": "DEM",
+        "on_general_ballot": true,
+        "primary_status": "Won Democratic primary"
+      },
+      "candidates": [
+        {
+          "name": "Althea A. Graves",
+          "party": "DEM",
+          "primary_contested": true
+        }
+      ],
+      "primary_results": [
+        {
+          "name": "Althea A. Graves",
+          "votes": 553,
+          "percent": 49.64093357271095
+        },
+        {
+          "name": "Belen Florez",
+          "votes": 337,
+          "percent": 30.251346499102333
+        },
+        {
+          "name": "Robert Louis Ricci",
+          "votes": 224,
+          "percent": 20.107719928186714
+        }
+      ],
+      "primary_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/RI2026StatewidePrimary/ballot-items/01000000-553f-29ee-aa01-08df0541a682"
+    },
+    {
+      "ward": 13,
+      "current": {
+        "name": "Rachel Miller",
+        "party": "DEM",
+        "on_general_ballot": false,
+        "primary_status": "Not on the general-election ballot"
+      },
+      "candidates": [
+        {
+          "name": "Annajane Elizabeth Yolken",
+          "party": "DEM",
+          "primary_contested": true
+        }
+      ],
+      "primary_results": [
+        {
+          "name": "Annajane E. Yolken",
+          "votes": 2143,
+          "percent": 81.20500189465707
+        },
+        {
+          "name": "Connor Blier",
+          "votes": 496,
+          "percent": 18.794998105342934
+        }
+      ],
+      "primary_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/RI2026StatewidePrimary/ballot-items/01000000-553f-29ee-38ff-08df0541a68f"
+    },
+    {
+      "ward": 14,
+      "current": {
+        "name": "Shelley Peterson",
+        "party": "DEM",
+        "on_general_ballot": true,
+        "primary_status": "Unopposed Democratic nominee"
+      },
+      "candidates": [
+        {
+          "name": "Shelley T. Peterson",
+          "party": "DEM",
+          "primary_contested": false
+        }
+      ],
+      "primary_results": []
+    },
+    {
+      "ward": 15,
+      "current": {
+        "name": "Oscar Vargas",
+        "party": "DEM",
+        "on_general_ballot": true,
+        "primary_status": "Unopposed Democratic nominee"
+      },
+      "candidates": [
+        {
+          "name": "Oscar Otoniel Vargas",
+          "party": "DEM",
+          "primary_contested": false
+        }
+      ],
+      "primary_results": []
+    }
+  ],
+  "primary_results_as_of": "2026-09-15T21:17:17.466545Z"
+}

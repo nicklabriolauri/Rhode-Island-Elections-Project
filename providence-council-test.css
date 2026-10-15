@@ -10,3 +10,17 @@
 #map .council-label.is-selected span{background:#203aa7;color:white;border:1px solid white;border-radius:50%;width:27px;height:27px;display:grid;place-items:center;text-shadow:none}
 #map .leaflet-interactive:focus{outline:3px solid #f0b429;outline-offset:2px}
 @media(max-width:760px){#map.leaflet-container{height:460px}}
+
+.race-views{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 12px;border-bottom:1px solid var(--line);padding-bottom:12px}
+.race-views button{background:white;color:var(--navy);border-color:var(--line);font-size:14px}
+.race-views button[aria-pressed=true]{background:var(--navy);color:white;border-color:var(--navy)}
+.local-candidate{border:1px solid var(--line);border-left:3px solid #2b50d9;padding:14px;margin:10px 0;display:grid;gap:6px}
+.local-candidate:has(.REP){border-left-color:#b4333c}.local-candidate:has(.IND){border-left-color:#6b7280}
+.local-candidate strong{font-size:19px;line-height:1.35}.party{font-weight:700;font-size:12px;color:#2349be}.party.REP{color:#a12732}.party.IND{color:#525b6c}
+.race-content{margin:18px 0 22px}.race-content>a{font-size:13px}
+.precinct-summary{padding:16px;background:#fff8e9;border:1px solid #e6d5ae;margin-bottom:22px}.precinct-summary h3{margin-top:8px}.precinct-summary p{font-size:14px}
+.district-links{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 14px}.district-links a{font-size:13px;font-weight:700}
+.precinct-list{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}.precinct-list button{min-height:38px;padding:6px 10px;background:white;border-color:#cbd5e1;color:#0e1632;font-size:13px}
+.precinct-list button[aria-pressed=true]{background:#fff0c9;border-color:#cf7a00;color:#794500}
+#map .precinct-label{font:700 11px/20px system-ui,sans-serif;color:#233553;text-align:center;pointer-events:none;text-shadow:0 1px 3px white,1px 0 3px white,-1px 0 3px white}
+#map .precinct-label.is-selected{color:#7b4400;font-weight:900}.primary-table{overflow-x:auto;margin:16px 0}.primary-table table{width:100%;border-collapse:collapse;font-size:13px}.primary-table td,.primary-table th{text-align:left;padding:8px 5px;border-bottom:1px solid var(--line)}.primary-table td:not(:first-child),.primary-table th:not(:first-child){text-align:right;white-space:nowrap}
