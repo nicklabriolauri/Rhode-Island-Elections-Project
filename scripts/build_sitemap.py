@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import json,re
 from pathlib import Path
-from datetime import date
+from build_candidate_seo import profiles
 ROOT=Path(__file__).resolve().parents[1]
 BASE='https://www.rhodeislandelectionsproject.org'
 run=json.loads((ROOT/'data/whos_running_2026.json').read_text())
@@ -18,13 +18,14 @@ def party_slug(p):
 for race in res.get('races',[]):
     if race.get('contested') is False: continue
     urls.append(f"/races/{str(race.get('chamber','')).lower()}-{int(race.get('district'))}-{party_slug(race.get('party'))}.html")
+urls.append('/candidate-profiles.html')
+urls.extend('/' + p['path'] for p in profiles())
 seen=[]
 for u in urls:
     if u not in seen: seen.append(u)
-lastmod=date.today().isoformat()
 lines=['<?xml version="1.0" encoding="UTF-8"?>','<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
 for u in seen:
-    lines += ['  <url>',f'    <loc>{BASE}{u}</loc>',f'    <lastmod>{lastmod}</lastmod>','  </url>']
+    lines += ['  <url>',f'    <loc>{BASE}{u}</loc>','  </url>']
 lines.append('</urlset>')
 (ROOT/'sitemap.xml').write_text('\n'.join(lines)+'\n')
 print(f'wrote {len(seen)} sitemap URLs')
