@@ -22,6 +22,7 @@ before=page_path.read_text();build();assert page_path.read_text()==before,'repea
 assert before.count('id="bffi-scorecard"')==1
 assert before.count('href="bffi-scorecard.css?v=20261006"')==1
 assert bffi_styles(before,target)==before
+assert 'href="#bffi-scorecard"' in before
 assert 'id="bffi-scorecard"' in ratings(target),'profile regeneration retains pilot'
 for phrase in ['Center for Effective Lawmaking','id="riep-legislative-index"','id="aclu-votes-dialog"','RI League of Cities and Towns','data-voting-widget']:
  assert phrase in before,phrase

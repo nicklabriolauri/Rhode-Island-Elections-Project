@@ -82,6 +82,9 @@ def bffi_card(rec):
 def bffi_styles(page,rec):
  if bffi_card(rec) and 'href="bffi-scorecard.css' not in page:
   page=page.replace('</head>','<link rel="stylesheet" href="bffi-scorecard.css?v=20261006">\n</head>')
+
+ if bffi_card(rec) and 'href="#bffi-scorecard"' not in page:
+  page=page.replace('</nav>','<a href="#bffi-scorecard">Womxn Project rating</a></nav>',1)
  return page
 
 def ratings(rec):

@@ -51,6 +51,15 @@ function sections(html, c) {
     index.prepend(title);
     if (parent) parent.before(index);
   }
+  // Approved Womxn Project ratings get their own visible mobile section.
+  const bffi = main.querySelector('#bffi-scorecard');
+  if (bffi) {
+    const parent = bffi.parentElement.closest('section');
+    const title = doc.createElement('h2');
+    title.textContent = 'The Womxn Project · Bodily Freedom Forever Index';
+    bffi.prepend(title);
+    if (parent) parent.after(bffi);
+  }
   // ACLU vote records normally open in a desktop dialog. Make them an inline foldout.
   doc.querySelectorAll('dialog').forEach(dialog => {
     const details = doc.createElement('details');
@@ -71,7 +80,7 @@ function sections(html, c) {
     const id = el.id || 'profile-section-' + i;
     el.querySelector('h2').remove();
     clean(el, base);
-    return {id, title, html:el.innerHTML, open:['about','priorities','riep-legislative-index'].includes(id)};
+    return {id, title, html:el.innerHTML, open:['about','priorities','riep-legislative-index','bffi-scorecard'].includes(id)};
   });
 }
 async function load(c, target) {
