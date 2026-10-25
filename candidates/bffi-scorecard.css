@@ -12,3 +12,9 @@
 .bffi-key dt{font-weight:800}.bffi-key dd{margin:0}
 .bffi-card .source{margin-bottom:0;font-size:12px}
 @media(max-width:600px){.bffi-card{padding:16px}.bffi-head{gap:12px;flex-wrap:wrap}.bffi-head h3{font-size:17px}.bffi-badge{font-size:17px;padding:7px 13px}.bffi-key{grid-template-columns:60px minmax(0,1fr);gap:10px}}
+
+
+.bffi-against{border-left-color:#434343}.bffi-against .bffi-badge{background:#434343}
+.bffi-mixed{border-left-color:#9b5a16}.bffi-mixed .bffi-badge{background:#9b5a16}
+.bffi-na,.bffi-unlisted{border-left-color:#64748b}.bffi-na .bffi-badge,.bffi-unlisted .bffi-badge{background:#e2e8f0;color:#25354b}
+.bffi-source-list{line-height:1.7}

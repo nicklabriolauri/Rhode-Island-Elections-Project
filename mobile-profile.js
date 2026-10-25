@@ -80,7 +80,7 @@ function sections(html, c) {
     const id = el.id || 'profile-section-' + i;
     el.querySelector('h2').remove();
     clean(el, base);
-    return {id, title, html:el.innerHTML, open:['about','priorities','riep-legislative-index','bffi-scorecard'].includes(id)};
+    return {id, title, bffiClass:el.id === 'bffi-scorecard' ? [...el.classList].filter(cls => /^bffi-(for|against|mixed|na|unlisted)$/.test(cls)).join(' ') : '', bffiRating:el.getAttribute('data-bffi-rating'), html:el.innerHTML, open:['about','priorities','riep-legislative-index','bffi-scorecard'].includes(id)};
   });
 }
 async function load(c, target) {
@@ -104,6 +104,8 @@ async function load(c, target) {
     for (const row of rows) {
       const fold = document.createElement('details'); fold.className = 'profile-section';
       fold.id = row.id; fold.open = row.open;
+      if (row.bffiClass) fold.className += ' ' + row.bffiClass;
+      if (row.bffiRating) fold.dataset.bffiRating = row.bffiRating;
       const summary = document.createElement('summary'); summary.textContent = row.title;
       const content = document.createElement('div'); content.className = 'profile-content'; content.innerHTML = row.html;
       fold.append(summary, content); fragment.append(fold);
@@ -133,3 +135,4 @@ async function load(c, target) {
 }
 window.RIEPMobileProfile = {load};
 })();
+

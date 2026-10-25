@@ -69,23 +69,12 @@ def current_index(rec):
  result=f'<section class="riep-progress" id="riep-legislative-index" aria-labelledby="riep-progress-title"><div class="lawmaker-head"><div><span class="eyebrow">Experimental RIEP calculation · 2025–2026</span><h3 id="riep-progress-title">Three-stage legislative progress index</h3></div><div class="lawmaker-score"><strong>{score:.2f}</strong><small>#{rank} of {n} Senate district records</small></div></div>{tags}<p><a class="score-comparison-link" href="current-riep-ranking.html#district-{rec['district_number']}">View entire 2025–2026 Senate ranking →</a></p>{context}<p class="intro">Lead-sponsored bills, bills passed by the Senate, and bills that became law, compared with all {n} Senate district records. A score of 1 represents the comparison-set average.</p><div class="riep-progress-metrics">'+''.join(f'<div><strong>{counts[k]}</strong><span>{label}</span></div>' for k,label in zip(keys,['Lead-sponsored','Passed Senate','Became law']))+f'</div><details><summary>View calculation and methodology</summary><p>Each stage receives equal weight. Divide {esc(surname)}’s count at each stage by the corresponding Senate total, average the three shares, and multiply by {n}. Rank uses unrounded scores; equal scores share a rank. Bills that become law contribute at each stage they reach. Cosponsored bills and resolutions are excluded.</p><p>{n} ÷ 3 × ({formula}) = {score:.6f}.</p><p>Dataset updated: August 30, 2026. Counts reflect this dataset, not a live legislative feed.</p><p><strong>Prototype only.</strong> This is a separate RIEP progress index, not an update to the Center for Effective Lawmaking’s score or an overall assessment of a legislator. It does not include committee-action stages or bill-significance weights. It uses existing district records rather than every legislator who served during the term.</p></details><p class="source">Underlying bill records: <a href="https://status.rilegislature.gov/" target="_blank" rel="noopener">Official Rhode Island Bill Status/History ↗</a></p></section>'
  return result if rec["chamber"]=="senate" else result.replace("Senate","House").replace("current-riep-ranking.html","current-riep-house-ranking.html")
 def bffi_card(rec):
- payload=load('bffi_pilot_2026')
- matches=[r for r in payload['ratings'] if r['candidate_id']==rec['candidate_id']]
- if not matches:return ''
- assert len(matches)==1
- r=matches[0]
- assert r['chamber']==rec['chamber'] and r['district_number']==rec['district_number'] and r['candidate_name']==rec['candidate_name']
- assert r['rating']=='For', 'Pilot currently supports the verified Lauria entry only'
- name=esc(r['candidate_name']);stamp=date.fromisoformat(payload['retrieved_at']).strftime('%B %d, %Y').replace(' 0',' ')
- return f'''<section class="bffi-card" id="bffi-scorecard" aria-labelledby="bffi-title"><div class="bffi-head"><div><p class="eyebrow">The Womxn Project · {esc(payload['edition'])}</p><h3 id="bffi-title">{esc(payload['index_name'])}</h3><p class="bffi-subtitle">Reproductive rights and LGBTQ+ rights · BFFI</p></div><span class="bffi-badge" aria-label="The Womxn Project rating: For">{esc(r['rating'])}</span></div><p>The Womxn Project lists {name} as <strong>For</strong>: its category for support of reproductive rights, gender-affirming care and LGBTQ+ rights. This is a categorical assessment of positions on these issues, rather than a numerical legislative-effectiveness score.</p><details><summary>What the rating means &amp; how it is assigned</summary><p>The Womxn Project defines bodily freedom as deciding what happens to one’s own body while respecting others’ bodily autonomy. The index focuses on reproductive rights and LGBTQ+ rights.</p><h4>How The Womxn Project gathers information</h4><p>Its staff and volunteers send candidates a two-question survey, review public statements and social media, examine relevant voting records, and contact candidates about their findings. Public-source research is used when a candidate’s position is not confirmed.</p><p>The published entry does not identify whether Lauria’s label comes from a survey response, research or both.</p><h4>Reading the categories</h4><dl class="bffi-key"><dt>For</dt><dd>Support for reproductive rights, gender-affirming care and LGBTQ+ rights under the organization’s definition.</dd><dt>Against</dt><dd>The organization finds opposition to policies supporting reproductive and LGBTQ+ rights.</dd><dt>Mixed</dt><dd>Its researchers found conflicting information that the candidate has not clarified through the survey.</dd><dt>N/A</dt><dd>The organization could not obtain the information. This indicates missing information, not an “Against” rating.</dd></dl><p>This outside assessment reflects The Womxn Project’s issue selection and definitions. It is not an RIEP score or endorsement and is not combined with CEL, the RIEP index or other scorecards.</p></details><p class="source"><a href="{esc(r['source_url'])}">Barrington candidate listing ↗</a> · <a href="{esc(payload['methodology_url'])}">BFFI methodology ↗</a> · Checked {stamp}. This is a dated snapshot of the published label.</p></section>'''
+ from bffi_scorecards import card
+ return card(rec)
 
 def bffi_styles(page,rec):
- if bffi_card(rec) and 'href="bffi-scorecard.css' not in page:
-  page=page.replace('</head>','<link rel="stylesheet" href="bffi-scorecard.css?v=20261006">\n</head>')
-
- if bffi_card(rec) and 'href="#bffi-scorecard"' not in page:
-  page=page.replace('</nav>','<a href="#bffi-scorecard">Womxn Project rating</a></nav>',1)
- return page
+ from bffi_scorecards import styles
+ return styles(page,rec)
 
 def ratings(rec):
  name=rec['candidate_name'];rows=[r for r in load('outside_ratings_2026')['ratings'] if r['chamber']==rec['chamber'] and r['district_number']==rec['district_number']];cel=next((r for r in rows if r['organization']=='Center for Effective Lawmaking'),None)
@@ -167,3 +156,4 @@ def harmonize(slug):
   if not endorsements:page=page.replace('Published endorsements from outside organizations. Select an organization to view its endorsement source.','No published endorsements are currently recorded for this candidate in RIEP’s research. Additional endorsements will be added after verification.')
  if district in (22,25,30,31,38):page=page.replace('width="450" height="600"','width="200" height="300"')
  p.write_text(page)
+
