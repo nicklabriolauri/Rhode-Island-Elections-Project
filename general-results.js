@@ -29,7 +29,7 @@
       const counts = data.seat_leads[c], total = c === 'house' ? 75 : 38;
       const parties = ['DEM','IND','REP', ...Object.keys(counts).filter(p => !['DEM','IND','REP'].includes(p))];
       const description = parties.map(p => `${counts[p] || 0} ${partyName(p)}`).join(', ');
-      return `<article class="seat-summary"><h3>${chamberName(c)}<small>${total} seats · ${c === 'house' ? 38 : 20} for a majority</small></h3><div class="seat-counts">${parties.map(p => `<span class="${partyClass(p)}-text"><b>${counts[p] || 0}</b>${esc(p === 'UNASSIGNED' ? 'Unassigned' : partyName(p))}</span>`).join('')}</div><div class="seat-bar" role="img" aria-label="Current seat leads: ${esc(description)}">${parties.filter(p => counts[p]).map(p => `<span class="${partyClass(p)}" style="width:${100 * counts[p] / total}%"></span>`).join('')}</div></article>`;
+      return `<article class="seat-summary"><h3>${chamberName(c)}<small>${total} seats · ${c === 'house' ? 38 : 20} for a majority</small></h3><div class="seat-counts">${parties.map(p => `<span class="${partyClass(p)}-text"><b>${counts[p] || 0}</b>${esc(p === 'UNASSIGNED' ? 'Unassigned' : partyName(p))}</span>`).join('')}</div><div class="seat-bar" style="--majority:${100 * (c === 'house' ? 38 : 20) / total}%" role="img" aria-label="Current seat leads: ${esc(description)}">${parties.filter(p => counts[p]).map(p => `<span class="${partyClass(p)}" style="width:${100 * counts[p] / total}%"></span>`).join('')}</div></article>`;
     }).join('');
   }
 
