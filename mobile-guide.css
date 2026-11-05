@@ -48,3 +48,5 @@ h2{font-size:19px}.eyebrow{letter-spacing:.08em;font-size:11px}
 .profile-content .vp-selected{padding:12px;background:var(--soft);border-color:var(--accent)}.profile-content .vp-chart{min-width:0;width:100%}
 .profile-section summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 @media(max-width:380px){.profile-head h1{font-size:25px}.profile-content{padding:12px}.profile-content .election{grid-template-columns:42px minmax(0,1fr) auto;gap:6px}}
+
+.general-results-banner{max-width:720px;margin:16px auto;padding:16px 20px;background:#111c3d;color:#fff;border-left:4px solid #9ed2f4}.general-results-banner span{font-size:11px;text-transform:uppercase;letter-spacing:.05em}.general-results-banner a{display:block;color:#fff;font-weight:700;font-size:19px;line-height:1.3;margin-top:6px;text-decoration:none}.general-results-banner p{margin:6px 0 0;font-size:13px;color:#dce9f6}

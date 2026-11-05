@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>2026 Rhode Island House &amp; Senate Election Results | RIEP</title>
+  <meta name="description" content="Explore 2026 Rhode Island State House and State Senate election results on district maps, with candidate vote totals, vote shares, and current seat leads. Unofficial results from the Rhode Island Board of Elections.">
+  <link rel="canonical" href="https://www.rhodeislandelectionsproject.org/general-results.html">
+  <meta property="og:title" content="2026 Rhode Island Legislative Election Results">
+  <meta property="og:description" content="District maps and vote totals for all 75 House and 38 Senate races. Rhode Island Elections Project.">
+  <meta property="og:url" content="https://www.rhodeislandelectionsproject.org/general-results.html">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/general-results.css?v=20261105">
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script defer src="/general-results.js?v=20261105"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to results</a>
+  <header><nav aria-label="Main navigation"><a class="brand" href="/"><img src="/riep-logo-sunburst-white.png" alt=""><span>Rhode Island<br>Elections Project</span></a><div><a href="/map.html">Past election maps</a><a href="/running.html">Races &amp; candidates</a><a href="/race-ratings.html">Archived ratings</a></div></nav></header>
+  <main id="main">
+    <div class="heading"><p class="eyebrow">November 3, 2026 · General election</p><h1>Rhode Island election results</h1><p>State House &amp; State Senate</p></div>
+    <div class="source-note"><strong id="resultStatus">Loading results</strong><span id="sourceTime"></span><a href="https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection" target="_blank" rel="noopener">View state source ↗</a></div>
+    <p class="method-note">A dated snapshot of reported votes. Colors show the leading candidate’s party, including unopposed races. A lead is not a race call or certification. Percentages include write-ins.</p>
+    <div id="error" role="alert" hidden></div>
+    <section aria-labelledby="balanceHeading"><h2 id="balanceHeading">Current seat leads</h2><div id="seatTotals" class="seat-totals" aria-live="polite"></div></section>
+    <section aria-labelledby="mapHeading">
+      <div class="map-heading"><h2 id="mapHeading">Results by district</h2><div class="chamber-tabs" role="group" aria-label="Choose chamber"><button type="button" data-chamber="house" aria-pressed="true">State House</button><button type="button" data-chamber="senate" aria-pressed="false">State Senate</button></div></div>
+      <div class="map-controls"><label for="district">District <select id="district"><option value="">All districts</option></select></label><button type="button" id="resetMap">View entire state</button><a href="#resultsTable">Browse all results ↓</a></div>
+      <div class="map-layout"><div id="resultsMap" role="region" aria-label="Rhode Island legislative district results map"><p id="mapFallback">Loading district map…</p></div><section class="district-detail" id="districtDetail" aria-live="polite"><h3>Select a district</h3><p>Choose a district on the map, in the dropdown, or in the results table to see every candidate’s votes.</p></section></div>
+      <div class="legend" aria-label="Map legend"><span><i class="swatch dem" aria-hidden="true"></i>Democratic lead</span><span><i class="swatch rep" aria-hidden="true"></i>Republican lead</span><span><i class="swatch ind" aria-hidden="true"></i>Independent lead</span><span><i class="swatch other" aria-hidden="true"></i>Tied / no votes</span></div>
+    </section>
+    <section id="resultsTable" aria-labelledby="tableHeading"><h2 id="tableHeading">State House results</h2><p class="method-note">Select a district number for its map and full race details. “Unopposed” means one named ballot candidate; write-ins remain listed.</p><div class="table-wrap"><table><thead><tr><th scope="col">District</th><th scope="col">Candidate</th><th scope="col" class="number">Votes</th><th scope="col" class="number">Share</th><th scope="col">Status</th></tr></thead><tbody id="resultRows"></tbody></table></div></section>
+    <details><summary>Sources &amp; how to read these results</summary><p>Vote totals come directly from the Rhode Island Board of Elections statewide general election feed. Shares divide each candidate’s votes by all votes reported for that contest, including write-ins. They may not sum to exactly 100% after rounding.</p><p>Reporting units are the state feed’s reporting jurisdictions, not a percentage of all ballots counted. Results may change as additional or corrected ballots are included. This page does not refresh automatically.</p><p>“Party change” compares the current leader’s party with the party that won the district in 2024; it is provisional until the result is certified. No independent race calls are made here. District boundaries are the same current legislative boundaries used in RIEP’s 2022–2024 maps. Surrounding-state boundaries come from U.S. Census data distributed by <a href="https://github.com/topojson/us-atlas">U.S. Atlas</a>.</p><p><a href="/data/general_results_2026.json" download>Download the results data (JSON)</a> · <a href="/race-ratings.html">See our archived pre-election ratings</a></p></details>
+  </main>
+  <footer>Rhode Island Elections Project · Independent, nonpartisan election information</footer>
+</body>
+</html>

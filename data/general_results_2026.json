@@ -1,0 +1,5029 @@
+{
+  "election_date": "2026-11-03",
+  "is_official": false,
+  "source": "Rhode Island Board of Elections",
+  "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection",
+  "source_feed_url": "https://electionresults.ri.gov/results/public/api/elections/RhodeIsland/2026StatewideGeneralElection/data",
+  "source_as_of": "2026-11-05T01:02:59.1989035Z",
+  "source_published_at": "2026-11-05T01:03:11.5780143Z",
+  "source_publish_version": "658d3c75-e4c2-461c-bba1-c16d7bbb4c14",
+  "imported_at": "2026-11-05T06:25:48.861141+00:00",
+  "notes": [
+    "Percentages include write-in votes; they are not two-party shares.",
+    "Leading does not mean called or certified. Winner status requires an official source flag or certified results.",
+    "Reporting units are the source's reporting jurisdictions, not an estimate of ballots counted.",
+    "Unopposed means one named ballot candidate; write-ins are still included.",
+    "This is a dated snapshot, not a live feed. Party changes compare current leaders with the party that won in 2024."
+  ],
+  "seat_leads": {
+    "house": {
+      "DEM": 66,
+      "IND": 1,
+      "REP": 8
+    },
+    "senate": {
+      "DEM": 36,
+      "REP": 2
+    }
+  },
+  "races": [
+    {
+      "chamber": "house",
+      "district": 1,
+      "contest": "Representative in General Assembly District 1",
+      "source_id": "01000000-59ac-daed-a133-08df1e27bb52",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-a133-08df1e27bb52",
+      "total_votes": 2867,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-bd06-08df1e27bb5b",
+          "name": "Edith H. Ajello",
+          "party": "DEM",
+          "votes": 2811,
+          "pct": 98.046739,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-c135-08df1e27bb5b",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 56,
+          "pct": 1.953261,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Edith H. Ajello",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 2755,
+      "margin_pct": 96.093478,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 2,
+      "contest": "Representative in General Assembly District 2",
+      "source_id": "01000000-59ac-daed-3e17-08df1e27bb64",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-3e17-08df1e27bb64",
+      "total_votes": 3756,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-a753-08df1e27bb6c",
+          "name": "Christopher R. Blazejewski",
+          "party": "DEM",
+          "votes": 3707,
+          "pct": 98.695421,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-aa36-08df1e27bb6c",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 49,
+          "pct": 1.304579,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Christopher R. Blazejewski",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 3658,
+      "margin_pct": 97.390841,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 3,
+      "contest": "Representative in General Assembly District 3",
+      "source_id": "01000000-59ac-daed-fbbc-08df1e27bb74",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-fbbc-08df1e27bb74",
+      "total_votes": 2060,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-b964-08df1e27bb7d",
+          "name": "Nathan W. Biah",
+          "party": "DEM",
+          "votes": 2014,
+          "pct": 97.76699,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-bc25-08df1e27bb7d",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 46,
+          "pct": 2.23301,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Nathan W. Biah",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 1968,
+      "margin_pct": 95.533981,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 4,
+      "contest": "Representative in General Assembly District 4",
+      "source_id": "01000000-59ac-daed-46d7-08df1e27bb86",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-46d7-08df1e27bb86",
+      "total_votes": 5801,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-df1c-08df1e27bb8e",
+          "name": "Rebecca M. Kislak",
+          "party": "DEM",
+          "votes": 5695,
+          "pct": 98.172729,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-e1f6-08df1e27bb8e",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 106,
+          "pct": 1.827271,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Rebecca M. Kislak",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 5589,
+      "margin_pct": 96.345458,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 5,
+      "contest": "Representative in General Assembly District 5",
+      "source_id": "01000000-59ac-daed-e518-08df1e27bb96",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-e518-08df1e27bb96",
+      "total_votes": 2726,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-5c7e-08df1e27bb9f",
+          "name": "Anthony J. DeSimone",
+          "party": "DEM",
+          "votes": 2055,
+          "pct": 75.38518,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-5f5b-08df1e27bb9f",
+          "name": "Brittany M. Kubicek",
+          "party": "SOC",
+          "votes": 635,
+          "pct": 23.294204,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-6093-08df1e27bb9f",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 36,
+          "pct": 1.320616,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Anthony J. DeSimone",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": false,
+      "margin_votes": 1420,
+      "margin_pct": 52.090976,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 6,
+      "contest": "Representative in General Assembly District 6",
+      "source_id": "01000000-59ac-daed-b797-08df1e27b788",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-b797-08df1e27b788",
+      "total_votes": 3511,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-85f8-08df1e27b791",
+          "name": "Raymond A. Hull",
+          "party": "DEM",
+          "votes": 3418,
+          "pct": 97.351182,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-8a06-08df1e27b791",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 93,
+          "pct": 2.648818,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Raymond A. Hull",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 3325,
+      "margin_pct": 94.702364,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 7,
+      "contest": "Representative in General Assembly District 7",
+      "source_id": "01000000-59ac-daed-f8cf-08df1e27bba7",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-f8cf-08df1e27bba7",
+      "total_votes": 3273,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-87f5-08df1e27bbb1",
+          "name": "Amy J. Santiago",
+          "party": "DEM",
+          "votes": 2685,
+          "pct": 82.03483,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-8560-08df1e27bbb1",
+          "name": "Christopher L. Ireland",
+          "party": "REP",
+          "votes": 570,
+          "pct": 17.415215,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-88e1-08df1e27bbb1",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 18,
+          "pct": 0.549954,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Amy J. Santiago",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": false,
+      "margin_votes": 2115,
+      "margin_pct": 64.619615,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 8,
+      "contest": "Representative in General Assembly District 8",
+      "source_id": "01000000-59ac-daed-ada8-08df1e27bbb9",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-ada8-08df1e27bbb9",
+      "total_votes": 3076,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-18eb-08df1e27bbc2",
+          "name": "John Joseph Lombardi",
+          "party": "DEM",
+          "votes": 3024,
+          "pct": 98.309493,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-1beb-08df1e27bbc2",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 52,
+          "pct": 1.690507,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "John Joseph Lombardi",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 2972,
+      "margin_pct": 96.618986,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 9,
+      "contest": "Representative in General Assembly District 9",
+      "source_id": "01000000-59ac-daed-59cd-08df1e27bbca",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-59cd-08df1e27bbca",
+      "total_votes": 2316,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-7692-08df1e27bbd3",
+          "name": "Enrique George Sanchez",
+          "party": "DEM",
+          "votes": 2236,
+          "pct": 96.545769,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-7a7f-08df1e27bbd3",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 80,
+          "pct": 3.454231,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Enrique George Sanchez",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 2156,
+      "margin_pct": 93.091537,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 10,
+      "contest": "Representative in General Assembly District 10",
+      "source_id": "01000000-59ac-daed-4572-08df1e27bbdc",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-4572-08df1e27bbdc",
+      "total_votes": 2100,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-1bbf-08df1e27bbe6",
+          "name": "Scott A. Slater",
+          "party": "DEM",
+          "votes": 2056,
+          "pct": 97.904762,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-2300-08df1e27bbe6",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 44,
+          "pct": 2.095238,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Scott A. Slater",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 2012,
+      "margin_pct": 95.809524,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 11,
+      "contest": "Representative in General Assembly District 11",
+      "source_id": "01000000-59ac-daed-b557-08df1e27bbef",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-b557-08df1e27bbef",
+      "total_votes": 2484,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-311c-08df1e27bbf8",
+          "name": "Grace Diaz",
+          "party": "DEM",
+          "votes": 2405,
+          "pct": 96.819646,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-33e2-08df1e27bbf8",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 79,
+          "pct": 3.180354,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Grace Diaz",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 2326,
+      "margin_pct": 93.639291,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 12,
+      "contest": "Representative in General Assembly District 12",
+      "source_id": "01000000-59ac-daed-46ce-08df1e27bc00",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-46ce-08df1e27bc00",
+      "total_votes": 2116,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-7e83-08df1e27bc09",
+          "name": "Arlette Hidalgo",
+          "party": "DEM",
+          "votes": 2076,
+          "pct": 98.109641,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-80d7-08df1e27bc09",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 40,
+          "pct": 1.890359,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Arlette Hidalgo",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 2036,
+      "margin_pct": 96.219282,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 13,
+      "contest": "Representative in General Assembly District 13",
+      "source_id": "01000000-59ac-daed-c7ae-08df1e27b26a",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-c7ae-08df1e27b26a",
+      "total_votes": 2405,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-56a5-08df1e27b273",
+          "name": "Ramón Pérez",
+          "party": "DEM",
+          "votes": 1751,
+          "pct": 72.806653,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-538e-08df1e27b273",
+          "name": "Derick A. Reels",
+          "party": "REP",
+          "votes": 641,
+          "pct": 26.652807,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-5840-08df1e27b273",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 13,
+          "pct": 0.540541,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Ramón Pérez",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": false,
+      "margin_votes": 1110,
+      "margin_pct": 46.153846,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 14,
+      "contest": "Representative in General Assembly District 14",
+      "source_id": "01000000-59ac-daed-25b7-08df1e27ab74",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-25b7-08df1e27ab74",
+      "total_votes": 2597,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-8986-08df1e27ab7c",
+          "name": "Charlene M. Lima",
+          "party": "DEM",
+          "votes": 2471,
+          "pct": 95.148248,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-8c76-08df1e27ab7c",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 126,
+          "pct": 4.851752,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Charlene M. Lima",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 2345,
+      "margin_pct": 90.296496,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 15,
+      "contest": "Representative in General Assembly District 15",
+      "source_id": "01000000-59ac-daed-2c9a-08df1e27ab84",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-2c9a-08df1e27ab84",
+      "total_votes": 6449,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-8f03-08df1e27ab8d",
+          "name": "Allan W. Fung",
+          "party": "IND",
+          "votes": 2518,
+          "pct": 39.044813,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-8e17-08df1e27ab8d",
+          "name": "Colleen M. Crudele",
+          "party": "DEM",
+          "votes": 2036,
+          "pct": 31.570786,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-8ae1-08df1e27ab8d",
+          "name": "Christopher G. Paplauskas",
+          "party": "REP",
+          "votes": 1893,
+          "pct": 29.353388,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-9045-08df1e27ab8d",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 2,
+          "pct": 0.031013,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Allan W. Fung",
+      "leader_party": "IND",
+      "status": "leading",
+      "is_unopposed": false,
+      "margin_votes": 482,
+      "margin_pct": 7.474027,
+      "previous_party": "REP",
+      "party_change": true,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 16,
+      "contest": "Representative in General Assembly District 16",
+      "source_id": "01000000-59ac-daed-3e6c-08df1e27ab96",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-3e6c-08df1e27ab96",
+      "total_votes": 3785,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-ac39-08df1e27aba2",
+          "name": "Brandon Potter",
+          "party": "DEM",
+          "votes": 3626,
+          "pct": 95.799207,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-afd8-08df1e27aba2",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 159,
+          "pct": 4.200793,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Brandon Potter",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 3467,
+      "margin_pct": 91.598415,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 17,
+      "contest": "Representative in General Assembly District 17",
+      "source_id": "01000000-59ac-daed-b431-08df1e27abaa",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-b431-08df1e27abaa",
+      "total_votes": 3999,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-0170-08df1e27abb3",
+          "name": "Jacquelyn Baginski",
+          "party": "DEM",
+          "votes": 3809,
+          "pct": 95.248812,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-04f6-08df1e27abb3",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 190,
+          "pct": 4.751188,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Jacquelyn Baginski",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 3619,
+      "margin_pct": 90.497624,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 18,
+      "contest": "Representative in General Assembly District 18",
+      "source_id": "01000000-59ac-daed-8144-08df1e27abba",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-8144-08df1e27abba",
+      "total_votes": 4050,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-bffa-08df1e27abc2",
+          "name": "Arthur Handy",
+          "party": "DEM",
+          "votes": 2944,
+          "pct": 72.691358,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-bcbc-08df1e27abc2",
+          "name": "Jessica Gomes",
+          "party": "REP",
+          "votes": 1093,
+          "pct": 26.987654,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-c0ea-08df1e27abc2",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 13,
+          "pct": 0.320988,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Arthur Handy",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": false,
+      "margin_votes": 1851,
+      "margin_pct": 45.703704,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 19,
+      "contest": "Representative in General Assembly District 19",
+      "source_id": "01000000-59ac-daed-041c-08df1e27abca",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-041c-08df1e27abca",
+      "total_votes": 6838,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-0dbb-08df1e27abd2",
+          "name": "Joseph McNamara",
+          "party": "DEM",
+          "votes": 4967,
+          "pct": 72.638198,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-110c-08df1e27abd2",
+          "name": "Patrick E. Maloney, Jr.",
+          "party": "IND",
+          "votes": 1843,
+          "pct": 26.952325,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-11fd-08df1e27abd2",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 28,
+          "pct": 0.409476,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Joseph McNamara",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": false,
+      "margin_votes": 3124,
+      "margin_pct": 45.685873,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 20,
+      "contest": "Representative in General Assembly District 20",
+      "source_id": "01000000-59ac-daed-e90a-08df1e27c169",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-e90a-08df1e27c169",
+      "total_votes": 4055,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-a57f-08df1e27c172",
+          "name": "David A. Bennett",
+          "party": "DEM",
+          "votes": 3822,
+          "pct": 94.254007,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-a868-08df1e27c172",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 233,
+          "pct": 5.745993,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "David A. Bennett",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 3589,
+      "margin_pct": 88.508015,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 21,
+      "contest": "Representative in General Assembly District 21",
+      "source_id": "01000000-59ac-daed-c547-08df1e27c17b",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-c547-08df1e27c17b",
+      "total_votes": 3776,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-da04-08df1e27c184",
+          "name": "Marie A. Hopkins",
+          "party": "REP",
+          "votes": 3405,
+          "pct": 90.174788,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-df6e-08df1e27c184",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 371,
+          "pct": 9.825212,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Marie A. Hopkins",
+      "leader_party": "REP",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 3034,
+      "margin_pct": 80.349576,
+      "previous_party": "REP",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 22,
+      "contest": "Representative in General Assembly District 22",
+      "source_id": "01000000-59ac-daed-9b1c-08df1e27c18d",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-9b1c-08df1e27c18d",
+      "total_votes": 5208,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-cb38-08df1e27c196",
+          "name": "Zakary J. Pereira",
+          "party": "DEM",
+          "votes": 3061,
+          "pct": 58.774962,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-c7cf-08df1e27c196",
+          "name": "Barbara Quigley",
+          "party": "REP",
+          "votes": 2133,
+          "pct": 40.956221,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-cc45-08df1e27c196",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 14,
+          "pct": 0.268817,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Zakary J. Pereira",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": false,
+      "margin_votes": 928,
+      "margin_pct": 17.81874,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 23,
+      "contest": "Representative in General Assembly District 23",
+      "source_id": "01000000-59ac-daed-6bac-08df1e27c19f",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-6bac-08df1e27c19f",
+      "total_votes": 5268,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-c6bd-08df1e27c1a8",
+          "name": "William Muto",
+          "party": "DEM",
+          "votes": 3235,
+          "pct": 61.408504,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-c2f4-08df1e27c1a8",
+          "name": "Dana James Traversie",
+          "party": "REP",
+          "votes": 2020,
+          "pct": 38.344723,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-c829-08df1e27c1a8",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 13,
+          "pct": 0.246773,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "William Muto",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": false,
+      "margin_votes": 1215,
+      "margin_pct": 23.063781,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 24,
+      "contest": "Representative in General Assembly District 24",
+      "source_id": "01000000-59ac-daed-3019-08df1e27ae00",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-3019-08df1e27ae00",
+      "total_votes": 5275,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-3cd1-08df1e27ae09",
+          "name": "Evan Patrick Shanley",
+          "party": "DEM",
+          "votes": 5049,
+          "pct": 95.71564,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-3ffa-08df1e27ae09",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 226,
+          "pct": 4.28436,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Evan Patrick Shanley",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 4823,
+      "margin_pct": 91.43128,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 25,
+      "contest": "Representative in General Assembly District 25",
+      "source_id": "01000000-59ac-daed-1490-08df1e27a9e3",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-1490-08df1e27a9e3",
+      "total_votes": 2974,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-92e9-08df1e27a9f0",
+          "name": "Thomas E. Noret",
+          "party": "DEM",
+          "votes": 2784,
+          "pct": 93.611298,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-98fb-08df1e27a9f0",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 190,
+          "pct": 6.388702,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Thomas E. Noret",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 2594,
+      "margin_pct": 87.222596,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 26,
+      "contest": "Representative in General Assembly District 26",
+      "source_id": "01000000-59ac-daed-204d-08df1e27a9fa",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-204d-08df1e27a9fa",
+      "total_votes": 3630,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-a46f-08df1e27aa04",
+          "name": "Earl A. Read, III",
+          "party": "DEM",
+          "votes": 3450,
+          "pct": 95.041322,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-a777-08df1e27aa04",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 180,
+          "pct": 4.958678,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Earl A. Read, III",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 3270,
+      "margin_pct": 90.082645,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 3,
+        "totalUnits": 3,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 27,
+      "contest": "Representative in General Assembly District 27",
+      "source_id": "01000000-59ac-daed-79a8-08df1e27aa0c",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-79a8-08df1e27aa0c",
+      "total_votes": 5438,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-aaf7-08df1e27aa14",
+          "name": "Angela S. Coburn",
+          "party": "DEM",
+          "votes": 3047,
+          "pct": 56.031629,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-a7ff-08df1e27aa14",
+          "name": "Lawrence P. Almagno, Jr.",
+          "party": "REP",
+          "votes": 2386,
+          "pct": 43.876425,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-abdf-08df1e27aa14",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 5,
+          "pct": 0.091946,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Angela S. Coburn",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": false,
+      "margin_votes": 661,
+      "margin_pct": 12.155204,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 28,
+      "contest": "Representative in General Assembly District 28",
+      "source_id": "01000000-59ac-daed-2716-08df1e27aa1c",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-2716-08df1e27aa1c",
+      "total_votes": 4422,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-5205-08df1e27aa24",
+          "name": "George A. Nardone",
+          "party": "REP",
+          "votes": 4175,
+          "pct": 94.414292,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-54da-08df1e27aa24",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 247,
+          "pct": 5.585708,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "George A. Nardone",
+      "leader_party": "REP",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 3928,
+      "margin_pct": 88.828584,
+      "previous_party": "REP",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 29,
+      "contest": "Representative in General Assembly District 29",
+      "source_id": "01000000-59ac-daed-8a7c-08df1e27aa2c",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-8a7c-08df1e27aa2c",
+      "total_votes": 4022,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-0cdf-08df1e27aa36",
+          "name": "Sherry L. Roberts",
+          "party": "REP",
+          "votes": 3827,
+          "pct": 95.151666,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-0ff4-08df1e27aa36",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 195,
+          "pct": 4.848334,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Sherry L. Roberts",
+      "leader_party": "REP",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 3632,
+      "margin_pct": 90.303332,
+      "previous_party": "REP",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 30,
+      "contest": "Representative in General Assembly District 30",
+      "source_id": "01000000-59ac-daed-ad98-08df1e27ae10",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-ad98-08df1e27ae10",
+      "total_votes": 4803,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-e4e1-08df1e27ae18",
+          "name": "Justine Caldwell",
+          "party": "DEM",
+          "votes": 4565,
+          "pct": 95.044764,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-e862-08df1e27ae18",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 238,
+          "pct": 4.955236,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Justine Caldwell",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 4327,
+      "margin_pct": 90.089527,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 31,
+      "contest": "Representative in General Assembly District 31",
+      "source_id": "01000000-59ac-daed-cf4c-08df1e27af56",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-cf4c-08df1e27af56",
+      "total_votes": 5179,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-6542-08df1e27af5f",
+          "name": "James C. Sheehan",
+          "party": "DEM",
+          "votes": 4934,
+          "pct": 95.269357,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-68bb-08df1e27af5f",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 245,
+          "pct": 4.730643,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "James C. Sheehan",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 4689,
+      "margin_pct": 90.538714,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 32,
+      "contest": "Representative in General Assembly District 32",
+      "source_id": "01000000-59ac-daed-77f8-08df1e27b744",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-77f8-08df1e27b744",
+      "total_votes": 5353,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-8502-08df1e27b74d",
+          "name": "Robert E. Craven, Jr.",
+          "party": "DEM",
+          "votes": 5069,
+          "pct": 94.694564,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-87a8-08df1e27b74d",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 284,
+          "pct": 5.305436,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Robert E. Craven, Jr.",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 4785,
+      "margin_pct": 89.389128,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 33,
+      "contest": "Representative in General Assembly District 33",
+      "source_id": "01000000-59ac-daed-73b0-08df1e27b5dd",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-73b0-08df1e27b5dd",
+      "total_votes": 6511,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-61ed-08df1e27b5e6",
+          "name": "Carol Hagan McEntee",
+          "party": "DEM",
+          "votes": 4122,
+          "pct": 63.308248,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-5eb9-08df1e27b5e6",
+          "name": "Jessica Drew Day",
+          "party": "REP",
+          "votes": 2376,
+          "pct": 36.49209,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-6302-08df1e27b5e6",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 13,
+          "pct": 0.199662,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Carol Hagan McEntee",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": false,
+      "margin_votes": 1746,
+      "margin_pct": 26.816157,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 34,
+      "contest": "Representative in General Assembly District 34",
+      "source_id": "01000000-59ac-daed-b1c2-08df1e27b5ee",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-b1c2-08df1e27b5ee",
+      "total_votes": 4654,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-9838-08df1e27b5f7",
+          "name": "Teresa A. Tanzi",
+          "party": "DEM",
+          "votes": 4499,
+          "pct": 96.669532,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-9c48-08df1e27b5f7",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 155,
+          "pct": 3.330468,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Teresa A. Tanzi",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 4344,
+      "margin_pct": 93.339063,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 35,
+      "contest": "Representative in General Assembly District 35",
+      "source_id": "01000000-59ac-daed-c991-08df1e27bf5a",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-c991-08df1e27bf5a",
+      "total_votes": 4251,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-b5d7-08df1e27bf63",
+          "name": "Kathleen A. Fogarty",
+          "party": "DEM",
+          "votes": 2889,
+          "pct": 67.96048,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-b30e-08df1e27bf63",
+          "name": "Jennifer P. Nerbonne",
+          "party": "REP",
+          "votes": 1357,
+          "pct": 31.921901,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-b6c4-08df1e27bf63",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 5,
+          "pct": 0.117619,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Kathleen A. Fogarty",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": false,
+      "margin_votes": 1532,
+      "margin_pct": 36.038579,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 36,
+      "contest": "Representative in General Assembly District 36",
+      "source_id": "01000000-59ac-daed-43b1-08df1e27a903",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-43b1-08df1e27a903",
+      "total_votes": 6024,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-f4b3-08df1e27a912",
+          "name": "Tina L. Spears",
+          "party": "DEM",
+          "votes": 5815,
+          "pct": 96.530544,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-f85f-08df1e27a912",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 209,
+          "pct": 3.469456,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Tina L. Spears",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 5606,
+      "margin_pct": 93.061089,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 4,
+        "totalUnits": 4,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 37,
+      "contest": "Representative in General Assembly District 37",
+      "source_id": "01000000-59ac-daed-a938-08df1e27c34e",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-a938-08df1e27c34e",
+      "total_votes": 5912,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-d7aa-08df1e27c357",
+          "name": "Samuel Angelo Azzinaro",
+          "party": "DEM",
+          "votes": 4008,
+          "pct": 67.794317,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-d474-08df1e27c357",
+          "name": "Christopher M. Stanton",
+          "party": "REP",
+          "votes": 1889,
+          "pct": 31.951962,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-d8c7-08df1e27c357",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 15,
+          "pct": 0.253721,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Samuel Angelo Azzinaro",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": false,
+      "margin_votes": 2119,
+      "margin_pct": 35.842355,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 38,
+      "contest": "Representative in General Assembly District 38",
+      "source_id": "01000000-59ac-daed-17f3-08df1e27b14e",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-17f3-08df1e27b14e",
+      "total_votes": 4079,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-2858-08df1e27b156",
+          "name": "Brian Patrick Kennedy",
+          "party": "DEM",
+          "votes": 3866,
+          "pct": 94.778132,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-2b92-08df1e27b156",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 213,
+          "pct": 5.221868,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Brian Patrick Kennedy",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 3653,
+      "margin_pct": 89.556264,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 39,
+      "contest": "Representative in General Assembly District 39",
+      "source_id": "01000000-59ac-daed-31dd-08df1e27af67",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-31dd-08df1e27af67",
+      "total_votes": 6518,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-3a97-08df1e27af6f",
+          "name": "Megan L. Cotter",
+          "party": "DEM",
+          "votes": 3893,
+          "pct": 59.72691,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-3744-08df1e27af6f",
+          "name": "Jasmin Roy",
+          "party": "REP",
+          "votes": 2623,
+          "pct": 40.242406,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-3b88-08df1e27af6f",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 2,
+          "pct": 0.030684,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Megan L. Cotter",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": false,
+      "margin_votes": 1270,
+      "margin_pct": 19.484504,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 3,
+        "totalUnits": 3,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 40,
+      "contest": "Representative in General Assembly District 40",
+      "source_id": "01000000-59ac-daed-2692-08df1e27aa3d",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-2692-08df1e27aa3d",
+      "total_votes": 4989,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-2494-08df1e27aa45",
+          "name": "Michael Chippendale",
+          "party": "REP",
+          "votes": 4735,
+          "pct": 94.908799,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-2795-08df1e27aa45",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 254,
+          "pct": 5.091201,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Michael Chippendale",
+      "leader_party": "REP",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 4481,
+      "margin_pct": 89.817599,
+      "previous_party": "REP",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 3,
+        "totalUnits": 3,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 41,
+      "contest": "Representative in General Assembly District 41",
+      "source_id": "01000000-59ac-daed-7467-08df1e27abd9",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-7467-08df1e27abd9",
+      "total_votes": 6288,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-bbd6-08df1e27abe1",
+          "name": "Michael J. Riley",
+          "party": "REP",
+          "votes": 3690,
+          "pct": 58.683206,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-bf3d-08df1e27abe1",
+          "name": "Shaina N. Smith",
+          "party": "DEM",
+          "votes": 2593,
+          "pct": 41.237277,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-c0de-08df1e27abe1",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 5,
+          "pct": 0.079517,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Michael J. Riley",
+      "leader_party": "REP",
+      "status": "leading",
+      "is_unopposed": false,
+      "margin_votes": 1097,
+      "margin_pct": 17.445929,
+      "previous_party": "REP",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 42,
+      "contest": "Representative in General Assembly District 42",
+      "source_id": "01000000-59ac-daed-2cbc-08df1e27abe9",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-2cbc-08df1e27abe9",
+      "total_votes": 4796,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-bd4e-08df1e27abf1",
+          "name": "Edward W. Stravato",
+          "party": "DEM",
+          "votes": 2528,
+          "pct": 52.710592,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-ba4a-08df1e27abf1",
+          "name": "Richard R. Fascia",
+          "party": "REP",
+          "votes": 2262,
+          "pct": 47.164304,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-be3d-08df1e27abf1",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 6,
+          "pct": 0.125104,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Edward W. Stravato",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": false,
+      "margin_votes": 266,
+      "margin_pct": 5.546289,
+      "previous_party": "REP",
+      "party_change": true,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 43,
+      "contest": "Representative in General Assembly District 43",
+      "source_id": "01000000-59ac-daed-6384-08df1e27b27b",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-6384-08df1e27b27b",
+      "total_votes": 3606,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-f5f9-08df1e27b283",
+          "name": "Deborah A. Fellela",
+          "party": "DEM",
+          "votes": 3412,
+          "pct": 94.620078,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-f96f-08df1e27b283",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 194,
+          "pct": 5.379922,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Deborah A. Fellela",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 3218,
+      "margin_pct": 89.240155,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 44,
+      "contest": "Representative in General Assembly District 44",
+      "source_id": "01000000-59ac-daed-7953-08df1e27b28c",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-7953-08df1e27b28c",
+      "total_votes": 6559,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-eabe-08df1e27b294",
+          "name": "Gregory Costantino",
+          "party": "DEM",
+          "votes": 4032,
+          "pct": 61.472785,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-e79b-08df1e27b294",
+          "name": "Joseph Hosey",
+          "party": "REP",
+          "votes": 2513,
+          "pct": 38.313767,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-ebaa-08df1e27b294",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 14,
+          "pct": 0.213447,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Gregory Costantino",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": false,
+      "margin_votes": 1519,
+      "margin_pct": 23.159018,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 3,
+        "totalUnits": 3,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 45,
+      "contest": "Representative in General Assembly District 45",
+      "source_id": "01000000-59ac-daed-da94-08df1e27ad60",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-da94-08df1e27ad60",
+      "total_votes": 4188,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-cc33-08df1e27ad68",
+          "name": "Mia A. Ackerman",
+          "party": "DEM",
+          "votes": 3915,
+          "pct": 93.481375,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-cf31-08df1e27ad68",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 273,
+          "pct": 6.518625,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Mia A. Ackerman",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 3642,
+      "margin_pct": 86.962751,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 46,
+      "contest": "Representative in General Assembly District 46",
+      "source_id": "01000000-59ac-daed-9e6c-08df1e27b36b",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-9e6c-08df1e27b36b",
+      "total_votes": 4859,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-ed22-08df1e27b373",
+          "name": "Mary Ann Shallcross Smith",
+          "party": "DEM",
+          "votes": 4601,
+          "pct": 94.690265,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-f004-08df1e27b373",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 258,
+          "pct": 5.309735,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Mary Ann Shallcross Smith",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 4343,
+      "margin_pct": 89.380531,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 47,
+      "contest": "Representative in General Assembly District 47",
+      "source_id": "01000000-59ac-daed-c119-08df1e27a796",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-c119-08df1e27a796",
+      "total_votes": 4005,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-e180-08df1e27a79e",
+          "name": "David J. Place",
+          "party": "REP",
+          "votes": 3813,
+          "pct": 95.205993,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-e539-08df1e27a79e",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 192,
+          "pct": 4.794007,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "David J. Place",
+      "leader_party": "REP",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 3621,
+      "margin_pct": 90.411985,
+      "previous_party": "REP",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 48,
+      "contest": "Representative in General Assembly District 48",
+      "source_id": "01000000-59ac-daed-5e27-08df1e27a7a6",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-5e27-08df1e27a7a6",
+      "total_votes": 4245,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-6dcc-08df1e27a7ae",
+          "name": "Brian C. Newberry",
+          "party": "REP",
+          "votes": 4007,
+          "pct": 94.393404,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-71e7-08df1e27a7ae",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 238,
+          "pct": 5.606596,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Brian C. Newberry",
+      "leader_party": "REP",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 3769,
+      "margin_pct": 88.786808,
+      "previous_party": "REP",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 49,
+      "contest": "Representative in General Assembly District 49",
+      "source_id": "01000000-59ac-daed-fe86-08df1e27b85a",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-fe86-08df1e27b85a",
+      "total_votes": 2637,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-d874-08df1e27b863",
+          "name": "Veronicka Vega",
+          "party": "DEM",
+          "votes": 1367,
+          "pct": 51.839211,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-db73-08df1e27b863",
+          "name": "Jon D. Brien",
+          "party": "IND",
+          "votes": 1253,
+          "pct": 47.516117,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-dc5c-08df1e27b863",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 17,
+          "pct": 0.644672,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Veronicka Vega",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": false,
+      "margin_votes": 114,
+      "margin_pct": 4.323094,
+      "previous_party": "IND",
+      "party_change": true,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 50,
+      "contest": "Representative in General Assembly District 50",
+      "source_id": "01000000-59ac-daed-7c17-08df1e27c3cd",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-7c17-08df1e27c3cd",
+      "total_votes": 2429,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-8f99-08df1e27c3d6",
+          "name": "Stephen Casey",
+          "party": "DEM",
+          "votes": 2308,
+          "pct": 95.018526,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-92df-08df1e27c3d6",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 121,
+          "pct": 4.981474,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Stephen Casey",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 2187,
+      "margin_pct": 90.037052,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 51,
+      "contest": "Representative in General Assembly District 51",
+      "source_id": "01000000-59ac-daed-1eda-08df1e27ad70",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-1eda-08df1e27ad70",
+      "total_votes": 2538,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-164e-08df1e27ad78",
+          "name": "Robert D. Phillips",
+          "party": "DEM",
+          "votes": 2438,
+          "pct": 96.05989,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-1b44-08df1e27ad78",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 100,
+          "pct": 3.94011,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Robert D. Phillips",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 2338,
+      "margin_pct": 92.119779,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 52,
+      "contest": "Representative in General Assembly District 52",
+      "source_id": "01000000-59ac-daed-2c3d-08df1e27ad80",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-2c3d-08df1e27ad80",
+      "total_votes": 4716,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-4310-08df1e27ad88",
+          "name": "Alex D. Marszalkowski",
+          "party": "DEM",
+          "votes": 4523,
+          "pct": 95.907549,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-4610-08df1e27ad88",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 193,
+          "pct": 4.092451,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Alex D. Marszalkowski",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 4330,
+      "margin_pct": 91.815098,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 53,
+      "contest": "Representative in General Assembly District 53",
+      "source_id": "01000000-59ac-daed-7fc9-08df1e27b08b",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-7fc9-08df1e27b08b",
+      "total_votes": 4933,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-b62a-08df1e27b093",
+          "name": "Paul M. Santucci",
+          "party": "REP",
+          "votes": 2597,
+          "pct": 52.645449,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-b96d-08df1e27b093",
+          "name": "Suzanna L. Alba",
+          "party": "DEM",
+          "votes": 2328,
+          "pct": 47.192378,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-ba5c-08df1e27b093",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 8,
+          "pct": 0.162173,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Paul M. Santucci",
+      "leader_party": "REP",
+      "status": "leading",
+      "is_unopposed": false,
+      "margin_votes": 269,
+      "margin_pct": 5.453071,
+      "previous_party": "REP",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 54,
+      "contest": "Representative in General Assembly District 54",
+      "source_id": "01000000-59ac-daed-7e19-08df1e27b79a",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-7e19-08df1e27b79a",
+      "total_votes": 3618,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-5259-08df1e27b7a3",
+          "name": "William W. O'Brien",
+          "party": "DEM",
+          "votes": 3479,
+          "pct": 96.158098,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-55f5-08df1e27b7a3",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 139,
+          "pct": 3.841902,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "William W. O'Brien",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 3340,
+      "margin_pct": 92.316197,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 55,
+      "contest": "Representative in General Assembly District 55",
+      "source_id": "01000000-59ac-daed-9c0c-08df1e27b7ab",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-9c0c-08df1e27b7ab",
+      "total_votes": 4165,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-4bb3-08df1e27b7b4",
+          "name": "Arthur J. Corvese",
+          "party": "DEM",
+          "votes": 4036,
+          "pct": 96.902761,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-4f4a-08df1e27b7b4",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 129,
+          "pct": 3.097239,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Arthur J. Corvese",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 3907,
+      "margin_pct": 93.805522,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 56,
+      "contest": "Representative in General Assembly District 56",
+      "source_id": "01000000-59ac-daed-34ae-08df1e27a7f8",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-34ae-08df1e27a7f8",
+      "total_votes": 1362,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-32bd-08df1e27a800",
+          "name": "Joshua J. Giraldo",
+          "party": "DEM",
+          "votes": 1336,
+          "pct": 98.091043,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-35fc-08df1e27a800",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 26,
+          "pct": 1.908957,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Joshua J. Giraldo",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 1310,
+      "margin_pct": 96.182085,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 57,
+      "contest": "Representative in General Assembly District 57",
+      "source_id": "01000000-59ac-daed-7669-08df1e27a807",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-7669-08df1e27a807",
+      "total_votes": 2691,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-f3af-08df1e27a810",
+          "name": "Brandon T. Voas",
+          "party": "DEM",
+          "votes": 2566,
+          "pct": 95.354887,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-f819-08df1e27a810",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 125,
+          "pct": 4.645113,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Brandon T. Voas",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 2441,
+      "margin_pct": 90.709773,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 58,
+      "contest": "Representative in General Assembly District 58",
+      "source_id": "01000000-59ac-daed-49a2-08df1e27b956",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-49a2-08df1e27b956",
+      "total_votes": 2374,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-ef5a-08df1e27b95e",
+          "name": "Cherie L. Cruz",
+          "party": "DEM",
+          "votes": 2296,
+          "pct": 96.714406,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-f235-08df1e27b95e",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 78,
+          "pct": 3.285594,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Cherie L. Cruz",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 2218,
+      "margin_pct": 93.428812,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 59,
+      "contest": "Representative in General Assembly District 59",
+      "source_id": "01000000-59ac-daed-cb4d-08df1e27b966",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-cb4d-08df1e27b966",
+      "total_votes": 2874,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-0fd2-08df1e27b96f",
+          "name": "Jennifer A. Stewart",
+          "party": "DEM",
+          "votes": 2824,
+          "pct": 98.260264,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-129a-08df1e27b96f",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 50,
+          "pct": 1.739736,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Jennifer A. Stewart",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 2774,
+      "margin_pct": 96.520529,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 60,
+      "contest": "Representative in General Assembly District 60",
+      "source_id": "01000000-59ac-daed-8195-08df1e27a818",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-8195-08df1e27a818",
+      "total_votes": 1970,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-86f5-08df1e27a821",
+          "name": "Karen Alzate",
+          "party": "DEM",
+          "votes": 1911,
+          "pct": 97.005076,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-8bd9-08df1e27a821",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 59,
+          "pct": 2.994924,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Karen Alzate",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 1852,
+      "margin_pct": 94.010152,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 61,
+      "contest": "Representative in General Assembly District 61",
+      "source_id": "01000000-59ac-daed-e3ce-08df1e27b976",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-e3ce-08df1e27b976",
+      "total_votes": 3332,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-18d0-08df1e27b97f",
+          "name": "Leonela Felix",
+          "party": "DEM",
+          "votes": 3186,
+          "pct": 95.618247,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-1bbd-08df1e27b97f",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 146,
+          "pct": 4.381753,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Leonela Felix",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 3040,
+      "margin_pct": 91.236495,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 62,
+      "contest": "Representative in General Assembly District 62",
+      "source_id": "01000000-59ac-daed-52e8-08df1e27b987",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-52e8-08df1e27b987",
+      "total_votes": 2719,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-3f98-08df1e27b990",
+          "name": "Mary Duffy Messier",
+          "party": "DEM",
+          "votes": 2628,
+          "pct": 96.653181,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-42d3-08df1e27b990",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 91,
+          "pct": 3.346819,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Mary Duffy Messier",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 2537,
+      "margin_pct": 93.306363,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 63,
+      "contest": "Representative in General Assembly District 63",
+      "source_id": "01000000-59ac-daed-28dd-08df1e27ae64",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-28dd-08df1e27ae64",
+      "total_votes": 4568,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-df74-08df1e27ae6e",
+          "name": "Katherine Sheena Kazarian",
+          "party": "DEM",
+          "votes": 4403,
+          "pct": 96.387916,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-e31c-08df1e27ae6e",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 165,
+          "pct": 3.612084,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Katherine Sheena Kazarian",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 4238,
+      "margin_pct": 92.775832,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 64,
+      "contest": "Representative in General Assembly District 64",
+      "source_id": "01000000-59ac-daed-b237-08df1e27ae77",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-b237-08df1e27ae77",
+      "total_votes": 3084,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-2bea-08df1e27ae80",
+          "name": "Jenni A. Furtado",
+          "party": "DEM",
+          "votes": 2941,
+          "pct": 95.363165,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-2f7e-08df1e27ae80",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 143,
+          "pct": 4.636835,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Jenni A. Furtado",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 2798,
+      "margin_pct": 90.726329,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 65,
+      "contest": "Representative in General Assembly District 65",
+      "source_id": "01000000-59ac-daed-33cb-08df1e27ae88",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-33cb-08df1e27ae88",
+      "total_votes": 4790,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-5d34-08df1e27ae93",
+          "name": "Matthew Dawson",
+          "party": "DEM",
+          "votes": 4603,
+          "pct": 96.096033,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-6081-08df1e27ae93",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 187,
+          "pct": 3.903967,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Matthew Dawson",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 4416,
+      "margin_pct": 92.192067,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 66,
+      "contest": "Representative in General Assembly District 66",
+      "source_id": "01000000-59ac-daed-f238-08df1e27a458",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-f238-08df1e27a458",
+      "total_votes": 5227,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-4111-08df1e27a467",
+          "name": "Jennifer Smith Boylan",
+          "party": "DEM",
+          "votes": 5026,
+          "pct": 96.154582,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-45ba-08df1e27a467",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 201,
+          "pct": 3.845418,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Jennifer Smith Boylan",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 4825,
+      "margin_pct": 92.309164,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 67,
+      "contest": "Representative in General Assembly District 67",
+      "source_id": "01000000-59ac-daed-af5a-08df1e27a46e",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-af5a-08df1e27a46e",
+      "total_votes": 5737,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-3aaa-08df1e27a47c",
+          "name": "Nicole P. Jellinek",
+          "party": "DEM",
+          "votes": 3476,
+          "pct": 60.589158,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-3f61-08df1e27a47c",
+          "name": "Joseph A. DePasquale",
+          "party": "IND",
+          "votes": 2227,
+          "pct": 38.818198,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-407e-08df1e27a47c",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 34,
+          "pct": 0.592644,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Nicole P. Jellinek",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": false,
+      "margin_votes": 1249,
+      "margin_pct": 21.77096,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 68,
+      "contest": "Representative in General Assembly District 68",
+      "source_id": "01000000-59ac-daed-8242-08df1e27a6e8",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-8242-08df1e27a6e8",
+      "total_votes": 4653,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-5137-08df1e27a6f4",
+          "name": "June S. Speakman",
+          "party": "DEM",
+          "votes": 4451,
+          "pct": 95.658715,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-5602-08df1e27a6f4",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 202,
+          "pct": 4.341285,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "June S. Speakman",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 4249,
+      "margin_pct": 91.31743,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 69,
+      "contest": "Representative in General Assembly District 69",
+      "source_id": "01000000-59ac-daed-ce4a-08df1e27a6fc",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-ce4a-08df1e27a6fc",
+      "total_votes": 3514,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-a1ec-08df1e27a704",
+          "name": "Susan Ann Donovan",
+          "party": "DEM",
+          "votes": 3345,
+          "pct": 95.190666,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-a5af-08df1e27a704",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 169,
+          "pct": 4.809334,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Susan Ann Donovan",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 3176,
+      "margin_pct": 90.381332,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 70,
+      "contest": "Representative in General Assembly District 70",
+      "source_id": "01000000-59ac-daed-c052-08df1e27bfa0",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-c052-08df1e27bfa0",
+      "total_votes": 3904,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-2b8e-08df1e27bfa9",
+          "name": "John G. Edwards",
+          "party": "DEM",
+          "votes": 3745,
+          "pct": 95.927254,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-2e4c-08df1e27bfa9",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 159,
+          "pct": 4.072746,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "John G. Edwards",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 3586,
+      "margin_pct": 91.854508,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 71,
+      "contest": "Representative in General Assembly District 71",
+      "source_id": "01000000-59ac-daed-e897-08df1e27b454",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-e897-08df1e27b454",
+      "total_votes": 4862,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-8440-08df1e27b45e",
+          "name": "Michelle E. McGaw",
+          "party": "DEM",
+          "votes": 4687,
+          "pct": 96.400658,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-86fb-08df1e27b45e",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 175,
+          "pct": 3.599342,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Michelle E. McGaw",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 4512,
+      "margin_pct": 92.801316,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 3,
+        "totalUnits": 3,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 72,
+      "contest": "Representative in General Assembly District 72",
+      "source_id": "01000000-59ac-daed-8750-08df1e27b56b",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-8750-08df1e27b56b",
+      "total_votes": 4782,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-3aea-08df1e27b578",
+          "name": "Terri-Denise Cortvriend",
+          "party": "DEM",
+          "votes": 4617,
+          "pct": 96.549561,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-3e1e-08df1e27b578",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 165,
+          "pct": 3.450439,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Terri-Denise Cortvriend",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 4452,
+      "margin_pct": 93.099122,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 73,
+      "contest": "Representative in General Assembly District 73",
+      "source_id": "01000000-59ac-daed-4805-08df1e27b580",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-4805-08df1e27b580",
+      "total_votes": 3082,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-3ee3-08df1e27b589",
+          "name": "Marvin Abney",
+          "party": "DEM",
+          "votes": 3005,
+          "pct": 97.501622,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-4412-08df1e27b589",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 77,
+          "pct": 2.498378,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Marvin Abney",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 2928,
+      "margin_pct": 95.003245,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 74,
+      "contest": "Representative in General Assembly District 74",
+      "source_id": "01000000-59ac-daed-e03e-08df1e27b1f3",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-e03e-08df1e27b1f3",
+      "total_votes": 4388,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-0605-08df1e27b1fd",
+          "name": "Alex Finkelman",
+          "party": "DEM",
+          "votes": 4276,
+          "pct": 97.447584,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-0935-08df1e27b1fd",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 112,
+          "pct": 2.552416,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Alex Finkelman",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 4164,
+      "margin_pct": 94.895169,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "house",
+      "district": 75,
+      "contest": "Representative in General Assembly District 75",
+      "source_id": "01000000-59ac-daed-8833-08df1e27b6e1",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-8833-08df1e27b6e1",
+      "total_votes": 3569,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-0d47-08df1e27b6ea",
+          "name": "Lauren H. Carson",
+          "party": "DEM",
+          "votes": 3486,
+          "pct": 97.674419,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-1091-08df1e27b6ea",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 83,
+          "pct": 2.325581,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Lauren H. Carson",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 3403,
+      "margin_pct": 95.348837,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 1,
+      "contest": "Senator in General Assembly District 1",
+      "source_id": "01000000-59ac-daed-bd1f-08df1e27bafb",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-bd1f-08df1e27bafb",
+      "total_votes": 4454,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-5299-08df1e27bb04",
+          "name": "Jacob Bissaillon",
+          "party": "DEM",
+          "votes": 4354,
+          "pct": 97.754827,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-55bc-08df1e27bb04",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 100,
+          "pct": 2.245173,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Jacob Bissaillon",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 4254,
+      "margin_pct": 95.509654,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 2,
+      "contest": "Senator in General Assembly District 2",
+      "source_id": "01000000-59ac-daed-72e0-08df1e27bb0c",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-72e0-08df1e27bb0c",
+      "total_votes": 4022,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-3829-08df1e27bb15",
+          "name": "Ana B. Quezada",
+          "party": "DEM",
+          "votes": 3934,
+          "pct": 97.812034,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-3b50-08df1e27bb15",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 88,
+          "pct": 2.187966,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Ana B. Quezada",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 3846,
+      "margin_pct": 95.624068,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 3,
+      "contest": "Senator in General Assembly District 3",
+      "source_id": "01000000-59ac-daed-8a20-08df1e27bb1d",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-8a20-08df1e27bb1d",
+      "total_votes": 7997,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-7a39-08df1e27bb26",
+          "name": "Samuel D. Zurier",
+          "party": "DEM",
+          "votes": 7878,
+          "pct": 98.511942,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-7d3e-08df1e27bb26",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 119,
+          "pct": 1.488058,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Samuel D. Zurier",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 7759,
+      "margin_pct": 97.023884,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 4,
+      "contest": "Senator in General Assembly District 4",
+      "source_id": "01000000-59ac-daed-c9c1-08df1e27b777",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-c9c1-08df1e27b777",
+      "total_votes": 7779,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-aff0-08df1e27b780",
+          "name": "Stefano V. Famiglietti",
+          "party": "DEM",
+          "votes": 7532,
+          "pct": 96.824785,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-b39d-08df1e27b780",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 247,
+          "pct": 3.175215,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Stefano V. Famiglietti",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 7285,
+      "margin_pct": 93.649569,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 5,
+      "contest": "Senator in General Assembly District 5",
+      "source_id": "01000000-59ac-daed-cd4b-08df1e27bb2e",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-cd4b-08df1e27bb2e",
+      "total_votes": 8184,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-eb11-08df1e27bb38",
+          "name": "Samuel W. Bell",
+          "party": "DEM",
+          "votes": 7013,
+          "pct": 85.691593,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-e800-08df1e27bb38",
+          "name": "William D. Connell, Jr.",
+          "party": "REP",
+          "votes": 1120,
+          "pct": 13.685239,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-ebfc-08df1e27bb38",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 51,
+          "pct": 0.623167,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Samuel W. Bell",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": false,
+      "margin_votes": 5893,
+      "margin_pct": 72.006354,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 6,
+      "contest": "Senator in General Assembly District 6",
+      "source_id": "01000000-59ac-daed-374d-08df1e27bb41",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-374d-08df1e27bb41",
+      "total_votes": 5189,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-24f2-08df1e27bb4a",
+          "name": "Tiara T. Mack",
+          "party": "DEM",
+          "votes": 5074,
+          "pct": 97.783773,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-2891-08df1e27bb4a",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 115,
+          "pct": 2.216227,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Tiara T. Mack",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 4959,
+      "margin_pct": 95.567547,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 7,
+      "contest": "Senator in General Assembly District 7",
+      "source_id": "01000000-59ac-daed-d251-08df1e27b247",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-d251-08df1e27b247",
+      "total_votes": 3949,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-1f06-08df1e27b250",
+          "name": "Frank A. Ciccone",
+          "party": "DEM",
+          "votes": 3843,
+          "pct": 97.315776,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-22be-08df1e27b250",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 106,
+          "pct": 2.684224,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Frank A. Ciccone",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 3737,
+      "margin_pct": 94.631552,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 8,
+      "contest": "Senator in General Assembly District 8",
+      "source_id": "01000000-59ac-daed-08d9-08df1e27b936",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-08d9-08df1e27b936",
+      "total_votes": 5206,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-1935-08df1e27b93e",
+          "name": "Lori Urso",
+          "party": "DEM",
+          "votes": 5011,
+          "pct": 96.254322,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-1bb6-08df1e27b93e",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 195,
+          "pct": 3.745678,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Lori Urso",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 4816,
+      "margin_pct": 92.508644,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 9,
+      "contest": "Senator in General Assembly District 9",
+      "source_id": "01000000-59ac-daed-59cb-08df1e27c2d0",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-59cb-08df1e27c2d0",
+      "total_votes": 7040,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-c1bd-08df1e27c2d9",
+          "name": "John Burke",
+          "party": "DEM",
+          "votes": 6588,
+          "pct": 93.579545,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-c594-08df1e27c2d9",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 452,
+          "pct": 6.420455,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "John Burke",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 6136,
+      "margin_pct": 87.159091,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 10,
+      "contest": "Senator in General Assembly District 10",
+      "source_id": "01000000-59ac-daed-2ade-08df1e27a6c4",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-2ade-08df1e27a6c4",
+      "total_votes": 8494,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-c947-08df1e27a6cb",
+          "name": "Walter S. Felag, Jr.",
+          "party": "DEM",
+          "votes": 8154,
+          "pct": 95.997174,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-cd33-08df1e27a6cb",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 340,
+          "pct": 4.002826,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Walter S. Felag, Jr.",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 7814,
+      "margin_pct": 91.994349,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 3,
+        "totalUnits": 3,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 11,
+      "contest": "Senator in General Assembly District 11",
+      "source_id": "01000000-59ac-daed-d82e-08df1e27a6d2",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-d82e-08df1e27a6d2",
+      "total_votes": 8222,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-41e9-08df1e27a6e1",
+          "name": "Linda L. Ujifusa",
+          "party": "DEM",
+          "votes": 7915,
+          "pct": 96.266115,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-4668-08df1e27a6e1",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 307,
+          "pct": 3.733885,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Linda L. Ujifusa",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 7608,
+      "margin_pct": 92.532231,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 12,
+      "contest": "Senator in General Assembly District 12",
+      "source_id": "01000000-59ac-daed-f1d8-08df1e27b444",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-f1d8-08df1e27b444",
+      "total_votes": 8712,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-0d1f-08df1e27b44d",
+          "name": "Louis DiPalma",
+          "party": "DEM",
+          "votes": 8421,
+          "pct": 96.65978,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-0fee-08df1e27b44d",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 291,
+          "pct": 3.34022,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Louis DiPalma",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 8130,
+      "margin_pct": 93.319559,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 4,
+        "totalUnits": 4,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 13,
+      "contest": "Senator in General Assembly District 13",
+      "source_id": "01000000-59ac-daed-d545-08df1e27b1e3",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-d545-08df1e27b1e3",
+      "total_votes": 7692,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-fc7c-08df1e27b1eb",
+          "name": "Dawn Euer",
+          "party": "DEM",
+          "votes": 7467,
+          "pct": 97.074883,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-ff86-08df1e27b1eb",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 225,
+          "pct": 2.925117,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Dawn Euer",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 7242,
+      "margin_pct": 94.149766,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 14,
+      "contest": "Senator in General Assembly District 14",
+      "source_id": "01000000-59ac-daed-0f9e-08df1e27ae42",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-0f9e-08df1e27ae42",
+      "total_votes": 8507,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-3a5d-08df1e27ae4a",
+          "name": "Valarie Jean Lawson",
+          "party": "DEM",
+          "votes": 5500,
+          "pct": 64.652639,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-3e34-08df1e27ae4a",
+          "name": "Brian G. Coogan",
+          "party": "IND",
+          "votes": 2950,
+          "pct": 34.677325,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-3f48-08df1e27ae4a",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 57,
+          "pct": 0.670036,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Valarie Jean Lawson",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": false,
+      "margin_votes": 2550,
+      "margin_pct": 29.975314,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 15,
+      "contest": "Senator in General Assembly District 15",
+      "source_id": "01000000-59ac-daed-e1b5-08df1e27b945",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-e1b5-08df1e27b945",
+      "total_votes": 6764,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-7313-08df1e27b94e",
+          "name": "Meghan E. Kallman",
+          "party": "DEM",
+          "votes": 6621,
+          "pct": 97.885866,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-769c-08df1e27b94e",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 143,
+          "pct": 2.114134,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Meghan E. Kallman",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 6478,
+      "margin_pct": 95.771733,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 16,
+      "contest": "Senator in General Assembly District 16",
+      "source_id": "01000000-59ac-daed-a582-08df1e27a7e0",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-a582-08df1e27a7e0",
+      "total_votes": 2936,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-9d6e-08df1e27a7f0",
+          "name": "Jonathon Acosta",
+          "party": "DEM",
+          "votes": 2880,
+          "pct": 98.092643,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-a2a9-08df1e27a7f0",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 56,
+          "pct": 1.907357,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Jonathon Acosta",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 2824,
+      "margin_pct": 96.185286,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 17,
+      "contest": "Senator in General Assembly District 17",
+      "source_id": "01000000-59ac-daed-21b5-08df1e27b33e",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-21b5-08df1e27b33e",
+      "total_votes": 11141,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-add7-08df1e27b346",
+          "name": "Nelly Burdette",
+          "party": "DEM",
+          "votes": 4844,
+          "pct": 43.479041,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-aa6a-08df1e27b346",
+          "name": "Thomas J. Paolino",
+          "party": "REP",
+          "votes": 4328,
+          "pct": 38.8475,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-afdf-08df1e27b346",
+          "name": "Jina N. Petrarca",
+          "party": "IND",
+          "votes": 1443,
+          "pct": 12.952159,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-aef2-08df1e27b346",
+          "name": "John Douglas Barr, II",
+          "party": "IND",
+          "votes": 520,
+          "pct": 4.667445,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-b0ad-08df1e27b346",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 6,
+          "pct": 0.053855,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Nelly Burdette",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": false,
+      "margin_votes": 516,
+      "margin_pct": 4.631541,
+      "previous_party": "REP",
+      "party_change": true,
+      "reporting": {
+        "reportingUnits": 3,
+        "totalUnits": 3,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 18,
+      "contest": "Senator in General Assembly District 18",
+      "source_id": "01000000-59ac-daed-f6f0-08df1e27ae51",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-f6f0-08df1e27ae51",
+      "total_votes": 7179,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-754e-08df1e27ae5c",
+          "name": "Robert Britto",
+          "party": "DEM",
+          "votes": 6903,
+          "pct": 96.155453,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-78be-08df1e27ae5c",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 276,
+          "pct": 3.844547,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Robert Britto",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 6627,
+      "margin_pct": 92.310907,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 19,
+      "contest": "Senator in General Assembly District 19",
+      "source_id": "01000000-59ac-daed-947c-08df1e27ad3e",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-947c-08df1e27ad3e",
+      "total_votes": 7929,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-1255-08df1e27ad47",
+          "name": "Ryan W. Pearson",
+          "party": "DEM",
+          "votes": 7449,
+          "pct": 93.946273,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-1617-08df1e27ad47",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 480,
+          "pct": 6.053727,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Ryan W. Pearson",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 6969,
+      "margin_pct": 87.892546,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 20,
+      "contest": "Senator in General Assembly District 20",
+      "source_id": "01000000-59ac-daed-94c2-08df1e27ad4f",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-94c2-08df1e27ad4f",
+      "total_votes": 5762,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-dce0-08df1e27ad57",
+          "name": "Brian J. Thompson",
+          "party": "DEM",
+          "votes": 5516,
+          "pct": 95.730649,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-e0ae-08df1e27ad57",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 246,
+          "pct": 4.269351,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Brian J. Thompson",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 5270,
+      "margin_pct": 91.461298,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 21,
+      "contest": "Senator in General Assembly District 21",
+      "source_id": "01000000-59ac-daed-2b71-08df1e27a9c4",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-2b71-08df1e27a9c4",
+      "total_votes": 9049,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-ef2c-08df1e27a9cb",
+          "name": "Gordon E. Rogers",
+          "party": "REP",
+          "votes": 8464,
+          "pct": 93.535197,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-f27e-08df1e27a9cb",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 585,
+          "pct": 6.464803,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Gordon E. Rogers",
+      "leader_party": "REP",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 7879,
+      "margin_pct": 87.070395,
+      "previous_party": "REP",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 4,
+        "totalUnits": 4,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 22,
+      "contest": "Senator in General Assembly District 22",
+      "source_id": "01000000-59ac-daed-99f0-08df1e27b34e",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-99f0-08df1e27b34e",
+      "total_votes": 8731,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-164d-08df1e27b364",
+          "name": "David P. Tikoian",
+          "party": "DEM",
+          "votes": 8368,
+          "pct": 95.842401,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-1936-08df1e27b364",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 363,
+          "pct": 4.157599,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "David P. Tikoian",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 8005,
+      "margin_pct": 91.684801,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 3,
+        "totalUnits": 3,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 23,
+      "contest": "Senator in General Assembly District 23",
+      "source_id": "01000000-59ac-daed-2a19-08df1e27a76b",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-2a19-08df1e27a76b",
+      "total_votes": 9178,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-83ed-08df1e27a78f",
+          "name": "Jessica de la Cruz",
+          "party": "REP",
+          "votes": 8724,
+          "pct": 95.053389,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-8864-08df1e27a78f",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 454,
+          "pct": 4.946611,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Jessica de la Cruz",
+      "leader_party": "REP",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 8270,
+      "margin_pct": 90.106777,
+      "previous_party": "REP",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 3,
+        "totalUnits": 3,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 24,
+      "contest": "Senator in General Assembly District 24",
+      "source_id": "01000000-59ac-daed-6484-08df1e27b849",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-6484-08df1e27b849",
+      "total_votes": 4142,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-ce8e-08df1e27b851",
+          "name": "Melissa Murray",
+          "party": "DEM",
+          "votes": 3958,
+          "pct": 95.557702,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-d5a4-08df1e27b851",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 184,
+          "pct": 4.442298,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Melissa Murray",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 3774,
+      "margin_pct": 91.115403,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 25,
+      "contest": "Senator in General Assembly District 25",
+      "source_id": "01000000-59ac-daed-ccea-08df1e27b257",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-ccea-08df1e27b257",
+      "total_votes": 7086,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-1598-08df1e27b261",
+          "name": "Andrew R. Dimitri",
+          "party": "DEM",
+          "votes": 6721,
+          "pct": 94.848998,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-1ae5-08df1e27b261",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 365,
+          "pct": 5.151002,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Andrew R. Dimitri",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 6356,
+      "margin_pct": 89.697996,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 26,
+      "contest": "Senator in General Assembly District 26",
+      "source_id": "01000000-59ac-daed-51e0-08df1e27ab31",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-51e0-08df1e27ab31",
+      "total_votes": 7902,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-6dc6-08df1e27ab39",
+          "name": "Todd M. Patalano",
+          "party": "DEM",
+          "votes": 7607,
+          "pct": 96.266768,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-71cb-08df1e27ab39",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 295,
+          "pct": 3.733232,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Todd M. Patalano",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 7312,
+      "margin_pct": 92.533536,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 27,
+      "contest": "Senator in General Assembly District 27",
+      "source_id": "01000000-59ac-daed-5007-08df1e27ab41",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-5007-08df1e27ab41",
+      "total_votes": 8999,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-3cc4-08df1e27ab4b",
+          "name": "Hanna M. Gallo",
+          "party": "DEM",
+          "votes": 8553,
+          "pct": 95.043894,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-405d-08df1e27ab4b",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 446,
+          "pct": 4.956106,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Hanna M. Gallo",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 8107,
+      "margin_pct": 90.087788,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 28,
+      "contest": "Senator in General Assembly District 28",
+      "source_id": "01000000-59ac-daed-4274-08df1e27ab54",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-4274-08df1e27ab54",
+      "total_votes": 7171,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-20f8-08df1e27ab5c",
+          "name": "Lammis J. Vargas",
+          "party": "DEM",
+          "votes": 6921,
+          "pct": 96.513736,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-23bc-08df1e27ab5c",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 250,
+          "pct": 3.486264,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Lammis J. Vargas",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 6671,
+      "margin_pct": 93.027472,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 29,
+      "contest": "Senator in General Assembly District 29",
+      "source_id": "01000000-59ac-daed-8a85-08df1e27c146",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-8a85-08df1e27c146",
+      "total_votes": 7751,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-ac3e-08df1e27c14f",
+          "name": "Peter A. Appollonio, Jr.",
+          "party": "DEM",
+          "votes": 7279,
+          "pct": 93.910463,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-b042-08df1e27c14f",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 472,
+          "pct": 6.089537,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Peter A. Appollonio, Jr.",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 6807,
+      "margin_pct": 87.820926,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 30,
+      "contest": "Senator in General Assembly District 30",
+      "source_id": "01000000-59ac-daed-5085-08df1e27c158",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-5085-08df1e27c158",
+      "total_votes": 9669,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-5290-08df1e27c161",
+          "name": "Mark McKenney",
+          "party": "DEM",
+          "votes": 9117,
+          "pct": 94.291033,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-558c-08df1e27c161",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 552,
+          "pct": 5.708967,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Mark McKenney",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 8565,
+      "margin_pct": 88.582066,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 31,
+      "contest": "Senator in General Assembly District 31",
+      "source_id": "01000000-59ac-daed-be3e-08df1e27ab63",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-be3e-08df1e27ab63",
+      "total_votes": 8908,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-5bf7-08df1e27ab6c",
+          "name": "Matthew L. LaMountain",
+          "party": "DEM",
+          "votes": 8461,
+          "pct": 94.982039,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-5eed-08df1e27ab6c",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 447,
+          "pct": 5.017961,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Matthew L. LaMountain",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 8014,
+      "margin_pct": 89.964077,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 32,
+      "contest": "Senator in General Assembly District 32",
+      "source_id": "01000000-59ac-daed-7a21-08df1e27a434",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-7a21-08df1e27a434",
+      "total_votes": 10679,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-e35c-08df1e27a451",
+          "name": "Pamela J. Lauria",
+          "party": "DEM",
+          "votes": 10281,
+          "pct": 96.273059,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-e7ae-08df1e27a451",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 398,
+          "pct": 3.726941,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Pamela J. Lauria",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 9883,
+      "margin_pct": 92.546119,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 3,
+        "totalUnits": 3,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 33,
+      "contest": "Senator in General Assembly District 33",
+      "source_id": "01000000-59ac-daed-82c9-08df1e27a9d3",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-82c9-08df1e27a9d3",
+      "total_votes": 10230,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-d8d8-08df1e27a9db",
+          "name": "Leonidas Peter Raptakis",
+          "party": "DEM",
+          "votes": 6313,
+          "pct": 61.710655,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-d5b0-08df1e27a9db",
+          "name": "James P. Pierson",
+          "party": "REP",
+          "votes": 3890,
+          "pct": 38.025415,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-d9eb-08df1e27a9db",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 27,
+          "pct": 0.26393,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Leonidas Peter Raptakis",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": false,
+      "margin_votes": 2423,
+      "margin_pct": 23.685239,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 2,
+        "totalUnits": 2,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 34,
+      "contest": "Senator in General Assembly District 34",
+      "source_id": "01000000-59ac-daed-f729-08df1e27a8cd",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-f729-08df1e27a8cd",
+      "total_votes": 12832,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-58b1-08df1e27a8d6",
+          "name": "Samantha R. Wilcox",
+          "party": "DEM",
+          "votes": 6760,
+          "pct": 52.680798,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-5335-08df1e27a8d6",
+          "name": "Elaine J. Morgan",
+          "party": "REP",
+          "votes": 6066,
+          "pct": 47.272444,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-5abc-08df1e27a8d6",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 6,
+          "pct": 0.046758,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Samantha R. Wilcox",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": false,
+      "margin_votes": 694,
+      "margin_pct": 5.408354,
+      "previous_party": "REP",
+      "party_change": true,
+      "reporting": {
+        "reportingUnits": 5,
+        "totalUnits": 5,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 35,
+      "contest": "Senator in General Assembly District 35",
+      "source_id": "01000000-59ac-daed-5dce-08df1e27adf0",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-5dce-08df1e27adf0",
+      "total_votes": 10383,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-72ca-08df1e27adf8",
+          "name": "Bridget G. Valverde",
+          "party": "DEM",
+          "votes": 9919,
+          "pct": 95.531157,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-7681-08df1e27adf8",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 464,
+          "pct": 4.468843,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Bridget G. Valverde",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 9455,
+      "margin_pct": 91.062313,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 3,
+        "totalUnits": 3,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 36,
+      "contest": "Senator in General Assembly District 36",
+      "source_id": "01000000-59ac-daed-9cf2-08df1e27b5b8",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-9cf2-08df1e27b5b8",
+      "total_votes": 10787,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-9dd4-08df1e27b5d4",
+          "name": "Alana M. DiMario",
+          "party": "DEM",
+          "votes": 10370,
+          "pct": 96.134236,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-a28c-08df1e27b5d4",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 417,
+          "pct": 3.865764,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Alana M. DiMario",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 9953,
+      "margin_pct": 92.268471,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 3,
+        "totalUnits": 3,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 37,
+      "contest": "Senator in General Assembly District 37",
+      "source_id": "01000000-59ac-daed-b45e-08df1e27bf49",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-b45e-08df1e27bf49",
+      "total_votes": 8196,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-3873-08df1e27bf52",
+          "name": "Virginia Susan Sosnowski",
+          "party": "DEM",
+          "votes": 7952,
+          "pct": 97.022938,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-3afb-08df1e27bf52",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 244,
+          "pct": 2.977062,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Virginia Susan Sosnowski",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": true,
+      "margin_votes": 7708,
+      "margin_pct": 94.045876,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 1,
+        "totalUnits": 1,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    },
+    {
+      "chamber": "senate",
+      "district": 38,
+      "contest": "Senator in General Assembly District 38",
+      "source_id": "01000000-59ac-daed-4c1e-08df1e27a8e2",
+      "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-4c1e-08df1e27a8e2",
+      "total_votes": 12215,
+      "candidates": [
+        {
+          "source_id": "01000000-59ac-daed-1d80-08df1e27a8fb",
+          "name": "Victoria Gu",
+          "party": "DEM",
+          "votes": 7818,
+          "pct": 64.003275,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-18c1-08df1e27a8fb",
+          "name": "Westin J. Place",
+          "party": "REP",
+          "votes": 4386,
+          "pct": 35.906672,
+          "is_write_in": false,
+          "source_is_winner": null
+        },
+        {
+          "source_id": "01000000-59ac-daed-1e81-08df1e27a8fb",
+          "name": "Write-in",
+          "party": "OTHER",
+          "votes": 11,
+          "pct": 0.090053,
+          "is_write_in": true,
+          "source_is_winner": null
+        }
+      ],
+      "leader_name": "Victoria Gu",
+      "leader_party": "DEM",
+      "status": "leading",
+      "is_unopposed": false,
+      "margin_votes": 3432,
+      "margin_pct": 28.096603,
+      "previous_party": "DEM",
+      "party_change": false,
+      "reporting": {
+        "reportingUnits": 3,
+        "totalUnits": 3,
+        "asOf": "2026-11-05T01:02:59.1989035Z",
+        "reportingStatusDetails": null
+      }
+    }
+  ]
+}
