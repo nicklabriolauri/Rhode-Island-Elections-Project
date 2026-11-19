@@ -39,7 +39,7 @@ function clean(root, base) {
   });
 }
 function sections(html, c) {
-  const doc = new DOMParser().parseFromString(html, 'text/html');
+  const doc = new DOMParser().parseFromString(html.replaceAll(' The 2026 general election has not occurred.', ' See the 2026 general-election results above.'), 'text/html');
   const main = doc.querySelector('main');
   if (!main) throw Error('Profile sections are unavailable.');
   // Give RIEP's own score a distinct section rather than burying it with outside ratings.

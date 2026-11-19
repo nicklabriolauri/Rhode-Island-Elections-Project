@@ -4,7 +4,7 @@ import json
 import unittest
 from collections import Counter
 from pathlib import Path
-from import_general_results_2026 import normalize
+from import_general_results_2026 import normalize, apply_calls
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -27,6 +27,16 @@ def fixture():
 
 
 class ImportTests(unittest.TestCase):
+    def test_attributed_calls_require_matching_leader(self):
+        result = normalize(fixture())
+        audit = {'source':'Decision Desk HQ','source_url':'https://votes.decisiondeskhq.com/', 'checked_at':'2026-11-19', 'calls':[{'chamber':'house','district':15,'winner_last_name':'A'}]}
+        apply_calls(result, audit)
+        race = next(r for r in result['races'] if r['chamber']=='house' and r['district']==15)
+        self.assertEqual(race['status'], 'winner')
+        self.assertEqual(race['call_source'], 'Decision Desk HQ')
+        audit['calls'][0]['winner_last_name'] = 'B'
+        with self.assertRaises(ValueError): apply_calls(normalize(fixture()), audit)
+
     def test_complete_reporting_does_not_call_race(self):
         result = normalize(fixture())
         self.assertEqual(len(result['races']), 113)

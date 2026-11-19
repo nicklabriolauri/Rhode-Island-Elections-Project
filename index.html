@@ -551,7 +551,8 @@
     .address-history summary { cursor:pointer;font-size:14px;font-weight:700; }
     @media(max-width:640px) { .address-candidate-grid { grid-template-columns:1fr; } }
   </style>
-<style>.address-rating{font-size:13px;padding:9px 0;border-top:1px solid #d8dee5;border-bottom:1px solid #d8dee5}.address-rating a{color:#244f7b}.address-rating small{display:block;color:#596779;margin-top:3px}</style></head>
+<style>.address-rating{font-size:13px;padding:9px 0;border-top:1px solid #d8dee5;border-bottom:1px solid #d8dee5}.address-rating a{color:#244f7b}.address-rating small{display:block;color:#596779;margin-top:3px}</style><script src="/election-results-2026.js?v=20261119" defer></script>
+</head>
 <body>
   <div class="shell">
     <div class="topbar">
@@ -766,7 +767,7 @@
         ctas: [
           { label: "Mobile Voter Guide", href: "mobile-guide.html", style: "primary", className: "ballot" },
           { label: "See Who's On My Ballot", href: "running.html", style: "primary", className: "ballot" },
-          { label: "See Rhode Island Election Maps", href: "map.html?mode=results&chamber=house&year=2024&view=party", style: "primary", className: "maps" },
+          { label: "See Rhode Island Election Maps", href: "general-results.html", style: "primary", className: "maps" },
           { label: "Campaign Finance", href: "finance.html", style: "primary", className: "candidates" },
           { label: "Endorsement Overview", href: "endorsements.html", style: "primary", className: "endorsements" },
           { label: "Find My Precinct", href: "lookup.html", style: "primary", className: "precinct" }
@@ -1258,6 +1259,7 @@
     }
 
     async function loadHomepageSearchData() {
+      if (window.RIEPResults2026) await window.RIEPResults2026.ready.catch(() => {});
       if (homepageCandidates.length) return;
 
       const [candidateResponse, financeResponse, raceResponse, ratingResponse] = await Promise.all([
@@ -1374,6 +1376,7 @@
                     ${escapeHtml(`${partyLongLabel(candidate.party)} · ${chamberLabel(candidate.chamber)} District ${candidate.district_number}`)}
                     ${candidate.home_precinct_name ? ` · ${escapeHtml(candidate.home_precinct_name)}` : ""}
                   </p>
+                  ${window.RIEPResults2026?.badge(candidate) || ""}
                   ${buildCandidateStatusMarkup(candidate)}
                   ${buildCandidatePerformanceCard(candidate)}
                 </div>
@@ -1482,9 +1485,9 @@
         const profileHref = buildCandidateProfileHref(c);
         const action = profileHref ? "View profile →" : "View race · Profile coming soon →";
         const photo = profileHref ? `<img src="${escapeHtml(profileHref.replace(/\.html$/, ".png"))}" alt="" width="48" height="64" loading="lazy">` : "";
-        return `<a class="address-candidate" href="${escapeHtml(profileHref || raceHref)}" aria-label="${escapeHtml(`${c.name}: ${action.replace(" →", "")}`)}">${photo}<span class="address-candidate-text"><strong>${escapeHtml(c.name)}</strong><span>${escapeHtml(partyLongLabel(c.party))}</span><span class="address-candidate-action">${action}</span></span></a>`;
+        return `<a class="address-candidate" href="${escapeHtml(profileHref || raceHref)}" aria-label="${escapeHtml(`${c.name}: ${action.replace(" →", "")}`)}">${photo}<span class="address-candidate-text"><strong>${escapeHtml(c.name)}</strong><span>${escapeHtml(partyLongLabel(c.party))}</span>${window.RIEPResults2026?.badge(c,false) || ""}<span class="address-candidate-action">${action}</span></span></a>`;
       }).join("");
-      return `<section class="address-candidate-group" aria-label="${escapeHtml(title)} candidates"><h5>${escapeHtml(title)}</h5>${buildAddressRatingLine(chamber,districtNumber)}${rows || '<p class="hero-search-result-copy">Candidate information is being updated.</p>'}<a class="address-race-link" href="${raceHref}">View race &amp; opponents →</a></section>`;
+      return `<section class="address-candidate-group" aria-label="${escapeHtml(title)} candidates"><h5>${escapeHtml(title)}</h5>${window.RIEPResults2026?.district(chamber,districtNumber) || ""}${rows || '<p class="hero-search-result-copy">Candidate information is being updated.</p>'}<a class="address-race-link" href="${raceHref}">View race &amp; opponents →</a></section>`;
     }
 
     function renderAddressSearchResult(query, candidate, lookupRecord) {
@@ -1505,10 +1508,10 @@
       const ballotHref = `ballot.html?${ballotParams.toString()}`;
 
       const resultsHref = lookupRecord.house_district
-        ? `map.html?mode=results&chamber=house&year=2024&view=party&district=${encodeURIComponent(String(lookupRecord.house_district))}`
+        ? `general-results.html?chamber=house&district=${encodeURIComponent(String(lookupRecord.house_district))}`
         : lookupRecord.senate_district
-          ? `map.html?mode=results&chamber=senate&year=2024&view=party&district=${encodeURIComponent(String(lookupRecord.senate_district))}`
-          : "map.html?mode=results&chamber=house&year=2024&view=party";
+          ? `general-results.html?chamber=senate&district=${encodeURIComponent(String(lookupRecord.senate_district))}`
+          : "general-results.html";
 
       const districtCards = [
         lookupRecord.house_district ? buildDistrictResultCard("house", lookupRecord.house_district) : "",
@@ -1521,7 +1524,7 @@
           <div class="hero-search-overview-head">
             <div>
               <h4 class="hero-search-title">Your voting information</h4>
-              <p class="hero-search-subtitle">We matched ${escapeHtml(matchedAddress)} to ${escapeHtml(precinctName)}. Explore your 2026 legislative candidates below, or open My Ballot for more information.</p>
+              <p class="hero-search-subtitle">We matched ${escapeHtml(matchedAddress)} to ${escapeHtml(precinctName)}. Explore your 2026 legislative candidates and election outcomes below, or open My Ballot for more information.</p>
             </div>
             <span class="hero-search-kicker">Address match</span>
           </div>
@@ -1532,7 +1535,7 @@
             ${lookupRecord.senate_district ? `<span class="hero-search-chip">Senate District ${escapeHtml(String(lookupRecord.senate_district))}</span>` : ""}
           </div>
 
-          <div class="address-candidates"><h4>2026 candidates</h4><div class="address-candidate-grid">${buildAddressCandidateGroup("house", lookupRecord.house_district)}${buildAddressCandidateGroup("senate", lookupRecord.senate_district)}</div></div>
+          <div class="address-candidates"><h4>2026 candidates &amp; results</h4><div class="address-candidate-grid">${buildAddressCandidateGroup("house", lookupRecord.house_district)}${buildAddressCandidateGroup("senate", lookupRecord.senate_district)}</div></div>
           ${districtCards ? `<details class="address-history"><summary>2024 election results</summary><div class="hero-search-result-grid">${districtCards}</div></details>` : ""}
 
           <div class="hero-search-action-row">

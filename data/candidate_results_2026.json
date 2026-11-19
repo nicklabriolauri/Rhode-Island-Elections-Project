@@ -1,0 +1,1425 @@
+{
+  "election_date": "2026-11-03",
+  "candidates": [
+    {
+      "id": "house-1-dem-primary-edith-h-ajello",
+      "slug": "edith-h-ajello",
+      "name": "Edith H Ajello",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 1,
+      "profile": "/candidates/edith-h-ajello.html",
+      "source_id": "01000000-59ac-daed-bd06-08df1e27bb5b"
+    },
+    {
+      "id": "house-2-dem-primary-christopher-r-blazejewski",
+      "slug": "christopher-r-blazejewski",
+      "name": "Christopher R Blazejewski",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 2,
+      "profile": "/candidates/christopher-r-blazejewski.html",
+      "source_id": "01000000-59ac-daed-a753-08df1e27bb6c"
+    },
+    {
+      "id": "house-3-dem-primary-nathan-w-biah",
+      "slug": "nathan-w-biah",
+      "name": "Nathan W Biah",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 3,
+      "profile": "/candidates/nathan-w-biah.html",
+      "source_id": "01000000-59ac-daed-b964-08df1e27bb7d"
+    },
+    {
+      "id": "house-4-dem-primary-rebecca-m-kislak",
+      "slug": "rebecca-m-kislak",
+      "name": "Rebecca M Kislak",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 4,
+      "profile": "/candidates/rebecca-m-kislak.html",
+      "source_id": "01000000-59ac-daed-df1c-08df1e27bb8e"
+    },
+    {
+      "id": "house-5-dem-primary-anthony-j-desimone",
+      "slug": "anthony-j-desimone",
+      "name": "Anthony J DeSimone",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 5,
+      "profile": "/candidates/anthony-j-desimone.html",
+      "source_id": "01000000-59ac-daed-5c7e-08df1e27bb9f"
+    },
+    {
+      "id": "house-5-oth-general-brittany-m-kubicek",
+      "slug": "brittany-m-kubicek",
+      "name": "Brittany M Kubicek",
+      "party": "OTH",
+      "chamber": "house",
+      "district": 5,
+      "profile": "/candidates/brittany-m-kubicek.html",
+      "source_id": "01000000-59ac-daed-5f5b-08df1e27bb9f"
+    },
+    {
+      "id": "house-6-dem-primary-raymond-a-hull",
+      "slug": "raymond-a-hull",
+      "name": "Raymond A Hull",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 6,
+      "profile": "/candidates/raymond-a-hull.html",
+      "source_id": "01000000-59ac-daed-85f8-08df1e27b791"
+    },
+    {
+      "id": "house-7-dem-primary-amy-j-santiago",
+      "slug": "amy-j-santiago",
+      "name": "Amy J Santiago",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 7,
+      "profile": "/candidates/amy-j-santiago.html",
+      "source_id": "01000000-59ac-daed-87f5-08df1e27bbb1"
+    },
+    {
+      "id": "house-7-rep-primary-christopher-l-ireland",
+      "slug": "christopher-l-ireland",
+      "name": "Christopher L Ireland",
+      "party": "REP",
+      "chamber": "house",
+      "district": 7,
+      "profile": "/candidates/christopher-l-ireland.html",
+      "source_id": "01000000-59ac-daed-8560-08df1e27bbb1"
+    },
+    {
+      "id": "house-8-dem-primary-john-joseph-lombardi",
+      "slug": "john-joseph-lombardi",
+      "name": "John Joseph Lombardi",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 8,
+      "profile": "/candidates/john-joseph-lombardi.html",
+      "source_id": "01000000-59ac-daed-18eb-08df1e27bbc2"
+    },
+    {
+      "id": "house-9-dem-primary-enrique-george-sanchez",
+      "slug": "enrique-george-sanchez",
+      "name": "Enrique George Sanchez",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 9,
+      "profile": "/candidates/enrique-george-sanchez.html",
+      "source_id": "01000000-59ac-daed-7692-08df1e27bbd3"
+    },
+    {
+      "id": "house-10-dem-primary-scott-a-slater",
+      "slug": "scott-a-slater",
+      "name": "Scott A Slater",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 10,
+      "profile": "/candidates/scott-a-slater.html",
+      "source_id": "01000000-59ac-daed-1bbf-08df1e27bbe6"
+    },
+    {
+      "id": "house-11-dem-primary-grace-diaz",
+      "slug": "grace-diaz",
+      "name": "Grace Diaz",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 11,
+      "profile": "/candidates/grace-diaz.html",
+      "source_id": "01000000-59ac-daed-311c-08df1e27bbf8"
+    },
+    {
+      "id": "house-12-dem-primary-arlette-hidalgo",
+      "slug": "arlette-hidalgo",
+      "name": "Arlette Hidalgo",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 12,
+      "profile": "/candidates/arlette-hidalgo.html",
+      "source_id": "01000000-59ac-daed-7e83-08df1e27bc09"
+    },
+    {
+      "id": "house-13-dem-primary-ramon-perez",
+      "slug": "ramon-perez",
+      "name": "Ramon Perez",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 13,
+      "profile": "/candidates/ramon-perez.html",
+      "source_id": "01000000-59ac-daed-56a5-08df1e27b273"
+    },
+    {
+      "id": "house-13-rep-primary-derick-a-reels",
+      "slug": "derick-a-reels",
+      "name": "Derick A Reels",
+      "party": "REP",
+      "chamber": "house",
+      "district": 13,
+      "profile": "/candidates/derick-a-reels.html",
+      "source_id": "01000000-59ac-daed-538e-08df1e27b273"
+    },
+    {
+      "id": "house-14-dem-primary-charlene-m-lima",
+      "slug": "charlene-m-lima",
+      "name": "Charlene M Lima",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 14,
+      "profile": "/candidates/charlene-m-lima.html",
+      "source_id": "01000000-59ac-daed-8986-08df1e27ab7c"
+    },
+    {
+      "id": "house-15-dem-primary-colleen-m-crudele",
+      "slug": "colleen-m-crudele",
+      "name": "Colleen M Crudele",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 15,
+      "profile": "/candidates/colleen-m-crudele.html",
+      "source_id": "01000000-59ac-daed-8e17-08df1e27ab8d"
+    },
+    {
+      "id": "house-15-rep-primary-christopher-g-paplauskas",
+      "slug": "christopher-g-paplauskas",
+      "name": "Christopher G Paplauskas",
+      "party": "REP",
+      "chamber": "house",
+      "district": 15,
+      "profile": "/candidates/christopher-g-paplauskas.html",
+      "source_id": "01000000-59ac-daed-8ae1-08df1e27ab8d"
+    },
+    {
+      "id": "house-15-ind-general-allan-w-fung",
+      "slug": "allan-w-fung",
+      "name": "Allan W Fung",
+      "party": "IND",
+      "chamber": "house",
+      "district": 15,
+      "profile": "/candidates/allan-w-fung.html",
+      "source_id": "01000000-59ac-daed-8f03-08df1e27ab8d"
+    },
+    {
+      "id": "house-16-dem-primary-brandon-potter",
+      "slug": "brandon-potter",
+      "name": "Brandon Potter",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 16,
+      "profile": "/candidates/brandon-potter.html",
+      "source_id": "01000000-59ac-daed-ac39-08df1e27aba2"
+    },
+    {
+      "id": "house-17-dem-primary-jacquelyn-baginski",
+      "slug": "jacquelyn-baginski",
+      "name": "Jacquelyn Baginski",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 17,
+      "profile": "/candidates/jacquelyn-baginski.html",
+      "source_id": "01000000-59ac-daed-0170-08df1e27abb3"
+    },
+    {
+      "id": "house-18-dem-primary-arthur-handy",
+      "slug": "arthur-handy",
+      "name": "Arthur Handy",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 18,
+      "profile": "/candidates/arthur-handy.html",
+      "source_id": "01000000-59ac-daed-bffa-08df1e27abc2"
+    },
+    {
+      "id": "house-18-rep-primary-jessica-gomes",
+      "slug": "jessica-gomes",
+      "name": "Jessica Gomes",
+      "party": "REP",
+      "chamber": "house",
+      "district": 18,
+      "profile": "/candidates/jessica-gomes.html",
+      "source_id": "01000000-59ac-daed-bcbc-08df1e27abc2"
+    },
+    {
+      "id": "house-19-dem-primary-joseph-mcnamara",
+      "slug": "joseph-mcnamara",
+      "name": "Joseph McNamara",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 19,
+      "profile": "/candidates/joseph-mcnamara.html",
+      "source_id": "01000000-59ac-daed-0dbb-08df1e27abd2"
+    },
+    {
+      "id": "house-19-ind-general-patrick-e-maloney-jr",
+      "slug": "patrick-e-maloney-jr",
+      "name": "Patrick E Maloney Jr",
+      "party": "IND",
+      "chamber": "house",
+      "district": 19,
+      "profile": null,
+      "source_id": "01000000-59ac-daed-110c-08df1e27abd2"
+    },
+    {
+      "id": "house-20-dem-primary-david-a-bennett",
+      "slug": "david-a-bennett",
+      "name": "David A Bennett",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 20,
+      "profile": "/candidates/david-a-bennett.html",
+      "source_id": "01000000-59ac-daed-a57f-08df1e27c172"
+    },
+    {
+      "id": "house-21-rep-primary-marie-a-hopkins",
+      "slug": "marie-a-hopkins",
+      "name": "Marie A Hopkins",
+      "party": "REP",
+      "chamber": "house",
+      "district": 21,
+      "profile": "/candidates/marie-a-hopkins.html",
+      "source_id": "01000000-59ac-daed-da04-08df1e27c184"
+    },
+    {
+      "id": "house-22-dem-primary-zakary-j-pereira",
+      "slug": "zakary-j-pereira",
+      "name": "Zakary J Pereira",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 22,
+      "profile": "/candidates/zakary-j-pereira.html",
+      "source_id": "01000000-59ac-daed-cb38-08df1e27c196"
+    },
+    {
+      "id": "house-22-rep-primary-barbara-quigley",
+      "slug": "barbara-quigley",
+      "name": "Barbara Quigley",
+      "party": "REP",
+      "chamber": "house",
+      "district": 22,
+      "profile": "/candidates/barbara-quigley.html",
+      "source_id": "01000000-59ac-daed-c7cf-08df1e27c196"
+    },
+    {
+      "id": "house-23-dem-primary-william-muto",
+      "slug": "william-muto",
+      "name": "William Muto",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 23,
+      "profile": "/candidates/william-muto.html",
+      "source_id": "01000000-59ac-daed-c6bd-08df1e27c1a8"
+    },
+    {
+      "id": "house-23-rep-primary-dana-james-traversie",
+      "slug": "dana-james-traversie",
+      "name": "Dana James Traversie",
+      "party": "REP",
+      "chamber": "house",
+      "district": 23,
+      "profile": "/candidates/dana-james-traversie.html",
+      "source_id": "01000000-59ac-daed-c2f4-08df1e27c1a8"
+    },
+    {
+      "id": "house-24-dem-primary-evan-patrick-shanley",
+      "slug": "evan-patrick-shanley",
+      "name": "Evan Patrick Shanley",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 24,
+      "profile": "/candidates/evan-patrick-shanley.html",
+      "source_id": "01000000-59ac-daed-3cd1-08df1e27ae09"
+    },
+    {
+      "id": "house-25-dem-primary-thomas-e-noret",
+      "slug": "thomas-e-noret",
+      "name": "Thomas E Noret",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 25,
+      "profile": "/candidates/thomas-e-noret.html",
+      "source_id": "01000000-59ac-daed-92e9-08df1e27a9f0"
+    },
+    {
+      "id": "house-26-dem-primary-earl-a-read-iii",
+      "slug": "earl-a-read-iii",
+      "name": "Earl A Read III",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 26,
+      "profile": "/candidates/earl-a-read-iii.html",
+      "source_id": "01000000-59ac-daed-a46f-08df1e27aa04"
+    },
+    {
+      "id": "house-27-dem-primary-angela-s-coburn",
+      "slug": "angela-s-coburn",
+      "name": "Angela S Coburn",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 27,
+      "profile": "/candidates/angela-s-coburn.html",
+      "source_id": "01000000-59ac-daed-aaf7-08df1e27aa14"
+    },
+    {
+      "id": "house-27-rep-primary-lawrence-paul-almagno-jr",
+      "slug": "lawrence-paul-almagno-jr",
+      "name": "Lawrence Paul Almagno Jr",
+      "party": "REP",
+      "chamber": "house",
+      "district": 27,
+      "profile": "/candidates/lawrence-paul-almagno-jr.html",
+      "source_id": "01000000-59ac-daed-a7ff-08df1e27aa14"
+    },
+    {
+      "id": "house-28-rep-primary-george-a-nardone",
+      "slug": "george-a-nardone",
+      "name": "George A Nardone",
+      "party": "REP",
+      "chamber": "house",
+      "district": 28,
+      "profile": "/candidates/george-a-nardone.html",
+      "source_id": "01000000-59ac-daed-5205-08df1e27aa24"
+    },
+    {
+      "id": "house-29-rep-primary-sherry-l-roberts",
+      "slug": "sherry-l-roberts",
+      "name": "Sherry L Roberts",
+      "party": "REP",
+      "chamber": "house",
+      "district": 29,
+      "profile": "/candidates/sherry-l-roberts.html",
+      "source_id": "01000000-59ac-daed-0cdf-08df1e27aa36"
+    },
+    {
+      "id": "house-30-dem-primary-justine-caldwell",
+      "slug": "justine-caldwell",
+      "name": "Justine Caldwell",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 30,
+      "profile": "/candidates/justine-caldwell.html",
+      "source_id": "01000000-59ac-daed-e4e1-08df1e27ae18"
+    },
+    {
+      "id": "house-31-dem-primary-james-c-sheehan",
+      "slug": "james-c-sheehan",
+      "name": "James C Sheehan",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 31,
+      "profile": "/candidates/james-c-sheehan.html",
+      "source_id": "01000000-59ac-daed-6542-08df1e27af5f"
+    },
+    {
+      "id": "house-32-dem-primary-robert-e-craven-jr",
+      "slug": "robert-e-craven-jr",
+      "name": "Robert E Craven Jr",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 32,
+      "profile": "/candidates/robert-e-craven-jr.html",
+      "source_id": "01000000-59ac-daed-8502-08df1e27b74d"
+    },
+    {
+      "id": "house-33-dem-primary-carol-hagan-mcentee",
+      "slug": "carol-hagan-mcentee",
+      "name": "Carol Hagan McEntee",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 33,
+      "profile": "/candidates/carol-hagan-mcentee.html",
+      "source_id": "01000000-59ac-daed-61ed-08df1e27b5e6"
+    },
+    {
+      "id": "house-33-rep-primary-jessica-drew-day",
+      "slug": "jessica-drew-day",
+      "name": "Jessica Drew Day",
+      "party": "REP",
+      "chamber": "house",
+      "district": 33,
+      "profile": "/candidates/jessica-drew-day.html",
+      "source_id": "01000000-59ac-daed-5eb9-08df1e27b5e6"
+    },
+    {
+      "id": "house-34-dem-primary-teresa-a-tanzi",
+      "slug": "teresa-a-tanzi",
+      "name": "Teresa A Tanzi",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 34,
+      "profile": "/candidates/teresa-a-tanzi.html",
+      "source_id": "01000000-59ac-daed-9838-08df1e27b5f7"
+    },
+    {
+      "id": "house-35-dem-primary-kathleen-a-fogarty",
+      "slug": "kathleen-a-fogarty",
+      "name": "Kathleen A Fogarty",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 35,
+      "profile": "/candidates/kathleen-a-fogarty.html",
+      "source_id": "01000000-59ac-daed-b5d7-08df1e27bf63"
+    },
+    {
+      "id": "house-35-rep-primary-jennifer-p-nerbonne",
+      "slug": "jennifer-p-nerbonne",
+      "name": "Jennifer P Nerbonne",
+      "party": "REP",
+      "chamber": "house",
+      "district": 35,
+      "profile": "/candidates/jennifer-p-nerbonne.html",
+      "source_id": "01000000-59ac-daed-b30e-08df1e27bf63"
+    },
+    {
+      "id": "house-36-dem-primary-tina-l-spears",
+      "slug": "tina-l-spears",
+      "name": "Tina L Spears",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 36,
+      "profile": "/candidates/tina-l-spears.html",
+      "source_id": "01000000-59ac-daed-f4b3-08df1e27a912"
+    },
+    {
+      "id": "house-37-dem-primary-samuel-angelo-azzinaro",
+      "slug": "samuel-angelo-azzinaro",
+      "name": "Samuel Angelo Azzinaro",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 37,
+      "profile": "/candidates/samuel-angelo-azzinaro.html",
+      "source_id": "01000000-59ac-daed-d7aa-08df1e27c357"
+    },
+    {
+      "id": "house-37-rep-primary-christopher-m-stanton",
+      "slug": "christopher-m-stanton",
+      "name": "Christopher M Stanton",
+      "party": "REP",
+      "chamber": "house",
+      "district": 37,
+      "profile": "/candidates/christopher-m-stanton.html",
+      "source_id": "01000000-59ac-daed-d474-08df1e27c357"
+    },
+    {
+      "id": "house-38-dem-primary-brian-patrick-kennedy",
+      "slug": "brian-patrick-kennedy",
+      "name": "Brian Patrick Kennedy",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 38,
+      "profile": "/candidates/brian-patrick-kennedy.html",
+      "source_id": "01000000-59ac-daed-2858-08df1e27b156"
+    },
+    {
+      "id": "house-39-dem-primary-megan-l-cotter",
+      "slug": "megan-l-cotter",
+      "name": "Megan L Cotter",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 39,
+      "profile": "/candidates/megan-l-cotter.html",
+      "source_id": "01000000-59ac-daed-3a97-08df1e27af6f"
+    },
+    {
+      "id": "house-39-rep-primary-jasmin-roy",
+      "slug": "jasmin-roy",
+      "name": "Jasmin Roy",
+      "party": "REP",
+      "chamber": "house",
+      "district": 39,
+      "profile": "/candidates/jasmin-roy.html",
+      "source_id": "01000000-59ac-daed-3744-08df1e27af6f"
+    },
+    {
+      "id": "house-40-rep-primary-michael-chippendale",
+      "slug": "michael-chippendale",
+      "name": "Michael Chippendale",
+      "party": "REP",
+      "chamber": "house",
+      "district": 40,
+      "profile": "/candidates/michael-chippendale.html",
+      "source_id": "01000000-59ac-daed-2494-08df1e27aa45"
+    },
+    {
+      "id": "house-41-dem-primary-shaina-n-smith",
+      "slug": "shaina-n-smith",
+      "name": "Shaina N Smith",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 41,
+      "profile": "/candidates/shaina-n-smith.html",
+      "source_id": "01000000-59ac-daed-bf3d-08df1e27abe1"
+    },
+    {
+      "id": "house-41-rep-primary-michael-j-riley",
+      "slug": "michael-j-riley",
+      "name": "Michael J Riley",
+      "party": "REP",
+      "chamber": "house",
+      "district": 41,
+      "profile": "/candidates/michael-j-riley.html",
+      "source_id": "01000000-59ac-daed-bbd6-08df1e27abe1"
+    },
+    {
+      "id": "house-42-dem-primary-edward-w-stravato",
+      "slug": "edward-w-stravato",
+      "name": "Edward W Stravato",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 42,
+      "profile": "/candidates/edward-w-stravato.html",
+      "source_id": "01000000-59ac-daed-bd4e-08df1e27abf1"
+    },
+    {
+      "id": "house-42-rep-primary-richard-r-fascia",
+      "slug": "richard-r-fascia",
+      "name": "Richard R Fascia",
+      "party": "REP",
+      "chamber": "house",
+      "district": 42,
+      "profile": "/candidates/richard-r-fascia.html",
+      "source_id": "01000000-59ac-daed-ba4a-08df1e27abf1"
+    },
+    {
+      "id": "house-43-dem-primary-deborah-a-fellela",
+      "slug": "deborah-a-fellela",
+      "name": "Deborah A Fellela",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 43,
+      "profile": "/candidates/deborah-a-fellela.html",
+      "source_id": "01000000-59ac-daed-f5f9-08df1e27b283"
+    },
+    {
+      "id": "house-44-dem-primary-gregory-costantino",
+      "slug": "gregory-costantino",
+      "name": "Gregory Costantino",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 44,
+      "profile": "/candidates/gregory-costantino.html",
+      "source_id": "01000000-59ac-daed-eabe-08df1e27b294"
+    },
+    {
+      "id": "house-44-rep-primary-joseph-hosey",
+      "slug": "joseph-hosey",
+      "name": "Joseph Hosey",
+      "party": "REP",
+      "chamber": "house",
+      "district": 44,
+      "profile": "/candidates/joseph-hosey.html",
+      "source_id": "01000000-59ac-daed-e79b-08df1e27b294"
+    },
+    {
+      "id": "house-45-dem-primary-mia-a-ackerman",
+      "slug": "mia-a-ackerman",
+      "name": "Mia A Ackerman",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 45,
+      "profile": "/candidates/mia-a-ackerman.html",
+      "source_id": "01000000-59ac-daed-cc33-08df1e27ad68"
+    },
+    {
+      "id": "house-46-dem-primary-mary-ann-shallcross-smith",
+      "slug": "mary-ann-shallcross-smith",
+      "name": "Mary Ann Shallcross Smith",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 46,
+      "profile": "/candidates/mary-ann-shallcross-smith.html",
+      "source_id": "01000000-59ac-daed-ed22-08df1e27b373"
+    },
+    {
+      "id": "house-47-rep-primary-david-j-place",
+      "slug": "david-j-place",
+      "name": "David J Place",
+      "party": "REP",
+      "chamber": "house",
+      "district": 47,
+      "profile": "/candidates/david-j-place.html",
+      "source_id": "01000000-59ac-daed-e180-08df1e27a79e"
+    },
+    {
+      "id": "house-48-rep-primary-brian-c-newberry",
+      "slug": "brian-c-newberry",
+      "name": "Brian C Newberry",
+      "party": "REP",
+      "chamber": "house",
+      "district": 48,
+      "profile": "/candidates/brian-c-newberry.html",
+      "source_id": "01000000-59ac-daed-6dcc-08df1e27a7ae"
+    },
+    {
+      "id": "house-49-dem-primary-veronicka-vega",
+      "slug": "veronicka-vega",
+      "name": "Veronicka Vega",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 49,
+      "profile": "/candidates/veronicka-vega.html",
+      "source_id": "01000000-59ac-daed-d874-08df1e27b863"
+    },
+    {
+      "id": "house-49-ind-general-jon-d-brien",
+      "slug": "jon-d-brien",
+      "name": "Jon D Brien",
+      "party": "IND",
+      "chamber": "house",
+      "district": 49,
+      "profile": "/candidates/jon-d-brien.html",
+      "source_id": "01000000-59ac-daed-db73-08df1e27b863"
+    },
+    {
+      "id": "house-50-dem-primary-stephen-casey",
+      "slug": "stephen-casey",
+      "name": "Stephen Casey",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 50,
+      "profile": "/candidates/stephen-casey.html",
+      "source_id": "01000000-59ac-daed-8f99-08df1e27c3d6"
+    },
+    {
+      "id": "house-51-dem-primary-robert-d-phillips",
+      "slug": "robert-d-phillips",
+      "name": "Robert D Phillips",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 51,
+      "profile": "/candidates/robert-d-phillips.html",
+      "source_id": "01000000-59ac-daed-164e-08df1e27ad78"
+    },
+    {
+      "id": "house-52-dem-primary-alex-d-marszalkowski",
+      "slug": "alex-d-marszalkowski",
+      "name": "Alex D Marszalkowski",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 52,
+      "profile": "/candidates/alex-d-marszalkowski.html",
+      "source_id": "01000000-59ac-daed-4310-08df1e27ad88"
+    },
+    {
+      "id": "house-53-dem-primary-suzanna-l-alba",
+      "slug": "suzanna-l-alba",
+      "name": "Suzanna L Alba",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 53,
+      "profile": "/candidates/suzanna-l-alba.html",
+      "source_id": "01000000-59ac-daed-b96d-08df1e27b093"
+    },
+    {
+      "id": "house-53-rep-primary-paul-m-santucci",
+      "slug": "paul-m-santucci",
+      "name": "Paul M Santucci",
+      "party": "REP",
+      "chamber": "house",
+      "district": 53,
+      "profile": "/candidates/paul-m-santucci.html",
+      "source_id": "01000000-59ac-daed-b62a-08df1e27b093"
+    },
+    {
+      "id": "house-54-dem-primary-william-w-o-brien",
+      "slug": "william-w-o-brien",
+      "name": "William W O'Brien",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 54,
+      "profile": "/candidates/william-w-o-brien.html",
+      "source_id": "01000000-59ac-daed-5259-08df1e27b7a3"
+    },
+    {
+      "id": "house-55-dem-primary-arthur-j-corvese",
+      "slug": "arthur-j-corvese",
+      "name": "Arthur J Corvese",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 55,
+      "profile": "/candidates/arthur-j-corvese.html",
+      "source_id": "01000000-59ac-daed-4bb3-08df1e27b7b4"
+    },
+    {
+      "id": "house-56-dem-primary-joshua-j-giraldo",
+      "slug": "joshua-j-giraldo",
+      "name": "Joshua J Giraldo",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 56,
+      "profile": "/candidates/joshua-j-giraldo.html",
+      "source_id": "01000000-59ac-daed-32bd-08df1e27a800"
+    },
+    {
+      "id": "house-57-dem-primary-brandon-t-voas",
+      "slug": "brandon-t-voas",
+      "name": "Brandon T Voas",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 57,
+      "profile": "/candidates/brandon-t-voas.html",
+      "source_id": "01000000-59ac-daed-f3af-08df1e27a810"
+    },
+    {
+      "id": "house-58-dem-primary-cherie-l-cruz",
+      "slug": "cherie-l-cruz",
+      "name": "Cherie L Cruz",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 58,
+      "profile": "/candidates/cherie-l-cruz.html",
+      "source_id": "01000000-59ac-daed-ef5a-08df1e27b95e"
+    },
+    {
+      "id": "house-59-dem-primary-jennifer-a-stewart",
+      "slug": "jennifer-a-stewart",
+      "name": "Jennifer A Stewart",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 59,
+      "profile": "/candidates/jennifer-a-stewart.html",
+      "source_id": "01000000-59ac-daed-0fd2-08df1e27b96f"
+    },
+    {
+      "id": "house-60-dem-primary-karen-alzate",
+      "slug": "karen-alzate",
+      "name": "Karen Alzate",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 60,
+      "profile": "/candidates/karen-alzate.html",
+      "source_id": "01000000-59ac-daed-86f5-08df1e27a821"
+    },
+    {
+      "id": "house-61-dem-primary-leonela-felix",
+      "slug": "leonela-felix",
+      "name": "Leonela Felix",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 61,
+      "profile": "/candidates/leonela-felix.html",
+      "source_id": "01000000-59ac-daed-18d0-08df1e27b97f"
+    },
+    {
+      "id": "house-62-dem-primary-mary-duffy-messier",
+      "slug": "mary-duffy-messier",
+      "name": "Mary Duffy Messier",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 62,
+      "profile": "/candidates/mary-duffy-messier.html",
+      "source_id": "01000000-59ac-daed-3f98-08df1e27b990"
+    },
+    {
+      "id": "house-63-dem-primary-katherine-sheena-kazarian",
+      "slug": "katherine-sheena-kazarian",
+      "name": "Katherine Sheena Kazarian",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 63,
+      "profile": "/candidates/katherine-sheena-kazarian.html",
+      "source_id": "01000000-59ac-daed-df74-08df1e27ae6e"
+    },
+    {
+      "id": "house-64-dem-primary-jenni-a-furtado",
+      "slug": "jenni-a-furtado",
+      "name": "Jenni A Furtado",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 64,
+      "profile": "/candidates/jenni-a-furtado.html",
+      "source_id": "01000000-59ac-daed-2bea-08df1e27ae80"
+    },
+    {
+      "id": "house-65-dem-primary-matthew-dawson",
+      "slug": "matthew-dawson",
+      "name": "Matthew Dawson",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 65,
+      "profile": "/candidates/matthew-dawson.html",
+      "source_id": "01000000-59ac-daed-5d34-08df1e27ae93"
+    },
+    {
+      "id": "house-66-dem-primary-jennifer-smith-boylan",
+      "slug": "jennifer-smith-boylan",
+      "name": "Jennifer Smith Boylan",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 66,
+      "profile": "/candidates/jennifer-smith-boylan.html",
+      "source_id": "01000000-59ac-daed-4111-08df1e27a467"
+    },
+    {
+      "id": "house-67-dem-primary-nicole-p-jellinek",
+      "slug": "nicole-p-jellinek",
+      "name": "Nicole P Jellinek",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 67,
+      "profile": "/candidates/nicole-p-jellinek.html",
+      "source_id": "01000000-59ac-daed-3aaa-08df1e27a47c"
+    },
+    {
+      "id": "house-67-ind-general-joseph-a-depasquale",
+      "slug": "joseph-a-depasquale",
+      "name": "Joseph A DePasquale",
+      "party": "IND",
+      "chamber": "house",
+      "district": 67,
+      "profile": null,
+      "source_id": "01000000-59ac-daed-3f61-08df1e27a47c"
+    },
+    {
+      "id": "house-68-dem-primary-june-s-speakman",
+      "slug": "june-s-speakman",
+      "name": "June S Speakman",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 68,
+      "profile": "/candidates/june-s-speakman.html",
+      "source_id": "01000000-59ac-daed-5137-08df1e27a6f4"
+    },
+    {
+      "id": "house-69-dem-primary-susan-ann-donovan",
+      "slug": "susan-ann-donovan",
+      "name": "Susan Ann Donovan",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 69,
+      "profile": "/candidates/susan-ann-donovan.html",
+      "source_id": "01000000-59ac-daed-a1ec-08df1e27a704"
+    },
+    {
+      "id": "house-70-dem-primary-john-g-edwards",
+      "slug": "john-g-edwards",
+      "name": "John G Edwards",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 70,
+      "profile": "/candidates/john-g-edwards.html",
+      "source_id": "01000000-59ac-daed-2b8e-08df1e27bfa9"
+    },
+    {
+      "id": "house-71-dem-primary-michelle-e-mcgaw",
+      "slug": "michelle-e-mcgaw",
+      "name": "Michelle E McGaw",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 71,
+      "profile": "/candidates/michelle-e-mcgaw.html",
+      "source_id": "01000000-59ac-daed-8440-08df1e27b45e"
+    },
+    {
+      "id": "house-72-dem-primary-terri-denise-cortvriend",
+      "slug": "terri-denise-cortvriend",
+      "name": "Terri-Denise Cortvriend",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 72,
+      "profile": "/candidates/terri-denise-cortvriend.html",
+      "source_id": "01000000-59ac-daed-3aea-08df1e27b578"
+    },
+    {
+      "id": "house-73-dem-primary-marvin-abney",
+      "slug": "marvin-abney",
+      "name": "Marvin Abney",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 73,
+      "profile": "/candidates/marvin-abney.html",
+      "source_id": "01000000-59ac-daed-3ee3-08df1e27b589"
+    },
+    {
+      "id": "house-74-dem-primary-alex-finkelman",
+      "slug": "alex-finkelman",
+      "name": "Alex Finkelman",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 74,
+      "profile": "/candidates/alex-finkelman.html",
+      "source_id": "01000000-59ac-daed-0605-08df1e27b1fd"
+    },
+    {
+      "id": "house-75-dem-primary-lauren-h-carson",
+      "slug": "lauren-h-carson",
+      "name": "Lauren H Carson",
+      "party": "DEM",
+      "chamber": "house",
+      "district": 75,
+      "profile": "/candidates/lauren-h-carson.html",
+      "source_id": "01000000-59ac-daed-0d47-08df1e27b6ea"
+    },
+    {
+      "id": "senate-1-dem-primary-jacob-bissaillon",
+      "slug": "jacob-bissaillon",
+      "name": "Jacob Bissaillon",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 1,
+      "profile": "/candidates/jacob-bissaillon.html",
+      "source_id": "01000000-59ac-daed-5299-08df1e27bb04"
+    },
+    {
+      "id": "senate-2-dem-primary-ana-b-quezada",
+      "slug": "ana-b-quezada",
+      "name": "Ana B Quezada",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 2,
+      "profile": "/candidates/ana-b-quezada.html",
+      "source_id": "01000000-59ac-daed-3829-08df1e27bb15"
+    },
+    {
+      "id": "senate-3-dem-primary-samuel-d-zurier",
+      "slug": "samuel-d-zurier",
+      "name": "Samuel D Zurier",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 3,
+      "profile": "/candidates/samuel-d-zurier.html",
+      "source_id": "01000000-59ac-daed-7a39-08df1e27bb26"
+    },
+    {
+      "id": "senate-4-dem-primary-stefano-v-famiglietti",
+      "slug": "stefano-v-famiglietti",
+      "name": "Stefano V Famiglietti",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 4,
+      "profile": "/candidates/stefano-v-famiglietti.html",
+      "source_id": "01000000-59ac-daed-aff0-08df1e27b780"
+    },
+    {
+      "id": "senate-5-dem-primary-samuel-w-bell",
+      "slug": "samuel-w-bell",
+      "name": "Samuel W Bell",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 5,
+      "profile": "/candidates/samuel-w-bell.html",
+      "source_id": "01000000-59ac-daed-eb11-08df1e27bb38"
+    },
+    {
+      "id": "senate-5-rep-primary-william-d-connell-jr",
+      "slug": "william-d-connell-jr",
+      "name": "William D Connell Jr",
+      "party": "REP",
+      "chamber": "senate",
+      "district": 5,
+      "profile": null,
+      "source_id": "01000000-59ac-daed-e800-08df1e27bb38"
+    },
+    {
+      "id": "senate-6-dem-primary-tiara-t-mack",
+      "slug": "tiara-t-mack",
+      "name": "Tiara T Mack",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 6,
+      "profile": "/candidates/tiara-t-mack.html",
+      "source_id": "01000000-59ac-daed-24f2-08df1e27bb4a"
+    },
+    {
+      "id": "senate-7-dem-primary-frank-a-ciccone",
+      "slug": "frank-a-ciccone",
+      "name": "Frank A Ciccone",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 7,
+      "profile": "/candidates/frank-a-ciccone.html",
+      "source_id": "01000000-59ac-daed-1f06-08df1e27b250"
+    },
+    {
+      "id": "senate-8-dem-primary-lori-urso",
+      "slug": "lori-urso",
+      "name": "Lori Urso",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 8,
+      "profile": "/candidates/lori-urso.html",
+      "source_id": "01000000-59ac-daed-1935-08df1e27b93e"
+    },
+    {
+      "id": "senate-9-dem-primary-john-burke",
+      "slug": "john-burke",
+      "name": "John Burke",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 9,
+      "profile": "/candidates/john-burke.html",
+      "source_id": "01000000-59ac-daed-c1bd-08df1e27c2d9"
+    },
+    {
+      "id": "senate-10-dem-primary-walter-s-felag-jr",
+      "slug": "walter-s-felag-jr",
+      "name": "Walter S Felag Jr",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 10,
+      "profile": "/candidates/walter-s-felag-jr.html",
+      "source_id": "01000000-59ac-daed-c947-08df1e27a6cb"
+    },
+    {
+      "id": "senate-11-dem-primary-linda-l-ujifusa",
+      "slug": "linda-l-ujifusa",
+      "name": "Linda L Ujifusa",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 11,
+      "profile": "/candidates/linda-l-ujifusa.html",
+      "source_id": "01000000-59ac-daed-41e9-08df1e27a6e1"
+    },
+    {
+      "id": "senate-12-dem-primary-louis-dipalma",
+      "slug": "louis-dipalma",
+      "name": "Louis DiPalma",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 12,
+      "profile": "/candidates/louis-dipalma.html",
+      "source_id": "01000000-59ac-daed-0d1f-08df1e27b44d"
+    },
+    {
+      "id": "senate-13-dem-primary-dawn-euer",
+      "slug": "dawn-euer",
+      "name": "Dawn Euer",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 13,
+      "profile": "/candidates/dawn-euer.html",
+      "source_id": "01000000-59ac-daed-fc7c-08df1e27b1eb"
+    },
+    {
+      "id": "senate-14-dem-primary-valarie-jean-lawson",
+      "slug": "valarie-jean-lawson",
+      "name": "Valarie Jean Lawson",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 14,
+      "profile": "/candidates/valarie-jean-lawson.html",
+      "source_id": "01000000-59ac-daed-3a5d-08df1e27ae4a"
+    },
+    {
+      "id": "senate-14-ind-general-brian-g-coogan",
+      "slug": "brian-g-coogan",
+      "name": "Brian G Coogan",
+      "party": "IND",
+      "chamber": "senate",
+      "district": 14,
+      "profile": null,
+      "source_id": "01000000-59ac-daed-3e34-08df1e27ae4a"
+    },
+    {
+      "id": "senate-15-dem-primary-meghan-e-kallman",
+      "slug": "meghan-e-kallman",
+      "name": "Meghan E Kallman",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 15,
+      "profile": "/candidates/meghan-e-kallman.html",
+      "source_id": "01000000-59ac-daed-7313-08df1e27b94e"
+    },
+    {
+      "id": "senate-16-dem-primary-jonathon-acosta",
+      "slug": "jonathon-acosta",
+      "name": "Jonathon Acosta",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 16,
+      "profile": "/candidates/jonathon-acosta.html",
+      "source_id": "01000000-59ac-daed-9d6e-08df1e27a7f0"
+    },
+    {
+      "id": "senate-17-dem-primary-nelly-burdette",
+      "slug": "nelly-burdette",
+      "name": "Nelly Burdette",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 17,
+      "profile": "/candidates/nelly-burdette.html",
+      "source_id": "01000000-59ac-daed-add7-08df1e27b346"
+    },
+    {
+      "id": "senate-17-rep-primary-thomas-j-paolino",
+      "slug": "thomas-j-paolino",
+      "name": "Thomas J Paolino",
+      "party": "REP",
+      "chamber": "senate",
+      "district": 17,
+      "profile": "/candidates/thomas-j-paolino.html",
+      "source_id": "01000000-59ac-daed-aa6a-08df1e27b346"
+    },
+    {
+      "id": "senate-17-ind-general-jina-n-petrarca",
+      "slug": "jina-n-petrarca",
+      "name": "Jina N Petrarca",
+      "party": "IND",
+      "chamber": "senate",
+      "district": 17,
+      "profile": null,
+      "source_id": "01000000-59ac-daed-afdf-08df1e27b346"
+    },
+    {
+      "id": "senate-17-ind-general-john-douglas-barr-ii",
+      "slug": "john-douglas-barr-ii",
+      "name": "John Douglas Barr II",
+      "party": "IND",
+      "chamber": "senate",
+      "district": 17,
+      "profile": null,
+      "source_id": "01000000-59ac-daed-aef2-08df1e27b346"
+    },
+    {
+      "id": "senate-18-dem-primary-robert-britto",
+      "slug": "robert-britto",
+      "name": "Robert Britto",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 18,
+      "profile": "/candidates/robert-britto.html",
+      "source_id": "01000000-59ac-daed-754e-08df1e27ae5c"
+    },
+    {
+      "id": "senate-19-dem-primary-ryan-w-pearson",
+      "slug": "ryan-w-pearson",
+      "name": "Ryan W Pearson",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 19,
+      "profile": "/candidates/ryan-w-pearson.html",
+      "source_id": "01000000-59ac-daed-1255-08df1e27ad47"
+    },
+    {
+      "id": "senate-19-ind-general-james-d-purcell",
+      "slug": "james-d-purcell",
+      "name": "James D Purcell",
+      "party": "IND",
+      "chamber": "senate",
+      "district": 19,
+      "profile": null,
+      "source_id": null
+    },
+    {
+      "id": "senate-20-dem-primary-brian-j-thompson",
+      "slug": "brian-j-thompson",
+      "name": "Brian J Thompson",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 20,
+      "profile": "/candidates/brian-j-thompson.html",
+      "source_id": "01000000-59ac-daed-dce0-08df1e27ad57"
+    },
+    {
+      "id": "senate-21-rep-primary-gordon-e-rogers",
+      "slug": "gordon-e-rogers",
+      "name": "Gordon E Rogers",
+      "party": "REP",
+      "chamber": "senate",
+      "district": 21,
+      "profile": "/candidates/gordon-e-rogers.html",
+      "source_id": "01000000-59ac-daed-ef2c-08df1e27a9cb"
+    },
+    {
+      "id": "senate-22-dem-primary-david-p-tikoian",
+      "slug": "david-p-tikoian",
+      "name": "David P Tikoian",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 22,
+      "profile": "/candidates/david-p-tikoian.html",
+      "source_id": "01000000-59ac-daed-164d-08df1e27b364"
+    },
+    {
+      "id": "senate-23-rep-primary-jessica-de-la-cruz",
+      "slug": "jessica-de-la-cruz",
+      "name": "Jessica de la Cruz",
+      "party": "REP",
+      "chamber": "senate",
+      "district": 23,
+      "profile": "/candidates/jessica-de-la-cruz.html",
+      "source_id": "01000000-59ac-daed-83ed-08df1e27a78f"
+    },
+    {
+      "id": "senate-24-dem-primary-melissa-murray",
+      "slug": "melissa-murray",
+      "name": "Melissa Murray",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 24,
+      "profile": "/candidates/melissa-murray.html",
+      "source_id": "01000000-59ac-daed-ce8e-08df1e27b851"
+    },
+    {
+      "id": "senate-25-dem-primary-andrew-r-dimitri",
+      "slug": "andrew-r-dimitri",
+      "name": "Andrew R Dimitri",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 25,
+      "profile": "/candidates/andrew-r-dimitri.html",
+      "source_id": "01000000-59ac-daed-1598-08df1e27b261"
+    },
+    {
+      "id": "senate-26-dem-primary-todd-m-patalano",
+      "slug": "todd-m-patalano",
+      "name": "Todd M Patalano",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 26,
+      "profile": "/candidates/todd-m-patalano.html",
+      "source_id": "01000000-59ac-daed-6dc6-08df1e27ab39"
+    },
+    {
+      "id": "senate-27-dem-primary-hanna-m-gallo",
+      "slug": "hanna-m-gallo",
+      "name": "Hanna M Gallo",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 27,
+      "profile": "/candidates/hanna-m-gallo.html",
+      "source_id": "01000000-59ac-daed-3cc4-08df1e27ab4b"
+    },
+    {
+      "id": "senate-28-dem-primary-lammis-j-vargas",
+      "slug": "lammis-j-vargas",
+      "name": "Lammis J Vargas",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 28,
+      "profile": "/candidates/lammis-j-vargas.html",
+      "source_id": "01000000-59ac-daed-20f8-08df1e27ab5c"
+    },
+    {
+      "id": "senate-29-dem-primary-peter-a-appollonio-jr",
+      "slug": "peter-a-appollonio-jr",
+      "name": "Peter A Appollonio Jr",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 29,
+      "profile": "/candidates/peter-a-appollonio-jr.html",
+      "source_id": "01000000-59ac-daed-ac3e-08df1e27c14f"
+    },
+    {
+      "id": "senate-30-dem-primary-mark-mckenney",
+      "slug": "mark-mckenney",
+      "name": "Mark McKenney",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 30,
+      "profile": "/candidates/mark-mckenney.html",
+      "source_id": "01000000-59ac-daed-5290-08df1e27c161"
+    },
+    {
+      "id": "senate-31-dem-primary-matthew-l-lamountain",
+      "slug": "matthew-l-lamountain",
+      "name": "Matthew L LaMountain",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 31,
+      "profile": "/candidates/matthew-l-lamountain.html",
+      "source_id": "01000000-59ac-daed-5bf7-08df1e27ab6c"
+    },
+    {
+      "id": "senate-32-dem-primary-pamela-j-lauria",
+      "slug": "pamela-j-lauria",
+      "name": "Pamela J Lauria",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 32,
+      "profile": "/candidates/pamela-j-lauria.html",
+      "source_id": "01000000-59ac-daed-e35c-08df1e27a451"
+    },
+    {
+      "id": "senate-33-dem-primary-leonidas-peter-raptakis",
+      "slug": "leonidas-peter-raptakis",
+      "name": "Leonidas Peter Raptakis",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 33,
+      "profile": "/candidates/leonidas-peter-raptakis.html",
+      "source_id": "01000000-59ac-daed-d8d8-08df1e27a9db"
+    },
+    {
+      "id": "senate-33-rep-primary-james-p-pierson",
+      "slug": "james-p-pierson",
+      "name": "James P Pierson",
+      "party": "REP",
+      "chamber": "senate",
+      "district": 33,
+      "profile": "/candidates/james-p-pierson.html",
+      "source_id": "01000000-59ac-daed-d5b0-08df1e27a9db"
+    },
+    {
+      "id": "senate-34-dem-primary-samantha-r-wilcox",
+      "slug": "samantha-r-wilcox",
+      "name": "Samantha R Wilcox",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 34,
+      "profile": "/candidates/samantha-r-wilcox.html",
+      "source_id": "01000000-59ac-daed-58b1-08df1e27a8d6"
+    },
+    {
+      "id": "senate-34-rep-primary-elaine-j-morgan",
+      "slug": "elaine-j-morgan",
+      "name": "Elaine J Morgan",
+      "party": "REP",
+      "chamber": "senate",
+      "district": 34,
+      "profile": "/candidates/elaine-j-morgan.html",
+      "source_id": "01000000-59ac-daed-5335-08df1e27a8d6"
+    },
+    {
+      "id": "senate-35-dem-primary-bridget-g-valverde",
+      "slug": "bridget-g-valverde",
+      "name": "Bridget G Valverde",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 35,
+      "profile": "/candidates/bridget-g-valverde.html",
+      "source_id": "01000000-59ac-daed-72ca-08df1e27adf8"
+    },
+    {
+      "id": "senate-36-dem-primary-alana-m-dimario",
+      "slug": "alana-m-dimario",
+      "name": "Alana M DiMario",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 36,
+      "profile": "/candidates/alana-m-dimario.html",
+      "source_id": "01000000-59ac-daed-9dd4-08df1e27b5d4"
+    },
+    {
+      "id": "senate-37-dem-primary-virginia-susan-sosnowski",
+      "slug": "virginia-susan-sosnowski",
+      "name": "Virginia Susan Sosnowski",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 37,
+      "profile": "/candidates/virginia-susan-sosnowski.html",
+      "source_id": "01000000-59ac-daed-3873-08df1e27bf52"
+    },
+    {
+      "id": "senate-38-dem-primary-victoria-gu",
+      "slug": "victoria-gu",
+      "name": "Victoria Gu",
+      "party": "DEM",
+      "chamber": "senate",
+      "district": 38,
+      "profile": "/candidates/victoria-gu.html",
+      "source_id": "01000000-59ac-daed-1d80-08df1e27a8fb"
+    },
+    {
+      "id": "senate-38-rep-primary-westin-j-place",
+      "slug": "westin-j-place",
+      "name": "Westin J Place",
+      "party": "REP",
+      "chamber": "senate",
+      "district": 38,
+      "profile": "/candidates/westin-j-place.html",
+      "source_id": "01000000-59ac-daed-18c1-08df1e27a8fb"
+    }
+  ]
+}

@@ -7,6 +7,7 @@ No winner is inferred from a lead or from reporting-unit completeness.
 import argparse
 import json
 import re
+import unicodedata
 import urllib.request
 from collections import Counter
 from datetime import datetime, timezone
@@ -21,6 +22,30 @@ def text(value):
     if not value:
         return ''
     return next((x['text'] for x in value if x.get('languageId') == 'en'), value[0]['text'])
+
+
+def identity(value):
+    return re.sub(r'[^a-z0-9]', '', unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode().lower())
+
+
+def apply_calls(result, audit):
+    """Validate independently sourced calls against the same district's vote leader."""
+    races = {(r['chamber'], r['district']): r for r in result['races']}
+    seen = set()
+    for call in audit['calls']:
+        key = (call['chamber'], call['district'])
+        if key in seen or key not in races:
+            raise ValueError(f'Duplicate or unknown race call: {key}')
+        seen.add(key)
+        race = races[key]
+        matches = [c for c in race['candidates'] if not c['is_write_in'] and identity(c['name'].split()[-1]) == identity(call['winner_last_name'])]
+        if len(matches) != 1 or matches[0]['name'] != race['leader_name'] or race['status'] in ('tied', 'no-votes'):
+            raise ValueError(f'Call does not match a unique current leader: {key}')
+        race['status'] = 'winner'
+        race['call_source'] = audit['source']
+        race['call_source_url'] = audit['source_url']
+        race['call_checked_at'] = audit['checked_at']
+    return result
 
 
 def normalize(payload):
@@ -92,7 +117,7 @@ def normalize(payload):
         'imported_at': datetime.now(timezone.utc).isoformat(),
         'notes': [
             'Percentages include write-in votes; they are not two-party shares.',
-            'Leading does not mean called or certified. Winner status requires an official source flag or certified results.',
+            'Leading does not mean called or certified. Winner status requires an official source flag, certified results, or an attributed Decision Desk HQ call. Calls are not certification.',
             'Reporting units are the source\'s reporting jurisdictions, not an estimate of ballots counted.',
             'Unopposed means one named ballot candidate; write-ins are still included.',
             'This is a dated snapshot, not a live feed. Party changes compare current leaders with the party that won in 2024.',
@@ -112,6 +137,9 @@ if __name__ == '__main__':
         with urllib.request.urlopen(FEED_URL, timeout=60) as response:
             raw = json.load(response)
     result = normalize(raw)
+    audit_path = ROOT / 'data/general_results_2026_calls.json'
+    if audit_path.exists():
+        apply_calls(result, json.loads(audit_path.read_text()))
     path = ROOT / 'data/general_results_2026.json'
     path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
     print(f"Imported {len(result['races'])} districts: {result['seat_leads']}; as of {result['source_as_of']}")
