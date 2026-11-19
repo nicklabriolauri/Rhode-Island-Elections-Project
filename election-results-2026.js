@@ -48,7 +48,7 @@
   }
   function district(chamber,district) {
     const r = race(chamber,district); if (!r) return '';
-    return `<p class="riep-district-result"><a href="${href(r)}"><strong>2026: ${esc(r.leader_name || 'No leader')}</strong> · ${r.status === 'winner' ? 'Won · DDHQ call' : r.is_unopposed ? 'Unopposed · elected' : 'Leading · unofficial'} →</a></p>`;
+    return `<p class="riep-district-result"><a href="${href(r)}"><strong>2026: ${esc(r.leader_name || 'No leader')}</strong> · ${r.status === 'winner' ? (r.call_source ? 'Won · DDHQ call' : 'Won') : r.is_unopposed ? 'Unopposed · elected' : 'Leading · unofficial'} →</a></p>`;
   }
   window.RIEPResults2026 = {ready,record,race,badge,section,district};
   ready.then(() => {

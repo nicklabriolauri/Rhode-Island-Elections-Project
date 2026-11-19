@@ -15,7 +15,7 @@
   let selected = Number(params.get('district')) || null;
   let data, geometry, map, districts, request = 0;
   const raceList = () => data.races.filter(r => r.chamber === chamber);
-  const statusLabel = r => r.status === 'winner' ? (r.call_source ? 'Winner · DDHQ call' : 'Winner') : r.status === 'tied' ? 'Tied' : r.status === 'no-votes' ? 'No votes reported' : r.is_unopposed ? 'Unopposed · leading' : 'Leading';
+  const statusLabel = r => r.status === 'winner' ? (r.call_source ? 'Winner · DDHQ call' : 'Winner') : r.status === 'tied' ? 'Tied' : r.status === 'no-votes' ? 'No votes reported' : r.is_unopposed ? 'Elected unopposed' : 'Leading';
 
   function writeUrl() {
     const url = new URL(location.href);
