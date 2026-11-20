@@ -644,12 +644,12 @@
     </section>
 
 
-    <!-- Temporary Providence local-election pilot: remove this section to hide the entry. -->
+    <!-- Local municipal maps: Cranston overview and Providence pilot. -->
     <section aria-label="Local elections test" style="margin:24px 0;padding:22px 26px;border:1px solid rgba(255,255,255,.18);border-left:4px solid #8da8ff;background:#0e1632;">
       <div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#b8c8ff;">Local elections · Test section</div>
-      <h3 style="margin:8px 0;font-size:23px;">Explore Providence City Council wards</h3>
-      <p style="margin:0 0 12px;color:#e0e7f5;">A first look at local race mapping: find your ward and explore all 15 council seats.</p>
-      <a href="/providence-council-test.html" style="color:white;font-weight:700;">Open the test map →</a>
+      <h3 style="margin:8px 0;font-size:23px;">Explore your local wards and precincts</h3>
+      <p style="margin:0 0 12px;color:#e0e7f5;">Explore Cranston’s six wards, precincts, and local election returns, or visit the Providence council map.</p>
+      <a href="/cranston-map.html" style="color:white;font-weight:700;margin-right:24px;">Explore Cranston</a><a href="/providence-council-test.html" style="color:white;font-weight:700;">Explore Providence</a>
     </section>
     <section class="below-fold" aria-label="Additional project sections">
       <section class="news-section" aria-labelledby="newsTitle">
@@ -1541,6 +1541,7 @@
           <div class="hero-search-action-row">
             <a class="hero-search-action primary" href="${ballotHref}">My Ballot</a>
             <a class="hero-search-action" href="candidate-profiles.html">All Candidate Profiles</a>
+            ${lookupRecord.municipality === "Cranston" ? `<a class="hero-search-action" href="cranston-map.html?precinct=${encodeURIComponent(lookupRecord.precinct_code || "")}">Cranston ward &amp; precinct</a>` : ""}
             <a class="hero-search-action compare" href="${resultsHref}">Election Results</a>
           </div>
         </div>
