@@ -35,6 +35,7 @@
 
 // Share the same attributed 2026 results used in search and the mobile guide.
 (() => {
+  if (document.body.dataset.profileLevel === 'municipal') return;
   if (window.RIEPResults2026 || document.querySelector('script[src*="election-results-2026.js"]')) return;
   const script = document.createElement('script');
   script.src = '/election-results-2026.js?v=20261119';

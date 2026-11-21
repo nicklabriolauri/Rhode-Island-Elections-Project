@@ -161,7 +161,7 @@
     <div class="chips" id="ballotChips"></div>
   </section>
 
-  <div class="notice"><strong>RIEP voter guide — not an official ballot.</strong> This page gathers the 2026 Rhode Island General Assembly races RIEP can identify for your address. The official state sample ballot remains the authoritative source for every federal, state, local, and ballot-question contest.</div>
+  <div class="notice"><strong>RIEP voter guide — not an official ballot.</strong> This page gathers the 2026 General Assembly races RIEP can identify for your address and includes a municipal profile pilot for Cranston Ward 2. The official state sample ballot remains the authoritative source for every federal, state, local, and ballot-question contest.</div>
 
   <main id="ballotMain">
     <section class="race-section"><div class="empty">Loading your House and Senate races…</div></section>
@@ -181,6 +181,7 @@
   <footer>Rhode Island Elections Project · Nonpartisan election information and research.</footer>
 </div>
 
+<script src="/local-representation.js?v=20261121"></script>
 <script>
 (() => {
   const params = new URLSearchParams(location.search);
@@ -451,7 +452,8 @@
     fetch("data/candidate_finance_2026.json",{cache:"no-store"}).then(r=>r.ok?r.json():({profiles:[]})),
     fetch("data/outside_ratings_2026.json",{cache:"no-store"}).then(r=>r.ok?r.json():({ratings:[]})),
     fetch("data/incumbent_records_2026.json",{cache:"no-store"}).then(r=>r.ok?r.json():({records:[]})),
-    fetch("data/race_ratings_2026.json",{cache:"no-store"}).then(r=>r.ok?r.json():({races:[]})).catch(()=>({races:[]}))
+    fetch("data/race_ratings_2026.json",{cache:"no-store"}).then(r=>r.ok?r.json():({races:[]})).catch(()=>({races:[]})),
+    window.RIEPLocalRepresentation?.ready.catch(()=>{})
   ]).then(([runningPayload,profilePayload,researchPayload,financePayload,ratingsPayload,officePayload,raceRatingsPayload])=>{
     raceRatings=new Map((raceRatingsPayload?.races||[]).map(r=>[`${r.chamber}|${Number(r.district)}`,r]));
     profiles=new Map((profilePayload?.profiles||[]).map(p=>[p.candidate_id,p]));
@@ -467,6 +469,7 @@
     const sections=[];
     if(houseDistrict) sections.push(raceSection("house",houseDistrict,[],runningPayload));
     if(senateDistrict) sections.push(raceSection("senate",senateDistrict,[],runningPayload));
+    const local=window.RIEPLocalRepresentation?.renderGroup(municipality,precinct);if(local)sections.push(local);
     document.getElementById("ballotMain").innerHTML=sections.length?sections.join(""):`<section class="race-section"><div class="empty">No district information was passed to this page. Return to the homepage and search your address again.</div></section>`;
   }).catch(err=>{
     console.error(err);

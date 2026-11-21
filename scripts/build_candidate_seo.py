@@ -33,7 +33,7 @@ def profiles():
     if len({p['path'] for p in parser.profiles}) != len(parser.profiles): raise ValueError('Duplicate profile URLs')
     for p in parser.profiles:
         if not re.fullmatch(r'candidates/[a-z0-9-]+\.html', p['path']): raise ValueError(p['path'])
-        if not p['name'] or not re.fullmatch(r'(House|Senate) District \d+', p['district']): raise ValueError(p)
+        if not p['name'] or not re.fullmatch(r'(House|Senate) District \d+|[A-Za-z ]+ City Council Ward \d+', p['district']): raise ValueError(p)
         if not (ROOT / p['path']).is_file(): raise FileNotFoundError(p['path'])
     return parser.profiles
 
@@ -65,6 +65,9 @@ def main():
         path = ROOT / p['path']; before = path.read_text(); url = BASE + '/' + p['path']
         title = f"{p['name']} | RI {p['district']} | RIEP"
         desc = f"Explore {p['name']}'s RIEP profile for Rhode Island {p['district']}: campaign priorities, election history, campaign finance and available public records."
+        if 'City Council Ward' in p['district']:
+            title = f"{p['name']} | {p['district']} | RIEP"
+            desc = f"Explore {p['name']}'s RIEP municipal profile for {p['district']}: campaign priorities, election results, background and available council records."
         person = {'@type': 'Person', '@id': url + '#person', 'name': p['name'], 'url': url}
         schema = {'@context': 'https://schema.org', '@type': 'WebPage', '@id': url, 'url': url,
             'name': title, 'description': desc, 'inLanguage': 'en-US', 'about': person, 'publisher': publisher,
@@ -77,7 +80,7 @@ def main():
         'mainEntity': {'@type': 'ItemList', 'numberOfItems': len(records), 'itemListElement': [
             {'@type': 'ListItem', 'position': i, 'name': p['name'], 'url': BASE + '/' + p['path']}
             for i, p in enumerate(records, 1)]}}
-    after = metadata(before, 'Rhode Island Candidate Profiles | RIEP', 'Browse Rhode Island House and Senate candidate profiles, campaign priorities, election history, campaign finance and public records.', url, schema, 'website')
+    after = metadata(before, 'Rhode Island Candidate Profiles | RIEP', 'Browse Rhode Island House, Senate and municipal profiles, campaign priorities, election history, campaign finance and public records.', url, schema, 'website')
     if after != before: path.write_text(after)
     print(f'Updated search metadata on {changed} of {len(records)} published candidate profiles')
 

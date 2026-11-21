@@ -1,0 +1,156 @@
+{
+  "reviewed": "2026-11-21",
+  "coverage_note": "Municipal profile pilot: Sara Jane Haupt, Cranston Ward 2 only. Other councilors, school-committee members, municipal executives and statewide offices are not yet included in this profile registry.",
+  "municipalities": {
+    "Cranston": {
+      "precinct_wards": {
+        "0701": 3,
+        "0702": 3,
+        "0703": 5,
+        "0704": 4,
+        "0705": 4,
+        "0706": 5,
+        "0707": 4,
+        "0708": 5,
+        "0709": 4,
+        "0710": 5,
+        "0711": 6,
+        "0712": 2,
+        "0713": 2,
+        "0714": 6,
+        "0715": 2,
+        "0716": 5,
+        "0717": 5,
+        "0718": 6,
+        "0719": 6,
+        "0720": 3,
+        "0721": 3,
+        "0722": 1,
+        "0723": 1,
+        "0724": 2,
+        "0725": 1,
+        "0726": 2,
+        "0727": 6
+      },
+      "ward_map": "/cranston-map.html",
+      "boundary_source": "https://arcgisserver.cranstonri.org/arcgis/rest/services/Canvassing/FeatureServer/3"
+    }
+  },
+  "profiles": [
+    {
+      "slug": "sara-jane-haupt",
+      "name": "Sara Jane Haupt",
+      "municipality": "Cranston",
+      "office": "City Council",
+      "ward": 2,
+      "party": "DEM",
+      "status": "Councilor-elect",
+      "election_status": "won",
+      "term_start": "2027-01-04",
+      "profile": "/candidates/sara-jane-haupt.html",
+      "photo": "/candidates/sara-jane-haupt.jpg",
+      "photo_note": "Campaign photo with family, from Sara Haupt for Cranston City Council.",
+      "bio": "Sara Jane Haupt is a civil and environmental engineer and the 2026 winner of Cranston’s Ward 2 City Council election. Her campaign describes an approach to city government informed by engineering, practical problem-solving, and working with people who bring different perspectives.",
+      "priorities": [
+        {
+          "title": "City finances",
+          "text": "Address the city’s budget challenges through careful spending decisions and more efficient operations.",
+          "source": "https://www.saraforcranston.com/"
+        },
+        {
+          "title": "Public schools and city services",
+          "text": "Protect public schools and maintain the services residents rely on.",
+          "source": "https://www.saraforcranston.com/why-im-running"
+        },
+        {
+          "title": "Neighborhoods and parks",
+          "text": "Invest in neighborhoods and maintain parks for families and the wider community.",
+          "source": "https://www.saraforcranston.com/"
+        },
+        {
+          "title": "Safer streets",
+          "text": "Improve street safety for people walking, cycling, and driving.",
+          "source": "https://www.saraforcranston.com/"
+        },
+        {
+          "title": "Practical, collaborative government",
+          "text": "Use evidence and engineering experience to evaluate problems and work toward shared solutions.",
+          "source": "https://www.saraforcranston.com/why-im-running"
+        }
+      ],
+      "sources": {
+        "campaign": "https://www.saraforcranston.com/",
+        "priorities": "https://www.saraforcranston.com/why-im-running",
+        "contact": "https://www.saraforcranston.com/blank",
+        "winner": "https://vote.sos.ri.gov/Candidates/CandidateSearchSummary?CityTown=00007&Election=18144",
+        "council": "https://www.cranstonri.gov/about/city-council/",
+        "charter": "https://ecode360.com/46510588",
+        "photo": "https://static.wixstatic.com/media/ca3402_fcab6805ff9e4ef9bd71ffd0eb4498b2~mv2.jpg"
+      },
+      "reviewed": "2026-11-21",
+      "record_status": "Term has not begun; council voting records, ordinances, committee assignments and attendance will be added after review.",
+      "finance_status": "No verified filing has been imported into this municipal profile.",
+      "endorsements_status": "No endorsements have been verified for this profile.",
+      "general": {
+        "date": "2026-11-03",
+        "as_of": "2026-11-18T01:05:46.0614199Z",
+        "is_official": false,
+        "total_votes": 4670,
+        "source": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-cfa0-08df1e27ac18",
+        "candidates": [
+          {
+            "name": "Sara Jane Haupt",
+            "votes": 2978,
+            "share": 63.76873661670236,
+            "party": "DEM",
+            "is_write_in": false
+          },
+          {
+            "name": "Gregory P. Charpentier",
+            "votes": 1210,
+            "share": 25.910064239828696,
+            "party": "REP",
+            "is_write_in": false
+          },
+          {
+            "name": "Jesse Dooley",
+            "votes": 476,
+            "share": 10.192719486081371,
+            "party": "Ind",
+            "is_write_in": false
+          },
+          {
+            "name": "Write-in",
+            "votes": 6,
+            "share": 0.1284796573875803,
+            "party": null,
+            "is_write_in": true
+          }
+        ]
+      },
+      "primary": {
+        "date": "2026-09-09",
+        "as_of": "2026-09-15T21:17:17.466545Z",
+        "is_official": true,
+        "total_votes": 1568,
+        "source": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/RI2026StatewidePrimary/ballot-items/01000000-553f-29ee-6275-08df0541a118",
+        "candidates": [
+          {
+            "name": "Sara Jane Haupt",
+            "votes": 877,
+            "share": 55.931122448979586,
+            "party": "DEM",
+            "is_write_in": false
+          },
+          {
+            "name": "Justin McCarthy",
+            "votes": 691,
+            "share": 44.06887755102041,
+            "party": "DEM",
+            "is_write_in": false
+          }
+        ]
+      }
+    }
+  ]
+}

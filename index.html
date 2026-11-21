@@ -552,6 +552,7 @@
     @media(max-width:640px) { .address-candidate-grid { grid-template-columns:1fr; } }
   </style>
 <style>.address-rating{font-size:13px;padding:9px 0;border-top:1px solid #d8dee5;border-bottom:1px solid #d8dee5}.address-rating a{color:#244f7b}.address-rating small{display:block;color:#596779;margin-top:3px}</style><script src="/election-results-2026.js?v=20261119" defer></script>
+<script src="/local-representation.js?v=20261121"></script>
 </head>
 <body>
   <div class="shell">
@@ -953,6 +954,7 @@
     let precinctAssetsPromise = null;
 
     function chamberLabel(chamber) {
+      if (chamber === "municipal") return "City Council Ward";
       return chamber === "senate" ? "Senate" : "House";
     }
 
@@ -1035,6 +1037,7 @@
     }
 
     function buildRunningHref(candidate) {
+      if (candidate?.chamber === "municipal") return candidate.profile_url || candidate.profile;
       const primaryHistory =
         candidate?.on_primary_ballot === true &&
         (candidate?.party === "DEM" || candidate?.party === "REP") &&
@@ -1054,6 +1057,7 @@
     }
 
     function buildCandidateProfileHref(candidate) {
+      if (candidate?.chamber === "municipal") return candidate.profile_url || candidate.profile || "";
       if(candidate?.chamber === "house" && Number(candidate.district_number) === 35) {
         const name = normalizeSearchText(candidate.name || "").split(" ");
         if(name.includes("fogarty")) return "candidates/kathleen-a-fogarty.html";
@@ -1260,6 +1264,7 @@
 
     async function loadHomepageSearchData() {
       if (window.RIEPResults2026) await window.RIEPResults2026.ready.catch(() => {});
+      if (window.RIEPLocalRepresentation) await window.RIEPLocalRepresentation.ready.catch(() => {});
       if (homepageCandidates.length) return;
 
       const [candidateResponse, financeResponse, raceResponse, ratingResponse] = await Promise.all([
@@ -1272,7 +1277,7 @@
       if (!candidateResponse.ok) throw new Error("Candidate data could not be loaded.");
 
       const candidatePayload = await candidateResponse.json();
-      homepageCandidates = flattenCandidateData(candidatePayload);
+      homepageCandidates = flattenCandidateData(candidatePayload).concat((window.RIEPLocalRepresentation?.profiles || []).map(p => ({...p, chamber:"municipal",district_number:p.ward,profile_url:p.profile})));
       homepageRaceData = raceResponse.ok ? await raceResponse.json() : {};
       const ratingPayload=ratingResponse?.ok?await ratingResponse.json():{races:[]};
       homepageRaceRatings=new Map((ratingPayload.races||[]).map(r=>[`${r.chamber}|${Number(r.district)}`,r]));
@@ -1365,6 +1370,7 @@
 
           <div class="hero-search-match-list">
           ${matches.map(candidate => {
+            if (candidate.chamber === "municipal") return `<section class="riep-local-group"><h2>${escapeHtml(candidate.municipality)} City Council · Ward ${candidate.ward}</h2>${window.RIEPLocalRepresentation.renderProfile(candidate)}</section>`;
             const financeHref = buildFinanceHref(candidate);
             const candidateProfileHref = buildCandidateProfileHref(candidate);
             return `
@@ -1524,7 +1530,7 @@
           <div class="hero-search-overview-head">
             <div>
               <h4 class="hero-search-title">Your voting information</h4>
-              <p class="hero-search-subtitle">We matched ${escapeHtml(matchedAddress)} to ${escapeHtml(precinctName)}. Explore your 2026 legislative candidates and election outcomes below, or open My Ballot for more information.</p>
+              <p class="hero-search-subtitle">We matched ${escapeHtml(matchedAddress)} to ${escapeHtml(precinctName)}. Explore your state legislative candidates and election outcomes below. Cranston Ward 2 addresses also show the new local council profile. Open My Ballot for more information.</p>
             </div>
             <span class="hero-search-kicker">Address match</span>
           </div>
@@ -1536,6 +1542,7 @@
           </div>
 
           <div class="address-candidates"><h4>2026 candidates &amp; results</h4><div class="address-candidate-grid">${buildAddressCandidateGroup("house", lookupRecord.house_district)}${buildAddressCandidateGroup("senate", lookupRecord.senate_district)}</div></div>
+          ${window.RIEPLocalRepresentation?.renderGroup(lookupRecord.municipality, lookupRecord.precinct_code) || ""}
           ${districtCards ? `<details class="address-history"><summary>2024 election results</summary><div class="hero-search-result-grid">${districtCards}</div></details>` : ""}
 
           <div class="hero-search-action-row">
