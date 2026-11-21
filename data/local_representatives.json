@@ -1,6 +1,6 @@
 {
   "reviewed": "2026-11-21",
-  "coverage_note": "Municipal profile pilot: Sara Jane Haupt, Cranston Ward 2 only. Other councilors, school-committee members, municipal executives and statewide offices are not yet included in this profile registry.",
+  "coverage_note": "Profiles cover all six 2026 Cranston ward council winners. Citywide council and school-committee profiles are not yet included.",
   "municipalities": {
     "Cranston": {
       "precinct_wards": {
@@ -37,6 +37,103 @@
     }
   },
   "profiles": [
+    {
+      "slug": "avery-therese-mangahas",
+      "name": "Avery Therese Mangahas",
+      "municipality": "Cranston",
+      "office": "City Council",
+      "ward": 1,
+      "party": "DEM",
+      "status": "Councilor-elect",
+      "election_status": "won",
+      "term_start": "2027-01-04",
+      "profile": "/candidates/avery-therese-mangahas.html",
+      "photo": "/candidates/avery-therese-mangahas.jpg",
+      "photo_note": "Campaign portrait",
+      "bio": "Avery Mangahas is the 2026 winner of Cranston’s Ward 1 council election. Her campaign describes her as a mental health counselor and founder of the Rhody Civics Club.",
+      "background": [
+        {
+          "title": "Community involvement",
+          "text": "Her campaign describes work with the Rhody Civics Club, Rhode Island Working Families Party and Cranston Forward, encouraging residents to participate in local government.",
+          "source": "https://www.averymangahas.com/why-im-running"
+        }
+      ],
+      "priorities": [
+        {
+          "title": "Open local government",
+          "text": "Make local decision-making and elections easier for residents to understand and participate in.",
+          "source": "https://www.averymangahas.com/why-im-running"
+        },
+        {
+          "title": "Affordability and mobility",
+          "text": "Advocate for affordable childcare, better public transit and fair tax policy.",
+          "source": "https://www.averymangahas.com/why-im-running"
+        }
+      ],
+      "sources": {
+        "campaign": "https://www.averymangahas.com/",
+        "priorities": "https://www.averymangahas.com/why-im-running",
+        "council": "https://www.cranstonri.gov/about/city-council/",
+        "winner": "https://vote.sos.ri.gov/Candidates/CandidateSearchSummary?CityTown=00007&Election=18144",
+        "charter": "https://ecode360.com/46510588"
+      },
+      "reviewed": "2026-11-21",
+      "general": {
+        "date": "2026-11-03",
+        "as_of": "2026-11-18T01:05:46.0614199Z",
+        "is_official": false,
+        "total_votes": 4094,
+        "source": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-b945-08df1e27ac08",
+        "candidates": [
+          {
+            "name": "Avery Mangahas",
+            "party": "DEM",
+            "votes": 3954,
+            "share": 96.58036150464093,
+            "is_write_in": false,
+            "source_is_winner": null
+          },
+          {
+            "name": "Write-in",
+            "party": "",
+            "votes": 140,
+            "share": 3.419638495359062,
+            "is_write_in": true,
+            "source_is_winner": null
+          }
+        ]
+      },
+      "finance_status": "not_reviewed",
+      "record_status": "New term begins January 4, 2027.",
+      "endorsements_status": "Not yet verified",
+      "contact": {
+        "email": "hello@averymangahas.com",
+        "phone": "",
+        "source": "https://www.averymangahas.com/"
+      },
+      "current_committees": [],
+      "primary": {
+        "date": "2026-09-09",
+        "as_of": "2026-09-15T21:17:17.466545Z",
+        "is_official": true,
+        "total_votes": 2280,
+        "source": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/RI2026StatewidePrimary/ballot-items/01000000-553f-29ee-b488-08df0541a109",
+        "candidates": [
+          {
+            "name": "Avery Mangahas",
+            "votes": 1377,
+            "share": 60.39473684210526,
+            "party": "DEM"
+          },
+          {
+            "name": "John Croke, Jr.",
+            "votes": 903,
+            "share": 39.60526315789474,
+            "party": "DEM"
+          }
+        ]
+      }
+    },
     {
       "slug": "sara-jane-haupt",
       "name": "Sara Jane Haupt",
@@ -214,6 +311,335 @@
         }
       ],
       "finance_url": "/finance.html?slug=sara-jane-haupt"
+    },
+    {
+      "slug": "andy-m-andujar",
+      "name": "Andy M. Andujar",
+      "municipality": "Cranston",
+      "office": "City Council",
+      "ward": 3,
+      "party": "DEM",
+      "status": "Incumbent · Reelected",
+      "election_status": "won",
+      "term_start": "2027-01-04",
+      "profile": "/candidates/andy-m-andujar.html",
+      "photo": null,
+      "photo_note": "Portrait not yet verified",
+      "bio": "Andy M. Andujar is Cranston’s current Ward 3 councilor and won reelection in 2026. The city directory lists him as chair of the Ordinance Committee.",
+      "background": [],
+      "priorities": [],
+      "sources": {
+        "campaign": null,
+        "priorities": null,
+        "council": "https://www.cranstonri.gov/about/city-council/andy-m-andujar-ward-3/",
+        "winner": "https://vote.sos.ri.gov/Candidates/CandidateSearchSummary?CityTown=00007&Election=18144",
+        "charter": "https://ecode360.com/46510588"
+      },
+      "reviewed": "2026-11-21",
+      "general": {
+        "date": "2026-11-03",
+        "as_of": "2026-11-18T01:05:46.0614199Z",
+        "is_official": false,
+        "total_votes": 2953,
+        "source": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-705b-08df1e27ac28",
+        "candidates": [
+          {
+            "name": "Andy M. Andujar",
+            "party": "DEM",
+            "votes": 2077,
+            "share": 70.33525228581105,
+            "is_write_in": false,
+            "source_is_winner": null
+          },
+          {
+            "name": "Alphonse Cardi",
+            "party": "REP",
+            "votes": 859,
+            "share": 29.089061970877072,
+            "is_write_in": false,
+            "source_is_winner": null
+          },
+          {
+            "name": "Write-in",
+            "party": "",
+            "votes": 17,
+            "share": 0.5756857433118863,
+            "is_write_in": true,
+            "source_is_winner": null
+          }
+        ]
+      },
+      "finance_status": "not_reviewed",
+      "record_status": "Official council records available; individual roll calls not yet transcribed.",
+      "endorsements_status": "Not yet verified",
+      "contact": {
+        "email": "voteandujar@gmail.com",
+        "phone": "401-358-3300",
+        "source": "https://www.cranstonri.gov/about/city-council/andy-m-andujar-ward-3/"
+      },
+      "current_committees": [
+        "Ordinance (Chair)",
+        "Claims",
+        "Finance",
+        "Public Works",
+        "Safety Services & Licenses",
+        "School Buildings"
+      ]
+    },
+    {
+      "slug": "frank-j-ritz-jr",
+      "name": "Frank J. Ritz Jr.",
+      "municipality": "Cranston",
+      "office": "City Council",
+      "ward": 4,
+      "party": "REP",
+      "status": "Incumbent · Reelected",
+      "election_status": "won",
+      "term_start": "2027-01-04",
+      "profile": "/candidates/frank-j-ritz-jr.html",
+      "photo": "/candidates/frank-j-ritz-jr.jpg",
+      "photo_note": "City council directory portrait",
+      "bio": "Frank J. Ritz Jr. is Cranston’s current Ward 4 councilor and won reelection in 2026. His city biography describes a lifelong Cranston resident, former School Committee member and AAA Northeast operations leader.",
+      "background": [
+        {
+          "title": "Education and community",
+          "text": "His campaign lists an MBA from Johnson & Wales University and involvement in youth coaching and mentoring.",
+          "source": "https://www.frankritzforcranston.com/"
+        }
+      ],
+      "priorities": [
+        {
+          "title": "Development and green space",
+          "text": "Support sensible development that preserves Cranston’s green spaces.",
+          "source": "https://www.frankritzforcranston.com/"
+        },
+        {
+          "title": "Public safety and city upkeep",
+          "text": "Maintain a safe, clean city.",
+          "source": "https://www.frankritzforcranston.com/"
+        },
+        {
+          "title": "Schools",
+          "text": "Support modern, effective schools.",
+          "source": "https://www.frankritzforcranston.com/"
+        },
+        {
+          "title": "Constituent service",
+          "text": "Respond quickly to residents’ concerns and represent their interests.",
+          "source": "https://www.frankritzforcranston.com/"
+        }
+      ],
+      "sources": {
+        "campaign": "https://www.frankritzforcranston.com/",
+        "priorities": "https://www.frankritzforcranston.com/",
+        "council": "https://www.cranstonri.gov/about/city-council/frank-j-ritz-jr-ward-4/",
+        "winner": "https://vote.sos.ri.gov/Candidates/CandidateSearchSummary?CityTown=00007&Election=18144",
+        "charter": "https://ecode360.com/46510588"
+      },
+      "reviewed": "2026-11-21",
+      "general": {
+        "date": "2026-11-03",
+        "as_of": "2026-11-18T01:05:46.0614199Z",
+        "is_official": false,
+        "total_votes": 6042,
+        "source": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-fd64-08df1e27ac38",
+        "candidates": [
+          {
+            "name": "Frank Ritz",
+            "party": "REP",
+            "votes": 3617,
+            "share": 59.86428334988414,
+            "is_write_in": false,
+            "source_is_winner": null
+          },
+          {
+            "name": "Dante A. Diwan",
+            "party": "DEM",
+            "votes": 2412,
+            "share": 39.920556107249254,
+            "is_write_in": false,
+            "source_is_winner": null
+          },
+          {
+            "name": "Write-in",
+            "party": "",
+            "votes": 13,
+            "share": 0.21516054286660047,
+            "is_write_in": true,
+            "source_is_winner": null
+          }
+        ]
+      },
+      "finance_status": "not_reviewed",
+      "record_status": "Official council records available; individual roll calls not yet transcribed.",
+      "endorsements_status": "Not yet verified",
+      "contact": {
+        "email": "frankritzforcranston@gmail.com",
+        "phone": "401-265-9941",
+        "source": "https://www.cranstonri.gov/about/city-council/frank-j-ritz-jr-ward-4/"
+      },
+      "current_committees": [
+        "Claims",
+        "Finance",
+        "Safety Services & Licenses"
+      ]
+    },
+    {
+      "slug": "michael-a-traficante",
+      "name": "Michael A. Traficante",
+      "municipality": "Cranston",
+      "office": "City Council",
+      "ward": 5,
+      "party": "REP",
+      "status": "Incumbent · Reelected",
+      "election_status": "won",
+      "term_start": "2027-01-04",
+      "profile": "/candidates/michael-a-traficante.html",
+      "photo": null,
+      "photo_note": "Portrait not yet verified",
+      "bio": "Michael A. Traficante is Cranston’s current Ward 5 councilor and won reelection in 2026. The official directory provides his council contact information and committee assignments.",
+      "background": [],
+      "priorities": [],
+      "sources": {
+        "campaign": null,
+        "priorities": null,
+        "council": "https://www.cranstonri.gov/about/city-council/michael-a-traficante-ward-5/",
+        "winner": "https://vote.sos.ri.gov/Candidates/CandidateSearchSummary?CityTown=00007&Election=18144",
+        "charter": "https://ecode360.com/46510588"
+      },
+      "reviewed": "2026-11-21",
+      "general": {
+        "date": "2026-11-03",
+        "as_of": "2026-11-18T01:05:46.0614199Z",
+        "is_official": false,
+        "total_votes": 3892,
+        "source": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-fc8c-08df1e27ac48",
+        "candidates": [
+          {
+            "name": "Michael A. Traficante",
+            "party": "REP",
+            "votes": 3625,
+            "share": 93.13977389516957,
+            "is_write_in": false,
+            "source_is_winner": null
+          },
+          {
+            "name": "Write-in",
+            "party": "",
+            "votes": 267,
+            "share": 6.860226104830422,
+            "is_write_in": true,
+            "source_is_winner": null
+          }
+        ]
+      },
+      "finance_status": "not_reviewed",
+      "record_status": "Official council records available; individual roll calls not yet transcribed.",
+      "endorsements_status": "Not yet verified",
+      "contact": {
+        "email": "mtraficante@nellmct.com",
+        "phone": "401-480-1813",
+        "source": "https://www.cranstonri.gov/about/city-council/michael-a-traficante-ward-5/"
+      },
+      "current_committees": [
+        "Finance",
+        "Safety Services & Licenses",
+        "School Buildings"
+      ]
+    },
+    {
+      "slug": "daniel-robert-wall",
+      "name": "Daniel Robert Wall",
+      "municipality": "Cranston",
+      "office": "City Council",
+      "ward": 6,
+      "party": "DEM",
+      "status": "Incumbent · Reelected",
+      "election_status": "won",
+      "term_start": "2027-01-04",
+      "profile": "/candidates/daniel-robert-wall.html",
+      "photo": null,
+      "photo_note": "Portrait not yet verified",
+      "bio": "Daniel Wall is Cranston’s current Ward 6 councilor and won reelection in 2026. The city lists him as Council President for the current 2025–2026 term.",
+      "background": [
+        {
+          "title": "Education and experience",
+          "text": "His campaign lists degrees from Providence College and Brown University and experience as a Providence teacher and department head.",
+          "source": "https://danwallforcranstoncitycouncil.com/about"
+        },
+        {
+          "title": "Previous public service",
+          "text": "His campaign describes eight years on the Cranston School Committee, including two terms as chair.",
+          "source": "https://danwallforcranstoncitycouncil.com/about"
+        }
+      ],
+      "priorities": [
+        {
+          "title": "Structural deficit",
+          "text": "Address Cranston’s structural budget deficit.",
+          "source": "https://danwallforcranstoncitycouncil.com/about"
+        },
+        {
+          "title": "Economic development",
+          "text": "Pursue responsible economic development.",
+          "source": "https://danwallforcranstoncitycouncil.com/about"
+        },
+        {
+          "title": "Fiscal accountability",
+          "text": "Strengthen financial accountability in city government.",
+          "source": "https://danwallforcranstoncitycouncil.com/about"
+        }
+      ],
+      "sources": {
+        "campaign": "https://danwallforcranstoncitycouncil.com/",
+        "priorities": "https://danwallforcranstoncitycouncil.com/about",
+        "council": "https://www.cranstonri.gov/about/city-council/dan-wall-ward-6/",
+        "winner": "https://vote.sos.ri.gov/Candidates/CandidateSearchSummary?CityTown=00007&Election=18144",
+        "charter": "https://ecode360.com/46510588"
+      },
+      "reviewed": "2026-11-21",
+      "general": {
+        "date": "2026-11-03",
+        "as_of": "2026-11-18T01:05:46.0614199Z",
+        "is_official": false,
+        "total_votes": 4782,
+        "source": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-9e9e-08df1e27ac5a",
+        "candidates": [
+          {
+            "name": "Daniel Wall",
+            "party": "DEM",
+            "votes": 2766,
+            "share": 57.84190715181933,
+            "is_write_in": false,
+            "source_is_winner": null
+          },
+          {
+            "name": "Marcus Jason Stephenson",
+            "party": "REP",
+            "votes": 2012,
+            "share": 42.07444583856127,
+            "is_write_in": false,
+            "source_is_winner": null
+          },
+          {
+            "name": "Write-in",
+            "party": "",
+            "votes": 4,
+            "share": 0.0836470096194061,
+            "is_write_in": true,
+            "source_is_winner": null
+          }
+        ]
+      },
+      "finance_status": "not_reviewed",
+      "record_status": "Official council records available; individual roll calls not yet transcribed.",
+      "endorsements_status": "Not yet verified",
+      "contact": {
+        "email": "danwall67@gmail.com",
+        "phone": "401-935-8935",
+        "source": "https://www.cranstonri.gov/about/city-council/dan-wall-ward-6/"
+      },
+      "current_committees": []
     }
   ]
 }
