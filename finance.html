@@ -2269,7 +2269,12 @@
       `;
     }
 
+    function officeLabel(entry) {
+      return entry.chamber === "municipal" ? `${entry.municipality} City Council · Ward ${entry.ward || entry.district_number}` : `${chamberLabel(entry.chamber)} District ${entry.district_number}`;
+    }
+
     function chamberLabel(chamber) {
+      if (chamber === "municipal") return "Municipal";
       return chamber === "house" ? "House" : "Senate";
     }
 
@@ -2361,7 +2366,7 @@
     }
 
     function buildHero(profile, filingControl = "") {
-      const districtLabel = `${chamberLabel(profile.chamber)} District ${profile.district_number}`;
+      const districtLabel = officeLabel(profile);
       const buckets = (profile.source_buckets || []).slice();
       const total = buckets.reduce((sum, bucket) => sum + Number(bucket.amount || 0), 0) || 1;
       const strongestBucket = buckets.filter(bucket => Number(bucket.amount || 0) > 0).sort((a, b) => (b.amount || 0) - (a.amount || 0))[0];
@@ -2417,8 +2422,7 @@
             </div>
             ${filingControl}
             <div class="subject-actions">
-              <a href="running.html?chamber=${encodeURIComponent(profile.chamber)}&district=${encodeURIComponent(profile.district_number)}">Back to Who's Running?</a>
-              <a href="meet.html?chamber=${encodeURIComponent(profile.chamber)}&district=${encodeURIComponent(profile.district_number)}">Back to Meet the Candidates</a>
+              ${profile.chamber === "municipal" ? `<a href="${escapeHtml(profile.profile_url)}">Candidate profile</a><a href="${escapeHtml(profile.ward_map)}">Ward map and election results</a><a href="/finance.html">All campaign finance profiles</a>` : `<a href="running.html?chamber=${encodeURIComponent(profile.chamber)}&district=${encodeURIComponent(profile.district_number)}">Back to Who's Running?</a><a href="meet.html?chamber=${encodeURIComponent(profile.chamber)}&district=${encodeURIComponent(profile.district_number)}">Back to Meet the Candidates</a>`}
             </div>
             ${buildHeroFundingMix(profile)}
           </aside>
@@ -3014,7 +3018,7 @@
         const period = snapshot.reporting_period_label || snapshot.report_label || "Reporting period";
         const q2 = /April 1, 2026 to June 30, 2026|4\/1\/2026.*6\/30\/2026|^Q2 2026$|second.quarter/i.test(period);
         const label = q2 ? "Q2 2026" : /28.days.before/i.test(snapshot.report_label || "")
-          ? "28 days before election · 2026" : period;
+          ? "28 days before election · 2026" : /8.days.before/i.test(snapshot.report_label || "") ? "8 days before election · 2026" : period;
         return {key: index === 0 ? "latest" : `archive-${(profile.archived_reporting_periods || []).length - index}`, label, snapshot};
       });
     }
@@ -3033,7 +3037,7 @@
     function buildTransactions(profile) {
       const receipts = profile.receipt_transactions || [];
       const expenses = profile.expenditure_transactions || [];
-      const rows = (records, expense) => records.map(row => `<tr><td>${escapeHtml(row.date || "—")}</td><td>${escapeHtml((expense ? row.payee : row.donor) || "Reported in aggregate")}</td><td>${escapeHtml(expense ? row.category || row.type : row.type)}</td><td>${formatCurrency(row.amount)}</td><td>${escapeHtml(expense ? row.purpose || "" : row.notes || "")}</td></tr>`).join("");
+      const rows = (records, expense) => records.map(row => `<tr><td>${escapeHtml(row.date || "—")}</td><td>${escapeHtml((expense ? row.payee : row.donor) || "Reported in aggregate")}</td><td>${escapeHtml(expense ? row.category || row.type : row.type)}</td><td>${formatCurrency(row.amount)}</td><td>${escapeHtml(expense ? row.purpose || "" : [row.notes, row.employer ? "Employer as filed: " + row.employer : ""].filter(Boolean).join(" · "))}${row.source_document ? ` <a href="${escapeHtml(row.source_document)}#page=${Number(row.source_page)}" target="_blank" rel="noopener">Source p. ${Number(row.source_page)}</a>` : ""}</td></tr>`).join("");
       const table = (records, expense) => `<div style="overflow-x:auto"><table style="width:100%;text-align:left"><thead><tr><th>Date</th><th>${expense ? "Payee" : "Donor"}</th><th>Type</th><th>Amount</th><th>${expense ? "Purpose" : "Notes"}</th></tr></thead><tbody>${rows(records, expense)}</tbody></table></div>`;
       return `<article class="panel section-card"><div class="section-label">Selected filing details</div><h3>Donors &amp; expenses</h3><p class="section-copy">${escapeHtml(profile.reporting_period_label || profile.report_label)}</p><details><summary>Contribution transactions (${receipts.length})</summary>${receipts.length ? table(receipts, false) : '<p>Contribution transactions have not been transcribed for this period. Available named donors are shown above; aggregate contributions do not identify individual donors.</p>'}</details><details><summary>Expense transactions (${expenses.length})</summary>${expenses.length ? table(expenses, true) : '<p>Expense transactions have not been transcribed for this period. Available spending categories are shown above. A payee-by-payee list requires the original filing detail.</p>'}</details>${(profile.accounts_payable_transactions || []).length ? `<details><summary>Unpaid bill entries (separate from cash spending)</summary><p>${escapeHtml(profile.coverage_note || "")}</p>${table(profile.accounts_payable_transactions, true)}</details>` : ""}${(profile.in_kind_transactions || []).length ? `<details><summary>In-kind contributions (separate from cash receipts)</summary>${table(profile.in_kind_transactions, false)}</details>` : ""}</article>`;
     }
@@ -3069,7 +3073,7 @@
     }
 
     function buildDirectoryCard(entry) {
-      const districtLabel = `${chamberLabel(entry.chamber)} District ${entry.district_number}`;
+      const districtLabel = officeLabel(entry);
       const partyTone = partyClass(entry.party);
       const profile = entry.profile || null;
       const statusCopy = profile
@@ -3107,8 +3111,7 @@
               ? `<a class="finance-card-link primary" href="${profileUrl(profile)}">Open finance profile</a>`
               : `<span class="finance-card-link disabled">Finance profile not published yet</span>`
             }
-            <a class="finance-card-link" href="running.html?chamber=${encodeURIComponent(entry.chamber)}&district=${encodeURIComponent(entry.district_number)}">Who's Running?</a>
-            <a class="finance-card-link" href="meet.html?chamber=${encodeURIComponent(entry.chamber)}&district=${encodeURIComponent(entry.district_number)}">Meet the Candidates</a>
+            ${entry.chamber === "municipal" ? `<a class="finance-card-link" href="${escapeHtml(entry.profile_url)}">Candidate profile</a><a class="finance-card-link" href="${escapeHtml(entry.ward_map)}">Ward map</a>` : `<a class="finance-card-link" href="running.html?chamber=${encodeURIComponent(entry.chamber)}&district=${encodeURIComponent(entry.district_number)}">Who's Running?</a><a class="finance-card-link" href="meet.html?chamber=${encodeURIComponent(entry.chamber)}&district=${encodeURIComponent(entry.district_number)}">Meet the Candidates</a>`}
           </div>
         </article>
       `;
@@ -3414,7 +3417,7 @@
           <section class="panel directory-hero">
             <div class="eyebrow">Campaign Finance Directory</div>
             <h2>Browse Rhode Island campaign finance profiles.</h2>
-            <p>Search every legislative candidate, filter by chamber, and open a cleaner public summary of who raised money, who spent it, and what cash remains on hand when a filing is available.</p>
+            <p>Search state legislative candidates and the Cranston municipal pilot, filter by office level, and explore filing-period receipts, spending and cash on hand.</p>
             <div class="finance-progress-note">
               <div>
                 <strong>Work in progress</strong>
@@ -3425,17 +3428,17 @@
               <article class="directory-stat">
                 <div class="directory-stat-label">All candidates</div>
                 <div class="directory-stat-value">${entries.length}</div>
-                <div class="directory-stat-copy">House and Senate candidates currently listed in the 2026 statewide roster.</div>
+                <div class="directory-stat-copy">State legislative candidates and municipal candidates currently covered by RIEP.</div>
               </article>
               <article class="directory-stat">
                 <div class="directory-stat-label">Published profiles</div>
                 <div class="directory-stat-value">${publishedCount}</div>
-                <div class="directory-stat-copy">Candidates with a public 2026 second-quarter finance profile now available on this page.</div>
+                <div class="directory-stat-copy">Candidates with a published campaign-finance summary. Reporting periods vary; each profile shows its dates.</div>
               </article>
               <article class="directory-stat">
-                <div class="directory-stat-label">By chamber</div>
-                <div class="directory-stat-value">${houseCount} / ${senateCount}</div>
-                <div class="directory-stat-copy">House and Senate candidates currently represented in this finance directory.</div>
+                <div class="directory-stat-label">House / Senate / Municipal</div>
+                <div class="directory-stat-value">${houseCount} / ${senateCount} / ${entries.filter(entry => entry.chamber === "municipal").length}</div>
+                <div class="directory-stat-copy">Number of candidates at each office level in this directory.</div>
               </article>
             </div>
           </section>
@@ -3456,7 +3459,7 @@
                   <button class="directory-filter active" type="button" data-filter="all">All candidates</button>
                   <button class="directory-filter" type="button" data-filter="published">Published finance profiles</button>
                   <button class="directory-filter" type="button" data-chamber="house">House</button>
-                  <button class="directory-filter" type="button" data-chamber="senate">Senate</button>
+                  <button class="directory-filter" type="button" data-chamber="senate">Senate</button><button class="directory-filter" type="button" data-chamber="municipal">Municipal</button>
                 </div>
                 <label class="directory-sort" aria-label="Sort campaign finance profiles">
                   <span>Sort by</span>
@@ -3501,7 +3504,7 @@
           if (state.filter === "published" && !entry.profile) return false;
           if (state.chamber !== "all" && entry.chamber !== state.chamber) return false;
           if (!query) return true;
-          const districtLabel = `${chamberLabel(entry.chamber)} District ${entry.district_number}`.toLowerCase();
+          const districtLabel = officeLabel(entry).toLowerCase();
           const haystack = [
             entry.candidate_name,
             entry.office_sought,
@@ -3584,6 +3587,14 @@
       try {
         const response = await fetch(withAssetVersion("/data/candidate_finance_2026.json"), { cache: "no-store" });
         const data = await response.json();
+        const local = await fetch("/data/municipal_campaign_finance_2026.json?v=20261121", {cache:"no-store",signal:AbortSignal.timeout(12000)}).then(r => r.ok ? r.json() : null).catch(() => null);
+        if (local) {
+          for (const field of ["profiles", "directory"]) {
+            const slugs = new Set((data[field] || []).map(p => p.slug));
+            data[field] = [...(data[field] || []), ...(local[field] || []).filter(p => !slugs.has(p.slug))];
+          }
+          data.donor_index = [...(data.donor_index || []), ...(local.donor_index || [])];
+        }
         const profile = getRequestedProfile(data.profiles || []);
         if (profile) {
           renderProfile(profile, data);

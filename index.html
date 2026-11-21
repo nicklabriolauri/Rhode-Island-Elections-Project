@@ -552,7 +552,7 @@
     @media(max-width:640px) { .address-candidate-grid { grid-template-columns:1fr; } }
   </style>
 <style>.address-rating{font-size:13px;padding:9px 0;border-top:1px solid #d8dee5;border-bottom:1px solid #d8dee5}.address-rating a{color:#244f7b}.address-rating small{display:block;color:#596779;margin-top:3px}</style><script src="/election-results-2026.js?v=20261119" defer></script>
-<script src="/local-representation.js?v=20261121"></script>
+<script src="/local-representation.js?v=20261121-finance"></script>
 </head>
 <body>
   <div class="shell">
@@ -1092,6 +1092,7 @@
     }
 
     function buildFinanceHref(candidate) {
+      if (candidate?.chamber === "municipal") return candidate.finance_url || "";
       const profile = getFinanceProfile(candidate);
       return profile ? `finance.html?slug=${encodeURIComponent(profile.slug)}` : "";
     }

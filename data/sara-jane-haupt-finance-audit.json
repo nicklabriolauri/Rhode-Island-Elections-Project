@@ -1,0 +1,57 @@
+{
+  "committee_key": "10358",
+  "candidate_name": "Sara Jane Haupt",
+  "reviewed": "2026-11-21",
+  "documents": {
+    "28-base": {
+      "label": "28 days before election · earlier full schedules",
+      "href": "/data/finance-documents/sara-jane-haupt-28-base-2026.pdf",
+      "original_filename": "10358-RICF2-243053-70feb6ba-df17-423e-92d7-579d61e45d54.pdf",
+      "sha256": "f3728789cce7d49fea26a953a66bf779ce2cd1beba18acf96735131c94f210f6",
+      "embed": true
+    },
+    "28-updated": {
+      "label": "28 days before election · updated totals and additional entries",
+      "href": "/data/finance-documents/sara-jane-haupt-28-updated-2026.pdf",
+      "original_filename": "10358-RICF2-243053-cee84fe7-8d9e-4935-8319-e9b4dc5dcc76.pdf",
+      "sha256": "2fdeee6ae261573a8445cfd13b5d55a6429d88e56675ed77b9581e001f3ce2ec",
+      "embed": true
+    },
+    "8-base": {
+      "label": "8 days before election · earlier full schedules",
+      "href": "/data/finance-documents/sara-jane-haupt-8-base-2026.pdf",
+      "original_filename": "10358-RICF2-243054-95740c75-4d7c-4426-aa2a-b4305556b470.pdf",
+      "sha256": "75ae83c771fb310b4fa8fc453708f6e24bf7cbfdc59f98b082a9b30760cecd02",
+      "embed": true
+    },
+    "8-updated": {
+      "label": "8 days before election · updated totals and additional entries",
+      "href": "/data/finance-documents/sara-jane-haupt-8-updated-2026.pdf",
+      "original_filename": "10358-RICF2-243054-56a41d44-3a47-4a20-a6b0-fdeb98f8c35c.pdf",
+      "sha256": "6ca8542db903d305f4fb857c15c66a78b84c9e683b448982dcda5bb31353767f",
+      "embed": true
+    }
+  },
+  "periods": [
+    {
+      "period": "September 2, 2026 to October 5, 2026",
+      "cash_receipts": 3730,
+      "cash_spending": 3597.15,
+      "closing_cash": 1552.02,
+      "cash_rows": 21,
+      "expense_rows": 4,
+      "in_kind": 148.04,
+      "note": "Itemized cash contributions, cash expenses and in-kind support reconcile to the selected updated-totals CF-2 summary. Earlier full schedules and additional-entry schedules are combined once; repeated summaries are not added together. The September 2–October 5 opening cash was revised from $1,536.26 to $1,419.17, a $117.09 reduction not explained in the supplied PDFs. The displayed $1,552.02 closing balance matches the next period’s opening balance. Both source exports are retained."
+    },
+    {
+      "period": "October 6, 2026 to October 26, 2026",
+      "cash_receipts": 510,
+      "cash_spending": 883.95,
+      "closing_cash": 1178.07,
+      "cash_rows": 8,
+      "expense_rows": 12,
+      "in_kind": 0,
+      "note": "Itemized cash contributions, cash expenses and in-kind support reconcile to the selected updated-totals CF-2 summary. Earlier full schedules and additional-entry schedules are combined once; repeated summaries are not added together. The additional October 26 Facebook expense of $10 raises spending from $873.95 to $883.95 and lowers ending cash from $1,188.07 to $1,178.07. Both source exports are retained."
+    }
+  ]
+}
