@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "retrieved_at": "2026-11-22T04:29:20.441887+00:00",
+  "retrieved_at": "2026-11-22T07:32:02.591215+00:00",
   "scope": "Full City Council, opening roll call and explicitly named motion votes. Committee meetings are separate and not included.",
   "members": [
     {
@@ -163,18 +163,6 @@
       "status": "downloaded"
     },
     {
-      "title": "2026-08-17 City Council minutes",
-      "category": "minutes",
-      "url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C572051.pdf",
-      "expected_date": "2026-08-17",
-      "minutes_status": "Approved",
-      "state_meeting_id": "1092474",
-      "id": "minutes-f03a13d9e2eb",
-      "sha256": "8915ede80feb4e9f50fb1252397583b5779ac43483fc45f34a22cf94b838333e",
-      "local_path": "/data/cranston/records-2026/originals/minutes-f03a13d9e2eb.pdf",
-      "status": "downloaded"
-    },
-    {
       "title": "2026-07-20 City Council minutes",
       "category": "minutes",
       "url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C572046.pdf",
@@ -184,6 +172,18 @@
       "id": "minutes-bc5804d45ee7",
       "sha256": "b291eb150d7c8f031315a5c030499fca20a17266aa3b4c9944d34d16fab2ce79",
       "local_path": "/data/cranston/records-2026/originals/minutes-bc5804d45ee7.pdf",
+      "status": "downloaded"
+    },
+    {
+      "title": "2026-08-17 City Council minutes",
+      "category": "minutes",
+      "url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C572051.pdf",
+      "expected_date": "2026-08-17",
+      "minutes_status": "Approved",
+      "state_meeting_id": "1092474",
+      "id": "minutes-f03a13d9e2eb",
+      "sha256": "8915ede80feb4e9f50fb1252397583b5779ac43483fc45f34a22cf94b838333e",
+      "local_path": "/data/cranston/records-2026/originals/minutes-f03a13d9e2eb.pdf",
       "status": "downloaded"
     },
     {
