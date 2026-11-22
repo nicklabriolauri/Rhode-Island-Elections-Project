@@ -89,8 +89,6 @@ def details(m):
 with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:inventory=list(pool.map(details,inventory))
 unique={d['url']:d for d in documents}
 # Prefer the current approved state PDF over the older ClerkBase HTML for the same date.
-state_dates={d['expected_date'] for d in documents if d.get('expected_date')}
-unique={url:d for url,d in unique.items() if d.get('expected_date') or d['category']!='minutes' or not any(x.replace('-','')[2:] in url for x in [])}
 with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool: docs=list(pool.map(download,unique.values()))
 # Parse the adopted resolution index and resolve its attachment references.
 resolutions=[]
@@ -103,15 +101,12 @@ for d in list(docs):
   num=a.get_text(strip=True)
   if not re.fullmatch(r'2026-\d+[A-Z]?',num):continue
   resolutions.append({'number':num,'title':' '.join(cells[2].stripped_strings),'adopted_date_text':' '.join(cells[1].stripped_strings),'attachment_call':a['href'],'source_url':d['url'],'original_path':None})
- # Use the same public document-view request as ClerkBase, including its TOC identity.
- from urllib.parse import urlencode
- req=urllib.request.Request(BASE,data=urlencode({'siteId':'Cranston-RI','url':urlparse(d['url']).path,'title':'2026 Resolutions','nodeId':d.get('node_id',''),'path':d.get('tree_path','')}).encode())
- try:
-  viewer=urllib.request.urlopen(req,timeout=30).read().decode('utf-8','replace');indexes.append({'url':BASE+'[document viewer]','text':viewer,'status':'ok'})
- except Exception as e:indexes.append({'url':BASE+'[document viewer]','error':str(e),'status':'error'})
-# Public helper script locations used by the legacy attachment viewer.
-for url in [BASE+'getAttach.js',BASE+'Content/Cranston-RI/getAttach.js',BASE+'Scripts/getAttach.js']:
- body,err=get(url);indexes.append({'url':url,'status':'error' if err else 'ok','error':err,'text':body.decode('utf-8','replace')})
+# Attachment template is defined by ClerkBase's public /Scripts/getAttach.js.
+for res in resolutions:
+ filename=re.search(r"getAttach\('([^']+)'\)",res['attachment_call'])[1]
+ res['source_url']=BASE+'Content/Attachments/Cranston-RI/'+filename+'?clientSite=Cranston-RI'
+ d=download({'title':res['number']+' '+res['title'],'category':'adopted-resolution','url':res['source_url']})
+ docs.append(d);res['source_id']=d['id'];res['original_path']=d.get('local_path');res['document_status']=d['status']
 result={'retrieved_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'source':'https://clerkshq.com/cranston-ri','year':2026,'documents':docs,'resolutions':resolutions,'meeting_inventory':inventory,'index_errors':[{'url':x['url'],'error':x.get('error')} for x in indexes if x['status']=='error']}
 (OUT/'sources.json').write_text(json.dumps(result,ensure_ascii=False,indent=2))
 # Retain only the TOC inventories and document-view diagnostics, not third-party JS.
