@@ -40,7 +40,11 @@ def download(doc):
  doc['id']=doc['category']+'-'+hashlib.sha256(url.encode()).hexdigest()[:12]
  # A category prefix avoids equal filenames in different folders.
  local=OUT/'originals'/(doc['category']+'-'+name);local.parent.mkdir(exist_ok=True)
- body=local.read_bytes() if local.exists() else get(url)[0]
+ body,error=get(url)
+ if error and local.exists():
+  body=local.read_bytes();doc['collection_note']='Refresh failed; retained prior cached version: '+error
+ if body and local.exists() and local.read_bytes()!=body:
+  old=local.read_bytes();archive=OUT/'previous-versions';archive.mkdir(exist_ok=True);(archive/(hashlib.sha256(old).hexdigest()+'-'+local.name)).write_bytes(old)
  if not body:
   doc.update(status='unavailable',pages=[]);return doc
  local.write_bytes(body);doc['sha256']=hashlib.sha256(body).hexdigest();doc['local_path']='/'+str(local.relative_to(OUT.parents[2]))
@@ -62,7 +66,9 @@ def download(doc):
 # Supplement ClerkBase with the state's current public meeting filings.
 SOS='https://opengov.sos.ri.gov'
 dash_url=SOS+'/OpenMeetingsPublic/OpenMeetingDashboard?EntityID=715'
-body,err=get(dash_url);dash=BeautifulSoup(body,'html.parser');inventory=[]
+body,err=get(dash_url)
+if err:raise RuntimeError('State meeting index unavailable; preserving previous import: '+err)
+dash=BeautifulSoup(body,'html.parser');inventory=[]
 for tr in dash.select('#YesterDayEntitiesSummary tbody tr'):
  cell=tr.select_one('[onclick]');stamp=tr.select_one('#hdnDateSeq')
  if not cell or not stamp or not stamp.get_text().startswith('2026'):continue
@@ -88,7 +94,7 @@ def details(m):
  return m
 with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:inventory=list(pool.map(details,inventory))
 unique={d['url']:d for d in documents}
-# Prefer the current approved state PDF over the older ClerkBase HTML for the same date.
+# The builder prefers state PDFs over older HTML and deduplicates identical meeting text.
 with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool: docs=list(pool.map(download,unique.values()))
 # Parse the adopted resolution index and resolve its attachment references.
 resolutions=[]
@@ -108,6 +114,7 @@ for res in resolutions:
  d=download({'title':res['number']+' '+res['title'],'category':'adopted-resolution','url':res['source_url']})
  docs.append(d);res['source_id']=d['id'];res['original_path']=d.get('local_path');res['document_status']=d['status']
 result={'retrieved_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'source':'https://clerkshq.com/cranston-ri','year':2026,'documents':docs,'resolutions':resolutions,'meeting_inventory':inventory,'index_errors':[{'url':x['url'],'error':x.get('error')} for x in indexes if x['status']=='error']}
+if not resolutions or not inventory:raise RuntimeError('Source inventory incomplete; previous records have not been overwritten')
 (OUT/'sources.json').write_text(json.dumps(result,ensure_ascii=False,indent=2))
 # Retain only the TOC inventories and document-view diagnostics, not third-party JS.
 (OUT/'source-indexes.json').write_text(json.dumps(indexes,indent=2))
