@@ -105,7 +105,7 @@
       },
       "finance_status": "available",
       "record_status": "New term begins January 4, 2027.",
-      "endorsements_status": "Not yet verified",
+      "endorsements_status": "Verified: Cranston Forward (2026)",
       "contact": {
         "email": "hello@averymangahas.com",
         "phone": "",
@@ -133,7 +133,17 @@
           }
         ]
       },
-      "finance_url": "/finance.html?slug=avery-therese-mangahas"
+      "finance_url": "/finance.html?slug=avery-therese-mangahas",
+      "bffi_2026": {
+        "rating": "For",
+        "source": "https://thewomxnproject.org/bffi/cranston/"
+      },
+      "endorsements_2026": [
+        {
+          "organization": "Cranston Forward",
+          "source": "https://www.cranstonforward.org/endorsements"
+        }
+      ]
     },
     {
       "slug": "sara-jane-haupt",
@@ -203,7 +213,7 @@
       "reviewed": "2026-11-21",
       "record_status": "Term has not begun; council voting records, ordinances, committee assignments and attendance will be added after review.",
       "finance_status": "available",
-      "endorsements_status": "No endorsements have been verified for this profile.",
+      "endorsements_status": "Verified: Cranston Forward (2026)",
       "general": {
         "date": "2026-11-03",
         "as_of": "2026-11-18T01:05:46.0614199Z",
@@ -311,7 +321,17 @@
           "url": "https://www.instagram.com/saraforcranston/"
         }
       ],
-      "finance_url": "/finance.html?slug=sara-jane-haupt"
+      "finance_url": "/finance.html?slug=sara-jane-haupt",
+      "bffi_2026": {
+        "rating": "For",
+        "source": "https://thewomxnproject.org/bffi/cranston/"
+      },
+      "endorsements_2026": [
+        {
+          "organization": "Cranston Forward",
+          "source": "https://www.cranstonforward.org/endorsements"
+        }
+      ]
     },
     {
       "slug": "andy-m-andujar",
@@ -386,7 +406,11 @@
         "Safety Services & Licenses",
         "School Buildings"
       ],
-      "finance_url": "/finance.html?slug=andy-m-andujar"
+      "finance_url": "/finance.html?slug=andy-m-andujar",
+      "bffi_2026": {
+        "rating": "For",
+        "source": "https://thewomxnproject.org/bffi/cranston/"
+      }
     },
     {
       "slug": "frank-j-ritz-jr",
@@ -485,7 +509,11 @@
         "Finance",
         "Safety Services & Licenses"
       ],
-      "finance_url": "/finance.html?slug=frank-j-ritz-jr"
+      "finance_url": "/finance.html?slug=frank-j-ritz-jr",
+      "bffi_2026": {
+        "rating": "Against",
+        "source": "https://thewomxnproject.org/bffi/cranston/"
+      }
     },
     {
       "slug": "michael-a-traficante",
@@ -498,8 +526,8 @@
       "election_status": "won",
       "term_start": "2027-01-04",
       "profile": "/candidates/michael-a-traficante.html",
-      "photo": null,
-      "photo_note": "Portrait not yet verified",
+      "photo": "/candidates/michael-a-traficante.png",
+      "photo_note": "Portrait supplied to RIEP",
       "bio": "Michael A. Traficante is Cranston’s current Ward 5 councilor and won reelection in 2026. The official directory provides his council contact information and committee assignments.",
       "background": [],
       "priorities": [],
@@ -549,7 +577,11 @@
         "Safety Services & Licenses",
         "School Buildings"
       ],
-      "finance_url": "/finance.html?slug=michael-a-traficante"
+      "finance_url": "/finance.html?slug=michael-a-traficante",
+      "bffi_2026": {
+        "rating": "N/A",
+        "source": "https://thewomxnproject.org/bffi/cranston/"
+      }
     },
     {
       "slug": "daniel-robert-wall",
@@ -644,7 +676,11 @@
         "source": "https://www.cranstonri.gov/about/city-council/dan-wall-ward-6/"
       },
       "current_committees": [],
-      "finance_url": "/finance.html?slug=daniel-robert-wall"
+      "finance_url": "/finance.html?slug=daniel-robert-wall",
+      "bffi_2026": {
+        "rating": "N/A",
+        "source": "https://thewomxnproject.org/bffi/cranston/"
+      }
     },
     {
       "slug": "emilia-vaziri",
@@ -808,7 +844,11 @@
         "Finance",
         "Public Works",
         "Safety Services & Licenses"
-      ]
+      ],
+      "bffi_2026": {
+        "rating": "N/A",
+        "source": "https://thewomxnproject.org/bffi/cranston/"
+      }
     },
     {
       "slug": "steven-a-stycos",
@@ -966,13 +1006,23 @@
       },
       "finance_status": "not_reviewed",
       "record_status": "Individual council roll calls have not yet been compiled for this profile.",
-      "endorsements_status": "Not independently verified",
+      "endorsements_status": "Verified: Cranston Forward (2026)",
       "contact": {
         "email": "sstycos26@gmail.com",
         "phone": "401-461-2618",
         "source": "https://www.stevestycos.com/"
       },
-      "current_committees": []
+      "current_committees": [],
+      "bffi_2026": {
+        "rating": "For",
+        "source": "https://thewomxnproject.org/bffi/cranston/"
+      },
+      "endorsements_2026": [
+        {
+          "organization": "Cranston Forward",
+          "source": "https://www.cranstonforward.org/endorsements"
+        }
+      ]
     },
     {
       "slug": "kristen-e-haroian",
@@ -1121,7 +1171,11 @@
         "Ordinance",
         "Public Works",
         "Audit"
-      ]
+      ],
+      "bffi_2026": {
+        "rating": "N/A",
+        "source": "https://thewomxnproject.org/bffi/cranston/"
+      }
     }
   ]
 }

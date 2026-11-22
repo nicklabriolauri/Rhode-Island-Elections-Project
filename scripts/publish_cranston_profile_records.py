@@ -14,8 +14,10 @@ def publish():
   if slug not in ['avery-therese-mangahas','sara-jane-haupt','andy-m-andujar','frank-j-ritz-jr','michael-a-traficante','daniel-robert-wall','emilia-vaziri','steven-a-stycos','kristen-e-haroian']:continue
   if slug in current:
    a=[a for a in d['attendance'] if a['member_id']==slug];p=sum(x['status']=='Present' for x in a);late=sum(x['status']=='Late arrival' for x in a);absent=sum(x['status']=='Absent' for x in a);u=sum(x['status']=='Not recorded' for x in a)
+   known=p+late+absent
+   rate=f"{100*p/known:.1f}%" if known else "Not available"
    votes=[m for m in d['motions'] if slug in m['votes']]
-   body=f'<p>2026 service: <strong>{e(current[slug]["office_2026"])}</strong>. This history follows the individual across terms and offices.</p><h3>Meeting attendance</h3><p><strong>{p} present at opening roll call</strong> · {late} documented late arrivals · {absent} recorded absences · {u} unresolved opening records.</p><p class="source">Coverage: {len(d["meetings"])} available full council meeting records. Missing minutes are excluded. Opening roll call does not establish attendance throughout a meeting. Committee attendance is separate.</p><h3>Recorded votes</h3><p>{len(votes)} individual votes from named roll calls. Aggregate-only and inconsistent roll calls are not assigned to this member.</p>'
+   body=f'<p>2026 service: <strong>{e(current[slug]["office_2026"])}</strong>. This history follows the individual across terms and offices.</p><h3>Meeting attendance</h3><div class="attendance-stat"><strong class="attendance-rate">{rate}</strong><span>Present at opening roll call</span><small>{p} of {known} meetings with a known opening attendance status</small></div><p><strong>{p} present at opening roll call</strong> · {late} documented late arrivals · {absent} recorded absences · {u} unresolved opening records.</p><p class="source">Coverage: {len(d["meetings"])} available full council meeting records. Percentage = present at opening ÷ (present + late arrival + absent). Late arrivals remain separate; unresolved opening records and missing minutes are excluded. Opening roll call does not establish attendance throughout a meeting. Committee attendance is separate.</p><h3>Recorded votes</h3><p>{len(votes)} individual votes from named roll calls. Aggregate-only and inconsistent roll calls are not assigned to this member.</p>'
    rows=[]
    for m in votes[:10]:
     src=m['source_url']+(('#page='+str(m['source_page'])) if m['source_page'] else '')
@@ -30,6 +32,19 @@ def publish():
   s=path.read_text();s,n=re.subn(r'<section class="card" id="votes">.*?</section>',lambda _:section,s,count=1,flags=re.S);assert n==1,path
   s=s.replace('Official council minutes and ordinances are available. RIEP has not yet transcribed a member-specific list of sponsored measures or attendance for this profile.','Compiled 2026 votes and opening roll-call attendance appear below. A member-specific sponsorship history has not yet been compiled.')
   s=s.replace('Named lists are checked against printed tallies.','Printed tallies are checked where available.')
+  enrichment_path=ROOT/'data/cranston/profile-enrichment-2026.json'
+  if enrichment_path.exists():
+   extras=json.loads(enrichment_path.read_text())
+   rating=extras['bffi']['ratings'].get(slug)
+   if rating:
+    notes={'For':'The publisher classifies the candidate as supporting reproductive and LGBTQ+ rights.', 'Against':'The publisher classifies the candidate as opposing its bodily freedom criteria.', 'N/A':'The publisher reports insufficient information. This is not an opposition rating.'}
+    ratings='<section class="card" id="ratings"><h2>Outside scorecards and ratings</h2><h3>The Womxn Project · Bodily Freedom Forever Index</h3><p><strong>2026 rating: '+e(rating)+'</strong></p><p>'+notes[rating]+'</p><p class="source">A categorical voter-guide rating, not a percentage or an endorsement. <a href="'+e(extras['bffi']['source'])+'">Read the Cranston BFFI guide and criteria</a>. Reviewed '+e(extras['reviewed'])+'.</p></section>'
+    s,n=re.subn(r'<section class="card" id="ratings">.*?</section>',lambda _:ratings,s,count=1,flags=re.S);assert n==1
+   endorsement=extras['endorsements'].get(slug)
+   if endorsement:
+    section='<section class="card" id="endorsements"><h2>Endorsements</h2><p><strong>'+e(endorsement['organization'])+'</strong> · 2026 City Council election</p><p class="source"><a href="'+e(endorsement['source'])+'">Published endorsement list</a>. Reviewed '+e(extras['reviewed'])+'. Endorsements are listed separately from issue ratings; inclusion is not an endorsement by RIEP.</p></section>'
+    s,n=re.subn(r'<section class="card" id="endorsements">.*?</section>',lambda _:section,s,count=1,flags=re.S);assert n==1
   path.write_text(s)
  print('Updated nine Cranston profile sections')
 if __name__=='__main__':publish()
+

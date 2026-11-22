@@ -2,3 +2,6 @@ body{font-size:16px;line-height:1.6}.preview,.eyebrow,.photo-note,.source,.tag,.
 .campaign-statement{margin-top:24px;border-top:1px solid var(--line);padding-top:18px}.campaign-statement summary{font-size:16px;font-weight:700;cursor:pointer;padding:8px 0}.campaign-statement blockquote{margin:18px 0 0;padding:0 0 0 20px;border-left:3px solid #255c99}.campaign-statement blockquote p{font-size:16px;line-height:1.75;margin:0 0 20px}.campaign-statement .source{line-height:1.6}
 
 .municipal-initials{display:grid;place-items:center;width:100%;aspect-ratio:1;background:#e7eef8;color:#204e88;font-size:80px;font-weight:700;border-radius:12px}
+
+
+.attendance-stat{display:flex;flex-direction:column;align-items:flex-start;gap:4px;border-left:4px solid #255c99;padding:12px 18px;margin:16px 0;background:#f2f6fb}.attendance-stat .attendance-rate{font-size:2.5rem;line-height:1.15;color:#17264b}.attendance-stat span{font-weight:600}.attendance-stat small{font-size:.875rem;color:#4c5e78}
