@@ -1,0 +1,36 @@
+name: Refresh Cranston sponsorship activity
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'data/cranston/records-2026/records.json'
+      - 'data/cranston/sponsorship-review.json'
+      - 'data/local_representatives.json'
+      - 'scripts/cranston_sponsorship.py'
+      - '.github/workflows/cranston-sponsorship.yml'
+permissions:
+  contents: write
+concurrency:
+  group: cranston-sponsorship
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rebuild sponsorship data and pages against current source
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3; do
+            git fetch origin main
+            # Ephemeral Actions checkout: regenerate from the current committed inputs.
+            git reset --hard origin/main
+            python scripts/cranston_sponsorship.py
+            git add data/cranston/sponsorship-2026.json data/cranston/sponsorship-2026.csv cranston-sponsorship.html candidates/andy-m-andujar.html candidates/avery-therese-mangahas.html candidates/daniel-robert-wall.html candidates/frank-j-ritz-jr.html candidates/michael-a-traficante.html candidates/sara-jane-haupt.html candidates/emilia-vaziri.html candidates/kristen-e-haroian.html candidates/steven-a-stycos.html
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m 'Refresh observed Cranston sponsorship activity'
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          exit 1
