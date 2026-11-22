@@ -1,4 +1,4 @@
-import {CATEGORIES,FUNCTIONS,PRESETS,score,validateConfig,matchesTopic} from './activity-index-model.mjs?v=20261122-tiers125';
+import {CATEGORIES,FUNCTIONS,PRESETS,score,validateConfig,matchesTopic,rankRows} from './activity-index-model.mjs?v=20261122-full-credit';
 
 const data=JSON.parse(document.getElementById('pilot-data').textContent);
 const $=id=>document.getElementById(id);
@@ -21,8 +21,8 @@ function applyPreset(key){
 }
 function renderResults(rows){
   $('results').replaceChildren();
-  for(const row of rows){
-    const tr=document.createElement('tr');tr.append(text('th',row.name));tr.firstChild.scope='row';
+  for(const row of rankRows(rows)){
+    const tr=document.createElement('tr');tr.append(text('td',row.rank===null?'—':row.rank),text('th',row.name));tr.children[1].scope='row';
     for(const value of [row.office_2026,row.observed,number(row.raw,3)])tr.append(text('td',value));
     tr.append(text('td',row.index===null?'Not defined':number(row.index,1),'index-value'));
     const cell=document.createElement('td');const b=text('button','Inspect');b.type='button';b.className='quiet';b.setAttribute('aria-label','Inspect contributions for '+row.name);
@@ -102,3 +102,4 @@ $('export').addEventListener('click',()=>{
   const href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));const a=document.createElement('a');a.href=href;a.download='Cranston_Activity_Index_Test.csv';a.click();setTimeout(()=>URL.revokeObjectURL(href),1000);
 });
 applyPreset('core');
+if(data.members.some(m=>m.id===new URLSearchParams(location.search).get('member'))){$('audit-member').value=new URLSearchParams(location.search).get('member');renderAudit();}

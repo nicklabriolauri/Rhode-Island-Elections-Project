@@ -35,3 +35,7 @@ body{font-size:16px;line-height:1.6}.preview,.eyebrow,.photo-note,.source,.tag,.
 @media(max-width:900px){.sponsorship-stats{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:600px){.sponsorship-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.sponsorship-stats b{font-size:1.8rem}.sponsorship-coverage{padding:12px 14px}}
 
+
+
+/* Provisional activity pilot; preserve established profile palette. */
+.activity-score-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:24px 0}.activity-score-grid>div{padding:20px 16px;background:#edf3fc;border:1px solid #c7d7ef;border-top:4px solid #2356a0;border-radius:8px}.activity-score-grid>div:nth-child(2){background:#edf8f5;border-top-color:#087b78}.activity-score-grid>div:nth-child(3){background:#f4effc;border-top-color:#7042b0}.activity-score-grid b{display:block;font-size:1.8rem;line-height:1.3;color:#17264b}.activity-score-grid span{display:block;font-size:14px;margin-top:8px;color:#4d607c}.activity-caveat{background:#f3effb;border-left:4px solid #7042b0;padding:16px 20px;font-size:16px}#activity-index{scroll-margin-top:95px}@media(max-width:650px){.activity-score-grid{grid-template-columns:1fr}}

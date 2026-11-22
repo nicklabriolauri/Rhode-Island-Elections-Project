@@ -1,0 +1,408 @@
+{
+  "version": "0.3-test",
+  "year": 2026,
+  "reviewed": "2026-11-22",
+  "coverage": "Partial extracted records; attribution gaps vary by member. This is a frozen test snapshot, not a validated performance score.",
+  "meeting_count": 19,
+  "measure_count": 42,
+  "source_sha256": "c4ad683c790497df41a214db2a6cbb90ea3687bfe026aba31bf852b722692320",
+  "configuration": {
+    "label": "RIEP 1–2–5",
+    "weights": {
+      "symbolic": 1,
+      "administrative": 2,
+      "substantive": 5
+    },
+    "cosponsor": 0,
+    "joint": "full",
+    "includeCarryover": true
+  },
+  "leadership_source": "https://www.cranstonri.gov/about/city-council/default.aspx",
+  "mean_points": 18.88888888888889,
+  "members": [
+    {
+      "id": "daniel-robert-wall",
+      "name": "Daniel Robert Wall",
+      "office_2026": "Ward 6",
+      "leadership": "Council President",
+      "rank": 1,
+      "points": 29,
+      "index": 153.52941176470588,
+      "sponsorships": 17,
+      "additional_cosponsorships": 3,
+      "profile_url": "/candidates/daniel-robert-wall.html#activity-index",
+      "tiers": {
+        "symbolic": {
+          "count": 14,
+          "points": 14
+        },
+        "administrative": {
+          "count": 0,
+          "points": 0
+        },
+        "substantive": {
+          "count": 3,
+          "points": 15
+        }
+      },
+      "topics": [
+        {
+          "topic": "Budget and taxation",
+          "points": 6
+        },
+        {
+          "topic": "Housing and land use",
+          "points": 5
+        },
+        {
+          "topic": "Health",
+          "points": 1
+        },
+        {
+          "topic": "Education and libraries",
+          "points": 1
+        },
+        {
+          "topic": "Government administration and accountability",
+          "points": 6
+        },
+        {
+          "topic": "Community recognition",
+          "points": 10
+        }
+      ]
+    },
+    {
+      "id": "frank-j-ritz-jr",
+      "name": "Frank J. Ritz Jr.",
+      "office_2026": "Ward 4",
+      "leadership": null,
+      "rank": 1,
+      "points": 29,
+      "index": 153.52941176470588,
+      "sponsorships": 13,
+      "additional_cosponsorships": 2,
+      "profile_url": "/candidates/frank-j-ritz-jr.html#activity-index",
+      "tiers": {
+        "symbolic": {
+          "count": 9,
+          "points": 9
+        },
+        "administrative": {
+          "count": 0,
+          "points": 0
+        },
+        "substantive": {
+          "count": 4,
+          "points": 20
+        }
+      },
+      "topics": [
+        {
+          "topic": "Housing and land use",
+          "points": 10
+        },
+        {
+          "topic": "Transportation and traffic",
+          "points": 5
+        },
+        {
+          "topic": "Health",
+          "points": 2
+        },
+        {
+          "topic": "Education and libraries",
+          "points": 6
+        },
+        {
+          "topic": "Community recognition",
+          "points": 6
+        }
+      ]
+    },
+    {
+      "id": "michael-a-traficante",
+      "name": "Michael A. Traficante",
+      "office_2026": "Ward 5",
+      "leadership": null,
+      "rank": 3,
+      "points": 28,
+      "index": 148.23529411764704,
+      "sponsorships": 12,
+      "additional_cosponsorships": 3,
+      "profile_url": "/candidates/michael-a-traficante.html#activity-index",
+      "tiers": {
+        "symbolic": {
+          "count": 8,
+          "points": 8
+        },
+        "administrative": {
+          "count": 0,
+          "points": 0
+        },
+        "substantive": {
+          "count": 4,
+          "points": 20
+        }
+      },
+      "topics": [
+        {
+          "topic": "Transportation and traffic",
+          "points": 20
+        },
+        {
+          "topic": "Health",
+          "points": 1
+        },
+        {
+          "topic": "Community recognition",
+          "points": 7
+        }
+      ]
+    },
+    {
+      "id": "christopher-e-buonanno",
+      "name": "Christopher E. Buonanno",
+      "office_2026": "Citywide",
+      "leadership": null,
+      "rank": 4,
+      "points": 19,
+      "index": 100.58823529411764,
+      "sponsorships": 15,
+      "additional_cosponsorships": 3,
+      "profile_url": null,
+      "tiers": {
+        "symbolic": {
+          "count": 14,
+          "points": 14
+        },
+        "administrative": {
+          "count": 0,
+          "points": 0
+        },
+        "substantive": {
+          "count": 1,
+          "points": 5
+        }
+      },
+      "topics": [
+        {
+          "topic": "Transportation and traffic",
+          "points": 5
+        },
+        {
+          "topic": "Health",
+          "points": 2
+        },
+        {
+          "topic": "Education and libraries",
+          "points": 1
+        },
+        {
+          "topic": "Community recognition",
+          "points": 11
+        }
+      ]
+    },
+    {
+      "id": "andy-m-andujar",
+      "name": "Andy M. Andujar",
+      "office_2026": "Ward 3",
+      "leadership": null,
+      "rank": 5,
+      "points": 16,
+      "index": 84.70588235294117,
+      "sponsorships": 12,
+      "additional_cosponsorships": 3,
+      "profile_url": "/candidates/andy-m-andujar.html#activity-index",
+      "tiers": {
+        "symbolic": {
+          "count": 11,
+          "points": 11
+        },
+        "administrative": {
+          "count": 0,
+          "points": 0
+        },
+        "substantive": {
+          "count": 1,
+          "points": 5
+        }
+      },
+      "topics": [
+        {
+          "topic": "Housing and land use",
+          "points": 5
+        },
+        {
+          "topic": "Health",
+          "points": 1
+        },
+        {
+          "topic": "Community recognition",
+          "points": 10
+        }
+      ]
+    },
+    {
+      "id": "bridget-r-graziano",
+      "name": "Bridget R. Graziano",
+      "office_2026": "Ward 1",
+      "leadership": "Majority Leader",
+      "rank": 5,
+      "points": 16,
+      "index": 84.70588235294117,
+      "sponsorships": 8,
+      "additional_cosponsorships": 2,
+      "profile_url": null,
+      "tiers": {
+        "symbolic": {
+          "count": 6,
+          "points": 6
+        },
+        "administrative": {
+          "count": 0,
+          "points": 0
+        },
+        "substantive": {
+          "count": 2,
+          "points": 10
+        }
+      },
+      "topics": [
+        {
+          "topic": "Transportation and traffic",
+          "points": 10
+        },
+        {
+          "topic": "Community recognition",
+          "points": 6
+        }
+      ]
+    },
+    {
+      "id": "kristen-e-haroian",
+      "name": "Kristen E. Haroian",
+      "office_2026": "Ward 2",
+      "leadership": "Council Vice President",
+      "rank": 5,
+      "points": 16,
+      "index": 84.70588235294117,
+      "sponsorships": 12,
+      "additional_cosponsorships": 4,
+      "profile_url": "/candidates/kristen-e-haroian.html#activity-index",
+      "tiers": {
+        "symbolic": {
+          "count": 11,
+          "points": 11
+        },
+        "administrative": {
+          "count": 0,
+          "points": 0
+        },
+        "substantive": {
+          "count": 1,
+          "points": 5
+        }
+      },
+      "topics": [
+        {
+          "topic": "Health",
+          "points": 1
+        },
+        {
+          "topic": "Education and libraries",
+          "points": 1
+        },
+        {
+          "topic": "Public safety",
+          "points": 5
+        },
+        {
+          "topic": "Community recognition",
+          "points": 9
+        }
+      ]
+    },
+    {
+      "id": "emilia-vaziri",
+      "name": "Emilia Vaziri",
+      "office_2026": "Citywide",
+      "leadership": null,
+      "rank": 8,
+      "points": 10,
+      "index": 52.94117647058823,
+      "sponsorships": 10,
+      "additional_cosponsorships": 4,
+      "profile_url": "/candidates/emilia-vaziri.html#activity-index",
+      "tiers": {
+        "symbolic": {
+          "count": 10,
+          "points": 10
+        },
+        "administrative": {
+          "count": 0,
+          "points": 0
+        },
+        "substantive": {
+          "count": 0,
+          "points": 0
+        }
+      },
+      "topics": [
+        {
+          "topic": "Health",
+          "points": 1
+        },
+        {
+          "topic": "Community recognition",
+          "points": 9
+        }
+      ]
+    },
+    {
+      "id": "richard-d-campopiano",
+      "name": "Richard D. Campopiano",
+      "office_2026": "Citywide",
+      "leadership": "Minority Leader",
+      "rank": 9,
+      "points": 7,
+      "index": 37.05882352941176,
+      "sponsorships": 7,
+      "additional_cosponsorships": 0,
+      "profile_url": null,
+      "tiers": {
+        "symbolic": {
+          "count": 7,
+          "points": 7
+        },
+        "administrative": {
+          "count": 0,
+          "points": 0
+        },
+        "substantive": {
+          "count": 0,
+          "points": 0
+        }
+      },
+      "topics": [
+        {
+          "topic": "Budget and taxation",
+          "points": 1
+        },
+        {
+          "topic": "Education and libraries",
+          "points": 1
+        },
+        {
+          "topic": "Government administration and accountability",
+          "points": 1
+        },
+        {
+          "topic": "Community recognition",
+          "points": 4
+        }
+      ]
+    }
+  ]
+}

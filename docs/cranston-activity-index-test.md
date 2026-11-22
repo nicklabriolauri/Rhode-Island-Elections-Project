@@ -1,6 +1,6 @@
-# Cranston Legislative Activity Index, version 0.2-test
+# Cranston Legislative Activity Index, version 0.3-test
 
-This is a separate research sandbox at `/cranston-activity-index-test.html`. It is marked noindex,nofollow, omitted from the sitemap and not added to profile scores. It is publicly accessible to people with the link; no authentication is implied.
+The adjustable sandbox at `/cranston-activity-index-test.html` is marked noindex,nofollow and omitted from the sitemap. Its default model is now published provisionally at `/cranston-activity.html` and on eligible profiles. It is publicly accessible to people with the link; no authentication is implied.
 
 ## Reproduce
 
@@ -25,7 +25,7 @@ Every item has one primary topic and up to two secondary topics, with a coding r
 
 Health-awareness commemorations are tagged Health and Community recognition and remain in the symbolic tier. State library funding requests are tagged Education and libraries and Budget and taxation and remain advocacy. Topic labels do not multiply or change scores.
 
-Named council sponsors share 1 credit equally per measure. Explicit cosponsors receive .25 each; this is a per-member credit, not shared across cosponsors. A member cannot receive both roles on one item. Earlier-year items considered in 2026 are included, with an option to exclude them. No first-listed sponsor is presumed the lead author.
+Named council sponsors each receive full credit 1 per measure. Additional explicit cosponsors receive zero score credit by default and are displayed separately. A member cannot receive both roles on one item. Earlier-year items considered in 2026 are included, with an option to exclude them. No first-listed sponsor is presumed the lead author.
 
 Weighted activity is the sum of tier weight times role credit. Activity index is 100 times a member's weighted activity divided by the cohort mean across the nine 2026 members. 100 is a relative mean, not a percentage or performance standard. If every raw total is zero, the normalized index is not defined. No expected-performance adjustment is made.
 
@@ -49,4 +49,23 @@ Partial extraction is not comparable missingness across members. No score here m
 - Rhode Island home rule: https://rilegislature.gov/riconstitution/Constitution/C13.aspx
 - CEL research background: https://thelawmakers.org/methodology
 
-These sources inform distinctions between types of action. The scoring weights and fractional-credit convention are RIEP test assumptions, not rules derived from these sources or a replication of CEL methodology.
+These sources inform distinctions between types of action. The scoring weights and full-joint-credit convention are RIEP test assumptions, not rules derived from these sources or a replication of CEL methodology.
+
+## Version 0.3: published provisional scores
+
+Supersedes the previous credit convention: each explicitly named sponsor now receives full role credit 1, multiplied by tier weight (1/2/5). Additional explicit cosponsorships receive zero points by default and remain visible separately. Split credit and adjustable cosponsorship remain sandbox alternatives. Default raw totals (independent integer-count check): Wall 29, Ritz 29, Traficante 28, Buonanno 19, Andujar 16, Graziano 16, Haroian 16, Vaziri 10, Campopiano 7. The cohort mean is 170/9. Competition ranks preserve ties: 1,1,3,4,5,5,5,8,9.
+
+The sandbox remains noindex. `/cranston-activity.html` is now the public provisional ranking. Six existing 2026-member profiles have score cards; the three incoming profiles show Not applicable. No predecessors' records are transferred. Three outgoing members without existing profiles link to source records from the ranking. Leadership titles from the official directory are contextual, not date-by-date tenure histories or numeric adjustments.
+
+Rebuild after reviewed coding/source changes:
+
+```
+python scripts/build_cranston_activity_pilot.py
+python scripts/publish_cranston_activity.py
+node --test scripts/test_activity_index.mjs
+python scripts/test_cranston_activity_publication.py
+```
+
+The publication step invokes `export_cranston_activity.mjs`, which shares the sandbox's scoring functions, creates scores JSON/CSV, updates profile cards and the ranking HTML. `cranston_sponsorship.render_profile` reapplies the frozen score card to avoid removing it on a normal sponsorship presentation rebuild. A frozen snapshot must be deliberately rebuilt; fresh source counts do not silently change scores.
+
+CEL's standard framework credits primary-sponsored bills rather than assigning ordinary cosponsorship points. Its 2024 state-method appendix selects one introducing sponsor even where multiple primary sponsors exist; it tested broader alternatives but did not adopt them as the main score. Our full joint-credit convention explicitly differs because extracted municipal records do not establish a reliable lead author. Source: https://thelawmakers.org/wp-content/uploads/2024/01/BVW_SLES_Jan2024.pdf (Appendix, Selecting among Multiple Primary Sponsors).

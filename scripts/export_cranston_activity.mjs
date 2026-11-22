@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import {score,rankRows,PRESETS} from '../activity-index-model.mjs';
+const root=new URL('../',import.meta.url);
+const d=JSON.parse(fs.readFileSync(new URL('data/cranston/activity-index-pilot-2026.json',root)));
+const leaders={'bridget-r-graziano':'Majority Leader','kristen-e-haroian':'Council Vice President','daniel-robert-wall':'Council President','richard-d-campopiano':'Minority Leader'};
+const rows=rankRows(score(d,PRESETS.core)).map(r=>({id:r.id,name:r.name,office_2026:r.office_2026,leadership:leaders[r.id]||null,rank:r.rank,points:r.raw,index:r.index,sponsorships:r.contributions.filter(c=>c.role==='sponsor').length,additional_cosponsorships:r.contributions.filter(c=>c.role==='cosponsor').length,profile_url:r.profile_url?r.profile_url.split('#')[0]+'#activity-index':null,tiers:Object.fromEntries(['symbolic','administrative','substantive'].map(t=>[t,{count:r.contributions.filter(c=>c.role==='sponsor'&&c.proposal.tier===t&&c.included).length,points:r.contributions.filter(c=>c.proposal.tier===t).reduce((s,c)=>s+c.points,0)}])),topics:d.topic_vocabulary.map(topic=>({topic,points:r.contributions.filter(c=>c.proposal.primary_topic===topic).reduce((s,c)=>s+c.points,0)})).filter(t=>t.points>0)}));
+const result={version:d.version,year:d.year,reviewed:d.reviewed,coverage:d.coverage,meeting_count:d.meeting_count,measure_count:d.proposals.length,source_sha256:d.source_sha256,configuration:PRESETS.core,leadership_source:'https://www.cranstonri.gov/about/city-council/default.aspx',mean_points:rows.reduce((s,r)=>s+r.points,0)/rows.length,members:rows};
+fs.writeFileSync(new URL('data/cranston/activity-index-scores-2026.json',root),JSON.stringify(result,null,2)+'\n');
+const fields=['Rank','Member','2026 office','Leadership listed at review','Symbolic sponsorships (1 each)','Administrative sponsorships (2 each)','Substantive sponsorships (5 each)','Additional cosponsorships (0 points)','Weighted points','Index (cohort mean 100)','Reviewed','Snapshot'];
+const csv=[fields,...rows.map(r=>[r.rank,r.name,r.office_2026,r.leadership||'',r.tiers.symbolic.count,r.tiers.administrative.count,r.tiers.substantive.count,r.additional_cosponsorships,r.points,r.index,d.reviewed,d.version])].map(row=>row.map(v=>'"'+String(v).replaceAll('"','""')+'"').join(',')).join('\r\n');
+fs.writeFileSync(new URL('data/cranston/activity-index-ranking-2026.csv',root),csv+'\r\n');
+console.log(rows.map(r=>`${r.rank}. ${r.name}: ${r.points} points, ${r.index.toFixed(1)} index`).join('\n'));

@@ -10,9 +10,9 @@ export const FUNCTIONS = {
   symbolic:'Symbolic display policy', recognition:'Recognition and commemoration'
 };
 export const PRESETS = {
-  core: {label:'RIEP 1–2–5',weights:{symbolic:1,administrative:2,substantive:5},cosponsor:0.25,joint:'split',includeCarryover:true},
-  compact: {label:'Alternative 1–2–3',weights:{symbolic:1,administrative:2,substantive:3},cosponsor:0.25,joint:'split',includeCarryover:true},
-  equal: {label:'Equal weights 1–1–1',weights:{symbolic:1,administrative:1,substantive:1},cosponsor:0.25,joint:'split',includeCarryover:true}
+  core: {label:'RIEP 1–2–5',weights:{symbolic:1,administrative:2,substantive:5},cosponsor:0,joint:'full',includeCarryover:true},
+  compact: {label:'Alternative 1–2–3',weights:{symbolic:1,administrative:2,substantive:3},cosponsor:0,joint:'full',includeCarryover:true},
+  equal: {label:'Equal weights 1–1–1',weights:{symbolic:1,administrative:1,substantive:1},cosponsor:0,joint:'full',includeCarryover:true}
 };
 export function validateConfig(config) {
   if (!config || !['split','full'].includes(config.joint) || typeof config.includeCarryover!=='boolean') throw new Error('Invalid credit settings');
@@ -50,3 +50,8 @@ export function score(data, config) {
   return rows.map(r=>({...r,index:mean>0?100*r.raw/mean:null}));
 }
 export function matchesTopic(proposal,topic){return !topic||proposal.primary_topic===topic||proposal.secondary_topics.includes(topic);}
+
+export function rankRows(rows) {
+ const sorted=[...rows].sort((a,b)=>(b.raw-a.raw)||a.name.localeCompare(b.name));
+ return sorted.map((r,i)=>({...r,rank:r.index===null?null:(i&&Math.abs(r.raw-sorted[i-1].raw)<1e-10?sorted.findIndex(x=>Math.abs(x.raw-r.raw)<1e-10)+1:i+1)}));
+}
