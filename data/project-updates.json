@@ -2,13 +2,43 @@
   "timezone": "America/New_York",
   "updates": [
     {
+      "id": "cranston-legislative-activity-index",
+      "category": "Local research",
+      "title": "New Cranston activity ranking and clearer council profiles",
+      "ticker": "New: Cranston council activity ranking, topic tags and clearer profile scores",
+      "body": [
+        "RIEP has added a provisional Legislative Activity Index for the nine members who served on Cranston’s City Council in 2026. Each named sponsor receives full credit: 1 point for symbolic and advocacy measures, 2 for routine property or administrative approvals, and 5 for substantive local policy, fiscal measures and ordinances. Additional explicit cosponsorships are listed separately.",
+        "Profiles for six members of the 2026 council now show their activity rank and points, with the comparison to the council average combined into one clear summary. Daniel Wall and Frank Ritz are tied for first with 29 points each—53.5% above the council average. Wall’s profile also includes a newly added portrait. Incoming members are labeled “Not applicable” for 2026 and do not inherit their predecessors’ records.",
+        "The ranking links to measure-by-measure source records, topic tags, scoring explanations and downloadable data. It covers 42 identified measures across 19 available full-council meeting records. This is a partial record of documented sponsorship activity, not a finding of overall legislative effectiveness. Visitors can inspect the evidence and explore alternative scoring assumptions."
+      ],
+      "links": [
+        {
+          "label": "Explore the Cranston activity ranking",
+          "url": "/cranston-activity.html"
+        },
+        {
+          "label": "See Daniel Wall’s updated profile",
+          "url": "/candidates/daniel-robert-wall.html#activity-index"
+        },
+        {
+          "label": "Inspect measures and topic tags",
+          "url": "/cranston-activity-index-test.html"
+        },
+        {
+          "label": "Browse the sponsorship records",
+          "url": "/cranston-sponsorship.html"
+        }
+      ],
+      "published_at": "2026-11-22T23:15:26Z"
+    },
+    {
       "id": "project-updates-and-map-colors",
       "category": "Website update",
       "title": "A new home for RIEP announcements and color-coded map choices",
       "ticker": "New: dated project announcements and color-coded map choices",
       "body": [
         "RIEP has launched this project-updates archive to make new coverage and website changes easier to follow. Each notice includes a publication date and time, a permanent link and links to the relevant tools.",
-        "The homepage\u2019s scrolling updates now link directly to these notices. The map chooser uses four distinct solid colors for current statewide results, historical maps, Cranston wards and the Providence pilot."
+        "The homepage’s scrolling updates now link directly to these notices. The map chooser uses four distinct solid colors for current statewide results, historical maps, Cranston wards and the Providence pilot."
       ],
       "links": [
         {
@@ -25,11 +55,11 @@
     {
       "id": "cranston-womxn-project-ratings",
       "category": "Candidate coverage",
-      "title": "The Womxn Project\u2019s BFFI ratings added to Cranston council profiles",
+      "title": "The Womxn Project’s BFFI ratings added to Cranston council profiles",
       "ticker": "Womxn Project ratings now appear on Cranston council profiles",
       "body": [
-        "RIEP\u2019s nine Cranston council profiles now display The Womxn Project\u2019s 2026 Bodily Freedom Forever Index categories, with links to the publisher\u2019s Cranston listing and information about the rating.",
-        "Green identifies \u201cFor,\u201d red identifies \u201cAgainst,\u201d and gray identifies \u201cN/A.\u201d N/A means insufficient information, not opposition. These are outside issue ratings, displayed separately from organizational endorsements and RIEP\u2019s own research."
+        "RIEP’s nine Cranston council profiles now display The Womxn Project’s 2026 Bodily Freedom Forever Index categories, with links to the publisher’s Cranston listing and information about the rating.",
+        "Green identifies “For,” red identifies “Against,” and gray identifies “N/A.” N/A means insufficient information, not opposition. These are outside issue ratings, displayed separately from organizational endorsements and RIEP’s own research."
       ],
       "links": [
         {
@@ -37,7 +67,7 @@
           "url": "/candidates/sara-jane-haupt.html#ratings"
         },
         {
-          "label": "The Womxn Project\u2019s Cranston guide",
+          "label": "The Womxn Project’s Cranston guide",
           "url": "https://thewomxnproject.org/bffi/cranston/"
         }
       ],
@@ -50,7 +80,7 @@
       "ticker": "Explore Cranston council votes, attendance and election history",
       "body": [
         "Available 2026 full-council minutes now support member-specific vote records and opening roll-call attendance percentages. The archive links back to source records and keeps unresolved cases visible.",
-        "Attendance percentages exclude missing minutes and unresolved opening records; they do not establish presence throughout a meeting. Incoming members do not inherit a predecessor\u2019s record. Profile election histories also include 2026 returns and verified 2024 ward results for five individuals."
+        "Attendance percentages exclude missing minutes and unresolved opening records; they do not establish presence throughout a meeting. Incoming members do not inherit a predecessor’s record. Profile election histories also include 2026 returns and verified 2024 ward results for five individuals."
       ],
       "links": [
         {
@@ -67,15 +97,15 @@
     {
       "id": "cranston-nine-council-profiles",
       "category": "Local coverage",
-      "title": "Profiles now cover Cranston\u2019s six ward and three citywide council winners",
+      "title": "Profiles now cover Cranston’s six ward and three citywide council winners",
       "ticker": "Cranston coverage: nine council profiles and 2026 election results",
       "body": [
-        "RIEP\u2019s municipal coverage includes all nine winners of Cranston\u2019s 2026 City Council elections: six ward seats and three citywide seats. Profiles bring together sourced background information, available priorities, election returns and public records.",
+        "RIEP’s municipal coverage includes all nine winners of Cranston’s 2026 City Council elections: six ward seats and three citywide seats. Profiles bring together sourced background information, available priorities, election returns and public records.",
         "The Cranston map links local election returns with council profiles. Available campaign finance filings are linked from the relevant profiles. Current service is distinguished from the incoming council term beginning January 4, 2027."
       ],
       "links": [
         {
-          "label": "Explore Cranston\u2019s ward map",
+          "label": "Explore Cranston’s ward map",
           "url": "/cranston-map.html?colors=returns"
         },
         {
@@ -91,7 +121,7 @@
       "title": "Find Cranston and Providence ward maps from the homepage",
       "ticker": "Local ward maps: Cranston coverage and the Providence pilot",
       "body": [
-        "The \u201cSee Rhode Island Election Maps\u201d button now opens a directory of statewide and local maps. Visitors can choose 2026 legislative returns, historical statewide views, Cranston\u2019s ward map or the Providence council mapping pilot.",
+        "The “See Rhode Island Election Maps” button now opens a directory of statewide and local maps. Visitors can choose 2026 legislative returns, historical statewide views, Cranston’s ward map or the Providence council mapping pilot.",
         "Providence remains pilot coverage. Local maps and profiles will expand as boundaries, official records and election information are verified."
       ],
       "links": [
