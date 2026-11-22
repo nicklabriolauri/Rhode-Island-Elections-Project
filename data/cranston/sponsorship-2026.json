@@ -1,0 +1,1230 @@
+{
+  "schema_version": 1,
+  "year": 2026,
+  "reviewed": "2026-11-22",
+  "records_retrieved": "2026-11-22T04:29:20.441887+00:00",
+  "source_dataset": "/data/cranston/records-2026/records.json",
+  "coverage": "Minimum observed sponsorships in extracted full-council records. Incomplete attribution; no productivity ranking or effectiveness score.",
+  "meeting_count": 19,
+  "motion_count": 155,
+  "members": [
+    {
+      "id": "bridget-r-graziano",
+      "name": "Bridget R. Graziano",
+      "surname": "Graziano",
+      "office_2026": "Ward 1",
+      "counts": {
+        "sponsor": 8,
+        "cosponsor": 2,
+        "ordinance": 2,
+        "position": 0,
+        "symbolic": 0,
+        "recognition": 6
+      },
+      "profile_url": null
+    },
+    {
+      "id": "andy-m-andujar",
+      "name": "Andy M. Andujar",
+      "surname": "Andujar",
+      "office_2026": "Ward 3",
+      "counts": {
+        "sponsor": 12,
+        "cosponsor": 3,
+        "ordinance": 1,
+        "position": 0,
+        "symbolic": 0,
+        "recognition": 11
+      },
+      "profile_url": "/candidates/andy-m-andujar.html#sponsorship"
+    },
+    {
+      "id": "frank-j-ritz-jr",
+      "name": "Frank J. Ritz Jr.",
+      "surname": "Ritz",
+      "office_2026": "Ward 4",
+      "counts": {
+        "sponsor": 13,
+        "cosponsor": 2,
+        "ordinance": 4,
+        "position": 1,
+        "symbolic": 0,
+        "recognition": 8
+      },
+      "profile_url": "/candidates/frank-j-ritz-jr.html#sponsorship"
+    },
+    {
+      "id": "michael-a-traficante",
+      "name": "Michael A. Traficante",
+      "surname": "Traficante",
+      "office_2026": "Ward 5",
+      "counts": {
+        "sponsor": 12,
+        "cosponsor": 3,
+        "ordinance": 4,
+        "position": 0,
+        "symbolic": 1,
+        "recognition": 7
+      },
+      "profile_url": "/candidates/michael-a-traficante.html#sponsorship"
+    },
+    {
+      "id": "emilia-vaziri",
+      "name": "Emilia Vaziri",
+      "surname": "Vaziri",
+      "office_2026": "Citywide",
+      "counts": {
+        "sponsor": 10,
+        "cosponsor": 4,
+        "ordinance": 0,
+        "position": 0,
+        "symbolic": 1,
+        "recognition": 9
+      },
+      "profile_url": "/candidates/emilia-vaziri.html#sponsorship"
+    },
+    {
+      "id": "richard-d-campopiano",
+      "name": "Richard D. Campopiano",
+      "surname": "Campopiano",
+      "office_2026": "Citywide",
+      "counts": {
+        "sponsor": 7,
+        "cosponsor": 0,
+        "ordinance": 0,
+        "position": 3,
+        "symbolic": 0,
+        "recognition": 4
+      },
+      "profile_url": null
+    },
+    {
+      "id": "christopher-e-buonanno",
+      "name": "Christopher E. Buonanno",
+      "surname": "Buonanno",
+      "office_2026": "Citywide",
+      "counts": {
+        "sponsor": 15,
+        "cosponsor": 3,
+        "ordinance": 1,
+        "position": 1,
+        "symbolic": 1,
+        "recognition": 12
+      },
+      "profile_url": null
+    },
+    {
+      "id": "kristen-e-haroian",
+      "name": "Kristen E. Haroian",
+      "surname": "Haroian",
+      "office_2026": "Ward 2",
+      "counts": {
+        "sponsor": 12,
+        "cosponsor": 4,
+        "ordinance": 1,
+        "position": 1,
+        "symbolic": 1,
+        "recognition": 9
+      },
+      "profile_url": "/candidates/kristen-e-haroian.html#sponsorship"
+    },
+    {
+      "id": "daniel-robert-wall",
+      "name": "Daniel Robert Wall",
+      "surname": "Wall",
+      "office_2026": "Ward 6",
+      "counts": {
+        "sponsor": 17,
+        "cosponsor": 3,
+        "ordinance": 3,
+        "position": 3,
+        "symbolic": 0,
+        "recognition": 11
+      },
+      "profile_url": "/candidates/daniel-robert-wall.html#sponsorship"
+    }
+  ],
+  "proposals": [
+    {
+      "id": "ordinance-09-22-02",
+      "title": "09-22-02 ORDINANCE IN AMENDMENT OF TITLE 2, \u201cADMINISTRATION AND PERSONNEL\u201d, OF THE CITY OF CRANSTON CODE OF ORDINANCES, 2005, TO ADD CHAPTER 90 ENTITLED \u201cBACKGROUND CHECKS FOR CERTAIN SCHOOL EMPLOYEES\u201d",
+      "category": "ordinance",
+      "sponsors": [
+        "frank-j-ritz-jr"
+      ],
+      "cosponsors": [
+        "andy-m-andujar",
+        "bridget-r-graziano",
+        "daniel-robert-wall",
+        "emilia-vaziri",
+        "kristen-e-haroian"
+      ],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-10-19-2420e806931a-motion-f7dd9d51f22b",
+          "date": "2026-10-19",
+          "action": "On motion duly made by Councilman Buonanno and seconded by Councilwoman Vaziri, it was voted to continue the above Ordinance.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C572058.pdf",
+          "source_page": 5,
+          "minutes_status": "Approved",
+          "attribution": "Councilman Ritz; Co-sponsored by Council Vice-President Haroian, Council President Wall, Councilwoman Vaziri, Councilman Andujar and Councilwoman Graziano"
+        }
+      ],
+      "adopted_text": null,
+      "carryover": false
+    },
+    {
+      "id": "ordinance-06-15-02",
+      "title": "6-15-02 Ordinance In Amendment Of Title 10 Chapter 32 Section 020, Of The City Of Cranston Code Of Ordinances, 2005, Entitled \u2018Stop Intersections \u2013 Enumerated\u2019",
+      "category": "ordinance",
+      "sponsors": [
+        "bridget-r-graziano"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-08-17-666f21d8b2cf-motion-4e59480786b6",
+          "date": "2026-08-17",
+          "action": "On motion duly made by Councilman Buonanno and seconded by Councilman Andujar, it was voted to continue Ordinance 6-15-02 to the regular City Council meeting of September 22, 2026.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C572050.pdf",
+          "source_page": 4,
+          "minutes_status": "Approved",
+          "attribution": "Councilwoman Graziano"
+        },
+        {
+          "motion_id": "cranston-2026-10-19-2420e806931a-motion-f3b9fb2f954b",
+          "date": "2026-10-19",
+          "action": "On motion duly made by Councilman Andujar and seconded by Councilwoman Vaziri, it was voted to approve the above Ordinance.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C572058.pdf",
+          "source_page": 8,
+          "minutes_status": "Approved",
+          "attribution": "Councilwoman Graziano"
+        }
+      ],
+      "adopted_text": null,
+      "carryover": false
+    },
+    {
+      "id": "title-ad332296a67b",
+      "title": "RESOLUTION Urging the State of Rhode Island, the Rhode Island General Assembly and the Rhode Island Department of Education to Cease the Enactment of Unfunded Mandates and Fully Reimburse Cities, Towns, and School Departments for Mandated Costs",
+      "category": "position",
+      "sponsors": [
+        "richard-d-campopiano"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-10-19-2420e806931a-motion-e5e6c47285e0",
+          "date": "2026-10-19",
+          "action": "On motion duly made and seconded, it was voted to adopt the above Resolution.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C572058.pdf",
+          "source_page": 5,
+          "minutes_status": "Approved",
+          "attribution": "Councilman Campopiano"
+        }
+      ],
+      "adopted_text": null,
+      "carryover": false
+    },
+    {
+      "id": "title-43fd7891de48",
+      "title": "RESOLUTION Recognizing October 2026 as Breast Cancer Awareness Month in the City of Cranston",
+      "category": "recognition",
+      "sponsors": [
+        "christopher-e-buonanno",
+        "emilia-vaziri",
+        "frank-j-ritz-jr",
+        "kristen-e-haroian"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-10-19-2420e806931a-motion-d74bba48ec88",
+          "date": "2026-10-19",
+          "action": "On motion duly made by Councilwoman Graziano and seconded by Councilman Traficante, it was voted to adopt the above Resolution.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C572058.pdf",
+          "source_page": 3,
+          "minutes_status": "Approved",
+          "attribution": "Councilman Buonanno, Councilwoman Haroian, Councilman Ritz and Councilwoman Vaziri"
+        }
+      ],
+      "adopted_text": null,
+      "carryover": false
+    },
+    {
+      "id": "ordinance-08-17-02",
+      "title": "08-17-02 ORDINANCE IN AMENDMENT OF TITLE 3, CHAPTER 08, SECTION 060, OF THE CITY OF CRANSTON CODE OF ORDINANCES, 2005, ENTITLED \u2018BOARD OF CONTRACT AND PURCHASE.\u2019",
+      "category": "ordinance",
+      "sponsors": [
+        "daniel-robert-wall"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-08-17-666f21d8b2cf-motion-d72f32653c94",
+          "date": "2026-08-17",
+          "action": "On motion duly made by Councilman Andujar and seconded by Councilwoman Haroian, it was voted to refer Ordinance 08-17-02 to the Finance Committee meeting of September 14, 2026.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C572050.pdf",
+          "source_page": 10,
+          "minutes_status": "Approved",
+          "attribution": "Council President Wall"
+        },
+        {
+          "motion_id": "cranston-2026-10-19-2420e806931a-motion-a4abb27193cc",
+          "date": "2026-10-19",
+          "action": "On motion by Councilman Andujar, duly seconded by Councilman Traficante, it was voted to amend the amendment to reduce the threshold to $50,000.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C572058.pdf",
+          "source_page": 4,
+          "minutes_status": "Approved",
+          "attribution": "Council President Wall"
+        }
+      ],
+      "adopted_text": null,
+      "carryover": false
+    },
+    {
+      "id": "title-90cd977c491f",
+      "title": "RESOLUTION Recognizing October 2026 as Italian American Heritage Month in the City of Cranston",
+      "category": "recognition",
+      "sponsors": [
+        "andy-m-andujar",
+        "christopher-e-buonanno",
+        "frank-j-ritz-jr",
+        "michael-a-traficante",
+        "richard-d-campopiano"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-10-19-2420e806931a-motion-849de8323e93",
+          "date": "2026-10-19",
+          "action": "On motion duly made and seconded, it was voted to adopt the above Resolution.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C572058.pdf",
+          "source_page": 2,
+          "minutes_status": "Approved",
+          "attribution": "Councilman Campopiano, Councilman Buonanno, Councilman Ritz, Councilman Andujar and Councilman Traficante"
+        }
+      ],
+      "adopted_text": null,
+      "carryover": false
+    },
+    {
+      "id": "ordinance-08-17-05",
+      "title": "08-17-05 Ordinance in Amendment of Title 10, Chapter 32, Section 040 and Section 660 of the City of Cranston Code of Ordinances, 2005, entitled \u2018No Parking on Certain Streets\u2014Generally\u2019 and \u2018Two Hour Parking\u2014Between 9:00 A.M. and 5:00 P.M. Monday Through Friday.\u2019",
+      "category": "ordinance",
+      "sponsors": [
+        "michael-a-traficante"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-09-22-c99ca2826898-motion-ee391f4adf12",
+          "date": "2026-09-22",
+          "action": "On motion duly made by Councilwoman Haroian and seconded by Councilwoman Vaziri, it was voted to adopt 08-17-05.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C572056.pdf",
+          "source_page": 4,
+          "minutes_status": "Approved",
+          "attribution": "Councilman Traficante"
+        }
+      ],
+      "adopted_text": null,
+      "carryover": false
+    },
+    {
+      "id": "ordinance-08-17-04",
+      "title": "08-17-04 Ordinance in Amendment of Title 10, Chapter 32, Section 520 of the City of Cranston Code of Ordinances, 2005, entitled \u2018One Hour Parking\u2014Between 8:00 A.M. and 5:00 P.M. Monday Through Friday.\u2019",
+      "category": "ordinance",
+      "sponsors": [
+        "michael-a-traficante"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-09-22-c99ca2826898-motion-c953ef79a03a",
+          "date": "2026-09-22",
+          "action": "On motion duly made by Councilwoman Haroian and seconded by Councilman Buoanno, it was voted to adopt 08-17-04.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C572056.pdf",
+          "source_page": 4,
+          "minutes_status": "Approved",
+          "attribution": "Councilman Traficante"
+        }
+      ],
+      "adopted_text": null,
+      "carryover": false
+    },
+    {
+      "id": "ordinance-08-17-03",
+      "title": "08-17-03 Ordinance in Amendment of Title 10, Chapter 32, Section 020 of the City of Cranston Code of Ordinances, 2005, entitled \u2018Stop Intersections\u2014Enumerated.\u2019",
+      "category": "ordinance",
+      "sponsors": [
+        "michael-a-traficante"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-09-22-c99ca2826898-motion-c7d216c0d7a8",
+          "date": "2026-09-22",
+          "action": "On motion duly made by Councilman Buonanno and seconded by Councilwoman Vaziri, it was voted to adopt 08-17-03.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C572056.pdf",
+          "source_page": 4,
+          "minutes_status": "Approved",
+          "attribution": "Councilman Traficante"
+        }
+      ],
+      "adopted_text": null,
+      "carryover": false
+    },
+    {
+      "id": "ordinance-08-17-01",
+      "title": "08-17-01 Ordinance in Amendment of Chapter 08.24.031 of the City of Cranston Code of Ordinances, 2005, entitled \u2018Short Term Rentals of Outdoor Pools and Spaces.\u2019",
+      "category": "ordinance",
+      "sponsors": [
+        "daniel-robert-wall",
+        "frank-j-ritz-jr"
+      ],
+      "cosponsors": [
+        "christopher-e-buonanno",
+        "emilia-vaziri",
+        "kristen-e-haroian",
+        "michael-a-traficante"
+      ],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-09-22-c99ca2826898-motion-8612ee8a5658",
+          "date": "2026-09-22",
+          "action": "On motion duly made by Councilman Buonanno and seconded by Councilman Andujar, it was voted to continue the above Ordinance to the October 19, 2026 City Council meeting.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C572056.pdf",
+          "source_page": 3,
+          "minutes_status": "Approved",
+          "attribution": "Councilman Wall and Councilman Ritz"
+        }
+      ],
+      "adopted_text": null,
+      "carryover": false,
+      "cosponsor_evidence": [
+        {
+          "motion_id": "cranston-2026-10-19-2420e806931a-motion-0ebf906a8406",
+          "date": "2026-10-19",
+          "context": "Ordinance would be enforced; Council President Wall stated enforcement would rely on rental-app listings and neighbors. Councilman Traficante, Councilwoman Vaziri, Council Vice-President Haroian and Councilman Buonanno asked to be added as co-sponsors",
+          "excerpt": "On motion duly made and seconded, it was voted to approve the above amendment. Motion passed on a vote of 8-0. The following being recorded as voting \u201caye\u201d: Councilwoman Graziano, Councilmen Andujar, Traficante, Councilwoman Vaziri, Councilmen Campopiano, Buonanno, Council Vice-President Haroian and Council President Wall",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C572058.pdf",
+          "source_page": 7
+        }
+      ]
+    },
+    {
+      "id": "title-940cbdba6741",
+      "title": "RESOLUTION Celebrating Hispanic Heritage Month",
+      "category": "recognition",
+      "sponsors": [
+        "andy-m-andujar",
+        "daniel-robert-wall",
+        "emilia-vaziri",
+        "kristen-e-haroian"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-09-22-c99ca2826898-motion-3cfdbfddf32c",
+          "date": "2026-09-22",
+          "action": "On motion duly made by Councilman Buonanno and seconded by Councilwoman Vaziri, it was voted to adopt the above Resolution.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C572056.pdf",
+          "source_page": 2,
+          "minutes_status": "Approved",
+          "attribution": "Councilman Andujar, Council President Wall, Councilwoman Emilia Vaziri and Council Vice-President Kristen Haroian"
+        }
+      ],
+      "adopted_text": null,
+      "carryover": false
+    },
+    {
+      "id": "title-94d5c0dc4a6f",
+      "title": "RESOLUTION Authorizing the Permanent Flying and Display of the Official Flag of the Republic of Italy at Itri Park in the Neighborhood of Knightsville",
+      "category": "symbolic",
+      "sponsors": [
+        "christopher-e-buonanno",
+        "emilia-vaziri",
+        "kristen-e-haroian",
+        "michael-a-traficante"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-09-22-c99ca2826898-motion-386623b96738",
+          "date": "2026-09-22",
+          "action": "On motion duly made and seconded, it was voted to adopt the above Resolution.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C572056.pdf",
+          "source_page": 2,
+          "minutes_status": "Approved",
+          "attribution": "Councilman Christopher E. Buonanno, Councilman Michael A. Traficante, Councilwoman Emilia Vaziri and Council Vice-President Kristen Haroian"
+        }
+      ],
+      "adopted_text": null,
+      "carryover": false
+    },
+    {
+      "id": "ordinance-06-15-01",
+      "title": "6-15-01 Ordinance In Amendment Of Title 10, Chapter 12, Section 130 Of The City Of Cranston Code Of Ordinances, 2005, Entitled 'Right Turns At Certain Red Lights'",
+      "category": "ordinance",
+      "sponsors": [
+        "christopher-e-buonanno"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-08-17-666f21d8b2cf-motion-7da9f102a504",
+          "date": "2026-08-17",
+          "action": "On motion duly made by Councilman Buonanno and seconded by Councilman Andujar, it was voted to adopt the above Ordinance.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C572050.pdf",
+          "source_page": 8,
+          "minutes_status": "Approved",
+          "attribution": "Councilman Buonanno"
+        }
+      ],
+      "adopted_text": null,
+      "carryover": false
+    },
+    {
+      "id": "ordinance-05-26-01",
+      "title": "05-26-01 Ordinance in amendment of Title 8, Chapter 08, Section 200, of the City of Cranston Code of Ordinances, 2005, Entitled \u201cOutdoor Fires (Cooking Fires of Any Kind).\u201d",
+      "category": "ordinance",
+      "sponsors": [
+        "kristen-e-haroian"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-06-15-5ead7a617d99-motion-a645d9fed71b",
+          "date": "2026-06-15",
+          "action": "On motion by Councilman Andujar, duly seconded by Councilman Buonanno, it was voted to approve the above amendment.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C566194.pdf",
+          "source_page": 5,
+          "minutes_status": "Draft",
+          "attribution": "Council Vice-President Haroian"
+        },
+        {
+          "motion_id": "cranston-2026-07-20-bc5804d45ee7-motion-a2be80046111",
+          "date": "2026-07-20",
+          "action": "On motion duly made by Councilman Buonanno and seconded by Councilwoman Vaziri, it was voted to adopt the above Ordinance.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C572046.pdf",
+          "source_page": 5,
+          "minutes_status": "Approved",
+          "attribution": "Council Vice-President Haroian"
+        }
+      ],
+      "adopted_text": null,
+      "carryover": false
+    },
+    {
+      "id": "title-846571b0d75c",
+      "title": "Resolution Recognizing the Month of June 2026 as Pride Month",
+      "category": "recognition",
+      "sponsors": [
+        "bridget-r-graziano",
+        "christopher-e-buonanno",
+        "daniel-robert-wall",
+        "emilia-vaziri",
+        "frank-j-ritz-jr",
+        "kristen-e-haroian",
+        "michael-a-traficante"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-06-15-5ead7a617d99-motion-66695dd271a5",
+          "date": "2026-06-15",
+          "action": "On motion duly made by Councilwoman Vaziri and seconded by Councilman Traficante, the above Resolution was adopted on a vote of 8-0.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C566194.pdf",
+          "source_page": 3,
+          "minutes_status": "Draft",
+          "attribution": "Councilwoman Graziano, Council Vice-President Haroian, Councilman Ritz, Councilman Traficante, Councilman Buonanno, Councilwoman Vaziri and Council President Wall"
+        }
+      ],
+      "adopted_text": null,
+      "carryover": false
+    },
+    {
+      "id": "title-bca4faedc54a",
+      "title": "Resolution Recognizing June 19, 2026, as Juneteenth",
+      "category": "recognition",
+      "sponsors": [
+        "bridget-r-graziano",
+        "daniel-robert-wall",
+        "emilia-vaziri",
+        "frank-j-ritz-jr",
+        "kristen-e-haroian",
+        "richard-d-campopiano"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-06-15-5ead7a617d99-motion-40a4a90ef282",
+          "date": "2026-06-15",
+          "action": "On motion duly made by Councilman Traficante and seconded by Councilman Buonanno, the above Resolution was adopted on a vote of 8-0.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C566194.pdf",
+          "source_page": 4,
+          "minutes_status": "Draft",
+          "attribution": "Councilwoman Graziano, Council Vice-President Haroian, Councilwoman Vaziri, Councilman Ritz, Councilman Campopiano and Council President Wall"
+        }
+      ],
+      "adopted_text": null,
+      "carryover": false
+    },
+    {
+      "id": "title-c5dcc2e7bbd2",
+      "title": "Resolution Recognizing June 2026 as Portuguese Heritage Month",
+      "category": "recognition",
+      "sponsors": [
+        "andy-m-andujar",
+        "daniel-robert-wall"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-06-15-5ead7a617d99-motion-386759c55e7c",
+          "date": "2026-06-15",
+          "action": "On motion duly made by Councilman Andujar and seconded by Councilman Traficante, the above Resolution was adopted on a vote of 8-0.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C566194.pdf",
+          "source_page": 3,
+          "minutes_status": "Draft",
+          "attribution": "Councilman Andujar and Council President Wall"
+        }
+      ],
+      "adopted_text": null,
+      "carryover": false
+    },
+    {
+      "id": "title-eb9aab205b51",
+      "title": "Resolution Recognizing May 2026 as Mental Health Awareness Month and June 2026 as Men\u2019s Mental Health Awareness Month",
+      "category": "recognition",
+      "sponsors": [
+        "andy-m-andujar",
+        "christopher-e-buonanno",
+        "daniel-robert-wall",
+        "frank-j-ritz-jr",
+        "michael-a-traficante"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-06-15-5ead7a617d99-motion-08dc6669dc36",
+          "date": "2026-06-15",
+          "action": "On motion by Councilman Buonanno, duly seconded by Councilman Traficante, the above Resolution was adopted on a vote of 8-0.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C566194.pdf",
+          "source_page": 2,
+          "minutes_status": "Draft",
+          "attribution": "Councilman Andujar, Councilman Ritz, Councilman Traficante, Councilman Buonanno and Council President Wall"
+        }
+      ],
+      "adopted_text": null,
+      "carryover": false
+    },
+    {
+      "id": "ordinance-04-26-02",
+      "title": "\u2022 04-26-02 ORDINANCE in amendment of Title 3, Chapter 08, Section 050 of the City of Cranston Code of Ordinances, 2005, entitled \u201cTax Assessment Board of Review\u201d",
+      "category": "ordinance",
+      "sponsors": [
+        "daniel-robert-wall"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-05-18-ad3b73e9d731-motion-ab8abb8b6350",
+          "date": "2026-05-18",
+          "action": "On motion by Council Vice-President Haroian, seconded by Councilman Traficante, it was voted to adopt the ordinance.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C571952.pdf",
+          "source_page": 3,
+          "minutes_status": "Approved",
+          "attribution": "Council President Wall"
+        }
+      ],
+      "adopted_text": null,
+      "carryover": false
+    },
+    {
+      "id": "resolution-2026-20",
+      "title": "RESOLUTION Proclaiming May 2026 as Older Americans Month",
+      "category": "recognition",
+      "sponsors": [
+        "andy-m-andujar",
+        "christopher-e-buonanno",
+        "michael-a-traficante"
+      ],
+      "cosponsors": [
+        "daniel-robert-wall"
+      ],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-05-18-ad3b73e9d731-motion-54c5f1861407",
+          "date": "2026-05-18",
+          "action": "On motion by Councilwoman Vaziri, seconded by Councilman Andujar, it was voted to adopt the resolution.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C571952.pdf",
+          "source_page": 2,
+          "minutes_status": "Approved",
+          "attribution": "Councilman Andujar, Councilman Traficante, and Councilman Buonanno"
+        }
+      ],
+      "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/r2026_20.pdf?clientSite=Cranston-RI",
+      "carryover": false,
+      "cosponsor_evidence": [
+        {
+          "motion_id": "cranston-2026-05-18-ad3b73e9d731-motion-54c5f1861407",
+          "date": "2026-05-18",
+          "context": "RESOLUTION Proclaiming May 2026 as Older Americans Month; Sponsored by Councilman Andujar, Councilman Traficante, and Councilman Buonanno. Council President Wall, asked to be added as co- sponsor",
+          "excerpt": "On motion by Councilwoman Vaziri, seconded by Councilman Andujar, it was voted to adopt the resolution. Motion passed on a roll call vote; no member was recorded voting in opposition. Roll call aye\u2013 Councilman Andujar, Councilman Ritz, Councilman Traficante, Councilwoman Vaziri, Councilman Campopiano, Councilman Buonanno, Council Vice-President Haroian, Council President Wall",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C571952.pdf",
+          "source_page": 2
+        }
+      ]
+    },
+    {
+      "id": "ordinance-04-26-01",
+      "title": "\u2022 04-26-01 ORDINANCE in amendment of Title 10, Chapter 32, Section 020 and Section 030 of the City of Cranston Code of Ordinances, 2005 entitled \u201cStop Intersections-Enumerated\u201d and \u201cMulti Stop Intersections-Enumerated\u201d (Alpine Estates Dr./Caraway Dr.)",
+      "category": "ordinance",
+      "sponsors": [
+        "frank-j-ritz-jr"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-05-18-ad3b73e9d731-motion-4cb8153892a1",
+          "date": "2026-05-18",
+          "action": "On motion by Council Vice-President Haroian, seconded by Councilwoman Vaziri, it was voted to adopt the ordinance.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C571952.pdf",
+          "source_page": 2,
+          "minutes_status": "Approved",
+          "attribution": "Councilman Ritz"
+        }
+      ],
+      "adopted_text": null,
+      "carryover": false
+    },
+    {
+      "id": "resolution-2026-19",
+      "title": "RESOLUTION In Support of the Rhode Island General Assembly Legislation Authorizing the City of Cranston a One-Year Levy Cap Exemption for Fiscal Year 2027 Not to Exceed Five and One-Half Percent (5.5%) Under R.I.G.L. Sec. 44-5-2",
+      "category": "position",
+      "sponsors": [
+        "daniel-robert-wall"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-05-15-09245315b28b-aggregate-05a09a60c24e",
+          "date": "2026-05-15",
+          "action": "MOTION made by Councilman Andujar, SECONDED by Council Vice-President Haroian to approve the Amended Resolution, with the noted correction to line 34 to reflect 4.99%. Discussion: Councilman Buonanno noted the increase will not necessarily be 4.99%. That is the backstop. Everything is still on the table. Councilman Ritz had a hard time passing 4.99%. It is a last resort to fix the problem. For weeks he has listened to residents and reviewed the impact of cuts. He hoped to receive a budget with a 5% reduction in operating expenses. He would be more comfortable with a 4% max increase. Even 4.5% provides key services while still respecting the taxpayers. He believes money can be found to restore the Senior Center and provide additional support to the schools. Realistically, the Senior Center may need to operate leaner. The schools will still be doing more with less. He would like a breakdown from the Senior Center of what a 10% reduction in operations would look like, while preserving core functions. The residents deserve to see the analysis. He would like to set up a one-on-one tour of the Senior Center over the next week. During the tour he would like to meet with each division to understand their functions, and what services are truly essential. His MBA is in lean operations. He manages budgets and operational efficiencies daily in his professional life. He offered to collaborate with any department. He thinks it would help the body if the school administration provided a tie",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C557750.pdf",
+          "source_page": 2,
+          "minutes_status": "Draft",
+          "attribution": "Council President Wall"
+        }
+      ],
+      "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/r2026_19.pdf?clientSite=Cranston-RI",
+      "carryover": false
+    },
+    {
+      "id": "resolution-2026-17",
+      "title": "Resolution in Support of Fully Funding State Aid to Libraries to the Full Twenty-Five (25%) Percent",
+      "category": "position",
+      "sponsors": [
+        "christopher-e-buonanno",
+        "daniel-robert-wall",
+        "richard-d-campopiano"
+      ],
+      "cosponsors": [
+        "bridget-r-graziano",
+        "emilia-vaziri",
+        "frank-j-ritz-jr",
+        "kristen-e-haroian",
+        "michael-a-traficante"
+      ],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-04-20-6fad6c864335-motion-bc3a5d10fc76",
+          "date": "2026-04-20",
+          "action": "On motion by Councilman Buonanno, seconded by Councilwoman Vaziri, it was voted to adopt the above Resolution.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C557863.pdf",
+          "source_page": 3,
+          "minutes_status": "Approved",
+          "attribution": "Councilmen Campopiano, Buonanno and Council President Wall"
+        }
+      ],
+      "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/r2026_17.pdf?clientSite=Cranston-RI",
+      "carryover": false,
+      "cosponsor_evidence": [
+        {
+          "motion_id": "cranston-2026-04-20-6fad6c864335-motion-bc3a5d10fc76",
+          "date": "2026-04-20",
+          "context": "Resolution in Support of Fully Funding State Aid to Libraries to the Full Twenty-Five (25%) Percent. Sponsored by Councilmen Campopiano, Buonanno and Council President Wall",
+          "excerpt": "On motion by Councilman Buonanno, seconded by Councilwoman Vaziri, it was voted to adopt the above Resolution. Under Discussion: Council Vice-President Haroian, Councilmen Traficante, Ritz, Campopiano, Buonanno, Councilwomen Graziano and Vaziri asked to be added as co-sponsors. Councilman Buonanno stated that we have one of the best, if not the best Library Director in the State and we should all publicly acknowledge Director Garcia and the job that he does for our public libraries. Our libraries are the most used libraries in the State of Rhode Island and that is a tribute to the commitment that we have as a City and the commitment that Director Garcia has. He visits the library with his daughters approximately two times a week. He always has a book with him and reading is one of the most important thing we can do not only for our children but as we become adults to keep our mind sharp. Councilman Traficante stated that he goes back many years with several Directors of the Cranston Public Libraries and they have not only been superb for the City of Cranston for the children of our City, but most important they have been self- sustaining with very small appropriations from City government. Kudos to them. Roll call was taken on motion to adopt the above Resolution and motion passed on a vote 8-0. The following being recorded as voting \u201caye\u201d: Councilwoman Graziano, Councilmen Ritz, Traficante, Councilwoman Vaziri, Councilmen Campopiano, Buonanno, Council Vice-President Haroian and Council President Wall",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C557863.pdf",
+          "source_page": 3
+        }
+      ]
+    },
+    {
+      "id": "resolution-2026-18",
+      "title": "Resolution honoring Rosalba Zanni for her years of service and dedication to the City of Cranston",
+      "category": "recognition",
+      "sponsors": [
+        "andy-m-andujar",
+        "bridget-r-graziano",
+        "christopher-e-buonanno",
+        "daniel-robert-wall",
+        "emilia-vaziri",
+        "frank-j-ritz-jr",
+        "kristen-e-haroian",
+        "michael-a-traficante",
+        "richard-d-campopiano"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-04-20-6fad6c864335-motion-7f16a93301b2",
+          "date": "2026-04-20",
+          "action": "On motion by Councilman Traficante, seconded by Councilman Campopiano, the above Resolution was adopted on a vote 8-0.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C557863.pdf",
+          "source_page": 3,
+          "minutes_status": "Approved",
+          "attribution": "Councilwoman Vaziri, Councilmen Campopiano, Buonanno, Councilwoman Graziano, Councilmen Andujar, Ritz, Traficante, Council Vice-President Haroian and Council President Wall"
+        }
+      ],
+      "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/r2026_18.pdf?clientSite=Cranston-RI",
+      "carryover": false
+    },
+    {
+      "id": "resolution-2026-16",
+      "title": "Resolution Proclaiming April 2026 Genocide Awareness and Prevention Month",
+      "category": "recognition",
+      "sponsors": [
+        "daniel-robert-wall",
+        "kristen-e-haroian"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-04-20-6fad6c864335-motion-68e26ed94cb1",
+          "date": "2026-04-20",
+          "action": "On motion by Councilman Buonanno, seconded by Councilwoman Vaziri, the above Resolution was adopted on a vote 8-0.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C557863.pdf",
+          "source_page": 2,
+          "minutes_status": "Approved",
+          "attribution": "Mayor Hopkins, Council Vice-President Haroian and Council President Wall"
+        }
+      ],
+      "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/r2026_16.pdf?clientSite=Cranston-RI",
+      "carryover": false
+    },
+    {
+      "id": "ordinance-04-26-04",
+      "title": "4-26-04 Ordinance in amendment of Chapter 17 of the Code of the City of Cranston as amended, entitled \u201cZoning\u201d",
+      "category": "ordinance",
+      "sponsors": [
+        "andy-m-andujar"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-04-20-6fad6c864335-aggregate-74446a9e1a90",
+          "date": "2026-04-20",
+          "action": "On motion by Councilman Traficante, seconded by Council Vice-President Haroian, it was voted to refer all above New Business as a block to appropriate Committees. Motion passed on a vote of 8-0.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C557863.pdf",
+          "source_page": 12,
+          "minutes_status": "Approved",
+          "attribution": "Councilman Andujar"
+        }
+      ],
+      "adopted_text": null,
+      "carryover": false
+    },
+    {
+      "id": "ordinance-02-26-02",
+      "title": "2-26-02 ORDINANCE IN AMENDMENT OF TITLE 10, CHAPTER 12, SECTION 100 OF THE CITY OF CRANSTON CODE OF ORDINANCES, 2005, ENTITLED \u2018RIGHT TURNS PROHIBITED\u2019",
+      "category": "ordinance",
+      "sponsors": [
+        "bridget-r-graziano"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-03-16-15d0c7f6d09e-motion-ed5bb9eb5e58",
+          "date": "2026-03-16",
+          "action": "On motion by Council Vice-President Haroian, seconded by Councilman Buonanno, the above Ordinance was adopted on a vote of 9-0.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C554945.pdf",
+          "source_page": 4,
+          "minutes_status": "Approved",
+          "attribution": "Councilwoman Graziano"
+        }
+      ],
+      "adopted_text": null,
+      "carryover": false
+    },
+    {
+      "id": "resolution-2026-11",
+      "title": "RESOLUTION IN MEMORY OF FORMER COUNCIL PRESIDENT CARLO SPIRITO, JR",
+      "category": "recognition",
+      "sponsors": [
+        "bridget-r-graziano",
+        "christopher-e-buonanno",
+        "daniel-robert-wall"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-03-16-15d0c7f6d09e-motion-e1363bcd5927",
+          "date": "2026-03-16",
+          "action": "On motion by Councilman Traficante, seconded by Council Vice-President Haroian, the above Resolution was adopted on a vote of 9-0.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C554945.pdf",
+          "source_page": 2,
+          "minutes_status": "Approved",
+          "attribution": "Councilwoman Graziano, Councilman Buonanno and Council President Wall"
+        }
+      ],
+      "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/r2026_11.pdf?clientSite=Cranston-RI",
+      "carryover": false
+    },
+    {
+      "id": "ordinance-02-26-01",
+      "title": "2-26-01 ORDINANCE IN AMENDMENT OF TITLE 10, CHAPTER 32, SECTION 030 OF THE CITY OF CRANSTON CODE OF ORDINANCES, 2005, ENTITLED \u2018MULTI-WAY STOP INTERSECTIONS-ENUMERATED\u2019",
+      "category": "ordinance",
+      "sponsors": [
+        "michael-a-traficante"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-03-16-15d0c7f6d09e-motion-cbf176e41eb3",
+          "date": "2026-03-16",
+          "action": "On motion by Council Vice-President Haroian, seconded by Councilman Andujar, the above Ordinance was adopted on a vote of 9-0.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C554945.pdf",
+          "source_page": 4,
+          "minutes_status": "Approved",
+          "attribution": "Councilman Traficante"
+        }
+      ],
+      "adopted_text": null,
+      "carryover": false
+    },
+    {
+      "id": "resolution-2026-12A",
+      "title": "RESOLUTION RECOGNIZING AND CELEBRATING ST. PATRICK\u2019S DAY IN THE CITY OF CRANSTON",
+      "category": "recognition",
+      "sponsors": [
+        "daniel-robert-wall",
+        "kristen-e-haroian"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-03-16-15d0c7f6d09e-motion-936c1c1656f9",
+          "date": "2026-03-16",
+          "action": "On motion by Councilman Traficante, seconded by Councilman Andujar, the above Resolution was adopted on a vote of 9-0.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C554945.pdf",
+          "source_page": 2,
+          "minutes_status": "Approved",
+          "attribution": "Council President Wall and Council Vice- President Haroian"
+        }
+      ],
+      "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/r2026_12A.pdf?clientSite=Cranston-RI",
+      "carryover": false
+    },
+    {
+      "id": "resolution-2026-12",
+      "title": "RESOLUTION COMMEMORATING THE CELEBRATION OF ST. JOSEPH\u2019S DAY",
+      "category": "recognition",
+      "sponsors": [
+        "andy-m-andujar",
+        "christopher-e-buonanno",
+        "emilia-vaziri"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-03-16-15d0c7f6d09e-motion-62ee83197b0c",
+          "date": "2026-03-16",
+          "action": "On motion by Councilman Andujar, seconded by Council Vice-President Haroian, the above Resolution was adopted on a vote of 9-0.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C554945.pdf",
+          "source_page": 2,
+          "minutes_status": "Approved",
+          "attribution": "Councilmen Andujar, Buonanno and Councilwoman Vaziri"
+        }
+      ],
+      "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/r2026_12.pdf?clientSite=Cranston-RI",
+      "carryover": false
+    },
+    {
+      "id": "resolution-2026-13",
+      "title": "RESOLUTION RECOGNIZING MARCH AS WOMEN\u2019S HISTORY MONTH IN CRANSTON",
+      "category": "recognition",
+      "sponsors": [
+        "bridget-r-graziano",
+        "daniel-robert-wall",
+        "emilia-vaziri",
+        "kristen-e-haroian"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-03-16-15d0c7f6d09e-motion-4cb146eb27c2",
+          "date": "2026-03-16",
+          "action": "On motion by Councilman Traficante, seconded by Councilman Andujar, the above Resolution was adopted on a vote of 9-0.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C554945.pdf",
+          "source_page": 3,
+          "minutes_status": "Approved",
+          "attribution": "Councilwomen Vaziri, Graziano, Council Vice-President Haroian, Council President Wall and Mayor Hopkins"
+        }
+      ],
+      "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/r2026_13.pdf?clientSite=Cranston-RI",
+      "carryover": false
+    },
+    {
+      "id": "resolution-2026-10",
+      "title": "RESOLUTION REQUESTING THE GENERAL ASSEMBLY CONSIDER SWIFT ACTION TO CHANGE THE DATE OF THE SEPTEMBER 2026 RHODE ISLAND STATEWIDE PRIMARY ELECTION DUE TO CONCERNS REGARDING THE LABOR DAY HOLIDAY",
+      "category": "position",
+      "sponsors": [
+        "daniel-robert-wall",
+        "richard-d-campopiano"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-02-17-d4b17ea2bcfd-motion-cb429b90a289",
+          "date": "2026-02-17",
+          "action": "On motion by Councilman Campopiano, seconded by Councilwoman Vaziri, the above Resolution was adopted on a vote of 9-0.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C550015.pdf",
+          "source_page": 6,
+          "minutes_status": "Draft",
+          "attribution": "Council President Wall and Councilman Campopiano"
+        }
+      ],
+      "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/260217_08e3.pdf?clientSite=Cranston-RI",
+      "carryover": false
+    },
+    {
+      "id": "ordinance-12-26-02S",
+      "title": "12-26-02S ORDINANCE AUTHORIZING THE ESTABLISHMENT OF REVOLVING FUND FOR SCHOOL BUILDING IMPROVEMENTS. As substituted by Special Finance Committee 1/20/2026",
+      "category": "ordinance",
+      "sponsors": [],
+      "cosponsors": [
+        "andy-m-andujar",
+        "christopher-e-buonanno",
+        "daniel-robert-wall",
+        "emilia-vaziri",
+        "frank-j-ritz-jr",
+        "kristen-e-haroian",
+        "michael-a-traficante"
+      ],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-02-17-d4b17ea2bcfd-motion-b30b7fda9a44",
+          "date": "2026-02-17",
+          "action": "On motion by Council Vice-President Haroian, seconded by Councilman Andujar, the above Ordinance was adopted on a vote of 9-0.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C550015.pdf",
+          "source_page": 12,
+          "minutes_status": "Draft",
+          "attribution": "Mayor Kenneth J. Hopkins ; Co-sponsored by Councilmen Buonanno, Traficante, Councilmen Andujar, Ritz, Councilwoman Vaziri, Council Vice-President Haroian and Council President Wall"
+        }
+      ],
+      "adopted_text": null,
+      "carryover": false
+    },
+    {
+      "id": "ordinance-12-25-03",
+      "title": "12-25-03 ORDINANCE AUTHORIZING THE SALE OF CITY-OWNED PROPERTY LOCATED ON CARDINAL RD. (ASSESSOR PLAT 24, LOT 204), PURSUANT TO CHARTER SECTION 7.08. As amended by City Council 1/20/2026",
+      "category": "ordinance",
+      "sponsors": [],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-01-20-ca93d535b42e-motion-86239dfb2e91",
+          "date": "2026-01-20",
+          "action": "On motion by Council Vice-President Wall, seconded by Councilman Andujar, it was voted to amend above Ordinance as stated by Solicitor and re-advertise for February Council meeting for passage.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C549150.pdf",
+          "source_page": 3,
+          "minutes_status": "Approved",
+          "attribution": "Mayor Hopkins"
+        },
+        {
+          "motion_id": "cranston-2026-02-17-d4b17ea2bcfd-motion-a2143c99b2a3",
+          "date": "2026-02-17",
+          "action": "On motion by Councilman Andujar, seconded by Council Vice-President Haroian, it was voted to approve the above Ordinance.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C550015.pdf",
+          "source_page": 12,
+          "minutes_status": "Draft",
+          "attribution": "Mayor Hopkins"
+        }
+      ],
+      "adopted_text": null,
+      "carryover": true
+    },
+    {
+      "id": "resolution-2026-6",
+      "title": "RESOLUTION HONORING THE LIFE AND MEMORY OF DOLORES (RAVO) MELILLO",
+      "category": "recognition",
+      "sponsors": [
+        "andy-m-andujar",
+        "christopher-e-buonanno",
+        "michael-a-traficante"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-02-17-d4b17ea2bcfd-motion-94645cfa8fd9",
+          "date": "2026-02-17",
+          "action": "On motion by Councilman Buonanno, seconded by Council Vice-President Haroian, the above Resolution was adopted on a vote of 8-0.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C550015.pdf",
+          "source_page": 2,
+          "minutes_status": "Draft",
+          "attribution": "Councilmen Andujar, Buonanno and Traficante"
+        }
+      ],
+      "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/260217_07a.pdf?clientSite=Cranston-RI",
+      "carryover": false
+    },
+    {
+      "id": "resolution-2026-4",
+      "title": "RESOLUTION REQUESTING THE ADMINISTRATION AND CITY COUNCIL CELEBRATE BLACK HISTORY MONTH IN CRANSTON THROUGHOUT THE MONTH OF FEBRUARY",
+      "category": "recognition",
+      "sponsors": [
+        "andy-m-andujar",
+        "christopher-e-buonanno",
+        "emilia-vaziri",
+        "frank-j-ritz-jr"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-02-17-d4b17ea2bcfd-motion-935cab8b81bd",
+          "date": "2026-02-17",
+          "action": "On motion by Councilman Buonanno, seconded by Council Vice-President Haroian, the above Resolution was adopted on a vote of 8-0.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C550015.pdf",
+          "source_page": 3,
+          "minutes_status": "Draft",
+          "attribution": "Councilmen Buonanno, Andujar, Ritz and Councilwoman Vaziri"
+        }
+      ],
+      "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/260217_07d.pdf?clientSite=Cranston-RI",
+      "carryover": false
+    },
+    {
+      "id": "resolution-2026-3",
+      "title": "RESOLUTION HONORING MICHAEL C. TRAFICANTE ON HIS RETIREMENT FROM THE CRANSTON SCHOOL DEPARTMENT",
+      "category": "recognition",
+      "sponsors": [
+        "andy-m-andujar",
+        "bridget-r-graziano",
+        "christopher-e-buonanno",
+        "daniel-robert-wall",
+        "emilia-vaziri",
+        "frank-j-ritz-jr",
+        "kristen-e-haroian",
+        "michael-a-traficante",
+        "richard-d-campopiano"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-02-17-d4b17ea2bcfd-motion-6b2ab29432f4",
+          "date": "2026-02-17",
+          "action": "On motion by Councilman Buonanno, seconded by Councilwoman Vaziri, the above Resolution was adopted on a vote of 8-0.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C550015.pdf",
+          "source_page": 3,
+          "minutes_status": "Draft",
+          "attribution": "Mayor Hopkins, Councilwoman Vaziri, Councilmen Campopiano, Buonanno, Councilwoman Graziano, Councilmen Andujar, Ritz, Traficante, Council Vice-President Haroian and Council President Wall"
+        }
+      ],
+      "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/260217_07c.pdf?clientSite=Cranston-RI",
+      "carryover": false
+    },
+    {
+      "id": "resolution-2026-7",
+      "title": "RESOLUTION EXPRESSING THE SUPPORT OF THE CRANSTON CITY COUNCIL FOR 2026-S 2280, AN ACT RELATING TO EDUCATION HEALTH AND SAFETY OF PUPILS",
+      "category": "position",
+      "sponsors": [
+        "frank-j-ritz-jr",
+        "kristen-e-haroian"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-02-17-d4b17ea2bcfd-motion-61e312a49324",
+          "date": "2026-02-17",
+          "action": "On motion by Councilman Andujar, seconded by Council Vice-President Haroian, the above Resolution was adopted on a vote of 9-0.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C550015.pdf",
+          "source_page": 2,
+          "minutes_status": "Draft",
+          "attribution": "Councilman Ritz and Council Vice-President Haroian"
+        }
+      ],
+      "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/260217_07b.pdf?clientSite=Cranston-RI",
+      "carryover": false
+    },
+    {
+      "id": "resolution-2026-5",
+      "title": "RESOLUTION COMMEMORATING THE 182ND ANNIVERSARY OF DOMINICAN REPUBLIC INDEPENDENCE ON FEBRUARY 27, 2026",
+      "category": "recognition",
+      "sponsors": [
+        "andy-m-andujar",
+        "christopher-e-buonanno"
+      ],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-02-17-d4b17ea2bcfd-motion-5746f6d371ec",
+          "date": "2026-02-17",
+          "action": "On motion by Councilman Ritz, seconded by Councilwoman Vaziri, the above Resolution was adopted on a vote of 8-0.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C550015.pdf",
+          "source_page": 3,
+          "minutes_status": "Draft",
+          "attribution": "Councilmen Buonanno and Andujar"
+        }
+      ],
+      "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/260217_07e.pdf?clientSite=Cranston-RI",
+      "carryover": false
+    },
+    {
+      "id": "ordinance-12-25-06S",
+      "title": "12-25-06S Ordinance amending the City of Cranston 2025-2026 Municipal Budget (Rescue 5 \u2013 Full Time)",
+      "category": "ordinance",
+      "sponsors": [],
+      "cosponsors": [],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-01-20-ca93d535b42e-motion-b6dd21fe5140",
+          "date": "2026-01-20",
+          "action": "On motion by Council Vice-President Haroian, seconded by Councilman Buonanno, the above Ordinance was adopted on a vote of 8-0.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C549150.pdf",
+          "source_page": 3,
+          "minutes_status": "Approved",
+          "attribution": "Mayor Hopkins"
+        }
+      ],
+      "adopted_text": null,
+      "carryover": true
+    },
+    {
+      "id": "ordinance-12-25-01",
+      "title": "12-25-01 Ordinance in amendment of Chapter 17 of the Code of the City of Cranston, as amended, entitled \u201cZoning\u201d",
+      "category": "ordinance",
+      "sponsors": [
+        "frank-j-ritz-jr"
+      ],
+      "cosponsors": [
+        "andy-m-andujar",
+        "christopher-e-buonanno"
+      ],
+      "observations": [
+        {
+          "motion_id": "cranston-2026-01-20-ca93d535b42e-motion-1cbebbfeb134",
+          "date": "2026-01-20",
+          "action": "On motion by Council Vice-President Haroian, seconded by Councilman Traficante, the above Ordinance was adopted on a vote of 8-0.",
+          "source_url": "https://opengov.sos.ri.gov/Common/DownloadMeetingFiles?FilePath=%5CMinutes%5C4182%5C2026%5C549150.pdf",
+          "source_page": 3,
+          "minutes_status": "Approved",
+          "attribution": "Councilman Ritz. ; Co-sponsored by Councilmen Andujar and Bu0onanno"
+        }
+      ],
+      "adopted_text": null,
+      "carryover": true
+    }
+  ]
+}

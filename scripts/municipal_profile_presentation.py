@@ -50,6 +50,10 @@ def refresh():
   s=re.sub(r'(<section class="card" id="elections"><h2>.*?</h2>)',lambda m:m[1]+"<p class=\"source municipal-election-links\"><a href=\"#elections\">2026 results</a><a href=\"#election-history\">Past results</a><a href=\"#primaries\">Primary history</a></p>",s,count=1,flags=re.S)
   s=re.sub(r'<p class="source municipal-record-links">.*?</p>','',s,flags=re.S)
   s=re.sub(r'(<section class="card" id="record"><h2>.*?</h2>)',lambda m:m[1]+"<p class=\"source municipal-record-links\"><a href=\"#votes\">Council votes and attendance</a></p>",s,count=1,flags=re.S)
-  s=re.sub(r'municipal-profile.css\?v=[^"\s]+','municipal-profile.css?v=20261122-local-refresh',s)
+  # Keep sponsorship cards through every records/presentation refresh.
+  from cranston_sponsorship import render_profile, DATA
+  if DATA.exists():s=render_profile(s,slug,json.loads(DATA.read_text()))
+  s=re.sub(r'municipal-profile.css\?v=[^"\s]+','municipal-profile.css?v=20261122-sponsorship',s)
   path.write_text(s)
 if __name__=='__main__':refresh()
+

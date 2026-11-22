@@ -11,3 +11,27 @@ body{font-size:16px;line-height:1.6}.preview,.eyebrow,.photo-note,.source,.tag,.
 .bffi-against{--rating:#a13847;--tint:#fff5f6}.bffi-unavailable{--rating:#596779;--tint:#f5f7fa}
 .municipal-bffi-head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px}.municipal-bffi .eyebrow{color:var(--rating);font-weight:800;letter-spacing:.06em}.municipal-bffi h3{font-size:23px;margin:6px 0}.municipal-bffi-badge{background:var(--rating);color:white;font-size:24px;padding:10px 18px;border-radius:5px;white-space:nowrap}.municipal-bffi details{border-top:1px solid #d5e2e9;padding-top:16px;margin-top:20px}.municipal-bffi summary{color:#1e5096;font-weight:800;cursor:pointer}.endorsement-period{font-size:14px}.municipal-year{display:flex;flex-direction:column;gap:3px;min-height:65px;background:#2053a0;color:#fff;text-decoration:none;padding:12px 8px}.municipal-year:hover{background:#153c78;color:#fff}.municipal-year small{font-size:14px;color:#fff}.municipal-year::after{content:none}.election>div>small{display:block}.election>div>small a{font-size:13px}#election-history,#communications{border-top-color:#2053a0}#communications .actions{flex-wrap:wrap}#communications details{margin-top:22px}
 @media(max-width:600px){.municipal-bffi{padding:16px}.municipal-bffi-head{gap:12px}.municipal-bffi h3{font-size:20px}.municipal-bffi-badge{font-size:20px;padding:8px 12px}.municipal-bffi .eyebrow{font-size:12px}.election{gap:10px}.election .result{font-size:20px}}
+
+/* Observed sponsorship activity uses the state profiles' blue ruled metric cards. */
+#sponsorship{border-top-color:#2053a0}
+.sponsorship-stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:22px 0}
+.sponsorship-stats>div{padding:16px 12px;background:#f2f6fb;border-top:3px solid #2053a0;border-radius:4px}
+.sponsorship-stats b{display:block;font-size:2rem;color:#17264b;line-height:1.2}
+.sponsorship-stats span{display:block;margin-top:8px;font-size:14px;line-height:1.45;color:#415570}
+.sponsorship-coverage{padding:16px 18px;border-left:4px solid #255c99;background:#f2f6fb;color:#263b57;line-height:1.65}
+.sponsorship-list,.sponsorship-method{border-top:1px solid #d5e2e9;padding-top:16px;margin-top:20px}
+.sponsorship-list>summary,.sponsorship-method>summary,.sponsorship-events>summary{font-size:16px;font-weight:700;color:#2053a0;cursor:pointer;padding:7px 0}
+.sponsorship-item{padding:20px 0;border-bottom:1px solid #d5e2e9;overflow-wrap:anywhere}
+.sponsorship-item h4{font-size:18px;line-height:1.5;margin:10px 0 14px;color:#17264b}
+.sponsorship-labels{display:flex;flex-wrap:wrap;gap:8px;margin:0}
+.sponsorship-type,.sponsorship-role{display:inline-block;font-size:14px;line-height:1.5;padding:4px 9px;border-radius:4px;background:#eaf1fb;color:#204e88}
+.sponsorship-role{background:#f0f3f7;color:#40546c}
+.sponsorship-events ul{padding-left:20px}.sponsorship-events li{margin:16px 0}.sponsorship-events p{margin:8px 0}
+.sponsorship-directory .table-scroll{overflow-x:auto}.sponsorship-directory table{min-width:900px}
+.sponsorship-directory caption{text-align:left;line-height:1.6;margin:12px 0;color:#415570}
+.sponsorship-directory th,.sponsorship-directory td{vertical-align:top}
+.sponsorship-directory [hidden],#sponsorship [hidden]{display:none!important}
+.sponsorship-directory a:focus-visible,#sponsorship a:focus-visible,.sponsorship-directory summary:focus-visible,#sponsorship summary:focus-visible{outline:3px solid #77a9ed;outline-offset:3px}
+@media(max-width:900px){.sponsorship-stats{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:600px){.sponsorship-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.sponsorship-stats b{font-size:1.8rem}.sponsorship-coverage{padding:12px 14px}}
+

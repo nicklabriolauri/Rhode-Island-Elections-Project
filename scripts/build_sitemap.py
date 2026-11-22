@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 BASE='https://www.rhodeislandelectionsproject.org'
 run=json.loads((ROOT/'data/whos_running_2026.json').read_text())
 res=json.loads((ROOT/'data/primary_results_2026.json').read_text())
-urls=['/','/general-results.html','/cranston-map.html','/primary-results.html','/running.html','/ballot.html','/finance.html','/house-15-finance-model.html','/house-15-election-test.html','/endorsements.html','/lookup.html','/map.html','/methodology.html','/about.html','/support.html']
+urls=['/cranston-sponsorship.html','/','/general-results.html','/cranston-map.html','/primary-results.html','/running.html','/ballot.html','/finance.html','/house-15-finance-model.html','/house-15-election-test.html','/endorsements.html','/lookup.html','/map.html','/methodology.html','/about.html','/support.html']
 for chamber in ('house','senate'):
     for district in run.get('chambers',{}).get(chamber,{}):
         urls.append(f'/races/{chamber}-{district}.html')
@@ -29,3 +29,4 @@ for u in seen:
 lines.append('</urlset>')
 (ROOT/'sitemap.xml').write_text('\n'.join(lines)+'\n')
 print(f'wrote {len(seen)} sitemap URLs')
+

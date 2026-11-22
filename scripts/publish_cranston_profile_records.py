@@ -4,6 +4,8 @@ import json,re
 from html import escape as e
 ROOT=Path(__file__).resolve().parents[1]
 def publish():
+ from cranston_sponsorship import build
+ build()
  d=json.loads((ROOT/'data/cranston/records-2026/records.json').read_text());current={m['id']:m for m in d['members']}
  registry=json.loads((ROOT/'data/local_representatives.json').read_text())
  for person in registry['profiles']:
@@ -49,5 +51,6 @@ def publish():
  refresh()
  print('Updated nine Cranston profile sections')
 if __name__=='__main__':publish()
+
 
 
