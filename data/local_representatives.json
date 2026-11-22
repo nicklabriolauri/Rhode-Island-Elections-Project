@@ -103,7 +103,7 @@
           }
         ]
       },
-      "finance_status": "not_reviewed",
+      "finance_status": "available",
       "record_status": "New term begins January 4, 2027.",
       "endorsements_status": "Not yet verified",
       "contact": {
@@ -132,7 +132,8 @@
             "party": "DEM"
           }
         ]
-      }
+      },
+      "finance_url": "/finance.html?slug=avery-therese-mangahas"
     },
     {
       "slug": "sara-jane-haupt",
@@ -369,7 +370,7 @@
           }
         ]
       },
-      "finance_status": "not_reviewed",
+      "finance_status": "available",
       "record_status": "Official council records available; individual roll calls not yet transcribed.",
       "endorsements_status": "Not yet verified",
       "contact": {
@@ -384,7 +385,8 @@
         "Public Works",
         "Safety Services & Licenses",
         "School Buildings"
-      ]
+      ],
+      "finance_url": "/finance.html?slug=andy-m-andujar"
     },
     {
       "slug": "frank-j-ritz-jr",
@@ -470,7 +472,7 @@
           }
         ]
       },
-      "finance_status": "not_reviewed",
+      "finance_status": "available",
       "record_status": "Official council records available; individual roll calls not yet transcribed.",
       "endorsements_status": "Not yet verified",
       "contact": {
@@ -482,7 +484,8 @@
         "Claims",
         "Finance",
         "Safety Services & Licenses"
-      ]
+      ],
+      "finance_url": "/finance.html?slug=frank-j-ritz-jr"
     },
     {
       "slug": "michael-a-traficante",
@@ -533,7 +536,7 @@
           }
         ]
       },
-      "finance_status": "not_reviewed",
+      "finance_status": "available",
       "record_status": "Official council records available; individual roll calls not yet transcribed.",
       "endorsements_status": "Not yet verified",
       "contact": {
@@ -545,7 +548,8 @@
         "Finance",
         "Safety Services & Licenses",
         "School Buildings"
-      ]
+      ],
+      "finance_url": "/finance.html?slug=michael-a-traficante"
     },
     {
       "slug": "daniel-robert-wall",
@@ -631,7 +635,7 @@
           }
         ]
       },
-      "finance_status": "not_reviewed",
+      "finance_status": "available",
       "record_status": "Official council records available; individual roll calls not yet transcribed.",
       "endorsements_status": "Not yet verified",
       "contact": {
@@ -639,7 +643,8 @@
         "phone": "401-935-8935",
         "source": "https://www.cranstonri.gov/about/city-council/dan-wall-ward-6/"
       },
-      "current_committees": []
+      "current_committees": [],
+      "finance_url": "/finance.html?slug=daniel-robert-wall"
     }
   ]
 }
