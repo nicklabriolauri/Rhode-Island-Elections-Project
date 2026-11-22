@@ -1,0 +1,37 @@
+name: Publish project updates
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'data/project-updates.json'
+      - 'scripts/build_project_updates.py'
+      - '.github/workflows/project-updates.yml'
+permissions:
+  contents: write
+concurrency:
+  group: project-updates
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build dated announcements, feed and banner
+        run: |
+          python scripts/build_project_updates.py
+      - name: Publish against latest source
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3; do
+            git fetch origin main
+            # This disposable Actions checkout regenerates only the three outputs below.
+            git reset --hard origin/main
+            python scripts/build_project_updates.py
+            git add updates.html updates.xml index.html
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m 'Publish project update notices and homepage headlines'
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          exit 1

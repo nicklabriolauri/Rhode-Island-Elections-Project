@@ -24,7 +24,6 @@
   let paused=reduced.matches;
   const copy=group.cloneNode(true);
   copy.setAttribute('aria-hidden','true');
-  copy.setAttribute('inert','');
   copy.querySelectorAll('a').forEach(a=>a.setAttribute('tabindex','-1'));
   track.appendChild(copy);
   function sync(){
@@ -38,3 +37,4 @@
   strip.classList.add('ticker-ready');
   sync();
 })();
+

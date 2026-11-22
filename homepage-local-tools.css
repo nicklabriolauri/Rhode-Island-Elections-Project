@@ -77,3 +77,19 @@ body{background:#0e1c31;color:#f4f6f9}
 .info-section,.news-section,.entry-section,.entry-card,.entry-card.research,.finance-spotlight{background:#16273e;border-color:#41556d;border-radius:6px;box-shadow:none}
 .finance-spotlight-action{background:#edf3f7;color:#1d425f;border-radius:4px;box-shadow:none}
 @media(max-width:600px){.hero{border-radius:6px}.local-map-dialog{padding:20px}.local-map-dialog h2{font-size:22px}.local-map-dialog .local-map-link{padding:17px 4px}#homeCtaRow a{font-size:14px}}
+
+/* Solid colors distinguish map destinations without gradients or glow. */
+.local-map-dialog .local-map-grid{gap:16px}
+.local-map-dialog .local-map-link{padding:20px 18px;border:1px solid transparent;border-radius:4px;color:#fff}
+.local-map-dialog .map-choice-current,.local-map-dialog .map-choice-current:hover{background:#234f70}
+.local-map-dialog .map-choice-history,.local-map-dialog .map-choice-history:hover{background:#625374}
+.local-map-dialog .map-choice-cranston,.local-map-dialog .map-choice-cranston:hover{background:#2e665e}
+.local-map-dialog .map-choice-providence,.local-map-dialog .map-choice-providence:hover{background:#7a4357}
+.local-map-dialog .local-map-link strong{color:#fff}
+.local-map-dialog .local-map-link span{color:#f1f4f7}
+.local-map-dialog .local-map-link:hover{filter:brightness(1.1);border-color:#b9c8d5}
+.riep-updates-label{color:#bdcfdf;text-decoration:none}
+.riep-updates-label:hover{text-decoration:underline;text-underline-offset:4px}
+.riep-ticker-group a{cursor:pointer}
+@media(max-width:600px){.local-map-dialog .local-map-link{padding:18px 16px}}
+
