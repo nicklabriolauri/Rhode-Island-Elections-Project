@@ -553,6 +553,8 @@
   </style>
 <style>.address-rating{font-size:13px;padding:9px 0;border-top:1px solid #d8dee5;border-bottom:1px solid #d8dee5}.address-rating a{color:#244f7b}.address-rating small{display:block;color:#596779;margin-top:3px}</style><script src="/election-results-2026.js?v=20261119" defer></script>
 <script src="/local-representation.js?v=20261121-citywide"></script>
+<link rel="stylesheet" href="/homepage-local-tools.css?v=20261122">
+<script src="/homepage-local-tools.js?v=20261122" defer></script>
 </head>
 <body>
   <div class="shell">
@@ -626,7 +628,8 @@
             </div>
             <span class="primary-progress-action"><span class="primary-progress-action-label">View results</span><span class="primary-progress-arrow" aria-hidden="true">→</span></span>
           </a>
-          <div class="cta-row" id="homeCtaRow"></div>
+          <div class="riep-updates" id="riepUpdates" role="region" aria-label="Recent RIEP updates"><span class="riep-updates-label">Project updates</span><a class="riep-updates-item" data-update-link href="/cranston-map.html?colors=returns">Cranston: nine council profiles, campaign information and 2026 results</a><div class="riep-updates-controls"><button type="button" data-update-prev aria-label="Previous update">←</button><button type="button" data-update-pause>Pause</button><button type="button" data-update-next aria-label="Next update">→</button></div><span class="sr-only" data-update-status aria-live="polite"></span></div>
+<div class="cta-row" id="homeCtaRow"></div>
           <div class="feature-tools">
             <button type="button" class="feature-toggle" id="homeFeatureToggle" aria-expanded="false" aria-controls="homeFeaturePanel">More map views</button>
             <div class="feature-panel" id="homeFeaturePanel" hidden>
@@ -646,12 +649,7 @@
 
 
     <!-- Local municipal maps: Cranston overview and Providence pilot. -->
-    <section aria-label="Local elections test" style="margin:24px 0;padding:22px 26px;border:1px solid rgba(255,255,255,.18);border-left:4px solid #8da8ff;background:#0e1632;">
-      <div style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#b8c8ff;">Local elections · Test section</div>
-      <h3 style="margin:8px 0;font-size:23px;">Explore your local wards and precincts</h3>
-      <p style="margin:0 0 12px;color:#e0e7f5;">Explore Cranston’s six wards, precincts, and local election returns, or visit the Providence council map.</p>
-      <a href="/cranston-map.html" style="color:white;font-weight:700;margin-right:24px;">Explore Cranston</a><a href="/providence-council-test.html" style="color:white;font-weight:700;">Explore Providence</a>
-    </section>
+    <section class="local-coverage" id="local-coverage" aria-labelledby="localCoverageTitle"><div class="local-kicker">Local government · Expanded coverage</div><h2 id="localCoverageTitle">Your city. Your ward. Your representatives.</h2><p>Explore local boundaries and the people representing your neighborhood, alongside RIEP’s statewide coverage.</p><div class="local-map-grid"><a class="local-map-link" href="/cranston-map.html?colors=returns"><strong>Cranston →</strong><span>Six wards, precinct boundaries and 2026 results. Profiles for all nine incoming council members, with available finance, votes and attendance.</span><em>Explore the ward map</em></a><a class="local-map-link" href="/providence-council-test.html"><strong>Providence →</strong><span>Explore council wards and precincts in our local mapping pilot. Coverage is still being developed.</span><em>Explore the map pilot</em></a></div></section>
     <section class="below-fold" aria-label="Additional project sections">
       <section class="news-section" aria-labelledby="newsTitle">
         <div class="news-head">
@@ -1855,5 +1853,7 @@
   <script src="supplemental-2026.js?v=20260910f"></script>
 <script src="/independent-finance-bridge.js?v=20260910h"></script>
 <script src="/independent-finance-bridge.js?v=20260910"></script>
+<dialog class="local-map-dialog" id="localMapChooser" aria-labelledby="mapChooserTitle"><div class="local-map-dialog-head"><h2 id="mapChooserTitle">Explore Rhode Island election maps</h2><button type="button" data-close-map-chooser autofocus>Close</button></div><p>Choose statewide results or a local ward map.</p><div class="local-map-grid"><a class="local-map-link" href="/general-results.html"><strong>2026 House &amp; Senate →</strong><span>Reported results across all 113 legislative districts.</span></a><a class="local-map-link" href="/map.html"><strong>Historical statewide maps →</strong><span>Explore prior elections, turnout and competitiveness.</span></a><a class="local-map-link" href="/cranston-map.html?colors=returns"><strong>Cranston wards →</strong><span>Six wards, precincts, 2026 results and council profiles.</span></a><a class="local-map-link" href="/providence-council-test.html"><strong>Providence wards →</strong><span>Council ward and precinct map · pilot coverage.</span></a></div><p class="map-note">Local maps are available for Cranston and Providence. More municipalities will be added as records and boundaries are verified.</p></dialog>
 </body>
 </html>
+

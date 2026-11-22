@@ -45,6 +45,9 @@ def publish():
     section='<section class="card" id="endorsements"><h2>Endorsements</h2><p><strong>'+e(endorsement['organization'])+'</strong> · 2026 City Council election</p><p class="source"><a href="'+e(endorsement['source'])+'">Published endorsement list</a>. Reviewed '+e(extras['reviewed'])+'. Endorsements are listed separately from issue ratings; inclusion is not an endorsement by RIEP.</p></section>'
     s,n=re.subn(r'<section class="card" id="endorsements">.*?</section>',lambda _:section,s,count=1,flags=re.S);assert n==1
   path.write_text(s)
+ from municipal_profile_presentation import refresh
+ refresh()
  print('Updated nine Cranston profile sections')
 if __name__=='__main__':publish()
+
 
