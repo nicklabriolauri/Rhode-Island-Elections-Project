@@ -28,6 +28,8 @@ def publish():
   body+='<p class="source"><a href="/cranston-records.html">2026 resolution archive, attendance and coverage</a>. Named lists are checked against printed tallies. Draft minutes remain labeled, and unresolved source conflicts stay in the review queue.</p>'
   section='<section class="card" id="votes"><h2>Council votes and attendance</h2>'+body+'</section>'
   s=path.read_text();s,n=re.subn(r'<section class="card" id="votes">.*?</section>',lambda _:section,s,count=1,flags=re.S);assert n==1,path
+  s=s.replace('Official council minutes and ordinances are available. RIEP has not yet transcribed a member-specific list of sponsored measures or attendance for this profile.','Compiled 2026 votes and opening roll-call attendance appear below. A member-specific sponsorship history has not yet been compiled.')
+  s=s.replace('Named lists are checked against printed tallies.','Printed tallies are checked where available.')
   path.write_text(s)
  print('Updated nine Cranston profile sections')
 if __name__=='__main__':publish()

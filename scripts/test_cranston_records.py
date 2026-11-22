@@ -29,8 +29,8 @@ a=next(a for a in d['attendance'] if a['date']=='2026-01-20' and a['member_id']=
 a=next(a for a in d['attendance'] if a['date']=='2026-03-04' and a['member_id']=='kristen-e-haroian');assert a['status']=='Late arrival'
 a=next(a for a in d['attendance'] if a['date']=='2026-03-04' and a['member_id']=='christopher-e-buonanno');assert a['status']=='Not recorded'
 assert any(m['review_status']=='Aggregate only' and not m['votes'] and m['result']=='Unanimous' for m in d['motions'])
-assert len(d['resolutions'])==22 and any(r['number']=='2026-12A' for r in d['resolutions'])
-assert not any(r['number']=='2026-15' for r in d['resolutions'])
+assert len(d['resolutions'])>=22 and any(r['number']=='2026-12A' for r in d['resolutions'])
+raw=json.loads((R/'data/cranston/records-2026/sources.json').read_text());assert {r['number'] for r in d['resolutions']}=={r['number'] for r in raw['resolutions']}
 assert all(r.get('document_status')=='downloaded' and r.get('original_path','').endswith('.pdf') for r in d['resolutions'])
 assert all(r.get('source_url','').startswith('https://') for r in d['resolutions'])
 assert any(m['date']=='2026-11-16' and m['minutes_status']=='No minutes on file' for m in d['meeting_inventory'])
