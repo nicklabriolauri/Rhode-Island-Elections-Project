@@ -18,66 +18,6 @@
 .local-map-dialog{width:min(760px,calc(100% - 32px));max-height:85vh;box-sizing:border-box;overflow:auto;padding:28px;border:1px solid #afc7df;border-radius:8px;background:#fff;color:#16253f;box-shadow:0 25px 80px #0006}.local-map-dialog::backdrop{background:#07142cc9}.local-map-dialog-head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px}.local-map-dialog h2{margin:0;font-size:27px}.local-map-dialog p{font-size:16px;line-height:1.6;color:#52657e}.local-map-dialog button{padding:8px 13px;border:1px solid #b7c6d8;border-radius:4px;background:#eef4fb;color:#193b65;cursor:pointer;font-weight:700;min-height:44px}.local-map-dialog .local-map-link{background:#f1f6fc;border-color:#b8cee4;color:#194b87}.local-map-dialog .local-map-link span{color:#4c6078}.local-map-dialog .local-map-link em{color:#194b87}.local-map-dialog .local-map-link:hover{background:#e4effb}.local-map-dialog .local-map-grid{margin-top:20px}.local-map-dialog .map-note{font-size:14px}
 @media(max-width:600px){.local-map-grid{grid-template-columns:1fr}.local-coverage{padding:20px;margin:20px 12px}.local-coverage h2{font-size:24px}.local-map-dialog{padding:20px}.local-map-dialog h2{font-size:23px}.local-map-link{padding:16px}}
 
-/* RIEP editorial palette: ink navy, paper white and a restrained blue accent. */
-:root{--bg-1:#0e1c31;--bg-2:#15263e;--blue:#285879;--blue-dark:#1a405d;--line:#3c4d63;--shadow:none}
-body{background:#0e1c31;color:#f4f6f9}
-.brand-mark-wrap::before,.brand-mark-wrap::after,.hero::before{display:none}
-.hero{background:#16273e;border-color:#3c4d63;border-radius:8px;box-shadow:none}
-.hero-copy h2{letter-spacing:-.045em}
-.eyebrow.is-home{background:transparent;border:0;border-radius:0;padding:0;color:#bdcad8;box-shadow:none}
-.ocean-line{background:#8eabc5;border-radius:0;width:64px;height:3px}
-
-
-
-
-.hero-search{background:#1e324b;border-color:#4b6078;border-radius:6px;box-shadow:none}
-.hero-search-input,.hero-search-submit{border-radius:4px;box-shadow:none}
-.hero-search-submit{background:#fff;color:#173b5a;border:1px solid #fff;font-weight:700}
-.hero-search-submit:hover{background:#e8eff5;box-shadow:none;transform:none}
-.hero-search-toggle{border-radius:4px;background:#16283e;border-color:#607187}
-.hero-search-toggle button{border-radius:3px}.hero-search-toggle button.active{background:#fff;color:#183953;box-shadow:none}
-#homeCtaRow{gap:12px}
-#homeCtaRow a{background:#f6f8fa;color:#193550;border:1px solid #c0ceda;border-radius:4px;box-shadow:none;font-weight:700;min-height:48px;transition:background .15s ease,border-color .15s ease}
-#homeCtaRow a:hover{background:#dfe8f0;border-color:#fff;box-shadow:none;transform:none}
-#homeCtaRow a.maps{background:#2b597b;color:#fff;border-color:#86a7c2}
-#homeCtaRow a.maps:hover{background:#346b92;border-color:#b9d0e3}
-.primary-progress-card{background:#f5f8fb;border:1px solid #bacbd9;border-left:4px solid #7297b5;border-radius:4px;color:#17334f;box-shadow:none}
-.primary-progress-card:hover{background:#e8f0f6;border-color:#a7bece}
-.primary-progress-eyebrow,.primary-progress-subtitle{color:#48617a}
-.primary-progress-title,.primary-progress-action{color:#17334f}
-.primary-progress-badge{background:#e7eef4;color:#2f4d66;border-color:#bdccd9}
-.feature-toggle,.feature-card{border-radius:4px;background:transparent;border-color:#738297;box-shadow:none}
-.feature-toggle:hover,.feature-card:hover{background:#233850;border-color:#9dafc1;box-shadow:none;transform:none}
-.feature-card::before{display:none}
-.hero-search-action,.hero-search-action.primary,.hero-search-action.finance,.hero-search-action.compare{background:#f3f6f9;color:#214766;border:1px solid #bccbd8;border-radius:4px;box-shadow:none}
-.hero-search-action.primary{background:#285879;color:#fff;border-color:#285879}
-.hero-search-action:hover,.hero-search-match.is-clickable:hover,.hero-search-match-main:hover{box-shadow:none;transform:none}
-.hero-search-match-status.is-history,.hero-search-match-status.is-incumbent{background:#edf2f6;border-color:#b9cad8;color:#365571}
-.hero-search-overview,.hero-search-match,.hero-search-result-card{border-radius:5px;box-shadow:none}
-.hero-search-result-card,.hero-search-match.is-clickable:hover{background:#fff}
-.riep-updates{background:#101f34;border-color:#4b6078;border-left-color:#91adc5;border-radius:3px}
-.riep-updates-label{color:#bdcfdf}.riep-ticker-group a::after{color:#7894ac}
-.local-coverage{background:#13243a;border-color:#4b6078;border-left-color:#91adc5;border-radius:4px}
-.local-coverage .local-kicker{color:#bdcfdf}
-.local-map-link{background:transparent;border-color:#63798e;border-radius:3px}
-.local-map-link:hover{background:#213850;border-color:#a2b8cb}
-.local-map-link em{color:#c7dae8}
-.local-map-dialog{background:#fff;color:#192c42;border:1px solid #a7b5c2;border-radius:4px;box-shadow:0 18px 60px #0005;padding:28px}
-.local-map-dialog::backdrop{background:#081426d9}
-.local-map-dialog h2{font-size:25px;font-weight:700;letter-spacing:-.025em}
-.local-map-dialog p{color:#596a7a}
-.local-map-dialog button{background:#fff;border-color:#a8b5c1;color:#243b51;border-radius:3px;box-shadow:none}
-.local-map-dialog button:hover{background:#edf2f6}
-.local-map-dialog .local-map-grid{gap:0 24px;margin-top:24px}
-.local-map-dialog .local-map-link{padding:20px 4px;border:0;border-top:1px solid #bdc9d3;border-radius:0;background:#fff;color:#234f70}
-.local-map-dialog .local-map-link:hover{background:#f0f4f7;border-color:#6d8ca5}
-.local-map-dialog .local-map-link strong{font-size:19px;font-weight:700}
-.local-map-dialog .local-map-link span{color:#536677}
-.local-map-dialog .map-note{border-top:1px solid #d4dce3;padding-top:18px;margin-bottom:0;font-size:14px}
-.info-section,.news-section,.entry-section,.entry-card,.entry-card.research,.finance-spotlight{background:#16273e;border-color:#41556d;border-radius:6px;box-shadow:none}
-.finance-spotlight-action{background:#edf3f7;color:#1d425f;border-radius:4px;box-shadow:none}
-@media(max-width:600px){.hero{border-radius:6px}.local-map-dialog{padding:20px}.local-map-dialog h2{font-size:22px}.local-map-dialog .local-map-link{padding:17px 4px}#homeCtaRow a{font-size:14px}}
-
 /* Solid colors distinguish map destinations without gradients or glow. */
 .local-map-dialog .local-map-grid{gap:16px}
 .local-map-dialog .local-map-link{padding:20px 18px;border:1px solid transparent;border-radius:4px;color:#fff}

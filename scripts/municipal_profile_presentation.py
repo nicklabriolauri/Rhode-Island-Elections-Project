@@ -41,10 +41,15 @@ def refresh():
   links=[f'<a class="button secondary" href="{e(x["url"])}">{e(x["label"])} ↗</a>' for x in p.get('social_links',[])]
   if p.get('sources',{}).get('campaign'):links.append(f'<a class="button secondary" href="{e(p["sources"]["campaign"])}">Campaign website ↗</a>')
   if p.get('sources',{}).get('council'):links.append(f'<a class="button secondary" href="{e(p["sources"]["council"])}">Council information ↗</a>')
-  card='<section class="card" id="communications"><h2>Public communications</h2><p class="intro">Read this member’s public statements at the source.</p><div class="actions">'+''.join(links)+'</div><details><summary>About the planned digital listening feature</summary><p>RIEP is developing a way to explore public posts by topic, date and platform, with links to the original statements. A live post feed is not connected yet. These source links do not represent an exhaustive archive, a sentiment score or an ideology rating.</p></details></section>'
+  card='<section class="card" id="communications"><h2>Digital Listening</h2><p class="intro">Read this member’s public statements at the source.</p><div class="actions">'+''.join(links)+'</div><details><summary>About the planned digital listening feature</summary><p>RIEP is developing a way to explore public posts by topic, date and platform, with links to the original statements. A live post feed is not connected yet. These source links do not represent an exhaustive archive, a sentiment score or an ideology rating.</p></details></section>'
   s=replace_section(s,'communications',card)
-  for target,label in [('election-history','Election history'),('communications','Public communications')]:
-   if f'<a href="#{target}">' not in s:s=s.replace('<a href="#sources">Sources</a>',f'<a href="#{target}">{label}</a><a href="#sources">Sources</a>',1)
+  nav="<nav class=\"tabs\" aria-label=\"Profile sections\"><div class=\"shell\"><a href=\"#about\">Overview</a><a href=\"#priorities\">Priorities</a><a href=\"#elections\">Elections</a><a href=\"#finance\">Finance</a><a href=\"#record\">Council record</a><a href=\"#ratings\">Scorecards</a><a href=\"#endorsements\">Endorsements</a><a href=\"#communications\">Digital Listening</a><a href=\"#sources\">Sources</a></div></nav>"
+  s=re.sub(r'<nav class="tabs".*?</nav>',lambda _:nav,s,count=1,flags=re.S)
+  s=s.replace('Public communications','Digital Listening').replace('Public Communications','Digital Listening')
+  s=re.sub(r'<p class="source municipal-election-links">.*?</p>','',s,flags=re.S)
+  s=re.sub(r'(<section class="card" id="elections"><h2>.*?</h2>)',lambda m:m[1]+"<p class=\"source municipal-election-links\"><a href=\"#elections\">2026 results</a><a href=\"#election-history\">Past results</a><a href=\"#primaries\">Primary history</a></p>",s,count=1,flags=re.S)
+  s=re.sub(r'<p class="source municipal-record-links">.*?</p>','',s,flags=re.S)
+  s=re.sub(r'(<section class="card" id="record"><h2>.*?</h2>)',lambda m:m[1]+"<p class=\"source municipal-record-links\"><a href=\"#votes\">Council votes and attendance</a></p>",s,count=1,flags=re.S)
   s=re.sub(r'municipal-profile.css\?v=[^"\s]+','municipal-profile.css?v=20261122-local-refresh',s)
   path.write_text(s)
 if __name__=='__main__':refresh()
