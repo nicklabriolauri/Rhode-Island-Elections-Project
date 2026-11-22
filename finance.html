@@ -2270,7 +2270,7 @@
     }
 
     function officeLabel(entry) {
-      return entry.chamber === "municipal" ? `${entry.municipality} City Council · Ward ${entry.ward || entry.district_number}` : `${chamberLabel(entry.chamber)} District ${entry.district_number}`;
+      return entry.chamber === "municipal" ? `${entry.municipality} City Council · ${entry.scope === "citywide" ? "Citywide" : `Ward ${entry.ward || entry.district_number}`}` : `${chamberLabel(entry.chamber)} District ${entry.district_number}`;
     }
 
     function chamberLabel(chamber) {
@@ -3086,7 +3086,7 @@
       const profile = entry.profile || null;
       const statusCopy = profile
         ? escapeHtml(profile.reporting_period_label || "2026 second-quarter filing")
-        : "No public 2026 second-quarter finance profile found yet";
+        : entry.chamber === "municipal" ? "Finance filings not yet reviewed by RIEP" : "No public 2026 second-quarter finance profile found yet";
       return `
         <article class="finance-card">
           <div class="finance-card-top">

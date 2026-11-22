@@ -1,7 +1,7 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert/strict'),crypto=require('crypto');
 const d=JSON.parse(fs.readFileSync('data/municipal_campaign_finance_2026.json','utf8')),reg=JSON.parse(fs.readFileSync('data/local_representatives.json','utf8'));
 const cents=n=>Math.round(n*100),sum=xs=>xs.reduce((n,x)=>n+cents(x.amount),0);
-assert.equal(d.profiles.length,6);assert.equal(d.directory.length,6);
+assert.equal(d.profiles.length,6);assert.equal(d.directory.length,9);
 const expected={'avery-therese-mangahas':['10359',426.52,1040.31],'andy-m-andujar':['9834',11437.78,739.5],'frank-j-ritz-jr':['9360',1163.85,585],'michael-a-traficante':['325',10756.67,3518.96],'daniel-robert-wall':['7963',6020.86,5492.22]};
 const html=fs.readFileSync('finance.html','utf8'),script=[...html.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/g)].map(m=>m[1]).join('\n');new vm.Script(script);
 const app={innerHTML:'',addEventListener(){},textContent:''};const ctx={document:{addEventListener(){},getElementById:()=>app,querySelectorAll:()=>[]},window:{location:{search:'',href:'https://www.rhodeislandelectionsproject.org/finance.html'},history:{replaceState(){}}},URLSearchParams,URL,Intl,console};vm.createContext(ctx);vm.runInContext(script.replace(/\n\s*boot\(\);/,'\n'),ctx);

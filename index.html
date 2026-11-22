@@ -552,7 +552,7 @@
     @media(max-width:640px) { .address-candidate-grid { grid-template-columns:1fr; } }
   </style>
 <style>.address-rating{font-size:13px;padding:9px 0;border-top:1px solid #d8dee5;border-bottom:1px solid #d8dee5}.address-rating a{color:#244f7b}.address-rating small{display:block;color:#596779;margin-top:3px}</style><script src="/election-results-2026.js?v=20261119" defer></script>
-<script src="/local-representation.js?v=20261121-six-wards"></script>
+<script src="/local-representation.js?v=20261121-citywide"></script>
 </head>
 <body>
   <div class="shell">
@@ -1371,7 +1371,7 @@
 
           <div class="hero-search-match-list">
           ${matches.map(candidate => {
-            if (candidate.chamber === "municipal") return `<section class="riep-local-group"><h2>${escapeHtml(candidate.municipality)} City Council · Ward ${candidate.ward}</h2>${window.RIEPLocalRepresentation.renderProfile(candidate)}</section>`;
+            if (candidate.chamber === "municipal") return `<section class="riep-local-group"><h2>${escapeHtml(candidate.municipality)} City Council · ${candidate.ward==null?'Citywide':`Ward ${candidate.ward}`}</h2>${window.RIEPLocalRepresentation.renderProfile(candidate)}</section>`;
             const financeHref = buildFinanceHref(candidate);
             const candidateProfileHref = buildCandidateProfileHref(candidate);
             return `
@@ -1531,7 +1531,7 @@
           <div class="hero-search-overview-head">
             <div>
               <h4 class="hero-search-title">Your voting information</h4>
-              <p class="hero-search-subtitle">We matched ${escapeHtml(matchedAddress)} to ${escapeHtml(precinctName)}. Explore your state legislative candidates and election outcomes below. Cranston addresses also show the 2026 ward council winner’s profile. Open My Ballot for more information.</p>
+              <p class="hero-search-subtitle">We matched ${escapeHtml(matchedAddress)} to ${escapeHtml(precinctName)}. Explore your state legislative candidates and election outcomes below. Cranston addresses also show the 2026 ward and three citywide council winners’ profiles. Open My Ballot for more information.</p>
             </div>
             <span class="hero-search-kicker">Address match</span>
           </div>

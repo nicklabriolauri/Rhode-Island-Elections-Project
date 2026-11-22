@@ -41,7 +41,7 @@
   document.querySelectorAll('[data-ward]').forEach(b=>b.onclick=()=>{selectWard(Number(b.dataset.ward),true);if(b.closest('table'))$('ward-detail').scrollIntoView({behavior:'smooth',block:'start'});});
   const city=data.citywide_officeholders;
   $('citywide-current').innerHTML=`<div class="citywide-grid"><div class="citywide-group"><h3>Current mayor</h3><p>${esc(city.mayor.name)}</p><p class="small">Mayor is not on the 2026 general-election ballot.</p></div><div class="citywide-group"><h3>Current citywide councilors</h3>${city.council.map(n=>`<p>${esc(n)}</p>`).join('')}</div><div class="citywide-group"><h3>Current citywide school member</h3>${city.school.map(n=>`<p>${esc(n)}</p>`).join('')}</div></div><p class="small" style="margin:16px 0 0">City directory and GIS snapshot reviewed November 19, 2026. These are current officeholders, not a list of 2026 election winners.</p>`;
-  $('citywide-results').innerHTML=renderRace(race('council',null))+renderRace(race('school',null));
+  $('citywide-results').innerHTML=renderRace(race('council',null))+`<section class="riep-local-group"><h3>2026 citywide council winners</h3><p>All Cranston voters in Wards 1–6 elect these three seats, alongside their ward councilor. New terms begin January 4, 2027.</p>${(window.RIEPLocalRepresentation?.profiles||[]).filter(p=>p.municipality==='Cranston'&&p.ward==null).map(window.RIEPLocalRepresentation.renderProfile).join('')}</section>`+renderRace(race('school',null));
   $('source-date').textContent=`Vote totals as of ${date(data.results.as_of)}. ${data.results.is_official?'Official':'Unofficial'} results from the Rhode Island Board of Elections. This page does not update automatically.`;
  }
  function colorForWard(w){if(colorView==='returns'){const r=race('council',w);return r.candidates[0]?.votes===r.candidates[1]?.votes?'#c4cbd2':C.partyColor(leader(r)?.party);}if(colorView==='turnout'){const t=turnout(w).pct;return t>=65?'#224c72':t>=55?'#5982a7':t>=45?'#9bb9d1':'#d5e3ed';}return wardFeature(w)?.properties.color||'#b4c5d8';}
@@ -119,5 +119,6 @@
   if(['wards','precincts','house','senate'].includes(params.get('map')))mapView=params.get('map');if(['wards','returns','turnout'].includes(params.get('colors')))colorView=params.get('colors');if(params.get('info')==='current')info='current';if(params.get('office')==='school')office='school';
   $('map-view').value=mapView;$('color-view').value=colorView;renderOverview();makeMap();renderDetail();refreshMap();
   if(params.get('precinct'))selectPrecinct(params.get('precinct'),true);
+  if(location.hash==='#citywide-results'){const el=$('citywide-results');el.closest('details').open=true;el.scrollIntoView({block:'start'});}
  }).catch(error=>{console.error(error);$('municipal-map').innerHTML=`<div class="map-error"><h2>Map data could not load</h2><p>Please reload, or ${sourceLink('https://www.cranstonri.gov/departments/canvassing-department/voting-districts-and-district-maps/','open the official Cranston maps')}.</p></div>`;$('municipal-map').setAttribute('aria-busy','false');status.textContent='Map data is unavailable. Please reload or use the official city maps.';});
 })();

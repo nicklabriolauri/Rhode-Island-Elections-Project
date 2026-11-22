@@ -33,7 +33,7 @@ def profiles():
     if len({p['path'] for p in parser.profiles}) != len(parser.profiles): raise ValueError('Duplicate profile URLs')
     for p in parser.profiles:
         if not re.fullmatch(r'candidates/[a-z0-9-]+\.html', p['path']): raise ValueError(p['path'])
-        if not p['name'] or not re.fullmatch(r'(House|Senate) District \d+|[A-Za-z ]+ City Council Ward \d+', p['district']): raise ValueError(p)
+        if not p['name'] or not re.fullmatch(r'(House|Senate) District \d+|[A-Za-z ]+ City Council (?:Ward \d+|Citywide)', p['district']): raise ValueError(p)
         if not (ROOT / p['path']).is_file(): raise FileNotFoundError(p['path'])
     return parser.profiles
 
@@ -65,7 +65,7 @@ def main():
         path = ROOT / p['path']; before = path.read_text(); url = BASE + '/' + p['path']
         title = f"{p['name']} | RI {p['district']} | RIEP"
         desc = f"Explore {p['name']}'s RIEP profile for Rhode Island {p['district']}: campaign priorities, election history, campaign finance and available public records."
-        if 'City Council Ward' in p['district']:
+        if 'City Council' in p['district']:
             title = f"{p['name']} | {p['district']} | RIEP"
             desc = f"Explore {p['name']}'s RIEP municipal profile for {p['district']}: campaign priorities, election results, background and available council records."
         person = {'@type': 'Person', '@id': url + '#person', 'name': p['name'], 'url': url}

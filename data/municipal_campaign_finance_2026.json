@@ -5354,6 +5354,54 @@
       "profile_url": "/candidates/daniel-robert-wall.html",
       "ward_map": "/cranston-map.html?ward=6&colors=returns",
       "has_profile": true
+    },
+    {
+      "candidate_name": "Emilia Vaziri",
+      "slug": "emilia-vaziri",
+      "candidate_id": "cranston-council-citywide-emilia-vaziri",
+      "chamber": "municipal",
+      "district_number": "citywide",
+      "ward": null,
+      "scope": "citywide",
+      "party": "DEM",
+      "office_sought": "Cranston City Council · Citywide",
+      "municipality": "Cranston",
+      "profile_url": "/candidates/emilia-vaziri.html",
+      "ward_map": "/cranston-map.html?colors=returns#citywide-results",
+      "has_profile": false,
+      "finance_status": "not_reviewed"
+    },
+    {
+      "candidate_name": "Steven A. Stycos",
+      "slug": "steven-a-stycos",
+      "candidate_id": "cranston-council-citywide-steven-a-stycos",
+      "chamber": "municipal",
+      "district_number": "citywide",
+      "ward": null,
+      "scope": "citywide",
+      "party": "DEM",
+      "office_sought": "Cranston City Council · Citywide",
+      "municipality": "Cranston",
+      "profile_url": "/candidates/steven-a-stycos.html",
+      "ward_map": "/cranston-map.html?colors=returns#citywide-results",
+      "has_profile": false,
+      "finance_status": "not_reviewed"
+    },
+    {
+      "candidate_name": "Kristen E. Haroian",
+      "slug": "kristen-e-haroian",
+      "candidate_id": "cranston-council-citywide-kristen-e-haroian",
+      "chamber": "municipal",
+      "district_number": "citywide",
+      "ward": null,
+      "scope": "citywide",
+      "party": "DEM",
+      "office_sought": "Cranston City Council · Citywide",
+      "municipality": "Cranston",
+      "profile_url": "/candidates/kristen-e-haroian.html",
+      "ward_map": "/cranston-map.html?colors=returns#citywide-results",
+      "has_profile": false,
+      "finance_status": "not_reviewed"
     }
   ],
   "donor_index": [
@@ -5787,5 +5835,5 @@
       "slug": "daniel-robert-wall"
     }
   ],
-  "coverage_note": "Six Cranston ward council campaign finance profiles. Amounts are filing-period totals; report date ranges vary. Source conflicts are documented on the affected profiles."
+  "coverage_note": "Nine Cranston council candidate entries; six have reviewed finance profiles. Citywide finance filings have not yet been reviewed. Amounts are filing-period totals and source conflicts are documented."
 }
