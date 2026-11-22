@@ -93,6 +93,8 @@ def details(m):
  if selected:documents.append({'title':m['date']+' City Council minutes','category':'minutes','url':selected['url'],'expected_date':m['date'],'minutes_status':m['minutes_status'],'state_meeting_id':m['meeting_id']})
  return m
 with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:inventory=list(pool.map(details,inventory))
+# City-hosted special budget minutes are not listed in the state dashboard.
+documents.append({'title':'2026-04-29 Special council budget meeting','category':'minutes','url':'https://web.cranstonri.org/ClerkDocs/CouncilMinutes/2026/2026-04-29Special_BudgetAdoptionandAmendments.pdf','expected_date':'2026-04-29','minutes_status':'City-posted minutes; approval not established'})
 unique={d['url']:d for d in documents}
 # The builder prefers state PDFs over older HTML and deduplicates identical meeting text.
 with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool: docs=list(pool.map(download,unique.values()))
