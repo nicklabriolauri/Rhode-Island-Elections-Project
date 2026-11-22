@@ -5,7 +5,7 @@ numbers, defines the import inventory. Original files are cached and hashed.
 """
 from pathlib import Path
 import urllib.request, concurrent.futures, json, re, hashlib, datetime
-from urllib.parse import urljoin,urlparse
+from urllib.parse import urljoin,urlparse,urldefrag
 from bs4 import BeautifulSoup
 import fitz
 OUT=Path(__file__).resolve().parents[1]/'data/cranston/records-2026'
@@ -32,7 +32,7 @@ def toc(url,category,in_year=False,depth=0):
    # Root contains years. Never traverse another year's subtree.
    if year or (not re.search(r'20\d\d',title+' '+path) and depth<2):toc(urljoin(BASE,child),category,year,depth+1)
   elif year and a.get('href'):
-   documents.append({'title':title,'category':category,'url':urljoin(BASE,a['href']),'node_id':a.get('data-node-id'),'tree_path':path})
+   documents.append({'title':title,'category':category,'url':urldefrag(urljoin(BASE,a['href']))[0],'node_id':a.get('data-node-id'),'tree_path':path})
 for cat,node in [('minutes','Cranston_Minutes'),('resolution','Cranston_resolutions')]:toc(BASE+'toc/Cranston-RI?path='+node+',',cat)
 (OUT/'source-indexes.json').write_text(json.dumps(indexes,indent=2))
 def download(doc):
@@ -64,3 +64,8 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool: docs=list(poo
 result={'retrieved_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'source':'https://clerkshq.com/cranston-ri','year':2026,'documents':docs,'index_errors':[{'url':x['url'],'error':x['error']} for x in indexes if x['error']]}
 (OUT/'sources.json').write_text(json.dumps(result,ensure_ascii=False,indent=2))
 print(json.dumps({'documents':len(docs),'categories':{c:sum(d['category']==c for d in docs) for c in ['minutes','resolution']},'index_pages':len(indexes),'errors':result['index_errors']}))
+
+probes=[BASE+'js/jquery.main.js?v20190112','https://opengov.sos.ri.gov/OpenMeetingsPublic/OpenMeetingDashboard?EntityID=715','https://www.cranstonri.gov/city-council20260817/']
+for url in probes:
+ body,err=get(url);indexes.append({'url':url,'status':'error' if err else 'ok','error':err,'text':body.decode('utf-8','replace')})
+(OUT/'source-indexes.json').write_text(json.dumps(indexes,indent=2))
