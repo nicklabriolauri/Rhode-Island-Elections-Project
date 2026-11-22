@@ -51,7 +51,7 @@ def build():
    else:review.append({'id':mid+'-attendance','type':'Attendance','reason':'Ambiguous opening roll call','source_url':d['url']})
   else:review.append({'id':mid+'-attendance','type':'Attendance','reason':'Opening roll call not found','source_url':d['url']})
   meetings.append(mt)
-  starts=[m.start() for m in re.finditer(r'(?:(?:On|Upon)\s+motion\b|(?:A\s+)?MOTION\s+(?:was\s+)?(?:duly\s+)?made\b)',text,re.I)]
+  starts=[m.start() for m in re.finditer(r'(?:(?-i:On|Upon)\s+motion\b|(?:A\s+)?(?-i:MOTION|Motion)\s+(?:was\s+)?(?:duly\s+)?made\b)',text,re.I)]
   groups=[]
   pat=r'(?:The\s+)?following\s+(?:being\s+recorded\s+as\s+voting|voted|voting)\s*[“"\']\s*(aye|nay|yes|no|abstain(?:ed)?)\s*[”"\']\s*:?'
   for g in re.finditer(pat,text,re.I):
@@ -89,9 +89,10 @@ def build():
     if (yes,no)!=(int(tally[1]),int(tally[2])):issues.append('Named yes/no votes do not match printed overall tally')
    # Explicit named lists can establish votes even when the minutes omit an aggregate tally.
    # Keep the motion and immediately preceding agenda context. Never infer support from sponsorship.
-   before=raw[max(0,start-2200):start]
-   markers=list(re.finditer(r'(?:^|\n)\s*[•·]?\s*(?:RESOLUTION|Resolution|ORDINANCE|Ordinance|APPROVAL|APPOINTMENT|RE-APPOINTMENT|ADOPTION|\d{1,2}-\d{2}-\d{2}[A-Za-z]?)\b',before))
+   before=raw[max(0,start-12000):start]
+   markers=list(re.finditer(r'(?:^|\n)\s*[•·]?\s*(?:\d+[.]\s*)?(?:RESOLUTION|Resolution|ORDINANCE|Ordinance|APPROVAL(?=\s+(?:OF|of)\b)|APPOINTMENT|RE-APPOINTMENT|ADOPTION|\d{1,2}-\d{2}-\d{2}[A-Za-z]?)\b',before))
    context=before[markers[-1].start():] if markers else ''
+   if re.search(r'(?-i:On|Upon)\s+motion|MOTION\s+made',context):context=''
    context=re.split(r'\n\s*\n',context.strip())[0] if context else ''
    if re.search(r'(?:On|Upon)\s+motion|MOTION\s+made',context,re.I):context=''
    title=clean(context).strip(' :;.-') or 'Council motion'
@@ -114,8 +115,9 @@ def build():
    aggregate_seen.add(start)
    block=clean(text[start:m.end()]);tally=re.search(r'(?:vote\s+of|Result:)\s*(\d+)\s*[-–]\s*(\d+)',block,re.I)
    unanimous=bool(re.search(r'unanim|All\s+Ayes',block,re.I))
-   before=raw[max(0,start-2200):start];markers=list(re.finditer(r'(?:^|\n)\s*[•·]?\s*(?:RESOLUTION|Resolution|ORDINANCE|Ordinance|APPROVAL|APPOINTMENT|RE-APPOINTMENT|ADOPTION|\d{1,2}-\d{2}-\d{2}[A-Za-z]?)\b',before))
+   before=raw[max(0,start-12000):start];markers=list(re.finditer(r'(?:^|\n)\s*[•·]?\s*(?:\d+[.]\s*)?(?:RESOLUTION|Resolution|ORDINANCE|Ordinance|APPROVAL(?=\s+(?:OF|of)\b)|APPOINTMENT|RE-APPOINTMENT|ADOPTION|\d{1,2}-\d{2}-\d{2}[A-Za-z]?)\b',before))
    context=before[markers[-1].start():].strip() if markers else ''
+   if re.search(r'(?-i:On|Upon)\s+motion|MOTION\s+made',context):context=''
    context=re.split(r'\n\s*\n',context)[0]
    if re.search(r'(?:On|Upon)\s+motion|MOTION\s+made',context,re.I):context=''
    motionid=mid+'-aggregate-'+key(block+str(start))
