@@ -53,8 +53,9 @@ def refresh():
   # Keep sponsorship cards through every records/presentation refresh.
   from cranston_sponsorship import render_profile, DATA
   if DATA.exists():s=render_profile(s,slug,json.loads(DATA.read_text()))
-  s=re.sub(r'municipal-profile.css\?v=[^"\s]+','municipal-profile.css?v=20261122-full-credit',s)
+  s=re.sub(r'municipal-profile.css\?v=[^"\s]+','municipal-profile.css?v=20261122-plain-scores',s)
   path.write_text(s)
 if __name__=='__main__':refresh()
+
 
 

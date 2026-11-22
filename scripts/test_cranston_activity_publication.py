@@ -24,7 +24,8 @@ for slug in PROFILE_IDS:
  if slug in expected:
   m=next(m for m in d['members'] if m['id']==slug)
   assert f'<b>{m["points"]}</b>' in card
-  assert f'<b>{m["index"]:.1f}</b>' in card
+  assert f'How the {m["index"]:.1f} index is calculated' in card
+  assert f'{abs(m["index"]-100):.1f}%' in card
  else:assert 'Not applicable' in card and 'activity-score-grid' not in card
  assert text.count('<nav class="tabs"')==1
 # Test the existing sponsorship renderer also retains exactly one activity card.
@@ -38,3 +39,12 @@ page=(ROOT/'cranston-activity.html').read_text()
 assert page.count('<tr id=')==9 and '<!-- RANKING_ROWS -->' not in page
 assert 'noindex,nofollow' in (ROOT/'cranston-activity-index-test.html').read_text()
 print('Profile scores, no predecessor transfer, unique IDs, rebuild persistence and public ranking checks passed')
+
+
+wall=(ROOT/'candidates/daniel-robert-wall.html').read_text()
+assert 'alt="Daniel Robert Wall" width="526" height="554"' in wall
+assert 'Tied #1 in documented sponsorship activity' in wall and 'with Frank J. Ritz Jr.' in wall
+assert '53.5%' in wall and '18.9 points' in wall
+assert (ROOT/'candidates/daniel-robert-wall.png').read_bytes()[:8]==b'\x89PNG\r\n\x1a\n'
+assert 'most effective legislator' not in wall.lower()
+print('Portrait, explicit first-place tie and plain-language score explanation passed')

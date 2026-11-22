@@ -12,7 +12,15 @@ def profile_card(slug,data):
  else:
   tied=sum(x['rank']==m['rank'] for x in data['members'])>1
   body='<p class="intro">2026 service: <strong>'+e(m['office_2026'])+'</strong>'+(' · '+e(m['leadership']) if m['leadership'] else '')+'.</p>'
-  body+='<div class="activity-score-grid"><div><b>'+str(m['points'])+'</b><span>Weighted activity points</span></div><div><b>'+f'{m["index"]:.1f}'+'</b><span>Activity index · cohort mean 100</span></div><div><b>'+('Joint ' if tied else '')+str(m['rank'])+' of 9</b><span>Provisional 2026 activity rank</span></div></div>'
+  difference=m['index']-100
+  comparison=f"{abs(difference):.1f}%"
+  direction='above' if difference>=0 else 'below'
+  peers=[x['name'] for x in data['members'] if x['rank']==m['rank'] and x['id']!=slug]
+  rank_label=('Tied #' if tied else '#')+str(m['rank'])+' of 9'
+  body+='<div class="activity-score-grid"><div class="activity-rank"><b>'+rank_label+'</b><span>Documented sponsorship activity</span></div><div><b>'+str(m['points'])+'</b><span>Activity points from named sponsorships</span></div><div><b>'+comparison+'</b><span>'+direction.capitalize()+' the council average in activity points</span></div></div>'
+  if m['rank']==1:
+   body+='<p class="activity-rank-note"><strong>Tied #1 in documented sponsorship activity</strong>'+(' with '+e(' and '.join(peers)) if peers else '')+' among the nine 2026 council members in this partial record. This is an activity ranking, not a finding of overall effectiveness.</p>'
+  body+='<div class="activity-explainer"><h3>What does this score mean?</h3><p>'+e(m['name'])+' has <strong>'+str(m['points'])+' activity points</strong>. The nine-member council average is <strong>'+f'{data["mean_points"]:.1f}'+' points</strong>. That puts this score <strong>'+comparison+' '+direction+' average</strong> under the same scoring rules.</p><details><summary>How the '+f'{m["index"]:.1f}'+' index is calculated</summary><p>We set the council average to 100 so scores are easier to compare. A score of 150 means 50% more activity points than average; 100 means average; 50 means half the average.</p><p><strong>'+str(m['points'])+' ÷ '+f'{data["mean_points"]:.6f}'+'… × 100 = '+f'{m["index"]:.1f}'+'</strong> (rounded; the calculation uses the unrounded average).</p><p>The index compares weighted sponsorship points. It does not mean '+f'{m["index"]:.1f}'+'% effective, and it does not measure the quality or impact of policies.</p></details></div>'
   body+='<div class="table-scroll"><table class="bill-table"><caption>Sponsorship breakdown · full credit for each named sponsor</caption><thead><tr><th scope="col">Measure tier</th><th scope="col">Sponsorships</th><th scope="col">Points each</th><th scope="col">Points</th></tr></thead><tbody>'
   for key,label,weight in [('symbolic','Symbolic and advocacy',1),('administrative','Property / administrative approvals',2),('substantive','Local policy, fiscal measures and ordinances',5)]:
    t=m['tiers'][key];body+=f'<tr><th scope="row">{label}</th><td>{t["count"]}</td><td>{weight}</td><td>{t["points"]}</td></tr>'
@@ -29,7 +37,7 @@ def render_profile_activity(text,slug):
  if anchor not in text:raise ValueError('Missing sponsorship section '+slug)
  text=text.replace(anchor,profile_card(slug,data)+'\n'+anchor,1)
  if 'href="#activity-index"' not in text:text=text.replace('<p class="source municipal-record-links">','<p class="source municipal-record-links"><a href="#activity-index">Activity index</a>',1)
- return text.replace('municipal-profile.css?v=20261122-sponsorship','municipal-profile.css?v=20261122-full-credit')
+ return re.sub(r'municipal-profile.css\?v=[^"\s]+','municipal-profile.css?v=20261122-plain-scores',text)
 def ranking_page(data):
  rows=[]
  for m in data['members']:
@@ -49,3 +57,4 @@ def publish():
  if 'href="/cranston-activity.html"' not in text:text=text.replace('<section class="panel">','<p><a href="/cranston-activity.html">See the provisional 1–2–5 activity ranking and methodology</a></p><section class="panel">',1)
  path.write_text(text)
 if __name__=='__main__':publish()
+
