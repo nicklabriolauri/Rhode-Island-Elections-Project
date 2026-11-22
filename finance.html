@@ -2422,7 +2422,7 @@
             </div>
             ${filingControl}
             <div class="subject-actions">
-              ${profile.chamber === "municipal" ? `<a href="${escapeHtml(profile.profile_url)}">Candidate profile</a><a href="${escapeHtml(profile.ward_map)}">Ward map and election results</a><a href="/finance.html">All campaign finance profiles</a>` : `<a href="running.html?chamber=${encodeURIComponent(profile.chamber)}&district=${encodeURIComponent(profile.district_number)}">Back to Who's Running?</a><a href="meet.html?chamber=${encodeURIComponent(profile.chamber)}&district=${encodeURIComponent(profile.district_number)}">Back to Meet the Candidates</a>`}
+              ${profile.chamber === "municipal" ? `<a href="${escapeHtml(profile.profile_url)}">Candidate profile</a><a href="${escapeHtml(profile.ward_map)}">${profile.scope === "citywide" ? "Citywide election results" : "Ward map and election results"}</a><a href="/finance.html">All campaign finance profiles</a>` : `<a href="running.html?chamber=${encodeURIComponent(profile.chamber)}&district=${encodeURIComponent(profile.district_number)}">Back to Who's Running?</a><a href="meet.html?chamber=${encodeURIComponent(profile.chamber)}&district=${encodeURIComponent(profile.district_number)}">Back to Meet the Candidates</a>`}
             </div>
             ${buildHeroFundingMix(profile)}
           </aside>
@@ -3036,10 +3036,11 @@
 
     function buildTransactions(profile) {
       const receipts = profile.receipt_transactions || [];
+      const receiptLabel = profile.scope === "citywide" ? "Cash receipt" : "Contribution";
       const expenses = profile.expenditure_transactions || [];
       const rows = (records, expense) => records.map(row => `<tr><td>${escapeHtml(row.date || "—")}</td><td>${escapeHtml((expense ? row.payee : row.donor) || "Reported in aggregate")}</td><td>${escapeHtml(expense ? row.category || row.type : row.type)}</td><td>${formatCurrency(row.amount)}</td><td>${escapeHtml(expense ? row.purpose || "" : [row.notes, row.employer ? "Employer as filed: " + row.employer : ""].filter(Boolean).join(" · "))}${row.source_document ? ` <a href="${escapeHtml(row.source_document)}#page=${Number(row.source_page)}" target="_blank" rel="noopener">Source p. ${Number(row.source_page)}</a>` : ""}</td></tr>`).join("");
       const table = (records, expense) => `<div style="overflow-x:auto"><table style="width:100%;text-align:left"><thead><tr><th>Date</th><th>${expense ? "Payee" : "Donor"}</th><th>Type</th><th>Amount</th><th>${expense ? "Purpose" : "Notes"}</th></tr></thead><tbody>${rows(records, expense)}</tbody></table></div>`;
-      return `<article class="panel section-card"><div class="section-label">Selected filing details</div><h3>Donors &amp; expenses</h3><p class="section-copy">${escapeHtml(profile.reporting_period_label || profile.report_label)}</p><details><summary>Contribution transactions (${receipts.length})</summary>${receipts.length ? table(receipts, false) : '<p>Contribution transactions have not been transcribed for this period. Available named donors are shown above; aggregate contributions do not identify individual donors.</p>'}</details><details><summary>Expense transactions (${expenses.length})</summary>${expenses.length ? table(expenses, true) : '<p>Expense transactions have not been transcribed for this period. Available spending categories are shown above. A payee-by-payee list requires the original filing detail.</p>'}</details>${(profile.accounts_payable_transactions || []).length ? `<details><summary>${profile.chamber === "municipal" ? "Accounts-payable entries (obligations incurred)" : "Unpaid bill entries (separate from cash spending)"}</summary><p>${escapeHtml(profile.coverage_note || "")}</p>${table(profile.accounts_payable_transactions, true)}</details>` : ""}${(profile.in_kind_transactions || []).length ? `<details><summary>In-kind contributions (separate from cash receipts)</summary>${table(profile.in_kind_transactions, false)}</details>` : ""}</article>`;
+      return `<article class="panel section-card"><div class="section-label">Selected filing details</div><h3>Donors &amp; expenses</h3><p class="section-copy">${escapeHtml(profile.reporting_period_label || profile.report_label)}</p><details><summary>${receiptLabel} transactions (${receipts.length})</summary>${receipts.length ? table(receipts, false) : '<p>Contribution transactions have not been transcribed for this period. Available named donors are shown above; aggregate contributions do not identify individual donors.</p>'}</details><details><summary>Expense transactions (${expenses.length})</summary>${expenses.length ? table(expenses, true) : '<p>Expense transactions have not been transcribed for this period. Available spending categories are shown above. A payee-by-payee list requires the original filing detail.</p>'}</details>${(profile.accounts_payable_transactions || []).length ? `<details><summary>${profile.chamber === "municipal" ? "Accounts-payable entries (obligations incurred)" : "Unpaid bill entries (separate from cash spending)"}</summary><p>${escapeHtml(profile.coverage_note || "")}</p>${table(profile.accounts_payable_transactions, true)}</details>` : ""}${(profile.in_kind_transactions || []).length ? `<details><summary>In-kind contributions (separate from cash receipts)</summary>${table(profile.in_kind_transactions, false)}</details>` : ""}</article>`;
     }
 
     function buildFilingControl(choices, choice, selected) {
@@ -3119,7 +3120,7 @@
               ? `<a class="finance-card-link primary" href="${profileUrl(profile)}">Open finance profile</a>`
               : `<span class="finance-card-link disabled">Finance profile not published yet</span>`
             }
-            ${entry.chamber === "municipal" ? `<a class="finance-card-link" href="${escapeHtml(entry.profile_url)}">Candidate profile</a><a class="finance-card-link" href="${escapeHtml(entry.ward_map)}">Ward map</a>` : `<a class="finance-card-link" href="running.html?chamber=${encodeURIComponent(entry.chamber)}&district=${encodeURIComponent(entry.district_number)}">Who's Running?</a><a class="finance-card-link" href="meet.html?chamber=${encodeURIComponent(entry.chamber)}&district=${encodeURIComponent(entry.district_number)}">Meet the Candidates</a>`}
+            ${entry.chamber === "municipal" ? `<a class="finance-card-link" href="${escapeHtml(entry.profile_url)}">Candidate profile</a><a class="finance-card-link" href="${escapeHtml(entry.ward_map)}">${entry.scope === "citywide" ? "Citywide results" : "Ward map"}</a>` : `<a class="finance-card-link" href="running.html?chamber=${encodeURIComponent(entry.chamber)}&district=${encodeURIComponent(entry.district_number)}">Who's Running?</a><a class="finance-card-link" href="meet.html?chamber=${encodeURIComponent(entry.chamber)}&district=${encodeURIComponent(entry.district_number)}">Meet the Candidates</a>`}
           </div>
         </article>
       `;
@@ -3595,7 +3596,7 @@
       try {
         const response = await fetch(withAssetVersion("/data/candidate_finance_2026.json"), { cache: "no-store" });
         const data = await response.json();
-        const local = await fetch("/data/municipal_campaign_finance_2026.json?v=20261121-six-wards", {cache:"no-store",signal:AbortSignal.timeout(12000)}).then(r => r.ok ? r.json() : null).catch(() => null);
+        const local = await fetch("/data/municipal_campaign_finance_2026.json?v=20261122-citywide", {cache:"no-store",signal:AbortSignal.timeout(12000)}).then(r => r.ok ? r.json() : null).catch(() => null);
         if (local) {
           for (const field of ["profiles", "directory"]) {
             const slugs = new Set((data[field] || []).map(p => p.slug));

@@ -831,7 +831,7 @@
           }
         ]
       },
-      "finance_status": "not_reviewed",
+      "finance_status": "available",
       "record_status": "Individual council roll calls have not yet been compiled for this profile.",
       "endorsements_status": "Not independently verified",
       "contact": {
@@ -848,7 +848,8 @@
       "bffi_2026": {
         "rating": "N/A",
         "source": "https://thewomxnproject.org/bffi/cranston/"
-      }
+      },
+      "finance_url": "/finance.html?slug=emilia-vaziri"
     },
     {
       "slug": "steven-a-stycos",
@@ -1004,7 +1005,7 @@
           }
         ]
       },
-      "finance_status": "not_reviewed",
+      "finance_status": "available",
       "record_status": "Individual council roll calls have not yet been compiled for this profile.",
       "endorsements_status": "Verified: Cranston Forward (2026)",
       "contact": {
@@ -1022,7 +1023,8 @@
           "organization": "Cranston Forward",
           "source": "https://www.cranstonforward.org/endorsements"
         }
-      ]
+      ],
+      "finance_url": "/finance.html?slug=steven-a-stycos"
     },
     {
       "slug": "kristen-e-haroian",
@@ -1156,7 +1158,7 @@
           }
         ]
       },
-      "finance_status": "not_reviewed",
+      "finance_status": "available",
       "record_status": "Individual council roll calls have not yet been compiled for this profile.",
       "endorsements_status": "Not independently verified",
       "contact": {
@@ -1175,7 +1177,8 @@
       "bffi_2026": {
         "rating": "N/A",
         "source": "https://thewomxnproject.org/bffi/cranston/"
-      }
+      },
+      "finance_url": "/finance.html?slug=kristen-e-haroian"
     }
   ]
 }
