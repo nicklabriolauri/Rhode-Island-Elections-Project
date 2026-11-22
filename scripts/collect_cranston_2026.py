@@ -69,3 +69,12 @@ probes=[BASE+'js/jquery.main.js?v20190112','https://opengov.sos.ri.gov/OpenMeeti
 for url in probes:
  body,err=get(url);indexes.append({'url':url,'status':'error' if err else 'ok','error':err,'text':body.decode('utf-8','replace')})
 (OUT/'source-indexes.json').write_text(json.dumps(indexes,indent=2))
+
+for url in [BASE+'js/getAttach.js','https://opengov.sos.ri.gov/Scripts/Validate.js']:
+ body,err=get(url);indexes.append({'url':url,'status':'error' if err else 'ok','error':err,'text':body.decode('utf-8','replace')})
+from urllib.parse import urlencode
+req=urllib.request.Request(BASE,data=urlencode({'siteId':'Cranston-RI','url':'Content/Cranston-RI/books/resolutions/2026Resolutions.htm','title':'2026 Resolutions'}).encode())
+try:
+ body=urllib.request.urlopen(req,timeout=30).read();indexes.append({'url':BASE+'[public document viewer]','text':body.decode('utf-8','replace'),'status':'ok'})
+except Exception as e:indexes.append({'url':BASE+'[public document viewer]','error':str(e),'status':'error'})
+(OUT/'source-indexes.json').write_text(json.dumps(indexes,indent=2))
