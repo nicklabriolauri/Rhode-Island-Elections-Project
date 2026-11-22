@@ -36,7 +36,7 @@ def toc(url,category,in_year=False,depth=0):
 for cat,node in [('minutes','Cranston_Minutes'),('resolution','Cranston_resolutions')]:toc(BASE+'toc/Cranston-RI?path='+node+',',cat)
 (OUT/'source-indexes.json').write_text(json.dumps(indexes,indent=2))
 def download(doc):
- url=doc['url'];name=urlparse(url).path.rsplit('/',1)[-1]
+ url=doc['url'];name=urlparse(url).path.rsplit('/',1)[-1];name=(hashlib.sha256(url.encode()).hexdigest()[:12]+'.pdf') if 'DownloadMeetingFiles?' in url else name
  doc['id']=doc['category']+'-'+hashlib.sha256(url.encode()).hexdigest()[:12]
  # A category prefix avoids equal filenames in different folders.
  local=OUT/'originals'/(doc['category']+'-'+name);local.parent.mkdir(exist_ok=True)
@@ -59,22 +59,61 @@ def download(doc):
   doc['links']=[urljoin(url,a['href']) for a in soup.select('a[href]')]
  doc['status']='downloaded' if any(p['text'].strip() for p in doc['pages']) else 'needs OCR'
  return doc
+# Supplement ClerkBase with the state's current public meeting filings.
+SOS='https://opengov.sos.ri.gov'
+dash_url=SOS+'/OpenMeetingsPublic/OpenMeetingDashboard?EntityID=715'
+body,err=get(dash_url);dash=BeautifulSoup(body,'html.parser');inventory=[]
+for tr in dash.select('#YesterDayEntitiesSummary tbody tr'):
+ cell=tr.select_one('[onclick]');stamp=tr.select_one('#hdnDateSeq')
+ if not cell or not stamp or not stamp.get_text().startswith('2026'):continue
+ mid=re.search(r'ViewMeetingDetails\((\d+)\)',cell.get('onclick',''))[1]
+ date=stamp.get_text()[:8];date=date[:4]+'-'+date[4:6]+'-'+date[6:8]
+ inventory.append({'meeting_id':mid,'date':date,'meeting':' '.join(tr.stripped_strings),'source_url':dash_url+'&MeetingID='+mid})
+def details(m):
+ body,err=get(SOS+'/OpenMeetingsPublic/ViewMeetingDetailByID?MeetingID='+m['meeting_id'])
+ soup=BeautifulSoup(body,'html.parser');links=[]
+ for a in soup.select('a[onclick]'):
+  x=re.search(r"DownloadMeetingFiles\('([^']+)'\)",a['onclick'])
+  if x and 'Minutes filed' in a.get_text():
+   # Javascript source contains doubled backslashes. Decode only that escape.
+   path=x[1].replace('\\\\','\\')
+   from urllib.parse import quote
+   links.append({'url':SOS+'/Common/DownloadMeetingFiles?FilePath='+quote(path,safe=''),'label':a.get_text(' ',strip=True)})
+ approved=[x for x in links if x['label'].lower().startswith('approved')]
+ selected=approved[0] if approved else links[0] if links else None
+ m['minutes_status']='Approved' if approved else 'Draft' if selected else 'No minutes on file'
+ m['minutes_url']=selected['url'] if selected else None
+ m['all_minute_versions']=links
+ if selected:documents.append({'title':m['date']+' City Council minutes','category':'minutes','url':selected['url'],'expected_date':m['date'],'minutes_status':m['minutes_status'],'state_meeting_id':m['meeting_id']})
+ return m
+with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:inventory=list(pool.map(details,inventory))
 unique={d['url']:d for d in documents}
+# Prefer the current approved state PDF over the older ClerkBase HTML for the same date.
+state_dates={d['expected_date'] for d in documents if d.get('expected_date')}
+unique={url:d for url,d in unique.items() if d.get('expected_date') or d['category']!='minutes' or not any(x.replace('-','')[2:] in url for x in [])}
 with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool: docs=list(pool.map(download,unique.values()))
-result={'retrieved_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'source':'https://clerkshq.com/cranston-ri','year':2026,'documents':docs,'index_errors':[{'url':x['url'],'error':x['error']} for x in indexes if x['error']]}
+# Parse the adopted resolution index and resolve its attachment references.
+resolutions=[]
+for d in list(docs):
+ if d['category']!='resolution':continue
+ body,_=get(d['url']);soup=BeautifulSoup(body,'html.parser')
+ for tr in soup.select('tr'):
+  cells=tr.find_all('td');a=tr.select_one('a[href]')
+  if len(cells)<3 or not a:continue
+  num=a.get_text(strip=True)
+  if not re.fullmatch(r'2026-\d+[A-Z]?',num):continue
+  resolutions.append({'number':num,'title':' '.join(cells[2].stripped_strings),'adopted_date_text':' '.join(cells[1].stripped_strings),'attachment_call':a['href'],'source_url':d['url'],'original_path':None})
+ # Use the same public document-view request as ClerkBase, including its TOC identity.
+ from urllib.parse import urlencode
+ req=urllib.request.Request(BASE,data=urlencode({'siteId':'Cranston-RI','url':urlparse(d['url']).path,'title':'2026 Resolutions','nodeId':d.get('node_id',''),'path':d.get('tree_path','')}).encode())
+ try:
+  viewer=urllib.request.urlopen(req,timeout=30).read().decode('utf-8','replace');indexes.append({'url':BASE+'[document viewer]','text':viewer,'status':'ok'})
+ except Exception as e:indexes.append({'url':BASE+'[document viewer]','error':str(e),'status':'error'})
+# Public helper script locations used by the legacy attachment viewer.
+for url in [BASE+'getAttach.js',BASE+'Content/Cranston-RI/getAttach.js',BASE+'Scripts/getAttach.js']:
+ body,err=get(url);indexes.append({'url':url,'status':'error' if err else 'ok','error':err,'text':body.decode('utf-8','replace')})
+result={'retrieved_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'source':'https://clerkshq.com/cranston-ri','year':2026,'documents':docs,'resolutions':resolutions,'meeting_inventory':inventory,'index_errors':[{'url':x['url'],'error':x.get('error')} for x in indexes if x['status']=='error']}
 (OUT/'sources.json').write_text(json.dumps(result,ensure_ascii=False,indent=2))
-print(json.dumps({'documents':len(docs),'categories':{c:sum(d['category']==c for d in docs) for c in ['minutes','resolution']},'index_pages':len(indexes),'errors':result['index_errors']}))
-
-probes=[BASE+'js/jquery.main.js?v20190112','https://opengov.sos.ri.gov/OpenMeetingsPublic/OpenMeetingDashboard?EntityID=715','https://www.cranstonri.gov/city-council20260817/']
-for url in probes:
- body,err=get(url);indexes.append({'url':url,'status':'error' if err else 'ok','error':err,'text':body.decode('utf-8','replace')})
+# Retain only the TOC inventories and document-view diagnostics, not third-party JS.
 (OUT/'source-indexes.json').write_text(json.dumps(indexes,indent=2))
-
-for url in [BASE+'js/getAttach.js','https://opengov.sos.ri.gov/Scripts/Validate.js']:
- body,err=get(url);indexes.append({'url':url,'status':'error' if err else 'ok','error':err,'text':body.decode('utf-8','replace')})
-from urllib.parse import urlencode
-req=urllib.request.Request(BASE,data=urlencode({'siteId':'Cranston-RI','url':'Content/Cranston-RI/books/resolutions/2026Resolutions.htm','title':'2026 Resolutions'}).encode())
-try:
- body=urllib.request.urlopen(req,timeout=30).read();indexes.append({'url':BASE+'[public document viewer]','text':body.decode('utf-8','replace'),'status':'ok'})
-except Exception as e:indexes.append({'url':BASE+'[public document viewer]','error':str(e),'status':'error'})
-(OUT/'source-indexes.json').write_text(json.dumps(indexes,indent=2))
+print(json.dumps({'documents':len(docs),'meetings':len(inventory),'minutes':sum(bool(x['minutes_url']) for x in inventory),'resolutions':len(resolutions)}))
