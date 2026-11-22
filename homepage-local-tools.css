@@ -26,10 +26,10 @@ body{background:#0e1c31;color:#f4f6f9}
 .hero-copy h2{letter-spacing:-.045em}
 .eyebrow.is-home{background:transparent;border:0;border-radius:0;padding:0;color:#bdcad8;box-shadow:none}
 .ocean-line{background:#8eabc5;border-radius:0;width:64px;height:3px}
-.site-nav a,.social-link,.social-link.linkedin,.view-toggle{background:transparent;border-color:#536175;box-shadow:none;backdrop-filter:none}
-.site-nav a{border-radius:5px;font-weight:600}
-.site-nav a:hover,.social-link:hover,.social-link.linkedin:hover{background:#233850;box-shadow:none;transform:none}
-.view-toggle{border-radius:5px}.view-toggle button{border-radius:3px;font-weight:700}.view-toggle button.active{background:#fff;color:#172b44;box-shadow:none}
+
+
+
+
 .hero-search{background:#1e324b;border-color:#4b6078;border-radius:6px;box-shadow:none}
 .hero-search-input,.hero-search-submit{border-radius:4px;box-shadow:none}
 .hero-search-submit{background:#fff;color:#173b5a;border:1px solid #fff;font-weight:700}
