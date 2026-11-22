@@ -16,6 +16,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Install public-document readers
+        run: |
+          python -m pip install pymupdf beautifulsoup4
+          sudo apt-get update -qq
+          sudo apt-get install -y tesseract-ocr
       - name: Collect public source indexes
         run: python scripts/collect_cranston_2026.py
       - name: Save source inventory
@@ -27,3 +32,4 @@ jobs:
           git commit -m 'Collect public Cranston council source inventory'
           git pull --rebase origin main
           git push
+
