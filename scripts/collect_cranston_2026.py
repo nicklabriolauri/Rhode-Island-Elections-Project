@@ -11,6 +11,8 @@ import fitz
 OUT=Path(__file__).resolve().parents[1]/'data/cranston/records-2026'
 OUT.mkdir(parents=True,exist_ok=True)
 BASE='https://clerkshq.com/'
+previous={}
+if (OUT/'sources.json').exists():previous={d['url']:d for d in json.loads((OUT/'sources.json').read_text()).get('documents',[])}
 def get(url):
  try:
   req=urllib.request.Request(url,headers={'User-Agent':'RhodeIslandElectionsProject/1.0 (public council records research)'})
@@ -48,6 +50,9 @@ def download(doc):
  if not body:
   doc.update(status='unavailable',pages=[]);return doc
  local.write_bytes(body);doc['sha256']=hashlib.sha256(body).hexdigest();doc['local_path']='/'+str(local.relative_to(OUT.parents[2]))
+ old=previous.get(url)
+ if old and old.get('sha256')==doc['sha256'] and old.get('status')=='downloaded':
+  doc.update({k:old[k] for k in ['pages','links','status'] if k in old});return doc
  if body.startswith(b'%PDF'):
   pdf=fitz.open(stream=body,filetype='pdf');pages=[]
   for page in pdf:

@@ -39,7 +39,7 @@ def build():
   if roll:
    body=roll[1];body=re.split(r'Also\s+Present\s*:',body,flags=re.I)[0]
    split=re.split(r'\bAbsent\s*:',body,flags=re.I);present=names(split[0]);absent=names(split[1]) if len(split)>1 else []
-   late=names(' '.join(re.findall(r'[^.]*\barrived\b[^.]*',body,flags=re.I)))
+   late=[m[0] for m in MEMBERS if re.search(r'\b'+m[2]+r'\b\s*[(]?\s*(?:arrived|appeared)\b',body,re.I)]
    present=[x for x in present if x not in late]
    overlap=set(present)&set(absent)
    if present and not overlap:

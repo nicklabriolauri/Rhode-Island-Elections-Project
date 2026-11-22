@@ -25,6 +25,7 @@ m=next(m for m in d['motions'] if m['id']==r['motion_ids'][0]);assert (m['yes'],
 assert 'Councilman Traficante' in m['action'] and 'Resolution' in m['action']
 assert 'bridget-r-graziano' not in m['votes']
 a=next(a for a in d['attendance'] if a['date']=='2026-01-20' and a['member_id']=='bridget-r-graziano');assert a['status']=='Absent'
+a=next(a for a in d['attendance'] if a['date']=='2026-02-17' and a['member_id']=='richard-d-campopiano');assert a['status']=='Late arrival'
 # Joint March 4 minutes explicitly note Haroian arriving at 7:11, not present at opening.
 a=next(a for a in d['attendance'] if a['date']=='2026-03-04' and a['member_id']=='kristen-e-haroian');assert a['status']=='Late arrival'
 a=next(a for a in d['attendance'] if a['date']=='2026-03-04' and a['member_id']=='christopher-e-buonanno');assert a['status']=='Not recorded'
