@@ -1,4 +1,4 @@
-import {CATEGORIES,PRESETS,score,validateConfig} from './activity-index-model.mjs';
+import {CATEGORIES,FUNCTIONS,PRESETS,score,validateConfig,matchesTopic} from './activity-index-model.mjs?v=20261122-tiers125';
 
 const data=JSON.parse(document.getElementById('pilot-data').textContent);
 const $=id=>document.getElementById(id);
@@ -33,16 +33,30 @@ function renderResults(rows){
 function renderAudit(){
   $('audit-items').replaceChildren();if(!currentRows)return;
   const row=currentRows.find(r=>r.id===$('audit-member').value);
-  $('audit-total').textContent=`${row.name}: ${number(row.raw,3)} weighted activity units across ${row.observed} identified items in either role. Zero-point items are included below.`;
-  for(const c of row.contributions){
+  const topic=$('audit-topic').value;
+  const visible=row.contributions.filter(c=>matchesTopic(c.proposal,topic));
+  $('audit-total').textContent=`${row.name}: ${number(row.raw,3)} weighted activity units across ${row.observed} identified items in either role. Showing ${visible.length} item${visible.length===1?'':'s'}${topic?' tagged '+topic:''}. Topic filtering does not change the overall score.`;
+  $('topic-breakdown').replaceChildren();
+  for(const t of data.topic_vocabulary){
+    const items=row.contributions.filter(c=>c.proposal.primary_topic===t);
+    if(!items.length)continue;
+    const tr=document.createElement('tr');const th=text('th',t);th.scope='row';tr.append(th,text('td',items.length),text('td',number(items.reduce((s,c)=>s+c.points,0),3)));$('topic-breakdown').append(tr);
+  }
+  if(!visible.length)$('audit-items').append(text('p','No identified contributions match this topic. This does not establish that the member did no work on it.'));
+  for(const c of visible){
     const p=c.proposal;const card=document.createElement('details');card.className='contribution';
-    const summary=document.createElement('summary');summary.append(text('span',p.title),text('strong',number(c.points,3)+' points'));card.append(summary);
+    const summary=document.createElement('summary');const titleBox=document.createElement('span');titleBox.append(text('span',p.title));
+    const previewTags=document.createElement('span');previewTags.className='topic-tags';previewTags.append(text('span',p.primary_topic,'topic-tag'));
+    for(const topic of p.secondary_topics)previewTags.append(text('span',topic,'topic-tag secondary'));titleBox.append(previewTags);
+    summary.append(titleBox,text('strong',number(c.points,3)+' points'));card.append(summary);
     const body=document.createElement('div');
-    body.append(text('p',CATEGORIES.find(([key])=>key===p.function)[1]+' · '+(c.role==='sponsor'?'Named / joint sponsor':'Explicit cosponsor'),'item-type'));
+    body.append(text('p',CATEGORIES.find(([key])=>key===p.tier)[1]+' · '+FUNCTIONS[p.function]+' · '+(c.role==='sponsor'?'Named / joint sponsor':'Explicit cosponsor'),'item-type'));
+    const tags=document.createElement('div');tags.className='topic-tags';tags.append(text('span',p.primary_topic+' · primary','topic-tag'));
+    for(const tag of p.secondary_topics)tags.append(text('span',tag,'topic-tag secondary'));body.append(tags);
     const roleText=c.role==='sponsor' && currentConfig.joint==='split'?`1 / ${p.sponsors.length} named council sponsor${p.sponsors.length===1?'':'s'}`:number(c.roleCredit,3);
     body.append(text('p',c.included?`Category weight ${number(c.categoryWeight)} × role credit (${roleText}) = ${number(c.points,4)} points.`:'Excluded by the earlier-year item setting.'));
     if(p.carryover)body.append(text('p','Earlier-year item considered in 2026; not a new 2026 introduction.','source'));
-    body.append(text('p',p.classification_note,'source'));
+    body.append(text('p',p.coding_reason,'source'),text('p',p.classification_note,'source'));
     for(const o of p.observations){
       const record=document.createElement('div');record.className='source-record';record.append(text('strong',o.date),text('p',o.action),text('p','Recorded attribution: '+o.attribution));
       const a=text('a','Read source minutes'+(o.source_page?', p. '+o.source_page:''));a.href=o.source_url+(o.source_page?'#page='+o.source_page:'');record.append(a);body.append(record);
@@ -61,10 +75,11 @@ function update(){
     const total=rows.reduce((s,r)=>s+r.raw,0);
     $('result-status').textContent=total===0?'All weighted activity is zero. The mean is zero, so the normalized index is not defined.':`Nine 2026 council members · ${data.proposals.length} identified measures · Mean weighted activity: ${number(total/rows.length,3)} · Index mean: 100. All attribution coverage is partial.`;
   }catch(error){
-    currentRows=null;$('input-error').textContent=error.message;$('input-error').hidden=false;$('export').disabled=true;$('results').replaceChildren();$('audit-items').replaceChildren();$('audit-total').textContent='';$('result-status').textContent='Results are unavailable until the input error is corrected.';
+    currentRows=null;$('input-error').textContent=error.message;$('input-error').hidden=false;$('export').disabled=true;$('results').replaceChildren();$('audit-items').replaceChildren();$('topic-breakdown').replaceChildren();$('audit-total').textContent='';$('result-status').textContent='Results are unavailable until the input error is corrected.';
   }
 }
 for(const m of data.members){const option=text('option',m.name);option.value=m.id;$('audit-member').append(option);}
+for(const t of data.topic_vocabulary){const option=text('option',t);option.value=t;$('audit-topic').append(option);}
 const scenarios=Object.values(PRESETS).map(p=>score(data,p));
 for(let i=0;i<data.members.length;i++){
   const tr=document.createElement('tr');const name=text('th',data.members[i].name);name.scope='row';tr.append(name);
@@ -78,6 +93,7 @@ $('controls').addEventListener('input',()=>{$('preset').value='custom';update();
 $('controls').addEventListener('change',()=>{$('preset').value='custom';update();});
 $('reset').addEventListener('click',()=>applyPreset('core'));
 $('audit-member').addEventListener('change',renderAudit);
+$('audit-topic').addEventListener('change',renderAudit);
 $('export').addEventListener('click',()=>{
   if(!currentRows)return;
   const fields=['Member','2026 office','Observed items','Weighted activity','Activity index (mean 100)','Joint credit','Cosponsor credit','Include earlier-year items',...CATEGORIES.map(([,label])=>label+' weight'),'Snapshot version','Source SHA256'];

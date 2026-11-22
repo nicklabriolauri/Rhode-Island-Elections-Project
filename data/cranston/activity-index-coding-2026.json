@@ -1,0 +1,297 @@
+{
+  "version": "0.2-test",
+  "reviewed": "2026-11-22",
+  "topic_vocabulary": [
+    "Budget and taxation",
+    "Economy and development",
+    "Housing and land use",
+    "Transportation and traffic",
+    "Health",
+    "Education and libraries",
+    "Public safety",
+    "Environment and recreation",
+    "Government administration and accountability",
+    "Community recognition",
+    "Public property"
+  ],
+  "items": {
+    "ordinance-09-22-02": {
+      "tier": "substantive",
+      "primary_topic": "Education and libraries",
+      "secondary_topics": [
+        "Public safety"
+      ],
+      "reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
+    },
+    "ordinance-06-15-02": {
+      "tier": "substantive",
+      "primary_topic": "Transportation and traffic",
+      "secondary_topics": [],
+      "reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
+    },
+    "title-ad332296a67b": {
+      "tier": "symbolic",
+      "primary_topic": "Budget and taxation",
+      "secondary_topics": [
+        "Education and libraries"
+      ],
+      "reason": "Requests action by state institutions; does not itself change state law or funding."
+    },
+    "title-43fd7891de48": {
+      "tier": "symbolic",
+      "primary_topic": "Health",
+      "secondary_topics": [
+        "Community recognition"
+      ],
+      "reason": "Recognition or commemoration; subject matter does not increase the weight."
+    },
+    "ordinance-08-17-02": {
+      "tier": "substantive",
+      "primary_topic": "Government administration and accountability",
+      "secondary_topics": [
+        "Budget and taxation"
+      ],
+      "reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
+    },
+    "title-90cd977c491f": {
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "reason": "Recognition or commemoration; subject matter does not increase the weight."
+    },
+    "ordinance-08-17-05": {
+      "tier": "substantive",
+      "primary_topic": "Transportation and traffic",
+      "secondary_topics": [],
+      "reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
+    },
+    "ordinance-08-17-04": {
+      "tier": "substantive",
+      "primary_topic": "Transportation and traffic",
+      "secondary_topics": [],
+      "reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
+    },
+    "ordinance-08-17-03": {
+      "tier": "substantive",
+      "primary_topic": "Transportation and traffic",
+      "secondary_topics": [],
+      "reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
+    },
+    "ordinance-08-17-01": {
+      "tier": "substantive",
+      "primary_topic": "Housing and land use",
+      "secondary_topics": [
+        "Public safety"
+      ],
+      "reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
+    },
+    "title-940cbdba6741": {
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "reason": "Recognition or commemoration; subject matter does not increase the weight."
+    },
+    "title-94d5c0dc4a6f": {
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [
+        "Public property"
+      ],
+      "reason": "Flag-display policy classified as symbolic for this test."
+    },
+    "ordinance-06-15-01": {
+      "tier": "substantive",
+      "primary_topic": "Transportation and traffic",
+      "secondary_topics": [],
+      "reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
+    },
+    "ordinance-05-26-01": {
+      "tier": "substantive",
+      "primary_topic": "Public safety",
+      "secondary_topics": [
+        "Environment and recreation"
+      ],
+      "reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
+    },
+    "title-846571b0d75c": {
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "reason": "Recognition or commemoration; subject matter does not increase the weight."
+    },
+    "title-bca4faedc54a": {
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "reason": "Recognition or commemoration; subject matter does not increase the weight."
+    },
+    "title-c5dcc2e7bbd2": {
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "reason": "Recognition or commemoration; subject matter does not increase the weight."
+    },
+    "title-eb9aab205b51": {
+      "tier": "symbolic",
+      "primary_topic": "Health",
+      "secondary_topics": [
+        "Community recognition"
+      ],
+      "reason": "Recognition or commemoration; subject matter does not increase the weight."
+    },
+    "ordinance-04-26-02": {
+      "tier": "substantive",
+      "primary_topic": "Budget and taxation",
+      "secondary_topics": [
+        "Government administration and accountability"
+      ],
+      "reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
+    },
+    "resolution-2026-20": {
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "reason": "Recognition or commemoration; subject matter does not increase the weight."
+    },
+    "ordinance-04-26-01": {
+      "tier": "substantive",
+      "primary_topic": "Transportation and traffic",
+      "secondary_topics": [],
+      "reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
+    },
+    "resolution-2026-19": {
+      "tier": "symbolic",
+      "primary_topic": "Budget and taxation",
+      "secondary_topics": [],
+      "reason": "Requests action by state institutions; does not itself change state law or funding."
+    },
+    "resolution-2026-17": {
+      "tier": "symbolic",
+      "primary_topic": "Education and libraries",
+      "secondary_topics": [
+        "Budget and taxation"
+      ],
+      "reason": "Requests action by state institutions; does not itself change state law or funding."
+    },
+    "resolution-2026-18": {
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "reason": "Recognition or commemoration; subject matter does not increase the weight."
+    },
+    "resolution-2026-16": {
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "reason": "Recognition or commemoration; subject matter does not increase the weight."
+    },
+    "ordinance-04-26-04": {
+      "tier": "substantive",
+      "primary_topic": "Housing and land use",
+      "secondary_topics": [],
+      "reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
+    },
+    "ordinance-02-26-02": {
+      "tier": "substantive",
+      "primary_topic": "Transportation and traffic",
+      "secondary_topics": [],
+      "reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
+    },
+    "resolution-2026-11": {
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "reason": "Recognition or commemoration; subject matter does not increase the weight."
+    },
+    "ordinance-02-26-01": {
+      "tier": "substantive",
+      "primary_topic": "Transportation and traffic",
+      "secondary_topics": [],
+      "reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
+    },
+    "resolution-2026-12A": {
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "reason": "Recognition or commemoration; subject matter does not increase the weight."
+    },
+    "resolution-2026-12": {
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "reason": "Recognition or commemoration; subject matter does not increase the weight."
+    },
+    "resolution-2026-13": {
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "reason": "Recognition or commemoration; subject matter does not increase the weight."
+    },
+    "resolution-2026-10": {
+      "tier": "symbolic",
+      "primary_topic": "Government administration and accountability",
+      "secondary_topics": [],
+      "reason": "Requests action by state institutions; does not itself change state law or funding."
+    },
+    "ordinance-12-26-02S": {
+      "tier": "substantive",
+      "primary_topic": "Education and libraries",
+      "secondary_topics": [
+        "Budget and taxation"
+      ],
+      "reason": "School-building revolving fund: fiscal authorization."
+    },
+    "ordinance-12-25-03": {
+      "tier": "administrative",
+      "primary_topic": "Public property",
+      "secondary_topics": [],
+      "reason": "Identified city-owned property sale approval; no broader policy change established in this extract."
+    },
+    "resolution-2026-6": {
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "reason": "Recognition or commemoration; subject matter does not increase the weight."
+    },
+    "resolution-2026-4": {
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "reason": "Recognition or commemoration; subject matter does not increase the weight."
+    },
+    "resolution-2026-3": {
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "reason": "Recognition or commemoration; subject matter does not increase the weight."
+    },
+    "resolution-2026-7": {
+      "tier": "symbolic",
+      "primary_topic": "Education and libraries",
+      "secondary_topics": [
+        "Health"
+      ],
+      "reason": "Requests action by state institutions; does not itself change state law or funding."
+    },
+    "resolution-2026-5": {
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "reason": "Recognition or commemoration; subject matter does not increase the weight."
+    },
+    "ordinance-12-25-06S": {
+      "tier": "substantive",
+      "primary_topic": "Public safety",
+      "secondary_topics": [
+        "Budget and taxation"
+      ],
+      "reason": "Rescue-service budget amendment: fiscal policy."
+    },
+    "ordinance-12-25-01": {
+      "tier": "substantive",
+      "primary_topic": "Housing and land use",
+      "secondary_topics": [],
+      "reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
+    }
+  }
+}

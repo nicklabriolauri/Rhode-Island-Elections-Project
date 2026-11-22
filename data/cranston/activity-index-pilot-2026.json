@@ -1,7 +1,20 @@
 {
-  "version": "0.1-test",
+  "version": "0.2-test",
   "year": 2026,
   "reviewed": "2026-11-22",
+  "topic_vocabulary": [
+    "Budget and taxation",
+    "Economy and development",
+    "Housing and land use",
+    "Transportation and traffic",
+    "Health",
+    "Education and libraries",
+    "Public safety",
+    "Environment and recreation",
+    "Government administration and accountability",
+    "Community recognition",
+    "Public property"
+  ],
   "source_sha256": "c4ad683c790497df41a214db2a6cbb90ea3687bfe026aba31bf852b722692320",
   "source_url": "/data/cranston/sponsorship-2026.json",
   "meeting_count": 19,
@@ -173,7 +186,13 @@
       "adopted_text": null,
       "carryover": false,
       "function": "local_rule",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption. School-related background-check proposal is treated as a proposed local rule; no claim about legal validity or enactment."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption. School-related background-check proposal is treated as a proposed local rule; no claim about legal validity or enactment.",
+      "tier": "substantive",
+      "primary_topic": "Education and libraries",
+      "secondary_topics": [
+        "Public safety"
+      ],
+      "coding_reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
     },
     {
       "id": "ordinance-06-15-02",
@@ -206,7 +225,11 @@
       "adopted_text": null,
       "carryover": false,
       "function": "local_rule",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "substantive",
+      "primary_topic": "Transportation and traffic",
+      "secondary_topics": [],
+      "coding_reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
     },
     {
       "id": "title-ad332296a67b",
@@ -230,7 +253,13 @@
       "adopted_text": null,
       "carryover": false,
       "function": "advocacy",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "symbolic",
+      "primary_topic": "Budget and taxation",
+      "secondary_topics": [
+        "Education and libraries"
+      ],
+      "coding_reason": "Requests action by state institutions; does not itself change state law or funding."
     },
     {
       "id": "title-43fd7891de48",
@@ -257,7 +286,13 @@
       "adopted_text": null,
       "carryover": false,
       "function": "recognition",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "symbolic",
+      "primary_topic": "Health",
+      "secondary_topics": [
+        "Community recognition"
+      ],
+      "coding_reason": "Recognition or commemoration; subject matter does not increase the weight."
     },
     {
       "id": "ordinance-08-17-02",
@@ -290,7 +325,13 @@
       "adopted_text": null,
       "carryover": false,
       "function": "local_rule",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "substantive",
+      "primary_topic": "Government administration and accountability",
+      "secondary_topics": [
+        "Budget and taxation"
+      ],
+      "coding_reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
     },
     {
       "id": "title-90cd977c491f",
@@ -318,7 +359,11 @@
       "adopted_text": null,
       "carryover": false,
       "function": "recognition",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "coding_reason": "Recognition or commemoration; subject matter does not increase the weight."
     },
     {
       "id": "ordinance-08-17-05",
@@ -342,7 +387,11 @@
       "adopted_text": null,
       "carryover": false,
       "function": "local_rule",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "substantive",
+      "primary_topic": "Transportation and traffic",
+      "secondary_topics": [],
+      "coding_reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
     },
     {
       "id": "ordinance-08-17-04",
@@ -366,7 +415,11 @@
       "adopted_text": null,
       "carryover": false,
       "function": "local_rule",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "substantive",
+      "primary_topic": "Transportation and traffic",
+      "secondary_topics": [],
+      "coding_reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
     },
     {
       "id": "ordinance-08-17-03",
@@ -390,7 +443,11 @@
       "adopted_text": null,
       "carryover": false,
       "function": "local_rule",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "substantive",
+      "primary_topic": "Transportation and traffic",
+      "secondary_topics": [],
+      "coding_reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
     },
     {
       "id": "ordinance-08-17-01",
@@ -430,7 +487,13 @@
         }
       ],
       "function": "local_rule",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "substantive",
+      "primary_topic": "Housing and land use",
+      "secondary_topics": [
+        "Public safety"
+      ],
+      "coding_reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
     },
     {
       "id": "title-940cbdba6741",
@@ -457,7 +520,11 @@
       "adopted_text": null,
       "carryover": false,
       "function": "recognition",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "coding_reason": "Recognition or commemoration; subject matter does not increase the weight."
     },
     {
       "id": "title-94d5c0dc4a6f",
@@ -484,7 +551,13 @@
       "adopted_text": null,
       "carryover": false,
       "function": "symbolic",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [
+        "Public property"
+      ],
+      "coding_reason": "Flag-display policy classified as symbolic for this test."
     },
     {
       "id": "ordinance-06-15-01",
@@ -508,7 +581,11 @@
       "adopted_text": null,
       "carryover": false,
       "function": "local_rule",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "substantive",
+      "primary_topic": "Transportation and traffic",
+      "secondary_topics": [],
+      "coding_reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
     },
     {
       "id": "ordinance-05-26-01",
@@ -541,7 +618,13 @@
       "adopted_text": null,
       "carryover": false,
       "function": "local_rule",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "substantive",
+      "primary_topic": "Public safety",
+      "secondary_topics": [
+        "Environment and recreation"
+      ],
+      "coding_reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
     },
     {
       "id": "title-846571b0d75c",
@@ -571,7 +654,11 @@
       "adopted_text": null,
       "carryover": false,
       "function": "recognition",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "coding_reason": "Recognition or commemoration; subject matter does not increase the weight."
     },
     {
       "id": "title-bca4faedc54a",
@@ -600,7 +687,11 @@
       "adopted_text": null,
       "carryover": false,
       "function": "recognition",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "coding_reason": "Recognition or commemoration; subject matter does not increase the weight."
     },
     {
       "id": "title-c5dcc2e7bbd2",
@@ -625,7 +716,11 @@
       "adopted_text": null,
       "carryover": false,
       "function": "recognition",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "coding_reason": "Recognition or commemoration; subject matter does not increase the weight."
     },
     {
       "id": "title-eb9aab205b51",
@@ -653,7 +748,13 @@
       "adopted_text": null,
       "carryover": false,
       "function": "recognition",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "symbolic",
+      "primary_topic": "Health",
+      "secondary_topics": [
+        "Community recognition"
+      ],
+      "coding_reason": "Recognition or commemoration; subject matter does not increase the weight."
     },
     {
       "id": "ordinance-04-26-02",
@@ -677,7 +778,13 @@
       "adopted_text": null,
       "carryover": false,
       "function": "local_rule",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "substantive",
+      "primary_topic": "Budget and taxation",
+      "secondary_topics": [
+        "Government administration and accountability"
+      ],
+      "coding_reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
     },
     {
       "id": "resolution-2026-20",
@@ -715,7 +822,11 @@
         }
       ],
       "function": "recognition",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "coding_reason": "Recognition or commemoration; subject matter does not increase the weight."
     },
     {
       "id": "ordinance-04-26-01",
@@ -739,7 +850,11 @@
       "adopted_text": null,
       "carryover": false,
       "function": "local_rule",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "substantive",
+      "primary_topic": "Transportation and traffic",
+      "secondary_topics": [],
+      "coding_reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
     },
     {
       "id": "resolution-2026-19",
@@ -763,7 +878,11 @@
       "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/r2026_19.pdf?clientSite=Cranston-RI",
       "carryover": false,
       "function": "advocacy",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "symbolic",
+      "primary_topic": "Budget and taxation",
+      "secondary_topics": [],
+      "coding_reason": "Requests action by state institutions; does not itself change state law or funding."
     },
     {
       "id": "resolution-2026-17",
@@ -805,7 +924,13 @@
         }
       ],
       "function": "advocacy",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "symbolic",
+      "primary_topic": "Education and libraries",
+      "secondary_topics": [
+        "Budget and taxation"
+      ],
+      "coding_reason": "Requests action by state institutions; does not itself change state law or funding."
     },
     {
       "id": "resolution-2026-18",
@@ -837,7 +962,11 @@
       "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/r2026_18.pdf?clientSite=Cranston-RI",
       "carryover": false,
       "function": "recognition",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "coding_reason": "Recognition or commemoration; subject matter does not increase the weight."
     },
     {
       "id": "resolution-2026-16",
@@ -862,7 +991,11 @@
       "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/r2026_16.pdf?clientSite=Cranston-RI",
       "carryover": false,
       "function": "recognition",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "coding_reason": "Recognition or commemoration; subject matter does not increase the weight."
     },
     {
       "id": "ordinance-04-26-04",
@@ -886,7 +1019,11 @@
       "adopted_text": null,
       "carryover": false,
       "function": "local_rule",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "substantive",
+      "primary_topic": "Housing and land use",
+      "secondary_topics": [],
+      "coding_reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
     },
     {
       "id": "ordinance-02-26-02",
@@ -910,7 +1047,11 @@
       "adopted_text": null,
       "carryover": false,
       "function": "local_rule",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "substantive",
+      "primary_topic": "Transportation and traffic",
+      "secondary_topics": [],
+      "coding_reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
     },
     {
       "id": "resolution-2026-11",
@@ -936,7 +1077,11 @@
       "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/r2026_11.pdf?clientSite=Cranston-RI",
       "carryover": false,
       "function": "recognition",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "coding_reason": "Recognition or commemoration; subject matter does not increase the weight."
     },
     {
       "id": "ordinance-02-26-01",
@@ -960,7 +1105,11 @@
       "adopted_text": null,
       "carryover": false,
       "function": "local_rule",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "substantive",
+      "primary_topic": "Transportation and traffic",
+      "secondary_topics": [],
+      "coding_reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
     },
     {
       "id": "resolution-2026-12A",
@@ -985,7 +1134,11 @@
       "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/r2026_12A.pdf?clientSite=Cranston-RI",
       "carryover": false,
       "function": "recognition",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "coding_reason": "Recognition or commemoration; subject matter does not increase the weight."
     },
     {
       "id": "resolution-2026-12",
@@ -1011,7 +1164,11 @@
       "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/r2026_12.pdf?clientSite=Cranston-RI",
       "carryover": false,
       "function": "recognition",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "coding_reason": "Recognition or commemoration; subject matter does not increase the weight."
     },
     {
       "id": "resolution-2026-13",
@@ -1038,7 +1195,11 @@
       "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/r2026_13.pdf?clientSite=Cranston-RI",
       "carryover": false,
       "function": "recognition",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "coding_reason": "Recognition or commemoration; subject matter does not increase the weight."
     },
     {
       "id": "resolution-2026-10",
@@ -1063,7 +1224,11 @@
       "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/260217_08e3.pdf?clientSite=Cranston-RI",
       "carryover": false,
       "function": "advocacy",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "symbolic",
+      "primary_topic": "Government administration and accountability",
+      "secondary_topics": [],
+      "coding_reason": "Requests action by state institutions; does not itself change state law or funding."
     },
     {
       "id": "ordinance-12-26-02S",
@@ -1093,7 +1258,13 @@
       "adopted_text": null,
       "carryover": false,
       "function": "fiscal",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption. School-building revolving fund or municipal rescue-service budget measure."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption. School-building revolving fund or municipal rescue-service budget measure.",
+      "tier": "substantive",
+      "primary_topic": "Education and libraries",
+      "secondary_topics": [
+        "Budget and taxation"
+      ],
+      "coding_reason": "School-building revolving fund: fiscal authorization."
     },
     {
       "id": "ordinance-12-25-03",
@@ -1124,7 +1295,11 @@
       "adopted_text": null,
       "carryover": true,
       "function": "approval",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption. City-owned property sale approval, separated from general policy initiation."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption. City-owned property sale approval, separated from general policy initiation.",
+      "tier": "administrative",
+      "primary_topic": "Public property",
+      "secondary_topics": [],
+      "coding_reason": "Identified city-owned property sale approval; no broader policy change established in this extract."
     },
     {
       "id": "resolution-2026-6",
@@ -1150,7 +1325,11 @@
       "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/260217_07a.pdf?clientSite=Cranston-RI",
       "carryover": false,
       "function": "recognition",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "coding_reason": "Recognition or commemoration; subject matter does not increase the weight."
     },
     {
       "id": "resolution-2026-4",
@@ -1177,7 +1356,11 @@
       "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/260217_07d.pdf?clientSite=Cranston-RI",
       "carryover": false,
       "function": "recognition",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "coding_reason": "Recognition or commemoration; subject matter does not increase the weight."
     },
     {
       "id": "resolution-2026-3",
@@ -1209,7 +1392,11 @@
       "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/260217_07c.pdf?clientSite=Cranston-RI",
       "carryover": false,
       "function": "recognition",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "coding_reason": "Recognition or commemoration; subject matter does not increase the weight."
     },
     {
       "id": "resolution-2026-7",
@@ -1234,7 +1421,13 @@
       "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/260217_07b.pdf?clientSite=Cranston-RI",
       "carryover": false,
       "function": "advocacy",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "symbolic",
+      "primary_topic": "Education and libraries",
+      "secondary_topics": [
+        "Health"
+      ],
+      "coding_reason": "Requests action by state institutions; does not itself change state law or funding."
     },
     {
       "id": "resolution-2026-5",
@@ -1259,7 +1452,11 @@
       "adopted_text": "https://clerkshq.com/Content/Attachments/Cranston-RI/260217_07e.pdf?clientSite=Cranston-RI",
       "carryover": false,
       "function": "recognition",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "symbolic",
+      "primary_topic": "Community recognition",
+      "secondary_topics": [],
+      "coding_reason": "Recognition or commemoration; subject matter does not increase the weight."
     },
     {
       "id": "ordinance-12-25-06S",
@@ -1281,7 +1478,13 @@
       "adopted_text": null,
       "carryover": true,
       "function": "fiscal",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption. School-building revolving fund or municipal rescue-service budget measure."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption. School-building revolving fund or municipal rescue-service budget measure.",
+      "tier": "substantive",
+      "primary_topic": "Public safety",
+      "secondary_topics": [
+        "Budget and taxation"
+      ],
+      "coding_reason": "Rescue-service budget amendment: fiscal policy."
     },
     {
       "id": "ordinance-12-25-01",
@@ -1308,7 +1511,11 @@
       "adopted_text": null,
       "carryover": true,
       "function": "local_rule",
-      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption."
+      "classification_note": "Provisional function classification from the identified title and recorded actions; not a legal ruling or a finding of final adoption.",
+      "tier": "substantive",
+      "primary_topic": "Housing and land use",
+      "secondary_topics": [],
+      "coding_reason": "Proposed local rule changes municipal regulation or governance; classified by action, not by topic."
     }
   ]
 }
