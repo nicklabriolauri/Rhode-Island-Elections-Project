@@ -3604,7 +3604,7 @@
       try {
         const response = await fetch(withAssetVersion("/data/candidate_finance_2026.json"), { cache: "no-store" });
         const data = await response.json();
-        const local = await fetch("/data/municipal_campaign_finance_2026.json?v=20261124-central-falls-schedules", {cache:"no-store",signal:AbortSignal.timeout(12000)}).then(r => r.ok ? r.json() : null).catch(() => null);
+        const local = await fetch("/data/municipal_campaign_finance_2026.json?v=20261124-explorer-links", {cache:"no-store",signal:AbortSignal.timeout(12000)}).then(r => r.ok ? r.json() : null).catch(() => null);
         if (local) {
           for (const field of ["profiles", "directory"]) {
             const slugs = new Set((data[field] || []).map(p => p.slug));
@@ -3614,6 +3614,10 @@
         }
         const profile = getRequestedProfile(data.profiles || []);
         if (profile) {
+          if (profile.municipality === "Central Falls") {
+            const canonical = document.querySelector('link[rel="canonical"]');
+            canonical.href = new URL(profileUrl(profile), canonical.href).href;
+          }
           renderProfile(profile, data);
           return;
         }
