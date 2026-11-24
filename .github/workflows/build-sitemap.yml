@@ -6,6 +6,7 @@ on:
       - 'scripts/build_sitemap.py'
       - 'scripts/build_candidate_seo.py'
       - 'candidates/**'
+      - 'finance-candidates/**'
       - 'candidate-profiles.html'
       - 'data/whos_running_2026.json'
       - 'data/primary_results_2026.json'

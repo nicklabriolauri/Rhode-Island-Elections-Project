@@ -20,6 +20,8 @@ for race in res.get('races',[]):
     urls.append(f"/races/{str(race.get('chamber','')).lower()}-{int(race.get('district'))}-{party_slug(race.get('party'))}.html")
 urls.append('/candidate-profiles.html')
 urls.extend('/' + p['path'] for p in profiles())
+urls.extend('/' + p.relative_to(ROOT).as_posix() for p in sorted((ROOT/'finance-candidates').glob('*.html')))
+urls.extend(['/central-falls.html', '/central-falls-map.html'])
 seen=[]
 for u in urls:
     if u not in seen: seen.append(u)
