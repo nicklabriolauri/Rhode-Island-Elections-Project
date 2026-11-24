@@ -1,5 +1,6 @@
 # Cranston council records: intern replication guide
 
+For a new municipality, start with the [municipal data replication guide](municipal-data-replication-guide.md). Use this page for the Cranston-specific records workflow and worked roll-call example.
 ## What one record means
 
 - **Meeting:** one full council session. Special sessions have their own IDs. Two state filings can describe the same session. Compare date, time, body and document contents before counting attendance twice.
