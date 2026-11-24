@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Central Falls Ward and Precinct Map | Rhode Island Elections Project</title>
+  <meta name="description" content="Explore five Central Falls council wards, seven precincts, state districts, current councilors, and 2026 election returns.">
+  <link rel="canonical" href="https://www.rhodeislandelectionsproject.org/central-falls-map.html">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/municipal-map.css?v=20261119">
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script defer src="/municipal-map-core.js?v=20261119"></script>
+  <script defer src="/municipal-map.js?v=central-falls-20261123"></script>
+</head>
+<body data-municipality="central-falls">
+<a class="skip" href="#main">Skip to the map and ward information</a>
+<header class="site-header"><div class="header-inner"><a href="/?view=full" class="brand"><img src="/riep-logo-sunburst-white.png" alt="Rhode Island Elections Project"></a><nav aria-label="Site navigation"><a href="/general-results.html">Statewide results</a><a href="/cranston-map.html">Cranston wards</a><a href="/mobile-guide.html">Voter guide</a></nav></div></header>
+<main id="main">
+  <div class="page-heading"><div><p class="eyebrow">Rhode Island Elections Project <span class="divider">/</span> Local elections</p><h1>Central Falls</h1><p class="intro">Your wards, your precincts, your representatives.</p></div><p class="scope">5 wards <span>7 precincts</span><span>2 at-large council seats</span></p></div>
+  <section class="finder" aria-labelledby="finder-title"><div><h2 id="finder-title">Find your ward</h2><p>Search a Central Falls address, or select a ward on the map.</p></div><form id="address-form"><label class="visually-hidden" for="address">Central Falls street address</label><input id="address" autocomplete="street-address" placeholder="580 Broad Street, Central Falls" required><button id="find-button" type="submit">Find address</button></form><p class="address-status" id="address-status" role="status">Address searches use the ArcGIS geocoder. RIEP does not save your address.</p><div id="address-matches"></div></section>
+  <section class="atlas" aria-label="Central Falls local election map">
+    <div class="map-column"><div class="map-controls"><label for="map-view">Map view<select id="map-view"><option value="wards">Council wards</option><option value="precincts">Voting precincts</option><option value="house">State House districts</option><option value="senate">State Senate districts</option></select></label><label for="color-view">Ward colors<select id="color-view"><option value="wards">Ward colors</option><option value="turnout">2024 turnout</option></select></label><button class="secondary" type="button" id="reset-map">Show all Central Falls</button></div>
+      <div class="map-frame"><div id="municipal-map" aria-label="Interactive Central Falls ward and precinct map" aria-busy="true"><p class="loading" role="status">Loading Central Falls’s boundaries…</p></div><div class="map-caption" id="map-caption">Each ward elects one councilor. Two at-large councilors are elected citywide.</div></div>
+      <div class="legend" id="map-legend" aria-label="Map color legend"></div><p class="map-hint" id="map-hint" role="status">Select a ward to explore it. Zoom in for precinct boundaries and streets.</p>
+      <nav class="ward-list" id="ward-list" aria-label="Choose a Central Falls ward"></nav>
+    </div>
+    <aside class="ward-panel" aria-label="Selected ward"><div id="ward-detail" aria-live="polite"><h2>Choose a ward</h2><p>Ward information will appear here.</p></div></aside>
+  </section>
+  <section class="overview" aria-labelledby="overview-title"><div class="section-heading"><div><p class="eyebrow">Across the city</p><h2 id="overview-title">All five wards</h2></div><p>One council seat per ward. Council races are nonpartisan.</p></div><div class="table-scroll"><table><thead><tr><th scope="col">Ward</th><th scope="col">Precincts</th><th scope="col">Current ward councilor</th><th scope="col">2026 council returns</th></tr></thead><tbody id="ward-overview"><tr><td colspan="4">Loading ward overview…</td></tr></tbody></table></div></section>
+  <section class="citywide" aria-labelledby="citywide-title"><div class="section-heading"><div><p class="eyebrow">Representing every ward</p><h2 id="citywide-title">Citywide representation</h2></div><p>Every voter can choose one ward councilor and up to two at-large councilors. The at-large members represent all five wards.</p></div><div id="citywide-current"></div><details open><summary>2026 at-large election returns</summary><div id="citywide-results"></div></details></section>
+  <section class="sources" aria-labelledby="sources-title"><h2 id="sources-title">Maps, sources, and dates</h2><p>Ward shapes are built by combining the seven precinct polygons in the Rhode Island GIS 2022 precinct layer. All seven precinct assignments were cross-checked against the state’s 2026 sample ballots. Turnout is from 2024.</p><div class="source-links"><a href="https://services2.arcgis.com/S8zZg9pg23JUEexQ/ArcGIS/rest/services/BND_Voting_Precincts_2022/FeatureServer/0">State precinct boundaries</a><a href="https://www.centralfallsri.gov/media/2246">City charter</a><a href="https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection">State election returns</a><a href="/data/central-falls/wards.geojson" download>Download ward GeoJSON</a><a href="/data/central-falls/overview.json" download>Download council returns</a><a href="https://vote.sos.ri.gov/Home/PollingPlaces">Official voter lookup</a></div><p id="source-date">Loading source dates…</p><p class="small">Central Falls has an appointed school board. The ward and at-large races on this map are for City Council.</p></section>
+</main><footer><span>Rhode Island Elections Project</span><a href="/?view=full">Home</a><a href="/general-results.html">2026 statewide results</a><a href="/providence-council-test.html">Providence map</a></footer>
+</body></html>
