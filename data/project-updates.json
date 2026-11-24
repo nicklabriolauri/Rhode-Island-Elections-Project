@@ -2,6 +2,31 @@
   "timezone": "America/New_York",
   "updates": [
     {
+      "id": "central-falls-council-profile",
+      "category": "Local coverage",
+      "title": "Central Falls council coverage is live",
+      "ticker": "New: Central Falls council profile, ward map and legislative records",
+      "body": [
+        "Explore all five wards and the seven precincts on the Central Falls map. The city council profile brings together the 2026 ward and at-large election returns, pre-election campaign finance, attendance, recorded votes and charter powers.",
+        "An initial register links 35 ordinances and resolutions to the source records and distinguishes agenda attributions and introductions by request from verified sponsorship."
+      ],
+      "links": [
+        {
+          "label": "Explore the Central Falls council profile",
+          "url": "/central-falls.html"
+        },
+        {
+          "label": "Open the Central Falls ward map",
+          "url": "/central-falls-map.html"
+        },
+        {
+          "label": "Download the measure register",
+          "url": "/data/central-falls/council-measures-2026.csv"
+        }
+      ],
+      "published_at": "2026-11-24T04:48:25Z"
+    },
+    {
       "id": "cranston-legislative-activity-index",
       "category": "Local research",
       "title": "New Cranston activity ranking and clearer council profiles",
