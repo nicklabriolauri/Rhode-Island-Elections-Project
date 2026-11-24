@@ -2417,7 +2417,7 @@
               </div>
               <div class="subject-name">${escapeHtml(profile.candidate_name)}</div>
               <div class="subject-meta">
-                ${escapeHtml(profile.office_sought)}<br />
+                ${profile.office_sought === districtLabel ? "" : `${escapeHtml(profile.office_sought)}<br />`}
                 ${escapeHtml(districtLabel)}<br />
                 Filing period: ${escapeHtml(profile.reporting_period_label)}
               </div>
@@ -2664,8 +2664,8 @@
             <div class="section-label">Top donors</div>
             <h3>Who gave the biggest checks${buildHelp("Some filings list donors one by one, while others report part of their money in aggregate form without naming each contributor.")}</h3>
             <p class="section-copy">
-              No itemized donor list is visible in this filing.
-              ${unnamedBucket ? ` ${formatCurrency(unnamedBucket.amount)} was reported without individual donor names attached, so that portion cannot be shown as a donor-by-donor list here.` : "This candidate may still have raised money, but the filing data currently available to the site does not expose a donor-by-donor list we can show here yet."}
+              ${profile.municipality === "Central Falls" && profile.money_raised === 0 ? "The CF-2 reports $0 in cash receipts this period." : `No itemized donor list is visible in this filing.
+              ${unnamedBucket ? ` ${formatCurrency(unnamedBucket.amount)} was reported without individual donor names attached, so that portion cannot be shown as a donor-by-donor list here.` : "This candidate may still have raised money, but the filing data currently available to the site does not expose a donor-by-donor list we can show here yet."}`}
             </p>
           </article>
         `;
@@ -2700,7 +2700,10 @@
 
     function buildSpendingHighlights(profile) {
       const categories = profile.spending_categories || [];
-      if (!categories.length) return "";
+      if (!categories.length) {
+        return profile.municipality === "Central Falls" && profile.money_spent === 0
+          ? '<article class="panel section-card jump-target" id="spending-breakdown"><h3>Spending breakdown</h3><p>The CF-2 reports $0 in cash disbursements this period.</p></article>' : "";
+      }
       return `
         <article class="panel section-card jump-target" id="spending-breakdown">
           <div class="section-label">Spending breakdown</div>
@@ -3042,9 +3045,10 @@
       const receipts = profile.receipt_transactions || [];
       const receiptLabel = profile.scope === "citywide" ? "Cash receipt" : "Contribution";
       const expenses = profile.expenditure_transactions || [];
+      const alternate = profile.alternate_expenditure_transactions || [];
       const rows = (records, expense) => records.map(row => `<tr><td>${escapeHtml(row.date || "—")}</td><td>${escapeHtml((expense ? row.payee : row.donor) || "Reported in aggregate")}</td><td>${escapeHtml(expense ? row.category || row.type : row.type)}</td><td>${formatCurrency(row.amount)}</td><td>${escapeHtml(expense ? row.purpose || "" : [row.notes, row.employer ? "Employer as filed: " + row.employer : ""].filter(Boolean).join(" · "))}${row.source_document ? ` <a href="${escapeHtml(row.source_document)}#page=${Number(row.source_page)}" target="_blank" rel="noopener">Source p. ${Number(row.source_page)}</a>` : ""}</td></tr>`).join("");
       const table = (records, expense) => `<div style="overflow-x:auto"><table style="width:100%;text-align:left"><thead><tr><th>Date</th><th>${expense ? "Payee" : "Donor"}</th><th>Type</th><th>Amount</th><th>${expense ? "Purpose" : "Notes"}</th></tr></thead><tbody>${rows(records, expense)}</tbody></table></div>`;
-      return `<article class="panel section-card"><div class="section-label">Selected filing details</div><h3>Donors &amp; expenses</h3><p class="section-copy">${escapeHtml(profile.reporting_period_label || profile.report_label)}</p><details><summary>${receiptLabel} transactions (${receipts.length})</summary>${receipts.length ? table(receipts, false) : '<p>Contribution transactions have not been transcribed for this period. Available named donors are shown above; aggregate contributions do not identify individual donors.</p>'}</details><details><summary>Expense transactions (${expenses.length})</summary>${expenses.length ? table(expenses, true) : '<p>Expense transactions have not been transcribed for this period. Available spending categories are shown above. A payee-by-payee list requires the original filing detail.</p>'}</details>${(profile.accounts_payable_transactions || []).length ? `<details><summary>${profile.chamber === "municipal" ? "Accounts-payable entries (obligations incurred)" : "Unpaid bill entries (separate from cash spending)"}</summary><p>${escapeHtml(profile.coverage_note || "")}</p>${table(profile.accounts_payable_transactions, true)}</details>` : ""}${(profile.in_kind_transactions || []).length ? `<details><summary>In-kind contributions (separate from cash receipts)</summary>${table(profile.in_kind_transactions, false)}</details>` : ""}</article>`;
+      return `<article class="panel section-card"><div class="section-label">Selected filing details</div><h3>Donors &amp; expenses</h3><p class="section-copy">${escapeHtml(profile.reporting_period_label || profile.report_label)}</p><details><summary>${receiptLabel} transactions (${receipts.length})</summary>${receipts.length ? table(receipts, false) : profile.municipality === "Central Falls" && profile.money_raised === 0 ? '<p>No cash receipts reported.</p>' : '<p>Contribution transactions have not been transcribed for this period. Available named donors are shown above; aggregate contributions do not identify individual donors.</p>'}</details><details><summary>Expense transactions (${expenses.length})</summary>${expenses.length ? table(expenses, true) : profile.municipality === "Central Falls" && profile.money_spent === 0 ? '<p>No cash disbursements reported.</p>' : '<p>Expense transactions have not been transcribed for this period. Available spending categories are shown above. A payee-by-payee list requires the original filing detail.</p>'}</details>${alternate.length ? `<details><summary>Expenses in the alternate export (${alternate.length})</summary>${table(alternate, true)}</details>` : ""}${(profile.accounts_payable_transactions || []).length ? `<details><summary>${profile.chamber === "municipal" ? "Accounts-payable entries (obligations incurred)" : "Unpaid bill entries (separate from cash spending)"}</summary><p>${escapeHtml(profile.coverage_note || "")}</p>${table(profile.accounts_payable_transactions, true)}</details>` : ""}${(profile.in_kind_transactions || []).length ? `<details><summary>In-kind contributions (separate from cash receipts)</summary>${table(profile.in_kind_transactions, false)}</details>` : ""}</article>`;
     }
 
     function buildFilingControl(choices, choice, selected) {
@@ -3056,14 +3060,6 @@
 
     function buildMunicipalAccounting(profile) {
       if (profile.chamber !== "municipal") return "";
-      if (profile.summary_only) {
-        return `<article class="panel section-card"><div class="section-label">Filing summary</div><h3>Cash, debt and payments</h3><dl>
-          <dt>Cash at period end</dt><dd>${formatCurrency(profile.ending_cash)}</dd>
-          <dt>Accounts payable</dt><dd>${formatCurrency(profile.accounts_payable)}</dd>
-          <dt>Outstanding loans</dt><dd>${formatCurrency(profile.loans_payable)}</dd>
-          <dt>In-kind support</dt><dd>${formatCurrency(profile.in_kind_total)}</dd>
-        </dl><p>${escapeHtml(profile.coverage_note)}</p></article>`;
-      }
       const amounts = [["Cash at period end", profile.ending_cash], ["Accounts payable", profile.accounts_payable], ["Outstanding loans", profile.loans_payable], ["Reported fund balance after liabilities", profile.total_fund_balance]];
       const variants = profile.source_summary_variants || [];
       return `<article class="panel section-card"><div class="section-label">Cash and obligations</div><h3>Cash, debt and payments</h3><div class="table-scroll"><table style="width:100%;text-align:left"><tbody>${amounts.map(([label,value]) => `<tr><th scope="row">${escapeHtml(label)}</th><td>${formatCurrency(value || 0)}</td></tr>`).join("")}</tbody></table></div><p class="section-copy">Cash disbursements include ${formatCurrency(profile.campaign_expenses || 0)} in campaign expenses, ${formatCurrency(profile.aggregate_expenses || 0)} in aggregate expenses, ${formatCurrency(profile.loan_repayments || 0)} in loan repayments and ${formatCurrency(profile.ap_repayments || 0)} in accounts-payable repayments. In-kind support of ${formatCurrency(profile.in_kind_total || 0)} is separate from cash receipts.</p>${variants.length > 1 ? `<details><summary>Compare the supplied summary exports (${variants.length})</summary><p>These exports cover the same reporting period. They are not added together. No amendment order is inferred from filenames.</p><div style="overflow-x:auto"><table style="width:100%;text-align:left"><thead><tr><th>Source</th><th>Opening cash</th><th>Cash receipts</th><th>Cash disbursed</th><th>Closing cash</th><th>Individual / PAC receipts</th></tr></thead><tbody>${variants.map((v,i)=>`<tr><th scope="row"><a href="${escapeHtml(v.document)}" target="_blank" rel="noopener">${v.displayed?"Displayed summary":`Alternate export ${i}`}</a></th><td>${formatCurrency(v.beginning_cash)}</td><td>${formatCurrency(v.money_raised)}</td><td>${formatCurrency(v.money_spent)}</td><td>${formatCurrency(v.ending_cash)}</td><td>${formatCurrency(v.individual_receipts)} / ${formatCurrency(v.pac_receipts)}</td></tr>`).join("")}</tbody></table></div></details>` : ""}</article>`;
@@ -3081,9 +3077,9 @@
         ${buildMunicipalAccounting(selected)}
         ${selected.finance_audit_note ? `<article class="panel section-card" role="note"><div class="section-label">Source verification note</div><p>${escapeHtml(selected.finance_audit_note)}</p></article>` : ""}
         <section class="content-grid">
-          ${selected.summary_only ? "" : `<div class="stack">${buildPacTopicPanel(selected)}${buildDonorHighlights(selected)}</div>`}
-          <div class="stack">${selected.summary_only ? "" : buildSpendingHighlights(selected)}${buildHistory(selected)}${buildVerification(selected)}</div>
-        </section>${selected.summary_only ? "" : buildTransactions(selected)}
+          <div class="stack">${buildPacTopicPanel(selected)}${buildDonorHighlights(selected)}</div>
+          <div class="stack">${buildSpendingHighlights(selected)}${buildHistory(selected)}${buildVerification(selected)}</div>
+        </section>${buildTransactions(selected)}
       `;
       document.getElementById("financeFilingSelect").addEventListener("change", event => {
         const url = new URL(window.location.href);
@@ -3608,7 +3604,7 @@
       try {
         const response = await fetch(withAssetVersion("/data/candidate_finance_2026.json"), { cache: "no-store" });
         const data = await response.json();
-        const local = await fetch("/data/municipal_campaign_finance_2026.json?v=20261124-central-falls", {cache:"no-store",signal:AbortSignal.timeout(12000)}).then(r => r.ok ? r.json() : null).catch(() => null);
+        const local = await fetch("/data/municipal_campaign_finance_2026.json?v=20261124-central-falls-schedules", {cache:"no-store",signal:AbortSignal.timeout(12000)}).then(r => r.ok ? r.json() : null).catch(() => null);
         if (local) {
           for (const field of ["profiles", "directory"]) {
             const slugs = new Set((data[field] || []).map(p => p.slug));
