@@ -15,8 +15,28 @@ for(const file of ['index.html','ballot.html']){const text=fs.readFileSync(file,
 const page=fs.readFileSync('candidates/sara-jane-haupt.html','utf8');assert(page.includes('January 4, 2027'));assert(page.includes('No votes or attendance from that term exist yet'));assert(!page.includes('W-NOMINATE'));assert(fs.readFileSync('sitemap.xml','utf8').includes('/candidates/sara-jane-haupt.html'));
 console.log('PASS: all 27 precinct assignments, six-ward profile lookup, all state districts preserved, wrong-city/invalid-code exclusion, exact election arithmetic, inline script syntax and indexed profile.');
 
-assert.equal(registry.profiles.length,9);
-for(const p of registry.profiles){const page=fs.readFileSync(p.profile.slice(1),'utf8');if(p.ward==null){assert(page.includes('/cranston-map.html?colors=returns#citywide-results'));assert(page.includes('Share of candidate votes'));}else{assert(page.includes(`/cranston-map.html?ward=${p.ward}&amp;colors=returns`));assert(page.includes('View 2026 results on the Cranston ward map'));}assert(page.includes(p.name));assert(!api.renderProfile(p).includes('src="null"'));assert.equal(p.general.candidates.reduce((s,c)=>s+c.votes,0),p.general.total_votes);assert(fs.readFileSync('sitemap.xml','utf8').includes(p.profile));}
+assert.equal(registry.profiles.filter(p=>p.municipality==='Cranston').length,9);
+for(const p of registry.profiles.filter(p=>p.municipality==='Cranston')){const page=fs.readFileSync(p.profile.slice(1),'utf8');if(p.ward==null){assert(page.includes('/cranston-map.html?colors=returns#citywide-results'));assert(page.includes('Share of candidate votes'));}else{assert(page.includes(`/cranston-map.html?ward=${p.ward}&amp;colors=returns`));assert(page.includes('View 2026 results on the Cranston ward map'));}assert(page.includes(p.name));assert(!api.renderProfile(p).includes('src="null"'));assert.equal(p.general.candidates.reduce((s,c)=>s+c.votes,0),p.general.total_votes);assert(fs.readFileSync('sitemap.xml','utf8').includes(p.profile));}
 console.log('PASS: six published profile destinations, exact result totals and ward-specific results-map links.');
 
 for(const f of precincts){const ps=api.profilesFor('Cranston',f.properties.precinct),rendered=api.renderGroup('Cranston',f.properties.precinct);assert.equal(ps.filter(p=>p.ward==null).length,3);for(const slug of ['emilia-vaziri','steven-a-stycos','kristen-e-haroian'])assert(rendered.includes('/candidates/'+slug+'.html'));assert(!rendered.includes('Ward null'));assert(!rendered.includes('Ward undefined'));}assert.equal(api.profilesFor('Warwick','0724').length,0);console.log('PASS: each of 27 precincts receives its one ward winner and the same three citywide winners; outside municipalities receive none.');
+
+const centralFalls=JSON.parse(fs.readFileSync('data/central-falls/precincts.geojson','utf8')).features;
+for (const {properties:p} of centralFalls) {
+ const results=api.profilesFor('Central Falls',p.precinct);
+ assert.equal(results.length,3);
+ assert.deepEqual(results.map(p=>p.ward),[p.ward,null,null]);
+ assert.equal(api.mapHref('Central Falls',Number(p.precinct)),`/central-falls-map.html?precinct=${p.precinct}`);
+ const rendered=api.renderGroup('Central Falls',p.precinct);
+ assert(rendered.includes('All five wards'));
+ assert(!rendered.includes('All six wards'));
+ for (const person of results) {
+  assert(rendered.includes(person.profile));
+  assert(fs.readFileSync(person.profile.slice(1),'utf8').includes(person.name));
+ }
+ ctx.renderAddressSearchResult('test',{address:'test'},{municipality:'Central Falls',precinct_code:p.precinct,house_district:p.house,senate_district:p.senate});
+ assert(el.innerHTML.includes(api.mapHref('Central Falls',p.precinct)));
+ for (const person of results) assert(el.innerHTML.includes(person.profile));
+}
+assert.equal(api.mapHref('Central Falls','0724'),null);
+console.log('PASS: all seven Central Falls precincts show one ward profile and both at-large profiles in address-search results.');

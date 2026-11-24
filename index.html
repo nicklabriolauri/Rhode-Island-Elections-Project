@@ -552,7 +552,7 @@
     @media(max-width:640px) { .address-candidate-grid { grid-template-columns:1fr; } }
   </style>
 <style>.address-rating{font-size:13px;padding:9px 0;border-top:1px solid #d8dee5;border-bottom:1px solid #d8dee5}.address-rating a{color:#244f7b}.address-rating small{display:block;color:#596779;margin-top:3px}</style><script src="/election-results-2026.js?v=20261119" defer></script>
-<script src="/local-representation.js?v=20261121-citywide"></script>
+<script src="/local-representation.js?v=central-falls-profiles"></script>
 <link rel="stylesheet" href="/homepage-local-tools.css?v=20261123-central-falls">
 <script src="/homepage-local-tools.js?v=20261122-updates" defer></script>
 </head>
@@ -1501,6 +1501,7 @@
       if (!results) return;
 
       const matchedAddress = candidate.address || query;
+      const localMapHref = window.RIEPLocalRepresentation?.mapHref(lookupRecord.municipality, lookupRecord.precinct_code);
       const precinctName = `${lookupRecord.municipality} Precinct ${lookupRecord.precinct_label || lookupRecord.precinct_code}`;
 
       const ballotParams = new URLSearchParams();
@@ -1548,7 +1549,7 @@
           <div class="hero-search-action-row">
             <a class="hero-search-action primary" href="${ballotHref}">My Ballot</a>
             <a class="hero-search-action" href="candidate-profiles.html">All Candidate Profiles</a>
-            ${lookupRecord.municipality === "Cranston" ? `<a class="hero-search-action" href="cranston-map.html?precinct=${encodeURIComponent(lookupRecord.precinct_code || "")}">Cranston ward &amp; precinct</a>` : ""}
+            ${localMapHref ? `<a class="hero-search-action" href="${escapeHtml(localMapHref)}">${escapeHtml(lookupRecord.municipality)} ward &amp; precinct</a>` : ""}
             <a class="hero-search-action compare" href="${resultsHref}">Election Results</a>
           </div>
         </div>

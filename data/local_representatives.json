@@ -1,6 +1,6 @@
 {
   "reviewed": "2026-11-21",
-  "coverage_note": "Profiles cover all nine 2026 Cranston City Council winners: six ward members and three citywide members. School-committee profiles are not yet included.",
+  "coverage_note": "Profiles for the nine Cranston and seven Central Falls council candidates who led the 2026 returns for the available seats.",
   "municipalities": {
     "Cranston": {
       "precinct_wards": {
@@ -34,6 +34,17 @@
       },
       "ward_map": "/cranston-map.html",
       "boundary_source": "https://arcgisserver.cranstonri.org/arcgis/rest/services/Canvassing/FeatureServer/3"
+    },
+    "Central Falls": {
+      "precinct_wards": {
+        "0401": 1,
+        "0402": 3,
+        "0403": 4,
+        "0404": 5,
+        "0405": 5,
+        "0406": 2,
+        "0407": 2
+      }
     }
   },
   "profiles": [
@@ -1179,6 +1190,288 @@
         "source": "https://thewomxnproject.org/bffi/cranston/"
       },
       "finance_url": "/finance.html?slug=kristen-e-haroian"
+    },
+    {
+      "slug": "laurilim-rosado-martinez",
+      "name": "Laurilim Rosado Martinez",
+      "profile": "/candidates/laurilim-rosado-martinez.html",
+      "municipality": "Central Falls",
+      "office": "City Council",
+      "ward": 1,
+      "party": "NON",
+      "status": "2026 election · Incoming term",
+      "photo": null,
+      "finance_url": "/candidates/laurilim-rosado-martinez.html#finance",
+      "general": {
+        "office": "council",
+        "ward": 1,
+        "seats": 1,
+        "total_votes": 402,
+        "candidates": [
+          {
+            "name": "Laurilim Rosado Martinez",
+            "party": "NON",
+            "votes": 394,
+            "share": 98.00995024875621,
+            "is_write_in": false,
+            "source_is_winner": null
+          },
+          {
+            "name": "Write-in",
+            "party": "NON",
+            "votes": 8,
+            "share": 1.9900497512437811,
+            "is_write_in": true,
+            "source_is_winner": null
+          }
+        ],
+        "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-31c6-08df1e27a838"
+      },
+      "outcome": "Led the 2026 returns for an available seat · Incoming term begins January 4, 2027"
+    },
+    {
+      "slug": "jackeline-parra",
+      "name": "Jackeline Parra",
+      "profile": "/candidates/jackeline-parra.html",
+      "municipality": "Central Falls",
+      "office": "City Council",
+      "ward": 2,
+      "party": "NON",
+      "status": "2026 election · Incoming term",
+      "photo": null,
+      "finance_url": "/candidates/jackeline-parra.html#finance",
+      "general": {
+        "office": "council",
+        "ward": 2,
+        "seats": 1,
+        "total_votes": 421,
+        "candidates": [
+          {
+            "name": "Jackeline Parra",
+            "party": "NON",
+            "votes": 412,
+            "share": 97.8622327790974,
+            "is_write_in": false,
+            "source_is_winner": null
+          },
+          {
+            "name": "Write-in",
+            "party": "NON",
+            "votes": 9,
+            "share": 2.137767220902613,
+            "is_write_in": true,
+            "source_is_winner": null
+          }
+        ],
+        "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-706d-08df1e27a84c"
+      },
+      "outcome": "Led the 2026 returns for an available seat · Incoming term begins January 4, 2027"
+    },
+    {
+      "slug": "kevin-kazarian",
+      "name": "Kevin Kazarian",
+      "profile": "/candidates/kevin-kazarian.html",
+      "municipality": "Central Falls",
+      "office": "City Council",
+      "ward": 3,
+      "party": "NON",
+      "status": "2026 election · Incoming term",
+      "photo": null,
+      "finance_url": "/candidates/kevin-kazarian.html#finance",
+      "general": {
+        "office": "council",
+        "ward": 3,
+        "seats": 1,
+        "total_votes": 281,
+        "candidates": [
+          {
+            "name": "Kevin Kazarian",
+            "party": "NON",
+            "votes": 275,
+            "share": 97.86476868327402,
+            "is_write_in": false,
+            "source_is_winner": null
+          },
+          {
+            "name": "Write-in",
+            "party": "NON",
+            "votes": 6,
+            "share": 2.135231316725979,
+            "is_write_in": true,
+            "source_is_winner": null
+          }
+        ],
+        "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-8f8b-08df1e27a85c"
+      },
+      "outcome": "Led the 2026 returns for an available seat · Incoming term begins January 4, 2027"
+    },
+    {
+      "slug": "franklin-solano",
+      "name": "Franklin Solano",
+      "profile": "/candidates/franklin-solano.html",
+      "municipality": "Central Falls",
+      "office": "City Council",
+      "ward": 4,
+      "party": "NON",
+      "status": "2026 election · Incoming term",
+      "photo": null,
+      "finance_url": "/candidates/franklin-solano.html#finance",
+      "general": {
+        "office": "council",
+        "ward": 4,
+        "seats": 1,
+        "total_votes": 398,
+        "candidates": [
+          {
+            "name": "Franklin Solano",
+            "party": "NON",
+            "votes": 384,
+            "share": 96.4824120603015,
+            "is_write_in": false,
+            "source_is_winner": null
+          },
+          {
+            "name": "Write-in",
+            "party": "NON",
+            "votes": 14,
+            "share": 3.5175879396984926,
+            "is_write_in": true,
+            "source_is_winner": null
+          }
+        ],
+        "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-0b0f-08df1e27a86e"
+      },
+      "outcome": "Led the 2026 returns for an available seat · Incoming term begins January 4, 2027"
+    },
+    {
+      "slug": "rafael-peguero",
+      "name": "Rafael Peguero",
+      "profile": "/candidates/rafael-peguero.html",
+      "municipality": "Central Falls",
+      "office": "City Council",
+      "ward": 5,
+      "party": "NON",
+      "status": "2026 election · Incoming term",
+      "photo": null,
+      "finance_url": "/candidates/rafael-peguero.html#finance",
+      "general": {
+        "office": "council",
+        "ward": 5,
+        "seats": 1,
+        "total_votes": 377,
+        "candidates": [
+          {
+            "name": "Rafael Peguero",
+            "party": "NON",
+            "votes": 369,
+            "share": 97.87798408488064,
+            "is_write_in": false,
+            "source_is_winner": null
+          },
+          {
+            "name": "Write-in",
+            "party": "NON",
+            "votes": 8,
+            "share": 2.122015915119363,
+            "is_write_in": true,
+            "source_is_winner": null
+          }
+        ],
+        "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-128d-08df1e27a881"
+      },
+      "outcome": "Led the 2026 returns for an available seat · Incoming term begins January 4, 2027"
+    },
+    {
+      "slug": "tatiana-baena",
+      "name": "Tatiana Baena",
+      "profile": "/candidates/tatiana-baena.html",
+      "municipality": "Central Falls",
+      "office": "City Council",
+      "ward": null,
+      "party": "NON",
+      "status": "2026 election · Incoming term",
+      "photo": null,
+      "finance_url": "/candidates/tatiana-baena.html#finance",
+      "general": {
+        "office": "council",
+        "ward": null,
+        "seats": 2,
+        "total_votes": 2530,
+        "candidates": [
+          {
+            "name": "Tatiana Baena",
+            "party": "NON",
+            "votes": 1275,
+            "share": 50.39525691699605,
+            "is_write_in": false,
+            "source_is_winner": null
+          },
+          {
+            "name": "Alberto Rivas-Lugo",
+            "party": "NON",
+            "votes": 1216,
+            "share": 48.06324110671937,
+            "is_write_in": false,
+            "source_is_winner": null
+          },
+          {
+            "name": "Write-in",
+            "party": "NON",
+            "votes": 39,
+            "share": 1.541501976284585,
+            "is_write_in": true,
+            "source_is_winner": null
+          }
+        ],
+        "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-e078-08df1e27a828"
+      },
+      "outcome": "Led the 2026 returns for an available seat · Incoming term begins January 4, 2027"
+    },
+    {
+      "slug": "alberto-rivas-lugo",
+      "name": "Alberto Rivas-Lugo",
+      "profile": "/candidates/alberto-rivas-lugo.html",
+      "municipality": "Central Falls",
+      "office": "City Council",
+      "ward": null,
+      "party": "NON",
+      "status": "2026 election · Incoming term",
+      "photo": null,
+      "finance_url": "/candidates/alberto-rivas-lugo.html#finance",
+      "general": {
+        "office": "council",
+        "ward": null,
+        "seats": 2,
+        "total_votes": 2530,
+        "candidates": [
+          {
+            "name": "Tatiana Baena",
+            "party": "NON",
+            "votes": 1275,
+            "share": 50.39525691699605,
+            "is_write_in": false,
+            "source_is_winner": null
+          },
+          {
+            "name": "Alberto Rivas-Lugo",
+            "party": "NON",
+            "votes": 1216,
+            "share": 48.06324110671937,
+            "is_write_in": false,
+            "source_is_winner": null
+          },
+          {
+            "name": "Write-in",
+            "party": "NON",
+            "votes": 39,
+            "share": 1.541501976284585,
+            "is_write_in": true,
+            "source_is_winner": null
+          }
+        ],
+        "source_url": "https://electionresults.ri.gov/results/public/RhodeIsland/elections/2026StatewideGeneralElection/ballot-items/01000000-59ac-daed-e078-08df1e27a828"
+      },
+      "outcome": "Led the 2026 returns for an available seat · Incoming term begins January 4, 2027"
     }
   ]
 }
