@@ -1,6 +1,6 @@
 {
   "reviewed": "2026-11-21",
-  "coverage_note": "Profiles for the nine Cranston and seven Central Falls council candidates who led the 2026 returns for the available seats.",
+  "coverage_note": "Profiles for the nine Cranston and seven Central Falls council candidates who led the 2026 returns for the available seats. Woonsocket covers the sitting roster and the seven leaders in the 2026 returns.",
   "municipalities": {
     "Cranston": {
       "precinct_wards": {
@@ -45,6 +45,24 @@
         "0406": 2,
         "0407": 2
       }
+    },
+    "Woonsocket": {
+      "council_scope": "citywide",
+      "precincts": [
+        "3901",
+        "3902",
+        "3903",
+        "3904",
+        "3905",
+        "3906",
+        "3907",
+        "3908",
+        "3909",
+        "3910",
+        "3911",
+        "3912"
+      ],
+      "council_url": "/woonsocket.html"
     }
   },
   "profiles": [
@@ -1478,6 +1496,123 @@
       },
       "outcome": "Led the 2026 returns for an available seat · Incoming term begins January 4, 2027",
       "photo_note": "Portrait supplied to RIEP."
+    },
+    {
+      "slug": "alana-gordon",
+      "name": "Alana Gordon",
+      "profile": "/candidates/alana-gordon.html",
+      "municipality": "Woonsocket",
+      "office": "City Council",
+      "ward": null,
+      "party": "NON",
+      "status": "2026 top seven · Incoming",
+      "photo": null,
+      "sitting": false,
+      "outcome": "In the top seven in the 2026 council returns"
+    },
+    {
+      "slug": "damon-s-flynn",
+      "name": "Damon S. Flynn",
+      "profile": "/candidates/damon-s-flynn.html",
+      "municipality": "Woonsocket",
+      "office": "City Council",
+      "ward": null,
+      "party": "NON",
+      "status": "2026 top seven · Incoming",
+      "photo": null,
+      "sitting": false,
+      "outcome": "In the top seven in the 2026 council returns"
+    },
+    {
+      "slug": "daniel-m-gendron",
+      "name": "Daniel M. Gendron",
+      "profile": "/candidates/daniel-m-gendron.html",
+      "municipality": "Woonsocket",
+      "office": "City Council",
+      "ward": null,
+      "party": "NON",
+      "status": "Sitting councilor",
+      "photo": null,
+      "sitting": true,
+      "outcome": "Sitting council roster"
+    },
+    {
+      "slug": "denise-d-sierra",
+      "name": "Denise D. Sierra",
+      "profile": "/candidates/denise-d-sierra.html",
+      "municipality": "Woonsocket",
+      "office": "City Council",
+      "ward": null,
+      "party": "NON",
+      "status": "Sitting councilor · 2026 top seven",
+      "photo": null,
+      "sitting": true,
+      "outcome": "In the top seven in the 2026 council returns"
+    },
+    {
+      "slug": "james-c-cournoyer",
+      "name": "James C. Cournoyer",
+      "profile": "/candidates/james-c-cournoyer.html",
+      "municipality": "Woonsocket",
+      "office": "City Council",
+      "ward": null,
+      "party": "NON",
+      "status": "Sitting councilor · 2026 top seven",
+      "photo": null,
+      "sitting": true,
+      "outcome": "In the top seven in the 2026 council returns"
+    },
+    {
+      "slug": "kristina-a-fox",
+      "name": "Kristina A. Fox",
+      "profile": "/candidates/kristina-a-fox.html",
+      "municipality": "Woonsocket",
+      "office": "City Council",
+      "ward": null,
+      "party": "NON",
+      "status": "Sitting councilor",
+      "photo": null,
+      "sitting": true,
+      "outcome": "Sitting council roster"
+    },
+    {
+      "slug": "michael-n-dubois",
+      "name": "Michael N. Dubois",
+      "profile": "/candidates/michael-n-dubois.html",
+      "municipality": "Woonsocket",
+      "office": "City Council",
+      "ward": null,
+      "party": "NON",
+      "status": "Sitting councilor · 2026 top seven",
+      "photo": null,
+      "sitting": true,
+      "outcome": "In the top seven in the 2026 council returns"
+    },
+    {
+      "slug": "sharon-l-harmon",
+      "name": "Sharon L. Harmon",
+      "profile": "/candidates/sharon-l-harmon.html",
+      "municipality": "Woonsocket",
+      "office": "City Council",
+      "ward": null,
+      "party": "NON",
+      "status": "Sitting councilor · 2026 top seven",
+      "photo": null,
+      "sitting": true,
+      "outcome": "In the top seven in the 2026 council returns"
+    },
+    {
+      "slug": "valerie-gonzalez",
+      "name": "Valerie Gonzalez",
+      "profile": "/candidates/valerie-gonzalez.html",
+      "municipality": "Woonsocket",
+      "office": "City Council",
+      "ward": null,
+      "party": "NON",
+      "status": "Sitting councilor · 2026 top seven",
+      "photo": null,
+      "sitting": true,
+      "outcome": "In the top seven in the 2026 council returns"
     }
   ]
 }
