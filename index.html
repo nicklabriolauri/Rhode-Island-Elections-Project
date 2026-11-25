@@ -1855,7 +1855,31 @@
   <script src="supplemental-2026.js?v=20260910f"></script>
 <script src="/independent-finance-bridge.js?v=20260910h"></script>
 <script src="/independent-finance-bridge.js?v=20260910"></script>
-<dialog class="local-map-dialog" id="localMapChooser" aria-labelledby="mapChooserTitle"><div class="local-map-dialog-head"><h2 id="mapChooserTitle">Explore Rhode Island election maps</h2><button type="button" data-close-map-chooser autofocus>Close</button></div><p>Choose statewide election maps or local council results.</p><div class="local-map-grid"><a class="local-map-link map-choice-current" href="/general-results.html"><strong>2026 House &amp; Senate →</strong><span>Reported results across all 113 legislative districts.</span></a><a class="local-map-link map-choice-history" href="/map.html"><strong>Historical statewide maps →</strong><span>Explore prior elections, turnout and competitiveness.</span></a><a class="local-map-link map-choice-cranston" href="/cranston-map.html?colors=returns"><strong>Cranston wards →</strong><span>Six wards, precincts, 2026 results and council profiles.</span></a><a class="local-map-link map-choice-central-falls" href="/central-falls-map.html"><strong>Central Falls wards →</strong><span>Five council wards, seven precincts and 2026 council returns.</span></a><a class="local-map-link map-choice-woonsocket" href="/woonsocket.html#election-choices"><strong>Woonsocket →</strong><span>Choose the mayoral precinct map or the citywide council results.</span></a><a class="local-map-link map-choice-providence" href="/providence-council-test.html"><strong>Providence wards →</strong><span>Council ward and precinct map · pilot coverage.</span></a></div><p class="map-note">Local maps are available for Central Falls, Cranston, Providence and Woonsocket. More municipalities will be added as records and boundaries are verified.</p></dialog>
+<dialog class="local-map-dialog" id="localMapChooser" aria-labelledby="mapChooserTitle"><div class="local-map-dialog-head"><h2 id="mapChooserTitle">Explore Rhode Island election maps</h2><button type="button" data-close-map-chooser autofocus>Close</button></div><p>Choose statewide election maps or local council results.</p><div class="local-map-grid"><a class="local-map-link map-choice-current" href="/general-results.html"><strong>2026 House &amp; Senate →</strong><span>Reported results across all 113 legislative districts.</span></a><a class="local-map-link map-choice-history" href="/map.html"><strong>Historical statewide maps →</strong><span>Explore prior elections, turnout and competitiveness.</span></a><a class="local-map-link map-choice-cranston" href="/cranston-map.html?colors=returns"><strong>Cranston wards →</strong><span>Six wards, precincts, 2026 results and council profiles.</span></a><a class="local-map-link map-choice-central-falls" href="/central-falls-map.html"><strong>Central Falls wards →</strong><span>Five council wards, seven precincts and 2026 council returns.</span></a><a class="local-map-link map-choice-woonsocket" href="/woonsocket.html#election-choices" id="openWoonsocketChooser" aria-haspopup="dialog"><strong>Woonsocket →</strong><span>Choose the mayoral precinct map or the citywide council results.</span></a><a class="local-map-link map-choice-providence" href="/providence-council-test.html"><strong>Providence wards →</strong><span>Council ward and precinct map · pilot coverage.</span></a></div><p class="map-note">Local maps are available for Central Falls, Cranston, Providence and Woonsocket. More municipalities will be added as records and boundaries are verified.</p></dialog>
+<dialog class="local-map-dialog" id="woonsocketChooser" aria-labelledby="woonsocketChooserTitle">
+  <div class="local-map-dialog-head">
+    <h2 id="woonsocketChooserTitle">Woonsocket elections</h2>
+    <form method="dialog"><button type="submit" autofocus>Back to maps</button></form>
+  </div>
+  <div class="local-map-grid">
+    <a class="local-map-link map-choice-woonsocket" href="/woonsocket-mayor-map.html"><strong>Mayoral election →</strong><span>Interactive precinct map and vote margins.</span></a>
+    <a class="local-map-link map-choice-cranston" href="/woonsocket.html#election"><strong>City Council election →</strong><span>Official results for the seven at-large seats.</span></a>
+  </div>
+</dialog>
+<script>
+(() => {
+  const trigger = document.getElementById('openWoonsocketChooser');
+  const chooser = document.getElementById('woonsocketChooser');
+  if (typeof chooser.showModal !== 'function') return;
+  trigger.addEventListener('click', event => {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    chooser.showModal();
+  });
+  chooser.addEventListener('close', () => trigger.focus());
+})();
+</script>
+
 </body>
 </html>
 
