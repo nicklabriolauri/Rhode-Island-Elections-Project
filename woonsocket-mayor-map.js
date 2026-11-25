@@ -15,8 +15,9 @@
   const share = (r, key) => r[key] / total(r) * 100;
   const margin = r => share(r, "gendron") - share(r, "beauchamp");
   const marginBand = value => value < 5 ? 0 : value < 10 ? 1 : value < 15 ? 2 : value < 20 ? 3 : 4;
+  const bubbleRadius = points => 5 * Math.sqrt(Math.abs(points));
   const shareBand = value => value < 40 ? 0 : value < 45 ? 1 : value < 50 ? 2 : value < 55 ? 3 : 4;
-  let map, layers, bounds;
+  let map, layers, bubbles, bounds;
   const records = new Map();
   const rows = [...document.querySelectorAll("#results tbody tr")];
   rows.forEach(row => {
@@ -40,12 +41,18 @@
       button.type = "button";
       button.setAttribute("aria-pressed", String(mode.value === key));
       button.title = "Map " + candidate.name + "’s vote share";
-      const name = document.createElement("strong");
+      const label = document.createElement("div");
+      label.className = "tally-candidate";
+      const name = document.createElement(key === "gendron" ? "a" : "strong");
+      if (key === "gendron") name.href = "/woonsocket-mayor.html";
       name.className = "tally-choice";
       name.textContent = candidate.name + (result === citywide && key === "gendron" ? " · Winner" : "");
+      label.append(name);
+      const action = document.createElement("span");
+      action.textContent = "Map vote share";
       const value = document.createElement("span");
       value.textContent = numbers.format(result[key]) + " · " + share(result, key).toFixed(2) + "%";
-      button.append(name, value);
+      button.append(action, value);
       button.addEventListener("click", () => {
         mode.value = mode.value === key ? "margin" : key;
         refresh(key);
@@ -56,7 +63,7 @@
       const fill = document.createElement("span");
       fill.style.setProperty("--share", share(result, key) + "%");
       bar.append(fill);
-      line.append(button, bar);
+      line.append(label, button, bar);
       tally.append(line);
       if (key === focusKey) button.focus();
     }
@@ -72,11 +79,27 @@
     const selected = precinct.value === r.code;
     const modeKey = mode.value;
     const lead = margin(r);
+    if (modeKey === "bubbles") return { color: selected ? "#182b4d" : "#71859b", weight: selected ? 3 : 1, fillOpacity: 0 };
     const palette = candidates[modeKey] || candidates[lead >= 0 ? "gendron" : "beauchamp"];
     const band = modeKey === "margin" ? marginBand(Math.abs(lead)) : shareBand(share(r, modeKey));
     return { color: selected ? "#182b4d" : "#fff", weight: selected ? 3 : 1.3, fillColor: palette.shades[band], fillOpacity: selected ? .94 : .74 };
   }
   function drawLegend() {
+    if (mode.value === "bubbles") {
+      const label = document.createElement("span");
+      label.textContent = "Bubble area shows the winner’s lead (percentage points)";
+      legend.replaceChildren(label);
+      for (const points of [5, 15, 25]) {
+        const item = document.createElement("span");
+        const dot = document.createElement("i");
+        dot.className = "bubble-key";
+        dot.style.width = dot.style.height = 2 * bubbleRadius(points) + "px";
+        dot.setAttribute("aria-hidden", "true");
+        item.append(dot, points + " pp");
+        legend.append(item);
+      }
+      return;
+    }
     const isMargin = mode.value === "margin";
     const groups = isMargin ? Object.values(candidates) : [candidates[mode.value]];
     const bins = isMargin ? ["<5", "5–<10", "10–<15", "15–<20", "20+"] : ["<40", "40–<45", "45–<50", "50–<55", "55+"];
@@ -97,6 +120,10 @@
   }
   function refresh(focusKey) {
     if (layers) layers.setStyle(style);
+    if (bubbles) {
+      if (mode.value === "bubbles") bubbles.addTo(map);
+      else bubbles.remove();
+    }
     drawLegend();
     drawTally(focusKey);
   }
@@ -121,6 +148,7 @@
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     }).addTo(map);
+    bubbles = L.layerGroup();
     layers = L.geoJSON(geo, {
       style,
       onEachFeature(feature, layer) {
@@ -128,11 +156,22 @@
         const label = document.createElement("span");
         label.textContent = r.name + " · Gendron +" + margin(r).toFixed(1) + " pp";
         layer.bindTooltip(label, { sticky: true });
-        layer.on("click", () => { precinct.value = r.code; refresh(); });
+        const select = () => { precinct.value = r.code; refresh(); };
+        layer.on("click", select);
+        const lead = margin(r);
+        const color = candidates[lead >= 0 ? "gendron" : "beauchamp"].color;
+        const bubble = L.circleMarker([r.label[1], r.label[0]], {
+          radius: bubbleRadius(lead), color: "#fff", weight: 2,
+          fillColor: color, fillOpacity: .85,
+        });
+        bubble.bindTooltip(label.cloneNode(true), { sticky: true });
+        bubble.on("click", select);
+        bubbles.addLayer(bubble);
       },
     }).addTo(map);
     bounds = layers.getBounds();
     map.fitBounds(bounds.pad(.18));
+    refresh();
   })().catch(() => {
     container.textContent = "The map could not load. Use the precinct selector or results table.";
   });

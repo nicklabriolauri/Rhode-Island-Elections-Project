@@ -2,6 +2,31 @@
   "timezone": "America/New_York",
   "updates": [
     {
+      "id": "woonsocket-mayoral-election",
+      "category": "Local coverage",
+      "title": "Woonsocket mayoral election map and council results",
+      "ticker": "New: Woonsocket mayoral precinct map and City Council results",
+      "body": [
+        "The Woonsocket mayoral map shows the official 2026 results across 12 precincts. Compare shaded margins, lead-size bubbles and each candidate’s vote share, or select a precinct to see its tally.",
+        "The Woonsocket election page also links to Daniel Gendron’s mayoral profile and the official results for the seven at-large council seats."
+      ],
+      "links": [
+        {
+          "label": "Open the Woonsocket mayoral map",
+          "url": "/woonsocket-mayor-map.html"
+        },
+        {
+          "label": "Explore Woonsocket City Council results",
+          "url": "/woonsocket.html#election"
+        },
+        {
+          "label": "Read Daniel Gendron’s profile",
+          "url": "/woonsocket-mayor.html"
+        }
+      ],
+      "published_at": "2026-11-25T02:03:08Z"
+    },
+    {
       "id": "central-falls-council-profile",
       "category": "Local coverage",
       "title": "Central Falls council coverage is live",

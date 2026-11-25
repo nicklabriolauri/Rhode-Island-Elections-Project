@@ -15,12 +15,15 @@
 .tally-line button{display:flex;align-items:center;justify-content:space-between;gap:.5rem;width:100%;border:1px solid var(--line);border-radius:4px;padding:.65rem;background:white;color:var(--navy);text-align:left;font:inherit;cursor:pointer}
 .tally-line button[aria-pressed="true"]{border-color:var(--navy);background:#edf3f8}
 .tally-line .result-bar span{background:var(--candidate);width:var(--share)}
+.tally-candidate{display:flex;align-items:center;gap:.5rem;margin-bottom:.35rem}
+.tally-candidate a{font-weight:700}
+.legend .bubble-key{border-radius:50%;border:1px solid #466477;background:#16766c}
 .tally-choice{border-left:5px solid var(--candidate);padding-left:.5rem}
 .tally-profile{display:inline-block;margin:.25rem 0}
 @media(max-width:900px){.mayor-tally{margin-top:0}}
 </style>
 <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script defer src="/woonsocket-mayor-map.js?v=leaflet"></script>
+<script defer src="/woonsocket-mayor-map.js?v=lead-bubbles"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -35,8 +38,8 @@
 <section class="atlas" aria-label="Woonsocket mayoral election map">
 <div class="map-column">
 <div class="map-controls">
-<label for="map-mode">Map colors<select id="map-mode">
-<option value="margin">Winning margin</option><option value="gendron">Gendron vote share</option><option value="beauchamp">Beauchamp vote share</option>
+<label for="map-mode">Map view<select id="map-mode">
+<option value="margin">Winning margin</option><option value="bubbles">Winning margin bubbles</option><option value="gendron">Gendron vote share</option><option value="beauchamp">Beauchamp vote share</option>
 </select></label>
 <label for="precinct-select">Voting precinct<select id="precinct-select">
 <option value="">Citywide results</option><option value="3901">3901 · Hamlet Middle School</option><option value="3902">3902 · John F. Kennedy Manor</option><option value="3903">3903 · Park View Manor</option><option value="3904">3904 · Harris Elementary School</option><option value="3905">3905 · Fairmont Heights</option><option value="3906">3906 · Globe Park Elementary School</option><option value="3907">3907 · Holy Trinity Parish</option><option value="3908">3908 · Crepeau Court</option><option value="3909">3909 · Bernon Heights Elementary School</option><option value="3910">3910 · Leo Savoie Elementary School</option><option value="3911">3911 · Woonsocket High School</option><option value="3912">3912 · Governor Pothier School</option>
