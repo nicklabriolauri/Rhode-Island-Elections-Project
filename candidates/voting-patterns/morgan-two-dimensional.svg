@@ -1,15 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 425" font-family="system-ui, sans-serif" role="img" aria-labelledby="title desc"><title id="title">Two-dimensional Senate voting patterns</title><desc id="desc">Each dot is a senator. A gold ring highlights Elaine Morgan at 0.933 on Dimension 1 and 0.360 on Dimension 2.</desc><rect width="600" height="425" rx="12" fill="#f5f8fc"/>
-<path d="M81 45V335 M81 333H519" stroke="#dbe4ee"/>
-<g fill="#415779" font-size="15" text-anchor="middle"><text x="81" y="356">-1</text><text x="62" y="338">-1</text></g>
-<path d="M190.5 45V335 M81 261.5H519" stroke="#dbe4ee"/>
-<g fill="#415779" font-size="15" text-anchor="middle"><text x="190.5" y="356">-0.5</text><text x="62" y="266.5">-0.5</text></g>
-<path d="M300 45V335 M81 190H519" stroke="#9daec3"/>
-<g fill="#415779" font-size="15" text-anchor="middle"><text x="300" y="356">0</text><text x="62" y="195">0</text></g>
-<path d="M409.5 45V335 M81 118.5H519" stroke="#dbe4ee"/>
-<g fill="#415779" font-size="15" text-anchor="middle"><text x="409.5" y="356">0.5</text><text x="62" y="123.5">0.5</text></g>
-<path d="M519 45V335 M81 47H519" stroke="#dbe4ee"/>
-<g fill="#415779" font-size="15" text-anchor="middle"><text x="519" y="356">1</text><text x="62" y="52">1</text></g>
-<g fill="#213957" font-size="17" font-weight="600" text-anchor="middle"><text x="300" y="383">Dimension 1</text><text transform="translate(26 190) rotate(-90)">Dimension 2</text></g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 425" font-family="system-ui, sans-serif" role="img" aria-labelledby="title desc"><title id="title">Two-dimensional Senate voting patterns</title><desc id="desc">Each dot is a senator. A gold ring highlights Elaine Morgan at 0.933 on Dimension 1 and 0.360 on Dimension 2.</desc><rect width="600" height="425" rx="12" fill="#ffffff"/>
+<ellipse cx="300" cy="190" rx="219" ry="143" fill="#f8fbff" stroke="#697e96" stroke-width="1.25"/><path d="M81 190H519 M300 47V333" stroke="#aab9cb" stroke-dasharray="4 4"/><path d="M72 47V333 M81 342H519" stroke="#697e96"/><g fill="#415779" font-size="14" text-anchor="middle"><text x="81" y="363">−1</text><text x="300" y="363">0</text><text x="519" y="363">+1</text><text x="55" y="338">−1</text><text x="55" y="195">0</text><text x="55" y="52">+1</text></g><g fill="#213957" font-size="17" font-weight="600" text-anchor="middle"><text x="300" y="389">Dimension 1 · Between-party alignment</text><text transform="translate(25 190) rotate(-90)">Dimension 2 · Within-party divides</text></g>
 <circle cx="89.17" cy="166.56" r="5" stroke="#fff" fill="#2964a0"><title>Samuel W Bell (-0.963, +0.164)</title></circle>
 <circle cx="94.16" cy="141.17" r="5" stroke="#fff" fill="#2964a0"><title>Tiara T Mack (-0.940, +0.341)</title></circle>
 <circle cx="103.21" cy="127.25" r="5" stroke="#fff" fill="#2964a0"><title>Dawn Euer (-0.899, +0.439)</title></circle>
