@@ -1,0 +1,5 @@
+# Rhode Island Senate two-dimensional W-NOMINATE preview
+
+Run `Rscript fit.R` from this directory with R 4.5.0, pscl, and wnominate 1.5. The supplied matrix contains the independently reconstructed and filtered input, with rows keyed by senator and columns keyed by journal date and roll-call sequence. Audit details are in audit.json. The source is the 81 Rhode Island Senate journals through June 11, 2026. The matrix uses 1 for yea, 6 for nay and 9 for missing. Retention requires at least 2.5% of recorded votes on the losing side. The model requires 20 eligible votes per senator.
+
+The separately run models use the same input. Jessica de la Cruz sets the positive orientation of Dimension 1 and Dawn Euer sets the positive orientation of Dimension 2. That choice provides consistent axis direction. The second dimension has no assigned policy or party interpretation. Party colors are applied after estimation. Bootstrap uncertainty is not reported for this preview. The journal reconstruction and exclusion count differ from those of the published one-dimensional pilot.
