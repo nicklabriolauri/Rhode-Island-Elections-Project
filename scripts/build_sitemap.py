@@ -24,7 +24,7 @@ municipal_finance=json.loads((ROOT/'data/municipal_campaign_finance_2026.json').
 central_falls_finance={p['slug']:p['finance_url'] for p in municipal_finance['profiles'] if p['municipality']=='Central Falls'}
 urls.extend(central_falls_finance.get(p.stem, '/' + p.relative_to(ROOT).as_posix())
             for p in sorted((ROOT/'finance-candidates').glob('*.html')))
-urls.extend(['/central-falls.html', '/central-falls-map.html'])
+urls.extend(['/central-falls.html', '/central-falls-map.html', '/woonsocket.html'])
 seen=[]
 for u in urls:
     if u not in seen: seen.append(u)
