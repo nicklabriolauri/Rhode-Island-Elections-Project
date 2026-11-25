@@ -9,7 +9,8 @@
   const city=registry.municipalities[municipality];
   if(city?.council_scope==='citywide'){
    if(!city.precincts.includes(normalizedCode(precinct)))return [];
-   return registry.profiles.filter(p=>p.municipality===municipality&&p.sitting===true);
+   const rosterField=city.term_switch_at&&Date.now()>=Date.parse(city.term_switch_at)?'elected_2026':'sitting';
+   return registry.profiles.filter(p=>p.municipality===municipality&&p[rosterField]===true);
   }
   const ward=wardFor(municipality,precinct);if(!ward)return [];return registry.profiles.filter(p=>p.municipality===municipality&&(p.ward==null||Number(p.ward)===Number(ward)));}
  const mapFor=municipality=>({'Cranston':'cranston','Central Falls':'central-falls'}[municipality]);

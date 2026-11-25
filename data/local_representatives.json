@@ -62,7 +62,8 @@
         "3911",
         "3912"
       ],
-      "council_url": "/woonsocket.html"
+      "council_url": "/woonsocket.html",
+      "term_switch_at": "2026-12-01T20:00:00-05:00"
     }
   },
   "profiles": [
@@ -1505,10 +1506,11 @@
       "office": "City Council",
       "ward": null,
       "party": "NON",
-      "status": "2026 top seven · Incoming",
+      "status": "Elected in 2026 · Incoming term",
       "photo": null,
       "sitting": false,
-      "outcome": "In the top seven in the 2026 council returns"
+      "outcome": "Elected to the City Council in 2026",
+      "elected_2026": true
     },
     {
       "slug": "damon-s-flynn",
@@ -1518,10 +1520,11 @@
       "office": "City Council",
       "ward": null,
       "party": "NON",
-      "status": "2026 top seven · Incoming",
+      "status": "Elected in 2026 · Incoming term",
       "photo": null,
       "sitting": false,
-      "outcome": "In the top seven in the 2026 council returns"
+      "outcome": "Elected to the City Council in 2026",
+      "elected_2026": true
     },
     {
       "slug": "daniel-m-gendron",
@@ -1534,7 +1537,8 @@
       "status": "Sitting councilor",
       "photo": "/candidates/daniel-m-gendron.jpg",
       "sitting": true,
-      "outcome": "Sitting council roster"
+      "outcome": "Sitting council roster",
+      "elected_2026": false
     },
     {
       "slug": "denise-d-sierra",
@@ -1544,10 +1548,11 @@
       "office": "City Council",
       "ward": null,
       "party": "NON",
-      "status": "Sitting councilor · 2026 top seven",
+      "status": "Sitting councilor · Reelected in 2026",
       "photo": null,
       "sitting": true,
-      "outcome": "In the top seven in the 2026 council returns"
+      "outcome": "Elected to the City Council in 2026",
+      "elected_2026": true
     },
     {
       "slug": "james-c-cournoyer",
@@ -1557,10 +1562,11 @@
       "office": "City Council",
       "ward": null,
       "party": "NON",
-      "status": "Sitting councilor · 2026 top seven",
+      "status": "Sitting councilor · Reelected in 2026",
       "photo": null,
       "sitting": true,
-      "outcome": "In the top seven in the 2026 council returns"
+      "outcome": "Elected to the City Council in 2026",
+      "elected_2026": true
     },
     {
       "slug": "kristina-a-fox",
@@ -1573,7 +1579,8 @@
       "status": "Sitting councilor",
       "photo": "/candidates/kristina-a-fox.jpg",
       "sitting": true,
-      "outcome": "Sitting council roster"
+      "outcome": "Sitting council roster",
+      "elected_2026": false
     },
     {
       "slug": "michael-n-dubois",
@@ -1583,10 +1590,11 @@
       "office": "City Council",
       "ward": null,
       "party": "NON",
-      "status": "Sitting councilor · 2026 top seven",
+      "status": "Sitting councilor · Reelected in 2026",
       "photo": null,
       "sitting": true,
-      "outcome": "In the top seven in the 2026 council returns"
+      "outcome": "Elected to the City Council in 2026",
+      "elected_2026": true
     },
     {
       "slug": "sharon-l-harmon",
@@ -1596,10 +1604,11 @@
       "office": "City Council",
       "ward": null,
       "party": "NON",
-      "status": "Sitting councilor · 2026 top seven",
+      "status": "Sitting councilor · Reelected in 2026",
       "photo": null,
       "sitting": true,
-      "outcome": "In the top seven in the 2026 council returns"
+      "outcome": "Elected to the City Council in 2026",
+      "elected_2026": true
     },
     {
       "slug": "valerie-gonzalez",
@@ -1609,10 +1618,11 @@
       "office": "City Council",
       "ward": null,
       "party": "NON",
-      "status": "Sitting councilor · 2026 top seven",
+      "status": "Sitting councilor · Reelected in 2026",
       "photo": null,
       "sitting": true,
-      "outcome": "In the top seven in the 2026 council returns"
+      "outcome": "Elected to the City Council in 2026",
+      "elected_2026": true
     }
   ]
 }
