@@ -2270,7 +2270,7 @@
     }
 
     function officeLabel(entry) {
-      return entry.chamber === "municipal" ? `${entry.municipality} City Council · ${entry.scope === "citywide" ? "Citywide" : `Ward ${entry.ward || entry.district_number}`}` : `${chamberLabel(entry.chamber)} District ${entry.district_number}`;
+      return entry.chamber === "municipal" ? `${entry.office_sought || entry.municipality + " City Council"} · ${entry.scope === "citywide" ? "Citywide" : `Ward ${entry.ward || entry.district_number}`}` : `${chamberLabel(entry.chamber)} District ${entry.district_number}`;
     }
 
     function chamberLabel(chamber) {
@@ -2664,7 +2664,7 @@
             <div class="section-label">Top donors</div>
             <h3>Who gave the biggest checks${buildHelp("Some filings list donors one by one, while others report part of their money in aggregate form without naming each contributor.")}</h3>
             <p class="section-copy">
-              ${profile.municipality === "Central Falls" && profile.money_raised === 0 ? "The CF-2 reports $0 in cash receipts this period." : `No itemized donor list is visible in this filing.
+              ${(profile.municipality === "Central Falls" || profile.source_search_url) && profile.money_raised === 0 ? "The CF-2 reports $0 in cash receipts this period." : `No itemized donor list is visible in this filing.
               ${unnamedBucket ? ` ${formatCurrency(unnamedBucket.amount)} was reported without individual donor names attached, so that portion cannot be shown as a donor-by-donor list here.` : "This candidate may still have raised money, but the filing data currently available to the site does not expose a donor-by-donor list we can show here yet."}`}
             </p>
           </article>
@@ -2701,7 +2701,7 @@
     function buildSpendingHighlights(profile) {
       const categories = profile.spending_categories || [];
       if (!categories.length) {
-        return profile.municipality === "Central Falls" && profile.money_spent === 0
+        return (profile.municipality === "Central Falls" || profile.source_search_url) && profile.money_spent === 0
           ? '<article class="panel section-card jump-target" id="spending-breakdown"><h3>Spending breakdown</h3><p>The CF-2 reports $0 in cash disbursements this period.</p></article>' : "";
       }
       return `
@@ -2776,6 +2776,13 @@
 
     function buildVerification(profile) {
       const documents = profile.original_documents || [];
+      if (!documents.length && profile.source_search_url) return `
+        <article class="panel section-card">
+          <div class="section-label">Filing source</div>
+          <h3>Rhode Island Board of Elections</h3>
+          <p class="section-copy">Search for committee ${escapeHtml(String(profile.committee_key))} (${escapeHtml(profile.source_filer_name)}) and select the report for ${escapeHtml(profile.reporting_period_label)}.</p>
+          <a href="${escapeHtml(profile.source_search_url)}" target="_blank" rel="noopener">Search filed reports</a>
+        </article>`;
       if (!documents.length) return "";
       return `
         <article class="panel section-card">
@@ -3048,7 +3055,7 @@
       const alternate = profile.alternate_expenditure_transactions || [];
       const rows = (records, expense) => records.map(row => `<tr><td>${escapeHtml(row.date || "—")}</td><td>${escapeHtml((expense ? row.payee : row.donor) || "Reported in aggregate")}</td><td>${escapeHtml(expense ? row.category || row.type : row.type)}</td><td>${formatCurrency(row.amount)}</td><td>${escapeHtml(expense ? row.purpose || "" : [row.notes, row.employer ? "Employer as filed: " + row.employer : ""].filter(Boolean).join(" · "))}${row.source_document ? ` <a href="${escapeHtml(row.source_document)}#page=${Number(row.source_page)}" target="_blank" rel="noopener">Source p. ${Number(row.source_page)}</a>` : ""}</td></tr>`).join("");
       const table = (records, expense) => `<div style="overflow-x:auto"><table style="width:100%;text-align:left"><thead><tr><th>Date</th><th>${expense ? "Payee" : "Donor"}</th><th>Type</th><th>Amount</th><th>${expense ? "Purpose" : "Notes"}</th></tr></thead><tbody>${rows(records, expense)}</tbody></table></div>`;
-      return `<article class="panel section-card"><div class="section-label">Selected filing details</div><h3>Donors &amp; expenses</h3><p class="section-copy">${escapeHtml(profile.reporting_period_label || profile.report_label)}</p><details><summary>${receiptLabel} transactions (${receipts.length})</summary>${receipts.length ? table(receipts, false) : profile.municipality === "Central Falls" && profile.money_raised === 0 ? '<p>No cash receipts reported.</p>' : '<p>Contribution transactions have not been transcribed for this period. Available named donors are shown above; aggregate contributions do not identify individual donors.</p>'}</details><details><summary>Expense transactions (${expenses.length})</summary>${expenses.length ? table(expenses, true) : profile.municipality === "Central Falls" && profile.money_spent === 0 ? '<p>No cash disbursements reported.</p>' : '<p>Expense transactions have not been transcribed for this period. Available spending categories are shown above. A payee-by-payee list requires the original filing detail.</p>'}</details>${alternate.length ? `<details><summary>Expenses in the alternate export (${alternate.length})</summary>${table(alternate, true)}</details>` : ""}${(profile.accounts_payable_transactions || []).length ? `<details><summary>${profile.chamber === "municipal" ? "Accounts-payable entries (obligations incurred)" : "Unpaid bill entries (separate from cash spending)"}</summary><p>${escapeHtml(profile.coverage_note || "")}</p>${table(profile.accounts_payable_transactions, true)}</details>` : ""}${(profile.in_kind_transactions || []).length ? `<details><summary>In-kind contributions (separate from cash receipts)</summary>${table(profile.in_kind_transactions, false)}</details>` : ""}</article>`;
+      return `<article class="panel section-card"><div class="section-label">Selected filing details</div><h3>Donors &amp; expenses</h3><p class="section-copy">${escapeHtml(profile.reporting_period_label || profile.report_label)}</p><details><summary>${receiptLabel} transactions (${receipts.length})</summary>${receipts.length ? table(receipts, false) : (profile.municipality === "Central Falls" || profile.source_search_url) && profile.money_raised === 0 ? '<p>No cash receipts reported.</p>' : '<p>Contribution transactions have not been transcribed for this period. Available named donors are shown above; aggregate contributions do not identify individual donors.</p>'}</details><details><summary>Expense transactions (${expenses.length})</summary>${expenses.length ? table(expenses, true) : (profile.municipality === "Central Falls" || profile.source_search_url) && profile.money_spent === 0 ? '<p>No cash disbursements reported.</p>' : '<p>Expense transactions have not been transcribed for this period. Available spending categories are shown above. A payee-by-payee list requires the original filing detail.</p>'}</details>${alternate.length ? `<details><summary>Expenses in the alternate export (${alternate.length})</summary>${table(alternate, true)}</details>` : ""}${(profile.accounts_payable_transactions || []).length ? `<details><summary>${profile.chamber === "municipal" ? "Accounts-payable entries (obligations incurred)" : "Unpaid bill entries (separate from cash spending)"}</summary><p>${escapeHtml(profile.coverage_note || "")}</p>${table(profile.accounts_payable_transactions, true)}</details>` : ""}${(profile.in_kind_transactions || []).length ? `<details><summary>In-kind contributions (separate from cash receipts)</summary>${table(profile.in_kind_transactions, false)}</details>` : ""}</article>`;
     }
 
     function buildFilingControl(choices, choice, selected) {
@@ -3434,7 +3441,7 @@
           <section class="panel directory-hero">
             <div class="eyebrow">Campaign Finance Directory</div>
             <h2>Browse Rhode Island campaign finance profiles.</h2>
-            <p>Search state legislative candidates and municipal council candidates in Cranston and Central Falls, filter by office level, and explore filing-period receipts, spending and cash on hand.</p>
+            <p>Search state legislative candidates and municipal candidates in Cranston, Central Falls and Woonsocket, filter by office level, and explore filing-period receipts, spending and cash on hand.</p>
             <div class="finance-progress-note">
               <div>
                 <strong>Work in progress</strong>
@@ -3611,6 +3618,16 @@
             data[field] = [...(data[field] || []), ...(local[field] || []).filter(p => !slugs.has(p.slug))];
           }
           data.donor_index = [...(data.donor_index || []), ...(local.donor_index || [])];
+        }
+        const supplied = await fetch("/data/supplied-campaign-finance-20261126.json", {cache:"no-store",signal:AbortSignal.timeout(12000)})
+          .then(response => response.ok ? response.json() : null).catch(() => null);
+        if (supplied) {
+          for (const field of ["profiles", "directory"]) {
+            const suppliedSlugs = new Set(supplied[field].map(entry => entry.slug));
+            data[field] = [...data[field].filter(entry => !suppliedSlugs.has(entry.slug)), ...supplied[field]];
+          }
+          const suppliedSlugs = new Set(supplied.profiles.map(entry => entry.slug));
+          data.donor_index = [...(data.donor_index || []).filter(entry => !suppliedSlugs.has(entry.slug)), ...supplied.donor_index];
         }
         const profile = getRequestedProfile(data.profiles || []);
         if (profile) {
