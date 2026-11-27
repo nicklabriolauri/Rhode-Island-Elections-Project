@@ -465,7 +465,7 @@
     .scroll-cue { display:inline-flex;align-items:center;gap:10px;margin-top:28px;color:rgba(255,255,255,0.58);font-size:12px;text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;opacity:0;transform:translateY(16px);animation:heroRise .9s ease forwards;animation-delay:.52s; }
     .scroll-cue-arrow { width:28px;height:28px;border-radius:999px;border:1px solid rgba(255,255,255,0.12);display:inline-flex;align-items:center;justify-content:center;font-size:16px;line-height:1; }
 
-    .below-fold { margin-top:24vh;display:grid;gap:18px; }
+    .below-fold { margin-top:0;display:grid;gap:18px; }
     .news-section { position:relative;overflow:hidden;border-radius:28px;border:1px solid rgba(191,219,254,0.26);background:radial-gradient(circle at 86% 16%,rgba(147,197,253,0.22),transparent 24%),radial-gradient(circle at 14% 84%,rgba(191,219,254,0.12),transparent 22%),linear-gradient(180deg,rgba(255,255,255,0.14) 0%,rgba(255,255,255,0.10) 100%);box-shadow:0 22px 48px rgba(5,10,28,0.18);padding:26px 28px; }
     .news-section::before { content:"";position:absolute;inset:auto auto -62px -42px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.14),rgba(255,255,255,0));pointer-events:none; }
     .news-head { position:relative;z-index:1;display:flex;align-items:start;justify-content:space-between;gap:22px;flex-wrap:wrap; }
@@ -529,7 +529,7 @@
     }
 
     @media (max-width:760px){
-      .shell{width:min(100% - 28px,1200px);padding-top:20px}.topbar-right{width:100%;display:flex;flex-direction:column;align-items:flex-start;min-width:0}.view-toggle{width:100%;justify-content:flex-start}.site-nav{width:100%;flex-wrap:wrap;justify-content:flex-start;gap:8px}.site-nav a{max-width:100%;padding:9px 12px}.social-links{margin-top:4px}.footer-social{width:100%;justify-content:flex-start}.brand{align-items:flex-start}.brand-mark-wrap{width:132px;height:78px}.brand-mark{width:122px;height:72px}.brand-mark-wrap::after{left:48px;top:18px;width:142px;height:48px}.brand-copy h1{font-size:30px}.brand-copy p{font-size:14px}.brand-tagline{white-space:normal;line-height:1.35}.hero{padding:24px;border-radius:28px}.hero-search{padding:16px}.hero-search-head{flex-direction:column;align-items:stretch}.hero-search-form{grid-template-columns:1fr}.hero-search-submit{width:100%}.hero-search-overview-head{flex-direction:column;align-items:flex-start}.hero-search-match{grid-template-columns:1fr}.hero-search-match-main{border-radius:12px}.hero-search-match-actions{justify-content:flex-start}.hero-copy h2{font-size:48px;word-break:break-word}.summary{font-size:17px}.info-section{padding:22px 20px;border-radius:24px}.news-section{padding:22px 20px;border-radius:24px}.below-fold{margin-top:18px}.info-title{font-size:28px}.info-summary{font-size:16px}.news-title{font-size:26px}.feature-row{gap:10px}.finance-spotlight{padding:18px}.finance-spotlight-side{display:grid}.finance-spotlight-title{font-size:24px}.finance-spotlight-points{flex-direction:column}.finance-spotlight-point{width:100%;justify-content:flex-start}.entry-section{padding:20px 18px}.entry-header h3{font-size:26px}.feature-card{width:100%;max-width:none;min-width:0}.feature-note{white-space:normal}.link-row{gap:8px 12px;max-width:100%}.separator-dot{display:none}
+      .shell{width:min(100% - 28px,1200px);padding-top:20px}.topbar-right{width:100%;display:flex;flex-direction:column;align-items:flex-start;min-width:0}.view-toggle{width:100%;justify-content:flex-start}.site-nav{width:100%;flex-wrap:wrap;justify-content:flex-start;gap:8px}.site-nav a{max-width:100%;padding:9px 12px}.social-links{margin-top:4px}.footer-social{width:100%;justify-content:flex-start}.brand{align-items:flex-start}.brand-mark-wrap{width:132px;height:78px}.brand-mark{width:122px;height:72px}.brand-mark-wrap::after{left:48px;top:18px;width:142px;height:48px}.brand-copy h1{font-size:30px}.brand-copy p{font-size:14px}.brand-tagline{white-space:normal;line-height:1.35}.hero{padding:24px;border-radius:28px}.hero-search{padding:16px}.hero-search-head{flex-direction:column;align-items:stretch}.hero-search-form{grid-template-columns:1fr}.hero-search-submit{width:100%}.hero-search-overview-head{flex-direction:column;align-items:flex-start}.hero-search-match{grid-template-columns:1fr}.hero-search-match-main{border-radius:12px}.hero-search-match-actions{justify-content:flex-start}.hero-copy h2{font-size:48px;word-break:break-word}.summary{font-size:17px}.info-section{padding:22px 20px;border-radius:24px}.news-section{padding:22px 20px;border-radius:24px}.info-title{font-size:28px}.info-summary{font-size:16px}.news-title{font-size:26px}.feature-row{gap:10px}.finance-spotlight{padding:18px}.finance-spotlight-side{display:grid}.finance-spotlight-title{font-size:24px}.finance-spotlight-points{flex-direction:column}.finance-spotlight-point{width:100%;justify-content:flex-start}.entry-section{padding:20px 18px}.entry-header h3{font-size:26px}.feature-card{width:100%;max-width:none;min-width:0}.feature-note{white-space:normal}.link-row{gap:8px 12px;max-width:100%}.separator-dot{display:none}
     }
 
     @media (prefers-reduced-motion:reduce){.brand-mark,.brand-mark-wrap::before,.brand-mark-wrap::after,.hero-line-text{animation:none!important;opacity:1!important;clip-path:none!important;transform:none!important}}
@@ -553,8 +553,8 @@
   </style>
 <style>.address-rating{font-size:13px;padding:9px 0;border-top:1px solid #d8dee5;border-bottom:1px solid #d8dee5}.address-rating a{color:#244f7b}.address-rating small{display:block;color:#596779;margin-top:3px}</style><script src="/election-results-2026.js?v=20261119" defer></script>
 <script src="/local-representation.js?v=woonsocket-2026-roster"></script>
-<link rel="stylesheet" href="/homepage-local-tools.css?v=20261126-updates">
-<script src="/homepage-local-tools.js?v=20261122-updates" defer></script>
+<link rel="stylesheet" href="/homepage-local-tools.css?v=20261127-spacing">
+<script src="/homepage-local-tools.js?v=20261127-spacing" defer></script>
 </head>
 <body>
   <div class="shell">
@@ -585,7 +585,6 @@
       </div>
     </div>
 
-    <div class="riep-updates" id="riepUpdates" role="region" aria-label="Recent RIEP updates"><a class="riep-updates-label" href="/updates.html">Latest updates</a><div class="riep-ticker-window"><div class="riep-ticker-track"><div class="riep-ticker-group"><a href="/updates.html#woonsocket-mayoral-election">New: Woonsocket mayoral precinct map and City Council results</a><a href="/updates.html#central-falls-council-profile">New: Central Falls council profile, ward map and legislative records</a><a href="/updates.html#cranston-legislative-activity-index">New: Cranston council activity ranking, topic tags and clearer profile scores</a><a href="/updates.html#project-updates-and-map-colors">New: dated project announcements and color-coded map choices</a><a href="/updates.html#cranston-womxn-project-ratings">Womxn Project ratings now appear on Cranston council profiles</a></div></div></div><button type="button" data-update-pause aria-label="Pause scrolling updates" aria-pressed="false">Pause</button></div>
 
     <section class="hero" aria-labelledby="heroTitle">
       <div class="hero-grid">

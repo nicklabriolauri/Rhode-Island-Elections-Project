@@ -33,8 +33,6 @@ def build():
   for k,v in [('title',x['title']),('link',url),('guid',url),('description','\n\n'.join(x['body'])),('pubDate',format_datetime(datetime.fromisoformat(x['published_at'].replace('Z','+00:00'))))]:ET.SubElement(entry,k).text=v
  (ROOT/'updates.xml').write_bytes(ET.tostring(rss,encoding='utf-8',xml_declaration=True))
  index=ROOT/'index.html';s=index.read_text()
- ticker=''.join(f'<a href="/updates.html#{x["id"]}">{e(x.get("ticker",x["title"]))}</a>' for x in items[:5])
- s,n=re.subn(r'<div class="riep-ticker-group">.*?</div>',lambda _:'<div class="riep-ticker-group">'+ticker+'</div>',s,count=1,flags=re.S);assert n==1,'Ticker group missing'
  cards=[]
  for x in items[:3]:
   url=f'/updates.html#{x["id"]}'
@@ -49,5 +47,5 @@ def build():
  s,n=re.subn(re.escape(start)+r'.*?'+re.escape(end),lambda _:start+preview+end,s,count=1,flags=re.S)
  assert n==1,'Homepage updates preview markers missing'
  index.write_text(s)
- print(f'Built {len(items)} dated notices, RSS and homepage ticker')
+ print(f'Built {len(items)} dated notices, RSS and homepage cards')
 if __name__=='__main__':build()

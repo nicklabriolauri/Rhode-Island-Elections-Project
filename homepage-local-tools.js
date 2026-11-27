@@ -15,26 +15,4 @@
     }});
     dialog.addEventListener('close', () => { if (opener?.isConnected) opener.focus(); });
   }
-  const strip = document.getElementById('riepUpdates');
-  if (!strip) return;
-  const track=strip.querySelector('.riep-ticker-track');
-  const group=strip.querySelector('.riep-ticker-group');
-  const pause=strip.querySelector('[data-update-pause]');
-  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
-  let paused=reduced.matches;
-  const copy=group.cloneNode(true);
-  copy.setAttribute('aria-hidden','true');
-  copy.querySelectorAll('a').forEach(a=>a.setAttribute('tabindex','-1'));
-  track.appendChild(copy);
-  function sync(){
-    strip.classList.toggle('is-paused',paused);
-    pause.textContent=paused?'Play':'Pause';
-    pause.setAttribute('aria-label',paused?'Play scrolling updates':'Pause scrolling updates');
-    pause.setAttribute('aria-pressed',String(paused));
-  }
-  pause.addEventListener('click',()=>{paused=!paused;sync();});
-  reduced.addEventListener('change',event=>{paused=event.matches;sync();});
-  strip.classList.add('ticker-ready');
-  sync();
 })();
-
