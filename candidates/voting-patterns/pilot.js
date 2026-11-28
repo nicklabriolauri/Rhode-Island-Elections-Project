@@ -31,7 +31,7 @@
       <details open><summary>Where Senate Democrats split</summary>
       <p>The chart shows two groups of Democrats on the left and a Republican cluster on the right. The vertical gap between the Democratic groups reflects disagreements over issues such as energy and criminal justice.</p>
       <ul>
-        <li><a href="https://www.rilegislature.gov/journals/senatejournals/2025%20Senate%20Journals/06-10-2025.pdf#page=26">Nuclear power purchases, June 2025</a>: 0 of 13 higher-scoring Democrats voted yes, compared with 19 of 19 lower-scoring Democrats who voted.</li>
+        <li><a href="https://www.rilegislature.gov/journals/senatejournals/2025%20Senate%20Journals/06-10-2025.pdf#page=25">Nuclear power purchases, June 2025</a>: 0 of 13 higher-scoring Democrats voted yes, compared with 19 of 19 lower-scoring Democrats who voted.</li>
         <li><a href="https://www.rilegislature.gov/journals/senatejournals/2026%20Senate%20Journals/SJ%2006-09-2026.pdf#page=6">Limits on utility profits, June 2026</a>: 12 of 14 higher-scoring Democrats and 0 of 20 lower-scoring Democrats voted for the amendment.</li>
         <li><a href="https://www.rilegislature.gov/journals/senatejournals/2026%20Senate%20Journals/SJ%2006-11-2026.pdf#page=24">Use of force to resist lawful orders in prison, June 2026</a>: 1 of 14 higher-scoring Democrats and 20 of 20 lower-scoring Democrats voted for the bill.</li>
       </ul>
