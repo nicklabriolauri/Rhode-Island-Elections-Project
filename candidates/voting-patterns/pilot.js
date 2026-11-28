@@ -28,8 +28,14 @@
         <dt><strong>Dimension 2 · Within-party divides</strong></dt>
         <dd>The vertical axis captures a secondary voting pattern. Senators with similar horizontal scores can still vote differently. Positive and negative positions indicate different patterns, and the direction depends on the model’s anchor.</dd>
       </dl>
-      <details><summary>Three groups visible in the chart</summary>
-      <p>On the left, 14 Democrats have positive vertical scores and 20 have negative scores. On the right, all four Republicans cluster horizontally, with Elaine Morgan above the other three. Democrat Leonidas Raptakis sits near the horizontal midpoint. These are visual descriptions. The specific policy issues driving the second axis have yet to be established.</p></details>
+      <details open><summary>Where Senate Democrats split</summary>
+      <p>The chart shows two groups of Democrats on the left and a Republican cluster on the right. The vertical gap between the Democratic groups reflects disagreements over issues such as energy and criminal justice.</p>
+      <ul>
+        <li><a href="https://www.rilegislature.gov/journals/senatejournals/2025%20Senate%20Journals/06-10-2025.pdf#page=26">Nuclear power purchases, June 2025</a>: 0 of 13 higher-scoring Democrats voted yes, compared with 19 of 19 lower-scoring Democrats who voted.</li>
+        <li><a href="https://www.rilegislature.gov/journals/senatejournals/2026%20Senate%20Journals/SJ%2006-09-2026.pdf#page=6">Limits on utility profits, June 2026</a>: 12 of 14 higher-scoring Democrats and 0 of 20 lower-scoring Democrats voted for the amendment.</li>
+        <li><a href="https://www.rilegislature.gov/journals/senatejournals/2026%20Senate%20Journals/SJ%2006-11-2026.pdf#page=24">Use of force to resist lawful orders in prison, June 2026</a>: 1 of 14 higher-scoring Democrats and 20 of 20 lower-scoring Democrats voted for the bill.</li>
+      </ul>
+      <p>These are examples of votes with large gaps between Democrats above and below zero on the vertical axis. They suggest a divide between Democrats who more often challenged Senate leadership on these votes and Democrats who more often sided with it. The groups can shift by issue.</p></details>
       <details><summary>Data and methodology</summary><p>W-NOMINATE estimates voting positions from recorded yea and nay votes in 81 official Senate journals. Party affiliation provides the point colors. Jessica de la Cruz and Dawn Euer anchor the directions of the two axes. Uncertainty intervals are unavailable for this fit.</p><p><a href="${sourceLink}">Official Senate journals</a> · <a href="${modelLink}">Model inputs and R code</a></p></details>
       <p><a data-explore href="${explorer}">Open the Senate explorer</a></p>`;
     if (!profile) root.querySelector('[data-explore]').parentElement.remove();
