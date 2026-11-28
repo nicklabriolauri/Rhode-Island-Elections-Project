@@ -23,7 +23,7 @@ async function enableVotingPlot(figure) {
 
   chart.style.cssText = 'display:block;width:100%;height:auto';
   chart.removeAttribute('aria-labelledby');
-  chart.setAttribute('aria-label', 'Senate voting positions. Use the senator menu to explore every point.');
+  chart.setAttribute('aria-label', 'Legislative voting positions. Use the member menu to explore every point.');
   const ring = document.createElementNS(chart.namespaceURI, 'circle');
   ring.setAttribute('r', '9');
   ring.setAttribute('fill', 'none');
