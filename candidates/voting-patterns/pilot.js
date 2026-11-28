@@ -1,39 +1,143 @@
 (() => {
-"use strict";
-const dataURL = new URL("positions.json", document.currentScript.src);
-const esc = v => String(v).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const color = r => r.party === "DEM" ? "#2266a5" : "#ba453d";
-const x = v => 35 + (v + 1.2) / 2.4 * 630;
-const fmt = v => Number(v).toFixed(3);
-async function init(root) {
-try {
- const response=await fetch(dataURL); if(!response.ok) throw Error("Voting data unavailable");
- const data=await response.json(), compact=root.dataset.compact==="true";
- let period="combined", selected=new URLSearchParams(location.search).get("candidate") || root.dataset.candidate || "John Burke", query="";
- root.innerHTML='<div class="vp-explainer"><h3>What does this chart show?</h3><p>Each dot represents a senator. Senators closer together horizontally have more similar voting patterns in the analyzed roll calls; senators farther apart have more different patterns. Blue dots are Democrats and red dots are Republicans. The larger, outlined dot is the senator currently selected.</p><p><strong>How to use it:</strong> Select a dot to see that senator’s estimate, or change the reporting period. Open the Senate explorer to search names and compare the full list.</p></div><div class="vp-controls"><label>Reporting period<select data-period><option value="combined">2025–2026 combined</option><option value="2025">2025 only</option><option value="2026">2026 only</option></select></label>'+(compact?'':'<label>Highlight a senator<input type="search" data-search placeholder="Search by name" autocomplete="off"></label>')+'</div><div class="vp-key"><span><i class="vp-dot dem"></i>Democrat</span><span><i class="vp-dot rep"></i>Republican</span></div><p class="vp-count" data-count aria-live="polite"></p><div data-chart></div><div class="vp-selected" data-selected aria-live="polite"></div>'+(compact?'<a class="vp-action" data-explore>Explore all senators →</a>':'<div class="vp-table-wrap"><table class="vp-table"><caption class="vp-note">Select a name to highlight its position. Light lines show ±1 bootstrap standard error for the combined fit.</caption><thead><tr><th scope="col">Senator · district</th><th scope="col">Position (−1 to +1)</th><th scope="col">Estimate</th><th scope="col">Votes used</th></tr></thead><tbody data-rows></tbody></table></div>')+'<p class="vp-note">Reading the scale: “More liberal” and “More conservative” are provisional interpretations of the broad voting alignment observed in this Senate, not issue-by-issue ratings. The model estimates voting similarity, not senators’ stated beliefs. −1 and +1 are opposite ends of the fitted scale; its positive direction is anchored to Jessica de la Cruz. Zero does not establish political moderation, and neither end is a judgment of extremism or quality. The dots’ vertical placement only prevents overlap. “Divided votes” means roll calls with both Yea and Nay votes; unanimous votes do not distinguish senators. Missing votes are not treated as Nay. Annual models are separately scaled, so changing years does not measure ideological movement. Coverage ends June 11, 2026.</p>';
- function render(){
- const rows=data.periods[period].slice().sort((a,b)=>a.position-b.position||a.name.localeCompare(b.name));
- const matches=r=>!query||r.name.toLowerCase().includes(query), chosen=rows.find(r=>r.name===selected);
- root.querySelector("[data-count]").textContent=rows.length+" senators · "+data.period_counts[period]+" roll-call votes modeled (divided votes)"+(query?" · "+rows.filter(matches).length+" matching names highlighted":"");
- let svg='<svg class="vp-chart" viewBox="0 0 700 175" role="group" aria-label="Senate voting positions. Selected senator: '+esc(selected)+'"><line x1="35" x2="665" y1="128" y2="128" stroke="#a8bfdf"/>';
- for(const tick of [-1,-.5,0,.5,1]) svg+='<line x1="'+x(tick)+'" x2="'+x(tick)+'" y1="42" y2="132" stroke="#dae4ef"/><text x="'+x(tick)+'" y="153" text-anchor="middle">'+tick+'</text>';
- rows.filter(r=>r.name!==selected).concat(rows.filter(r=>r.name===selected)).forEach((r,i)=>{const active=r.name===selected;svg+='<circle class="vp-point" data-name="'+esc(r.name)+'" cx="'+x(r.position)+'" cy="'+(55+(i%3)*23)+'" r="'+(active?8:5)+'" fill="'+color(r)+'" opacity="'+(matches(r)?(active?1:.55):.12)+'" stroke="'+(active?"#805a16":"#fff")+'" stroke-width="'+(active?3:1)+'" role="button" tabindex="0" aria-label="Select '+esc(r.name)+', position '+fmt(r.position)+'"><title>'+esc(r.name)+' · '+fmt(r.position)+'</title></circle>';});
- root.querySelector("[data-chart]").innerHTML=svg+'</svg><div class="vp-axis-caption"><span>← More liberal</span><span>Scale midpoint</span><span>More conservative →</span></div>';
- const interpretation=chosen?'<p><strong>What this number means:</strong> '+fmt(chosen.position)+' places '+esc(chosen.name)+' on the model’s −1 to +1 voting-pattern scale. It is not a percentage, a rank, or an effectiveness score. Nearby dots represent more similar overall voting patterns; they do not mean the senators agreed on every bill.</p>':'';
- root.querySelector("[data-selected]").innerHTML=chosen?'<h3>'+esc(chosen.name)+' · Senate District '+chosen.district+'</h3><p><strong>Vote-based ideology estimate: '+fmt(chosen.position)+'</strong> · '+chosen.recorded_votes_used+' recorded votes used</p>'+interpretation+'<p>'+(chosen.bootstrap_standard_error===null?'Standard errors are not available for this annual fit.':'Estimate uncertainty: bootstrap standard error '+fmt(chosen.bootstrap_standard_error)+'. This describes how much the estimate varied when votes were resampled; it is not a margin of error for a poll. The full explorer’s table shows ±1 standard error.')+'</p><p>This compares voting patterns within the Senate. It does not grade legislative performance.</p>':'<h3>'+esc(selected)+'</h3><p>No estimate is available for this senator in the selected period. Famiglietti took office after the 2025 sittings in this dataset; missing votes are not assigned as Nay.</p>';
- if(compact) root.querySelector("[data-explore]").href=new URL("index.html", dataURL).href+"?candidate="+encodeURIComponent(selected);
- else root.querySelector("[data-rows]").innerHTML=rows.map(r=>{
- const se=r.bootstrap_standard_error,bar=se===null?"":'<line x1="'+x(r.position-se)+'" x2="'+x(r.position+se)+'" y1="14" y2="14" stroke="'+color(r)+'" opacity=".35" stroke-width="5"/>';
- return '<tr class="'+(r.name===selected?"is-selected ":"")+(!matches(r)?"is-muted":"")+'"><th scope="row"><button class="vp-select" data-name="'+esc(r.name)+'" aria-pressed="'+(r.name===selected)+'">'+esc(r.name)+' · '+r.district+'</button></th><td><svg class="vp-row-axis" viewBox="0 0 700 28" aria-hidden="true"><line x1="'+x(-1)+'" x2="'+x(1)+'" y1="14" y2="14" stroke="#dae4ef"/>'+bar+'<circle cx="'+x(r.position)+'" cy="14" r="6" fill="'+color(r)+'"/></svg></td><td>'+fmt(r.position)+'</td><td>'+r.recorded_votes_used+'</td></tr>';
- }).join("");
- }
- root.querySelector("[data-period]").addEventListener("change",e=>{period=e.target.value;render();});
- root.querySelector("[data-search]")?.addEventListener("input",e=>{query=e.target.value.trim().toLowerCase();render();});
- function select(e){const t=e.target.closest("[data-name]");if(!t)return;selected=t.dataset.name;const button=t.tagName.toLowerCase()==="button";render();if(button)[...root.querySelectorAll("button[data-name]")].find(b=>b.dataset.name===selected)?.focus();}
- root.addEventListener("click",select);
- root.addEventListener("keydown",e=>{if(e.target.matches("circle[data-name]")&&(e.key==="Enter"||e.key===" ")){e.preventDefault();select(e);[...root.querySelectorAll("circle[data-name]")].find(c=>c.dataset.name===selected)?.focus();}});
- render();
-}catch(e){root.innerHTML='<p class="vp-error" role="alert">The voting-pattern preview could not load. Please refresh this page or try again later.</p>';console.error(e);}
-}
-document.querySelectorAll("[data-voting-widget]").forEach(init);
+  const assets = new URL('.', document.currentScript.src);
+  const explorer = new URL('index.html', assets);
+  const chartUrl = new URL('senate-two-dimensional.svg', assets);
+  const candidateParam = new URLSearchParams(location.search).get('candidate');
+  const sourceLink = 'https://www.rilegislature.gov/journals/senatejournals/SitePages/senateJournals.aspx';
+  const modelLink = 'https://github.com/nicklabriolauri/Rhode-Island-Elections-Project/tree/main/analysis/senate-two-dimensional-preview';
+
+  async function init(root) {
+    const candidate = root.dataset.candidate;
+    const profile = root.dataset.compact === 'true';
+    const section = root.closest('#voting-patterns');
+    if (section) {
+      const heading = document.createElement('h2');
+      heading.textContent = 'Senate voting patterns · W-NOMINATE';
+      section.replaceChildren(heading, root);
+    }
+    root.innerHTML = `
+      <p>2025–2026 Rhode Island Senate · 358 divided roll calls through June 11, 2026</p>
+      <p data-unscored hidden></p>
+      <div class="vp-controls"><label>Explore a senator<select></select></label></div>
+      <p>Hover near a dot for its name and scores. Click, tap, or use the menu to select a senator.</p>
+      <div class="vp-plot"><div class="vp-tooltip" aria-hidden="true" hidden><strong></strong><span></span></div></div>
+      <p class="vp-selected" aria-live="polite"></p>
+      <dl>
+        <dt><strong>Dimension 1 · Between-party alignment</strong></dt>
+        <dd>The horizontal axis captures the strongest voting divide in this Senate sample. Democrats fall to the left and Republicans to the right. Coordinates indicate voting positions on a fitted scale.</dd>
+        <dt><strong>Dimension 2 · Within-party divides</strong></dt>
+        <dd>The vertical axis captures a secondary voting pattern. Senators with similar horizontal scores can still vote differently. Positive and negative positions indicate different patterns, and the direction depends on the model’s anchor.</dd>
+      </dl>
+      <details><summary>Three groups visible in the chart</summary>
+      <p>On the left, 14 Democrats have positive vertical scores and 20 have negative scores. On the right, all four Republicans cluster horizontally, with Elaine Morgan above the other three. Democrat Leonidas Raptakis sits near the horizontal midpoint. These are visual descriptions. The specific policy issues driving the second axis have yet to be established.</p></details>
+      <details><summary>Data and methodology</summary><p>W-NOMINATE estimates voting positions from recorded yea and nay votes in 81 official Senate journals. Party affiliation provides the point colors. Jessica de la Cruz and Dawn Euer anchor the directions of the two axes. Uncertainty intervals are unavailable for this fit.</p><p><a href="${sourceLink}">Official Senate journals</a> · <a href="${modelLink}">Model inputs and R code</a></p></details>
+      <p><a data-explore href="${explorer}">Open the Senate explorer</a></p>`;
+    if (!profile) root.querySelector('[data-explore]').parentElement.remove();
+    const response = await fetch(chartUrl);
+    if (!response.ok) throw Error('Chart unavailable');
+    const parsed = new DOMParser().parseFromString(await response.text(), 'image/svg+xml');
+    if (parsed.documentElement.localName !== 'svg') throw Error('Chart unavailable');
+    const chart = document.importNode(parsed.documentElement, true);
+    const plot = root.querySelector('.vp-plot');
+    const tooltip = plot.querySelector('.vp-tooltip');
+    const select = root.querySelector('select');
+    const readout = root.querySelector('.vp-selected');
+    const points = [];
+    const coords = dot => ['cx', 'cy'].map(key => Number(dot.getAttribute(key)));
+    for (const dot of chart.querySelectorAll('circle')) {
+      const title = dot.querySelector('title');
+      const match = title?.textContent.match(/^(.+) \(([+-][\d.]+), ([+-][\d.]+)\)$/);
+      if (!match) continue;
+      const [, name, first, second] = match;
+      const [x,y] = coords(dot);
+      points.push({ name, first, second, x, y });
+      title.remove();
+    }
+    if (!points.length) throw Error('Chart points unavailable');
+    points.sort((a,b) => a.name.localeCompare(b.name));
+    const byName = new Map(points.map(point => [point.name, point]));
+    const initial = byName.get(profile ? candidate : candidateParam || candidate);
+    const unavailable = root.querySelector('[data-unscored]');
+    if (candidate && !byName.has(candidate) && profile) {
+      unavailable.textContent = `No W-NOMINATE estimate is available for ${candidate} in this Senate roll-call sample. Explore the modeled senators below.`;
+      unavailable.hidden = false;
+    }
+    select.add(new Option('Select a senator', ''));
+    for (const point of points) select.add(new Option(point.name, point.name));
+    chart.style.cssText = 'display:block;width:100%;height:auto;cursor:crosshair';
+    chart.removeAttribute('aria-labelledby');
+    chart.setAttribute('aria-label', 'Senate voting positions. Use the senator menu to explore every point.');
+    const ring = document.createElementNS(chart.namespaceURI, 'circle');
+    for (const [key,value] of Object.entries({r:9,fill:'none',stroke:'#14213d','stroke-width':2.5,'pointer-events':'none'})) ring.setAttribute(key,value);
+    chart.append(ring);
+    plot.prepend(chart);
+
+    const shortScores = point => `Dimension 1 ${point.first} · Dimension 2 ${point.second}`;
+    function highlight(point) {
+      ring.setAttribute('visibility', point ? 'visible' : 'hidden');
+      if (point) {
+        ring.setAttribute('cx', point.x);
+        ring.setAttribute('cy', point.y);
+      }
+    }
+    function choose(point) {
+      select.value = point?.name || '';
+      readout.hidden = !point;
+      readout.textContent = point ? `${point.name} · ${shortScores(point)}` : '';
+      highlight(point);
+    }
+    function nearest(event) {
+      const bounds = chart.getBoundingClientRect();
+      let best, distance = event.pointerType === 'touch' ? 25 : 18;
+      for (const point of points) {
+        const gap = Math.hypot(event.clientX - bounds.left - point.x * bounds.width / 600,
+          event.clientY - bounds.top - point.y * bounds.height / 425);
+        if (gap < distance) { best = point; distance = gap; }
+      }
+      return best;
+    }
+    function showTooltip(point) {
+      highlight(point);
+      tooltip.querySelector('strong').textContent = point.name;
+      tooltip.querySelector('span').textContent = shortScores(point);
+      tooltip.hidden = false;
+      const bounds = chart.getBoundingClientRect();
+      const left = point.x * bounds.width / 600;
+      const top = point.y * bounds.height / 425;
+      tooltip.style.left = Math.max(0, Math.min(left + 12, bounds.width - tooltip.offsetWidth)) + 'px';
+      tooltip.style.top = Math.max(0, top - tooltip.offsetHeight - 9) + 'px';
+    }
+    function clearTooltip() {
+      tooltip.hidden = true;
+      highlight(byName.get(select.value));
+    }
+    chart.addEventListener('pointermove', event => {
+      if (event.pointerType === 'touch') return;
+      const point = nearest(event);
+      if (point) showTooltip(point); else clearTooltip();
+    });
+    chart.addEventListener('pointerleave', clearTooltip);
+    chart.addEventListener('click', event => {
+      const point = nearest(event);
+      if (point) { choose(point); showTooltip(point); }
+    });
+    select.addEventListener('change', () => {
+      const point = byName.get(select.value);
+      choose(point);
+      if (point) showTooltip(point); else clearTooltip();
+    });
+    choose(initial);
+  }
+
+  document.querySelectorAll('[data-voting-widget]').forEach(root => init(root).catch(error => {
+    const plot = root.querySelector('.vp-plot');
+    if (plot) {
+      const link = document.createElement('a');
+      link.href = chartUrl;
+      link.textContent = 'Open the Senate voting chart';
+      plot.replaceChildren(link);
+    }
+    root.querySelector('.vp-controls')?.remove();
+    console.error(error);
+  }));
 })();
