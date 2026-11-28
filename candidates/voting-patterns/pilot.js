@@ -1,7 +1,7 @@
 (() => {
   const assets = new URL('.', document.currentScript.src);
   const explorer = new URL('index.html', assets);
-  const chartUrl = new URL('senate-two-dimensional.svg', assets);
+  const chartUrl = new URL('senate-two-dimensional.svg?v=groups', assets);
   const candidateParam = new URLSearchParams(location.search).get('candidate');
   const sourceLink = 'https://www.rilegislature.gov/journals/senatejournals/SitePages/senateJournals.aspx';
   const modelLink = 'https://github.com/nicklabriolauri/Rhode-Island-Elections-Project/tree/main/analysis/senate-two-dimensional-preview';
@@ -29,7 +29,7 @@
         <dd>The vertical axis captures a secondary voting pattern. Senators with similar horizontal scores can still vote differently. Positive and negative positions indicate different patterns, and the direction depends on the model’s anchor.</dd>
       </dl>
       <details open><summary>Where Senate Democrats split</summary>
-      <p>The chart shows two groups of Democrats on the left and a Republican cluster on the right. The vertical gap between the Democratic groups reflects disagreements over issues such as energy and criminal justice.</p>
+      <p>The shaded outlines label the two Democratic clusters by their relationship to Senate leadership on the example votes below. These are descriptive labels for these voting patterns. Leonidas Raptakis sits apart from the two visible Democratic clusters and is counted with the lower-scoring Democrats in the vote totals.</p>
       <ul>
         <li><a href="https://www.rilegislature.gov/journals/senatejournals/2025%20Senate%20Journals/06-10-2025.pdf#page=25">Nuclear power purchases, June 2025</a>: 0 of 13 higher-scoring Democrats voted yes, compared with 19 of 19 lower-scoring Democrats who voted.</li>
         <li><a href="https://www.rilegislature.gov/journals/senatejournals/2026%20Senate%20Journals/SJ%2006-09-2026.pdf#page=6">Limits on utility profits, June 2026</a>: 12 of 14 higher-scoring Democrats and 0 of 20 lower-scoring Democrats voted for the amendment.</li>
